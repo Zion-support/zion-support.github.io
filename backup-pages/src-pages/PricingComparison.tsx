@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-const PricingComparison: React.FC = (): JSX.Element => {;
-  const [selectedPlan, setSelectedPlan] = useState('monthly');
-
-  
-        {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           name: "AI Code Review & Security","
           description: "Advanced vulnerability detection with AI-powered analysis",

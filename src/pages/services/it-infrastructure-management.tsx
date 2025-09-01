@@ -149,238 +149,238 @@ const ITInfrastructureManagement: React.FC = () => {;
   return (;
     <>;
       <SEO;
-        title="IT Infrastructure Management | Zion Tech Group";""
-        description="Professional IT infrastructure management services with 99.9% uptime guarantee. 40+ hours saved per week. 24/7 monitoring and support.";""
-        keywords="IT infrastructure management, server management, network management, cloud infrastructure, IT services, infrastructure monitoring";""
-        ogImage="/images/it-infrastructure-management.jpg";""
-        canonicalUrl="/services/it-infrastructure-management";"
-      />;";""
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;""
-        {/* Hero Section */}";""
-        <section className="relative pt-20 pb-16 overflow-hidden">";""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />";""
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />;";""
-          <div className="relative z-10 container mx-auto px-4">;""
-            <motion.div ";""
-              className="text-center max-w-4xl mx-auto";
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};"
-              transition={{ duration: 0.8 }};""
-            >";""
-              <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">";""
-                <Server className="w-5 h-5 text-cyan-400" />";""
-                <span className="text-cyan-400 text-sm font-medium">Professional IT Management</span>;"
-              </div>;";""
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">;""
-                IT Infrastructure";""
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Management;
-                </span>;"
-              </h1>;";""
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-                Professional IT infrastructure management services with 99.9% uptime guarantee.;
-                Save 40+ hours per week with our comprehensive monitoring and management solutions.;"
-              </p>;";""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-                <motion.button";""
+        title="IT Infrastructure Management | Zion Tech Group";"";"
+        description="Professional IT infrastructure management services with 99.9% uptime guarantee. 40+ hours saved per week. 24/7 monitoring and support.";"";"
+        keywords="IT infrastructure management, server management, network management, cloud infrastructure, IT services, infrastructure monitoring";"";"
+        ogImage="/images/it-infrastructure-management.jpg";"";"
+        canonicalUrl="/services/it-infrastructure-management";";"
+      />;";"";"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;"";"
+        {/* Hero Section */}";"";"
+        <section className="relative pt-20 pb-16 overflow-hidden">";"";"
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10" />";"";"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />;";"";"
+          <div className="relative z-10 container mx-auto px-4">;"";"
+            <motion.div ";"";"
+              className="text-center max-w-4xl mx-auto";"
+              initial={{ opacity: 0, y: 30 }};";"
+              animate={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};"";"
+            >";"";"
+              <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">";"";"
+                <Server className="w-5 h-5 text-cyan-400" />";"";"
+                <span className="text-cyan-400 text-sm font-medium">Professional IT Management</span>;";"
+              </div>;";"";"
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">;"";"
+                IT Infrastructure";"";"
+                <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;"
+                  Management;";"
+                </span>;";"
+              </h1>;";"";"
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;"
+                Professional IT infrastructure management services with 99.9% uptime guarantee.;";"
+                Save 40+ hours per week with our comprehensive monitoring and management solutions.;";"
+              </p>;";"";"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+                <motion.button";"";"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
                   whileHover={{ scale: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
-                >;
-                  Get Free Assessment;"
-                </motion.button>;""
-                <motion.button";""
+                  whileTap={{ scale: 0.95 }};"
+                >;";"
+                  Get Free Assessment;";"
+                </motion.button>;"";"
+                <motion.button";"";"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
                   whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }};
                 >;
                   Schedule Consultation;
                 </motion.button>;
-              </div>;
-            </motion.div>;
-          </div>;"
-        </section>;""
-        {/* Features Section */}";""
-        <section className="py-16 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              </div>;"
+            </motion.div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* Features Section */}";"";"
+        <section className="py-16 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center mb-16";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-4">;"
-                Comprehensive Infrastructure Management;""
-              </h2>";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-4">;";"
+                Comprehensive Infrastructure Management;"";"
+              </h2>";"";"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Our team of certified IT professionals provides end-to-end infrastructure management;
-                to ensure your systems run smoothly and securely.;
-              </p>;"
-            </motion.div>;";""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {features.map((feature, index) => (;"
-                <motion.div;""
-                  key={feature.title}";""
+                Our team of certified IT professionals provides end-to-end infrastructure management;"
+                to ensure your systems run smoothly and securely.;";"
+              </p>;";"
+            </motion.div>;";"";"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;";"
+              {features.map((feature, index) => (;";"
+                <motion.div;"";"
+                  key={feature.title}";"";"
                   className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300";
                   initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
-                  viewport={{ once: true }};"
-                  whileHover={{ y: -5, scale: 1.02 }};""
-                >";""
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">";""
-                    <feature.icon className="w-6 h-6 text-white" />;"
-                  </div>;";""
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>";""
-                  <p className="text-gray-300 mb-4">{feature.description}</p>;";""
-                  <ul className="space-y-2">;""
-                    {feature.benefits.map((benefit, benefitIndex) => (";""
-                      <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">";""
+                  whileInView={{ opacity: 1, y: 0 }};"
+                  transition={{ duration: 0.6, delay: index * 0.1 }};";"
+                  viewport={{ once: true }};";"
+                  whileHover={{ y: -5, scale: 1.02 }};"";"
+                >";"";"
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">";"";"
+                    <feature.icon className="w-6 h-6 text-white" />;";"
+                  </div>;";"";"
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>";"";"
+                  <p className="text-gray-300 mb-4">{feature.description}</p>;";"";"
+                  <ul className="space-y-2">;"";"
+                    {feature.benefits.map((benefit, benefitIndex) => (";"";"
+                      <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">";"";"
                         <CheckCircle className="w-4 h-4 text-cyan-400" />;
                         <span>{benefit}</span>;
                       </li>;
                     ))};
                   </ul>;
                 </motion.div>;
-              ))};
-            </div>;
-          </div>;"
-        </section>;""
-        {/* Services Overview Section */}";""
-        <section className="py-16 bg-gray-800/20 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              ))};"
+            </div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* Services Overview Section */}";"";"
+        <section className="py-16 bg-gray-800/20 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center mb-16";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-4">;"
-                Our Service Categories;""
-              </h2>";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-4">;";"
+                Our Service Categories;"";"
+              </h2>";"";"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                We provide comprehensive IT infrastructure management across all critical areas;
-                to ensure your business continuity and success.;
-              </p>;"
-            </motion.div>;";""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {services.map((service, index) => (;"
-                <motion.div;""
-                  key={service.category}";""
+                We provide comprehensive IT infrastructure management across all critical areas;"
+                to ensure your business continuity and success.;";"
+              </p>;";"
+            </motion.div>;";"";"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;";"
+              {services.map((service, index) => (;";"
+                <motion.div;"";"
+                  key={service.category}";"";"
                   className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6";
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};"
-                  viewport={{ once: true }};""
-                >";""
-                  <h3 className="text-xl font-semibold text-white mb-4 text-center">;
-                    {service.category};"
-                  </h3>;";""
-                  <ul className="space-y-2">;""
-                    {service.items.map((item, itemIndex) => (";""
-                      <li key={itemIndex} className="flex items-center space-x-2 text-sm text-gray-300">";""
+                  initial={{ opacity: 0, y: 30 }};"
+                  whileInView={{ opacity: 1, y: 0 }};";"
+                  transition={{ duration: 0.6, delay: index * 0.1 }};";"
+                  viewport={{ once: true }};"";"
+                >";"";"
+                  <h3 className="text-xl font-semibold text-white mb-4 text-center">;";"
+                    {service.category};";"
+                  </h3>;";"";"
+                  <ul className="space-y-2">;"";"
+                    {service.items.map((item, itemIndex) => (";"";"
+                      <li key={itemIndex} className="flex items-center space-x-2 text-sm text-gray-300">";"";"
                         <ArrowRight className="w-4 h-4 text-cyan-400" />;
                         <span>{item}</span>;
                       </li>;
                     ))};
                   </ul>;
                 </motion.div>;
-              ))};
-            </div>;
-          </div>;"
-        </section>;""
-        {/* Technologies Section */}";""
-        <section className="py-16 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              ))};"
+            </div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* Technologies Section */}";"";"
+        <section className="py-16 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center mb-16";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-4">;"
-                Supported Technologies;""
-              </h2>";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-4">;";"
+                Supported Technologies;"";"
+              </h2>";"";"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Our team is certified and experienced with the latest technologies and platforms;
-                to provide you with the best possible service.;
-              </p>;"
-            </motion.div>;";""
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">;
-              {technologies.map((tech, index) => (;"
-                <motion.div;""
-                  key={index}";""
+                Our team is certified and experienced with the latest technologies and platforms;"
+                to provide you with the best possible service.;";"
+              </p>;";"
+            </motion.div>;";"";"
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">;";"
+              {technologies.map((tech, index) => (;";"
+                <motion.div;"";"
+                  key={index}";"";"
                   className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 text-center hover:border-cyan-500/30 transition-all duration-300";
                   initial={{ opacity: 0, scale: 0.8 }};
-                  whileInView={{ opacity: 1, scale: 1 }};
-                  transition={{ duration: 0.4, delay: index * 0.05 }};
-                  viewport={{ once: true }};"
-                  whileHover={{ scale: 1.05 }};""
-                >";""
-                  <Server className="w-8 h-8 text-cyan-400 mx-auto mb-2" />";""
+                  whileInView={{ opacity: 1, scale: 1 }};"
+                  transition={{ duration: 0.4, delay: index * 0.05 }};";"
+                  viewport={{ once: true }};";"
+                  whileHover={{ scale: 1.05 }};"";"
+                >";"";"
+                  <Server className="w-8 h-8 text-cyan-400 mx-auto mb-2" />";"";"
                   <p className="text-sm text-gray-300">{tech}</p>;
                 </motion.div>;
-              ))};
-            </div>;
-          </div>;"
-        </section>;""
-        {/* Benefits Section */}";""
-        <section className="py-16 bg-gray-800/20 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              ))};"
+            </div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* Benefits Section */}";"";"
+        <section className="py-16 bg-gray-800/20 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center mb-16";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-4">;"
-                Proven Results & Benefits;""
-              </h2>";""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Join hundreds of companies that have transformed their IT operations with our services.;
-              </p>;"
-            </motion.div>;";""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {benefits.map((benefit, index) => (;"
-                <motion.div;""
-                  key={benefit.title}";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-4">;";"
+                Proven Results & Benefits;"";"
+              </h2>";"";"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+                Join hundreds of companies that have transformed their IT operations with our services.;";"
+              </p>;";"
+            </motion.div>;";"";"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;";"
+              {benefits.map((benefit, index) => (;";"
+                <motion.div;"";"
+                  key={benefit.title}";"";"
                   className="text-center";
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};"
-                  viewport={{ once: true }};""
-                >";""
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";""
-                    <benefit.icon className="w-8 h-8 text-white" />;"
-                  </div>;";""
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>";""
+                  initial={{ opacity: 0, y: 30 }};"
+                  whileInView={{ opacity: 1, y: 0 }};";"
+                  transition={{ duration: 0.6, delay: index * 0.1 }};";"
+                  viewport={{ once: true }};"";"
+                >";"";"
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";"";"
+                    <benefit.icon className="w-8 h-8 text-white" />;";"
+                  </div>;";"";"
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>";"";"
                   <p className="text-gray-300">{benefit.description}</p>;
                 </motion.div>;
-              ))};
-            </div>;
-          </div>;"
-        </section>;""
-        {/* Pricing Section */}";""
-        <section className="py-16 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              ))};"
+            </div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* Pricing Section */}";"";"
+        <section className="py-16 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center mb-16";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-4">;"
-                Flexible Service Plans;""
-              </h2>";""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Choose the plan that best fits your infrastructure needs and scale as you grow.;
-              </p>;"
-            </motion.div>;";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-4">;";"
+                Flexible Service Plans;"";"
+              </h2>";"";"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+                Choose the plan that best fits your infrastructure needs and scale as you grow.;";"
+              </p>;";"
+            </motion.div>;";"";"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
               {pricingTiers.map((tier, index) => (;
                 <motion.div;
@@ -392,29 +392,29 @@ const ITInfrastructureManagement: React.FC = () => {;
                   }`};
                   initial={{ opacity: 0, y: 30 }};
                   whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.6, delay: index * 0.1 }};
-                  viewport={{ once: true }};
-                  whileHover={{ y: -5, scale: 1.02 }};"
-                >;""
-                  {tier.popular && (";""
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";""
+                  transition={{ duration: 0.6, delay: index * 0.1 }};"
+                  viewport={{ once: true }};";"
+                  whileHover={{ y: -5, scale: 1.02 }};";"
+                >;"";"
+                  {tier.popular && (";"";"
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"";"
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                        Most Popular;
-                      </span>;
-                    </div>;"
-                  )};";""
-                  <div className="text-center mb-8">";""
-                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>";""
-                    <div className="flex items-baseline justify-center mb-2">";""
-                      <span className="text-4xl font-bold text-white">{tier.price}</span>";""
-                      <span className="text-gray-400 ml-1">{tier.period}</span>;""
-                    </div>";""
-                    <p className="text-gray-300">{tier.description}</p>;"
-                  </div>;";""
-                  <ul className="space-y-3 mb-8">;""
-                    {tier.features.map((feature, featureIndex) => (";""
-                      <li key={featureIndex} className="flex items-center space-x-3">";""
-                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />";""
+                        Most Popular;"
+                      </span>;";"
+                    </div>;";"
+                  )};";"";"
+                  <div className="text-center mb-8">";"";"
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>";"";"
+                    <div className="flex items-baseline justify-center mb-2">";"";"
+                      <span className="text-4xl font-bold text-white">{tier.price}</span>";"";"
+                      <span className="text-gray-400 ml-1">{tier.period}</span>;"";"
+                    </div>";"";"
+                    <p className="text-gray-300">{tier.description}</p>;";"
+                  </div>;";"";"
+                  <ul className="space-y-3 mb-8">;"";"
+                    {tier.features.map((feature, featureIndex) => (";"";"
+                      <li key={featureIndex} className="flex items-center space-x-3">";"";"
+                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />";"";"
                         <span className="text-gray-300">{feature}</span>;
                       </li>;
                     ))};
@@ -431,50 +431,50 @@ const ITInfrastructureManagement: React.FC = () => {;
                     {tier.cta};
                   </motion.button>;
                 </motion.div>;
-              ))};
-            </div>;
-          </div>;"
-        </section>;""
-        {/* CTA Section */}";""
-        <section className="py-16 bg-gray-800/20 relative">";""
-          <div className="container mx-auto px-4">;""
-            <motion.div ";""
+              ))};"
+            </div>;";"
+          </div>;";"
+        </section>;"";"
+        {/* CTA Section */}";"";"
+        <section className="py-16 bg-gray-800/20 relative">";"";"
+          <div className="container mx-auto px-4">;"";"
+            <motion.div ";"";"
               className="text-center max-w-4xl mx-auto";
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};"
-              viewport={{ once: true }};""
-            >";""
-              <h2 className="text-4xl font-bold text-white mb-6">;"
-                Ready to Optimize Your Infrastructure?;""
-              </h2>";""
-              <p className="text-xl text-gray-300 mb-8">;
-                Let our team of experts take care of your IT infrastructure so you can focus on your business.;
-                Get started with a free assessment today.;"
-              </p>;";""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-                <motion.button";""
+              initial={{ opacity: 0, y: 30 }};"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.8 }};";"
+              viewport={{ once: true }};"";"
+            >";"";"
+              <h2 className="text-4xl font-bold text-white mb-6">;";"
+                Ready to Optimize Your Infrastructure?;"";"
+              </h2>";"";"
+              <p className="text-xl text-gray-300 mb-8">;"
+                Let our team of experts take care of your IT infrastructure so you can focus on your business.;";"
+                Get started with a free assessment today.;";"
+              </p>;";"";"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+                <motion.button";"";"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
                   whileHover={{ scale: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
-                >;
-                  Get Free Assessment;"
-                </motion.button>;""
-                <motion.button";""
+                  whileTap={{ scale: 0.95 }};"
+                >;";"
+                  Get Free Assessment;";"
+                </motion.button>;"";"
+                <motion.button";"";"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
                   whileHover={{ scale: 1.05 }};
-                  whileTap={{ scale: 0.95 }};
-                >;
-                  Schedule Consultation;"
-                </motion.button>;""
-                <motion.button";""
+                  whileTap={{ scale: 0.95 }};"
+                >;";"
+                  Schedule Consultation;";"
+                </motion.button>;"";"
+                <motion.button";"";"
                   className="px-8 py-4 border border-gray-500/30 text-gray-300 font-semibold rounded-lg hover:bg-gray-500/10 transition-all duration-300";
                   whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }};
-                >;
-                  Contact Sales;
-                </motion.button>;"
-              </div>;";""
+                >;"
+                  Contact Sales;";"
+                </motion.button>;";"
+              </div>;";"";"
               <p className="text-sm text-gray-400 mt-6">;
                 Free assessment • No commitment required • Expert consultation included;
               </p>;
@@ -482,8 +482,8 @@ const ITInfrastructureManagement: React.FC = () => {;
           </div>;
         </section>;
       </div>;
-    </>;
-  );
-};"
-;""
-export default ITInfrastructureManagement;";""
+    </>;"
+  );";"
+};";"
+;"";"
+export default ITInfrastructureManagement;";"";"

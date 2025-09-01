@@ -104,16 +104,16 @@ export const useAccessibility = () => {;
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';
             announcement.textContent = message;
-            document.body.appendChild(announcement);
-            setTimeout(() => {;
-                document.body.removeChild(announcement)}, 1000)};"
-    }, [preferences.screenReader]);""
-    // Focus management";""
+            document.body.appendChild(announcement);"
+            setTimeout(() => {;";"
+                document.body.removeChild(announcement)}, 1000)};";"
+    }, [preferences.screenReader]);"";"
+    // Focus management";"";"
     const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        if (focusableElements.length > 0) {;
-            focusableElements[0].focus()};
-    }, []);"
-    const trapFocus = useCallback((container) => {;";""
+        if (focusableElements.length > 0) {;"
+            focusableElements[0].focus()};";"
+    }, []);";"
+    const trapFocus = useCallback((container) => {;";"";"
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {;
             const element = el;
             return !element.disabled});
@@ -142,7 +142,7 @@ export const useAccessibility = () => {;
         settings,;
         savePreferences,;
         saveSettings,;
-        announceToScreenReader,;
-        focusFirstInteractive,;
-        trapFocus;"
-    }};";""
+        announceToScreenReader,;"
+        focusFirstInteractive,;";"
+        trapFocus;";"
+    }};";"";"

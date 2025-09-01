@@ -109,15 +109,16 @@ export const AccessibilityProvider = ({ children }) => {;
         toggleReducedMotion,;
         toggleLargeText,;
         focusTrap,;
-        announceToScreenReader};
+        announceToScreenReader,;
+};
     return (<AccessibilityContext.Provider value={value}>;
       {children};
     </AccessibilityContext.Provider>)};
-// Accessibility toolbar component;"
-export const AccessibilityToolbar = () => {;""
-    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();";""
-    return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">";""
-      <div className="space-y-3">";""
+// Accessibility toolbar component;
+export const AccessibilityToolbar = () => {;"
+    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();";"
+    return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">";"
+      <div className="space-y-3">";"
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>;
         <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast;
             ? 'bg-zion-cyan text-zion-blue-dark';
@@ -132,8 +133,9 @@ export const AccessibilityToolbar = () => {;""
         <button onClick={toggleLargeText} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isLargeText;
             ? 'bg-zion-cyan text-zion-blue-dark';
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>;
-          Large Text;"
-        </button>;";""
+          Large Text;
+        </button>;"
+";"
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">;
           <p>Keyboard shortcuts:</p>;
           <p>Ctrl/Cmd + K: High Contrast</p>;
@@ -143,7 +145,8 @@ export const AccessibilityToolbar = () => {;""
       </div>;
     </div>)};
 // Skip to main content link;"
-export const SkipToMainContent = () => {;";""
+export const SkipToMainContent = () => {";"
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">;
-      Skip to main content;"
-    </a>)};";""
+      Skip to main content;
+    </a>)};"
+";"

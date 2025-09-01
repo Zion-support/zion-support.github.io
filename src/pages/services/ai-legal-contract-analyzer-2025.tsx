@@ -132,126 +132,126 @@ export function AILegalContractAnalyzer2025() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-zion-blue text-white">;""
-      {/* Hero Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-blue via-blue-900 to-zion-blue">";""
+    <div className="min-h-screen bg-zion-blue text-white">;"";"
+      {/* Hero Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-blue via-blue-900 to-zion-blue">";"";"
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            animate={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }};""
-          >";""
-            <div className="flex justify-center mb-6">";""
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">";""
-                <FileText className="w-10 h-10 text-white" />;"
-              </div>;""
-            </div>";""
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;"
-              AI Legal Contract Analyzer;""
-            </h1>";""
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;
-              Revolutionize your legal contract review process with AI-powered analysis,;
-              risk assessment, and compliance automation. Save time, reduce risk, and;"
-              improve accuracy across all your legal documents.;""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <Link";""
-                to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";"
-              >;""
-                Start Free Trial";""
-                <ArrowRight className="ml-2 w-5 h-5" />;"
-              </Link>;""
-              <Link";""
-                to="/pricing";""
+          <motion.div;"
+            initial={{ opacity: 0, y: 20 }};";"
+            animate={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};"";"
+          >";"";"
+            <div className="flex justify-center mb-6">";"";"
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">";"";"
+                <FileText className="w-10 h-10 text-white" />;";"
+              </div>;"";"
+            </div>";"";"
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;";"
+              AI Legal Contract Analyzer;"";"
+            </h1>";"";"
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;"
+              Revolutionize your legal contract review process with AI-powered analysis,;";"
+              risk assessment, and compliance automation. Save time, reduce risk, and;";"
+              improve accuracy across all your legal documents.;"";"
+            </p>";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <Link";"";"
+                to="/contact";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";";"
+              >;"";"
+                Start Free Trial";"";"
+                <ArrowRight className="ml-2 w-5 h-5" />;";"
+              </Link>;"";"
+              <Link";"";"
+                to="/pricing";"";"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300";
               >;
                 View Pricing;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;"
-      </section>;""
-      {/* Features Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">";""
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
-              Powerful AI-Powered Legal Intelligence;""
-            </h2>";""
+            </div>;"
+          </motion.div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Features Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";"";"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center mb-16";"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">;";"
+              Powerful AI-Powered Legal Intelligence;"";"
+            </h2>";"";"
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">;
-              Our platform combines cutting-edge AI with deep legal expertise to;
-              provide unparalleled contract analysis and risk assessment capabilities.;
-            </p>;"
-          </motion.div>;";""
+              Our platform combines cutting-edge AI with deep legal expertise to;"
+              provide unparalleled contract analysis and risk assessment capabilities.;";"
+            </p>;";"
+          </motion.div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {features.map((feature, index) => (;
-              <motion.div;
-                key={feature.title};
-                initial={{ opacity: 0, y: 20 }};"
-                whileInView={{ opacity: 1, y: 0 }};""
-                transition={{ duration: 0.8, delay: index * 0.1 }}";""
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300";""
-              >";""
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">";""
-                  <feature.icon className="w-8 h-8 text-white" />;""
-                </div>";""
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>";""
-                <p className="text-gray-400 mb-4">{feature.description}</p>";""
-                <ul className="space-y-2">;""
-                  {feature.benefits.map((benefit, idx) => (";""
-                    <li key={idx} className="flex items-center text-sm text-gray-300">";""
+              <motion.div;"
+                key={feature.title};";"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};"";"
+                transition={{ duration: 0.8, delay: index * 0.1 }}";"";"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300";"";"
+              >";"";"
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">";"";"
+                  <feature.icon className="w-8 h-8 text-white" />;"";"
+                </div>";"";"
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>";"";"
+                <p className="text-gray-400 mb-4">{feature.description}</p>";"";"
+                <ul className="space-y-2">;"";"
+                  {feature.benefits.map((benefit, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-sm text-gray-300">";"";"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
                       {benefit};
                     </li>;
                   ))};
                 </ul>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Legal Features Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";""
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
-              Advanced Legal Technology;""
-            </h2>";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Legal Features Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";"";"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center mb-16";"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">;";"
+              Advanced Legal Technology;"";"
+            </h2>";"";"
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">;
-              Built specifically for legal professionals with industry-leading;
-              accuracy and compliance capabilities.;
-            </p>;"
-          </motion.div>;";""
+              Built specifically for legal professionals with industry-leading;"
+              accuracy and compliance capabilities.;";"
+            </p>;";"
+          </motion.div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {legalFeatures.map((feature, index) => (;
-              <motion.div;
-                key={feature.title};
-                initial={{ opacity: 0, y: 20 }};"
-                whileInView={{ opacity: 1, y: 0 }};""
-                transition={{ duration: 0.8, delay: index * 0.1 }}";""
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300";""
-              >";""
-                <div className="flex items-start space-x-4">";""
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">";""
-                    <feature.icon className="w-6 h-6 text-white" />;"
-                  </div>;""
-                  <div>";""
-                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>";""
-                    <p className="text-gray-400 mb-4">{feature.description}</p>";""
-                    <ul className="space-y-2">;""
-                      {feature.benefits.map((benefit, idx) => (";""
-                        <li key={idx} className="flex items-center text-sm text-gray-300">";""
+              <motion.div;"
+                key={feature.title};";"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};"";"
+                transition={{ duration: 0.8, delay: index * 0.1 }}";"";"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300";"";"
+              >";"";"
+                <div className="flex items-start space-x-4">";"";"
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">";"";"
+                    <feature.icon className="w-6 h-6 text-white" />;";"
+                  </div>;"";"
+                  <div>";"";"
+                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>";"";"
+                    <p className="text-gray-400 mb-4">{feature.description}</p>";"";"
+                    <ul className="space-y-2">;"";"
+                      {feature.benefits.map((benefit, idx) => (";"";"
+                        <li key={idx} className="flex items-center text-sm text-gray-300">";"";"
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
                           {benefit};
                         </li>;
@@ -260,97 +260,97 @@ export function AILegalContractAnalyzer2025() {;
                   </div>;
                 </div>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Metrics Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">";""
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
-              Proven Performance;""
-            </h2>";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Metrics Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";"";"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center mb-16";"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">;";"
+              Proven Performance;"";"
+            </h2>";"";"
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">;
-              Our platform delivers exceptional results with industry-leading;
-              accuracy and performance metrics.;
-            </p>;"
-          </motion.div>;";""
+              Our platform delivers exceptional results with industry-leading;"
+              accuracy and performance metrics.;";"
+            </p>;";"
+          </motion.div>;";"";"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             {legalMetrics.map((metric, index) => (;
-              <motion.div;
-                key={metric.label};
-                initial={{ opacity: 0, y: 20 }};"
-                whileInView={{ opacity: 1, y: 0 }};""
-                transition={{ duration: 0.8, delay: index * 0.1 }}";""
-                className="text-center";""
-              >";""
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">;"
-                  {metric.metric};""
-                </div>";""
+              <motion.div;"
+                key={metric.label};";"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};"";"
+                transition={{ duration: 0.8, delay: index * 0.1 }}";"";"
+                className="text-center";"";"
+              >";"";"
+                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">;";"
+                  {metric.metric};"";"
+                </div>";"";"
                 <div className="text-gray-400">{metric.label}</div>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Compliance Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";""
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
-              Industry Compliance & Security;""
-            </h2>";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Compliance Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";"";"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center mb-16";"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">;";"
+              Industry Compliance & Security;"";"
+            </h2>";"";"
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">;
-              Our platform meets the highest security standards and compliance requirements;
-              across industries and regulations.;
-            </p>;"
-          </motion.div>;";""
+              Our platform meets the highest security standards and compliance requirements;"
+              across industries and regulations.;";"
+            </p>;";"
+          </motion.div>;";"";"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
             {complianceFrameworks.map((framework, index) => (;
-              <motion.div;
-                key={framework};
-                initial={{ opacity: 0, y: 20 }};"
-                whileInView={{ opacity: 1, y: 0 }};""
-                transition={{ duration: 0.8, delay: index * 0.1 }}";""
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300";""
-              >";""
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">";""
-                  <Check className="w-6 h-6 text-white" />;""
-                </div>";""
+              <motion.div;"
+                key={framework};";"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};"";"
+                transition={{ duration: 0.8, delay: index * 0.1 }}";"";"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300";"";"
+              >";"";"
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">";"";"
+                  <Check className="w-6 h-6 text-white" />;"";"
+                </div>";"";"
                 <h3 className="font-semibold text-cyan-400">{framework}</h3>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Pricing Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";""
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
-              Affordable Legal Technology;""
-            </h2>";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Pricing Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">";"";"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center mb-16";"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">;";"
+              Affordable Legal Technology;"";"
+            </h2>";"";"
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">;
-              Choose the plan that fits your legal practice needs. All plans include;
-              our core AI capabilities and enterprise-grade security.;
-            </p>;"
-          </motion.div>;";""
+              Choose the plan that fits your legal practice needs. All plans include;"
+              our core AI capabilities and enterprise-grade security.;";"
+            </p>;";"
+          </motion.div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans.map((plan, index) => (;
               <motion.div;
@@ -360,28 +360,28 @@ export function AILegalContractAnalyzer2025() {;
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${;
                   plan.popular;
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20';
-                    : 'border-gray-700';
-                }`};"
-              >;""
-                {plan.popular && (";""
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";""
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20';"
+                    : 'border-gray-700';";"
+                }`};";"
+              >;"";"
+                {plan.popular && (";"";"
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"";"
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;"
-                )};";""
-                <div className="text-center mb-6">";""
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>";""
-                  <div className="flex items-baseline justify-center mb-2">";""
-                    <span className="text-4xl font-bold">{plan.price}</span>";""
-                    <span className="text-gray-400 ml-1">{plan.period}</span>;""
-                  </div>";""
-                  <p className="text-gray-400">{plan.description}</p>;"
-                </div>;";""
-                <ul className="space-y-3 mb-8">;""
-                  {plan.features.map((feature, idx) => (";""
-                    <li key={idx} className="flex items-center text-gray-300">";""
+                      Most Popular;"
+                    </span>;";"
+                  </div>;";"
+                )};";"";"
+                <div className="text-center mb-6">";"";"
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>";"";"
+                  <div className="flex items-baseline justify-center mb-2">";"";"
+                    <span className="text-4xl font-bold">{plan.price}</span>";"";"
+                    <span className="text-gray-400 ml-1">{plan.period}</span>;"";"
+                  </div>";"";"
+                  <p className="text-gray-400">{plan.description}</p>;";"
+                </div>;";"";"
+                <ul className="space-y-3 mb-8">;"";"
+                  {plan.features.map((feature, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-gray-300">";"";"
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />;
                       {feature};
                     </li>;
@@ -398,72 +398,72 @@ export function AILegalContractAnalyzer2025() {;
                   {plan.cta};
                 </Link>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* CTA Section */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* CTA Section */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">";"";"
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }};""
-          >";""
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;"
-              Ready to Transform Your Legal Practice?;""
-            </h2>";""
-            <p className="text-xl text-gray-300 mb-8">;
-              Join thousands of legal professionals already using our AI-powered;"
-              contract analysis platform.;""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <Link";""
-                to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";"
-              >;""
-                Start Your Free Trial";""
-                <ArrowRight className="ml-2 w-5 h-5" />;"
-              </Link>;""
-              <Link";""
-                to="/pricing";""
+          <motion.div;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};"";"
+          >";"";"
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;";"
+              Ready to Transform Your Legal Practice?;"";"
+            </h2>";"";"
+            <p className="text-xl text-gray-300 mb-8">;";"
+              Join thousands of legal professionals already using our AI-powered;";"
+              contract analysis platform.;"";"
+            </p>";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <Link";"";"
+                to="/contact";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";";"
+              >;"";"
+                Start Your Free Trial";"";"
+                <ArrowRight className="ml-2 w-5 h-5" />;";"
+              </Link>;"";"
+              <Link";"";"
+                to="/pricing";"";"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300";
               >;
                 View Full Pricing;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;"
-      </section>;""
-      {/* Contact Information */}";""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">";""
+            </div>;"
+          </motion.div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Contact Information */}";"";"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";"";"
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }};""
-          >";""
-            <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>";""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";""
-              <div className="flex flex-col items-center">";""
-                <Phone className="w-8 h-8 text-cyan-400 mb-4" />";""
-                <h3 className="font-semibold mb-2">Phone</h3>";""
-                <p className="text-gray-400">+1 302 464 0950</p>;""
-              </div>";""
-              <div className="flex flex-col items-center">";""
-                <Mail className="w-8 h-8 text-cyan-400 mb-4" />";""
-                <h3 className="font-semibold mb-2">Email</h3>";""
-                <p className="text-gray-400">kleber@ziontechgroup.com</p>;""
-              </div>";""
-              <div className="flex flex-col items-center">";""
-                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />";""
-                <h3 className="font-semibold mb-2">Address</h3>";""
-                <p className="text-gray-400">364 E Main St STE 1008<br / / / />Middletown DE 19709</p>;
+          <motion.div;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};"";"
+          >";"";"
+            <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>";"";"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"";"
+              <div className="flex flex-col items-center">";"";"
+                <Phone className="w-8 h-8 text-cyan-400 mb-4" />";"";"
+                <h3 className="font-semibold mb-2">Phone</h3>";"";"
+                <p className="text-gray-400">+1 302 464 0950</p>;"";"
+              </div>";"";"
+              <div className="flex flex-col items-center">";"";"
+                <Mail className="w-8 h-8 text-cyan-400 mb-4" />";"";"
+                <h3 className="font-semibold mb-2">Email</h3>";"";"
+                <p className="text-gray-400">kleber@ziontechgroup.com</p>;"";"
+              </div>";"";"
+              <div className="flex flex-col items-center">";"";"
+                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />";"";"
+                <h3 className="font-semibold mb-2">Address</h3>";"";"
+                <p className="text-gray-400">364 E Main St STE 1008<br / / / / / />Middletown DE 19709</p>;
               </div>;
             </div>;
           </motion.div>;
-        </div>;
-      </section>;
-    </div>;"
-  );""
-}";""
+        </div>;"
+      </section>;";"
+    </div>;";"
+  );"";"
+}";"";"

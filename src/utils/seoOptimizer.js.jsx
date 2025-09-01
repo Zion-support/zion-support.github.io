@@ -103,8 +103,16 @@ export const seoOptimizer = new SEOOptimizer () ;
     };
     static generateStructuredData(path) {;
         const baseData = {;
-  "@context": "https://schema.org",";"@type": "WebPage",";"name": this.generateTitle(path),";"description": this.generateDescription(path),";"url": this.generateCanonicalUrl(path),";"publisher": {;";""
-";"@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",";
+  "@context": "https://schema.org",";"
+            "@type": "WebPage",";"
+            "name": this.generateTitle(path),";"
+            "description": this.generateDescription(path),";"
+            "url": this.generateCanonicalUrl(path),";"
+            "publisher": {";"
+";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",";
 =======;
         const formattedSegment = lastSegment;
             .split('-');
@@ -125,43 +133,91 @@ export const seoOptimizer = new SEOOptimizer () ;
         return `${baseUrl}${path}`;
     };
     static generateStructuredData(path) {;"
-        const baseData = {;";""
-  "@context": "https://schema.org",";"@type": "WebPage",";"name": this.generateTitle(path),";"description": this.generateDescription(path),";"url": this.generateCanonicalUrl(path),";"publisher": {;";""
-                "@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",;""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+        const baseData = {";"
+  "@context": "https://schema.org",";"
+            "@type": "WebPage",";"
+            "name": this.generateTitle(path),";"
+            "description": this.generateDescription(path),";"
+            "url": this.generateCanonicalUrl(path),";"
+            "publisher": {";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",;"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
 };
         };
 <<<<<<< HEAD;
         // Add specific structured data based on page type';
-        if (path === '/') {;"
-            return {;";""
-                ...baseData,";"@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"address": {;";""
-";"@type": "PostalAddress",";"streetAddress": "364 E Main St STE 1008",";"addressLocality": "Middletown",";"addressRegion": "DE",";"postalCode": "19709",";"addressCountry": "US";""
-                },";""
-                "contactPoint": {;";""
-";"@type": "ContactPoint",";"telephone": "+1-302-464-0950",";"contactType": "customer service",";
+        if (path === '/') {;
+            return {;"
+";"
+                ...baseData,";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",";"
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"
+                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"
+                "address": {";"
+";"
+                    "@type": "PostalAddress",";"
+                    "streetAddress": "364 E Main St STE 1008",";"
+                    "addressLocality": "Middletown",";"
+                    "addressRegion": "DE",";"
+                    "postalCode": "19709",";"
+                    "addressCountry": "US";"
+                },"";"
+                "contactPoint": {";"
+";"
+                    "@type": "ContactPoint",";"
+                    "telephone": "+1-302-464-0950",";"
+                    "contactType": "customer service",";
 =======;
         // Add specific structured data based on page type;
-        if (path === '/') {;"
-            return {;""
-                ...baseData,";"@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"address": {;";""
-                    "@type": "PostalAddress",";"streetAddress": "364 E Main St STE 1008",";"addressLocality": "Middletown",";"addressRegion": "DE",";"postalCode": "19709",";"addressCountry": "US";""
-                },";"contactPoint": {;";""
-                    "@type": "ContactPoint",";"telephone": "+1-302-464-0950",";"contactType": "customer service",;""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";"email": "kleber@ziontechgroup.com";
+        if (path === '/') {;
+            return {;"
+                ...baseData,";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",";"
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"
+                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"
+                "address": {";"
+                    "@type": "PostalAddress",";"
+                    "streetAddress": "364 E Main St STE 1008",";"
+                    "addressLocality": "Middletown",";"
+                    "addressRegion": "DE",";"
+                    "postalCode": "19709",";"
+                    "addressCountry": "US";"
+                },";"
+                "contactPoint": {";"
+                    "@type": "ContactPoint",";"
+                    "telephone": "+1-302-464-0950",";"
+                    "contactType": "customer service",;"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+                    "email": "kleber@ziontechgroup.com";
                 };
             };
         };
         if (path.startsWith('/services/')) {;
-<<<<<<< HEAD;"
-            return {;";""
-                ...baseData,";"@type": "Service",";"serviceType": path.split('/').pop()?.replace(/-/g,),";"provider": {;";""
-";"@type": "Organization",";
-=======;"
-            return {;""
-                ...baseData,";"@type": "Service",";"serviceType": path.split('/').pop()?.replace(/-/g, ' '),";"provider": {;";""
-                    "@type": "Organization",;""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";"name": "Zion Tech Group";
+<<<<<<< HEAD;
+            return {;"
+";"
+                ...baseData,";"
+                "@type": "Service",";"
+                "serviceType": path.split('/').pop()?.replace(/-/g,),";"
+                "provider": {";"
+";"
+                    "@type": "Organization",";
+=======;
+            return {;"
+                ...baseData,";"
+                "@type": "Service",";"
+                "serviceType": path.split('/').pop()?.replace(/-/g, ' '),";"
+                "provider": {";"
+                    "@type": "Organization",;"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+                    "name": "Zion Tech Group";
                 };
             };
         };
@@ -183,16 +239,16 @@ export const seoOptimizer = new SEOOptimizer () ;
                 issue: 'missing-title',;
                 severity: 'high',;
                 suggestedFix: 'Add a descriptive title tag with relevant keywords';
-<<<<<<< HEAD;"
-            }) ;""
-        }";""
-        // Check for missing meta description'";""
+<<<<<<< HEAD;
+            }) ;"
+        }";"
+        // Check for missing meta description'";"
         if (!content.includes('name="description"')) {;
             issues.push({;
 =======;
-            });"
-        };""
-        // Check for missing meta description";""
+            });
+        };"
+        // Check for missing meta description";"
         if (!content.includes('name="description"')) {;
             issues.push({;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
@@ -200,17 +256,17 @@ export const seoOptimizer = new SEOOptimizer () ;
                 issue: 'missing-description',;
                 severity: 'high',;
                 suggestedFix: 'Add a meta description tag with compelling content';
-<<<<<<< HEAD;"
-            }) ;""
-        }";""
-        // Check for short meta description";""
+<<<<<<< HEAD;
+            }) ;"
+        }";"
+        // Check for short meta description";"
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {;
             issues.push({;
 =======;
-            });"
-        };""
-        // Check for short meta description";""
+            });
+        };"
+        // Check for short meta description";"
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {;
             issues.push({;
@@ -262,55 +318,59 @@ export const seoOptimizer = new SEOOptimizer () ;
         return issues;
     };
     static generateMetaTags(seoData) {;
-<<<<<<< HEAD;"
-`;""
-        return `";""
-    <title>${seoData.title}</title>";""
-    <meta name="description" content="${seoData.description}" / / / />'";""
-    <meta name="keywords" content="${seoData.keywords.join(',)}" / / / />";""
-    <link rel="canonical" href="${seoData.canonicalUrl}" / / / />;";""
-    <!-- Open Graph -->";""
-    <meta property="og:title" content="${seoData.title}" / / / />";""
-    <meta property="og:description" content="${seoData.description}" / / / />";""
-    <meta property="og:type" content="website" / / / />";""
-    <meta property="og:url" content="${seoData.canonicalUrl}" / / / />'";""
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;";""
-    <!-- Twitter -->";""
-    <meta name="twitter:card" content="summary_large_image" / / / />";""
-    <meta name="twitter:title" content="${seoData.title}" / / / />";""
-    <meta name="twitter:description" content="${seoData.description}" / / / />'";""
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;";""
-    <!-- Structured Data -->";""
+<<<<<<< HEAD;
+`;"
+        return `";"
+    <title>${seoData.title}</title>";"
+    <meta name="description" content="${seoData.description}" / / />'";"
+    <meta name="keywords" content="${seoData.keywords.join(',)}" / / />";"
+    <link rel="canonical" href="${seoData.canonicalUrl}" / / />;"
+    ";"
+    <!-- Open Graph -->";"
+    <meta property="og:title" content="${seoData.title}" / / />";"
+    <meta property="og:description" content="${seoData.description}" / / />";"
+    <meta property="og:type" content="website" / / />";"
+    <meta property="og:url" content="${seoData.canonicalUrl}" / / />'";"
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    ";"
+    <!-- Twitter -->";"
+    <meta name="twitter:card" content="summary_large_image" / / />";"
+    <meta name="twitter:title" content="${seoData.title}" / / />";"
+    <meta name="twitter:description" content="${seoData.description}" / / />'";"
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    ";"
+    <!-- Structured Data -->";"
     <script type="application/ld+json">;
       ${JSON.stringify(seoData.structuredData, null, 2)};
     </script>`;
-=======;"
-        return `;""
-    <title>${seoData.title}</title>";""
-    <meta name="description" content="${seoData.description}" / / / />";""
-    <meta name="keywords" content="${seoData.keywords.join(', ')}" / / / />";""
-    <link rel="canonical" href="${seoData.canonicalUrl}" / / / />;""
-    <!-- Open Graph -->";""
-    <meta property="og:title" content="${seoData.title}" / / / />";""
-    <meta property="og:description" content="${seoData.description}" / / / />";""
-    <meta property="og:type" content="website" / / / />";""
-    <meta property="og:url" content="${seoData.canonicalUrl}" / / / />";""
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;""
-    <!-- Twitter -->";""
-    <meta name="twitter:card" content="summary_large_image" / / / />";""
-    <meta name="twitter:title" content="${seoData.title}" / / / />";""
-    <meta name="twitter:description" content="${seoData.description}" / / / />";""
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;""
-    <!-- Structured Data -->";""
+=======;
+        return `;"
+    <title>${seoData.title}</title>";"
+    <meta name="description" content="${seoData.description}" / / />";"
+    <meta name="keywords" content="${seoData.keywords.join(', ')}" / / />";"
+    <link rel="canonical" href="${seoData.canonicalUrl}" / / />;"
+    <!-- Open Graph -->";"
+    <meta property="og:title" content="${seoData.title}" / / />";"
+    <meta property="og:description" content="${seoData.description}" / / />";"
+    <meta property="og:type" content="website" / / />";"
+    <meta property="og:url" content="${seoData.canonicalUrl}" / / />";"
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    <!-- Twitter -->";"
+    <meta name="twitter:card" content="summary_large_image" / / />";"
+    <meta name="twitter:title" content="${seoData.title}" / / />";"
+    <meta name="twitter:description" content="${seoData.description}" / / />";"
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    <!-- Structured Data -->";"
     <script type="application/ld+json">;
       ${JSON.stringify(seoData.structuredData, null, 2)};
     </script>;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
     `;
     };
-};"
-export const seoOptimizer = new SEOOptimizer();""
-<<<<<<< HEAD";""
+};
+export const seoOptimizer = new SEOOptimizer();"
+<<<<<<< HEAD";"
 '"`;
-=======;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;";""
+=======;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+";"

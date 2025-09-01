@@ -135,5 +135,6 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
   {;
             opacity: intensity,;
   filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none';
-}}/>)};"
-export default FuturisticAnimatedBackground2029;";""
+}}/>)};
+export default FuturisticAnimatedBackground2029;"
+";"

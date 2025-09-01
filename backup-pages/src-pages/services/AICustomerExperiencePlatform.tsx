@@ -1,108 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Users,
-  Brain,
-  MessageSquare,
-  Heart,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Mail,
-  Phone,
-  Globe,
-========
-<<<<<<< HEAD
-import { Users, 
-  Brain, 
-  MessageSquare, 
-  Heart, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
->>>>>>>> main:backup-pages/src-pages/services/AICustomerExperiencePlatform.tsx
-  ExternalLink,
-  Zap,
-  BarChart3,
-  Target,
-  Cpu,
-  Smartphone,
-  Monitor,
-  Activity,
-  Star,
-  Award,
-  Clock,
-  Target,
-  MessageCircle,
-  Bot,
-  Headphones'
- } from 'lucide-react';
-;
-export { function };
-export default function AICustomerExperiencePlatform(...args[]):  {
+<=
 
-  
-    'Intelligent chatbot with natural language processing',;
-    'Personalized recommendation engine',;
-    'Omnichannel customer interaction tracking',;
-    'Predictive customer behavior analytics',;
-    'Automated customer feedback analysis',;
-    'Integration with major CRM and marketing platforms';
-  ]},;
-    {
-
-      title: 'AI Platform Implementation',
-      description: 'Full implementation of AI-powered customer experience platform',
-      price: 'From $12,000',
-      features['Platform setup',AI model training',Integration configuration',Team training']},;
-    { ;
-      name: 'Enterprise', ;
-      price: '$2,499/mo', ;
-      details: ['Unlimited interactions',Unlimited team members',Custom AI models',24/7 dedicated support'] },;
-  ];
-
-  
-    'E-commerce customer experience optimization',;
-    'SaaS product user engagement tracking',;
-    'Financial services customer journey mapping',;
-    'Healthcare patient experience improvement',;
-    'Retail customer satisfaction enhancement',;
-    'B2B customer relationship management';
-  ];
-
-  
-    'Increase customer satisfaction scores by 25-40%',;
-    'Improve customer retention rates by 30-50%',;
-    'Reduce customer service costs by 35-45%',;
-    'Boost customer lifetime value by 20-35%',;
-    'Enhance brand loyalty and advocacy',;
-    'Gain actionable insights for product development';
-  ];
-
-  
-    'Customer Satisfaction Score (CSAT),;
-    'Net Promoter Score (NPS),;
-    'Customer Effort Score (CES),;
-    'Customer Lifetime Value (CLV),;
-    'Customer Churn Rate',;
-    'First Response Time';
-  ];
-
-  return ("
-    <div className = "min-h-screen bg-white">"
-      <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">"
-        <div className="max-w-5xl mx-auto px-6">"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <Heart className="w-4 h-4 mr-2"  /> AI-Powered Customer Experience
-          </div>"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Customer Experience Platform</h1>"
-          <p className="text-rose-100 text-xl">Revolutionize your customer experience with AI-powered insights, personalization, and automation that delights customers and drives business growth.</p>
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </div>
       </section>
 "
@@ -167,16 +64,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Transform CX
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-========
+<=
               <a "
                 href="https://ziontechgroup.com/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
@@ -184,8 +72,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 Transform CX"
                 <ArrowRight className="w-5 h-5"  />              </a>
               <a "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerExperiencePlatform.tsx
-                href="tel:+13024640950"
+>                href="tel:+13024640950"
                 className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >"
                 <Phone className="w-5 h-5"  />                CX Consultation

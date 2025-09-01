@@ -1,49 +1,59 @@
-/** @type {import('next').NextConfig} */;
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // Skip ESLint during production builds to avoid blocking on config issues
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // Skip type checking during build to allow app to compile while we fix TS
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
   
-  // Image optimization
-  images: {
-    domains: ['ziontechgroup.com'],
-    unoptimized: true
-  },
-
-  // Compiler optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
-  },
-
   // Performance optimizations
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react',framer-motion']
+    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
   },
-
-  // Restrict Next.js to only pick up .page.tsx files in /pages to avoid legacy conflicts
-  pageExtensions: ['p.tsx', 'p.ts', 'api.ts'],
-
-  // Bundle analyzer (optional)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: config => {
+  
+  // Image optimization
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Bundle analyzer
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
       config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
-          enabled: true
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
         })
       );
-      return config;
-    },
-  }),
+    }
+    return config;
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

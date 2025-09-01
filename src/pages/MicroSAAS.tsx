@@ -38,38 +38,41 @@ export default function MicroSaaS() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-futuristic">;""
-      <SEO ";""
-        title="Micro SAAS - Zion Tech Group";""
-        description="Lightweight SaaS tools: AI email, SEO optimizer, internal linking, reviews, smart surveys.";""
-      />";""
-      <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">";""
-        <div className="max-w-6xl mx-auto">";""
-          <div className="text-center">";""
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Micro SAAS Suite</h1>";""
+    <div className="min-h-screen bg-futuristic">;"
+      <SEO ";"
+        title="Micro SAAS - Zion Tech Group";"
+        description="Lightweight SaaS tools: AI email, SEO optimizer, internal linking, reviews, smart surveys.";"
+      />";"
+      <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">";"
+        <div className="max-w-6xl mx-auto">";"
+          <div className="text-center">";"
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Micro SAAS Suite</h1>";"
             <p className="mt-4 text-slate-300 max-w-3xl mx-auto">;
               Quick-to-deploy tools that pay for themselves in days. Cancel anytime.;
-            </p>;"
-          </div>;";""
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">;""
-            {products.map((p) => (";""
-              <div key={p.name} className="card-futuristic">";""
-                <h3 className="text-white font-semibold">{p.name}</h3>";""
-                <div className="mt-1 text-slate-400">{p.price}</div>";""
+            </p>;
+          </div>;"
+";"
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">;"
+            {products.map((p) => (";"
+              <div key={p.name} className="card-futuristic">";"
+                <h3 className="text-white font-semibold">{p.name}</h3>";"
+                <div className="mt-1 text-slate-400">{p.price}</div>";"
                 <ul className="mt-4 space-y-2 text-slate-300">;
                   {p.features.map((f) => (;
-                    <li key={f}>• {f}</li>;"
-                  ))};""
-                </ul>";""
+                    <li key={f}>• {f}</li>;
+                  ))};"
+                </ul>";"
                 <Link to={p.link} className="mt-6 inline-flex btn-futuristic">Start</Link>;
               </div>;
-            ))};"
-          </div>;";""
-          <div className="mt-12 text-center">";""
+            ))};
+          </div>;"
+";"
+          <div className="mt-12 text-center">";"
             <div className="text-slate-400 text-xs">Published at https://ziontechgroup.com</div>;
           </div>;
         </div>;
       </section>;
     </div>;
-  );"
-};";""
+  );
+};"
+";"

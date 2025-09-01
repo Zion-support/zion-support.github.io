@@ -423,7 +423,7 @@ export const useBlockchainWeb3 = (initialConfig) => {;
         createDeFiPosition,;
         closeDeFiPosition,;
         getTransactionStatus,;
-        estimateGas,;
-        getBlockNumber,;
-        configureWeb3;"
-    }};";""
+        estimateGas,;"
+        getBlockNumber,;";"
+        configureWeb3;";"
+    }};";"";"

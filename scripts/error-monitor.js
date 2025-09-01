@@ -1,103 +1,116 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync, spawn } from 'child_process';
+import { fileURLToPath } from 'url';
 
-const MONITOR_INTERVAL = parseInt(process.env.MONITOR_INTERVAL) || 30000; // 30 seconds
-const LOG_FILE = path.join(__dirname, '../logs/error-monitor.log');
-const ERROR_REPORT_FILE = path.join(__dirname, '../error-reports/current-errors.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class ErrorMonitor {
   constructor() {
-    this.errors = {
-      eslint: [],
-      typescript: [],
-      build: [],
-      runtime: []
-    };
-    this.lastCheck = new Date();
-    this.checkCount = 0;
+    this.logDir = path.join(__dirname, '..', 'logs');
+    this.errorReportDir = path.join(__dirname, '..', 'error-reports');
+    this.maxLogSize = 10 * 1024 * 1024; // 10MB
+    this.errorThreshold = 5; // Number of errors before triggering fixes
+    this.errors = [];
+    
+    this.ensureDirectories();
   }
 
-  log(message, level = 'INFO') {
+  ensureDirectories() {
+    [this.logDir, this.errorReportDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  log(level, message, error = null) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    const logEntry = {
+      timestamp,
+      level,
+      message,
+      error: error ? {
+        message: error.message,
+        stack: error.stack
+      } : null
+    };
+
+    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     
-    console.log(logMessage);
-    
-    // Append to log file
+    if (error) {
+      console.error(error);
+    }
+
+    // Write to log file
+    const logFile = path.join(this.logDir, 'error-monitor.log');
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
+  }
+
+  async checkTypeScriptErrors() {
     try {
-      fs.appendFileSync(LOG_FILE, logMessage + '\n');
+      this.log('info', 'Checking TypeScript errors...');
+      
+      const result = execSync('npm run type-check', { 
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf8',
+        timeout: 60000
+      });
+      
+      this.log('info', 'TypeScript check passed');
+      return { success: true, errors: [] };
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      const errorOutput = error.stdout || error.message;
+      const errors = this.parseTypeScriptErrors(errorOutput);
+      
+      this.log('error', `TypeScript check failed with ${errors.length} errors`);
+      return { success: false, errors };
     }
   }
 
   async checkESLintErrors() {
     try {
-      execSync('npm run lint', { 
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
+      this.log('info', 'Checking ESLint errors...');
+      
+      const result = execSync('npm run lint', { 
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf8',
+        timeout: 60000
       });
-      this.errors.eslint = [];
+      
+      this.log('info', 'ESLint check passed');
       return { success: true, errors: [] };
     } catch (error) {
-      const errorOutput = error.stdout || error.stderr || error.message;
-      this.errors.eslint = this.parseESLintErrors(errorOutput);
-      return { success: false, errors: this.errors.eslint };
-    }
-  }
-
-  async checkTypeScriptErrors() {
-    try {
-      execSync('npm run type-check', { 
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.errors.typescript = [];
-      return { success: true, errors: [] };
-    } catch (error) {
-      const errorOutput = error.stdout || error.stderr || error.message;
-      this.errors.typescript = this.parseTypeScriptErrors(errorOutput);
-      return { success: false, errors: this.errors.typescript };
+      const errorOutput = error.stdout || error.message;
+      const errors = this.parseESLintErrors(errorOutput);
+      
+      this.log('error', `ESLint check failed with ${errors.length} errors`);
+      return { success: false, errors };
     }
   }
 
   async checkBuildErrors() {
     try {
-      execSync('npm run build', { 
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
+      this.log('info', 'Checking build errors...');
+      
+      const result = execSync('npm run build', { 
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf8',
+        timeout: 300000 // 5 minutes
       });
-      this.errors.build = [];
+      
+      this.log('info', 'Build check passed');
       return { success: true, errors: [] };
     } catch (error) {
-      const errorOutput = error.stdout || error.stderr || error.message;
-      this.errors.build = this.parseBuildErrors(errorOutput);
-      return { success: false, errors: this.errors.build };
+      const errorOutput = error.stdout || error.message;
+      const errors = this.parseBuildErrors(errorOutput);
+      
+      this.log('error', `Build check failed with ${errors.length} errors`);
+      return { success: false, errors };
     }
-  }
-
-  parseESLintErrors(output) {
-    const errors = [];
-    const lines = output.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('error') || line.includes('Error')) {
-        errors.push({
-          type: 'eslint',
-          message: line.trim(),
-          timestamp: new Date().toISOString(),
-          severity: line.includes('error') ? 'error' : 'warning'
-        });
-      }
-    }
-    
-    return errors;
   }
 
   parseTypeScriptErrors(output) {
@@ -105,12 +118,35 @@ class ErrorMonitor {
     const lines = output.split('\n');
     
     for (const line of lines) {
-      if (line.includes('error TS') || line.includes('Error:')) {
+      if (line.includes(': error TS')) {
+        const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
+        if (match) {
+          errors.push({
+            type: 'typescript',
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            code: match[4],
+            message: match[5],
+            raw: line
+          });
+        }
+      }
+    }
+    
+    return errors;
+  }
+
+  parseESLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
         errors.push({
-          type: 'typescript',
+          type: 'eslint',
           message: line.trim(),
-          timestamp: new Date().toISOString(),
-          severity: 'error'
+          raw: line
         });
       }
     }
@@ -123,12 +159,11 @@ class ErrorMonitor {
     const lines = output.split('\n');
     
     for (const line of lines) {
-      if (line.includes('error') || line.includes('Error') || line.includes('failed')) {
+      if (line.includes('Error:') || line.includes('ERROR')) {
         errors.push({
           type: 'build',
           message: line.trim(),
-          timestamp: new Date().toISOString(),
-          severity: 'error'
+          raw: line
         });
       }
     }
@@ -136,89 +171,118 @@ class ErrorMonitor {
     return errors;
   }
 
-  async saveErrorReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      checkCount: this.checkCount,
-      lastCheck: this.lastCheck.toISOString(),
-      summary: {
-        eslint: this.errors.eslint.length,
-        typescript: this.errors.typescript.length,
-        build: this.errors.build.length,
-        runtime: this.errors.runtime.length,
-        total: this.errors.eslint.length + this.errors.typescript.length + 
-               this.errors.build.length + this.errors.runtime.length
-      },
-      errors: this.errors
-    };
-
+  async triggerAutoFixer(errors) {
     try {
-      // Ensure directory exists
-      const dir = path.dirname(ERROR_REPORT_FILE);
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+      this.log('info', `Triggering auto-fixer for ${errors.length} errors`);
+      
+      // Write errors to a temporary file for the auto-fixer
+      const errorFile = path.join(this.errorReportDir, `errors-${Date.now()}.json`);
+      fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
+      
+      // Trigger auto-fixer
+      const autoFixerScript = path.join(__dirname, 'auto-fixer.js');
+      spawn('node', [autoFixerScript, errorFile], {
+        detached: true,
+        stdio: 'ignore'
+      }).unref();
+      
+      this.log('info', 'Auto-fixer triggered successfully');
+    } catch (error) {
+      this.log('error', 'Failed to trigger auto-fixer', error);
+    }
+  }
+
+  async generateReport() {
+    const timestamp = new Date().toISOString();
+    const reportFile = path.join(this.errorReportDir, `error-monitor-report-${Date.now()}.json`);
+    
+    const report = {
+      timestamp,
+      summary: {
+        totalErrors: this.errors.length,
+        typescriptErrors: this.errors.filter(e => e.type === 'typescript').length,
+        eslintErrors: this.errors.filter(e => e.type === 'eslint').length,
+        buildErrors: this.errors.filter(e => e.type === 'build').length
+      },
+      errors: this.errors,
+      recommendations: this.generateRecommendations()
+    };
+    
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log('info', `Error report generated: ${reportFile}`);
+    
+    return report;
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.errors.some(e => e.type === 'typescript')) {
+      recommendations.push('Run TypeScript auto-fixer to resolve type errors');
+    }
+    
+    if (this.errors.some(e => e.type === 'eslint')) {
+      recommendations.push('Run ESLint auto-fix to resolve code quality issues');
+    }
+    
+    if (this.errors.some(e => e.type === 'build')) {
+      recommendations.push('Check dependencies and build configuration');
+    }
+    
+    return recommendations;
+  }
+
+  async run() {
+    try {
+      this.log('info', 'Starting error monitoring cycle...');
+      
+      // Check for different types of errors
+      const checks = await Promise.allSettled([
+        this.checkTypeScriptErrors(),
+        this.checkESLintErrors(),
+        this.checkBuildErrors()
+      ]);
+      
+      this.errors = [];
+      
+      // Collect all errors
+      checks.forEach((check, index) => {
+        if (check.status === 'fulfilled' && !check.value.success) {
+          this.errors.push(...check.value.errors);
+        }
+      });
+      
+      // Generate report
+      const report = await this.generateReport();
+      
+      // Trigger auto-fixer if error threshold is exceeded
+      if (this.errors.length >= this.errorThreshold) {
+        await this.triggerAutoFixer(this.errors);
       }
       
-      fs.writeFileSync(ERROR_REPORT_FILE, JSON.stringify(report, null, 2));
-      this.log(`Error report saved: ${report.summary.total} total errors`);
+      this.log('info', `Error monitoring cycle completed. Found ${this.errors.length} errors.`);
+      
     } catch (error) {
-      this.log(`Failed to save error report: ${error.message}`, 'ERROR');
+      this.log('error', 'Error monitoring cycle failed', error);
     }
-  }
-
-  async runHealthCheck() {
-    this.checkCount++;
-    this.lastCheck = new Date();
-    
-    this.log(`Running health check #${this.checkCount}`);
-    
-    const checks = [
-      { name: 'ESLint', fn: () => this.checkESLintErrors() },
-      { name: 'TypeScript', fn: () => this.checkTypeScriptErrors() },
-      { name: 'Build', fn: () => this.checkBuildErrors() }
-    ];
-
-    for (const check of checks) {
-      try {
-        const result = await check.fn();
-        if (result.success) {
-          this.log(`✅ ${check.name}: No errors`);
-        } else {
-          this.log(`❌ ${check.name}: ${result.errors.length} errors found`, 'WARNING');
-        }
-      } catch (error) {
-        this.log(`💥 ${check.name}: Check failed - ${error.message}`, 'ERROR');
-      }
-    }
-
-    await this.saveErrorReport();
-  }
-
-  start() {
-    this.log('🚀 Error Monitor started');
-    this.log(`Monitor interval: ${MONITOR_INTERVAL}ms`);
-    
-    // Run initial check
-    this.runHealthCheck();
-    
-    // Set up periodic checks
-    setInterval(() => {
-      this.runHealthCheck();
-    }, MONITOR_INTERVAL);
   }
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('\n🛑 Error Monitor shutting down...');
-  process.exit(0);
-});
+// Run if called directly
+const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+if (isMainModule) {
+  const monitor = new ErrorMonitor();
+  
+  // Run once immediately
+  monitor.run().then(() => {
+    // Set up periodic monitoring (every 10 minutes)
+    setInterval(() => {
+      monitor.run();
+    }, 10 * 60 * 1000);
+  }).catch(error => {
+    console.error('Failed to start error monitor:', error);
+    process.exit(1);
+  });
+}
 
-process.on('SIGTERM', () => {
-  console.log('\n🛑 Error Monitor terminated...');
-  process.exit(0);
-});
-
-// Start the monitor
-const monitor = new ErrorMonitor();
-monitor.start();
+export default ErrorMonitor;

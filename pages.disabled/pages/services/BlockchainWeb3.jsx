@@ -1,184 +1,318 @@
 import React from 'react';
-import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {
-    const blockchainServices = [
-        {
-
+import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {}
+    const blockchainServices = []
+        {}
             icon: LinkIcon,
-            title: "Smart Contract Development","
-            description: "Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions","
+            title: "Smart Contract Development",""
+            description: "Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions",""
             features["Solidity & Rust development", "Security auditing", "Gas optimization", "Multi-chain deployment"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-
-            icon: Shield,"
-            title: "DeFi Protocol Development","
-            description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions","
+"
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            icon: Shield,""
+            title: "DeFi Protocol Development",""
+            description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions",""
             features["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-
-            icon: Users,"
-            title: "DAO & Governance Systems","
-            description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks","
+"
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            icon: Users,""
+            title: "DAO & Governance Systems",""
+            description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks",""
             features["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-
-            icon: Database,"
-            title: "NFT Marketplace Development","
-            description: "Complete NFT ecosystems with minting, trading, and marketplace functionality","
+"
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            icon: Database,""
+            title: "NFT Marketplace Development",""
+            description: "Complete NFT ecosystems with minting, trading, and marketplace functionality",""
             features["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-
-            icon: Network,"
-            title: "Cross-Chain Solutions","
-            description: "Interoperability solutions connecting different blockchain networks seamlessly","
+"
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            icon: Network,""
+            title: "Cross-Chain Solutions",""
+            description: "Interoperability solutions connecting different blockchain networks seamlessly",""
             features["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-
-            icon: Lock,"
-            title: "Enterprise Blockchain","
-            description: "Private and consortium blockchain solutions for enterprise applications","
+"
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            icon: Lock,""
+            title: "Enterprise Blockchain",""
+            description: "Private and consortium blockchain solutions for enterprise applications",""
             features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"];
         }
     ];
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
     const web3Technologies = [
         {
 "
-            name: "Ethereum","
-            description: "Smart contracts and DeFi protocols","
+""
+            name: "Ethereum",""
+            description: "Smart contracts and DeFi protocols",""
             icon: "ETH"
         },
         {
 "
-            name: "Polygon","
-            description: "Scalable Layer 2 solutions","
+""
+            name: "Polygon",""
+            description: "Scalable Layer 2 solutions",""
             icon: "POL"
         },
         {
 "
-            name: "Solana","
-            description: "High-performance blockchain","
+""
+            name: "Solana",""
+            description: "High-performance blockchain",""
             icon: "SOL"
         },
         {
 "
-            name: "Polkadot","
-            description: "Multi-chain interoperability","
+""
+            name: "Polkadot",""
+            description: "Multi-chain interoperability",""
             icon: "DOT"
         },
         {
 "
-            name: "Cosmos","
-            description: "Internet of blockchains","
+""
+            name: "Cosmos",""
+            description: "Internet of blockchains",""
             icon: "ATOM"
         },
         {
 "
-            name: "Avalanche","
-            description: "Fast consensus protocol","
+""
+            name: "Avalanche",""
+            description: "Fast consensus protocol",""
             icon: "AVAX"
 
     ];
     const useCases = [
         {
 "
-            title: "Financial Services","
+=======
+    const web3Technologies = []
+        {}
+""
+            name: "Ethereum",""
+            description: "Smart contracts and DeFi protocols",""
+            icon: "ETH""
+        },
+        {}
+""
+            name: "Polygon",""
+            description: "Scalable Layer 2 solutions",""
+            icon: "POL""
+        },
+        {}
+""
+            name: "Solana",""
+            description: "High-performance blockchain",""
+            icon: "SOL""
+        },
+        {}
+""
+            name: "Polkadot",""
+            description: "Multi-chain interoperability",""
+            icon: "DOT""
+        },
+        {}
+""
+            name: "Cosmos",""
+            description: "Internet of blockchains",""
+            icon: "ATOM""
+        },
+        {}
+""
+            name: "Avalanche",""
+            description: "Fast consensus protocol",""
+            icon: "AVAX""
+    ];
+    const useCases = []
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+            title: "Financial Services",""
             description: "DeFi protocols, payment systems, and asset tokenization",
-            icon: TrendingUp
+            icon: TrendingUp;
         },
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
 "
-            title: "Supply Chain","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+            title: "Supply Chain",""
             description: "Transparent tracking and verification of goods and materials",
-            icon: Network
+            icon: Network;
         },
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
 "
-            title: "Digital Identity","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+            title: "Digital Identity",""
             description: "Self-sovereign identity and verifiable credentials",
-            icon: Shield
+            icon: Shield;
         },
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
 "
-            title: "Gaming & Metaverse","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+            title: "Gaming & Metaverse",""
             description: "NFT gaming, virtual assets, and metaverse infrastructure",
-            icon: Users
+            icon: Users;
         },
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
 "
-            title: "Healthcare","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+            title: "Healthcare",""
             description: "Patient data management and pharmaceutical supply chain",
-            icon: Eye
+            icon: Eye;
         },
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
         {
 "
-            title: "Real Estate","
+""
+            title: "Real Estate",""
             description: "Property tokenization and fractional ownership",
             icon: Target
 
-    ];
-    const benefits = ["
-        "Transparent and immutable record-keeping","
-        "Reduced intermediaries and costs","
-        "Enhanced security and privacy","
-        "Programmable business logic","
-        "Global accessibility and inclusivity","
-        "Real-time settlement and automation"
     ];"
+=======
+        {}
+""
+            title: "Real Estate",""
+            description: "Property tokenization and fractional ownership",
+            icon: Target;
+    ];
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+    const benefits = [""
+        "Transparent and immutable record-keeping",""
+        "Reduced intermediaries and costs",""
+        "Enhanced security and privacy",""
+        "Programmable business logic",""
+        "Global accessibility and inclusivity",""
+        "Real-time settlement and automation""
+    ];""
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+=======
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}"
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <div className="mb-8">"
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* Hero Section */}""
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
+        <div className="max-w-7xl mx-auto text-center">""
+          <div className="mb-8">""
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">""
               <LinkIcon className="w-4 h-4 mr-2"/>
-              Blockchain & Web3
-            </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Building the Future of"
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Decentralized Technology</span>
-            </h1>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+              Blockchain & Web3"
+            </div>""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
+              Building the Future of""
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Decentralized Technology</span>"
+            </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We develop cutting-edge blockchain solutions and Web3 applications that enable
-              trustless, transparent, and efficient digital ecosystems for the future.
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              trustless, transparent, and efficient digital ecosystems for the future."
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Explore Services
-              </a>"
+                Explore Services"
+=======
+              Blockchain & Web3;
+            </div>""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Building the Future of""
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Decentralized Technology</span>
+            </h1>""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              We develop cutting-edge blockchain solutions and Web3 applications that enable;
+              trustless, transparent, and efficient digital ecosystems for the future.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Explore Services;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+              </a>""
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Get Started
+                Get Started;
               </a>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+"
+=======
 
-      {/* Blockchain Services Grid */}"
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* Blockchain Services Grid */}""
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Blockchain & Web3 Services
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+              Our Blockchain & Web3 Services"
+=======
+              Our Blockchain & Web3 Services;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions covering every aspect of blockchain development
+              Comprehensive solutions covering every aspect of blockchain development;
               and Web3 application creation.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">"
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">""
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+                  <service.icon className="w-8 h-8 text-white"/>"
+=======
                   <service.icon className="w-8 h-8 text-white"/>
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
-                <p className="text-gray-300 mb-4">{service.description}</p>"
-                <ul className="space-y-2">"
-                  {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
+                <p className="text-gray-300 mb-4">{service.description}</p>""
+                <ul className="space-y-2">""
+                  {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
                     </li>))}
@@ -187,84 +321,141 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+"
+=======
 
-      {/* Web3 Technologies */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* Web3 Technologies */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Supported Blockchain Technologies
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+              Supported Blockchain Technologies"
+=======
+              Supported Blockchain Technologies;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with leading blockchain platforms and protocols to deliver
+              We work with leading blockchain platforms and protocols to deliver;
               the best solutions for your specific needs.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">"
-            {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""
+            {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+                  {tech.icon}"
+=======
                   {tech.icon}
-                </div>"
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+                </div>""
+                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>""
                 <p className="text-sm text-gray-300">{tech.description}</p>
               </div>))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+"
+=======
 
-      {/* Use Cases */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* Use Cases */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Blockchain Use Cases
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+              Blockchain Use Cases"
+=======
+              Blockchain Use Cases;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how blockchain technology can transform your industry
+              Discover how blockchain technology can transform your industry;
               and create new opportunities for innovation.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">"
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+                  <useCase.icon className="w-8 h-8 text-white"/>"
+=======
                   <useCase.icon className="w-8 h-8 text-white"/>
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>""
                 <p className="text-gray-300">{useCase.description}</p>
               </div>))}
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+"
+      {/* Benefits Section */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
+            <div>""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Blockchain?
-              </h2>"
+                Why Choose Blockchain?"
+              </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Blockchain technology offers unprecedented opportunities to create
+                trust, transparency, and efficiency in digital systems."
+=======
+
+      {/* Benefits Section */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Blockchain?
+              </h2>""
+              <p className="text-lg text-gray-300 mb-6">
+                Blockchain technology offers unprecedented opportunities to create;
                 trust, transparency, and efficiency in digital systems.
-              </p>"
-              <ul className="space-y-3">"
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+              </p>""
+              <ul className="space-y-3">""
+                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+              </ul>"
+=======
               </ul>
-            </div>"
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">"
-              <div className="text-center">"
-                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>"
-                <p className="text-gray-300 mb-6">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            </div>""
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">""
+              <div className="text-center">""
+                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>""
+                <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>""
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+                <p className="text-gray-300 mb-6">'
                   We're at the forefront of the Web3 revolution, building
+                  decentralized applications that empower users and organizations."
+=======
+                <p className="text-gray-300 mb-6">
+                  We're at the forefront of the Web3 revolution, building;
                   decentralized applications that empower users and organizations.
-                </p>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+                </p>""
                 <div className="text-sm text-gray-400">
                   <p>• Decentralized applications</p>
                   <p>• Smart contract automation</p>
@@ -275,72 +466,130 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </div>
         </div>
       </section>
-
-      {/* Development Process */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our Development Process
-          </h2>"
-          <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to building secure, scalable, and user-friendly
-            blockchain applications.
-          </p>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
 "
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">"
-            <div className="text-center">"
+=======
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* Development Process */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+        <div className="max-w-4xl mx-auto text-center">""
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+            Our Development Process"
+=======
+            Our Development Process;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+          </h2>""
+          <p className="text-xl text-gray-300 mb-8">
+            A systematic approach to building secure, scalable, and user-friendly;
+            blockchain applications.
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+          </p>"
+=======
+          </p>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">""
+            <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                1
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>"
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+                1"
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>""
+              <p className="text-gray-300">Requirements analysis and blockchain selection</p>"
+            </div>""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
+                2"
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>""
+              <p className="text-gray-300">Architecture and smart contract design</p>"
+            </div>""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
+                3"
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>""
+              <p className="text-gray-300">Smart contract and frontend development</p>"
+            </div>""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
+                4"
+=======
+                1;
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>""
               <p className="text-gray-300">Requirements analysis and blockchain selection</p>
-            </div>"
-            <div className="text-center">"
+            </div>""
+            <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                2
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>"
+                2;
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>""
               <p className="text-gray-300">Architecture and smart contract design</p>
-            </div>"
-            <div className="text-center">"
+            </div>""
+            <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                3
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>"
+                3;
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>""
               <p className="text-gray-300">Smart contract and frontend development</p>
-            </div>"
-            <div className="text-center">"
+            </div>""
+            <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                4
-              </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>"
+                4;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>""
               <p className="text-gray-300">Testing, auditing, and mainnet deployment</p>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+"
+=======
 
-      {/* CTA Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
-        <div className="max-w-4xl mx-auto text-center">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+      {/* CTA Section */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build on the Blockchain?
-          </h2>"
-          <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+            Ready to Build on the Blockchain?"
+          </h2>""
+          <p className="text-xl text-gray-300 mb-8">'
             Let's discuss how blockchain technology can transform your business
-            and create new opportunities for growth and innovation.
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            and create new opportunities for growth and innovation."
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Project
-            </a>"
+              Start Your Project"
+=======
+            Ready to Build on the Blockchain?
+          </h2>""
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how blockchain technology can transform your business;
+            and create new opportunities for growth and innovation.
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Start Your Project;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx
+            </a>""
             <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View Solutions
+              View Solutions;
             </a>
           </div>
         </div>
       </section>
     </div>)};
 export { BlockchainWeb3 };
+<<<<<<< HEAD:pages.disabled/pages/services/BlockchainWeb3.jsx
+export default BlockchainWeb3;'"
+}}}}'"'"
+=======
 export default BlockchainWeb3;
-}}}}'"
+}}}}'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/BlockchainWeb3.jsx

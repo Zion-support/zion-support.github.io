@@ -18,7 +18,7 @@ export function Switch(...args: any[]): any {;
 ;
   return (;
     <button;
-      type = "button";""
+      type = "button";"
       role="switch";
       aria-checked={checked};
       aria-label={ariaLabel};
@@ -45,6 +45,6 @@ export function Switch(...args: any[]): any {;
 ;
 };
       />;
-    </button>;"
-  );""
-}}}";""
+    </button>;
+  );"
+}}}";"

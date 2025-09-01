@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-import { Bot, 
 
-
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  ArrowRight, 
-  Cpu, 
-  Network,
-  Settings,
-  BarChart3,
-  Clock,
-  CheckCircle,
-  Play,
-  Download,
-  BookOpen,
-  MessageSquare,
-  Workflow,
-  Target,
-  Database,
-  Rocket,
-  Star'
-  } from 'lucide-react.ts';
-
-const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
-
-  
-    };
-=======
   ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ]};
   ];
 

@@ -65,8 +65,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
   }, []);
 ;
   const getMetricIcon = useCallback((score: number) => {;
-    if (score >= 90) return <CheckCircle className="w-4 h-4" />;";""
-    if (score >= 50) return <AlertTriangle className="w-4 h-4" />;";""
+    if (score >= 90) return <CheckCircle className="w-4 h-4" />;";"";"
+    if (score >= 50) return <AlertTriangle className="w-4 h-4" />;";"";"
     return <AlertTriangle className="w-4 h-4" />;
   }, []);
 ;
@@ -142,55 +142,55 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
 ;
   if (!isVisible) return null;
 ;
-  return (;
-    <motion.div;
-      initial={{ opacity: 0, y: -20 }};"
-      animate={{ opacity: 1, y: 0 }};""
-      exit={{ opacity: 0, y: -20 }}";""
-      className="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm";""
-    >";""
-      <div className="flex items-center justify-between mb-3">";""
-        <div className="flex items-center gap-2">";""
-          <Activity className="w-5 h-5 text-blue-600" />";""
-          <h3 className="font-semibold text-gray-900">Performance</h3>;
-        </div>;"
-        <button;""
-          onClick={() => setIsExpanded(!isExpanded)}";""
+  return (;"
+    <motion.div;";"
+      initial={{ opacity: 0, y: -20 }};";"
+      animate={{ opacity: 1, y: 0 }};"";"
+      exit={{ opacity: 0, y: -20 }}";"";"
+      className="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm";"";"
+    >";"";"
+      <div className="flex items-center justify-between mb-3">";"";"
+        <div className="flex items-center gap-2">";"";"
+          <Activity className="w-5 h-5 text-blue-600" />";"";"
+          <h3 className="font-semibold text-gray-900">Performance</h3>;";"
+        </div>;";"
+        <button;"";"
+          onClick={() => setIsExpanded(!isExpanded)}";"";"
           className="text-gray-500 hover:text-gray-700 transition-colors";
-        >;
-          {isExpanded ? '−' : '+'};
-        </button>;"
-      </div>;";""
-      <div className="space-y-2">";""
-        <div className="flex items-center justify-between">";""
-          <span className="text-sm text-gray-600">FCP</span>";""
+        >;"
+          {isExpanded ? '−' : '+'};";"
+        </button>;";"
+      </div>;";"";"
+      <div className="space-y-2">";"";"
+        <div className="flex items-center justify-between">";"";"
+          <span className="text-sm text-gray-600">FCP</span>";"";"
           <div className="flex items-center gap-2">;
             {getMetricIcon(getPerformanceScore('fcp'))};
             <span className={`text-sm font-medium ${getMetricColor(getPerformanceScore('fcp'))}`}>;
-              {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : '—'};
-            </span>;
-          </div>;"
-        </div>;";""
-        <div className="flex items-center justify-between">";""
-          <span className="text-sm text-gray-600">LCP</span>";""
+              {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : '—'};"
+            </span>;";"
+          </div>;";"
+        </div>;";"";"
+        <div className="flex items-center justify-between">";"";"
+          <span className="text-sm text-gray-600">LCP</span>";"";"
           <div className="flex items-center gap-2">;
             {getMetricIcon(getPerformanceScore('lcp'))};
             <span className={`text-sm font-medium ${getMetricColor(getPerformanceScore('lcp'))}`}>;
-              {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : '—'};
-            </span>;
-          </div>;"
-        </div>;";""
-        <div className="flex items-center justify-between">";""
-          <span className="text-sm text-gray-600">FID</span>";""
+              {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : '—'};"
+            </span>;";"
+          </div>;";"
+        </div>;";"";"
+        <div className="flex items-center justify-between">";"";"
+          <span className="text-sm text-gray-600">FID</span>";"";"
           <div className="flex items-center gap-2">;
             {getMetricIcon(getPerformanceScore('fid'))};
             <span className={`text-sm font-medium ${getMetricColor(getPerformanceScore('fid'))}`}>;
-              {metrics.fid ? `${Math.round(metrics.fid)}ms` : '—'};
-            </span>;
-          </div>;"
-        </div>;";""
-        <div className="flex items-center justify-between">";""
-          <span className="text-sm text-gray-600">CLS</span>";""
+              {metrics.fid ? `${Math.round(metrics.fid)}ms` : '—'};"
+            </span>;";"
+          </div>;";"
+        </div>;";"";"
+        <div className="flex items-center justify-between">";"";"
+          <span className="text-sm text-gray-600">CLS</span>";"";"
           <div className="flex items-center gap-2">;
             {getMetricIcon(getPerformanceScore('cls'))};
             <span className={`text-sm font-medium ${getMetricColor(getPerformanceScore('cls'))}`}>;
@@ -200,42 +200,42 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
         </div>;
       </div>;
       <AnimatePresence>;
-        {isExpanded && (;
-          <motion.div;
-            initial={{ height: 0, opacity: 0 }};"
-            animate={{ height: 'auto', opacity: 1 }};""
-            exit={{ height: 0, opacity: 0 }}";""
-            className="mt-3 pt-3 border-t border-gray-200";""
-          >";""
-            <div className="space-y-2 text-xs text-gray-600">;""
-              {metrics.ttfb && (";""
+        {isExpanded && (;"
+          <motion.div;";"
+            initial={{ height: 0, opacity: 0 }};";"
+            animate={{ height: 'auto', opacity: 1 }};"";"
+            exit={{ height: 0, opacity: 0 }}";"";"
+            className="mt-3 pt-3 border-t border-gray-200";"";"
+          >";"";"
+            <div className="space-y-2 text-xs text-gray-600">;"";"
+              {metrics.ttfb && (";"";"
                 <div className="flex justify-between">;
-                  <span>TTFB:</span>;
-                  <span>{Math.round(metrics.ttfb)}ms</span>;
-                </div>;"
-              )};""
-              {metrics.domLoad && (";""
+                  <span>TTFB:</span>;"
+                  <span>{Math.round(metrics.ttfb)}ms</span>;";"
+                </div>;";"
+              )};"";"
+              {metrics.domLoad && (";"";"
                 <div className="flex justify-between">;
-                  <span>DOM Load:</span>;
-                  <span>{Math.round(metrics.domLoad)}ms</span>;
-                </div>;"
-              )};""
-              {metrics.windowLoad && (";""
+                  <span>DOM Load:</span>;"
+                  <span>{Math.round(metrics.domLoad)}ms</span>;";"
+                </div>;";"
+              )};"";"
+              {metrics.windowLoad && (";"";"
                 <div className="flex justify-between">;
                   <span>Window Load:</span>;
                   <span>{Math.round(metrics.windowLoad)}ms</span>;
                 </div>;
               )};
             </div>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;"
-      <button;""
-        onClick={() => setIsVisible(false)}";""
+          </motion.div>;"
+        )};";"
+      </AnimatePresence>;";"
+      <button;"";"
+        onClick={() => setIsVisible(false)}";"";"
         className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors";
       >;
-        ×;
-      </button>;
-    </motion.div>;"
-  );""
-};";""
+        ×;"
+      </button>;";"
+    </motion.div>;";"
+  );"";"
+};";"";"

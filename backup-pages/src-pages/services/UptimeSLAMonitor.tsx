@@ -73,12 +73,9 @@ export default function UptimeSLAMonitor(...args: []):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/UptimeSLAMonitor.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/UptimeSLAMonitor.tsx
-        title = "Uptime SLA Monitor - Zion Tech Group"
+>        title = "Uptime SLA Monitor - Zion Tech Group"
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
        />
@@ -142,12 +139,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Everything you need to ensure your services are always available and performing optimally
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/UptimeSLAMonitor.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/UptimeSLAMonitor.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -193,12 +187,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 From simple website checks to complex infrastructure monitoring
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/UptimeSLAMonitor.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/UptimeSLAMonitor.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {monitoringTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -244,12 +235,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Professional monitoring that helps you maintain high availability and meet your SLA commitments
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/UptimeSLAMonitor.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/UptimeSLAMonitor.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -297,12 +285,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Choose the monitoring plan that fits your needs and scale as you grow
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/UptimeSLAMonitor.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/UptimeSLAMonitor.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

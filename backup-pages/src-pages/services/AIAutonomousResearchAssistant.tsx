@@ -1,17 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Search,
-  TrendingUp,
-  Zap,
-  Shield,
-  Users,
-  Clock,
-  DollarSign,
-  CheckCircle,
-========
+<=
 import {
   Brain, 
   Search, 
@@ -22,8 +9,7 @@ import {
   Clock, 
   DollarSign, 
   CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-  Star,
+>  Star,
   ArrowRight,
   Globe,
   BookOpen,
@@ -34,58 +20,8 @@ import {
   Activity,
   Award,
   Rocket,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-import {
-  Brain,
-  Search,
-  BookOpen,
-  FileText,
-  TrendingUp,
-  Users,
-  Globe,
-========
-<<<<<<< HEAD
+<=
 
-  Brain, 
-  Search, 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Globe, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Lightbulb,
-  Zap,
-  Shield,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-;
-export { function };
-export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-  
-  
-  
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
   Zap as ZapIcon,;
@@ -98,12 +34,10 @@ export default function AIAutonomousResearchAssistant(...args: unknown[]): unkno
   const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
   const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-========
+<=
 export default function AIAutonomousResearchAssistant() {
 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-  const [activeTab, setActiveTab] = useState('overview');
+>  const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -121,32 +55,16 @@ export default function AIAutonomousResearchAssistant() {
   
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-      <SEO
-        title="AI Autonomous Research Assistant - Zion Tech Group"
-        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
-        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-========
+<=
       <SEO "
-<<<<<<< HEAD
-        title="AI Autonomous Research Assistant - Zion Tech Group"
-        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
-        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-       />
-=======
+
         title="AI Autonomous Research Assistant - Zion Tech Group""
         description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-        <div className="max-w-7xl mx-auto text-center">
+>        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
@@ -338,41 +256,24 @@ export default function AIAutonomousResearchAssistant() {
                     <Star className="w-4 h-4 mr-1"  />                    Most Popular
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-========
+<=
                 "
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>"
                 <div className="mb-4">"
                   <span className="text-4xl font-bold text-white">{tier.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-                  <span className="text-gray-400">/{tier.period}</span>
+>                  <span className="text-gray-400">/{tier.period}</span>
                 </div>"
                 <p className="text-gray-300 mb-6">{tier.description}</p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-
-========
+<=
                 "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-                <ul className="space-y-3 mb-8">
+>                <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-
-                <div className="text-sm text-gray-400 mb-6">
-                  <strong>Best for:</strong> {tier.bestFor}
-                </div>
-
-                <a
-                  href="/contact"
-========
+<=
                 "
                 <div className="text-sm text-gray-400 mb-6">
                   <strong>Best for:</strong> {tier.bestFor}
@@ -380,8 +281,7 @@ export default function AIAutonomousResearchAssistant() {
                 
                 <a"
                   href="/contact"`
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousResearchAssistant.tsx
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+>                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
 
                     index === 1'
                       ? 'bg-blue-600 hover:bg-blue-700 text-white''

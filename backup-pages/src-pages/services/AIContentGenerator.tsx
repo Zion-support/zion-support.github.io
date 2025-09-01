@@ -1,16 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
-import {
-  PenTool,
-  FileText,
-  Image,
-  Video,
-  Globe,
-  Zap,
-  Brain,
-========
+<=
 import {
   PenTool, 
   FileText, 
@@ -19,8 +7,7 @@ import {
   Globe, 
   Zap, 
   Brain, 
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-  Shield,
+>  Shield,
   CheckCircle,
   TrendingUp,
   MessageSquare,
@@ -134,19 +121,15 @@ export default function AIContentGenerator(...args[]):  {
         'SLA guarantees',;'
         'Advanced security features',;'        'Custom integrations';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-        title = "AI Content Generator - Create Engaging Content with AI"
+>        title = "AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
        />
@@ -217,12 +200,9 @@ export default function AIContentGenerator(...args[]):  {
                 that engages your audience and drives results.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -268,12 +248,9 @@ export default function AIContentGenerator(...args[]):  {
                 From blog posts to social media content, our AI handles it all
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {contentTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -319,12 +296,9 @@ export default function AIContentGenerator(...args[]):  {
                 Whether you're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map(useCase: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -386,12 +360,9 @@ export default function AIContentGenerator(...args[]):  {
                 their content strategy with AI-powered generation.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -449,12 +420,9 @@ export default function AIContentGenerator(...args[]):  {
                 All plans include a 14-day free trial.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

@@ -31,5 +31,6 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
   { duration: 0.6,;
   ease: "easeOut";
 }}>;
-      {children};"
-    </motion.h1>)};";""
+      {children};
+    </motion.h1>)};"
+";"

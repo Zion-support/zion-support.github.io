@@ -7,36 +7,22 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
   
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group"
-        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
-        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
-       />
-=======
+
         title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group""
         description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.""        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />'"
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-========
+<=
         "
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-            className="text-center"
+>            className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -62,12 +48,9 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       {/* Features Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-          <motion.div
-========
+<=
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-            className="text-center mb-16"
+>            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -106,12 +89,9 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       {/* Benefits Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-          <motion.div
-========
+<=
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-            className="text-center mb-16"
+>            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -150,12 +130,9 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       {/* Integrations Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-          <motion.div
-========
+<=
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-            className="text-center mb-16"
+>            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -193,12 +170,9 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSupport.tsx
-          <motion.div
-========
+<=
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSupport.tsx
-            className="text-center mb-16"
+>            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

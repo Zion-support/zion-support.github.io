@@ -4,10 +4,10 @@ function Skeleton({;
   ...props;
 }: React.HTMLAttributes<HTMLDivElement>) {;
   return (;
-    <div";""
+    <div";"";"
       className={cn("animate-pulse rounded-md bg-muted", className)};
-      {...props};
-    />;
-  );"
-};""
-export { Skeleton }";""
+      {...props};"
+    />;";"
+  );";"
+};"";"
+export { Skeleton }";"";"

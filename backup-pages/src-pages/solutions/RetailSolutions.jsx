@@ -130,11 +130,7 @@ export default function RetailSolutions() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/solutions/RetailSolutions.jsx
-  y: 0
-
-}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
-========
+<=
   y: 0 
 
 
@@ -143,8 +139,7 @@ export default function RetailSolutions() {
 
 "
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">"
->>>>>>>> main:backup-pages/src-pages/solutions/RetailSolutions.jsx
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+>            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               AI-Powered Retail Technology
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -167,12 +162,7 @@ export default function RetailSolutions() {
 }} transition = {
 
   { duration: 0.8,
-<<<<<<<< HEAD:pages.disabled/solutions/RetailSolutions.jsx
-  delay: index * 0.1
-
-}} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-========
+<=
   delay: index * 0.1 
 
 
@@ -182,8 +172,7 @@ export default function RetailSolutions() {
 "
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">"
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">"
->>>>>>>> main:backup-pages/src-pages/solutions/RetailSolutions.jsx
-                  <feature.icon className="w-6 h-6 text-white"/>
+>                  <feature.icon className="w-6 h-6 text-white"/>
                 </div>"
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
@@ -203,11 +192,7 @@ export default function RetailSolutions() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/solutions/RetailSolutions.jsx
-  y: 0
-
-}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
-========
+<=
   y: 0 
 
 
@@ -216,8 +201,7 @@ export default function RetailSolutions() {
 
 "
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">"
->>>>>>>> main:backup-pages/src-pages/solutions/RetailSolutions.jsx
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+>            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Choose Our Retail Solutions?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -280,11 +264,7 @@ export default function RetailSolutions() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/solutions/RetailSolutions.jsx
-  y: 0
-
-}} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
-========
+<=
   y: 0 
 
 
@@ -293,8 +273,7 @@ export default function RetailSolutions() {
 
 "
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">"
->>>>>>>> main:backup-pages/src-pages/solutions/RetailSolutions.jsx
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+>            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Retail Categories
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -317,12 +296,7 @@ export default function RetailSolutions() {
 }} transition = {
 
   { duration: 0.8,
-<<<<<<<< HEAD:pages.disabled/solutions/RetailSolutions.jsx
-  delay: index * 0.1
-
-}} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">
-                <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>
-========
+<=
   delay: index * 0.1 
 
 
@@ -332,8 +306,7 @@ export default function RetailSolutions() {
 "
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">"
                 <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>"
->>>>>>>> main:backup-pages/src-pages/solutions/RetailSolutions.jsx
-                <h3 className="font-semibold">{type}</h3>
+>                <h3 className="font-semibold">{type}</h3>
               </motion.div>))}
           </div>
         </div>

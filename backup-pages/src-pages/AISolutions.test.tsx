@@ -1,13 +1,13 @@
-describe('AISolutions', () => {
+describe('AiSolutions', () => {
   it('renders without crashing', () => {
-    render(<AISolutions />);
+    render(<AiSolutions />);
     expect(
       screen.getByRole('main') || screen.getByText(/.*/)
     ).toBeInTheDocument();
   });
 
   it('displays expected content', () => {
-    render(<AISolutions />);
+    render(<AiSolutions />);
     // Add specific test assertions based on component content
   });
 });

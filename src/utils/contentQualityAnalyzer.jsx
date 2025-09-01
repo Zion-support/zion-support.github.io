@@ -406,10 +406,10 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {;
 =======;
   return (;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
-    <div className="space-y-4">;"
-      <button;""
-        onClick={analyzeContent}";""
-        disabled={isAnalyzing}";""
+    <div className="space-y-4">;
+      <button;"
+        onClick={analyzeContent}";"
+        disabled={isAnalyzing}";"
         className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50";
       >;
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'};
@@ -433,49 +433,49 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {;
 <<<<<<< HEAD;
   y: 0;
 =======;
-  y: 0;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;""
-<<<<<<< HEAD";""
+  y: 0;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+<<<<<<< HEAD";"
 }}";
-=======;"
-}};""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";""
-          className="space-y-4";""
-        >";""
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";""
-            <div className="text-center p-4 bg-blue-50 rounded-lg">";""
-              <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>";""
-              <div className="text-sm text-gray-600">Words</div>";""
-            </div>";""
-            <div className="text-center p-4 bg-green-50 rounded-lg">";""
-              <div className="text-2xl font-bold text-green-600">{analysis.sentenceCount}</div>";""
-              <div className="text-sm text-gray-600">Sentences</div>";""
-            </div>";""
-            <div className="text-center p-4 bg-purple-50 rounded-lg">";""
-              <div className="text-2xl font-bold text-purple-600">{analysis.paragraphCount}</div>";""
-              <div className="text-sm text-gray-600">Paragraphs</div>";""
-            </div>";""
-            <div className="text-center p-4 bg-orange-50 rounded-lg">";""
-              <div className="text-2xl font-bold text-orange-600">{analysis.readabilityScore}</div>";""
+=======;
+}};"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+          className="space-y-4";"
+        >"";"
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";"
+            <div className="text-center p-4 bg-blue-50 rounded-lg">";"
+              <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>";"
+              <div className="text-sm text-gray-600">Words</div>";"
+            </div>";"
+            <div className="text-center p-4 bg-green-50 rounded-lg">";"
+              <div className="text-2xl font-bold text-green-600">{analysis.sentenceCount}</div>";"
+              <div className="text-sm text-gray-600">Sentences</div>";"
+            </div>";"
+            <div className="text-center p-4 bg-purple-50 rounded-lg">";"
+              <div className="text-2xl font-bold text-purple-600">{analysis.paragraphCount}</div>";"
+              <div className="text-sm text-gray-600">Paragraphs</div>";"
+            </div>";"
+            <div className="text-center p-4 bg-orange-50 rounded-lg">";"
+              <div className="text-2xl font-bold text-orange-600">{analysis.readabilityScore}</div>";"
               <div className="text-sm text-gray-600">Readability</div>;
             </div>;
           </div>;
+<<<<<<< HEAD;
 <<<<<<< HEAD;"
-<<<<<<< HEAD;""
-          {analysis.suggestions.length > 0 && (<div>";""
-              <h3 className="text - lg font - semibold mb - 2">Suggestions:</h3>";""
-              <ul className="space - y-2">";""
-                {analysis.suggestions.map ( (suggestion, index) => (<li key={index} className="flex items - start space - x-2">";""
+          {analysis.suggestions.length > 0 && (<div>";"
+              <h3 className="text - lg font - semibold mb - 2">Suggestions:</h3>";"
+              <ul className="space - y-2">";"
+                {analysis.suggestions.map ( (suggestion, index) => (<li key={index} className="flex items - start space - x-2">";"
                     <span className="text - green - 500 mt - 1">•</span>;
 =======;
-=======;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;""
-          {analysis.suggestions.length > 0 && (";""
-            <div>";""
-              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>";""
-              <ul className="space-y-2">";""
-                {analysis.suggestions.map((suggestion, index) => (";""
-                  <li key={index} className="flex items-start space-x-2">";""
+=======;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+          {analysis.suggestions.length > 0 && (";"
+            <div>";"
+              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>";"
+              <ul className="space-y-2">";"
+                {analysis.suggestions.map((suggestion, index) => (";"
+                  <li key={index} className="flex items-start space-x-2">";"
                     <span className="text-green-500 mt-1">•</span>;
 >>>>>>> main;
                     <span>{suggestion}</span>;
@@ -485,13 +485,14 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {;
         </motion.div>) };
     </div>) ;
 };
-;"
-<<<<<<< HEAD;""
-export default ContentQualityAnalyzer;";""
+;
+<<<<<<< HEAD;"
+export default ContentQualityAnalyzer;";"
 }}}}}}}}}}}}}}}}'"`;
 =======;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 export default ContentQualityAnalyzer;
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;";""
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+";"

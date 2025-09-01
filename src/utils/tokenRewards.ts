@@ -1,7 +1,11 @@
 
 export async function rewardOnboarding(...args: any[]): any {;
+<<<<<<< HEAD;
+  await apiClient('/functions/v1/token-manager/earn', {;
+=======;
 '  await apiClient('/functions/v1/token-manager/earn', {;
 ';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
     method: 'POST',;
     body: JSON.stringify({ userId, action, amount })});
 ;
@@ -31,3 +35,4 @@ export async function rewardOnboarding(...args: any[]): any {;
           amount: 100})})};
   };
 };
+export default earnTokensForAction;

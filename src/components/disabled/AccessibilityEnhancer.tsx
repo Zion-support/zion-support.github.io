@@ -346,34 +346,34 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
   const renderAccessibilityMenu = () => (;
     <AnimatePresence>;
       {isMenuOpen && (;
-        <motion.div;
-          ref={menuRef};
-          initial={{ opacity: 0, scale: 0.95, y: 20 }};"
-          animate={{ opacity: 1, scale: 1, y: 0 }};""
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}";""
-          className="fixed top-20 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 w-80 max-h-[80vh] overflow-hidden";""
-          role="dialog";""
-          aria-labelledby="accessibility-menu-title";""
-          aria-describedby="accessibility-menu-description";""
-        >";""
-          <div className="p-4 border-b border-gray-200 dark:border-gray-700">";""
-            <div className="flex items-center justify-between">";""
-              <h2 id="accessibility-menu-title" className="text-lg font-semibold text-gray-900 dark:text-white">;
-                Accessibility Settings;
-              </h2>;"
-              <button;""
-                onClick={() => setIsMenuOpen(false)}";""
-                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300";""
-                aria-label="Close accessibility menu";""
-              >";""
-                <X className="w-5 h-5" />;"
-              </button>;""
-            </div>";""
-            <p id="accessibility-menu-description" className="text-sm text-gray-600 dark:text-gray-400 mt-1">;
-              Customize your browsing experience with these accessibility features;
-            </p>;"
-          </div>;";""
-          <div className="p-4">";""
+        <motion.div;"
+          ref={menuRef};";"
+          initial={{ opacity: 0, scale: 0.95, y: 20 }};";"
+          animate={{ opacity: 1, scale: 1, y: 0 }};"";"
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}";"";"
+          className="fixed top-20 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 w-80 max-h-[80vh] overflow-hidden";"";"
+          role="dialog";"";"
+          aria-labelledby="accessibility-menu-title";"";"
+          aria-describedby="accessibility-menu-description";"";"
+        >";"";"
+          <div className="p-4 border-b border-gray-200 dark:border-gray-700">";"";"
+            <div className="flex items-center justify-between">";"";"
+              <h2 id="accessibility-menu-title" className="text-lg font-semibold text-gray-900 dark:text-white">;"
+                Accessibility Settings;";"
+              </h2>;";"
+              <button;"";"
+                onClick={() => setIsMenuOpen(false)}";"";"
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300";"";"
+                aria-label="Close accessibility menu";"";"
+              >";"";"
+                <X className="w-5 h-5" />;";"
+              </button>;"";"
+            </div>";"";"
+            <p id="accessibility-menu-description" className="text-sm text-gray-600 dark:text-gray-400 mt-1">;"
+              Customize your browsing experience with these accessibility features;";"
+            </p>;";"
+          </div>;";"";"
+          <div className="p-4">";"";"
             <div className="flex space-x-2 mb-4">;
               {(['visual', 'navigation', 'audio', 'advanced'] as const).map((tab) => (;
                 <button;
@@ -385,99 +385,99 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
                       : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200';
                   }`};
                 >;
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)};
-                </button>;
-              ))};"
-            </div>;";""
-            <div className="space-y-4">;
-              {activeTab === 'visual' && (;"
-                <>;""
-                  <AccessibilityToggle";""
-                    label="High Contrast";""
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)};"
+                </button>;";"
+              ))};";"
+            </div>;";"";"
+            <div className="space-y-4">;";"
+              {activeTab === 'visual' && (;";"
+                <>;"";"
+                  <AccessibilityToggle";"";"
+                    label="High Contrast";"";"
                     description="Increase contrast for better visibility";
-                    enabled={features.highContrast};
-                    onToggle={toggleHighContrast};
-                    icon={Contrast};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="High Contrast Text";""
+                    enabled={features.highContrast};"
+                    onToggle={toggleHighContrast};";"
+                    icon={Contrast};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="High Contrast Text";"";"
                     description="Optimize text contrast";
-                    enabled={features.highContrastText};
-                    onToggle={toggleHighContrastText};
-                    icon={Type};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="Large Text";""
+                    enabled={features.highContrastText};"
+                    onToggle={toggleHighContrastText};";"
+                    icon={Type};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="Large Text";"";"
                     description="Increase text size for better readability";
-                    enabled={features.largeText};
-                    onToggle={toggleLargeText};
-                    icon={Type};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="Increased Spacing";""
+                    enabled={features.largeText};"
+                    onToggle={toggleLargeText};";"
+                    icon={Type};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="Increased Spacing";"";"
                     description="Add more space between elements";
                     enabled={features.increasedSpacing};
                     onToggle={toggleIncreasedSpacing};
                     icon={Move};
                   />;
-                </>;
-              )};
-              {activeTab === 'navigation' && (;"
-                <>;""
-                  <AccessibilityToggle";""
-                    label="Focus Highlight";""
+                </>;"
+              )};";"
+              {activeTab === 'navigation' && (;";"
+                <>;"";"
+                  <AccessibilityToggle";"";"
+                    label="Focus Highlight";"";"
                     description="Highlight focused elements";
-                    enabled={features.focusHighlight};
-                    onToggle={toggleFocusHighlight};
-                    icon={Keyboard};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="Keyboard Navigation";""
+                    enabled={features.focusHighlight};"
+                    onToggle={toggleFocusHighlight};";"
+                    icon={Keyboard};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="Keyboard Navigation";"";"
                     description="Enhanced keyboard navigation";
-                    enabled={features.keyboardNavigation};
-                    onToggle={toggleKeyboardNavigation};
-                    icon={Keyboard};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="Cursor Enhancement";""
+                    enabled={features.keyboardNavigation};"
+                    onToggle={toggleKeyboardNavigation};";"
+                    icon={Keyboard};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="Cursor Enhancement";"";"
                     description="Make cursor more visible";
                     enabled={features.cursorEnhancement};
                     onToggle={toggleCursorEnhancement};
                     icon={MousePointer};
                   />;
-                </>;
-              )};
-              {activeTab === 'audio' && (;"
-                <>;""
-                  <AccessibilityToggle";""
-                    label="Screen Reader Mode";""
+                </>;"
+              )};";"
+              {activeTab === 'audio' && (;";"
+                <>;"";"
+                  <AccessibilityToggle";"";"
+                    label="Screen Reader Mode";"";"
                     description="Optimize for screen readers";
                     enabled={features.screenReaderMode};
                     onToggle={toggleScreenReaderMode};
                     icon={Volume2};
                   />;
-                </>;
-              )};
-              {activeTab === 'advanced' && (;"
-                <>;""
-                  <AccessibilityToggle";""
-                    label="Reduced Motion";""
+                </>;"
+              )};";"
+              {activeTab === 'advanced' && (;";"
+                <>;"";"
+                  <AccessibilityToggle";"";"
+                    label="Reduced Motion";"";"
                     description="Reduce animations and transitions";
-                    enabled={features.reducedMotion};
-                    onToggle={toggleReducedMotion};
-                    icon={Move};"
-                  />;""
-                  <AccessibilityToggle";""
-                    label="Color Blindness Support";""
+                    enabled={features.reducedMotion};"
+                    onToggle={toggleReducedMotion};";"
+                    icon={Move};";"
+                  />;"";"
+                  <AccessibilityToggle";"";"
+                    label="Color Blindness Support";"";"
                     description="Optimize colors for color blindness";
                     enabled={features.colorBlindnessSupport};
                     onToggle={toggleColorBlindnessSupport};
                     icon={Eye};
-                  />;
-                </>;
-              )};"
-            </div>;";""
-            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">";""
+                  />;"
+                </>;";"
+              )};";"
+            </div>;";"";"
+            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">";"";"
               <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">;
                 <p><strong>Keyboard Shortcuts:</strong></p>;
                 <p>Alt + A: Toggle this menu</p>;
@@ -501,26 +501,26 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
     icon: Icon;
   }: {;
     label: string;
-    description: string;
-    enabled: boolean;
-    onToggle: () => void;"
-    icon: React.ComponentType<any>;""
-  }) => (";""
-    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">";""
-      <div className="flex items-center space-x-3">";""
-        <Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />;""
-        <div>";""
-          <label className="text-sm font-medium text-gray-900 dark:text-white cursor-pointer">;"
-            {label};""
-          </label>";""
+    description: string;"
+    enabled: boolean;";"
+    onToggle: () => void;";"
+    icon: React.ComponentType<any>;"";"
+  }) => (";"";"
+    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">";"";"
+      <div className="flex items-center space-x-3">";"";"
+        <Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />;"";"
+        <div>";"";"
+          <label className="text-sm font-medium text-gray-900 dark:text-white cursor-pointer">;";"
+            {label};"";"
+          </label>";"";"
           <p className="text-xs text-gray-500 dark:text-gray-400">{description}</p>;
         </div>;
       </div>;
-      <button;
-        onClick={onToggle};
-        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${;"
-          enabled ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700';""
-        }`}";""
+      <button;"
+        onClick={onToggle};";"
+        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${;";"
+          enabled ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700';"";"
+        }`}";"";"
         role="switch";
         aria-checked={enabled};
         aria-label={`${label} ${enabled ? 'enabled' : 'disabled'}`};
@@ -535,24 +535,24 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
   );
 ;
   return (;
-    <>;
-      {/* Floating accessibility button */};
-      <button;"
-        ref={buttonRef};""
-        onClick={() => setIsMenuOpen(!isMenuOpen)}";""
-        className="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-40 transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2";""
-        aria-label="Open accessibility settings";""
-        aria-expanded={isMenuOpen}";""
-        aria-haspopup="dialog";""
-      >";""
+    <>;"
+      {/* Floating accessibility button */};";"
+      <button;";"
+        ref={buttonRef};"";"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}";"";"
+        className="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-40 transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2";"";"
+        aria-label="Open accessibility settings";"";"
+        aria-expanded={isMenuOpen}";"";"
+        aria-haspopup="dialog";"";"
+      >";"";"
         <Accessibility className="w-5 h-5" />;
-      </button>;
-      {/* Accessibility menu */};
-      {renderAccessibilityMenu()};"
-      {/* Screen reader announcements */};""
-      <div";""
-        aria-live="polite";""
-        aria-atomic="true";""
+      </button>;"
+      {/* Accessibility menu */};";"
+      {renderAccessibilityMenu()};";"
+      {/* Screen reader announcements */};"";"
+      <div";"";"
+        aria-live="polite";"";"
+        aria-atomic="true";"";"
         className="sr-only";
       >;
         {currentAnnouncement};
@@ -560,19 +560,19 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
       {/* Visual announcements for non-screen reader users */};
       <AnimatePresence>;
         {announcements.map((announcement) => (;
-          <motion.div;
-            key={announcement.id};
-            initial={{ opacity: 0, y: 50 }};"
-            animate={{ opacity: 1, y: 0 }};""
-            exit={{ opacity: 0, y: -50 }}";""
-            className="fixed bottom-20 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 max-w-sm";""
-            role="status";"
-            aria-live={announcement.priority};""
-          >";""
+          <motion.div;"
+            key={announcement.id};";"
+            initial={{ opacity: 0, y: 50 }};";"
+            animate={{ opacity: 1, y: 0 }};"";"
+            exit={{ opacity: 0, y: -50 }}";"";"
+            className="fixed bottom-20 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 max-w-sm";"";"
+            role="status";";"
+            aria-live={announcement.priority};"";"
+          >";"";"
             <p className="text-sm">{announcement.message}</p>;
           </motion.div>;
         ))};
-      </AnimatePresence>;
-    </>;
-  );"
-};";""
+      </AnimatePresence>;"
+    </>;";"
+  );";"
+};";"";"

@@ -153,7 +153,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         return null;
     return (<>;
       {/* Accessibility Toggle Button */};
-      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>";""
+      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>";"
         <Settings className="w-6 h-6 text-white"/>;
       </motion.button>;
       {/* Accessibility Panel */};
@@ -168,148 +168,156 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   { opacity: 0,;
   x: 300;
 }} transition = {;
-  { type: 'spring', damping: 25,;"
-  stiffness: 200;";""
-}} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">;""
-            {/* Header */}";""
-            <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">";""
-              <div className="flex items-center justify-between">";""
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3">";""
-                  <Eye className="w-6 h-6 text-zion-cyan"/>;"
-                  Accessibility;""
-                </h2>";""
-                <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-zion-blue/20 rounded-lg transition-colors" aria-label="Close accessibility panel">";""
-                  <X className="w-5 h-5 text-white"/>;"
-                </button>;""
-              </div>";""
+  { type: 'spring', damping: 25,;
+  stiffness: 200;"
+";"
+}} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">;"
+            {/* Header */}";"
+            <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">";"
+              <div className="flex items-center justify-between">";"
+                <h2 className="text-2xl font-bold text-white flex items-center gap-3">";"
+                  <Eye className="w-6 h-6 text-zion-cyan"/>;
+                  Accessibility;"
+                </h2>";"
+                <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-zion-blue/20 rounded-lg transition-colors" aria-label="Close accessibility panel">";"
+                  <X className="w-5 h-5 text-white"/>;
+                </button>;"
+              </div>";"
               <p className="text-zinc-300 mt-2 text-sm">;
                 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H, L, R, A);
-              </p>;"
-            </div>;""
-            {/* Settings Content */}";""
-            <div className="p-6 space-y-6">;""
-              {/* Visual Settings */}";""
-              <div className="space-y-4">";""
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";""
+              </p>;
+            </div>;"
+            {/* Settings Content */}";"
+            <div className="p-6 space-y-6">;"
+              {/* Visual Settings */}";"
+              <div className="space-y-4">";"
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";"
                   <Eye className="w-5 h-5 text-zion-cyan"/>;
-                  Visual Settings;"
-                </h3>;""
-                {/* High Contrast */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+                  Visual Settings;
+                </h3>;"
+                {/* High Contrast */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.highContrast} onChange = {;
-  (e) = / / /> updateSetting('highContrast',;"
-  e.target.checked);";""
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;"
-                    High Contrast;""
-                  </label>";""
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>;"
-                </div>;""
-                {/* Large Text */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+  (e) = / /> updateSetting('highContrast',;
+  e.target.checked);"
+";"
+} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+                    High Contrast;"
+                  </label>";"
+                  <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>;
+                </div>;"
+                {/* Large Text */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.largeText} onChange = {;
-  (e) = / / /> updateSetting('largeText',;"
-  e.target.checked);";""
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;"
-                    Large Text;""
-                  </label>";""
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>;"
-                </div>;""
-                {/* Font Size Control */}";""
-                <div className="space-y-2">";""
-                  <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>";""
-                  <div className="flex items-center gap-2">";""
-                    <button onClick={decreaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Decrease font size">";""
-                      <Type className="w-4 h-4 text-white"/>;""
-                    </button>";""
-                    <div className="flex-1 h-2 bg-zion-blue/20 rounded-full">";""
-                      <div className="h-full bg-zion-cyan rounded-full transition-all duration-200" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}/>;""
-                    </div>";""
-                    <button onClick={increaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Increase font size">";""
+  (e) = / /> updateSetting('largeText',;
+  e.target.checked);"
+";"
+} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+                    Large Text;"
+                  </label>";"
+                  <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>;
+                </div>;"
+                {/* Font Size Control */}";"
+                <div className="space-y-2">";"
+                  <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>";"
+                  <div className="flex items-center gap-2">";"
+                    <button onClick={decreaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Decrease font size">";"
+                      <Type className="w-4 h-4 text-white"/>;"
+                    </button>";"
+                    <div className="flex-1 h-2 bg-zion-blue/20 rounded-full">";"
+                      <div className="h-full bg-zion-cyan rounded-full transition-all duration-200" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}/>;"
+                    </div>";"
+                    <button onClick={increaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Increase font size">";"
                       <Type className="w-4 h-4 text-white"/>;
                     </button>;
-                  </div>;"
-                </div>;""
-                {/* Color Blind Mode */}";""
-                <div className="space-y-2">";""
+                  </div>;
+                </div>;"
+                {/* Color Blind Mode */}";"
+                <div className="space-y-2">";"
                   <label className="text-white text-sm">Color Blind Mode</label>;
                   <select value={settings.colorBlindMode} onChange = {;
-  (e) => updateSetting('colorBlindMode',;"
-  e.target.value);";""
-} className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">";""
-                    <option value="none">None</option>";""
-                    <option value="protanopia">Protanopia (Red-Blind)</option>";""
-                    <option value="deuteranopia">Deuteranopia (Green-Blind)</option>";""
+  (e) => updateSetting('colorBlindMode',;
+  e.target.value);"
+";"
+} className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">";"
+                    <option value="none">None</option>";"
+                    <option value="protanopia">Protanopia (Red-Blind)</option>";"
+                    <option value="deuteranopia">Deuteranopia (Green-Blind)</option>";"
                     <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
                   </select>;
-                </div>;"
-              </div>;""
-              {/* Motion & Audio Settings */}";""
-              <div className="space-y-4">";""
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";""
+                </div>;
+              </div>;"
+              {/* Motion & Audio Settings */}";"
+              <div className="space-y-4">";"
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";"
                   <Volume2 className="w-5 h-5 text-zion-cyan"/>;
-                  Motion & Audio;"
-                </h3>;""
-                {/* Reduced Motion */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+                  Motion & Audio;
+                </h3>;"
+                {/* Reduced Motion */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.reducedMotion} onChange = {;
-  (e) = / / /> updateSetting('reducedMotion',;"
-  e.target.checked);";""
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;"
-                    Reduced Motion;""
-                  </label>";""
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>;"
-                </div>;""
-                {/* Screen Reader */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+  (e) = / /> updateSetting('reducedMotion',;
+  e.target.checked);"
+";"
+} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+                    Reduced Motion;"
+                  </label>";"
+                  <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>;
+                </div>;"
+                {/* Screen Reader */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.screenReader} onChange = {;
-  (e) = / / /> updateSetting('screenReader',;"
-  e.target.checked);";""
+  (e) = / /> updateSetting('screenReader',;
+  e.target.checked);"
+";"
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Screen Reader Support;
                   </label>;
-                </div>;"
-              </div>;""
-              {/* Navigation Settings */}";""
-              <div className="space-y-4">";""
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";""
+                </div>;
+              </div>;"
+              {/* Navigation Settings */}";"
+              <div className="space-y-4">";"
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">";"
                   <Settings className="w-5 h-5 text-zion-cyan"/>;
-                  Navigation;"
-                </h3>;""
-                {/* Focus Indicator */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+                  Navigation;
+                </h3>;"
+                {/* Focus Indicator */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.focusIndicator} onChange = {;
-  (e) = / / /> updateSetting('focusIndicator',;"
-  e.target.checked);";""
+  (e) = / /> updateSetting('focusIndicator',;
+  e.target.checked);"
+";"
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Focus Indicator;
-                  </label>;"
-                </div>;""
-                {/* Keyboard Navigation */}";""
-                <div className="flex items-center justify-between">";""
-                  <label className="text-white cursor-pointer flex items-center gap-2">";""
+                  </label>;
+                </div>;"
+                {/* Keyboard Navigation */}";"
+                <div className="flex items-center justify-between">";"
+                  <label className="text-white cursor-pointer flex items-center gap-2">";"
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {;
-  (e) = / / /> updateSetting('keyboardNavigation',;"
-  e.target.checked);";""
+  (e) = / /> updateSetting('keyboardNavigation',;
+  e.target.checked);"
+";"
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Keyboard Navigation;
                   </label>;
-                </div>;"
-              </div>;""
-              {/* Reset Button */}";""
-              <div className="pt-4 border-t border-zion-cyan/30">";""
+                </div>;
+              </div>;"
+              {/* Reset Button */}";"
+              <div className="pt-4 border-t border-zion-cyan/30">";"
                 <button onClick={resetToDefaults} className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors">;
                   Reset to Defaults;
                 </button>;
               </div>;
             </div>;
-          </motion.div>)};"
-      </AnimatePresence>;""
-      {/* Notifications */}";""
+          </motion.div>)};
+      </AnimatePresence>;"
+      {/* Notifications */}";"
       <div className="fixed top-6 right-6 z-50 space-y-2">;
         <AnimatePresence>;
           {notifications.map((notification) => (<motion.div key={notification.id} initial = {;
@@ -326,12 +334,12 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   stiffness: 200;
 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success';
                 ? 'bg-green-500/20 border-green-500 text-green-300';
-                : notification.type === 'warning';"
-                    ? 'bg-yellow-500/20 border-yellow-500 text-yellow-300';""
-                    : 'bg-blue-500/20 border-blue-500 text-blue-300'}`}>";""
-              {notification.type === 'success' && <Check className="w-5 h-5"/>}";""
-              {notification.type === 'warning' && <AlertTriangle className="w-5 h-5"/>}";""
-              {notification.type === 'info' && <Info className="w-5 h-5"/>}";""
+                : notification.type === 'warning';
+                    ? 'bg-yellow-500/20 border-yellow-500 text-yellow-300';"
+                    : 'bg-blue-500/20 border-blue-500 text-blue-300'}`}>";"
+              {notification.type === 'success' && <Check className="w-5 h-5"/>}";"
+              {notification.type === 'warning' && <AlertTriangle className="w-5 h-5"/>}";"
+              {notification.type === 'info' && <Info className="w-5 h-5"/>}";"
               <span className="text-sm font-medium">{notification.message}</span>;
             </motion.div>))};
         </AnimatePresence>;
@@ -371,16 +379,19 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             margin: -1px;
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
-            white-space: nowrap;"
-            border: 0};""
-          /* Color blind mode filters */";""
-          [style*="--color-blind-mode: protanopia"] {;";""
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia')};";""
-          [style*="--color-blind-mode: deuteranopia"] {;";""
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia')};";""
-          [style*="--color-blind-mode: tritanopia"] {;";""
+            white-space: nowrap;
+            border: 0};"
+          /* Color blind mode filters */";"
+          [style*="--color-blind-mode: protanopia"] {";"
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia')};"
+";"
+          [style*="--color-blind-mode: deuteranopia"] {";"
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia')};"
+";"
+          [style*="--color-blind-mode: tritanopia"] {";"
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia')};
         `;
         }}/>;
-    </>)};"
-export default AccessibilityPanel;";""
+    </>)};
+export default AccessibilityPanel;"
+";"

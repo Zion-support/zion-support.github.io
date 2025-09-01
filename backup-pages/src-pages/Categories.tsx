@@ -70,12 +70,8 @@ const Categories: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search categories..."
-=======
+
                   type="text""                  placeholder="Search categories..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

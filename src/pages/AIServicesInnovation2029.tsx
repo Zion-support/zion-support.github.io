@@ -353,67 +353,67 @@ const AIServicesInnovation2029: React.FC = () => {;
     : aiServices.filter(service => service.category === activeCategory);
 ;
   return (;
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-purple-50">;""
-      {/* Hero Section */}";""
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 text-white">";""
-        <div className="absolute inset-0 bg-black/20"></div>";""
-        <div className="relative container mx-auto px-4 py-20">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};"
-            animate={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.8 }}";""
-            className="text-center max-w-4xl mx-auto";""
-          >";""
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">;"
-              AI Services Innovation 2029;""
-            </h1>";""
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">;
-              Transform your business with cutting-edge AI solutions including generative AI, machine learning,;"
-              computer vision, and intelligent automation designed for the future.;""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <a";""
-                href="tel:+13024640950";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg";""
-              >";""
-                <Phone className="w-5 h-5 mr-2" />;
-                Call +1 302 464 0950;"
-              </a>;""
-              <a";""
-                href="mailto:kleber@ziontechgroup.com";""
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 text-lg border border-white/20";""
-              >";""
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-purple-50">;"";"
+      {/* Hero Section */}";"";"
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 text-white">";"";"
+        <div className="absolute inset-0 bg-black/20"></div>";"";"
+        <div className="relative container mx-auto px-4 py-20">;"
+          <motion.div;";"
+            initial={{ opacity: 0, y: 30 }};";"
+            animate={{ opacity: 1, y: 0 }};"";"
+            transition={{ duration: 0.8 }}";"";"
+            className="text-center max-w-4xl mx-auto";"";"
+          >";"";"
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">;";"
+              AI Services Innovation 2029;"";"
+            </h1>";"";"
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">;";"
+              Transform your business with cutting-edge AI solutions including generative AI, machine learning,;";"
+              computer vision, and intelligent automation designed for the future.;"";"
+            </p>";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <a";"";"
+                href="tel:+13024640950";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg";"";"
+              >";"";"
+                <Phone className="w-5 h-5 mr-2" />;";"
+                Call +1 302 464 0950;";"
+              </a>;"";"
+              <a";"";"
+                href="mailto:kleber@ziontechgroup.com";"";"
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 text-lg border border-white/20";"";"
+              >";"";"
                 <Mail className="w-5 h-5 mr-2" />;
                 Get Started;
               </a>;
-            </div>;
-          </motion.div>;
-        </div>;"
-      </section>;""
-      {/* Category Filter */}";""
-      <section className="py-12 bg-white">";""
-        <div className="container mx-auto px-4">";""
+            </div>;"
+          </motion.div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Category Filter */}";"";"
+      <section className="py-12 bg-white">";"";"
+        <div className="container mx-auto px-4">";"";"
           <div className="flex flex-wrap justify-center gap-4">;
             {categories.map((category) => (;
               <button;
                 key={category.id};
                 onClick={() => setActiveCategory(category.id)};
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
-                  activeCategory === category.id;
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200';"
-                }`};""
-              >";""
+                  activeCategory === category.id;"
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;";"
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200';";"
+                }`};"";"
+              >";"";"
                 <category.icon className="w-5 h-5" />;
                 <span>{category.name}</span>;
               </button>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Services Grid */}";""
-      <section className="py-16 bg-gray-50">";""
-        <div className="container mx-auto px-4">";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Services Grid */}";"";"
+      <section className="py-16 bg-gray-50">";"";"
+        <div className="container mx-auto px-4">";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {filteredServices.map((service) => (;
               <motion.div;
@@ -422,66 +422,66 @@ const AIServicesInnovation2029: React.FC = () => {;
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6 }};
                 viewport={{ once: true }};
-                className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${;
-                  service.featured ? 'ring-2 ring-purple-500' : '';
-                }`};"
-              >;""
-                {service.featured && (";""
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center py-2 text-sm font-semibold">;
-                    ⭐ Featured Solution;
-                  </div>;"
-                )};";""
-                <div className="p-6">;""
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>";""
-                    <service.icon className="w-8 h-8 text-white" />;"
-                  </div>;";""
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>";""
-                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>;";""
-                  <div className="mb-4">";""
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>";""
-                    <ul className="space-y-1">;""
-                      {service.features.slice(0, 4).map((feature, index) => (";""
-                        <li key={index} className="flex items-center text-sm text-gray-600">";""
+                className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${;"
+                  service.featured ? 'ring-2 ring-purple-500' : '';";"
+                }`};";"
+              >;"";"
+                {service.featured && (";"";"
+                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center py-2 text-sm font-semibold">;"
+                    ⭐ Featured Solution;";"
+                  </div>;";"
+                )};";"";"
+                <div className="p-6">;"";"
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>";"";"
+                    <service.icon className="w-8 h-8 text-white" />;";"
+                  </div>;";"";"
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>";"";"
+                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>;";"";"
+                  <div className="mb-4">";"";"
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>";"";"
+                    <ul className="space-y-1">;"";"
+                      {service.features.slice(0, 4).map((feature, index) => (";"";"
+                        <li key={index} className="flex items-center text-sm text-gray-600">";"";"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                           {feature};
-                        </li>;
-                      ))};
-                    </ul>;"
-                  </div>;";""
-                  <div className="mb-4">";""
-                    <h4 className="font-semibold text-gray-900 mb-2">Pricing:</h4>";""
-                    <div className="space-y-1">;""
-                      {Object.entries(service.pricing).map(([plan, price]) => (";""
-                        <div key={plan} className="flex justify-between text-sm">";""
-                          <span className="text-gray-600 capitalize">{plan}:</span>";""
-                          <span className="font-semibold text-gray-900">{price}</span>;
-                        </div>;"
-                      ))};""
-                    </div>";""
-                    <p className="text-xs text-gray-500 mt-1">;
-                      Market average: {service.marketPrice};
-                    </p>;"
-                  </div>;";""
-                  <div className="mb-4">";""
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits:</h4>";""
-                    <ul className="space-y-1">;""
-                      {service.benefits.slice(0, 2).map((benefit, index) => (";""
-                        <li key={index} className="flex items-center text-sm text-gray-600">";""
+                        </li>;"
+                      ))};";"
+                    </ul>;";"
+                  </div>;";"";"
+                  <div className="mb-4">";"";"
+                    <h4 className="font-semibold text-gray-900 mb-2">Pricing:</h4>";"";"
+                    <div className="space-y-1">;"";"
+                      {Object.entries(service.pricing).map(([plan, price]) => (";"";"
+                        <div key={plan} className="flex justify-between text-sm">";"";"
+                          <span className="text-gray-600 capitalize">{plan}:</span>";"";"
+                          <span className="font-semibold text-gray-900">{price}</span>;";"
+                        </div>;";"
+                      ))};"";"
+                    </div>";"";"
+                    <p className="text-xs text-gray-500 mt-1">;"
+                      Market average: {service.marketPrice};";"
+                    </p>;";"
+                  </div>;";"";"
+                  <div className="mb-4">";"";"
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits:</h4>";"";"
+                    <ul className="space-y-1">;"";"
+                      {service.benefits.slice(0, 2).map((benefit, index) => (";"";"
+                        <li key={index} className="flex items-center text-sm text-gray-600">";"";"
                           <TrendingUp className="w-4 h-4 text-purple-500 mr-2 flex-shrink-0" />;
                           {benefit};
-                        </li>;
-                      ))};
-                    </ul>;"
-                  </div>;";""
-                  <div className="flex flex-col sm:flex-row gap-3">;"
-                    <a;""
-                      href={service.link}";""
+                        </li>;"
+                      ))};";"
+                    </ul>;";"
+                  </div>;";"";"
+                  <div className="flex flex-col sm:flex-row gap-3">;";"
+                    <a;"";"
+                      href={service.link}";"";"
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium";
-                    >;
-                      Learn More;
-                    </a>;"
-                    <a;""
-                      href={service.demo}";""
+                    >;"
+                      Learn More;";"
+                    </a>;";"
+                    <a;"";"
+                      href={service.demo}";"";"
                       className="flex-1 bg-gray-100 text-gray-700 text-center py-3 px-4 rounded-lg hover:bg-gray-200 transition-all duration-300 font-medium";
                     >;
                       View Demo;
@@ -489,56 +489,56 @@ const AIServicesInnovation2029: React.FC = () => {;
                   </div>;
                 </div>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Contact Section */}";""
-      <section className="py-20 bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 text-white">";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Contact Section */}";"";"
+      <section className="py-20 bg-gradient-to-r from-purple-900 via-pink-900 to-red-900 text-white">";"";"
         <div className="container mx-auto px-4 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }};""
-            viewport={{ once: true }}";""
-            className="max-w-3xl mx-auto";""
-          >";""
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">;"
-              Ready to Harness the Power of AI?;""
-            </h2>";""
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed">;
-              Our team of AI experts is ready to help you implement cutting-edge artificial intelligence;
-              solutions that transform your business. Get in touch today to start your AI journey.;"
-            </p>;";""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">";""
-              <div className="text-center">";""
-                <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />";""
-                <h3 className="text-xl font-semibold mb-2">Call Us</h3>";""
-                <p className="text-gray-300">+1 302 464 0950</p>;""
-              </div>";""
-              <div className="text-center">";""
-                <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />";""
-                <h3 className="text-xl font-semibold mb-2">Email Us</h3>";""
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>;""
-              </div>";""
-              <div className="text-center">";""
-                <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />";""
-                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>";""
-                <p className="text-gray-300">364 E Main St STE 1008<br / / / />Middletown DE 19709</p>;
-              </div>;"
-            </div>;";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <a";""
-                href="tel:+13024640950";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg";""
-              >";""
-                <Phone className="w-5 h-5 mr-2" />;
-                Call Now;"
-              </a>;""
-              <a";""
-                href="mailto:kleber@ziontechgroup.com";""
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 text-lg border border-white/20";""
-              >";""
+          <motion.div;"
+            initial={{ opacity: 0, y: 30 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};"";"
+            viewport={{ once: true }}";"";"
+            className="max-w-3xl mx-auto";"";"
+          >";"";"
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">;";"
+              Ready to Harness the Power of AI?;"";"
+            </h2>";"";"
+            <p className="text-xl text-gray-200 mb-8 leading-relaxed">;"
+              Our team of AI experts is ready to help you implement cutting-edge artificial intelligence;";"
+              solutions that transform your business. Get in touch today to start your AI journey.;";"
+            </p>;";"";"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">";"";"
+              <div className="text-center">";"";"
+                <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />";"";"
+                <h3 className="text-xl font-semibold mb-2">Call Us</h3>";"";"
+                <p className="text-gray-300">+1 302 464 0950</p>;"";"
+              </div>";"";"
+              <div className="text-center">";"";"
+                <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />";"";"
+                <h3 className="text-xl font-semibold mb-2">Email Us</h3>";"";"
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>;"";"
+              </div>";"";"
+              <div className="text-center">";"";"
+                <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />";"";"
+                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>";"";"
+                <p className="text-gray-300">364 E Main St STE 1008<br / / / / / />Middletown DE 19709</p>;";"
+              </div>;";"
+            </div>;";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <a";"";"
+                href="tel:+13024640950";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg";"";"
+              >";"";"
+                <Phone className="w-5 h-5 mr-2" />;";"
+                Call Now;";"
+              </a>;"";"
+              <a";"";"
+                href="mailto:kleber@ziontechgroup.com";"";"
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 text-lg border border-white/20";"";"
+              >";"";"
                 <Mail className="w-5 h-5 mr-2" />;
                 Get Quote;
               </a>;
@@ -546,8 +546,8 @@ const AIServicesInnovation2029: React.FC = () => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
-};"
-;""
-export default AIServicesInnovation2029;";""
+    </div>;"
+  );";"
+};";"
+;"";"
+export default AIServicesInnovation2029;";"";"

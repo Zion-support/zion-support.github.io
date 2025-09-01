@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
-import { Button } from "./button";";""
-import { Badge } from "./badge";";""
+import { Button } from "./button";";"
+import { Badge } from "./badge";";"
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = " }) {;
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -188,11 +188,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   { scale: 0.8,;
   opacity: 0;
 }} animate = {;
-  { scale: 1,;"
-  opacity: 1;""
-}}>";""
-        <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">";""
-          <Activity className="w-4 h-4 mr-2"/>";""
+  { scale: 1,;
+  opacity: 1;"
+}}>";"
+        <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">";"
+          <Activity className="w-4 h-4 mr-2"/>";"
           {alerts.length > 0 && (<Badge variant="outline" className="ml-2 text-xs">;
               {alerts.length};
             </Badge>)};
@@ -202,35 +202,38 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   { scale: 0.8,;
   opacity: 0;
 }} animate = {;
-  { scale: 1,;"
-  opacity: 1;""
-}}>";""
-      <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">;""
-        {/* Header */}";""
-        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">";""
-          <div className="flex items-center gap-3">";""
-            <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">";""
-              <Activity className="w-5 h-5 text-white"/>;"
-            </div>;""
-            <div>";""
-              <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>";""
-              <p className="text-zinc-400 text-xs">Real-time metrics</p>;
+  { scale: 1,;
+  opacity: 1;"
+}}>";"
+      <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">;"
+        {/* Header */}";"
+        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">";"
+          <div className="flex items-center gap-3">";"
+            <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">";"
+              <Activity className="w-5 h-5 text-white"/>;
             </div>;"
-          </div>;";""
-          <div className="flex items-center gap-2">";""
-            <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">";""
-              <Settings className="w-4 h-4"/>;"
-            </Button>;";""
-            <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">";""
-              <Minimize2 className="w-4 h-4"/>;"
-            </Button>;";""
-            <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">";""
+            <div>";"
+              <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>";"
+              <p className="text-zinc-400 text-xs">Real-time metrics</p>;
+            </div>;
+          </div>;"
+          ";"
+          <div className="flex items-center gap-2">";"
+            <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">";"
+              <Settings className="w-4 h-4"/>;
+            </Button>;"
+            ";"
+            <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">";"
+              <Minimize2 className="w-4 h-4"/>;
+            </Button>;"
+            ";"
+            <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">";"
               {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>};
             </Button>;
           </div>;
-        </div>;"
-        {/* Settings Panel */};""
-        <AnimatePresence>";""
+        </div>;
+        {/* Settings Panel */};"
+        <AnimatePresence>";"
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {;
   { height: 0,;
   opacity: 0;
@@ -238,32 +241,33 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   { height: 'auto',;
   opacity: 1;
 }} exit = {;
-  { height: 0,;"
-  opacity: 0;""
-}} transition={{ duration: 0.2 }}>";""
-              <div className="space-y-3">";""
-                <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>";""
-                <div className="grid grid-cols-2 gap-3">;""
-                  {Object.entries(thresholds).map(([key, value]) => (<div key={key}>";""
-                      <label className="text-zinc-300 text-xs font-medium capitalize">;"
-                        {key.replace(/([A-Z])/g, ' $1').trim()};""
-                      </label>";""
+  { height: 0,;
+  opacity: 0;"
+}} transition={{ duration: 0.2 }}>";"
+              <div className="space-y-3">";"
+                <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>";"
+                <div className="grid grid-cols-2 gap-3">;"
+                  {Object.entries(thresholds).map(([key, value]) => (<div key={key}>";"
+                      <label className="text-zinc-300 text-xs font-medium capitalize">;
+                        {key.replace(/([A-Z])/g, ' $1').trim()};"
+                      </label>";"
                       <input type="number" value={value} onChange = {;
-  (e) = / / /> setThresholds(prev => ({ ...prev,;"
-  [key]: Number(e.target.value);";""
+  (e) = / /> setThresholds(prev => ({ ...prev,;
+  [key]: Number(e.target.value);"
+";"
 }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"/>;
                     </div>))};
                 </div>;
               </div>;
-            </motion.div>)};"
-        </AnimatePresence>;""
-        {/* Metrics Display */}";""
-        <div className="p-4">";""
-          <div className="grid grid-cols-2 gap-4">;""
-            {/* FPS */}";""
-            <div className="text-center">";""
-              <div className="flex items-center justify-center gap-2 mb-2">";""
-                <Activity className="w-4 h-4 text-zinc-400"/>";""
+            </motion.div>)};
+        </AnimatePresence>;"
+        {/* Metrics Display */}";"
+        <div className="p-4">";"
+          <div className="grid grid-cols-2 gap-4">;"
+            {/* FPS */}";"
+            <div className="text-center">";"
+              <div className="flex items-center justify-center gap-2 mb-2">";"
+                <Activity className="w-4 h-4 text-zinc-400"/>";"
                 <span className="text-zinc-300 text-xs">FPS</span>;
               </div>;
               <div className = {;
@@ -271,12 +275,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   thresholds.fps);
 }`}>;
                 {metrics.fps};
-              </div>;"
-            </div>;""
-            {/* Memory */}";""
-            <div className="text-center">";""
-              <div className="flex items-center justify-center gap-2 mb-2">";""
-                <Activity className="w-4 h-4 text-zinc-400"/>";""
+              </div>;
+            </div>;"
+            {/* Memory */}";"
+            <div className="text-center">";"
+              <div className="flex items-center justify-center gap-2 mb-2">";"
+                <Activity className="w-4 h-4 text-zinc-400"/>";"
                 <span className="text-zinc-300 text-xs">Memory</span>;
               </div>;
               <div className = {;
@@ -284,12 +288,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   thresholds.memory);
 }`}>;
                 {metrics.memory.percentage}%;
-              </div>;"
-            </div>;""
-            {/* Render Time */}";""
-            <div className="text-center">";""
-              <div className="flex items-center justify-center gap-2 mb-2">";""
-                <Cpu className="w-4 h-4 text-zinc-400"/>";""
+              </div>;
+            </div>;"
+            {/* Render Time */}";"
+            <div className="text-center">";"
+              <div className="flex items-center justify-center gap-2 mb-2">";"
+                <Cpu className="w-4 h-4 text-zinc-400"/>";"
                 <span className="text-zinc-300 text-xs">Render</span>;
               </div>;
               <div className = {;
@@ -297,12 +301,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   thresholds.renderTime);
 }`}>;
                 {metrics.renderTime}ms;
-              </div>;"
-            </div>;""
-            {/* Network */}";""
-            <div className="text-center">";""
-              <div className="flex items-center justify-center gap-2 mb-2">";""
-                <Wifi className="w-4 h-4 text-zinc-400"/>";""
+              </div>;
+            </div>;"
+            {/* Network */}";"
+            <div className="text-center">";"
+              <div className="flex items-center justify-center gap-2 mb-2">";"
+                <Wifi className="w-4 h-4 text-zinc-400"/>";"
                 <span className="text-zinc-300 text-xs">Network</span>;
               </div>;
               <div className = {;
@@ -311,21 +315,21 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 }`}>;
                 {metrics.networkLatency}ms;
               </div>;
-            </div>;"
-          </div>;""
-          {/* Detailed Metrics */}";""
+            </div>;
+          </div>;"
+          {/* Detailed Metrics */}";"
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial = {;
   { height: 0,;
   opacity: 0;
 }} animate = {;
-  { height: 'auto',;"
-  opacity: 1;""
-}} transition={{ duration: 0.2 }}>";""
-              <div className="space-y-3">;""
-                {/* CPU Usage */}";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-zinc-300 text-xs">CPU Usage</span>";""
-                  <div className="flex items-center gap-2">";""
+  { height: 'auto',;
+  opacity: 1;"
+}} transition={{ duration: 0.2 }}>";"
+              <div className="space-y-3">;"
+                {/* CPU Usage */}";"
+                <div className="flex items-center justify-between">";"
+                  <span className="text-zinc-300 text-xs">CPU Usage</span>";"
+                  <div className="flex items-center gap-2">";"
                     <div className="w-20 bg-zinc-700 rounded-full h-2">;
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.cpuUsage}%` }}/>;
                     </div>;
@@ -335,12 +339,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 }`}>;
                       {metrics.cpuUsage}%;
                     </span>;
-                  </div>;"
-                </div>;""
-                {/* Disk Usage */}";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-zinc-300 text-xs">Disk Usage</span>";""
-                  <div className="flex items-center gap-2">";""
+                  </div>;
+                </div>;"
+                {/* Disk Usage */}";"
+                <div className="flex items-center justify-between">";"
+                  <span className="text-zinc-300 text-xs">Disk Usage</span>";"
+                  <div className="flex items-center gap-2">";"
                     <div className="w-20 bg-zinc-700 rounded-full h-2">;
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.diskUsage}%` }}/>;
                     </div>;
@@ -350,32 +354,33 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 }`}>;
                       {metrics.diskUsage}%;
                     </span>;
-                  </div>;"
-                </div>;""
-                {/* Memory Details */}";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-zinc-300 text-xs">Memory Details</span>";""
+                  </div>;
+                </div>;"
+                {/* Memory Details */}";"
+                <div className="flex items-center justify-between">";"
+                  <span className="text-zinc-300 text-xs">Memory Details</span>";"
                   <span className="text-zinc-400 text-xs">;
                     {metrics.memory.used}MB / {metrics.memory.total}MB;
-                  </span>;"
-                </div>;""
-                {/* Last Updated */}";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-zinc-300 text-xs">Last Updated</span>";""
+                  </span>;
+                </div>;"
+                {/* Last Updated */}";"
+                <div className="flex items-center justify-between">";"
+                  <span className="text-zinc-300 text-xs">Last Updated</span>";"
                   <span className="text-zinc-400 text-xs">;
                     {new Date(metrics.timestamp).toLocaleTimeString()};
                   </span>;
                 </div>;
-              </div>;"
-            </motion.div>)};""
-          {/* Alerts */}";""
-          {alerts.length > 0 && (<div className="mt-4 pt-4 border-t border-zion-blue-light/30">";""
-              <div className="flex items-center justify-between mb-3">";""
-                <h4 className="text-white font-medium text-sm">Alerts</h4>";""
-                <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-400 hover:text-white p-1">";""
+              </div>;
+            </motion.div>)};"
+          {/* Alerts */}";"
+          {alerts.length > 0 && (<div className="mt-4 pt-4 border-t border-zion-blue-light/30">";"
+              <div className="flex items-center justify-between mb-3">";"
+                <h4 className="text-white font-medium text-sm">Alerts</h4>";"
+                <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-400 hover:text-white p-1">";"
                   <X className="w-3 h-3"/>;
-                </Button>;"
-              </div>;";""
+                </Button>;
+              </div>;"
+              ";"
               <div className="space-y-2 max-h-32 overflow-y-auto">;
                 {alerts.map((alert) => {;
                 const Icon = getMetricIcon(alert.metric);
@@ -386,36 +391,38 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   { opacity: 1,;
   x: 0;
 }} exit = {;
-  { opacity: 0,;"
-  x: -20;""
-}}>";""
-                      <div className="flex items-center gap-2">";""
-                        <Icon className="w-3 h-3"/>";""
-                        <span className="font-medium">{alert.metric}</span>";""
+  { opacity: 0,;
+  x: -20;"
+}}>";"
+                      <div className="flex items-center gap-2">";"
+                        <Icon className="w-3 h-3"/>";"
+                        <span className="font-medium">{alert.metric}</span>";"
                         <span className="text-xs opacity-75">;
-                          {new Date(alert.timestamp).toLocaleTimeString()};"
-                        </span>;""
-                      </div>";""
+                          {new Date(alert.timestamp).toLocaleTimeString()};
+                        </span>;"
+                      </div>";"
                       <p className="mt-1 opacity-90">{alert.message}</p>;
                     </motion.div>)})};
-              </div>;"
-            </div>)};""
-          {/* Actions */}";""
-          <div className="mt-4 pt-4 border-t border-zion-blue-light/30">";""
-            <div className="flex items-center gap-2">";""
+              </div>;
+            </div>)};"
+          {/* Actions */}";"
+          <div className="mt-4 pt-4 border-t border-zion-blue-light/30">";"
+            <div className="flex items-center gap-2">";"
               <Button size="sm" variant="outline" onClick={() => {;
-            measureMemory();"
-            measureRenderTime();""
-            measureNetworkLatency();";""
-            simulateMetrics()}} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">";""
+            measureMemory();
+            measureRenderTime();"
+            measureNetworkLatency();";"
+            simulateMetrics()}} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">";"
                 <RefreshCw className="w-3 h-3 mr-2"/>;
-                Refresh;"
-              </Button>;";""
-              <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">";""
+                Refresh;
+              </Button>;"
+              ";"
+              <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">";"
                 <Settings className="w-3 h-3"/>;
               </Button>;
             </div>;
           </div>;
         </div>;
-      </div>;"
-    </motion.div>)};";""
+      </div>;
+    </motion.div>)};"
+";"

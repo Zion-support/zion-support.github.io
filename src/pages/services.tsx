@@ -269,70 +269,70 @@ const Services: React.FC = (): JSX.Element => {;
               {/* Filter Button */};
               <button;
                 onClick={() => setShowFilters(!showFilters)};
-                className="px-4 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg text-white hover:bg-slate-700/50 transition-all duration-200 flex items-center gap-2";""
-              >";""
+                className="px-4 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg text-white hover:bg-slate-700/50 transition-all duration-200 flex items-center gap-2";"";"
+              >";"";"
                 <FilterIcon className="w-5 h-5" />;
-                Filters;
-              </button>;
-            </div>;"
-          </div>;""
-  return (";""
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";""
-      <div className="container mx-auto px-4 py-20 text-white">";""
-        <header className="text-center max-w-4xl mx-auto">";""
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;"
-            Services & Micro SaaS;""
-          </h1>";""
-          <p className="text-base md:text-xl text-slate-300">;
-            Practical, production-grade solutions with transparent pricing and modern stacks.;
-          </p>;"
-        </header>;";""
-        <section className="mt-14">";""
-          <h2 className="text-2xl font-semibold text-cyan-300 mb-6">Enterprise Services</h2>";""
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">;""
-            {featuredServices.map((s)              => (";""
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors">";""
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>";""
-                <p className="text-slate-300 mb-4">{s.description}</p>";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-cyan-300 font-semibold">{s.priceRange}</span>;""
-                  {s.learnMoreUrl && (";""
-                    <a className="text-sm text-cyan-400 hover:text-cyan-300 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">;
-                      Reference;
-                    </a>;"
-                  )};""
-                </div>";""
+                Filters;"
+              </button>;";"
+            </div>;";"
+          </div>;"";"
+  return (";"";"
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";"";"
+      <div className="container mx-auto px-4 py-20 text-white">";"";"
+        <header className="text-center max-w-4xl mx-auto">";"";"
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;";"
+            Services & Micro SaaS;"";"
+          </h1>";"";"
+          <p className="text-base md:text-xl text-slate-300">;"
+            Practical, production-grade solutions with transparent pricing and modern stacks.;";"
+          </p>;";"
+        </header>;";"";"
+        <section className="mt-14">";"";"
+          <h2 className="text-2xl font-semibold text-cyan-300 mb-6">Enterprise Services</h2>";"";"
+          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">;"";"
+            {featuredServices.map((s)              => (";"";"
+              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors">";"";"
+                <h3 className="text-xl font-bold mb-2">{s.title}</h3>";"";"
+                <p className="text-slate-300 mb-4">{s.description}</p>";"";"
+                <div className="flex items-center justify-between">";"";"
+                  <span className="text-cyan-300 font-semibold">{s.priceRange}</span>;"";"
+                  {s.learnMoreUrl && (";"";"
+                    <a className="text-sm text-cyan-400 hover:text-cyan-300 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">;"
+                      Reference;";"
+                    </a>;";"
+                  )};"";"
+                </div>";"";"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                   {category.services.map((service, serviceIndex) => (;
-                    <motion.div;
-                      key={service.name};
-                      initial={{ opacity: 0, y: 20 }};"
-                      whileInView={{ opacity: 1, y: 0 }};""
-                      transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (serviceIndex * 0.1) }}";""
-                      className="group";""
-                    >";""
-                      <span className="mr-2">{category.icon}</span>;""
-                      {category.name}";""
+                    <motion.div;"
+                      key={service.name};";"
+                      initial={{ opacity: 0, y: 20 }};";"
+                      whileInView={{ opacity: 1, y: 0 }};"";"
+                      transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (serviceIndex * 0.1) }}";"";"
+                      className="group";"";"
+                    >";"";"
+                      <span className="mr-2">{category.icon}</span>;"";"
+                      {category.name}";"";"
                       <span className="ml-2 text-xs bg-slate-700/50 px-2 py-1 rounded-full">;
                         {category.count};
                       </span>;
                     </button>;
                   ))};
                 </div>;
-              </motion.div>;
-            ))};
-          </div>;"
-        </section>;";""
-        <section className="mt-16">";""
-          <h2 className="text-2xl font-semibold text-purple-300 mb-6">Micro SaaS Products</h2>";""
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">;""
-            {microSaaS.map((s)              => (";""
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors">";""
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>";""
-                <p className="text-slate-300 mb-4">{s.description}</p>";""
-                <div className="flex items-center justify-between">";""
-                  <span className="text-purple-300 font-semibold">{s.priceRange}</span>;""
-                  {s.learnMoreUrl && (";""
+              </motion.div>;"
+            ))};";"
+          </div>;";"
+        </section>;";"";"
+        <section className="mt-16">";"";"
+          <h2 className="text-2xl font-semibold text-purple-300 mb-6">Micro SaaS Products</h2>";"";"
+          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">;"";"
+            {microSaaS.map((s)              => (";"";"
+              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors">";"";"
+                <h3 className="text-xl font-bold mb-2">{s.title}</h3>";"";"
+                <p className="text-slate-300 mb-4">{s.description}</p>";"";"
+                <div className="flex items-center justify-between">";"";"
+                  <span className="text-purple-300 font-semibold">{s.priceRange}</span>;"";"
+                  {s.learnMoreUrl && (";"";"
                     <a className="text-sm text-purple-300 hover:text-purple-200 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">;
                       Learn more;
                     </a>;
@@ -341,63 +341,63 @@ const Services: React.FC = (): JSX.Element => {;
               </motion.div>;
             ))};
           </motion.div>;
-          {/* Empty State */};
-          {sortedServices.length === 0 && (;
-            <motion.div;"
-              initial={{ opacity: 0, y: 20 }};""
-              animate={{ opacity: 1, y: 0 }}";""
-              className="text-center py-16";""
-            >";""
-              <div className="w-24 h-24 mx-auto mb-6 bg-slate-800/50 rounded-full flex items-center justify-center">";""
-                <Search className="w-12 h-12 text-slate-400" />;""
-              </div>";""
-              <h3 className="text-2xl font-bold text-slate-300 mb-2">No services found</h3>";""
+          {/* Empty State */};"
+          {sortedServices.length === 0 && (;";"
+            <motion.div;";"
+              initial={{ opacity: 0, y: 20 }};"";"
+              animate={{ opacity: 1, y: 0 }}";"";"
+              className="text-center py-16";"";"
+            >";"";"
+              <div className="w-24 h-24 mx-auto mb-6 bg-slate-800/50 rounded-full flex items-center justify-center">";"";"
+                <Search className="w-12 h-12 text-slate-400" />;"";"
+              </div>";"";"
+              <h3 className="text-2xl font-bold text-slate-300 mb-2">No services found</h3>";"";"
               <p className="text-slate-400 mb-6">;
                 Try adjusting your search terms or filters to find what you're looking for.;
               </p>;
-              <button;
-                onClick={() => {;
-                  setSearchTerm('');"
-                  setActiveCategory('all');""
-                }}";""
+              <button;"
+                onClick={() => {;";"
+                  setSearchTerm('');";"
+                  setActiveCategory('all');"";"
+                }}";"";"
                 className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-200";
               >;
                 Clear Filters;
               </button>;
-            </motion.div>;
-          )};
-        </div>;"
-      </section>;""
-      {/* CTA Section */}";""
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">";""
+            </motion.div>;"
+          )};";"
+        </div>;";"
+      </section>;"";"
+      {/* CTA Section */}";"";"
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">";"";"
         <div className="container mx-auto px-4 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }};""
-            viewport={{ once: true }}";""
-            className="max-w-3xl mx-auto";""
-          >";""
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;"
-              Ready to Transform Your Business?;""
-            </h2>";""
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
-              Let our team of experts help you implement cutting-edge solutions that drive innovation,;"
-              efficiency, and growth for your organization.;""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <Link";""
-                to="/contact";""
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center";"
-              >;""
-                Get Started Today";""
-                <ArrowRight className="w-5 h-5 ml-2" />;"
-              </Link>;""
-              <Link";""
-                to="/schedule-demo";""
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center";"
-              >;""
-                Schedule a Demo";""
+          <motion.div;"
+            initial={{ opacity: 0, y: 30 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};"";"
+            viewport={{ once: true }}";"";"
+            className="max-w-3xl mx-auto";"";"
+          >";"";"
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;";"
+              Ready to Transform Your Business?;"";"
+            </h2>";"";"
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">;";"
+              Let our team of experts help you implement cutting-edge solutions that drive innovation,;";"
+              efficiency, and growth for your organization.;"";"
+            </p>";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <Link";"";"
+                to="/contact";"";"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center";";"
+              >;"";"
+                Get Started Today";"";"
+                <ArrowRight className="w-5 h-5 ml-2" />;";"
+              </Link>;"";"
+              <Link";"";"
+                to="/schedule-demo";"";"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center";";"
+              >;"";"
+                Schedule a Demo";"";"
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Link>;
             </div>;
@@ -405,7 +405,7 @@ const Services: React.FC = (): JSX.Element => {;
         </div>;
       </section>;
     </div>;
-  );
-};
-;"
-export default Services;";""
+  );"
+};";"
+;";"
+export default Services;";"";"

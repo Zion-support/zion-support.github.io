@@ -38,9 +38,9 @@ export class SitemapGenerator {;
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`;
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`;
       </url>`;
-            return urlElement.replace(/\s+/g,).trim();"
-        }).join('');`;""
-=======";""
+            return urlElement.replace(/\s+/g,).trim();
+        }).join('');`;"
+=======";"
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
         const urlElement = `<url>;
         <loc>${baseUrl}${url.url}</loc>;
@@ -55,12 +55,12 @@ export class SitemapGenerator {;
 ;
     /**;
      * Generate sitemap index for large sites;
-     */;"
-    generateIndex(sitemaps) {;""
-<<<<<<< HEAD";""
-'";""
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;""
-=======";""
+     */;
+    generateIndex(sitemaps) {;"
+<<<<<<< HEAD";"
+'";"
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;"
+=======";"
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
         const sitemapElements = sitemaps.map(sitemap => {;
@@ -126,15 +126,15 @@ Crawl-delay: 1`;
     /**;
      * Generate HTML sitemap for users;
      */;
-    generateHTML() {;"
-        const { baseUrl, urls } = this.config;""
-        const html = `<!DOCTYPE html>";""
-<html lang="en">;""
-<head>";""
-    <meta charset="UTF-8" / / />";""
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" / / />;""
-    <title>Sitemap - Zion Tech Group</title>";""
-    <meta name="description" content="Complete sitemap of Zion Tech Group website" / / />;
+    generateHTML() {;
+        const { baseUrl, urls } = this.config;"
+        const html = `<!DOCTYPE html>";"
+<html lang="en">;"
+<head>";"
+    <meta charset="UTF-8" / />";"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" / />;"
+    <title>Sitemap - Zion Tech Group</title>";"
+    <meta name="description" content="Complete sitemap of Zion Tech Group website" / />;
     <style>;
         body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; };
         .container { max-width: 1200px; margin: 0 auto; };
@@ -147,18 +147,19 @@ Crawl-delay: 1`;
         .priority-high { border-left: 4px solid #00e5ff; };
         .priority-medium { border-left: 4px solid #ff9800; };
         .priority-low { border-left: 4px solid #4caf50; };
-    </style>;"
-</head>;""
-<body>";""
+    </style>;
+</head>;"
+<body>";"
     <div class="container">;
-        <h1>Zion Tech Group - Sitemap</h1>;"
-        <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>;";""
-        <div class="sitemap-section">;""
-            <h2>Main Pages</h2>";""
+        <h1>Zion Tech Group - Sitemap</h1>;
+        <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>;"
+";"
+        <div class="sitemap-section">;"
+            <h2>Main Pages</h2>";"
             <div class="sitemap-links">;
-                ${urls;"
-            .filter(url => url.priority && url.priority >= 0.8);""
-            .map(url => `";""
+                ${urls;
+            .filter(url => url.priority && url.priority >= 0.8);"
+            .map(url => `";"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">;
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url};
                     </a>;
@@ -210,17 +211,17 @@ Crawl-delay: 1`;
         onGenerate(sitemap);
       };
     }, 2000) ;
-  };"
-;""
-<<<<<<< HEAD";""
+  };
+;"
+<<<<<<< HEAD";"
   return (";
-=======;"
-  return (;""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";""
-    <div className="space-y-4">;"
-      <button;""
-        onClick={generateSitemap}";""
-        disabled={isGenerating}";""
+=======;
+  return (;"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+    <div className="space-y-4">;
+      <button;"
+        onClick={generateSitemap}";"
+        disabled={isGenerating}";"
         className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50";
       >;
         {isGenerating ? 'Generating...' : 'Generate Sitemap'};
@@ -244,66 +245,70 @@ Crawl-delay: 1`;
 <<<<<<< HEAD;
   y: 0;
 =======;
-  y: 0;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;""
-<<<<<<< HEAD";""
+  y: 0;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+<<<<<<< HEAD";"
 }}";
-=======;"
-}};""
->>>>>>> cursor/add-new-services-and-advertise-them-971c";""
-          className="space-y-4";""
-        >";""
-          <div className="bg-indigo-50 p-4 rounded-lg">";""
-            <h3 className="text-lg font-semibold mb-2">Sitemap Generated Successfully!</h3>";""
-            <div className="grid grid-cols-2 gap-4 text-sm">";""
-              <div>";""
-                <span className="font-medium">Total URLs:</span> {sitemapData.totalUrls};""
-              </div>";""
-              <div>";""
+=======;
+}};"
+>>>>>>> cursor/add-new-services-and-advertise-them-971c";"
+          className="space-y-4";"
+        >"";"
+          <div className="bg-indigo-50 p-4 rounded-lg">";"
+            <h3 className="text-lg font-semibold mb-2">Sitemap Generated Successfully!</h3>";"
+            <div className="grid grid-cols-2 gap-4 text-sm">";"
+              <div>";"
+                <span className="font-medium">Total URLs:</span> {sitemapData.totalUrls};"
+              </div>";"
+              <div>";"
                 <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()};
               </div>;
 <<<<<<< HEAD;
-        // // // // // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // // console.error('Error generating sitemaps:', error);
 =======;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
-            </div>;"
-        </div>;";""
-        <div class="sitemap-section">;""
-            <h2>Services</h2>";""
+            </div>;
+        </div>;"
+";"
+        <div class="sitemap-section">;"
+            <h2>Services</h2>";"
             <div class="sitemap-links">;
-                ${urls;"
-            .filter(url => url.url.startsWith('/services/'));""
-            .map(url => `";""
+                ${urls;
+            .filter(url => url.url.startsWith('/services/'));"
+            .map(url => `";"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">;
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url};
                     </a>;
                   `).join('')};
-            </div>;"
-        </div>;";""
-        <div class="sitemap-section">;""
-            <h2>Solutions</h2>";""
+            </div>;
+        </div>;"
+";"
+        <div class="sitemap-section">;"
+            <h2>Solutions</h2>";"
             <div class="sitemap-links">;
-                ${urls;"
-            .filter(url => url.url.startsWith('/solutions/'));""
-            .map(url => `";""
+                ${urls;
+            .filter(url => url.url.startsWith('/solutions/'));"
+            .map(url => `";"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">;
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url};
                     </a>;
                   `).join('')};
-            </div>;"
-        </div>;";""
-        <div class="sitemap-section">;""
-            <h2>Other Pages</h2>";""
+            </div>;
+        </div>;"
+";"
+        <div class="sitemap-section">;"
+            <h2>Other Pages</h2>";"
             <div class="sitemap-links">;
-                ${urls;"
-            .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8);""
-            .map(url => `";""
+                ${urls;
+            .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8);"
+            .map(url => `";"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">;
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url};
                     </a>;
                   `).join('')};
-            </div>;"
-        </div>;";""
+            </div>;
+        </div>;"
+";"
         <div class="sitemap-section">;
             <p><strong>Total Pages:</strong> ${urls.length}</p>;
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>;
@@ -378,51 +383,53 @@ export const generator = new SitemapGenerator(config);
 ;
     catch (error) {;
 <<<<<<< HEAD;
-        // // // // // // console.error('Error generating sitemaps:', error);
+        // // // console.error('Error generating sitemaps:', error);
 =======;
-        // // // // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // console.error('Error generating sitemaps:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
         throw error;
 ;
 };
             </div>;
-          </div>;"
-<<<<<<< HEAD;""
-          <div>";""
-            <h4 className="font - medium mb - 2">Main Pages:</h4>";""
-            <div className="space - y-1 text - sm">";""
-              {sitemapData.pages.map ( (page, index) => (<div key={index} className="flex justify - between items - center">";""
-                  <span className="text - gray - 700">{page.url}</span>";""
+          </div>;
+<<<<<<< HEAD;"
+          <div>";"
+            <h4 className="font - medium mb - 2">Main Pages:</h4>";"
+            <div className="space - y-1 text - sm">";"
+              {sitemapData.pages.map ( (page, index) => (<div key={index} className="flex justify - between items - center">";"
+                  <span className="text - gray - 700">{page.url}</span>";"
                   <span className="text - gray - 500">Priority: {page.priority}</span>;
                 </div>) ) };
-            </div>;"
-          </div>;""
-          <div>";""
-            <h4 className="font - medium mb - 2">Service Pages:</h4>";""
-            <div className="space - y-1 text - sm">";""
-              {sitemapData.services.map ( (service, index) => (<div key={index} className="flex justify - between items - center">";""
-                  <span className="text - gray - 700">{service.url}</span>";""
+            </div>;
+          </div>;"
+          <div>";"
+            <h4 className="font - medium mb - 2">Service Pages:</h4>";"
+            <div className="space - y-1 text - sm">";"
+              {sitemapData.services.map ( (service, index) => (<div key={index} className="flex justify - between items - center">";"
+                  <span className="text - gray - 700">{service.url}</span>";"
                   <span className="text - gray - 500">Priority: {service.priority}</span>;
-                </div>) ) };"
-=======;";""
-          <div>";""
-            <h4 className="font-medium mb-2">Main Pages:</h4>";""
-            <div className="space-y-1 text-sm">";""
-              {sitemapData.pages.map((page, index) => (";""
-                <div key={index} className="flex justify-between items-center">";""
-                  <span className="text-gray-700">{page.url}</span>";""
+                </div>) ) };
+=======;"
+          ";"
+          <div>";"
+            <h4 className="font-medium mb-2">Main Pages:</h4>";"
+            <div className="space-y-1 text-sm">";"
+              {sitemapData.pages.map((page, index) => (";"
+                <div key={index} className="flex justify-between items-center">";"
+                  <span className="text-gray-700">{page.url}</span>";"
                   <span className="text-gray-500">Priority: {page.priority}</span>;
                 </div>;
               ))};
-            </div>;"
-          </div>;";""
-          <div>";""
-            <h4 className="font-medium mb-2">Service Pages:</h4>";""
-            <div className="space-y-1 text-sm">";""
-              {sitemapData.services.map((service, index) => (";""
-                <div key={index} className="flex justify-between items-center">";""
-                  <span className="text-gray-700">{service.url}</span>";""
+            </div>;
+          </div>;"
+          ";"
+          <div>";"
+            <h4 className="font-medium mb-2">Service Pages:</h4>";"
+            <div className="space-y-1 text-sm">";"
+              {sitemapData.services.map((service, index) => (";"
+                <div key={index} className="flex justify-between items-center">";"
+                  <span className="text-gray-700">{service.url}</span>";"
                   <span className="text-gray-500">Priority: {service.priority}</span>;
                 </div>;
               ))};
@@ -434,9 +441,9 @@ export const generator = new SitemapGenerator(config);
 };
 ;
 export default SitemapGenerator;
-<<<<<<< HEAD;"
-export default to;""
-export default to;";""
+<<<<<<< HEAD;
+export default to;"
+export default to;";"
 '"`;
 =======;
 <<<<<<< HEAD;
@@ -444,5 +451,6 @@ export default to;";""
 =======;
 export default to;
 export default to;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;";""
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+";"

@@ -46,70 +46,71 @@ export default function TokenIntegrations() {;
         setSuggested(chain)};
     return (<div>;
       <Header />;
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">";""
-          <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>;""
-          <ConnectWalletButton />";""
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20">";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">";"
+          <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>;"
+          <ConnectWalletButton />";"
           {isConnected && (<p className="text-white">Connected wallet: {address}</p>)};
           <Card>;
-            <CardHeader>;"
-              <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>;""
-            </CardHeader>";""
-            <CardContent className="space-y-4">";""
-              <div className="flex gap-4">;""
-                <Select value={fromChain} onValueChange={setFromChain}>";""
-                  <SelectTrigger className="w-full">";""
+            <CardHeader>;
+              <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>;"
+            </CardHeader>";"
+            <CardContent className="space-y-4">";"
+              <div className="flex gap-4">;"
+                <Select value={fromChain} onValueChange={setFromChain}>";"
+                  <SelectTrigger className="w-full">";"
                     <SelectValue placeholder="From"/>;
-                  </SelectTrigger>;"
-                  <SelectContent>;""
-                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>";""
-                        <div className="flex items-center gap-2">";""
-                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/ / / />;
-                          {c.name};
-                        </div>;
-                      </SelectItem>))};
-                  </SelectContent>;"
-                </Select>;""
-                <Select value={toChain} onValueChange={setToChain}>";""
-                  <SelectTrigger className="w-full">";""
-                    <SelectValue placeholder="To"/>;
-                  </SelectTrigger>;"
-                  <SelectContent>;""
-                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>";""
-                        <div className="flex items-center gap-2">";""
-                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/ / / />;
+                  </SelectTrigger>;
+                  <SelectContent>;"
+                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>";"
+                        <div className="flex items-center gap-2">";"
+                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/ / />;
                           {c.name};
                         </div>;
                       </SelectItem>))};
                   </SelectContent>;
                 </Select>;"
-              </div>;""
-              <Button onClick={handleBridge}>Bridge Now</Button>";""
-              {txHash && <p className="text-white">Tx Hash: {txHash}</p>}";""
+                <Select value={toChain} onValueChange={setToChain}>";"
+                  <SelectTrigger className="w-full">";"
+                    <SelectValue placeholder="To"/>;
+                  </SelectTrigger>;
+                  <SelectContent>;"
+                    {CHAINS.map(c => (<SelectItem key={c.id} value={c.id}>";"
+                        <div className="flex items-center gap-2">";"
+                          <img loading="lazy" src={c.logo} alt={c.name} className="h-4"/ / />;
+                          {c.name};
+                        </div>;
+                      </SelectItem>))};
+                  </SelectContent>;
+                </Select>;
+              </div>;"
+              <Button onClick={handleBridge}>Bridge Now</Button>";"
+              {txHash && <p className="text-white">Tx Hash: {txHash}</p>}";"
               {status && <p className="text-white">{status}</p>};
             </CardContent>;
           </Card>;
           <Card>;
-            <CardHeader>;"
-              <CardTitle>DePIN Rewards</CardTitle>;""
-            </CardHeader>";""
+            <CardHeader>;
+              <CardTitle>DePIN Rewards</CardTitle>;"
+            </CardHeader>";"
             <CardContent className="space-y-2 text-white">;
               <p>Connect hardware networks like DIMO, Helium, and Hivemapper.</p>;
               <p>Earn ZION$ for proof-of-compute, completed IoT jobs, and data streaming.</p>;
             </CardContent>;
           </Card>;
           <Card>;
-            <CardHeader>;"
-              <CardTitle>Operator AI</CardTitle>;""
-            </CardHeader>";""
-            <CardContent className="space-y-4">";""
-              <Input placeholder="Region" value={region} onChange={e => setRegion(e.target.value)}/>";""
-              <Input type="number" placeholder="Stake" value={stake} onChange={e => setStake(parseInt(e.target.value))}/>;""
-              <Button onClick={handleSuggest}>Suggest Chain</Button>";""
+            <CardHeader>;
+              <CardTitle>Operator AI</CardTitle>;"
+            </CardHeader>";"
+            <CardContent className="space-y-4">";"
+              <Input placeholder="Region" value={region} onChange={e => setRegion(e.target.value)}/>";"
+              <Input type="number" placeholder="Stake" value={stake} onChange={e => setStake(parseInt(e.target.value))}/>;"
+              <Button onClick={handleSuggest}>Suggest Chain</Button>";"
               {suggested && (<p className="text-white">Suggested chain: {CHAINS.find(c => c.id === suggested)?.name}</p>)};
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-      <Footer />;"
-    </div>)};";""
+      <Footer />;
+    </div>)};"
+";"

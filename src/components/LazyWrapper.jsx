@@ -77,7 +77,7 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
   { opacity: 1,;
   y: 0;
 }} transition={{ duration: 0.6 }} className={className}>;
-      {children};"
-    </motion.div>)};""
-export default LazyWrapper;";""
-}}}'"`";""
+      {children};
+    </motion.div>)};"
+export default LazyWrapper;";"
+}}}'"`";"

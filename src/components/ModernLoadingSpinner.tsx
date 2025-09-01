@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Cpu, Brain, Cloud, Shield } from 'lucide-react';
 ;
 interface ModernLoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -29,17 +28,17 @@ const spinnerVariants = {;
   pulse: {;
     scale: [1, 1.1, 1],;
     opacity: [0.5, 1, 0.5],;
-    transition: {;"
-      duration: 2,;""
-      repeat: Infinity,";""
+    transition: {;
+      duration: 2,;"
+      repeat: Infinity,";"
       ease: "easeInOut";
     };
   },;
   float: {;
     y: [-10, 10, -10],;
-    transition: {;"
-      duration: 3,;""
-      repeat: Infinity,";""
+    transition: {;
+      duration: 3,;"
+      repeat: Infinity,";"
       ease: "easeInOut";
     };
   };
@@ -48,17 +47,17 @@ const spinnerVariants = {;
 const iconVariants = {;
   rotate: {;
     rotate: 360,;
-    transition: {;"
-      duration: 2,;""
-      repeat: Infinity,";""
+    transition: {;
+      duration: 2,;"
+      repeat: Infinity,";"
       ease: "linear";
     };
   },;
   pulse: {;
     scale: [1, 1.2, 1],;
-    transition: {;"
-      duration: 1.5,;""
-      repeat: Infinity,";""
+    transition: {;
+      duration: 1.5,;"
+      repeat: Infinity,";"
       ease: "easeInOut";
     };
   };
@@ -121,9 +120,9 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
   }, [duration, showProgress, onComplete]);
 ;
   const renderSpinner = () => {;
-    switch (variant) {;"
-      case 'futuristic':;""
-        return (";""
+    switch (variant) {;
+      case 'futuristic':;"
+        return (";"
           <div className="relative">;
             <motion.div;
               className={`${sizeClasses[size]} border-4 border-transparent rounded-full`};
@@ -134,86 +133,86 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
               animate={{;
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'];
               }};
-              transition={{;"
-                duration: 2,;""
-                repeat: Infinity,";""
+              transition={{;
+                duration: 2,;"
+                repeat: Infinity,";"
                 ease: "easeInOut";
-              }};"
-            />;""
-            <motion.div";""
+              }};
+            />;"
+            <motion.div";"
               className="absolute inset-0 border-4 border-slate-800 rounded-full";
               animate={{ rotate: 360 }};
-              transition={{;"
-                duration: 1.5,;""
-                repeat: Infinity,";""
+              transition={{;
+                duration: 1.5,;"
+                repeat: Infinity,";"
                 ease: "linear";
               }};
             />;
           </div>;
         );
-;"
-      case 'ai':;""
-        return (";""
-          <div className="relative">;"
-            <motion.div;""
-              className={`${sizeClasses[size]} flex items-center justify-center`}";""
-              animate="pulse";"
-              variants={spinnerVariants};""
-            >";""
-              <Brain className="w-full h-full text-cyan-400" />;"
-            </motion.div>;""
-            <motion.div";""
-              className="absolute inset-0 border-2 border-cyan-400 rounded-full";""
+;
+      case 'ai':;"
+        return (";"
+          <div className="relative">;
+            <motion.div;"
+              className={`${sizeClasses[size]} flex items-center justify-center`}";"
+              animate="pulse";
+              variants={spinnerVariants};"
+            >";"
+              <Brain className="w-full h-full text-cyan-400" />;
+            </motion.div>;"
+            <motion.div";"
+              className="absolute inset-0 border-2 border-cyan-400 rounded-full";"
               animate="rotate";
               variants={spinnerVariants};
             />;
           </div>;
         );
-;"
-      case 'cyber':;""
-        return (";""
-          <div className="relative">;"
-            <motion.div;""
-              className={`${sizeClasses[size]} flex items-center justify-center`}";""
-              animate="pulse";"
-              variants={spinnerVariants};""
-            >";""
-              <Shield className="w-full h-full text-purple-400" />;"
-            </motion.div>;""
-            <motion.div";""
+;
+      case 'cyber':;"
+        return (";"
+          <div className="relative">;
+            <motion.div;"
+              className={`${sizeClasses[size]} flex items-center justify-center`}";"
+              animate="pulse";
+              variants={spinnerVariants};"
+            >";"
+              <Shield className="w-full h-full text-purple-400" />;
+            </motion.div>;"
+            <motion.div";"
               className="absolute inset-0 border-2 border-purple-400 rounded-full";
               style={{;
                 background: 'conic-gradient(from 0deg, transparent, #a855f7, transparent)';
               }};
               animate={{ rotate: 360 }};
-              transition={{;"
-                duration: 2,;""
-                repeat: Infinity,";""
+              transition={{;
+                duration: 2,;"
+                repeat: Infinity,";"
                 ease: "linear";
               }};
             />;
           </div>;
         );
-;"
-      case 'quantum':;""
-        return (";""
-          <div className="relative">;"
-            <motion.div;""
-              className={`${sizeClasses[size]} flex items-center justify-center`}";""
-              animate="float";"
-              variants={spinnerVariants};""
-            >";""
-              <Cpu className="w-full h-full text-green-400" />;"
-            </motion.div>;""
-            <motion.div";""
+;
+      case 'quantum':;"
+        return (";"
+          <div className="relative">;
+            <motion.div;"
+              className={`${sizeClasses[size]} flex items-center justify-center`}";"
+              animate="float";
+              variants={spinnerVariants};"
+            >";"
+              <Cpu className="w-full h-full text-green-400" />;
+            </motion.div>;"
+            <motion.div";"
               className="absolute inset-0 border-2 border-green-400 rounded-full";
               animate={{;
                 scale: [1, 1.5, 1],;
                 opacity: [1, 0.3, 1];
               }};
-              transition={{;"
-                duration: 2,;""
-                repeat: Infinity,";""
+              transition={{;
+                duration: 2,;"
+                repeat: Infinity,";"
                 ease: "easeInOut";
               }};
             />;
@@ -225,9 +224,9 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
           <motion.div;
             className={`${sizeClasses[size]} border-4 border-slate-600 border-t-cyan-400 rounded-full`};
             animate={{ rotate: 360 }};
-            transition={{;"
-              duration: 1,;""
-              repeat: Infinity,";""
+            transition={{;
+              duration: 1,;"
+              repeat: Infinity,";"
               ease: "linear";
             }};
           />;
@@ -236,16 +235,16 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
   };
 ;
   const renderProgressBar = () => {;
-    if (!showProgress) return null;"
-;""
-    return (";""
-      <div className="w-full max-w-xs mt-4">";""
+    if (!showProgress) return null;
+;"
+    return (";"
+      <div className="w-full max-w-xs mt-4">";"
         <div className="flex justify-between text-sm text-slate-400 mb-2">;
-          <span>Loading...</span>;"
-          <span>{currentProgress}%</span>;""
-        </div>";""
-        <div className="w-full bg-slate-700 rounded-full h-2">;""
-          <motion.div";""
+          <span>Loading...</span>;
+          <span>{currentProgress}%</span>;"
+        </div>";"
+        <div className="w-full bg-slate-700 rounded-full h-2">;"
+          <motion.div";"
             className="h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full";
             initial={{ width: 0 }};
             animate={{ width: `${currentProgress}%` }};
@@ -265,9 +264,9 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
         initial={{ opacity: 0, y: 10 }};
         animate={{ opacity: 1, y: 0 }};
         transition={{;
-          delay: index * 0.1,;"
-          duration: 0.3;""
-        }}";""
+          delay: index * 0.1,;
+          duration: 0.3;"
+        }}";"
         className="inline-block";
       >;
         {char === ' ' ? '\u00A0' : char};
@@ -286,23 +285,23 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
     );
   };
 ;
-  if (isComplete) {;"
-    return (;""
-      <motion.div";""
+  if (isComplete) {;
+    return (;"
+      <motion.div";"
         className="flex flex-col items-center justify-center";
         initial={{ opacity: 0, scale: 0.8 }};
         animate={{ opacity: 1, scale: 1 }};
         transition={{ duration: 0.5 }};
       >;
         <motion.div;
-          className={`${sizeClasses[size]} flex items-center justify-center text-green-400`};"
-          initial={{ scale: 0 }};""
-          animate={{ scale: 1 }}";""
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }};""
-        >";""
-          <Zap className="w-full h-full" />;"
-        </motion.div>;""
-        <motion.p";""
+          className={`${sizeClasses[size]} flex items-center justify-center text-green-400`};
+          initial={{ scale: 0 }};"
+          animate={{ scale: 1 }}";"
+          transition={{ delay: 0.2, type: "spring", stiffness: 200 }};"
+        >";"
+          <Zap className="w-full h-full" />;
+        </motion.div>;"
+        <motion.p";"
           className="text-slate-300 mt-4 text-center";
           initial={{ opacity: 0 }};
           animate={{ opacity: 1 }};
@@ -311,60 +310,60 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
           Ready!;
         </motion.p>;
       </motion.div>;
-    );"
-  };""
-  return (";""
-    <AnimatePresence mode="wait">;""
-      <motion.div";""
-        className="flex flex-col items-center justify-center p-8";""
-        variants={loadingVariants}";""
-        initial="hidden";""
-        animate="visible";""
-        exit="exit";"
-      >;""
-        {/* Main Spinner */}";""
+    );
+  };"
+  return (";"
+    <AnimatePresence mode="wait">;"
+      <motion.div";"
+        className="flex flex-col items-center justify-center p-8";"
+        variants={loadingVariants}";"
+        initial="hidden";"
+        animate="visible";"
+        exit="exit";
+      >;"
+        {/* Main Spinner */}";"
         <div className="relative">;
           {renderSpinner()};
           {/* Floating particles for futuristic variants */};
-          {variant === 'futuristic' && (;"
-            <>;""
-              <motion.div";""
+          {variant === 'futuristic' && (;
+            <>;"
+              <motion.div";"
                 className="absolute -top-2 -left-2 w-2 h-2 bg-cyan-400 rounded-full";
                 animate={{;
                   x: [0, 10, 0],;
                   y: [0, -10, 0],;
                   opacity: [0.5, 1, 0.5];
                 }};
-                transition={{;"
-                  duration: 2,;""
-                  repeat: Infinity,";""
+                transition={{;
+                  duration: 2,;"
+                  repeat: Infinity,";"
                   ease: "easeInOut";
-                }};"
-              />;""
-              <motion.div";""
+                }};
+              />;"
+              <motion.div";"
                 className="absolute -top-2 -right-2 w-2 h-2 bg-purple-400 rounded-full";
                 animate={{;
                   x: [0, -10, 0],;
                   y: [0, -10, 0],;
                   opacity: [0.5, 1, 0.5];
                 }};
-                transition={{;"
-                  duration: 2,;""
-                  repeat: Infinity,";""
+                transition={{;
+                  duration: 2,;"
+                  repeat: Infinity,";"
                   ease: "easeInOut",;
                   delay: 0.5;
-                }};"
-              />;""
-              <motion.div";""
+                }};
+              />;"
+              <motion.div";"
                 className="absolute -bottom-2 -left-2 w-2 h-2 bg-green-400 rounded-full";
                 animate={{;
                   x: [0, 10, 0],;
                   y: [0, 10, 0],;
                   opacity: [0.5, 1, 0.5];
                 }};
-                transition={{;"
-                  duration: 2,;""
-                  repeat: Infinity,";""
+                transition={{;
+                  duration: 2,;"
+                  repeat: Infinity,";"
                   ease: "easeInOut",;
                   delay: 1;
                 }};
@@ -376,25 +375,25 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
         {renderProgressBar()};
         {/* Loading Text */};
         {renderLoadingText()};
-        {/* Additional Loading Indicators */};"
-        {variant === 'ai' && (;""
-          <motion.div";""
+        {/* Additional Loading Indicators */};
+        {variant === 'ai' && (;"
+          <motion.div";"
             className="flex space-x-2 mt-4";
             initial={{ opacity: 0 }};
             animate={{ opacity: 1 }};
             transition={{ delay: 1 }};
           >;
-            {[0, 1, 2].map((i) => (;"
-              <motion.div;""
-                key={i}";""
+            {[0, 1, 2].map((i) => (;
+              <motion.div;"
+                key={i}";"
                 className="w-2 h-2 bg-cyan-400 rounded-full";
                 animate={{;
                   scale: [1, 1.5, 1],;
                   opacity: [0.5, 1, 0.5];
                 }};
-                transition={{;"
-                  duration: 1,;""
-                  repeat: Infinity,";""
+                transition={{;
+                  duration: 1,;"
+                  repeat: Infinity,";"
                   ease: "easeInOut",;
                   delay: i * 0.2;
                 }};
@@ -403,6 +402,6 @@ export const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({;
           </motion.div>;
         )};
       </motion.div>;
-    </AnimatePresence>;"
-  );""
-};";""
+    </AnimatePresence>;
+  );"
+};";"

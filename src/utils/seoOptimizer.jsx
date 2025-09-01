@@ -80,30 +80,59 @@ export class SEOOptimizer {;
 ;
     static generateStructuredData(path) {;
         const baseData = {;
-  "@context": "https://schema.org",";"@type": "WebPage",";"name": this.generateTitle(path),";"description": this.generateDescription(path),";"url": this.generateCanonicalUrl(path),";"publisher": {;";""
-                "@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",;""
-<<<<<<< HEAD";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
-};"
-=======;""
-<<<<<<< HEAD";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";""
-=======";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+  "@context": "https://schema.org",";"
+            "@type": "WebPage",";"
+            "name": this.generateTitle(path),";"
+            "description": this.generateDescription(path),";"
+            "url": this.generateCanonicalUrl(path),";"
+            "publisher": {";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",;"
+<<<<<<< HEAD";"
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+};
+=======;"
+<<<<<<< HEAD";"
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";"
+=======";"
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
 };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
         };
         // Add specific structured data based on page type;
-        if (path === '/') {;"
-            return {;""
-                ...baseData,";"@type": "Organization",";"name": "Zion Tech Group",";"url": "https://ziontechgroup.com",";"logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"address": {;";""
-                    "@type": "PostalAddress",";"streetAddress": "364 E Main St STE 1008",";"addressLocality": "Middletown",";"addressRegion": "DE",";"postalCode": "19709",";"addressCountry": "US";""
-                },";"contactPoint": {;";""
-                    "@type": "ContactPoint",";"telephone": "+1-302-464-0950",";"contactType": "customer service",";"email": "kleber@ziontechgroup.com";
+        if (path === '/') {;
+            return {;"
+                ...baseData,";"
+                "@type": "Organization",";"
+                "name": "Zion Tech Group",";"
+                "url": "https://ziontechgroup.com",";"
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";"
+                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";"
+                "address": {";"
+                    "@type": "PostalAddress",";"
+                    "streetAddress": "364 E Main St STE 1008",";"
+                    "addressLocality": "Middletown",";"
+                    "addressRegion": "DE",";"
+                    "postalCode": "19709",";"
+                    "addressCountry": "US";"
+                },";"
+                "contactPoint": {";"
+                    "@type": "ContactPoint",";"
+                    "telephone": "+1-302-464-0950",";"
+                    "contactType": "customer service",";"
+                    "email": "kleber@ziontechgroup.com";
             };
 ;
-        if (path.startsWith('/services/')) {;"
-            return {;""
-                ...baseData,";"@type": "Service",";"serviceType": path.split('/').pop()?.replace(/-/g, ' '),";"provider": {;";""
-                    "@type": "Organization",";"name": "Zion Tech Group";
+        if (path.startsWith('/services/')) {;
+            return {;"
+                ...baseData,";"
+                "@type": "Service",";"
+                "serviceType": path.split('/').pop()?.replace(/-/g, ' '),";"
+                "provider": {";"
+                    "@type": "Organization",";"
+                    "name": "Zion Tech Group";
             };
 ;
         return baseData;
@@ -117,18 +146,18 @@ export class SEOOptimizer {;
                 issue: 'missing-title',;
                 severity: 'high',;
                 suggestedFix: 'Add a descriptive title tag with relevant keywords';
-            });"
-;""
-        // Check for missing meta description";""
+            });
+;"
+        // Check for missing meta description";"
         if (!content.includes('name="description"')) {;
             issues.push({;
                 page,;
                 issue: 'missing-description',;
                 severity: 'high',;
                 suggestedFix: 'Add a meta description tag with compelling content';
-            });"
-;""
-        // Check for short meta description";""
+            });
+;"
+        // Check for short meta description";"
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {;
             issues.push({;
@@ -159,24 +188,24 @@ export class SEOOptimizer {;
 ;
         return issues;
 ;
-    static generateMetaTags(seoData) {;"
-        return `;""
-    <title>${seoData.title}</title>";""
-    <meta name="description" content="${seoData.description}" / / / />";""
-    <meta name="keywords" content="${seoData.keywords.join(', ')}" / / / />";""
-    <link rel="canonical" href="${seoData.canonicalUrl}" / / / />;""
-    <!-- Open Graph -->";""
-    <meta property="og:title" content="${seoData.title}" / / / />";""
-    <meta property="og:description" content="${seoData.description}" / / / />";""
-    <meta property="og:type" content="website" / / / />";""
-    <meta property="og:url" content="${seoData.canonicalUrl}" / / / />";""
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;""
-    <!-- Twitter -->";""
-    <meta name="twitter:card" content="summary_large_image" / / / />";""
-    <meta name="twitter:title" content="${seoData.title}" / / / />";""
-    <meta name="twitter:description" content="${seoData.description}" / / / />";""
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / / />;""
-    <!-- Structured Data -->";""
+    static generateMetaTags(seoData) {;
+        return `;"
+    <title>${seoData.title}</title>";"
+    <meta name="description" content="${seoData.description}" / / />";"
+    <meta name="keywords" content="${seoData.keywords.join(', ')}" / / />";"
+    <link rel="canonical" href="${seoData.canonicalUrl}" / / />;"
+    <!-- Open Graph -->";"
+    <meta property="og:title" content="${seoData.title}" / / />";"
+    <meta property="og:description" content="${seoData.description}" / / />";"
+    <meta property="og:type" content="website" / / />";"
+    <meta property="og:url" content="${seoData.canonicalUrl}" / / />";"
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    <!-- Twitter -->";"
+    <meta name="twitter:card" content="summary_large_image" / / />";"
+    <meta name="twitter:title" content="${seoData.title}" / / />";"
+    <meta name="twitter:description" content="${seoData.description}" / / />";"
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" / / />;"
+    <!-- Structured Data -->";"
     <script type="application/ld+json">;
       ${JSON.stringify(seoData.structuredData, null, 2)};
     </script>;
@@ -206,10 +235,10 @@ export const seoOptimizer = new SEOOptimizer();
           newRecommendations.push('Optimize title length (30-60 characters)');
 });
       } else {;
-        newRecommendations.push('Add a title tag');"
-});""
-      // Check meta description";""
-      const metaMatch = content.match(/<meta[^ / / />]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
+        newRecommendations.push('Add a title tag');
+});"
+      // Check meta description";"
+      const metaMatch = content.match(/<meta[^ / />]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
       if (metaMatch) {;
         const metaLength = metaMatch[1].length;
         if (metaLength >= 120 && metaLength <= 160) {;
@@ -239,9 +268,9 @@ export const seoOptimizer = new SEOOptimizer();
         } else {;
           score += 10;
           newRecommendations.push('Add alt text to all images');
+});
 });"
-});""
-      // Check internal links";""
+      // Check internal links";"
       const internalLinks = content.match(/href="/[^"]*"/g) || [];
       if (internalLinks.length >= 2) {;
         score += 20;
@@ -259,13 +288,13 @@ export const seoOptimizer = new SEOOptimizer();
         onOptimize({ score, recommendations: newRecommendations });
 });
     }, 2000);
-  };"
-;""
-  return (";""
+  };
+;"
+  return (";"
     <div className="space-y-4">;
-      <button;"
-        onClick={analyzeSEO};""
-        disabled={isAnalyzing}";""
+      <button;
+        onClick={analyzeSEO};"
+        disabled={isAnalyzing}";"
         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:opacity-50";
       >;
         {isAnalyzing ? 'Analyzing SEO...' : 'Analyze SEO'};
@@ -277,21 +306,21 @@ export const seoOptimizer = new SEOOptimizer();
   y: 20;
 }};
           animate = {;
-  { opacity: 1,;"
-  y: 0;""
-}}";""
-          className="space-y-4";""
-        >";""
-          <div className="text-center">";""
-            <div className="text-4xl font-bold text-purple-600 mb-2">{seoScore}/100</div>";""
+  { opacity: 1,;
+  y: 0;"
+}}";"
+          className="space-y-4";"
+        >";"
+          <div className="text-center">";"
+            <div className="text-4xl font-bold text-purple-600 mb-2">{seoScore}/100</div>";"
             <div className="text-lg text-gray-600">SEO Score</div>;
-          </div>;"
-          {recommendations.length > 0 && (;""
-            <div>";""
-              <h3 className="text-lg font-semibold mb-2">Recommendations:</h3>";""
-              <ul className="space-y-2">;""
-                {recommendations.map((recommendation, index) => (";""
-                  <li key={index} className="flex items-start space-x-2">";""
+          </div>;
+          {recommendations.length > 0 && (;"
+            <div>";"
+              <h3 className="text-lg font-semibold mb-2">Recommendations:</h3>";"
+              <ul className="space-y-2">;"
+                {recommendations.map((recommendation, index) => (";"
+                  <li key={index} className="flex items-start space-x-2">";"
                     <span className="text-purple-500 mt-1">•</span>;
                     <span>{recommendation}</span>;
                   </li>;
@@ -306,5 +335,6 @@ export const seoOptimizer = new SEOOptimizer();
 };
 ;
 export default SEOOptimizer;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;";""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
+";"

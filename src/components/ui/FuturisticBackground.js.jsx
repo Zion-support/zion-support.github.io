@@ -195,10 +195,10 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
             boxShadow: `0 0 ${glowSize} ${glowColor}`,;
             borderColor: `${glowColor}40`;
         }}>;
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>";""
-      <div className="relative z-10 p-6">;"
-        {children};""
-      </div>";""
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>";"
+      <div className="relative z-10 p-6">;
+        {children};"
+      </div>";"
       <div className="absolute inset-0 opacity-20" style = {;
   {;
             background: `linear-gradient(45deg, transparent 30%,;
@@ -222,5 +222,6 @@ style.textContent = `;
     100% {;
       transform: translateX(100%)};
   };
-`;"
-document.head.appendChild(style);";""
+`;
+document.head.appendChild(style);"
+";"

@@ -23,5 +23,6 @@ export function PopoverContent({ children, className = '' }) {;
     if (!context.isOpen);
         return null;
     return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>;
-      {children};"
-    </div>)};";""
+      {children};
+    </div>)};"
+";"

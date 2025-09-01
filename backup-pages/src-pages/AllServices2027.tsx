@@ -1,43 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Brain,
-  Shield,
-  Zap,
-  Code,
-  Signal,
-  Users,
-  Truck,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  CheckCircle,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Cloud,
-  Rocket'
- } from 'lucide-react';
-
-const AllServices2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  
-    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
-    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
-  ]}};
-    
-          return {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         count: services.length,
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g,).split('/')[0]), 0) / services.length),
@@ -74,18 +35,11 @@ const AllServices2027: React.FC = () => {;
   return()
     <>
       <SEOHead"
-<<<<<<< HEAD
-        title="All Services 2027 - Zion Tech Group"
-        description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
-        canonical="/all-services-2027"
-        url="https://ziontechgroup.com/all-services-2027"
-      />
-=======
+
         title="All Services 2027 - Zion Tech Group""
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed.""
         canonical="/all-services-2027""        url="https://ziontechgroup.com/all-services-2027"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">'"
@@ -411,7 +365,6 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 =======
 '
       case 'AI Services':;            </a>;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>;
         </div>;
       </section>;

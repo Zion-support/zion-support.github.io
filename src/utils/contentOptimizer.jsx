@@ -45,7 +45,7 @@ export default ContentOptimizer;
     return headingMatches ? headingMatches.length : 0;
   };
   static countImages(content) {;
-    const imageMatches = content.match(/<img[^ / / />]*>/gi);
+    const imageMatches = content.match(/<img[^ / />]*>/gi);
     return imageMatches ? imageMatches.length : 0;
   };
   static countLinks(content) {;
@@ -100,15 +100,15 @@ export default ContentOptimizer;
     if (!content.includes('<h2>)) score -= 5;
 ;
     // Check for images with alt text;
-    const images = content.match(/<img[^ / / />]*>/gi) || [];
+    const images = content.match(/<img[^ / />]*>/gi) || [];
     const imagesWithAlt = images.filter(img => img.includes('alt='));
     if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
-;"
-<<<<<<< HEAD;""
-    // Check for internal links";""
-    const internalLinks = content.match (/href="/[^"]*"/g) || [];""
-=======";""
-    // Check for internal links";""
+;
+<<<<<<< HEAD;"
+    // Check for internal links";"
+    const internalLinks = content.match (/href="/[^"]*"/g) || [];"
+=======";"
+    // Check for internal links";"
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
 >>>>>>> main;
     if (internalLinks.length < 2) score -= 10;
@@ -186,9 +186,9 @@ export default ContentOptimizer;
         .join('\n');`;
       return `${optimizationComments}\n\n${optimizedContent}`;
     };
-    return optimizedContent;"
-  }};""
-export default ContentOptimizer;";""
+    return optimizedContent;
+  }};"
+export default ContentOptimizer;";"
 '"`;
 =======;
 <<<<<<< HEAD;
@@ -233,7 +233,7 @@ export class ContentOptimizer {;
         return headingMatches ? headingMatches.length : 0;
 ;
     static countImages(content) {;
-        const imageMatches = content.match(/<img[^ / / />]*>/gi);
+        const imageMatches = content.match(/<img[^ / />]*>/gi);
         return imageMatches ? imageMatches.length : 0;
 ;
     static countLinks(content) {;
@@ -270,9 +270,9 @@ export class ContentOptimizer {;
     static calculateSEOScore(content, page) {;
         let score = 100;
         // Check for title;
-        if (!content.includes('<title>'));"
-            score -= 20;""
-        // Check for meta description";""
+        if (!content.includes('<title>'));
+            score -= 20;"
+        // Check for meta description";"
         if (!content.includes('name="description"'));
             score -= 15;
         // Check for headings;
@@ -282,9 +282,9 @@ export class ContentOptimizer {;
             score -= 5;
         // Check for images with alt text;
         const imagesWithAlt = images.filter(img => img.includes('alt='));
-        if (images.length > 0 && imagesWithAlt.length === 0);"
-            score -= 10;""
-        // Check for internal links";""
+        if (images.length > 0 && imagesWithAlt.length === 0);
+            score -= 10;"
+        // Check for internal links";"
         const internalLinks = content.match(/href="/[^"]*"/g) || [];
         if (internalLinks.length < 2);
             score -= 10;
@@ -537,13 +537,13 @@ const ContentOptimizer = ({ content, onOptimize }) => {;
         onOptimize(optimized);
 });
     }, 2000);
-  };"
-;""
-  return (";""
+  };
+;"
+  return (";"
     <div className="space-y-4">;
-      <button;"
-        onClick={optimizeContent};""
-        disabled={isOptimizing}";""
+      <button;
+        onClick={optimizeContent};"
+        disabled={isOptimizing}";"
         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50";
       >;
         {isOptimizing ? 'Optimizing...' : 'Optimize Content'};
@@ -555,23 +555,23 @@ const ContentOptimizer = ({ content, onOptimize }) => {;
   y: 20;
 }};
           animate = {;
-  { opacity: 1,;"
-  y: 0;""
-}}";""
-          className="space-y-4";"
-        >;""
-          <div>";""
-            <h3 className="text-lg font-semibold mb-2">Optimized Content:</h3>";""
+  { opacity: 1,;
+  y: 0;"
+}}";"
+          className="space-y-4";
+        >;"
+          <div>";"
+            <h3 className="text-lg font-semibold mb-2">Optimized Content:</h3>";"
             <div className="p-4 bg-gray-50 rounded-lg">;
               {optimizedContent};
             </div>;
-          </div>;"
-          {suggestions.length > 0 && (;""
-            <div>";""
-              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>";""
-              <ul className="space-y-2">;""
-                {suggestions.map((suggestion, index) => (";""
-                  <li key={index} className="flex items-start space-x-2">";""
+          </div>;
+          {suggestions.length > 0 && (;"
+            <div>";"
+              <h3 className="text-lg font-semibold mb-2">Suggestions:</h3>";"
+              <ul className="space-y-2">;"
+                {suggestions.map((suggestion, index) => (";"
+                  <li key={index} className="flex items-start space-x-2">";"
                     <span className="text-blue-500 mt-1">•</span>;
                     <span>{suggestion}</span>;
                   </li>;
@@ -587,5 +587,6 @@ const ContentOptimizer = ({ content, onOptimize }) => {;
 ;
 export default ContentOptimizer;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;";""
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+";"

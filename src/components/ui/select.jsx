@@ -42,5 +42,6 @@ export function SelectContent({ children, className = '' }) {;
         <div className={`absolute top-full left-0 right-0 z-50 mt-1 rounded-md border border-zion-blue-light/30 bg-zion-blue-dark/90 backdrop-blur-sm shadow-lg ${className}`}>;
             {children};
         </div>;
-    );"
-};";""
+    );
+};"
+";"

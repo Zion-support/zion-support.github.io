@@ -1,23 +1,5 @@
-<<<<<<< HEAD
 
-export default function ComprehensivePricingGuide2029(...args: any[]): any {
-
-  const [selectedPlan, setSelectedPlan] = useState('enterprise');
-  const [billingCycle, setBillingCycle] = useState('monthly');
-
-  
-  
-  
-  
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO "
-        title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
-        description="Complete pricing information for our revolutionary 2029 AI, quantum computing, space technology, and emerging tech services."
        />
-=======
-       />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"

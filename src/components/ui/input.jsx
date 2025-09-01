@@ -7,6 +7,6 @@ export function Input({ className = '', ...props }) {;
         <input;
             className={`${baseClasses} ${className}`};
             {...props};
-        / / / />;
+        / / />;
     );
 };

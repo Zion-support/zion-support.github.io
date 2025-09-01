@@ -267,14 +267,9 @@ export default function SearchPage() {
 
   // Clear all filters
   
-<<<<<<< HEAD
-    setSelectedTags([]);
-    setSearchQuery('');
-    setSearchParams({})};
-=======
+
     setSelectedTags([]);'    setSearchQuery('');
     setSearchParams({})};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   
       case 'page': return FileText;
@@ -289,7 +284,6 @@ export default function SearchPage() {
       case 'blog': return BookOpen;'
       case 'case-study': return FileText;'      case 'documentation': return Code;
       default: return FileText}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   

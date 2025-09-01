@@ -1,1 +1,1 @@
-export default function Checkout(): import("react/jsx-runtime").JSX.Element;
+import React from 'react'; export default function Checkout(): import("react/jsx-runtime").JSX.Element; 

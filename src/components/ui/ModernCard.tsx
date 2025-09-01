@@ -51,22 +51,22 @@ export const ModernCard: React.FC<ModernCardProps> = ({;
       animate={{ opacity: 1, y: 0 }};
       transition={{ duration: 0.5, ease: 'easeOut' }};
     >;
-      <div className="relative z-10 p-6">;
-        {children};"
-      </div>;""
-      {/* Animated background elements */}";""
-      <div className="absolute inset-0 opacity-20">";""
-        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl" />";""
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl" />;
-      </div>;
-      {/* Hover glow effect */};"
-      {hoverEffect && (;""
-        <motion.div";""
+      <div className="relative z-10 p-6">;";"
+        {children};";"
+      </div>;"";"
+      {/* Animated background elements */}";"";"
+      <div className="absolute inset-0 opacity-20">";"";"
+        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl" />";"";"
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl" />;"
+      </div>;";"
+      {/* Hover glow effect */};";"
+      {hoverEffect && (;"";"
+        <motion.div";"";"
           className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0";
           whileHover={{ opacity: 1 }};
           transition={{ duration: 0.3 }};
-        />;
-      )};
-    </motion.div>;"
-  );""
-};";""
+        />;"
+      )};";"
+    </motion.div>;";"
+  );"";"
+};";"";"

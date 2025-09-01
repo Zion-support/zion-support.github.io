@@ -63,33 +63,17 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-      <SEO
-        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
-      />
-
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-========
+<=
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
-       />
-=======
+
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
           <div className="text-center">"
->>>>>>>> main:backup-pages/src-pages/services/AISupplyChainOptimizationPlatform.tsx
-            <GradientHeading className="text-5xl md:text-6xl font-bold mb-6">
+>            <GradientHeading className="text-5xl md:text-6xl font-bold mb-6">
               AI-Powered Supply Chain Optimization Platform
             </GradientHeading>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -113,12 +97,9 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">Transform Your Supply Chain</h2>"
           <p className="text-gray-300 text-lg">See measurable improvements in your logistics operations</p>
         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-
-========
+<=
         "
->>>>>>>> main:backup-pages/src-pages/services/AISupplyChainOptimizationPlatform.tsx
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+>        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index)   => ("
             <div key={index} className="text-center">"
               <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>"
@@ -133,12 +114,9 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">Powerful Features</h2>"
           <p className="text-gray-300 text-lg">Everything you need for intelligent supply chain management</p>
         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-
-========
+<=
         "
->>>>>>>> main:backup-pages/src-pages/services/AISupplyChainOptimizationPlatform.tsx
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+>        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index)   => ("
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>"
@@ -161,12 +139,9 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">Industry Use Cases</h2>"
           <p className="text-gray-300 text-lg">Optimize supply chains across various industries</p>
         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-
-========
+<=
         "
->>>>>>>> main:backup-pages/src-pages/services/AISupplyChainOptimizationPlatform.tsx
-        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+>        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
           {useCases.map((useCase, index)   => ("
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>"
@@ -186,12 +161,9 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>"
           <p className="text-gray-300 text-lg">Choose the plan that fits your supply chain needs</p>
         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-
-========
+<=
         "
->>>>>>>> main:backup-pages/src-pages/services/AISupplyChainOptimizationPlatform.tsx
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+>        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
           {pricingTiers.map((tier, index)   => ('
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>
               {tier.popular && ("

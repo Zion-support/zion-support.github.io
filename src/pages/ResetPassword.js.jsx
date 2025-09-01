@@ -44,21 +44,22 @@ export default function ResetPasswordPage() {;
             setIsLoading(false)};
     };
     if (error && !token) { // If token was invalid from the start;
-        return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">;"
-        <p>{error}</p>;""
-      </div>)}";""
-    return (<div className="flex min-h-screen items-center justify-center p-4">";""
-      <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">";""
-        <h2 className="text-2xl font-bold text-center">Reset Your Password</h2>";""
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>};""
-        <div>";""
+        return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">;
+        <p>{error}</p>;"
+      </div>)}";"
+    return (<div className="flex min-h-screen items-center justify-center p-4">";"
+      <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">";"
+        <h2 className="text-2xl font-bold text-center">Reset Your Password</h2>";"
+        {error && <p className="text-red-500 text-sm text-center">{error}</p>};"
+        <div>";"
           <Input type="password" name="password" placeholder="Enter new password" value={password} onChange={handlePasswordChange} disabled={isLoading}/>;
-          {/* Assuming PasswordStrengthMeter is available and configured */};"
-          {/* <PasswordStrengthMeter password={password} /> */};""
-        </div>";""
-        <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}/>";""
+          {/* Assuming PasswordStrengthMeter is available and configured */};
+          {/* <PasswordStrengthMeter password={password} /> */};"
+        </div>";"
+        <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}/>";"
         <Button type="submit" className="w-full" disabled={isLoading}>;
           {isLoading ? 'Resetting Password...' : 'Reset Password'};
         </Button>;
-      </form>;"
-    </div>)};";""
+      </form>;
+    </div>)};"
+";"

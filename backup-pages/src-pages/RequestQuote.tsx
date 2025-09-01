@@ -146,14 +146,9 @@ export default function RequestQuote() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Request Quote - Zion Tech Group"
-        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
-       />
-=======
+
         title="Request Quote - Zion Tech Group""        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

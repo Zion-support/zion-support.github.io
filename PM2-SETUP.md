@@ -16,6 +16,7 @@ PM2 now handles the following tasks that were previously managed by GitHub Actio
 ## PM2 Commands
 
 ### Start the Application
+
 ```bash
 # Start with PM2
 pm2 start npm --name "bolt-zion-app" -- run preview
@@ -25,12 +26,14 @@ pm2 start npm --name "bolt-zion-app" -- run preview
 ```
 
 ### Check Status
+
 ```bash
 pm2 status
 pm2 logs bolt-zion-app
 ```
 
 ### Stop/Restart
+
 ```bash
 pm2 stop bolt-zion-app
 pm2 restart bolt-zion-app
@@ -38,6 +41,7 @@ pm2 delete bolt-zion-app
 ```
 
 ### Monitoring
+
 ```bash
 pm2 monit
 ```
@@ -85,6 +89,7 @@ The following GitHub Actions workflows have been replaced:
 ## Troubleshooting
 
 If PM2 fails to start:
+
 1. Check if the application is already running: `pm2 status`
 2. Clear PM2 processes: `pm2 delete all`
 3. Restart PM2 daemon: `pm2 kill && pm2 start`

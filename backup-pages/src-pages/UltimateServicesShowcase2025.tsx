@@ -18,16 +18,10 @@ export default function UltimateServicesShowcase2025() {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Ultimate Innovative Services 2025 | Zion Tech Group"
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
-        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
-       />
-=======
+
         title="Ultimate Innovative Services 2025 | Zion Tech Group""
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -173,12 +167,8 @@ export default function UltimateServicesShowcase2025() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">"
                   <CheckCircle className="w-6 h-6 text-green-400"  />
                 </div>"
-<<<<<<< HEAD
-                <h3 className="text-lg font-semibold text-white mb-2 capitalize">
-                  {key.replace(/([A-Z])/g, $1').trim()}
-=======
+
                 <h3 className="text-lg font-semibold text-white mb-2 capitalize">'                  {key.replace(/([A-Z])/g, ' $1').trim()}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </h3>"
                 <p className="text-gray-300 text-sm">{value}</p>
               </div>

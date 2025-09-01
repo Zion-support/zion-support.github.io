@@ -10,6 +10,6 @@ function DisputesPage() {;
       </>;
     </ProtectedRoute>)};
 export default DisputesPage;
-;"
-export default DisputesPage;""
-export default DisputesPage;";""
+;
+export default DisputesPage;"
+export default DisputesPage;";"

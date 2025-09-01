@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import { Search, 
 
-
-    Filter, 
-    TrendingUp, 
-    Shield, 
-    Zap, 
-    Globe, 
-    Users, 
-    BarChart3,
-    DollarSign,
-    Heart,
-    GraduationCap,
-    Target,
-    Settings,
-    Package,
-    CheckCircle,
-    Star,
-    ArrowRight,
-    Phone,
-    Mail,
-    MapPin,
-    ExternalLink,
-    Crown,
-    Sparkles'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -154,12 +125,8 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <div className="relative">"
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                                 <input"
-<<<<<<< HEAD
-                                    type="text"
-                                    placeholder="Search services..."
-=======
+
                                     type="text""                                    placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}"
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"

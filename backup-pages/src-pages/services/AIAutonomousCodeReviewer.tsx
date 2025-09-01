@@ -1,19 +1,10 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Code,
-  CheckCircle,
-  Shield,
-  Zap,
-========
+<=
 import {
   Code, 
   CheckCircle, 
   Shield, 
   Zap, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-  ArrowRight,
+>  ArrowRight,
   Play,
   Settings,
   Target,
@@ -69,36 +60,24 @@ import {
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">"
               <Code className="w-4 h-4 mr-2"  />              AI-Powered Code Review
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+>            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous"
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>
             </h1>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+>            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your code review process with AI-powered analysis that catches bugs,
               improves security, and maintains code quality automatically.
             </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-========
+<=
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">"
                 <Play className="w-5 h-5 mr-2"  />
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-                Start Free Trial
+>                Start Free Trial
               </button>"
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">"
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo
@@ -262,17 +241,12 @@ import {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-                  plan.popular
-                    ? 'border-blue-500/50 bg-blue-500/5'
-                    : 'border-slate-700/50'
-========
+<=
 
                   plan.popular '
                     ? 'border-blue-500/50 bg-blue-500/5' '
                     : 'border-slate-700/50'`
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-                }`}
+>                }`}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -281,22 +255,14 @@ import {
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <p className="text-gray-400 mb-4">{plan.description}</p>"
                   <div className="mb-4">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-                    <span className="text-gray-400">{plan.period}</span>
+>                    <span className="text-gray-400">{plan.period}</span>
                   </div>
                 </div>
 "
@@ -444,18 +410,12 @@ import {
                 Contact Sales
               </button>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-
-            <div className="mt-8 text-center">
-              <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
-========
+<=
             "
             <div className="mt-8 text-center">"
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousCodeReviewer.tsx
-                <div className="flex items-center justify-center space-x-2">
+>                <div className="flex items-center justify-center space-x-2">
                   <span>📱</span>
                   <span>+1 302 464 0950</span>
                 </div>"

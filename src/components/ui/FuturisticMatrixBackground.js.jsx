@@ -15,7 +15,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters;
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<React.Fragment>?";";""
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";";"
         const matrixArray = matrix.split(");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;
@@ -76,5 +76,6 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
   {;
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,;
   #16213e 100%)';
-}}/>)};"
-export default FuturisticMatrixBackground;";""
+}}/>)};
+export default FuturisticMatrixBackground;"
+";"

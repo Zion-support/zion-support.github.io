@@ -73,7 +73,8 @@ export default function TokenManager() {;
         const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
             method: 'POST',;
             headers: { 'Content-Type': 'application/json' },;
-            body: JSON.stringify({ userId, amount })});
+            body: JSON.stringify({ userId, amount }),;
+        });
         if (res.ok) {;
             toast({;
                 title: 'Success',;
@@ -100,28 +101,29 @@ export default function TokenManager() {;
     };
     return (<ProtectedRoute adminOnly>;
       <div>;
-        <div className="min-h-screen bg-zion-blue px-4 py-8">";""
-          <div className="container mx-auto">";""
-            <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>";""
+        <div className="min-h-screen bg-zion-blue px-4 py-8">";"
+          <div className="container mx-auto">";"
+            <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>";"
             <Card className="mb-6">;
-              <CardHeader>;"
-                <CardTitle>Issue or Revoke Tokens</CardTitle>;""
-              </CardHeader>";""
-              <CardContent className="space-y-4">";""
-                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)}/>";""
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))}/>";""
-                <div className="flex gap-2">;""
-                  <Button onClick={() => handleIssue('earn')}>Issue</Button>";""
+              <CardHeader>;
+                <CardTitle>Issue or Revoke Tokens</CardTitle>;"
+              </CardHeader>";"
+              <CardContent className="space-y-4">";"
+                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)}/>";"
+                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))}/>";"
+                <div className="flex gap-2">;"
+                  <Button onClick={() => handleIssue('earn')}>Issue</Button>";"
                   <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>;
                 </div>;
-              </CardContent>;"
-            </Card>;";""
-            <Tabs defaultValue="history">;""
-              <TabsList>";""
-                <TabsTrigger value="history">Transaction History</TabsTrigger>;""
-              </TabsList>";""
-              <TabsContent value="history">";""
-                <ul className="space-y-2">";""
+              </CardContent>;
+            </Card>;"
+";"
+            <Tabs defaultValue="history">;"
+              <TabsList>";"
+                <TabsTrigger value="history">Transaction History</TabsTrigger>;"
+              </TabsList>";"
+              <TabsContent value="history">";"
+                <ul className="space-y-2">";"
                   {transactions.map(tx => (<li key={tx.id} className="flex justify-between border-b py-2 text-white">;
                       <span>{tx.user_id}</span>;
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
@@ -136,5 +138,6 @@ export default function TokenManager() {;
     </ProtectedRoute>);
 </Card></Card></Card>}}};
 =======;
-    </ProtectedRoute>)};"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;";""
+    </ProtectedRoute>)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
+";"

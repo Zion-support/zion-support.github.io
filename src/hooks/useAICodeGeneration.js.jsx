@@ -231,11 +231,11 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   const handleAction = useCallback(() => {;
     // TODO: Implement action handler;
   }, []);
-;
-  return (;
-    <motion.div;"
-      initial={{ opacity: 0 }};""
-      animate={{ opacity: 1 }}";""
+;"
+  return (;";"
+    <motion.div;";"
+      initial={{ opacity: 0 }};"";"
+      animate={{ opacity: 1 }}";"";"
       className="generated-component";
     >;
       {/* TODO: Implement component based on prompt: ${prompt} */};
@@ -262,38 +262,38 @@ app.use(express.json());
 app.get('/', (req, res) => {;
   res.json({ message: 'Generated API based on prompt: ${prompt}' })});
 ;
-// TODO: Implement additional routes based on prompt;
-app.listen(PORT, () => {;
-  // // // console.log(\`Server running on port \${PORT}\`)});`};"
-    const generatePythonCode = (prompt, _options) => {;""
-        return `#!/usr/bin/env python3";"";""
-Generated Python code based on prompt: ${prompt}";"";
-import asyncio;
-from typing import Optional, List, Dict, Any;
-from dataclasses import dataclass;"
-@dataclass;""
-class GeneratedClass:";""Generated class based on prompt.";
-    def __init__(self):;
-        # TODO: Implement initialization;"
-        pass;""
-    async def process_data(self, data: Any) -> Any:";""Process data based on prompt requirements.";
-        # TODO: Implement data processing logic;"
-        return data;""
-async def main():";""Main function.";
-    instance = GeneratedClass();"
-    # TODO: Implement main logic based on prompt;""
-    ";""
+// TODO: Implement additional routes based on prompt;"
+app.listen(PORT, () => {;";"
+  // // // console.log(\`Server running on port \${PORT}\`)});`};";"
+    const generatePythonCode = (prompt, _options) => {;"";"
+        return `#!/usr/bin/env python3";";"";"
+Generated Python code based on prompt: ${prompt}";";
+import asyncio;"
+from typing import Optional, List, Dict, Any;";"
+from dataclasses import dataclass;";"
+@dataclass;"";"
+class GeneratedClass:";"Generated class based on prompt.";"
+    def __init__(self):;";"
+        # TODO: Implement initialization;";"
+        pass;"";"
+    async def process_data(self, data: Any) -> Any:";"Process data based on prompt requirements.";";"
+        # TODO: Implement data processing logic;";"
+        return data;"";"
+async def main():";"Main function.";";"
+    instance = GeneratedClass();";"
+    # TODO: Implement main logic based on prompt;"";"
+    ";"";"
 if __name__ == "__main__":;
     asyncio.run(main())`};
     const generateGenericCode = (prompt, options) => {;
         return `// Generated ${options.language} code based on prompt: ${prompt};
 // Framework: ${options.framework || 'none'};
-// Style: ${options.style};
-// Target: ${options.target};
-// TODO: Implement code based on prompt requirements;"
-// This is a placeholder implementation;";""
-// // // console.log("Generated code placeholder");";""
-// // // console.log("Prompt:", "${prompt}");";""
+// Style: ${options.style};"
+// Target: ${options.target};";"
+// TODO: Implement code based on prompt requirements;";"
+// This is a placeholder implementation;";"";"
+// // // console.log("Generated code placeholder");";"";"
+// // // console.log("Prompt:", "${prompt}");";"";"
 // // // console.log("Language:", "${options.language}");`};
     // Helper functions for code analysis;
     const calculateComplexity = (code) => {;
@@ -373,11 +373,11 @@ if __name__ == "__main__":;
             issues.push({;
                 severity: 'info',;
                 message: 'Code contains TODO comments that need implementation',;
-                line: code.split('\n').findIndex(line => line.includes('TODO')) + 1;
-            })};
-        if (code.includes('')) {;"
-            issues.push({;""
-                severity: 'warning',";""
+                line: code.split('\n').findIndex(line => line.includes('TODO')) + 1;"
+            })};";"
+        if (code.includes('')) {;";"
+            issues.push({;"";"
+                severity: 'warning',";"";"
                 message: 'Usage of " type reduces type safety',;
                 line: code.split('\n').findIndex(line => line.includes('')) + 1;
             })};
@@ -395,16 +395,16 @@ if __name__ == "__main__":;
             .replace(/localStorage/g, '// Consider security implications of localStorage')};
     const optimizeForMaintainability = (code) => {;
         return code;
-            .replace(/\/\/ TODO/g, '// IMPLEMENTED:');
-            .replace(/any/g, 'unknown');
-            .replace(/function\s+(\w+)/g, 'const $1 = (')};"
-    const optimizeForAccessibility = (code) => {;""
-        return code";""
-            .replace(/<div>/g, '<div role="main">')";""
-            .replace(/<button>/g, '<button aria-label="Action button">')";""
+            .replace(/\/\/ TODO/g, '// IMPLEMENTED:');"
+            .replace(/any/g, 'unknown');";"
+            .replace(/function\s+(\w+)/g, 'const $1 = (')};";"
+    const optimizeForAccessibility = (code) => {;"";"
+        return code";"";"
+            .replace(/<div>/g, '<div role="main">')";"";"
+            .replace(/<button>/g, '<button aria-label="Action button">')";"";"
             .replace(/<img/g, '<img alt="Description"')};
     // Helper functions for test generation;
-    const generateJestTests = (_code) = / / /> {;
+    const generateJestTests = (_code) = / / / / /> {;
         return `import { render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from './GeneratedComponent';
 ;
@@ -421,12 +421,12 @@ describe('GeneratedComponent', () => {;
         return `import pytest;
 from generated_module import GeneratedClass;
 class TestGeneratedClass:;
-    def test_initialization(self):;
-        instance = GeneratedClass();
-        assert instance is not None;"
-    def test_process_data(self):;""
-        instance = GeneratedClass()";""
-        result = instance.process_data("test")";""
+    def test_initialization(self):;"
+        instance = GeneratedClass();";"
+        assert instance is not None;";"
+    def test_process_data(self):;"";"
+        instance = GeneratedClass()";"";"
+        result = instance.process_data("test")";"";"
         assert result == "test";
     # TODO: Add more specific test cases based on class functionality`};
     const generateGenericTests = (_code, language) => {;
@@ -447,17 +447,17 @@ describe('Generated Code Tests', () => {;
  * @example;
  * <GeneratedComponent />;
  */;
-export const GeneratedComponent = () => {;
-  // Component implementation;
-};`};"
-    const generatePythonDoc = (_code) => {;";""
-        return `";"
-Generated Module;""
-This module was generated based on user requirements.";"";""
-def generated_function():";"";
-    Generated function with docstring.;"
-    Returns:;""
-        str: Description of return value";"";
+export const GeneratedComponent = () => {;"
+  // Component implementation;";"
+};`};";"
+    const generatePythonDoc = (_code) => {;";"";"
+        return `";";"
+Generated Module;"";"
+This module was generated based on user requirements.";";"";"
+def generated_function():";";";"
+    Generated function with docstring.;";"
+    Returns:;"";"
+        str: Description of return value";";
     pass`};
     const generateGenericDocs = (_code, language) => {;
         return `/**;
@@ -489,7 +489,7 @@ def generated_function():";"";
         generateTests,;
         generateDocs,;
         // Utilities;
-        clearHistory,;
-        exportCode,;
-        getCodeMetrics;"
-    }};";""
+        clearHistory,;"
+        exportCode,;";"
+        getCodeMetrics;";"
+    }};";"";"

@@ -2,7 +2,7 @@ import React from 'react';
 ;
 const Tabs = ({ tabs, activeTab, onTabChange }) => {;
   return (;
-    <div className="w-full">";""
+    <div className="w-full">";"
       <div className="flex space-x-1 border-b border-gray-200">;
         {tabs.map((tab) => (;
           <button;
@@ -17,9 +17,9 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {;
             {tab.label};
           </button>;
         ))};
-      </div>;"
-      <div;""
-        key={activeTab}";""
+      </div>;
+      <div;"
+        key={activeTab}";"
         className="mt-4";
       >;
         {tabs.find(tab => tab.id === activeTab)?.content};
@@ -58,5 +58,6 @@ const TabsContent = ({ children, className = '', ...props }) => {;
   );
 };
 ;
-export { Tabs, TabsContent, TabsList, TabsTrigger };"
-export default Tabs;";""
+export { Tabs, TabsContent, TabsList, TabsTrigger };
+export default Tabs;"
+";"

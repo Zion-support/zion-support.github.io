@@ -1,7 +1,6 @@
 import React, { memo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronRight, Search, User, Bell, Settings, HelpCircle, MessageCircle } from 'lucide-react';
 ;
 interface MobileNavigationProps {;
   isOpen: boolean;
@@ -114,70 +113,70 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
           {/* Navigation Panel */};
           <motion.div;
             initial={{ x: '100%' }};
-            animate={{ x: 0 }};"
-            exit={{ x: '100%' }};""
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}";""
-            className="fixed right-0 top-0 h-full w-full max-w-sm bg-zion-slate-light border-l border-zion-cyan/20 z-50 overflow-y-auto";"
-          >;""
-            {/* Header */}";""
-            <div className="sticky top-0 bg-zion-slate-light/95 backdrop-blur-sm border-b border-zion-cyan/20 p-4">";""
-              <div className="flex items-center justify-between">";""
-                <h2 className="text-lg font-semibold text-zion-cyan">Menu</h2>;"
-                <button;""
-                  onClick={onClose}";""
-                  className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors";""
-                  aria-label="Close menu";""
-                >";""
+            animate={{ x: 0 }};
+            exit={{ x: '100%' }};"
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}";"
+            className="fixed right-0 top-0 h-full w-full max-w-sm bg-zion-slate-light border-l border-zion-cyan/20 z-50 overflow-y-auto";
+          >;"
+            {/* Header */}";"
+            <div className="sticky top-0 bg-zion-slate-light/95 backdrop-blur-sm border-b border-zion-cyan/20 p-4">";"
+              <div className="flex items-center justify-between">";"
+                <h2 className="text-lg font-semibold text-zion-cyan">Menu</h2>;
+                <button;"
+                  onClick={onClose}";"
+                  className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors";"
+                  aria-label="Close menu";"
+                >";"
                   <X className="w-6 h-6 text-zion-cyan" />;
-                </button>;"
-              </div>;""
-              {/* Search Bar */}";""
-              <form onSubmit={handleSearch} className="mt-4">";""
-                <div className="relative">";""
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-text-secondary" />;""
-                  <input";""
-                    type="text";""
-                    placeholder="Search services, solutions...";"
-                    value={searchQuery};""
-                    onChange={(e) = / / /> setSearchQuery(e.target.value)}";""
+                </button>;
+              </div>;"
+              {/* Search Bar */}";"
+              <form onSubmit={handleSearch} className="mt-4">";"
+                <div className="relative">";"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-text-secondary" />;"
+                  <input";"
+                    type="text";"
+                    placeholder="Search services, solutions...";
+                    value={searchQuery};"
+                    onChange={(e) = / /> setSearchQuery(e.target.value)}";"
                     className="w-full pl-10 pr-4 py-2 bg-zion-slate/50 border border-zion-cyan/20 rounded-lg text-zion-text-primary placeholder-zion-text-secondary focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/40";
                   />;
                 </div>;
-              </form>;"
-            </div>;""
-            {/* Quick Actions */}";""
-            <div className="p-4 border-b border-zion-cyan/20">";""
-              <h3 className="text-sm font-medium text-zion-text-secondary mb-3">Quick Actions</h3>";""
+              </form>;
+            </div>;"
+            {/* Quick Actions */}";"
+            <div className="p-4 border-b border-zion-cyan/20">";"
+              <h3 className="text-sm font-medium text-zion-text-secondary mb-3">Quick Actions</h3>";"
               <div className="space-y-2">;
                 {quickActions.map((action) => (;
                   <Link;
                     key={action.name};
                     to={action.href};
-                    onClick={onClose};"
-                    className={`block p-3 rounded-lg bg-gradient-to-r ${action.color} text-white font-medium text-sm transition-transform hover:scale-105`};""
-                  >";""
-                    <div className="flex items-center gap-3">";""
+                    onClick={onClose};
+                    className={`block p-3 rounded-lg bg-gradient-to-r ${action.color} text-white font-medium text-sm transition-transform hover:scale-105`};"
+                  >";"
+                    <div className="flex items-center gap-3">";"
                       <action.icon className="w-5 h-5" />;
                       <span>{action.name}</span>;
                     </div>;
                   </Link>;
                 ))};
-              </div>;"
-            </div>;""
-            {/* Navigation Items */}";""
-            <div className="p-4">";""
+              </div>;
+            </div>;"
+            {/* Navigation Items */}";"
+            <div className="p-4">";"
               <nav className="space-y-2">;
                 {navigationItems.map((item) => (;
-                  <div key={item.name}>;"
-                    <button;""
-                      onClick={() => toggleSection(item.name)}";""
-                      className="w-full flex items-center justify-between p-3 text-left hover:bg-zion-cyan/10 rounded-lg transition-colors group";""
-                    >";""
-                      <div className="flex items-center gap-3">";""
-                        <item.icon className="w-5 h-5 text-zion-cyan" />;""
-                        <div>";""
-                          <div className="font-medium text-zion-text-primary">{item.name}</div>;""
-                          {item.description && (";""
+                  <div key={item.name}>;
+                    <button;"
+                      onClick={() => toggleSection(item.name)}";"
+                      className="w-full flex items-center justify-between p-3 text-left hover:bg-zion-cyan/10 rounded-lg transition-colors group";"
+                    >";"
+                      <div className="flex items-center gap-3">";"
+                        <item.icon className="w-5 h-5 text-zion-cyan" />;"
+                        <div>";"
+                          <div className="font-medium text-zion-text-primary">{item.name}</div>;"
+                          {item.description && (";"
                             <div className="text-xs text-zion-text-secondary">{item.description}</div>;
                           )};
                         </div>;
@@ -193,17 +192,17 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
                       {activeSection === item.name && item.children && (;
                         <motion.div;
                           initial={{ height: 0, opacity: 0 }};
-                          animate={{ height: 'auto', opacity: 1 }};"
-                          exit={{ height: 0, opacity: 0 }};""
-                          transition={{ duration: 0.3 }}";""
-                          className="overflow-hidden";""
-                        >";""
+                          animate={{ height: 'auto', opacity: 1 }};
+                          exit={{ height: 0, opacity: 0 }};"
+                          transition={{ duration: 0.3 }}";"
+                          className="overflow-hidden";"
+                        >";"
                           <div className="ml-8 mt-2 space-y-1">;
                             {item.children.map((child) => (;
                               <Link;
-                                key={child.name};"
-                                to={child.href};""
-                                onClick={onClose}";""
+                                key={child.name};
+                                to={child.href};"
+                                onClick={onClose}";"
                                 className="block p-2 text-sm text-zion-text-secondary hover:text-zion-cyan hover:bg-zion-cyan/10 rounded transition-colors";
                               >;
                                 {child.name};
@@ -215,17 +214,17 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
                     </AnimatePresence>;
                   </div>;
                 ))};
-              </nav>;"
-            </div>;""
-            {/* Footer */}";""
-            <div className="p-4 border-t border-zion-cyan/20 mt-auto">";""
-              <div className="flex items-center justify-between text-sm text-zion-text-secondary">;""
-                <span>© 2024 Zion Tech Group</span>";""
-                <div className="flex items-center gap-2">";""
-                  <button className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors">";""
-                    <User className="w-4 h-4" />;""
-                  </button>";""
-                  <button className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors">";""
+              </nav>;
+            </div>;"
+            {/* Footer */}";"
+            <div className="p-4 border-t border-zion-cyan/20 mt-auto">";"
+              <div className="flex items-center justify-between text-sm text-zion-text-secondary">;"
+                <span>© 2024 Zion Tech Group</span>";"
+                <div className="flex items-center gap-2">";"
+                  <button className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors">";"
+                    <User className="w-4 h-4" />;"
+                  </button>";"
+                  <button className="p-2 hover:bg-zion-cyan/20 rounded-lg transition-colors">";"
                     <Bell className="w-4 h-4" />;
                   </button>;
                 </div>;
@@ -236,6 +235,6 @@ export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }
       )};
     </AnimatePresence>;
   );
-});"
-;""
-MobileNavigation.displayName = 'MobileNavigation';";""
+});
+;"
+MobileNavigation.displayName = 'MobileNavigation';";"

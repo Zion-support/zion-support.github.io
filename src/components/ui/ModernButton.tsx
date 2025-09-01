@@ -70,34 +70,34 @@ export const ModernButton: React.FC<ModernButtonProps> = ({;
       {/* Loading spinner */};
       {loading && (;
         <motion.div;
-          className="absolute inset-0 flex items-center justify-center";
-          initial={{ opacity: 0 }};"
-          animate={{ opacity: 1 }};""
-        >";""
+          className="absolute inset-0 flex items-center justify-center";";"
+          initial={{ opacity: 0 }};";"
+          animate={{ opacity: 1 }};"";"
+        >";"";"
           <Loader2 className="w-5 h-5 animate-spin" />;
         </motion.div>;
       )};
       {/* Content */};
-      <div className={cn(;
-        'flex items-center gap-2',;
-        loading ? 'opacity-0' : 'opacity-100';"
-      )}>;""
-        {icon && iconPosition === 'left' && (";""
+      <div className={cn(;"
+        'flex items-center gap-2',;";"
+        loading ? 'opacity-0' : 'opacity-100';";"
+      )}>;"";"
+        {icon && iconPosition === 'left' && (";"";"
+          <span className="flex-shrink-0">{icon}</span>;";"
+        )};";"
+        <span>{children}</span>;"";"
+        {icon && iconPosition === 'right' && (";"";"
           <span className="flex-shrink-0">{icon}</span>;
         )};"
-        <span>{children}</span>;""
-        {icon && iconPosition === 'right' && (";""
-          <span className="flex-shrink-0">{icon}</span>;
-        )};
-      </div>;
-      {/* Hover effect overlay */};"
-      {!isDisabled && (;""
-        <motion.div";""
+      </div>;";"
+      {/* Hover effect overlay */};";"
+      {!isDisabled && (;"";"
+        <motion.div";"";"
           className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 rounded-xl";
           whileHover={{ opacity: 1 }};
           transition={{ duration: 0.2 }};
-        />;
-      )};
-    </motion.button>;"
-  );""
-};";""
+        />;"
+      )};";"
+    </motion.button>;";"
+  );"";"
+};";"";"

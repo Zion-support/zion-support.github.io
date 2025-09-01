@@ -342,7 +342,7 @@ export const useMachineLearning = (_initialConfig) => {;
         makePrediction,;
         updateModelMetrics,;
         getModelPerformance,;
-        exportModel,;
-        importModel,;
-        configureML;"
-    }};";""
+        exportModel,;"
+        importModel,;";"
+        configureML;";"
+    }};";"";"

@@ -1,15 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingSolutions.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Atom,
-  Zap,
-  Brain,
-  Cpu,
-  TrendingUp,
-  Shield,
-  Globe,
-========
+<=
 import {
   Atom, 
   Zap, 
@@ -18,8 +7,7 @@ import {
   TrendingUp, 
   Shield, 
   Globe, 
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingSolutions.tsx
-  Database,
+>  Database,
   Cloud,
   Lock,
   Users,
@@ -67,21 +55,12 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingSolutions.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingSolutions.tsx
-        title="Quantum Computing Solutions - Zion Tech Group"
-        description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
-        keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
-       />
-=======
+
         title="Quantum Computing Solutions - Zion Tech Group""
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions.""        keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -276,17 +255,12 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingSolutions.tsx
-                  plan.popular
-                    ? 'border-indigo-500/50 ring-2 ring-indigo-500/20'
-                    : 'border-gray-700 hover:border-indigo-500/50'
-========
+<=
 
                   plan.popular '
                     ? 'border-indigo-500/50 ring-2 ring-indigo-500/20' '
                     : 'border-gray-700 hover:border-indigo-500/50'`
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingSolutions.tsx
-                } transition-all duration-300`}
+>                } transition-all duration-300`}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"

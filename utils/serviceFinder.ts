@@ -41,7 +41,7 @@ export function findServiceBySlug(slug: string): ServiceRecord | null {
 	for (const arr of allServiceArrays) {
 
 <<<<<<< HEAD
-		const hit = arr.find((s: any) => {;
+		const hit = arr.find((s: unknown) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			if (!s) return false;
 			if (s.id && s.id === slug) return true;

@@ -47,16 +47,10 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <SEO"
-<<<<<<< HEAD
-        title="Comprehensive Services Showcase 2029 | Zion Tech Group"
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
-        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
-      />
-=======
+
         title="Comprehensive Services Showcase 2029 | Zion Tech Group""
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -111,12 +105,8 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
+
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
@@ -328,16 +318,10 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
-<<<<<<< HEAD
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-=======
+
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>

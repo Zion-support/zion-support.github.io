@@ -78,12 +78,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-        title = "SOC2 Compliance Tracker - Zion Tech Group"
+>        title = "SOC2 Compliance Tracker - Zion Tech Group"
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
         canonical="/services/soc2-compliance-tracker"
        />
@@ -147,12 +144,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Everything you need to achieve and maintain SOC2 compliance efficiently
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -198,12 +192,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Comprehensive coverage of all SOC2 Trust Service Criteria
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceAreas.map(area: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -249,12 +240,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Step-by-step guidance through the entire compliance process
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceSteps.map(step: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -300,12 +288,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Professional compliance tools that help you achieve and maintain SOC2 certification
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -353,12 +338,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Choose the compliance plan that fits your organization's needs
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/SOC2ComplianceTracker.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

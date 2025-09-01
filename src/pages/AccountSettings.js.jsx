@@ -25,7 +25,7 @@ export default function AccountSettings() {;
                 setEnableBackup(!!parsed.enableBackup)};
         };
         catch (e) {;
-            // console.error('Error loading account settings', e)};
+            console.error('Error loading account settings', e)};
     }, []);
     const handleSave = () => {;
         setIsSubmitting(true);
@@ -33,10 +33,10 @@ export default function AccountSettings() {;
         setTimeout(() => {;
             try {;
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully')};
             catch (e) {;
-                // console.error('Failed to save settings', e);
+                console.error('Failed to save settings', e);
                 toast.error('Failed to save settings')};
             finally {;
                 setIsSubmitting(false)};
@@ -64,68 +64,71 @@ export default function AccountSettings() {;
                     setDidHandle(ensName)};
             };
             catch (error) {;
-                // console.error('ENS lookup error:', error)};
+                console.error('ENS lookup error:', error)};
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)};
         catch (error) {;
-            toast.error(error.message || 'Failed to connect wallet')};"
-    };""
-    return (<>";""
-      <SEO title="Account Settings" description="Manage your account"/>;";""
-      <main className="container mx-auto py-8 px-4">";""
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>;";""
+            toast.error(error.message || 'Failed to connect wallet')};
+    };"
+    return (<>";"
+      <SEO title="Account Settings" description="Manage your account"/>;"
+      ";"
+      <main className="container mx-auto py-8 px-4">";"
+        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>;"
+        ";"
         <div className="grid gap-6 md:grid-cols-2">;
           <Card>;
             <CardHeader>;
-              <CardTitle>Profile Settings</CardTitle>;"
-              <CardDescription>Manage your personal information and privacy</CardDescription>;""
-            </CardHeader>";""
-            <CardContent className="space-y-6">";""
-              <div className="space-y-2">";""
-                <Label htmlFor="email">Email Address</Label>";""
-                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>;"
-              </div>;";""
-              <div className="space-y-2">";""
-                <Label htmlFor="didHandle">Web3 Identity Handle</Label>";""
-                <div className="flex gap-2">";""
-                  <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>";""
+              <CardTitle>Profile Settings</CardTitle>;
+              <CardDescription>Manage your personal information and privacy</CardDescription>;"
+            </CardHeader>";"
+            <CardContent className="space-y-6">";"
+              <div className="space-y-2">";"
+                <Label htmlFor="email">Email Address</Label>";"
+                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>;
+              </div>;"
+              ";"
+              <div className="space-y-2">";"
+                <Label htmlFor="didHandle">Web3 Identity Handle</Label>";"
+                <div className="flex gap-2">";"
+                  <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>";"
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">;
                     <Wallet connected</span>;
-                  </div>)};"
-              </div>;""
-              <div>";""
-                <h3 className="font-medium mb-2">Backup Status</h3>";""
-                <div className="grid grid-cols-2 gap-2">";""
-                  <div className="bg-gray-100 p-3 rounded-md">";""
-                    <p className="text-sm font-medium">Profile Data</p>";""
+                  </div>)};
+              </div>;"
+              <div>";"
+                <h3 className="font-medium mb-2">Backup Status</h3>";"
+                <div className="grid grid-cols-2 gap-2">";"
+                  <div className="bg-gray-100 p-3 rounded-md">";"
+                    <p className="text-sm font-medium">Profile Data</p>";"
                     <p className="text-xs text-gray-500">;
-                      {enableBackup ? 'Backed up' : 'Not backed up'};"
-                    </p>;""
-                  </div>";""
-                  <div className="bg-gray-100 p-3 rounded-md">";""
-                    <p className="text-sm font-medium">Resume Data</p>";""
+                      {enableBackup ? 'Backed up' : 'Not backed up'};
+                    </p>;"
+                  </div>";"
+                  <div className="bg-gray-100 p-3 rounded-md">";"
+                    <p className="text-sm font-medium">Resume Data</p>";"
                     <p className="text-xs text-gray-500">;
-                      {enableBackup ? 'Backed up' : 'Not backed up'};"
-                    </p>;""
-                  </div>";""
-                  <div className="bg-gray-100 p-3 rounded-md">";""
-                    <p className="text-sm font-medium">Project History</p>";""
+                      {enableBackup ? 'Backed up' : 'Not backed up'};
+                    </p>;"
+                  </div>";"
+                  <div className="bg-gray-100 p-3 rounded-md">";"
+                    <p className="text-sm font-medium">Project History</p>";"
                     <p className="text-xs text-gray-500">;
-                      {enableBackup ? 'Backed up' : 'Not backed up'};"
-                    </p>;""
-                  </div>";""
-                  <div className="bg-gray-100 p-3 rounded-md">";""
-                    <p className="text-sm font-medium">Reviews</p>";""
+                      {enableBackup ? 'Backed up' : 'Not backed up'};
+                    </p>;"
+                  </div>";"
+                  <div className="bg-gray-100 p-3 rounded-md">";"
+                    <p className="text-sm font-medium">Reviews</p>";"
                     <p className="text-xs text-gray-500">;
                       {enableBackup ? 'Backed up' : 'Not backed up'};
                     </p>;
                   </div>;
-                </div>;"
-              </div>;""
-              <div>";""
-                <h3 className="font-medium mb-2">Recovery Options</h3>";""
-                <Button variant="outline" className="w-full" disabled={!enableBackup}>;"
-                  Restore Profile from Backup;""
-                </Button>";""
+                </div>;
+              </div>;"
+              <div>";"
+                <h3 className="font-medium mb-2">Recovery Options</h3>";"
+                <Button variant="outline" className="w-full" disabled={!enableBackup}>;
+                  Restore Profile from Backup;"
+                </Button>";"
                 <p className="text-xs text-gray-500 mt-1">;
                   {enableBackup;
             ? 'Restore your profile data from decentralized storage';
@@ -135,5 +138,6 @@ export default function AccountSettings() {;
             </CardContent>;
           </Card>;
         </div>;
-      </main>;"
-    </>)};";""
+      </main>;
+    </>)};"
+";"

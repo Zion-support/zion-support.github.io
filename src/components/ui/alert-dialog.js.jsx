@@ -26,10 +26,10 @@ export function AlertDialogTrigger({ children }) {;
 export function AlertDialogContent({ children, className = '' }) {;
     const context = useContext(AlertDialogContext);
     if (!context);
-        throw new Error('AlertDialogContent must be used within AlertDialog');"
-    if (!context.isOpen);""
-        return null;";""
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">";""
+        throw new Error('AlertDialogContent must be used within AlertDialog');
+    if (!context.isOpen);"
+        return null;";"
+    return (<div className="fixed inset-0 z-50 flex items-center justify-center">";"
       <div className="fixed inset-0 bg-black bg-opacity-50"/>;
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>;
         {children};
@@ -51,5 +51,6 @@ export function AlertDialogCancel({ children, className = '' }) {;
     if (!context);
         throw new Error('AlertDialogCancel must be used within AlertDialog');
     return (<button className={`px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors ${className}`} onClick={() => context.setIsOpen(false)}>;
-      {children};"
-    </button>)};";""
+      {children};
+    </button>)};"
+";"

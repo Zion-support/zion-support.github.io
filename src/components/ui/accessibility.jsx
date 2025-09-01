@@ -132,13 +132,13 @@ const AccessibilityPanel = () => {;
   ];
 ;
   const renderTabContent = () => {;
-    switch (activeTab) {;"
-      case 'general':;""
-        return (";""
-          <div className="space-y-4">";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">High Contrast Mode</h4>";""
+    switch (activeTab) {;
+      case 'general':;"
+        return (";"
+          <div className="space-y-4">";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">High Contrast Mode</h4>";"
                 <p className="text-sm text-gray-600">Increase contrast for better visibility</p>;
               </div>;
               <button;
@@ -153,11 +153,12 @@ const AccessibilityPanel = () => {;
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1';
                   }`};
                 />;
-              </button>;"
-            </div>;";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">Large Text</h4>";""
+              </button>;
+            </div>;"
+";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">Large Text</h4>";"
                 <p className="text-sm text-gray-600">Increase font size for better readability</p>;
               </div>;
               <button;
@@ -172,11 +173,12 @@ const AccessibilityPanel = () => {;
                     settings.largeText ? 'translate-x-6' : 'translate-x-1';
                   }`};
                 />;
-              </button>;"
-            </div>;";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">Reduced Motion</h4>";""
+              </button>;
+            </div>;"
+";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">Reduced Motion</h4>";"
                 <p className="text-sm text-gray-600">Reduce animations and transitions</p>;
               </div>;
               <button;
@@ -195,12 +197,12 @@ const AccessibilityPanel = () => {;
             </div>;
           </div>;
         );
-;"
-      case 'visual':;""
-        return (";""
-          <div className="space-y-4">";""
-            <div className="space-y-3">";""
-              <h4 className="font-medium text-gray-900">Color Blindness Support</h4>";""
+;
+      case 'visual':;"
+        return (";"
+          <div className="space-y-4">";"
+            <div className="space-y-3">";"
+              <h4 className="font-medium text-gray-900">Color Blindness Support</h4>";"
               <div className="grid grid-cols-2 gap-2">;
                 {['none', 'protanopia', 'deuteranopia', 'tritanopia'].map((type) => (;
                   <button;
@@ -215,11 +217,12 @@ const AccessibilityPanel = () => {;
                     {type.charAt(0).toUpperCase() + type.slice(1)};
                   </button>;
                 ))};
-              </div>;"
-            </div>;";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">Focus Indicators</h4>";""
+              </div>;
+            </div>;"
+";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">Focus Indicators</h4>";"
                 <p className="text-sm text-gray-600">Show clear focus indicators</p>;
               </div>;
               <button;
@@ -237,13 +240,13 @@ const AccessibilityPanel = () => {;
             </div>;
           </div>;
         );
-;"
-      case 'audio':;""
-        return (";""
-          <div className="space-y-4">";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">Screen Reader Support</h4>";""
+;
+      case 'audio':;"
+        return (";"
+          <div className="space-y-4">";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">Screen Reader Support</h4>";"
                 <p className="text-sm text-gray-600">Enable enhanced screen reader support</p>;
               </div>;
               <button;
@@ -257,13 +260,14 @@ const AccessibilityPanel = () => {;
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1';
                   }`};
                 />;
-              </button>;"
-            </div>;";""
-            <div className="p-4 bg-blue-50 rounded-lg">";""
-              <div className="flex items-start space-x-3">";""
-                <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />";""
-                <div className="text-sm text-blue-800">";""
-                  <p className="font-medium">Screen Reader Tips</p>";""
+              </button>;
+            </div>;"
+";"
+            <div className="p-4 bg-blue-50 rounded-lg">";"
+              <div className="flex items-start space-x-3">";"
+                <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />";"
+                <div className="text-sm text-blue-800">";"
+                  <p className="font-medium">Screen Reader Tips</p>";"
                   <ul className="mt-1 space-y-1">;
                     <li>• Use Tab to navigate between elements</li>;
                     <li>• Press Enter or Space to activate buttons</li>;
@@ -274,13 +278,13 @@ const AccessibilityPanel = () => {;
             </div>;
           </div>;
         );
-;"
-      case 'navigation':;""
-        return (";""
-          <div className="space-y-4">";""
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;""
-              <div>";""
-                <h4 className="font-medium text-gray-900">Enhanced Keyboard Navigation</h4>";""
+;
+      case 'navigation':;"
+        return (";"
+          <div className="space-y-4">";"
+            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;"
+              <div>";"
+                <h4 className="font-medium text-gray-900">Enhanced Keyboard Navigation</h4>";"
                 <p className="text-sm text-gray-600">Improve keyboard navigation experience</p>;
               </div>;
               <button;
@@ -294,13 +298,14 @@ const AccessibilityPanel = () => {;
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1';
                   }`};
                 />;
-              </button>;"
-            </div>;";""
-            <div className="p-4 bg-yellow-50 rounded-lg">";""
-              <div className="flex items-start space-x-3">";""
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />";""
-                <div className="text-sm text-yellow-800">";""
-                  <p className="font-medium">Keyboard Shortcuts</p>";""
+              </button>;
+            </div>;"
+";"
+            <div className="p-4 bg-yellow-50 rounded-lg">";"
+              <div className="flex items-start space-x-3">";"
+                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />";"
+                <div className="text-sm text-yellow-800">";"
+                  <p className="font-medium">Keyboard Shortcuts</p>";"
                   <ul className="mt-1 space-y-1">;
                     <li>• Tab: Navigate between elements</li>;
                     <li>• Shift + Tab: Navigate backwards</li>;
@@ -320,45 +325,45 @@ const AccessibilityPanel = () => {;
 ;
   return (;
     <>;
-      {/* Floating Action Button */};"
-      <button;""
-        onClick={() => setIsOpen(true)}";""
-        className="fixed bottom-6 right-6 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200";""
-        aria-label="Open accessibility settings";""
-      >";""
+      {/* Floating Action Button */};
+      <button;"
+        onClick={() => setIsOpen(true)}";"
+        className="fixed bottom-6 right-6 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200";"
+        aria-label="Open accessibility settings";"
+      >";"
         <Settings className="w-6 h-6" />;
       </button>;
       {/* Accessibility Panel */};
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0 }};"
-            animate={{ opacity: 1 }};""
-            exit={{ opacity: 0 }}";""
+            initial={{ opacity: 0 }};
+            animate={{ opacity: 1 }};"
+            exit={{ opacity: 0 }}";"
             className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4";
             onClick={() => setIsOpen(false)};
           >;
             <motion.div;
               ref={panelRef};
-              initial={{ scale: 0.9, opacity: 0 }};"
-              animate={{ scale: 1, opacity: 1 }};""
-              exit={{ scale: 0.9, opacity: 0 }}";""
+              initial={{ scale: 0.9, opacity: 0 }};
+              animate={{ scale: 1, opacity: 1 }};"
+              exit={{ scale: 0.9, opacity: 0 }}";"
               className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-hidden";
-              onClick={(e) => e.stopPropagation()};"
-            >;""
-              {/* Header */}";""
-              <div className="flex items-center justify-between p-6 border-b border-gray-200">";""
-                <h2 className="text-xl font-semibold text-gray-900">Accessibility Settings</h2>;"
-                <button;""
-                  onClick={() => setIsOpen(false)}";""
-                  className="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors";""
-                  aria-label="Close accessibility panel";""
-                >";""
+              onClick={(e) => e.stopPropagation()};
+            >;"
+              {/* Header */}";"
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">";"
+                <h2 className="text-xl font-semibold text-gray-900">Accessibility Settings</h2>;
+                <button;"
+                  onClick={() => setIsOpen(false)}";"
+                  className="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors";"
+                  aria-label="Close accessibility panel";"
+                >";"
                   <X className="w-5 h-5" />;
-                </button>;"
-              </div>;""
-              {/* Tabs */}";""
-              <div className="border-b border-gray-200">";""
+                </button>;
+              </div>;"
+              {/* Tabs */}";"
+              <div className="border-b border-gray-200">";"
                 <nav className="flex space-x-8 px-6">;
                   {tabs.map((tab) => {;
                     const Icon = tab.icon;
@@ -369,21 +374,21 @@ const AccessibilityPanel = () => {;
                         className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${;
                           activeTab === tab.id;
                             ? 'border-blue-500 text-blue-600';
-                            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300';"
-                        }`};""
-                      >";""
+                            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300';
+                        }`};"
+                      >";"
                         <Icon className="w-4 h-4" />;
                         <span>{tab.label}</span>;
                       </button>;
                     );
                   })};
-                </nav>;"
-              </div>;""
-              {/* Content */}";""
+                </nav>;
+              </div>;"
+              {/* Content */}";"
               <div className="p-6 overflow-y-auto max-h-96">;
-                {renderTabContent()};"
-              </div>;""
-              {/* Footer */}";""
+                {renderTabContent()};
+              </div>;"
+              {/* Footer */}";"
               <div className="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">;
                 <button;
                   onClick={() => {;
@@ -395,15 +400,15 @@ const AccessibilityPanel = () => {;
                       keyboardNavigation: false,;
                       focusIndicators: true,;
                       colorBlindness: 'none';
-                    });"
-                    addNotification('Settings reset to default', 'info');""
-                  }}";""
+                    });
+                    addNotification('Settings reset to default', 'info');"
+                  }}";"
                   className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors";
                 >;
                   Reset to Default;
-                </button>;"
-                <button;""
-                  onClick={() => setIsOpen(false)}";""
+                </button>;
+                <button;"
+                  onClick={() => setIsOpen(false)}";"
                   className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors";
                 >;
                   Done;
@@ -411,9 +416,9 @@ const AccessibilityPanel = () => {;
               </div>;
             </motion.div>;
           </motion.div>;
-        )};"
-      </AnimatePresence>;""
-      {/* Notifications */}";""
+        )};
+      </AnimatePresence>;"
+      {/* Notifications */}";"
       <div className="fixed top-4 right-4 z-60 space-y-2">;
         {notifications.map((notification) => (;
           <motion.div;
@@ -424,13 +429,13 @@ const AccessibilityPanel = () => {;
             className={`p-4 rounded-lg shadow-lg max-w-sm ${;
               notification.type === 'info' ? 'bg-blue-500 text-white' :;
               notification.type === 'success' ? 'bg-green-500 text-white' :;
-              'bg-yellow-500 text-white';"
-            }`};""
-          >";""
-            <div className="flex items-center space-x-2">";""
-              {notification.type === 'info' && <Info className="w-4 h-4" />}";""
-              {notification.type === 'success' && <Check className="w-4 h-4" />}";""
-              {notification.type === 'warning' && <AlertTriangle className="w-4 h-4" />}";""
+              'bg-yellow-500 text-white';
+            }`};"
+          >";"
+            <div className="flex items-center space-x-2">";"
+              {notification.type === 'info' && <Info className="w-4 h-4" />}";"
+              {notification.type === 'success' && <Check className="w-4 h-4" />}";"
+              {notification.type === 'warning' && <AlertTriangle className="w-4 h-4" />}";"
               <span className="text-sm font-medium">{notification.message}</span>;
             </div>;
           </motion.div>;
@@ -439,5 +444,6 @@ const AccessibilityPanel = () => {;
     </>;
   );
 };
-;"
-export default AccessibilityPanel;";""
+;
+export default AccessibilityPanel;"
+";"

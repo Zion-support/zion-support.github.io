@@ -26,8 +26,8 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
   {;
             duration: 1,;
             repeat: Infinity,;
-  ease: "linear";""
-}} role="status" aria-label="Loading"/>";""
+  ease: "linear";"
+}} role="status" aria-label="Loading"/>";"
       {showText && (<motion.p className="mt-3 text-sm text-zion-slate-light text-center" initial = {;
   { opacity: 0,;
   y: 10;
@@ -52,19 +52,20 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {;
 // Page loading component;
 export function PageLoader({ text = 'Loading page...', className }) {;
     return (<div className = {;
-  cn('min-h-screen flex items-center justify-center',;"
-  className);""
-}>";""
-      <div className="text-center">";""
+  cn('min-h-screen flex items-center justify-center',;
+  className);"
+}>";"
+      <div className="text-center">";"
         <LoadingSpinner size="xl" color="primary" showText text={text}/>;
       </div>;
     </div>)};
 // Button loading state;
 export function ButtonLoader({ size = 'sm', className }) {;
     return (<div className = {;
-  cn('inline-flex items-center',;"
-  className);""
-}>";""
-      <LoadingSpinner size={size} color="white"/>";""
-      <span className="ml-2">Loading...</span>;"
-    </div>)};";""
+  cn('inline-flex items-center',;
+  className);"
+}>";"
+      <LoadingSpinner size={size} color="white"/>";"
+      <span className="ml-2">Loading...</span>;
+    </div>)};"
+";"

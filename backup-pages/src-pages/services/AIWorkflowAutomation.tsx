@@ -1,20 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIWorkflowAutomation.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Workflow,
-  Zap,
-  Brain,
-  Clock,
-  TrendingUp,
-  Shield,
-  Globe,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-========
+<=
 import {
   Workflow, 
   Zap, 
@@ -26,8 +10,7 @@ import {
   Clock, 
   Users, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIWorkflowAutomation.tsx
-  CheckCircle,
+>  CheckCircle,
   ArrowRight,
   Play,
   Star,
@@ -54,34 +37,17 @@ export default function AIWorkflowAutomation(...args[]):  {
   
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIWorkflowAutomation.tsx
-      <SEO
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
-        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-========
+<=
       <SEO "
-<<<<<<< HEAD
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
-        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
-       />
-=======
+
         title="AI Workflow Automation - Zion Tech Group""
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.""        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>"
->>>>>>>> main:backup-pages/src-pages/services/AIWorkflowAutomation.tsx
-        <div className="relative max-w-7xl mx-auto text-center">
+>        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -273,17 +239,12 @@ export default function AIWorkflowAutomation(...args[]):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIWorkflowAutomation.tsx
-                  plan.popular
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20'
-                    : 'border-gray-700 hover:border-blue-500/50'
-========
+<=
 
                   plan.popular '
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' '
                     : 'border-gray-700 hover:border-blue-500/50'`
->>>>>>>> main:backup-pages/src-pages/services/AIWorkflowAutomation.tsx
-                } transition-all duration-300`}
+>                } transition-all duration-300`}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -292,20 +253,13 @@ export default function AIWorkflowAutomation(...args[]):  {
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIWorkflowAutomation.tsx
-
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-6">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center mb-2">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIWorkflowAutomation.tsx
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+>                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>"
                   <p className="text-gray-400">{plan.description}</p>
                 </div>

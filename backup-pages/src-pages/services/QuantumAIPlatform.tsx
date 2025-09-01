@@ -1,46 +1,6 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Atom,
-  Brain,
-  Zap,
-  Target,
-  BarChart3,
-  Cpu,
-========
-<<<<<<< HEAD
-import { Atom, 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Cpu, 
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-  CheckCircle,
-  Star,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Server,
-  Network,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  TrendingUp,
-  Users,
-  Shield'
- } from 'lucide-react';
-;
+<=
 
-        "Molecular modeling",;"
-        "Chemical reaction simulation",;"
-        "Material property prediction",;"
-        "Drug discovery acceleration";
       ]};
-=======
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricingPlans = [
@@ -128,19 +88,11 @@ import { Atom,
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-        title="Quantum AI Platform - Zion Tech Group"
-        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-       />
-=======
+
         title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -173,22 +125,16 @@ import { Atom,
               accelerate research, and gain quantum advantage in optimization and machine learning.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-              <a
-========
+<=
               <a "
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-                href="tel:+13024640950"
+>                href="tel:+13024640950"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
               >
                 📞 Call +1 (302) 464-0950
               </a>
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-              <a
-========
+<=
               <a "
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-                href="/request-quote"
+>                href="/request-quote"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 Get Quantum Access
@@ -419,14 +365,10 @@ import { Atom,
                     </li>
                   ))}
                 </ul>
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-                <a
-                  href="tel:+13024640950"
-========
+<=
                 <a "
                   href="tel:+13024640950" `
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
+>                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
 
                     tier.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105''

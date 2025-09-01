@@ -15,10 +15,10 @@ export default function GenericPage(...args[]: any):  {;
 }}>;
       <Helmet>;
         <title>{title} | Zion Tech Group</title>;
-        <meta name="description" content={`Information about ${title} at Zion Tech Group.`} / / / />";""
-        <link rel="canonical" href={canonical} / / / />;""
-      </Helmet>";""
-      <nav style={{marginBottom:16}} aria-label="Breadcrumbs">";""
+        <meta name="description" content={`Information about ${title} at Zion Tech Group.`} / / />";"
+        <link rel="canonical" href={canonical} / / />;"
+      </Helmet>";"
+      <nav style={{marginBottom:16}} aria-label="Breadcrumbs">";"
         <Link to="/" style={{color:'#2563eb'}}>Home</Link>;
         <span style = {;
   {margin:'0 8px',;
@@ -35,11 +35,12 @@ export default function GenericPage(...args[]: any):  {;
         <h2 style={{marginBottom:8}}>How we can help</h2>;
         <ul style={{paddingLeft:18}}>;
           <li>Micro SaaS solutions tailored to your workflow</li>;
-          <li>Applied AI: assistants, RAG, and automation</li>;"
-          <li>Cloud, DevOps, data, and cybersecurity services</li>;""
-        </ul>;";""
+          <li>Applied AI: assistants, RAG, and automation</li>;
+          <li>Cloud, DevOps, data, and cybersecurity services</li>;"
+        </ul>;";"
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>;
       </section>;
     </main>;
-  );"
-};";""
+  );
+};"
+";"

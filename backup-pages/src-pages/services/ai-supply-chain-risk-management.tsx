@@ -40,18 +40,11 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Supply Chain Risk Management - Zion Tech Group"
-        description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business."
-        keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization"
-        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
-      />
-=======
+
         title="AI Supply Chain Risk Management - Zion Tech Group""
         description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.""
         keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization""        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

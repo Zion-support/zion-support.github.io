@@ -90,5 +90,5 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 duration: 0.6,;
                 ease: "easeOut";
     };"
-    const floatingVariants = {;";""
-'";""
+    const floatingVariants = {";"
+'";"

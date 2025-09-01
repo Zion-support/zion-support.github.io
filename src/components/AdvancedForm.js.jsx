@@ -267,11 +267,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 <<<<<<< HEAD;
                 });
 <<<<<<< HEAD;
-            // // // // // // console.error('Form submission failed:', error);
+            // // // console.error('Form submission failed:', error);
 ;
 =======;
             };
-            // // // // // // // // // // console.error('Form submission failed:', error);
+            // // // // // // // console.error('Form submission failed:', error);
         };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
         finally {;
@@ -280,7 +280,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 =======;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
                 })};
-            // // // // console.error('Form submission failed:', error)};
+            // console.error('Form submission failed:', error)};
         finally {;
             setIsSubmitting(false)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -289,24 +289,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const togglePasswordVisibility = useCallback((fieldName) => {;
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);
     // Get field icon;
-    const getFieldIcon = useCallback((field) => {;"
-        switch (field.type) {;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";""
-'";""
-            case 'email': return <Mail className="w-4 h-4"/>;'";""
-            case 'tel': return <Phone className="w-4 h-4"/>;'";""
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;'";""
-            case 'select': return <Building className="w-4 h-4"/>;";""
-========";""
-            case 'email': return <Mail className="w-4 h-4"/>;";""
-            case 'tel': return <Phone className="w-4 h-4"/>;";""
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;";""
-            case 'select': return <Building className="w-4 h-4"/>;""
-<<<<<<< HEAD";""
+    const getFieldIcon = useCallback((field) => {;
+        switch (field.type) {;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+'";"
+            case 'email': return <Mail className="w-4 h-4"/>;'";"
+            case 'tel': return <Phone className="w-4 h-4"/>;'";"
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>;'";"
+            case 'select': return <Building className="w-4 h-4"/>;";"
+========";"
+            case 'email': return <Mail className="w-4 h-4"/>;";"
+            case 'tel': return <Phone className="w-4 h-4"/>;";"
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>;";"
+            case 'select': return <Building className="w-4 h-4"/>;"
+<<<<<<< HEAD";"
             default: return <User className="w-4 h-4"/>;
-;"
-=======;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+;
+=======;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
             default: return <User className="w-4 h-4"/>};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     }, []);
@@ -321,22 +321,25 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ========;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
 }} animate = {;
-  { opacity: 1,;"
-  y: 0;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";""
-}} className="space-y-2">";"
-========;";""
-}} className="space-y-2">;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">";""
-          {field.label}";""
-          {field.required && <span className="text-red-500 ml-1">*</span>};"
-        </label>;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";"
-========;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
-        <div className="relative">";""
-          {/* Field Icon */}";""
+  { opacity: 1,;
+  y: 0;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";"
+}} className="space-y-2">";
+========;"
+";"
+}} className="space-y-2">;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">";"
+          {field.label}";"
+          {field.required && <span className="text-red-500 ml-1">*</span>};
+        </label>;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";
+========;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
+        <div className="relative">";"
+          {/* Field Icon */}";"
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
             {getFieldIcon(field)};
           </div>;
@@ -360,28 +363,30 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ========;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
 } onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched;
-                    ? fieldValidation.isValid';"
-                        ? 'border-green-500 focus:ring-green-200'';""
-                        : 'border-red-500 focus:ring-red-200''`";""
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>";""
-              <option value=">Select an option</option>;"
-              {field.options?.map(option => (<option key={option.value} value={option.value}>;""
-                  {option.label}";""
-                </option>))}'";""
-            </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">";""
+                    ? fieldValidation.isValid';
+                        ? 'border-green-500 focus:ring-green-200'';"
+                        : 'border-red-500 focus:ring-red-200''`";"
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>";"
+              <option value="">Select an option</option>;
+              {field.options?.map(option => (<option key={option.value} value={option.value}>;"
+                  {option.label}";"
+                </option>))}'";"
+            </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">";"
               <input type="checkbox" name={field.name} checked={fieldValue} onChange = {;
-  (e) = / / /> handleFieldChange(field.name,;"
-  e.target.checked);""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";""
-} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>";"
-========;";""
-} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+  (e) = / /> handleFieldChange(field.name,;
+  e.target.checked);"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";"
+} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>";
+========;"
+";"
+} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
               <span className="text-sm text-gray-600 dark:text-gray-400">;
                 {field.placeholder};
               </span>;
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {;
-  (e) = / / /> handleFieldChange(field.name,;
+  (e) = / /> handleFieldChange(field.name,;
   e.target.value);
 <<<<<<<< HEAD:src/components/AdvancedForm.js.jsx;
 `;
@@ -390,23 +395,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched;
                     ? fieldValidation.isValid';
                         ? 'border-green-500 focus:ring-green-200'';
-                        : 'border-red-500 focus:ring-red-200''`;"
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)};""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";""
-          {/* Password Toggle */}";""
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">";""
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>};"
-            </button>)};";""
-          {/* Validation Icon */}";""
-          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">";"
-========;""
-          {/* Password Toggle */}";""
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">";""
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>};"
-            </button>)};""
-          {/* Validation Icon */}";""
-          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+                        : 'border-red-500 focus:ring-red-200''`;
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)};"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+          {/* Password Toggle */}";"
+          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">";"
+              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>};
+            </button>)};"
+";"
+          {/* Validation Icon */}";"
+          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">";
+========;"
+          {/* Password Toggle */}";"
+          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">";"
+              {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>};
+            </button>)};"
+          {/* Validation Icon */}";"
+          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
               {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)};
             </div>)};
         </div>;
@@ -418,11 +424,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ========;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
 }} animate = {;
-  { opacity: 1,;"
-  height: 'auto';""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";"
-========;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+  { opacity: 1,;
+  height: 'auto';"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";
+========;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
 }} className="text-sm text-red-600 dark:text-red-400">;
             {fieldValidation.message};
           </motion.p>)};
@@ -435,18 +442,20 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ========;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
 }} animate = {;
-  { opacity: 1,;"
-  scale: 1;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";""
-}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">";""
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>";"
-========;";""
-}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">";""
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">;""
-          Thank You!";""
-        </h3>";""
+  { opacity: 1,;
+  scale: 1;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";"
+}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">";"
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>";
+========;"
+";"
+}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">";"
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
+        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">;"
+          Thank You!";"
+        </h3>";"
         <p className="text-green-600 dark:text-green-300">;
           Your message has been sent successfully. We'll get back to you soon!;
         </p>;
@@ -478,63 +487,65 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 }} animate = {;
   { opacity: 1,;
   y: 0;
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx;"
-`;""
-}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>";""
-      {/* Header */}";""
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">";""
-        <h2 className="text-2xl font-bold mb-2">{title}</h2>";""
-        <p className="text-blue-100">{subtitle}</p>;"
-      </div>;";""
-      {/* Progress Bar */}";""
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx;
+`;"
+}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>";"
+      {/* Header */}";"
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">";"
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>";"
+        <p className="text-blue-100">{subtitle}</p>;
+      </div>;"
+";"
+      {/* Progress Bar */}";"
       {showProgressBar && (<div className="px-6 pt-4">";
 ========;
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;""
-      {/* Header */}";""
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">";""
-        <h2 className="text-2xl font-bold mb-2">{title}</h2>";""
-        <p className="text-blue-100">{subtitle}</p>;"
-      </div>;""
-      {/* Progress Bar */}";""
-      {showProgressBar && (<div className="px-6 pt-4">;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">;"
-            <span>Form Progress</span>;""
-            <span>{Math.round(progress)}%</span>";""
-          </div>";""
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"`";""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
+      {/* Header */}";"
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">";"
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>";"
+        <p className="text-blue-100">{subtitle}</p>;
+      </div>;"
+      {/* Progress Bar */}";"
+      {showProgressBar && (<div className="px-6 pt-4">;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
+          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">;
+            <span>Form Progress</span>;"
+            <span>{Math.round(progress)}%</span>";"
+          </div>";"
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"`";"
             <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;
           </div>;
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx;"
-        </div>) };";""
-      {/* Form */}";""
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx;
+        </div>) };"
+";"
+      {/* Form */}";"
       <form onSubmit={handleSubmit} className="p-6 space-y-6">";
-========;"
-        </div>)};""
-      {/* Form */}";""
-      <form onSubmit={handleSubmit} className="p-6 space-y-6">;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+========;
+        </div>)};"
+      {/* Form */}";"
+      <form onSubmit={handleSubmit} className="p-6 space-y-6">;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-          {fields.map(field => renderField(field))};"
-        </div>;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";""
-        {/* Submit Button */}"`";""
-        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting';"
-            ? 'bg-gray-400 cursor-not-allowed''`;""
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>";""
-          {isSubmitting ? (<>";"
-========;""
-        {/* Submit Button */}";""
+          {fields.map(field => renderField(field))};
+        </div>;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+        {/* Submit Button */}"`";"
+        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting';
+            ? 'bg-gray-400 cursor-not-allowed''`;"
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>";"
+          {isSubmitting ? (<>";
+========;"
+        {/* Submit Button */}";"
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting;
             ? 'bg-gray-400 cursor-not-allowed';
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : { /* empty */ }} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : { /* empty */ }}>;"
-          {isSubmitting ? (<>;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
-              <Loader2 className="w-5 h-5 animate-spin"/>;""
-              Sending...";""
-            </>) : (<>";""
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : { /* empty */ }} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : { /* empty */ }}>;
+          {isSubmitting ? (<>;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
+              <Loader2 className="w-5 h-5 animate-spin"/>;"
+              Sending...";"
+            </>) : (<>";"
               <Send className="w-5 h-5"/>;
               {submitText};
             </>) };
@@ -554,13 +565,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ========;
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;
 }} exit = {;
-  { opacity: 0,;"
-  height: 0;""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";";""
-}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">";"
-========;";""
-}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">;""
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";""
+  { opacity: 0,;
+  height: 0;"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
+";"
+}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">";
+========;"
+";"
+}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">;"
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx";"
               <p className="text-sm text-red-600 dark:text-red-400">;
                 Please fix the errors above before submitting the form.;
               </p>;
@@ -571,10 +584,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     </motion.div>);
 };
 }}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div>};
-=======;"
-    </motion.div>)};""
-<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";""
+=======;
+    </motion.div>)};"
+<<<<<<<< HEAD:src/components/AdvancedForm.js.jsx";"
 '"`;
 ========;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;"
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;";""
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx;"
+";"

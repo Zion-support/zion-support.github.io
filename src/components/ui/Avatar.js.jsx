@@ -8,7 +8,7 @@ Avatar.displayName = 'Avatar';
 const AvatarImage = React.forwardRef(({ className, src, alt = '', ...props }, ref) => (<img ref={ref} className = {;
   cn('aspect-square h-full w-full',;
   className);
-} src={src} alt={alt} {...props}/ / / />));
+} src={src} alt={alt} {...props}/ / />));
 AvatarImage.displayName = 'AvatarImage';
 const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (<div ref={ref} className = {;
   cn('flex h-full w-full items-center justify-center rounded-full bg-muted',;

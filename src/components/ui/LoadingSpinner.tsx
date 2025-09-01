@@ -1,17 +1,27 @@
-type LoadingSpinnerProps = {;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-  text?: string};
-export default function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {;
-  const sizeClasses: Record<string, string> = {;
-    sm: 'w-6 h-6',;
-    md: 'w-10 h-10',;
-    lg: 'w-14 h-14',;
-    xl: 'w-20 h-20';
+
+import React from 'react';
+;
+interface LoadingSpinnerProps {;
+  size?: 'small' | 'medium' | 'large';
+  color?: string;
+  text?: string;
+};
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'medium',;
+  color = '#3b82f6',;
+  text = 'Loading...';
+}) => {;
+  const sizeMap = {;
+    small: 'w-4 h-4',;
+    medium: 'w-8 h-8',;
+    large: 'w-12 h-12';
   };
+;
   return (;
-    <div className={`flex flex-col items-center justify-center ${className}`}>;
-      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin`} aria-label="Loading" />";""
-      {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null};
-    </div>;"
-  )};";""
+    <div className="flex flex-col items-center justify-center p-4">;"
+      <div className={`${sizeMap[size]} animate-spin rounded-full border-4 border-gray-200 border-t-${color}`}></div>";"
+      {text && <p className="mt-2 text-sm text-gray-600">{text}</p>};
+    </div>;
+  );
+};"
+";"

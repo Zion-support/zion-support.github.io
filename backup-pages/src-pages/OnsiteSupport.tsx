@@ -1,55 +1,6 @@
-<<<<<<< HEAD
-import { Wrench, 
 
-
-  Clock, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  Star, 
-  Award, 
-  Building, 
-  Wrench, 
-  Settings, 
-  Database, 
-  Server, 
-  Network, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Info, 
-  ArrowRight,
-  Globe'
-} from 'lucide-react';"
-
-export default function OnsiteSupport(...args[]):  {
-
-  
-    },;
-    {
-
-      icon: Network,
-      title: 'Network Infrastructure',
-      description: 'Complete network setup, troubleshooting, and optimization',
-      features['WiFi optimization',Cable management',Switch configuration',Network security']},;
-    {
-
-      icon: Database,
-      title: 'Database Management',
-      description: 'Database optimization, backup, and recovery services',
-      features['Performance tuning',Backup strategies',Recovery procedures',Security hardening']},;
-    {
-
-      title: 'Training & Consultation',
-=======
 '
       title: 'Training & Consultation','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Staff training and strategic consultation',
       icon: Users,
       color: 'from-purple-500 to-pink-500',
@@ -95,14 +46,9 @@ export default function OnsiteSupport(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Onsite IT Support Services - Zion Tech Group"
-        description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
-       />
-=======
+
         title="Onsite IT Support Services - Zion Tech Group""        description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative py-20 px-4">"

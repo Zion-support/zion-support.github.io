@@ -171,213 +171,213 @@ export default function AISupplyChainIntelligencePlatform() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-futuristic">;""
-      {/* Hero Section */}";""
-      <section className="relative pt-32 pb-20 overflow-hidden">";""
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-purple-900/20"></div>";""
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center max-w-4xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              animate={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.8 }}";""
-              className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6";""
-            >";""
+    <div className="min-h-screen bg-futuristic">;"";"
+      {/* Hero Section */}";"";"
+      <section className="relative pt-32 pb-20 overflow-hidden">";"";"
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-purple-900/20"></div>";"";"
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center max-w-4xl mx-auto">;"
+            <motion.div;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.8 }}";"";"
+              className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6";"";"
+            >";"";"
               <Brain className="h-4 w-4 mr-2" />;
               AI-Powered Supply Chain Intelligence;
-            </motion.div>;
-            <motion.h1;
-              initial={{ opacity: 0, y: 20 }};"
-              animate={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.8, delay: 0.1 }}";""
-              className="text-5xl md:text-7xl font-bold text-white mb-6";"
-            >;""
-              AI Supply Chain";""
+            </motion.div>;"
+            <motion.h1;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.8, delay: 0.1 }}";"";"
+              className="text-5xl md:text-7xl font-bold text-white mb-6";";"
+            >;"";"
+              AI Supply Chain";"";"
               <span className="block bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 bg-clip-text text-transparent">;
                 Intelligence Platform;
               </span>;
-            </motion.h1>;
-            <motion.p;
-              initial={{ opacity: 0, y: 20 }};"
-              animate={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.8, delay: 0.2 }}";""
+            </motion.h1>;"
+            <motion.p;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.8, delay: 0.2 }}";"";"
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto";
             >;
               Transform your supply chain operations with AI-powered intelligence, real-time visibility,;
               predictive analytics, and automated optimization. Built for modern logistics and manufacturing.;
-            </motion.p>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              animate={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.8, delay: 0.3 }}";""
-              className="flex flex-col sm:flex-row gap-4 justify-center";"
-            >;""
-              <Link";""
-                to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-200 transform hover:scale-105";"
-              >;""
-                Start Free Trial";""
-                <ArrowRight className="ml-2 h-5 w-5" />;"
-              </Link>;""
-              <Link";""
-                to="#demo";""
+            </motion.p>;"
+            <motion.div;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.8, delay: 0.3 }}";"";"
+              className="flex flex-col sm:flex-row gap-4 justify-center";";"
+            >;"";"
+              <Link";"";"
+                to="/contact";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-200 transform hover:scale-105";";"
+              >;"";"
+                Start Free Trial";"";"
+                <ArrowRight className="ml-2 h-5 w-5" />;";"
+              </Link>;"";"
+              <Link";"";"
+                to="#demo";"";"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200";
               >;
                 Watch Demo;
               </Link>;
-            </motion.div>;
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Key Benefits */}";""
-      <section className="py-20 bg-gray-900/50">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Supply Chain Platform?</h2>";""
+            </motion.div>;"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Key Benefits */}";"";"
+      <section className="py-20 bg-gray-900/50">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Supply Chain Platform?</h2>";"";"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Experience the future of supply chain management with cutting-edge AI technology designed for;
-              efficiency, visibility, and cost optimization.;
-            </p>;"
-          </div>;";""
+              Experience the future of supply chain management with cutting-edge AI technology designed for;"
+              efficiency, visibility, and cost optimization.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }};"
-              transition={{ duration: 0.5 }};""
-              viewport={{ once: true }}";""
-              className="text-center";""
-            >";""
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 mb-4">";""
-                <TrendingUp className="h-8 w-8 text-white" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-3">25% Cost Reduction</h3>";""
+            <motion.div;"
+              initial={{ opacity: 0, y: 20 }};";"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.5 }};"";"
+              viewport={{ once: true }}";"";"
+              className="text-center";"";"
+            >";"";"
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 mb-4">";"";"
+                <TrendingUp className="h-8 w-8 text-white" />;"";"
+              </div>";"";"
+              <h3 className="text-xl font-semibold text-white mb-3">25% Cost Reduction</h3>";"";"
               <p className="text-gray-400">Average supply chain cost savings within 6 months</p>;
             </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }};"
-              transition={{ duration: 0.5, delay: 0.1 }};""
-              viewport={{ once: true }}";""
-              className="text-center";""
-            >";""
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 mb-4">";""
-                <Clock className="h-8 w-8 text-white" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-3">40% Faster Delivery</h3>";""
+            <motion.div;"
+              initial={{ opacity: 0, y: 20 }};";"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.5, delay: 0.1 }};"";"
+              viewport={{ once: true }}";"";"
+              className="text-center";"";"
+            >";"";"
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 mb-4">";"";"
+                <Clock className="h-8 w-8 text-white" />;"";"
+              </div>";"";"
+              <h3 className="text-xl font-semibold text-white mb-3">40% Faster Delivery</h3>";"";"
               <p className="text-gray-400">Optimized routes and real-time tracking</p>;
             </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }};"
-              transition={{ duration: 0.5, delay: 0.2 }};""
-              viewport={{ once: true }}";""
-              className="text-center";""
-            >";""
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 mb-4">";""
-                <Eye className="h-8 w-8 text-white" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-3">100% Visibility</h3>";""
+            <motion.div;"
+              initial={{ opacity: 0, y: 20 }};";"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.5, delay: 0.2 }};"";"
+              viewport={{ once: true }}";"";"
+              className="text-center";"";"
+            >";"";"
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 mb-4">";"";"
+                <Eye className="h-8 w-8 text-white" />;"";"
+              </div>";"";"
+              <h3 className="text-xl font-semibold text-white mb-3">100% Visibility</h3>";"";"
               <p className="text-gray-400">End-to-end supply chain transparency</p>;
             </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};
-              whileInView={{ opacity: 1, y: 0 }};"
-              transition={{ duration: 0.5, delay: 0.3 }};""
-              viewport={{ once: true }}";""
-              className="text-center";""
-            >";""
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-orange-600 to-red-600 mb-4">";""
-                <Shield className="h-8 w-8 text-white" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-3">Risk Mitigation</h3>";""
+            <motion.div;"
+              initial={{ opacity: 0, y: 20 }};";"
+              whileInView={{ opacity: 1, y: 0 }};";"
+              transition={{ duration: 0.5, delay: 0.3 }};"";"
+              viewport={{ once: true }}";"";"
+              className="text-center";"";"
+            >";"";"
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-orange-600 to-red-600 mb-4">";"";"
+                <Shield className="h-8 w-8 text-white" />;"";"
+              </div>";"";"
+              <h3 className="text-xl font-semibold text-white mb-3">Risk Mitigation</h3>";"";"
               <p className="text-gray-400">Proactive risk identification and management</p>;
-            </motion.div>;
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Features */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>";""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Comprehensive AI-powered features designed to revolutionize your supply chain operations.;
-            </p>;"
-          </div>;";""
+            </motion.div>;"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Features */}";"";"
+      <section className="py-20">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>";"";"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+              Comprehensive AI-powered features designed to revolutionize your supply chain operations.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             {features.map((feature, index) => (;
               <motion.div;
-                key={feature.title};
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
-                whileInView={{ opacity: 1, x: 0 }};"
-                transition={{ duration: 0.6, delay: index * 0.1 }};""
-                viewport={{ once: true }}";""
-                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300";"
-              >;""
-                <div className={`inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-green-600 mb-6`}>";""
-                  <feature.icon className="h-8 w-8 text-white" />;""
-                </div>";""
-                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>";""
-                <p className="text-gray-400 mb-6">{feature.description}</p>";""
-                <ul className="space-y-3">;""
-                  {feature.benefits.map((benefit, idx) => (";""
-                    <li key={idx} className="flex items-center text-gray-300">";""
+                key={feature.title};"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};";"
+                whileInView={{ opacity: 1, x: 0 }};";"
+                transition={{ duration: 0.6, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300";";"
+              >;"";"
+                <div className={`inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-green-600 mb-6`}>";"";"
+                  <feature.icon className="h-8 w-8 text-white" />;"";"
+                </div>";"";"
+                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>";"";"
+                <p className="text-gray-400 mb-6">{feature.description}</p>";"";"
+                <ul className="space-y-3">;"";"
+                  {feature.benefits.map((benefit, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-gray-300">";"";"
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />;
                       {benefit};
                     </li>;
                   ))};
                 </ul>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Industry Solutions */}";""
-      <section className="py-20 bg-gray-900/50">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>";""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Tailored solutions designed for the unique challenges of different industries and supply chain types.;
-            </p>;"
-          </div>;";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Industry Solutions */}";"";"
+      <section className="py-20 bg-gray-900/50">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>";"";"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+              Tailored solutions designed for the unique challenges of different industries and supply chain types.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {industrySolutions.map((solution, index) => (;
               <motion.div;
-                key={solution.title};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};"
-                transition={{ duration: 0.5, delay: index * 0.1 }};""
-                viewport={{ once: true }}";""
-                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300";""
-              >";""
-                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 mb-6">";""
-                  <solution.icon className="h-8 w-8 text-white" />;""
-                </div>";""
-                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>";""
-                <p className="text-gray-400 mb-6">{solution.description}</p>";""
-                <ul className="space-y-2">;""
-                  {solution.features.map((feature, idx) => (";""
-                    <li key={idx} className="flex items-center text-gray-300">";""
+                key={solution.title};"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};";"
+                transition={{ duration: 0.5, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300";"";"
+              >";"";"
+                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 mb-6">";"";"
+                  <solution.icon className="h-8 w-8 text-white" />;"";"
+                </div>";"";"
+                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>";"";"
+                <p className="text-gray-400 mb-6">{solution.description}</p>";"";"
+                <ul className="space-y-2">;"";"
+                  {solution.features.map((feature, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-gray-300">";"";"
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />;
                       {feature};
                     </li>;
                   ))};
                 </ul>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Pricing */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Transparent Pricing</h2>";""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Choose the plan that fits your supply chain needs. All plans include our core AI capabilities and 24/7 support.;
-            </p>;"
-          </div>;";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Pricing */}";"";"
+      <section className="py-20">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Transparent Pricing</h2>";"";"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+              Choose the plan that fits your supply chain needs. All plans include our core AI capabilities and 24/7 support.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
             {pricingPlans.map((plan, index) => (;
               <motion.div;
@@ -388,25 +388,25 @@ export default function AISupplyChainIntelligencePlatform() {;
                 viewport={{ once: true }};
                 className={`relative bg-gray-800/50 rounded-xl p-8 border ${;
                   plan.popular;
-                    ? 'border-blue-500/50 bg-blue-600/10';
-                    : 'border-gray-700 hover:border-blue-500/50';
-                } transition-all duration-300`};"
-              >;""
-                {plan.popular && (";""
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";""
+                    ? 'border-blue-500/50 bg-blue-600/10';"
+                    : 'border-gray-700 hover:border-blue-500/50';";"
+                } transition-all duration-300`};";"
+              >;"";"
+                {plan.popular && (";"";"
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"";"
                     <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
-                  </div>;"
-                )};";""
-                <div className="text-center mb-8">";""
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";""
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>";""
-                  <p className="text-gray-400">{plan.description}</p>;"
-                </div>;";""
-                <ul className="space-y-4 mb-8">;""
-                  {plan.features.map((feature, idx) => (";""
-                    <li key={idx} className="flex items-center text-gray-300">";""
+                      Most Popular;"
+                    </span>;";"
+                  </div>;";"
+                )};";"";"
+                <div className="text-center mb-8">";"";"
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";"";"
+                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>";"";"
+                  <p className="text-gray-400">{plan.description}</p>;";"
+                </div>;";"";"
+                <ul className="space-y-4 mb-8">;"";"
+                  {plan.features.map((feature, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-gray-300">";"";"
                       <CheckCircle className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0" />;
                       {feature};
                     </li>;
@@ -423,112 +423,112 @@ export default function AISupplyChainIntelligencePlatform() {;
                   {plan.cta};
                 </Link>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Use Cases */}";""
-      <section className="py-20 bg-gray-900/50">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Industry Use Cases</h2>";""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our AI platform is transforming supply chains across multiple industries and use cases.;
-            </p>;"
-          </div>;";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Use Cases */}";"";"
+      <section className="py-20 bg-gray-900/50">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Industry Use Cases</h2>";"";"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+              Our AI platform is transforming supply chains across multiple industries and use cases.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {useCases.map((useCase, index) => (;
               <motion.div;
-                key={useCase.title};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};"
-                transition={{ duration: 0.5, delay: index * 0.1 }};""
-                viewport={{ once: true }}";""
-                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300";""
-              >";""
-                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 mb-6">";""
-                  <useCase.icon className="h-8 w-8 text-white" />;""
-                </div>";""
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>";""
-                <p className="text-gray-400 mb-6">{useCase.description}</p>";""
-                <ul className="space-y-2">;""
-                  {useCase.benefits.map((benefit, idx) => (";""
-                    <li key={idx} className="flex items-center text-gray-300">";""
+                key={useCase.title};"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};";"
+                transition={{ duration: 0.5, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-green-500/50 transition-all duration-300";"";"
+              >";"";"
+                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 mb-6">";"";"
+                  <useCase.icon className="h-8 w-8 text-white" />;"";"
+                </div>";"";"
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>";"";"
+                <p className="text-gray-400 mb-6">{useCase.description}</p>";"";"
+                <ul className="space-y-2">;"";"
+                  {useCase.benefits.map((benefit, idx) => (";"";"
+                    <li key={idx} className="flex items-center text-gray-300">";"";"
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />;
                       {benefit};
                     </li>;
                   ))};
                 </ul>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* Technical Specifications */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
-          <div className="text-center mb-16">";""
-            <h2 className="text-4xl font-bold text-white mb-4">Technical Specifications</h2>";""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Enterprise-grade technology built for scale, security, and performance.;
-            </p>;"
-          </div>;";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Technical Specifications */}";"";"
+      <section className="py-20">";"";"
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-4xl font-bold text-white mb-4">Technical Specifications</h2>";"";"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;"
+              Enterprise-grade technology built for scale, security, and performance.;";"
+            </p>;";"
+          </div>;";"";"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {technicalSpecs.map((spec, index) => (;
               <motion.div;
-                key={spec.category};
-                initial={{ opacity: 0, y: 20 }};
-                whileInView={{ opacity: 1, y: 0 }};"
-                transition={{ duration: 0.5, delay: index * 0.1 }};""
-                viewport={{ once: true }}";""
-                className="bg-gray-800/30 rounded-xl p-6 border border-gray-700";""
-              >";""
-                <h3 className="text-xl font-semibold text-white mb-4">{spec.category}</h3>";""
-                <ul className="space-y-2">;""
-                  {spec.specs.map((item, idx) => (";""
-                    <li key={idx} className="flex items-start text-gray-300 text-sm">";""
+                key={spec.category};"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};";"
+                transition={{ duration: 0.5, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="bg-gray-800/30 rounded-xl p-6 border border-gray-700";"";"
+              >";"";"
+                <h3 className="text-xl font-semibold text-white mb-4">{spec.category}</h3>";"";"
+                <ul className="space-y-2">;"";"
+                  {spec.specs.map((item, idx) => (";"";"
+                    <li key={idx} className="flex items-start text-gray-300 text-sm">";"";"
                       <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />;
                       {item};
                     </li>;
                   ))};
                 </ul>;
               </motion.div>;
-            ))};
-          </div>;
-        </div>;"
-      </section>;""
-      {/* CTA Section */}";""
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-green-900/50">";""
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* CTA Section */}";"";"
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-green-900/50">";"";"
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};
-            transition={{ duration: 0.8 }};"
-            viewport={{ once: true }};""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Supply Chain?</h2>";""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Join leading companies that are already leveraging AI to optimize their supply chains,;"
-              reduce costs, and improve customer satisfaction.;""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
-              <Link";""
-                to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-200 transform hover:scale-105";"
-              >;""
-                Start Free Trial";""
-                <ArrowRight className="ml-2 h-5 w-5" />;"
-              </Link>;""
-              <Link";""
-                to="/contact";""
+            initial={{ opacity: 0, y: 20 }};"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.8 }};";"
+            viewport={{ once: true }};"";"
+          >";"";"
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Supply Chain?</h2>";"";"
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;";"
+              Join leading companies that are already leveraging AI to optimize their supply chains,;";"
+              reduce costs, and improve customer satisfaction.;"";"
+            </p>";"";"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";"
+              <Link";"";"
+                to="/contact";"";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-200 transform hover:scale-105";";"
+              >;"";"
+                Start Free Trial";"";"
+                <ArrowRight className="ml-2 h-5 w-5" />;";"
+              </Link>;"";"
+              <Link";"";"
+                to="/contact";"";"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200";
               >;
                 Schedule Demo;
               </Link>;
             </div>;
           </motion.div>;
-        </div>;
-      </section>;
-    </div>;"
-  );""
-}";""
+        </div>;"
+      </section>;";"
+    </div>;";"
+  );"";"
+}";"";"

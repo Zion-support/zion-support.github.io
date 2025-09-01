@@ -147,70 +147,70 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
       {/* Sidebar */};
       <motion.div;
         initial={{ x: '-100%' }};
-        animate={{ x: isOpen ? 0 : '-100%' }};
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }};
-        className={`fixed left-0 top-0 h-full w-80 bg-gray-900 border-r border-cyan-500/20 z-50 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800`};"
-      >;""
-        {/* Header */}";""
-        <div className="p-6 border-b border-gray-800">";""
-          <div className="flex items-center justify-between mb-4">";""
-            <div className="flex items-center space-x-3">";""
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">";""
-                <Zap className="w-6 h-6 text-white" />;""
-              </div>";""
+        animate={{ x: isOpen ? 0 : '-100%' }};"
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }};";"
+        className={`fixed left-0 top-0 h-full w-80 bg-gray-900 border-r border-cyan-500/20 z-50 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800`};";"
+      >;"";"
+        {/* Header */}";"";"
+        <div className="p-6 border-b border-gray-800">";"";"
+          <div className="flex items-center justify-between mb-4">";"";"
+            <div className="flex items-center space-x-3">";"";"
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">";"";"
+                <Zap className="w-6 h-6 text-white" />;"";"
+              </div>";"";"
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Zion Tech Group;
-              </span>;
-            </div>;"
-            <button;""
-              onClick={onClose}";""
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors";""
-            >";""
-              <X className="w-5 h-5" />;
-            </button>;"
-          </div>;""
-          {/* Search Bar */}";""
-          <div className="relative">";""
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;""
-            <input";""
-              type="text";""
-              placeholder="Search services...";""
-              className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20";
-            / / / />;
-          </div>;"
-        </div>;""
-        {/* Quick Actions */}";""
-        <div className="p-6 border-b border-gray-800">";""
-          <h3 className="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wider">;"
-            Quick Actions;""
-          </h3>";""
-          <div className="grid grid-cols-2 gap-3">;
-            {quickActions.map((action, index) => (;
-              <Link;"
-                key={index};""
-                to={action.href}";""
-                className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors group";"
-              >;""
-                <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform`}>";""
-                  <action.icon className="w-4 h-4 text-white" />;""
-                </div>";""
+                Zion Tech Group;"
+              </span>;";"
+            </div>;";"
+            <button;"";"
+              onClick={onClose}";"";"
+              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors";"";"
+            >";"";"
+              <X className="w-5 h-5" />;";"
+            </button>;";"
+          </div>;"";"
+          {/* Search Bar */}";"";"
+          <div className="relative">";"";"
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;"";"
+            <input";"";"
+              type="text";"";"
+              placeholder="Search services...";"";"
+              className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20";"
+            / / / / / />;";"
+          </div>;";"
+        </div>;"";"
+        {/* Quick Actions */}";"";"
+        <div className="p-6 border-b border-gray-800">";"";"
+          <h3 className="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wider">;";"
+            Quick Actions;"";"
+          </h3>";"";"
+          <div className="grid grid-cols-2 gap-3">;"
+            {quickActions.map((action, index) => (;";"
+              <Link;";"
+                key={index};"";"
+                to={action.href}";"";"
+                className="p-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors group";";"
+              >;"";"
+                <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mb-2 group-hover:scale-110 transition-transform`}>";"";"
+                  <action.icon className="w-4 h-4 text-white" />;"";"
+                </div>";"";"
                 <span className="text-xs text-gray-300 font-medium">{action.name}</span>;
-              </Link>;
-            ))};
-          </div>;"
-        </div>;""
-        {/* Navigation Sections */}";""
-        <div className="p-6 space-y-6">;"
-          {navigationSections.map((section) => (;""
-            <div key={section.id}>";""
-              <div className="flex items-center justify-between mb-3">";""
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider flex items-center">";""
+              </Link>;"
+            ))};";"
+          </div>;";"
+        </div>;"";"
+        {/* Navigation Sections */}";"";"
+        <div className="p-6 space-y-6">;";"
+          {navigationSections.map((section) => (;"";"
+            <div key={section.id}>";"";"
+              <div className="flex items-center justify-between mb-3">";"";"
+                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider flex items-center">";"";"
                   {section.icon && <section.icon className="w-4 h-4 mr-2 text-cyan-400" />};
-                  {section.title};
-                </h3>;
-                {section.items && section.items.length > 0 && (;"
-                  <button;""
-                    onClick={() => toggleSection(section.id)}";""
+                  {section.title};"
+                </h3>;";"
+                {section.items && section.items.length > 0 && (;";"
+                  <button;"";"
+                    onClick={() => toggleSection(section.id)}";"";"
                     className="p-1 text-gray-400 hover:text-white transition-colors";
                   >;
                     <ChevronRight;
@@ -222,11 +222,11 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
               {section.items && (;
                 <AnimatePresence>;
                   {expandedSections.includes(section.id) && (;
-                    <motion.ul;
-                      initial={{ height: 0, opacity: 0 }};
-                      animate={{ height: 'auto', opacity: 1 }};"
-                      exit={{ height: 0, opacity: 0 }};""
-                      transition={{ duration: 0.2 }}";""
+                    <motion.ul;"
+                      initial={{ height: 0, opacity: 0 }};";"
+                      animate={{ height: 'auto', opacity: 1 }};";"
+                      exit={{ height: 0, opacity: 0 }};"";"
+                      transition={{ duration: 0.2 }}";"";"
                       className="space-y-1 ml-4";
                     >;
                       {section.items.map((item, index) => (;
@@ -234,11 +234,11 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
                           <Link;
                             to={item.href};
                             className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${;
-                              isActive(item.href);
-                                ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30';
-                                : 'text-gray-400 hover:text-white hover:bg-gray-800';"
-                            }`};""
-                          >";""
+                              isActive(item.href);"
+                                ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30';";"
+                                : 'text-gray-400 hover:text-white hover:bg-gray-800';";"
+                            }`};"";"
+                          >";"";"
                             <item.icon className="w-4 h-4" />;
                             <span>{item.name}</span>;
                           </Link>;
@@ -247,56 +247,56 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
                     </motion.ul>;
                   )};
                 </AnimatePresence>;
-              )};
-            </div>;
-          ))};"
-        </div>;""
-        {/* Contact Information */}";""
-        <div className="p-6 border-t border-gray-800 mt-auto">";""
-          <h3 className="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wider">;"
-            Contact Information;""
-          </h3>";""
-          <div className="space-y-3">;""
-            {contactInfo.map((contact, index) => (";""
-              <div key={index} className="flex items-center space-x-3">";""
+              )};"
+            </div>;";"
+          ))};";"
+        </div>;"";"
+        {/* Contact Information */}";"";"
+        <div className="p-6 border-t border-gray-800 mt-auto">";"";"
+          <h3 className="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wider">;";"
+            Contact Information;"";"
+          </h3>";"";"
+          <div className="space-y-3">;"";"
+            {contactInfo.map((contact, index) => (";"";"
+              <div key={index} className="flex items-center space-x-3">";"";"
                 <contact.icon className="w-4 h-4 text-cyan-400 flex-shrink-0" />;
-                {contact.href !== '#' ? (;
-                  <a;
-                    href={contact.href};"
-                    target={contact.href.startsWith('http') ? '_blank' : undefined};""
-                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}";""
-                    className="text-xs text-gray-400 hover:text-cyan-400 transition-colors flex items-center";"
-                  >;""
-                    {contact.text}";""
-                    {contact.href.startsWith('http') && <ExternalLink className="w-3 h-3 ml-1" />};"
-                  </a>;""
-                ) : (";""
+                {contact.href !== '#' ? (;"
+                  <a;";"
+                    href={contact.href};";"
+                    target={contact.href.startsWith('http') ? '_blank' : undefined};"";"
+                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}";"";"
+                    className="text-xs text-gray-400 hover:text-cyan-400 transition-colors flex items-center";";"
+                  >;"";"
+                    {contact.text}";"";"
+                    {contact.href.startsWith('http') && <ExternalLink className="w-3 h-3 ml-1" />};";"
+                  </a>;"";"
+                ) : (";"";"
                   <span className="text-xs text-gray-400">{contact.text}</span>;
                 )};
-              </div>;
-            ))};
-          </div>;"
-        </div>;""
-        {/* Footer */}";""
-        <div className="p-6 border-t border-gray-800">";""
-          <div className="text-center">";""
-            <p className="text-xs text-gray-500 mb-2">;"
-              © 2025 Zion Tech Group;""
-            </p>";""
-            <div className="flex items-center justify-center space-x-4">";""
-              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";""
-                <Bell className="w-4 h-4" />;""
-              </button>";""
-              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";""
-                <HelpCircle className="w-4 h-4" />;""
-              </button>";""
-              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";""
+              </div>;"
+            ))};";"
+          </div>;";"
+        </div>;"";"
+        {/* Footer */}";"";"
+        <div className="p-6 border-t border-gray-800">";"";"
+          <div className="text-center">";"";"
+            <p className="text-xs text-gray-500 mb-2">;";"
+              © 2025 Zion Tech Group;"";"
+            </p>";"";"
+            <div className="flex items-center justify-center space-x-4">";"";"
+              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";"";"
+                <Bell className="w-4 h-4" />;"";"
+              </button>";"";"
+              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";"";"
+                <HelpCircle className="w-4 h-4" />;"";"
+              </button>";"";"
+              <button className="p-2 text-gray-500 hover:text-cyan-400 transition-colors">";"";"
                 <BookOpen className="w-4 h-4" />;
               </button>;
             </div>;
           </div>;
-        </div>;
-      </motion.div>;
-    </>;"
-  );""
-}";""
+        </div>;"
+      </motion.div>;";"
+    </>;";"
+  );"";"
+}";"";"

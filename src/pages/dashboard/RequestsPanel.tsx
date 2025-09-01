@@ -35,24 +35,24 @@ export default function RequestsPanel(...args[]: any):  {;
   // Filter quotes by archive status;
   const archivedQuotes = quotes.filter((q: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => q.is_archived);
 ;
-  return (;"
-    <ProtectedRoute>;""
-      <div>";""
-        <div className="min-h-screen bg-zion-blue px-4 py-8">";""
+  return (;
+    <ProtectedRoute>;"
+      <div>";"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">";"
           <div className="container mx-auto">;
             <RequestsHeader;
               unreadCount={unreadCount};
               statusFilter={statusFilter};
               setStatusFilter={setStatusFilter};
               archiveFilter={archiveFilter};
-              setArchiveFilter={setArchiveFilter};"
-            />;""
-            {/* Main Content */}";""
-            <Tabs defaultValue="active" className="mb-6">";""
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">";""
-                <TabsTrigger value="active">Active Requests</TabsTrigger>";""
-                <TabsTrigger value="archived">Archived</TabsTrigger>;""
-              </TabsList>";""
+              setArchiveFilter={setArchiveFilter};
+            />;"
+            {/* Main Content */}";"
+            <Tabs defaultValue="active" className="mb-6">";"
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">";"
+                <TabsTrigger value="active">Active Requests</TabsTrigger>";"
+                <TabsTrigger value="archived">Archived</TabsTrigger>;"
+              </TabsList>";"
               <TabsContent value="active">;
                 <QuoteRequestsList;
                   quotes={activeQuotes};
@@ -60,9 +60,9 @@ export default function RequestsPanel(...args[]: any):  {;
                   isArchived={false};
                   onViewDetails={handleViewDetails};
                   onMarkAsResponded={markAsResponded};
-                  onToggleArchive={toggleArchive};"
-                />;""
-              </TabsContent>";""
+                  onToggleArchive={toggleArchive};
+                />;"
+              </TabsContent>";"
               <TabsContent value="archived">;
                 <QuoteRequestsList;
                   quotes={archivedQuotes};
@@ -85,5 +85,6 @@ export default function RequestsPanel(...args[]: any):  {;
             setSelectedQuote(null)}};
         />;
       </div>;
-    </ProtectedRoute>;"
-  )};";""
+    </ProtectedRoute>;
+  )};"
+";"

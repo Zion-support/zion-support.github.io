@@ -38,7 +38,7 @@ export class ContentOptimizer {;
     return headingMatches ? headingMatches.length : 0;
   };
   static countImages(content) {;
-    const imageMatches = content.match(/<img[^ / / />]*>/gi);
+    const imageMatches = content.match(/<img[^ / />]*>/gi);
     return imageMatches ? imageMatches.length : 0;
   };
   static countLinks(content) {;
@@ -84,10 +84,10 @@ export class ContentOptimizer {;
     // Check for headings';
     if (!content.includes('<h1>)) score -= 10;
     if (!content.includes('<h2>)) score -= 5;
-    // Check for images with alt text';"
-    const imagesWithAlt = images.filter(img => img.includes('alt='));""
-    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;";""
-    // Check for internal links";""
+    // Check for images with alt text';
+    const imagesWithAlt = images.filter(img => img.includes('alt='));"
+    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;";"
+    // Check for internal links";"
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
     if (internalLinks.length < 2) score -= 10;
     return Math.max(0, score);
@@ -296,9 +296,9 @@ export class ContentOptimizer {;
     const baseDescription = baseDescriptions[contentType];
     const pageKeywords = this.extractPageKeywords(page).join(' ');`;
     return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
-  };"
-};""
-export const contentOptimizer = new ContentOptimizer();";""
+  };
+};"
+export const contentOptimizer = new ContentOptimizer();";"
 '"`;
 =======;
     static MIN_WORD_COUNT = 300;
@@ -341,7 +341,7 @@ export const contentOptimizer = new ContentOptimizer();";""
         return headingMatches ? headingMatches.length : 0;
     };
     static countImages(content) {;
-        const imageMatches = content.match(/<img[^ / / />]*>/gi);
+        const imageMatches = content.match(/<img[^ / />]*>/gi);
         return imageMatches ? imageMatches.length : 0;
     };
     static countLinks(content) {;
@@ -378,9 +378,9 @@ export const contentOptimizer = new ContentOptimizer();";""
     static calculateSEOScore(content, page) {;
         let score = 100;
         // Check for title;
-        if (!content.includes('<title>'));"
-            score -= 20;""
-        // Check for meta description";""
+        if (!content.includes('<title>'));
+            score -= 20;"
+        // Check for meta description";"
         if (!content.includes('name="description"'));
             score -= 15;
         // Check for headings;
@@ -390,9 +390,9 @@ export const contentOptimizer = new ContentOptimizer();";""
             score -= 5;
         // Check for images with alt text;
         const imagesWithAlt = images.filter(img => img.includes('alt='));
-        if (images.length > 0 && imagesWithAlt.length === 0);"
-            score -= 10;""
-        // Check for internal links";""
+        if (images.length > 0 && imagesWithAlt.length === 0);
+            score -= 10;"
+        // Check for internal links";"
         const internalLinks = content.match(/href="\/[^"]*"/g) || [];
         if (internalLinks.length < 2);
             score -= 10;
@@ -603,5 +603,6 @@ export const contentOptimizer = new ContentOptimizer();";""
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
     };
 };
-export const contentOptimizer = new ContentOptimizer();"
->>>>>>> cursor/add-new-services-and-advertise-them-971c;";""
+export const contentOptimizer = new ContentOptimizer();
+>>>>>>> cursor/add-new-services-and-advertise-them-971c;"
+";"
