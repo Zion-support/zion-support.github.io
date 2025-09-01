@@ -9,7 +9,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 2500,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "AI-driven investment recommendations",
             "Portfolio optimization algorithms",
             "Risk assessment and management",
@@ -19,28 +19,28 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Goal-based investing",
             "Performance tracking and reporting"
         ],
-        benefits[
+        benefits: [
             "Increase portfolio returns by 15-25%",
             "Reduce investment risk through AI analysis",
             "Automated portfolio rebalancing",
             "Personalized financial planning",
             "24/7 market monitoring"
         ],
-        useCases[
+        useCases: [
             "Individual investors",
             "Financial advisors",
             "Wealth management firms",
             "Retirement planning",
             "Tax optimization"
         ],
-        targetAudience[
+        targetAudience: [
             "Individual investors",
             "Financial advisors",
             "Wealth managers",
             "Retirement planners",
             "Tax professionals"
         ],
-        tags["AI", "Financial Advisory", "Investment", "Portfolio Management", "Risk Management"],
+        tags: ["AI", "Financial Advisory", "Investment", "Portfolio Management", "Risk Management"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $8,000/month",
@@ -49,16 +49,16 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["SEC", "FINRA", "GDPR", "SOC 2"],
-        integrations["TD Ameritrade", "Charles Schwab", "Fidelity", "TurboTax", "Mint"],
+        technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+        compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
+        integrations: ["TD Ameritrade", "Charles Schwab", "Fidelity", "TurboTax", "Mint"],
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "10 years",
         uptime: "99.99%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
+        securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
     // AI-Powered Healthcare Solutions
     {
