@@ -105,10 +105,7 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/jest-dom": "^6.1.2",
     "jsdom": "^24.0.0",
-    "@eslint/config-array": "^1.0.0"
-  },
-  "overrides": {
-    "@humanwhocodes/config-array": "npm:@eslint/config-array@^1.0.0"
+    "rimraf": "^5.0.0"
   }
 }
 

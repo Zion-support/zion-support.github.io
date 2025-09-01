@@ -174,14 +174,10 @@ npm run build
 
 For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
 
-## Running Tests
-
-This project uses [Vitest](https://vitest.dev/) for unit tests. After installing
-dependencies via `./setup.sh npm`, run:
+If you see a warning about `glob@7.2.3` or `rimraf@3.0.2` being deprecated, run:
 
 ```sh
 npm run test
 ```
 
-The tests are located in the `tests/` directory and use JSDOM to simulate the
-browser environment.
+This updates `rimraf` so it no longer relies on the deprecated `glob` version.
