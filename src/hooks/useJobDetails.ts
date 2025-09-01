@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback'
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback'''
 import { supabase } from '@/integrations/supabase/client';
 
 export function useJobDetails(jobId: string | undefined) {
@@ -16,10 +16,11 @@ export function useJobDetails(jobId: string | undefined) {
     }
     
     try {
-      setIsLoading(true);
-      const { data, error: supabaseError } = await supabase // Renamed error to avoid conflict'
-        .from('jobs')'
-        .select('*')'
+'
+      setIsLoading(true);''
+      const { data, error: supabaseError } = await supabase // Renamed error to avoid conflict'''
+        .from('jobs')'''
+        .select('*')'''
         .eq('id', jobId)
         .single();
         
@@ -28,6 +29,8 @@ export function useJobDetails(jobId: string | undefined) {
       setError(null);
     } catch (err: any) {
 '
+''
+'''
       console.error('Error loading job details:', err);
       setError(err.message);
       setJob(null); // Clear job on error
@@ -50,6 +53,6 @@ export function useJobDetails(jobId: string | undefined) {
     refetch: loadJobDetails // Added refetch alias for consistency if preferred
   };
 }
-
-export default useJobDetails;
 '
+export default useJobDetails;''
+'''

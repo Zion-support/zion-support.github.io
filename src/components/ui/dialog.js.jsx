@@ -23,33 +23,35 @@ const Dialog({ children, open, onOpenChange }) {
       </div>
     </DialogContext.Provider>)};
 export function DialogTrigger({ children, asChild = false }) {
-
-    const context = useContext(DialogContext);
-    if (!context)'
+'
+    const context = useContext(DialogContext);''
+    if (!context)'''
         throw new Error('DialogTrigger must be used within Dialog');
     if (asChild) {
 
         return (<div onClick={() => context.setIsOpen(true)}>
         {children}
       </div>)}
-    return (<div onClick={() => context.setIsOpen(true)}>
-      {children}
-    </div>)}'
+    return (<div onClick={() => context.setIsOpen(true)}>'
+      {children}''
+    </div>)}'''
 export function DialogContent({ children, className = '' }) {
-
-    const context = useContext(DialogContext);
-    if (!context)'
-        throw new Error('DialogContent must be used within Dialog');
-    if (!context.isOpen)"
-        return null;""
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">""
+'
+    const context = useContext(DialogContext);''
+    if (!context)'''"
+        throw new Error('DialogContent must be used within Dialog');""
+    if (!context.isOpen)"""
+        return null;""""
+    return (<div className="fixed inset-0 z-50 flex items-center justify-center">""""
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
-        {children}
-      </div>
-    </div>)}'
+        {children}'
+      </div>''
+    </div>)}'''
 export function DialogFooter({ children, className = '' }) {
 `
 ``
-    return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}'"`
-'"`'"`
+``'"`
+``'"`'"`
+    return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}'"`'"`'"`
+'"`'"`'"`'"`

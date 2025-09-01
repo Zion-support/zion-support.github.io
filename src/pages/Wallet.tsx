@@ -1,40 +1,42 @@
-import React from 'react';'
-import { useQuery } from '@tanstack/react-query';'
-import { getWallet } from '@/api/wallet';'
+import React from 'react';'''
+import { useQuery } from '@tanstack/react-query';'''
+import { getWallet } from '@/api/wallet';'''
 import { Skeleton } from '@/components/ui/skeleton';
 
 const Wallet = () => {
   const { data, isLoading } = useQuery({
 '
+''
+'''
     queryKey: ['wallet'],
     queryFn: getWallet});
 
   if (isLoading) {
 
     return()
-      <div className="p-4 space-y-4">"
-        <h1 className="text-2xl font-bold">Wallet</h1>"
-        <Skeleton className="h-6 w-24" />"
+      <div className="p-4 space-y-4">"""
+        <h1 className="text-2xl font-bold">Wallet</h1>"""
+        <Skeleton className="h-6 w-24" />"""
         <Skeleton className="h-32 w-full" />
       </div>
     );
   }
 
   const points = data?.points ?? 0;
-  const history = data?.history ?? [];
-
-  return ("
-    <div className="p-4">"
-      <h1 className="text-2xl font-bold mb-4">Wallet</h1>"
-      <section className="mb-4">"
+  const history = data?.history ?? [];"
+""
+  return ("""
+    <div className="p-4">"""
+      <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""
+      <section className="mb-4">"""
         <h2 className="text-lg font-semibold">Points</h2>
-        <p>{points}</p>
-      </section>
-      <section>"
+        <p>{points}</p>"
+      </section>""
+      <section>"""
         <h2 className="text-lg font-semibold">Transaction History</h2>
-        {history.length === 0 ? (
-          <p>No transactions yet.</p>
-        ) : ("
+        {history.length === 0 ? ("
+          <p>No transactions yet.</p>""
+        ) : ("""
           <ul className="space-y-2">
             {history.map((item, idx) => (
               <li key={idx}>{/* TODO: render history item */}</li>
@@ -45,6 +47,6 @@ const Wallet = () => {
     </div>
   );
 };
-
-export default Wallet;
 '"
+export default Wallet;'"'"
+'"'"'"

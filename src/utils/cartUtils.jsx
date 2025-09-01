@@ -37,9 +37,9 @@ export const addToCart = (cart, newItem) => {
 
                                     /**
                                      * Cart utility functions for Zion Tech Group * Provides comprehensive cart management functionality
-                                     */
-
-                                    // Constants'
+                                     */'
+''
+                                    // Constants'''
                                     const CART_STORAGE_KEY = 'zion_cart_guest';
                                     const TAX_RATE = 0.08; // 8% tax rate
                                     const SHIPPING_THRESHOLD = 100; // Free shipping over $100
@@ -47,12 +47,12 @@ export const addToCart = (cart, newItem) => {
 
                                     /**
                                      * Validate cart item structure
-                                     * @param {Object} item - Cart item to validate
-                                     * @returns {boolean} Whether item is valid
-                                     */'
-                                    if (!item || typeof item !== 'object') return false;
-
-                                    const requiredFields = ['
+                                     * @param {Object} item - Cart item to validate'
+                                     * @returns {boolean} Whether item is valid''
+                                     */'''
+                                    if (!item || typeof item !== 'object') return false;'
+''
+                                    const requiredFields = ['''
                                       'id',name',price',quantity',
                                     ];
                                     return requiredFields.every(field =>
@@ -69,6 +69,8 @@ export const addToCart = (cart, newItem) => {
                                    */
                                   if (!validateCartItem (newItem) ) {
 '
+''
+'''
                                     console.error ('Invalid cart item:',
                                       newItem) ;
                                     return cart;
@@ -205,16 +207,20 @@ export const addToCart = (cart, newItem) => {
 
               /**
                * Format price for display
-               * @param {number} price - Price to format
-               * @param {string} currency - Currency code (default: USD) * @returns {string} Formatted price
-               */'
+               * @param {number} price - Price to format'
+               * @param {string} currency - Currency code (default: USD) * @returns {string} Formatted price''
+               */'''
               if (typeof price !== 'number' || isNaN (price) ) {
 '
-                return '$0.00';
-              }
-'
+''
+'''
+                return '$0.00';'
+              }''
+'''
               return new Intl.NumberFormat ('en - US', {
 '
+''
+'''
                 style: 'currency',
                 currency: currency}) .format (price) ;
             };
@@ -245,7 +251,9 @@ export const addToCart = (cart, newItem) => {
             return JSON.stringify (cart, null, 2) ;
           } catch (error) {
 '
-            console.error ('Error exporting cart data:', error) ;'
+''
+'''
+            console.error ('Error exporting cart data:', error) ;'''
             return '[]';
           }
         };
@@ -263,6 +271,8 @@ export const addToCart = (cart, newItem) => {
           return [];
         } catch (error) {
 '
+''
+'''
           console.error ('Error importing cart data:', error) ;
           return [];
         }
@@ -320,6 +330,6 @@ export const addToCart = (cart, newItem) => {
    * @param {Array} cart2 - Second cart
    * @returns {Array} Merged cart
    */
-  return mergeCarts(cart1, cart2) ;
-};
-'`
+  return mergeCarts(cart1, cart2) ;'`
+};'`'`
+'`'`'`

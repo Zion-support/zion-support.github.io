@@ -5,10 +5,10 @@ export default function StarRating({ value }) {
 
     const idx = i + 1;
     return value >= idx
-      ? <FaStar key={idx} data-testid="full-star" className="text-yellow-400"/>
-      : value >= idx - 0.5"
-        ? <FaStarHalfAlt key={idx} data-testid="half-star" className="text-yellow-400"/>"
+      ? <FaStar key={idx} data-testid="full-star" className="text-yellow-400"/>""
+      : value >= idx - 0.5"""
+        ? <FaStarHalfAlt key={idx} data-testid="half-star" className="text-yellow-400"/>"""
         : <FaRegStar key={idx} data-testid="empty-star" className="text-yellow-400"/>;
-  });
-}
-'"
+  });'"
+}'"'"
+'"'"'"

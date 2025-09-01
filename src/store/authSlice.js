@@ -1,7 +1,7 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-// Async thunk for login'
-export const loginUser = createAsyncThunk(''
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';'
+''
+// Async thunk for login'''
+export const loginUser = createAsyncThunk(''''
   'auth/loginUser',
   async (credentials, { rejectWithValue }) => {
 
@@ -15,32 +15,34 @@ export const loginUser = createAsyncThunk(''
             resolve({
 
               user: {
-
-                id: 1,
-                email: credentials.email,'
-                name: 'John Doe','
-                role: 'user'},'
+'
+                id: 1,''
+                email: credentials.email,'''
+                name: 'John Doe','''
+                role: 'user'},'''
               token: 'mock-jwt-token'});
           } else {
 '
+''
+'''
             reject(new Error('Invalid credentials'));
           }
-        }, 1000);
-      });
-'
-      // Store token in localStorage''
-      localStorage.setItem('token', response.token);'
+        }, 1000);'
+      });''
+'''
+      // Store token in localStorage''''
+      localStorage.setItem('token', response.token);'''
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
-    } catch(error) {
+    } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for signup'
-export const signupUser = createAsyncThunk(''
+);'
+''
+// Async thunk for signup'''
+export const signupUser = createAsyncThunk(''''
   'auth/signupUser',
   async (userData, { rejectWithValue }) => {
 
@@ -55,31 +57,33 @@ export const signupUser = createAsyncThunk(''
 
               user: {
 
-                id: Date.now(),
-                email: userData.email,
-                name: userData.name,'
-                role: 'user'},'
+                id: Date.now(),'
+                email: userData.email,''
+                name: userData.name,'''
+                role: 'user'},'''
               token: 'mock-jwt-token'});
           } else {
 '
+''
+'''
             reject(new Error('Invalid user data'));
           }
-        }, 1000);
-      });
-'
-      // Store token in localStorage''
-      localStorage.setItem('token', response.token);'
+        }, 1000);'
+      });''
+'''
+      // Store token in localStorage''''
+      localStorage.setItem('token', response.token);'''
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
-    } catch(error) {
+    } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for logout'
-export const logoutUser = createAsyncThunk(''
+);'
+''
+// Async thunk for logout'''
+export const logoutUser = createAsyncThunk(''''
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
 
@@ -87,28 +91,30 @@ export const logoutUser = createAsyncThunk(''
       // Simulate API call
       await new Promise(resolve => {
 
-        setTimeout(resolve, 500);
-      });
-'
-      // Clear localStorage''
-      localStorage.removeItem('token');'
+        setTimeout(resolve, 500);'
+      });''
+'''
+      // Clear localStorage''''
+      localStorage.removeItem('token');'''
       localStorage.removeItem('user');
 
       return null;
-    } catch(error) {
+    } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
-
-// Async thunk for checking auth status'
-export const checkAuthStatus = createAsyncThunk(''
+);'
+''
+// Async thunk for checking auth status'''
+export const checkAuthStatus = createAsyncThunk(''''
   'auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
 
     try {
 '
-      const token = localStorage.getItem('token');'
+''
+'''
+      const token = localStorage.getItem('token');'''
       const user = localStorage.getItem('user');
 
       if(token && user) {
@@ -119,9 +125,11 @@ export const checkAuthStatus = createAsyncThunk(''
           token: token};
       } else {
 '
+''
+'''
         throw new Error('No auth data found');
       }
-    } catch(error) {
+    } catch (error) {
       return rejectWithValue(error.message);
     }
   }
@@ -137,6 +145,8 @@ const initialState = {
 
 const authSlice = createSlice({
 '
+''
+'''
   name: 'auth',
   initialState,
   reducers: {
@@ -249,6 +259,6 @@ export const selectToken = state => state.auth.token;
 export const selectIsAuthenticated = state => state.auth.isAuthenticated;
 export const selectIsLoading = state => state.auth.isLoading;
 export const selectError = state => state.auth.error;
-
-export default authSlice.reducer;
 '
+export default authSlice.reducer;''
+'''

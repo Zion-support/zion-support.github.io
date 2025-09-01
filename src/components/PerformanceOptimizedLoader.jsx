@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';'
+import { motion } from 'framer-motion';'''
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
 
     const sizeClasses = {
 '
-  sm: 'w-6 h-6','
-        md: 'w-12 h-12','
+''
+'''
+  sm: 'w-6 h-6','''
+        md: 'w-12 h-12','''
   lg: 'w-16 h-16'
     
 
@@ -14,15 +16,19 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
 
     const sizeClasses = {
 '
-  sm: 'w - 6 h - 6','
-        md: 'w - 12 h - 12','
+''
+'''
+  sm: 'w - 6 h - 6','''
+        md: 'w - 12 h - 12','''
   lg: 'w - 16 h - 16'
 
 };
     const colorClasses = {
 '
-  primary: 'text-zion-purple','
-        secondary: 'text-zion-cyan','
+''
+'''
+  primary: 'text-zion-purple','''
+        secondary: 'text-zion-cyan','''
   white: 'text-white'
     
 
@@ -49,3 +55,5 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
     const pulseVariants = {
 '"
 '"'"
+'"'"'"
+'"'"'"'"

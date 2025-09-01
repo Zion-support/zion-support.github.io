@@ -13,6 +13,6 @@ const useToast = () => {
 
   return { successToast, errorToast };
 };
-
-export default useToast;
 '
+export default useToast;''
+'''

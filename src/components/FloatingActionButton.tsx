@@ -11,11 +11,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
     <button
       onClick={() => setOpen(!open)}
       aria-expanded={open}
-      aria-label="Quick actions""
+      aria-label="Quick actions""""
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white"
     >
       <Plus size={24}  />
     </button>
-  )};
-
-export default FloatingActionButton;"
+  )};"
+""
+export default FloatingActionButton;"""

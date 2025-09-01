@@ -21,9 +21,9 @@ seller: {
   likes: number;
   shares: number}
 ;export interface ProductListing extends Listing {
-
-  brand?: string;
-  model?: string;'
+'
+  brand?: string;''
+  model?: string;'''
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string;
   shipping: {
@@ -34,6 +34,8 @@ seller: {
 ;export interface ServiceListing extends Listing {
 '
 ''
+'''
+''''
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
@@ -53,15 +55,15 @@ seller: {
   references?: string[]}
 ;export interface CartItem {
   id: string;
-  title: string;
-  price: number;
-  quantity: number;'
+  title: string;'
+  price: number;''
+  quantity: number;'''
   type: 'product' | 'service' | 'talent';
   image?: string}
 ;export interface WishlistItem {
-  id: string;
-  userId: string;
-  listingId: string;'
-  type: 'product' | 'service' | 'talent';
-  addedAt: string}
-'
+  id: string;'
+  userId: string;''
+  listingId: string;'''
+  type: 'product' | 'service' | 'talent';'
+  addedAt: string}''
+'''

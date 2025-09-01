@@ -1,6 +1,6 @@
-import React from 'react';'
-import SEO from '@/components/SEO';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
+import React from 'react';'''
+import SEO from '@/components/SEO';'''
+import { ProtectedRoute } from '@/components/ProtectedRoute';'''
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
 function ProjectMilestones() {
     return (<ProtectedRoute>
@@ -16,7 +16,7 @@ export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;
-export default ProjectMilestones;
-export default ProjectMilestones;
 export default ProjectMilestones;'"
-'"'"
+export default ProjectMilestones;'"'"
+export default ProjectMilestones;'"'"'"
+'"'"'"'"

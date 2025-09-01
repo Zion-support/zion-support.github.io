@@ -17,13 +17,13 @@ function cartReducer(state: CartState, action: CartAction): CartState {
             ? { ...i, quantity: i.quantity + action.payload.quantity }
             : i
         )} else {
-
-        items = [...state.items, action.payload]}
-      return { items }}'
-    case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };'
-    case 'CLEAR_CART':
-      return { items: [] };'
+'
+        items = [...state.items, action.payload]}''
+      return { items }}'''
+    case 'REMOVE_ITEM':''
+      return { items: state.items.filter(i => i.id !== action.payload) };'''
+    case 'CLEAR_CART':''
+      return { items: [] };'''
     case 'SET_ITEMS':
       return { items: action.payload };
     default:
@@ -32,6 +32,8 @@ function cartReducer(state: CartState, action: CartAction): CartState {
 
 export function useCart(): CartContextType {
 '
+''
+'''
   if (!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
 
@@ -48,6 +50,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         try {
           if (items.length) {
 '
+''
+'''
             dispatch({ type: 'SET_ITEMS', payload: items })}
         } catch {
 
@@ -61,7 +65,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
       try {
 '
-        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));'
+''
+'''
+        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));'''
         dispatch({ type: 'SET_ITEMS', payload: items });
         safeStorage.removeItem(GUEST_CART_KEY)} catch {
 
@@ -80,6 +86,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
     items: state.items,
     dispatch};
-
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
 '
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>}''
+'''

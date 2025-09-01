@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';'
-import Web3Modal from 'web3modal';'
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';'''
+import Web3Modal from 'web3modal';'''
 import { ethers } from 'ethers';
 
 interface WalletState {
@@ -34,11 +34,15 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
   useEffect(() => {
 '
+''
+'''
     if (typeof window !== 'undefined') {
 
         const providerOptions = {};
         const modal = new Web3Modal({
 '
+''
+'''
             network: 'mainnet', 
             cacheProvider: true, 
             providerOptions});
@@ -57,6 +61,8 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const connectWallet = useCallback(async () => {
     if (!web3ModalInstance) {
 '
+''
+'''
         console.error('Web3Modal not initialized');
         return;
     }
@@ -72,9 +78,9 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         provider,
         signer,
         address,
-        chainId: network.chainId,
-        isConnected: true});
-'
+        chainId: network.chainId,'
+        isConnected: true});''
+'''
       instance.on('accountsChanged', (accounts: string[]) => {
 
         if (accounts.length > 0) {
@@ -96,9 +102,9 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         } else {
 
           disconnectWallet();
-        }
-      });
-'
+        }'
+      });''
+'''
       instance.on('chainChanged', async () => { // Added async
         // Re-initialize provider, signer, address, and chainId
         const newProvider = new ethers.providers.Web3Provider(instance);
@@ -109,20 +115,24 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
           provider: newProvider,
           signer: newSigner,
-          address: newAddress,
-          chainId: newNetwork.chainId,
-          isConnected: true});'
-        console.log('Network changed to:', newNetwork.chainId);
-      });
-'
+          address: newAddress,'
+          chainId: newNetwork.chainId,''
+          isConnected: true});'''
+        console.log('Network changed to:', newNetwork.chainId);'
+      });''
+'''
       instance.on('disconnect', (error: any) => {
 '
+''
+'''
         console.log('Disconnected', error);
         disconnectWallet();
       });
 
     } catch (error) {
 '
+''
+'''
       console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
@@ -145,8 +155,10 @@ export const useWallet = (): WalletContextType => {
   const context = useContext(WalletContext);
   if (context === undefined) {
 '
+''
+'''
     throw new Error('useWallet must be used within a WalletProvider');
   }
-  return context;
-};
-'`
+  return context;'`
+};'`'`
+'`'`'`

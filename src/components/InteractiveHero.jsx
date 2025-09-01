@@ -1,13 +1,15 @@
 import { motion  } from 'framer-motion';
 
 export default function Page() {
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
-export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [''
-    { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },'
-    { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },'
-    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },'
+'
+''
+import React, { useState, useEffect } from 'react';'''
+import { motion } from 'framer-motion';'''
+import { Link } from 'react-router-dom';'''
+export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [''''
+    { value: '500+', label: 'Happy Clients', color: 'text-blue-400' },'''
+    { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },'''
+    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },'''
     { value: '24/7', label: 'Support Available', color: 'text-cyan-400' }
 ] }) => {
 
@@ -16,14 +18,17 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {
         const handleMouseMove = (e) => {
-
-            setMousePosition({ x: e.clientX, y: e.clientY })};'
+'
+''
+            setMousePosition({ x: e.clientX, y: e.clientY })};'''
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats
         const interval = setInterval(() => {
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
         return () => {
 '
+''
+'''
             window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
     const containerVariants = {
@@ -57,3 +62,5 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const floatingVariants = {
 '"
 '"'"
+'"'"'"
+'"'"'"'"

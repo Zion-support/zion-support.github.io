@@ -1,6 +1,6 @@
-        return a.price - b.price;''
-      case 'roi':;''
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);''
+        return a.price - b.price;''''
+      case 'roi':;''''
+        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);''''
       case 'name':;
         return a.name.localeCompare (b.name) ;
       default:;
@@ -9,7 +9,8 @@
 
             </motion.div>;
           </div>;
-        </div>;
-      </section>;
-    </div>;) }'
+        </div>;'
+      </section>;''
+    </div>;) }'''
+'"'"'"
 '"'"

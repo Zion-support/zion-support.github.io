@@ -11,19 +11,19 @@ const useIdFallback = (): string => {
   }
   return idRef.current;
 };
-
-// Determine which ID generation function to use.
-// This check happens once when the module is loaded."
-const useActualId = typeof React.useId === "function" ? React.useId : useIdFallback;
-
-/**`
- * React 18 introduced `useId` for generating unique IDs. If an older`
+"
+// Determine which ID generation function to use.""
+// This check happens once when the module is loaded."""
+const useActualId = typeof React.useId === "function" ? React.useId : useIdFallback;`
+``
+/**```
+ * React 18 introduced `useId` for generating unique IDs. If an older```
  * React version is used where `useId` is unavailable, this hook provides
  * a fallback.*/
 export function useReactId(): string {
 
   // This now calls either React.useId() or useIdFallback() directly.
   // Both of these functions adhere to the rules of hooks internally.
-  return useActualId();
-}
-"`
+  return useActualId();"`
+}"`"`
+"`"`"`

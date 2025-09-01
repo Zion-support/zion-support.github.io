@@ -8,6 +8,6 @@ const MessagingProvider({ children }) {
 
   id: Date.now().toString(),
             content,
-            timestamp: new Date(),
-            isRead: false,
-'
+            timestamp: new Date(),'
+            isRead: false,''
+'''

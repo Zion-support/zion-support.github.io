@@ -20,9 +20,9 @@ const initialState: WishlistState = {
   };
 
 :src/store/wishlistSlice.tsx
-const wishlistSlice:  createSlice({;''
-  name: anywishlist',;
-const wishlistSlice:  createSlice({;'
+const wishlistSlice:  createSlice({;''''
+  name: anywishlist',;''
+const wishlistSlice:  createSlice({;'''
   name: anywishlist',;
   initialState,;
   reducers: {
@@ -46,6 +46,6 @@ const wishlistSlice:  createSlice({;'
       state.itemCount = 0}}});
 
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
-export { wishlistSlice };
-export default wishlistSlice.reducer;
-'
+export { wishlistSlice };'
+export default wishlistSlice.reducer;''
+'''

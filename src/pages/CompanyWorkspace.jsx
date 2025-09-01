@@ -1,12 +1,12 @@
-import React from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import { CompDashboard } from '@/components/enterprise/workspace/CompDashboard';'
-import { useAuth } from '@/hooks/useAuth';'
-import { Navigate, useParams } from 'react-router-dom';'
-import SEO from '@/components/SEO';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
-import { useCompWorkspace } from '@/hooks/useCompWorkspace';'
+import React from 'react';'''
+import { Header } from '@/components/Header';'''
+import { Footer } from '@/components/Footer';'''
+import { CompDashboard } from '@/components/enterprise/workspace/CompDashboard';'''
+import { useAuth } from '@/hooks/useAuth';'''
+import { Navigate, useParams } from 'react-router-dom';'''
+import SEO from '@/components/SEO';'''
+import { ProtectedRoute } from '@/components/ProtectedRoute';'''
+import { useCompWorkspace } from '@/hooks/useCompWorkspace';'''
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function CompWorkspace() {
   const { compSlug } = useParams();
@@ -16,7 +16,7 @@ export default function CompWorkspace() {
   if (isLoading) {
 
     return()
-      <div className="flex items-center justify-center min-h-screen">""
+      <div className="flex items-center justify-center min-h-screen">""""
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
       </div>
     );
@@ -24,14 +24,17 @@ export default function CompWorkspace() {
   if (error || !comp) {
 "
 ""
-    return <Navigate to="/" />;
-  }'
+"""
+"""'"
+    return <Navigate to="/" />;''
+  }'''
   // In white-label mode, use the tenant's theme instead of the comp's theme
   const effectiveTheme = isWhitelabel;
     ? {
-
-        primaryColor: tenant?.primary_color || company.theme?.primaryColor,'
-        backgroundColor: company.theme?.backgroundColor || 'var(--background),'
+'
+''
+        primaryColor: tenant?.primary_color || company.theme?.primaryColor,'''
+        backgroundColor: company.theme?.backgroundColor || 'var(--background),'''
         textColor: company.theme?.textColor || 'var(--foreground)}
     : company.theme;
   // Check if user has access to this comp workspace
@@ -39,29 +42,33 @@ export default function CompWorkspace() {
   if (!hasAccess) {
 "
 ""
+"""
+""""
     return <Navigate to="/unauthorized" />;
-  }
-  return()
-    <ProtectedRoute>'
-      <SEO''
-        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}'`'`
+  }'
+  return()''
+    <ProtectedRoute>'''
+      <SEO''''
+        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}'`'`'`'`
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
       <Header
-        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
-        customTheme={effectiveTheme}
-      />"
-      <main""
+        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}"
+        customTheme={effectiveTheme}""
+      />"""
+      <main""""
         className="min-h-screen"
         style={{
 '
-          backgroundColor:''
+''
+'''
+          backgroundColor:''''
             effectiveTheme?.backgroundColor || 'var(--background)}}
       >
         <CompDashboard company={comp} />
       </main>
       <Footer />
-    </ProtectedRoute>
-  );
-}'"`
-'"`'"`
+    </ProtectedRoute>'"`
+  );'"`'"`
+}'"`'"`'"`
+'"`'"`'"`'"`

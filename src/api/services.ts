@@ -9,12 +9,14 @@ export interface ServiceItem {
 
 export async function fetchServices(category?: string, q?: string: any): Promise<ServiceItem[]> {
 
-  if (category) params.append('category', category);'
+  if (category) params.append('category', category);'''
   if (q) params.append('q', q);
   
   
   if (!res.ok) {
 '
-    throw new Error('Failed to fetch services')}
-  return res.json()}
-'
+''
+'''
+    throw new Error('Failed to fetch services')}'
+  return res.json()}''
+'''

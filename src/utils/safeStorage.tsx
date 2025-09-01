@@ -20,10 +20,10 @@ function isLocalStorageAvailable() {
     if(typeof window === 'undefined') {
 
       localStorageAvailable = false;
-      return false;
-    }
-'
-    const testKey = '__localStorage_test__';'
+      return false;'
+    }''
+'''
+    const testKey = '__localStorage_test__';'''
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
@@ -37,8 +37,10 @@ function isLocalStorageAvailable() {
 
 function safeConsoleError(message, error) {
 '
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';'
-  // Prevent infinite recursion in console logging''
+''
+'''
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';'''
+  // Prevent infinite recursion in console logging''''
   if (env === 'production') return;
 
   try {
@@ -56,6 +58,8 @@ export const safeStorage = {
       return localStorage.getItem(key);
     } catch (error) {
 '
+''
+'''
       // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
@@ -68,6 +72,8 @@ export const safeStorage = {
       return true;
     } catch (error) {
 '
+''
+'''
       // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
@@ -80,6 +86,8 @@ export const safeStorage = {
       return true;
     } catch (error) {
 '
+''
+'''
       // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
@@ -91,6 +99,8 @@ export const safeStorage = {
       return true;
     } catch (error) {
 '
+''
+'''
       // console.warn('Failed to clear localStorage:', error);
       return false;
     }
@@ -103,6 +113,8 @@ export const safeStorage = {
     } catch (error) {
 '
 ''
+'''
+''''
       // console.warn('Failed to get key from localStorage:', error);      return null;
     }
   },
@@ -113,9 +125,11 @@ export const safeStorage = {
     } catch (error) {
 '
 ''
+'''
+''''
       // console.warn('Failed to get localStorage length:', error);      return 0;
     }
   }};
-
-export default safeStorage;
 '
+export default safeStorage;''
+'''

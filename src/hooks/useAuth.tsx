@@ -42,9 +42,13 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
             isLoading: false})} catch (error) {
 '
+''
+'''
           // console.error('Error parsing stored user:', error);
             isLoading: false})} catch (error) {
 '
+''
+'''
           console.error('Error parsing stored user:', error);
           setAuthState({
 
@@ -74,36 +78,36 @@ export function useAuth(...args: unknown[]): unknown {
     setAuthState({
 
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-'
-    // Store user data in localStorage''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
 :src/hooks/useAuth.tsx
-    return { success: true, user: mockUser }};
-
-  '
-    // Clear localStorage''
-    localStorage.removeItem('zion_user');'
+    return { success: true, user: mockUser }};'
+''
+  '''
+    // Clear localStorage''''
+    localStorage.removeItem('zion_user');'''
     localStorage.removeItem('authToken')};
 
     return { success: true, user: mockUser }};
-
-  
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');'
+'
+  ''
+    // Clear localStorage'''
+    localStorage.removeItem('zion_user');'''
     localStorage.removeItem('authToken')};
 
     setAuthState({
 
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-'
-    // Store user data in localStorage''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser }};
@@ -113,12 +117,12 @@ export function useAuth(...args: unknown[]): unknown {
       setAuthState(prev => ({
 
 :src/hooks/useAuth.tsx
-        ...prev,
-        user: updatedUser}));
-'
-      // Update localStorage''
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage'
+        ...prev,'
+        user: updatedUser}));''
+'''
+      // Update localStorage''''
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}''
+      // Update localStorage'''
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
 
@@ -127,9 +131,9 @@ export function useAuth(...args: unknown[]): unknown {
     ...authState,
     login,
     logout,
-    register,
-:src/hooks/useAuth.tsx
-    updateProfile}}'
-'
-    updateProfile}}
-'
+    register,'
+:src/hooks/useAuth.tsx''
+    updateProfile}}'''
+''
+    updateProfile}}''
+'''

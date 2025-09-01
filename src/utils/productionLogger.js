@@ -1,7 +1,7 @@
 export const logErrorToProduction = (message, error) => {
 
   // In production, you might want to send this to a logging service
-  // For now, we'll just log to console in development''
+  // For now, we'll just log to console in development''''
   if (process.env.NODE_ENV === 'development') {
 
     // console.error(message, error);  }
@@ -15,6 +15,8 @@ export const logErrorToProduction = (message, error) => {
 
 export const logInfoToProduction = (message, data) => {
 '
+''
+'''
   if (process.env.NODE_ENV === 'development') {
 
     // console.log(message, data);  }
@@ -22,6 +24,8 @@ export const logInfoToProduction = (message, data) => {
 
 export const logWarningToProduction = (message, data) => {
 '
+''
+'''
   if (process.env.NODE_ENV === 'development') {
 
     // console.warn(message, data);  }
@@ -30,6 +34,6 @@ export const logWarningToProduction = (message, data) => {
 export default {
 
   logErrorToProduction,
-  logInfoToProduction,
-  logWarningToProduction};
-'
+  logInfoToProduction,'
+  logWarningToProduction};''
+'''

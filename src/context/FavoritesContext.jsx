@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';'
+import { createContext, useContext, useEffect, useState } from 'react';'''
 import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 
 const FavoritesContext = createContext(null);
@@ -9,6 +9,8 @@ export function FavoritesProvider({ children }) {
 
   useEffect(() => {
 '
+''
+'''
     const stored = localStorage.getItem('favorites');
     if (stored) {
 
@@ -23,6 +25,8 @@ export function FavoritesProvider({ children }) {
 
   useEffect(() => {
 '
+''
+'''
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
@@ -37,6 +41,8 @@ export function FavoritesProvider({ children }) {
       );
     } catch (err) {
 '
+''
+'''
       console.error('Toggle favorite failed', err);
     }
   };
@@ -51,6 +57,6 @@ export function FavoritesProvider({ children }) {
 }
 
 export function useFavorites() {
-  return useContext(FavoritesContext);
-}
-'
+  return useContext(FavoritesContext);'
+}''
+'''

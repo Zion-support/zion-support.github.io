@@ -17,10 +17,12 @@ interface AuthTokens {
 }
 ;
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {
+
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({
+
     accessToken: null,
     refreshToken: null
   });
@@ -30,28 +32,39 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
         if (typeof window !== 'null') {;
           if (auth) {
 '
+''
+'''
         if (typeof window !== 'null') {;
           if (auth) {
+
             if (parsed.user && parsed.token) {
+
               setUser(parsed.user);
               setTokens({
-                accessToken: parsed.token,
-:src/context/auth/useAuthState.tsx'
-                refreshToken: parsed.refreshToken || null''
+'
+                accessToken: parsed.token,''
+:src/context/auth/useAuthState.tsx'''
+                refreshToken: parsed.refreshToken || null''''
         // // // // // // // // console.error('Error checking auth state:', error)} finally {
-        setIsLoading(false)})}
-                refreshToken: parsed.refreshToken || null'
+'
+        setIsLoading(false)})}''
+                refreshToken: parsed.refreshToken || null'''
         // // // // // // // console.error('Error checking auth state:', error)} finally {
+
         setIsLoading(false)})}
           }
         }
       } catch (error) {
 '
+''
+'''
         // console.error('Error checking auth state:', error)} finally {
+
         setIsLoading(false)}
     };
     checkAuthState()}, []);
   return {
+
     user,
     setUser,
     isLoading,
@@ -59,6 +72,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     onboardingStep,
     setOnboardingStep,
     tokens,
-    setTokens
-  }};
-'
+    setTokens'
+  }};''
+'''

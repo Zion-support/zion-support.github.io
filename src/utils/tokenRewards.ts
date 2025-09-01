@@ -4,6 +4,8 @@ export async function rewardOnboarding(...args: any[]): any {
 '  await apiClient('/functions/v1/token-manager/earn', {
 '
 ''
+'''
+''''
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })});
 
@@ -13,12 +15,17 @@ export async function rewardOnboarding(...args: any[]): any {
     purchaseType: string
   ): Promise<any> {
 '
+''
+'''
     await apiClient('/functions/v1/token-manager/earn', {
 '
+''
+'''
       method: 'POST',
       body: JSON.stringify({
-
-        userId,'
+'
+''
+        userId,'''
         action: 'purchase',
         amount: purchaseAmount,
         purchaseType})});
@@ -28,15 +35,20 @@ export async function rewardOnboarding(...args: any[]): any {
       referredUserId: string
     ): Promise<any> {
 '
+''
+'''
       await apiClient('/functions/v1/token-manager/earn', {
 '
+''
+'''
         method: 'POST',
         body: JSON.stringify({
-
-          userId,'
+'
+''
+          userId,'''
           action: 'referral',
           referredUserId,
           amount: 100})})}
-  }
-}
-'
+  }'
+}''
+'''
