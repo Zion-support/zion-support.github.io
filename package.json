@@ -89,6 +89,7 @@
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4",
+    "@stripe/stripe-js": "^2.3.0",
     "axios": "^1.6.0"
   },
   "devDependencies": {

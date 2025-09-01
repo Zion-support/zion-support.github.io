@@ -1,35 +1,62 @@
-export interface AxiosInstance {
-  defaults: { baseURL?: string; headers: { common: Record<string, string> } };
-  interceptors: { request: { use: (fn: (config: any) => any) => void } };
-  post: (url: string, data: any) => Promise<{ status: number; data: any }>;
+export interface AxiosResponse<T = any> {
+  status: number;
+  data: T;
 }
 
-export interface AxiosConfig {
+export interface AxiosRequestConfig {
   baseURL?: string;
+  headers?: Record<string, string>;
 }
 
-export function create(config: AxiosConfig = {}): AxiosInstance {
-  let interceptor: ((config: any) => any) | null = null;
+interface Interceptor {
+  use(handler: (config: AxiosRequestConfig) => AxiosRequestConfig): void;
+  handlers: Array<(config: AxiosRequestConfig) => AxiosRequestConfig>;
+}
 
-  const instance: AxiosInstance = {
-    defaults: {
-      baseURL: config.baseURL,
-      headers: { common: {} }
+function createRequestInterceptor(): Interceptor {
+  const interceptor: Interceptor = {
+    handlers: [],
+    use(handler) {
+      this.handlers.push(handler);
     },
-    interceptors: {
-      request: {
-        use(fn: (config: any) => any) {
-          interceptor = fn;
-        }
-      }
-    },
-    async post(url: string, data: any) {
-      let cfg: any = { url, data, headers: { ...instance.defaults.headers.common } };
-      if (interceptor) cfg = interceptor(cfg) || cfg;
-      return { status: 200, data: {} };
-    }
   };
-  return instance;
+  return interceptor;
 }
 
-export default { create };
+export interface AxiosInstance {
+  defaults: { headers: { common: Record<string, string> } };
+  interceptors: { request: Interceptor };
+  post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>>;
+}
+
+export const axios = {
+  create(config: AxiosRequestConfig = {}): AxiosInstance {
+    const defaultsHeaders: Record<string, string> = {};
+    const requestInterceptor = createRequestInterceptor();
+    const instance: AxiosInstance = {
+      defaults: { headers: { common: defaultsHeaders } },
+      interceptors: { request: requestInterceptor },
+      async post(url, data, reqConfig = {}) {
+        let finalConfig: AxiosRequestConfig = { ...config, ...reqConfig };
+        for (const handler of requestInterceptor.handlers) {
+          finalConfig = handler(finalConfig) || finalConfig;
+        }
+        const headers = {
+          'Content-Type': 'application/json',
+          ...finalConfig.headers,
+          ...defaultsHeaders,
+        };
+        const res = await fetch(`${finalConfig.baseURL || ''}${url}`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify(data ?? {}),
+        });
+        const responseData = await res.json().catch(() => ({}));
+        return { status: res.status, data: responseData };
+      },
+    };
+    return instance;
+  },
+};
+
+export default axios;
