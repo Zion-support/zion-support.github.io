@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:47:05.578Z",
+  "generatedAt": "2025-08-11T22:47:41.782Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -19,7 +19,7 @@
     "capability-map-runner",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "content-gap-finder",
+    "content-freshness-runner",
     "continuous-front-runner",
     "continuous-orchestrator",
     "css-bloat-report",
@@ -56,7 +56,7 @@
     "image-lazyload-auditor",
     "image-optimizer-runner",
     "innovation-lab",
-    "internal-link-graph-runner",
+    "internal-link-sentinel-runner",
     "link-and-health-scheduler",
     "link-crawler",
     "linting-orchestrator-runner",

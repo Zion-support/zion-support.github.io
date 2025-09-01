@@ -11,7 +11,7 @@ const Index: NextPage = () => {
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-extrabold mb-2">Automation Hub</h1>
         <p className="text-white/70 mb-8">Discover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.</p>
-                        <ul className="space-y-4">
+                         <ul className="space-y-4">
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">SEO Audit</h2>
             <p className="text-white/70">Generates SEO report for all pages and publishes it.</p>
@@ -131,19 +131,21 @@ const Index: NextPage = () => {
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Link Graph</h2>
-            <p className="text-white/70">Builds and publishes the site’s internal link graph.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/internal-link-graph-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Accessibility Audit</h2>
+            <p className="text-white/70">Checks a11y basics across routes and publishes a dashboard.</p>
+            <a className="text-cyan-300 underline" href="/reports/a11y" target="_blank" rel="noopener">Open Report</a>
           </li>
+
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Component Usage Index</h2>
-            <p className="text-white/70">Indexes component usage across the app for refactors.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/component-usage-index-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Internal Link Sentinel</h2>
+            <p className="text-white/70">Detects broken internal routes and suggests fixes.</p>
+            <a className="text-cyan-300 underline" href="/reports/link-sentinel" target="_blank" rel="noopener">Open Report</a>
           </li>
+
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Freshness Auditor</h2>
-            <p className="text-white/70">Audits last-updated times and highlights stale content.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/content-freshness-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Content Freshness</h2>
+            <p className="text-white/70">Surfaces stale files and highlights newest updates.</p>
+            <a className="text-cyan-300 underline" href="/reports/content-freshness" target="_blank" rel="noopener">Open Report</a>
           </li>
         </ul>
       </main>
