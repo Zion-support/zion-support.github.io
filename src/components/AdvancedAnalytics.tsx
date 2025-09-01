@@ -7,7 +7,6 @@ import {
   Eye, 
   MousePointer, 
   Clock, 
-  TrendingUp, 
   TrendingDown,
   Activity,
   Zap,
@@ -137,7 +136,7 @@ export function AdvancedAnalytics({
     };
 
     // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData);
+    // this.sendAnalyticsData('pageview', pageViewData);
     
     // Update local state
     setAnalyticsData(prev => ({
@@ -177,17 +176,25 @@ export function AdvancedAnalytics({
     }
 
     // Send to analytics service
-    this.sendAnalyticsData('interaction', interactionData);
+    // this.sendAnalyticsData('interaction', interactionData);
 
     // Update local state
-    setAnalyticsData(prev => ({
-      ...prev,
-      interactions: {
-        ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
+    setAnalyticsData(prev => {
+      const newInteractions = { ...prev.interactions };
+      if (type === 'form') {
+        newInteractions.formSubmissions++;
+      } else if (type === 'error') {
+        newInteractions.errors++;
+      } else if (type === 'click') {
+        newInteractions.clicks++;
+      } else if (type === 'scroll') {
+        newInteractions.scrolls++;
       }
-    }));
+      return {
+        ...prev,
+        interactions: newInteractions
+      };
+    });
   }, [enabled, userSession, currentPage]);
 
   // Track performance metrics
@@ -220,7 +227,7 @@ export function AdvancedAnalytics({
       }));
 
       // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData);
+      // this.sendAnalyticsData('performance', performanceData);
     }
   }, [enabled, userSession]);
 
@@ -577,4 +584,4 @@ export function AdvancedAnalytics({
       </AnimatePresence>
     </>
   );
-}}}}}}}}}}}}}
+}
