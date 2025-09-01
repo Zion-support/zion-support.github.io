@@ -203,7 +203,7 @@ export default function EquipmentDetail() {
 
     setIsAdding(true);
     try {
-      const response = await fetch('/api/stripe/create-session', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: id }),

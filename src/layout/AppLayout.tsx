@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 interface AppLayoutProps {
   children?: React.ReactNode;
