@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('adaptive-orchestrator function triggered');
     
-    // Basic adaptive-orchestrator logic
+    // Basic adaptive orchestration logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'adaptive-orchestrator function executed successfully',
+        message: 'adaptive-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'adaptive-orchestrator',
-        action: 'executing adaptive-orchestrator functionality'
+        function: 'adaptive-orchestrator'
       })
     };
     

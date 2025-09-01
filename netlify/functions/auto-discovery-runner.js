@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('auto-discovery-runner function triggered');
     
-    // Basic auto-discovery-runner logic
+    // Basic auto-discovery logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'auto-discovery-runner function executed successfully',
+        message: 'auto-discovery-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'auto-discovery-runner',
-        action: 'executing auto-discovery-runner functionality'
+        function: 'auto-discovery-runner'
       })
     };
     

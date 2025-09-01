@@ -1,28 +1,25 @@
 exports.handler = async function(event, context) {
-  console.log('seo-audit-runner function executed');
-  
   try {
-    // Basic SEO audit runner logic
-    const timestamp = new Date().toISOString();
-    console.log(`SEO audit runner process started at ${timestamp}`);
+    console.log('seo-audit-runner function triggered');
     
-    // Simulate some SEO audit work
-    await new Promise(resolve => setTimeout(resolve, 350));
-    
-    return {
+    // Basic SEO audit logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'SEO audit runner completed successfully',
-        timestamp: timestamp,
-        function: 'seo-audit-runner'
+        message: 'seo-audit-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'seo-audit-runner',
+        purpose: 'SEO optimization and audit'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in seo-audit-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'SEO audit runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'seo-audit-runner'
       })

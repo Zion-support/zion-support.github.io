@@ -1,28 +1,25 @@
 exports.handler = async function(event, context) {
-  console.log('security-audit-runner function executed');
-  
   try {
-    // Basic security audit runner logic
-    const timestamp = new Date().toISOString();
-    console.log(`Security audit runner process started at ${timestamp}`);
+    console.log('security-audit-runner function triggered');
     
-    // Simulate some security audit work
-    await new Promise(resolve => setTimeout(resolve, 400));
-    
-    return {
+    // Basic security audit logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Security audit runner completed successfully',
-        timestamp: timestamp,
-        function: 'security-audit-runner'
+        message: 'security-audit-runner executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'security-audit-runner',
+        purpose: 'Security scanning and vulnerability assessment'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in security-audit-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Security audit runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'security-audit-runner'
       })

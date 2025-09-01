@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('anchor-links-auto-fixer function triggered');
     
-    // Basic anchor-links-auto-fixer logic
+    // Basic anchor links auto-fixing logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'anchor-links-auto-fixer function executed successfully',
+        message: 'anchor-links-auto-fixer executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'anchor-links-auto-fixer',
-        action: 'executing anchor-links-auto-fixer functionality'
+        function: 'anchor-links-auto-fixer'
       })
     };
     

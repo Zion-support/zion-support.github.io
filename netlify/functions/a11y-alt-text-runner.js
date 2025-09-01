@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('a11y-alt-text-runner function triggered');
     
-    // Basic a11y-alt-text-runner logic
+    // Basic accessibility alt-text scanning logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'a11y-alt-text-runner function executed successfully',
+        message: 'a11y-alt-text-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'a11y-alt-text-runner',
-        action: 'executing a11y-alt-text-runner functionality'
+        function: 'a11y-alt-text-runner'
       })
     };
     

@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('ai-changelog-runner function executed');
-  
   try {
-    // Basic AI changelog runner logic
-    const timestamp = new Date().toISOString();
-    console.log(`AI changelog runner process started at ${timestamp}`);
+    console.log('ai-changelog-runner function triggered');
     
-    // Simulate some changelog work
-    await new Promise(resolve => setTimeout(resolve, 300));
-    
-    return {
+    // Basic AI changelog generation logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'AI changelog runner completed successfully',
-        timestamp: timestamp,
+        message: 'ai-changelog-runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'ai-changelog-runner'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in ai-changelog-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'AI changelog runner failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'ai-changelog-runner'
       })

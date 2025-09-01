@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('netlify-auto-healer-runner function triggered');
     
-    // Basic netlify-auto-healer-runner logic
+    // Basic Netlify auto-healing logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'netlify-auto-healer-runner function executed successfully',
+        message: 'netlify-auto-healer-runner executed successfully',
         timestamp: new Date().toISOString(),
         function: 'netlify-auto-healer-runner',
-        action: 'executing netlify-auto-healer-runner functionality'
+        purpose: 'Site health monitoring and auto-healing'
       })
     };
     

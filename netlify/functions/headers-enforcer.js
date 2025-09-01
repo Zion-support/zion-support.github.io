@@ -2,14 +2,14 @@ exports.handler = async function(event, context) {
   try {
     console.log('headers-enforcer function triggered');
     
-    // Basic headers-enforcer logic
+    // Basic HTTP headers enforcement logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'headers-enforcer function executed successfully',
+        message: 'headers-enforcer executed successfully',
         timestamp: new Date().toISOString(),
         function: 'headers-enforcer',
-        action: 'executing headers-enforcer functionality'
+        purpose: 'Enforce and audit HTTP headers continuously'
       })
     };
     

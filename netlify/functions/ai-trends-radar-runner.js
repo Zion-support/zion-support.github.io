@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('ai-trends-radar-runner function triggered');
     
-    // Basic ai-trends-radar-runner logic
+    // Basic AI trends radar logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ai-trends-radar-runner function executed successfully',
+        message: 'ai-trends-radar-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'ai-trends-radar-runner',
-        action: 'executing ai-trends-radar-runner functionality'
+        function: 'ai-trends-radar-runner'
       })
     };
     
