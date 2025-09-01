@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -77,13 +77,22 @@ export function ChatAssistant({
 >>>>>>> main
   };
   
-    e.preventDefault();
-    handleSendMessage(inputMessage)};
-  
-    setIsChatOpen(!isChatOpen)};
-  const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
-    if(onClose) onClose()};
-  if(!isChatOpen) {
+  const handleSendMessage = async (message: string) => {
+    if (!message.trim()) return;
+    
+    // Add user message to the chat
+    const newMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      message,
+      timestamp: new Date()
+    };
+    
+    setMessages((prev: Message[]) => [...prev, newMessage]);
+    
+    // Send message to recipient via the provided handler
+    await onSendMessage(message, conversationId);
+  };
 
     return ()
       <button
