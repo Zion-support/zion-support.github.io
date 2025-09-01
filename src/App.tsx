@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { NotificationProvider } from './components/ui/NotificationSystem';
 import { ThemeProvider } from './context/ThemeContext';
 import { ModernLoader } from './components/ui/ModernLoader';
+import { AccessibilityEnhancer } from './components/accessibility/AccessibilityEnhancer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
@@ -15,6 +16,7 @@ const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ def
 const SettingsPage = lazy(() => import('./pages/SettingsPage').then(module => ({ default: module.default })));
 const AnalyticsDashboard = lazy(() => import('./components/dashboard/AnalyticsDashboard').then(module => ({ default: module.default })));
 const PerformanceMonitor = lazy(() => import('./components/monitoring/PerformanceMonitor').then(module => ({ default: module.default })));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
 const EnhancedHomePage = lazy(() => import('./pages/EnhancedHomePage').then(module => ({ default: module.default })));
 const EnhancedPricingPage = lazy(() => import('./pages/EnhancedPricingPage').then(module => ({ default: module.default })));
 
@@ -29,12 +31,13 @@ function App() {
   return (
     <ThemeProvider>
       <NotificationProvider>
-        <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-          <div className="App">
-            <Header />
-            <main className="min-h-screen">
-              <Suspense fallback={<PageLoader />}>
-                <Routes>
+        <AccessibilityEnhancer>
+          <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
+            <div className="App">
+              <Header />
+              <main id="main-content" className="min-h-screen">
+                <Suspense fallback={<PageLoader />}>
+                  <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/services" element={<ServicesPage />} />
                   <Route path="/services/*" element={<ServicesPage />} />
@@ -70,6 +73,7 @@ function App() {
                   <Route path="/settings" element={<SettingsPage />} />
                   <Route path="/analytics" element={<AnalyticsDashboard />} />
                   <Route path="/monitoring" element={<PerformanceMonitor />} />
+                  <Route path="/services-showcase" element={<ComprehensiveServicesShowcase />} />
                   <Route path="*" element={<SimplePage />} />
                 </Routes>
               </Suspense>
@@ -77,6 +81,7 @@ function App() {
             <Footer />
           </div>
         </ErrorBoundary>
+      </AccessibilityEnhancer>
       </NotificationProvider>
     </ThemeProvider>
   );
