@@ -424,7 +424,10 @@ import { SEO } from '../components / SEO';
                     </motion.div>) ) }
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cookie Management */}
       <section className="py - 20">
