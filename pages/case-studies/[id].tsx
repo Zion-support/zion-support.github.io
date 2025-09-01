@@ -3,257 +3,185 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function CaseStudyPage() {
+// Mock case study data - in a real app, this would come from an API or database
+const caseStudies = {
+  'ai-automation-manufacturing': {
+    id: 'ai-automation-manufacturing',
+    title: 'AI-Powered Manufacturing Automation',
+    company: 'ManufactureTech Inc.',
+    industry: 'Manufacturing',
+    duration: '6 months',
+    challenge: 'Manual quality control processes were slow, error-prone, and couldn\'t scale with production demands.',
+    solution: 'Implemented computer vision AI systems for automated quality inspection with real-time defect detection.',
+    results: [
+      'Reduced defect rate by 85%',
+      'Increased production speed by 40%',
+      'Saved $2.3M annually in quality control costs',
+      'Improved customer satisfaction scores by 92%'
+    ],
+    fullDescription: 'ManufactureTech Inc. faced significant challenges with their manual quality control processes. Their existing system relied on human inspectors who could only examine a small percentage of products, leading to quality issues and customer complaints. The company needed a solution that could scale with their growing production demands while maintaining or improving quality standards.',
+    implementation: 'We deployed a comprehensive AI-powered quality control system that included computer vision cameras, machine learning models trained on thousands of defect examples, and automated sorting mechanisms. The system was integrated with their existing production line and provided real-time analytics and reporting.',
+    outcomes: 'The transformation was remarkable. The AI system now inspects 100% of products with 99.7% accuracy, far exceeding human inspector performance. Production line speed increased by 40% as bottlenecks were eliminated, and the company saved $2.3M annually in quality control costs. Most importantly, customer satisfaction scores improved by 92%, leading to increased repeat business and market share.',
+    technologies: ['Computer Vision AI', 'Machine Learning', 'IoT Sensors', 'Real-time Analytics', 'Automated Sorting Systems']
+  },
+  'cloud-migration-finance': {
+    id: 'cloud-migration-finance',
+    title: 'Secure Cloud Migration for Financial Services',
+    company: 'SecureBank Financial',
+    industry: 'Financial Services',
+    duration: '12 months',
+    challenge: 'Legacy on-premise systems were expensive to maintain, difficult to scale, and posed security risks.',
+    solution: 'Migrated to a secure, compliant cloud infrastructure with automated security monitoring and compliance reporting.',
+    results: [
+      'Reduced infrastructure costs by 60%',
+      'Improved system uptime to 99.99%',
+      'Enhanced security compliance by 95%',
+      'Reduced deployment time from weeks to hours'
+    ],
+    fullDescription: 'SecureBank Financial operated on legacy on-premise systems that were becoming increasingly expensive to maintain and difficult to scale. The systems also posed security risks and made compliance with financial regulations challenging. The bank needed a modern, secure, and compliant solution that could support their growth while meeting strict regulatory requirements.',
+    implementation: 'We designed and implemented a secure cloud migration strategy that included private cloud infrastructure, automated security monitoring, compliance automation, and disaster recovery systems. The migration was conducted in phases to minimize business disruption and ensure data integrity.',
+    outcomes: 'The cloud migration delivered exceptional results. Infrastructure costs were reduced by 60% while system performance and reliability improved dramatically. The new cloud-based systems achieved 99.99% uptime and enhanced security compliance by 95%. Deployment times were reduced from weeks to hours, enabling the bank to respond quickly to market changes and customer needs.',
+    technologies: ['Private Cloud Infrastructure', 'Security Automation', 'Compliance Monitoring', 'Disaster Recovery', 'DevOps Automation']
+  },
+  'retail-automation': {
+    id: 'retail-automation',
+    title: 'Retail Automation & Customer Experience',
+    company: 'SmartRetail Solutions',
+    industry: 'Retail',
+    duration: '8 months',
+    challenge: 'Manual inventory management and customer service processes were inefficient and led to stockouts and poor customer experiences.',
+    solution: 'Implemented AI-powered inventory management, automated customer service chatbots, and predictive analytics for demand forecasting.',
+    results: [
+      'Eliminated stockouts by 90%',
+      'Improved customer satisfaction by 78%',
+      'Reduced operational costs by 35%',
+      'Increased sales conversion by 45%'
+    ],
+    fullDescription: 'SmartRetail Solutions struggled with inefficient manual processes that led to frequent stockouts, poor customer experiences, and high operational costs. Their inventory management was reactive rather than proactive, and customer service couldn\'t scale with demand. They needed an intelligent automation solution that could transform their operations.',
+    implementation: 'We deployed a comprehensive retail automation platform that included AI-powered inventory management, intelligent chatbots for customer service, predictive analytics for demand forecasting, and automated reordering systems. The platform integrated with their existing POS and e-commerce systems.',
+    outcomes: 'The automation transformation revolutionized their retail operations. Stockouts were virtually eliminated with 90% reduction, while customer satisfaction improved by 78% through faster, more accurate service. Operational costs decreased by 35%, and sales conversion increased by 45% due to better inventory availability and improved customer experiences.',
+    technologies: ['AI Inventory Management', 'Chatbot Automation', 'Predictive Analytics', 'POS Integration', 'E-commerce Automation']
+  }
+};
+
+export default function CaseStudyDetailPage() {
   const router = useRouter();
   const { id } = router.query;
-
-  // Case studies data - this should match the data in case-studies.tsx
-  const caseStudies = [
-    {
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
-      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.',
-      results: ['40% increase in production efficiency', '60% reduction in downtime', '25% improvement in quality control'],
-      duration: '6 months',
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
-        <h2>Background</h2>
-        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
-        
-        <h2>Challenge</h2>
-        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands 
-        and minimize human intervention.</p>
-        
-        <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>
-        <ul>
-          <li>Predictive maintenance algorithms</li>
-          <li>Real-time production optimization</li>
-          <li>Automated quality control systems</li>
-          <li>Intelligent scheduling and resource allocation</li>
-        </ul>
-        
-        <h2>Results</h2>
-        <p>The implementation delivered exceptional results:</p>
-        <ul>
-          <li><strong>40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>
-          <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
-          <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
-        </ul>
-        
-        <h2>Implementation Timeline</h2>
-        <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
-        The system was deployed in phases, allowing for gradual adoption and optimization.</p>
-      `
-    },
-    {
-      id: 'content-generation-scale',
-      title: 'Scaling Content Generation 10x',
-      company: 'Digital Marketing Agency',
-      industry: 'Marketing',
-      challenge: 'Manual content creation was limiting growth and unable to meet client demands.',
-      solution: 'Deployed autonomous AI content generation systems with human oversight.',
-      results: ['10x increase in content output', '85% improvement in engagement', '70% reduction in production time'],
-      duration: '4 months',
-      description: 'Transforming content creation through autonomous AI systems.',
-      fullContent: `
-        <h2>Background</h2>
-        <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
-        Their manual processes were limiting growth and preventing them from taking on new clients.</p>
-        
-        <h2>Challenge</h2>
-        <p>The agency needed to dramatically increase their content production capacity while maintaining 
-        high quality standards and creative excellence. They required a solution that could handle multiple 
-        content types and formats.</p>
-        
-        <h2>Solution</h2>
-        <p>We implemented an autonomous content generation system that included:</p>
-        <ul>
-          <li>AI-powered content creation engines</li>
-          <li>Automated research and fact-checking</li>
-          <li>Intelligent content optimization</li>
-          <li>Human oversight and quality control</li>
-        </ul>
-        
-        <h2>Results</h2>
-        <p>The transformation was remarkable:</p>
-        <ul>
-          <li><strong>10x increase in content output</strong> - From 50 to 500 pieces per month</li>
-          <li><strong>85% improvement in engagement</strong> - AI-optimized content performed significantly better</li>
-          <li><strong>70% reduction in production time</strong> - Automated workflows accelerated delivery</li>
-        </ul>
-        
-        <h2>Implementation Timeline</h2>
-        <p>The system was deployed in 4 months with comprehensive training for the creative team. 
-        The AI systems learned from human feedback and continuously improved over time.</p>
-      `
-    },
-    {
-      id: 'cloud-infrastructure-optimization',
-      title: 'Cloud Infrastructure Optimization',
-      company: 'E-commerce Platform',
-      industry: 'Technology',
-      challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
-      results: ['50% reduction in cloud costs', '99.9% uptime achieved', '3x improvement in performance'],
-      duration: '8 months',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
-      fullContent: `
-        <h2>Background</h2>
-        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
-        Their infrastructure was not scaling efficiently with their business growth.</p>
-        
-        <h2>Challenge</h2>
-        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
-        They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
-        
-        <h2>Solution</h2>
-        <p>We designed and implemented a comprehensive cloud optimization system:</p>
-        <ul>
-          <li>Auto-scaling infrastructure with intelligent resource allocation</li>
-          <li>Self-healing systems with automatic failure recovery</li>
-          <li>Cost optimization algorithms</li>
-          <li>Performance monitoring and alerting</li>
-        </ul>
-        
-        <h2>Results</h2>
-        <p>The optimization delivered outstanding results:</p>
-        <ul>
-          <li><strong>50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>
-          <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
-          <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
-        </ul>
-        
-        <h2>Implementation Timeline</h2>
-        <p>The project was completed in 8 months with careful planning to avoid service disruption. 
-        The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
-      `
-    }
-  ];
-
-  const caseStudy = caseStudies.find(study => study.id === id);
+  
+  const caseStudy = caseStudies[id as keyof typeof caseStudies];
 
   if (!caseStudy) {
     return (
-      <>
-        <Head>
-          <title>Case Study Not Found | Zion Tech Group</title>
-        </Head>
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-          <main className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>
-              <p className="text-xl text-white/80 mb-8">
-                The case study you're looking for doesn't exist.
-              </p>
-              <Link 
-                href="/case-studies"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-              >
-                ← Back to Case Studies
-              </Link>
-            </div>
-          </main>
-        </div>
-      </>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
+            <p className="text-white/80 mb-8">The requested case study could not be found.</p>
+            <Link href="/case-studies" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+              Back to Case Studies
+            </Link>
+          </div>
+        </main>
+      </div>
     );
   }
 
   return (
     <>
       <Head>
-        <title>{caseStudy.title} | Zion Tech Group - Case Study</title>
-        <meta name="description" content={caseStudy.description} />
-        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
-        <meta property="og:description" content={caseStudy.description} />
+        <title>{caseStudy.title} - {caseStudy.company} | Zion Tech Group</title>
+        <meta name="description" content={caseStudy.fullDescription} />
+        <meta property="og:title" content={`${caseStudy.title} - ${caseStudy.company}`} />
+        <meta property="og:description" content={caseStudy.fullDescription} />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Case Studies
+            </Link>
+          </nav>
+
+          {/* Header */}
+          <header className="text-center mb-16">
+            <div className="mb-6">
+              <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                {caseStudy.industry}
+              </span>
+            </div>
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              {caseStudy.title}
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-4">
+              {caseStudy.fullDescription}
+            </p>
+            <div className="text-cyan-400 font-semibold text-lg">
+              {caseStudy.company}
+            </div>
+            <div className="text-white/60 text-sm mt-2">
+              Project Duration: {caseStudy.duration}
+            </div>
+          </header>
+
+          {/* Case Study Content */}
           <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
-              </Link>
-            </nav>
-            
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
-                </span>
-              </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
-              <p className="text-white/80 text-lg">{caseStudy.description}</p>
-            </header>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              <div className="lg:col-span-2">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <h2 className="text-2xl font-bold mb-6 text-white">Overview</h2>
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="font-semibold text-cyan-400 text-lg mb-2">Challenge</h3>
-                      <p className="text-white/80">{caseStudy.challenge}</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>
-                      <p className="text-white/80">{caseStudy.solution}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Challenge</h2>
+              <p className="text-lg text-white/80">{caseStudy.challenge}</p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Solution</h2>
+              <p className="text-lg text-white/80 mb-6">{caseStudy.solution}</p>
+              <p className="text-lg text-white/80">{caseStudy.implementation}</p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-green-400">Results & Outcomes</h2>
+              <p className="text-lg text-white/80 mb-6">{caseStudy.outcomes}</p>
               
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
-                  <ul className="space-y-3">
-                    {caseStudy.results.map((result, index) => (
-                      <li key={index} className="text-white/80 flex items-center gap-3">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        {result}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <span className="text-white/60 text-sm">Duration:</span>
-                      <p className="text-white font-medium">{caseStudy.duration}</p>
-                    </div>
-                    <div>
-                      <span className="text-white/60 text-sm">Industry:</span>
-                      <p className="text-white font-medium">{caseStudy.industry}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {caseStudy.results.map((result, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <span className="text-white/90">{result}</span>
                     </div>
                   </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Technologies Used</h2>
+              <div className="flex flex-wrap gap-3">
+                {caseStudy.technologies.map((tech, index) => (
+                  <span key={index} className="px-4 py-2 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </section>
+
+            {/* CTA */}
+            <section className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
+                <p className="text-white/80 mb-6">
+                  Let's discuss how AI automation can transform your business operations and drive measurable results.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+                    Get Started
+                  </Link>
+                  <Link href="/services" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300">
+                    Our Services
+                  </Link>
                 </div>
               </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-              <div 
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-              />
-            </div>
-            
-            <div className="text-center">
-              <Link 
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-              >
-                Get Started with Your Project
-              </Link>
-            </div>
+            </section>
           </div>
         </main>
       </div>
