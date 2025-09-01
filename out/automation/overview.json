@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:00:34.883Z",
+  "generatedAt": "2025-08-11T23:00:52.241Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -17,7 +17,7 @@
     "branch-cleanup-runner",
     "broken-image-scanner",
     "broken-image-scanner-runner",
-    "cache-warmer",
+    "changelog-publisher",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
     "content-keywords-runner",
@@ -26,7 +26,7 @@
     "css-bloat-report",
     "dead-code-audit",
     "dead-code-report",
-    "docs-glossary-builder",
+    "dependency-health-runner",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
@@ -56,6 +56,7 @@
     "hyper-front-index-accelerator",
     "image-lazyload-auditor",
     "image-optimizer-runner",
+    "innovation-generator",
     "innovation-lab",
     "internal-redirect-optimizer",
     "link-and-health-scheduler",
