@@ -22,6 +22,12 @@ import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
+// New Enhanced Components
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
 import { AppFooter } from './components/layout/AppFooter';
@@ -368,6 +374,25 @@ function App() {
 
           {/* Smart Notification System */}
           <SmartNotificationSystem />
+
+          {/* New Enhanced Components */}
+          <PerformanceMonitor 
+            enabled={true} 
+            showMetrics={false} 
+            position="top-left" 
+          />
+          
+          <AccessibilityEnhancer 
+            enabled={true} 
+            showPanel={false} 
+            position="top-right" 
+          />
+          
+          <SEOOptimizer 
+            enabled={true} 
+            showPanel={false} 
+            position="bottom-right" 
+          />
         </div>
       </ErrorBoundary>
     </HelmetProvider>
