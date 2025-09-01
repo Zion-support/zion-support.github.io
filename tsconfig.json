@@ -103,6 +103,11 @@
     "node_modules",
     ".next",
     "out",
-    "dist"
+    "dist",
+    "automation",
+    "components.disabled",
+    "**/*.disabled",
+    "**/*.backup",
+    "**/*.tsbackup"
   ]
 }

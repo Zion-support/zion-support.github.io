@@ -402,8 +402,8 @@ const AdvancedAIAssistant: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
         >
+          <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Assistant
           </h2>
@@ -411,6 +411,7 @@ const AdvancedAIAssistant: React.FC = () => {
             Advanced AI-powered assistant with intelligent automation, natural language processing, 
             and smart recommendations to enhance productivity and decision-making.
           </p>
+          </div>
         </motion.div>
 
         {/* Quick Stats */}
@@ -419,8 +420,8 @@ const AdvancedAIAssistant: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -472,6 +473,7 @@ const AdvancedAIAssistant: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-2">91%</h3>
             <p className="text-gray-400 text-sm">Accuracy Rate</p>
           </div>
+          </div>
         </motion.div>
 
         {/* View Tabs */}
@@ -480,8 +482,8 @@ const AdvancedAIAssistant: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto"
         >
+          <div className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto">
           {(['overview', 'conversations', 'insights', 'features'] as const).map((view) => (
             <button
               key={view}
@@ -499,6 +501,7 @@ const AdvancedAIAssistant: React.FC = () => {
               {view.charAt(0).toUpperCase() + view.slice(1)}
             </button>
           ))}
+          </div>
         </motion.div>
 
         {/* Controls */}
@@ -507,8 +510,8 @@ const AdvancedAIAssistant: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12"
         >
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -537,23 +540,20 @@ const AdvancedAIAssistant: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <motion.button
+            <button
               className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 text-gray-300 hover:text-white rounded-lg border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <Settings className="w-4 h-4" />
               AI Settings
-            </motion.button>
+            </button>
             
-            <motion.button
+            <button
               className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <Plus className="w-4 h-4" />
               New Session
-            </motion.button>
+            </button>
+          </div>
           </div>
         </motion.div>
 

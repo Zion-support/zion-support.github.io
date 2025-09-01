@@ -7,5 +7,5 @@ module.exports = {
     'react/prop-types': 'off',
     'no-console': 'warn'
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
+  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/', 'components.disabled/', '**/*.disabled', '**/*.backup', '**/*.tsbackup']
 };
