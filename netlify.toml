@@ -94,7 +94,15 @@
   name = "hyper-front-index-accelerator"
   schedule = "*/1 * * * *" # every minute
 
-# Newly added intelligent audits
+# New intelligence generators
+[[scheduled.functions]]
+  name = "ai-alt-text-generator-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "content-keywords-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
 [[scheduled.functions]]
   name = "content-staleness-auditor"
   schedule = "*/15 * * * *" # every 15 minutes
