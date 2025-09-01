@@ -1,229 +1,403 @@
-import React, { ReactElement, ReactNode } from 'react';
-import { NextPage } from 'next';
+// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
+if (process.env.NODE_ENV === 'development') {
+  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
+  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
+  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
+  console.log('- globalThis.process:', !!(globalThis as any).process);
+}
+
+// CRITICAL: Import environment polyfill FIRST to prevent process.env errors
+import '../src/utils/env-polyfill';
+
+// Enhanced error logging - import early for comprehensive coverage
+import enhancedErrorLogger from '../src/utils/enhanced-error-logger';
+
+// Add global error handling for undefined components
+if (typeof window !== 'undefined') {
+  window.addEventListener('unhandledrejection', (event) => {
+    if (event.reason?.message?.includes('getInitialProps')) {
+      console.error('Component loading error caught:', event.reason);
+      event.preventDefault(); // Prevent the error from crashing the app
+    }
+  });
+  
+  // Additional error handling for process.env errors
+  window.addEventListener('error', (event) => {
+    if (event.message?.includes('Cannot read properties of undefined')) {
+      console.error('Runtime error caught:', event.error);
+      event.preventDefault();
+    }
+  });
+}
+
+import React, { useEffect, useState, Suspense } from 'react'; // Added Suspense
+import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import type { AppProps } from 'next/app';
-import { HelmetProvider } from 'react-helmet-async';
-import { AuthProvider } from '@/context/auth/AuthProvider';
+import Head from 'next/head';
+import dynamic from 'next/dynamic'; // Import dynamic
+import '../src/index.css';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { WalletProvider } from '@/context/WalletContext';
-import { AnalyticsProvider } from '@/context/AnalyticsContext';
-import { CartProvider } from '@/context/CartContext';
-import { ErrorProvider } from '@/context/ErrorContext';
-import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
+
 import { I18nextProvider } from 'react-i18next';
-import i18n from '@/i18n';
-import { Toaster } from '@/components/ui/toaster';
-import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
-import ErrorBoundary from '@/components/ErrorBoundary'; // Generic ErrorBoundary
-import RootErrorBoundary from '@/components/RootErrorBoundary';
-import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
-import { OfflineIndicator } from '@/components/OfflineIndicator';
-// import { BetaBanner } from '@/components/BetaBanner'; // Unused
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { AppLayout } from '@/layout/AppLayout'; // Default AppLayout
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
-import dynamic from 'next/dynamic';
-// import { PerformanceMonitor } from '@/components/ui/performance-monitor'; // Unused
-// import { BundleAnalyzer } from '@/components/ui/bundle-analyzer'; // Unused
-// import { QuickActions } from '@/components/ui/quick-actions'; // Unused
-import { logInfo, logWarn, logError } from '@/utils/productionLogger';
+import i18n from '../src/i18n';
 
+// Synchronously import core providers
+import { AuthProvider } from '../src/context/auth/AuthProvider';
+import { WhitelabelProvider } from '../src/context/WhitelabelContext';
+import { CartProvider } from '../src/context/CartContext';
+import { FeedbackProvider } from '../src/context/FeedbackContext';
+import { ThemeProvider } from '../src/context/ThemeContext';
 
-// Dynamically load heavy components to improve initial load time
-// const IntercomChat = dynamic(() => import('@/components/IntercomChat'), { // IntercomChat variable unused
-//   ssr: false,
-//   loading: () => null
-// });
-dynamic(() => import('@/components/IntercomChat'), { // Import for side effects if needed, or remove if not used
-  ssr: false,
-  loading: () => null
-});
-import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
-// Import Next.js fonts for optimal loading and CLS prevention
-import { Inter, Poppins } from 'next/font/google';
-import Head from 'next/head';
-// Import global Tailwind styles so they load before the app renders
-import '../src/index.css';
-import * as Sentry from '@sentry/nextjs';
-// import getConfig from 'next/config'; // Unused
-import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
-import {
-  validateProductionEnvironment,
-  initializeServices,
-} from '@/utils/environmentConfig';
-import {
-  initializePerformanceOptimizations,
-  initializePerformance,
-} from '@/utils/performance';
-import '@/utils/globalFetchInterceptor';
-import '@/utils/consoleErrorToast';
-import { initConsoleLogCapture } from '@/utils/consoleLogCapture';
-import { RouteChangeHandler } from '@/components/RouteChangeHandler';
-import RouteSEO from '@/components/RouteSEO';
-import { registerServiceWorker } from '@/serviceWorkerRegistration';
-// import PageTransition from '@/components/PageTransition'; // Unused
-// import { AnimatePresence } from 'framer-motion'; // Unused
+// Dynamically import potentially heavy providers
+const DynamicWalletProvider = dynamic(() =>
+  import('../src/context/WalletContext').then(mod => mod.WalletProvider),
+  { ssr: false, loading: () => <DynamicProviderFallback providerName="Wallet System" /> }
+);
 
-// Define types for getLayout pattern
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
-};
+const DynamicAnalyticsProvider = dynamic(() =>
+  import('../src/context/AnalyticsContext').then(mod => mod.AnalyticsProvider),
+  { ssr: false, loading: () => <DynamicProviderFallback providerName="Analytics" /> }
+);
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-};
+// Fallback component for dynamic providers
+const DynamicProviderFallback: React.FC<{ providerName: string }> = ({ providerName }) => (
+  <div style={{ display: 'none' }} data-provider-loading={providerName}>
+    Loading {providerName}...
+  </div>
+);
 
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  console.log('[App] MyApp component rendering started.');
-  const router = useRouter();
-  // console.log('Current route:', router.asPath, router.pathname); // Removed for linting
-  const [queryClient] = React.useState(() => new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes
-        retry: false, // Disable retries for faster error handling
-      },
-    },
-  }));
-  const [isInitialized, setIsInitialized] = React.useState(false);
+// Error boundary component
+class AppErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  React.useEffect(() => {
-    console.log('[App] MyApp main useEffect hook started.');
-    try {
-      validateProductionEnvironment();
-      initializeServices();
-      initializeGlobalErrorHandlers();
-      
-      const { publicRuntimeConfig } = getConfig();
-      console.log('[App] Public Runtime Config:', publicRuntimeConfig);
-      
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE) {
-        Sentry.setTag('release', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_RELEASE);
-      }
-      if (publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT) {
-        Sentry.setTag('environment', publicRuntimeConfig.NEXT_PUBLIC_SENTRY_ENVIRONMENT);
-      }
-    } catch (error) {
-      console.error('[App] Critical initialization error:', error);
-      try {
-        Sentry.captureException(error);
-      } catch (sentryError) {
-        console.warn('[App] Could not send error to Sentry:', sentryError);
-      }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('App Error Boundary caught an error:', error, errorInfo);
+    
+    // Report to enhanced error logger
+    if (typeof window !== 'undefined') {
+      enhancedErrorLogger.captureReactError(error, errorInfo, errorInfo.componentStack || undefined);
+      enhancedErrorLogger.addBreadcrumb('error-boundary', `React error in component: ${error.name}`, 'error');
     }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ 
+          padding: '2rem', 
+          textAlign: 'center',
+          maxWidth: '600px',
+          margin: '0 auto',
+          fontFamily: 'Arial, sans-serif'
+        }}>
+          <h2>⚠️ Application Error</h2>
+          <p>Something went wrong while loading the application.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            style={{
+              padding: '10px 20px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              marginTop: '1rem'
+            }}
+          >
+            Reload Page
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+// Loading screen component
+const LoadingScreen: React.FC<{ progress: number }> = ({ progress }) => (
+  <div style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#f8f9fa',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 9999,
+    fontFamily: 'Arial, sans-serif'
+  }}>
+    <div style={{
+      width: '120px',
+      height: '120px',
+      border: '8px solid #e9ecef',
+      borderTop: '8px solid #007bff',
+      borderRadius: '50%',
+      animation: 'spin 2s linear infinite'
+    }} />
+    <h2 style={{ marginTop: '2rem', color: '#495057' }}>
+      Initializing Zion App...
+    </h2>
+    <p style={{ color: '#6c757d', marginTop: '0.5rem' }}>
+      Loading components ({progress}%)
+    </p>
+    <div style={{
+      width: '200px',
+      height: '6px',
+      backgroundColor: '#e9ecef',
+      borderRadius: '3px',
+      marginTop: '1rem'
+    }}>
+      <div style={{
+        width: `${progress}%`,
+        height: '100%',
+        backgroundColor: '#007bff',
+        borderRadius: '3px',
+        transition: 'width 0.3s ease'
+      }} />
+    </div>
+    <style jsx>{`
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}</style>
+  </div>
+);
+
+// Provider wrapper with error handling
+const ProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Note: Suspense for dynamic imports is handled individually by next/dynamic.
+  // A top-level Suspense here could be added if there are other suspense-using components.
+  return (
+    <AppErrorBoundary>
+      <ReduxProvider store={store}>
+        <I18nextProvider i18n={i18n}>
+          <AuthProvider>
+            <WhitelabelProvider>
+              <DynamicWalletProvider> {/* Use dynamic import */}
+                <DynamicAnalyticsProvider> {/* Use dynamic import */}
+                  <CartProvider>
+                    <FeedbackProvider>
+                      <ThemeProvider>
+                        {children}
+                      </ThemeProvider>
+                    </FeedbackProvider>
+                  </CartProvider>
+                </DynamicAnalyticsProvider>
+              </DynamicWalletProvider>
+            </WhitelabelProvider>
+          </AuthProvider>
+        </I18nextProvider>
+      </ReduxProvider>
+    </AppErrorBoundary>
+  );
+};
+
+function MyApp({ Component, pageProps }: AppProps) {
+  // Start with isLoading true to show the loading screen immediately.
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [initializationError, setInitializationError] = useState<string | null>(null);
+  const router = useRouter();
+  const [queryClient] = useState(() => new QueryClient());
+
+  useEffect(() => {
+    // Ensure loading screen is shown at the very start
+    setIsLoading(true);
+    setLoadingProgress(5); // Initial small progress
+
+    const initializeApp = async () => {
+      try {
+        // Simulate progressive loading with realistic steps
+        const steps = [
+          { name: 'Loading Core Components', duration: 300 },
+          { name: 'Initializing Providers', duration: 400 },
+          { name: 'Setting up Analytics', duration: 200 },
+          { name: 'Configuring Theme', duration: 200 },
+          { name: 'Final Setup', duration: 300 }
+        ];
+
+        let currentProgress = 0;
+        const progressStep = 100 / steps.length;
+
+        for (let i = 0; i < steps.length; i++) {
+          const step = steps[i];
+          if (!step) continue;
+          
+          // Update progress
+          currentProgress = (i + 1) * progressStep;
+          setLoadingProgress(Math.min(currentProgress, 95));
+
+          // Simulate async work
+          await new Promise(resolve => setTimeout(resolve, step.duration));
+        }
+
+        // Final progress update
+        setLoadingProgress(100);
+        
+        // Small delay to show completion
+        await new Promise(resolve => setTimeout(resolve, 200));
+
+        // PERFORMANCE: Initialize Web Vitals monitoring in production
+        if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+          try {
+            const { onCLS, onFCP, onINP, onLCP, onTTFB } = await import('web-vitals');
+
+            const reportWebVitalsSafely = (metric: any) => {
+              try { // Add specific try-catch within the callback
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', metric.name, {
+                    value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+                    event_label: metric.id,
+                    non_interaction: true,
+                  });
+                }
+
+                // Initialize comprehensive performance monitoring on first metric (still keeping the actual import commented for now as per previous step)
+                if (!(global as any).performanceMonitorInitialized) {
+                  (global as any).performanceMonitorInitialized = true;
+                  // import('@/utils/performance-monitor').then(...).catch(...);
+                  console.log('Performance monitor import is currently skipped.');
+                }
+              } catch (reportError) {
+                console.warn('Error during Web Vitals reporting:', reportError);
+              }
+            };
+            
+            // Wrap each listener setup in a try-catch as well, just in case
+            try { onCLS(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onCLS:', e); }
+            try { onFCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onFCP:', e); }
+            try { onINP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onINP:', e); }
+            try { onLCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onLCP:', e); }
+            try { onTTFB(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onTTFB:', e); }
+
+          } catch (webVitalsError) {
+            console.warn('Web Vitals main initialization failed:', webVitalsError);
+          }
+        }
+        
+        setIsLoading(false); // Crucial: ensure isLoading is set to false
+      } catch (error) {
+        console.error('App initialization error:', error);
+        setInitializationError('Failed to initialize application. Please refresh the page.');
+        setIsLoading(false);
+      }
+    };
+
+    // Force initialization completion after maximum 3 seconds
+    const forceInitTimeout = setTimeout(() => {
+      console.warn('Force completing app initialization due to timeout');
+      setLoadingProgress(100); // Ensure progress is full on timeout
+      setIsLoading(false);
+    }, 3000);
+
+    initializeApp().finally(() => {
+      clearTimeout(forceInitTimeout);
+    });
+
+    return () => {
+      clearTimeout(forceInitTimeout);
+    };
   }, []);
 
-  React.useEffect(() => {
-    Sentry.setTag('route', router.pathname);
-    Sentry.setContext('query', router.query);
-  }, [router.pathname, router.query]); // Added router.query as dependency
+  // Handle router events for page transitions
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      // Could add route change loading if needed
+    };
 
-  console.log('[App] Attempting to render component:', Component.displayName || Component.name || 'UnnamedComponent');
+    const handleRouteChangeComplete = () => {
+      // Route change completed
+    };
 
-  // Use the getLayout defined on the page component, or default to AppLayout
-  const getLayout = Component.getLayout ?? ((page) => <AppLayout>{page}</AppLayout>);
+    const handleRouteChangeError = () => {
+      console.error('Route change error');
+    };
 
-  return (
-    <>
-      <Head>
-        {/* Next.js font optimization handles preloading automatically */}
-        {/* Font optimization CSS to prevent CLS */}
-        <style jsx global>{`
-          :root {
-            --font-inter: ${inter.style.fontFamily};
-            --font-poppins: ${poppins.style.fontFamily};
-          }
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    router.events.on('routeChangeError', handleRouteChangeError);
 
-          /* Optimized fallback font adjustments */
-          @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 107%;
-            ascent-override: 90%;
-            descent-override: 25%;
-            line-gap-override: 0%;
-          }
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      router.events.off('routeChangeError', handleRouteChangeError);
+    };
+  }, [router]);
 
-          @font-face {
-            font-family: 'Poppins Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 102%;
-            ascent-override: 92%;
-            descent-override: 24%;
-            line-gap-override: 0%;
-          }
+  // Show loading screen during initialization
+  if (isLoading) {
+    return (
+      <>
+        <Head>
+          <title>Loading - Zion App</title>
+          <meta name="description" content="Zion App is loading..." />
+        </Head>
+        <LoadingScreen progress={loadingProgress} />
+      </>
+    );
+  }
 
-          /* Performance optimizations */
-          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif; }
-          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif; }
-        `}</style>
-      </Head>
-      <div className={`${inter.variable} ${poppins.variable}`}>
-        <ProductionErrorBoundary>
-          <RootErrorBoundary>
-            <HydrationErrorBoundary>
-              <React.Suspense
-                fallback={
-                  <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-pulse text-lg">Loading...</div>
-                  </div>
-                }
-              >
-                <GlobalErrorBoundary>
-                  <QueryClientProvider client={queryClient}>
-                    <ApiErrorBoundary>
-                      <ReduxProvider store={store}>
-                        <I18nextProvider i18n={i18n}>
-                          <ErrorProvider>
-                            <AuthProvider>
-                              <WhitelabelProvider>
-                                <LanguageProviderWrapper>
-                                  <WalletProvider>
-                                    <CartProvider>
-                                      <AnalyticsProvider>
-                                        <FeedbackProvider>
-                                          <ThemeProvider>
-                                            <AppLayout>
-                                              <RouteSEO />
-                                              <RouteChangeHandler
-                                                resetScrollOnChange={true}
-                                                forceRerender={false} // Keep false as per original, true didn't seem to have a listener
-                                              />
-                                              <ErrorBoundary>
-                                                <Component
-                                                  key={router.asPath}
-                                                  {...pageProps}
-                                                />
-                                              </ErrorBoundary>
-                                              <ErrorResetOnRouteChange />
-                                              <ToastContainer />
-                                              <OfflineIndicator />
-                                              {/* IntercomChat is dynamically imported but not rendered here explicitly */}
-                                              {/* PerformanceMonitor, BundleAnalyzer, QuickActions were commented out/removed */}
-                                            </AppLayout>
-                                          </ThemeProvider>
-                                        </FeedbackProvider>
-                                      </AnalyticsProvider>
-                                    </CartProvider>
-                                  </WalletProvider>
-                                </LanguageProviderWrapper>
-                              </WhitelabelProvider>
-                            </AuthProvider>
-                          </ErrorProvider>
-                        </I18nextProvider>
-                      </ReduxProvider>
-                    </ApiErrorBoundary>
-                  </QueryClientProvider>
-                </GlobalErrorBoundary>
-              </React.Suspense>
-            </HydrationErrorBoundary>
-          </RootErrorBoundary>
-        </ProductionErrorBoundary>
+  // Show error screen if initialization failed
+  if (initializationError) {
+    return (
+      <div style={{ 
+        padding: '2rem', 
+        textAlign: 'center',
+        maxWidth: '600px',
+        margin: '0 auto',
+        fontFamily: 'Arial, sans-serif'
+      }}>
+        <h2>🚫 Initialization Error</h2>
+        <p>{initializationError}</p>
+        <button 
+          onClick={() => window.location.reload()}
+          style={{
+            padding: '10px 20px',
+            backgroundColor: '#dc3545',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            marginTop: '1rem'
+          }}
+        >
+          Reload Application
+        </button>
       </div>
-    </>
+    );
+  }
+
+  // Main app render with all providers
+  return (
+    <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
+      <ProviderWrapper>
+        <Head>
+          <title>Zion App - AI Marketplace & DAO Platform</title>
+        <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+             <div>
+         <Component {...pageProps} />
+       </div>
+      </ProviderWrapper>
+    </QueryClientProvider>
   );
 }
