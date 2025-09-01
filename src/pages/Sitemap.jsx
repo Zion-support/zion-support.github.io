@@ -1,6 +1,5 @@
-import { Link } from 'react - router - dom';
 import React from 'react';
-export default Sitemap;
+import { Link } from 'react-router-dom';
 
 const Sitemap = () => {
   const sitemapSections = [
@@ -229,5 +228,8 @@ const Sitemap = () => {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>
+  );
 };
+
+export default Sitemap;

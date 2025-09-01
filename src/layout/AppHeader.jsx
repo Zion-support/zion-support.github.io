@@ -53,6 +53,12 @@ export function AppHeader() {
       icon: null,
       dropdown: [
         {
+          name: 'All Services Showcase',
+          path: '/services',
+          icon: Rocket,
+          color: 'from-green-500 to-emerald-500'
+        },
+        {
           name: 'AI & Machine Learning',
           path: '/services/ai',
           icon: Brain,
@@ -67,14 +73,14 @@ export function AppHeader() {
         {
           name: 'Cybersecurity',
           path: '/services/cybersecurity',
-          icon: Lock,
+          icon: Shield,
           color: 'from-red-500 to-pink-500'
         },
         {
-          name: 'All Services',
-          path: '/services',
+          name: 'Solutions',
+          path: '/solutions',
           icon: Database,
-          color: 'from-green-500 to-emerald-500'
+          color: 'from-indigo-500 to-purple-500'
         },
         {
           name: 'AI Quantum Trading',
@@ -84,7 +90,43 @@ export function AppHeader() {
         }
       ]
     },
-    { name: 'About', path: '/about', icon: null },
+    {
+      name: 'Company',
+      path: '/about',
+      icon: null,
+      dropdown: [
+        {
+          name: 'About Us',
+          path: '/about',
+          icon: Users,
+          color: 'from-blue-500 to-cyan-500'
+        },
+        {
+          name: 'Case Studies',
+          path: '/case-studies',
+          icon: Database,
+          color: 'from-green-500 to-teal-500'
+        },
+        {
+          name: 'Research & Development',
+          path: '/research-development',
+          icon: Brain,
+          color: 'from-purple-500 to-pink-500'
+        },
+        {
+          name: 'News & Updates',
+          path: '/news',
+          icon: Rocket,
+          color: 'from-orange-500 to-red-500'
+        },
+        {
+          name: 'Events',
+          path: '/events',
+          icon: Users,
+          color: 'from-cyan-500 to-blue-500'
+        }
+      ]
+    },
     { 
       name: 'Resources', 
       path: '#', 
@@ -113,6 +155,12 @@ export function AppHeader() {
           path: '/partners',
           icon: Users,
           color: 'from-purple-500 to-pink-500'
+        },
+        {
+          name: 'Sitemap',
+          path: '/sitemap',
+          icon: Database,
+          color: 'from-gray-500 to-slate-500'
         }
       ]
     },

@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
   Mail,
   Phone,
   MapPin,
@@ -14,7 +9,8 @@ import { motion } from 'framer - motion';
   Heart,
   CheckCircle,
   Send,
-  Globe} from 'lucide-react';
+  Globe
+} from 'lucide-react';
 
 export function FooterNewsletter() {
 
@@ -125,28 +121,44 @@ export function Footer() {
     {
       title: 'Services',
       links: [
-        { label: 'AI Solutions', path: '/services/ai' },
+        { label: 'All Services Showcase', path: '/services' },
+        { label: 'AI & Machine Learning', path: '/services/ai' },
         { label: 'Cloud & DevOps', path: '/services/cloud' },
         { label: 'Cybersecurity', path: '/services/cybersecurity' },
-        { label: 'All Services', path: '/services' }
+        { label: 'Solutions', path: '/solutions' },
+        { label: 'AI Quantum Trading', path: '/services/AIQuantumFinancialTrading' }
       ]
     },
     {
       title: 'Company',
       links: [
         { label: 'About Us', path: '/about' },
-        { label: 'Careers', path: '/careers' },
-        { label: 'Partners', path: '/partners' },
-        { label: 'Blog', path: '/blog' }
+        { label: 'Case Studies', path: '/case-studies' },
+        { label: 'Research & Development', path: '/research-development' },
+        { label: 'News & Updates', path: '/news' },
+        { label: 'Events', path: '/events' },
+        { label: 'Careers', path: '/careers' }
       ]
     },
     {
       title: 'Resources',
       links: [
+        { label: 'Blog & Insights', path: '/blog' },
         { label: 'FAQ', path: '/faq' },
+        { label: 'Partners', path: '/partners' },
         { label: 'Sitemap', path: '/sitemap' },
         { label: 'Contact', path: '/contact' },
         { label: 'Pricing', path: '/pricing' }
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { label: 'Privacy Policy', path: '/privacy' },
+        { label: 'Terms of Service', path: '/terms' },
+        { label: 'Infrastructure', path: '/infrastructure' },
+        { label: 'Transformation', path: '/transformation' },
+        { label: 'Consulting', path: '/consulting' }
       ]
     }
   ];
@@ -201,7 +213,7 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Comp Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-8">
@@ -225,7 +237,7 @@ export function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w - 10 h - 10 bg - zinc - 800 / 50 border border - zinc - 700 / 50 rounded - lg flex items - center justify - center text - lg transition - all duration - 300 ${social.color} hover:scale - 110`}
+                  className={`w-10 h-10 bg-zinc-800/50 border border-zinc-700/50 rounded-lg flex items-center justify-center text-lg transition-all duration-300 ${social.color} hover:scale-110`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -17,21 +17,23 @@ export interface InnovativeMicroSaasService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
-
+  contactInfo: {
     phone: string;
     email: string;
-    website: string
-};
+    website: string;
+  };
   technicalSpecs?: {
-
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]};
+    security: string[];
+  };
   competitors?: string[];
-  marketSize?: string};
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+}
 export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence Platform
   {

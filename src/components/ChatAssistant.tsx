@@ -1,17 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-
   MessageCircle,
   X,
   Send,
-=======
-  MessageCircle, 
-  X, 
-  Send, 
->>>>>>> main
   Bot,
   User,
   Sparkles,

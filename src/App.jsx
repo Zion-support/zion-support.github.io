@@ -26,6 +26,9 @@ const CloudServices = lazy(() => import('./pages/services/CloudServices.tsx'));
 const CybersecurityServices = lazy(() => import('./pages/services/CybersecurityServices.tsx'));
 const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading.tsx'));
 
+// Enhanced Services Showcase
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
+
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -116,11 +119,79 @@ function App() {
               } />
 
               {/* Services routes */}
-              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/services/enhanced" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/services/showcase" element={<EnhancedServicesShowcase2025 />} />
               <Route path="/services/ai" element={<AIServices />} />
               <Route path="/services/cloud" element={<CloudServices />} />
               <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
               <Route path="/services/AIQuantumFinancialTrading" element={<AIQuantumFinancialTrading />} />
+              
+              {/* Additional service routes */}
+              <Route path="/solutions" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/research-development" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Research & Development</h1>
+                    <p className="text-gray-300">Our R&D initiatives are showcased in our services portfolio</p>
+                    <a href="/services" className="bg-cyan-500 text-white px-6 py-3 rounded-lg mt-4 inline-block hover:bg-cyan-600 transition-colors">View Our Services</a>
+                  </div>
+                </div>
+              } />
+              <Route path="/case-studies" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
+                    <p className="text-gray-300">Real success stories from our innovative solutions</p>
+                    <a href="/services" className="bg-cyan-500 text-white px-6 py-3 rounded-lg mt-4 inline-block hover:bg-cyan-600 transition-colors">Explore Services</a>
+                  </div>
+                </div>
+              } />
+              <Route path="/news" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Latest News</h1>
+                    <p className="text-gray-300">Stay updated with Zion Tech Group innovations</p>
+                    <a href="/blog" className="bg-cyan-500 text-white px-6 py-3 rounded-lg mt-4 inline-block hover:bg-cyan-600 transition-colors">Read Our Blog</a>
+                  </div>
+                </div>
+              } />
+              <Route path="/events" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Events</h1>
+                    <p className="text-gray-300">Join us at upcoming technology events and webinars</p>
+                    <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg mt-4 inline-block hover:bg-cyan-600 transition-colors">Contact Us</a>
+                  </div>
+                </div>
+              } />
+              <Route path="/infrastructure" element={<CloudServices />} />
+              <Route path="/transformation" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/consulting" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/privacy" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
+                    <p className="text-gray-300">Your privacy is our priority</p>
+                    <div className="max-w-2xl mx-auto mt-8 text-left">
+                      <p className="mb-4">Zion Tech Group is committed to protecting your privacy and ensuring the security of your personal information.</p>
+                      <p className="mb-4">Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400">kleber@ziontechgroup.com</a> for privacy inquiries.</p>
+                    </div>
+                  </div>
+                </div>
+              } />
+              <Route path="/terms" element={
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
+                    <p className="text-gray-300">Terms and conditions for using our services</p>
+                    <div className="max-w-2xl mx-auto mt-8 text-left">
+                      <p className="mb-4">By using Zion Tech Group services, you agree to our terms and conditions.</p>
+                      <p className="mb-4">For questions, contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400">kleber@ziontechgroup.com</a>.</p>
+                    </div>
+                  </div>
+                </div>
+              } />
 
               {/* Catch-all route for 404 */}
               <Route
