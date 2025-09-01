@@ -800,7 +800,7 @@ const HomePage = memo(function HomePage() {
                   <li>• Netlify functions backup</li>
                   <li>• GitHub Actions redundancy</li>
                 </ul>
-                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/services#redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -817,7 +817,7 @@ const HomePage = memo(function HomePage() {
                   <li>• Performance monitoring</li>
                   <li>• Quality assurance</li>
                 </ul>
-                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services#ai-automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -834,7 +834,7 @@ const HomePage = memo(function HomePage() {
                   <li>• Automated reporting</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services#build-systems" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
