@@ -2,8 +2,17 @@ import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { build } from 'esbuild';
 import React from 'react';
-import { renderToString } from 'react-dom/server';
 import { HelmetProvider } from 'react-helmet-async';
+import { renderToString } from 'react-dom/server';
+
+const aliasPlugin = {
+  name: 'alias',
+  setup(build) {
+    build.onResolve({ filter: /^@\/(.+)/ }, (args) => ({
+      path: resolve('src', args.path.replace(/^@\//, '')),
+    }));
+  },
+};
 
 async function prerender() {
   const result = await build({
@@ -12,18 +21,14 @@ async function prerender() {
     platform: 'node',
     format: 'esm',
     write: false,
+    plugins: [aliasPlugin],
   });
 
   const text = result.outputFiles[0].text;
   const mod = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);
   const Home = mod.default;
-  const helmetContext = {};
   const html = renderToString(
-    React.createElement(
-      HelmetProvider,
-      { context: helmetContext },
-      React.createElement(Home)
-    )
+    React.createElement(HelmetProvider, null, React.createElement(Home))
   );
 
   const template = readFileSync(resolve('dist/index.html'), 'utf8');
