@@ -1,31 +1,68 @@
 import React from 'react';
+import { cn } from '../../lib/utils';
 
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
-  className?: string;
-  hover?: boolean;
-  padding?: 'sm' | 'md' | 'lg';
 }
 
-export default function Card({ 
-  children, 
-  className = '', 
-  hover = true,
-  padding = 'md' 
-}: CardProps) {
-  const paddingClasses = {
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8',
-  };
-
-  const baseClasses = 'bg-white rounded-xl border border-gray-200/50 shadow-sm';
-  const hoverClasses = hover ? 'hover:shadow-lg hover:border-gray-300/50 transition-all duration-200' : '';
-  
-  const classes = `${baseClasses} ${paddingClasses[padding]} ${hoverClasses} ${className}`;
-
+export function Card({ className, children, ...props }: CardProps) {
   return (
-    <div className={classes}>
+    <div
+      className={cn(
+        "rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-200",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function CardHeader({ className, children, ...props }: CardProps) {
+  return (
+    <div
+      className={cn("flex flex-col space-y-1.5 p-6", className)}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function CardTitle({ className, children, ...props }: CardProps) {
+  return (
+    <h3
+      className={cn("text-2xl font-semibold leading-none tracking-tight", className)}
+      {...props}
+    >
+      {children}
+    </h3>
+  );
+}
+
+export function CardDescription({ className, children, ...props }: CardProps) {
+  return (
+    <p
+      className={cn("text-sm text-gray-600", className)}
+      {...props}
+    >
+      {children}
+    </p>
+  );
+}
+
+export function CardContent({ className, children, ...props }: CardProps) {
+  return (
+    <div className={cn("p-6 pt-0", className)} {...props}>
+      {children}
+    </div>
+  );
+}
+
+export function CardFooter({ className, children, ...props }: CardProps) {
+  return (
+    <div className={cn("flex items-center p-6 pt-0", className)} {...props}>
       {children}
     </div>
   );
