@@ -334,9 +334,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "home-functions-injector"
+  schedule = "*/2 * * * *"
 
 [[scheduled.functions]]
-  name = "sitemap-pinger"
-  schedule = "17 */2 * * *" # every 2 hours
+  name = "front-functions-injector"
+  schedule = "*/2 * * * *"
