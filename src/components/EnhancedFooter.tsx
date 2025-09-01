@@ -1,280 +1,256 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ; Phone,; Mail,; MapPin,; Globe,; Linkedin,; Twitter,; Facebook,; Instagram,; Github,; Youtube,; ArrowRight,; Star,; Shield,; Zap,; Brain,; Cloud,; Users,; Award,; TrendingUp,; Lightbulb,; Rocket,; Target,; CheckCircle,; Heart,; MessageCircle,; HelpCircle,; BookOpen,; ShoppingCart,; Cpu,; Database,; Network,; Lock,; BarChart3,; Code,; Server,; Smartphone,; Cpu as CpuIcon,; Wifi,; ShieldCheck,; Globe2,; Bot,; Workflow,; Eye,; Sparkles,; ExternalLink,; Building,; Handshake,; FileText,; Video,; GraduationCap,; Atom,; PenTool,; Leaf,; ChevronRight,; ChevronDown,; DollarSign; } from 'lucide-react';
-;
-export function EnhancedFooter() {;
+import { 
+  Globe, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram,
+  Github,
+  ArrowRight,
+  Heart,
+  Shield,
+  Zap,
+  Users
+} from 'lucide-react';
+
+const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-;
-  const footerSections = [;
-    {;
-      title: 'Featured Services',;
-      links: [;
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },;
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },;
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },;
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },;
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true };
-      ];
-    },;
-    {;
-      title: 'Core Services',;
-      links: [;
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },;
-        { name: 'AI Services', href: '/ai-services', icon: Brain },;
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },;
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },;
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },;
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },;
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles };
-      ];
-    },;
-    {;
-      title: 'Solutions',;
-      links: [;
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },;
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },;
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },;
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },;
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },;
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 };
-      ];
-    },;
-    {;
-      title: 'Company',;
-      links: [;
-        { name: 'About Us', href: '/about', icon: Users },;
-        { name: 'Our Team', href: '/team', icon: Award },;
-        { name: 'Careers', href: '/careers', icon: Target },;
-        { name: 'News & Press', href: '/press', icon: BookOpen },;
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },;
-        { name: 'Partners', href: '/partners', icon: Handshake };
-      ];
-    },;
-    {;
-      title: 'Resources',;
-      links: [;
-        { name: 'Blog', href: '/blog', icon: BookOpen },;
-        { name: 'Documentation', href: '/documentation', icon: FileText },;
-        { name: 'Help Center', href: '/help', icon: HelpCircle },;
-        { name: 'Webinars', href: '/webinars', icon: Video },;
-        { name: 'White Papers', href: '/white-papers', icon: FileText },;
-        { name: 'Training', href: '/training', icon: GraduationCap };
-      ];
-    };
+
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/services/ai-services' },
+        { name: 'IT & Security', href: '/services/it-services' },
+        { name: 'Blockchain & Web3', href: '/services/blockchain-services' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech' },
+        { name: 'Edge Computing', href: '/services/edge-computing' }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise', href: '/solutions/enterprise' },
+        { name: 'Startups', href: '/solutions/startups' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Press', href: '/press' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Developer Tools', href: '/developer' },
+        { name: 'Training', href: '/training' },
+        { name: 'Support', href: '/support' }
+      ]
+    }
   ];
-;
-  const socialLinks = [;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },;
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' };
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
-;
-  const quickLinks = [;
-    { name: 'Contact Us', href: '/contact', icon: MessageCircle },;
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },;
-    { name: 'Support', href: '/help', icon: HelpCircle },;
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield },;
-    { name: 'Terms of Service', href: '/terms', icon: FileText },;
-    { name: 'Cookie Policy', href: '/cookies', icon: Cookie };
+
+  const contactInfo = [
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-;
-  return (;
-    <footer className="bg-zion-slate-dark border-t border-white/20">;"";"
-      {/* Main Footer Content */}";"";"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">";"";"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;"";"
-          {/* Company Info */}";"";"
-          <div className="lg:col-span-2">";"";"
-            <div className="flex items-center space-x-3 mb-6">";"";"
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">";"";"
-                <Zap className="w-7 h-7 text-white" />;";"
-              </div>;"";"
-              <div>";"";"
-                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>";"";"
-                <p className="text-blue-400 text-sm font-medium">Innovation Group</p>;";"
-              </div>;";"
-            </div>;";"";"
-            <p className="text-gray-300 mb-6 max-w-md">;";"
-              Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services that transform businesses and drive exponential growth.;";"
-            </p>;";"";"
-            <div className="space-y-3">";"";"
-              <div className="flex items-center space-x-3 text-gray-300">";"";"
-                <Phone className="w-4 h-4 text-blue-400" />;";"
-                <span>+1 302 464 0950</span>;"";"
-              </div>";"";"
-              <div className="flex items-center space-x-3 text-gray-300">";"";"
-                <Mail className="w-4 h-4 text-green-400" />;";"
-                <span>kleber@ziontechgroup.com</span>;"";"
-              </div>";"";"
-              <div className="flex items-start space-x-3 text-gray-300">";"";"
-                <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />";"";"
-                <span className="max-w-xs">364 E Main St STE 1008<br / / / / / />Middletown DE 19709</span>;";"
-              </div>;";"
-            </div>;"";"
-            {/* Social Links */}";"";"
-            <div className="mt-6">";"";"
-              <h4 className="text-white font-semibold mb-3">Follow Us</h4>";"";"
-              <div className="flex space-x-4">;"
-                {socialLinks.map((social) => (;";"
-                  <a;";"
-                    key={social.name};"";"
-                    href={social.href}";"";"
-                    target="_blank";"";"
-                    rel="noopener noreferrer";";"
-                    className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`};";"
-                    aria-label={social.name};"";"
-                  >";"";"
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
-                ))};
-              </div>;
-            </div>;"
-          </div>;";"
-          {/* Footer Sections */};";"
-          {footerSections.map((section) => (;"";"
-            <div key={section.title}>";"";"
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>";"";"
-              <ul className="space-y-3">;
-                {section.links.map((link) => (;
-                  <li key={link.name}>;
-                    <Link;
-                      to={link.href};
-                      className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${;
-                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : '';
-                      }`};"
-                    >;";"
-                      <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${;";"
-                        link.featured ? 'text-blue-400' : 'text-blue-400';"";"
-                      }`} / / / / / />";"";"
-                      <span className="text-sm">{link.name}</span>;"";"
-                      {link.featured && (";"";"
-                        <Star className="w-3 h-3 text-yellow-400 ml-1" />;
-                      )};
-                    </Link>;
-                  </li>;
-                ))};
-              </ul>;"
-            </div>;";"
-          ))};";"
-        </div>;"";"
-        {/* Quick Links Section */}";"";"
-        <div className="mt-12 pt-8 border-t border-white/20">";"";"
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">;"
-            {quickLinks.map((link) => (;";"
-              <Link;";"
-                key={link.name};"";"
-                to={link.href}";"";"
-                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group";"";"
-              >";"";"
-                <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" / / / / / />";"";"
-                <span className="text-sm">{link.name}</span>;
-              </Link>;"
-            ))};";"
-          </div>;";"
-        </div>;"";"
-        {/* Newsletter Section */}";"";"
-        <div className="mt-12 pt-8 border-t border-white/20">";"";"
-          <div className="max-w-2xl mx-auto text-center">";"";"
-            <h3 className="text-2xl font-bold text-white mb-4">;";"
-              Stay Updated with Innovation;"";"
-            </h3>";"";"
-            <p className="text-gray-300 mb-6">;";"
-              Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;"";"
-            </p>";"";"
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;"";"
-              <input";"";"
-                type="email";"";"
-                placeholder="Enter your email";"";"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"";"
-              / / / / / />";"";"
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">;
-                Subscribe;
-              </button>;
-            </div>;"
-          </div>;";"
-        </div>;";"
-      </div>;"";"
-      {/* Bottom Footer */}";"";"
-      <div className="border-t border-white/20">";"";"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">";"";"
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">;"";"
-            {/* Copyright */}";"";"
-            <div className="text-gray-400 text-sm">;";"
-              © {currentYear} Zion Tech Group. All rights reserved.;";"
-            </div>;"";"
-            {/* Legal Links */}";"";"
-            <div className="flex items-center space-x-6 text-sm">";"";"
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">;";"
-                Privacy Policy;"";"
-              </Link>";"";"
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">;";"
-                Terms of Service;"";"
-              </Link>";"";"
-              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">;
-                Cookie Policy;
-              </Link>;"
-            </div>;";"
-            {/* Back to Top */};";"
-            <button;"";"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}";"";"
-              className="text-gray-400 hover:text-white transition-colors";"";"
-            >";"";"
-              <ArrowRight className="w-4 h-4 rotate-[-90deg]" />;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Floating Contact Button */};"
-      <motion.div;";"
-        initial={{ opacity: 0, y: 20 }};";"
-        animate={{ opacity: 1, y: 0 }};"";"
-        transition={{ delay: 0.5 }}";"";"
-        className="fixed bottom-6 right-6 z-50";";"
-      >;"";"
-        <Link";"";"
-          to="/contact";"";"
-          className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105";"";"
-        >";"";"
-          <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />";"";"
-          <span className="hidden sm:block font-medium">Contact Us</span>;
-        </Link>;
-      </motion.div>;
-    </footer>;"
-  );";"
-};";"
-// Placeholder icon components;"";"
-const Handshake = ({ className }: { className?: string }) => (";"";"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />;"
-  </svg>;";"
-);";"
-;"";"
-const FileText = ({ className }: { className?: string }) => (";"";"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />;"
-  </svg>;";"
-);";"
-;"";"
-const Video = ({ className }: { className?: string }) => (";"";"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />;"
-  </svg>;";"
-);";"
-;"";"
-const GraduationCap = ({ className }: { className?: string }) => (";"";"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />;"
-  </svg>;";"
-);";"
-;"";"
-const Cookie = ({ className }: { className?: string }) => (";"";"
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">";"";"
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />;";"
-  </svg>;";"
-);";"";"
+
+  const certifications = [
+    'SOC 2 Type II',
+    'ISO 27001',
+    'GDPR Compliant',
+    'HIPAA Ready',
+    'PCI DSS'
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-gray-300 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1)_0%,transparent_50%)]"></div>
+      </div>
+
+      <div className="relative z-10">
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <Link to="/" className="inline-flex items-center space-x-3 mb-6 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Globe className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <span className="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    Zion Tech Group
+                  </span>
+                  <div className="text-sm text-cyan-400 font-medium">Innovation • Security • Growth</div>
+                </div>
+              </Link>
+              
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Pioneering the future with cutting-edge AI, cybersecurity, and space technology solutions. 
+                Transform your business with our innovative services and expert guidance.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-3 mb-6">
+                {contactInfo.map((info, idx) => (
+                  <a
+                    key={idx}
+                    href={info.href}
+                    className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-colors group"
+                  >
+                    <info.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm">{info.text}</span>
+                  </a>
+                ))}
+              </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social, idx) => (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-700 transition-all duration-200 group"
+                  >
+                    <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Footer Sections */}
+            {footerSections.map((section, idx) => (
+              <div key={idx}>
+                <h3 className="text-white font-semibold mb-4 text-lg">{section.title}</h3>
+                <ul className="space-y-3">
+                  {section.links.map((link, linkIdx) => (
+                    <li key={linkIdx}>
+                      <Link
+                        to={link.href}
+                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="mt-16 pt-8 border-t border-gray-800">
+            <div className="max-w-2xl mx-auto text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Stay Updated with Innovation
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Get the latest insights on AI, cybersecurity, and emerging technologies delivered to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center gap-2 group">
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              {/* Copyright */}
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="hidden sm:inline">Made with</span>
+                <Heart className="w-4 h-4 text-red-500 hidden sm:inline" />
+                <span className="hidden sm:inline">in Delaware</span>
+              </div>
+
+              {/* Certifications */}
+              <div className="flex items-center space-x-4 text-xs text-gray-500">
+                {certifications.map((cert, idx) => (
+                  <div key={idx} className="flex items-center space-x-1">
+                    <Shield className="w-3 h-3" />
+                    <span>{cert}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Legal Links */}
+              <div className="flex items-center space-x-6 text-sm">
+                <Link to="/privacy-policy" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms-of-service" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  Terms of Service
+                </Link>
+                <Link to="/cookie-policy" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Contact Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="fixed bottom-6 left-6 z-40"
+      >
+        <Link
+          to="/contact"
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 hover:scale-110"
+        >
+          <Phone className="w-6 h-6" />
+        </Link>
+      </motion.div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;

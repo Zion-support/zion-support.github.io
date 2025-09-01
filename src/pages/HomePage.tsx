@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ; ArrowRight,; Star,; Users,; Award,; CheckCircle,; Play,; Sparkles,; Phone,; Mail,; ChevronRight,; ChevronUp,; Shield,; Globe,; MapPin,; Zap,; TrendingUp,; Target,; Rocket,; Plus,; Building2; } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ServiceShowcase from '../components/ServiceShowcase';
+import InnovativeServicesShowcase from '../components/InnovativeServicesShowcase';
 import { contactInfo } from '../data/services';
 ;
 // Optimized futuristic animated background component with reduced re-renders;
@@ -99,58 +100,33 @@ const FloatingActionButton: React.FC = React.memo(() => {;
               </motion.div>;
             </motion.button>;
             {/* Expanded Actions */};
-            <AnimatePresence>;"
-              {isExpanded && (";"
-                <div className="absolute bottom-20 right-0 space-y-3">;
+            <AnimatePresence>;
+              {isExpanded && (;
+                <motion.div;
+                  initial={{ opacity: 0, scale: 0.8, y: 10 }};
+                  animate={{ opacity: 1, scale: 1, y: 0 }};"
+                  exit={{ opacity: 0, scale: 0.8, y: 10 }}";"
+                  className="absolute bottom-full right-0 mb-4 space-y-3";
+                >;
                   {/* Phone Action */};
                   <motion.button;
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }};
-                    animate={{ opacity: 1, x: 0, scale: 1 }};
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }};
-                    transition={{ delay: 0.1 }};"
-                    onClick={() => handleContactClick('phone')}";"
-                    className="w-14 h-14 bg-green-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group";
+                    onClick={() => handleContactClick('phone')};
+                    className="w-12 h-12 bg-green-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200";
                     whileHover={{ scale: 1.1 }};
-                    whileTap={{ scale: 0.9 }};"
-                  >";"
-                    <Phone className="w-6 h-6" />";"
-                    <div className="absolute right-16 bg-green-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">;
-                      Call Us;
-                    </div>;
+                    whileTap={{ scale: 0.9 }};
+                  >;
+                    <Phone className="w-6 h-6" />;
                   </motion.button>;
                   {/* Email Action */};
                   <motion.button;
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }};
-                    animate={{ opacity: 1, x: 0, scale: 1 }};
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }};
-                    transition={{ delay: 0.2 }};"
-                    onClick={() => handleContactClick('email')}";"
-                    className="w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group";
+                    onClick={() => handleContactClick('email')};
+                    className="w-12 h-12 bg-blue-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200";
                     whileHover={{ scale: 1.1 }};
-                    whileTap={{ scale: 0.9 }};"
-                  >";"
-                    <Mail className="w-6 h-6" />";"
-                    <div className="absolute right-16 bg-blue-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">;
-                      Email Us;
-                    </div>;
+                    whileTap={{ scale: 0.9 }};
+                  >;
+                    <Mail className="w-6 h-6" />;
                   </motion.button>;
-                  {/* Scroll to Top */};
-                  <motion.button;
-                    initial={{ opacity: 0, x: 20, scale: 0.8 }};
-                    animate={{ opacity: 1, x: 0, scale: 1 }};
-                    exit={{ opacity: 0, x: 20, scale: 0.8 }};
-                    transition={{ delay: 0.3 }};"
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}";"
-                    className="w-14 h-14 bg-purple-500 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all duration-200 group";
-                    whileHover={{ scale: 1.1 }};
-                    whileTap={{ scale: 0.9 }};"
-                  >";"
-                    <ChevronUp className="w-6 h-6" />";"
-                    <div className="absolute right-16 bg-purple-500 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">;
-                      Back to Top;
-                    </div>;
-                  </motion.button>;
-                </div>;
+                </motion.div>;
               )};
             </AnimatePresence>;
           </div>;
@@ -162,40 +138,36 @@ const FloatingActionButton: React.FC = React.memo(() => {;
 ;
 FloatingActionButton.displayName = 'FloatingActionButton';
 ;
-// Enhanced Stats Section with better animations and data;
+// Enhanced Stats Section with better animations;
 const StatsSection: React.FC = React.memo(() => {;
-  const stats = React.useMemo(() => [;
-    { number: '500+', label: 'Projects Delivered', icon: Award, color: 'from-yellow-500 to-orange-500' },;
-    { number: '50+', label: 'Enterprise Clients', icon: Building2, color: 'from-blue-500 to-indigo-500' },;
-    { number: '99.9%', label: 'Uptime SLA', icon: Shield, color: 'from-green-500 to-emerald-500' },;
-    { number: '24/7', label: 'Support Available', icon: Users, color: 'from-purple-500 to-pink-500' };
-  ], []);
-;"
-  return (";"
-    <section className="py-20 bg-slate-800 relative overflow-hidden">;"
-      {/* Background Pattern */}";"
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:100px_100px]"></div>;"
-      ";"
-      <div className="container mx-auto px-4 relative z-10">;"
-        <motion.div";"
+  const stats = [;
+    { number: '500+', label: 'Happy Clients', color: 'from-blue-500 to-cyan-500', icon: Users },;
+    { number: '50+', label: 'Expert Team', color: 'from-purple-500 to-pink-500', icon: Award },;
+    { number: '99.9%', label: 'Uptime', color: 'from-green-500 to-emerald-500', icon: Shield },;
+    { number: '24/7', label: 'Support', color: 'from-orange-500 to-red-500', icon: Globe };
+  ];
+;
+  return (;
+    <section className="py-20 bg-slate-900">;
+      <div className="container mx-auto px-4">;
+        <motion.div;
           className="text-center mb-16";
           initial={{ opacity: 0, y: 20 }};
           whileInView={{ opacity: 1, y: 0 }};
           transition={{ duration: 0.6 }};
           viewport={{ once: true }};"
-        >";"
+        >;"
           <h2 className="text-4xl font-bold text-white mb-6">;
-            Trusted by Industry Leaders;"
-          </h2>";"
+            Trusted by Industry Leaders;
+          </h2>;"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            Our track record speaks for itself with proven results across diverse industries;
-          </p>;
+            Our track record speaks for itself - delivering exceptional results across diverse industries;
+          </p>;"
         </motion.div>;"
-";"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
           {stats.map((stat, index) => (;
-            <motion.div;"
-              key={stat.label}";"
+            <motion.div;
+              key={index}";
               className="text-center group";
               initial={{ opacity: 0, y: 20 }};
               whileInView={{ opacity: 1, y: 0 }};
@@ -205,14 +177,14 @@ const StatsSection: React.FC = React.memo(() => {;
             >;"
               <div className={`w-20 h-20 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>";"
                 <stat.icon className="w-10 h-10 text-white" />;"
-              </div>";"
-              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>";"
+              </div>;"
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;"
               <div className="text-gray-400">{stat.label}</div>;
             </motion.div>;
           ))};
-        </div>;
-      </div>;
-    </section>;
+        </div>;"
+      </div>;"
+    </section>;"
   );
 });
 ;
@@ -276,23 +248,23 @@ const HeroSection: React.FC = React.memo(() => {;"
             animate={{ opacity: 1, y: 0 }};"
             transition={{ duration: 0.8, delay: 0.8 }}";"
             className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400";"
-          >";"
-            <div className="flex items-center gap-2">";"
-              <CheckCircle className="w-5 h-5 text-green-400" />;
+          >;"
+            <div className="flex items-center gap-2">;"
+              <CheckCircle className="w-5 h-5 text-green-400" />;"
               <span>ISO 27001 Certified</span>;"
-            </div>";"
-            <div className="flex items-center gap-2">";"
-              <CheckCircle className="w-5 h-5 text-green-400" />;
+            </div>;"
+            <div className="flex items-center gap-2">;"
+              <CheckCircle className="w-5 h-5 text-green-400" />;"
               <span>SOC2 Type II Compliant</span>;"
-            </div>";"
-            <div className="flex items-center gap-2">";"
-              <CheckCircle className="w-5 h-5 text-green-400" />;
+            </div>;"
+            <div className="flex items-center gap-2">;"
+              <CheckCircle className="w-5 h-5 text-green-400" />;"
               <span>24/7 Support</span>;
             </div>;
           </motion.div>;
         </motion.div>;
-      </div>;
-    </section>;
+      </div>;"
+    </section>;"
   );
 });
 ;
@@ -305,23 +277,23 @@ const FeaturesSection: React.FC = React.memo(() => {;
       icon: Zap,";"
       title: "Lightning Fast",";"
       description: "Optimized performance with cutting-edge technologies";
-    },;
+    },;"
     {;"
       icon: Shield,";"
       title: "Enterprise Security",";"
       description: "Bank-grade security with SOC2 compliance";
-    },;
+    },;"
     {;"
       icon: TrendingUp,";"
       title: "Scalable Solutions",";"
       description: "Grow with confidence using our scalable architecture";
-    },;
+    },;"
     {;"
       icon: Target,";"
       title: "Results Driven",";"
       description: "Focused on delivering measurable business outcomes";
-    };
-  ];
+    };"
+  ];"
 ;"
   return (";"
     <section className="py-20 bg-slate-800">";"
@@ -335,14 +307,13 @@ const FeaturesSection: React.FC = React.memo(() => {;
         >";"
           <h2 className="text-4xl font-bold text-white mb-6">;
             Why Choose Zion Tech Group?;"
-          </h2>";"
+          </h2>;"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             We combine innovation with reliability to deliver exceptional results;
-          </p>;
-        </motion.div>;"
+          </p>;"
 ";"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {features.map((feature, index) => (;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;"
+          {features.map((feature, index) => (;"
             <motion.div;"
               key={index}";"
               className="text-center group";
@@ -354,14 +325,14 @@ const FeaturesSection: React.FC = React.memo(() => {;
             >";"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">";"
                 <feature.icon className="w-8 h-8 text-white" />;"
-              </div>";"
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>";"
+              </div>;"
+              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;"
               <p className="text-gray-400">{feature.description}</p>;
             </motion.div>;
           ))};
-        </div>;
-      </div>;
-    </section>;
+        </div>;"
+      </div>;"
+    </section>;"
   );
 });
 ;
@@ -378,14 +349,24 @@ const HomePage: React.FC = () => {;"
           <div className="container mx-auto px-4 text-center">";"
             <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>";"
             <p className="text-gray-400">Loading services...</p>;
-          </div>;
-        </div>;
-      }>;
+          </div>;"
+        </div>;"
+      }>;"
+        <InnovativeServicesShowcase />;
+      </Suspense>;
+      <Suspense fallback={";"
+        <div className="py-20 bg-slate-900">";"
+          <div className="container mx-auto px-4 text-center">";"
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>";"
+            <p className="text-gray-400">Loading legacy services...</p>;
+          </div>;"
+        </div>;"
+      }>;"
         <ServiceShowcase />;
       </Suspense>;
       <StatsSection />;
       <FloatingActionButton />;
-    </div>;
+    </div>;"
   );
 };
 ;

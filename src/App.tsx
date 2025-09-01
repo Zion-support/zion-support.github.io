@@ -2,10 +2,12 @@ import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 
+// Import enhanced components
+import EnhancedHeader from './components/navigation/EnhancedHeader';
+import EnhancedFooter from './components/EnhancedFooter';
+
 // Temporary placeholder components to get build working
 const LoadingSpinner = () => <div>Loading...</div>;
-const Header = () => <header className="bg-gray-900 text-white p-4">Zion Tech Group</header>;
-const Footer = () => <footer className="bg-gray-900 text-white p-4">© 2025 Zion Tech Group</footer>;
 const Sidebar = ({ isOpen, onToggle }: { isOpen: boolean; onToggle: () => void }) => (
   <div className={`fixed left-0 top-16 h-full w-64 bg-gray-800 transform transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
     <button onClick={onToggle} className="p-4 text-white">Toggle Sidebar</button>
@@ -63,7 +65,7 @@ function App() {
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
-        <Header />
+        <EnhancedHeader />
         <div className="flex pt-16">
           <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
           <main className="flex-1 ml-64 min-h-screen">
@@ -110,7 +112,7 @@ function App() {
             </Suspense>
           </main>
         </div>
-        <Footer />
+        <EnhancedFooter />
       </div>
     </ErrorBoundary>
   );
