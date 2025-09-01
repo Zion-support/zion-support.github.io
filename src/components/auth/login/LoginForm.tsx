@@ -5,13 +5,21 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { LogIn, User, Eye, EyeOff  } from 'lucide-react';
 
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from '@/components/ui/form';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Link  } from 'react-router-dom';
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { auth } from "@/services/authService";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Link, useNavigate } from "react-router-dom";
 
 );
 
@@ -30,15 +38,16 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = async(data: LoginFormValues) => {
-    if(isSubmitting) return;
+  const handleLogin = async (data: LoginFormValues) => {
+    if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
-      const result = await login(data.email, data.password);
-      if(result.error) {
-        form.setError("root", { message: result.error }); // Keep this for form-level error display
-        toast.error(result.error); // Add this line to show a toast notification
+      const res = await auth.login(data.email, data.password);
+      if (res.status === 200) {
+        navigate('/dashboard');
+      } else if (res.status >= 400 && res.status < 500) {
+        toast.error(res.data?.error || 'Invalid credentials');
       }
     } finally {
       setIsSubmitting(false);
@@ -52,12 +61,7 @@ export function LoginForm() {
         </Alert>
       )}
       <form
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if(firstError) {
-            form.setFocus(firstError);
-          }
-        })}
+        onSubmit={form.handleSubmit(handleLogin)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
