@@ -1,86 +1,57 @@
-import useSWR from 'swr';
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../../data/talent';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+type Talent = { id: number; name: string; title: string };
 
-export default function TalentDashboard() {
-  const [selectedTalentSlug, setSelectedTalentSlug] = useState<string>(TALENT_PROFILES[0]?.slug || '');
-  const talent = useMemo(() => TALENT_PROFILES.find((t) => t.slug === selectedTalentSlug), [selectedTalentSlug]);
+export default function BrowseTalentPage() {
+  const [talent, setTalent] = useState<Talent[]>([]);
+  const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasMore, setHasMore] = useState(true);
 
-  const { data } = useSWR('/api/jobs', fetcher);
-  const jobs = (data?.jobs as any[]) || [];
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      const newItems: Talent[] = Array.from({ length: 8 }).map((_, i) => {
+        const id = (page - 1) * 8 + i + 1;
+        return { id, name: `Talent #${id}`, title: ['Full-Stack Engineer', 'Designer', 'Data Scientist'][id % 3] };
+      });
+      setTalent((prev) => [...prev, ...newItems]);
+      setHasMore(page < 5);
+      setIsLoading(false);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [page]);
 
-  const suggestions = useMemo(() => {
-    if (!talent) return [] as any[];
-    const skillSet = new Set(talent.skills.map((s) => s.toLowerCase()));
-    return jobs
-      .map((job) => {
-        const overlap = (job.requiredSkills || []).filter((s: string) => skillSet.has(String(s).toLowerCase()));
-        const score = overlap.length;
-        return { job, score, overlap };
-      })
-      .filter((x) => x.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 10);
-  }, [jobs, talent]);
-
-  async function act(jobId: string, action: 'apply' | 'skip') {
-    await fetch('/api/applications', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ jobId, talentSlug: selectedTalentSlug, action }),
-    });
-  }
+  const grid = useMemo(() => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {talent.map((t) => (
+        <div key={t.id} className="border rounded-lg p-4 bg-white/50 dark:bg-black/30">
+          <div className="font-medium">{t.name}</div>
+          <div className="text-sm opacity-80">{t.title}</div>
+          <button className="mt-3 px-3 py-1.5 rounded-md bg-blue-600 text-white">View Profile</button>
+        </div>
+      ))}
+    </div>
+  ), [talent]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Talent Dashboard</h1>
-        <Link href="/messages"><a className="text-sm underline">Go to Messages</a></Link>
+        <h1 className="text-xl font-semibold">Browse Talent</h1>
       </div>
 
-      <div className="flex items-center gap-3">
-        <label className="text-sm">Viewing as</label>
-        <select
-          className="border rounded p-2 text-sm"
-          value={selectedTalentSlug}
-          onChange={(e) => setSelectedTalentSlug(e.target.value)}
-        >
-          {TALENT_PROFILES.map((t) => (
-            <option key={t.slug} value={t.slug}>{t.name} — {t.title}</option>
-          ))}
-        </select>
-      </div>
+      {grid}
 
-      <section>
-        <h2 className="text-lg font-medium mb-2">AI‑Match Suggestions</h2>
-        <div className="grid gap-3">
-          {suggestions.length === 0 && <p className="text-sm text-gray-600">No suggestions yet. Check back later.</p>}
-          {suggestions.map(({ job, score, overlap }) => (
-            <div key={job.id} className="border rounded p-4 bg-white dark:bg-gray-900">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-medium">{job.title}</h3>
-                  <p className="text-xs text-gray-500">Category: {job.category} • Match score: {score}</p>
-                  {overlap.length > 0 && (
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {overlap.map((s: string) => (
-                        <span key={s} className="px-2 py-0.5 text-xs rounded bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">{s}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <div className="flex gap-2">
-                  <button className="px-2 py-1 text-sm border rounded" onClick={() => act(job.id, 'apply')}>Apply Now</button>
-                  <button className="px-2 py-1 text-sm border rounded" onClick={() => act(job.id, 'skip')}>Skip</button>
-                </div>
-              </div>
-            </div>
-          ))}
+      {isLoading && <EnhancedLoading rows={3} />}
+
+      {!isLoading && hasMore && (
+        <div className="flex justify-center">
+          <button onClick={() => setPage((p) => p + 1)} className="px-4 py-2 rounded-md border">
+            Load more
+          </button>
         </div>
-      </section>
+      )}
     </div>
   );
 }

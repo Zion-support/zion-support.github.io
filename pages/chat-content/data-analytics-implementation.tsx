@@ -1,3 +1,8 @@
-export default function DataAnalyticsImplementation() {
-  return <div className="text-sm">Data analytics implementation</div>;
+export default function DataAnalyticsImplementationPage() {
+  return (
+    <div>
+      <h1 className="text-xl font-semibold mb-2">Data Analytics Implementation</h1>
+      <p className="opacity-80">Article content coming soon.</p>
+    </div>
+  );
 }

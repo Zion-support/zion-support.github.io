@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRole } from '../context/RoleContext';
 
-const EnhancedNavigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export default function EnhancedNavigation() {
+  const { role } = useRole();
 
   return (
     <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
@@ -10,15 +11,10 @@ const EnhancedNavigation: React.FC = () => {
         <Link href="/">
           <a className="font-semibold">Zion</a>
         </Link>
-        <div className="hidden md:flex items-center gap-4 text-sm">
-          <Link href="/about"><a>About</a></Link>
-          <Link href="/blog"><a>Blog</a></Link>
-          <Link href="/dashboard/talent"><a>Talent</a></Link>
-          <Link href="/dashboard/client"><a>Client</a></Link>
-          <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/post-job"><a className="font-medium">Post a Job</a></Link>
-          <Link href="/messages"><a>Messages</a></Link>
-          <Link href="/talent"><a>Talent</a></Link>
+        <div className="flex items-center gap-3 text-sm">
+          <Link href="/jobs/post"><a className="px-3 py-1.5 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition">Post a Job</a></Link>
+          <Link href="/talent"><a className="px-3 py-1.5 rounded-md bg-gray-900 text-white dark:bg-white dark:text-black hover:opacity-90 transition">Browse Talent</a></Link>
+          <Link href="/dashboard"><a className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">{role === 'client' ? 'Client Dashboard' : 'Talent Dashboard'}</a></Link>
         </div>
         <div className="md:hidden text-sm opacity-80">Menu</div>
       </div>

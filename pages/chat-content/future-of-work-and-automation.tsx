@@ -1,3 +1,8 @@
-export default function FutureOfWorkAndAutomation() {
-  return <div className="text-sm">Future of work and automation</div>;
+export default function FutureOfWorkAndAutomationPage() {
+  return (
+    <div>
+      <h1 className="text-xl font-semibold mb-2">Future of Work and Automation</h1>
+      <p className="opacity-80">Article content coming soon.</p>
+    </div>
+  );
 }

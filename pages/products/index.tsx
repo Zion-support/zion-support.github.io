@@ -1,7 +1,8 @@
-export default function Products() {
+export default function ProductsIndexPage() {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Products</h1>
+      <h1 className="text-xl font-semibold mb-2">Products</h1>
+      <p className="opacity-80">Our product catalog is coming soon.</p>
     </div>
   );
 }
