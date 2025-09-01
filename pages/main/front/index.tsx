@@ -412,11 +412,7 @@ export default function FrontLanding() {
               { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
               { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
-              { label: 'Repo Knowledge Graph', desc: 'Builds knowledge graph for smart linking.', href: '/.netlify/functions/knowledge-graph' },
-              { label: 'Broken Image Defender', desc: 'Scans and optimizes media automatically.', href: '/.netlify/functions/broken-image-defender' },
-              { label: 'Newsroom Publisher', desc: 'Publishes curated updates on a schedule.', href: '/.netlify/functions/newsroom-publisher' },
-              { label: 'OG Image Maker', desc: 'Regenerates Open Graph images for content.', href: '/.netlify/functions/og-image-maker' },
-              { label: 'Ultra‑fast Git Sync', desc: 'Keeps the repo in sync every minute.', href: '/.netlify/functions/ultrafast-git-sync' },
+              { label: 'Docs Freshness Runner', desc: 'Analyzes docs freshness and commits a report.', href: '/.netlify/functions/docs-freshness-runner' },
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
