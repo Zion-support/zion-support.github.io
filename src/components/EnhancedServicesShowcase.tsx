@@ -358,7 +358,14 @@ export default function EnhancedServicesShowcase() {
           <div role="button" className="mt - 6 text - zion - slate - light">
             Questions? Email < a href="mailto:kleber@ziontechgroup.com" className="text - zion - cyan hover:underline">kleber@ziontechgroup.com</a>
           </div>
-        </motion.div>
+        )}
+
+        {/* Results Count */}
+        {filteredServices.length > 0 && (
+          <div className="text-center mt-8 text-slate-400">
+            Showing {filteredServices.length} of {allServices.length} services
+          </div>
+        )}
       </div>
     </section>
   );
