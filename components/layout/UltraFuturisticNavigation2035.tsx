@@ -111,7 +111,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', description: 'Personalized content delivery' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },
-      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
+      { name: 'Advanced AI Automation', href: '/services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
   },
   {
@@ -183,32 +183,15 @@ const navigationItems: NavigationItem[] = [
     description: 'Industry-specific technology solutions',
     badge: 'Industry',
     children: [
-      { name: 'Healthcare & Biotech', href: '/biotech-ai', description: 'AI-powered healthcare' },
-      { name: 'Financial Technology', href: '/billing-analytics', description: 'Next-gen fintech analytics' },
-      { name: 'Manufacturing AI', href: '/autonomous-manufacturing', description: 'Smart manufacturing' },
+      { name: 'Healthcare Solutions', href: '/healthcare-solutions', description: 'AI-powered healthcare' },
+      { name: 'Financial Technology', href: '/financial-solutions', description: 'Next-gen fintech' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Smart manufacturing' },
       { name: 'Retail Technology', href: '/retail-technology-solutions', description: 'Digital retail transformation' },
-      { name: 'Education Technology', href: '/training', description: 'AI-powered learning' },
-      { name: 'Government Solutions', href: '/enterprise-solutions-showcase', description: 'Public sector innovation' },
-      { name: 'Energy & Utilities', href: '/quantum-energy', description: 'Sustainable energy tech' },
-      { name: 'Transportation & Logistics', href: '/quantum-logistics', description: 'Route optimization' },
-      { name: 'Space Technology', href: '/space-technology', description: 'Advanced space tech' }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: <Users className="w-5 h-5" />,
-    description: 'About the company and updates',
-    children: [
-      { name: 'About Us', href: '/about', description: 'Mission and vision' },
-      { name: 'Team', href: '/team', description: 'Leadership and team' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'Press', href: '/press', description: 'News and announcements' },
-      { name: 'Events', href: '/events', description: 'Conferences and talks' },
-      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand' },
-      { name: 'Partners', href: '/partners', description: 'Strategic partners' },
-      { name: 'Investors', href: '/investors', description: 'Investor relations' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch' }
+      { name: 'Education Technology', href: '/education-technology-solutions', description: 'AI-powered learning' },
+      { name: 'Government Solutions', href: '/government-technology-solutions', description: 'Public sector innovation' },
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions', description: 'Sustainable energy tech' },
+      { name: 'Biotech AI Research', href: '/biotech-ai-research-platform', description: 'AI-driven biotech' },
+      { name: 'Space Technology', href: '/space-technology', description: 'Space tech' }
     ]
   },
   {

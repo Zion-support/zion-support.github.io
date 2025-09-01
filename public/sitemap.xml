@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.965Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/2026-services-showcase-enhanced/</loc>
-    <lastmod>2025-08-22T20:01:43.301Z</lastmod>
+    <lastmod>2025-08-16T07:14:40.053Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -465,7 +465,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-consciousness-evolution-2029/</loc>
-    <lastmod>2025-08-22T20:01:40.489Z</lastmod>
+    <lastmod>2025-08-16T07:14:40.053Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1901,7 +1901,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/api-performance-testing/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.965Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2341,7 +2341,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/browser-automation-cloud/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.965Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2480,7 +2480,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.965Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3252,12 +3252,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/legal/</loc>
-    <lastmod>2025-08-22T20:03:35.934Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ziontechgroup.com/llm-gateway-proxy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3546,7 +3540,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/pricing-2033/</loc>
-    <lastmod>2025-08-22T20:01:41.181Z</lastmod>
+    <lastmod>2025-08-16T07:14:40.065Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4554,7 +4548,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/secrets-rotation-automation/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.965Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4605,7 +4599,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/services-advertising/</loc>
-    <lastmod>2025-08-16T07:14:43.669Z</lastmod>
+    <lastmod>2025-08-16T07:14:43.969Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4665,24 +4659,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/social/facebook/</loc>
-    <lastmod>2025-08-22T20:01:53.149Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/social/github/</loc>
-    <lastmod>2025-08-22T20:02:19.265Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/social/instagram/</loc>
-    <lastmod>2025-08-22T20:02:02.525Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ziontechgroup.com/social/linkedin/</loc>
     <lastmod>2025-08-16T07:14:40.069Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -4691,12 +4667,6 @@
   <url>
     <loc>https://ziontechgroup.com/social/twitter/</loc>
     <lastmod>2025-08-16T07:14:40.069Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/social/youtube/</loc>
-    <lastmod>2025-08-22T20:02:10.589Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4913,12 +4883,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/team/</loc>
-    <lastmod>2025-08-22T20:03:26.222Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ziontechgroup.com/terms/</loc>
     <lastmod>2025-08-16T07:14:40.069Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -5019,12 +4983,6 @@
   <url>
     <loc>https://ziontechgroup.com/webhook-relay-replay/</loc>
     <lastmod>2025-08-16T07:14:40.069Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/webinars/</loc>
-    <lastmod>2025-08-22T20:03:40.798Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
