@@ -1,145 +1,152 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
 export default function AboutPage() {
   return (
     <>
       <Head>
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
+        <meta name="description" content="Learn about Zion Tech Group's mission to advance autonomous AI technologies and create the future of intelligent automation." />
         <meta property="og:title" content="About Zion Tech Group | Autonomous Innovation Hub" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
+        <meta property="og:description" content="Learn about Zion Tech Group's mission to advance autonomous AI technologies and create the future of intelligent automation." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="mb-8">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Home
-            </Link>
-          </div>
-          
           <div className="max-w-6xl mx-auto">
             <header className="text-center mb-16">
+              <nav className="mb-6 text-left">
+                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  ← Back to Home
+                </a>
+              </nav>
               <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
                 About Zion Tech Group
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Pioneering the future of autonomous technology and intelligent automation systems.
+                Pioneering the future of autonomous AI and intelligent automation systems
               </p>
             </header>
 
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-300">Our Mission</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white/10 rounded-lg p-8 border border-white/20">
-                  <h3 className="text-xl font-semibold mb-4 text-green-400">Autonomous Innovation</h3>
-                  <p className="text-white/80 leading-relaxed">
-                    We're building the world's first truly autonomous technology ecosystem where AI agents 
-                    work independently to create, optimize, and maintain digital solutions without human intervention.
-                  </p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-8 border border-white/20">
-                  <h3 className="text-xl font-semibold mb-4 text-blue-400">Intelligent Automation</h3>
-                  <p className="text-white/80 leading-relaxed">
-                    Our systems learn, adapt, and evolve continuously, delivering unprecedented efficiency 
-                    and innovation across all aspects of digital technology.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-300">Core Technologies</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-lg p-6 border border-green-500/30">
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">AI Agent Factory</h3>
-                  <p className="text-white/80 text-sm">
-                    Self-replicating AI agents that autonomously create and manage digital content, 
-                    optimize performance, and drive continuous improvement.
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-lg p-6 border border-blue-500/30">
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Autonomous Orchestration</h3>
-                  <p className="text-white/80 text-sm">
-                    Intelligent systems that coordinate complex workflows, manage resources, and 
-                    ensure optimal performance across all operations.
-                  </p>
-                </div>
-                <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-lg p-6 border border-purple-500/30">
-                  <h3 className="text-lg font-semibold mb-3 text-purple-400">Self-Healing Infrastructure</h3>
-                  <p className="text-white/80 text-sm">
-                    Advanced monitoring and recovery systems that automatically detect, diagnose, 
-                    and resolve issues before they impact users.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-300">Our Achievements</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
-                  <div className="text-white/70">Active Automations</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                  <div className="text-white/70">Uptime Guarantee</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">2.1s</div>
-                  <div className="text-white/70">Average Load Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">A+</div>
-                  <div className="text-white/70">Performance Score</div>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-300">The Future Vision</h2>
-              <div className="bg-gradient-to-r from-indigo-900/20 to-purple-900/20 rounded-lg p-8 border border-indigo-500/30">
-                <p className="text-lg text-white/90 leading-relaxed mb-6">
-                  We envision a world where technology works autonomously, continuously improving itself 
-                  while humans focus on creativity, innovation, and strategic thinking. Our autonomous 
-                  systems are the foundation of this future.
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-white">Our Mission</h2>
+                <p className="text-lg text-white/80 mb-6">
+                  Zion Tech Group is dedicated to advancing the frontiers of artificial intelligence 
+                  and autonomous systems. We believe in creating technology that works for humanity, 
+                  not against it.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-lg font-semibold mb-3 text-cyan-300">Short Term (2025-2026)</h4>
-                    <ul className="text-white/80 space-y-2">
-                      <li>• Expand AI agent capabilities</li>
-                      <li>• Launch autonomous content platforms</li>
-                      <li>• Deploy self-optimizing infrastructure</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-3 text-purple-300">Long Term (2027+)</h4>
-                    <ul className="text-white/80 space-y-2">
-                      <li>• Fully autonomous digital ecosystems</li>
-                      <li>• AI-driven innovation networks</li>
-                      <li>• Self-evolving technology platforms</li>
-                    </ul>
-                  </div>
+                <p className="text-lg text-white/80">
+                  Our autonomous AI systems are designed to learn, adapt, and evolve, creating 
+                  a future where technology enhances human potential rather than replacing it.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-white/10 to-white/5 p-8 rounded-2xl border border-white/10">
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Core Values</h3>
+                <ul className="space-y-3 text-white/80">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                    Innovation through autonomous learning
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                    Ethical AI development
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                    Human-AI collaboration
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                    Global accessibility
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Technology Stack</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Autonomous AI</h3>
+                  <p className="text-white/80">
+                    Self-learning systems that continuously improve and adapt to new challenges
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Cloud-Native</h3>
+                  <p className="text-white/80">
+                    Scalable, resilient infrastructure built for the modern digital economy
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Blockchain Integration</h3>
+                  <p className="text-white/80">
+                    Decentralized systems for trust, transparency, and autonomous governance
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Edge Computing</h3>
+                  <p className="text-white/80">
+                    Distributed intelligence for real-time processing and decision-making
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Quantum-Ready</h3>
+                  <p className="text-white/80">
+                    Future-proof architecture designed for quantum computing integration
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Federated Learning</h3>
+                  <p className="text-white/80">
+                    Collaborative AI training while preserving privacy and data sovereignty
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">227+</div>
+                  <div className="text-white/80">Automations</div>
+                </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">2,960+</div>
+                  <div className="text-white/80">Pages Generated</div>
+                </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">12</div>
+                  <div className="text-white/80">Components</div>
+                </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-white/80">Autonomous Operation</div>
                 </div>
               </div>
             </section>
 
             <section className="text-center">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Join the Revolution</h2>
-              <p className="text-lg text-white/80 mb-8">
-                Be part of the future where technology works autonomously and innovation never stops.
+              <h2 className="text-3xl font-bold mb-6 text-white">Join the Future</h2>
+              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Be part of the revolution in autonomous AI technology. Whether you're a developer, 
+                researcher, or business leader, there's a place for you in the Zion ecosystem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200">
-                  Explore Our Platform
-                </Link>
-                <Link href="/contact" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200">
+                <a 
+                  href="/contact" 
+                  className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all"
+                >
                   Get in Touch
-                </Link>
+                </a>
+                <a 
+                  href="/automation" 
+                  className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all"
+                >
+                  Explore Our Systems
+                </a>
               </div>
             </section>
           </div>
