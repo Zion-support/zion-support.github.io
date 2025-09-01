@@ -102,7 +102,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   MicOff,
   Volume2,
   VolumeX,
-  Handshake,
+  HeartHandshake,
   Play,
   Pause,
   Stop,
