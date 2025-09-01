@@ -1,10 +1,12 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
+import Header from './components/header/Header';
+import Footer from './components/layout/Footer';
 import LoadingSpinner from './components/ui/loading-spinner';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
@@ -21,10 +23,10 @@ const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ d
 
 // Loading component
 const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+  <div className="flex items-center justify-center min-h-screen bg-slate-900">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+      <p className="text-zion-slate-light">Loading...</p>
     </div>
   </div>
 );
@@ -33,6 +35,7 @@ function App() {
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
+        <Header />
         <div className="min-h-screen">
           <Suspense fallback={<PageLoader />}>
             <Routes>
@@ -50,7 +53,7 @@ function App() {
               <Route path="/blog/*" element={<BlogPage />} />
               <Route path="/careers" element={<AboutPage />} />
               <Route path="/partners" element={<AboutPage />} />
-              <Route path="/press" element={<AboutPage />} />
+              <Route path="/press" element={<BlogPage />} />
               <Route path="/case-studies" element={<BlogPage />} />
               <Route path="/research-development" element={<BlogPage />} />
               <Route path="/docs" element={<BlogPage />} />
@@ -66,6 +69,7 @@ function App() {
             </Routes>
           </Suspense>
         </div>
+        <Footer />
       </div>
     </ErrorBoundary>
   );

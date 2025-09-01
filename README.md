@@ -1,295 +1,208 @@
-# Zion Tech Group - Advanced Technology Solutions Platform
+# Zion Tech Group Website
 
-## 🚀 Overview
-
-Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
-
-## ✨ Key Features
-
-### 🎯 Core Functionality
-
-- **AI-Powered Services**: Machine learning, automation, and intelligent solutions
-- **Cybersecurity Suite**: Advanced threat detection and compliance tools
-- **Cloud & DevOps**: Scalable infrastructure and deployment solutions
-- **Digital Transformation**: Business process optimization and modernization
-
-### 🔧 Technical Enhancements
-
-- **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
-- **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
-- **Mobile Experience**: Mobile-first navigation with intuitive swipe gestures
-- **Performance Monitoring**: Real-time Core Web Vitals tracking and optimization
-
-### 🎨 User Experience
-
-- **Modern UI/UX**: Futuristic design with smooth animations
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Progressive Web App**: Offline capabilities and app-like experience
-- **Multi-language Support**: Internationalization with language detection
-
-## 🛠️ Technology Stack
-
-### Frontend
-
-- **React 18** with TypeScript
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
-- **React Router** for navigation
-- **Redux Toolkit** for state management
-- **React Query** for data fetching
-
-### Backend & Services
-
-- **Node.js** with Express
-- **Supabase** for database and authentication
-- **Stripe** for payment processing
-- **Vercel/Netlify** for deployment
-
-### Development Tools
-
-- **ESLint** and **Prettier** for code quality
-- **Husky** for git hooks
-- **Jest** and **Vitest** for testing
-- **Storybook** for component development
-
-A modern, accessible, and performant AI marketplace platform built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for Zion Tech Group, showcasing technology services and solutions with a focus on AI, cloud computing, cybersecurity, and digital transformation.
 
 ## 🚀 Features
 
+### Modern Design
+- **Dark Theme**: Professional dark theme with gradient accents
+- **Responsive Layout**: Mobile-first design that works on all devices
+- **Smooth Animations**: Framer Motion animations for enhanced user experience
+- **Modern UI Components**: Built with Tailwind CSS and modern design principles
+
+### Core Pages
+- **Homepage**: Hero section, services showcase, features, testimonials, and CTA
+- **Services**: Comprehensive service offerings with detailed descriptions
+- **About**: Company information, team, values, and company history
+- **Contact**: Contact form with company information and service selection
+- **Header & Footer**: Professional navigation with dropdown menus and comprehensive footer
+
+### Technology Stack
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite for fast development and building
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion for smooth interactions
+- **Icons**: Lucide React for consistent iconography
+- **Routing**: React Router for client-side navigation
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
 ### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd zion-tech-group
 
-1. **Clone the repository**
+# Install dependencies
+npm install
 
-   ```bash
-   git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
-   ```
+# Start development server
+npm run dev
 
-2. **Install dependencies**
+# Build for production
+npm run build
 
-   ```bash
-   npm install
-   ```
+# Preview production build
+npm run start
+```
 
-3. **Set up environment variables**
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+- `npm run test` - Run tests
 
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
+## 🎨 Design System
 
-4. **Start development server**
+### Color Palette
+- **Primary**: Zion Cyan (#0d9488)
+- **Secondary**: Zion Blue (#2e73ea)
+- **Accent**: Zion Purple (#a855f7)
+- **Background**: Dark slate gradients
+- **Text**: White and light slate variants
 
-   ```bash
-   npm run dev
-   ```
+### Typography
+- **Headings**: Bold, large fonts for hierarchy
+- **Body**: Readable text with proper contrast
+- **Interactive**: Hover effects and smooth transitions
 
-5. **Open your browser**
-   Navigate to `http://localhost:5173`
+### Components
+- **Cards**: Service cards with hover effects
+- **Buttons**: Gradient buttons with hover animations
+- **Forms**: Styled form inputs with focus states
+- **Navigation**: Sticky header with dropdown menus
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- **Mobile**: 320px and up
+- **Tablet**: 768px and up
+- **Desktop**: 1024px and up
+- **Large Desktop**: 1280px and up
+
+## 🚀 Performance Features
+
+- **Lazy Loading**: Components and pages load on demand
+- **Code Splitting**: Automatic code splitting for optimal bundle sizes
+- **Optimized Builds**: Vite for fast development and optimized production builds
+- **Image Optimization**: Optimized images and icons
+- **CSS Optimization**: Purged CSS with Tailwind
+
+## 🔧 Customization
+
+### Adding New Services
+Edit `src/pages/ServicesPage.tsx` to add new service offerings:
+
+```typescript
+const services = [
+  {
+    icon: NewIcon,
+    title: 'New Service',
+    description: 'Service description',
+    features: ['Feature 1', 'Feature 2'],
+    color: 'from-color1 to-color2',
+    price: 'Starting at $X'
+  }
+];
+```
+
+### Modifying Colors
+Update the color scheme in `tailwind.config.ts`:
+
+```typescript
+colors: {
+  'zion-cyan': '#0d9488',
+  'zion-blue': '#2e73ea',
+  'zion-purple': '#a855f7',
+  // Add more colors as needed
+}
+```
+
+### Adding New Pages
+1. Create a new page component in `src/pages/`
+2. Add the route in `src/App.tsx`
+3. Update navigation in `src/components/header/Header.tsx`
 
 ## 📁 Project Structure
 
 ```
-zion.app/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── ui/             # Base UI components
-│   │   ├── layout/         # Layout components
-│   │   └── [feature]/      # Feature-specific components
-│   ├── pages/              # Page components
-│   ├── services/           # API and external services
-│   ├── store/              # Redux store and slices
-│   ├── utils/              # Utility functions
-│   ├── types/              # TypeScript type definitions
-│   └── styles/             # Global styles and CSS
-├── public/                 # Static assets
-├── tests/                  # Test files
-└── docs/                   # Documentation
+src/
+├── components/          # Reusable UI components
+│   ├── header/         # Header and navigation
+│   ├── layout/         # Layout components
+│   └── ui/            # Basic UI components
+├── pages/              # Page components
+│   ├── HomePage.tsx    # Homepage
+│   ├── ServicesPage.tsx # Services page
+│   ├── AboutPage.tsx   # About page
+│   └── ContactPage.tsx # Contact page
+├── App.tsx             # Main app component
+├── main.tsx            # App entry point
+└── index.css           # Global styles
 ```
 
 ## 🧪 Testing
 
-### Run all tests
+The project includes testing setup with Jest and React Testing Library:
 
 ```bash
-npm run test:all
-```
+# Run tests
+npm run test
 
-### Run specific test suites
+# Run tests in watch mode
+npm run test:watch
 
-```bash
-npm run test:unit          # Unit tests
-npm run test:integration   # Integration tests
-npm run test:e2e          # End-to-end tests
-```
-
-### Test coverage
-
-```bash
+# Run tests with coverage
 npm run test:coverage
-```
-
-## 🏗️ Building
-
-### Development build
-
-```bash
-npm run build:dev
-```
-
-### Production build
-
-```bash
-npm run build
-```
-
-### Preview production build
-
-```bash
-npm run preview
 ```
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables
-3. Deploy automatically on push to main
-
 ### Netlify
+The project is configured for Netlify deployment with:
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Environment variables for production
 
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
+### Other Platforms
+The project can be deployed to any static hosting platform:
+- Vercel
+- GitHub Pages
+- AWS S3
+- Firebase Hosting
 
-### Manual Deployment
+## 📈 Analytics & SEO
 
-```bash
-npm run build
-# Upload dist/ folder to your hosting provider
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file with the following variables:
-
-```env
-# API Configuration
-VITE_API_URL=your_api_url
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_key
-
-# Payment Processing
-VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
-
-# Analytics
-VITE_GA_TRACKING_ID=your_ga_id
-
-# Feature Flags
-VITE_ENABLE_ANALYTICS=true
-VITE_ENABLE_PWA=true
-```
-
-### Tailwind Configuration
-
-The project uses Tailwind CSS with custom configuration. Edit `tailwind.config.js` to customize:
-
-- Colors and theme
-- Content paths
-- Plugins and extensions
-
-## 📊 Performance Monitoring
-
-The application includes built-in performance monitoring:
-
-- **Core Web Vitals** tracking
-- **Real-time metrics** collection
-- **Performance scoring** and alerts
-- **User experience** analytics
-
-## ♿ Accessibility Features
-
-### Built-in Accessibility
-
-- **WCAG 2.1 AA** compliance
-- **Screen reader** support
-- **Keyboard navigation** optimization
-- **High contrast** mode
-- **Reduced motion** support
-
-### User Controls
-
-- **Font size** adjustment
-- **Color scheme** preferences
-- **Focus indicators** customization
-- **Zoom level** controls
-
-## 🔒 Security
-
-### Security Features
-
-- **HTTPS** enforcement
-- **Content Security Policy** (CSP)
-- **XSS protection**
-- **CSRF protection**
-- **Input validation** and sanitization
-
-### Best Practices
-
-- Regular security audits
-- Dependency vulnerability scanning
-- Secure coding guidelines
-- Privacy compliance (GDPR, CCPA)
+- **Meta Tags**: Proper meta tags for SEO
+- **Structured Data**: JSON-LD structured data
+- **Performance Monitoring**: Lighthouse CI integration
+- **Accessibility**: WCAG 2.1 AA compliance
 
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+## 📄 License
 
-### Development Guidelines
+This project is proprietary to Zion Tech Group.
 
-- Follow the existing code style
-- Write tests for new features
-- Update documentation as needed
-- Ensure accessibility compliance
-- Test across different browsers
+## 📞 Support
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-### Getting Help
-
-- **Documentation**: Check the `/docs` folder
-- **Issues**: Create an issue on GitHub
-- **Discussions**: Use GitHub Discussions
-- **Email**: support@ziontechgroup.com
-
-### Community
-
-- **Discord**: Join our community server
-- **Twitter**: Follow us for updates
-- **LinkedIn**: Connect with our team
-
-## 🏆 Acknowledgments
-
-- **React Team** for the amazing framework
-- **Vite Team** for the fast build tool
-- **Tailwind CSS** for the utility-first CSS framework
-- **All contributors** who have helped improve this project
+For support or questions:
+- Email: contact@ziontechgroup.com
+- Phone: +1 (555) 123-4567
+- Website: https://ziontechgroup.com
 
 ---
 
-**Built with ❤️ by the Zion Tech Group Team**
-
-_Empowering businesses with cutting-edge technology solutions_
+**Built with ❤️ by Zion Tech Group**
