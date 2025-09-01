@@ -3,8 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { CheckoutShippingOptions, ShippingRate } from '@/components/CheckoutShippingOptions';
 import {
@@ -33,12 +32,18 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
   const watchAddr = form.watch(['name', 'address', 'city', 'country']);
 
   useEffect(() => {
+    const sku = searchParams.get('sku');
+    if (sku) {
+      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
+      return;
+    }
+
     const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
@@ -51,7 +56,16 @@ export default function CheckoutPage() {
         // ignore parsing errors
       }
     }
-  }, []);
+    // Provide mock data if cart empty
+    setItems([
+      {
+        id: 'prod_mock',
+        name: 'Test Item',
+        price: 25,
+        quantity: 1,
+      },
+    ]);
+  }, [searchParams]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
   const [shippingRate, setShippingRate] = useState<ShippingRate | null>(null);
