@@ -10,7 +10,7 @@ test.describe('Smoke Tests', () => {
     // Check for critical content
     await expect(page.locator('h1')).toBeVisible();
     
-    // Check for navigation elements (be more specific to avoid strict mode violation)
+    // Check for navigation elements - use first nav element
     await expect(page.locator('nav').first()).toBeVisible();
     
     // Check for footer
@@ -23,17 +23,17 @@ test.describe('Smoke Tests', () => {
     // Check page loads
     await expect(page).toHaveTitle(/Explore/);
     
-    // Check for content (be more specific to avoid strict mode violation)
+    // Check for content - use first main element
     await expect(page.locator('main').first()).toBeVisible();
   });
 
   test('front page loads successfully', async ({ page }) => {
     await page.goto('/front');
     
-    // Check page loads (be more flexible with title matching)
+    // Check page loads - fix title expectation
     await expect(page).toHaveTitle(/Zion/);
     
-    // Check for content (be more specific to avoid strict mode violation)
+    // Check for content - use first main element
     await expect(page.locator('main').first()).toBeVisible();
   });
 
@@ -43,7 +43,7 @@ test.describe('Smoke Tests', () => {
     // Check page loads
     await expect(page).toHaveTitle(/Newsroom/);
     
-    // Check for content (be more specific to avoid strict mode violation)
+    // Check for content - use first main element
     await expect(page.locator('main').first()).toBeVisible();
   });
 
@@ -89,8 +89,8 @@ test.describe('Smoke Tests', () => {
         // Should navigate to new page
         await expect(page).toHaveURL(href);
         
-        // Page should load
-        await expect(page.locator('main')).toBeVisible();
+        // Page should load - use first main element
+        await expect(page.locator('main').first()).toBeVisible();
       }
     }
   });

@@ -270,12 +270,12 @@ const About: NextPage = () => {
               >
                 Get Started
               </Link>
-              <a 
+              <Link 
                 href="/services" 
                 className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </section>
