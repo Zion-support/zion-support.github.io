@@ -129,23 +129,15 @@ const Index: NextPage = () => {
             <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Accessibility Audit</h2>
-            <p className="text-white/70">Checks a11y basics across routes and publishes a dashboard.</p>
-            <a className="text-cyan-300 underline" href="/reports/a11y" target="_blank" rel="noopener">Open Report</a>
+            <h2 className="text-xl font-bold">Smart Redirects</h2>
+            <p className="text-white/70">Heals internal 404s by proposing and committing safe redirects.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/smart-redirects" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Link Sentinel</h2>
-            <p className="text-white/70">Detects broken internal routes and suggests fixes.</p>
-            <a className="text-cyan-300 underline" href="/reports/link-sentinel" target="_blank" rel="noopener">Open Report</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Freshness</h2>
-            <p className="text-white/70">Surfaces stale files and highlights newest updates.</p>
-            <a className="text-cyan-300 underline" href="/reports/content-freshness" target="_blank" rel="noopener">Open Report</a>
+            <h2 className="text-xl font-bold">Automation Catalog</h2>
+            <p className="text-white/70">Live index of functions and automation scripts.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/automation-catalog" target="_blank" rel="noopener">Open</a>
           </li>
         </ul>
       </main>
