@@ -4,7 +4,14 @@ describe('UserExperienceOptimizer', () => {
     render(<UserExperienceOptimizer  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-  it('displays expected content', () => {
-    render(<UserExperienceOptimizer  />) ;
+describe ('UserExperienceOptimizer', () => {
+'
+  it ('renders without crashing', () => {
+    render (<UserExperienceOptimizer  />) ;'
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
+'
+  it ('displays expected content', () => {
+    render (<UserExperienceOptimizer  />) ;
     // Add specific test assertions based on component content
   }) }) ;
+'

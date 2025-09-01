@@ -1,83 +1,63 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
-
-export default function Page() {
-    setExpandedSections(newExpanded)};
-
-  const navigationSections = [{
-
-      title: "Main Navigation",
-      icon: Home,
-      items[;"
-        { name: "Home", href: "/", icon: Home },"
-        { name: "Solutions", href: "/solutions", icon: Target },"
-        { name: "Services", href: "/services", icon: Zap },"
-        { name: "Case Studies", href: "/case-studies", icon: FileText },"
-        { name: "Blog", href: "/blog", icon: FileText },"
-        { name: "Partners", href: "/partners", icon: Handshake },"
-        { name: "About", href: "/about", icon: Users },"
-        { name: "Contact", href: "/contact", icon: MessageCircle },"
-        { name: "Careers", href: "/careers", icon: Briefcase },"
-        { name: "Partners", href: "/partners", icon: Handshake }
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
-"
+
+""
       title: "Service Areas",
-      icon: Zap,
-      items[;"
-        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },"
-        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },"
-        { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },"
-        { name: "IoT Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },"
-        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },"
-        { name: "Micro SaaS Products", href: "/services/micro-saas", icon: ShoppingCart },"
-        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },"
-        { name: "Helpdesk Platform", href: "/services/helpdesk", icon: HelpCircle },"
-        { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },"
+      icon: Zap,"
+      items[;""
+        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },""
+        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },""
+        { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },""
+        { name: "IoT Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },""
+        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },""
+        { name: "Micro SaaS Products", href: "/services/micro-saas", icon: ShoppingCart },""
+        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },""
+        { name: "Helpdesk Platform", href: "/services/helpdesk", icon: HelpCircle },""
+        { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },""
         { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
       ]
     },;
     {
 "
+""
       title: "Security & Compliance",
-      icon: Shield,
-      items: ["
-        { name: "Documentation", href: "/documentation", icon: FileText },"
-        { name: "API Reference", href: "/api", icon: Code },"
-        { name: "Developer Portal", href: "/developer", icon: Cpu },"
-        { name: "Support Center", href: "/help-center", icon: HelpCircle },"
-        { name: "FAQ", href: "/faq", icon: HelpCircle },"
-        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },"
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },"
-        { name: "Login", href: "/login", icon: User },"
+      icon: Shield,"
+      items: [""
+        { name: "Documentation", href: "/documentation", icon: FileText },""
+        { name: "API Reference", href: "/api", icon: Code },""
+        { name: "Developer Portal", href: "/developer", icon: Cpu },""
+        { name: "Support Center", href: "/help-center", icon: HelpCircle },""
+        { name: "FAQ", href: "/faq", icon: HelpCircle },""
+        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },""
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },""
+        { name: "Login", href: "/login", icon: User },""
         { name: "Support", href: "/support", icon: HelpCircle }
       ]
 
   ];
 
-  return ("
-    <div className="w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
-        {/* Logo */}"
-        <div className="mb-8">;"
-        { name: "Sitemap", href: "/sitemap", icon: Globe },;"
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;"
+  "
+  return (""
+    <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">"
+        {/* Logo */}""
+        <div className="mb-8">;""
+        { name: "Sitemap", href: "/sitemap", icon: Globe },;""
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;""
         { name: "Login", href: "/login", icon: User };
       ]};
   ];
-
-  const quickActions = [;"
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
+"
+  const quickActions = [;""
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;""
     { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
-
-  return ("
-    <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">"
+"
+  return (""
+    <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">""
       <div className="p-6">
-        {/* Logo Section */}
-        <motion.div"
+        {/* Logo Section */}"
+        <motion.div""
           className="mb-8"
           initial = {
 
@@ -91,19 +71,19 @@ export default function Page() {
   y: 0
 
 }}
-          transition={{ duration: 0.5 }}
-        >"
-          <Link to="/" className="flex items-center space-x-3 group">"
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-              <Zap className="w-6 h-6 text-white"  />
+          transition={{ duration: 0.5 }}"
+        >""
+          <Link to="/" className="flex items-center space-x-3 group">""
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""
+              <Zap className="w-6 h-6 text-white"  />"
             </div>"            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
               Zion Tech Group
             </h1>
           </Link>
         </div>
 
-        {/* Quick Actions */}
-        <motion.div"
+        {/* Quick Actions */}"
+        <motion.div""
           className="mb-8"
           initial = {
 
@@ -122,9 +102,9 @@ export default function Page() {
   { duration: 0.5,
   delay: 0.1
 
-}}
-        >"
-          <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>"
+}}"
+        >""
+          <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>""
           <div className="space-y-2">
             {quickActions.map((action, index) => (
               <motion.div
@@ -149,18 +129,20 @@ export default function Page() {
 }}
               >
                 <Link to={action.href}
-                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary''
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
-                  }`}
-"
+                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
+
+                    action.variant === 'primary'''
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'''`
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'``
+                  }`}"
+""
                   <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">{action.name}</span>
                 </Link>
               </motion.div>;) ) }
           </div>
         </motion.div>
-
-        {/* Navigation Sections */}"
+"
+        {/* Navigation Sections */}""
         <div className="space-y-6">
           {navigationSections.map((section, sectionIndex) => (
             <motion.div
@@ -184,34 +166,23 @@ export default function Page() {
 
 }}
             >
-              <button
-                onClick={() => toggleSection(section.title)}"
-                className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-              >"
-                <div className="flex items-center space-x-3">"
-                  <section.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />"
+              <button"
+                onClick={() => toggleSection(section.title)}""
+                className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group""
+              >""
+                <div className="flex items-center space-x-3">""
+                  <section.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />""
                   <span className="font-medium text-slate-300 group-hover:text-white transition-colors">
                     {section.title}
                   </span>
-                </div>
-<<<<<<< HEAD
-                <ChevronDown
-                  className={`w-4 h-4 text-slate - 400 transition - transform duration - 200 ${expandedSections.has(section.title) ? 'rotate - 180' : ''
-                  }`}
-                />
-=======
                 <ChevronDown `
-                  className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${<<<<<<< HEAD
-
-                    expandedSections.has(section.title) ? 'rotate-180' : ''`
-                  }`} 
-                 />
-=======
+                </div>`
+                <ChevronDown ``
+                  className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
 '
+''`
                     expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
                  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
               </button>
 
               <AnimatePresence>
@@ -224,8 +195,8 @@ export default function Page() {
 }}
                     animate = {
 
-  { opacity: 1,
-  height: 'auto'
+  { opacity: 1,'
+  height: 'auto' 
 
 }}
                     exit = {
@@ -233,8 +204,8 @@ export default function Page() {
   { opacity: 0,
   height: 0
 
-}}
-                    transition={{ duration: 0.3 }}"
+}}"
+                    transition={{ duration: 0.3 }}""
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item) => (<Link
@@ -256,11 +227,11 @@ export default function Page() {
   { duration: 0.2,
   delay: itemIndex * 0.05
 
-}}
-                      >"
+}}"
+                      >""
                         <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                        {isActive(item.href) && ("
+                        <span>{item.name}</span>"
+                        {isActive(item.href) && (""
                           <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
                         )}
                       </Link>
@@ -271,8 +242,8 @@ export default function Page() {
             </div>) ) }
         </nav>
 
-        {/* Contact Info */}
-        <motion.div"
+        {/* Contact Info */}"
+        <motion.div""
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial = {
 
@@ -291,23 +262,23 @@ export default function Page() {
   { duration: 0.5,
   delay: 0.5
 
-}}
-        >"
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
-          <div className="space-y-2 text-xs text-zion-slate-light">"
-            <div className="flex items-center space-x-2">"
+}}"
+        >""
+          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>""
+          <div className="space-y-2 text-xs text-zion-slate-light">""
+            <div className="flex items-center space-x-2">""
               <Phone className="w-3 h-3"  />
-              <span>+1 302 464 0950</span>
-            </div>"
-            <div className="flex items-center space-x-3 text-sm text-slate-400">"
+              <span>+1 302 464 0950</span>"
+            </div>""
+            <div className="flex items-center space-x-3 text-sm text-slate-400">""
               <Mail className="w-4 h-4"  />
-              <span>kleber@ziontechgroup.com</span>
-            </div>"
-            <div className="flex items-center space-x-2">"
+              <span>kleber@ziontechgroup.com</span>"
+            </div>""
+            <div className = "flex items-center space-x-2">""
               <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </aside>;) };
-'"`
+    </aside>;) };'"`
+'"`'"`

@@ -1,14 +1,14 @@
 export 
       sessionStorage.removeItem('auth')}
-  } catch(error) {
-
+  } catch (error) {
+'
     // console.error('Error cleaning up auth state:', error)}
 };
 
 export 
       return !!auth}
-    return false} catch(error) {
-
+    return false} catch (error) {
+'
     // console.error('Error checking authentication status:', error);
     return false}
 };
@@ -18,8 +18,8 @@ export
 
         return parsed.token || null}
     }
-    return null} catch(error) {
-
+    return null} catch (error) {
+'
     // console.error('Error getting auth token:', error);
 
       return null}
@@ -30,9 +30,10 @@ export
 
         return parsed.user || null}
     }
-    return null} catch(error) {
-
+    return null} catch (error) {
+'
     // console.error('Error getting user data:', error);
 
     return null}
 };
+'

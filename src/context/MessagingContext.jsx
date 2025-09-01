@@ -10,3 +10,4 @@ const MessagingProvider({ children }) {
             content,
             timestamp: new Date(),
             isRead: false,
+'

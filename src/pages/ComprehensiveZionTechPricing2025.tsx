@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
-export default ComprehensiveZionTechPricing2025;}}
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from '../data/enhancedZionTechServices2025';
+export default ComprehensiveZionTechPricing2025}}
+  );
 
-export default function Page() {
-;
+          ""
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">;""
+            <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>;""
+            <p className="text-gray-300">We provide 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;) };
+"
+export default ComprehensiveZionTechPricing2025}}'"'"

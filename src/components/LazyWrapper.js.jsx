@@ -1,7 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView  } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';'
+import { motion, useInView } from 'framer-motion';'
+import { EnhancedLoading } from './EnhancedLoading';
+const LazyWrapper = ({
 
-export default function Page() {
+  children,
+  threshold = 0.1,'
+  className = '','
+  loadingVariant = 'default','
+  loadingText = 'Loading...','
+  loadingSize = 'md'}) => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: threshold });
+  useEffect(() => {
+    if (inView && !isInView) {
+
+      setIsInView(true);
+      // Simulate loading delay for better UX
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
   }, [inView, isInView]);
   if(!isInView) {
 
@@ -15,9 +37,9 @@ export default function Page() {
       </div>
     );
   }
-  if(!isLoaded) {
-
-    return ()`
+  if (!isLoaded) {
+`
+    return()``
       <div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading
           variant={loadingVariant}
@@ -38,5 +60,5 @@ export default function Page() {
     </motion.div>
   );
 };
-export default LazyWrapper;
-'`
+export default LazyWrapper;'`
+'`'`

@@ -4,3 +4,4 @@ interface ErrorPageProps {
 }
 export default function ErrorPage({ statusCode, err }: ErrorPageProps): import("react/jsx-runtime").JSX.Element;
 export {};
+"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export default function Page() {
 , [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
@@ -38,14 +38,14 @@ export default function Page() {
                 setState(prev => ({ ...prev, isScrolling: false }))}, 150)})}, []);
     // Scroll to specific index
     const scrollTop;
-        switch(align) {
-
+        switch (align) {
+'
             case 'start':
                 scrollTop = index * itemHeight;
-                break;
+                break;'
             case 'center':
                 scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2);
-                break;
+                break;'
             case 'end':
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
@@ -56,7 +56,7 @@ export default function Page() {
 
             containerRef.current.scrollTo({
 
-                top: scrollTop,
+                top: scrollTop,'
                 behavior: 'smooth'
             })}
         else {
@@ -65,12 +65,12 @@ export default function Page() {
         setState(prev => ({ ...prev, scrollTop }))}, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling]);
     // Scroll to top
     const scrollToTop = useCallback(() => {
-
+'
         scrollToIndex(0,start')}, [scrollToIndex]);
     // Scroll to bottom
     const scrollToBottom = useCallback(() => {
-
-        scrollToIndex(items.length-1,end')}, [scrollToIndex, items.length]);
+'
+        scrollToIndex(items.length - 1,end')}, [scrollToIndex, items.length]);
     // Get current scroll position
     const getScrollTop = useCallback(() => {
         return containerRef.current?.scrollTop || 0}, []);
@@ -91,19 +91,19 @@ export default function Page() {
             return;
         const handleScrollEnd = () => {
             const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
-            if(scrollHeight - scrollTop - clientHeight < threshold) {
-
-                // Trigger infinite scroll event'
+            if (scrollHeight - scrollTop - clientHeight < threshold) {
+'
+                // Trigger infinite scroll event''
                 const event = new CustomEvent('virtualScrollEnd', {
 
                     detail: { scrollTop, scrollHeight, clientHeight }
                 });
                 window.dispatchEvent(event)}
         };
-        const container = containerRef.current;
+        const container = containerRef.current;'
         container.addEventListener('scroll', handleScrollEnd);
         return () => {
-
+'
             container.removeEventListener('scroll', handleScrollEnd)}}, [enableInfiniteScroll, threshold]);
     // Cleanup on unmount
     useEffect(() => {
@@ -121,9 +121,9 @@ export default function Page() {
   ref: containerRef,
         style: {
 
-            height: containerHeight,
-            overflow: 'auto',
-            position: 'relative',
+            height: containerHeight,'
+            overflow: 'auto','
+            position: 'relative','
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
 
 },
@@ -134,15 +134,17 @@ export default function Page() {
 
   style: {
 
-            height: state.totalHeight,
+            height: state.totalHeight,'
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
 
-<<<<<<< HEAD
-=======
 
 `
->>>>>>> main
+
+
+
+`
+``
 }px)`
         }
     };
@@ -189,8 +191,8 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     let pos = value.indexOf(query);
                     while(pos !== -1) {
 
-                        highlightPositions.push(pos);
-                        pos = value.indexOf(query, pos + 1)}`
+                        highlightPositions.push(pos);`
+                        pos = value.indexOf(query, pos + 1)}``
                     itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}
             });
             if(isMatch) {
@@ -277,5 +279,5 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         getCumulativeHeight,
         findIndexFromScrollTop,
         state
-    }};
-'`
+    }};'`
+'`'`

@@ -1,7 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';'
 import { Button } from '@/components/ui/button';
 
-export default function Page() {
+      e.preventDefault();
+      setDeferred(e);
+    };'
+    window.addEventListener('beforeinstallprompt', handler);'
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+  if (!deferred) return null;
+  const onClick = async () => {
+    deferred.prompt();
+    const result = await deferred.userChoice;'
+    if (result.outcome !== 'accepted') {
+
+      // keep for later
+      setDeferred(deferred);
+    } else {
+
+      setDeferred(null);
+    }
   };
   return ()
     <div className="fixed bottom-4 right-4 z-50">
@@ -9,5 +26,5 @@ export default function Page() {
     </div>
   );
 };
-export default InstallPrompt;
-'"
+export default InstallPrompt;'"
+'"'"

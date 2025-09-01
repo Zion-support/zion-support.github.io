@@ -1,90 +1,117 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Page() {
-;
+import { motion } from 'framer-motion';
+import {
 
-  const navigationItems = [{ name: 'Home', path: '/', icon: null },
+  Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Zap,
+  Lock,
+  Rocket,
+  Sun,
+  Moon,
+  Cloud,
+  Users,
+  Database,
+  Shield} from 'lucide-react';
+
+export function AppHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // In a real app, this would toggle the theme
+  };
+
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: null },
     {
       name: 'Services',
       path: '/services',
       icon: null,
       dropdown: [
         {
-          name: 'AI & Machine Learning',
-          path: '/services/ai',
+          name: 'AI Services',
+          path: '/services?category=AI%20Services',
           icon: Brain,
           color: 'from-purple-500 to-pink-500'
         },
         {
-          name: 'Cloud & DevOps',
-          path: '/services/cloud',
-          icon: Cloud,
+          name: 'IT Services',
+          path: '/services?category=IT%20Services',
+          icon: Shield,
           color: 'from-blue-500 to-cyan-500'
         },
         {
-          name: 'Cybersecurity',
-          path: '/services/cybersecurity',
-          icon: Lock,
-          color: 'from-red-500 to-pink-500'
-        },
-        {
-          name: 'All Services',
-          path: '/services',
+          name: 'Enterprise AI',
+          path: '/services?category=Enterprise%20AI',
           icon: Database,
           color: 'from-green-500 to-emerald-500'
         },
         {
-          name: 'AI Quantum Trading',
-          path: '/services/AIQuantumFinancialTrading',
+          name: 'Quantum Technology',
+          path: '/services?category=Quantum%20Technology',
           icon: Zap,
-          color: 'from-yellow-500 to-orange-500'
-        }
-      ]
-    },
-    { name: 'About', path: '/about', icon: null },
-    { 
-      name: 'Resources', 
-      path: '#', 
-      icon: null,
-      dropdown: [{
-          name: 'Blog & Insights',
-          path: '/blog',
-          icon: Users,
-          color: 'from-blue-500 to-purple-500'
-        },
-        {
-          name: 'FAQ',
-          path: '/faq',
-          icon: Users,
-          color: 'from-green-500 to-blue-500'
-        },
-        {
-          name: 'Careers',
-          path: '/careers',
-          icon: Users,
           color: 'from-orange-500 to-red-500'
         },
         {
-          name: 'Partners',
-          path: '/partners',
+          name: 'Blockchain Technology',
+          path: '/services?category=Blockchain%20Technology',
           icon: Users,
-          color: 'from-purple-500 to-pink-500'
+          color: 'from-indigo-500 to-purple-500'
+        },
+        {
+          name: 'Strategic Consulting',
+          path: '/services?category=Strategic%20Consulting',
+          icon: Cloud,
+          color: 'from-yellow-500 to-orange-500'
+        },
+        {
+          name: 'Compliance Consulting',
+          path: '/services?category=Compliance%20Consulting',
+          icon: Lock,
+          color: 'from-red-500 to-pink-500'
         }
       ]
     },
+    { name: 'Pricing', path: '/pricing', icon: null },
+    { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null }
   ];
 
   const isActiveRoute = path => {
-    if(path === '/') {
+    if (path === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
 
-  return (<motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+  return (
+    <motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
           ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
       }`}
@@ -127,7 +154,8 @@ export default function Page() {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`text-white hover:text-zion-cyan transition-colors ${isActiveRoute(item.path) ? 'text-zion-cyan' : ''
+                    className={`text-white hover:text-zion-cyan transition-colors ${
+                      isActiveRoute(item.path) ? 'text-zion-cyan' : ''
                     }`}
                   >
                     {item.name}
