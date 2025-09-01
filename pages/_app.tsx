@@ -1,392 +1,427 @@
-// CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
-if (process.env.NODE_ENV === 'development') {
-  console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
-  console.log('- globalThis.__extends:', !!(globalThis as any).__extends);
-  console.log('- globalThis.__assign:', !!(globalThis as any).__assign);
-  console.log('- globalThis.process:', !!(globalThis as any).process);
-}
-
-// CRITICAL: Import environment polyfill FIRST to prevent process.env errors
-import '../src/utils/env-polyfill';
-
-// Enhanced error logging - import early for comprehensive coverage
-import enhancedErrorLogger from '../src/utils/enhanced-error-logger';
-
-// Add global error handling for undefined components
-if (typeof window !== 'undefined') {
-  window.addEventListener('unhandledrejection', (event) => {
-    if (event.reason?.message?.includes('getInitialProps')) {
-      console.error('Component loading error caught:', event.reason);
-      event.preventDefault(); // Prevent the error from crashing the app
-    }
-  });
-  
-  // Additional error handling for process.env errors
-  window.addEventListener('error', (event) => {
-    if (event.message?.includes('Cannot read properties of undefined')) {
-      console.error('Runtime error caught:', event.error);
-      event.preventDefault();
-    }
-  });
-}
-
-import React, { useEffect, useState, Suspense } from 'react'; // Added Suspense
-import type { AppProps } from 'next/app';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Head from 'next/head';
-import dynamic from 'next/dynamic'; // Import dynamic
-import '../src/index.css';
+import type { AppProps } from 'next/app';
+import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store';
-
+import { store } from '@/store'; // Changed to named import
+import { useAuth } from '@/hooks/useAuth';
+import { ErrorProvider } from '@/context/ErrorContext';
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
 import { I18nextProvider } from 'react-i18next';
-import i18n from '../src/i18n';
+import i18n from '@/i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import RootErrorBoundary from '@/components/RootErrorBoundary';
+import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+import dynamic from 'next/dynamic';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
+import { Inter, Poppins } from 'next/font/google';
+import Head from 'next/head';
+// Lazy load global styles to improve initial bundle size
+import '../src/index.css';
+import * as Sentry from '@sentry/nextjs';
+import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
+import {
+  validateProductionEnvironment,
+  initializeServices,
+} from '@/utils/environmentConfig';
 
-// Synchronously import core providers
-import { AuthProvider } from '../src/context/auth/AuthProvider';
-import { WhitelabelProvider } from '../src/context/WhitelabelContext';
-import { CartProvider } from '../src/context/CartContext';
-import { FeedbackProvider } from '../src/context/FeedbackContext';
-import { ThemeProvider } from '../src/context/ThemeContext';
+// ===================================================================
+// DYNAMIC IMPORTS - Load heavy providers only when needed
+// ===================================================================
 
-// Dynamically import potentially heavy providers
-const DynamicWalletProvider = dynamic(() =>
-  import('../src/context/WalletContext').then(mod => mod.WalletProvider),
-  { ssr: false, loading: () => <DynamicProviderFallback providerName="Wallet System" /> }
-);
+// Load non-critical providers dynamically to reduce initial bundle
+const WhitelabelProvider = dynamic(() =>
+  import('@/context/WhitelabelContext').then(mod => ({ default: mod.WhitelabelProvider })), {
+  ssr: true,
+  loading: () => null
+});
 
-const DynamicAnalyticsProvider = dynamic(() =>
-  import('../src/context/AnalyticsContext').then(mod => mod.AnalyticsProvider),
-  { ssr: false, loading: () => <DynamicProviderFallback providerName="Analytics" /> }
-);
+const WalletProvider = dynamic(() =>
+  import('@/context/WalletContext').then(mod => ({ default: mod.WalletProvider })), {
+  ssr: false, // Wallet is client-side only
+  loading: () => null
+});
 
-// Fallback component for dynamic providers
-const DynamicProviderFallback: React.FC<{ providerName: string }> = ({ providerName }) => (
-  <div style={{ display: 'none' }} data-provider-loading={providerName}>
-    Loading {providerName}...
-  </div>
-);
+const AnalyticsProvider = dynamic(() =>
+  import('@/context/AnalyticsContext').then(mod => ({ default: mod.AnalyticsProvider })), {
+  ssr: false, // Analytics is client-side only
+  loading: () => null
+});
 
-// Error boundary component
-class AppErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
+const CartProvider = dynamic(() =>
+  import('@/context/CartContext').then(mod => ({ default: mod.CartProvider })), {
+  ssr: true,
+  loading: () => null
+});
 
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error };
-  }
+const FeedbackProvider = dynamic(() =>
+  import('@/context/FeedbackContext').then(mod => ({ default: mod.FeedbackProvider })), {
+  ssr: false, // Feedback is client-side only
+  loading: () => null
+});
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('App Error Boundary caught an error:', error, errorInfo);
-    
-    // Report to enhanced error logger
-    if (typeof window !== 'undefined') {
-      enhancedErrorLogger.captureReactError(error, errorInfo, errorInfo.componentStack || undefined);
-      enhancedErrorLogger.addBreadcrumb('error-boundary', `React error in component: ${error.name}`, 'error');
-    }
-  }
+const ThemeProvider = dynamic(() =>
+  import('@/components/ThemeProvider').then(mod => ({ default: mod.ThemeProvider })), {
+  ssr: true,
+  loading: () => null
+});
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div style={{ 
-          padding: '2rem', 
-          textAlign: 'center',
-          maxWidth: '600px',
-          margin: '0 auto',
-          fontFamily: 'Arial, sans-serif'
-        }}>
-          <h2>⚠️ Application Error</h2>
-          <p>Something went wrong while loading the application.</p>
-          <button 
-            onClick={() => window.location.reload()}
-            style={{
-              padding: '10px 20px',
-              backgroundColor: '#007bff',
-              color: 'white',
-              border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              marginTop: '1rem'
-            }}
-          >
-            Reload Page
-          </button>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-// Loading screen component
-const LoadingScreen: React.FC<{ progress: number }> = ({ progress }) => (
-  <div style={{
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#f8f9fa',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    zIndex: 9999,
-    fontFamily: 'Arial, sans-serif'
-  }}>
-    <div style={{
-      width: '120px',
-      height: '120px',
-      border: '8px solid #e9ecef',
-      borderTop: '8px solid #007bff',
-      borderRadius: '50%',
-      animation: 'spin 2s linear infinite'
-    }} />
-    <h2 style={{ marginTop: '2rem', color: '#495057' }}>
-      Initializing Zion App...
-    </h2>
-    <p style={{ color: '#6c757d', marginTop: '0.5rem' }}>
-      Loading components ({progress}%)
-    </p>
-    <div style={{
-      width: '200px',
-      height: '6px',
-      backgroundColor: '#e9ecef',
-      borderRadius: '3px',
-      marginTop: '1rem'
-    }}>
-      <div style={{
-        width: `${progress}%`,
-        height: '100%',
-        backgroundColor: '#007bff',
-        borderRadius: '3px',
-        transition: 'width 0.3s ease'
-      }} />
+const AppLayout = dynamic(() =>
+  import('@/layout/AppLayout').then(mod => ({ default: mod.AppLayout })), {
+  ssr: true,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-pulse text-lg">Loading layout...</div>
     </div>
-    <style jsx>{`
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    `}</style>
-  </div>
-);
+  )
+});
 
-// Provider wrapper with error handling
-const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryClient }> = ({ children, queryClient }) => {
+// Load utility components dynamically
+const ToastContainer = dynamic(() =>
+  import('@/components/ToastContainer').then(mod => ({ default: mod.ToastContainer })), {
+  ssr: false,
+  loading: () => null
+});
+
+const OfflineIndicator = dynamic(() =>
+  import('@/components/OfflineIndicator').then(mod => ({ default: mod.OfflineIndicator })), {
+  ssr: false,
+  loading: () => null
+});
+
+const RouteChangeHandler = dynamic(() =>
+  import('@/components/RouteChangeHandler').then(mod => ({ default: mod.RouteChangeHandler })), {
+  ssr: false,
+  loading: () => null
+});
+
+const RouteSEO = dynamic(() =>
+  import('@/components/RouteSEO'), {
+  ssr: true,
+  loading: () => null
+});
+
+// ===================================================================
+// FONT CONFIGURATION - Optimized loading
+// ===================================================================
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
+  variable: '--font-inter',
+  preload: true,
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
+  variable: '--font-poppins',
+  preload: true,
+});
+
+// ===================================================================
+// LIGHTWEIGHT LANGUAGE WRAPPER
+// ===================================================================
+
+const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const { user, isAuthenticated } = useAuth();
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const safeAuthState = React.useMemo(
+    () => ({
+      isAuthenticated: isClient ? !!isAuthenticated : false,
+      user: isClient ? user : null,
+    }),
+    [isClient, isAuthenticated, user],
+  );
+
   return (
-    <AppErrorBoundary>
-      <ReduxProvider store={store}>
-        <I18nextProvider i18n={i18n}>
-          <AuthProvider>
-            <WhitelabelProvider>
-              <DynamicWalletProvider> {/* Use dynamic import */}
-                <DynamicAnalyticsProvider> {/* Use dynamic import */}
-                  <CartProvider>
-                    <FeedbackProvider>
-                      <ThemeProvider>
-                        {children}
-                      </ThemeProvider>
-                    </FeedbackProvider>
-                  </CartProvider>
-                </DynamicAnalyticsProvider>
-              </DynamicWalletProvider>
-            </WhitelabelProvider>
-          </AuthProvider>
-        </I18nextProvider>
-      </ReduxProvider>
-    </AppErrorBoundary>
+    <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
   );
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
-  // Start with isLoading true to show the loading screen immediately.
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingProgress, setLoadingProgress] = useState(0);
-  const [initializationError, setInitializationError] = useState<string | null>(null);
-  const router = useRouter();
-  const [queryClient] = useState(() => new QueryClient());
+// ===================================================================
+// MAIN APP COMPONENT - FIXED: Optimized with fallback safety
+// ===================================================================
 
-  useEffect(() => {
-    // Ensure loading screen is shown at the very start
-    setIsLoading(true);
-    setLoadingProgress(5); // Initial small progress
+function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const [queryClient] = React.useState(() => new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 5 * 60 * 1000,
+        gcTime: 10 * 60 * 1000,
+        retry: false,
+      },
+    },
+  }));
+  const [isInitialized, setIsInitialized] = React.useState(false);
+  const [initError, setInitError] = React.useState<string | null>(null);
+
+  // CRITICAL FIX: Force initialization after timeout to prevent infinite loading
+  React.useEffect(() => {
+    const forceInitTimeout = setTimeout(() => {
+      if (!isInitialized) {
+        console.warn('[App] Force initializing after timeout - preventing infinite loading');
+        setIsInitialized(true);
+      }
+    }, 3000); // Force init after 3 seconds max
+
+    return () => clearTimeout(forceInitTimeout);
+  }, [isInitialized]);
+
+  // Simplified initialization with better error handling
+  React.useEffect(() => {
+    let isMounted = true;
 
     const initializeApp = async () => {
       try {
-        // Simulate progressive loading with realistic steps
-        const steps = [
-          { name: 'Loading Core Components', duration: 300 },
-          { name: 'Initializing Providers', duration: 400 },
-          { name: 'Setting up Analytics', duration: 200 },
-          { name: 'Configuring Theme', duration: 200 },
-          { name: 'Final Setup', duration: 300 }
-        ];
-
-        let currentProgress = 0;
-        const progressStep = 100 / steps.length;
-
-        for (let i = 0; i < steps.length; i++) {
-          const step = steps[i];
-          if (!step) continue;
-          
-          // Update progress
-          currentProgress = (i + 1) * progressStep;
-          setLoadingProgress(Math.min(currentProgress, 95));
-
-          // Simulate async work
-          await new Promise(resolve => setTimeout(resolve, step.duration));
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[App] Starting optimized initialization...');
         }
 
-        // Final progress update
-        setLoadingProgress(100);
-        
-        // Small delay to show completion
-        await new Promise(resolve => setTimeout(resolve, 200));
+        // Critical path only
+        try {
+          initializeGlobalErrorHandlers();
+        } catch (error) {
+          console.warn('[App] Global error handlers failed:', error);
+        }
 
-        // PERFORMANCE: Initialize Web Vitals monitoring in production
-        if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        try {
+          validateProductionEnvironment();
+        } catch (error) {
+          console.warn('[App] Environment validation warning:', error);
+        }
+
+        // Mark as initialized immediately for faster render
+        if (isMounted) {
+          setTimeout(() => {
+            setIsInitialized(true);
+          }, 100); // Small delay to ensure DOM is ready
+        }
+
+        // Defer non-critical initializations
+        setTimeout(() => {
+          if (!isMounted) return;
+
           try {
-            const { onCLS, onFCP, onINP, onLCP, onTTFB } = await import('web-vitals');
-
-            const reportWebVitalsSafely = (metric: any) => {
-              try { // Add specific try-catch within the callback
-                if (typeof window !== 'undefined' && (window as any).gtag) {
-                  (window as any).gtag('event', metric.name, {
-                    value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-                    event_label: metric.id,
-                    non_interaction: true,
-                  });
-                }
-
-                // Initialize comprehensive performance monitoring on first metric (still keeping the actual import commented for now as per previous step)
-                if (!(global as any).performanceMonitorInitialized) {
-                  (global as any).performanceMonitorInitialized = true;
-                  // import('@/utils/performance-monitor').then(...).catch(...);
-                  console.log('Performance monitor import is currently skipped.');
-                }
-              } catch (reportError) {
-                console.warn('Error during Web Vitals reporting:', reportError);
-              }
-            };
-            
-            // Wrap each listener setup in a try-catch as well, just in case
-            try { onCLS(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onCLS:', e); }
-            try { onFCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onFCP:', e); }
-            try { onINP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onINP:', e); }
-            try { onLCP(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onLCP:', e); }
-            try { onTTFB(reportWebVitalsSafely); } catch (e) { console.warn('Failed to setup onTTFB:', e); }
-
-          } catch (webVitalsError) {
-            console.warn('Web Vitals main initialization failed:', webVitalsError);
+            initializeServices().catch((err) =>
+              console.warn('Service initialization failed:', err),
+            );
+          } catch (error) {
+            console.warn('Services init error:', error);
           }
-        }
-        
-        setIsLoading(false); // Crucial: ensure isLoading is set to false
+
+          // Lazy load performance monitoring
+          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
+            import('@/utils/performance').then(perf => {
+              perf.initializePerformanceOptimizations();
+              perf.initializePerformance();
+            }).catch(err => console.warn('Performance monitoring failed:', err));
+          }
+
+          // Lazy load development tools
+          if (process.env.NODE_ENV === 'development') {
+            import('@/utils/consoleLogCapture').then(console => {
+              console.initConsoleLogCapture();
+            }).catch(err => console.warn('Console capture failed:', err));
+          }
+        }, 200);
+
       } catch (error) {
-        console.error('App initialization error:', error);
-        setInitializationError('Failed to initialize application. Please refresh the page.');
-        setIsLoading(false);
+        console.error('[App] Critical initialization error:', error);
+        setInitError('Initialization failed');
+
+        // Always initialize even on error to prevent infinite loading
+        if (isMounted) {
+          setTimeout(() => {
+            setIsInitialized(true);
+          }, 500);
+        }
+
+        // Deferred error reporting
+        setTimeout(() => {
+          try {
+            if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
+              Sentry.captureException(error);
+            }
+          } catch (sentryError) {
+            console.warn('[App] Could not send error to Sentry:', sentryError);
+          }
+        }, 0);
       }
     };
 
-    // Force initialization completion after maximum 3 seconds
-    // MODIFIED: Increased timeout to 15 seconds for debugging
-    const forceInitTimeout = setTimeout(() => {
-      console.warn('Force completing app initialization due to timeout (15s)');
-      setLoadingProgress(100);
-      setIsLoading(false);
-    }, 15000); // Increased from 3000ms
-
-    initializeApp().finally(() => {
-      clearTimeout(forceInitTimeout);
-    });
+    initializeApp();
 
     return () => {
-      clearTimeout(forceInitTimeout);
+      isMounted = false;
     };
   }, []);
 
-  // Handle router events for page transitions
-  useEffect(() => {
-    const handleRouteChangeStart = () => {
-      // Could add route change loading if needed
-    };
+  // Lazy Sentry context updates with error handling
+  React.useEffect(() => {
+    try {
+      if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
+        Sentry.setTag('route', router.pathname);
+        Sentry.setContext('query', router.query);
+      }
+    } catch (error) {
+      console.warn('Sentry context update failed:', error);
+    }
+  }, [router.pathname, router.query]);
 
-    const handleRouteChangeComplete = () => {
-      // Route change completed
-    };
+  // Lazy service worker registration with error handling
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      setTimeout(() => {
+        import('@/serviceWorkerRegistration').then(sw => {
+          sw.registerServiceWorker();
+        }).catch(err => console.warn('Service worker registration failed:', err));
+      }, 2000);
+    }
+  }, []);
 
-    const handleRouteChangeError = () => {
-      console.error('Route change error');
-    };
-
-    router.events.on('routeChangeStart', handleRouteChangeStart);
-    router.events.on('routeChangeComplete', handleRouteChangeComplete);
-    router.events.on('routeChangeError', handleRouteChangeError);
-
-    return () => {
-      router.events.off('routeChangeStart', handleRouteChangeStart);
-      router.events.off('routeChangeComplete', handleRouteChangeComplete);
-      router.events.off('routeChangeError', handleRouteChangeError);
-    };
-  }, [router]);
-
-  // Show loading screen during initialization
-  if (isLoading) {
+  // FIXED: Enhanced loading screen with error display
+  if (!isInitialized) {
     return (
-      <>
-        <Head>
-          <title>Loading - Zion App</title>
-          <meta name="description" content="Zion App is loading..." />
-        </Head>
-        <LoadingScreen progress={loadingProgress} />
-      </>
-    );
-  }
-
-  // Show error screen if initialization failed
-  if (initializationError) {
-    return (
-      <div style={{ 
-        padding: '2rem', 
-        textAlign: 'center',
-        maxWidth: '600px',
-        margin: '0 auto',
-        fontFamily: 'Arial, sans-serif'
-      }}>
-        <h2>🚫 Initialization Error</h2>
-        <p>{initializationError}</p>
-        <button 
-          onClick={() => window.location.reload()}
-          style={{
-            padding: '10px 20px',
-            backgroundColor: '#dc3545',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer',
-            marginTop: '1rem'
-          }}
-        >
-          Reload Application
-        </button>
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
+          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
+          <p className="text-blue-200 text-sm mt-2">
+            {initError ? `Error: ${initError}` : 'Optimizing performance...'}
+          </p>
+          <p className="text-blue-300 text-xs mt-2">This should complete in a few seconds</p>
+        </div>
       </div>
     );
   }
 
-  // Main app render with all providers
+  // FIXED: Simplified provider chain to reduce loading complexity
   return (
-    <ProviderWrapper queryClient={queryClient}>
-      <Component {...pageProps} />
-    </ProviderWrapper>
+    <>
+      <Head>
+        <style jsx global>{`
+          :root {
+            --font-inter: ${inter.style.fontFamily};
+            --font-poppins: ${poppins.style.fontFamily};
+          }
+
+          @font-face {
+            font-family: 'Inter Fallback';
+            src: local('Arial'), local('system-ui');
+            size-adjust: 107%;
+            ascent-override: 90%;
+            descent-override: 25%;
+            line-gap-override: 0%;
+          }
+
+          @font-face {
+            font-family: 'Poppins Fallback';
+            src: local('Arial'), local('system-ui');
+            size-adjust: 102%;
+            ascent-override: 92%;
+            descent-override: 24%;
+            line-gap-override: 0%;
+          }
+
+          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif; }
+          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif; }
+        `}</style>
+      </Head>
+      <div className={`${inter.variable} ${poppins.variable}`}>
+        <ProductionErrorBoundary>
+          <RootErrorBoundary>
+            <HydrationErrorBoundary>
+              <React.Suspense
+                fallback={
+                  <div className="flex items-center justify-center min-h-screen">
+                    <div className="animate-pulse text-lg">Loading app...</div>
+                  </div>
+                }
+              >
+                <GlobalErrorBoundary>
+                  <QueryClientProvider client={queryClient}>
+                    <ApiErrorBoundary>
+                      <ReduxProvider store={store}>
+                        <I18nextProvider i18n={i18n}>
+                          <ErrorProvider>
+                            <AuthProvider>
+                              <ErrorBoundary fallback={
+                                <div className="flex items-center justify-center min-h-screen">
+                                  <div className="text-center">
+                                    <h2 className="text-xl mb-4">Loading providers...</h2>
+                                    <p>If this takes too long, there may be a provider issue.</p>
+                                  </div>
+                                </div>
+                              }>
+                                <WhitelabelProvider>
+                                  <LanguageProviderWrapper>
+                                    <WalletProvider>
+                                      <CartProvider>
+                                        <AnalyticsProvider>
+                                          <FeedbackProvider>
+                                            <ThemeProvider>
+                                              <AppLayout>
+                                                <RouteSEO />
+                                                <RouteChangeHandler
+                                                  resetScrollOnChange={true}
+                                                  forceRerender={false}
+                                                />
+                                                <ErrorBoundary>
+                                                  <Component
+                                                    key={router.asPath}
+                                                    {...pageProps}
+                                                  />
+                                                </ErrorBoundary>
+                                                <ErrorResetOnRouteChange />
+                                                <ToastContainer />
+                                                <OfflineIndicator />
+                                              </AppLayout>
+                                            </ThemeProvider>
+                                          </FeedbackProvider>
+                                        </AnalyticsProvider>
+                                      </CartProvider>
+                                    </WalletProvider>
+                                  </LanguageProviderWrapper>
+                                </WhitelabelProvider>
+                              </ErrorBoundary>
+                            </AuthProvider>
+                          </ErrorProvider>
+                        </I18nextProvider>
+                      </ReduxProvider>
+                    </ApiErrorBoundary>
+                  </QueryClientProvider>
+                </GlobalErrorBoundary>
+              </React.Suspense>
+            </HydrationErrorBoundary>
+          </RootErrorBoundary>
+        </ProductionErrorBoundary>
+      </div>
+    </>
   );
 }
+
+if (process.env.NODE_ENV === 'development') {
+  console.log('[App] MyApp component initialized with loading fix');
+}
+
+export default MyApp;
