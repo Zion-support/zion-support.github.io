@@ -53,7 +53,7 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
-import PrivacySettings from './pages/PrivacySettings';
+import PrivacyPage from './pages/PrivacyPage';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -94,7 +94,7 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
-  { path: '/privacy-settings', element: <PrivacySettings /> },
+  { path: '/profile/privacy', element: <PrivacyPage /> },
 ];
 
 const App = () => {

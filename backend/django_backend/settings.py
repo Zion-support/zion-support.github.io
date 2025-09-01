@@ -19,11 +19,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'authentication',
-vu1sbl-codex/implement-cart-recovery-logic
-    'backend.cart',
-    'backend.notifications',
-    'public_api',
-main
+    'privacy',
 ]
 
 MIDDLEWARE = [
