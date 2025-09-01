@@ -4,8 +4,12 @@ export default function Page() {
  from 'lucide-react';
 >>>>>>> main
 
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { X } from "lucide-react";
+
+export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -51,104 +55,15 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            {isExpanded ? '✕' : '💬'}
-          </motion.button>
-
-          {/* Expanded Menu */}
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div"
-                className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]"
-                initial = {
-
-  { opacity: 0, scale: 0.8,
-  y: 10
-
-}}
-                animate = {
-
-  { opacity: 1, scale: 1,
-  y: 0
-
-}}
-                exit = {
-
-  { opacity: 0, scale: 0.8,
-  y: 10
-
-}}
-                transition={{ duration: 0.2 }}
-              >"
-                <div className="space-y-3">
-                  <Link"
-                    to="/contact"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">📞</span>
-                    <div>"
-                      <div className="font-semibold">Contact Us</div>"
-                      <div className="text-sm text-gray-400">Get in touch</div>
-                    </div>
-                  </Link>
-<<<<<<< HEAD
-
-                  <Link
-=======
-                  
-                  <Link"
->>>>>>> main
-                    to="/services"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">🚀</span>
-                    <div>"
-                      <div className="font-semibold">Our Services</div>"
-                      <div className="text-sm text-gray-400">Explore solutions</div>
-                    </div>
-                  </Link>
-<<<<<<< HEAD
-
-                  <Link
-=======
-                  
-                  <Link"
->>>>>>> main
-                    to="/quote"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">💰</span>
-                    <div>"
-                      <div className="font-semibold">Get Quote</div>"
-                      <div className="text-sm text-gray-400">Request pricing</div>
-                    </div>
-                  </Link>
-<<<<<<< HEAD
-
-                  <div  className="border-t border-slate - 600 pt -3">
-                    <div  className="text-center text-sm text-gray - 400 mb-2">
-                      Available 24 / 7
-                    </div>
-                    <div  className="flex items - center justify - center gap-2">
-                      <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div>
-                      <span className="text-green - 400 text-sm font -semibold">Online Now</span>
-=======
-                  "
-                  <div className="border-t border-slate-600 pt-3">"
-                    <div className="text-center text-sm text-gray-400 mb-2">
-                      Available 24/7
-                    </div>"
-                    <div className="flex items-center justify-center gap-2">"
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
-                      <span className="text-green-400 text-sm font-semibold">Online Now</span>
->>>>>>> main
-                    </div>
-                  </div>
-                </div>
-              </motion.div>) }
-          </AnimatePresence>
+            <Link href="/signup">Register Now</Link>
+          </Button>
+          <button 
+            onClick={handleClose}
+            className="text-zion-slate hover:text-white p-1"
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </motion.div>
 

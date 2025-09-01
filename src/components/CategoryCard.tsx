@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface CategoryCardProps {
   title: string;
@@ -22,27 +22,30 @@ export function CategoryCard({ title, description, icon, color, count, className
   const slug = slugify(title);
 
   return (
-    <Link 
-      to={`/category/${slug}`} 
-      className={cn(
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
-        className
-      )}
-    >
-      <div
+    <Link href={`/category/${slug}`}>
+      <a
+        tabIndex={0}
+        data-testid="category-card" // Added data-testid
         className={cn(
-          "mb-4 p-3 bg-zion-blue-dark rounded-full",
-          !color && "text-zion-cyan"
+          "flex flex-col items-center p-6 bg-card/60 backdrop-blur-md rounded-lg border border-primary/10 sm:border-primary/20 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border",
+          className
         )}
-        style={color ? { color } : undefined}
       >
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-      <p className="text-zion-slate-light text-center">{description}</p>
-      {count !== undefined && (
-        <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>
-      )}
+        <div
+          className={cn(
+            "mb-4 p-3 bg-background rounded-full", // Changed background for icon container
+            !color && "text-primary" // Changed default icon color
+          )}
+          style={color ? { color } : undefined}
+        >
+          {icon}
+        </div>
+        <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{title}</h3>
+        <p className="text-foreground/80 text-center">{description}</p>
+        {count !== undefined && (
+          <div className="mt-3 text-sm text-primary">{count} listings</div>
+        )}
+      </a>
     </Link>
   );
 }

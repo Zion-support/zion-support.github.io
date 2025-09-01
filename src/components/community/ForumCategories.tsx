@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -41,33 +40,26 @@ export default function ForumCategories(...args[]):  {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap];
         return (
-          <Link key={category.id} href={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-2 bg-zion-purple/10 rounded-full">
-                  <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
-                {category.adminOnly && ("
-                  <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                    Admin Only
-                  </span>
-                )}
-              </div>
-"
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                {category.name}
-              </h3>
-"
-              <p className="text-zion-slate-light mb-4 leading-relaxed">
-                {category.description}
-              </p>
-"
-              <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">"
-                <span className="flex items-center gap-2">"
-                  <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
-                  {category.postCount} posts
-                </span>
-              </div>
+          <Link key={category.id} href={`/community/category/${category.id}`} passHref>
+            <a className="block h-full"> {/* Make the anchor a block element and take full height */}
+              <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="p-2 bg-zion-purple/10 rounded-full">
+                    <Icon className="h-6 w-6 text-zion-purple" />
+                  </div>
+                  <CardTitle className="text-xl">{category.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">{category.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </a>
+          </Link>
+        );
+      })}
+    </div>
+  );
+};
 
               {category.lastPost && (;"
                 <div className="pt-4 border-t border-white/10">"

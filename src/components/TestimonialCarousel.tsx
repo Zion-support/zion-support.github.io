@@ -9,6 +9,8 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
+import Link from "next/link";
+import { CASE_STUDIES } from "@/data/case-studies";
 
 const testimonials = [
   {
@@ -83,6 +85,11 @@ export function TestimonialCarousel() {
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+                    <CardFooter className="p-6 pt-0">
+                      <Button variant="link" className="text-zion-cyan p-0" asChild>
+                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
+                      </Button>
+                    </CardFooter>
                   </Card>
                 </CarouselItem>
               ))}

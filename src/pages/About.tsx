@@ -8,35 +8,11 @@ export default function Page() {
     },
   ];
 
-  const values = [{
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description:
-        "We push the boundaries of what's possible, constantly exploring emerging technologies and creative solutions.",
-      color: 'from - purple - 500 to - pink - 500',
-    },
-    {
-      icon: Award,
-      title: 'Excellence in Execution',
-      description:
-        'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
-    {
-      icon: Heart,
-      title: 'Partnership Approach',
-      description:
-        'We work as an extension of your team, building long - term relationships based on trust and mutual success.',
-      color: 'from - green - 500 to - emerald - 500',
-    },
-    {
-      icon: Shield,
-      title: 'Security & Trust',
-      description:
-        'Your data and systems are protected with enterprise - grade security and compliance standards.',
-      color: 'from - red - 500 to - orange - 500',
-    },
-  ];
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import Link from "next/link";
 
   const teamMembers = [{
       name: 'Kleber Santos',
@@ -351,36 +327,16 @@ export default function Page() {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="text-center"
-        >
-          <div className="bg-gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 backdrop - blur - lg rounded-2xl p - 12 border border-cyan -500 / 30">
-            <h2 className="text-4xl font - bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
-              Join hundreds of organizations that have already transformed their
-              operations with our AI - powered solutions.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
-              <Link
-                to="/contact"
-                className="bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white px-8 py-4 rounded-lg font - semibold text-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:-translate - y-1 shadow-lg hover:shadow-xl"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-cyan - 500 text-cyan - 400 px-8 py-4 rounded-lg font - semibold text-lg hover:bg-cyan - 500 hover:text-white transition - all duration -200"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>) ;
+        <div className="content-section text-center">
+          <p className="text-zion-slate-light text-lg">
+            Ready to work with us? Explore our{' '}
+            <Link href="/services"><a className="text-zion-cyan underline">AI & IT services</a></Link>{' '}
+            or <Link href="/contact"><a className="text-zion-cyan underline">get in touch</a></Link>. For the latest updates, visit our{' '}
+            <Link href="/blog"><a className="text-zion-cyan underline">blog</a></Link>.
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }

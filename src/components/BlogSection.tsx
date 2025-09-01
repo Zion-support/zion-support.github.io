@@ -1,3 +1,10 @@
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import Image from 'next/image';
+import React, { useState } from 'react'; // Ensure React and useState are imported
 
 <<<<<<< HEAD
   const blogPosts = [{
@@ -18,30 +25,75 @@ export function BlogSection(...args[]):  {
       date: '2024-01-10',;
       readTime: '12 min read'};  ];
 
-  return ()
-    <section className="py-16">"
-      <div className="container mx-auto px-4">"
-        <div className="flex justify-between items-center mb-8">"
-          <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>"
-          <Link to="/blog" className="text-zion-cyan hover:underline">
-            View all posts →
-          </Link>
-        </div>"
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {blogPosts.map((post)  => ("
-            <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-              <h3 className="text-xl font-semibold text-white mb-3">"
-                <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
-                  {post.title}
-                </Link>
-              </h3>"
-              <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"
-              <div className="flex justify-between text-sm text-zion-slate-light">
-                <span>{post.date}</span>
-                <span>{post.readTime}</span>
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc("/images/blog-placeholder.svg");
+      setImageError(true);
+    }
+  };
+
+  return (
+    <Image
+      src={imageSrc}
+      alt={post.title}
+      width={300} // Placeholder width
+      height={200} // Placeholder height
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
+      onError={handleImageError}
+      className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
+      priority={false} // Not LCP
+    />
+  );
+};
+
+export function BlogSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark" id="blog">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+          <div>
+            <GradientHeading>Latest Insights</GradientHeading>
+            <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
+              Stay updated with trends in AI technology, marketplace strategies, and IT services
+            </p>
+          </div>
+          <Button
+            variant="outline"
+            className="mt-4 md:mt-0 border-zion-purple text-white hover:bg-zion-purple/10"
+            asChild
+          >
+            <Link href="/blog">View All Articles</Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {recentPosts.map((post, index) => (
+            <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
+              <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
+                <PostImage post={post} /> {/* Use the sub-component */}
+                <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold">{index + 1}</div>
               </div>
-            </article>;) ) };
-        </div>;
-      </div>;
-    </section>;) }
-'"`
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs text-white bg-zion-blue-dark px-2 py-1 rounded">{post.category}</span>
+                  <div className="text-xs text-zion-slate-light">{post.publishedDate} • {post.readTime}</div>
+                </div>
+                <h3 className="text-xl font-bold text-zion-blue-dark mb-3">{post.title}</h3>
+                <p className="text-zion-blue-dark line-clamp-2">{post.excerpt}</p>
+              </CardContent>
+              <CardFooter className="p-6 pt-0">
+                <Button
+                  variant="link"
+                  className="text-zion-blue-dark p-0 hover:text-zion-purple-dark"
+                  asChild
+                >
+                  <Link href={`/blog/${post.slug}`}>Read More →</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

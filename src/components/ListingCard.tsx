@@ -1,7 +1,19 @@
 
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Link  } from 'react-router-dom';
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+
+interface ListingCardProps {
+  id?: string;
+  title: string;
+  description: string;
+  images?: string[];
+  category: string;
+  tags?: string[];
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string; };
+  className?: string;
+  profileType?: 'service' | 'talent';
+}
 
 export function ListingCard({ 
   id,
@@ -21,19 +33,20 @@ export function ListingCard({
   // In a real app, this would be a proper ID from the database
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
-  return (<Link
-      to={`/profile/${profileId}`}
-      tabIndex={0}
-      className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
-        className
-      )}
-    >
-      {image && (
-        <div className="h-48 w-full overflow-hidden">
-          <img
-            src={image}
-            alt={title}
+  return (
+    <Link href={`/profile/${profileId}`}>
+      <a
+        tabIndex={0}
+        className={cn(
+          "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+          className
+        )}
+      >
+        {images && images.length > 0 && (
+          <div className="h-48 w-full overflow-hidden">
+          <img 
+            src={images[0]}
+            alt={title} 
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
@@ -75,6 +88,7 @@ export function ListingCard({
           </div>
         )}
       </div>
+      </a>
     </Link>
   );
 }

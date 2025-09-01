@@ -18,7 +18,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import Link from "next/link";
+
+import { Checkbox } from "@/components/ui/checkbox";
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+  rememberMe: z.boolean(),
+});
 
 );
 
@@ -140,8 +148,14 @@ export function LoginForm() {
 
         <div className="flex items-center justify-between">
           <div className="text-sm">
-            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-              Forgot your password?
+            {/* "Remember me" checkbox is now above, this div can be used for "Forgot Password" if it's still needed */}
+            {/* If "Remember me" was previously here, it's moved. */}
+          </div>
+          <div className="text-sm">
+            <Link href="/forgot-password">
+              <a className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                Forgot password?
+              </a>
             </Link>
           </div>
         </div>
@@ -154,6 +168,13 @@ export function LoginForm() {
         >
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
+        <p className="text-sm text-center mt-4">
+          <Link href="/signup">
+            <a className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+              Create account
+            </a>
+          </Link>
+        </p>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
