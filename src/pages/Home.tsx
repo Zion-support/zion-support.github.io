@@ -123,8 +123,87 @@ const HeroSection = React.memo(() => {
     "Quantum Edge Computing",
     "Enterprise Automation",
     "Customer Experience Analytics"
+  ];
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      <FuturisticBackground />
+      
+      <div className="relative z-10 text-center max-w-6xl mx-auto">
+        {/* Enhanced Logo/Brand */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
+          className="mb-8"
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/30 text-zion-cyan text-sm font-medium mb-8"
+          >
+            <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2 animate-pulse"></span>
+            Next-Generation AI Solutions
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+          >
+            <span className="bg-gradient-to-r from-zion-cyan via-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </motion.h1>
+
+          {/* Subheading */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            Pioneering the Future of AI-Powered Business Solutions
+          </motion.p>
+
+          {/* Feature Carousel */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mb-12"
+          >
+            <div className="text-lg text-zion-cyan font-medium">
+              {features[currentFeature]}
+            </div>
+          </motion.div>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="px-8 py-4 bg-zion-cyan text-black font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors">
+              Explore Services
+            </button>
+            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-colors">
+              Get Started
+            </button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
 // Enhanced Hero Section with improved animations
-const HeroSection = React.memo(() => {
+const HeroSection2 = React.memo(() => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const heroTexts = [
     "AI-Powered Solutions",
@@ -149,8 +228,6 @@ const HeroSection = React.memo(() => {
   }, []);
 
   return (
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
       <FuturisticBackground />
       

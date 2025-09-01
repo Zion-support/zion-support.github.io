@@ -43,7 +43,6 @@ import {
   Cog,
   Key,
   Unlock,
-  Eye as EyeIcon,
   EyeOff,
   Copy,
   Check,
@@ -64,16 +63,7 @@ import {
   Archive,
   Tag,
   Hash,
-  Hash as HashIcon,
-  Hash as HashIcon2,
-  Hash as HashIcon3,
-  Hash as HashIcon4,
-  Hash as HashIcon5,
-  Hash as HashIcon6,
-  Hash as HashIcon7,
-  Hash as HashIcon8,
-  Hash as HashIcon9,
-  Hash as HashIcon10
+  Database
 } from 'lucide-react';
 
 export default function Training() {
@@ -657,32 +647,7 @@ export default function Training() {
           >
             {filteredCourses.map((course, index) => (
   GraduationCap, 
-  BookOpen, 
-  Video, 
-  Users, 
-  Certificate, 
-  Clock,
-  Star,
-  Play,
-  Download,
-  ExternalLink,
-  ChevronRight,
-  ChevronDown,
-  Search,
-  Filter,
-  Calendar,
-  MapPin,
-  Globe,
-  Zap,
-  Shield,
-  Database,
-  Brain
-} from 'lucide-react';
 
-const Training: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedCourse, setExpandedCourse] = useState<Set<string>>(new Set(['ai-fundamentals']));
 
   const toggleCourse = (courseId: string) => {
     const newExpanded = new Set(expandedCourse);
