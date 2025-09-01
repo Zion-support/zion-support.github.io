@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Globe } from 'lucide-react';
+import { CheckCircle, Star, Users, Award, Globe, ArrowRight } from 'lucide-react';
 
 const Home: NextPage = () => {
   return (

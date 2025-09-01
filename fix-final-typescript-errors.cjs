@@ -1,4 +1,5 @@
->>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
@@ -7,7 +8,16 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-<<<<<<< HEAD
+    // Fix missing types in interface definitions
+    content = content.replace(/data: ;/g, 'data: any;');
+    content = content.replace(/data: ;/g, 'data: any;');
+    content = content.replace(/Array<>/g, 'Array<any>');
+    content = content.replace(/Array<>/g, 'Array<any>');
+    content = content.replace(/useState<>\(/g, 'useState<any>(');
+    content = content.replace(/useState<>\(/g, 'useState<any>(');
+    content = content.replace(/useState<>\(/g, 'useState<any>(');
+    content = content.replace(/useState<>\(/g, 'useState<any>(');
+    
     // Fix missing types in function parameters
     content = content.replace(/\(entry: \)/g, '(entry: any)');
     content = content.replace(/\(entry: \)/g, '(entry: any)');
@@ -77,6 +87,14 @@ function fixFile(filePath) {
     content = content.replace(/:\s*Promise\s*<\s*any\s*>/g, ': Promise<any>');
     content = content.replace(/:\s*Partial\s*<\s*(\w+)\s*>/g, ': Partial<$1>');
     
+    // Fix specific interface issues
+    content = content.replace(/interface\s+(\w+)\s*{\s*(\w+)\s*:\s*(\w+)\s*\|/g, 'interface $1 {\n  $2: $3 |');
+    content = content.replace(/interface\s+(\w+)\s*{\s*(\w+)\s*:\s*(\w+)\s*;/g, 'interface $1 {\n  $2: $3;');
+    
+    // Fix malformed React.FC
+    content = content.replace(/React\.FC<>\s*=/g, 'React.FC =');
+    content = content.replace(/React\.FC<>\s*=/g, 'React.FC =');
+    
     // Write back if changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -87,50 +105,41 @@ function fixFile(filePath) {
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-=======
-    // Fix double import statements
-    content = content.replace(/import\s+\{\s*import\s+\{\s*([^}]+)\s*\}\s*from\s*['"`]([^'"`]+)['"`]/g, "import { $1 } from '$2'");
-    
-    // Fix malformed function declarations
-    content = content.replace(/export\s+default\s+function\s+(\w+)\(\)\s*\{\s*import\s+\{/g, "export default function $1() {\n  import {");
-    
-    // Fix missing closing braces
-    content = content.replace(/export\s+default\s+function\s+(\w+)\(\)\s*\{\s*$/gm, "export default function $1() {\n");
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+function getAllFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      if (!['node_modules', '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+      files.push(...getAllFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
     }
-  });
+  }
   
-  return fixedCount;
+  return files;
 }
 
-console.log('Starting remaining syntax fixes...');
-const fixedCount = processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+// Main execution
+const srcDir = path.join(process.cwd(), 'src');
+if (fs.existsSync(srcDir)) {
+  const files = getAllFiles(srcDir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\nFixed ${fixedCount} files.`);
+} else {
+  console.log('src directory not found');
+}

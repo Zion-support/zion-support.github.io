@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 
 const Solutions: NextPage = () => {
   return (
