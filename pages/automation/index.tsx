@@ -153,21 +153,29 @@ const Index: NextPage = () => {
             <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-+         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-+           <h2 className="text-xl font-bold">OG Coverage Auditor</h2>
-+           <p className="text-white/70">Audits pages for Open Graph tag coverage and publishes a report.</p>
-+           <a className="text-cyan-300 underline" href="/.netlify/functions/og-coverage-auditor" target="_blank" rel="noopener">Trigger / View</a>
-+         </li>
-+         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-+           <h2 className="text-xl font-bold">Performance Budget Reporter</h2>
-+           <p className="text-white/70">Scans public assets and CSS to report on size budgets.</p>
-+           <a className="text-cyan-300 underline" href="/.netlify/functions/performance-budget-runner" target="_blank" rel="noopener">Trigger / View</a>
-+         </li>
-+         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-+           <h2 className="text-xl font-bold">Roadmap Auto‑Builder</h2>
-+           <p className="text-white/70">Synthesizes a roadmap from TODO signals into docs/reports.</p>
-+           <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-builder-runner" target="_blank" rel="noopener">Trigger / View</a>
-+         </li>
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Terminology Consistency</h2>
+            <p className="text-white/70">Audits and normalizes product terminology across docs and README.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/terminology-consistency-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Routes Map</h2>
+            <p className="text-white/70">Generates an index of all site routes and public reports.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/routes-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Component Props Docs</h2>
+            <p className="text-white/70">Scans components/ and publishes basic props docs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/component-props-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
+
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Static Asset Inventory</h2>
+            <p className="text-white/70">Indexes public/ assets and publishes a size report.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/asset-inventory-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
         </ul>
 </main>
     </div>
