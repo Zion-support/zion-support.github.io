@@ -102,11 +102,17 @@ const Index: NextPage = () => {
               >
                 Explore Services
               </a>
-              <a 
-                href="/contact" 
-                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Get in Touch
+              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                Our Services
+              </a>
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Blog
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
               </a>
             </div>
           </section>
@@ -155,80 +161,85 @@ const Index: NextPage = () => {
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
 
-          {/* Features Section */}
+          {/* Blog Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Why Choose Zion Tech Group?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold text-cyan-300 mb-3">Autonomous Systems</h3>
-                <p className="text-white/80 text-sm">
-                  Our AI-powered systems operate independently, continuously learning and improving without human intervention.
-                </p>
-              </div>
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Latest Insights & Guides</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <a href="/blog/ai-automation-future" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-purple-400/30 transition-all duration-300">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-purple-500/0 via-cyan-400/10 to-purple-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-purple-400/20 text-purple-400 text-xs font-medium rounded-full">
+                    AI & Automation
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">The Future of AI Automation</h3>
+                <p className="text-sm text-white/75 mb-3">How autonomous systems are revolutionizing industries and reshaping the future of work</p>
+                <div className="flex items-center justify-between text-xs text-white/50">
+                  <span>January 17, 2025</span>
+                  <span>8 min read</span>
+                </div>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-purple-300/90">Read More <span aria-hidden>→</span></div>
+              </a>
               
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-semibold text-fuchsia-300 mb-3">24/7 Operation</h3>
-                <p className="text-white/80 text-sm">
-                  Round-the-clock monitoring and maintenance ensures your systems never sleep and always perform optimally.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🔒</div>
-                <h3 className="text-xl font-semibold text-purple-300 mb-3">Enterprise Security</h3>
-                <p className="text-white/80 text-sm">
-                  Military-grade security protocols with autonomous threat detection and response systems.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-xl font-semibold text-green-300 mb-3">Global Scale</h3>
-                <p className="text-white/80 text-sm">
-                  Deployed across multiple continents with intelligent load balancing and regional optimization.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-semibold text-blue-300 mb-3">Real-time Analytics</h3>
-                <p className="text-white/80 text-sm">
-                  Live performance monitoring with predictive analytics and automated optimization recommendations.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-orange-400/30 transition-all duration-300">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-semibold text-orange-300 mb-3">Continuous Innovation</h3>
-                <p className="text-white/80 text-sm">
-                  Our systems evolve continuously, incorporating the latest AI breakthroughs and technological advances.
-                </p>
-              </div>
+              <a href="/blog/autonomous-systems-guide" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-purple-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded-full">
+                    Technical Guide
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Complete Guide to Autonomous Systems</h3>
+                <p className="text-sm text-white/75 mb-3">Everything you need to know about building, deploying, and managing intelligent autonomous systems</p>
+                <div className="flex items-center justify-between text-xs text-white/50">
+                  <span>January 17, 2025</span>
+                  <span>12 min read</span>
+                </div>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read More <span aria-hidden>→</span></div>
+              </a>
+            </div>
+            <div className="text-center mt-8">
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                View All Blog Posts
+              </a>
             </div>
           </section>
 
-          {/* Stats Section */}
+          {/* Case Studies Preview */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Our Impact</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
-                <p className="text-white/80 text-sm">Active Automations</p>
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Success Stories</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs font-medium rounded-full">
+                    E-commerce
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">E-commerce Automation Revolution</h3>
+                <p className="text-sm text-white/75 mb-3">TechRetail Inc. achieved 85% reduction in manual work and 60% improvement in order fulfillment speed.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-white/50">TechRetail Inc.</span>
+                  <a href="/case-studies" className="text-xs text-cyan-400 hover:text-cyan-300">View Case Study →</a>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-fuchsia-400 mb-2">2,960</div>
-                <p className="text-white/80 text-sm">Pages Maintained</p>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs font-medium rounded-full">
+                    Manufacturing
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Manufacturing Process Optimization</h3>
+                <p className="text-sm text-white/75 mb-3">GlobalManufacturing Co. reduced unplanned downtime by 70% and achieved $350K annual cost savings.</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-white/50">GlobalManufacturing Co.</span>
+                  <a href="/case-studies" className="text-xs text-fuchsia-400 hover:text-fuchsia-300">View Case Study →</a>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <p className="text-white/80 text-sm">Uptime</p>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">47</div>
-                <p className="text-white/80 text-sm">Countries Served</p>
-              </div>
+            </div>
+            <div className="text-center mt-8">
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+                View All Case Studies
+              </a>
             </div>
           </section>
         </main>

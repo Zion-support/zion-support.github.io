@@ -13,20 +13,40 @@ export default function AboutPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <nav className="mb-8">
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </a>
-            </nav>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Pioneering the future of autonomous technology and AI-driven innovation
+            </p>
             
-            <article className="prose prose-invert prose-lg max-w-none">
-              <header className="text-center mb-16">
-                <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                  About Zion Tech Group
-                </h1>
-                <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                  Pioneering the future of autonomous technology and intelligent automation systems
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                Home
+              </a>
+              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                Our Services
+              </a>
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Blog
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
+              </a>
+            </div>
+          </section>
+
+          <section className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
+                <p className="text-lg text-white/80 mb-4">
+                  To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
                 </p>
               </header>
               

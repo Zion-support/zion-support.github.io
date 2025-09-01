@@ -13,20 +13,33 @@ export default function ServicesPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-16">
-              <nav className="mb-6 text-left">
-                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Home
-                </a>
-              </nav>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Our Services
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Comprehensive autonomous technology solutions designed to transform your business operations
-              </p>
-            </header>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Comprehensive AI and automation solutions designed to transform your business and drive innovation
+            </p>
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                Home
+              </a>
+              <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                About Us
+              </a>
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Blog
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
+              </a>
+            </div>
+          </section>
 
             <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-white/10">
               <h2 className="text-3xl font-bold mb-6 text-cyan-300">Core Services</h2>
