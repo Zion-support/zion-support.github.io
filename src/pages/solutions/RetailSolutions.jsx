@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
-export default function RetailSolutions() {
+import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export default function RetailSolutions() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function RetailSolutions() {
             icon: Smartphone,
             title: "Omnichannel Experience",
             description: "Seamless integration across online and offline retail channels"
-        }
+
     ];
     const benefits = [
         "Increase sales by 25-40%",
@@ -58,7 +57,7 @@ export default function RetailSolutions() {
         {
             title: "Marketing Automation",
             description: "AI-driven marketing campaigns and personalization"
-        }
+
     ];
     const retailTypes = [
         "Fashion & Apparel",
@@ -102,7 +101,7 @@ export default function RetailSolutions() {
               Retail Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your retail business with cutting-edge AI technology. Enhance customer experience, 
+              Transform your retail business with cutting-edge AI technology. Enhance customer experience,
               optimize operations, and drive sales growth with intelligent retail solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,7 +142,7 @@ export default function RetailSolutions() {
               AI-Powered Retail Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive retail solutions combine advanced AI with retail expertise 
+              Our comprehensive retail solutions combine advanced AI with retail expertise
               to revolutionize how retailers operate and serve their customers.
             </p>
           </motion.div>
@@ -303,7 +302,7 @@ export default function RetailSolutions() {
               Retail Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our retail solutions are designed to meet the unique challenges and requirements 
+              Our retail solutions are designed to meet the unique challenges and requirements
               of various retail sectors and product categories.
             </p>
           </motion.div>
@@ -385,4 +384,4 @@ export default function RetailSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

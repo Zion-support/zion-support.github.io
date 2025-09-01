@@ -27,7 +27,7 @@ const features = [
         description: "Built to grow with your business, from startup to enterprise, with flexible deployment options.",
         icon: TrendingUp,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Centralize all business operations in one platform",
@@ -57,7 +57,7 @@ const modules = [
         title: "Project Management",
         description: "AI-driven project planning and resource allocation.",
         icon: TrendingUp
-    }
+
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
@@ -90,18 +90,18 @@ export default function AIAutonomousBusinessPlatform() {
               <Cpu className="w-4 h-4"/>
               Complete Business Solution
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Business Platform
               </span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">
               The ultimate business platform that unifies all your operations with intelligent AI automation, real-time insights, and seamless scalability.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>

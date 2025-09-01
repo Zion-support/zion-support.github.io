@@ -33,12 +33,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {
-<<<<<<< HEAD
-        trackEvent('chatbot', action, 'chatbot_interaction', null, metadata)}, [trackEvent]);
-=======
         trackEvent('chatbot', action, 'chatbot_interaction', null, metadata);
     }, [trackEvent]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Add message to chat
     const addMessage = useCallback((message) => {
         const newMessage = {
@@ -288,27 +284,27 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                         : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}>
                           {message.type === 'user' ? <User className="w-4 h-4"/> : <Bot className="w-4 h-4"/>}
                         </div>
-                        
+
                         <div className={`rounded-lg p-3 ${message.type === 'user'
                         ? 'bg-blue-500 text-white'
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}>
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                          
+
                           {/* Message Metadata */}
                           {message.metadata && (<div className="mt-2 text-xs opacity-70">
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
                             </div>)}
-                          
+
                           {/* Suggestions */}
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
                         </div>
                       </div>
                     </motion.div>))}
-                  
+
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
-                  
+
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef}/>
                 </div>
@@ -321,7 +317,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Send className="w-4 h-4"/>)}
                     </button>
                   </form>
-                  
+
                   {/* Quick Actions */}
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                     <button onClick={clearConversation} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">

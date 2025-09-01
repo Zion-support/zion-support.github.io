@@ -37,7 +37,7 @@ export function ServiceShowcase({ services }) {
                     Featured
                   </Badge>
                 </div>)}
-              
+
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
@@ -83,7 +83,7 @@ export function ServiceShowcase({ services }) {
                     </span>
                     <span className="text-zinc-400 text-sm">per month</span>
                   </div>
-                  
+
                   <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
                     Get Started
                   </Button>

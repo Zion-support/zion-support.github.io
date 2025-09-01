@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -166,7 +162,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Leaf className="w-4 h-4 mr-2" />
               Sustainable Technology
@@ -287,7 +283,7 @@ export default function GreenIT() {
 
 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Green IT?
               </h2>
@@ -344,7 +340,7 @@ export default function GreenIT() {
 }}
               transition={{ duration: 0.6 }}
               className="relative"
-            >
+
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-semibold text-white">Sustainability Dashboard</h3>
@@ -406,7 +402,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -451,7 +447,7 @@ export default function GreenIT() {
 
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -489,7 +485,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Solutions
             </h2>
@@ -534,7 +530,7 @@ export default function GreenIT() {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <solution.icon className="w-8 h-8 text-green-400" />
@@ -582,7 +578,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -627,7 +623,7 @@ export default function GreenIT() {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-green-400" />
@@ -675,7 +671,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -720,7 +716,7 @@ export default function GreenIT() {
 
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -758,7 +754,7 @@ export default function GreenIT() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -788,7 +784,7 @@ export default function GreenIT() {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -823,7 +819,7 @@ export default function GreenIT() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -860,7 +856,7 @@ export default function GreenIT() {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green with Your IT?
             </h2>
@@ -881,4 +877,4 @@ export default function GreenIT() {
       </section>;
     </div>;
   );
-}
+}}}}}}}

@@ -52,6 +52,11 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
+            // // // // // // // console.error('Error analyzing pages:', error);
+        }
+        finally {
+            setIsLoading(false);
+
                     images['/images/contact-office.jpg'],
                     links['/services', '/about', '/team']
                 }
@@ -148,7 +153,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                 ×
               </button>
             </div>
-            
+
             {/* Summary Stats */}
             {report && (<div className="grid grid-cols-4 gap-4 mt-3">
                 <div className="text-center">
@@ -271,7 +276,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                           <X className="w-5 h-5"/>
                         </button>
                       </div>
-                      
+
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
@@ -332,3 +337,4 @@ const ContentQualityDashboard = ({ className = '' }) => {
         </div>)}
     </div>)};
 export default ContentQualityDashboard;
+}}}}}}}}}

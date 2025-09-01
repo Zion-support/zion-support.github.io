@@ -54,7 +54,7 @@ export function FilterSidebar({
           <button
             onClick={onClose}
             className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-          >
+
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
         </div>
@@ -72,21 +72,12 @@ export function FilterSidebar({
           </div>
 
           {/* Filter groups */}
-<<<<<<< HEAD
-          {filters.map((group)  => (
-            <div key={group.key} className="space-y-3">
-              <h4 className="font-medium text-white">{group.title}</h4>
-
-              <div className="space-y-2">
-                {group.options.map((option) => {
-=======;
           {filters.map((group) => (;
             <div key={group.key} className="space-y-3">;
               <h4 className="font-medium text-white">{group.title}</h4>;
               ;
               <div className="space-y-2">;
                 {group.options.map((option) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
 
                   return (
@@ -112,14 +103,6 @@ export function FilterSidebar({
                         {option.label}
                         {option.count && (
                           <span className="ml-2 text-zion-slate-light/60">
-<<<<<<< HEAD
-                            ({option.count})
-                          </span>
-                        )}
-                      </span>
-                    </label>
-                  )})};
-=======;
                             ({option.count});
                           </span>;
                         )};
@@ -127,7 +110,6 @@ export function FilterSidebar({
                     </label>;
                   );
                 })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
           ))}

@@ -1,8 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { Suspense, lazy } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cpu,
   Rocket,
@@ -36,7 +35,7 @@ import {
   Search,
   Menu,
   X
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 // Lazy load components for better performance
 const LazyTestimonials = lazy(() => import('../components/Testimonials'));
@@ -60,7 +59,7 @@ const HeroSkeleton = () => (
   </div>
 );
 
-export function HomePage() {
+export function HomePage(...args: any[]): any {
   const heroFeatures = [
     { icon: Brain, text: 'AI-Powered Solutions', description: 'Transform your business with cutting-edge artificial intelligence' },
     { icon: Atom, text: 'Quantum Computing', description: 'Harness the power of quantum mechanics for unprecedented computational capabilities' },
@@ -245,6 +244,39 @@ export function HomePage() {
       <Suspense fallback={<div className="py-20 bg-gray-800 animate-pulse"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div className="h-64 bg-gray-700 rounded-xl"></div><div className="h-64 bg-gray-700 rounded-xl"></div><div className="h-64 bg-gray-700 rounded-xl"></div></div></div></div>}>
         <LazyTestimonials testimonials={testimonials} />
       </Suspense>
+
+      {/* New Services 2025 Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 rounded-full mb-6">
+            <Star className="w-5 h-5 text-white" />
+            <span className="text-white font-medium">New in 2025</span>
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Revolutionary AI Services
+          </h2>
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            Discover our cutting-edge micro SAAS services designed to transform industries and drive unprecedented growth. 
+            Each service combines proven AI technology with innovative business solutions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/new-services-2025"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <span>Explore New Services</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+            >
+              <span>Get Early Access</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">

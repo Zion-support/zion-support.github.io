@@ -141,7 +141,6 @@ export function HeroImage({ src, alt, className, ...props }) {
   className)
 
 } priority {...props}/>)}
-=======
   xl: 'w-16 h-16'
     
 
@@ -173,4 +172,3 @@ export function HeroImage({ src, alt, className, ...props }) {
 
 } priority {...props}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

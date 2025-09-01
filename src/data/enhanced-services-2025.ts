@@ -63,18 +63,11 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     trialDays: 30,
     setupTime: "2-4 weeks",
     contactInfo: {
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com";
-=======;
         mobile: string;
         email: string;
         address: string;
         website: string;
     };
-}
 
 const CONTACT = {
   mobile: '+1 302 464 0950',
@@ -446,7 +439,6 @@ export const enhancedServices2025: EnhancedService[] = [
         color: 'from-lime-600 to-green-700',
         link: '/services/edge-iot-observability',
         contactInfo: CONTACT
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
   },
   // Quantum Computing Services
@@ -1109,4 +1101,4 @@ export const enhancedServices2025: EnhancedService[] = [
   }
 ];
 
-export default enhancedServices2025;
+export default enhancedServices2025;}}

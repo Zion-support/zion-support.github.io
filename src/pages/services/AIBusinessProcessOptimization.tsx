@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Zap, 
   TrendingUp, 
   BarChart3, 
@@ -21,10 +20,10 @@ import {
   Database,
   Workflow,
   Gauge
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+ } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const AIBusinessProcessOptimization: React.FC = () => {
+const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -224,8 +223,8 @@ const AIBusinessProcessOptimization: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -263,8 +262,8 @@ const AIBusinessProcessOptimization: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -299,8 +298,8 @@ const AIBusinessProcessOptimization: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -340,8 +339,8 @@ const AIBusinessProcessOptimization: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -407,8 +406,8 @@ const AIBusinessProcessOptimization: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {roi.map((metric, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {roi.map((metric, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

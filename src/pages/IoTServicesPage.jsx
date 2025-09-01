@@ -5,31 +5,6 @@ import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
 import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
-<<<<<<< HEAD
-const iotBenefits = [
-    {
-        title: "Real-time Monitoring",
-        description: "Monitor your assets and processes in real-time for immediate insights and rapid response",
-        icon: <Activity className="h-6 w-6"/>
-    },
-    {
-        title: "Data-Driven Decisions",
-        description: "Make informed decisions based on comprehensive data collection and advanced analytics",
-        icon: <BarChart3 className="h-6 w-6"/>
-    },
-    {
-        title: "Operational Efficiency",
-        description: "Automate processes and optimize operations to reduce costs and improve productivity",
-        icon: <Zap className="h-6 w-6"/>
-    },
-    {
-        title: "Predictive Maintenance",
-        description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
-        icon: <TrendingUp className="h-6 w-6"/>
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotUseCases = [
     {
         title: "Smart Manufacturing",
@@ -50,7 +25,7 @@ const iotUseCases = [
         title: "Smart Agriculture",
         description: "Precision farming, environmental monitoring, and automated irrigation systems",
         icon: <Settings className="h-6 w-6"/>
-    }
+
 ];
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -65,7 +40,7 @@ export default function IoTServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to 
+              Connect, monitor, and optimize your business with cutting-edge IoT technology. From device management to
               advanced analytics, we deliver comprehensive IoT solutions that drive innovation and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

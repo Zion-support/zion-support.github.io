@@ -197,7 +197,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           <h3 className="text-xl font-semibold text-white mb-6">
             Popular Pages You Might Like
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {suggestions.map((route, index) => (<motion.div key={route} initial = {
   { opacity: 0,

@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  Brain,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Globe,
   Database,
   Cloud,
   Lock,
@@ -39,7 +33,6 @@ import {
   Star
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
@@ -249,7 +242,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6">
               AI Customer Success Prediction
             </h1>
@@ -294,12 +287,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful AI-Powered Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with deep customer insights to deliver 
+              Our platform combines cutting-edge AI with deep customer insights to deliver
               unprecedented accuracy in customer success prediction and optimization.
             </p>
           </motion.div>
@@ -351,7 +344,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -389,12 +382,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Platform Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive tools and features designed to transform your customer success operations 
+              Comprehensive tools and features designed to transform your customer success operations
               and drive measurable business outcomes.
             </p>
           </div>
@@ -434,7 +427,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-purple-400" />
@@ -482,12 +475,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI Customer Success Prediction is transforming industries across the globe, 
+              AI Customer Success Prediction is transforming industries across the globe,
               enabling proactive customer management and driving unprecedented business growth.
             </p>
           </div>
@@ -527,7 +520,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
-              >
+
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -575,12 +568,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI Customer Success Prediction can transform your organization 
+              Discover how AI Customer Success Prediction can transform your organization
               and drive measurable business outcomes.
             </p>
           </div>
@@ -620,7 +613,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -658,12 +651,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include a 14-day free trial 
+              Choose the perfect plan for your business needs. All plans include a 14-day free trial
               and our industry-leading 99.9% uptime guarantee.
             </p>
           </motion.div>
@@ -703,11 +696,11 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
+                  plan.popular
+                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -715,7 +708,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -773,12 +766,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven methodology ensures successful AI Customer Success Prediction deployment 
+              Our proven methodology ensures successful AI Customer Success Prediction deployment
               and rapid value realization.
             </p>
           </motion.div>
@@ -804,7 +797,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 step: '04',
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
@@ -839,7 +832,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -876,12 +869,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Customer Success?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Customer Success Prediction can revolutionize your customer 
+              Discover how AI-powered Customer Success Prediction can revolutionize your customer
               management and drive unprecedented business growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -950,16 +943,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default AICustomerSuccessPrediction;
-=======
             </div>;
           </div>;
         </div>;
@@ -967,4 +950,3 @@ export default AICustomerSuccessPrediction;
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

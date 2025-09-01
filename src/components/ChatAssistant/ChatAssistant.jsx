@@ -6,8 +6,7 @@ import { ChatMessage } from "./ChatMessage";
 import { ChatInput } from "./ChatInput";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import { focusManagement } from '@/utils/accessibility';
+import { X import { focusManagement } from '@/utils/accessibility';
 export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {
     const auth = useContext(AuthContext);
     const isGuest = !auth?.isAuthenticated;
@@ -29,7 +28,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (initialMessages && initialMessages.length > 0) {
                 setDisplayGuestMessages(initialMessages);
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
-            }
+
             else {
                 setDisplayGuestMessages(storedGuestMessages)}
         }
@@ -47,7 +46,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
             setDisplayGuestMessages(newMessages);
             setStoredGuestMessages(newMessages); // Always update localStorage for guests
-        }
+
         else {
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
             setLoggedInMessages(newMessages)}
@@ -154,12 +153,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             <X className="h-5 w-5"/>
           </Button>
         </div>
-        
+
         {/* Context Header (Optional) */}
         {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>)}
-        
+
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
@@ -167,7 +166,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
           <div ref={messagesEndRef}/>
         </div>
-        
+
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage}/>

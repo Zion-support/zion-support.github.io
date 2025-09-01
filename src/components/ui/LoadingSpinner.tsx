@@ -1,11 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from "../../lib/utils";
+import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
+}
+
+export default function LoadingSpinner({
+  size = 'md',
+  color = 'primary',
+  className = '',
+  showText = false,
+  text = 'Loading...'
   className?: string;
 }
 
@@ -57,7 +65,6 @@ export function LoadingSpinner({
       <span className="sr-only">Loading...</span>
     </div>
   );
-}
 
 // Enhanced loading spinner with dots
 export function LoadingDots({ 
@@ -141,7 +148,6 @@ export function LoadingSkeleton({
       ))}
     </div>
   );
-}
 
 // Button loading state
 export function ButtonLoader({ 
@@ -157,7 +163,6 @@ export function ButtonLoader({
       <span className="ml-2">Loading...</span>
     </div>
   );
-}
 
 // Page loading overlay
 export function PageLoaderOverlay({ 
@@ -215,15 +220,14 @@ export function FullPageLoader({
       </div>
     </div>
   );
-}
 
 // Content loading placeholder
-export function ContentPlaceholder({ 
+export function ContentPlaceholder({
   className = '',
   variant = 'default'
-}: { 
-  className?: string; 
-  variant?: 'default' | 'card' | 'list' | 'grid'; 
+}: {
+  className?: string;
+  variant?: 'default' | 'card' | 'list' | 'grid';
 }) {
   const variants = {
     default: 'space-y-4',
@@ -243,7 +247,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-6 border border-white/10"
-          >
+
             <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
@@ -258,7 +262,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             className="flex items-center space-x-3"
-          >
+
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
@@ -272,7 +276,7 @@ export function ContentPlaceholder({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-4 border border-white/10"
-          >
+
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
@@ -291,12 +295,11 @@ export function ContentPlaceholder({
       )}
     </div>
   );
-}
 
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
   const icons = ['🤖', '☁️', '🔒', '💡'];
-  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
@@ -306,7 +309,7 @@ export function AppLoadingSpinner() {
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
           <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
         </div>
-        
+
         {/* Floating icons */}
         {icons.map((icon, index) => (
           <motion.div
@@ -327,31 +330,31 @@ export function AppLoadingSpinner() {
               delay: index * 0.5,
               ease: "easeInOut"
             }}
-          >
-            <span 
+
+            <span
               style={{
                 position: 'absolute',
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`
               }}
-            >
+
               {icon}
             </span>
           </motion.div>
         ))}
       </div>
-      
+
       {/* Loading text */}
       <motion.div
         className="mt-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-      >
+
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
         <p className="text-gray-400">Preparing your futuristic experience...</p>
       </motion.div>
-      
+
       {/* Progress dots */}
       <div className="flex gap-2 mt-6">
         {[0, 1, 2].map((i) => (

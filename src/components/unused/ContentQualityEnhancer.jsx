@@ -12,10 +12,10 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(true);
         const issues = [];
         const suggestions = [];
-        let wordCount = 0;
-        let readabilityScore = 100;
-        let seoScore = 100;
-        let engagementScore = 100;
+        const wordCount = 0;
+        const readabilityScore = 100;
+        const seoScore = 100;
+        const engagementScore = 100;
         // Get all content elements
         const contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
@@ -90,7 +90,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = {};
+            const wordFrequency = { /* empty */ };
             commonWords.forEach(word => {
                 wordFrequency[word] = (wordFrequency[word] || 0) + 1});
             Object.entries(wordFrequency).forEach(([word, count]) => {
@@ -422,7 +422,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.seoScore)}`}>
                           <div className="text-center">
                             <div className={`text-lg font-bold ${getScoreColor(analysis.seoScore)}`}>
@@ -433,7 +433,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.engagementScore)}`}>
                           <div className="text-center">
                             <div className={`text-lg font-bold ${getScoreColor(analysis.engagementScore)}`}>
@@ -476,7 +476,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}
                             {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}
                             {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
-                            
+
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
                                 {issue.title}
@@ -516,7 +516,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                       {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
                           <div className="flex items-start gap-2">
                             <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>
-                            
+
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
                                 {suggestion.title}
@@ -595,3 +595,4 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
       `}</style>
     </>)};
 export default ContentQualityEnhancer;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

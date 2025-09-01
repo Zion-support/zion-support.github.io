@@ -55,6 +55,11 @@ export function ITServiceRequestHero(...args[]):  {
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+export function ITServiceRequestHero() {
   return (
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -69,7 +74,7 @@ export function ITServiceRequestHero(...args[]):  {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-      >
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
@@ -116,14 +121,14 @@ export function ITServiceRequestHero(...args[]):  {
               <Button
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+
                 Request Service Now
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              >
+
                 Learn More
               </Link>
             </div>
@@ -217,14 +222,6 @@ export function ITServiceRequestHero(...args[]):  {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -232,4 +229,3 @@ export function ITServiceRequestHero(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

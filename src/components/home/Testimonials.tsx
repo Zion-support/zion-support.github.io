@@ -13,64 +13,6 @@ interface Testimonial {
   avatar: string;
   industry: string}
 
-<<<<<<< HEAD
-const Testimonials: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials: Testimonial[] = [
-    {
-      id: 1,
-      name: "Sarah Chen",
-      role: "CTO",
-      comp: "TechFlow Solutions",
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",
-      rating: 5,
-      avatar: "/images/testimonials/sarah-chen.jpg",
-      industry: "Technology"
-    },
-    {
-      id: 2,
-      name: "Marcus Rodriguez",
-      role: "VP of Operations",
-      comp: "Global Manufacturing Co.",
-      content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
-      rating: 5,
-      avatar: "/images/testimonials/marcus-rodriguez.jpg",
-      industry: "Manufacturing"
-    },
-    {
-      id: 3,
-      name: "Dr. Emily Watson",
-      role: "Research Director",
-      comp: "Quantum Research Institute",
-      content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",
-      rating: 5,
-      avatar: "/images/testimonials/emily-watson.jpg",
-      industry: "Research"
-    },
-    {
-      id: 4,
-      name: "David Kim",
-      role: "CEO",
-      comp: "FinTech Innovations",
-      content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",
-      rating: 5,
-      avatar: "/images/testimonials/david-kim.jpg",
-      industry: "Financial Services"
-    }
-  ];
-
-<<<<<<< HEAD
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
-
-  const prevTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
-
-  const goToTestimonial = (index: number)  => {;
-    setCurrentIndex(index)};
-=======
   const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
@@ -82,7 +24,6 @@ const Testimonials: React.FC = () => {;
   const goToTestimonial = (index: number) => {;
     setCurrentIndex(index);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
@@ -111,7 +52,7 @@ const Testimonials: React.FC = () => {;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
             <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
@@ -163,7 +104,7 @@ const Testimonials: React.FC = () => {;
 }}
               transition={{ duration: 0.5 }}
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
-            >
+
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
@@ -206,7 +147,7 @@ const Testimonials: React.FC = () => {;
             onClick={prevTestimonial}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Previous testimonial"
-          >
+
             <ChevronLeft className="w-6 h-6" />
           </button>
 
@@ -214,7 +155,7 @@ const Testimonials: React.FC = () => {;
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Next testimonial"
-          >
+
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -269,7 +210,7 @@ const Testimonials: React.FC = () => {;
 
 }}
           viewport={{ once: true }}
-        >
+
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
@@ -287,14 +228,6 @@ const Testimonials: React.FC = () => {;
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
@@ -302,6 +235,5 @@ const Testimonials: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Testimonials;
+export default Testimonials;}}}

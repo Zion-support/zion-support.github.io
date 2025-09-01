@@ -1,23 +1,40 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-export default function SignUp() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { register } from "@/services/auth";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+// Form validation schema
+const signupSchema = z
+    .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+        .min(8, "Password must be at least 8 characters")
+        .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+        .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+        .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+        message: "You must accept the terms and conditions",
+    }),
+})
+    .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+});
+export default function Signup() {
+    const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
     const navigate = useNavigate();
-<<<<<<< HEAD
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        await axios.post('/auth/register', { email, password });
-        router('/marketplace')};
-    return (<form onSubmit={handleSubmit} className="p-4 space-y-2">
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="border px-2 py-1 w-full"/>
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="border px-2 py-1 w-full"/>
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-        Sign Up
-      </button>
-    </form>)}
-=======
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     // Track confirm password locally to prevent it from clearing on blur
@@ -72,7 +89,7 @@ export default function SignUp() {
                     // updating user state and navigating if necessary for other cases.
                     // For direct signup with session, we can navigate.
                     toast.success("Welcome to ZionAI 🎉");
-                    router("/dashboard");
+                    navigate("/dashboard");
                 }
                 else {
                     // This case might indicate an unexpected response from the API
@@ -147,16 +164,7 @@ export default function SignUp() {
                 {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">
                     <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
                   </Alert>)}
-                <form onSubmit = {
-  form.handleSubmit(onSubmit,
-  onInvalid)
-
-
-
-
-
-
-} className="space-y-6" noValidate>
+                <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6" noValidate>
                   <FormField control={form.control} name="displayName" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                         <FormControl>
@@ -299,4 +307,3 @@ export default function SignUp() {
     </>);
     };
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

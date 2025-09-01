@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
-const navigationItems = [
+import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown const navigationItems = [
     {
         name: 'Home',
         href: '/',
@@ -32,7 +31,7 @@ const navigationItems = [
         href: '/contact',
         icon: <Phone className="w-5 h-5"/>,
         description: 'Get in touch with us'
-    }
+
 ];
 export default function FuturisticNavigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +49,7 @@ export default function FuturisticNavigation() {
             : 'bg-transparent'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100"/>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

@@ -10,16 +10,12 @@ export default function Profile() {
     useEffect(() => {
         if (!isLoading && !user) {
             toast.error("Please log in to view your profile");
-<<<<<<< HEAD
-            router("/login?redirect=/profile")}
-=======
             router("/login?redirect=/profile");
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }, [user, isLoading, navigate]);
     if (isLoading) {
         return (<>
-        
+
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
@@ -27,7 +23,7 @@ export default function Profile() {
       </>)}
     if (!user) {
         return (<>
-        
+
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
@@ -40,7 +36,7 @@ export default function Profile() {
         
       </>)}
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
@@ -56,12 +52,8 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button onClick={() => {
             logout();
-<<<<<<< HEAD
-            router("/")}} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-=======
             router("/");
         }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   Logout
                 </Button>
               </div>
@@ -73,3 +65,4 @@ export default function Profile() {
     </>)}
 ;
 export default Profile;
+}}}}

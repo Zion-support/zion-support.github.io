@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityAutomation() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation() {
   const features = [
     'AI-powered security automation optimization',
     'Intelligent workflow automation and orchestration',;
@@ -13,10 +11,10 @@ export default function AISecurityAutomation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$599/mo', 
-      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityAutomation() {
       </section>;
     </div>;
   );
-}
+}}

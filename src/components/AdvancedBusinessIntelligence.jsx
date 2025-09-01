@@ -1,46 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-<<<<<<< HEAD
-const mockInsights = [
-    {
-        id: 'insight-1',
-        type: 'prediction',
-        title: 'Revenue Growth Prediction',
-        description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
-        confidence: 87,
-        impact: 'high',
-        category: 'Financial',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        actionable: true,
-        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
-    },
-    {
-        id: 'insight-2',
-        type: 'anomaly',
-        title: 'Customer Churn Anomaly',
-        description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
-        confidence: 92,
-        impact: 'high',
-        category: 'Customer',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        actionable: true,
-        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
-    },
-    {
-        id: 'insight-3',
-        type: 'opportunity',
-        title: 'Market Expansion Opportunity',
-        description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
-        confidence: 78,
-        impact: 'medium',
-        category: 'Growth',
-        timestamp: '2024-01-15T08:45:00.000Z',
-        actionable: true,
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockModels = [
     {
         id: 'model-1',
@@ -68,7 +30,7 @@ const mockModels = [
         status: 'training',
         predictions: 15420,
         category: 'Customer Analytics'
-    }
+
 ];
 export function AdvancedBusinessIntelligence() {
     const [isOpen, setIsOpen] = useState(false);
@@ -272,10 +234,10 @@ export function AdvancedBusinessIntelligence() {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                { label: 'Generate Report', icon: Download, action: () => { } },
-                { label: 'Schedule Review', icon: Calendar, action: () => { } },
-                { label: 'Set Alerts', icon: AlertTriangle, action: () => { } },
-                { label: 'Export Data', icon: Download, action: () => { } }
+                { label: 'Generate Report', icon: Download, action: () => { /* empty */ } },
+                { label: 'Schedule Review', icon: Calendar, action: () => { /* empty */ } },
+                { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },
+                { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
             ].map((item, index) => {
                 const Icon = item.icon;
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">

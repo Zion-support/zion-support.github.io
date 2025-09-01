@@ -56,7 +56,6 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_2027,
@@ -66,78 +65,23 @@ import {
   type ExpandedService2027
 } from '@/data/expandedInnovativeServices2027';
 
-<<<<<<< HEAD
-const ExpandedServicesShowcase2027: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
-
-  useEffect(() => {
-    let services = getExpandedServicesByCategory(selectedCategory);
-    if (searchQuery) {
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return Shield;
-      case 'Data Analytics':
-        return BarChart3;
-      case 'Cloud & DevOps':
-        return Cloud;
-      case 'IoT & Edge Computing':
-        return IoT;
-      case 'Financial Technology':
-        return FinTech;
-      case 'Healthcare Technology':
-        return Healthcare;
-      default:
         return Rocket}
   };
 
-<<<<<<< HEAD
-  const getCategoryColor = (category: string) => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'from-red-500 to-pink-600';
-      case 'Data Analytics':
-        return 'from-blue-500 to-cyan-600';
-      case 'Cloud & DevOps':
-        return 'from-indigo-500 to-purple-600';
-      case 'IoT & Edge Computing':
-        return 'from-green-500 to-emerald-600';
-      case 'Financial Technology':
-        return 'from-yellow-500 to-orange-600';
-      case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600';
-      default:
         return 'from-gray-500 to-slate-600'}
   };
 
-<<<<<<< HEAD
-  const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
-    if (pricing.model === 'Transaction Fees + Governance') {;
-      return 'Free + Transaction Fees'};
-    return `$${pricing.basePrice.toLocaleString()}/month`};
-
-  const renderServiceCard = (service: ExpandedService2027)  => {;
-=======;
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
-    }
+
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
   const renderServiceCard = (service: ExpandedService2027) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -166,7 +110,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 }}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
-      >
+
         {/* Header */}
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
@@ -224,7 +168,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 <button
                   onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                >
+
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
                 </button>
               )}
@@ -266,7 +210,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 }}
                 className="mb-4"
-              >
+
                 <div className="space-y-1">
                   {service.features.slice(3).map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -341,7 +285,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               <a
                 href={`mailto:${service.contactInfo.email}`}
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
               </a>
@@ -350,19 +294,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-<<<<<<< HEAD
-              </a>
-            </div>
-          </div>
-        </div>;
-      </motion.div>;
-    )};
-
-  const renderServiceList = (service: ExpandedService2027)  => {;
-=======;
               </a>;
             </div>;
           </div>;
@@ -372,7 +306,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   };
 
   const renderServiceList = (service: ExpandedService2027) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -401,7 +334,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 }}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6"
-      >
+
         <div className="flex items-start space-x-4">
           {/* Icon and Category */}
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>
@@ -457,7 +390,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               <a
                 href={`mailto:${service.contactInfo.email}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+
                 <Mail className="w-4 h-4" />
                 <span>Contact Sales</span>
               </a>
@@ -466,17 +399,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-<<<<<<< HEAD
-              </a>
-            </div>
-          </div>
-        </div>;
-      </motion.div>;
-    )};
-=======
               </a>;
             </div>;
           </div>;
@@ -484,7 +409,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
       </motion.div>;
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -521,7 +445,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-            >
+
               Expanded Innovative Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 2027
@@ -597,7 +521,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 }}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
-            >
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -669,7 +593,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
-                >
+
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
@@ -679,7 +603,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                   }`}
-                >
+
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -728,24 +652,16 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
-            >
+
               <Mail className="w-5 h-5" />
               <span>Get Started</span>
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
-            >
+
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -753,6 +669,5 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default ExpandedServicesShowcase2027;
+export default ExpandedServicesShowcase2027;}}}}}

@@ -43,13 +43,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             category: 'custom',
             description: 'Custom compliance requirement',
             status: 'pending_review',
-<<<<<<< HEAD
-            requirements['Requirement 1', 'Requirement 2'],
-  violations[]
-        
-
-};
-=======
             requirements: ['Requirement 1', 'Requirement 2'],
   violations: []
         
@@ -58,7 +51,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);
     const getSeverityColor = (severity) => {
@@ -100,13 +92,13 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center space-x-2">
           <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50">
             {isComplianceChecking ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
             <span>Check Compliance</span>
           </button>
-          
+
           <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
             <Settings className="w-5 h-5"/>
           </button>
@@ -123,7 +115,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
-            
+
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4 text-gray-500"/>
               <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -131,7 +123,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               </span>
             </div>
           </div>
-          
+
           <div className="flex space-x-2">
             {!isMonitoring ? (<button onClick={handleStartMonitoring} className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
                 <Play className="w-4 h-4"/>
@@ -202,7 +194,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <AlertTriangle className="w-8 h-8 text-orange-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -212,7 +204,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <XCircle className="w-8 h-8 text-red-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -222,7 +214,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <CheckCircle className="w-8 h-8 text-green-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -310,7 +302,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   Add Test Event
                 </button>
               </div>
-              
+
               <div className="space-y-3">
                 {securityEvents.map((event) => (<div key={event.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <div className="flex items-center justify-between mb-3">
@@ -392,7 +384,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   Add Rule
                 </button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {complianceRules.map((rule) => (<div key={rule.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <div className="flex items-center justify-between mb-3">
@@ -460,7 +452,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Threat Intelligence</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Current Threat Level</h4>
@@ -474,7 +466,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Response Metrics</h4>
                   <div className="space-y-3">
@@ -530,7 +522,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Reports & Analytics</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Security Report</h4>
@@ -547,7 +539,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       </span>)}
                   </button>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Audit Log Export</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
@@ -605,7 +597,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </span>
                 </label>
               </div>
-              
+
               <div>
                 <label className="flex items-center space-x-2">
                   <input type="checkbox" checked={isComplianceChecking} onChange={(e) => configureSecurity({ enableComplianceChecking: e.target.checked })} className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"/>

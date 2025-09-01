@@ -3,8 +3,7 @@ import SEO from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Wallet, Database, Save import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
@@ -22,6 +21,8 @@ export default function AccountSettings() {
                 const parsed = JSON.parse(saved);
                 setDisplayWeb3(!!parsed.displayWeb3);
                 setDidHandle(parsed.didHandle || '');
+            // // // // // // // console.error('Error loading account settings', e);
+        }
                 setEnableBackup(!!parsed.enableBackup)}
         }
         catch (e) {
@@ -33,6 +34,18 @@ export default function AccountSettings() {
         setTimeout(() => {
             try {
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
+                // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
+                toast.success('Account settings updated successfully');
+
+            catch (e) {
+                // // // // // // // console.error('Failed to save settings', e);
+                toast.error('Failed to save settings');
+
+            finally {
+                setIsSubmitting(false);
+
+        }, 1000);
+    };
                 console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully')}
             catch (e) {
@@ -61,6 +74,13 @@ export default function AccountSettings() {
                 const provider = new window.ethers.providers.Web3Provider(ethereum);
                 const ensName = await provider.lookupAddress(address);
                 if (ensName) {
+                // // // // // // // console.error('ENS lookup error:', error);
+            }
+            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+
+        catch (error) {
+            toast.error(error.message || 'Failed to connect wallet');
+
                     setDidHandle(ensName)}
             }
             catch (error) {
@@ -71,10 +91,10 @@ export default function AccountSettings() {
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
-      
+
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -86,7 +106,7 @@ export default function AccountSettings() {
                 <Label htmlFor="email">Email Address</Label>
                 <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -95,7 +115,7 @@ export default function AccountSettings() {
                     <Wallet connected</span>
                   </div>)}
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -125,7 +145,7 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button variant="outline" className="w-full" disabled={!enableBackup}>

@@ -4,22 +4,6 @@ import { SEO  } from "../components/SEO";
 import { Wrench, 
   Clock, 
   Shield, 
-<<<<<<< HEAD
-  Users, 
-  CheckCircle, 
-  AlertTriangle,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Server,
-  Network,
-  Database,
-  Monitor,
-  HardDrive,
-  Router
- } from 'lucide-react';
-=======
   Zap, 
   Brain, 
   Cloud, 
@@ -43,7 +27,6 @@ import { Wrench,
   Globe
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function OnsiteSupport(...args[]):  {
   const services = [
@@ -66,25 +49,6 @@ export default function OnsiteSupport(...args[]):  {
       features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
     },
     {
-<<<<<<< HEAD
-      icon: Monitor,
-      title: 'Workstation Support',
-      description: 'Desktop and laptop setup, maintenance, and troubleshooting',
-      features['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
-    },
-    {
-      icon: HardDrive,
-      title: 'Storage Solutions',
-      description: 'Storage system design, implementation, and maintenance',
-      features['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
-    },
-    {
-      icon: Router,
-      title: 'Security Implementation',
-      description: 'Comprehensive security setup and monitoring',
-      features['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
-    }
-=======
       title: 'Training & Consultation',
       description: 'Staff training and strategic consultation',
       icon: Users,
@@ -96,7 +60,6 @@ export default function OnsiteSupport(...args[]):  {
         'Process optimization';
       ];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -106,8 +69,6 @@ export default function OnsiteSupport(...args[]):  {
       description: 'Emergency support available around the clock'
     },
     {
-<<<<<<< HEAD
-=======
       title: 'Extended Coverage',
       description: 'Northeast and Mid-Atlantic regions',
       icon: Globe,
@@ -139,14 +100,11 @@ export default function OnsiteSupport(...args[]):  {
     {
       title: 'Basic Support',
       description: 'Essential onsite support for small businesses',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       icon: Shield,
       title: 'Certified Technicians',
       description: 'Microsoft, Cisco, and CompTIA certified experts'
     },
     {
-<<<<<<< HEAD
-=======
       title: 'Professional Support',
       description: 'Comprehensive support for growing businesses',
       icon: Star,
@@ -195,25 +153,12 @@ export default function OnsiteSupport(...args[]):  {
       step: '3',
       title: 'Dispatch',
       description: 'Technician is dispatched to your location',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       icon: Users,
       title: 'Dedicated Team',
       description: 'Assigned technicians familiar with your infrastructure'
     },
     {
       icon: CheckCircle,
-<<<<<<< HEAD
-      title: 'Preventive Maintenance',
-      description: 'Regular checkups to prevent issues before they occur';
-    };
-  ];
-
-  const responseTimes = [
-    { priority: 'Critical', time: '2-4 hours', description: 'System down, business impact' },
-    { priority: 'High', time: '4-8 hours', description: 'Major functionality affected' },
-    { priority: 'Medium', time: '24 hours', description: 'Minor issues, some impact' },
-    { priority: 'Low', time: '48 hours', description: 'General maintenance, no impact' }
-=======
       color: 'from-orange-500 to-red-500'
     },
     {;
@@ -240,7 +185,6 @@ export default function OnsiteSupport(...args[]):  {
       phone: '+1 302 464 0950',;
       address: 'Available 24/7 for critical issues';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
@@ -306,24 +250,6 @@ export default function OnsiteSupport(...args[]):  {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Why Onsite Support */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -358,13 +284,13 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Why Choose Onsite Support?
           </h2>
           <p className="text-slate-300 max-w-4xl mx-auto">
-            Sometimes remote support just isn't enough. Our onsite technicians provide hands-on 
-            assistance, faster problem resolution, and personalized service that ensures your 
+            Sometimes remote support just isn't enough. Our onsite technicians provide hands-on
+            assistance, faster problem resolution, and personalized service that ensures your
             systems are running at peak performance.
           </p>
         </motion.div>
@@ -405,7 +331,6 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
             className="text-3xl font-bold text-white text-center mb-12"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Onsite Services
@@ -420,24 +345,6 @@ export default function OnsiteSupport(...args[]):  {
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -469,7 +376,6 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <service.icon className="w-8 h-8 text-white" />
@@ -490,24 +396,6 @@ export default function OnsiteSupport(...args[]):  {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Coverage Areas */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
@@ -542,10 +430,10 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Service Coverage Areas
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {coverageAreas.map((area, index) => (
             <motion.div
@@ -581,7 +469,7 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-            >
+
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <area.icon className="w-8 h-8 text-white" />
@@ -589,7 +477,7 @@ export default function OnsiteSupport(...args[]):  {
                 <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                 <p className="text-slate-400 text-sm">{area.description}</p>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="space-y-3">
                   <h4 className="text-slate-300 font-medium">Coverage:</h4>
@@ -600,7 +488,7 @@ export default function OnsiteSupport(...args[]):  {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="pt-3 border-t border-slate-700">
                   <span className="text-slate-400 text-sm">Response Time:</span>
                   <div className="text-slate-300 font-medium">{area.responseTime}</div>
@@ -646,7 +534,6 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
             className="text-3xl font-bold text-white text-center mb-12"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Onsite Support?
@@ -660,25 +547,6 @@ export default function OnsiteSupport(...args[]):  {
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
-<<<<<<< HEAD
-                key={benefit.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="text-center"
-=======
                 key={tier.title}
                 initial = {
   { opacity: 0,
@@ -711,7 +579,6 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -724,24 +591,6 @@ export default function OnsiteSupport(...args[]):  {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Response Times */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-=======
       {/* Response Process */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
@@ -776,10 +625,10 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Our Response Process
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {responseProcess.map((step, index) => (
             <motion.div
@@ -815,7 +664,7 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
               className="text-center"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl`}>
                 {step.step}
               </div>
@@ -861,7 +710,6 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
             className="text-3xl font-bold text-white text-center mb-12"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Guaranteed Response Times
@@ -909,50 +757,6 @@ export default function OnsiteSupport(...args[]):  {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for Professional Onsite Support?
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
-              Don't let IT issues slow down your business. Our certified technicians 
-              are ready to provide immediate onsite support and solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/services-overview"
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )}
-=======
       {/* Contact Information */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
@@ -987,10 +791,10 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
           className="text-3xl font-bold text-white text-center mb-12"
-        >
+
           Get Onsite Support
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {contactInfo.map((contact, index) => (
             <motion.div
@@ -1026,10 +830,10 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-            >
+
               <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
               <p className="text-slate-400 mb-6">{contact.description}</p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
@@ -1039,7 +843,7 @@ export default function OnsiteSupport(...args[]):  {
                     <div className="text-white font-medium">{contact.email}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📞</span>
@@ -1048,7 +852,7 @@ export default function OnsiteSupport(...args[]):  {
                     <div className="text-white font-medium">{contact.phone}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
                     <span className="text-green-400 text-sm font-medium">📍</span>
@@ -1097,12 +901,12 @@ export default function OnsiteSupport(...args[]):  {
 
 }}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
-        >
+
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready for Onsite Support?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto mb-6">
-            Don't let technical issues slow down your business. Contact us today to schedule 
+            Don't let technical issues slow down your business. Contact us today to schedule
             onsite support or discuss your technical needs.
           </p>
           <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">;
@@ -1114,4 +918,3 @@ export default function OnsiteSupport(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

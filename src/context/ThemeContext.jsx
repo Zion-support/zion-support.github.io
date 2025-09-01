@@ -25,14 +25,8 @@ const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>)};
 export const useTheme = () => {
     const context = React.useContext(ThemeContext);
-<<<<<<< HEAD
-    if (context === null) {
-        throw new Error('useTheme must be used within a ThemeProvider')}
-    return context};
-=======
     if (context === null) {
         throw new Error('useTheme must be used within a ThemeProvider');
-    }
+
     return context;
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

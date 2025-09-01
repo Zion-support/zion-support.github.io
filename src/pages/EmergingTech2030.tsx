@@ -27,15 +27,9 @@ import { Brain,
   Eye,
   Heart,
   Zap as Lightning
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-import { emergingTechServices2030  } from "../data/emergingTechServices2030";
-=======
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { emergingTechServices2030 } from "../data/emergingTechServices2030";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function EmergingTech2030(...args[]):  {
   const containerVariants = {
@@ -96,18 +90,18 @@ export default function EmergingTech2030(...args[]):  {
         canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-          
-          <motion.div 
+
+          <motion.div
             className="relative z-10 container mx-auto text-center max-w-6xl"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
+
             <motion.div variants={itemVariants}>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Emerging Tech 2030
@@ -136,22 +130,22 @@ export default function EmergingTech2030(...args[]):  {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Request Quote
               </Link>
-              <Link 
-                to="/services-catalog" 
+              <Link
+                to="/services-catalog"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+
                 View All Services
               </Link>
             </motion.div>
@@ -160,39 +154,31 @@ export default function EmergingTech2030(...args[]):  {
 
         {/* Services Overview */}
         <section className="py-20 px-4">
-          <motion.div 
+          <motion.div
             className="container mx-auto max-w-7xl"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
+
             <motion.div variants={itemVariants} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Revolutionary Technologies
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
-<<<<<<< HEAD
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index)  => {;
-=======;
               </p>;
             </motion.div>;
 ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {emergingTechServices2030.map((service, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
-                
+
                 return (
                   <motion.div
                     key = {service.id}
                     variants={itemVariants}
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
-                  >
+
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300`}>
                         <IconComponent className="w-6 h-6 text-white" />
@@ -224,10 +210,10 @@ export default function EmergingTech2030(...args[]):  {
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span 
+                        <span
                           key={tagIndex}
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -245,14 +231,6 @@ export default function EmergingTech2030(...args[]):  {
 
 }`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
-<<<<<<< HEAD
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
-                )})};
-=======;
                     >;
                       Learn More;
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
@@ -260,7 +238,6 @@ export default function EmergingTech2030(...args[]):  {
                   </motion.div>;
                 );
               })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </motion.div>
         </section>
@@ -273,7 +250,7 @@ export default function EmergingTech2030(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             <motion.div variants={itemVariants} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
@@ -326,7 +303,7 @@ export default function EmergingTech2030(...args[]):  {
                   key={index}
                   variants={itemVariants}
                   className="text-center p-6"
-                >
+
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.color} mb-4`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -340,13 +317,13 @@ export default function EmergingTech2030(...args[]):  {
 
         {/* Contact Section */}
         <section className="py-20 px-4">
-          <motion.div 
+          <motion.div
             className="container mx-auto max-w-4xl text-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             <motion.div variants={itemVariants}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
@@ -372,26 +349,18 @@ export default function EmergingTech2030(...args[]):  {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Schedule a Consultation
               </Link>
-              <Link 
-                to="/request-quote" 
+              <Link
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Custom Quote
               </Link>
-<<<<<<< HEAD
-            </motion.div>
-          </motion.div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </motion.div>;
         </section>;
@@ -399,4 +368,3 @@ export default function EmergingTech2030(...args[]):  {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

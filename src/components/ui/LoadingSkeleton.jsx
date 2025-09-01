@@ -2,14 +2,6 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>
-<<<<<<< HEAD
-      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
-  cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
-  className)
-
-} animate={{
-                background[
-=======
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
@@ -22,7 +14,6 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 } animate = {
   {
                 background: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 100%, hsl(var(--zion-slate-dark)) 0%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%,

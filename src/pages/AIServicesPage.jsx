@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
-const AIServices = [
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search const AIServices = [
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
@@ -115,7 +114,7 @@ const AIServices = [
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
-    }
+
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
@@ -146,7 +145,7 @@ export default function AIServicesPage() {
             AI Services & Solutions
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Transform your business with cutting-edge artificial intelligence services. 
+            Transform your business with cutting-edge artificial intelligence services.
             From strategy to implementation, we've got you covered.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

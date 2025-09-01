@@ -604,7 +604,7 @@ export const innovativeServices2026: InnovativeService[] = [
     enterprise: true,
     startup: true,
     smb: true
-  }
+
 ];
 
 export const serviceCategories = [
@@ -623,19 +623,13 @@ export const serviceCategories = [
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s  => s.category === 'IT Services')
   },
-<<<<<<< HEAD
-  {
-    name: 'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   };
-=======;
   {;
     name: 'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
     services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
-export default innovativeServices2026;
+export default innovativeServices2026;}}

@@ -64,13 +64,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-<<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      // Skip links (Alt + S);
-      if (event.altKey && event.key === 's') {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        event.preventDefault();
-        setShowSkipLinks(true);
         setTimeout(() => setShowSkipLinks(false), 5000)}
 
       // High contrast toggle (Alt + H)
@@ -81,14 +74,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key = == '+') {;
         event.preventDefault();
-<<<<<<< HEAD
-        increaseFontSize()}
-      if (event.altKey && event.key = == '-') {;
-=======;
         increaseFontSize();
       }
       if (event.altKey && event.key = == '-') {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         event.preventDefault();
         decreaseFontSize()}
     };
@@ -189,24 +177,24 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 }}
             className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
-          >
+
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a
                 href="#main-content"
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+
                 Skip to main content
               </a>
               <a
                 href="#navigation"
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+
                 Skip to navigation
               </a>
               <button
                 onClick={() => setShowSkipLinks(false)}
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+
                 Close
               </button>
             </div>
@@ -238,7 +226,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 }}
           className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
-        >
+
           <div className="flex flex-col gap-2">
             <button
               onClick={toggleHighContrast}
@@ -247,7 +235,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               }`}
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
-            >
+
               <Braille className="w-4 h-4" />
             </button>
 
@@ -258,7 +246,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               }`}
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
-            >
+
               {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
             </button>
 
@@ -267,7 +255,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Increase font size"
               title="Increase font size (Alt + +)"
-            >
+
               A+
             </button>
 
@@ -276,7 +264,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Decrease font size"
               title="Decrease font size (Alt + -)"
-            >
+
               A-
             </button>
 
@@ -285,18 +273,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Reset font size"
               title="Reset font size"
-            >
+
               A
             </button>
           </div>
-<<<<<<< HEAD
-        </motion.div>
-      </div>
-
-      {children};
-    </AccessibilityContext.Provider>;
-  )};
-=======
         </motion.div>;
       </div>;
 ;
@@ -304,7 +284,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     </AccessibilityContext.Provider>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Focus trap component for modals
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
@@ -312,7 +291,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   isActive = true
 }) => {
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   useEffect(() => {
     if (!isActive) return;
@@ -324,14 +302,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-<<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      if (event.key !== 'Tab') return;
-
-      if (event.shiftKey) {
-        if (document.activeElement = == firstElement) {;
-          event.preventDefault();
           lastElement.focus()}
       } else {
         if (document.activeElement = == lastElement) {;

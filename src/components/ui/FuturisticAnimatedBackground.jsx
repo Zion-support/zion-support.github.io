@@ -86,7 +86,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
 };
             return colors[variant][Math.floor(Math.random() * colors[variant].length)]}
-=======
   cyberpunk: ['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],
                 quantum: ['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],
                 neon: ['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],
@@ -100,7 +99,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 };
             return colors[variant][Math.floor(Math.random() * colors[variant].length)];
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         // Initialize particles
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         for (let i = 0; i < particleCount; i++) {
@@ -227,45 +225,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate = {
   {
             rotate: 360,
-<<<<<<< HEAD
-            scale[1, 1.2, 1],
-            opacity[0.3, 0.6,
-  0.3]
-        
-
-}} transition = {
-  {
-            duration: 8,
-            repeat: Infinity,
-  ease: "linear"
-        
-
-}}/>
-        <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {
-  {
-            y[0, -20, 0],
-            opacity[0.2, 0.5,
-  0.2]
-        
-
-}} transition = {
-  {
-            duration: 6,
-            repeat: Infinity,
-  ease: "easeInOut"
-        
-
-}}/>
-        <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {
-  {
-            rotate[0, 180, 360],
-            scale[1, 1.1,
-  1]
-        
-
-}} transition = {
-  {
-=======
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6,
   0.3]
@@ -328,7 +287,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             duration: 10,
             repeat: Infinity,
   ease: "linear"

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const defaultContent = {
   products: {
@@ -55,24 +55,24 @@ export function EmptyState({ type, title, description, action, icon }) {
       <div className="mb-4">
         {displayIcon}
       </div>
-      
+
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
       </h3>
-      
+
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
         {displayDescription}
       </p>
-      
+
       {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">
           <RefreshCw className="w-4 h-4"/>
           {action.label}
         </Button>)}
-      
+
       {type === 'error' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>)}
-      
+
       {type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
             {t('general.check_status_page')}
@@ -90,7 +90,7 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
         ? {
             label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
             onClick: onAddProduct
-        }
+
         : onRetry
             ? { label: 'Try Again', onClick: onRetry }
             : null;
@@ -99,31 +99,6 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
         : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
     return (<EmptyState type="products" action={action} description={customDescription}/>)}
 export function CategoriesEmptyState({ onRetry }) {
-<<<<<<< HEAD
-    return (<EmptyState type="categories" action = {
-  onRetry ? { label: 'Refresh Categories',
-  onClick: onRetry 
-
-} : null}/>)}
-export function TalentEmptyState({ onRetry }) {
-    return (<EmptyState type="talent" action = {
-  onRetry ? { label: 'Reset Filters',
-  onClick: onRetry 
-
-} : null}/>)}
-export function EquipmentEmptyState({ onRetry }) {
-    return (<EmptyState type="equipment" action = {
-  onRetry ? { label: 'Refresh Listings',
-  onClick: onRetry 
-
-} : null}/>)}
-export function ServerErrorState({ onRetry }) {
-    return (<EmptyState type="error" action = {
-  onRetry ? { label: 'Retry',
-  onClick: onRetry 
-
-} : null}/>)}
-=======
     return (<EmptyState type="categories" action = {
   onRetry ? { label: 'Refresh Categories',
   onClick: onRetry 
@@ -195,4 +170,3 @@ export function ServerErrorState({ onRetry }) {
 
 } : null}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

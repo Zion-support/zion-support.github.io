@@ -1,6 +1,4 @@
-import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIInsurance() {
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
   const features = [
     'AI-powered risk assessment and underwriting automation',
     'Intelligent claims processing and fraud detection',;
@@ -13,10 +11,10 @@ export default function AIInsurance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Insurer', 
-      price: '$499/mo', 
-      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Insurer',
+      price: '$499/mo',
+      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Medium Insurer', 
@@ -171,4 +169,4 @@ export default function AIInsurance() {
       </section>;
     </div>;
   );
-}
+}}

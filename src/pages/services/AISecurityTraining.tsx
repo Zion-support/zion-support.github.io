@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityTraining() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {
   const features = [
     'AI-powered security training optimization',
     'Intelligent training strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityTraining() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$199/mo', 
-      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$199/mo',
+      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityTraining() {
       </section>;
     </div>;
   );
-}
+}}

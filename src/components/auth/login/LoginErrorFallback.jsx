@@ -1,4 +1,3 @@
-import React from 'react';
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
@@ -23,7 +22,7 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
           <button
             onClick={resetErrorBoundary}
             className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium"
-          >
+
             Try Again
           </button>
         </div>

@@ -85,14 +85,12 @@ const testimonials: Testimonial[] = [
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
     verified: true
   }
-=======;
     company: "Healthcare Innovations",;
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;
     industry: "Healthcare",;
     project: "Cloud Migration & Optimization";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const stats = [
@@ -147,7 +145,7 @@ export const TestimonialsSection: React.FC = () => {
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
-            >
+
               {/* Quote icon */}
               <div className="mb-4">
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
@@ -367,7 +365,6 @@ export const TestimonialsSection: React.FC = () => {
       </div>
     </section>
   )};
-=======;
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;

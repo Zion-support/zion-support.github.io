@@ -1,6 +1,4 @@
-import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
-export default function AISports() {
+import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
   const features = [
     'AI-powered performance analysis and optimization',
     'Intelligent training program design and monitoring',;
@@ -13,10 +11,10 @@ export default function AISports() {
   ];
 
   const tiers = [
-    { 
-      name: 'Amateur Team', 
-      price: '$199/mo', 
-      details: ['Up to 25 players', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Amateur Team',
+      price: '$199/mo',
+      details: ['Up to 25 players', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Professional Team', 
@@ -171,4 +169,4 @@ export default function AISports() {
       </section>;
     </div>;
   );
-}
+}}

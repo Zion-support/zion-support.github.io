@@ -10,8 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
@@ -95,8 +94,8 @@ export function TalentRegistrationForm() {
                         bio: formData.bio,
                         skills: skillTags,
                         location: formData.location
-                    }
-                }
+
+
             });
             if (error) {
                 throw new Error(error.message)}
@@ -106,7 +105,7 @@ export function TalentRegistrationForm() {
                 description: "AI has created a professional bio and suggested additional skills for your profile.",
             })}
         catch (error) {
-            console.error("Error generating enhanced profile:", error);
+            // // // // // // // console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -162,6 +161,8 @@ export function TalentRegistrationForm() {
             </div>
           </div>
           `
+            // // // // // // // console.error("Failed to send notification email:", error);
+        }
                 }
             })}
         catch (error) {
@@ -193,8 +194,8 @@ export function TalentRegistrationForm() {
                                 bio: values.bio,
                                 skills: skillTags,
                                 location: values.location
-                            }
-                        }
+
+
                     });
                     if (aiData) {
                         finalSummary = aiData.summary;
@@ -213,7 +214,7 @@ export function TalentRegistrationForm() {
                         finalSkills = [...new Set([...skillTags, ...aiSkills])]}
                 }
                 catch (error) {
-                    console.error("Error enhancing profile:", error);
+                    // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
                     finalSummary = ""}
             }
@@ -249,12 +250,12 @@ export function TalentRegistrationForm() {
                 availability_status: values.availability,
                 // Other fields would be handled here
               });
-      
+
             if (error) throw error;
             */
-        }
+
         catch (error) {
-            console.error("Error creating profile:", error);
+            // // // // // // // console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
@@ -330,7 +331,7 @@ export function TalentRegistrationForm() {
                         </FormItem>)}/>
                   </div>
                 </div>
-                
+
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -370,7 +371,7 @@ export function TalentRegistrationForm() {
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>)}/>
-                
+
                 {/* AI Enhancement Option */}
                 <FormField control={form.control} name="enhancedProfile" render={({ field }) => (<FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
@@ -386,7 +387,7 @@ export function TalentRegistrationForm() {
                         <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
                       </FormControl>
                     </FormItem>)}/>
-                
+
                 {form.watch("enhancedProfile") && (<div className="flex justify-end">
                     <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile} disabled={isGenerating}>
                       <Sparkles className="mr-2 h-4 w-4"/>
@@ -405,13 +406,13 @@ export function TalentRegistrationForm() {
                         <Check className="mr-1 h-3 w-3"/> Apply
                       </Button>
                     </div>
-                    
+
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-                      
+
                       {generatedContent.categorizedSkills && (<div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
                           <div className="flex flex-wrap gap-2 mt-1">

@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from '../components/SEO';
 
 const Pricing = () => {
   const pricingTiers = [
@@ -8,7 +8,7 @@ const Pricing = () => {
       price: "$19",
       period: "/month",
       description: "Perfect for individuals and small teams getting started with AI tools",
-      features[
+      features: [
         "AI Content Generation (100 credits/month)",
         "Basic AI Image Editing",
         "AI Meeting Assistant (5 hours/month)",
@@ -25,7 +25,7 @@ const Pricing = () => {
       price: "$49",
       period: "/month",
       description: "Ideal for growing businesses and professional teams",
-      features[
+      features: [
         "Everything in Starter",
         "AI Content Generation (500 credits/month)",
         "Advanced AI Image & Video Editing",
@@ -46,7 +46,7 @@ const Pricing = () => {
       price: "$99",
       period: "/month",
       description: "Comprehensive solution for established businesses",
-      features[
+      features: [
         "Everything in Professional",
         "AI Content Generation (2000 credits/month)",
         "AI Code Assistant (Advanced)",
@@ -71,7 +71,7 @@ const Pricing = () => {
       price: "Custom",
       period: "",
       description: "Tailored solutions for large organizations with specific requirements",
-      features[
+      features: [
         "Everything in Business",
         "Unlimited AI Content Generation",
         "Custom AI Model Training",
@@ -122,11 +122,11 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.popular 
-                    ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
+                  tier.popular
+                    ? 'border-blue-500 shadow-lg shadow-blue-500/25'
                     : 'border-white/10'
                 }`}
               >
@@ -137,7 +137,7 @@ const Pricing = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="text-4xl font-bold text-white mb-1">
@@ -156,12 +156,12 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <a 
+                <a
                   href={tier.link}
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
                     tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'bg-transparent border border-white text-white hover:bg-white hover:text-slate-900'
+                      : 'bg-transparent border border-white text-white hover:text-slate-900'
                   }`}
                 >
                   {tier.cta}
@@ -180,14 +180,14 @@ const Pricing = () => {
             Contact us for enterprise pricing and custom solutions tailored to your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               Contact Sales
@@ -196,6 +196,7 @@ const Pricing = () => {
         </div>
       </section>
     </div>
-  )};
+  );
+}
 
 export default Pricing;

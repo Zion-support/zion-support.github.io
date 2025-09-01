@@ -1,101 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
-<<<<<<< HEAD
-const globalOffices = [
-    {
-        id: 1,
-        city: "San Francisco",
-        country: "United States",
-        region: "North America",
-        flag: "🇺🇸",
-        established: "2018",
-        teamSize: "45+",
-        specialties["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
-        projects: 120,
-        clients: 85,
-        rating: 4.9,
-        timezone: "PST (UTC-8)",
-        address: "123 Innovation Drive, San Francisco, CA 94105"
-    },
-    {
-        id: 2,
-        city: "London",
-        country: "United Kingdom",
-        region: "Europe",
-        flag: "🇬🇧",
-        established: "2019",
-        teamSize: "32+",
-        specialties["FinTech", "Digital Banking", "RegTech"],
-        projects: 95,
-        clients: 67,
-        rating: 4.8,
-        timezone: "GMT (UTC+0)",
-        address: "456 Tech Square, London, EC2A 4BX"
-    },
-    {
-        id: 3,
-        city: "Singapore",
-        country: "Singapore",
-        region: "Asia Pacific",
-        flag: "🇸🇬",
-        established: "2020",
-        teamSize: "28+",
-        specialties["E-commerce", "Digital Transformation", "Smart Cities"],
-        projects: 78,
-        clients: 54,
-        rating: 4.9,
-        timezone: "SGT (UTC+8)",
-        address: "789 Digital Hub, Singapore 018956"
-    },
-    {
-        id: 4,
-        city: "Toronto",
-        country: "Canada",
-        region: "North America",
-        flag: "🇨🇦",
-        established: "2021",
-        teamSize: "25+",
-        specialties["Healthcare Tech", "AI Research", "Enterprise Solutions"],
-        projects: 65,
-        clients: 42,
-        rating: 4.8,
-        timezone: "EST (UTC-5)",
-        address: "321 Innovation Center, Toronto, ON M5V 3A8"
-    },
-    {
-        id: 5,
-        city: "Berlin",
-        country: "Germ",
-        region: "Europe",
-        flag: "🇩🇪",
-        established: "2021",
-        teamSize: "22+",
-        specialties["IoT", "Manufacturing Tech", "Sustainability"],
-        projects: 58,
-        clients: 38,
-        rating: 4.7,
-        timezone: "CET (UTC+1)",
-        address: "654 Tech District, Berlin, 10115"
-    },
-    {
-        id: 6,
-        city: "Sydney",
-        country: "Australia",
-        region: "Asia Pacific",
-        flag: "🇦🇺",
-        established: "2022",
-        teamSize: "18+",
-        specialties["EdTech", "Green Tech", "Digital Marketing"],
-        projects: 42,
-        clients: 29,
-        rating: 4.8,
-        timezone: "AEST (UTC+10)",
-        address: "987 Innovation Bay, Sydney, NSW 2000"
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
     { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },
@@ -158,7 +63,7 @@ const partnerships = [
         established: "2022",
         projects: 12,
         status: "Active"
-    }
+
 ];
 const industries = [
     { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },
@@ -179,8 +84,8 @@ export function GlobalPresenceSection() {
             transition: {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 30,
@@ -198,8 +103,8 @@ export function GlobalPresenceSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -234,7 +139,7 @@ export function GlobalPresenceSection() {
             Global <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            From Silicon Valley to Singapore, Zion Tech Group operates across six continents, 
+            From Silicon Valley to Singapore, Zion Tech Group operates across six continents,
             serving clients worldwide with localized expertise and global innovation.
           </p>
 
@@ -309,7 +214,7 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Global Offices</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {globalOffices.map((office, index) => (<motion.div key={office.id} initial = {
   { opacity: 0,
@@ -474,7 +379,7 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Partnerships</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {partnerships.map((partnership, index) => (<motion.div key={index} initial = {
   { opacity: 0,
@@ -606,7 +511,7 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Presence</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (<motion.div key={index} initial = {
   { opacity: 0,
@@ -637,7 +542,7 @@ export function GlobalPresenceSection() {
 
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{industry.name}</h4>
-                
+
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
                   <div>
                     <div className="text-zion-cyan font-bold text-lg">{industry.projects}</div>
@@ -691,7 +596,7 @@ export function GlobalPresenceSection() {
                 Ready to Go Global with Zion?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Whether you're in San Francisco or Singapore, our global team is ready to help you 
+                Whether you're in San Francisco or Singapore, our global team is ready to help you
                 scale your business worldwide with cutting-edge technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

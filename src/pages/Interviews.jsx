@@ -4,8 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
+import { Calendar, Clock, Video import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
     const { interviews, isLoading, fetchInterviews } = useInterviews();
     const [activeTab, setActiveTab] = useState("upcoming");
@@ -52,7 +51,7 @@ function InterviewsContent() {
         </div>))};
     return (<>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -78,7 +77,7 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="upcoming" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -88,7 +87,7 @@ function InterviewsContent() {
                 <p className="text-muted-foreground mb-6">You don't have  scheduled interviews coming up.</p>
               </div>)}
           </TabsContent>
-          
+
           <TabsContent value="pending" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -98,7 +97,7 @@ function InterviewsContent() {
                 <p className="text-muted-foreground mb-6">You don't have  interview requests that need your attention.</p>
               </div>)}
           </TabsContent>
-          
+
           <TabsContent value="past" className="space-y-6">
             {isLoading ? (<div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>

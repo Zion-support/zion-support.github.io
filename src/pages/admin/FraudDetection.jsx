@@ -48,15 +48,13 @@ export default function FraudDetection() {
 
 };
             setStats(newStats)}
-=======
   
 
 };
             setStats(newStats);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
-            console.error("Error fetching fraud flags:", error);
+            // // // // // // // console.error("Error fetching fraud flags:", error);
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
@@ -109,7 +107,7 @@ export default function FraudDetection() {
             // Refresh the data
             fetchFraudFlags()}
         catch (error) {
-            console.error("Error updating fraud flag:", error);
+            // // // // // // // console.error("Error updating fraud flag:", error);
             toast({
                 title: "Error",
                 description: "Failed to update flag",
@@ -134,17 +132,17 @@ export default function FraudDetection() {
               Monitor suspicious activities and protect the marketplace from fraud and abuse
             </p>
           </div>
-          
+
           <div className="mt-4 md:mt-0">
             <Button onClick={fetchFraudFlags} className="bg-zion-purple hover:bg-zion-purple-light" disabled={isLoading}>
               Refresh Data
             </Button>
           </div>
         </div>
-        
+
         {/* Stats Cards */}
         <FraudStatsCards stats={stats}/>
-        
+
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Flags</TabsTrigger>
@@ -152,11 +150,11 @@ export default function FraudDetection() {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <FraudFilters searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} severityFilter={severityFilter} setSeverityFilter={setSeverityFilter} contentTypeFilter={contentTypeFilter} setContentTypeFilter={setContentTypeFilter} resetFilters={resetFilters}/>
-            
+
             {/* Flags Table */}
             <Card>
               <CardContent className="p-0">
@@ -164,15 +162,15 @@ export default function FraudDetection() {
               </CardContent>
             </Card>
           </TabsContent>
-          
+
           <TabsContent value="pending">
             <FraudTabContent tabValue="pending"/>
           </TabsContent>
-          
+
           <TabsContent value="dangerous">
             <FraudTabContent tabValue="dangerous"/>
           </TabsContent>
-          
+
           <TabsContent value="actioned">
             <FraudTabContent tabValue="actioned"/>
           </TabsContent>

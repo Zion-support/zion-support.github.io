@@ -19,6 +19,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         if (savedSettings) {
             try {
                 const parsed = JSON.parse(savedSettings);
+                // // // // // // // console.error('Failed to parse accessibility settings:', error);
+            }
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
                 console.error('Failed to parse accessibility settings:', error)}
@@ -76,7 +78,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 };
         setSettings(defaultSettings)};
-=======
   colorBlindness: 'none'
         
 
@@ -86,7 +87,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 };
         setSettings(defaultSettings);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const tabs = [
         { id: 'general', label: 'General', icon: '⚙️' },
         { id: 'visual', label: 'Visual', icon: '👁️' },
@@ -471,3 +471,4 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
       </AnimatePresence>
     </>)};
 export default AccessibilityPanel;
+}}}}}}}}}}}}

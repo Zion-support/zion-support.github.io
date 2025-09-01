@@ -60,28 +60,17 @@ export default function Signup(...args[]):  {
     'Other'
   ]
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault()
-    
-    if (!validateForm()) return
+      // // // // // // // console.log('Signup successful:', formData)
 
-    setIsSubmitting(true)
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // Success - redirect or show success message
+    } catch (error) {
+      // // // // // // // console.error('Signup error:', error)
       // // // // console.log('Signup successful:', formData)
       
     } catch (error) {
       // // // // console.error('Signup error:', error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
+
 
   const title = 'Sign Up — Zion Tech Group'
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
@@ -93,13 +82,13 @@ export default function Signup(...args[]):  {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/signup" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://ziontechgroup.com/signup" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
@@ -114,7 +103,7 @@ export default function Signup(...args[]):  {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial = {
@@ -139,15 +128,15 @@ export default function Signup(...args[]):  {
 }}
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
-            >
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Join Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Unlock access to revolutionary AI autonomous systems, quantum computing solutions, 
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
                 and enterprise-grade cybersecurity platforms.
               </p>
-              
+
               <div className="flex flex-wrap justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 text-zion-cyan">
                   <Shield className="w-6 h-6" />
@@ -201,7 +190,7 @@ export default function Signup(...args[]):  {
 
 }}
               className="max-w-2xl mx-auto"
-            >
+
               <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12">
                 <h2 className="text-3xl font-bold text-center mb-8 text-white">
                   Create Your Account
@@ -312,7 +301,7 @@ export default function Signup(...args[]):  {
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -346,7 +335,7 @@ export default function Signup(...args[]):  {
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                      >
+
                         {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
                     </div>
@@ -427,7 +416,7 @@ export default function Signup(...args[]):  {
                         value={formData.industry}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                      >
+
                         <option value="">Select industry</option>
                         {industries.map(industry => (
                           <option key={industry} value={industry} className="bg-zion-blue-dark text-white">
@@ -449,7 +438,7 @@ export default function Signup(...args[]):  {
                       value={formData.useCase}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                    >
+
                       <option value="">Select primary use case</option>
                       {useCases.map(useCase => (
                         <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">
@@ -464,7 +453,7 @@ export default function Signup(...args[]):  {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+
                     {isSubmitting ? (
                       <div className="flex items-center justify-center gap-3">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -538,7 +527,7 @@ export default function Signup(...args[]):  {
 
 }}
               className="text-center mb-16"
-            >
+
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Why Join Zion Tech Group?
               </h2>
@@ -580,7 +569,7 @@ export default function Signup(...args[]):  {
 
 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -622,7 +611,7 @@ export default function Signup(...args[]):  {
 
 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
@@ -664,7 +653,7 @@ export default function Signup(...args[]):  {
 
 }}
                 className="text-center p-6"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                   <Cloud className="w-8 h-8 text-white" />
                 </div>

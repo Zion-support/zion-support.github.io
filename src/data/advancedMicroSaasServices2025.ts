@@ -360,3 +360,4 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     marketSize: "$18.9 billion by 2025"
   }
 ];
+export default ADVANCED_MICRO_SAAS_SERVICES_2025;

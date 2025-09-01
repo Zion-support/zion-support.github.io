@@ -33,14 +33,9 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     };
   ];
 
-<<<<<<< HEAD
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-=======
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = {`fixed bottom-6 right-6 z-50 ${className}`}>
@@ -78,7 +73,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 }}
         onClick={scrollToTop}
         className="mb-4 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center"
-      >
+
         <ArrowUp className="w-6 h-6 text-white" />
       </motion.button>
 
@@ -116,7 +111,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 }}
         onClick={() => setIsOpen(!isOpen)}
         className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
-      >
+
         <AnimatePresence mode="wait">
           {isOpen ? (
             <motion.div
@@ -152,7 +147,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 }}
               transition={{ duration: 0.2 }}
-            >
+
               <X className="w-8 h-8 text-white" />
             </motion.div>
           ) : (
@@ -189,7 +184,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 }}
               transition={{ duration: 0.2 }}
-            >
+
               <Plus className="w-8 h-8 text-white" />
             </motion.div>
           )}
@@ -221,7 +216,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 }}
                 className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-300 group"
-              >
+
                 <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <action.icon className="w-5 h-5 text-white" />
                 </div>
@@ -229,14 +224,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   {action.label}
                 </span>
               </motion.a>
-<<<<<<< HEAD
-            ))}
-          </div>
-        )}
-      </AnimatePresence>;
-    </div>;
-  )};
-=======
             ))};
           </div>;
         )};
@@ -244,4 +231,3 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

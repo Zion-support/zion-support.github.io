@@ -97,7 +97,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     reviews: 234,
     launchDate: '2027-01-20',
     status: 'active'
-  }
+
 ];
 export const serviceCategories2027 = [
   'All',
@@ -114,16 +114,9 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-<<<<<<< HEAD
-export const getServicesByCategory = (category: string): InnovativeService2027[]  => {
-  if (category === 'All') {;
-    return innovativeServices2027};
-  return innovativeServices2027.filter(service => service.category === category)};
-=======
 export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
   if (category === 'All') {;
     return innovativeServices2027;
-  }
+
   return innovativeServices2027.filter(service => service.category === category);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -65,11 +65,11 @@ export default function Webinars() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join industry experts for in-depth discussions on technology trends, 
+              Join industry experts for in-depth discussions on technology trends,
               best practices, and innovative solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {webinars.map((webinar, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -78,7 +78,7 @@ export default function Webinars() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
                 <p className="text-gray-300 mb-4">{webinar.description}</p>
-                
+
                 <div className="space-y-2 mb-4">
                   <p className="text-gray-400 text-sm flex items-center">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +99,7 @@ export default function Webinars() {
                     {webinar.speaker}
                   </p>
                 </div>
-                
+
                 <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                   Register Now
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,12 +109,12 @@ export default function Webinars() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>
               <p className="text-gray-300 mb-6">
-                Subscribe to our webinar series and never miss an opportunity to learn 
+                Subscribe to our webinar series and never miss an opportunity to learn
                 from industry experts and technology leaders.
               </p>
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -125,4 +125,5 @@ export default function Webinars() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

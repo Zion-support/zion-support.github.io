@@ -16,6 +16,12 @@ export const UserMenu = () => {
     const handleLogout = async () => {
         try {
             await logout();
+            // // // // // // // console.error('Logout failed:', error);
+        }
+    };
+    if (!user) {
+        return null;
+
             setIsOpen(false)}
         catch (error) {
             console.error('Logout failed:', error)}
@@ -45,17 +51,17 @@ export const UserMenu = () => {
                 <User className="w-4 h-4"/>
                 Profile
               </Link>
-              
+
               <Link to="/notifications" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Bell className="w-4 h-4"/>
                 Notifications
               </Link>
-              
+
               <Link to="/orders" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <ShoppingCart className="w-4 h-4"/>
                 Orders
               </Link>
-              
+
               <Link to="/settings" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Settings className="w-4 h-4"/>
                 Settings

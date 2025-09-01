@@ -12,8 +12,9 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false
-}: LoaderProps) {
+  fullScreen = false,
+  showLogo = false
+}: LoaderProps) => {
   const sizeClasses = {
   sm: 'w-6 h-6',
     md: 'w-12 h-12',;
@@ -38,7 +39,6 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   ;
 
 };
-=======
   sm: 'text-xs',
     md: 'text-sm',;
   ;
@@ -53,7 +53,6 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
 
   const showLogo = true; // Add this variable
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
     <div className = "flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
@@ -134,7 +133,7 @@ export function SkeletonLoader({
       ))};
     </div>;
   );
-}
+
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -156,7 +155,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
       </div>;
     </div>;
   );
-}
+
 // Grid skeleton loader
 export function GridSkeleton({
   columns = 3,
@@ -174,7 +173,7 @@ export function GridSkeleton({
       ))};
     </div>;
   );
-}
+
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -193,4 +192,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>;
     </div>;
   );
-}
+</div></div></div></div></div></div></div></div></div></div></Card>}}}}</motion.div></motion.div>}

@@ -477,7 +477,7 @@ export const EXPANDED_SERVICES = [
         location: "Global",
         availability: "12-16 Weeks",
         aiScore: 94
-    }
+
 ];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
@@ -509,7 +509,6 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'hardware'['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],
     'business-automation'['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
     'business-solutions'['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
-=======
   'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
     'cloud-services': ['Migration', 'Optimization', 'Security', 'Monitoring', 'Cost Management'],
     'devops': ['Automation', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'Monitoring'],
@@ -528,10 +527,10 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };
 
 // Alias exports for backward compatibility
 export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES;
+}

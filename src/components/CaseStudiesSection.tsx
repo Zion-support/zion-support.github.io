@@ -11,50 +11,9 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = (): JSX.Element => {
-  const caseStudies = [
-    {
-      comp: 'TechCorp Solutions',
-      industry: 'Financial Services',
-      challenge: 'Legacy system modernization and digital transformation',
-      solution: 'Implemented AI-powered automation and cloud migration',
-      results[
-        '40% reduction in operational costs',
-        '60% improvement in customer satisfaction',
-        '3x faster transaction processing'
-      ],
-      logo: '🏦',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      comp: 'Global Manufacturing Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Supply chain optimization and predictive maintenance',
-      solution: 'IoT sensors and AI-powered analytics platform',
-      results[
-        '25% reduction in downtime',
-        '30% improvement in supply chain efficiency',
-        '$2M annual cost savings'
-      ],
-      logo: '🏭',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      comp: 'HealthTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Patient data security and compliance management',
-      solution: 'Zero-trust security framework and automated compliance',
-      results[
-        '99.9% security compliance rate',
-        '50% reduction in audit preparation time',
-        'Enhanced patient data protection'
-      ],
-      logo: '🏥',
       color: 'from-purple-500 to-pink-500';
     };
   ];
-=======
 const caseStudies = [
   {
     id: 1,
@@ -102,7 +61,6 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function CaseStudiesSection() {
   return (
@@ -142,22 +100,9 @@ export function CaseStudiesSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg: grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)  => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study, index) => (
             <motion.div
-<<<<<<< HEAD
-              key={study.comp}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {
@@ -180,7 +125,6 @@ export function CaseStudiesSection() {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
@@ -283,14 +227,14 @@ export function CaseStudiesSection() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
-              >
+
                 Start Your Project
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
-              >
+
                 View All Case Studies
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -302,7 +246,6 @@ export function CaseStudiesSection() {
   )};
 
 export default CaseStudiesSection;
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -310,7 +253,6 @@ export default CaseStudiesSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default CaseStudiesSection;
 export default CaseStudiesSection;

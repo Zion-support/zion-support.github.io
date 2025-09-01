@@ -13,8 +13,13 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
+            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                                 service.description.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
+            return matchesSearch && matchesCategory && matchesPricing;
+        });
+    }, [searchTerm, selectedCategory, selectedPricingTier]);
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
@@ -188,7 +193,8 @@ export default function ComprehensiveServicesPage() {
                 title: "Expert Support",
                 description: "24/7 technical support and dedicated account management for enterprise clients"
             }
-        ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
+        ].map((feature, index) => (
+          <div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
                 </div>
@@ -221,4 +227,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  );
+}

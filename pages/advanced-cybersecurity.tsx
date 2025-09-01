@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState  } from 'react.ts';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027  } from "../data/advancedCybersecurityServices2027";
-
-const AdvancedCybersecurityServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-=======
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
@@ -14,7 +5,6 @@ import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecur
 
 const AdvancedCybersecurityServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
@@ -44,35 +34,12 @@ const AdvancedCybersecurityServices: NextPage = () => {;
         return 0}
   });
 
-<<<<<<< HEAD
-  const getInnovationColor = (level: string) => {;
-    switch (level) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'from-red-500 to-pink-600';
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
-      case 'Advanced': return 'from-blue-500 to-cyan-600';
       default: return 'from-gray-500 to-gray-600'}
   };
 
-<<<<<<< HEAD
-  const getBadgeColor = (badge: string) => {;
-    switch (badge) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
-<<<<<<< HEAD
-  const getSecurityIcon = (category: string) => {;
-    switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'AI Security': return '🤖';
-      case 'Quantum Security': return '🔐';
-      case 'Network Security': return '🌐';
-      case 'Endpoint Security': return '💻';
-      case 'Cloud Security': return '☁️';
       default: return '🛡️'}
   };
 
@@ -83,7 +50,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
+
         {/* Security Pattern Overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style = {
@@ -122,12 +89,12 @@ const AdvancedCybersecurityServices: NextPage = () => {;
               </div>
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Advanced Cybersecurity Services 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Protect your digital assets with cutting-edge cybersecurity solutions. 
+            Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -157,7 +124,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
-            >
+
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <span className="text-3xl">{stat.icon}</span>
               </div>
@@ -208,7 +175,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
+
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -231,7 +198,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-            >
+
               <span className="mr-2">{getSecurityIcon(category.name)}</span>
               {category.name}
             </button>
@@ -245,7 +212,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-            >
+
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
@@ -329,7 +296,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
               <a
                 href={service.link}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-              >
+
                 Learn More
               </a>
             </div>
@@ -348,22 +315,14 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            >
+
               Get Security Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
+
               📞 Call +1 (302) 464-0950
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -371,6 +330,5 @@ const AdvancedCybersecurityServices: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AdvancedCybersecurityServices;
+export default AdvancedCybersecurityServices;}}}}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 export const Step = ({ children, className, isActive, isCompleted }) => {
     return (<div className = {

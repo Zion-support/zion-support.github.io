@@ -86,20 +86,13 @@ const futuristicServices: ServiceShowcase[] = [
 		features['Autonomous navigation', 'Task learning', 'Multi-robot coordination'],
 		price: '$22,000/month',
 		status: 'active'
-	}
+
 ];
 export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-<<<<<<< HEAD
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
-		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: string)  => {
-		switch (status) {;
-=======;
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
@@ -107,19 +100,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	}, [isPlaying]);
 	const getStatusColor = (status: string) => {;
 		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
 	};
-<<<<<<< HEAD
-	const getStatusText = (status: string) => {;
-		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-			case 'new': return 'NEW';
-			case 'beta': return 'BETA';
-			case 'active': return 'ACTIVE';
 			default: return 'UNKNOWN'}
 	};
 	return (
@@ -132,7 +117,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
-					>
+
 						Futuristic
 						<span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
 							Service Showcase
@@ -143,7 +128,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-					>
+
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
 					</motion.p>
 				</div>
@@ -155,7 +140,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 							<button
 								onClick={() => setIsPlaying(!isPlaying)}
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
-							>
+
 								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
 							</button>
 							<div className="flex gap-2">
@@ -209,7 +194,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 }}
 							transition={{ duration: 0.5 }}
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
-						>
+
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 								{/* Left Side - Service Info */}
 								<div>
@@ -257,7 +242,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 }}
 													transition={{ delay: index * 0.1 }}
 													className="flex items-center text-zion-slate-light"
-												>
+
 													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
 													{feature}
 												</motion.li>
@@ -269,7 +254,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										target="_blank"
 										rel="noopener noreferrer"
 										className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-									>
+
 										Get Started
 										<ArrowRight className="ml-2 w-5 h-5" />
 									</a>
@@ -293,7 +278,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 												ease: "linear"
 											}}
 											className="absolute inset-0"
-										>
+
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>
 											<div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full"></div>
 											<div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-white/50 rounded-full"></div>
@@ -345,7 +330,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 }}
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
-							>
+
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
 										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
@@ -364,14 +349,6 @@ export default function FuturisticServicesShowcase(...args[]):  {
 									{service.price}
 								</div>
 							</motion.div>
-<<<<<<< HEAD
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	)};
-=======;
 						))};
 					</div>;
 				</div>;
@@ -379,4 +356,3 @@ export default function FuturisticServicesShowcase(...args[]):  {
 		</div>;
 	);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

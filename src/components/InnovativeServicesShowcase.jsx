@@ -98,7 +98,7 @@ const InnovativeServicesShowcase = () => {
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.name}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
@@ -244,7 +244,7 @@ const InnovativeServicesShowcase = () => {
                         <span className="text-white">{selectedService.contactInfo.website}</span>
                       </div>
                     </div>
-                    
+
                     <div className="mt-6">
                       <a href={`mailto:${selectedService.contactInfo.email}`} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block">
                         Get Started Today
@@ -278,3 +278,4 @@ const InnovativeServicesShowcase = () => {
       </section>
     </div>)};
 export default InnovativeServicesShowcase;
+}

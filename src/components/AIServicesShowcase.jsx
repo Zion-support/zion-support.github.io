@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
 const aiServices = [
     {
         id: 'ai-chat',
@@ -93,7 +92,7 @@ const aiServices = [
         icon: Scan,
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'
-    }
+
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase() {
@@ -128,8 +127,8 @@ export function AIServicesShowcase() {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { opacity: 0, y: 20,
@@ -148,8 +147,8 @@ export function AIServicesShowcase() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated gradients */}
@@ -184,14 +183,14 @@ export function AIServicesShowcase() {
             <Zap className="w-5 h-5 text-purple-400"/>
             <span className="text-purple-300 font-medium">Latest AI Services</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover the Future of
             <span className="block bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Artificial Intelligence
             </span>
           </h2>
-          
+
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Experience cutting-edge AI solutions designed to transform your business operations and drive innovation
           </p>

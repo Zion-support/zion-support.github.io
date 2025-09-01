@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         if (clientLoginResult?.error) {
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login
-            console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+            // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();
@@ -82,12 +82,8 @@ export const AuthProvider = ({ children }) => {
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-<<<<<<< HEAD
-                router(next, { replace: true })}
-=======
                 router(next, { replace: true });
             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         return result};
     useEffect(() => {
@@ -115,21 +111,24 @@ export const AuthProvider = ({ children }) => {
                                 // Clear pending action from state first
                                 router(location.pathname, { state: {}, replace: true });
                                 // Navigate to checkout
-<<<<<<< HEAD
-                                router('/checkout', { replace: true })}
-                            else if (next) {
-                                router(decodeURIComponent(next), { replace: true })}
-=======
                                 router('/checkout', { replace: true });
                             }
                             else if (next) {
                                 router(decodeURIComponent(next), { replace: true });
                             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                             // --- END MODIFICATION ---
-                        }
-                    }
+
+
                     else if (error) {
+                        // // // // // // // console.error("Error fetching user profile:", error);
+                        setUser(null);
+
+
+                catch (error) {
+                    // // // // // // // console.error("Error fetching user profile:", error);
+                    setUser(null);
+
+
                         console.error("Error fetching user profile:", error);
                         setUser(null)}
                 }

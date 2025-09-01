@@ -31,7 +31,7 @@ export default function OrderDetailPage() {
                     to: user.email,
                     subject: `Receipt for order ${order.orderId}`,
                     html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
-                }
+
             });
             toast({ title: 'Receipt sent!' })}
         catch (err) {

@@ -23,15 +23,9 @@ import {
  } from 'lucide-react';
 
 // Import the new services
-<<<<<<< HEAD
-import { ultimateInnovativeServices2025  } from "../../data/2025-ultimate-innovative-services-expansion";
-import { enterpriseITInfrastructureServices2025  } from "../../data/2025-enterprise-it-infrastructure-services";
-import { innovativeMicroSaasSolutions2025  } from "../../data/2025-innovative-micro-saas-solutions";
-=======
 import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -170,7 +164,6 @@ export function UltimateServicesShowcase(...args[]):  {
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -230,7 +223,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
 }}
           transition={{ duration: 0.8 }}
-        >
+
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Ultimate Innovation
@@ -301,7 +294,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                 : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
             }`}
-          >
+
             All Services ({allServices.length})
           </button>
           {categories.map((category)  => (
@@ -313,7 +306,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'
               }`}
-            >
+
               {category.name} ({category.services.length})
             </button>
           ))}
@@ -325,13 +318,13 @@ export function UltimateServicesShowcase(...args[]):  {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-        >
+
           {filteredServices.map((service) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
               className="group relative"
-            >
+
               <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover:border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                 {/* Service Header */}
                 <div className="mb-4">
@@ -417,14 +410,14 @@ export function UltimateServicesShowcase(...args[]):  {
                   <button
                     onClick={() => setSelectedService(service)}
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+
                     Learn More
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <Link
                     to={service.link}
                     className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                  >
+
                     <Zap className="w-4 h-4" />
                   </Link>
                 </div>
@@ -478,7 +471,7 @@ export function UltimateServicesShowcase(...args[]):  {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-              >
+
                 Get Started Today
                 <ArrowRight className="w-5 h-5" />
               </Link>
@@ -487,7 +480,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   .replace(/\s/g, '')
                   .replace(/[^\d+]/g, '')}
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -514,7 +507,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 <button
                   onClick={() => setSelectedService(null)}
                   className="text-zion-gray-light hover:text-white text-2xl"
-                >
+
                   ×
                 </button>
               </div>
@@ -595,7 +588,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     <Link
                       to={selectedService.link}
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
-                    >
+
                       Get Started
                     </Link>
                     <a
@@ -603,20 +596,12 @@ export function UltimateServicesShowcase(...args[]):  {
                         .replace(/\s/g, '')
                         .replace(/[^\d+]/g, '')}
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                    >
+
                       <Phone className="w-5 h-5" />
                     </a>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -624,7 +609,6 @@ export function UltimateServicesShowcase(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

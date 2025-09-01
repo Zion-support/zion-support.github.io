@@ -27,7 +27,7 @@ export default function AIContentGenerator() {
             title: "SEO Optimization",
             description: "AI-powered SEO suggestions to improve content visibility and ranking",
             icon: <Target className="h-6 w-6 text-zion-cyan"/>
-        }
+
     ];
 
     const contentTypes = [
@@ -60,7 +60,7 @@ export default function AIContentGenerator() {
             title: "Video Scripts",
             description: "Scripts for video content and presentations",
             icon: <Video className="h-8 w-8 text-zion-blue"/>
-        }
+
     ];
 
     const pricingPlans = [
@@ -111,7 +111,7 @@ export default function AIContentGenerator() {
                 "API access"
             ],
             popular: false
-        }
+
     ];
 
     const benefits = [
@@ -131,11 +131,11 @@ export default function AIContentGenerator() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            <SEO 
-                title="AI Content Generator - Zion Tech Group" 
+            <SEO
+                title="AI Content Generator - Zion Tech Group"
                 description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more."
             />
-            
+
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
@@ -148,7 +148,7 @@ export default function AIContentGenerator() {
                         AI Content Generator
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                        Transform your content creation with AI-powered writing tools. Generate high-quality, 
+                        Transform your content creation with AI-powered writing tools. Generate high-quality,
                         SEO-optimized content for blogs, social media, marketing campaigns, and more.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,11 +172,11 @@ export default function AIContentGenerator() {
                             Powerful Features for <span className="text-cyan-400">Content Creation</span>
                         </h2>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Our AI content generator provides everything you need to create engaging, 
+                            Our AI content generator provides everything you need to create engaging,
                             high-quality content that drives results.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature, index) => (
                             <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
@@ -204,7 +204,7 @@ export default function AIContentGenerator() {
                             From blog posts to social media content, our AI generator handles all your content needs.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {contentTypes.map((type, index) => (
                             <Card key={index} className="bg-slate-800/50 border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
@@ -232,7 +232,7 @@ export default function AIContentGenerator() {
                             Flexible pricing plans designed to grow with your content needs.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {pricingPlans.map((plan, index) => (
                             <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${
@@ -283,7 +283,7 @@ export default function AIContentGenerator() {
                             Experience the power of AI-driven content creation with these key benefits.
                         </p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {benefits.map((benefit, index) => (
                             <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
@@ -318,4 +318,4 @@ export default function AIContentGenerator() {
             </section>
         </div>
     );
-}
+</Card></Card></Card></Card></Card>}}}}}

@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
-    const [paramValues, setParamValues] = useState({});
-    const [body, setBody] = useState("{}");
+    const [paramValues, setParamValues] = useState({ /* empty */ });
+    const [body, setBody] = useState("{ /* empty */ }");
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const handleParamChange = (name, value) => {
         setParamValues((prev) => ({ ...prev, [name]: value }))};
     const sendRequest = async () => {
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
-        let url = `${baseUrl}${path}`;
+        const url = `${baseUrl}${path}`;
         const searchParams = new URLSearchParams();
         if (method === "GET" || method === "DELETE") {
             params.forEach((p) => {

@@ -13,8 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
-// Define the form schema with zod
+import { Sparkles // Define the form schema with zod
 const productSchema = z.object({
     title: z.string().min(3, "Title must be at least 3 characters"),
     description: z.string().min(10, "Description must be at least 10 characters"),
@@ -176,12 +175,8 @@ export function ProductSubmissionForm() {
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
-<<<<<<< HEAD
-            router(`/marketplace/listing/${productRecord.id}`)}
-=======
             router(`/marketplace/listing/${productRecord.id}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
             toast({
                 title: "Publication Failed",
@@ -201,7 +196,7 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-      
+
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -276,7 +271,7 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-                  
+
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"/>
@@ -323,7 +318,7 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-      
+
       <TabsContent value="ai">
         <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
   {

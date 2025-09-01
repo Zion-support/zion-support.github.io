@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
     const sizeClasses = {
@@ -27,7 +26,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 
 }}/>))}
     </div>);
-=======
   xl: 'w-16 h-16'
     
 
@@ -35,7 +33,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const renderVariant = () => {
         switch (variant) {
             case 'dots':
@@ -54,3 +51,4 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
         </motion.p>)}
     </div>)};
 export default EnhancedLoading;
+</motion.div></motion.div></motion.div></motion.div>}

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { z } from "zod";
-import { Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 // Form validation schema
@@ -49,7 +48,7 @@ export default function ForgotPassword() {
         </div>
       </>)}
     return (<>
-      
+
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">

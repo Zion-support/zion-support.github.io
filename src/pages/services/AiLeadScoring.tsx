@@ -7,7 +7,7 @@ import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
 const AiLeadScoring: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="AI Lead Scoring - Zion Tech Group"
         description="Explainable AI lead scoring with CRM integration, A/B tests, and lift tracking."
         keywords="lead scoring, AI sales, CRM, B2B marketing"
@@ -55,17 +55,17 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
             <h3 className="font-semibold mb-2">References</h3>
             <ul className="list-disc ml-5 text-slate-300 space-y-1">
               <li>
-                Average pricing benchmarks for AI tools: 
+                Average pricing benchmarks for AI tools:
                 <a className="text-cyan-400 hover:underline" href="https://www.g2.com/categories/predictive-lead-scoring" target="_blank" rel="noreferrer">G2 Predictive Lead Scoring</a>
               </li>
               <li>
-                CRM integrations and APIs: 
-                <a className="text-cyan-400 hover:underline" href="https://developers.hubspot.com/" target="_blank" rel="noreferrer">HubSpot Developers</a>, 
+                CRM integrations and APIs:
+                <a className="text-cyan-400 hover:underline" href="https://developers.hubspot.com/" target="_blank" rel="noreferrer">HubSpot Developers</a>,
                 <a className="text-cyan-400 hover:underline" href="https://developer.salesforce.com/" target="_blank" rel="noreferrer">Salesforce Developer</a>
               </li>
               <li>
-                Intent data providers: 
-                <a className="text-cyan-400 hover:underline" href="https://clearbit.com" target="_blank" rel="noreferrer">Clearbit</a>, 
+                Intent data providers:
+                <a className="text-cyan-400 hover:underline" href="https://clearbit.com" target="_blank" rel="noreferrer">Clearbit</a>,
                 <a className="text-cyan-400 hover:underline" href="https://6sense.com" target="_blank" rel="noreferrer">6sense</a>
               </li>
             </ul>
@@ -75,14 +75,6 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
             <p className="text-slate-300">Mobile: <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></p>
             <p className="text-slate-300">E-mail: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
             <p className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-          </div>
-        </div>
-        <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>
-      </section>;
-    </div>;
-  )};
-=======
           </div>;
         </div>;
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>;
@@ -90,7 +82,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AiLeadScoring;
 
+}

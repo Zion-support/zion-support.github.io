@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard } from 'lucide-react';
-const EmergingTech = () => {
+import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech = () => {
     const technologies = [
         {
             category: "Quantum Computing",
@@ -22,7 +21,7 @@ const EmergingTech = () => {
                     href: "/quantum-edge-computing-platform",
                     features["Low Latency", "High Security", "Scalable Infrastructure"],
                     status: "Emerging Technology"
-                }
+
             ]
         },
         {
@@ -43,7 +42,7 @@ const EmergingTech = () => {
                     href: "/space-tech",
                     features["Earth Observation", "Climate Monitoring", "Resource Management"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -64,7 +63,7 @@ const EmergingTech = () => {
                     href: "/services/edge-computing",
                     features["Low Latency", "High Bandwidth", "Distributed Processing"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -85,7 +84,7 @@ const EmergingTech = () => {
                     href: "/ai-autonomous-research-assistant",
                     features["Research Automation", "Data Analysis", "Insight Generation"],
                     status: "Research & Development"
-                }
+
             ]
         },
         {
@@ -106,7 +105,7 @@ const EmergingTech = () => {
                     href: "/services/ai-workflow-automation",
                     features["Process Optimization", "Error Reduction", "Efficiency Gains"],
                     status: "Production Ready"
-                }
+
             ]
         },
         {
@@ -127,9 +126,9 @@ const EmergingTech = () => {
                     href: "/services/blockchain-defi-solutions",
                     features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
                     status: "Active Development"
-                }
+
             ]
-        }
+
     ];
     const researchAreas = [
         {
@@ -155,7 +154,7 @@ const EmergingTech = () => {
             description: "Creating truly autonomous AI systems with minimal human intervention",
             progress: 80,
             timeline: "2025-2026"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -163,8 +162,8 @@ const EmergingTech = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 20,
@@ -181,8 +180,8 @@ const EmergingTech = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -201,7 +200,7 @@ const EmergingTech = () => {
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
   { opacity: 0,
@@ -228,7 +227,7 @@ const EmergingTech = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore the cutting-edge technologies that are shaping the future. 
+              Explore the cutting-edge technologies that are shaping the future.
               From quantum computing to autonomous systems, discover innovations that will transform industries.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -255,7 +254,7 @@ const EmergingTech = () => {
                 <p className="text-gray-400 max-w-2xl mx-auto mb-6">{category.description}</p>
                 <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {category.technologies.map((tech, techIndex) => (<motion.div key={tech.name} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-purple-500/50 transition-all duration-300 group">
                     <div className="flex items-start justify-between mb-4">
@@ -266,11 +265,11 @@ const EmergingTech = () => {
                         {tech.status}
                       </span>
                     </div>
-                    
+
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {tech.description}
                     </p>
-                    
+
                     <div className="mb-6">
                       <h4 className="text-sm font-medium text-gray-300 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -280,7 +279,7 @@ const EmergingTech = () => {
                           </li>))}
                       </ul>
                     </div>
-                    
+
                     <Link to={tech.href} className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Learn More
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,7 +318,7 @@ const EmergingTech = () => {
               Research & Development
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our dedicated R&D team is constantly pushing the boundaries of what's possible, 
+              Our dedicated R&D team is constantly pushing the boundaries of what's possible,
               working on next-generation technologies that will shape the future.
             </p>
           </motion.div>
@@ -357,9 +356,9 @@ const EmergingTech = () => {
                   <h3 className="text-lg font-semibold text-white">{area.title}</h3>
                   <span className="text-sm text-purple-400">{area.timeline}</span>
                 </div>
-                
+
                 <p className="text-gray-400 text-sm mb-4">{area.description}</p>
-                
+
                 <div className="mb-2">
                   <div className="flex justify-between text-sm text-gray-400 mb-1">
                     <span>Progress</span>
@@ -399,7 +398,7 @@ const EmergingTech = () => {
             Ready to Explore the Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join us in exploring and implementing the next generation of technologies 
+            Join us in exploring and implementing the next generation of technologies
             that will transform your business and industry.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -414,3 +413,4 @@ const EmergingTech = () => {
       </div>
     </div>)};
 export default EmergingTech;
+}}}}}}}}}}}}}}

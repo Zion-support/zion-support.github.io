@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Wifi, 
-  Server, 
-  Smartphone, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Wifi,
+  Server,
+  Smartphone,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -25,108 +25,10 @@ import {
   Cpu
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const iotEdgeSolutions = [
-  {
-    id: 1,
-    title: "IoT Device Management",
-    description: "Comprehensive platform for managing and monitoring IoT devices at scale.",
-    icon: Wifi,
-    features[
-      "Device provisioning",
-      "Remote monitoring",
-      "Firmware updates",
-      "Device analytics"
-    ],
-    price: "From $30,000",
-    timeline: "16-24 weeks",
-    category: "IoT Platform",
-    technologies["MQTT", "CoAP", "HTTP", "WebSocket"]
-  },
-  {
-    id: 2,
-    title: "Edge Computing Infrastructure",
-    description: "Distributed edge computing solutions for real-time data processing.",
-    icon: Server,
-    features[
-      "Edge nodes setup",
-      "Data processing",
-      "Load balancing",
-      "Failover systems"
-    ],
-    price: "From $40,000",
-    timeline: "20-32 weeks",
-    category: "Edge Computing",
-    technologies["Kubernetes", "Docker", "Apache Kafka", "Redis"]
-  },
-  {
-    id: 3,
-    title: "Real-Time Data Analytics",
-    description: "Streaming analytics platform for processing IoT data in real-time.",
-    icon: Activity,
-    features[
-      "Stream processing",
-      "Real-time alerts",
-      "Predictive analytics",
-      "Data visualization"
-    ],
-    price: "From $35,000",
-    timeline: "18-26 weeks",
-    category: "Analytics",
-    technologies["Apache Spark", "Apache Flink", "InfluxDB", "Grafana"]
-  },
-  {
-    id: 4,
-    title: "Smart City Solutions",
-    description: "IoT infrastructure for smart city applications and urban management.",
-    icon: Globe,
-    features[
-      "Traffic management",
-      "Environmental monitoring",
-      "Smart lighting",
-      "Public safety"
-    ],
-    price: "From $100,000",
-    timeline: "32-48 weeks",
-    category: "Smart Cities",
-    technologies["LoRaWAN", "NB-IoT", "5G", "Cloud Platforms"]
-  },
-  {
-    id: 5,
-    title: "Industrial IoT (IIoT)",
-    description: "Connected manufacturing and industrial automation solutions.",
-    icon: Cpu,
-    features[
-      "Equipment monitoring",
-      "Predictive maintenance",
-      "Quality control",
-      "Energy optimization"
-    ],
-    price: "From $80,000",
-    timeline: "24-36 weeks",
-    category: "Industrial IoT",
-    technologies["OPC UA", "Modbus", "Ethernet/IP", "Profinet"]
-  },
-  {
-    id: 6,
-    title: "IoT Security Framework",
-    description: "Comprehensive security solutions for IoT and edge computing environments.",
-    icon: Shield,
-    features[
-      "Device authentication",
-      "Data encryption",
-      "Access control",
-      "Threat detection"
-    ],
-    price: "From $45,000",
-    timeline: "16-24 weeks",
-    category: "Security",
     technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const iotTechnologies = [
   {
     name: "MQTT Protocol",
@@ -155,7 +57,7 @@ const iotTechnologies = [
     icon: Wifi,
     useCase: "Wide-area IoT",
     reliability: "Medium"
-  }
+
 ];
 
 const successStories = [
@@ -185,7 +87,7 @@ const successStories = [
     solution: "Built IoT fleet management system with edge computing",
     results: "50% improvement in delivery times, 35% reduction in fuel costs",
     logo: "LN"
-  }
+
 ];
 
 const processSteps = [
@@ -216,7 +118,7 @@ const processSteps = [
     description: "Integrate systems and conduct comprehensive testing",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+
 ];
 
 export default function IoTEdge() {
@@ -224,9 +126,9 @@ export default function IoTEdge() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'IoT Platform', 'Edge Computing', 'Analytics', 'Smart Cities', 'Industrial IoT', 'Security'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? iotEdgeSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? iotEdgeSolutions
     : iotEdgeSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -238,7 +140,7 @@ export default function IoTEdge() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
@@ -263,7 +165,7 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -296,20 +198,20 @@ export default function IoTEdge() {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Wifi className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IoT & Edge
               <span className="text-gradient block">Computing</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Connect, monitor, and optimize your world with cutting-edge IoT and edge computing solutions. 
+              Connect, monitor, and optimize your world with cutting-edge IoT and edge computing solutions.
               From smart cities to industrial automation, we help businesses harness the power of connected devices.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Wifi className="w-4 h-4" />
@@ -354,7 +256,7 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">IoT Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading IoT protocols and edge computing technologies
@@ -396,17 +298,17 @@ export default function IoTEdge() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -446,7 +348,7 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful IoT and edge computing implementation
@@ -488,7 +390,7 @@ export default function IoTEdge() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -497,7 +399,7 @@ export default function IoTEdge() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -535,7 +437,7 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">IoT & Edge Computing Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for the connected world
@@ -553,7 +455,7 @@ export default function IoTEdge() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -595,14 +497,14 @@ export default function IoTEdge() {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -611,23 +513,23 @@ export default function IoTEdge() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -669,7 +571,7 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with IoT and edge computing
@@ -711,7 +613,7 @@ export default function IoTEdge() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -721,7 +623,7 @@ export default function IoTEdge() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -736,7 +638,7 @@ export default function IoTEdge() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -775,24 +677,24 @@ export default function IoTEdge() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Connect Your World?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our IoT and edge computing solutions can transform your business, 
+              Let's discuss how our IoT and edge computing solutions can transform your business,
               improve efficiency, and create new opportunities through connected technology.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>

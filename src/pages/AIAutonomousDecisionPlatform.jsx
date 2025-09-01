@@ -8,7 +8,7 @@ const AIAutonomousDecisionPlatform = () => {
         <meta name="keywords" content="AI decision platform, autonomous decision making, decision orchestration, AI analytics, business intelligence, decision automation"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-platform"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -26,7 +26,7 @@ const AIAutonomousDecisionPlatform = () => {
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Platform Architecture</h2>
               <p className="text-lg text-gray-300 mb-6">
-                Our decision platform provides a unified framework for autonomous decision-making, featuring intelligent agents, 
+                Our decision platform provides a unified framework for autonomous decision-making, featuring intelligent agents,
                 advanced analytics, and seamless integration with your existing systems.
               </p>
               <div className="space-y-4">
@@ -48,7 +48,7 @@ const AIAutonomousDecisionPlatform = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Core Features</h3>
               <div className="space-y-3">
@@ -83,31 +83,31 @@ const AIAutonomousDecisionPlatform = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Decision Orchestration</h3>
               <p className="text-gray-300">Coordinate multiple AI agents for complex decision scenarios</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-indigo-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Advanced Analytics</h3>
               <p className="text-gray-300">Real-time data analysis and predictive modeling</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-purple-400 text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">AI Agents</h3>
               <p className="text-gray-300">Specialized autonomous agents for different decision domains</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-semibold text-white mb-3">System Integration</h3>
               <p className="text-gray-300">Seamless integration with existing business systems</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-cyan-400 text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Monitoring</h3>
               <p className="text-gray-300">Track decision quality and optimize performance</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
@@ -124,25 +124,25 @@ const AIAutonomousDecisionPlatform = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Data Input</h3>
                 <p className="text-gray-300 text-sm">Collect data from multiple sources</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Analysis</h3>
                 <p className="text-gray-300 text-sm">Process and analyze data</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Agent Coordination</h3>
                 <p className="text-gray-300 text-sm">Coordinate AI agents</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Decision</h3>
                 <p className="text-gray-300 text-sm">Generate optimal decision</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">5</div>
                 <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
@@ -159,12 +159,12 @@ const AIAutonomousDecisionPlatform = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Operations</h3>
                 <p className="text-gray-300">Orchestrate decisions across business units</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
                 <p className="text-gray-300">Risk assessment and investment decisions</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
                 <p className="text-gray-300">Clinical decision support and diagnostics</p>

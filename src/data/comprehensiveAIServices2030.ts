@@ -646,7 +646,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     integrations["ERP systems", "CRM platforms", "Document management", "Workflow tools"],
     freeTier: true,
     trialPeriod: "30 days"
-  }
+
 ];
 
-export default comprehensiveAIServices2030;
+export default comprehensiveAIServices2030;}}}

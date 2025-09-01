@@ -37,7 +37,7 @@ export const EnterpriseCallToAction = () => {
       action: 'Book Consultation',
       link: '#consultation',
       color: 'purple'
-    }
+
   ];
 
   return (
@@ -49,7 +49,7 @@ export const EnterpriseCallToAction = () => {
             Enterprise Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            For large organizations requiring enterprise-grade IT services, we provide customized solutions, 
+            For large organizations requiring enterprise-grade IT services, we provide customized solutions,
             dedicated support teams, and strategic consulting to drive your digital transformation.
           </p>
         </div>
@@ -94,7 +94,7 @@ export const EnterpriseCallToAction = () => {
               <a
                 href={method.link}
                 className={`inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-${method.color}-500 to-${method.color}-600 text-white font-semibold rounded-lg hover:from-${method.color}-600 hover:to-${method.color}-700 transition-all duration-300`}
-              >
+
                 <span>{method.action}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -108,21 +108,21 @@ export const EnterpriseCallToAction = () => {
             Ready to Transform Your IT Infrastructure?
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprise organizations that trust Zion with their critical IT operations. 
+            Join hundreds of enterprise organizations that trust Zion with their critical IT operations.
             Let's discuss how we can help you achieve your technology goals.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a
               href="#enterprise-demo"
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg"
-            >
+
               Request Enterprise Demo
             </a>
             <a
               href="#enterprise-quote"
               className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
-            >
+
               Get Enterprise Quote
             </a>
           </div>
@@ -195,20 +195,20 @@ export const EnterpriseCallToAction = () => {
               Start Your Enterprise Journey
             </h3>
             <p className="text-gray-300 mb-6">
-              Contact our enterprise team today to discuss your requirements and explore how Zion can help 
+              Contact our enterprise team today to discuss your requirements and explore how Zion can help
               you achieve your technology objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#enterprise-contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Contact Enterprise Team
               </a>
               <a
                 href="#enterprise-case-studies"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 View Case Studies
               </a>
             </div>

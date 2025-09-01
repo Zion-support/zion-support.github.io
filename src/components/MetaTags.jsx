@@ -10,10 +10,10 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <meta name="author" content={author}/>
       <meta name="robots" content="index, follow"/>
       <meta name="language" content="English"/>
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={url}/>
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle}/>
       <meta property="og:description" content={description}/>
@@ -22,7 +22,7 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <meta property="og:type" content={type}/>
       <meta property="og:site_name" content="Zion Tech Group"/>
       <meta property="og:locale" content="en_US"/>
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image"/>
       <meta name="twitter:title" content={fullTitle}/>
@@ -30,17 +30,17 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <meta name="twitter:image" content={image}/>
       <meta name="twitter:site" content="@ziontechgroup"/>
       <meta name="twitter:creator" content="@ziontechgroup"/>
-      
+
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="theme-color" content="#22ddd2"/>
       <meta name="msapplication-TileColor" content="#22ddd2"/>
-      
+
       {/* Article specific meta tags */}
       {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}
       {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}
       {type === 'article' && (<meta property="article:author" content={author}/>)}
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({

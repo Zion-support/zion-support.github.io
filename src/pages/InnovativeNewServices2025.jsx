@@ -111,7 +111,7 @@ const InnovativeNewServices2025 = () => {
                   </option>))}
               </select>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <label className="text-gray-300 font-medium">Price Range:</label>
               <select value={selectedPriceRange} onChange={(e) => setSelectedPriceRange(e.target.value)} className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none">
@@ -241,3 +241,4 @@ const InnovativeNewServices2025 = () => {
       </section>
     </div>)};
 export default InnovativeNewServices2025;
+}}}

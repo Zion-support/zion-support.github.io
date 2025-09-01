@@ -1,4 +1,3 @@
-export type ServiceVariant = | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'

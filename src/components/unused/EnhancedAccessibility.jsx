@@ -19,6 +19,8 @@ const EnhancedAccessibility = () => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
+                // // // // // // // console.warn('Failed to load accessibility settings:', error);
+            }
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
                 console.warn('Failed to load accessibility settings:', error)}
@@ -305,7 +307,7 @@ const EnhancedAccessibility = () => {
                   <SpeakerWaveIcon className="w-4 h-4"/>
                   <span>Test Screen Reader</span>
                 </button>
-                
+
                 <button onClick={resetSettings} className="w-full px-4 py-2 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors">
                   Reset to Defaults
                 </button>
@@ -331,3 +333,4 @@ const EnhancedAccessibility = () => {
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
     </>)};
 export default EnhancedAccessibility;
+}}}}}}}}}}}}

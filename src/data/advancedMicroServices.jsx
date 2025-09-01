@@ -585,3 +585,4 @@ export const ADVANCED_MICRO_SERVICES = [
         securityFeatures["Role-based access control", "Audit logging", "Data encryption", "Secure automation"]
     }
 ];
+}

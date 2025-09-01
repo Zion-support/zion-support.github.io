@@ -151,7 +151,7 @@ export default function UptimeSLAMonitor(...args: []):  {
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -180,27 +180,27 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
                 transition={{ duration: 0.6 }}
-              >
+
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
                     Uptime SLA Monitor
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure 
+                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure
                   with real-time alerts and comprehensive reporting.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  >
+
                     Start Monitoring
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-                  >
+
                     Schedule Demo
                   </Link>
                 </div>
@@ -256,7 +256,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -315,7 +315,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <type.icon className="w-6 h-6 text-white" />
                   </div>
@@ -374,7 +374,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
                   className="flex items-start space-x-4"
-                >
+
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -435,11 +435,11 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular 
-                      ? 'border-green-500 ring-2 ring-green-500/20' 
+                    plan.popular
+                      ? 'border-green-500 ring-2 ring-green-500/20'
                       : 'border-slate-700'
                   }`}
-                >
+
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -447,7 +447,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                     <div className="mb-4">
@@ -456,7 +456,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -465,7 +465,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -473,7 +473,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                         ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+
                     Get Started
                   </Link>
                 </motion.div>
@@ -507,7 +507,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 }}
               transition={{ duration: 0.6 }}
-            >
+
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Monitor Your Infrastructure?
               </h2>
@@ -515,16 +515,16 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Join thousands of businesses using our platform to ensure their services are always available.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Free Trial
                 </Link>
-                <Link 
+                <Link
                   to="/contact"
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-                >
+
                   Contact Sales
                 </Link>;
               </div>;
@@ -534,5 +534,4 @@ export default function UptimeSLAMonitor(...args: []):  {
       </div>;
     </>;
   );
-}
-
+}}}}}}

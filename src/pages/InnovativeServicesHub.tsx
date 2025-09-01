@@ -71,19 +71,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
-<<<<<<< HEAD
-      color: 'from-emerald-600 to-green-600',
-      route: '/green-it',
-      features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
-      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
     };
-=======;
       color: 'from-emerald-600 to-green-600',;
       route: '/green-it',;
       features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const featuredServices = [
@@ -150,7 +143,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-      >
+
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1
@@ -332,26 +325,18 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-      >
+
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             Explore Our Service Categories
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
-<<<<<<< HEAD
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {serviceCategories.map((category)  => {;
-=======;
           </p>;
         </div>;
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
           {serviceCategories.map((category) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -415,14 +400,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-<<<<<<< HEAD
-                >
-                  Explore {category.title}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </motion.div>
-            )})};
-=======;
                 >;
                   Explore {category.title};
                   <ArrowRight className="w-5 h-5" />;
@@ -430,7 +407,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               </motion.div>;
             );
           })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       </motion.div>
 
@@ -440,7 +416,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.2 }}
-      >
+
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             Featured Revolutionary Services
@@ -612,17 +588,9 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
-            >
+
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </motion.div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -630,6 +598,5 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default InnovativeServicesHub;
+export default InnovativeServicesHub;}}}}}}}

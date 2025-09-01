@@ -47,19 +47,13 @@ export default function CustomDevelopment(...args[]):  {
       features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
-<<<<<<< HEAD
-      title: 'System Integration',
-      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-      icon: Workflow,
       features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     };
-=======;
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
               icon: GitFork,;
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const technologies = [
@@ -82,19 +76,13 @@ export default function CustomDevelopment(...args[]):  {
       stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
-<<<<<<< HEAD
-      title: 'Database',
-      description: 'Modern database solutions for data storage and management.',
-      icon: Database,
       stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
     };
-=======;
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
       icon: Database,;
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -153,7 +141,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Custom Development
             </h1>
@@ -165,13 +153,13 @@ export default function CustomDevelopment(...args[]):  {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Start Your Project
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 View All Services
               </Link>
             </div>
@@ -205,7 +193,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services
             </h2>
@@ -304,7 +292,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack
             </h2>
@@ -394,7 +382,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?
             </h2>
@@ -476,7 +464,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
@@ -555,7 +543,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process
             </h2>
@@ -642,7 +630,7 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?
             </h2>
@@ -654,23 +642,15 @@ export default function CustomDevelopment(...args[]):  {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+
                 Start Your Project
               </Link>
               <Link
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+
                 Explore Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -678,4 +658,3 @@ export default function CustomDevelopment(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

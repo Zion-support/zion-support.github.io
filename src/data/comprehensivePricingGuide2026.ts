@@ -311,6 +311,131 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       uptime: "99.99%",
       security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]
     },
+    }
+  }
+};
+
+// BlockchainForge Pricing
+export const blockchainForgePricing: ServicePricing = {
+  serviceId: 3,
+  serviceName: "BlockchainForge",
+  category: "Blockchain Development",
+  pricingTiers: [
+    {
+      name: "Creator",
+      price: 999,
+      billingCycle: "monthly",
+      features: [
+        "Basic smart contract generator",
+        "Up to 5 contracts/month",
+        "Standard templates",
+        "Community support",
+        "Basic security audit"
+      ],
+      limitations: [
+        "Limited contract count",
+        "Basic templates only",
+        "Community support"
+      ],
+      targetAudience: ["Small projects", "Individual developers", "Startups"],
+      roi: "200% within 3 months",
+      setupTime: "1 week",
+      support: "Community support",
+      marketComparison: "50% below market average",
+      volumeDiscounts: ["20% off annual billing"]
+    },
+    {
+      name: "Professional",
+      price: 2499,
+      billingCycle: "monthly",
+      features: [
+        "Advanced contract generator",
+        "Unlimited contracts",
+        "Advanced templates",
+        "Priority support",
+        "Advanced security audit",
+        "Multi-chain support",
+        "API access"
+      ],
+      limitations: [
+        "Advanced features require approval",
+        "Custom features limited"
+      ],
+      targetAudience: ["Fintech companies", "Medium enterprises", "DeFi projects"],
+      roi: "400% within 6 months",
+      setupTime: "2-3 weeks",
+      support: "Priority support (6h response)",
+      marketComparison: "30% below market average",
+      volumeDiscounts: ["25% off annual billing", "Volume discounts available"]
+    },
+    {
+      name: "Enterprise",
+      price: 7999,
+      billingCycle: "monthly",
+      features: [
+        "Full blockchain platform",
+        "Custom everything",
+        "Advanced security",
+        "Dedicated support",
+        "Custom integrations",
+        "White-label options",
+        "Regulatory compliance",
+        "SLA guarantees"
+      ],
+      limitations: [
+        "None - fully customizable"
+      ],
+      targetAudience: ["Large enterprises", "Banks", "Insurance companies"],
+      roi: "600% within 8 months",
+      setupTime: "3-5 weeks",
+      support: "Dedicated support (1h response)",
+      marketComparison: "Market leading pricing",
+      volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]
+    }
+  ],
+  marketAnalysis: {
+    averagePrice: "$4,800/month",
+    priceRange: "$1,500 - $12,000/month",
+    competitors: ["OpenZeppelin Enterprise: $8,000/month", "Truffle Enterprise: $6,500/month", "Hardhat Enterprise: $7,000/month"],
+    valueProposition: "90% faster blockchain development with automated security and compliance"
+  },
+  specialOffers: {
+    annualDiscount: "30% off annual billing",
+    enterpriseDiscount: "Up to 45% off for enterprise contracts",
+    startupProgram: "70% off for qualified startups (first year)",
+    referralProgram: "25% commission for successful referrals"
+  }
+};
+
+// Export all pricing guides
+export const ALL_PRICING_GUIDES_2026 = [
+  quantumFlowProPricing,
+  neuroSyncAIPricing,
+  blockchainForgePricing
+];
+
+export const PRICING_SUMMARY_2026 = {
+  overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
+  keyBenefits: [
+    "Competitive pricing with superior technology",
+    "Flexible tiered pricing for all business sizes",
+    "Proven ROI with rapid payback periods",
+    "Comprehensive support and implementation",
+    "Future-proof technology investments"
+  ],
+  pricingStrategy: {
+    approach: "Value-based pricing with ROI focus",
+    target: "15-30% below market average",
+    value: "2-3x better ROI than competitors",
+    flexibility: "Custom pricing for enterprise clients"
+  },
+  contactInfo: {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    website: "https://ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+
+};}}}}}}}}}}}}}}
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]
@@ -720,6 +845,4 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
     scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]
   }
-];
-
-export default COMPREHENSIVE_PRICING_GUIDE_2026;
+};

@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/components/ui/use-toast";
-import { apiClient } from "@/utils/apiClient";
+import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
+import { apiClient } from "@/utils/apiClient";
+import { Loader2, Send import { useEffect, useRef, useState } from "react";
 import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
     { id: "hire", text: "How do I hire?" },
@@ -74,7 +73,7 @@ export function ChatBotPanel() {
                 setFailedAttempts(0)}
         }
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // // // // // // // console.error("Error in AI chat:", error);
             toast({
                 variant: "destructive",
                 title: "Communication Error",
@@ -109,7 +108,7 @@ export function ChatBotPanel() {
                 message: data.message
             }}
         catch (error) {
-            console.error("Error in AI chat:", error);
+            // // // // // // // console.error("Error in AI chat:", error);
             return {
                 success: false,
                 message: "I'm experiencing technical difficulties. Please try again later."
@@ -129,12 +128,17 @@ export function ChatBotPanel() {
         try {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
-            console.log("Support escalation triggered", {
+            // // // // // // // console.log("Support escalation triggered", {
                 conversationHistory: messages.map(m => ({
                     content: m.content,
                     sender: m.sender,
                     timestamp: m.timestamp
                 }))
+            // // // // // // // console.error("Failed to log support escalation:", error);
+        }
+    };
+    const handleQuickReply = (text) => {
+        handleSendMessage(text);
             })}
         catch (error) {
             console.error("Failed to log support escalation:", error)}
@@ -153,7 +157,7 @@ export function ChatBotPanel() {
                 content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
                 sender: "bot",
                 timestamp: new Date()
-            }
+
         ]);
         // In a real implementation, this would trigger a live chat request
         toast({
@@ -180,13 +184,13 @@ export function ChatBotPanel() {
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
-          
+
           {isLoading && (<div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
             </div>)}
         </div>
       </ScrollArea>
-      
+
       {messages.length === 1 && (<div className="px-4 py-3">
           <p className = {
   cn("text-sm mb-2",
@@ -204,7 +208,7 @@ export function ChatBotPanel() {
             {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
         </div>)}
-      
+
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
           <p className = {
   cn("text-sm mb-2 font-medium",
@@ -240,12 +244,6 @@ export function ChatBotPanel() {
 }>
         <form onSubmit={(e) => {
             e.preventDefault();
-<<<<<<< HEAD
-            handleSendMessage()}} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
-  cn("flex-1",
-  theme === "dark"
-=======
             handleSendMessage();
         
 
@@ -253,7 +251,6 @@ export function ChatBotPanel() {
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
   cn("flex-1",
   theme === "dark"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
 

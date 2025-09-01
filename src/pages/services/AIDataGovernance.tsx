@@ -243,7 +243,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
@@ -271,22 +271,22 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
               transition={{ duration: 0.8 }}
-            >
+
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Data Protection
               </div>
-              
+
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Data
                 <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"> Governance</span>
               </h1>
-              
+
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Protect your most valuable asset with intelligent data governance. 
+                Protect your most valuable asset with intelligent data governance.
                 AI-powered classification, access control, and compliance management for the modern enterprise.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
@@ -347,7 +347,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -408,7 +408,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
                 className="text-center"
-              >
+
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -468,7 +468,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>
                     <framework.icon className="w-6 h-6 text-white" />
@@ -529,7 +529,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
                 className="group"
-              >
+
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -595,11 +595,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
                 className={`relative rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
+                  plan.popular
+                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -607,7 +607,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
@@ -616,7 +616,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -625,7 +625,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
@@ -664,7 +664,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Data?
             </h2>
@@ -678,14 +678,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -693,6 +685,5 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AIDataGovernance;
+export default AIDataGovernance;}}}}}}

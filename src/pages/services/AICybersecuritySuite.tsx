@@ -34,8 +34,6 @@ export default function AICybersecuritySuite(...args[]):  {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-=======
       title: "Zero-Trust Architecture",
       description: "Implement comprehensive zero-trust security with AI-driven access control",
       icon: Shield,
@@ -168,7 +166,6 @@ export default function AICybersecuritySuite(...args[]):  {
     {
       title: "Threat Detection Rate",
       description: "AI-powered detection with machine learning",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       icon: Eye,
       title: 'Behavioral Analytics',
       description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
@@ -193,19 +190,11 @@ export default function AICybersecuritySuite(...args[]):  {
       color: 'from-red-500 to-pink-500'
     },
     {
-<<<<<<< HEAD
-      icon: Database,
-      title: 'Data Protection',
-      description: 'Advanced encryption and data loss prevention with AI-powered monitoring',
-      color: 'from-indigo-500 to-purple-500'
-    };
-=======;
       title: "Compliance Coverage",;
       description: "Automated compliance for all major frameworks",;
       icon: CheckCircle,;
       metric: "100%";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const services = [
@@ -296,26 +285,12 @@ export default function AICybersecuritySuite(...args[]):  {
         title="AI Cybersecurity Suite - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -338,7 +313,6 @@ export default function AICybersecuritySuite(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
@@ -369,8 +343,6 @@ export default function AICybersecuritySuite(...args[]):  {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-=======
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-red-600/20 rounded-full blur-xl"></div>
@@ -403,12 +375,12 @@ export default function AICybersecuritySuite(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Unmatched Security Performance
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Suite delivers industry-leading security metrics 
+              Our AI Cybersecurity Suite delivers industry-leading security metrics
               that protect your business around the clock.
             </p>
           </motion.div>
@@ -448,11 +420,11 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 text-center"
-              >
+
                 <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg mx-auto mb-4 w-fit">
                   <metric.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <div className="text-4xl font-bold text-red-400 mb-2">{metric.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
@@ -460,26 +432,12 @@ export default function AICybersecuritySuite(...args[]):  {
             ))}
           </div>
         </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </section>
 
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -501,9 +459,8 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced AI-Powered Security Features
             </h2>
@@ -516,24 +473,6 @@ export default function AICybersecuritySuite(...args[]):  {
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -565,7 +504,6 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -582,19 +520,6 @@ export default function AICybersecuritySuite(...args[]):  {
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -616,9 +541,8 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Security Solutions
             </h2>
@@ -631,24 +555,6 @@ export default function AICybersecuritySuite(...args[]):  {
             {services.map((service, index)  => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -680,11 +586,10 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-red-500 ring-2 ring-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 ring-2 ring-red-500/20'
                     : 'border-slate-700'
                 }`}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -707,19 +612,6 @@ export default function AICybersecuritySuite(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -741,9 +633,8 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Integrated Security Modules
             </h2>
@@ -756,24 +647,6 @@ export default function AICybersecuritySuite(...args[]):  {
             {securityModules.map((module, index)  => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -805,7 +678,6 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
                 <p className="text-gray-300 mb-6">{module.description}</p>
@@ -938,20 +810,6 @@ export default function AICybersecuritySuite(...args[]):  {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -973,7 +831,6 @@ export default function AICybersecuritySuite(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Secure Your Business Today
@@ -993,47 +850,6 @@ export default function AICybersecuritySuite(...args[]):  {
                 href="tel:+13024640950" 
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
-<<<<<<< HEAD
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 flex items-center gap-2">
-                ziontechgroup.com
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )}
-=======
                 Contact Security Experts;
               </motion.button>;
             </div>;
@@ -1043,4 +859,3 @@ export default function AICybersecuritySuite(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

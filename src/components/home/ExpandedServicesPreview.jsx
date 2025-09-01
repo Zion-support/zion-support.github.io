@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { ArrowRight, Star, Zap, TrendingUp import { SERVICE_CATEGORIES } from '@/data/expandedServices';
 export function ExpandedServicesPreview() {
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -29,7 +28,7 @@ export function ExpandedServicesPreview() {
             Comprehensive Tech Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services 
+            From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services
             designed to accelerate your business growth and digital transformation.
           </p>
         </div>

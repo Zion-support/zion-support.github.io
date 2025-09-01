@@ -44,7 +44,7 @@ const AdvancedServices = () => {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Discover cutting-edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies that transform businesses and drive innovation.
             </p>
-            
+
             {/* Key Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
               {[
@@ -332,7 +332,7 @@ const AdvancedServices = () => {
                 View Case Studies
               </button>
             </div>
-            
+
             {/* Contact Info */}
             <div className="mt-8 pt-8 border-t border-cyan-500/30">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -352,3 +352,4 @@ const AdvancedServices = () => {
       </section>
     </div>)};
 export default AdvancedServices;
+}}

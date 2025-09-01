@@ -1,7 +1,5 @@
 import React from 'react';
-import { Globe, Clock, Users, Shield, Zap, CheckCircle } from 'lucide-react';
-
-export const GlobalServiceSection = () => {
+import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
   const globalServices = [
     {
       icon: Globe,
@@ -58,7 +56,7 @@ export const GlobalServiceSection = () => {
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-            >
+
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
                   <service.icon className="h-8 w-8 text-blue-400" />

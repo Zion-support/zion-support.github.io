@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027  } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027  } from "../../data/2027-specialized-innovative-services";
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +6,6 @@ import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-ed
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -119,14 +108,6 @@ export default function ComprehensivePricing(...args[]):  {
     return matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const getPriceRangeLabel = (range: string) => {;
-    switch (range) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'under-1000': return 'Under $1,000';
-      case '1000-3000': return '$1,000 - $3,000';
-      case '3000-5000': return '$3,000 - $5,000';
-      case 'over-5000': return 'Over $5,000';
       default: return 'All Prices'}
   };
 
@@ -219,7 +200,7 @@ export default function ComprehensivePricing(...args[]):  {
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-            >
+
               <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
@@ -229,7 +210,7 @@ export default function ComprehensivePricing(...args[]):  {
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
-            >
+
               <option value="all">All Prices</option>
               <option value="under-1000">Under $1,000</option>
               <option value="1000-3000">$1,000 - $3,000</option>
@@ -333,14 +314,9 @@ export default function ComprehensivePricing(...args[]):  {
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-<<<<<<< HEAD
-                  setSelectedPriceRange('all')}}
-                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark";
-=======;
                   setSelectedPriceRange('all');
                 }}
                 className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 Clear Filters
               </Button>
@@ -415,14 +391,6 @@ export default function ComprehensivePricing(...args[]):  {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -430,4 +398,3 @@ export default function ComprehensivePricing(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

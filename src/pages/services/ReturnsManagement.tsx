@@ -64,7 +64,6 @@ function ReturnsManagement() {
       </section>;
     </div>;
   );
-}
 
 export default ReturnsManagement;
 

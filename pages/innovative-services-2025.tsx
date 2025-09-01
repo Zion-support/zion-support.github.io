@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from "../src/data/innovativeServices2025";
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
-=======;
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../src/data/innovativeServices2025";
 const InnovativeServicesShowcase: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -29,37 +23,23 @@ const InnovativeServicesShowcase: React.FC = () => {;
   const filtered = INNOVATIVE_SERVICES_2025;
     // Filter by search term
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
     // Filter by price range;
     if (priceRange !== 'all') {;
       const [min, max] = priceRange.split('-').map(Number);
-<<<<<<< HEAD
-      if (priceRange = == '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000)} else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max)};
-=======;
       if (priceRange = == '3000+') {;
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
     // Sort services
     switch (sortBy) {
@@ -86,9 +66,9 @@ const InnovativeServicesShowcase: React.FC = () => {;
           <span className="text-xs text-gray-400">({service.reviews})</span>
         </div>
       </div>
-      
+
       <p className="text-gray-600 mb-4">{service.description}</p>
-      
+
       <div className="flex items-center justify-between mb-4">
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
@@ -132,7 +112,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
           <span>Delivery: {service.estimatedDelivery}</span>
           <span>Support: {service.supportLevel}</span>
         </div>
-        
+
         <div className="flex space-x-3">
           <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
             Get Quote
@@ -202,7 +182,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select
@@ -217,7 +197,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select
@@ -230,7 +210,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select
@@ -278,14 +258,6 @@ const InnovativeServicesShowcase: React.FC = () => {;
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Download Brochure
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </button>;
           </div>;
         </div>;
@@ -293,5 +265,4 @@ const InnovativeServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default InnovativeServicesShowcase;

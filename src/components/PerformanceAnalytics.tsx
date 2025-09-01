@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Activity, 
-  TrendingUp, 
-  TrendingDown, 
-  Clock, 
-  Zap, 
+import {
+  Activity,
+  TrendingUp,
+  TrendingDown,
+  Clock,
+  Zap,
   AlertTriangle,
   CheckCircle,
   BarChart3,
@@ -13,8 +13,6 @@ import {
   HardDrive,
   Network,
   Monitor
-} from 'lucide-react';
-
 interface PerformanceMetric {
   name: string;
   value: number;
@@ -22,14 +20,12 @@ interface PerformanceMetric {
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
-}
 
 interface PerformanceData {
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
-}
 
 const PerformanceAnalytics: React.FC = () => {;
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
@@ -87,7 +83,7 @@ const PerformanceAnalytics: React.FC = () => {;
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap
-      }
+
     ];
 
     const alerts = [;
@@ -126,7 +122,7 @@ const PerformanceAnalytics: React.FC = () => {;
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
-    }
+
   };
 
   const getStatusBgColor = (status: string) => {;
@@ -135,7 +131,7 @@ const PerformanceAnalytics: React.FC = () => {;
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20';
-    }
+
   };
 
   const getTrendIcon = (trend: string) => {;
@@ -143,7 +139,7 @@ const PerformanceAnalytics: React.FC = () => {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />;
-    }
+
   };
 
   const startMonitoring = () => {;
@@ -468,6 +464,6 @@ const PerformanceAnalytics: React.FC = () => {;
       </div>;
     </div>;
   );
-};
+</div>};
 
-export default PerformanceAnalytics;
+export default PerformanceAnalytics;}}}}}}}}

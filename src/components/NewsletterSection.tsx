@@ -2,36 +2,6 @@ import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
 
-<<<<<<< HEAD
-const NewsletterSection: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (!email) return;
-
-    setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
-      setEmail('')}, 1500)};
-
-  const benefits = [
-    {
-      icon: Bell,
-      title: "Latest Updates",
-      description: "Stay informed about new services and features"
-    },
-    {
-      icon: TrendingUp,
-      title: "Industry Insights",
       description: "Get exclusive access to tech trends and analysis";
     },;
     {;
@@ -68,7 +38,7 @@ const NewsletterSection: React.FC = () => {;
 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
-          >
+
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
@@ -81,14 +51,6 @@ const NewsletterSection: React.FC = () => {;
               onClick={() => setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-<<<<<<< HEAD
-              Subscribe Another Email
-            </button>
-          </motion.div>
-        </div>
-      </section>
-    )};
-=======;
               Subscribe Another Email;
             </button>;
           </motion.div>;
@@ -96,7 +58,6 @@ const NewsletterSection: React.FC = () => {;
       </section>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -125,7 +86,7 @@ const NewsletterSection: React.FC = () => {;
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead with Zion Tech Group
             </h2>
@@ -169,7 +130,7 @@ const NewsletterSection: React.FC = () => {;
 
 }}
                   className="flex items-start"
-                >
+
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -249,7 +210,7 @@ const NewsletterSection: React.FC = () => {;
                   type="submit"
                   disabled={isLoading || !email}
                   className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
-                >
+
                   {isLoading ? (
                     <div className="flex items-center">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
@@ -276,14 +237,6 @@ const NewsletterSection: React.FC = () => {;
                   </a>
                 </p>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -291,6 +244,5 @@ const NewsletterSection: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default NewsletterSection;
+export default NewsletterSection;}}}

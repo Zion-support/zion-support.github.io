@@ -1,15 +1,16 @@
-import React from 'react';
-import { cn } from "../../lib/utils";
+import React from 'react.ts';
+import { cn  } from '../../lib/utils';
 
-interface ProgressProps {
+interface ProgressProps extends React.PropsWithChildren<{}> {
+
   value: number;
   max?: number;
   className?: string;
-}
 
-const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {;
+const Progress: React.FC<ProgressProps> = ({ value, max = 100, className;
+}) => {;
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
-  
+
   return (
     <div className = {
   cn("w-full bg-slate-700 rounded-full h-2",
@@ -29,4 +30,5 @@ const Progress: React.FC<ProgressProps> = ({ value, max = 100, className }) => {
   );
 };
 
-export { Progress };
+export { Progress </div>};
+}

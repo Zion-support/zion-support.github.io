@@ -549,3 +549,4 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures["Cloud-native", "Auto-scaling", "Multi-tenant", "Global distribution"]
     }
 ];
+}

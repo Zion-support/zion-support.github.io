@@ -45,20 +45,13 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
                     onAlert?.('fps', fps, thresholds.fps)}
                 frameCount = 0;
-<<<<<<< HEAD
-                lastTime = currentTime}
-            requestAnimationFrame(countFrame)};
-        requestAnimationFrame(countFrame)}, [thresholds.fps, onAlert]);
-    const memoryInfo = performance.memory;
-=======
                 lastTime = currentTime;
-            }
+
             requestAnimationFrame(countFrame);
         };
         requestAnimationFrame(countFrame);
     }, [thresholds.fps, onAlert]);
     const memoryInfo = performance.memory;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
             const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
             const percentage = Math.round((used / total) * 100);
@@ -219,18 +212,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               {alerts.length}
             </Badge>)}
         </Button>
-<<<<<<< HEAD
-      </motion.div>)}
-    return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
-  { scale: 0.8,
-  opacity: 0 
-
-}} animate = {
-  { scale: 1,
-  opacity: 1 
-
-}}>
-=======
       </motion.div>);
     }
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
@@ -252,7 +233,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
@@ -265,16 +245,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <p className="text-zinc-400 text-xs">Real-time metrics</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
               <Settings className="w-4 h-4"/>
             </Button>
-            
+
             <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
               <Minimize2 className="w-4 h-4"/>
             </Button>
-            
+
             <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
               {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
             </Button>
@@ -509,7 +489,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                   <X className="w-3 h-3"/>
                 </Button>
               </div>
-              
+
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {alerts.map((alert) => {
                 const Icon = getMetricIcon(alert.metric);
@@ -564,7 +544,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <RefreshCw className="w-3 h-3 mr-2"/>
                 Refresh
               </Button>
-              
+
               <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
                 <Settings className="w-3 h-3"/>
               </Button>

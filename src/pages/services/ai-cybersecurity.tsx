@@ -1,9 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp } from 'lucide-react';
-
-const AICybersecurity: React.FC = () => {
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -65,7 +63,7 @@ const AICybersecurity: React.FC = () => {
         title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -92,24 +90,24 @@ const AICybersecurity: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">
               <Shield className="w-5 h-5 text-red-400 mr-2" />
               <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400">
                 Cybersecurity
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your business with intelligent cybersecurity that learns, adapts, and evolves. 
+              Protect your business with intelligent cybersecurity that learns, adapts, and evolves.
               Our AI-powered security solutions detect and prevent threats before they can cause harm.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
                 Secure Your Business
@@ -148,7 +146,7 @@ const AICybersecurity: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Security Features
             </h2>
@@ -192,7 +190,7 @@ const AICybersecurity: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -230,7 +228,7 @@ const AICybersecurity: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Security Services
             </h2>
@@ -274,7 +272,7 @@ const AICybersecurity: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{service.icon}</div>
                   <div>
@@ -314,7 +312,7 @@ const AICybersecurity: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Cybersecurity?
             </h2>
@@ -347,7 +345,7 @@ const AICybersecurity: React.FC = () => {
 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -382,10 +380,10 @@ const AICybersecurity: React.FC = () => {
 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>
               <p className="text-gray-300 mb-6">
-                Don't wait for a security breach. Our AI cybersecurity experts can assess your current 
+                Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20">
@@ -421,7 +419,7 @@ const AICybersecurity: React.FC = () => {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
@@ -443,4 +441,4 @@ const AICybersecurity: React.FC = () => {
   );
 };
 
-export default AICybersecurity;
+export default AICybersecurity;}}}

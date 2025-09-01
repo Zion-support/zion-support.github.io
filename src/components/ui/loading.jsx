@@ -40,13 +40,6 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     </div>)}
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
-<<<<<<< HEAD
-    return (<div className = {
-  cn('animate-pulse rounded-md bg-zion-slate-light/20',
-  className)
-
-} {...props}/>)}
-=======
     return (<div className = {
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
@@ -58,7 +51,6 @@ export function Skeleton({ className, ...props }) {
 
 } {...props}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Page loading component
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">

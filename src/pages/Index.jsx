@@ -16,8 +16,7 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
-export default function Index() {
+import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
     // Tools and features showcase
@@ -57,7 +56,7 @@ export default function Index() {
             description: "Take Zion with you on the go with our mobile app for iOS and Android",
             icon: <Smartphone className="h-6 w-6 text-zion-purple"/>,
             link: "/mobile-launch"
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue text-white">
       <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"/>

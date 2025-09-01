@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIElasticsearch() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch() {
   const features = [
     'AI-powered Elasticsearch optimization',
     'Intelligent Elasticsearch management',;
@@ -13,10 +11,10 @@ export default function AIElasticsearch() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIElasticsearch() {
       </section>;
     </div>;
   );
-}
+}}

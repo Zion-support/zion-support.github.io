@@ -5,12 +5,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Clock, Briefcase } from "lucide-react";
-function ProjectsContent() {
+import { Clock, Briefcase function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>

@@ -24,15 +24,6 @@ const frequencies = [;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
 
-<<<<<<< HEAD
-export const EnhancedNewsletter: React.FC = () => {;
-  const [formData, setFormData] = useState<NewsletterFormData>({;
-    email: '',;
-    firstName: '',;
-    interests: [],;
-    frequency: 'monthly';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  });
   
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
@@ -47,24 +38,13 @@ export const EnhancedNewsletter: React.FC = () => {;
     if (!formData.firstName) {
       newErrors.firstName = 'First name is required'}
 
-<<<<<<< HEAD
-    if (formData.interests.length === 0) {
-      newErrors.interests = 'Please select at least one interest'};
-=======;
     if (formData.interests.length = == 0) {;
       newErrors.interests = 'Please select at least one interest';
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    
-    if (!validateForm()) {
       return}
 
     setStatus('loading');
@@ -72,12 +52,14 @@ export const EnhancedNewsletter: React.FC = () => {;
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Here you would typically send the data to your newsletter service
+      // // // // // // // console.log('Newsletter subscription:', formData);
+
       console.log('Newsletter subscription: ', formData);
       
       setStatus('success');
-      
+
       // Reset form after successful submission
       setTimeout(()  => {
         setFormData({
@@ -86,45 +68,24 @@ export const EnhancedNewsletter: React.FC = () => {;
           interests[],
           frequency: 'monthly'
         });
+      // // // // // // // console.error('Newsletter subscription error:', error);
+    }
         setStatus('idle')}, 3000)} catch (error) {
       setStatus('error');
       console.error('Newsletter subscription error:', error)}
   };
 
-<<<<<<< HEAD
-  const handleInterestToggle = (interestId: string) => {;
-    setFormData(prev => ({;
-      ...prev,;
-      interests: prev.interests.includes(interestId);
-        ? prev.interests.filter(id => id !== interestId);
-        : [...prev.interests, interestId];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    }));
-    
-    // Clear error when user selects an interest
-    if (errors.interests) {
-<<<<<<< HEAD
-      setErrors(prev = > ({ ...prev, interests: null }))};
-  };
-
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {;
-=======;
       setErrors(prev => ({ ...prev, interests: null }));
     }
   };
 
   const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
-<<<<<<< HEAD
-      setErrors(prev = > ({ ...prev, [field]: null }))};
-=======;
       setErrors(prev => ({ ...prev, [field]: null }));
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   if (status = == 'success') {
@@ -151,7 +112,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
-      >
+
         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
@@ -159,14 +120,6 @@ export const EnhancedNewsletter: React.FC = () => {;
         <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>
-<<<<<<< HEAD
-        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">
-          <Mail className="h-4 w-4" />
-          <span>Check your email for a confirmation message</span>
-        </div>
-      </motion.div>
-    )};
-=======;
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;
           <Mail className="h-4 w-4" />;
           <span>Check your email for a confirmation message</span>;
@@ -174,7 +127,6 @@ export const EnhancedNewsletter: React.FC = () => {;
       </motion.div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
@@ -193,10 +145,10 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 }}
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
-        >
+
           <Mail className="h-8 w-8 text-white" />
         </motion.div>
-        
+
         <motion.h2
           initial = {
   { opacity: 0,
@@ -220,10 +172,10 @@ export const EnhancedNewsletter: React.FC = () => {;
 }}
           transition={{ delay: 0.2 }}
           className="text-3xl font-bold text-slate-900 dark:text-white mb-4"
-        >
+
           Stay Ahead with Zion Tech Insights
         </motion.h2>
-        
+
         <motion.p
           initial = {
   { opacity: 0,
@@ -247,7 +199,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 }}
           transition={{ delay: 0.3 }}
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
-        >
+
           Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.
         </motion.p>
       </div>
@@ -276,7 +228,7 @@ export const EnhancedNewsletter: React.FC = () => {;
         transition={{ delay: 0.4 }}
         onSubmit={handleSubmit}
         className="max-w-2xl mx-auto space-y-6"
-      >
+
         {/* Email and Name Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -348,22 +300,14 @@ export const EnhancedNewsletter: React.FC = () => {;
 
         {/* Interests Selection */}
         <div>
-<<<<<<< HEAD
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-            Areas of Interest * (Select all that apply)
-          </label>
-          <div className="grid grid-cols-2 md: grid-cols-3 gap-3">
-            {interests.map((interest)  => {;
-=======;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
           </label>;
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
-              
+
               return (
                 <motion.button
                   key = {interest.id}
@@ -375,14 +319,6 @@ export const EnhancedNewsletter: React.FC = () => {;
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'
                   }`}
                   whileHover={{ scale: 1.02 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />
-                  <span className="text-sm font-medium">{interest.label}</span>
-                </motion.button>
-              )})};
-=======;
                   whileTap={{ scale: 0.98 }};
                 >;
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />;
@@ -390,7 +326,6 @@ export const EnhancedNewsletter: React.FC = () => {;
                 </motion.button>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
           {errors.interests && (
             <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">
@@ -414,7 +349,7 @@ export const EnhancedNewsletter: React.FC = () => {;
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
                     : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'
                 }`}
-              >
+
                 <input
                   type="radio"
                   name="frequency"
@@ -460,9 +395,9 @@ export const EnhancedNewsletter: React.FC = () => {;
               ? 'bg-slate-400 cursor-not-allowed'
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
           }`}
-          whileHover={status !== 'loading' ? { scale: 1.02 } : {}}
-          whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
-        >
+          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
+          whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
+
           {status === 'loading' ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -500,7 +435,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 }}
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
-          >
+
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">
               <AlertCircle className="h-4 w-4" />
               Something went wrong. Please try again later.
@@ -510,14 +445,6 @@ export const EnhancedNewsletter: React.FC = () => {;
 
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-<<<<<<< HEAD
-          By subscribing, you agree to receive marketing emails from Zion Tech Group. 
-          You can unsubscribe at  time. We respect your privacy and will never share your information.
-        </p>
-      </motion.form>;
-    </div>;
-  )};
-=======
           By subscribing, you agree to receive marketing emails from Zion Tech Group. ;
           You can unsubscribe at any time. We respect your privacy and will never share your information.;
         </p>;
@@ -525,4 +452,3 @@ export const EnhancedNewsletter: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

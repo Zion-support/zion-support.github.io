@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIPenetrationTesting() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
   const features = [
     'AI-powered penetration testing optimization',
     'Intelligent vulnerability discovery and exploitation',;
@@ -13,10 +11,10 @@ export default function AIPenetrationTesting() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIPenetrationTesting() {
       </section>;
     </div>;
   );
-}
+}}

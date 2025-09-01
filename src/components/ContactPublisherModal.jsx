@@ -38,15 +38,15 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             onClose(); // Close modal
             setSubject(''); // Clear subject
             setMessage(''); // Clear message
-        }
+
         catch (err) {
-            console.error('Failed to send message:', err);
+            // // // // // // // console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed
             // setError('Failed to send message. Please try again.')}
         finally {
             setIsLoading(false); // Set loading false
-        }
+
     };
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>
       <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick={(e) => e.stopPropagation()}>

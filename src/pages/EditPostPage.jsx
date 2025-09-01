@@ -88,12 +88,8 @@ export default function EditPostPage() {
                 description: "Your post has been updated successfully"
             });
             // Redirect back to the post
-<<<<<<< HEAD
-            router(`/community/post/${postId}`)}
-=======
             router(`/community/post/${postId}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
             toast({
                 title: "Error",
@@ -115,8 +111,8 @@ export default function EditPostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>
         </div>
-        
+
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        
+
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>)}

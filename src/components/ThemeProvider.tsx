@@ -12,30 +12,19 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
-<<<<<<< HEAD
-  if (context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider')};
-  return context};
-=======
   if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
-  }
+
   return context;
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode}
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-<<<<<<< HEAD
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'null') {
-=======
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'null') {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
         return saved}
@@ -50,17 +39,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const updateTheme = () => {;
       let effectiveTheme: 'light' | 'dark';
       
-<<<<<<< HEAD
-      if (theme = == 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'} else {
-        effectiveTheme = theme};
-=======;
       if (theme = == 'system') {;
         effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       } else {
         effectiveTheme = theme;
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       
       setIsDark(effectiveTheme === 'dark');
       
@@ -101,15 +84,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 };
 
   return (
-<<<<<<< HEAD
-    <ThemeContext.Provider value = {value}>
-      {children};
-    </ThemeContext.Provider>;
-  )};
-=======
     <ThemeContext.Provider value = {value}>;
       {children};
     </ThemeContext.Provider>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -208,7 +208,7 @@ export default function QuantumComputingSolutions() {
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 animate-pulse"></div>
@@ -417,7 +417,7 @@ export default function QuantumComputingSolutions() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -528,4 +528,4 @@ export default function QuantumComputingSolutions() {
       </section>
     </div>
   );
-}
+</div>}}}</motion.div></motion.div>}

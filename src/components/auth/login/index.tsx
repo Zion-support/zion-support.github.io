@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { LoginForm  } from "./LoginForm";
-=======
 import { LoginForm } from "./LoginForm";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function LoginContent(...args[]):  {
   return (
@@ -22,14 +18,6 @@ export function LoginContent(...args[]):  {
             Don't have an account?{' '}
             <a href="/register" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
               Sign up
-<<<<<<< HEAD
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </a>;
           </p>;
         </div>;
@@ -37,4 +25,3 @@ export function LoginContent(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

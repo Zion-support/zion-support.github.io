@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain  } from 'lucide-react';
-=======
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function HealthcareTech(...args: []):  {
   const features = [
@@ -92,7 +85,7 @@ export default function HealthcareTech(...args: []):  {
         title="Healthcare Technology Services - Zion Tech Group"
         description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
@@ -120,7 +113,7 @@ export default function HealthcareTech(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Heart className="w-10 h-10 text-white" />
@@ -133,7 +126,7 @@ export default function HealthcareTech(...args: []):  {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions, 
+              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions,
               and advanced patient care technologies. Improve outcomes and enhance patient experience.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -141,14 +134,14 @@ export default function HealthcareTech(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+
                 Learn More
               </motion.button>
             </div>
@@ -182,12 +175,12 @@ export default function HealthcareTech(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Healthcare Technology?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Modern healthcare technology improves patient outcomes, reduces costs, 
+              Modern healthcare technology improves patient outcomes, reduces costs,
               and enhances the overall quality of care delivery.
             </p>
           </motion.div>
@@ -227,7 +220,7 @@ export default function HealthcareTech(...args: []):  {
 
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -265,12 +258,12 @@ export default function HealthcareTech(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Healthcare Technology Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive healthcare technology solutions designed to meet the unique 
+              Comprehensive healthcare technology solutions designed to meet the unique
               needs of healthcare providers and patients
             </p>
           </motion.div>
@@ -310,7 +303,7 @@ export default function HealthcareTech(...args: []):  {
 
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
@@ -326,7 +319,7 @@ export default function HealthcareTech(...args: []):  {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-                >
+
                   Get Quote
                 </motion.button>
               </motion.div>
@@ -361,12 +354,12 @@ export default function HealthcareTech(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Healthcare Technology Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how modern technology is transforming various aspects of healthcare 
+              Discover how modern technology is transforming various aspects of healthcare
               and patient care delivery
             </p>
           </motion.div>
@@ -406,7 +399,7 @@ export default function HealthcareTech(...args: []):  {
 
 }}
                 className="text-center group"
-              >
+
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <app.icon className="w-8 h-8 text-pink-400" />
                 </div>
@@ -443,12 +436,12 @@ export default function HealthcareTech(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how healthcare technology can improve patient outcomes, 
+              Let's discuss how healthcare technology can improve patient outcomes,
               streamline operations, and create a better healthcare experience for everyone.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -456,7 +449,7 @@ export default function HealthcareTech(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </motion.button>
               <motion.button
@@ -472,4 +465,4 @@ export default function HealthcareTech(...args: []):  {
       </section>;
     </div>;
   );
-}
+}}}}

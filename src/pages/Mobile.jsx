@@ -1,30 +1,5 @@
 import SEO from "../SEO";
 const Mobile = () => {
-<<<<<<< HEAD
-    const mobileBenefits = [
-        {
-            title: "Increased Engagement",
-            description: "Mobile users are more engaged and likely to interact with your content",
-            icon: "📈"
-        },
-        {
-            title: "Better User Experience",
-            description: "Optimized mobile experiences lead to higher satisfaction and retention",
-            icon: "⭐"
-        },
-        {
-            title: "Wider Reach",
-            description: "Mobile-first approach ensures accessibility across all devices",
-            icon: "🌍"
-        },
-        {
-            title: "Competitive Advantage",
-            description: "Stay ahead with modern mobile solutions and user expectations",
-            icon: "🏆"
-        }
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const mobileStats = [
         {
             stat: "73%",
@@ -45,11 +20,11 @@ const Mobile = () => {
             stat: "40%",
             label: "Mobile Conversion",
             description: "Higher conversion rates on mobile-optimized sites"
-        }
+
     ];
     return (<>
       <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <main className="pt-12">
           <div className="container mx-auto px-4 py-16">
@@ -59,8 +34,8 @@ const Mobile = () => {
                 Mobile-First Solutions
               </h1>
               <p className="text-xl text-blue-100 max-w-4xl mx-auto">
-                In today's mobile-first world, we ensure your digital presence is optimized 
-                for mobile devices. From responsive websites to native mobile applications, 
+                In today's mobile-first world, we ensure your digital presence is optimized
+                for mobile devices. From responsive websites to native mobile applications,
                 we deliver exceptional mobile experiences that drive engagement and results.
               </p>
             </div>
@@ -159,7 +134,7 @@ const Mobile = () => {
                     Zion Mobile App
                   </h2>
                   <p className="text-blue-100 mb-6 text-lg">
-                    Access our services and manage your projects on the go with our mobile application. 
+                    Access our services and manage your projects on the go with our mobile application.
                     Available for iOS and Android devices.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -181,7 +156,7 @@ const Mobile = () => {
                   Ready to Go Mobile?
                 </h2>
                 <p className="text-blue-100 mb-6 text-lg">
-                  Let's discuss your mobile strategy and create solutions that deliver 
+                  Let's discuss your mobile strategy and create solutions that deliver
                   exceptional experiences across all devices.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -199,3 +174,4 @@ const Mobile = () => {
       </div>
     </>)};
 export default Mobile;
+}}}}

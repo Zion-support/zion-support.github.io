@@ -24,8 +24,8 @@ const EnhancedServicesShowcase = () => {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { opacity: 0,
@@ -41,7 +41,7 @@ const EnhancedServicesShowcase = () => {
             opacity: 1,
             y: 0,
             transition: { duration: 0.5 }
-        }
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -102,7 +102,7 @@ const EnhancedServicesShowcase = () => {
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, 
             cutting-edge AI services, and emerging technology solutions designed to transform your business.
           </motion.p>
-          
+
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {
   { opacity: 0,
@@ -429,3 +429,4 @@ const EnhancedServicesShowcase = () => {
       </section>
     </div>)};
 export default EnhancedServicesShowcase;
+}}}

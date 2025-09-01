@@ -5,53 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services
-<<<<<<< HEAD
-const ENHANCED_SERVICES = [
-    {
-        id: "ai-1",
-        title: "AI-Powered Business Intelligence",
-        description: "Advanced AI algorithms that transform your data into actionable business insights",
-        category: "AI & Machine Learning",
-        pricingModel: "subscription",
-        availability: "immediate",
-        rating: 4.9,
-        price: 2999,
-        features["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
-        benefits["Increased efficiency", "Better decision making", "Cost reduction"],
-        tags["AI", "Analytics", "Business Intelligence"],
-        location: "Global"
-    },
-    {
-        id: "security-1",
-        title: "Enterprise Cybersecurity Suite",
-        description: "Comprehensive security solution protecting your business from modern threats",
-        category: "Cybersecurity",
-        pricingModel: "subscription",
-        availability: "immediate",
-        rating: 4.8,
-        price: 1999,
-        features["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
-        benefits["Enhanced security", "Compliance assurance", "Risk mitigation"],
-        tags["Security", "Compliance", "Enterprise"],
-        location: "Global"
-    },
-    {
-        id: "cloud-1",
-        title: "Cloud Infrastructure Optimization",
-        description: "Optimize your cloud costs and performance with intelligent automation",
-        category: "Cloud & DevOps",
-        pricingModel: "usage-based",
-        availability: "within-week",
-        rating: 4.7,
-        price: 1499,
-        features["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
-        benefits["Cost savings", "Improved performance", "Scalability"],
-        tags["Cloud", "DevOps", "Optimization"],
-        location: "Global"
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const EnhancedServicesOverview = () => {
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
@@ -87,8 +40,8 @@ const EnhancedServicesOverview = () => {
             </span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our comprehensive suite of next-generation technology services. 
-            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions 
+            Transform your business with our comprehensive suite of next-generation technology services.
+            From AI and cybersecurity to blockchain and quantum computing, we deliver innovative solutions
             that drive real business results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -117,11 +70,11 @@ const EnhancedServicesOverview = () => {
                     {service.pricingModel}
                   </Badge>
                 </div>
-                
+
                 <CardTitle className="text-lg text-white mb-2 line-clamp-2">
                   {service.title}
                 </CardTitle>
-                
+
                 <CardDescription className="text-zion-slate-light line-clamp-2">
                   {service.description}
                 </CardDescription>
@@ -189,7 +142,7 @@ const EnhancedServicesOverview = () => {
               Comprehensive coverage across all major technology domains
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {ENHANCED_SERVICES.reduce((acc, service) => {
             if (!acc.find(cat => cat.category === service.category)) {
@@ -215,7 +168,7 @@ const EnhancedServicesOverview = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
-              Our team of technology experts is ready to help you implement cutting-edge solutions 
+              Our team of technology experts is ready to help you implement cutting-edge solutions
               that drive real business results. Contact us today for a free consultation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -247,3 +200,4 @@ const EnhancedServicesOverview = () => {
       </div>
     </section>)};
 export default EnhancedServicesOverview;
+}}}}}

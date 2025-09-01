@@ -86,7 +86,7 @@ export const AdvancedServiceComparison = () => {
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/quantum-enterprise'
-        }
+
     ];
     const filteredServices = useMemo(() => {
         return mockServices.filter(service => {
@@ -181,7 +181,7 @@ export const AdvancedServiceComparison = () => {
               <option value="cybersecurity">Cybersecurity</option>
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select value={filters.complexity} onChange = {
@@ -306,7 +306,7 @@ export const AdvancedServiceComparison = () => {
                     {selectedServices.includes(service.id) ? <Check className="w-4 h-4"/> : <X className="w-4 h-4"/>}
                   </Button>
                 </div>
-                
+
                 <div className="flex items-center gap-2 mb-3">
                   <Badge className={getComplexityColor(service.complexity)}>
                     {service.complexity}
@@ -423,7 +423,7 @@ export const AdvancedServiceComparison = () => {
               <div className="text-zion-slate-light">Enterprise Solutions</div>
             </div>
           </div>
-          
+
           <div className="mt-6 text-center">
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',
@@ -464,7 +464,7 @@ export const AdvancedServiceComparison = () => {
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our cutting-edge services are designed to give you a competitive advantage in the digital age. 
+            Our cutting-edge services are designed to give you a competitive advantage in the digital age.
             Contact us today to discuss your specific needs and find the perfect solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -499,3 +499,4 @@ export const AdvancedServiceComparison = () => {
       </motion.div>
     </div>)};
 export default AdvancedServiceComparison;
+}}}}

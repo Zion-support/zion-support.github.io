@@ -1,90 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+
 const steps = [
-<<<<<<< HEAD
-    {
-        icon: <Search className="w-8 h-8"/>,
-        title: "Discover",
-        description: "Browse our comprehensive catalog of services, talent, and solutions",
-        color: "from-zion-cyan to-zion-cyan-dark",
-        bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-        details: [
-            "AI-powered search and filtering",
-            "Curated service categories",
-            "Expert talent matching",
-            "Real-time availability"
-        ],
-        duration: "1-2 hours",
-        success: "95% match rate"
-    },
-    {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Connect",
-        description: "Get matched with the perfect team or service for your project",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        details: [
-            "Smart matching algorithm",
-            "Profile verification",
-            "Portfolio review",
-            "Direct communication"
-        ],
-        duration: "2-4 hours",
-        success: "98% satisfaction"
-    },
-    {
-        icon: <FileText className="w-8 h-8"/>,
-        title: "Plan",
-        description: "Collaborate on project requirements, timeline, and deliverables",
-        color: "from-zion-blue to-zion-blue-dark",
-        bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-        details: [
-            "Interactive project planning",
-            "Timeline optimization",
-            "Resource allocation",
-            "Risk assessment"
-        ],
-        duration: "4-8 hours",
-        success: "90% on-time delivery"
-    },
-    {
-        icon: <Rocket className="w-8 h-8"/>,
-        title: "Execute",
-        description: "Watch your vision come to life with our expert execution",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        details: [
-            "Agile development process",
-            "Regular progress updates",
-            "Quality assurance",
-            "Performance monitoring"
-        ],
-        duration: "1-4 weeks",
-        success: "99% quality score"
-    },
-    {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Deliver",
-        description: "Receive your completed project with ongoing support and maintenance",
-        color: "from-zion-purple-light to-zion-purple",
-        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-        details: [
-            "Comprehensive testing",
-            "Documentation delivery",
-            "Training and handover",
-            "Post-launch support"
-        ],
-        duration: "Ongoing",
-        success: "100% client retention";
-    };
-];
-const stats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
-    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
-    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
-=======
   {
     icon: <Search className="w-8 h-8" />,
     title: "Discover",
@@ -167,55 +86,12 @@ const stats = [;
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
+
 export function HowItWorksSection() {
-    const [hoveredStep, setHoveredStep] = useState(null);
-    const [activeStep, setActiveStep] = useState(0);
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            };
-        };
-    };
+  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState<number>(0);
 
-<<<<<<< HEAD
-    const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-},;
-        visible: { opacity: 1, y: 0 };
-    };
-    const statsVariants = {
-  hidden: { opacity: 0,
-  scale: 0.8 
-
-},
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            };
-        };
-    };
-    return (<section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style = {
-  {
-            backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-  backgroundSize: '40px 40px'
-        
-
-}}/>
-=======
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {;
@@ -263,7 +139,6 @@ export function HowItWorksSection() {
 
 
 }} />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
@@ -318,7 +193,6 @@ export function HowItWorksSection() {
 
 }}
         />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -347,7 +221,6 @@ export function HowItWorksSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
@@ -363,13 +236,13 @@ export function HowItWorksSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {stats.map((stat, index) => (
-            <motion.div
-              key={index}
+            <motion.div 
+              key={index} 
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-            >
+
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -384,31 +257,16 @@ export function HowItWorksSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        >
+
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
   { duration: 2,
   delay: 0.5 
 
-}}/>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+          {/* Steps grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative">
             {steps.map((step, index) => (
-<<<<<<< HEAD
-              <motion.div 
-                key={index} 
-                variants={itemVariants} 
-                className="relative group" 
-                onHoverStart={() => setHoveredStep(index)} 
-                onHoverEnd={() => setHoveredStep(null)} 
-                whileHover={{ y: -8 }} 
-                transition = {
-  { type: "spring",
-  stiffness: 300 
-
-}}
-=======
               <motion.div
                 key={index}
                 variants={containerVariants}
@@ -426,7 +284,6 @@ export function HowItWorksSection() {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="text-center h-full">
                   {/* Step number with enhanced styling */}
@@ -512,8 +369,6 @@ export function HowItWorksSection() {
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
                 {/* Hover details */}
                 <AnimatePresence>
@@ -551,7 +406,7 @@ export function HowItWorksSection() {
 
 }}
                       transition={{ duration: 0.2 }}
-                    >
+
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {step.details.map((detail, idx) => (
@@ -567,27 +422,10 @@ export function HowItWorksSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </motion.div>
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-        {/* Enhanced bottom CTA */}
-        <motion.div className="text-center mt-20" initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition = {
-  { duration: 0.6,
-  delay: 0.3 
-
-}}>
-=======
 
         {/* Call to action */}
         <motion.div
@@ -624,7 +462,6 @@ export function HowItWorksSection() {
 
 }}
         >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
@@ -634,54 +471,10 @@ export function HowItWorksSection() {
                 Get Started Today
                 <Rocket className="w-5 h-5"/>
               </button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-        {/* Additional features */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial = {
-  { opacity: 0,
-  y: 20 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} viewport={{ once: true }} transition = {
-  { duration: 0.6,
-  delay: 0.5 
-
-}}>
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
-              <Zap className="w-8 h-8 text-white"/>
-            </div>
-            <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
-            <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
-          </div>
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-purple to-zion-cyan mb-4">
-              <Shield className="w-8 h-8 text-white"/>
-            </div>
-            <h4 className="text-white font-semibold mb-2">Secure & Reliable</h4>
-            <p className="text-zion-slate-light text-sm">Enterprise-grade security and uptime</p>
-          </div>
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan-light to-zion-blue mb-4">
-              <Users className="w-8 h-8 text-white"/>
-            </div>
-            <h4 className="text-white font-semibold mb-2">Expert Support</h4>
-            <p className="text-zion-slate-light text-sm">24/7 support from our team</p>
-          </div>
-        </motion.div>
-      </div>
-    </section>;
-=======;
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

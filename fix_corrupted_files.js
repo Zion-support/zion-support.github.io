@@ -50,6 +50,13 @@ function fixCorruptedFile(filePath) {
       .replace(/\s+/g, " ")
       .trim();
     fs.writeFileSync(filePath, content);
+    // // // // // // // console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+
+
     console.log(`Fixed: ${filePath}`);
     return true} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -65,9 +72,10 @@ function files = fs.readdirSync(directory);
   }
 }
 // Start fixing from the pages directory
-console.log("Fixing corrupted TypeScript files...");
+// // // // // // // console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
+// // // // // // // console.log("Finished fixing corrupted files.");
 console.log("Finished fixing corrupted files.");
 
 export default fixCorruptedFile;

@@ -368,23 +368,14 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     status: 'active',
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
-  }
+
 ];
-<<<<<<< HEAD
-export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
-  if (category === 'All') {;
-    return IOT_EDGE_COMPUTING_SERVICES_2025};
-  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
-export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
-  return IOT_EDGE_COMPUTING_SERVICES_2025};
-=======
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[] => {;
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025;
-  }
+
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
 };
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
   return IOT_EDGE_COMPUTING_SERVICES_2025;
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

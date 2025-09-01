@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
-import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
-=======
-// import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-// import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+// import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
+// import { enterpriseITInfrastructureServices2026 } from '../data/2025-enterprise-it-infrastructure-services';
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
-    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
+    const allServices = [...ultimateInnovativeServices2026, ...specializedITInfrastructureServices2026];
     const categories = [
         'all',
         'Business Intelligence',
@@ -43,17 +38,18 @@ const UltimateServicesShowcase2026 = () => {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
         .sort((a, b) => {
-        switch (sortBy) {
-            case 'price':
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-            case 'category':
-                return a.category.localeCompare(b.category);
-            case 'rating':
-                return b.rating - a.rating;
-            case 'name':
-            default:
-                return a.name.localeCompare(b.name)}
-    });
+            switch (sortBy) {
+                case 'price':
+                    return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+                case 'category':
+                    return a.category.localeCompare(b.category);
+                case 'rating':
+                    return b.rating - a.rating;
+                case 'name':
+                default:
+                    return a.name.localeCompare(b.name);
+            }
+        });
     const getCategoryIcon = (category) => {
         const icons = {
   'Business Intelligence': '📊',
@@ -75,23 +71,11 @@ const UltimateServicesShowcase2026 = () => {
             'Storage Management': '💾',
             'Virtualization': '🖥️',
             'IT Asset Management': '📱',
-  <<<<<<< HEAD
             'Performance Monitoring': '📊'
-        
-
-};
-        return icons[category] || '🚀'};
-=======
-  'Performance Monitoring': '📊'
-        
-
-
-
-
-};
+        };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -101,16 +85,12 @@ const UltimateServicesShowcase2026 = () => {
             }
         }
     };
+    
     const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
+        hidden: { 
+            y: 20,
+            opacity: 0 
+        },
         visible: {
             y: 0,
             opacity: 1,
@@ -124,92 +104,30 @@ const UltimateServicesShowcase2026 = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ duration: 0.8 }}>
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold mb-6" 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {" "}Innovative Services 2026
             </span>
           </motion.h1>
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services, 
-            from AI-powered business solutions to enterprise IT infrastructure. 
+          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+            Discover our comprehensive collection of 20+ cutting-edge innovative services,
+            from AI-powered business solutions to enterprise IT infrastructure.
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
-          
+
           {/* Contact Information */}
-          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}>
+          <motion.div 
+            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
@@ -310,7 +228,7 @@ const UltimateServicesShowcase2026 = () => {
                     {service.name}
                   </h3>
                   <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                  
+
                   {/* Price */}
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -413,7 +331,7 @@ const UltimateServicesShowcase2026 = () => {
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative technology solutions can drive your business forward. 
+              Let's discuss how our innovative technology solutions can drive your business forward.
               Contact us today for a personalized consultation and demo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -458,5 +376,8 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>)};
+    </div>
+  );
+};
+
 export default UltimateServicesShowcase2026;

@@ -55,7 +55,6 @@ export function AccessibilityMenu() {
 
 };
         setSettings(defaultSettings)};
-=======
   soundEnabled: true
         
 
@@ -65,7 +64,6 @@ export function AccessibilityMenu() {
 };
         setSettings(defaultSettings);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>

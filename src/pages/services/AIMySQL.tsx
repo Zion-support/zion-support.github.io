@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIMySQL() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMySQL() {
   const features = [
     'AI-powered MySQL query optimization',
     'Intelligent database indexing and partitioning',;
@@ -13,10 +11,10 @@ export default function AIMySQL() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$199/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$199/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIMySQL() {
       </section>;
     </div>;
   );
-}
+}}

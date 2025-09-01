@@ -11,43 +11,6 @@ import {
   Heart
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      comp: 'TechFlow Solutions',
-      avatar: '👩‍💼',
-      rating: 5,
-      quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
-      metrics['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO',
-      comp: 'Global Manufacturing Co.',
-      avatar: '👨‍💼',
-      rating: 5,
-      quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
-      metrics['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'VP of Operations',
-      comp: 'HealthTech Innovations',
-      avatar: '👩‍⚕️',
-      rating: 5,
-      quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
-      metrics['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
-    },
-    {
-      name: 'David Thompson',
-      role: 'Founder',
-      comp: 'StartupXYZ',
-      avatar: '👨‍💻',
-      rating: 5,
-      quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
       metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
     };
   ];
@@ -58,7 +21,6 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
     { label: 'Client Retention', value: '95%', icon: Users },;
     { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
-=======
 const successStories = [
   {
     id: 1,
@@ -112,7 +74,6 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function ClientSuccessStoriesSection() {
   return (
@@ -152,8 +113,6 @@ export function ClientSuccessStoriesSection() {
           </p>
         </motion.div>
 
-        {/* Success Metrics */}
-        <motion.div
           initial = {
   { opacity: 0,
   y: 20 
@@ -191,6 +150,8 @@ export function ClientSuccessStoriesSection() {
         {/* Testimonials Grid */}
         <div className="grid md: grid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)  => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {successStories.map((story, index) => (
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -412,7 +373,6 @@ export function ClientSuccessStoriesSection() {
   )};
 
 export default ClientSuccessStoriesSection;
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -420,7 +380,6 @@ export default ClientSuccessStoriesSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;

@@ -27,7 +27,6 @@ export interface EnterprisePricing {
     email: string;
     website: string;
   };
-}
 
 export interface ServicePricing {
   serviceId: string;

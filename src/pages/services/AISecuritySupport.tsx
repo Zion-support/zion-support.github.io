@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecuritySupport() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport() {
   const features = [
     'AI-powered security support optimization',
     'Intelligent support strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecuritySupport() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$299/mo', 
-      details: ['Up to 50 support tickets/month', 'Basic AI features', 'Standard support', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 50 support tickets/month', 'Basic AI features', 'Standard support', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecuritySupport() {
       </section>;
     </div>;
   );
-}
+}}

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe } from 'lucide-react';
-
-export const ServiceIncludes = () => {
+import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe export const ServiceIncludes = () => {
   const servicePackages = [
     {
       name: 'Basic Package',
@@ -100,7 +98,7 @@ export const ServiceIncludes = () => {
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
         { name: 'Reporting', value: 'Daily', icon: FileText }
       ]
-    }
+
   ];
 
   const additionalServices = [
@@ -139,7 +137,7 @@ export const ServiceIncludes = () => {
       price: 'Custom Quote',
       description: 'Complete cloud infrastructure migration services',
       icon: Globe
-    }
+
   ];
 
   return (
@@ -151,7 +149,7 @@ export const ServiceIncludes = () => {
             What's Included in Your Service
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the service package that fits your business needs. All packages include our core services 
+            Choose the service package that fits your business needs. All packages include our core services
             with additional features and support levels.
           </p>
         </div>
@@ -162,11 +160,11 @@ export const ServiceIncludes = () => {
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                pkg.popular 
-                  ? 'border-blue-500 scale-105' 
+                pkg.popular
+                  ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-            >
+
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -174,7 +172,7 @@ export const ServiceIncludes = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 {/* Package Header */}
                 <div className="text-center mb-8">
@@ -235,7 +233,7 @@ export const ServiceIncludes = () => {
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-                >
+
                   Get Started
                 </button>
               </div>
@@ -318,13 +316,13 @@ export const ServiceIncludes = () => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>

@@ -317,7 +317,6 @@ export function HelpCenter() {
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
       return;
-    }
 
     const filtered = faqData.filter(faq =>
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
@@ -342,7 +341,7 @@ export function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-        >
+
           <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
@@ -355,7 +354,7 @@ export function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-        >
+
           <div className="relative">
             <input
               type="text"
@@ -374,7 +373,7 @@ export function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-        >
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {helpCategories.map((category, index) => (
@@ -383,11 +382,11 @@ export function HelpCenter() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
+
                 <Link
                   to={category.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="h-8 w-8 text-white" />
                   </div>
@@ -409,7 +408,7 @@ export function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-        >
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option, index) => (
@@ -418,11 +417,11 @@ export function HelpCenter() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              >
+
                 <Link
                   to={option.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <option.icon className="h-8 w-8 text-white" />
                   </div>
@@ -443,7 +442,7 @@ export function HelpCenter() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-        >
+
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
 
@@ -456,7 +455,7 @@ export function HelpCenter() {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
-              >
+
                 All Categories
               </button>
               {helpCategories.map(category => (
@@ -468,7 +467,7 @@ export function HelpCenter() {
                       ? 'bg-zion-cyan text-white'
                       : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                   }`}
-                >
+
                   {category.title}
                 </button>
               ))}
@@ -638,4 +637,3 @@ export function HelpCenter() {
 }
 
 export default HelpCenter;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

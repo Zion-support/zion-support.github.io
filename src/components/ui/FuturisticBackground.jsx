@@ -166,16 +166,6 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                 requestAnimationFrame(animate)};
             animate()}
         return () => {
-<<<<<<< HEAD
-            window.removeEventListener('resize', resizeCanvas)}}, [variant, intensity]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
-  {
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
-  #16213e 100%)'
-        
-
-}}/>)}
-=======
             window.removeEventListener('resize', resizeCanvas);
         };
     }, [variant, intensity]);
@@ -192,7 +182,6 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
 
 }}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
@@ -258,3 +247,4 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+}}}}}}}}}}}}}}}}}}}}}}}}}}

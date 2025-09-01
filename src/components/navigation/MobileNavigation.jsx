@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb import { Button } from '@/components/ui/button';
 const mobileMenuItems = [
     { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' },
     { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' },

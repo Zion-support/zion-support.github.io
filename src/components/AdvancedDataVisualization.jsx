@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
-const mockChartData = [
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
@@ -51,6 +50,8 @@ export function AdvancedDataVisualization() {
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+        // // // // // // // console.log(`Downloading chart as ${format}`);
+    };
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const downloadChart = (format) => {
@@ -316,7 +317,7 @@ export function AdvancedDataVisualization() {
                     Refresh Data
                   </>)}
               </button>
-              
+
               <div className="grid grid-cols-3 gap-2">
                 <button onClick={() => downloadChart('png')} className="px-3 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald-light transition-colors text-xs">
                   PNG
@@ -342,11 +343,11 @@ export function AdvancedDataVisualization() {
               {chartTypes.find(t => t.id === selectedChartType)?.description}
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
             {renderChart()}
           </div>
-          
+
           {/* Data Summary */}
           <div className="mt-6 grid grid-cols-3 gap-4">
             <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">

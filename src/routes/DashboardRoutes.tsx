@@ -50,7 +50,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/creator-dashboard"
@@ -82,7 +82,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/project/:id/room"
@@ -90,7 +90,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/messages"
@@ -146,7 +146,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/projects"
@@ -154,7 +154,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/portfolio-builder"
@@ -178,7 +178,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/wallet"
@@ -186,7 +186,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Wallet Page</div>
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/orders"
@@ -194,7 +194,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/orders/:orderId"
@@ -202,7 +202,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
-        }
+
       />
       <Route
         path="/dashboard/api-access"
@@ -225,3 +225,4 @@ const DashboardRoutes = () => {
 };
 
 export default DashboardRoutes;
+}}}}}}}}}}}}}}}}}}}}}}}}

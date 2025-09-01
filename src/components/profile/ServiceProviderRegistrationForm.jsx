@@ -10,8 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound, Globe import { toast } from "@/components/ui/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -96,8 +95,8 @@ export function ServiceProviderRegistrationForm() {
                         bio: formData.bio,
                         services: serviceTags,
                         location: formData.location
-                    }
-                }
+
+
             });
             if (error) {
                 throw new Error(error.message)}
@@ -107,7 +106,7 @@ export function ServiceProviderRegistrationForm() {
                 description: "AI has created a professional bio and suggested additional services for your profile.",
             })}
         catch (error) {
-            console.error("Error generating enhanced profile:", error);
+            // // // // // // // console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -153,8 +152,8 @@ export function ServiceProviderRegistrationForm() {
                                 bio: values.bio,
                                 services: serviceTags,
                                 location: values.location
-                            }
-                        }
+
+
                     });
                     if (aiData) {
                         finalSummary = aiData.summary || values.bio;
@@ -163,10 +162,10 @@ export function ServiceProviderRegistrationForm() {
                         finalServices = [...new Set([...serviceTags, ...aiServices])]}
                 }
                 catch (error) {
-                    console.error("Error enhancing profile:", error);
+                    // // // // // // // console.error("Error enhancing profile:", error);
                     // Continue with submission even if enhancement fails
-                }
-            }
+
+
             else if (generatedContent) {
                 finalSummary = generatedContent.summary;
                 finalServices = [...new Set([...serviceTags, ...generatedContent.services])]}
@@ -202,7 +201,7 @@ export function ServiceProviderRegistrationForm() {
                 location: values.location,
                 website: values.website || null,
               });
-      
+
             if (serviceError) throw serviceError;
             */
             // Send notification email if available
@@ -226,10 +225,10 @@ export function ServiceProviderRegistrationForm() {
                         }
                     })}
                 catch (emailError) {
-                    console.error("Failed to send notification email:", emailError);
+                    // // // // // // // console.error("Failed to send notification email:", emailError);
                     // Continue with submission even if email fails
-                }
-            }
+
+
             toast({
                 title: "Profile Created Successfully",
                 description: "Your service provider profile has been published and is now visible in the directory.",
@@ -238,7 +237,7 @@ export function ServiceProviderRegistrationForm() {
             setTimeout(() => {
                 window.location.href = "/service-dashboard"}, 1500)}
         catch (error) {
-            console.error("Error creating profile:", error);
+            // // // // // // // console.error("Error creating profile:", error);
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
@@ -315,7 +314,7 @@ export function ServiceProviderRegistrationForm() {
                         </FormItem>)}/>
                   </div>
                 </div>
-                
+
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -355,7 +354,7 @@ export function ServiceProviderRegistrationForm() {
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>)}/>
-                
+
                 {/* AI Enhancement Option */}
                 <FormField control={form.control} name="enhancedProfile" render={({ field }) => (<FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
@@ -371,7 +370,7 @@ export function ServiceProviderRegistrationForm() {
                         <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
                       </FormControl>
                     </FormItem>)}/>
-                
+
                 {form.watch("enhancedProfile") && (<div className="flex justify-end">
                     <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile} disabled={isGenerating}>
                       <Sparkles className="mr-2 h-4 w-4"/>
@@ -390,13 +389,13 @@ export function ServiceProviderRegistrationForm() {
                         <Check className="mr-1 h-3 w-3"/> Apply
                       </Button>
                     </div>
-                    
+
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-                      
+
                       {generatedContent.services && generatedContent.services.length > 0 && (<div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
                           <div className="flex flex-wrap gap-2 mt-1">

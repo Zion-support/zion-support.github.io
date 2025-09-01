@@ -5,63 +5,63 @@ export default function AIESGCompliancePlatform() {
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
     'Real-time sustainability performance tracking',
-    'Carbon footprint calculation and optimization',;
-    'Social responsibility metrics and reporting',;
-    'Governance risk assessment and monitoring',;
-    'Regulatory compliance automation',;
-    'Stakeholder engagement tracking',;
-    'ESG scoring and benchmarking',;
-    'Custom sustainability dashboard creation';
+    'Carbon footprint calculation and optimization',
+    'Social responsibility metrics and reporting',
+    'Governance risk assessment and monitoring',
+    'Regulatory compliance automation',
+    'Stakeholder engagement tracking',
+    'ESG scoring and benchmarking',
+    'Custom sustainability dashboard creation'
   ];
 
-  const benefits = [;
-    'Reduce ESG reporting time by 85%',;
-    'Improve compliance accuracy by 90%',;
-    'Cut carbon emissions tracking costs by 70%',;
-    'Real-time sustainability performance insights',;
-    'Automated regulatory compliance updates',;
-    'Enhanced stakeholder transparency and trust';
+  const benefits = [
+    'Reduce ESG reporting time by 85%',
+    'Improve compliance accuracy by 90%',
+    'Cut carbon emissions tracking costs by 70%',
+    'Real-time sustainability performance insights',
+    'Automated regulatory compliance updates',
+    'Enhanced stakeholder transparency and trust'
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
-      price: '$399/mo', 
+    {
+      name: 'Starter',
+      price: '$399/mo',
       features: ['Up to 50 ESG metrics', 'Basic compliance reporting', 'Standard dashboards', 'Email support', 'Monthly sustainability reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$899/mo', 
+    {
+      name: 'Professional',
+      price: '$899/mo',
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-    },;
-    { ;
-      name: 'Enterprise', ;
-      price: '$2,999/mo', ;
-      features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
-      popular: false;
-    };
+    },
+    {
+      name: 'Enterprise',
+      price: '$2,999/mo',
+      features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
+      popular: false
+    }
   ];
 
-  const useCases = [;
-    'Corporate sustainability reporting',;
-    'ESG investment portfolio analysis',;
-    'Supply chain sustainability tracking',;
-    'Regulatory compliance automation',;
-    'Stakeholder ESG communication',;
-    'Sustainability performance benchmarking';
+  const useCases = [
+    'Corporate sustainability reporting',
+    'ESG investment portfolio analysis',
+    'Supply chain sustainability tracking',
+    'Regulatory compliance automation',
+    'Stakeholder ESG communication',
+    'Sustainability performance benchmarking'
   ];
 
   const esgCategories = [
     'Environmental Impact Assessment',
-    'Carbon Footprint Management',;
-    'Renewable Energy Tracking',;
-    'Waste Management Analytics',;
-    'Social Responsibility Metrics',;
-    'Diversity & Inclusion Tracking',;
-    'Governance Risk Assessment',;
-    'Compliance Monitoring';
+    'Carbon Footprint Management',
+    'Renewable Energy Tracking',
+    'Waste Management Analytics',
+    'Social Responsibility Metrics',
+    'Diversity & Inclusion Tracking',
+    'Governance Risk Assessment',
+    'Compliance Monitoring'
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function AIESGCompliancePlatform() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI ESG Compliance Platform</h1>
           <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability 
+            Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability
             monitoring. Meet regulatory requirements while driving positive environmental and social impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,7 +94,7 @@ export default function AIESGCompliancePlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive ESG Intelligence</h2>
           <p className="text-xl text-gray-600">End-to-end ESG compliance and sustainability management powered by AI</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
@@ -107,7 +107,7 @@ export default function AIESGCompliancePlatform() {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">ESG Categories</h3>
             <div className="grid grid-cols-1 gap-3">
@@ -129,7 +129,7 @@ export default function AIESGCompliancePlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose AI ESG Compliance Platform?</h2>
             <p className="text-xl text-gray-600">Transform your sustainability reporting and compliance with intelligent automation</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -149,7 +149,7 @@ export default function AIESGCompliancePlatform() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Applications</h2>
           <p className="text-xl text-gray-600">Trusted by leading organizations across industries</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
@@ -169,7 +169,7 @@ export default function AIESGCompliancePlatform() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your ESG compliance needs</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
@@ -182,13 +182,13 @@ export default function AIESGCompliancePlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>
                   <p className="text-gray-600">per month</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -197,10 +197,10 @@ export default function AIESGCompliancePlatform() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                  plan.popular
+                    ? 'bg-green-600 text-white hover:bg-green-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   Get Started
@@ -208,7 +208,7 @@ export default function AIESGCompliancePlatform() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
@@ -269,7 +269,7 @@ export default function AIESGCompliancePlatform() {
               +1 302 464 0950
             </a>
           </div>
-          
+
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Mail className="w-8 h-8 text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
@@ -279,22 +279,22 @@ export default function AIESGCompliancePlatform() {
             </a>
           </div>
         </div>
-        
+
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold";
-          >;
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
-          </a>;
-        </div>;
-      </section>;
-    </div>;
+          <a
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+          >
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </section>
+    </div>
   );
 }

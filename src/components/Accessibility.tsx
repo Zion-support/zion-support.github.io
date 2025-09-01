@@ -13,15 +13,12 @@ import {
   Sun,
   Moon,
   Settings
-} from 'lucide-react';
-
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-}
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +37,6 @@ export function Accessibility() {
       const parsed = JSON.parse(savedSettings);
       setSettings(parsed);
       applySettings(parsed);
-    }
 
     // Add keyboard shortcuts
     const handleKeyDown = (e: KeyboardEvent) => {;
@@ -59,8 +55,8 @@ export function Accessibility() {
             e.preventDefault();
             resetSettings();
             break;
-        }
-      }
+
+
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -69,24 +65,22 @@ export function Accessibility() {
 
   const applySettings = (newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
-    
+
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
-    
+
     // Apply high contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-    }
-    
+
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
-    }
-    
+
     // Apply theme
     if (newSettings.theme = == 'light') {;
       root.classList.add('light-theme');
@@ -96,17 +90,9 @@ export function Accessibility() {
       root.classList.remove('light-theme');
     } else {
       root.classList.remove('light-theme', 'dark-theme');
-    }
+
   };
 
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
-    const newSettings = {
-  ...settings,;
-  [key]: value ;
-
-};
-=======
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     const newSettings = {
   ...settings,;
@@ -123,7 +109,6 @@ export function Accessibility() {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -132,13 +117,13 @@ export function Accessibility() {
   const increaseFontSize = () => {;
     if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
-    }
+
   };
 
   const decreaseFontSize = () => {;
     if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
-    }
+
   };
 
   const resetSettings = () => {
@@ -222,7 +207,7 @@ export function Accessibility() {
 
 }}
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
-          >
+
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -234,7 +219,7 @@ export function Accessibility() {
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
-                >
+
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -251,7 +236,7 @@ export function Accessibility() {
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Decrease font size"
-                  >
+
                     <Minus className="w-4 h-4 text-white" />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
@@ -262,7 +247,7 @@ export function Accessibility() {
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Increase font size"
-                  >
+
                     <Plus className="w-4 h-4 text-white" />
                   </button>
                 </div>
@@ -357,7 +342,7 @@ export function Accessibility() {
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
-                    >
+
                       {theme === 'auto' && 'Auto'}
                       {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />}
                       {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
@@ -433,4 +418,4 @@ export function Accessibility() {
       </AnimatePresence>;
     </>;
   );
-}
+}}}}}}}}}}}

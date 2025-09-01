@@ -1,9 +1,11 @@
 import React, { Suspense, lazy } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -20,47 +22,66 @@ const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: 
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
+const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025').then(module => ({ default: module.ComprehensiveServicesShowcase2025 })));
+const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-    </div>
-  </div>
-);
+// Enhanced Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-    <div className="text-center max-w-md">
-      <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-        <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-        </svg>
-      </div>
-      <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
-      <p className="text-gray-400 mb-6">We're sorry, but something unexpected happened. Please try again.</p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Try again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          Go home
-        </button>
-      </div>
-    </div>
-  </div>
-);
+// Enhanced Components
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
 
-export default function App() {
+// Enhanced lazy loading with preloading hints
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+  const LazyComponent = lazy(importFn);
+  return (props: any) => (
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+      <LazyComponent {...props} />
+    </Suspense>
+  );
+};
+
+
+// New AI Services 2025
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+
+// Showcase pages
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// 2031 Cutting-Edge Services
+const ZionCuttingEdgeServices2031 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2031'));
+
+// Comprehensive Pricing Guide 2031
+const ComprehensivePricingGuide2031 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2031'));
+
+// Additional pages that actually exist
+const Solutions = createLazyComponent(() => import('./pages/solutions'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+
+
+function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div className="min-h-screen bg-gray-900 text-white">
@@ -108,5 +129,55 @@ export default function App() {
         <Footer />
       </div>
     </ErrorBoundary>
+=======
+    <div className="App">
+      <ErrorBoundary>
+        <PerformanceOptimizer>
+          <EnhancedAccessibilityEnhancer>
+            <MobileExperienceEnhancer>
+              <SEO />
+              <Header />
+              <Sidebar />
+              <main className="main-content">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/solutions" element={<SolutionsPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/case-studies" element={<CaseStudies />} />
+                  <Route path="/white-papers" element={<WhitePapers />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                  <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
+                  <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
+                  <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  <Route path="/support" element={<Support />} />
+                  <Route path="/training" element={<Training />} />
+                  <Route path="/helpdesk" element={<Helpdesk />} />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </main>
+              <Footer />
+              <FloatingActionButton />
+              <ChatAssistant />
+              <AdvancedAnalytics />
+              <SmartNotificationSystem />
+            </MobileExperienceEnhancer>
+          </EnhancedAccessibilityEnhancer>
+        </PerformanceOptimizer>
+      </ErrorBoundary>
+    </div>
+
+>>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2
   );
 }
+
+export default App;

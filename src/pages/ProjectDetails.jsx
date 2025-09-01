@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
@@ -18,7 +18,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
 function ProjectDetailsContent() {
-    const router = useRouter();
+    const router = useNavigate();
     // Get projectId from Next.js router query params
     const { projectId } = router.query;
     const { user } = useAuth();
@@ -46,18 +46,13 @@ function ProjectDetailsContent() {
                     description: "The requested project could not be found.",
                     variant: "destructive",
                 });
-<<<<<<< HEAD
-                router.push("/dashboard")}
-            setIsLoading(false)}
-        loadProject()}, [projectId]);
-=======
                 router("/dashboard");
+                navigate("/dashboard");
             }
             setIsLoading(false);
-        }
+
         loadProject();
     }, [projectId]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const fetchProjectNotes = async (projectId) => {
         try {
             const { data, error } = await supabase
@@ -70,6 +65,8 @@ function ProjectDetailsContent() {
                 .order("created_at", { ascending: false });
             if (error)
                 throw error;
+            // // // // // // // console.error("Error fetching project notes:", err);
+        }
             setNotes(data || [])}
         catch (err) {
             console.error("Error fetching project notes:", err)}
@@ -97,7 +94,7 @@ function ProjectDetailsContent() {
                 description: "Your note has been added to the project.",
             })}
         catch (err) {
-            console.error("Error adding note:", err);
+            // // // // // // // console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
@@ -158,11 +155,8 @@ function ProjectDetailsContent() {
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-<<<<<<< HEAD
-            <Button onClick={() => router.push("/dashboard")}>
-=======
             <Button onClick={() => router("/dashboard")}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+            <Button onClick={() => navigate("/dashboard")}>
               Return to Dashboard
             </Button>
           </CardContent>
@@ -171,19 +165,14 @@ function ProjectDetailsContent() {
     // Check if user is either the client or the talent
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
-<<<<<<< HEAD
-        router.push("/unauthorized");
-        return null}
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-=======
         router("/unauthorized");
+        navigate("/unauthorized");
         return null;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
-      
+
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
@@ -196,7 +185,7 @@ function ProjectDetailsContent() {
                 </span>
               </div>
             </div>
-            
+
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (<>
@@ -210,7 +199,7 @@ function ProjectDetailsContent() {
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offer, you agree to the project terms and timeline.
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -222,12 +211,12 @@ function ProjectDetailsContent() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  
+
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4"/> Request Changes
                   </Button>
                 </>)}
-              
+
               {(isClient || isTalent) && project.status === "in_progress" && (<AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -238,7 +227,7 @@ function ProjectDetailsContent() {
                     <AlertDialogHeader>
                       <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
                       <AlertDialogDescription>
-                        This will finalize the project and mark it as complete. 
+                        This will finalize the project and mark it as complete.
                         Make sure all deliverables have been provided and approved.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
@@ -250,7 +239,7 @@ function ProjectDetailsContent() {
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>)}
-              
+
               {isActiveProject && (<Button variant="default" asChild>
                   <Link href={`/project/${project.id}/milestones`}>
                     <Layers className="mr-2 h-4 w-4"/> Milestones
@@ -263,17 +252,15 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>)}
               
-<<<<<<< HEAD
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
-=======
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
@@ -284,7 +271,7 @@ function ProjectDetailsContent() {
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>
                 {project.status === "completed" && (<TabsTrigger value="reviews">Reviews</TabsTrigger>)}
               </TabsList>
-              
+
               <TabsContent value="details">
                 <Card>
                   <CardHeader>
@@ -301,14 +288,14 @@ function ProjectDetailsContent() {
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-                      
+
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-                      
+
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -319,7 +306,7 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
@@ -337,7 +324,7 @@ function ProjectDetailsContent() {
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5"/>
                         <div>
@@ -351,7 +338,7 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
@@ -386,7 +373,7 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
@@ -418,7 +405,7 @@ function ProjectDetailsContent() {
                             </p>
                           </div>)}
                       </div>
-                      
+
                       {isOfferAccepted && (<div>
                           <Textarea placeholder="Add a note or update to the project..." value={newNote} onChange={(e) => setNewNote(e.target.value)} className="min-h-[100px] mb-2"/>
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>
@@ -429,13 +416,13 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="reviews">
                 <ProjectReviewSection project={project}/>
               </TabsContent>
             </Tabs>
           </div>
-          
+
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
@@ -454,16 +441,13 @@ function ProjectDetailsContent() {
                       <p className="text-sm text-muted-foreground">
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
-<<<<<<< HEAD
-                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
-=======
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?talentId=${project.talent_id}`)}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (<img loading="lazy" src={project.talent_profile.profile_picture_url} alt={project.talent_profile.full_name}/>) : (<User className="h-6 w-6"/>)}
@@ -473,11 +457,8 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
-<<<<<<< HEAD
-                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
-=======
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?clientId=${project.client_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -485,7 +466,7 @@ function ProjectDetailsContent() {
                 </div>
               </CardContent>
             </Card>
-            
+
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -497,14 +478,14 @@ function ProjectDetailsContent() {
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
@@ -513,33 +494,30 @@ function ProjectDetailsContent() {
                   </div>
                 </div>
               </CardContent>
-              
+
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
-<<<<<<< HEAD
-                  <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
-=======
                   <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                  <Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)} className="w-full">
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}
-              
+
               {project.status === "offer_sent" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>)}
-              
+
               {project.status === "completed" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
                     <CheckCircle2 className="h-4 w-4"/> This project has been completed.
                   </p>
                 </CardFooter>)}
-              
+
               {project.status === "canceled" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-red-600 flex items-center gap-1">
                     <XCircle className="h-4 w-4"/> This project has been canceled.

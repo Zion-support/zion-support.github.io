@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useNavigate } from 'react-router-dom';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -16,7 +16,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const router = useRouter();
+    const router = useNavigate();
     const id = router.query.id;
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ export default function ListingDetail() {
                       <span className="text-zion-slate-light">No image available</span>
                     </div>)}
                 </div>
-                
+
                 {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {
   cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
@@ -75,7 +75,7 @@ export default function ListingDetail() {
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
-                
+
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -100,7 +100,7 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -112,7 +112,7 @@ export default function ListingDetail() {
                 </div>
               </div>
             </div>
-            
+
             {/* Right Column - Details */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -124,9 +124,9 @@ export default function ListingDetail() {
                       Featured
                     </Badge>)}
                 </div>
-                
+
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
-                
+
                 {listing.rating && (<div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (<Star key={i} className = {
@@ -144,7 +144,7 @@ export default function ListingDetail() {
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
                     </span>
                   </div>)}
-                
+
                 {/* Price */}
                 <div className="mb-6">
                   {listing.price !== null ? (<div className="text-3xl font-bold text-white">
@@ -153,7 +153,7 @@ export default function ListingDetail() {
                       Custom Pricing
                     </div>)}
                 </div>
-                
+
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {
@@ -165,7 +165,6 @@ export default function ListingDetail() {
                 
 
 })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
-=======
   description: "Redirecting to secure checkout..."
                 
 
@@ -174,16 +173,15 @@ export default function ListingDetail() {
 
 });
             }}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}
-                  
+
                   <Button variant="outline" onClick={handleContact} disabled={isLoading} className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     <MessageSquare className="h-4 w-4 mr-2"/>
                     Contact Publisher
                   </Button>
                 </div>
-                
+
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -199,7 +197,7 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">

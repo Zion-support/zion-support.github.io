@@ -1,6 +1,4 @@
-import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 } from 'lucide-react';
-
-export default function AILegalTech() {
+import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
   const features = [
     'AI-powered contract analysis and risk assessment',
     'Intelligent legal document generation and review',;
@@ -13,10 +11,10 @@ export default function AILegalTech() {
   ];
 
   const tiers = [
-    { 
-      name: 'Solo Practice', 
-      price: '$299/mo', 
-      details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support'] 
+    {
+      name: 'Solo Practice',
+      price: '$299/mo',
+      details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support']
     },
     { 
       name: 'Small Firm', 
@@ -171,4 +169,4 @@ export default function AILegalTech() {
       </section>;
     </div>;
   );
-}
+}}

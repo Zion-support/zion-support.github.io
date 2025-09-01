@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const AIPoweredITAssetManagement = () => {
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
@@ -10,7 +10,7 @@ const AIPoweredITAssetManagement = () => {
               AI-Powered IT Asset Management
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your IT infrastructure with intelligent asset tracking, 
+              Revolutionize your IT infrastructure with intelligent asset tracking,
               predictive maintenance, and automated lifecycle management powered by AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,29 +38,29 @@ const AIPoweredITAssetManagement = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Smart Discovery</h3>
               <p className="text-gray-300">
-                AI automatically discovers and catalogs all IT assets across your network, 
+                AI automatically discovers and catalogs all IT assets across your network,
                 including hardware, software, and cloud resources.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">📊</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Predictive Analytics</h3>
               <p className="text-gray-300">
-                Machine learning algorithms predict asset failures, optimize replacement 
+                Machine learning algorithms predict asset failures, optimize replacement
                 schedules, and identify cost-saving opportunities.
               </p>
             </div>
-            
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-3xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Automated Workflows</h3>
               <p className="text-gray-300">
-                Streamlined processes for asset procurement, deployment, maintenance, 
+                Streamlined processes for asset procurement, deployment, maintenance,
                 and retirement with minimal manual intervention.
               </p>
             </div>
@@ -79,7 +79,7 @@ const AIPoweredITAssetManagement = () => {
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">Hardware Assets</h3>
                 <p className="text-gray-300 mb-4">
-                  Complete tracking of servers, workstations, networking equipment, 
+                  Complete tracking of servers, workstations, networking equipment,
                   and peripheral devices with detailed specifications and warranty information.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -89,11 +89,11 @@ const AIPoweredITAssetManagement = () => {
                   <li>• Warranty and support tracking</li>
                 </ul>
               </div>
-              
+
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-indigo-400">Software Assets</h3>
                 <p className="text-gray-300 mb-4">
-                  Comprehensive software license management, version tracking, 
+                  Comprehensive software license management, version tracking,
                   and compliance monitoring across all platforms.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -104,12 +104,12 @@ const AIPoweredITAssetManagement = () => {
                 </ul>
               </div>
             </div>
-            
+
             <div className="space-y-8">
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Cloud Resources</h3>
                 <p className="text-gray-300 mb-4">
-                  Real-time monitoring of cloud infrastructure, services, and costs 
+                  Real-time monitoring of cloud infrastructure, services, and costs
                   with automated optimization recommendations.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -119,11 +119,11 @@ const AIPoweredITAssetManagement = () => {
                   <li>• Resource utilization analytics</li>
                 </ul>
               </div>
-              
+
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">Network Infrastructure</h3>
                 <p className="text-gray-300 mb-4">
-                  Complete visibility into network topology, bandwidth utilization, 
+                  Complete visibility into network topology, bandwidth utilization,
                   and connectivity status with automated alerting.
                 </p>
                 <ul className="text-sm text-gray-400 space-y-1">
@@ -172,7 +172,7 @@ const AIPoweredITAssetManagement = () => {
             Transform Your IT Asset Management
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations that have revolutionized their IT operations 
+            Join leading organizations that have revolutionized their IT operations
             with AI-powered asset management solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

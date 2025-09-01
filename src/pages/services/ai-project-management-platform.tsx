@@ -161,7 +161,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
         title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -187,22 +187,22 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Project Management
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               The Future of
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights. 
+              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
               Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -242,7 +242,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -287,7 +287,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -326,7 +326,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -371,7 +371,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -410,7 +410,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>
@@ -455,7 +455,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -494,7 +494,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -539,11 +539,11 @@ export default function AIProjectManagementPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -609,14 +609,14 @@ export default function AIProjectManagementPlatform(...args: []):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of teams already experiencing the future of project management
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -625,22 +625,13 @@ export default function AIProjectManagementPlatform(...args: []):  {
                 Contact Sales
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-}
+}}}}}}

@@ -47,7 +47,7 @@ export function ServicesShowcase() {
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -120,6 +120,7 @@ export function ServicesShowcase() {
                   </Link>
                 </div>
               </CardContent>
+            </FuturisticCard>))}
             </FuturisticCard>
           ))}
         </div>
@@ -148,7 +149,7 @@ export function ServicesShowcase() {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              
+
               <CardContent className="text-center space-y-3">
                 <CardDescription className="text-sm">
                   {service.description}
@@ -177,7 +178,7 @@ export function ServicesShowcase() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth, 
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth,
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

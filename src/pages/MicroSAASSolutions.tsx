@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../components/SEO";
-import { Code, 
-=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 import {
@@ -56,19 +51,13 @@ export default function MicroSAASSolutions(...args[]):  {
       features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
-<<<<<<< HEAD
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
       features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     };
-=======;
       title: "Analytics & Reporting",;
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -224,7 +213,7 @@ export default function MicroSAASSolutions(...args[]):  {
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -261,7 +250,7 @@ export default function MicroSAASSolutions(...args[]):  {
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -289,7 +278,7 @@ export default function MicroSAASSolutions(...args[]):  {
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
@@ -349,24 +338,16 @@ export default function MicroSAASSolutions(...args[]):  {
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-                >
+
                   Start Your Project
                 </a>
                 <a
                   href="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-                >
+
                   Get Consultation
                 </a>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
@@ -374,4 +355,3 @@ export default function MicroSAASSolutions(...args[]):  {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

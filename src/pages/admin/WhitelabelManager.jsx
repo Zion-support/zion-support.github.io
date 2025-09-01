@@ -14,7 +14,7 @@ export default function WhitelabelManager() {
         return <Navigate to="/unauthorized"/>}
     return (<>
       <SEO title="White-Label Management - Zion AI Marketplace" description="Create and manage white-label instances of the Zion AI Marketplace platform."/>
-      
+
       <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
           <div>
@@ -30,21 +30,21 @@ export default function WhitelabelManager() {
               <TabsTrigger value="create">Create New</TabsTrigger>
               <TabsTrigger value="docs">Documentation</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="tenants" className="space-y-6">
               <TenantsList />
             </TabsContent>
-            
+
             <TabsContent value="create" className="flex justify-center">
               <WhitelabelRequestForm />
             </TabsContent>
-            
+
             <TabsContent value="docs" className="space-y-6">
               <div className="prose dark:prose-invert max-w-none">
                 <h2>White-Label Documentation</h2>
                 <h3>DNS Configuration</h3>
                 <p>
-                  To use a custom domain with your white-label instance, you need to configure the DNS records. 
+                  To use a custom domain with your white-label instance, you need to configure the DNS records.
                   Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.
                 </p>
                 <table>
@@ -65,10 +65,10 @@ export default function WhitelabelManager() {
                     </tr>
                   </tbody>
                 </table>
-                
+
                 <h3>Email Templates</h3>
                 <p>
-                  White-label instances can use customized email templates. You can upload HTML templates 
+                  White-label instances can use customized email templates. You can upload HTML templates
                   for the following emails:
                 </p>
                 <ul>
@@ -78,10 +78,10 @@ export default function WhitelabelManager() {
                   <li>Invoice</li>
                   <li>Receipt</li>
                 </ul>
-                
+
                 <h3>Admin Access</h3>
                 <p>
-                  You can assign tenant administrators who will have access to manage their white-label instance, 
+                  You can assign tenant administrators who will have access to manage their white-label instance,
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>

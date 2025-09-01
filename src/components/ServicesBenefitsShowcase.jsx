@@ -94,7 +94,7 @@ export function ServicesBenefitsShowcase() {
             startingPrice: "$199",
             implementationTime: "Immediate - 3 weeks",
             support: "Business hours support with priority options"
-        }
+
     ];
     const industryStats = [
         { metric: "95%", label: "Client Satisfaction Rate" },
@@ -110,7 +110,7 @@ export function ServicesBenefitsShowcase() {
             Why Choose Our Services?
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
-            Discover the unique advantages and proven benefits that make our services the preferred choice 
+            Discover the unique advantages and proven benefits that make our services the preferred choice
             for businesses worldwide. From cutting-edge AI to enterprise IT solutions, we deliver results.
           </p>
         </div>
@@ -135,7 +135,7 @@ export function ServicesBenefitsShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-6">
                 {/* Key Benefits */}
                 <div>

@@ -21,12 +21,8 @@ export default function CreatePostPage() {
                 description: "Your post has been published successfully"
             });
             // Redirect to the forum category
-<<<<<<< HEAD
-            router(`/community/category/${values.categoryId}`)}
-=======
             router(`/community/category/${values.categoryId}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
             toast({
                 title: "Error",
@@ -44,8 +40,8 @@ export default function CreatePostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Create Post</span>
         </div>
-        
+
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
-        
+
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
       </div>)}

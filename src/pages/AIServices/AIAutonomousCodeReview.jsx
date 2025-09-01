@@ -27,7 +27,7 @@ const features = [
         description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations.",
         icon: CheckCircle,
         color: "from-orange-500 to-red-500"
-    }
+
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -78,18 +78,18 @@ export default function AIAutonomousCodeReview() {
               <Code className="w-4 h-4"/>
               AI-Powered Code Review
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Code Review
               </span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">
               Revolutionize your development workflow with intelligent AI that automatically reviews code, detects issues, and ensures quality standards.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>

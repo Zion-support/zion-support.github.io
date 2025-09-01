@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
 const mockScreenshots = [
     { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -24,7 +23,7 @@ export const AppScreenshots = () => {
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
-        
+
         <div className="relative">
           <Button variant="ghost" size="icon" className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" onClick={() => scroll("left")} aria-label="Scroll left">
             <ChevronLeft className="h-6 w-6"/>
@@ -44,7 +43,7 @@ export const AppScreenshots = () => {
                 <img loading="lazy" src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-cover"/>
               </div>))}
           </div>
-          
+
           <Button variant="ghost" size="icon" className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" onClick={() => scroll("right")} aria-label="Scroll right">
             <ChevronRight className="h-6 w-6"/>
           </Button>

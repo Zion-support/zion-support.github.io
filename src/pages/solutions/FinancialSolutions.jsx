@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard } from 'lucide-react';
-export default function FinancialSolutions() {
+import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export default function FinancialSolutions() {
     const features = [
         {
             icon: Brain,
@@ -32,7 +31,7 @@ export default function FinancialSolutions() {
             icon: TrendingUp,
             title: "Portfolio Optimization",
             description: "AI-driven investment strategies and portfolio management"
-        }
+
     ];
     const benefits = [
         "Reduce fraud losses by 60-80%",
@@ -58,7 +57,7 @@ export default function FinancialSolutions() {
         {
             title: "Compliance Automation",
             description: "Automated regulatory compliance and reporting"
-        }
+
     ];
     const industries = [
         "Retail Banking",
@@ -102,7 +101,7 @@ export default function FinancialSolutions() {
               Financial Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your financial services with cutting-edge AI technology. Enhance security, 
+              Transform your financial services with cutting-edge AI technology. Enhance security,
               optimize operations, and deliver superior customer experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,7 +142,7 @@ export default function FinancialSolutions() {
               AI-Powered Financial Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive financial solutions combine advanced AI with industry expertise 
+              Our comprehensive financial solutions combine advanced AI with industry expertise
               to revolutionize how financial institutions operate and serve their customers.
             </p>
           </motion.div>
@@ -303,7 +302,7 @@ export default function FinancialSolutions() {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our financial solutions are tailored to meet the unique challenges and requirements 
+              Our financial solutions are tailored to meet the unique challenges and requirements
               of various financial sectors.
             </p>
           </motion.div>
@@ -385,4 +384,4 @@ export default function FinancialSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

@@ -1,114 +1,7 @@
 import React, { useState } from 'react';
-import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-
-export const ServiceDetailsSection = ({ services = [] }) => {
+import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
-<<<<<<< HEAD
-  const defaultServices = [
-    {
-      id: 1,
-      name: 'IT Infrastructure Setup',
-      description: 'Complete IT infrastructure design, implementation, and optimization',
-      duration: '2-4 weeks',
-      teamSize: '3-5 engineers',
-      features[
-        'Network architecture design',
-        'Server configuration and setup',
-        'Security implementation',
-        'Backup and disaster recovery',
-        'Monitoring and alerting',
-        'Documentation and training'
-      ],
-      benefits[
-        'Scalable and reliable infrastructure',
-        'Enhanced security posture',
-        'Improved performance and uptime',
-        'Reduced operational costs',
-        'Compliance-ready systems'
-      ],
-      requirements[
-        'Site survey and assessment',
-        'Hardware specifications',
-        'Network requirements',
-        'Security policies',
-        'Budget approval'
-      ],
-      icon: '🏗️',
-      category: 'Infrastructure',
-      complexity: 'High',
-      estimatedCost: '$15,000 - $50,000'
-    },
-    {
-      id: 2,
-      name: 'Network Security Implementation',
-      description: 'Comprehensive network security setup and monitoring',
-      duration: '1-2 weeks',
-      teamSize: '2-3 engineers',
-      features[
-        'Firewall configuration',
-        'Intrusion detection systems',
-        'VPN setup and management',
-        'Network segmentation',
-        'Security monitoring',
-        'Incident response planning'
-      ],
-      benefits[
-        'Protection against cyber threats',
-        'Compliance with security standards',
-        'Real-time threat detection',
-        'Secure remote access',
-        'Audit trail and reporting'
-      ],
-      requirements[
-        'Network topology review',
-        'Security policy definition',
-        'Compliance requirements',
-        'User access management',
-        'Security training needs'
-      ],
-      icon: '🛡️',
-      category: 'Security',
-      complexity: 'Medium',
-      estimatedCost: '$8,000 - $25,000'
-    },
-    {
-      id: 3,
-      name: 'Cloud Migration Services',
-      description: 'Seamless migration to cloud infrastructure',
-      duration: '4-8 weeks',
-      teamSize: '4-6 engineers',
-      features[
-        'Cloud platform assessment',
-        'Migration strategy planning',
-        'Data migration and testing',
-        'Application deployment',
-        'Performance optimization',
-        'Cost optimization analysis'
-      ],
-      benefits[
-        'Reduced infrastructure costs',
-        'Improved scalability',
-        'Enhanced disaster recovery',
-        'Better performance',
-        'Simplified management'
-      ],
-      requirements[
-        'Current infrastructure audit',
-        'Cloud platform selection',
-        'Data classification',
-        'Compliance requirements',
-        'Migration timeline'
-      ],
-      icon: '☁️',
-      category: 'Cloud',
-      complexity: 'High',
-      estimatedCost: '$20,000 - $75,000'
-    }
-  ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {
@@ -135,7 +28,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             Service Details & Specifications
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get detailed information about our IT services, including features, requirements, 
+            Get detailed information about our IT services, including features, requirements,
             timelines, and estimated costs.
           </p>
         </div>
@@ -146,7 +39,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
             <div
               key={service.id}
               className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
+
               {/* Service Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between">
@@ -160,7 +53,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         </span>
                       </div>
                       <p className="text-gray-600 text-lg">{service.description}</p>
-                      
+
                       {/* Quick Info */}
                       <div className="flex items-center space-x-6 mt-4">
                         <div className="flex items-center space-x-2 text-gray-500">
@@ -178,11 +71,11 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <button
                     onClick={() => toggleService(service.id)}
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                  >
+
                     {expandedService === service.id ? (
                       <ChevronUp className="w-6 h-6" />
                     ) : (
@@ -253,7 +146,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
                         <p className="text-2xl font-bold text-blue-600">{service.estimatedCost}</p>
                         <p className="text-sm text-gray-500">*Final cost depends on specific requirements</p>
                       </div>
-                      
+
                       <div className="flex space-x-4">
                         <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors">
                           Download Brochure
@@ -284,13 +177,13 @@ export const ServiceDetailsSection = ({ services = [] }) => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Discuss Requirements
               </a>
               <a
                 href="#consultation"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>

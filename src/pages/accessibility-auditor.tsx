@@ -100,14 +100,12 @@ export default function AccessibilityPage() {
       description: 'European accessibility requirements for ICT products and services',
       color: 'text-green-500'
     }
-=======;
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
     },;
     {;
       category: "Technical Accessibility",;
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const accessibilityTools = [
@@ -320,24 +318,16 @@ export default function AccessibilityPage() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+
                   Get Accessibility Audit
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+
                   View All Services
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;

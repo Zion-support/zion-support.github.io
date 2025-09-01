@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIIncidentResponse() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {
   const features = [
     'AI-powered incident response optimization',
     'Intelligent threat detection and analysis',;
@@ -13,10 +11,10 @@ export default function AIIncidentResponse() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$599/mo', 
-      details: ['Up to 100 incidents/month', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 100 incidents/month', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIIncidentResponse() {
       </section>;
     </div>;
   );
-}
+}}

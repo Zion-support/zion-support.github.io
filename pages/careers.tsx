@@ -32,7 +32,7 @@ export default function Careers(...args[]):  {
 			location: 'Remote',
 			type: 'Full-time',
 			description: 'Create intuitive user interfaces for our AI-powered platforms.'
-		}
+
 	]
 
 	return (
@@ -185,7 +185,7 @@ export default function Careers(...args[]):  {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-								>
+
 									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -206,13 +206,13 @@ export default function Careers(...args[]):  {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-							>
+
 								Send Resume
 							</Link>
 							<a
 								href="mailto:careers@ziontechgroup.com"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-							>
+
 								careers@ziontechgroup.com
 							</a>
 						</div>

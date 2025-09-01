@@ -33,29 +33,13 @@ export default function RequestsPanel(...args[]):  {
     toggleArchive
   } = useTalentQuotes();
 
-<<<<<<< HEAD
-  const handleViewDetails = (quote: QuoteRequest) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedQuote(quote);
-    setShowDetails(true);
-
-    // If status is new, mark as viewed
-<<<<<<< HEAD
-    if (quote.status = == 'new') {;
-      markAsViewed(quote.id)};
-  };
-
-  // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
-=======
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
-    }
+
   };
 
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <ProtectedRoute>

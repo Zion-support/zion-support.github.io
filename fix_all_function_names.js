@@ -20,57 +20,69 @@ function fileName = path.basename(filePath, path.extname(filePath));
 
 };
         return numberWords[digit] || `_${digit}`});
-=======
   
 
 };
         return numberWords[digit] || `_${digit}`;
       });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // If the function name is already valid, skip
     if (currentFunctionName === functionName) return false;
     // Replace the function name throughout the file
     let fixedContent = content.replace(
       new RegExp(
-        `const\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,
+        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,
       ),
       `const ${functionName}: NextPage = () => {`,
     );
     // Also replace the export default
     fixedContent = fixedContent.replace(
       new RegExp(
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `export default ${functionName}`,
     );
     // Replace in title and description
     fixedContent = fixedContent.replace(
       new RegExp(
-        `<title>${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `<title>${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `<title>${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
     );
     fixedContent = fixedContent.replace(
       new RegExp(
-        `content="${currentFunctionName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`,
+        `content="${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`,
       ),
       `content="${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`,
     );
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, "utf8");
-      console.log(
+      // // // // // // // console.log(
         `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,
       );
+    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+
+
+async function fixAllFiles() {
+  const files = await glob("pages/**/*.{ts,tsx}", {
+    ignore: ["node_modules/**", ".next/**"],
+  });
+  const fixedCount = 0;
+  for (const file of files) {
+    if (fixFunctionName(file)) {
+      fixedCount++;
+    }
+  }
+  // // // // // // // console.log(`Fixed ${fixedCount} files.`);
+}
+fixAllFiles();
+}}}}}}}}}
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-<<<<<<< HEAD
 async function fixedCount = 0;
-=======
-async function fixedCount = 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++}

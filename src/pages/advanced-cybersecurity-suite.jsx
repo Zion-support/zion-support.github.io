@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const AdvancedCybersecuritySuite = () => {
     const features = [
         {
@@ -21,7 +21,7 @@ const AdvancedCybersecuritySuite = () => {
             title: "Incident Response",
             description: "24/7 security monitoring and rapid response",
             icon: "🚨"
-        }
+
     ];
     const securityModules = [
         {
@@ -69,7 +69,7 @@ const AdvancedCybersecuritySuite = () => {
         {
             category: "Forensic Analysis",
             description: "Advanced digital forensics and evidence collection"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -82,12 +82,12 @@ const AdvancedCybersecuritySuite = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity protection for modern enterprises. Our advanced suite 
-              combines AI-powered threat detection, automated compliance, and expert security 
+              Comprehensive cybersecurity protection for modern enterprises. Our advanced suite
+              combines AI-powered threat detection, automated compliance, and expert security
               management to protect your digital assets.
             </p>
           </div>
-          
+
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Enterprise-Grade Security Features</h2>
@@ -99,7 +99,7 @@ const AdvancedCybersecuritySuite = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Security Modules */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Security Modules</h2>
@@ -107,7 +107,7 @@ const AdvancedCybersecuritySuite = () => {
               {securityModules.map((module, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{module.title}</h3>
                   <p className="text-gray-300 mb-4">{module.description}</p>
-                  
+
                   <div className="space-y-2">
                     {module.features.map((feature, idx) => (<div key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
@@ -117,13 +117,13 @@ const AdvancedCybersecuritySuite = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Compliance Frameworks */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance & Standards</h2>
               <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-                Our cybersecurity suite helps you meet and maintain compliance with major 
+                Our cybersecurity suite helps you meet and maintain compliance with major
                 industry standards and regulatory frameworks.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -133,7 +133,7 @@ const AdvancedCybersecuritySuite = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Threat Intelligence */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Advanced Threat Intelligence</h2>
@@ -144,7 +144,7 @@ const AdvancedCybersecuritySuite = () => {
                 </div>))}
             </div>
           </div>
-          
+
           {/* Security Dashboard */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -157,7 +157,7 @@ const AdvancedCybersecuritySuite = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Real-time Monitoring</h3>
                   <p className="text-gray-300 text-sm">Live security metrics and threat alerts</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">🔧</span>
@@ -165,7 +165,7 @@ const AdvancedCybersecuritySuite = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Automated Response</h3>
                   <p className="text-gray-300 text-sm">AI-powered incident response and remediation</p>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📈</span>
@@ -176,7 +176,7 @@ const AdvancedCybersecuritySuite = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Cybersecurity Suite?</h2>
@@ -202,7 +202,7 @@ const AdvancedCybersecuritySuite = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Technical Advantages</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -226,13 +226,13 @@ const AdvancedCybersecuritySuite = () => {
               </div>
             </div>
           </div>
-          
+
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Enterprise?</h3>
               <p className="text-gray-300 mb-6">
-                Get comprehensive cybersecurity protection with our advanced suite. 
+                Get comprehensive cybersecurity protection with our advanced suite.
                 Contact us today to discuss your security needs and get a customized solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -249,3 +249,4 @@ const AdvancedCybersecuritySuite = () => {
       </section>
     </div>)};
 export default AdvancedCybersecuritySuite;
+}}}

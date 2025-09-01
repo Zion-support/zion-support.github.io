@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
     const features = [
@@ -32,7 +33,7 @@ const QuantumEdgeComputingPlatform = () => {
             icon: Users,
             title: "Scalable Architecture",
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -77,7 +78,7 @@ const QuantumEdgeComputingPlatform = () => {
                 "On-site implementation support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -99,7 +100,7 @@ const QuantumEdgeComputingPlatform = () => {
             title: "Research & Development",
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -116,7 +117,7 @@ const QuantumEdgeComputingPlatform = () => {
             Quantum Edge Computing Platform
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Revolutionary edge computing platform that leverages quantum computing principles to deliver 
+            Revolutionary edge computing platform that leverages quantum computing principles to deliver
             unprecedented performance and efficiency for distributed applications.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -280,3 +281,4 @@ const QuantumEdgeComputingPlatform = () => {
       </section>
     </div>)};
 export default QuantumEdgeComputingPlatform;
+}}}}

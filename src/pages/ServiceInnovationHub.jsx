@@ -48,7 +48,7 @@ const ServiceInnovationHub = () => {
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
             trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],
             investment: '$80B+'
-        }
+
     ];
     const keyInsights = [
         {
@@ -74,7 +74,7 @@ const ServiceInnovationHub = () => {
             description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes',
             impact: 'High',
             timeline: '2025-2035'
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -84,7 +84,7 @@ const ServiceInnovationHub = () => {
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial = {
   { opacity: 0,
@@ -109,7 +109,7 @@ const ServiceInnovationHub = () => {
               Service Innovation Hub
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover cutting-edge innovation trends, future technology roadmaps, and strategic insights 
+              Discover cutting-edge innovation trends, future technology roadmaps, and strategic insights
               that will shape the next generation of revolutionary services and solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -160,7 +160,7 @@ const ServiceInnovationHub = () => {
               Innovation Areas
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Our comprehensive innovation hub covers the most transformative technology sectors 
+              Our comprehensive innovation hub covers the most transformative technology sectors
               that will define the future of business and society.
             </p>
           </motion.div>
@@ -345,7 +345,7 @@ const ServiceInnovationHub = () => {
               Interactive Innovation Hub
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Explore our comprehensive innovation hub with real-time trends, future roadmaps, 
+              Explore our comprehensive innovation hub with real-time trends, future roadmaps,
               and strategic insights for informed decision making.
             </p>
           </motion.div>
@@ -380,7 +380,7 @@ const ServiceInnovationHub = () => {
               Ready to Lead the Innovation Revolution?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our innovation hub provides the insights, strategies, and tools you need to stay ahead 
+              Our innovation hub provides the insights, strategies, and tools you need to stay ahead
               of emerging technologies and capitalize on future opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -416,3 +416,4 @@ const ServiceInnovationHub = () => {
       </section>
     </div>)};
 export default ServiceInnovationHub;
+}}}

@@ -79,7 +79,7 @@ const AIAutonomousLegalResearchAssistant = () => {
                 "On-site training & support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {

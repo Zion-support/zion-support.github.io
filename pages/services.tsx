@@ -41,7 +41,7 @@ export default function Services(...args[]):  {
 					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
 				default:
 					return 0
-			}
+
 		})
 
 	// Pagination logic
@@ -312,14 +312,14 @@ export default function Services(...args[]):  {
 									<Link
 										to={service.link}
 										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-									>
+
 										Learn More
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 									<Link
 										to="/contact"
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-									>
+
 										Contact
 									</Link>
 								</div>
@@ -379,7 +379,7 @@ export default function Services(...args[]):  {
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
 							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
-						
+
 						{/* Contact Details */}
 						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 							<div>

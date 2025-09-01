@@ -2,8 +2,7 @@ import React from 'react';
 import SEO from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
-export default function Enterprise() {
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise() {
     const features = [
         {
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,
@@ -34,7 +33,7 @@ export default function Enterprise() {
             icon: <Phone className="h-8 w-8 text-zion-cyan"/>,
             title: "Dedicated Support",
             description: "Priority support with dedicated account managers and 24/7 technical assistance."
-        }
+
     ];
     const plans = [
         {
@@ -75,7 +74,7 @@ export default function Enterprise() {
                 "Custom security",
                 "On-premise options"
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
@@ -87,7 +86,7 @@ export default function Enterprise() {
             Enterprise Solutions
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Scale your tech operations with Zion Tech Group's comprehensive enterprise platform. 
+            Scale your tech operations with Zion Tech Group's comprehensive enterprise platform.
             Access global talent, advanced tools, and dedicated support for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -112,7 +111,7 @@ export default function Enterprise() {
               Everything you need to manage large-scale tech operations efficiently and securely
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<Card key={index} className="bg-zion-blue border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
@@ -140,7 +139,7 @@ export default function Enterprise() {
               Choose the plan that fits your organization's needs and scale
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (<Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${plan.name === "Professional" ? "ring-2 ring-zion-purple" : ""}`}>
                 <CardHeader className="text-center">
@@ -179,7 +178,7 @@ export default function Enterprise() {
               Ready to Scale Your Tech Operations?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join leading organizations that trust Zion Tech Group for their enterprise tech needs. 
+              Join leading organizations that trust Zion Tech Group for their enterprise tech needs.
               Get started today with a personalized consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

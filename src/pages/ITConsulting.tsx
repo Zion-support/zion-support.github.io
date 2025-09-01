@@ -72,19 +72,6 @@ export default function ITConsulting() {
       color: "from-purple-500 to-pink-500"
     },
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation solutions",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Cybersecurity and regulatory compliance expertise",
-      color: "from-red-500 to-pink-500"
-    },
-    {
       icon: Target,
       title: "Performance Optimization",
       description: "System optimization and performance tuning",
@@ -209,7 +196,7 @@ export default function ITConsulting() {
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Get Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
@@ -292,7 +279,7 @@ export default function ITConsulting() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {consultingServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -353,7 +340,7 @@ export default function ITConsulting() {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our Consulting?
             </h2>
@@ -369,13 +356,13 @@ export default function ITConsulting() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
@@ -413,7 +400,7 @@ export default function ITConsulting() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
@@ -456,7 +443,7 @@ export default function ITConsulting() {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Strategy?
             </h2>
@@ -468,16 +455,8 @@ export default function ITConsulting() {
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
+
               Start Your Consultation
-<<<<<<< HEAD
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </motion.button>;
           </motion.div>;
         </div>;
@@ -485,4 +464,3 @@ export default function ITConsulting() {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

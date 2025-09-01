@@ -1,6 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react';
-const QuantumNeuralNetworkPlatform = () => {
+import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPlatform = () => {
     const features = [
         {
             icon: Brain,
@@ -21,7 +20,7 @@ const QuantumNeuralNetworkPlatform = () => {
             icon: Shield,
             title: 'Quantum Security',
             description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
-        }
+
     ];
     const useCases = [
         {
@@ -43,7 +42,7 @@ const QuantumNeuralNetworkPlatform = () => {
             title: 'AI Training',
             description: 'Faster and more efficient training of large language models and neural networks.',
             icon: Brain
-        }
+
     ];
     const benefits = [
         'Exponential speedup in complex computations',
@@ -69,7 +68,7 @@ const QuantumNeuralNetworkPlatform = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your AI capabilities with our cutting-edge quantum neural network platform. 
+              Revolutionize your AI capabilities with our cutting-edge quantum neural network platform.
               Experience unprecedented computational power and unlock new possibilities in machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,11 +93,11 @@ const QuantumNeuralNetworkPlatform = () => {
               Revolutionary Quantum Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform combines the best of quantum computing and neural networks to deliver 
+              Our platform combines the best of quantum computing and neural networks to deliver
               unprecedented performance and capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -121,11 +120,11 @@ const QuantumNeuralNetworkPlatform = () => {
               Transform Your Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how quantum neural networks are revolutionizing various sectors and 
+              Discover how quantum neural networks are revolutionizing various sectors and
               creating new opportunities for innovation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
             const IconComponent = useCase.icon;
@@ -149,7 +148,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Why Choose Our Quantum Platform?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Experience the future of computing with our quantum neural network platform. 
+                Experience the future of computing with our quantum neural network platform.
                 Get ahead of the competition with cutting-edge technology that delivers real results.
               </p>
               <div className="space-y-4">
@@ -159,7 +158,7 @@ const QuantumNeuralNetworkPlatform = () => {
                   </div>))}
               </div>
             </div>
-            
+
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
               <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
               <div className="space-y-6">
@@ -203,7 +202,7 @@ const QuantumNeuralNetworkPlatform = () => {
             Ready to Experience the Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the quantum revolution and transform your AI capabilities today. 
+            Join the quantum revolution and transform your AI capabilities today.
             Our team of experts is ready to help you get started.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -229,7 +228,7 @@ const QuantumNeuralNetworkPlatform = () => {
               Explore our resources to understand how quantum neural networks can transform your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
@@ -241,7 +240,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Read Docs →
               </Link>
             </div>
-            
+
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                 <Download className="w-6 h-6 text-white"/>
@@ -252,7 +251,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Download →
               </Link>
             </div>
-            
+
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                 <MessageSquare className="w-6 h-6 text-white"/>
@@ -268,3 +267,4 @@ const QuantumNeuralNetworkPlatform = () => {
       </section>
     </div>)};
 export default QuantumNeuralNetworkPlatform;
+}}}

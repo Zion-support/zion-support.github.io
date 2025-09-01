@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-
-export const QuoteFormSection = () => {
+import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,13 +30,13 @@ export const QuoteFormSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 5 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -89,10 +87,10 @@ export const QuoteFormSection = () => {
               Get Your Custom Quote
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Tell us about your IT needs and we'll provide you with a detailed, 
+              Tell us about your IT needs and we'll provide you with a detailed,
               no-obligation quote tailored to your business requirements.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -104,7 +102,7 @@ export const QuoteFormSection = () => {
                   <p className="text-sm text-gray-500">We respond within 24 hours</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-green-600" />
@@ -115,7 +113,7 @@ export const QuoteFormSection = () => {
                   <p className="text-sm text-gray-500">Mon-Fri 8AM-6PM EST</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-purple-600" />
@@ -145,7 +143,7 @@ export const QuoteFormSection = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Request Your Quote
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -163,7 +161,7 @@ export const QuoteFormSection = () => {
                     placeholder="John Doe"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -196,7 +194,7 @@ export const QuoteFormSection = () => {
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
                     Comp Name
@@ -224,7 +222,7 @@ export const QuoteFormSection = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
+
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>{service}</option>
@@ -251,7 +249,7 @@ export const QuoteFormSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-              >
+
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -266,7 +264,7 @@ export const QuoteFormSection = () => {
               </button>
 
               <p className="text-xs text-gray-500 text-center">
-                By submitting this form, you agree to our privacy policy and terms of service. 
+                By submitting this form, you agree to our privacy policy and terms of service.
                 We'll never share your information with third parties.
               </p>
             </form>

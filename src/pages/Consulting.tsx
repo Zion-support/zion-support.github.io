@@ -34,19 +34,13 @@ const Consulting = () => {
       features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
     },
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: "Digital Innovation",
-      description: "Emerging technology consulting and innovation acceleration",
       features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
     };
-=======;
       icon: Zap,;
       title: "Digital Innovation",;
       description: "Emerging technology consulting and innovation acceleration",;
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const industries = [
@@ -288,14 +282,6 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -303,6 +289,5 @@ const Consulting = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Consulting;
+export default Consulting;}}}}

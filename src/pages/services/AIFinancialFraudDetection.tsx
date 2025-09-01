@@ -84,19 +84,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     },
     {
       plan: "Enterprise",
-<<<<<<< HEAD
-      price: "Custom",
-      period: "",
-      features["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
-      popular: false
     };
-=======;
       price: "Custom",;
       period: "",;
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
@@ -107,7 +100,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
         canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-orange-900/20"></div>
@@ -135,7 +128,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Fraud Prevention Platform
@@ -191,7 +184,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
               Advanced Security Features
             </h2>
@@ -236,7 +229,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -275,7 +268,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               Proven Results
             </h2>
@@ -320,7 +313,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -358,7 +351,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Industry Applications
             </h2>
@@ -403,7 +396,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
@@ -441,7 +434,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Seamless Integrations
             </h2>
@@ -486,7 +479,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 }}
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
-              >
+
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
               </motion.div>
             ))}
@@ -521,7 +514,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               Transparent Pricing
             </h2>
@@ -566,11 +559,11 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
-                  plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-500 shadow-lg shadow-red-500/20'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -578,7 +571,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
                   <div className="flex items-baseline justify-center">
@@ -586,7 +579,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                     <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -595,7 +588,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
@@ -635,7 +628,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Stop Financial Fraud?
             </h2>
@@ -643,17 +636,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Join 200+ companies that have protected their business with our AI-powered fraud detection platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a 
-                href="/contact" 
+              <a
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
+
                 Schedule Demo
               </a>
             </div>
@@ -690,14 +683,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <p className="text-slate-300">
                 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -705,6 +690,5 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AIFinancialFraudDetection;
+export default AIFinancialFraudDetection;}}}

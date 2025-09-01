@@ -18,18 +18,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         // Particle system
         const particles = [];
         // Color schemes
-<<<<<<< HEAD
-        const colorSchemes = {
-  blue['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-            purple['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-            green['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-            multi['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000',
-  '#8000ff']
-        
-
-};
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const colors = colorSchemes[colorScheme];
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         // Initialize particles
@@ -148,3 +136,4 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             window.removeEventListener('resize', resizeCanvas)}}, [intensity, colorScheme]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};
 export default FuturisticAnimatedBackground;
+}}}}}}}}}}}

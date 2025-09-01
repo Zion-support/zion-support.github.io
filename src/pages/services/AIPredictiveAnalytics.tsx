@@ -1,6 +1,4 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users } from 'lucide-react';
-
-export default function AIPredictiveAnalytics() {
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
   const features = [
     'Advanced machine learning algorithms for pattern recognition',
     'Real-time data processing and predictive modeling',;
@@ -13,10 +11,10 @@ export default function AIPredictiveAnalytics() {
   ];
 
   const tiers = [
-    { 
-      name: 'Starter', 
-      price: '$299/mo', 
-      details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support'] 
+    {
+      name: 'Starter',
+      price: '$299/mo',
+      details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
     },
     { 
       name: 'Professional', 
@@ -171,4 +169,4 @@ export default function AIPredictiveAnalytics() {
       </section>;
     </div>;
   );
-}
+}}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
-const LinkHealthChecker = ({ links, className = '' }) => {
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
     const [linkStatuses, setLinkStatuses] = useState([]);
     const [isChecking, setIsChecking] = useState(false);
     const checkLinkHealth = async (url) => {
@@ -157,7 +156,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
           <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>
           <p className="text-sm text-red-300">
-            {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention. 
+            {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
@@ -170,3 +169,4 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         </div>)}
     </div>)};
 export default LinkHealthChecker;
+}}}}}}}}}

@@ -12,101 +12,6 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      comp: 'MedTech Innovations',
-      avatar: '👩‍⚕️',
-      rating: 5,
-      quote: 'Zion Tech Group revolutionized our healthcare platform with AI-powered diagnostics. We\'ve seen a 45% improvement in diagnostic accuracy and 60% reduction in processing time.',
-      metrics: {
-        accuracy: '45% improvement',
-        time: '60% reduction',
-        satisfaction: '98% client satisfaction'
-      },
-      industry: 'Healthcare',
-      projectDuration: '6 months'
-    },
-    {
-      id: 2,
-      name: 'Marcus Rodriguez',
-      role: 'VP of Engineering',
-      comp: 'FinFlow Solutions',
-      avatar: '👨‍💼',
-      rating: 5,
-      quote: 'The cybersecurity implementation exceeded our expectations. We achieved SOC 2 compliance in record time and our security posture has never been stronger.',
-      metrics: {
-        compliance: 'SOC 2 achieved',
-        security: 'Zero breaches',
-        uptime: '99.99% uptime'
-      },
-      industry: 'Financial Services',
-      projectDuration: '4 months'
-    },
-    {
-      id: 3,
-      name: 'Jennifer Kim',
-      role: 'Founder & CEO',
-      comp: 'EcoSmart Retail',
-      avatar: '👩‍💻',
-      rating: 5,
-      quote: 'From concept to launch in just 10 weeks! The team\'s expertise in e-commerce and AI personalization helped us achieve 300% better conversion rates.',
-      metrics: {
-        conversion: '300% improvement',
-        launch: '10 weeks',
-        roi: '400% ROI'
-      },
-      industry: 'E-commerce',
-      projectDuration: '10 weeks'
-    },
-    {
-      id: 4,
-      name: 'David Thompson',
-      role: 'Operations Director',
-      comp: 'Global Manufacturing Co.',
-      avatar: '👨‍🏭',
-      rating: 5,
-      quote: 'The IoT and predictive maintenance solutions have transformed our operations. We\'ve reduced downtime by 70% and increased productivity by 40%.',
-      metrics: {
-        downtime: '70% reduction',
-        productivity: '40% increase',
-        savings: '$2M annual savings'
-      },
-      industry: 'Manufacturing',
-      projectDuration: '8 months';
-    };
-  ];
-
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
-
-  const previousTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
-
-  const goToTestimonial = (index: number)  => {;
-    setCurrentIndex(index)};
-
-  const togglePlayPause = () => {;
-    setIsPlaying(!isPlaying)};
-
-  // Auto-advance testimonials
-  React.useEffect(() => {
-    if (!isPlaying) return;
-    
-    const interval = setInterval(() => {;
-      nextTestimonial()}, 5000);
-
-    return () => clearInterval(interval)}, [isPlaying, currentIndex]);
-
-  const currentTestimonial = testimonials[currentIndex];
-=======
 const testimonials = [
   {
     id: 1,
@@ -188,28 +93,6 @@ export function InteractiveTestimonials() {
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  // Auto-advance testimonials
-  React.useEffect(() => {
-    if (!isPlaying) return;
-
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isPlaying, currentIndex]);
-
-  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,28 +131,31 @@ export function InteractiveTestimonials() {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Main Testimonial Display */}
-        <div className="relative mb-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTestimonial.id}
-              initial = {
-  { opacity: 0,
-  x: 100 
-
-}}
-              animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-              exit = {
-  { opacity: 0,
-  x: -100 
-
-}}
-              transition={{ duration: 0.5 }}
+        {/* Category Filter */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-3 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setSelectedCategory(category);
+                setSelectedTestimonial(0);
+              }}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
             >
               <div className="text-center mb-8">
@@ -380,7 +266,6 @@ export function InteractiveTestimonials() {
   y: 0 
 
 }}
-=======
         {/* Category Filter */}
         <motion.div 
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -404,7 +289,6 @@ export function InteractiveTestimonials() {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
@@ -433,7 +317,6 @@ export function InteractiveTestimonials() {
   )};
 
 export default InteractiveTestimonials;
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -441,7 +324,6 @@ export default InteractiveTestimonials;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;

@@ -318,7 +318,6 @@ export default function RequestQuote() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setSubmitting(true);
     
@@ -968,7 +967,6 @@ export default function RequestQuote() {
       </section>
     </div>
   )};
-=======;
             </div>;
           </div>;
         </motion.div>;
@@ -976,4 +974,3 @@ export default function RequestQuote() {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -22,7 +22,6 @@ import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensiv
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
-=======
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
@@ -30,7 +29,6 @@ import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensiv
 const ComprehensivePricingGuide2026: React.FC = () => {;
   const [selectedService, setSelectedService] = useState<string>('all');
   const [selectedTier, setSelectedTier] = useState<string>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
@@ -45,23 +43,9 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
     return filtered;
   }, [selectedService]);
 
-<<<<<<< HEAD
-  const getServiceIcon = (serviceName: string) => {;
-    switch (serviceName) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
-      case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
-      case 'BlockchainForge': return <Shield className="w-6 h-6" />;
       default: return <Zap className = "w-6 h-6" />};
   };
 
-<<<<<<< HEAD
-  const getTierColor = (tierName: string) => {;
-    switch (tierName) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Starter': return 'from-green-500 to-emerald-500';
-      case 'Professional': return 'from-blue-500 to-cyan-500';
-      case 'Enterprise': return 'from-purple-500 to-pink-500';
       default: return 'from-gray-500 to-gray-600'}
   };
 
@@ -83,7 +67,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
+
               Comprehensive Pricing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
                 Guide 2026
@@ -105,7 +89,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-            >
+
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="text-3xl font-bold text-green-400 mb-2">{marketSummary2026.totalMarketSize}</div>
                 <div className="text-zinc-400">Total Market Size</div>
@@ -200,7 +184,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 }}
                 className="mb-16"
-              >
+
                 {/* Service Header */}
                 <div className="text-center mb-12">
                   <div className="flex items-center justify-center gap-3 mb-4">
@@ -281,7 +265,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 }}
                       className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                    >
+
                       {/* Tier Header */}
                       <div className="text-center mb-6">
                         <div className={`inline-block p-2 rounded-lg bg-gradient-to-r ${getTierColor(tier.name)} mb-4`}>
@@ -413,7 +397,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-3xl p-12 border border-white/10"
-            >
+
               <h2 className="text-4xl font-bold text-white mb-8 text-center">Market Trends & Competitive Advantages</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -455,7 +439,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10"
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -467,14 +451,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
-                >
+
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
-                >
+
                   <Mail className="w-5 h-5" />
                   Email kleber@ziontechgroup.com
                 </a>
@@ -483,14 +467,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 <p>364 E Main St STE 1008 Middletown DE 19709</p>
                 <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>;
-    </>;
-  )};
-=======
             </motion.div>;
           </div>;
         </section>;
@@ -498,6 +474,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ComprehensivePricingGuide2026;
 export default ComprehensivePricingGuide2026;

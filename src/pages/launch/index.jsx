@@ -59,9 +59,15 @@ const LaunchToolkitPage = () => {
             for (const assetPath of toolkitAssets) {
                 const response = await fetch(`/${assetPath}`); // Fetch from public directory
                 if (!response.ok) {
-                    console.error(`Failed to fetch asset: ${assetPath}`);
+                    // // // // // // // console.error(`Failed to fetch asset: ${assetPath}`);
                     // Optionally, decide if one failed asset should stop the whole process
                     // or if it should be skipped. For now, we'll log and continue.
+            // // // // // // // console.error("Error creating ZIP:", error);
+            setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
+
+        finally {
+            setIsZipping(false);
+
                     continue}
                 const blob = await response.blob();
                 // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip
@@ -86,7 +92,7 @@ const LaunchToolkitPage = () => {
                 const text = await response.text();
                 setExplainerCopy(text)}
             catch (error) {
-                console.error("Error loading explainer copy:", error);
+                // // // // // // // console.error("Error loading explainer copy:", error);
                 setExplainerCopy('Could not load explainer copy.');
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.')}
             finally {
@@ -106,7 +112,7 @@ const LaunchToolkitPage = () => {
             const text = await response.text();
             setSelectedTemplateContent(text)}
         catch (error) {
-            console.error("Error loading template:", error);
+            // // // // // // // console.error("Error loading template:", error);
             setSelectedTemplateContent('');
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.')}
         finally {
@@ -371,3 +377,4 @@ const LaunchToolkitPage = () => {
       </div>
     </AppLayout>)};
 export default LaunchToolkitPage;
+}}}}}}}}}}}}}}}}

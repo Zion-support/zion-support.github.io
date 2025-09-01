@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
-const SEOOptimizer = () => {
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOptimizer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [report, setReport] = useState(null);
@@ -58,7 +57,7 @@ const SEOOptimizer = () => {
             const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages);
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length;
             // Collect all issues and count frequency
-            const issueCounts = {};
+            const issueCounts = { /* empty */ };
             pageAnalyses.forEach(page => {
                 page.issues.forEach(issue => {
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})});
@@ -74,6 +73,11 @@ const SEOOptimizer = () => {
                 topIssues,
                 pageAnalyses,
                 summary
+            // // // // // // // console.error('Error analyzing SEO:', error);
+        }
+        finally {
+            setIsAnalyzing(false);
+
             })}
         catch (error) {
             console.error('Error analyzing SEO:', error)}
@@ -85,7 +89,7 @@ const SEOOptimizer = () => {
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {
         let score = 0;
-        let maxScore = 0;
+        const maxScore = 0;
         // Title optimization (0-20 points)
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
@@ -127,17 +131,11 @@ const SEOOptimizer = () => {
         if (page.url === '/' || page.url.includes('-')) {
             score += 15}
         else if (page.url.length > 0) {
-<<<<<<< HEAD
-            score += 8}
-        return Math.round((score / maxScore) * 100)};
-    const issues = [];
-=======
             score += 8;
-        }
+
         return Math.round((score / maxScore) * 100);
     };
     const issues = [];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (!page.title || page.title.length < 30) {
             issues.push('Title is too short (should be 30-60 characters)')}
         else if (page.title.length > 60) {
@@ -247,7 +245,7 @@ const SEOOptimizer = () => {
                 ×
               </button>
             </div>
-            
+
             {/* Summary Stats */}
             {report && (<div className="grid grid-cols-3 gap-4 mt-3">
                 <div className="text-center">
@@ -342,7 +340,7 @@ const SEOOptimizer = () => {
                           ×
                         </button>
                       </div>
-                      
+
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
                           <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
@@ -404,3 +402,4 @@ const SEOOptimizer = () => {
         </div>)}
     </div>)};
 export default SEOOptimizer;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -4,7 +4,6 @@ interface InteractiveSearchProps {
   placeholder?: string;
   onSearch: (query: string) => void;
   className?: string;
-}
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", ;
@@ -17,7 +16,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());
-    }
+
   };
 
   return (
@@ -46,4 +45,4 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   );
 };
 
-export default InteractiveSearch;
+export default InteractiveSearch;}}

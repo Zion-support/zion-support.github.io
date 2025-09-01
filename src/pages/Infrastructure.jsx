@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Server,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -43,6 +43,8 @@ import {
   Box,
   Ship,
   Train,
+  Plane,
+  Car,
   Truck,
   Cloud,
   Settings,
@@ -50,6 +52,24 @@ import {
   Smartphone,
   Tablet,
   Monitor,
+  Smartphone,
+  Globe,
+  Shield,
+  Zap,
+  Users,
+  Settings,
+  Palette,
+  Database,
+  Server,
+  Network,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
   Wifi,
   Bluetooth,
   Battery,
@@ -159,6 +179,7 @@ import {
   Colocation,
   Edge,
   Fog,
+  Cloud,
   Hybrid,
   Multi,
   Public,
@@ -222,6 +243,7 @@ import {
   Application,
   Data,
   Security,
+  Network,
   Storage,
   Compute,
   Memory,
@@ -234,6 +256,8 @@ import {
   NearRealTime,
   Offline,
   Online,
+  Hybrid,
+  Multi,
   Single,
   Distributed,
   Centralized,
@@ -242,6 +266,7 @@ import {
   Hierarchical,
   Flat,
   Mesh,
+  Star,
   Ring,
   Bus,
   Tree,
@@ -253,9 +278,12 @@ import {
   Array,
   List,
   Stack,
+  Queue,
   Deque,
   PriorityQueue,
   Heap,
+  Tree,
+  Graph,
   HashTable,
   BloomFilter,
   SkipList,
@@ -264,111 +292,297 @@ import {
   RedBlackTree,
   AVLTree,
   SplayTree,
+  Treap,
+  SplayTree,
+  RedBlackTree,
+  AVLTree,
+  BTree,
+  Trie,
+  SkipList,
+  BloomFilter,
+  HashTable,
+  Graph,
+  Tree,
+  Heap,
+  PriorityQueue,
+  Deque,
+  Queue,
+  Stack,
+  List,
+  Array,
+  Tensor,
+  Scalar,
+  Vector,
+  Matrix,
+  Graph,
+  Tree,
+  Ring,
+  Star,
+  Mesh,
+  Flat,
+  Hierarchical,
+  Federated,
+  Decentralized,
+  Centralized,
+  Distributed,
+  Single,
+  Multi,
+  Hybrid,
+  Online,
+  Offline,
+  NearRealTime,
+  RealTime,
+  Batch,
+  Stream,
+  Queue,
+  Buffer,
+  Cache,
+  Memory,
+  Compute,
+  Storage,
+  Network,
+  Security,
+  Data,
+  Application,
+  Infrastructure,
+  Platform,
+  SRE,
+  NoOps,
+  AIOps,
+  MLOps,
+  DataOps,
+  SecOps,
+  GitOps,
+  DevOps,
+  CD,
+  CI,
+  DeploymentTech,
+  ReleaseTech,
+  ChangeTech,
+  IncidentTech,
+  AlertingTech,
+  MetricsTech,
+  TracingTech,
+  LoggingTech,
+  ObservabilityTech,
+  MonitoringTech,
+  AuditTech,
+  RiskTech,
+  GovernanceTech,
+  ComplianceTech,
+  PrivacyTech,
+  SecurityTech,
+  SupportTech,
+  SalesTech,
+  HRTech,
+  MarTech,
+  Adtech,
+  Regtech,
+  Legaltech,
+  Proptech,
+  Edtech,
+  Healthtech,
+  Insurtech,
+  Fintech,
+  Ecommerce,
+  Social,
+  Gaming,
+  Entertainment,
+  Media,
+  Telecommunications,
+  Utilities,
+  Energy,
+  Transportation,
+  Manufacturing,
+  Retail,
+  Education,
+  Healthcare,
+  Financial,
+  Government,
+  Community,
+  Private,
+  Public,
+  Multi,
+  Hybrid,
+  Cloud,
+  Fog,
+  Edge,
+  Colocation,
+  Datacenter,
+  Cabinet,
+  Rack,
+  Chassis,
+  Backplane,
+  Motherboard,
+  PCB,
+  SiP,
+  SoC,
+  ASIC,
+  FPGA,
+  TPU,
+  GPU,
+  CISC,
+  RISC,
+  x86,
+  ARM,
+  TDX,
+  SEV,
+  SGX,
+  TrustZone,
+  SecureEnclave,
+  TPM,
+  HSM,
+  OCSP,
+  CRL,
+  CSR,
+  Certificate,
+  Token,
+  ServiceAccount,
+  ClusterRoleBinding,
+  ClusterRole,
+  RoleBinding,
+  Role,
+  PodSecurityPolicy,
+  NetworkPolicy,
+  VerticalPodAutoscaler,
+  HorizontalPodAutoscaler,
+  CronJob,
+  Job,
+  DaemonSet,
+  StatefulSet,
+  StorageClass,
+  PersistentVolume,
+  Secret,
+  ConfigMap,
+  Namespace,
+  Node,
+  Cluster,
+  Egress,
+  Ingress,
+  Service,
+  Pod,
+  Container,
+  VNF,
+  NFV,
+  SDN,
+  MPLS,
+  IPSec,
+  GRE,
+  VXLAN,
+  VLAN,
+  RIP,
+  EIGRP,
+  OSPF,
+  BGP,
+  IPFIX,
+  sFlow,
+  NetFlow,
+  SNMP,
+  Syslog,
+  Tacacs,
+  Radius,
+  OpenID,
+  SAML,
+  JWT,
+  OAuth,
+  Kerberos,
+  LDAP,
+  IMAP,
+  POP3,
+  SMTP,
+  NTP,
+  DHCP,
+  DNS,
+  HTTPS,
+  HTTP,
+  FTP,
+  SSH,
+  TLS,
+  SSL,
+  VPN,
+  Proxy,
+  Gateway,
+  LoadBalancer,
+  Firewall,
+  Modem,
+  Hub,
+  Switch,
+  Router,
+  MemoryStick,
+  HardDrive,
+  Signal,
+  Battery,
+  Bluetooth,
+  Wifi,
+  Network,
+  Server,
+  Database,
+  Palette,
+  Settings,
+  Users,
+  Zap,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Tablet,
+  Smartphone,
+  Palette,
+  Settings,
+  Cloud,
+  Truck,
+  Car,
+  Plane,
+  Train,
+  Ship,
+  Box,
+  Navigation,
+  Route,
+  Warehouse,
+  Package,
+  AlertTriangle,
+  RefreshCw,
+  Layers,
+  MapPin,
+  TrendingUp,
+  BarChart3,
+  Cog,
+  Factory,
+  Plane,
+  Car,
+  Building,
+  Server,
+  Network,
+  Gauge,
+  Lightbulb,
+  Rocket,
+  Target,
+  Brain,
+  Cpu,
+  Wrench,
+  FileText,
+  Code,
+  Database,
+  Eye,
+  Clock,
+  Activity,
+  Lock,
+  Globe,
+  Award,
+  Users,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Zap,
+  Server
   Treap
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const infrastructureSolutions = [
-  {
-    id: 1,
-    title: "Data Center Infrastructure",
-    description: "Enterprise-grade data center design and implementation with high availability and scalability.",
-    icon: Server,
-    features[
-      "Server infrastructure",
-      "Storage systems",
-      "Network architecture",
-      "Power and cooling"
-    ],
-    price: "From $500,000",
-    timeline: "24-48 weeks",
-    category: "Data Center",
-    technologies["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
-  },
-  {
-    id: 2,
-    title: "Cloud Infrastructure",
-    description: "Multi-cloud and hybrid cloud infrastructure design and management.",
-    icon: Cloud,
-    features[
-      "Cloud architecture",
-      "Multi-cloud strategy",
-      "Hybrid cloud setup",
-      "Cloud migration"
-    ],
-    price: "From $200,000",
-    timeline: "16-32 weeks",
-    category: "Cloud",
-    technologies["AWS", "Azure", "GCP", "Kubernetes"]
-  },
-  {
-    id: 3,
-    title: "Network Infrastructure",
-    description: "Enterprise networking solutions with security and performance optimization.",
-    icon: Network,
-    features[
-      "Network design",
-      "Security implementation",
-      "Performance optimization",
-      "Monitoring systems"
-    ],
-    price: "From $150,000",
-    timeline: "12-24 weeks",
-    category: "Networking",
-    technologies["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
-  },
-  {
-    id: 4,
-    title: "Security Infrastructure",
-    description: "Comprehensive security infrastructure with threat detection and prevention.",
-    icon: Shield,
-    features[
-      "Firewall systems",
-      "Intrusion detection",
-      "Access control",
-      "Security monitoring"
-    ],
-    price: "From $300,000",
-    timeline: "20-36 weeks",
-    category: "Security",
-    technologies["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
-  },
-  {
-    id: 5,
-    title: "Storage Infrastructure",
-    description: "High-performance storage solutions with data protection and backup.",
-    icon: HardDrive,
-    features[
-      "Storage architecture",
-      "Data protection",
-      "Backup systems",
-      "Disaster recovery"
-    ],
-    price: "From $250,000",
-    timeline: "16-28 weeks",
-    category: "Storage",
-    technologies["SAN", "NAS", "Backup Software", "DR Systems"]
-  },
-  {
-    id: 6,
-    title: "Monitoring & Observability",
-    description: "Comprehensive monitoring and observability platform for infrastructure management.",
-    icon: Activity,
-    features[
-      "Infrastructure monitoring",
-      "Application performance",
-      "Log management",
-      "Alerting systems"
-    ],
-    price: "From $100,000",
-    timeline: "12-20 weeks",
-    category: "Monitoring",
     technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
   }
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const infrastructureTechnologies = [
   {
     name: "Server Technologies",
@@ -397,7 +611,7 @@ const infrastructureTechnologies = [
     icon: Shield,
     useCase: "Infrastructure Security",
     reliability: "Critical"
-  }
+
 ];
 
 const successStories = [
@@ -427,7 +641,7 @@ const successStories = [
     solution: "Built edge computing infrastructure with IoT integration and real-time monitoring",
     results: "40% efficiency improvement, real-time monitoring, predictive maintenance, cost savings",
     logo: "MC"
-  }
+
 ];
 
 const processSteps = [
@@ -458,7 +672,7 @@ const processSteps = [
     description: "Test infrastructure and optimize performance",
     icon: Gauge,
     duration: "2-6 weeks"
-  }
+
 ];
 
 const infrastructureBenefits = [
@@ -493,9 +707,9 @@ export default function Infrastructure() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Data Center', 'Cloud', 'Networking', 'Security', 'Storage', 'Monitoring'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? infrastructureSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? infrastructureSolutions
     : infrastructureSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -507,7 +721,7 @@ export default function Infrastructure() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
@@ -532,7 +746,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -565,20 +779,20 @@ export default function Infrastructure() {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Server className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure &
               <span className="text-gradient block">Technology Solutions</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Build robust, scalable, and secure IT infrastructure that powers your business. 
+              Build robust, scalable, and secure IT infrastructure that powers your business.
               From data centers to cloud solutions, we help you create the foundation for digital success.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Server className="w-4 h-4" />
@@ -623,7 +837,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Technology Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make modern infrastructure essential
@@ -665,14 +879,14 @@ export default function Infrastructure() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -714,7 +928,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading infrastructure platforms and technologies
@@ -756,17 +970,17 @@ export default function Infrastructure() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -806,7 +1020,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Infrastructure Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful infrastructure deployment
@@ -848,7 +1062,7 @@ export default function Infrastructure() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -857,7 +1071,7 @@ export default function Infrastructure() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -895,7 +1109,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for modern enterprise infrastructure
@@ -913,7 +1127,7 @@ export default function Infrastructure() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -955,14 +1169,14 @@ export default function Infrastructure() {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -971,23 +1185,23 @@ export default function Infrastructure() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1029,7 +1243,7 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Infrastructure Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with modern infrastructure
@@ -1071,7 +1285,7 @@ export default function Infrastructure() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1081,7 +1295,7 @@ export default function Infrastructure() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1096,7 +1310,7 @@ export default function Infrastructure() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1135,24 +1349,24 @@ export default function Infrastructure() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Infrastructure?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how modern infrastructure can transform your business operations, 
+              Let's discuss how modern infrastructure can transform your business operations,
               improve performance, and ensure scalability for future growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Infrastructure Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Infrastructure Consultation
               </a>
             </div>

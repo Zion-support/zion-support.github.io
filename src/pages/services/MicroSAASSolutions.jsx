@@ -1,6 +1,7 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import { SEO } from '../../components/SEO';
 import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+
 export default function MicroSAASSolutions() {
     const services = [
         {
@@ -92,7 +93,7 @@ export default function MicroSAASSolutions() {
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business ideas into powerful, scalable software solutions with our micro SAAS development 
+            Transform your business ideas into powerful, scalable software solutions with our micro SAAS development
             services designed for rapid deployment and growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -114,11 +115,11 @@ export default function MicroSAASSolutions() {
               Comprehensive SAAS Development Services
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end micro SAAS development services that 
+              From concept to deployment, we provide end-to-end micro SAAS development services that
               accelerate your business growth and digital transformation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (<div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
@@ -149,11 +150,11 @@ export default function MicroSAASSolutions() {
               Why Choose Our Micro SAAS Solutions?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience the advantages of rapid development, scalability, and cost-effective solutions 
+              Experience the advantages of rapid development, scalability, and cost-effective solutions
               designed for modern business needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
@@ -181,7 +182,7 @@ export default function MicroSAASSolutions() {
               Tailored micro SAAS solutions designed for the unique requirements and compliance needs of different industries.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => (<div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -205,7 +206,7 @@ export default function MicroSAASSolutions() {
             Ready to Build Your Micro SAAS Solution?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Let us help you transform your business idea into a powerful, scalable software solution 
+            Let us help you transform your business idea into a powerful, scalable software solution
             that drives growth and innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -218,5 +219,6 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-    </div>);
+    </div>
+  );
 }

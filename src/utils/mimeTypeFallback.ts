@@ -1,5 +1,7 @@
 interface MimeTypeMapping {
+
   [key: string]: string;
+
 }
 
 class MimeTypeFallback {
@@ -69,7 +71,7 @@ class MimeTypeFallback {
     return filename.substring(lastDot).toLowerCase();
   }
 
-  async checkAndFixMimeType(url: string): Promise<boolean> {
+  async checkAndFixMimeType(url: string): Promise<any> {
     try {
       const response = await fetch(url, { method: 'HEAD' });
       
@@ -100,7 +102,7 @@ class MimeTypeFallback {
     }
   }
 
-  private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
+  private async tryFallbackUrl(originalUrl: string): Promise<any> {
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
     
     if (fallbackUrl) {
@@ -142,7 +144,7 @@ class MimeTypeFallback {
     });
   }
 
-  async preloadCriticalResources(): Promise<void> {
+  async preloadCriticalResources(): Promise<any> {
     const criticalResources = [
       '/css/index-RK9lga5l.css',
       '/js/index-C64WnLOI.js',
@@ -182,8 +184,8 @@ class MimeTypeFallback {
     }
   }
 
-  injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
-    return new Promise((resolve, reject) => {
+  injectResource(url: anystring, type: 'script' | 'stylesheet'): Promise<any> {
+    return new Promise((resolve, reject)  => {
       const element = this.createResourceElement(url, type);
       
       element.onload = () => {

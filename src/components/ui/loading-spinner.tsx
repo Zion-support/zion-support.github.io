@@ -7,7 +7,6 @@ interface LoadingSpinnerProps {
   text?: string;
   showText?: boolean;
   className?: string;
-}
 
 const sizeClasses = {
   sm: 'w-8 h-8',
@@ -57,7 +56,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="relative">
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-        
+
         {/* Animated spinner */}
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
@@ -76,7 +75,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 }}
         />
-        
+
         {/* Center dot for larger sizes */}
         {size === 'xl' && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -84,7 +83,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </div>
         )}
       </div>
-      
+
       {/* Loading text */}
       {showText && text && (
         <motion.div
@@ -92,7 +91,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-4 text-center"
-        >
+
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
           </div>;
@@ -106,9 +105,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 // Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({ 
-  size = 'sm', 
-  className = '' 
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+  size = 'sm',
+  className = ''
 }) => (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
     <motion.div
@@ -133,12 +132,12 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 );
 
 // Full-screen loading overlay
-export const FullScreenLoader: React.FC<{ 
-  text?: string; 
+export const FullScreenLoader: React.FC<{
+  text?: string;
   showLogo?: boolean;
   className?: string;
-}> = ({ 
-  text = 'Loading amazing experiences...', 
+}> = ({
+  text = 'Loading amazing experiences...',
   showLogo = true,
   className = ''
 }) => (
@@ -160,12 +159,12 @@ export const FullScreenLoader: React.FC<{
 );
 
 // Skeleton loading component
-export const SkeletonLoader: React.FC<{ 
+export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
-}> = ({ 
-  className = '', 
-  lines = 3 
+}> = ({
+  className = '',
+  lines = 3
 }) => (
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map((_, index) => (
@@ -179,4 +178,4 @@ export const SkeletonLoader: React.FC<{
   </div>;
 );
 
-export default LoadingSpinner;
+export default LoadingSpinner;</motion.div></motion.div>}

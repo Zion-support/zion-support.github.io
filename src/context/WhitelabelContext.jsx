@@ -2,9 +2,7 @@ import React, { createContext, useContext } from 'react';
 const defaultConfig = {
   <<<<<<< HEAD
     compName: 'Zion Tech Group',
-=======
   companyName: 'Zion Tech Group',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     logo: '/logo.svg',
     primaryColor: '#1e40af',
     secondaryColor: '#7c3aed',

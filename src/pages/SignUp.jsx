@@ -1,23 +1,40 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-export default function SignUp() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { register } from "@/services/auth";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+// Form validation schema
+const signupSchema = z
+    .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+        .min(8, "Password must be at least 8 characters")
+        .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+        .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+        .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+        message: "You must accept the terms and conditions",
+    }),
+})
+    .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+});
+export default function Signup() {
+    const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
     const navigate = useNavigate();
-<<<<<<< HEAD
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        await axios.post('/auth/register', { email, password });
-        router('/marketplace')};
-    return (<form onSubmit={handleSubmit} className="p-4 space-y-2">
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="border px-2 py-1 w-full"/>
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="border px-2 py-1 w-full"/>
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-        Sign Up
-      </button>
-    </form>)}
-=======
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     // Track confirm password locally to prevent it from clearing on blur
@@ -63,7 +80,7 @@ export default function SignUp() {
                     // Set the session directly if verification is not required
                     const { error: sessionError } = await supabase.auth.setSession(resData.session);
                     if (sessionError) {
-                        console.error("Error setting session:", sessionError);
+                        // // // // // // // console.error("Error setting session:", sessionError);
                         form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
                         toast.error(sessionError.message || "Failed to set session. Please try logging in.");
                         return;
@@ -76,7 +93,7 @@ export default function SignUp() {
                 }
                 else {
                     // This case might indicate an unexpected response from the API
-                    console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+                    // // // // // // // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
                     form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
                     toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
                     // Potentially navigate to login or show a more specific error
@@ -92,14 +109,14 @@ export default function SignUp() {
                         await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
                     }
                     catch (err) {
-                        console.error('Mailchimp subscription failed', err);
+                        // // // // // // // console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
                 }
                 // Toast and navigation are handled above if session is present
                 // If emailVerificationRequired, no toast/navigation here, message is shown
             }
-            try { }
+            try { /* empty */ }
             catch (err) {
                 const message = err.message ?? "Registration failed";
                 form.setError("root", { message });
@@ -109,7 +126,7 @@ export default function SignUp() {
                 setIsSubmitting(false);
             }
         }
-        finally { }
+        finally { /* empty */ }
         ;
         const onInvalid = (errors) => {
             const firstError = Object.keys(errors)[0];
@@ -126,7 +143,7 @@ export default function SignUp() {
             return <Navigate to="/onboarding"/>;
         }
         return (<>
-      
+
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -295,8 +312,7 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      
+
     </>);
     };
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

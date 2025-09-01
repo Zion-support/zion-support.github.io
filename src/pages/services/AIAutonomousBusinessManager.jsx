@@ -16,7 +16,7 @@ const AIAutonomousBusinessManager = () => {
               AI Autonomous Business Manager
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business operations with our cutting-edge AI system that autonomously manages, 
+              Transform your business operations with our cutting-edge AI system that autonomously manages,
               optimizes, and scales your business processes in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

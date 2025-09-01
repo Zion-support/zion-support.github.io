@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
-export default function FuturisticHero() {
+import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default function FuturisticHero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
@@ -25,7 +24,7 @@ export default function FuturisticHero() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"/>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"/>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500"/>
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
       </div>
@@ -263,7 +262,7 @@ export default function FuturisticHero() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
           </button>
-          
+
           <button className="group relative border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-400 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-cyan-500/10">
             <span className="relative z-10 flex items-center">
               Get Started Today
@@ -273,31 +272,6 @@ export default function FuturisticHero() {
         </motion.div>
 
         {/* Scroll Indicator */}
-<<<<<<< HEAD
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
-  { duration: 1,
-  delay: 1.5 
-
-}} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <motion.div animate = {
-  { y[0, 10,
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-            <motion.div animate = {
-  { y[0, 12,
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
-=======
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 1,
   delay: 1.5 
@@ -346,7 +320,6 @@ export default function FuturisticHero() {
 
 
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </motion.div>
       </div>
@@ -368,7 +341,6 @@ export default function FuturisticHero() {
   
 
 }} transition={{
-=======
   
 
 }} animate = {
@@ -379,7 +351,6 @@ export default function FuturisticHero() {
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,

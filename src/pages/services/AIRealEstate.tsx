@@ -1,6 +1,4 @@
-import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 } from 'lucide-react';
-
-export default function AIRealEstate() {
+import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
   const features = [
     'AI-powered property valuation and market analysis',
     'Intelligent property matching and recommendations',;
@@ -13,10 +11,10 @@ export default function AIRealEstate() {
   ];
 
   const tiers = [
-    { 
-      name: 'Individual Agent', 
-      price: '$199/mo', 
-      details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support'] 
+    {
+      name: 'Individual Agent',
+      price: '$199/mo',
+      details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support']
     },
     { 
       name: 'Small Agency', 
@@ -171,4 +169,4 @@ export default function AIRealEstate() {
       </section>;
     </div>;
   );
-}
+}}

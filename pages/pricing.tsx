@@ -80,19 +80,13 @@ export default function PricingPage(...args[]):  {
       features['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
-<<<<<<< HEAD
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
       features['Architecture Design', 'Data Migration', 'Performance Optimization']
     };
-=======;
       name: 'Cloud Migration',;
       description: 'Complete cloud infrastructure migration',;
       price: 'From $10,000',;
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   const faqs = [
     {
@@ -114,19 +108,13 @@ export default function PricingPage(...args[]):  {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
-<<<<<<< HEAD
-    },
-    {
-      question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     };
-=======;
     },;
     {;
       question: 'Can I cancel my subscription?',;
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   return (
     <>
@@ -165,11 +153,11 @@ export default function PricingPage(...args[]):  {
                 <div 
                   key={index} 
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
-                    tier.popular 
-                      ? 'border-blue-400 border-2 scale-105' 
+                    tier.popular
+                      ? 'border-blue-400 border-2 scale-105'
                       : 'border-white border-opacity-10'
                   }`}
-                >
+
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -177,7 +165,7 @@ export default function PricingPage(...args[]):  {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                     <p className="text-gray-300 mb-6">{tier.description}</p>
@@ -196,14 +184,14 @@ export default function PricingPage(...args[]):  {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href={tier.ctaLink}
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       tier.popular
                         ? 'bg-blue-600 hover:bg-blue-700 text-white'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                     }`}
-                  >
+
                     {tier.cta}
                   </Link>
                 </div>
@@ -237,10 +225,10 @@ export default function PricingPage(...args[]):  {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href="/contact"
                     className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-                  >
+
                     Learn More →
                   </Link>
                 </div>
@@ -257,7 +245,7 @@ export default function PricingPage(...args[]):  {
                 Get answers to common questions about our pricing and services
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
@@ -278,26 +266,18 @@ export default function PricingPage(...args[]):  {
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 Contact Sales
               </Link>
-              <Link 
-                href="/services" 
+              <Link
+                href="/services"
                 className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
+
                 View Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
@@ -305,4 +285,3 @@ export default function PricingPage(...args[]):  {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

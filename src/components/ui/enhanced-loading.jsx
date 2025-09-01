@@ -35,8 +35,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
-            }
-        }
+
+
     };
     const iconVariants = {
   hidden: { scale: 0,
@@ -54,7 +54,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.1,
@@ -62,19 +62,17 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             transition: {
                 duration: 0.3,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const pulseVariants = {
   <<<<<<< HEAD
         pulse: {
             scale[1, 1.1, 1],
             opacity[1, 0.7, 1],
-=======
   pulse: {
             scale: [1, 1.1, 1],
             opacity: [1, 0.7, 1],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 2,
                 repeat: Infinity,
@@ -93,10 +91,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
   <<<<<<< HEAD
         bounce: {
             y[0, -20, 0],
-=======
   bounce: {
             y: [0, -20, 0],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 1.5,
                 repeat: Infinity,
@@ -115,10 +111,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
   <<<<<<< HEAD
         wave: {
             y[0, -15, 0],
-=======
   wave: {
             y: [0, -15, 0],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 1,
                 repeat: Infinity,
@@ -177,7 +171,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
           <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`}/>
         </motion.div>
-        
+
         {showIcons && (<div className="absolute inset-0">
             {icons.map((Icon, index) => (<motion.div key={index} className="absolute" style = {
   {
@@ -197,7 +191,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 
 
 }} transition={{
-=======
   height: sizeClasses[size]
                 
 
@@ -218,7 +211,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
@@ -237,28 +229,8 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
               </motion.div>))}
           </div>)}
       </div>
-      
+
       {text && (<motion.div variants={iconVariants} className="mt-6 text-center">
-<<<<<<< HEAD
-          <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
-  { opacity[0.5, 1,
-  0.5] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-            {text}
-          </motion.p>
-          <motion.div className="mt-2 flex justify-center space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
-  { scale[1, 1.5,
-  1] 
-
-}} transition = {
-  {
-=======
           <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
   { opacity: [0.5, 1,
   0.5] 
@@ -292,7 +264,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: 1.5,
                     repeat: Infinity,
   delay: i * 0.2

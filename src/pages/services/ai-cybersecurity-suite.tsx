@@ -22,22 +22,22 @@ export default function AICybersecuritySuite(...args: []):  {
                 <Shield className="w-4 h-4 mr-2" />
                 AI-Powered Cybersecurity
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Cybersecurity
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Suite</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds 
+                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds
                 in real-time. Protect your digital assets with intelligent threat detection and automated response.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Protected
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function AICybersecuritySuite(...args: []):  {
                 Intelligent Threat Protection
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats 
+                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats
                 with intelligent detection and automated response capabilities.
               </p>
             </div>
@@ -295,7 +295,7 @@ export default function AICybersecuritySuite(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200"
-              >
+
                 Schedule Security Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -311,4 +311,4 @@ export default function AICybersecuritySuite(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}}

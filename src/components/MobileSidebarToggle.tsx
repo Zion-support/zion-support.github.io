@@ -3,18 +3,6 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
 import { Link, useLocation  } from 'react-router-dom.ts';
 
-<<<<<<< HEAD
-export const MobileSidebarToggle: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-<<<<<<< HEAD
-  const toggleSection = (section: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
@@ -79,7 +67,7 @@ export const MobileSidebarToggle: React.FC = () => {;
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-      >
+
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </motion.button>
 
@@ -113,7 +101,7 @@ export const MobileSidebarToggle: React.FC = () => {;
 
 }}
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
-            >
+
               <div className="p-6">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
@@ -131,7 +119,7 @@ export const MobileSidebarToggle: React.FC = () => {;
                   <button
                     onClick={() => setIsOpen(false)}
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                  >
+
                     <X className="w-5 h-5" />
                   </button>
                 </div>
@@ -182,7 +170,7 @@ export const MobileSidebarToggle: React.FC = () => {;
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'
                           }`}
-                        >
+
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                           <span className="font-medium">{action.name}</span>
                         </Link>
@@ -230,7 +218,7 @@ export const MobileSidebarToggle: React.FC = () => {;
                       <button
                         onClick={() => toggleSection(section.title)}
                         className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-                      >
+
                         <div className="flex items-center space-x-3">
                           <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-300" />
                           <span className="font-medium">{section.title}</span>
@@ -277,7 +265,7 @@ export const MobileSidebarToggle: React.FC = () => {;
 }}
                             transition={{ duration: 0.3 }}
                             className="ml-7 mt-2 space-y-1"
-                          >
+
                             {section.items.map((item, itemIndex) => (
                               <motion.div
                                 key={item.name}
@@ -320,7 +308,7 @@ export const MobileSidebarToggle: React.FC = () => {;
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'
                                   }`}
-                                >
+
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
                                   <span className="text-sm">{item.name}</span>
                                 </Link>
@@ -349,14 +337,6 @@ export const MobileSidebarToggle: React.FC = () => {;
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>;
-    </>;
-  )};
-=======
             </motion.div>;
           </>;
         )};
@@ -364,4 +344,3 @@ export const MobileSidebarToggle: React.FC = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 } from 'lucide-react';
-const AIAgentOrchestrator = () => {
+import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 const AIAgentOrchestrator = () => {
     return (<>
       <Helmet>
         <title>AI Agent Orchestrator - Zion Tech Group</title>
@@ -26,7 +25,7 @@ const AIAgentOrchestrator = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Coordinate multiple AI agents seamlessly with our advanced orchestration platform. 
+                Coordinate multiple AI agents seamlessly with our advanced orchestration platform.
                 Manage complex workflows, optimize resource allocation, and achieve unprecedented automation efficiency.
               </p>
             </div>
@@ -74,7 +73,7 @@ const AIAgentOrchestrator = () => {
                 icon: CheckCircle,
                 title: "Quality Assurance",
                 description: "Built-in quality control mechanisms and validation frameworks for agent outputs"
-            }
+
         ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-colors">
                   <feature.icon className="w-12 h-12 text-purple-400 mb-6"/>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -111,7 +110,7 @@ const AIAgentOrchestrator = () => {
             {
                 title: "Business Process Automation",
                 description: "Automate complex business processes with intelligent agents handling different aspects of the workflow."
-            }
+
         ].map((useCase, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
@@ -143,3 +142,4 @@ const AIAgentOrchestrator = () => {
       </div>
     </>)};
 export default AIAgentOrchestrator;
+}}}

@@ -1,50 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
-<<<<<<< HEAD
-const mockSecurityMetrics = [
-    {
-        id: '1',
-        name: 'Security Score',
-        value: 87,
-        target: 90,
-        unit: '%',
-        trend: 'up',
-        change: 2.5,
-        category: 'Overall'
-    },
-    {
-        id: '2',
-        name: 'Threat Detection Rate',
-        value: 94.2,
-        target: 95,
-        unit: '%',
-        trend: 'up',
-        change: 1.8,
-        category: 'Detection'
-    },
-    {
-        id: '3',
-        name: 'Mean Time to Response',
-        value: 15,
-        target: 10,
-        unit: 'minutes',
-        trend: 'down',
-        change: -2.3,
-        category: 'Response'
-    },
-    {
-        id: '4',
-        name: 'Vulnerability Remediation',
-        value: 78.5,
-        target: 85,
-        unit: '%',
-        trend: 'up',
-        change: 3.2,
-        category: 'Remediation'
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockThreatIntelligence = [
     {
         id: '1',
@@ -65,7 +20,7 @@ const mockThreatIntelligence = [
         mitigationSteps['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
-    }
+
 ];
 export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false);

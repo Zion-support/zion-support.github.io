@@ -172,38 +172,10 @@ export default function Events(...args[]):  {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-<<<<<<< HEAD
-  const formatDate = (dateString: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })};
-
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'AI & ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'Data Analytics': return TrendingUp;
-      case 'IoT & Edge': return Zap;
-      case 'Digital Transformation': return Globe;
       default: return BookOpen}
   };
 
-<<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
-    if (status === 'upcoming') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
-    } else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (
@@ -234,7 +206,7 @@ export default function Events(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Calendar className="w-5 h-5" />
               <span className="font-medium">Events & Webinars</span>
@@ -243,7 +215,7 @@ export default function Events(...args[]):  {
               Join Our Events
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover the latest technology trends, learn from industry experts, and network with 
+              Discover the latest technology trends, learn from industry experts, and network with
               professionals at our comprehensive events, workshops, and webinars.
             </p>
           </motion.div>
@@ -342,21 +314,13 @@ export default function Events(...args[]):  {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
-<<<<<<< HEAD
-              <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {;
-=======;
+              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {upcomingEvents.map((event, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -393,7 +357,7 @@ export default function Events(...args[]):  {
 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                  >
+
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -467,19 +431,11 @@ export default function Events(...args[]):  {
                       <Link
                         href={`/events/${event.id}`}
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
+
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-<<<<<<< HEAD
-                        <div className="text-sm text-zion-slate-light">Contact us for details</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )})};
-=======;
                         <div className="text-sm text-zion-slate-light">Contact us for details</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
@@ -487,7 +443,6 @@ export default function Events(...args[]):  {
                   </motion.div>;
                 );
               })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </div>
         </section>
@@ -521,21 +476,13 @@ export default function Events(...args[]):  {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
-<<<<<<< HEAD
-              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {;
-=======;
+              <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {pastEvents.map((event, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -572,7 +519,7 @@ export default function Events(...args[]):  {
 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
-                  >
+
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -609,19 +556,11 @@ export default function Events(...args[]):  {
                       <Link
                         href={`/events/${event.id}`}
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
+
                         View Event Details
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-<<<<<<< HEAD
-                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )})};
-=======;
                         <div className="text-sm text-zion-slate-light">Contact us for future events</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
@@ -629,7 +568,6 @@ export default function Events(...args[]):  {
                   </motion.div>;
                 );
               })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </div>
         </section>
@@ -662,36 +600,28 @@ export default function Events(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Want to Host an Event?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group to host technology events, workshops, or webinars. 
+              Partner with Zion Tech Group to host technology events, workshops, or webinars.
               Let's create valuable learning experiences together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+
                 Partner With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+
                 View Our Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -699,4 +629,3 @@ export default function Events(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

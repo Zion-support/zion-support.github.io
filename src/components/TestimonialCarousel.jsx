@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight } from 'lucide-react';
-const testimonials = [
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [
     {
         id: 1,
         name: 'Sarah Johnson',
@@ -67,7 +66,7 @@ const testimonials = [
         rating: 5,
         category: 'Infrastructure',
         project: 'Cloud Infrastructure'
-    }
+
 ];
 export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,16 +74,10 @@ export function TestimonialCarousel() {
     useEffect(() => {
         const timer = setInterval(() => {
             setDirection(1);
-<<<<<<< HEAD
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 5000);
-        return () => clearInterval(timer)}, []);
-    const swipeConfidenceThreshold = 10000;
-=======
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
         }, 5000);
         return () => clearInterval(timer);
     }, []);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity};
     const paginate = (newDirection) => {
@@ -223,7 +216,7 @@ export function TestimonialCarousel() {
           <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(-1)}>
             <ChevronLeft className="w-6 h-6"/>
           </button>
-          
+
           <button className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(1)}>
             <ChevronRight className="w-6 h-6"/>
           </button>

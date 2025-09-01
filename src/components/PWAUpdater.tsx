@@ -22,6 +22,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   useEffect(() => {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
+      // // // // // // // console.log('Service worker not available');
       // Register service worker
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
@@ -106,6 +107,9 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
         window.location.reload();
       }, 1000);
     } catch (error) {
+      // // // // // // // console.error('Update failed:', error);
+      setIsUpdating(false);
+
       console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true);

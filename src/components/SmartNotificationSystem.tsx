@@ -1,506 +1,538 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Bell, 
-  X, 
-  CheckCircle, 
-  AlertCircle, 
-  Info, 
+import {
+  Bell,
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
   XCircle,
   Settings,
   Volume2,
   VolumeX,
   Clock,
   Star,
-  MessageSquare,
+  Archive,
+  Trash2,
+  Filter,
+  Search,
+  MoreVertical,
+  Eye,
+  EyeOff,
   Zap,
-  TrendingUp,
-  Award
+  Shield,
+  Globe
 } from 'lucide-react';
 
-interface Notification {
+export interface Notification {
   id: string;
-  type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
+  type: 'success' | 'error' | 'warning' | 'info' | 'system';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  category: 'user' | 'system' | 'security' | 'performance' | 'update';
   timestamp: Date;
   read: boolean;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-  priority: 'low' | 'medium' | 'high';
-  category: string;
+  archived: boolean;
+  actions?: NotificationAction[];
+  metadata?: Record<string, any>;
   expiresAt?: Date;
 }
 
-interface Props {
-  enabled?: boolean;
+export interface NotificationAction {
+  label: string;
+  action: () => void;
+  variant?: 'primary' | 'secondary' | 'danger';
+  icon?: React.ComponentType<any>;
 }
 
-export function SmartNotificationSystem({ enabled = true }: Props) {;
+interface SmartNotificationSystemProps {
+  enabled?: boolean;
+  maxNotifications?: number;
+  autoDismiss?: boolean;
+  autoDismissDelay?: number;
+  soundEnabled?: boolean;
+  onNotificationAction?: (notification: Notification, action: string) => void;
+}
+
+export function SmartNotificationSystem({
+  enabled = true,
+  maxNotifications = 5,
+  autoDismiss = true,
+  autoDismissDelay = 5000,
+  soundEnabled = true,
+  onNotificationAction
+}: SmartNotificationSystemProps) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [settings, setSettings] = useState({
+    sound: soundEnabled,
+    desktop: true,
+    autoDismiss: autoDismiss,
+    autoDismissDelay,
+    showPreview: true,
+    grouping: true,
+    priority: true
+  });
 
-  // Generate sample notifications
-  const generateSampleNotifications = useCallback(() => {
-    const sampleNotifications: Notification[] = [
-      {
-        id: '1',
-        type: 'success',
-        title: 'Welcome to Zion Tech Group!',
-        message: 'Your account has been successfully created. Explore our AI-powered solutions.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
-        read: false,
-        priority: 'high',
-        category: 'onboarding',
-        action: {
-          label: 'Get Started',
-          onClick: () => console.log('Get Started clicked')
-        }
-      },
-      {
-        id: '2',
-        type: 'achievement',
-        title: 'Performance Milestone Reached!',
-        message: 'Your website performance score has improved to 95%. Great job!',
-        timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-        read: false,
-        priority: 'medium',
-        category: 'performance',
-        action: {
-          label: 'View Details',
-          onClick: () => console.log('View Details clicked')
-        }
-      },
-      {
-        id: '3',
-        type: 'info',
-        title: 'New Feature Available',
-        message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        read: true,
-        priority: 'low',
-        category: 'features'
-      },
-      {
-        id: '4',
-        type: 'warning',
-        title: 'Security Update Required',
-        message: 'Please update your password to maintain account security.',
-        timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
-        read: false,
-        priority: 'high',;
-        category: 'security',;
-        action: {;
-          label: 'Update Now',;
-          onClick: () => console.log('Update Now clicked');
-        };
-      };
-    ];
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const notificationCount = notifications.filter(n => !n.read).length;
 
-    setNotifications(sampleNotifications);
-    setUnreadCount(sampleNotifications.filter(n => !n.read).length);
-  }, []);
-
-  // Initialize with sample notifications
+  // Initialize audio for notification sounds
   useEffect(() => {
-    if (enabled) {
-      generateSampleNotifications();
+    if (settings.sound) {
+      audioRef.current = new Audio('/notification-sound.mp3');
+      audioRef.current.volume = 0.3;
     }
-  }, [enabled, generateSampleNotifications]);
+  }, [settings.sound]);
 
-  // Auto-expire notifications
-  useEffect(() => {
-    const interval = setInterval(() => {;
-      setNotifications(prev => {;
-        const now = new Date();
-        const filtered = prev.filter(notification => {;
-          if (notification.expiresAt && notification.expiresAt < now) {;
-            return false;
-          }
-          return true;
-        });
-        
-        if (filtered.length !== prev.length) {
-          setUnreadCount(filtered.filter(n => !n.read).length);
-        }
-        
-        return filtered;
+  // Add notification
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+    const newNotification: Notification = {
+      ...notification,
+      id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: new Date(),
+      read: false,
+      archived: false
+    };
+
+    setNotifications(prev => {
+      const updated = [newNotification, ...prev];
+      return updated.slice(0, maxNotifications);
+    });
+
+    // Play sound if enabled
+    if (settings.sound && audioRef.current) {
+      audioRef.current.play().catch(() => {
+        // Ignore audio play errors
       });
-    }, 60000); // Check every minute
+    }
 
-    return () => clearInterval(interval);
+    // Auto-dismiss if enabled
+    if (settings.autoDismiss && notification.priority !== 'critical') {
+      setTimeout(() => {
+        dismissNotification(newNotification.id);
+      }, settings.autoDismissDelay);
+    }
+
+    // Show desktop notification if enabled
+    if (settings.desktop && 'Notification' in window && Notification.permission === 'granted') {
+      new Notification(notification.title, {
+        body: notification.message,
+        icon: '/favicon.ico',
+        tag: notification.id,
+        requireInteraction: notification.priority === 'critical'
+      });
+    }
+  }, [maxNotifications, settings, autoDismissDelay]);
+
+  // Dismiss notification
+  const dismissNotification = useCallback((id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
-  // Mark notification as read
-  const markAsRead = useCallback((id: string) => {;
-    setNotifications(prev => {;
-      const updated = prev.map(n => ;
-        n.id === id ? { ...n, read: true } : n;
-      );
-      setUnreadCount(updated.filter(n => !n.read).length);
-      return updated;
-    });
+  // Mark as read
+  const markAsRead = useCallback((id: string) => {
+    setNotifications(prev => 
+      prev.map(n => n.id === id ? { ...n, read: true } : n)
+    );
+  }, []);
+
+  // Archive notification
+  const archiveNotification = useCallback((id: string) => {
+    setNotifications(prev => 
+      prev.map(n => n.id === id ? { ...n, archived: true } : n)
+    );
   }, []);
 
   // Mark all as read
-  const markAllAsRead = useCallback(() => {;
-    setNotifications(prev => {;
-      const updated = prev.map(n => ({ ...n, read: true }));
-      setUnreadCount(0);
-      return updated;
-    });
-  }, []);
-
-  // Remove notification
-  const removeNotification = useCallback((id: string) => {;
-    setNotifications(prev => {;
-      const filtered = prev.filter(n => n.id !== id);
-      setUnreadCount(filtered.filter(n => !n.read).length);
-      return filtered;
-    });
+  const markAllAsRead = useCallback(() => {
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
   }, []);
 
   // Clear all notifications
-  const clearAllNotifications = useCallback(() => {;
+  const clearAllNotifications = useCallback(() => {
     setNotifications([]);
-    setUnreadCount(0);
   }, []);
 
-  // Toggle mute
-  const toggleMute = useCallback(() => {;
-    setIsMuted(!isMuted);
-  }, [isMuted]);
+  // Filter notifications
+  const filteredNotifications = notifications.filter(notification => {
+    if (filter === 'unread' && notification.read) return false;
+    if (filter === 'important' && notification.priority !== 'high' && notification.priority !== 'critical') return false;
+    if (searchTerm && !notification.title.toLowerCase().includes(searchTerm.toLowerCase()) && 
+        !notification.message.toLowerCase().includes(searchTerm.toLowerCase())) return false;
+    return !notification.archived;
+  });
 
   // Get notification icon
-  const getNotificationIcon = (type: Notification['type']) => {;
-    switch (type) {;
-      case 'success':;
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />;
-      case 'achievement':
-        return <Award className="w-5 h-5 text-purple-500" />;
-      default:
-        return <Info className="w-5 h-5 text-gray-500" />;
+  const getNotificationIcon = (type: Notification['type']) => {
+    switch (type) {
+      case 'success': return CheckCircle;
+      case 'error': return XCircle;
+      case 'warning': return AlertTriangle;
+      case 'info': return Info;
+      case 'system': return Zap;
+      default: return Info;
     }
   };
 
   // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {;
-    switch (priority) {;
-      case 'high':;
-        return 'border-l-red-500';
-      case 'medium':
-        return 'border-l-yellow-500';
-      case 'low':
-        return 'border-l-blue-500';
-      default:
-        return 'border-l-gray-500';
+  const getPriorityColor = (priority: Notification['priority']) => {
+    switch (priority) {
+      case 'critical': return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
+      case 'high': return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
+      case 'medium': return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';
+      case 'low': return 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800';
+      default: return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800';
     }
   };
 
-  // Format timestamp
-  const formatTimestamp = (timestamp: Date) => {;
-    const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const minutes = Math.floor(diff / (1000 * 60));
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    if (minutes < 1) return 'Just now';
-    if (minutes < 60) return `${minutes}m ago`;
-    if (hours < 24) return `${hours}h ago`;
-    return `${days}d ago`;
+  // Get category icon
+  const getCategoryIcon = (category: Notification['category']) => {
+    switch (category) {
+      case 'user': return Eye;
+      case 'system': return Zap;
+      case 'security': return Shield;
+      case 'performance': return Zap;
+      case 'update': return Globe;
+      default: return Info;
+    }
   };
+
+  // Request notification permission
+  const requestNotificationPermission = useCallback(async () => {
+    if ('Notification' in window && Notification.permission === 'default') {
+      const permission = await Notification.requestPermission();
+      if (permission === 'granted') {
+        setSettings(prev => ({ ...prev, desktop: true }));
+      }
+    }
+  }, []);
+
+  // Handle notification action
+  const handleNotificationAction = useCallback((notification: Notification, action: NotificationAction) => {
+    action.action();
+    markAsRead(notification.id);
+    
+    if (onNotificationAction) {
+      onNotificationAction(notification, action.label);
+    }
+  }, [markAsRead, onNotificationAction]);
+
+  // Group notifications by category
+  const groupedNotifications = settings.grouping 
+    ? filteredNotifications.reduce((groups, notification) => {
+        const category = notification.category;
+        if (!groups[category]) groups[category] = [];
+        groups[category].push(notification);
+        return groups;
+      }, {} as Record<string, Notification[]>)
+    : { 'All': filteredNotifications };
 
   if (!enabled) return null;
 
-  if (!isVisible) {
-    return (
+  return (
+    <>
+      {/* Notification Bell */}
       <motion.button
-        onClick = {() => setIsVisible(true)}
-        className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        title="Notifications"
+        onClick={() => setIsOpen(true)}
+        className="relative p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         aria-label="Open notifications"
       >
-        <Bell className="w-6 h-6 text-white" />
-        {unreadCount > 0 && (
+        <Bell className="w-6 h-6" />
+        {notificationCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }};
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold";
-          >;
-            {unreadCount > 9 ? '9+' : unreadCount};
-          </motion.div>;
-        )};
-      </motion.button>;
-    );
-  }
+            animate={{ scale: 1 }}
+            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-medium"
+          >
+            {notificationCount > 99 ? '99+' : notificationCount}
+          </motion.div>
+        )}
+      </motion.button>
 
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial = {
-  { opacity: 0,
-  x: 300 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-        exit = {
-  { opacity: 0,
-  x: 300 
-
-
-
-
-
-
-}}
-        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
-      >
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <div className="flex items-center gap-2">
-            <Bell className="w-5 h-5 text-pink-500" />
-            <h3 className="text-lg font-semibold text-gray-800">Notifications</h3>
-            {unreadCount > 0 && (
-              <span className="px-2 py-1 bg-pink-100 text-pink-600 text-xs rounded-full font-medium">
-                {unreadCount} new
-              </span>
-            )}
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <button
-              onClick={toggleMute}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              title={isMuted ? 'Unmute notifications' : 'Mute notifications'}
-            >
-              {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button>
-            
-            <button
-              onClick={() => setShowSettings(!showSettings)}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              title="Notification settings"
-            >
-              <Settings className="w-4 h-4" />
-            </button>
-            
-            <button
-              onClick={() => setIsVisible(false)}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              aria-label="Close notifications"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Settings Panel */}
-        <AnimatePresence>
-          {showSettings && (
+      {/* Notification Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          >
             <motion.div
-              initial = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
-              animate = {
-  { height: 'auto',
-  opacity: 1 
-
-
-
-
-
-
-}}
-              exit = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
-              className="border-b border-gray-200 p-4 bg-gray-50"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: -20 }}
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden"
             >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">Mark all as read</span>
-                  <button
-                    onClick={markAllAsRead}
-                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
-                    Mark All
-                  </button>
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center space-x-3">
+                  <Bell className="w-6 h-6 text-blue-600" />
+                  <div>
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                      Notifications
+                    </h2>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {notificationCount} unread
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-700">Clear all notifications</span>
+                <div className="flex items-center space-x-2">
                   <button
-                    onClick={clearAllNotifications}
-                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
+                    onClick={() => setShowSettings(!showSettings)}
+                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >
-                    Clear All
+                    <Settings className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                  >
+                    <X className="w-5 h-5" />
                   </button>
                 </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
-        {/* Notifications List */}
-        <div className="max-h-96 overflow-y-auto">
-          {notifications.length === 0 ? (
-            <div className="p-8 text-center">
-              <Bell className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-              <p className="text-gray-500">No notifications yet</p>
-              <p className="text-sm text-gray-400">We'll notify you when something important happens</p>
-            </div>
-          ) : (
-            <div className="divide-y divide-gray-100">
-              {notifications.map((notification) => (
-                <motion.div
-                  key={notification.id}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  exit = {
-  { opacity: 0,
-  y: -20 
-
-
-
-
-
-
-}}
-                  className={`p-4 hover:bg-gray-50 transition-colors cursor-pointer border-l-4 ${getPriorityColor(notification.priority)} ${
-                    !notification.read ? 'bg-blue-50/50' : ''
-                  }`}
-                  onClick={() => markAsRead(notification.id)}
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 mt-0.5">
-                      {getNotificationIcon(notification.type)}
+              {/* Settings Panel */}
+              <AnimatePresence>
+                {showSettings && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="border-b border-gray-200 dark:border-gray-700 overflow-hidden"
+                  >
+                    <div className="p-4 space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <label className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            checked={settings.sound}
+                            onChange={(e) => setSettings(prev => ({ ...prev, sound: e.target.checked }))}
+                            className="w-4 h-4 text-blue-600"
+                          />
+                          <span className="text-sm">Sound</span>
+                        </label>
+                        <label className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            checked={settings.desktop}
+                            onChange={(e) => setSettings(prev => ({ ...prev, desktop: e.target.checked }))}
+                            className="w-4 h-4 text-blue-600"
+                          />
+                          <span className="text-sm">Desktop</span>
+                        </label>
+                        <label className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            checked={settings.autoDismiss}
+                            onChange={(e) => setSettings(prev => ({ ...prev, autoDismiss: e.target.checked }))}
+                            className="w-4 h-4 text-blue-600"
+                          />
+                          <span className="text-sm">Auto-dismiss</span>
+                        </label>
+                        <label className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            checked={settings.grouping}
+                            onChange={(e) => setSettings(prev => ({ ...prev, grouping: e.target.checked }))}
+                            className="w-4 h-4 text-blue-600"
+                          />
+                          <span className="text-sm">Group by category</span>
+                        </label>
+                      </div>
+                      {settings.desktop && Notification.permission === 'default' && (
+                        <button
+                          onClick={requestNotificationPermission}
+                          className="px-3 py-1 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                          Enable Desktop Notifications
+                        </button>
+                      )}
                     </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <p className={`text-sm font-medium ${!notification.read ? 'text-gray-900' : 'text-gray-700'}`}>
-                            {notification.title}
-                          </p>
-                          <p className="text-sm text-gray-600 mt-1">;
-                            {notification.message};
-                          </p>;
-                          ;
-                          {notification.action && (;
-                            <button;
-                              onClick={(e) => {;
-                                e.stopPropagation();
-                                notification.action!.onClick();
-                              }}
-                              className = "mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                            >
-                              {notification.action.label} →
-                            </button>
-                          )}
-                        </div>
-                        
-                        <div className="flex items-center gap-2 ml-3">;
-                          <span className="text-xs text-gray-400">;
-                            {formatTimestamp(notification.timestamp)};
-                          </span>;
-                          ;
-                          <button;
-                            onClick={(e) => {;
-                              e.stopPropagation();
-                              removeNotification(notification.id);
-                            }}
-                            className = "p-1 text-gray-400 hover:text-red-500 transition-colors"
-                            title="Remove notification"
-                          >
-                            <X className="w-3 h-3" />
-                          </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Controls */}
+              <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex space-x-1">
+                    {(['all', 'unread', 'important'] as const).map((filterType) => (
+                      <button
+                        key={filterType}
+                        onClick={() => setFilter(filterType)}
+                        className={`px-3 py-1 text-sm rounded-lg transition-colors ${
+                          filter === filterType
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                        }`}
+                      >
+                        {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={markAllAsRead}
+                      className="px-3 py-1 text-sm bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                    >
+                      Mark All Read
+                    </button>
+                    <button
+                      onClick={clearAllNotifications}
+                      className="px-3 py-1 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                    >
+                      Clear All
+                    </button>
+                  </div>
+                </div>
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search notifications..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              {/* Notifications List */}
+              <div className="overflow-y-auto max-h-[60vh]">
+                {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (
+                  <div key={category} className="border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+                    {settings.grouping && (
+                      <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800">
+                        <div className="flex items-center space-x-2">
+                          {getCategoryIcon(category as Notification['category'])({ className: 'w-4 h-4' })}
+                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
+                            {category}
+                          </span>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">
+                            ({categoryNotifications.length})
+                          </span>
                         </div>
                       </div>
-                      
-                      {/* Category badge */}
-                      <div className="mt-2">
-                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                          {notification.category}
-                        </span>
-                      </div>
+                    )}
+                    <div className="divide-y divide-gray-200 dark:divide-gray-700">
+                      {categoryNotifications.map((notification) => (
+                        <motion.div
+                          key={notification.id}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          className={`p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${
+                            !notification.read ? 'bg-blue-50 dark:bg-blue-900/10' : ''
+                          }`}
+                        >
+                          <div className="flex items-start space-x-3">
+                            <div className={`p-2 rounded-lg ${getPriorityColor(notification.priority)}`}>
+                              {getNotificationIcon(notification.type)({ className: 'w-5 h-5' })}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-start justify-between">
+                                <div className="flex-1">
+                                  <h4 className={`text-sm font-medium ${
+                                    !notification.read ? 'text-gray-900 dark:text-white' : 'text-gray-700 dark:text-gray-300'
+                                  }`}>
+                                    {notification.title}
+                                  </h4>
+                                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                    {notification.message}
+                                  </p>
+                                  <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500 dark:text-gray-400">
+                                    <span className="flex items-center space-x-1">
+                                      <Clock className="w-3 h-3" />
+                                      <span>{notification.timestamp.toLocaleTimeString()}</span>
+                                    </span>
+                                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(notification.priority)}`}>
+                                      {notification.priority}
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="flex items-center space-x-1 ml-2">
+                                  {!notification.read && (
+                                    <button
+                                      onClick={() => markAsRead(notification.id)}
+                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
+                                      title="Mark as read"
+                                    >
+                                      <Eye className="w-4 h-4" />
+                                    </button>
+                                  )}
+                                  <button
+                                    onClick={() => archiveNotification(notification.id)}
+                                    className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
+                                    title="Archive"
+                                  >
+                                    <Archive className="w-4 h-4" />
+                                  </button>
+                                  <button
+                                    onClick={() => dismissNotification(notification.id)}
+                                    className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
+                                    title="Dismiss"
+                                  >
+                                    <X className="w-4 h-4" />
+                                  </button>
+                                </div>
+                              </div>
+                              
+                              {/* Actions */}
+                              {notification.actions && notification.actions.length > 0 && (
+                                <div className="flex space-x-2 mt-3">
+                                  {notification.actions.map((action, index) => (
+                                    <button
+                                      key={index}
+                                      onClick={() => handleNotificationAction(notification, action)}
+                                      className={`px-3 py-1 text-xs rounded-lg transition-colors ${
+                                        action.variant === 'primary'
+                                          ? 'bg-blue-600 text-white hover:bg-blue-700'
+                                          : action.variant === 'danger'
+                                          ? 'bg-red-600 text-white hover:bg-red-700'
+                                          : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                                      }`}
+                                    >
+                                      {action.icon && <action.icon className="w-3 h-3 inline mr-1" />}
+                                      {action.label}
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
-        {notifications.length > 0 && (
-          <div className="p-3 border-t border-gray-200 bg-gray-50">
-            <div className="flex items-center justify-between text-xs text-gray-500">
-              <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>;
-              <span>{unreadCount} unread</span>;
-            </div>;
-          </div>;
-        )};
-      </motion.div>;
-    </AnimatePresence>;
+                ))}
+                
+                {filteredNotifications.length === 0 && (
+                  <div className="p-8 text-center text-gray-500 dark:text-gray-400">
+                    <Bell className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                    <p>No notifications to display</p>
+                    <p className="text-sm">You're all caught up!</p>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
+
+// Export the addNotification function for external use
+export const addNotification = (notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+  // This will be implemented by the component instance
+  console.warn('addNotification called before component initialization');
+};

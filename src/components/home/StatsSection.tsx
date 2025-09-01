@@ -43,7 +43,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           }, 50);
         });
       }, 500);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
       return () => clearTimeout(timer)}
   }, [isInView, stats]);
@@ -75,7 +74,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
+
           <h2 id="stats-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
           </h2>
@@ -131,7 +130,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 }
               }}
-            >
+
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -158,7 +157,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 }}
                 viewport={{ once: true }}
-              >
+
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
@@ -173,14 +172,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
-<<<<<<< HEAD
-            </motion.div>
-          ))}
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </motion.div>;
           ))};
         </div>;
@@ -188,6 +179,5 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default StatsSection;
+export default StatsSection;}}}}}

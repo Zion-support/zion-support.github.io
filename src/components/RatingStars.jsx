@@ -1,6 +1,5 @@
 import React from 'react';
-import { Star, StarHalf } from 'lucide-react';
-export function RatingStars({ value = 0 }) {
+import { Star, StarHalf export function RatingStars({ value = 0 }) {
     const filled = Math.floor(value);
     const half = value - filled >= 0.5;
     return (<div className="flex items-center" data-testid="rating-stars">

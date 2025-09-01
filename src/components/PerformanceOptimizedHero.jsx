@@ -67,9 +67,9 @@ const PerformanceOptimizedHero = memo(() => {
             <br />
             <span className="text-white">With AI & Tech</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services 
+            Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services
             designed to propel your business into the future.
           </p>
 
@@ -97,3 +97,4 @@ const PerformanceOptimizedHero = memo(() => {
     </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
+}

@@ -59,16 +59,6 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   maxProjects?: number}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-<<<<<<< HEAD
-  showFilters = true,
-  showStats = true,
-  maxProjects = 10;
-}) => {;
-  const [projects, setProjects] = useState<any>([]);
-  const [filteredProjects, setFilteredProjects] = useState<any>([]);
-  const [selectedStatus, setSelectedStatus] = useState<any>('all');
-  const [selectedPriority, setSelectedPriority] = useState<any>('all');
-=======
   showFilters = true,;
   showStats = true,;
   maxProjects = 10;
@@ -77,7 +67,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [selectedPriority, setSelectedPriority] = useState<string>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
@@ -135,7 +124,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             status: 'pending',
             assignee: 'Sarah Johnson',
             priority: 'medium'
-          }
+
         ]
       },
       {
@@ -169,7 +158,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             status: 'in-progress',
             assignee: 'Lisa Thompson',
             priority: 'critical'
-          }
+
         ]
       },
       {
@@ -194,9 +183,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             status: 'in-progress',
             assignee: 'James Wilson',
             priority: 'high'
-          }
+
         ]
-      }
+
     ];
 
     setProjects(sampleProjects);
@@ -219,7 +208,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )};
-=======;
       filtered = filtered.filter(p => ;
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -227,7 +215,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setFilteredProjects(filtered.slice(0, maxProjects))}, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
 
@@ -249,7 +236,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const getStatusDisplay = (status: string)  => {
     switch (status) {
       case 'planning':
-=======
   total: projects.length,
     active: projects.filter(p => p.status === 'active').length,
     completed: projects.filter(p => p.status === 'completed').length,
@@ -270,7 +256,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const getStatusDisplay = (status: string) => {;
     switch (status) {;
       case 'planning':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
       case 'active':
         return { color: 'text-green-400 bg-green-400/20', icon: <Play className="w-4 h-4" /> };
@@ -285,42 +270,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
-<<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get milestone status color
-<<<<<<< HEAD
-  const getMilestoneStatusColor = (status: string) => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20';
-      case 'completed': return 'text-green-400 bg-green-400/20';
-      case 'overdue': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Format currency
-<<<<<<< HEAD
-  const formatCurrency = (amount: number)  => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0;
-    }).format(amount)};
-
-  // Calculate days remaining
-  const getDaysRemaining = (endDate: string)  => {
-=======;
   const formatCurrency = (amount: number) => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
@@ -332,7 +289,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Calculate days remaining
   const getDaysRemaining = (endDate: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const end = new Date(endDate);
     const today = new Date();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -363,7 +319,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                     ? 'bg-zion-cyan text-white'
                     : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
                 }`}
-              >
+
                 {mode.icon}
                 {mode.label}
               </button>
@@ -374,7 +330,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <button
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
-          >
+
             <Plus className="w-4 h-4" />
             Add Project
           </button>
@@ -406,7 +362,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
             <div className="text-zinc-400 text-sm">Total Projects</div>
           </motion.div>
@@ -434,7 +390,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: 0.1 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
             <div className="text-zinc-400 text-sm">Active</div>
           </motion.div>
@@ -462,7 +418,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: 0.2 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
             <div className="text-zinc-400 text-sm">Completed</div>
           </motion.div>
@@ -490,7 +446,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: 0.3 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
             <div className="text-zinc-400 text-sm">On Hold</div>
           </motion.div>
@@ -518,7 +474,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: 0.4 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
             <div className="text-zinc-400 text-sm">Total Budget</div>
           </motion.div>
@@ -546,7 +502,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: 0.5 }}
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
             <div className="text-zinc-400 text-sm">Avg Progress</div>
           </motion.div>
@@ -561,7 +517,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+
             <option value="all">All Statuses</option>
             <option value="planning">Planning</option>
             <option value="active">Active</option>
@@ -575,7 +531,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -624,7 +580,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 }}
             transition={{ delay: index * 0.1 }}
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-          >
+
             {/* Project Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
@@ -711,7 +667,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                 <span
                   key={tag}
                   className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                >
+
                   {tag}
                 </span>
               ))}
@@ -725,7 +681,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                   <div
                     key={milestone.id}
                     className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg"
-                  >
+
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <h5 className="text-sm font-medium text-white">{milestone.title}</h5>
@@ -756,7 +712,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-center py-12"
-        >
+
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No projects found</h3>
           <p className="text-zinc-400 mb-4">
@@ -766,14 +722,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-<<<<<<< HEAD
-            Create Project
-          </button>
-        </motion.div>
-      )};
-    </div>;
-  )};
-=======
             Create Project;
           </button>;
         </motion.div>;
@@ -781,4 +729,3 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

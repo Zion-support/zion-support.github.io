@@ -47,7 +47,7 @@ const mockUser = {
             description: "Created your first forum post",
             icon: "Star",
             color: "#6366F1"
-        }
+
     ],
     isVerified: true,
     isModerator: false
@@ -103,7 +103,7 @@ const userPosts = [
         upvotes: 24,
         downvotes: 0,
         replyCount: 6
-    }
+
 ];
 export default function CommunityProfilePage() {
     const { userId } = useParams();
@@ -128,14 +128,6 @@ export default function CommunityProfilePage() {
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-<<<<<<< HEAD
-        </div>)}
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
-  `community, forum, profile, user profile,
-  ${user.name
-
-}`}/>
-=======
         </div>);
     }
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
@@ -148,7 +140,6 @@ export default function CommunityProfilePage() {
 
 
 }`}/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -160,7 +151,7 @@ export default function CommunityProfilePage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">{user.name}</span>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <Card>
@@ -184,18 +175,18 @@ export default function CommunityProfilePage() {
                   </Badge>)}
                 {user.isModerator && (<Badge className="mt-2 bg-blue-500">Moderator</Badge>)}
               </CardHeader>
-              
+
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
                   <ReputationDisplay reputation={user.reputation} size="lg"/>
                 </div>
-                
+
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
                   <UserBadges badges={user.badges}/>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
                     <CardContent className="p-4 text-center">
@@ -210,24 +201,24 @@ export default function CommunityProfilePage() {
                     </CardContent>
                   </Card>
                 </div>
-                
+
                 <div className="text-sm text-muted-foreground">
                   <p>Member since April 2025</p>
                 </div>
               </CardContent>
             </Card>
           </div>
-          
+
           <div className="md:col-span-2">
             <Tabs defaultValue="posts">
               <TabsList>
                 <TabsTrigger value="posts">Posts</TabsTrigger>
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="posts" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                
+
                 {posts.length > 0 ? (<div className="space-y-4">
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
                   </div>) : (<Card>
@@ -236,10 +227,10 @@ export default function CommunityProfilePage() {
                     </CardContent>
                   </Card>)}
               </TabsContent>
-              
+
               <TabsContent value="activity" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                
+
                 <Card>
                   <CardContent className="p-6">
                     <ul className="space-y-4">

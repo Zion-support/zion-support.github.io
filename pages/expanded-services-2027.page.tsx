@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState, useMemo  } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_2027  } from "../data/expandedInnovativeServices2027";
-=======
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const ExpandedServicesShowcase2027: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,13 +10,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
   const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories and subcategories
-<<<<<<< HEAD
-  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-    return cats}, []);
-
-  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
-      return subcats}
-=======
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
     return cats;
   }, []);
@@ -31,7 +17,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
   const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
       return subcats;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
     return subcats}, [selectedCategory]);
 
@@ -70,11 +55,11 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
             Expanded Innovative Services 2027
           </h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Discover our cutting-edge portfolio of advanced technology services designed to transform your business 
-            with next-generation cybersecurity, data analytics, cloud infrastructure, IoT solutions, fintech innovations, 
+            Discover our cutting-edge portfolio of advanced technology services designed to transform your business
+            with next-generation cybersecurity, data analytics, cloud infrastructure, IoT solutions, fintech innovations,
             and healthcare technology breakthroughs.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Contact Zion Tech Group</h3>
@@ -111,14 +96,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               value={selectedCategory};
               onChange={(e) => {;
                 setSelectedCategory(e.target.value);
-<<<<<<< HEAD
-                setSelectedSubcategory('all')}}
-              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400";
-=======;
                 setSelectedSubcategory('all');
               }}
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               {categories.map(cat  => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
@@ -126,7 +106,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 </option>
               ))}
             </select>
-            
+
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
@@ -138,32 +118,32 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 </option>
               ))}
             </select>
-            
+
             <button
               onClick={resetFilters}
               className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
-            >
+
               Reset Filters
             </button>
           </div>
-          
+
           <div className="flex justify-between items-center">
             <div className="text-white">
               <span className="font-semibold">{filteredServices.length}</span> services found
             </div>
-            
+
             <div className="flex items-center space-x-2">
               <span className="text-white text-sm">View:</span>
               <button
                 onClick={() => setViewMode('grid')}
                 className={`px-3 py-1 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
-              >
+
                 Grid
               </button>
               <button
                 onClick={() => setViewMode('list')}
                 className={`px-3 py-1 rounded ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
-              >
+
                 List
               </button>
             </div>
@@ -178,13 +158,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${
                 viewMode === 'list' ? 'flex items-start space-x-4' : ''
               }`}
-            >
+
               {viewMode === 'list' && (
                 <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">
                   {service.name.charAt(0)}
                 </div>
               )}
-              
+
               <div className={viewMode === 'list' ? 'flex-1' : ''}>
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -196,7 +176,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                     {service.status}
                   </span>
                 </div>
-                
+
                 <div className="mb-3">
                   <span className="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded mr-2 mb-1">
                     {service.category}
@@ -205,9 +185,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                     {service.subcategory}
                   </span>
                 </div>
-                
+
                 <p className="text-white/80 mb-4">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="text-white/70 text-sm space-y-1">
@@ -219,7 +199,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Pricing:</h4>
                   <div className="text-white/80">
@@ -228,7 +208,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                     <span className="text-sm ml-2">({service.pricing.model})</span>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="flex text-yellow-400">
@@ -240,7 +220,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                     </div>
                     <span className="text-white/70 text-sm">({service.reviews})</span>
                   </div>
-                  
+
                   <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
                     Learn More
                   </button>
@@ -257,30 +237,22 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               Ready to Transform Your Business?
             </h2>
             <p className="text-white/80 mb-6">
-              Our expanded 2027 services portfolio is designed to give you the competitive edge. 
+              Our expanded 2027 services portfolio is designed to give you the competitive edge.
               Contact us today to discuss how we can help implement these cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 Get Started Today
               </a>
               <a
                 href="/expanded-services-pricing-2027"
                 className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold transition-colors"
-              >
+
                 View Detailed Pricing
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </main>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -288,6 +260,5 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default ExpandedServicesShowcase2027;
+export default ExpandedServicesShowcase2027;}

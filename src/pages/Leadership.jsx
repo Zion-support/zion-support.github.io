@@ -110,7 +110,7 @@ const Leadership = () => {
             linkedin: "https://linkedin.com/in/james-wilson",
             email: "james.wilson@ziontechgroup.com",
             location: "New York, NY"
-        }
+
     ];
     const compValues = [
         {
@@ -132,7 +132,7 @@ const Leadership = () => {
             title: "Client Success",
             description: "Our success is measured by the success of our clients and the impact we create together.",
             icon: Target
-        }
+
     ];
     const vision = {
   title: "Our Vision",
@@ -203,11 +203,11 @@ const Leadership = () => {
               Executive Leadership
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our leadership team brings together decades of experience in technology, 
+              Our leadership team brings together decades of experience in technology,
               business, and innovation.
             </p>
           </div>
-          
+
           <div className="space-y-16">
             {leadershipTeam.map((leader, index) => (<div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
                 <div className="grid md:grid-cols-3 gap-8 items-start">
@@ -230,21 +230,21 @@ const Leadership = () => {
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <p className="text-slate-600 mb-6 leading-relaxed">
                       {leader.bio}
                     </p>
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Experience</h4>
                         <p className="text-slate-600 text-sm mb-4">{leader.experience}</p>
-                        
+
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Education</h4>
                         <p className="text-slate-600 text-sm">{leader.education}</p>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Expertise</h4>
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -252,7 +252,7 @@ const Leadership = () => {
                               {skill}
                             </span>))}
                         </div>
-                        
+
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Achievements</h4>
                         <ul className="space-y-1">
                           {leader.achievements.map((achievement, achievementIndex) => (<li key={achievementIndex} className="flex items-center text-sm text-slate-600">
@@ -280,7 +280,7 @@ const Leadership = () => {
               The principles that guide our decisions, shape our culture, and drive our success.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {compValues.map((value, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -304,7 +304,7 @@ const Leadership = () => {
             Join Our Mission
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Be part of a team that's shaping the future of technology and 
+            Be part of a team that's shaping the future of technology and
             transforming businesses around the world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -319,3 +319,4 @@ const Leadership = () => {
       </section>
     </div>)};
 export default Leadership;
+}}}

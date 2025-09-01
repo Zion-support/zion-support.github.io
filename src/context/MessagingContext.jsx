@@ -12,13 +12,11 @@ const MessagingProvider({ children }) {
 
 };
         setMessages(prev => [...prev, newMessage])};
-=======
   
 
 };
         setMessages(prev => [...prev, newMessage]);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const markAsRead = (id) => {
         setMessages(prev => prev.map(msg => msg.id === id ? { ...msg, isRead: true } : msg))};
     const unreadCount = messages.filter(msg => !msg.isRead).length;
@@ -35,14 +33,8 @@ const MessagingProvider({ children }) {
     </MessagingContext.Provider>)}
 export function useMessaging() {
     const context = useContext(MessagingContext);
-<<<<<<< HEAD
-    if (context === null) {
-        throw new Error('useMessaging must be used within a MessagingProvider')}
-    return context}
-=======
     if (context === null) {
         throw new Error('useMessaging must be used within a MessagingProvider');
-    }
+
     return context;
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

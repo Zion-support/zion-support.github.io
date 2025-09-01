@@ -1,9 +1,6 @@
-import React from 'react';
-
 const TermsOfService = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <div className="text-center">
+    <div className="max-w-4xl mx-auto space-y-8"><div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
         <p className="text-zion-slate-light text-lg">
           Last updated: {new Date().toLocaleDateString()}
@@ -17,6 +14,27 @@ const TermsOfService = () => {
             These Terms of Service govern your use of Zion Tech Group's services. By accessing or using our services, you agree to be bound by these terms.
           </p>
         </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">3. User Accounts</h2>
+            <p className="text-gray-300 leading-relaxed">
+              When creating an account with us, you must provide accurate and complete information. You are responsible for maintaining the security of your account and password. Zion Tech Group cannot and will not be liable for any loss or damage from your failure to comply with this security obligation.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">4. Acceptable Use</h2>
+            <p className="text-gray-300 leading-relaxed">
+              You agree not to use our services for any unlawful purpose or in any way that could damage, disable, overburden, or impair our servers or networks. You may not attempt to gain unauthorized access to any part of our services.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">5. Intellectual Property</h2>
+            <p className="text-gray-300 leading-relaxed">
+              All content, features, and functionality of our services are owned by Zion Tech Group and are protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written consent.
+            </p>
+          </section>
 
         <section>
           <h2 className="text-2xl font-semibold text-white mb-4">2. Description of Services</h2>
@@ -119,18 +137,11 @@ const TermsOfService = () => {
 
       <div className="mt-12 text-center">
         <a href="/" className="text-indigo-400 hover:text-indigo-300 font-medium">
-<<<<<<< HEAD
-          ← Back to Home
-        </a>
-      </div>
-    </div>;
-=======;
           ← Back to Home;
         </a>;
       </div>;
       </div>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

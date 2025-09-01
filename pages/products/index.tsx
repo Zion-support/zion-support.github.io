@@ -68,14 +68,6 @@ export default function ProductsIndex(...args[]):  {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Open Automation Hub</a></Link>
               <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Browse Services</a></Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
@@ -83,4 +75,3 @@ export default function ProductsIndex(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

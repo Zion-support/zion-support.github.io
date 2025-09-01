@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIPrometheus() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {
   const features = [
     'AI-powered Prometheus optimization',
     'Intelligent Prometheus management',;
@@ -13,10 +11,10 @@ export default function AIPrometheus() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$299/mo', 
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIPrometheus() {
       </section>;
     </div>;
   );
-}
+}}

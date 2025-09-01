@@ -226,14 +226,6 @@ export function FeatureCTAs(...args[]):  {
                   View All Services
                 </Button>
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -241,4 +233,3 @@ export function FeatureCTAs(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

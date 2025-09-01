@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Loader2 } from "lucide-react";
-export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
+import { Loader2 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
     const sizeClasses = {
   sm: "w-6 h-6",
         md: "w-8 h-8",
@@ -38,24 +37,13 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
 }}>
         <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
       </motion.div>
-      
+
       <motion.p className={`${textSizes[size]} text-zion-slate-light font-medium`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
         {message}
       </motion.p>
-      
+
       {/* Animated dots */}
       <motion.div className="flex space-x-1">
-<<<<<<< HEAD
-        {[0, 1, 2].map((index) => (<motion.div key={index} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
-  {
-                scale[1, 1.5, 1],
-                opacity[0.5, 1,
-  0.5]
-            
-
-}} transition = {
-  {
-=======
         {[0, 1,
   2].map((index) => (<motion.div key={index
 
@@ -73,7 +61,6 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: 1.4,
                 repeat: Infinity,
   delay: index * 0.2

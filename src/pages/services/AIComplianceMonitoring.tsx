@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AIComplianceMonitoring() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {
   const features = [
     'AI-powered compliance monitoring optimization',
     'Intelligent regulatory compliance tracking',;
@@ -13,10 +11,10 @@ export default function AIComplianceMonitoring() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$499/mo', 
-      details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AIComplianceMonitoring() {
       </section>;
     </div>;
   );
-}
+}}

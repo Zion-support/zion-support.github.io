@@ -79,7 +79,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large research institutions",
         setupTime: "8-10 weeks",
         support: "Dedicated account manager"
-      }
+
     ],
     marketPrice: "$7,000-15,000",
     competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
@@ -138,7 +138,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large companies",
         setupTime: "10-12 weeks",
         support: "Dedicated support"
-      }
+
     ],
     marketPrice: "$10,000-25,000",
     competitors["Unity", "Unreal Engine", "Roblox Studio"],
@@ -197,7 +197,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large enterprises",
         setupTime: "8-10 weeks",
         support: "Dedicated support"
-      }
+
     ],
     marketPrice: "$10,000-25,000",
     competitors["Okta", "Palo Alto Networks", "Cisco"],
@@ -257,7 +257,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large medical centers",
         setupTime: "12-16 weeks",
         support: "Dedicated support"
-      }
+
     ],
     marketPrice: "$20,000-50,000",
     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
@@ -317,7 +317,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         bestFor: "Large financial institutions",
         setupTime: "10-12 weeks",
         support: "Dedicated support"
-      }
+
     ],
     marketPrice: "$15,000-40,000",
     competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],
@@ -336,24 +336,6 @@ export const PRICING_ANALYSIS_2030 = {
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
-<<<<<<< HEAD
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
-  
-
-},
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
-    if (!acc[service.category]) {;
-      acc[service.category] = []};
-    acc[service.category].push(service.basePrice);
-    return acc}, {} as Record<string, any>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
-    serviceName: service.serviceName,
-    roi: service.roi,
-    setupTime: service.setupTime,
-    price: service.basePrice
-  }))
-=======
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
@@ -375,7 +357,6 @@ export const PRICING_ANALYSIS_2030 = {
     setupTime: service.setupTime,;
     price: service.basePrice;
   }));
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 };
 
 // Payment and Discount Information

@@ -1,4 +1,3 @@
-import React from 'react';
 export default function PostCard({ post }) {
     return (<div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
       <div className="flex items-start space-x-4">

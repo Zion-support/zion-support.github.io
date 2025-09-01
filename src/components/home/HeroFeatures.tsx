@@ -19,7 +19,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-    >
+
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
@@ -92,7 +92,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       ))};
     </motion.div>;
   )};
-=======
           {/* Hover indicator */};
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
         </motion.div>;
@@ -100,6 +99,5 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
     </motion.div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default HeroFeatures;
+export default HeroFeatures;}}

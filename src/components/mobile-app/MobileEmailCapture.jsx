@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
-
-export const MobileEmailCapture = () => {
+import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
@@ -10,7 +8,7 @@ export const MobileEmailCapture = () => {
     if (!email) return;
 
     setStatus('loading');
-    
+
     // Simulate API call
     setTimeout(() => {
       if (email.includes('@')) {
@@ -59,11 +57,11 @@ export const MobileEmailCapture = () => {
               {getStatusIcon()}
             </div>
           </div>
-          
+
           <h3 className="text-2xl font-bold text-white mb-4">
             {getStatusText()}
           </h3>
-          
+
           {status === 'idle' && (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3">
@@ -78,7 +76,7 @@ export const MobileEmailCapture = () => {
                 <button
                   type="submit"
                   className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 whitespace-nowrap"
-                >
+
                   Notify Me
                 </button>
               </div>
@@ -101,7 +99,7 @@ export const MobileEmailCapture = () => {
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Subscribe Another Email
               </button>
             </div>
@@ -113,7 +111,7 @@ export const MobileEmailCapture = () => {
               <button
                 onClick={() => setStatus('idle')}
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Try Again
               </button>
             </div>

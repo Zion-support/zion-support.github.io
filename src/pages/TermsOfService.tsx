@@ -17,15 +17,6 @@ import {
   Database
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const TermsOfService: React.FC = (): JSX.Element => {;
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'legal@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   
@@ -171,7 +162,6 @@ const TermsOfService = () => {;
       description: 'As a last resort, resolve disputes through binding arbitration';
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
@@ -233,7 +223,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Description of Services
@@ -278,7 +268,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-zion-cyan" />
                 User Accounts and Responsibilities
@@ -319,7 +309,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Acceptable Use Policy
@@ -368,7 +358,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Intellectual Property Rights
@@ -412,7 +402,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
@@ -438,7 +428,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
@@ -479,7 +469,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.7 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
@@ -523,7 +513,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
@@ -561,7 +551,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 0.9 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
@@ -587,7 +577,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 1.0 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
@@ -613,7 +603,7 @@ const TermsOfService = () => {;
               transition={{ duration: 0.8, delay: 1.1 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
@@ -638,7 +628,7 @@ const TermsOfService = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}
-            >
+
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Information
@@ -680,12 +670,6 @@ const TermsOfService = () => {;
               </p>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
         </section>
 
         {/* Table of Contents */}
@@ -1071,6 +1055,5 @@ const TermsOfService = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default TermsOfService;
+export default TermsOfService;}

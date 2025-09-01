@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cpu, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Cpu,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Award,
@@ -578,108 +578,10 @@ import {
   Cpu
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const autonomousSystemsSolutions = [
-  {
-    id: 1,
-    title: "Autonomous Vehicles",
-    description: "Self-driving vehicle systems with advanced AI and sensor fusion technology.",
-    icon: Car,
-    features[
-      "Computer vision",
-      "Sensor fusion",
-      "Path planning",
-      "Safety systems"
-    ],
-    price: "From $500,000",
-    timeline: "24-48 weeks",
-    category: "Vehicles",
-    technologies["LiDAR", "Computer Vision", "Machine Learning", "Sensor Fusion"]
-  },
-  {
-    id: 2,
-    title: "Industrial Robotics",
-    description: "AI-powered industrial robots for manufacturing and automation.",
-    icon: Factory,
-    features[
-      "Robotic arms",
-      "Computer vision",
-      "Path planning",
-      "Safety protocols"
-    ],
-    price: "From $200,000",
-    timeline: "16-32 weeks",
-    category: "Robotics",
-    technologies["ROS", "Computer Vision", "Motion Planning", "Safety Systems"]
-  },
-  {
-    id: 3,
-    title: "Drone Systems",
-    description: "Autonomous drone systems for surveillance, delivery, and inspection.",
-    icon: Plane,
-    features[
-      "Autonomous flight",
-      "Computer vision",
-      "Path planning",
-      "Collision avoidance"
-    ],
-    price: "From $100,000",
-    timeline: "12-24 weeks",
-    category: "Drones",
-    technologies["Flight Control", "Computer Vision", "GPS", "Obstacle Detection"]
-  },
-  {
-    id: 4,
-    title: "Smart Home Systems",
-    description: "AI-powered home automation with autonomous decision making.",
-    icon: Building,
-    features[
-      "Smart devices",
-      "AI decision making",
-      "Learning algorithms",
-      "Energy optimization"
-    ],
-    price: "From $50,000",
-    timeline: "8-16 weeks",
-    category: "Smart Home",
-    technologies["IoT", "Machine Learning", "Voice Recognition", "Automation"]
-  },
-  {
-    id: 5,
-    title: "Agricultural Robots",
-    description: "Autonomous farming robots for precision agriculture and crop management.",
-    icon: Globe,
-    features[
-      "Crop monitoring",
-      "Precision spraying",
-      "Harvesting automation",
-      "Soil analysis"
-    ],
-    price: "From $150,000",
-    timeline: "20-36 weeks",
-    category: "Agriculture",
-    technologies["Computer Vision", "GPS", "Sensors", "Robotics"]
-  },
-  {
-    id: 6,
-    title: "Medical Robotics",
-    description: "AI-powered medical robots for surgery and patient care.",
-    icon: Users,
-    features[
-      "Surgical assistance",
-      "Patient monitoring",
-      "Rehabilitation support",
-      "Medical imaging"
-    ],
-    price: "From $1,000,000",
-    timeline: "32-64 weeks",
-    category: "Medical",
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
   }
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const autonomousTechnologies = [
   {
     name: "Computer Vision",
@@ -708,7 +610,7 @@ const autonomousTechnologies = [
     icon: Cpu,
     useCase: "Physical Control",
     reliability: "Critical"
-  }
+
 ];
 
 const successStories = [
@@ -738,7 +640,7 @@ const successStories = [
     solution: "Built autonomous agricultural robots with precision farming capabilities",
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability",
     logo: "AC"
-  }
+
 ];
 
 const processSteps = [
@@ -769,7 +671,7 @@ const processSteps = [
     description: "Comprehensive testing and safety validation",
     icon: Shield,
     duration: "8-16 weeks"
-  }
+
 ];
 
 const autonomousBenefits = [
@@ -804,9 +706,9 @@ export default function AIAutonomousSystems() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Vehicles', 'Robotics', 'Drones', 'Smart Home', 'Agriculture', 'Medical'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? autonomousSystemsSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? autonomousSystemsSolutions
     : autonomousSystemsSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -818,7 +720,7 @@ export default function AIAutonomousSystems() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
@@ -843,7 +745,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -876,20 +778,20 @@ export default function AIAutonomousSystems() {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Cpu className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous &
               <span className="text-gradient block">Robotic Systems</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Build the future with intelligent autonomous systems. From self-driving vehicles to 
+              Build the future with intelligent autonomous systems. From self-driving vehicles to
               industrial robots, we help you create AI-powered solutions that operate independently.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Brain className="w-4 h-4" />
@@ -934,7 +836,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Autonomous Systems Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make autonomous systems essential
@@ -976,14 +878,14 @@ export default function AIAutonomousSystems() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
@@ -1025,7 +927,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Autonomous Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading autonomous and robotics platforms
@@ -1067,17 +969,17 @@ export default function AIAutonomousSystems() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-                
+
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-                  technology.reliability === 'Critical' 
+                  technology.reliability === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                     : technology.reliability === 'High'
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
@@ -1117,7 +1019,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Autonomous Systems Development Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful autonomous system development
@@ -1159,7 +1061,7 @@ export default function AIAutonomousSystems() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -1168,7 +1070,7 @@ export default function AIAutonomousSystems() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -1206,7 +1108,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Autonomous Systems Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for modern autonomous systems
@@ -1224,7 +1126,7 @@ export default function AIAutonomousSystems() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -1266,14 +1168,14 @@ export default function AIAutonomousSystems() {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -1282,23 +1184,23 @@ export default function AIAutonomousSystems() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -1340,7 +1242,7 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Autonomous Systems Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with autonomous systems
@@ -1382,7 +1284,7 @@ export default function AIAutonomousSystems() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1392,7 +1294,7 @@ export default function AIAutonomousSystems() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -1407,7 +1309,7 @@ export default function AIAutonomousSystems() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1446,24 +1348,24 @@ export default function AIAutonomousSystems() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how autonomous systems can transform your operations, 
+              Let's discuss how autonomous systems can transform your operations,
               improve efficiency, and create new possibilities through AI and robotics.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Autonomous Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Autonomous Systems Consultation
               </a>
             </div>

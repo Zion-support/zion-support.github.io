@@ -183,7 +183,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         ],
         setupFee: 50000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -227,7 +227,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+
   },
   {
     serviceId: 'ai-compliance-automator',
@@ -332,7 +332,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         ],
         setupFee: 20000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
@@ -376,8 +376,8 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // 2. DATA ANALYTICS SERVICES PRICING
@@ -484,7 +484,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         ],
         setupFee: 30000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -528,8 +528,8 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // 3. CLOUD & DEVOPS SERVICES PRICING
@@ -636,7 +636,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         ],
         setupFee: 40000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -680,8 +680,8 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
@@ -788,7 +788,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         ],
         setupFee: 50000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -832,8 +832,8 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
@@ -940,7 +940,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         ],
         setupFee: 150000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -984,8 +984,8 @@ export const finTechPricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
@@ -1092,7 +1092,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         ],
         setupFee: 70000,
         contractTerm: 'negotiable'
-      }
+
     },
     marketComparison: {
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
@@ -1136,8 +1136,8 @@ export const healthcarePricing: ExpandedServicePricing[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+
+
 ];
 
 // Export all pricing data
@@ -1151,24 +1151,6 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
 ];
 
 // Helper functions
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null  => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-
-export const getPricingByCategory = (category: string): ExpandedServicePricing[]  => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[]  => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-
-export const searchPricing = (query: string): ExpandedServicePricing[]  => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
@@ -1189,4 +1171,3 @@ export const searchPricing = (query: string): ExpandedServicePricing[] => {;
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

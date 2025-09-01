@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from 'lucide-react';
-
-export default function AffiliateTracking() {
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',
@@ -31,7 +29,7 @@ export default function AffiliateTracking() {
     {
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
-    }
+
   ];
 
   const plans = [
@@ -109,7 +107,7 @@ export default function AffiliateTracking() {
 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+
             Affiliate Tracking Platform
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
@@ -162,7 +160,7 @@ export default function AffiliateTracking() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
                 className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
-              >
+
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
                   <div>
@@ -238,7 +236,7 @@ export default function AffiliateTracking() {
 
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
-              >
+
                 {i === 1 && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
@@ -314,6 +312,7 @@ export default function AffiliateTracking() {
       </section>;
     </div>;
   );
-}
+</div>}
 
 // Duplicate leftover block removed
+}}}

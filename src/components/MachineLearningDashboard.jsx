@@ -47,6 +47,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 };
         try {
             await startTraining(modelId, hyperparameters);
+            // // // // // // // console.error('Training failed:', error);
+        }
             trackEvent('ml', 'dashboard', 'training_started')}
         catch (error) {
             console.error('Training failed:', error)}
@@ -65,8 +67,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             try {
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input);
-                console.log('Prediction result:', result);
+                // // // // // // // console.log('Prediction result:', result);
                 setPredictionForm({ modelId: '', input: '' });
+                // // // // // // // console.error('Prediction failed:', error);
+            }
                 trackEvent('ml', 'dashboard', 'prediction_made')}
             catch (error) {
                 console.error('Prediction failed:', error)}
@@ -76,6 +80,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         try {
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
+            // // // // // // // console.error('Export failed:', error);
+        }
             trackEvent('ml', 'dashboard', 'model_exported')}
         catch (error) {
             console.error('Export failed:', error)}
@@ -89,6 +95,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     const modelData = e.target?.result;
                     importModel(modelData);
                     setShowImportModel(false);
+                    // // // // // // // console.error('Import failed:', error);
+                }
+            };
+            reader.readAsText(file);
+
                     trackEvent('ml', 'dashboard', 'model_imported')}
                 catch (error) {
                     console.error('Import failed:', error)}
@@ -137,13 +148,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center space-x-2">
           <button onClick={() => setShowImportModel(!showImportModel)} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
             <Upload className="w-4 h-4"/>
             <span>Import</span>
           </button>
-          
+
           <button onClick={() => setShowCreateModel(!showCreateModel)} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700">
             <Plus className="w-4 h-4"/>
             <span>New Model</span>
@@ -209,7 +220,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <Brain className="w-8 h-8 text-purple-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -219,7 +230,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <CheckCircle className="w-8 h-8 text-green-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -229,7 +240,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <Target className="w-8 h-8 text-blue-500"/>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -476,12 +487,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </button>
                       </div>
                     </div>
-                    
+
                     <h4 className="font-medium text-gray-900 dark:text-white mb-2">{model.name}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                       {model.type} • {model.framework} • v{model.version}
                     </p>
-                    
+
                     <div className="space-y-2 mb-4">
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-500 dark:text-gray-400">Accuracy:</span>
@@ -502,7 +513,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </span>
                       </div>
                     </div>
-                    
+
                     <div className="flex space-x-2">
                       {model.status === 'ready' && (<>
                           <button onClick={() => handleStartTraining(model.id)} className="flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
@@ -550,7 +561,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Training Jobs</h3>
-              
+
               <div className="space-y-4">
                 {trainingJobs.map((job) => {
                 const model = models.find(m => m.id === job.modelId);
@@ -573,7 +584,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           {job.status}
                         </span>
                       </div>
-                      
+
                       {job.status === 'running' && (<div className="mb-3">
                           <div className="flex justify-between text-sm mb-1">
                             <span className="text-gray-500 dark:text-gray-400">Progress</span>
@@ -583,7 +594,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             <div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: `${job.progress}%` }}/>
                           </div>
                         </div>)}
-                      
+
                       {job.metrics.accuracy.length > 0 && (<div className="grid grid-cols-2 gap-4 mb-3">
                           <div>
                             <p className="text-sm text-gray-500 dark:text-gray-400">Latest Accuracy</p>
@@ -598,7 +609,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             </p>
                           </div>
                         </div>)}
-                      
+
                       <div className="flex space-x-2">
                         {job.status === 'running' && (<button onClick={() => handleStopTraining(job.id)} className="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
                             <Square className="w-4 h-4 inline mr-2"/>
@@ -652,7 +663,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Make Predictions</h3>
-              
+
               {/* Prediction Form */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -710,13 +721,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             {prediction.timestamp.toLocaleTimeString()}
                           </span>
                         </div>
-                        
+
                         {prediction.status === 'completed' && prediction.result && (<div className="text-sm text-gray-700 dark:text-gray-300">
                             <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p>
                             {prediction.confidence && (<p><strong>Confidence:</strong> {(prediction.confidence * 100).toFixed(1)}%</p>)}
                             {prediction.processingTime && (<p><strong>Processing Time:</strong> {prediction.processingTime}ms</p>)}
                           </div>)}
-                        
+
                         {prediction.status === 'failed' && prediction.error && (<div className="text-sm text-red-600 dark:text-red-400">
                             <strong>Error:</strong> {prediction.error}
                           </div>)}
@@ -759,7 +770,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Analytics</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Model Performance</h4>
@@ -777,7 +788,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       </div>))}
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Prediction Metrics</h4>
                   <div className="space-y-3">

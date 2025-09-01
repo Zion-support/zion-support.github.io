@@ -43,6 +43,54 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
+      // // // // // // // console.warn('PerformanceObserver not supported');
+      return;
+
+    // First Contentful Paint (FCP)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+
+    });
+    // Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lcpEntry = entries[entries.length - 1];
+      if (lcpEntry) {
+        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+
+    });
+    // First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fidEntry = entries[entries.length - 1] as FirstInputEntry;
+      if (fidEntry && 'processingStart' in fidEntry) {
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+
+    });
+    // Cumulative Layout Shift (CLS)
+    const clsObserver = new PerformanceObserver((list) => {
+      const clsValue = 0;
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as LayoutShiftEntry;
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
+
+
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    });
+    // Start observing
+    try {
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      // // // // // // // console.warn('Error setting up performance observers:', error);
+    }
+    // Navigation timing metrics
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
   const clsObserverRef = useRef<PerformanceObserver | null>(null);
 
@@ -63,6 +111,20 @@ export function usePerformance(options: PerformanceOptions = {}) {
         windowLoad
       }));
 
+          // // // // // // // console.warn('Long task detected:', {
+            duration: entry.duration,
+            startTime: entry.startTime,
+            name: entry.name
+          });
+
+      });
+    });
+    try {
+      longTaskObserver.observe({ entryTypes: ['longtask'] });
+    } catch (error) {
+      // // // // // // // console.warn('Error setting up long task observer:', error);
+    }
+    return () => longTaskObserver.disconnect();
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
@@ -306,6 +368,23 @@ export function usePerformance(options: PerformanceOptions = {}) {
     getResourceTiming,
     sendMetricsToAnalytics
   };
+      // // // // // // // console.warn(`Error observing ${eventName}:`, error);
+    }
+    return () => observer.disconnect();
+  }, [eventName, callback]);
+
+// Hook for measuring time between renders
+export function useRenderTime() {
+  const renderStart = useRef(performance.now());
+  const [renderTime, setRenderTime] = useState(0);
+  useEffect(() => {
+    const renderEnd = performance.now();
+    const time = renderEnd - renderStart.current;
+    setRenderTime(time);
+    renderStart.current = renderEnd;
+  });
+  return renderTime;
+}}}}}}}}}}}}}}}}}}}}
 }
 
 // Hook for monitoring specific component performance

@@ -4,13 +4,6 @@ import { NEW_PRODUCTS } from "@/data/newProductsData";
 const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: c, value: c }));
 export default function NewProductsPage() {
     const [listings] = useState([...NEW_PRODUCTS]);
-<<<<<<< HEAD
-    return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today's market." categorySlug="new-products" detailBasePath="/product" listings={listings} categoryFilters={CATEGORY_FILTERS} initialPrice = {
-  { min: 0,
-  max: 5000 
-
-}}/>)}
-=======
     return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today's market." categorySlug="new-products" detailBasePath="/product" listings={listings} categoryFilters={CATEGORY_FILTERS} initialPrice = {
   { min: 0,
   max: 5000 
@@ -22,4 +15,3 @@ export default function NewProductsPage() {
 
 }}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
-import { FlaskConical,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  FlaskConical,
   Brain,
   Shield,
   Cloud,
@@ -383,28 +384,7 @@ export default function ResearchDevelopment(...args[]):  {
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-<<<<<<< HEAD
-  const getAreaIcon = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.icon : FlaskConical};
-
-<<<<<<< HEAD
-  const getAreaColor = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.color : 'from-gray-500 to-slate-600'};
-
-<<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
-    if (status === 'Active') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
-    } else if (status = == 'Completed') {;
-      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
-    } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (
@@ -435,7 +415,7 @@ export default function ResearchDevelopment(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <FlaskConical className="w-5 h-5" />
               <span className="font-medium">Research & Development</span>
@@ -527,21 +507,13 @@ export default function ResearchDevelopment(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)  => {;
-=======;
+            <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -578,7 +550,7 @@ export default function ResearchDevelopment(...args[]):  {
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -607,14 +579,6 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>
-<<<<<<< HEAD
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
-                      <div className="text-xs text-zion-slate-light">Projects</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
@@ -622,7 +586,6 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -654,21 +617,13 @@ export default function ResearchDevelopment(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => {;
-=======;
+            <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map((project, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -706,7 +661,7 @@ export default function ResearchDevelopment(...args[]):  {
 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -772,19 +727,11 @@ export default function ResearchDevelopment(...args[]):  {
                     <Link
                       to={`/research-development/projects/${project.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
-                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
@@ -792,7 +739,6 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -824,7 +770,7 @@ export default function ResearchDevelopment(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Research Publications</h2>
             <p className="text-zion-slate-light text-lg">Our latest research contributions to the scientific community</p>
           </motion.div>
@@ -865,7 +811,7 @@ export default function ResearchDevelopment(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
@@ -898,7 +844,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <Link
                       to={`/research-development/publications/${pub.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+
                       Read Paper
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -937,7 +883,7 @@ export default function ResearchDevelopment(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">Patents & Intellectual Property</h2>
             <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
           </motion.div>
@@ -978,7 +924,7 @@ export default function ResearchDevelopment(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{patent.title}</h3>
@@ -1015,7 +961,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <Link
                     to={`/research-development/patents/${patent.id}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                  >
+
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -1057,7 +1003,7 @@ export default function ResearchDevelopment(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Collaborate with Our Research Team
             </h2>
@@ -1069,24 +1015,16 @@ export default function ResearchDevelopment(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+
                 Start Collaboration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+
                 View Research Impact
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -1094,4 +1032,3 @@ export default function ResearchDevelopment(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

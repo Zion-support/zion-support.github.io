@@ -144,7 +144,6 @@ export default function Index() {
       <Footer />
     </div>
   )};
-=======;
             </a>;
           </div>;
         </div>;
@@ -154,4 +153,3 @@ export default function Index() {
 };
 
 export default Home;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

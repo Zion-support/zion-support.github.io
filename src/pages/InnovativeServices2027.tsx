@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Star, 
-  Target, 
-  TrendingUp, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
+  Heart,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  Star,
+  Target,
+  TrendingUp,
   Award,
   Zap,
   Eye,
@@ -32,8 +32,9 @@ import {
   Building,
   Phone
 } from 'lucide-react';
+
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,
@@ -68,16 +69,16 @@ export default function InnovativeServices2027() {
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
         return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
@@ -89,37 +90,19 @@ export default function InnovativeServices2027() {
   });
 
   return (
-    <div className = "min-h-screen bg-futuristic">
-      <SEO 
+    <div className="min-h-screen bg-futuristic">
+      <SEO
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -127,7 +110,7 @@ export default function InnovativeServices2027() {
               2027 Innovative Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions 
+              Revolutionary AI, Quantum Computing, Blockchain, and emerging technology solutions
               that are transforming industries worldwide. Experience the future of technology today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -188,7 +171,7 @@ export default function InnovativeServices2027() {
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as )}
+                onChange={(e) => setSortBy(e.target.value as string)}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
               >
                 <option value="innovation">Sort by Innovation</option>
@@ -215,48 +198,13 @@ export default function InnovativeServices2027() {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                  whileHover = {
-  { y: -10,
-  scale: 1.02 
-
-
-
-
-
-
-}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
                   className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
                 >
+
                   {/* Service Header */}
                   <div className={`p-6 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>
                     <div className="flex items-center justify-between mb-4">
@@ -373,17 +321,17 @@ export default function InnovativeServices2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }};
-              animate={{ opacity: 1 }};
-              className="text-center py-16";
-            >;
-              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-16"
+            >
+              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+              <button
+                onClick={() => {
                   setSelectedCategory('all');
                   setSearchQuery('');
                 }}
-                className = "px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
               </button>
@@ -396,26 +344,8 @@ export default function InnovativeServices2027() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -423,7 +353,7 @@ export default function InnovativeServices2027() {
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the elite group of forward-thinking companies that are already leveraging our 
+              Join the elite group of forward-thinking companies that are already leveraging our
               revolutionary 2027 services to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -453,26 +383,8 @@ export default function InnovativeServices2027() {
         <div className="container-responsive">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -482,26 +394,8 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
-              initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -511,37 +405,19 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
             >
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

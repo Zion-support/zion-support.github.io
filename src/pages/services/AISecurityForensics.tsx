@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityForensics() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
   const features = [
     'AI-powered security forensics optimization',
     'Intelligent digital evidence analysis and processing',;
@@ -13,10 +11,10 @@ export default function AISecurityForensics() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityForensics() {
       </section>;
     </div>;
   );
-}
+}}

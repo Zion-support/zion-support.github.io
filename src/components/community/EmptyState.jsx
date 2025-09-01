@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -22,3 +23,4 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
       </TooltipProvider>
     </div>)};
 export default EmptyState;
+}

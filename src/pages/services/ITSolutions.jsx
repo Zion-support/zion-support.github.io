@@ -22,7 +22,7 @@ const ITSolutions = () => {
             icon: Shield,
             title: "IT Security",
             description: "Multi-layered security for your IT infrastructure"
-        }
+
     ];
     const benefits = [
         "Improved system reliability and performance",
@@ -242,3 +242,4 @@ const ITSolutions = () => {
     </div>);
 };
 export default ITSolutions;
+}}

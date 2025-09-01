@@ -31,8 +31,8 @@ const InnovationServicesMarketing = () => {
             Innovation Services 2025
           </h1>
           <p className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-8">
-            Transform your business with our comprehensive portfolio of cutting-edge micro SAAS services, 
-            AI solutions, and specialized industry platforms. Stay ahead of the competition with 
+            Transform your business with our comprehensive portfolio of cutting-edge micro SAAS services,
+            AI solutions, and specialized industry platforms. Stay ahead of the competition with
             next-generation technology solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-lg">
@@ -169,7 +169,7 @@ const InnovationServicesMarketing = () => {
                     <div className="text-sm text-gray-400">{service.pricingModel}</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -273,8 +273,8 @@ const InnovationServicesMarketing = () => {
               Ready to Lead the Innovation Revolution?
             </h2>
             <p className="text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
-              Join hundreds of forward-thinking companies already transforming their operations 
-              with our cutting-edge AI and technology solutions. Contact us today to start your 
+              Join hundreds of forward-thinking companies already transforming their operations
+              with our cutting-edge AI and technology solutions. Contact us today to start your
               innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -293,3 +293,4 @@ const InnovationServicesMarketing = () => {
       </div>
     </div>)};
 export default InnovationServicesMarketing;
+}}}}}}}}

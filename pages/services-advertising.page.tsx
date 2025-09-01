@@ -23,22 +23,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
 };
   const benefits = [
     '1000% ROI target with measurable KPIs',
-<<<<<<< HEAD
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',;
-    'Proven architectures and reference implementations',;
-    'No long-term lock-in; cancel time',
-    'SOC 2-aligned processes and data handling',
-    'Flexible deployment: SaaS or self-hosted options'
-  ];
-  const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
-    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
-    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
-=======;
     'Transparent pricing with market references',;
     'Fast onboarding with templates and playbooks',;
     'Enterprise-grade security and compliance',;
@@ -53,7 +37,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },;
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },;
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   const anchors = [;
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },;
@@ -158,7 +141,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   href: 'https://www.onetrust.com/pricing/' 
 
 },
-=======
   privacy: [
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
@@ -167,7 +149,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
     ],
     finops[
@@ -176,30 +157,17 @@ export default function ServicesAdvertisingPage(...args[]):  {
     ],
     devex[
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
-<<<<<<< HEAD
-    ],
-    seo[
-      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
-      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
-    ];
-=======;
     ],;
     seo: [;
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
     ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   } as const;
   function ext(...args[]):  {
     return (
-<<<<<<< HEAD
-      <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    )};
-=======;
       <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   return (
     <div className = "min-h-screen bg-black">
       <Helmet>
@@ -465,7 +433,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
             <p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -474,7 +442,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Status Page & SLO Monitor</h2>
             <p className="text-slate-300">Public status pages, incident comms, and SLO/error budget tracking.</p>
@@ -507,7 +475,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
             </ul>
           </section>
-          
+
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">API Security Scanner</h2>
             <p className="text-slate-300">Continuously discover APIs and detect OWASP API Top 10 risks with CI gating.</p>
@@ -564,7 +532,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
             </ul>
           </section>
-          
+
           <div className="pt-4 text-slate-400 text-sm">See also: <a className="text-cyan-400 underline" href="/market-pricing">Market Pricing</a> for a broader list of benchmarks and links.</div>
           <section id="ai-email-responder" className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">AI Email Responder</h2>
@@ -594,14 +562,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="/contact" className="px-6 py-3 bg-cyan-600 text-white rounded-lg inline-flex">Contact Sales</a>
               <a href="/services" className="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg inline-flex">Browse Services</a>
-<<<<<<< HEAD
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </section>;
         </div>;
@@ -609,4 +569,3 @@ export default function ServicesAdvertisingPage(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

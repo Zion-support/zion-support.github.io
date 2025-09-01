@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
-const GetStarted = () => {
+import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock const GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const services = [
         {
@@ -56,7 +55,7 @@ const GetStarted = () => {
             Get Started Today
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Our simple 4-step process gets you from idea to implementation quickly.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -235,3 +234,4 @@ const GetStarted = () => {
       </section>
     </div>)};
 export default GetStarted;
+}}}

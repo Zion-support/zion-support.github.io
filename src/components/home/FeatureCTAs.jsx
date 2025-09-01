@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  Briefcase, 
-  Cpu, 
-  Shield, 
-  Zap, 
+import {
+  ArrowRight,
+  Users,
+  Briefcase,
+  Cpu,
+  Shield,
+  Zap,
   Clock,
   Rocket,
   Target,
@@ -94,104 +94,81 @@ export function FeatureCTAs() {
     },
     {
       title: "Learn More",
-      description: "Discover our capabilities",
-      href: "/about",
-      icon: Globe,
+      description: "Explore our resources",
+      href: "/resources",
+      icon: TrendingUp,
       color: "from-orange-500 to-orange-600",
       hoverColor: "from-orange-600 to-orange-700"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-background/90">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-3">Discover Zion's Powerful Features</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Explore Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Solutions</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover comprehensive solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-blue-300">
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
+            <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all duration-300">
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-slate-300">
                   {feature.icon}
-                  {feature.badge && (
-                    <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                      {feature.badge}
-                    </span>
-                  )}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
-                <p className="text-sm text-gray-500 mb-4">{feature.details}</p>
-                <Link 
-                  to={feature.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                >
-                  Explore {feature.title}
-                  <ArrowRight className="w-4 h-4 ml-2"/>
-                </Link>
+                {feature.badge && (
+                  <span className="px-3 py-1 text-xs font-medium bg-zion-purple/20 text-zion-purple border border-zion-purple/30 rounded-full">
+                    {feature.badge}
+                  </span>
+                )}
               </div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-300 text-sm mb-4">
+                {feature.description}
+              </p>
+              <p className="text-gray-400 text-sm mb-4">
+                {feature.details}
+              </p>
+              <Link 
+                to={feature.link}
+                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="mt-20 bg-slate-900 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose your next step and begin your journey with Zion Tech Group
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ctaItems.map((item, index) => (
-              <a 
-                key={index} 
-                href={item.href} 
-                className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
-                  <item.icon className="w-8 h-8 text-white"/>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {ctaItems.map((item, index) => (
+            <Link
+              key={index}
+              to={item.href}
+              className="group block"
+            >
+              <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl p-6 text-center hover:border-slate-500/50 transition-all duration-300 group-hover:scale-105">
+                <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:${item.hoverColor} transition-all duration-300`}>
+                  <item.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-200">
                   {item.title}
                 </h3>
-                
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">
+                <p className="text-gray-300 text-sm">
                   {item.description}
                 </p>
-                
-                <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg hover:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2"/>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-400 mb-4">
-              Need help choosing? Our experts are here to guide you.
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Talk to an Expert
-              <ArrowRight className="w-5 h-5 ml-2"/>
-            </a>
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
-  )}
+  );
+}

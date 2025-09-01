@@ -5,8 +5,7 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react";
-export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
     { label: 'Newest First', value: 'newest' },
     { label: 'Oldest First', value: 'oldest' },
     { label: 'Highest Rating', value: 'rating-high' },
@@ -80,7 +79,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"/>
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
               </div>
-              
+
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">

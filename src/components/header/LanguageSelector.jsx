@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Globe } from 'lucide-react';
-export const LanguageSelector = () => {
+import { ChevronDown, Globe export const LanguageSelector = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = [

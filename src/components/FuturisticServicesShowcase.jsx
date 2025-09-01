@@ -33,7 +33,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-      
+
       {/* Neon Border Effect */}
       <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${isHovered
             ? 'bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 p-[2px]'
@@ -41,17 +41,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-<<<<<<< HEAD
-            {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
-  {
-                x[0, Math.random() * 100 - 50],
-                y[0, Math.random() * 100 - 50],
-                opacity[0.6, 0.2, 0.6],
-  
-
-}} transition = {
-  {
-=======
             {[...Array(8)].map((_,
   i) => (<motion.div key={i
 
@@ -64,7 +53,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
@@ -92,7 +80,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   </span>
                 </div>
               </div>
-              
+
               {/* AI Score Badge */}
               {service.aiScore && (<div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -136,7 +124,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 </div>
                 <div className="text-xs text-gray-500">{service.marketPrice}</div>
               </div>
-              
+
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">
                 Get Started
               </button>
@@ -233,7 +221,7 @@ export const FuturisticServicesShowcase = () => {
           <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies
           </p>
-          
+
           {/* Search and Filter Controls */}
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-6 mb-12">
             {/* Search Bar */}

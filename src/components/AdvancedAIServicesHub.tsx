@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
   Database,
   ArrowRight,
   Star,
   CheckCircle,
   Rocket
-} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AIService {
@@ -30,7 +29,6 @@ interface AIService {
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
-}
 
 const AdvancedAIServicesHub: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -103,7 +101,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
       icon: Shield,
       route: '/services/ai-cybersecurity',
       status: 'coming-soon'
-    }
+
   ];
 
   const categories = [
@@ -132,7 +130,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
         return b.status === 'active' ? 1 : -1;
       default:
         return 0;
-    }
+
   });
 
   return (
@@ -436,4 +434,4 @@ const AdvancedAIServicesHub: React.FC = () => {;
   );
 };
 
-export default AdvancedAIServicesHub;
+export default AdvancedAIServicesHub;}}}}}}

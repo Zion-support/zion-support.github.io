@@ -14,39 +14,17 @@ import { slugify } from '@/lib/slugify';
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 
-<<<<<<< HEAD
-export function PrimaryNav(...args[]):  {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const { user } = useAuth();
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useLocation();
-  const [query, setQuery] = React.useState('');
-  const suggestions = generateSearchSuggestions();
+      // // // // // // // console.log('PrimaryNav search submit:', query);
+      router.push(`/search/${slugify(query)}`);
+      setQuery('');
 
-  let unreadCount = 0;
-  try {
-    const messaging = useMessaging();
-    unreadCount = messaging.unreadCount} catch {
-    // context not available
-  }
-
-  const cartCount = useSelector((s: RootState)  =>;
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
-  );
-
-  const handleSubmit = (e: React.FormEvent)  => {;
-    e.preventDefault();
-    if (query.trim()) {
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
-=======
 // Theme toggle component
 const ModeToggle = () => {;
   const [isDark, setIsDark] = useState(false);
@@ -54,7 +32,6 @@ const ModeToggle = () => {;
   const toggleTheme = () => {;
     setIsDark(!isDark);
     // Add theme switching logic here
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return (
@@ -64,7 +41,7 @@ const ModeToggle = () => {;
         role="navigation"
         aria-label="Primary"
         data-testid="header"
-      >
+
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
 
@@ -73,17 +50,7 @@ const ModeToggle = () => {;
             <ResponsiveNavigation />
           </div>
 
-          {/* Actions container with responsive layout */}
-          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
-  { width: 'clamp(12rem, 20vw,
-  16rem)' 
-
-}}>
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
+                  // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
                 onSelectSuggestion = {
   (sugg) => {
                   // // // // console.log('PrimaryNav search suggestion selected:',;
@@ -159,13 +126,13 @@ const ModeToggle = () => {;
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
-                  >
+
                     {t('auth.login')}
                   </Link>
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
-                  >
+
                     {t('auth.signup')}
                   </Link>
                 </>
@@ -182,27 +149,6 @@ const ModeToggle = () => {;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-<<<<<<< HEAD
-      </header>
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-            />
-          </div>
-        </div>
-      )}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-    </>
-  )}
-=======
 
         {/* Mobile Navigation */}
         <AnimatePresence>
@@ -300,4 +246,3 @@ const ModeToggle = () => {;
     </header>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

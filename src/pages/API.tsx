@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Code, 
-  Search, 
-  Filter,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Brain,
-  Cloud,
-  Shield,
-  Sparkles,
-  Zap,
-  Globe,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  User,
-  Star,
-  Terminal,
-  Key,
-  Database,
-  Lock
- } from 'lucide-react';
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -168,7 +140,7 @@ export default function API() {
         title="API Reference - Zion Tech Group"
         description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
       />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
@@ -198,12 +170,12 @@ export default function API() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
               <Code className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">API Reference</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Developer
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400">
@@ -214,7 +186,7 @@ export default function API() {
               Integrate Zion Tech Group's cutting-edge services into your applications
               with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Get API Key
@@ -253,7 +225,7 @@ export default function API() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               API Features
             </h2>
@@ -297,7 +269,7 @@ export default function API() {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -335,7 +307,7 @@ export default function API() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               API Endpoints
             </h2>
@@ -379,7 +351,7 @@ export default function API() {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -431,7 +403,7 @@ export default function API() {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               SDKs & Libraries
             </h2>
@@ -475,7 +447,7 @@ export default function API() {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="text-4xl mb-4">{sdk.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
                 <div className="flex space-x-2">
@@ -519,7 +491,7 @@ export default function API() {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -534,14 +506,6 @@ export default function API() {
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -551,4 +515,3 @@ export default function API() {
 };
 
 export default API;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

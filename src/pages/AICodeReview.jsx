@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle } from 'lucide-react';
-export default function AICodeReview() {
+import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview() {
     const features = [
         {
             icon: Code,
@@ -32,7 +31,7 @@ export default function AICodeReview() {
             icon: Target,
             title: "Best Practices",
             description: "Ensure code follows industry best practices and coding standards"
-        }
+
     ];
     const benefits = [
         "Reduce code review time by 80%",
@@ -211,11 +210,11 @@ export default function AICodeReview() {
               Revolutionary Code Review
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI code review system combines cutting-edge technology with industry best practices 
+              Our AI code review system combines cutting-edge technology with industry best practices
               to deliver exceptional code quality and security.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {
   { opacity: 0,
@@ -284,7 +283,7 @@ export default function AICodeReview() {
               Experience the advantages of AI-powered code review that transforms your development workflow.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
   { opacity: 0,
@@ -350,7 +349,7 @@ export default function AICodeReview() {
               Our AI code review system supports a wide range of programming languages and frameworks.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {supportedLanguages.map((language, index) => (<motion.div key={language} initial = {
   { opacity: 0,
@@ -413,7 +412,7 @@ export default function AICodeReview() {
               Ready to Transform Your Code Review Process?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of developers who have already revolutionized their code review workflow 
+              Join thousands of developers who have already revolutionized their code review workflow
               with our AI-powered system. Start improving code quality today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

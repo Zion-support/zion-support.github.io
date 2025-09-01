@@ -102,7 +102,7 @@ const AdvancedServicePortfolioDashboard = () => {
             complexity: 'Enterprise',
             marketDemand: 'Exploding',
             technologyMaturity: 'Leading'
-        }
+
     ];
     const filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
@@ -195,7 +195,7 @@ const AdvancedServicePortfolioDashboard = () => {
               Comprehensive insights into our cutting-edge service portfolio, performance metrics, and strategic analysis
             </p>
           </div>
-          
+
           <div className="flex gap-2">
             {['overview', 'detailed', 'analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2"/>}
@@ -353,7 +353,7 @@ const AdvancedServicePortfolioDashboard = () => {
                 </option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>
             <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -602,7 +602,7 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">
                 <Star className="w-5 h-5 text-zion-blue mt-1"/>
                 <div>
@@ -612,7 +612,7 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">
                 <Award className="w-5 h-5 text-zion-purple mt-1"/>
                 <div>
@@ -650,7 +650,7 @@ const AdvancedServicePortfolioDashboard = () => {
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
-            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors. 
+            Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.
             Contact us to discuss how we can help you achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -685,3 +685,4 @@ const AdvancedServicePortfolioDashboard = () => {
       </motion.div>
     </div>)};
 export default AdvancedServicePortfolioDashboard;
+}}}}}}

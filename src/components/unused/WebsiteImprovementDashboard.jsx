@@ -23,7 +23,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             canonical: false,
             ogTags: false,
             twitterTags: false
-        }
+
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
@@ -66,10 +66,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   <<<<<<< HEAD
             score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues[
-=======
   score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 'Missing meta description on some pages',
                 'Some images lack alt text',
                 'Heading structure could be improved'
@@ -106,10 +104,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   <<<<<<< HEAD
             score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues[
-=======
   score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 'Some form controls lack proper labels',
                 'Color contrast could be improved',
                 'Keyboard navigation needs enhancement'
@@ -285,7 +281,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Performance Metrics
                   </h3>
-                  
+
                   {/* Core Web Vitals */}
                   <div className="space-y-3">
                     {[
@@ -318,7 +314,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         value: metrics.firstInputDelay,
                         unit: 'ms',
                         thresholds: { good: 100, needsImprovement: 300 }
-                    }
+
                 ].map((metric, index) => {
                     const grade = getPerformanceGrade(metric.value, metric.thresholds);
                     return (<div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
@@ -341,7 +337,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     SEO Analysis
                   </h3>
-                  
+
                   {/* SEO Score */}
                   <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-green-600">
@@ -351,7 +347,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       SEO Score
                     </div>
                   </div>
-                  
+
                   {/* Meta Tags Status */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -366,7 +362,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         </div>))}
                     </div>
                   </div>
-                  
+
                   {/* Issues */}
                   {seoAnalysis.issues.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-red-600 mb-2">
@@ -378,7 +374,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                           </div>))}
                       </div>
                     </div>)}
-                  
+
                   {/* Suggestions */}
                   {seoAnalysis.suggestions.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-blue-600 mb-2">
@@ -396,7 +392,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Accessibility Report
                   </h3>
-                  
+
                   {/* Accessibility Score */}
                   <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-purple-600">
@@ -409,7 +405,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       WCAG {accessibilityReport.wcagCompliance} Compliance
                     </div>
                   </div>
-                  
+
                   {/* Issues Summary */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg text-center">
@@ -425,7 +421,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       <div className="text-xs text-yellow-600">Warnings</div>
                     </div>
                   </div>
-                  
+
                   {/* Issues List */}
                   {accessibilityReport.issues.length > 0 && (<div>
                       <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -443,7 +439,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Actionable Recommendations
                   </h3>
-                  
+
                   {/* Priority Actions */}
                   <div className="space-y-3">
                     {[
@@ -474,7 +470,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         description: 'Add alt text and compress images',
                         impact: 'Medium',
                         effort: 'Low'
-                    }
+
                 ].map((action, index) => (<div key={index} className="p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
                         <div className="flex items-start justify-between mb-2">
                           <span className={`text-xs px-2 py-1 rounded font-medium ${action.priority === 'High'
@@ -495,7 +491,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         </p>
                       </div>))}
                   </div>
-                  
+
                   {/* Quick Actions */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -519,3 +515,4 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
       </AnimatePresence>
     </>)};
 export default WebsiteImprovementDashboard;
+}}}}}

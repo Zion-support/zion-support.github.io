@@ -331,7 +331,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     innovationLevel: "Advanced",
     marketSize: "$12.5B by 2025",
     growthRate: "23% annually"
-  }
+
 ];
 
 // Innovative IT Infrastructure Services 2031

@@ -33,22 +33,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
   // Memoize the canonical URL
-<<<<<<< HEAD
-  const canonicalUrl = useMemo(() => {
-    if (seoData.canonical) {;
-      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`};
-    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
-
-  // Update document title
-  const updateTitle = useCallback((title: string)  => {
-    if (typeof document !== 'null') {;
-      document.title = title};
-  }, []);
-
-  // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData)  => {;
-    if (typeof document === 'null') return;
-=======
   const canonicalUrl = useMemo(() => {;
     if (seoData.canonical) {;
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
@@ -60,13 +44,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   const updateTitle = useCallback((title: string) => {;
     if (typeof document !== 'null') {;
       document.title = title;
-    }
+
   }, []);
 
   // Update meta tags
   const updateMetaTags = useCallback((data: SEOData) => {;
     if (typeof document === 'null') return;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     // Update or create meta description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -104,13 +87,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-<<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: SEOData)  => {;
-    if (typeof document === 'null') return;
-=======
   const updateOpenGraphTags = useCallback((data: SEOData) => {;
     if (typeof document === 'null') return;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const ogTags = [
       { property: 'og:title', content: fullTitle },;
@@ -131,13 +109,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-<<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: SEOData)  => {;
-    if (typeof document === 'null') return;
-=======
   const updateTwitterCardTags = useCallback((data: SEOData) => {;
     if (typeof document === 'null') return;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const twitterTags = [;
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
@@ -156,16 +129,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
   // Add structured data
-<<<<<<< HEAD
-  const addStructuredData = useCallback((data: object)  => {;
-    if (!enableStructuredData || typeof document === 'null') return;
-
-    // Remove existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script = > {
-      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove()};
-=======;
   const addStructuredData = useCallback((data: object) => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
@@ -175,7 +138,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove();
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     });
 
     // Add new structured data
@@ -206,18 +168,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-<<<<<<< HEAD
-    sameAs[
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://www.facebook.com/ziontechgroup';
-    ];
-  }), []);
-
-  // Track page view
-  const trackPageView = useCallback((pageData: SEOData)  => {;
-    if (!enableAnalytics || typeof window === 'null') return;
-=======
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
@@ -228,7 +178,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   // Track page view
   const trackPageView = useCallback((pageData: SEOData) => {;
     if (!enableAnalytics || typeof window === 'null') return;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     // Google Analytics
     if (window.gtag) {
@@ -253,17 +202,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     if (!enablePerformanceTracking || typeof window === 'null') return;
 
     // Wait for page load
-<<<<<<< HEAD
-    if (document.readyState = == 'complete') {
-      measureAndTrackPerformance()} else {
-      window.addEventListener('load', measureAndTrackPerformance)};
-=======;
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance();
     } else {
       window.addEventListener('load', measureAndTrackPerformance);
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
@@ -273,6 +216,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
+      // // // // // // // console.log('Web Vitals available');
+    }
       console.log('Web Vitals available')}
 
     // Navigation Timing API

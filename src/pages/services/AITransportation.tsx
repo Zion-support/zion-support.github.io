@@ -1,6 +1,4 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 } from 'lucide-react';
-
-export default function AITransportation() {
+import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
   const features = [
     'AI-powered route optimization and fleet management',
     'Intelligent traffic prediction and congestion avoidance',;
@@ -13,10 +11,10 @@ export default function AITransportation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Fleet', 
-      price: '$399/mo', 
-      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Fleet',
+      price: '$399/mo',
+      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Medium Fleet', 
@@ -171,4 +169,4 @@ export default function AITransportation() {
       </section>;
     </div>;
   );
-}
+}}

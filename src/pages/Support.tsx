@@ -5,34 +5,34 @@ import {
   HelpCircle, 
   MessageCircle, 
   Phone, 
-  Mail, 
-  MapPin, 
   Clock, 
-  Search, 
-  BookOpen, 
-  Video, 
   Users, 
-  Zap, 
   Shield, 
-  Settings, 
+  Cloud, 
+  Brain, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Search, 
   FileText, 
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  Star,
-  Rocket,
-  Brain,
-  Cloud,
-  Lock,
-  Globe,
-  Target,
-  TrendingUp
+  Video, 
+  BookOpen, 
+  HelpCircle, 
+  Star, 
+  MapPin, 
+  Globe, 
+  Calendar,
+  Send,
+  Ticket,
+  Headphones,
+  MessageSquare,
+  VideoCall,
+  Mailbox
 } from 'lucide-react';
 
-export default function Support() {
-  const [activeTab, setActiveTab] = useState('help');
-  const [searchQuery, setSearchQuery] = useState('');
+const Support = () => {
+  const [selectedCategory, setSelectedCategory] = useState('general');
+  const [contactMethod, setContactMethod] = useState('email');
 
   const supportCategories = [
     {
@@ -65,105 +65,27 @@ export default function Support() {
     }
   ];
 
-  const helpTopics = [
-    {
-      category: 'Getting Started',
-      icon: Rocket,
-      topics: [
-        { title: 'How to get started with our services', href: '/docs/getting-started' },
-        { title: 'Setting up your account', href: '/docs/account-setup' },
-        { title: 'First project configuration', href: '/docs/first-project' },
-        { title: 'Integration guide', href: '/docs/integration' }
-      ]
-    },
-    {
-      category: 'AI Services',
-      icon: Brain,
-      topics: [
-        { title: 'AI Business Intelligence setup', href: '/docs/ai-business-intelligence' },
-        { title: 'AI Healthcare Analytics configuration', href: '/docs/ai-healthcare' },
-        { title: 'AI Legal Document Analysis', href: '/docs/ai-legal' },
-        { title: 'AI Supply Chain Optimization', href: '/docs/ai-supply-chain' }
-      ]
-    },
-    {
-      category: 'Infrastructure',
-      icon: Cloud,
-      topics: [
-        { title: 'Cloud DevOps setup', href: '/docs/cloud-devops' },
-        { title: 'IT Infrastructure configuration', href: '/docs/it-infrastructure' },
-        { title: 'Digital Twin implementation', href: '/docs/digital-twin' },
-        { title: 'IoT Edge Computing setup', href: '/docs/iot-edge' }
-      ]
-    },
-    {
-      category: 'Security & Compliance',
-      icon: Shield,
-      topics: [
-        { title: 'Security best practices', href: '/docs/security' },
-        { title: 'Compliance requirements', href: '/docs/compliance' },
-        { title: 'Data protection guidelines', href: '/docs/data-protection' },
-        { title: 'Access control setup', href: '/docs/access-control' }
-      ]
-    }
-  ];
-
-  const contactMethods = [
-    {
-      type: 'Phone Support',
-      icon: Phone,
-      details: '+1 302 464 0950',
-      description: 'Available 24/7 for urgent issues',
-      response: 'Immediate response',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      type: 'Email Support',
-      icon: Mail,
-      details: 'kleber@ziontechgroup.com',
-      description: 'General inquiries and non-urgent issues',
-      response: 'Response within 2 hours',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      type: 'Emergency Support',
-      icon: AlertCircle,
-      details: '+1 302 464 0950',
-      description: 'Critical system issues and outages',
-      response: 'Immediate response',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      type: 'Business Hours',
-      icon: Clock,
-      details: 'Monday - Friday, 9AM - 6PM EST',
-      description: 'Standard business hours support',
-      response: 'Response within 4 hours',
-      color: 'from-green-500 to-teal-500'
-    }
-  ];
-
   const supportResources = [
     {
-      title: 'Documentation',
-      description: 'Comprehensive technical guides and API references',
-      icon: FileText,
-      href: '/docs',
-      color: 'from-blue-500 to-cyan-500'
+      title: 'Knowledge Base',
+      description: 'Browse our comprehensive documentation and guides',
+      icon: BookOpen,
+      action: 'Browse Docs',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Video,
-      href: '/tutorials',
-      color: 'from-purple-500 to-pink-500'
+      action: 'Watch Videos',
+      color: 'from-pink-500 to-rose-500'
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      href: '/community',
-      color: 'from-green-500 to-emerald-500'
+      action: 'Join Forum',
+      color: 'from-teal-500 to-cyan-500'
     },
     {
       title: 'Training Programs',
@@ -458,6 +380,13 @@ export default function Support() {
                 Check the current status of all our services and systems
               </p>
             </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -504,4 +433,4 @@ export default function Support() {
       </div>
     </div>
   );
-}
+}}}}}}}}}

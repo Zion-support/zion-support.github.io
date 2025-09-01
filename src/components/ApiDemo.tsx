@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { api, ApiResponse } from '@/services/api';
+import React, { useState, useEffect } from 'react.ts';
+import { api, ApiResponse  } from '@/services/api';
 
 interface User {
+
   id: number;
   name: string;
   email: string;
   createdAt?: string;
-}
 
-const ApiDemo: React.FC = () => {;
-  const [users, setUsers] = useState<User[]>([]);
+const ApiDemo: React.FC = (): JSX.Element => {;
+  const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [newUser, setNewUser] = useState({ name: '', email: '' });
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...');
+  const [error, setError] = useState<any>(null);
+const [newUser, setNewUser] = useState({ name: '', email: '';
+});
+  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
   useEffect(() => {
@@ -27,32 +28,31 @@ const ApiDemo: React.FC = () => {;
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
     } catch (err) {
       setHealthStatus('❌ API Unhealthy');
-    }
+
   };
 
   const fetchUsers = async () => {;
     setLoading(true);
     setError(null);
-    
+
     try {
       const response = await api.getUsers();
       if (response.success && response.data) {
         setUsers(response.data);
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
     } finally {
       setLoading(false);
-    }
+
   };
 
-  const handleCreateUser = async (e: React.FormEvent) => {;
+  const handleCreateUser = async (e: anyReact.FormEvent)  => {;
     e.preventDefault();
-    
+
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
-    }
 
     setLoading(true);
     setError(null);
@@ -62,12 +62,12 @@ const ApiDemo: React.FC = () => {;
       if (response.success && response.data) {
         setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });
-      }
+
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user');
     } finally {
       setLoading(false);
-    }
+
   };
 
   return (
@@ -76,7 +76,7 @@ const ApiDemo: React.FC = () => {;
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-        
+
         {/* API Health Status */}
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status</h3>
@@ -127,7 +127,7 @@ const ApiDemo: React.FC = () => {;
               type="submit"
               disabled={loading}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -148,11 +148,11 @@ const ApiDemo: React.FC = () => {;
               onClick={fetchUsers}
               disabled={loading}
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-            >
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-          
+
           {loading ? (
             <div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
@@ -197,4 +197,4 @@ const ApiDemo: React.FC = () => {;
   );
 };
 
-export default ApiDemo;
+export default ApiDemo;}}}}}}}

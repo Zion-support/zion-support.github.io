@@ -1,66 +1,115 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  ShoppingCart, 
+  MessageCircle, 
+  BookOpen, 
   DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  ChevronDown,
-  ChevronUp
+  Gauge,
+  HelpCircle
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
 
-interface ServiceShowcaseProps {
-  className?: string;
-}
-
-export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025];
-
-  // Group services by category
-  const servicesByCategory = allServices.reduce((acc, service) => {
-    const category = service.category;
-    if (!acc[category]) {
-      acc[category] = [];
+export function ServicesShowcase() {
+  const services = [
+    {
+      icon: Brain,
+      title: "AI & Analytics",
+      description: "Machine Learning & Data Science solutions",
+      href: "/services/ai-business-intelligence",
+      category: "AI",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud & DevOps",
+      description: "Infrastructure & Automation",
+      href: "/services/cloud-devops",
+      category: "Infrastructure",
+      color: "from-blue-500 to-cyan-600"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "AI-Powered Security solutions",
+      href: "/services",
+      category: "Security",
+      color: "from-red-500 to-orange-600"
+    },
+    {
+      icon: Cpu,
+      title: "IoT & Edge",
+      description: "Smart Devices & Networks",
+      href: "/services",
+      category: "IoT",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: Lock,
+      title: "Blockchain",
+      description: "DeFi & Smart Contracts",
+      href: "/services",
+      category: "Blockchain",
+      color: "from-yellow-500 to-orange-600"
+    },
+    {
+      icon: Users,
+      title: "Healthcare Tech",
+      description: "AI Medicine & Diagnostics",
+      href: "/services",
+      category: "Healthcare",
+      color: "from-pink-500 to-rose-600"
+    },
+    {
+      icon: Globe,
+      title: "Sustainability",
+      description: "Green IT Solutions",
+      href: "/services",
+      category: "Green IT",
+      color: "from-emerald-500 to-teal-600"
+    },
+    {
+      icon: ShoppingCart,
+      title: "Micro SaaS",
+      description: "Productized SaaS for niches",
+      href: "/services/micro-saas-solutions",
+      category: "SaaS",
+      color: "from-indigo-500 to-purple-600"
+    },
+    {
+      icon: MessageCircle,
+      title: "AI Auto Email",
+      description: "Faster replies, CRM logging",
+      href: "/services/ai-auto-email-responder",
+      category: "Automation",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: Users,
+      title: "Mobile Surveys",
+      description: "NPS/CSAT with AI insights",
+      href: "/services/mobile-survey",
+      category: "Analytics",
+      color: "from-teal-500 to-green-600"
     }
-    acc[category].push(service);
-    return acc;
-  }, {} as Record<string, typeof allServices>);
+  ];
 
-  const toggleCategory = (category: string) => {
-    setExpandedCategories(prev =>
-      prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   };
 
   const itemVariants = {
@@ -76,35 +125,6 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
       }
     }
   };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'AI & Machine Learning': 'from-zion-purple to-zion-purple-dark',
-      'Cloud & DevOps': 'from-zion-cyan to-zion-cyan-dark',
-      'Cybersecurity': 'from-zion-red to-zion-red-dark',
-      'Data & Analytics': 'from-zion-blue to-zion-blue-dark',
-      'IoT & Edge Computing': 'from-zion-green to-zion-green-dark',
-      'Quantum Computing': 'from-zion-indigo to-zion-indigo-dark'
-    };
-    return colors[category as keyof typeof colors] || 'from-zion-cyan to-zion-blue';
-  };
-
-  const filteredServices = selectedCategory === 'all'
-    ? allServices
-    : allServices.filter(service =>
-        service.category.toLowerCase().includes(selectedCategory.toLowerCase())
-      );
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -134,7 +154,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
+              <div className="text-4xl font-bold text-zion-cyan mb-2">{services.length}+</div>
               <div className="text-zion-slate-light">Total Services</div>
             </motion.div>
             <motion.div
@@ -175,7 +195,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {filteredServices.map((service, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}

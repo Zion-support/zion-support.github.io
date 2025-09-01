@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityMonitoring() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring() {
   const features = [
     'AI-powered security monitoring optimization',
     'Intelligent monitoring strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityMonitoring() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$299/mo', 
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard monitoring', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 10 systems', 'Basic AI features', 'Standard monitoring', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityMonitoring() {
       </section>;
     </div>;
   );
-}
+}}

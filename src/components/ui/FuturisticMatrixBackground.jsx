@@ -15,7 +15,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
-        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{ /* empty */ }|;:,.<>?";
         const matrixArray = matrix.split("");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;
@@ -25,7 +25,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
             drops[i] = 1}
         // Animation variables
         let animationId;
-        let frameCount = 0;
+        const frameCount = 0;
         const draw = () => {
             // Create semi-transparent black background for fade effect
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -71,16 +71,6 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         // Cleanup
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-<<<<<<< HEAD
-            cancelAnimationFrame(animationId)}}, [intensity, color, speed]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
-  {
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
-  #16213e 100%)'
-        
-
-}}/>)};
-=======
             cancelAnimationFrame(animationId);
         };
     }, [intensity, color, speed]);
@@ -97,5 +87,5 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
 
 }}/>);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default FuturisticMatrixBackground;
+}}}}}

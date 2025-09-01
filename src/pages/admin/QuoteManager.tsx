@@ -54,7 +54,6 @@ export default function QuoteManager(...args[]):  {
 };
 
   const handleViewDetails = (quote: QuoteRequest)  => {
-=======
   new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
     in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,;
     accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,;
@@ -70,7 +69,6 @@ export default function QuoteManager(...args[]):  {
 };
 
   const handleViewDetails = (quote: QuoteRequest) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedQuote(quote);
     setShowDetails(true)};
 
@@ -78,12 +76,8 @@ export default function QuoteManager(...args[]):  {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-<<<<<<< HEAD
-    setDateRange({ from: null, to: null })};
-=======
     setDateRange({ from: null, to: null });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   if (!isAdmin) {
     return <Navigate to = "/unauthorized" replace />}

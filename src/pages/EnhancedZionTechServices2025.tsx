@@ -25,7 +25,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
         return b.aiScore - a.aiScore;
       default:
         return a.title.localeCompare(b.title);
-    }
+
   });
 
   return (
@@ -42,7 +42,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Cutting-edge micro SAAS, IT services, and AI solutions designed to transform your business. 
+              Cutting-edge micro SAAS, IT services, and AI solutions designed to transform your business.
               Real solutions with proven results and comprehensive support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -70,7 +70,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
             Comprehensive Service Portfolio
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI-powered business solutions to cutting-edge quantum computing, 
+            From AI-powered business solutions to cutting-edge quantum computing,
             we provide the technology foundation your business needs to thrive in 2025 and beyond.
           </p>
         </div>
@@ -111,7 +111,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
@@ -120,7 +120,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+
               <option value="name">Sort by Name</option>
               <option value="price">Sort by Price</option>
               <option value="rating">Sort by Rating</option>
@@ -155,7 +155,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
                   <span className="text-lg font-bold text-green-400">{service.aiScore}/100</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div 
+                  <div
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
                     style={{ width: `${service.aiScore}%` }}
                   ></div>
@@ -219,14 +219,14 @@ const EnhancedZionTechServices2025: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
+
                   Learn More
                 </a>
                 <div className="text-center">
                   <a
                     href={`mailto:${service.contactInfo.email}`}
                     className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+
                     Contact Sales
                   </a>
                 </div>
@@ -292,4 +292,4 @@ const EnhancedZionTechServices2025: React.FC = () => {;
   );
 };
 
-export default EnhancedZionTechServices2025;
+export default EnhancedZionTechServices2025;}

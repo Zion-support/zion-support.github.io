@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown } from 'lucide-react';
-const Navigation = () => {
+import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();
@@ -35,7 +34,7 @@ const Navigation = () => {
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },
             ]
-        }
+
     ];
     const isActive = (href) => {
         if (href === '/') {
@@ -143,3 +142,4 @@ const Navigation = () => {
         </div>)}
     </nav>)};
 export default Navigation;
+}}}

@@ -350,5 +350,6 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     },
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
     marketSize: "$12.3 billion by 2025"
-  }
+
 ];
+}}

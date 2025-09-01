@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
 export default function ManufacturingSolutions() {
     const solutions = [
@@ -70,7 +71,7 @@ export default function ManufacturingSolutions() {
             title: "Production Planning",
             description: "Intelligent production scheduling and resource allocation",
             icon: "📅"
-        }
+
     ];
     const benefits = [
         "Reduce downtime by 30-50%",
@@ -93,7 +94,7 @@ export default function ManufacturingSolutions() {
             Manufacturing Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your manufacturing operations with Industry 4.0 technology. 
+            Transform your manufacturing operations with Industry 4.0 technology.
             Embrace smart manufacturing for increased efficiency, quality, and productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,7 +120,7 @@ export default function ManufacturingSolutions() {
               Our comprehensive suite of manufacturing technology solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg w-fit mb-4">
@@ -149,7 +150,7 @@ export default function ManufacturingSolutions() {
               Discover how smart manufacturing is transforming industries worldwide
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
@@ -171,7 +172,7 @@ export default function ManufacturingSolutions() {
               See real results with our smart manufacturing solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">

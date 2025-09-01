@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const MicroSAAS = () => {
     const microSaasServices = [
         {
@@ -34,16 +34,16 @@ const MicroSAAS = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized software-as-a-service solutions designed to solve specific business challenges 
+              Specialized software-as-a-service solutions designed to solve specific business challenges
               with focused functionality and rapid deployment
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {microSaasServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                
+
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Key Features</h4>
                   <ul className="space-y-1">
@@ -53,7 +53,7 @@ const MicroSAAS = () => {
                       </li>))}
                   </ul>
                 </div>
-                
+
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                     Learn More
@@ -64,12 +64,12 @@ const MicroSAAS = () => {
                 </div>
               </div>))}
           </div>
-          
+
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
               <p className="text-gray-300 mb-6">
-                Can't find exactly what you need? We can develop custom micro-SAAS solutions 
+                Can't find exactly what you need? We can develop custom micro-SAAS solutions
                 tailored to your specific business requirements.
               </p>
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -81,3 +81,4 @@ const MicroSAAS = () => {
       </section>
     </div>)};
 export default MicroSAAS;
+}

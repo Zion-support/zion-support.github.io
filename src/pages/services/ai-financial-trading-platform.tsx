@@ -169,7 +169,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -195,22 +195,22 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">
               <TrendingUp className="w-4 h-4 mr-2" />
               AI-Powered Trading
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Trade Smarter with
               <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis, 
+              Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis,
               automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -262,7 +262,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">{item.metric}</div>
                 <div className="text-gray-300 text-lg">{item.label}</div>
               </motion.div>
@@ -298,7 +298,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -343,7 +343,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -382,7 +382,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Trading?
             </h2>
@@ -427,7 +427,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -466,7 +466,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Trade Across All Markets
             </h2>
@@ -511,7 +511,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                   <market.icon className="w-8 h-8 text-white" />
                 </div>
@@ -550,7 +550,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Trading Plan
             </h2>
@@ -595,11 +595,11 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-green-500 ring-2 ring-green-500/20' 
+                  plan.popular
+                    ? 'border-green-500 ring-2 ring-green-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -665,14 +665,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Start AI Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of traders already experiencing the benefits of AI-powered trading
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -681,22 +681,13 @@ export default function AIFinancialTradingPlatform(...args: []):  {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-}
+}}}}}}

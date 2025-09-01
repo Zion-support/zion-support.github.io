@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Factory, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Factory, 
   Cog, 
   Bot, 
   TrendingUp, 
@@ -13,10 +12,10 @@ import {
   Brain,
   Cloud,
   Star
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+ } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
 
-const ManufacturingSolutions: React.FC = () => {
+const ManufacturingSolutions: React.FC = (): JSX.Element => {
   const solutions = [
     {
       title: 'Smart Factory Automation',
@@ -124,8 +123,8 @@ const ManufacturingSolutions: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit, index)  => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
@@ -159,8 +158,8 @@ const ManufacturingSolutions: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {solutions.map((solution, index)  => (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 20 }}

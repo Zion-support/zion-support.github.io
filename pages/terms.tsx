@@ -259,7 +259,7 @@ export default function Terms(...args[]):  {
 					<Link
 						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-					>
+
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
 					</Link>;

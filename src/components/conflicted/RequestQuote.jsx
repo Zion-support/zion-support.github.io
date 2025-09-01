@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
-export default function RequestQuote() {
+import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export default function RequestQuote() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -109,10 +108,10 @@ export default function RequestQuote() {
               Request a Quote
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Get a personalized quote for your project. Our team will analyze your requirements 
+              Get a personalized quote for your project. Our team will analyze your requirements
               and provide a detailed estimate within 24 hours.
             </p>
-            
+
             {/* Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div initial = {
@@ -239,7 +238,7 @@ export default function RequestQuote() {
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

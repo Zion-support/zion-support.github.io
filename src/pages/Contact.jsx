@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle,
   MessageSquare,
   Building,
@@ -126,7 +126,7 @@ const contactFormFields = [
     label: 'Service Interest',
     type: 'select',
     required: true,
-    options[
+    options: [
       'AI & Analytics',
       'Cybersecurity',
       'Cloud & DevOps',
@@ -157,18 +157,19 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))};
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setSubmitSuccess(false);
@@ -180,7 +181,9 @@ export default function Contact() {
         comp: '',
         service: '',
         message: ''
-      })}, 3000)};
+      });
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -191,75 +194,30 @@ export default function Contact() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <MessageSquare className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Get in
               <span className="text-gradient block">Touch</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Ready to transform your business with cutting-edge technology? 
+              Ready to transform your business with cutting-edge technology?
               Let's discuss your project and explore how we can help you achieve your goals.
             </p>
           </motion.div>
@@ -270,26 +228,8 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -303,46 +243,19 @@ export default function Contact() {
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-2">{method.title}</h3>
                 <p className="text-zion-cyan font-semibold mb-1">{method.value}</p>
                 <p className="text-zion-slate-light text-sm mb-4">{method.description}</p>
-                
+
                 {method.action && (
                   <a
                     href={method.action}
@@ -366,56 +279,20 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Form */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: -30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               <p className="text-zion-slate-light mb-8 leading-relaxed">
-                Fill out the form below and we'll get back to you within 24 hours. 
+                Fill out the form below and we'll get back to you within 24 hours.
                 We're excited to learn about your project and discuss how we can help.
               </p>
 
               {submitSuccess ? (
                 <motion.div
-                  initial = {
-  { opacity: 0,
-  scale: 0.9 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  scale: 1 
-
-
-
-
-
-
-}}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -531,34 +408,16 @@ export default function Contact() {
 
             {/* Comp Info */}
             <motion.div
-              initial = {
-  { opacity: 0,
-  x: 30 
-
-
-
-
-
-
-}}
-              whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">About Zion Tech Group</h3>
                 <p className="text-zion-slate-light leading-relaxed mb-6">
-                  We are a leading technology comp specializing in AI, cybersecurity, cloud solutions, 
-                  and digital transformation. Our team of experts is dedicated to helping businesses 
+                  We are a leading technology company specializing in AI, cybersecurity, cloud solutions,
+                  and digital transformation. Our team of experts is dedicated to helping businesses
                   leverage cutting-edge technology to achieve their goals.
                 </p>
                 <div className="flex items-center gap-3 text-zion-cyan">
@@ -615,32 +474,14 @@ export default function Contact() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Located in the heart of Middletown, Delaware, our office is easily accessible 
+              Located in the heart of Middletown, Delaware, our office is easily accessible
               and ready to welcome you for in-person meetings and consultations.
             </p>
           </motion.div>
@@ -662,4 +503,5 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

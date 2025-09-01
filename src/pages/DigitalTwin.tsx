@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Eye, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Eye, 
   Cpu, 
   Network, 
   Database, 
@@ -50,9 +49,9 @@ import {
   Car,
   Plane,
   Ship
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export default function DigitalTwin() {
+export default function DigitalTwin(...args: any[]): any {
   const features = [
     {
       icon: Eye,
@@ -180,8 +179,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -219,8 +218,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {applications.map((application, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {applications.map((application, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -268,8 +267,8 @@ export default function DigitalTwin() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
+            {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

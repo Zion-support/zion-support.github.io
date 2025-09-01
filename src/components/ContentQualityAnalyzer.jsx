@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react';
-const ContentQualityAnalyzer = () => {
+import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [contentIssues, setContentIssues] = useState([]);
@@ -49,7 +48,7 @@ const ContentQualityAnalyzer = () => {
             description: 'No headings found',
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
             status: 'open'
-        }
+
     ];
     useEffect(() => {
         setContentIssues(sampleIssues);
@@ -367,3 +366,4 @@ const ContentQualityAnalyzer = () => {
         </motion.div>)}
     </>)};
 export default ContentQualityAnalyzer;
+}}}}}}

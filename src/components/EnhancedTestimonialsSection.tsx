@@ -84,7 +84,7 @@ const testimonials: Testimonial[] = [
     industry: 'Cloud Services',
     results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
-  }
+
 ];
 
 export default function EnhancedTestimonialsSection(...args[]):  {
@@ -94,14 +94,9 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-<<<<<<< HEAD
-    const interval = setInterval(() => {;
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}, 8000);
-=======
     const interval = setInterval(() => {;
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
 
@@ -113,116 +108,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
 
-<<<<<<< HEAD
-  const goToTestimonial = (index: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setCurrentTestimonial(index);
-    setIsAutoPlaying(false)};
-
-  const currentTestimonialData = testimonials[currentTestimonial];
-
-  return (
-    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
-          </h2>
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Real results from real businesses. Discover how Zion Tech Group is transforming industries worldwide.
-          </p>
-        </motion.div>
-
-        {/* Testimonials Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTestimonial}
-              initial = {
-  { opacity: 0,
-  x: 100 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-              exit = {
-  { opacity: 0,
-  x: -100 
-
-
-
-
-
-
-}}
-              transition={{ duration: 0.5 }}
-              className="relative"
-            >
-              {/* Main Testimonial Card */}
-              <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
-
-                {/* Quote icon */}
-                <motion.div
-                  className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-<<<<<<< HEAD
-                  animate = {
-  { rotate[0,
-  360] 
-
-}}
-                  transition = {
-  { duration: 20,
-  repeat: Infinity 
-
-}}
-=======
                   animate = {
   { rotate: [0,
   360] 
@@ -243,7 +128,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
                 </motion.div>
@@ -257,7 +141,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: index * 0.1 }}
-                      >
+
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
                       </motion.div>
                     ))}
@@ -295,7 +179,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 }}
                         transition={{ delay: 0.3 + index * 0.1 }}
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
-                      >
+
                         <p className="text-zion-cyan font-semibold">{result}</p>
                       </motion.div>
                     ))}
@@ -332,7 +216,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-            >
+
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
 
@@ -356,7 +240,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-            >
+
               <ChevronRight className="w-6 h-6 text-white" />
             </motion.button>
           </div>
@@ -396,7 +280,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 }}
           className="mt-20"
-        >
+
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
@@ -442,7 +326,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 }}
                   className="text-center"
-                >
+
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
                     <indicator.icon className="w-8 h-8 text-zion-cyan" />
                   </div>
@@ -488,7 +372,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
@@ -500,23 +384,15 @@ export default function EnhancedTestimonialsSection(...args[]):  {
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
+
                 Start Your Transformation
               </a>
               <a
                 href="/case-studies"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300"
-              >
+
                 View Case Studies
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </motion.div>;
@@ -524,4 +400,3 @@ export default function EnhancedTestimonialsSection(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

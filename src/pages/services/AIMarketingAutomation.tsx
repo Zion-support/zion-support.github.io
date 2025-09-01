@@ -62,14 +62,12 @@ const AIMarketingAutomation = () => {
       description: "Seamlessly coordinate campaigns across email, social, and web",
       price: "$119/month"
     }
-=======;
       name: 'Enterprise',;
       price: '$799',;
       period: '/mo',;
       contacts: 'Unlimited contacts',;
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const pricingPlans = [

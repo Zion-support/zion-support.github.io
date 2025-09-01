@@ -105,19 +105,12 @@ export default function AIServices(...args[]):  {
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-<<<<<<< HEAD
-    {
-      industry: "Retail",
-      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
-      icon: ShoppingCart
     };
-=======;
     {;
       industry: "Retail",;
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
       icon: ShoppingCart;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
@@ -140,7 +133,7 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -177,7 +170,7 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
+
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -205,7 +198,7 @@ export default function AIServices(...args[]):  {
                   <Link
                     to="/contact"
                     className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-                  >
+
                     Get Quote
                   </Link>
                 </div>
@@ -232,7 +225,7 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-              >
+
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
@@ -261,7 +254,7 @@ export default function AIServices(...args[]):  {
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-              >
+
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
                   <useCase.icon className="h-6 w-6 text-white" />
                 </div>
@@ -294,24 +287,16 @@ export default function AIServices(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+
                 Explore All Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -319,4 +304,3 @@ export default function AIServices(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

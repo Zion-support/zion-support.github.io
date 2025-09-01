@@ -141,7 +141,7 @@ const services: Service[] = [
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
-  }
+
 ];
 
 const categories = [
@@ -156,21 +156,7 @@ const categories = [
   'Healthcare AI';
 ];
 
-<<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible(true);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
@@ -184,7 +170,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: number)  => {
     return Array.from({ length: 5 }, (_, i)  => (
@@ -197,7 +182,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
         }`};
       />;
     ))};
-=======
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';
@@ -205,7 +189,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
       />;
     ));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -234,7 +217,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
               Services
@@ -279,7 +262,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+
           {categories.map((category, index) => (
             <button
               key={category}
@@ -289,7 +272,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'
               }`}
-            >
+
               {category}
             </button>
           ))}
@@ -310,7 +293,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -335,7 +318,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
-              >
+
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
                     {/* Popular Badge */}
@@ -436,7 +419,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 }}
           className="text-center mt-16"
-        >
+
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -449,25 +432,17 @@ export const EnhancedServiceShowcase: React.FC = () => {;
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-              >
+
                 <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
@@ -475,4 +450,3 @@ export const EnhancedServiceShowcase: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

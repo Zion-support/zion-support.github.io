@@ -28,21 +28,13 @@ export default function Onboarding() {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
-<<<<<<< HEAD
-            router('/service-onboarding');
-            return}
-        else if (type === "talent") {
-            router('/talent-onboarding');
-            return}
-=======
             router('/service-onboarding');
             return;
-        }
+
         else if (type === "talent") {
             router('/talent-onboarding');
             return;
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         // Continue with the onboarding flow for clients
         setCurrentStep(1)};
     const handleProfileComplete = async (data) => {
@@ -52,14 +44,9 @@ export default function Onboarding() {
                 description: "Your session may have expired. Please log in again.",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            router('/login');
-            return}
-=======
             router('/login');
             return;
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const dbUserType = mapUserTypeToDatabase(userType);
         try {
             await updateProfile({
@@ -85,14 +72,10 @@ export default function Onboarding() {
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
-<<<<<<< HEAD
-            router(dashboardRoute)}
-=======
             router(dashboardRoute);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
-            console.error('Error updating profile:', error);
+            // // // // // // // console.error('Error updating profile:', error);
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
@@ -104,16 +87,11 @@ export default function Onboarding() {
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
     if (!user) {
-<<<<<<< HEAD
-        router('/login');
-        return null}
-=======
         router('/login');
         return null;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

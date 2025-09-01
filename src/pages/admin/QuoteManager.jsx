@@ -36,17 +36,13 @@ export default function QuoteManager() {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
-<<<<<<< HEAD
-        setDateRange({ from: null, to: null })};
-=======
         setDateRange({ from: null, to: null });
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!isAdmin) {
         return <Navigate to="/unauthorized" replace/>}
     return (<ProtectedRoute adminOnly>
       <div>
-        
+
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -56,27 +52,27 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests"/>
             </div>
-            
+
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts}/>
-            
+
             {/* Filters */}
             <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters}/>
-            
+
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable quotes={quotes.filter(quote => !quote.is_archived)} isLoading={isLoading} updateStatus={updateStatus} toggleArchive={toggleArchive} deleteQuote={deleteQuote} onViewDetails={handleViewDetails}/>
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable quotes={quotes.filter(quote => quote.is_archived)} isArchived={true} isLoading={isLoading} updateStatus={updateStatus} toggleArchive={toggleArchive} deleteQuote={deleteQuote} onViewDetails={handleViewDetails}/>
@@ -85,7 +81,7 @@ export default function QuoteManager() {
             </Tabs>
           </div>
         </div>
-        
+
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
             setShowDetails(false);

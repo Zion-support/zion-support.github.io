@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Zap, Clock, Globe, Shield, MapPin, Search, ArrowRight } from 'lucide-react';
-import { GradientHeading } from '@/components/GradientHeading';
-
+import React, { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,13 +76,13 @@ export function ITServiceRequestHero() {
                 Global IT Services
               </span>
             </div>
-            
+
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24x7 Global IT Onsite Services
             </GradientHeading>
-            
+
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
+              Request professional technicians anywhere in the world, anytime you need them.
               Fast, reliable, and secure IT solutions for your business.
             </p>
 

@@ -359,19 +359,13 @@ const workflowSolutions = [
       "Resource allocation",
       "Performance tracking"
     ],
-<<<<<<< HEAD
-    price: "From $100,000",
-    timeline: "16-28 weeks",
-    category: "Task Management",
     technologies["AI", "Task Management", "Optimization", "Analytics"]
   };
-=======;
     price: "From $100,000",;
     timeline: "16-28 weeks",;
     category: "Task Management",;
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const workflowTechnologies = [
@@ -486,19 +480,13 @@ const workflowBenefits = [
     examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
-<<<<<<< HEAD
-    title: "Scalability",
-    description: "AI workflows scale efficiently with business growth",
-    icon: Rocket,
     examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
   };
-=======;
     title: "Scalability",;
     description: "AI workflows scale efficiently with business growth",;
     icon: Rocket,;
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 export default function AIWorkflowAutomation(...args[]):  {
@@ -510,7 +498,6 @@ export default function AIWorkflowAutomation(...args[]):  {
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions
     : workflowSolutions.filter(solution => solution.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -546,7 +533,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -579,7 +566,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Brain className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -637,7 +624,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make AI workflow automation essential
@@ -679,7 +666,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -728,7 +715,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Workflow Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading AI workflow automation technologies
@@ -770,7 +757,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
@@ -820,7 +807,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Workflow Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful AI workflow automation implementation
@@ -862,7 +849,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -909,7 +896,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for intelligent workflow automation
@@ -927,7 +914,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -969,7 +956,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -991,7 +978,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
@@ -1043,7 +1030,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with AI workflow automation
@@ -1085,7 +1072,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -1149,7 +1136,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how AI workflow automation can revolutionize your operations,
@@ -1160,23 +1147,15 @@ export default function AIWorkflowAutomation(...args[]):  {
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Workflow Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Workflow Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -1184,4 +1163,3 @@ export default function AIWorkflowAutomation(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

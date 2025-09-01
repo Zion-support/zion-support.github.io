@@ -4,7 +4,7 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
 const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   const categories = [
     'All',
     'Comp News',
@@ -94,8 +94,11 @@ const News = () => {
   ];
 
   const filteredNews = newsItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory});
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -128,7 +131,7 @@ const News = () => {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex flex-wrap gap-3">
                 <select
                   value={selectedCategory}
@@ -238,6 +241,7 @@ const News = () => {
         </div>
       </section>
     </div>
-  )};
+  );
+}
 
 export default News;

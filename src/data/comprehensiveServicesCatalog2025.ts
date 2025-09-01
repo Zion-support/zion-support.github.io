@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from "./innovativeMicroSaasServices2025";
-import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025  } from "./expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025  } from "./emergingTechServices2025";
-=======
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices2025";
 import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "./expandedInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "./emergingTechServices2025";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export interface ComprehensiveService2025 {
 
@@ -118,19 +112,6 @@ export const calculateServiceStats = () => {
   const stats = {
   totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
-<<<<<<< HEAD
-    pricingTiers: PRICING_TIERS.map(tier  => ({
-      ...tier,;
-  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => {;
-        if (tier.id === 'budget') return service.price <= 1000;
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
-        if (tier.id === 'enterprise') return service.price > 5000;
-        return false
-
-}).length
-    })),
-    innovationLevels: INNOVATION_LEVELS.map(level = > ({
-=======;
     pricingTiers: PRICING_TIERS.map(tier => ({;
       ...tier,;
   ;
@@ -149,27 +130,17 @@ export const calculateServiceStats = () => {
 }).length
     })),
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       ...level,
       count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
         service.innovationLevel.toLowerCase() === level.id
       ).length
     })),
-<<<<<<< HEAD
-    supportLevels: SUPPORT_LEVELS.map(level  => ({
-      ...level,
-      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
-        service.supportLevel.toLowerCase() === level.id
-      ).length
-    }))
-=======;
     supportLevels: SUPPORT_LEVELS.map(level => ({;
       ...level,;
       count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
         service.supportLevel.toLowerCase() === level.id;
       ).length;
     }));
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   return stats;
@@ -214,7 +185,6 @@ export const searchServices = (query: string) => {
     service.subcategory.toLowerCase().includes(searchTerm)
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Get featured services (high ROI and innovation)
 export const getFeaturedServices = (limit: number = 10) => {;
@@ -226,48 +196,16 @@ export const getFeaturedServices = (limit: number = 10) => {;
     .slice(0, limit)};
 
 // Get trending services (recent and popular)
-<<<<<<< HEAD
-export const getTrendingServices = (limit: number = 10) => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025
-    .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
-    .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
-    .slice(0, limit)};
-=======
 export const getTrendingServices = (limit: number = 10) => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit);
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Get services by industry
 export const getServicesByIndustry = (industry: string)  => {
   const industryMap: { [key: string]: string[] } = {
-<<<<<<< HEAD
-    'healthcare'['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
-    'finance'['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
-    'legal'['AI & Legal Tech', 'Legal Research'],
-    'education'['AI & Education', 'Personalized Learning'],
-    'real-estate'['AI & Real Estate', 'Property Management'],
-    'marketing'['AI & Marketing', 'Marketing Automation'],
-    'manufacturing'['AI & Manufacturing', 'Manufacturing Optimization'],
-    'retail'['AI & Retail', 'Retail Analytics'],
-    'energy'['AI & Energy', 'Energy Management'],
-    'transportation'['AI & Transportation', 'Transportation & Logistics'],
-    'logistics'['AI & Supply Chain', 'Logistics Optimization', 'Transportation & Logistics'],
-    'cybersecurity'['Cybersecurity', 'AI Security', 'Quantum Security'],
-    'blockchain'['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],
-    'quantum'['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],
-    'iot'['IoT & Edge Computing', 'Edge AI'],;
-    'ai'['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics'];
-  };
-  
-  const categories = industryMap[industry.toLowerCase()] || [];
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service = > ;
-    categories.some(category => service.category.includes(category));
-  )};
-=======
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
     'legal': ['AI & Legal Tech', 'Legal Research'],
@@ -291,7 +229,6 @@ export const getServicesByIndustry = (industry: string)  => {
     categories.some(category => service.category.includes(category))
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Get service recommendations based on user preferences
 export const getServiceRecommendations = (preferences: {;
@@ -319,7 +256,6 @@ export const getServiceRecommendations = (preferences: {;
     recommendations = recommendations.filter(service =>
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
     )};
-=======;
     recommendations = recommendations.filter(service => ;
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase();
     );
@@ -330,4 +266,4 @@ export const getServiceRecommendations = (preferences: {;
     const bScore = parseInt(b.roi.replace(/\D/g, ''));
     return bScore - aScore})};
 
-export default COMPREHENSIVE_SERVICES_CATALOG_2025;
+export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}

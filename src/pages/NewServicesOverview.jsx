@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
 export default function NewServicesOverview() {
     const serviceCategories = [
@@ -30,7 +31,7 @@ export default function NewServicesOverview() {
                     price: '$3,500/month',
                     features['Disease detection', 'Diagnostic support', 'Patient monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -60,7 +61,7 @@ export default function NewServicesOverview() {
                     price: '$2,400/month',
                     features['Multi-cloud monitoring', 'Configuration management', 'Compliance'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -90,7 +91,7 @@ export default function NewServicesOverview() {
                     price: '$2,500/month',
                     features['Multi-cluster management', 'Security policies', 'Monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -120,7 +121,7 @@ export default function NewServicesOverview() {
                     price: '$2,100/month',
                     features['Customer segmentation', 'Behavioral analysis', 'Personalization'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
         },
         {
@@ -150,9 +151,9 @@ export default function NewServicesOverview() {
                     price: '$3,200/month',
                     features['Predictive maintenance', 'Quality control', 'Production monitoring'],
                     path: '/comprehensive-services-showcase'
-                }
+
             ]
-        }
+
     ];
     const benefits = [
         {
@@ -178,7 +179,7 @@ export default function NewServicesOverview() {
             title: 'Expert Support',
             description: '24/7 technical support and dedicated success managers',
             color: 'text-yellow-400'
-        }
+
     ];
     const stats = [
         { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
@@ -266,7 +267,7 @@ export default function NewServicesOverview() {
                       <p className="text-gray-400 mb-4 line-clamp-3">
                         {service.description}
                       </p>
-                      
+
                       <div className="mb-4">
                         <div className="text-2xl font-bold text-blue-400 mb-2">
                           {service.price}
@@ -327,7 +328,7 @@ export default function NewServicesOverview() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement the perfect solution for your business needs. 
+              Our team of experts is ready to help you implement the perfect solution for your business needs.
               Get in touch today to start your digital transformation journey.
             </p>
 

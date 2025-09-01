@@ -22,22 +22,22 @@ export default function MicroSAASSolutions(...args: []):  {
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Micro SaaS Solutions
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Micro SaaS
                 <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> Solutions</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Build, launch, and scale your micro SaaS business with our comprehensive solutions. 
+                Build, launch, and scale your micro SaaS business with our comprehensive solutions.
                 From development to marketing, we help you create profitable subscription businesses.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function MicroSAASSolutions(...args: []):  {
                 Complete Micro SaaS Platform
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our micro SaaS platform provides everything you need to build, launch, and grow 
+                Our micro SaaS platform provides everything you need to build, launch, and grow
                 your subscription business successfully.
               </p>
             </div>
@@ -393,7 +393,7 @@ export default function MicroSAASSolutions(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
-              >
+
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -409,4 +409,4 @@ export default function MicroSAASSolutions(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}}}

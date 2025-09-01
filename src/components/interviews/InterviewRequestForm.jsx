@@ -11,8 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { format, addDays } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { CalendarIcon import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 const formSchema = z.object({
     date: z.date({
@@ -72,7 +71,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             });
             onClose()}
         catch (error) {
-            console.error("Failed to schedule interview:", error);
+            // // // // // // // console.error("Failed to schedule interview:", error);
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",

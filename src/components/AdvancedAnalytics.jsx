@@ -7,9 +7,9 @@ export function AdvancedAnalytics() {
         revenue: 0,
         bounceRate: 0,
         avgSessionDuration: 0,
-        topPages[],
-        trafficSources[],
-        deviceTypes[]
+        topPages: [],
+        trafficSources: [],
+        deviceTypes: []
     });
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
@@ -24,42 +24,48 @@ export function AdvancedAnalytics() {
                 revenue: Math.floor(Math.random() * 50000) + 10000,
                 bounceRate: Math.random() * 30 + 20,
                 avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-                topPages[
+                topPages: [
                     { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
                     { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
                     { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
                     { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
                     { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
                 ],
-                trafficSources[
+                trafficSources: [
                     { source: 'Organic Search', percentage: 45 },
                     { source: 'Direct', percentage: 25 },
                     { source: 'Social Media', percentage: 20 },
                     { source: 'Referral', percentage: 10 }
                 ],
-                deviceTypes[
+                deviceTypes: [
                     { device: 'Desktop', percentage: 60 },
                     { device: 'Mobile', percentage: 35 },
                     { device: 'Tablet', percentage: 5 }
                 ]
             });
-            setIsLoading(false)};
-        fetchData()}, [timeRange]);
+            setIsLoading(false);
+        };
+        fetchData();
+    }, [timeRange]);
     const formatNumber = (num) => {
         if (num >= 1000000)
             return (num / 1000000).toFixed(1) + 'M';
         if (num >= 1000)
             return (num / 1000).toFixed(1) + 'K';
-        return num.toString()};
+        return num.toString();
+    };
     const formatCurrency = (num) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
-        }).format(num)};
+        }).format(num);
+    };
     if (isLoading) {
         return (<div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
-      </div>)}
+      </div>);
+    }
+    
     return (<div className="space-y-6 p-6">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-zion-blue mb-4">
@@ -68,38 +74,33 @@ export function AdvancedAnalytics() {
         <p className="text-zion-slate-light text-lg">
           Real-time insights and performance metrics
         </p>
-        
+
         {/* Time Range Selector */}
         <div className="flex justify-center mt-4 space-x-2">
-          {['1d', '7d', '30d', '90d'].map((range) => (<button key={range} onClick={() => setTimeRange(range)} className={`px-4 py-2 rounded-lg transition-colors ${timeRange === range
-                ? 'bg-zion-cyan text-white'
-                : 'bg-zion-slate/10 text-zion-slate-light hover:bg-zion-slate/20'}`}>
+          {['1d', '7d', '30d', '90d'].map((range) => (
+            <button 
+              key={range} 
+              onClick={() => setTimeRange(range)} 
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                timeRange === range
+                  ? 'bg-zion-cyan text-white'
+                  : 'bg-zion-slate/10 text-zion-slate-light hover:bg-zion-slate/20'
+              }`}
+            >
               {range}
-            </button>))}
+            </button>
+          ))}
         </div>
       </div>
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.1 }} className="p-6 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="p-6 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-xl"
+        >
           <div className="text-2xl font-bold text-zion-blue">
             {formatNumber(analyticsData.visitors)}
           </div>
@@ -107,25 +108,12 @@ export function AdvancedAnalytics() {
           <div className="text-zion-cyan text-xs mt-2">+12.5% vs last period</div>
         </motion.div>
 
-        <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.2 }} className="p-6 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="p-6 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-xl"
+        >
           <div className="text-2xl font-bold text-zion-purple">
             {formatNumber(analyticsData.conversions)}
           </div>
@@ -133,25 +121,12 @@ export function AdvancedAnalytics() {
           <div className="text-zion-cyan text-xs mt-2">+8.3% vs last period</div>
         </motion.div>
 
-        <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.3 }} className="p-6 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="p-6 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-xl"
+        >
           <div className="text-2xl font-bold text-zion-cyan">
             {formatCurrency(analyticsData.revenue)}
           </div>
@@ -159,25 +134,12 @@ export function AdvancedAnalytics() {
           <div className="text-zion-cyan text-xs mt-2">+15.7% vs last period</div>
         </motion.div>
 
-        <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.4 }} className="p-6 bg-gradient-to-br from-zion-slate/20 to-zion-blue/20 border border-zion-slate/30 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="p-6 bg-gradient-to-br from-zion-slate/20 to-zion-blue/20 border border-zion-slate/30 rounded-xl"
+        >
           <div className="text-2xl font-bold text-zion-slate-light">
             {analyticsData.bounceRate.toFixed(1)}%
           </div>
@@ -189,25 +151,12 @@ export function AdvancedAnalytics() {
       {/* Detailed Analytics */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Pages */}
-        <motion.div initial = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.5 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 }}
+          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        >
           <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
             Top Pages
           </h3>
@@ -229,25 +178,12 @@ export function AdvancedAnalytics() {
         </motion.div>
 
         {/* Traffic Sources */}
-        <motion.div initial = {
-  { opacity: 0,
-  x: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.6 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }} 
+          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        >
           <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
             Traffic Sources
           </h3>
@@ -266,25 +202,12 @@ export function AdvancedAnalytics() {
       </div>
 
       {/* Device Types */}
-      <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.7 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7 }}
+        className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+      >
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Device Types
         </h3>
@@ -304,25 +227,12 @@ export function AdvancedAnalytics() {
       </motion.div>
 
       {/* Performance Insights */}
-      <motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.8 }} className="p-6 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 border border-zion-blue/20 rounded-xl">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8 }}
+        className="p-6 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 border border-zion-blue/20 rounded-xl"
+      >
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Performance Insights
         </h3>
@@ -345,4 +255,8 @@ export function AdvancedAnalytics() {
           </div>
         </div>
       </motion.div>
-    </div>)}
+    </div>
+  );
+}
+
+export default AdvancedAnalytics;

@@ -1,29 +1,41 @@
-import React from 'react.ts';
+import React from 'react';
+import { cn } from '../../lib/utils';
 
-interface AlertProps extends React.PropsWithChildren<{}> {
-
+interface AlertProps {
   children: React.ReactNode;
-  className?: string}
+  className?: string;
+}
 
-<<<<<<< HEAD
-export function Alert({ children, className = '' }: AlertProps) {;
-  return (;
-    <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
-      {children};
-    </div>;
+interface AlertTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface AlertDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function Alert({ children, className = '' }: AlertProps) {
+  return (
+    <div className={cn('relative w-full rounded-lg border p-4', className)}>
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  children: React.ReactNode;
-  className?: string}
-
-<<<<<<< HEAD
-export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {;
-  return (;
-    <div className={`text-sm ${className}`}>;
-      {children};
-    </div>;
+export function AlertTitle({ children, className = '' }: AlertTitleProps) {
+  return (
+    <h5 className={cn('mb-1 font-medium leading-none tracking-tight', className)}>
+      {children}
+    </h5>
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
+  return (
+    <div className={cn('text-sm', className)}>
+      {children}
+    </div>
+  );
+}

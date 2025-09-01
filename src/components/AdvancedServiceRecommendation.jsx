@@ -92,10 +92,10 @@ const AdvancedServiceRecommendation = () => {
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
             contactInfo: '+1 302 464 0950',
             email: 'kleber@ziontechgroup.com'
-        }
+
     ];
     const calculateMatchScore = (service, profile) => {
-        let score = 0;
+        const score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
             score += 25}
@@ -221,7 +221,7 @@ const AdvancedServiceRecommendation = () => {
           AI-Powered Service Recommendation Engine
         </h1>
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Get personalized service recommendations based on your industry, goals, and requirements. 
+          Get personalized service recommendations based on your industry, goals, and requirements.
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
@@ -250,7 +250,7 @@ const AdvancedServiceRecommendation = () => {
           <Brain className="w-6 h-6 text-zion-cyan"/>
           Tell Us About Your Business
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
@@ -268,18 +268,8 @@ const AdvancedServiceRecommendation = () => {
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
             </select>
           </div>
-          
-          <div>
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
-            <select value={clientProfile.compSize} onChange = {
-  (e) => setClientProfile(prev => ({ ...prev,
-  compSize: e.target.value 
 
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">
-              <option value="">Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
-=======
+          <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
@@ -293,10 +283,9 @@ const AdvancedServiceRecommendation = () => {
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Company Size</option>
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {
@@ -313,7 +302,7 @@ const AdvancedServiceRecommendation = () => {
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {
@@ -330,7 +319,7 @@ const AdvancedServiceRecommendation = () => {
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
             </select>
           </div>
-          
+
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {
@@ -356,12 +345,6 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
 
@@ -370,7 +353,6 @@ const AdvancedServiceRecommendation = () => {
 
 }));
                 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
             }} className="rounded text-zion-cyan"/>
@@ -386,12 +368,6 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
 
@@ -400,7 +376,6 @@ const AdvancedServiceRecommendation = () => {
 
 }));
                 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
             }} className="rounded text-zion-cyan"/>
@@ -445,7 +420,7 @@ const AdvancedServiceRecommendation = () => {
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
           </h2>
-          
+
           <div className="space-y-6">
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
   { opacity: 0,
@@ -476,7 +451,7 @@ const AdvancedServiceRecommendation = () => {
                         <p className="text-zion-slate-light mb-3">
                           {rec.service.description}
                         </p>
-                        
+
                         <div className="flex flex-wrap gap-2 mb-4">
                           <Badge className={getPriorityColor(rec.priority)}>
                             Priority: {rec.priority}
@@ -489,7 +464,7 @@ const AdvancedServiceRecommendation = () => {
                           </Badge>
                         </div>
                       </div>
-                      
+
                       <div className="text-right ml-4">
                         <div className="text-2xl font-bold text-zion-cyan mb-1">
                           {rec.service.price}
@@ -500,7 +475,7 @@ const AdvancedServiceRecommendation = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
@@ -515,7 +490,7 @@ const AdvancedServiceRecommendation = () => {
                             </li>))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                           <BarChart3 className="w-4 h-4 text-zion-cyan"/>
@@ -537,7 +512,7 @@ const AdvancedServiceRecommendation = () => {
                             </Badge>
                           </div>
                         </div>
-                        
+
                         <div className="mt-4">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
   () => window.open(rec.service.link,
@@ -559,7 +534,7 @@ const AdvancedServiceRecommendation = () => {
                 </Card>
               </motion.div>))}
           </div>
-          
+
           {/* CTA Section */}
           <motion.div initial = {
   { opacity: 0,
@@ -583,7 +558,7 @@ const AdvancedServiceRecommendation = () => {
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
               <p className="text-xl mb-6 max-w-2xl mx-auto">
-                Our expert team is ready to help you implement the perfect solution 
+                Our expert team is ready to help you implement the perfect solution
                 for your business needs. Contact us today for a personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -619,3 +594,4 @@ const AdvancedServiceRecommendation = () => {
         </motion.div>)}
     </div>)};
 export default AdvancedServiceRecommendation;
+}}}}}}}}}

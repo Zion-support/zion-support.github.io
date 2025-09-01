@@ -82,7 +82,6 @@ const ComprehensivePricingShowcase2025 = () => {
 
 };
         return icons[category] || '🚀'};
-=======
   'AI & Customer Experience': '💬'
         
 
@@ -92,7 +91,6 @@ const ComprehensivePricingShowcase2025 = () => {
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
@@ -120,10 +118,10 @@ const ComprehensivePricingShowcase2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transparent pricing for our revolutionary collection of 25+ cutting-edge micro SAAS services, 
+            Transparent pricing for our revolutionary collection of 25+ cutting-edge micro SAAS services,
             IT solutions, and AI platforms. Find the perfect solution for your business needs and budget.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-blue-400">Contact Zion Tech Group</h3>
@@ -205,7 +203,7 @@ const ComprehensivePricingShowcase2025 = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Transparent Pricing for All Services
           </h2>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group">
                 {/* Service Type Badge */}
@@ -338,7 +336,7 @@ const ComprehensivePricingShowcase2025 = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our transparent pricing ensures you know exactly what you're getting. 
+              Our transparent pricing ensures you know exactly what you're getting.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -358,3 +356,4 @@ const ComprehensivePricingShowcase2025 = () => {
       </section>
     </div>)};
 export default ComprehensivePricingShowcase2025;
+}}}}}}}}

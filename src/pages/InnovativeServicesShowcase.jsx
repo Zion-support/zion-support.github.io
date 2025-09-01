@@ -55,7 +55,6 @@ const InnovativeServicesShowcase = () => {
 
 };
         return categoryIcons[category] || <Zap className="h-5 w-5"/>};
-=======
   'Digital Twin': <Cpu className="h-5 w-5"/>
         
 
@@ -65,7 +64,6 @@ const InnovativeServicesShowcase = () => {
 };
         return categoryIcons[category] || <Zap className="h-5 w-5"/>;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceRange = (price) => {
         if (price < 10000)
             return 'starter';
@@ -81,7 +79,7 @@ const InnovativeServicesShowcase = () => {
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig}/>
-      
+
       {/* Header Section */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -119,19 +117,19 @@ const InnovativeServicesShowcase = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>
                 <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10"/>
               </div>
-              
+
               <select value={selectedCategory} onChange={(e) => {
             setSelectedCategory(e.target.value);
             setSelectedSubcategory('all')}} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Categories</option>
                 {INNOVATIVE_SERVICE_CATEGORIES_2025.map((category) => (<option key={category} value={category}>{category}</option>))}
               </select>
-              
+
               <select value={selectedSubcategory} onChange={(e) => setSelectedSubcategory(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Subcategories</option>
                 {getSubcategoriesForCategory(selectedCategory).map((subcategory) => (<option key={subcategory} value={subcategory}>{subcategory}</option>))}
               </select>
-              
+
               <select value={priceRange} onChange={(e) => setPriceRange(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue">
                 <option value="all">All Prices</option>
                 <option value="low">Under $10K</option>
@@ -171,11 +169,11 @@ const InnovativeServicesShowcase = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
@@ -254,7 +252,7 @@ const InnovativeServicesShowcase = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our innovative services are designed to help you stay ahead of the competition. 
+            Our innovative services are designed to help you stay ahead of the competition.
             Get in touch with our experts to discuss your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -301,16 +299,16 @@ const InnovativeServicesShowcase = () => {
                           Featured
                         </Badge>)}
                     </div>
-                    
+
                     <CardTitle className="text-xl text-zion-blue-dark group-hover:text-zion-purple transition-colors">
                       {service.title}
                     </CardTitle>
-                    
+
                     <CardDescription className="text-zion-slate line-clamp-3">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-4">
                     {/* Key Features */}
                     <div>
@@ -353,7 +351,7 @@ const InnovativeServicesShowcase = () => {
                           {service.pricingModel}
                         </Badge>
                       </div>
-                      
+
                       <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                         <span className="flex items-center gap-1">
                           <Clock className="h-4 w-4"/>
@@ -426,10 +424,10 @@ const InnovativeServicesShowcase = () => {
             Ready to Future-Proof Your Business?
           </h2>
           <p className="text-xl text-zion-cyan-light mb-10 max-w-3xl mx-auto">
-            Join the technology revolution with Zion Tech Group. Our innovative solutions are designed to 
+            Join the technology revolution with Zion Tech Group. Our innovative solutions are designed to
             drive growth, efficiency, and competitive advantage in the digital age.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light">
               <Link to="/contact">Schedule a Consultation</Link>

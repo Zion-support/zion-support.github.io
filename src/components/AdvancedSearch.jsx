@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
-const mockSuggestions = [
+import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
@@ -71,9 +70,9 @@ export function AdvancedSearch() {
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <Search className="h-5 w-5 text-zion-slate-light"/>
         </div>
-        
+
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} onFocus={() => setShowSuggestions(true)} placeholder="Search for services, technologies, or solutions..." className="block w-full pl-10 pr-12 py-3 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-200 text-zion-slate placeholder-zion-slate-light"/>
-        
+
         <div className="absolute inset-y-0 right-0 flex items-center pr-3">
           <button onClick={() => setIsExpanded(!isExpanded)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Advanced Filters">
             <Filter className="h-5 w-5"/>
@@ -89,7 +88,7 @@ export function AdvancedSearch() {
                 Clear All
               </button>)}
           </div>
-          
+
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)
                     ? 'bg-zion-cyan text-white border-zion-cyan'
@@ -124,7 +123,7 @@ export function AdvancedSearch() {
                 </div>
               </div>
             </button>))}
-          
+
           <div className="p-3 bg-zion-slate-light/5 border-t border-zion-slate-light">
             <div className="flex items-center gap-2 text-xs text-zion-slate-light">
               <Sparkles className="w-3 h-3"/>

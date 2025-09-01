@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { QrCode, Smartphone, Download, Share2, Copy, Check } from 'lucide-react';
-
-export const QrCodeDownload = () => {
+import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = () => {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('ios');
 
@@ -26,13 +24,15 @@ export const QrCodeDownload = () => {
       qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
       icon: '🤖',
       description: 'Download for Android devices'
-    }
+
   };
 
   const handleCopyLink = async (url) => {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+      // // // // // // // console.error('Failed to copy: ', err);
+    }
       setTimeout(() => setCopied(false), 2000)} catch (err) {
       console.error('Failed to copy: ', err)}
   };
@@ -40,13 +40,19 @@ export const QrCodeDownload = () => {
   const handleShare = async (platform) => {
     const { url, name } = downloadLinks[platform];
     const text = `Download ${name} - Zion IT Asset Management App: ${url}`;
-    
+
     if (navigator.share) {
       try {
         await navigator.share({
           title: 'Zion Mobile App',
           text: text,
           url: url
+        // // // // // // // console.error('Error sharing:', err);
+      }
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      handleCopyLink(url);
+
         })} catch (err) {
         console.error('Error sharing:', err)}
     } else {
@@ -64,7 +70,7 @@ export const QrCodeDownload = () => {
             Quick Download Access
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Scan the QR code with your mobile device or use the direct download links below. 
+            Scan the QR code with your mobile device or use the direct download links below.
             Get Zion mobile app in seconds!
           </p>
         </div>
@@ -78,19 +84,19 @@ export const QrCodeDownload = () => {
                   <QrCode className="w-8 h-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">Scan to Download</h3>
                 </div>
-                
+
                 <div className="bg-white rounded-2xl p-6 mb-6 inline-block">
-                  <img 
-                    src={currentPlatform.qrCode} 
+                  <img
+                    src={currentPlatform.qrCode}
                     alt={`QR Code for ${currentPlatform.name}`}
                     className="w-48 h-48 mx-auto"
                   />
                 </div>
-                
+
                 <p className="text-gray-300 mb-4">
                   Point your camera at the QR code above
                 </p>
-                
+
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
                   <Smartphone className="w-4 h-4" />
                   <span>Works with  QR code scanner app</span>
@@ -110,7 +116,7 @@ export const QrCodeDownload = () => {
                         ? 'bg-blue-600 text-white shadow-lg'
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
-                  >
+
                     <span className="text-xl">{downloadLinks[platform].icon}</span>
                     <span className="capitalize">{platform}</span>
                   </button>
@@ -131,31 +137,31 @@ export const QrCodeDownload = () => {
                   <p className="text-gray-300">{currentPlatform.description}</p>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <a
                   href={currentPlatform.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
+
                   <Download className="w-5 h-5" />
                   <span>Download Now</span>
                 </a>
-                
+
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => handleShare(activeTab)}
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-                  >
+
                     <Share2 className="w-4 h-4" />
                     <span>Share</span>
                   </button>
-                  
+
                   <button
                     onClick={() => handleCopyLink(currentPlatform.url)}
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-                  >
+
                     {copied ? (
                       <>
                         <Check className="w-4 h-4 text-green-400" />
@@ -227,13 +233,13 @@ export const QrCodeDownload = () => {
               <a
                 href="#support"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Get Help
               </a>
               <a
                 href="#manual-download"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Manual Download
               </a>
             </div>

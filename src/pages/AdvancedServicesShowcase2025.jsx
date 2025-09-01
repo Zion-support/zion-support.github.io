@@ -73,7 +73,6 @@ const AdvancedServicesShowcase2025 = () => {
 
 };
         return icons[category] || '🚀'};
-=======
   'Network Security': '🛡️'
         
 
@@ -83,15 +82,14 @@ const AdvancedServicesShowcase2025 = () => {
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 20,
@@ -108,8 +106,8 @@ const AdvancedServicesShowcase2025 = () => {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEOHead config = {
@@ -185,7 +183,7 @@ const AdvancedServicesShowcase2025 = () => {
             Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services. 
             Each solution is market-ready with proven ROI, competitive pricing, and enterprise-grade support.
           </motion.p>
-          
+
           {/* Contact Information */}
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial = {
   { opacity: 0,
@@ -472,7 +470,7 @@ const AdvancedServicesShowcase2025 = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Our advanced services are designed to drive innovation, improve efficiency, and deliver measurable ROI. 
+              Our advanced services are designed to drive innovation, improve efficiency, and deliver measurable ROI.
               Contact us today to discuss your specific needs and discover how we can help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -490,3 +488,4 @@ const AdvancedServicesShowcase2025 = () => {
       </section>
     </div>)};
 export default AdvancedServicesShowcase2025;
+}}}}}}

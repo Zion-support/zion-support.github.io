@@ -45,7 +45,7 @@ const transformationServices = [
         icon: Shield,
         features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
         color: "from-yellow-500 to-orange-500"
-    }
+
 ];
 const transformationPhases = [
     {
@@ -71,11 +71,9 @@ const transformationPhases = [
         title: "Full Implementation",
         description: "Execute transformation plan with phased rollout and continuous optimization",
         duration: "6-18 months"
-    }
+
 ];
-=======
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const testimonials = [
     {
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
@@ -94,7 +92,7 @@ const testimonials = [
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
         rating: 5
-    }
+
 ];
 const stats = [
     { label: "Transformations Completed", value: "75+", icon: Rocket },
@@ -134,7 +132,7 @@ export default function DigitalTransformation() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Transform your business for the digital age with comprehensive modernization strategies, 
+              Transform your business for the digital age with comprehensive modernization strategies,
               process automation, and technology innovation that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -396,7 +394,7 @@ export default function DigitalTransformation() {
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
-            }
+
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {

@@ -284,3 +284,4 @@ const ComprehensivePricing = () => {
       </section>
     </div>)};
 export default ComprehensivePricing;
+}}}}}}}}}}}}

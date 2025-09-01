@@ -1,6 +1,4 @@
-import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 } from 'lucide-react';
-
-export default function AIEntertainment() {
+import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
   const features = [
     'AI-powered content recommendation and personalization',
     'Intelligent content creation and generation',;
@@ -13,10 +11,10 @@ export default function AIEntertainment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Creator', 
-      price: '$199/mo', 
-      details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Creator',
+      price: '$199/mo',
+      details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Medium Creator', 
@@ -171,4 +169,4 @@ export default function AIEntertainment() {
       </section>;
     </div>;
   );
-}
+}}

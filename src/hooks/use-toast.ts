@@ -27,13 +27,6 @@ export function useToast(...args[]):  {
     return id;
   }, []);
 
-<<<<<<< HEAD
-  const dismiss = useCallback((id: string)  => {;
-    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
-
-  const dismissAll = useCallback(() => {;
-    setToasts([])}, []);
-=======
   const dismiss = useCallback((id: string) => {;
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
@@ -41,23 +34,18 @@ export function useToast(...args[]):  {
   const dismissAll = useCallback(() => {;
     setToasts([]);
   }, []);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return {
     toasts,
     toast,
     dismiss,
     dismissAll
+  // // // // // // // console.log('Toast:', { title, description, variant, duration });
+};
   }}
 
 // Export a default toast function for backward compatibility
-<<<<<<< HEAD
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
-  // In a real implementation, this would dispatch to a global toast system;
-  console.log('Toast:', { title, description, variant, duration })};
-=======
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
   // In a real implementation, this would dispatch to a global toast system;
   console.log('Toast:', { title, description, variant, duration });
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

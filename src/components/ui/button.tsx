@@ -8,10 +8,6 @@ interface ButtonProps extends React.PropsWithChildren<{}> {
   className?: string;
   onClick?: ()  => void;
   type?: 'button' | 'submit' | 'reset';
-<<<<<<< HEAD
-  disabled?: boolean}
-export function Button(...args[]):  {
-=======
   disabled?: boolean;
 }
 export function Button({
@@ -66,14 +62,6 @@ export function Button({
     <button
       type = {type}
       className={classes}
-<<<<<<< HEAD
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  )};
-=======;
       onClick={onClick};
       disabled={disabled};
     >;
@@ -81,7 +69,6 @@ export function Button({
     </button>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -101,3 +88,4 @@ export const buttonVariants = {
 
 };
 export type { ButtonProps };
+}}}

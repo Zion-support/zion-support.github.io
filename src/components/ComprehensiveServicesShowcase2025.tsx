@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  DollarSign, 
+import {
+  Search,
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
   CheckCircle,
   Rocket,
   Target,
@@ -410,7 +410,6 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
@@ -451,7 +450,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
-    
+
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
@@ -483,20 +482,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         return a.category.localeCompare(b.category);
       default:
         return 0;
-    }
+
   });
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: any) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -540,7 +528,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       case 'Edge Computing': return <Network className="w-5 h-5" />;
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
-    }
+
   };
 
   const getInnovationIcon = (level: string) => {;
@@ -549,7 +537,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500" />;
       default: return <Star className="w-4 h-4 text-gray-400" />;
-    }
+
   };
 
   return (
@@ -586,7 +574,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
               Comprehensive Services 2025
             </h1>
@@ -643,7 +631,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 }}
             className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
-          >
+
             {/* Search Bar */}
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
@@ -664,7 +652,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
@@ -680,7 +668,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   {innovationLevels.map((level) => (
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
@@ -696,7 +684,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="innovation">Sort by Innovation</option>
@@ -710,21 +698,21 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-                    viewMode === 'grid' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'grid'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
-                >
+
                   <Grid className="w-4 h-4 mx-auto" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-                    viewMode === 'list' 
-                      ? 'bg-zion-cyan text-white' 
+                    viewMode === 'list'
+                      ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-400 hover:text-white'
                   }`}
-                >
+
                   <List className="w-4 h-4 mx-auto" />
                 </button>
               </div>
@@ -791,11 +779,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' 
+            className={viewMode === 'grid'
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
-            }
-          >
+
             {sortedServices.map((service) => (
               <motion.div
                 key={service.id}
@@ -804,7 +791,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   viewMode === 'list' ? 'flex items-center gap-6' : ''
                 }`}
                 onClick={() => handleServiceClick(service)}
-              >
+
                 {viewMode === 'grid' ? (
                   // Grid View
                   <>
@@ -833,7 +820,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                         <span
                           key={index}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -847,7 +834,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                         </span>
                         <span className="text-sm text-zion-slate-400">/month</span>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.estimatedDelivery}</span>
@@ -881,17 +868,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                         </div>
                         {getInnovationIcon(service.innovationLevel)}
                       </div>
-                      
+
                       <p className="text-zion-slate-300 mb-3">
                         {service.description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 5).map((tag, index) => (
                           <span
                             key={index}
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                          >
+
                             {tag}
                           </span>
                         ))}
@@ -920,7 +907,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-20"
-            >
+
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-zion-slate-400 mb-6">
@@ -965,7 +952,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
-          >
+
             <motion.div
               initial = {
   { scale: 0.9,
@@ -999,7 +986,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 }}
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
-            >
+
               <div className="p-8">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -1018,7 +1005,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <button
                     onClick={closeModal}
                     className="text-zion-slate-400 hover:text-white transition-colors"
-                  >
+
                     <X className="w-6 h-6" />
                   </button>
                 </div>
@@ -1168,6 +1155,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       </AnimatePresence>;
     </div>;
   );
-};
+</div></div></div></div></div></div></div>};
 
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025;}}}}}}}}}}

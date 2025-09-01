@@ -19,7 +19,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             y: -12,
@@ -27,8 +27,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const iconVariants = {
   hidden: { scale: 0.8,
@@ -46,7 +46,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.2,
@@ -54,8 +54,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.6,
                 ease: "easeInOut"
-            }
-        }
+
+
     };
     const featureVariants = {
   hover: {
@@ -89,8 +89,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             transition: {
                 duration: 0.3,
                 ease: "backOut"
-            }
-        }
+
+
     };
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">
       {/* Enhanced Popular Badge */}
@@ -146,19 +146,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       <div className="relative h-full bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 overflow-hidden group-hover:shadow-zion-glow">
         {/* Enhanced Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse"/>
-        
+
         {/* Enhanced Icon with Floating Animation */}
-<<<<<<< HEAD
-        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
-  { y[0, -5,
-  0] 
-
-}} transition = {
-  { duration: 3, repeat: Infinity,
-  ease: "easeInOut" 
-
-}}>
-=======
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
   { y: [0, -5,
   0] 
@@ -178,7 +167,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           {icon}
         </motion.div>
 
@@ -223,17 +211,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
           <div className="text-center">
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">
               <span>Learn More</span>
-<<<<<<< HEAD
-              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
-  { x[0, 5,
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-=======
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
   { x: [0, 5,
   0] 
@@ -253,7 +230,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 →
               </motion.span>
             </Link>
@@ -262,14 +238,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
         {/* Enhanced Hover Effect Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-blue/5 to-zion-purple/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"/>
-        
+
         {/* Animated Border Glow */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/20 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse"/>
       </div>
 
       {/* Enhanced Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/30 via-zion-blue/20 to-zion-purple/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10 group-hover:scale-110"/>
-      
+
       {/* Floating Particles Effect */}
       <div className="absolute inset-0 overflow-hidden rounded-2xl">
         <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500"/>
@@ -278,3 +254,4 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
       </div>
     </motion.div>)};
 export default ServiceCard;
+}}}}}}}}}}

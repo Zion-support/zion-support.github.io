@@ -624,7 +624,6 @@ export const pricingSubcategories2027 = {
   'Sustainable Tech'['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
   'NeuroTech Solutions'['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
   'Fusion Energy Solutions'['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
-=======
   'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
   'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
   'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
@@ -640,7 +639,7 @@ export const pricingSubcategories2027 = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };
+}}}}}}}}}}}}

@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity } from 'lucide-react';
-const IncidentResponsePlatform = () => {
+import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
     const features = [
         {
             title: "AI-Powered Threat Detection",
@@ -24,7 +23,7 @@ const IncidentResponsePlatform = () => {
             title: "Incident Timeline Tracking",
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
             icon: <Clock className="w-6 h-6"/>
-        }
+
     ];
     const benefits = [
         {
@@ -46,7 +45,7 @@ const IncidentResponsePlatform = () => {
             metric: "90%",
             description: "Compliance assurance",
             icon: <Shield className="w-5 h-5"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -94,7 +93,7 @@ const IncidentResponsePlatform = () => {
                 "Custom development"
             ],
             popular: false
-        }
+
     ];
     const integrations = [
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow"
@@ -206,7 +205,7 @@ const IncidentResponsePlatform = () => {
               Comprehensive incident management platform that uses AI to detect, respond to, and analyze 
               security incidents in real-time, reducing response time and improving resolution quality.
             </motion.p>
-            
+
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {
   { opacity: 0,
@@ -309,7 +308,7 @@ const IncidentResponsePlatform = () => {
                 Comprehensive incident response capabilities that protect your organization 24/7
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
   { opacity: 0,
@@ -376,7 +375,7 @@ const IncidentResponsePlatform = () => {
                 Choose the security level that matches your organization's needs
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-red-400 bg-red-900/20'
@@ -413,7 +412,7 @@ const IncidentResponsePlatform = () => {
                         Most Popular
                       </span>
                     </div>)}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-red-400 mb-2">
@@ -422,14 +421,14 @@ const IncidentResponsePlatform = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
                   </ul>
-                  
+
                   <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular
                 ? 'bg-red-600 hover:bg-red-700 text-white'
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>
@@ -666,3 +665,4 @@ const IncidentResponsePlatform = () => {
     </>);
 };
 export default IncidentResponsePlatform;
+}}}}

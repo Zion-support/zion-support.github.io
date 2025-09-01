@@ -88,7 +88,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 };
         return iconMap[category] || Calendar};
-=======
   'Launch': Award
         
 
@@ -98,7 +97,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 };
         return iconMap[category] || Calendar;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Toggle play/pause
     const togglePlayback = useCallback(() => {
         setIsPlaying(!isPlaying)}, [isPlaying]);
@@ -135,7 +133,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           <h3 className="text-xl font-semibold text-white mb-2">Interactive Timeline</h3>
           <p className="text-zinc-300 text-sm">Track project milestones and progress</p>
         </div>
-        
+
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">
@@ -145,17 +143,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </button>))}
           </div>
-          
+
           {/* Playback Controls */}
           <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
             <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 hover:text-white p-2">
               {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
             </Button>
-            
+
             <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 hover:text-white p-2">
               <RotateCcw className="w-4 h-4"/>
             </Button>
-            
+
             <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none">
               <option value={0.5}>0.5x</option>
               <option value={1}>1x</option>
@@ -163,7 +161,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <option value={3}>3x</option>
             </select>
           </div>
-          
+
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">
             <Button size="sm" variant="ghost" onClick = {
@@ -192,13 +190,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <ZoomIn className="w-4 h-4"/>
             </Button>
           </div>
-          
+
           {/* Action Buttons */}
           <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
             <Share2 className="w-4 h-4 mr-2"/>
             Share
           </Button>
-          
+
           <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
             <Download className="w-4 h-4 mr-2"/>
             Export
@@ -212,7 +210,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           <Filter className="w-4 h-4 mr-2"/>
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
-        
+
         <AnimatePresence>
           {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial = {
   { height: 0,
@@ -247,12 +245,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <select multiple value={filters.status} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  status: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   status: selected 
 
@@ -261,25 +253,18 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
                   <option value="upcoming">Upcoming</option>
                   <option value="milestone">Milestone</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Category</label>
                 <select multiple value={filters.category} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  category: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   category: selected 
 
@@ -288,7 +273,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
                   <option value="Cloud">Cloud</option>
@@ -298,18 +282,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <option value="Launch">Launch</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Priority</label>
                 <select multiple value={filters.priority} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  priority: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   priority: selected 
 
@@ -318,14 +296,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
                   <option value="medium">Medium</option>
                   <option value="low">Low</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Progress</label>
                 <div className="mt-1">
@@ -372,7 +349,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple"/>
-          
+
           {/* Events */}
           <div className="space-y-6">
             {filteredEvents.map((event, index) => {
@@ -411,17 +388,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <div className="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent
                         ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
-<<<<<<< HEAD
-                        : 'border-zion-blue-light/30'}`} animate = {
-  isCurrent ? { scale[1, 1.1,
-  1] 
-
-} : {}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-=======
                         : 'border-zion-blue-light/30'}`} animate = {
   isCurrent ? { scale: [1, 1.1,
   1] 
@@ -441,10 +407,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
                     </motion.div>
-                    
+
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
                         <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"/>
@@ -478,11 +443,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                               Verified
                             </Badge>)}
                         </div>
-                        
+
                         <p className="text-zinc-300 text-sm mb-3 line-clamp-2">
                           {event.description}
                         </p>
-                        
+
                         <div className="flex items-center gap-4 text-xs text-zinc-400">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-3 h-3"/>
@@ -502,7 +467,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                             </span>)}
                         </div>
                       </div>
-                      
+
                       {/* Status Change Button */}
                       <div className="ml-4">
                         <select value={event.status} onChange = {
@@ -685,10 +650,10 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <X className="w-4 h-4"/>
                 </Button>
               </div>
-              
+
               <div className="space-y-4">
                 <p className="text-zinc-300">{selectedEvent.description}</p>
-                
+
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-zinc-400">Date:</span>
@@ -707,7 +672,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                     <span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>
                   </div>
                 </div>
-                
+
                 {selectedEvent.participants.length > 0 && (<div>
                     <span className="text-zinc-400 text-sm">Participants:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
@@ -716,7 +681,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         </Badge>))}
                     </div>
                   </div>)}
-                
+
                 {selectedEvent.metadata.dependencies.length > 0 && (<div>
                     <span className="text-zinc-400 text-sm">Dependencies:</span>
                     <div className="flex flex-wrap gap-2 mt-2">

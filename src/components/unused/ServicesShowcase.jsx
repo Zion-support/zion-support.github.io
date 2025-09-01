@@ -45,7 +45,7 @@ export function ServicesShowcase() {
             description: "Data analytics and insights for informed decision-making",
             color: "from-zion-purple to-zion-blue",
             href: "/business-intelligence"
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,8 +53,8 @@ export function ServicesShowcase() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 20,
@@ -71,15 +71,15 @@ export function ServicesShowcase() {
             opacity: 1,
             transition: {
                 duration: 0.5
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-zion-purple/5 rounded-full blur-3xl"></div>
-      
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial = {
@@ -105,7 +105,7 @@ export function ServicesShowcase() {
             Our Core Services
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth 
+            Comprehensive technology solutions designed to accelerate your business growth
             and digital transformation journey.
           </p>
         </motion.div>
@@ -119,7 +119,7 @@ export function ServicesShowcase() {
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white"/>
                   </div>
-                  
+
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {service.title}
@@ -127,7 +127,7 @@ export function ServicesShowcase() {
                   <p className="text-zion-slate-light leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   {/* Arrow */}
                   <div className="mt-6 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>

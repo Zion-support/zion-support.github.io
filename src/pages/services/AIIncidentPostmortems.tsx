@@ -24,13 +24,8 @@ import { AlertTriangle,
   Mail,
   MapPin,
   Server
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../../components/SEO";
-=======
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function AIIncidentPostmortems(...args[]):  {
   const contactInfo = {
@@ -180,7 +175,7 @@ export default function AIIncidentPostmortems(...args[]):  {
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
         keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -206,24 +201,24 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6">
               <AlertTriangle className="w-4 h-4 mr-2" />
               AI-Powered Incident Management
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Incident Postmortems
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 Platform
               </span>
             </h1>
-            
+
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your incident management with AI-powered postmortems. Automate root cause analysis, 
+              Transform your incident management with AI-powered postmortems. Automate root cause analysis,
               prevent future incidents, and build a culture of continuous improvement.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -263,7 +258,7 @@ export default function AIIncidentPostmortems(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Teams
             </h2>
@@ -308,7 +303,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -347,7 +342,7 @@ export default function AIIncidentPostmortems(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Incident Postmortems?
             </h2>
@@ -392,7 +387,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
-              >
+
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>
@@ -428,7 +423,7 @@ export default function AIIncidentPostmortems(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -473,11 +468,11 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20' 
+                  plan.popular
+                    ? 'border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20'
                     : 'border-slate-700/50'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -485,7 +480,7 @@ export default function AIIncidentPostmortems(...args[]):  {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -494,7 +489,7 @@ export default function AIIncidentPostmortems(...args[]):  {
                   </div>
                   <p className="text-slate-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
@@ -503,7 +498,7 @@ export default function AIIncidentPostmortems(...args[]):  {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -544,7 +539,7 @@ export default function AIIncidentPostmortems(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Team
             </h2>
@@ -589,7 +584,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="text-center"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -627,14 +622,14 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Incident Management?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Join thousands of teams who have already improved their incident response with AI
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -643,7 +638,7 @@ export default function AIIncidentPostmortems(...args[]):  {
                 Schedule Demo
               </button>
             </div>
-            
+
             <p className="text-slate-400 mt-6">
               No credit card required • 14-day free trial • Cancel time
             </p>
@@ -677,14 +672,14 @@ export default function AIIncidentPostmortems(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Our team is here to help you get started and answer  questions
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-purple-400 mb-3" />
@@ -702,21 +697,13 @@ export default function AIIncidentPostmortems(...args[]):  {
                 <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
-            
+
             <a
               href={`mailto:${contactInfo.email}`}
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-            >
+
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </a>;
           </motion.div>;
         </div>;
@@ -724,5 +711,4 @@ export default function AIIncidentPostmortems(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

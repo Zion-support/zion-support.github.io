@@ -20,7 +20,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true,;
 }) => {;
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
-  
+
   const variants = {
   default: 'h-4 w-full',
     circular: 'rounded-full',
@@ -67,26 +67,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 }
             initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-            animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-            transition = {
-  {
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-  delay: index * 0.1
-            
-
-}}
-          />
-        ))}
-      </div>
-    )}
-=======
             animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
@@ -116,9 +96,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
       </div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const style: React.CSSProperties = {};
+  const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
@@ -127,23 +106,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
       className = {skeletonClasses}
       style={style}
       initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-      animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-      transition = {
-  {
-        duration: 1.5,
-        repeat: Infinity,
-  ease: 'easeInOut'
-      
-
-}};
-    />;
-  )};
-=======
       animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
@@ -170,7 +132,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
     />;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Specialized skeleton components
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
@@ -218,35 +179,18 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {/* Rows */}
     {Array.from({ length: rows }).map((_, rowIndex)  => (
       <div key={rowIndex} className="flex space-x-4">
-<<<<<<< HEAD
-        {Array.from({ length: columns }).map((_, colIndex)  => (
-          <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
-        ))}
-      </div>
-    ))}
-  </div>
-=======;
         {Array.from({ length: columns }).map((_, colIndex) => (;
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
       </div>;
     ))};
   </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 );
 
 export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   items = 5,
   className
 }) => (
-<<<<<<< HEAD
-  <div className = {
-  cn('space-y-4',
-  className)
-
-}>
-    {Array.from({ length: items }).map((_, index)  => (
-=======
   <div className = {
   cn('space-y-4',
   className)
@@ -258,7 +202,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 }>
     {Array.from({ length: items }).map((_, index) => (
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">;
@@ -270,9 +213,9 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   </div>;
 );
 
-export const GridSkeleton: React.FC<{ 
-  rows?: number; 
-  columns?: number; 
+export const GridSkeleton: React.FC<{
+  rows?: number;
+  columns?: number;
   className?: string;
   itemHeight?: number}> = ({
   rows = 3,
@@ -291,19 +234,11 @@ export const GridSkeleton: React.FC<{
 
 } style={{
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
-<<<<<<< HEAD
-  }}>
-    {Array.from({ length: rows * columns }).map((_, index)  => (
-      <Skeleton key={index} variant="card" height={itemHeight} />
-    ))}
-  </div>;
-=======;
   }}>;
     {Array.from({ length: rows * columns }).map((_, index) => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
     ))};
   </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 );
 
-export default Skeleton;
+export default Skeleton;}</motion.div></motion.div>}

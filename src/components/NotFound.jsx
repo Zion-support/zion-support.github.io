@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
-const NotFound = () => {
+import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
     const popularPages = [
         { path: '/', label: 'Home', description: 'Main landing page' },
         { path: '/services', label: 'Services', description: 'All our services' },
@@ -38,17 +37,6 @@ const NotFound = () => {
 
 }} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}
-<<<<<<< HEAD
-        <motion.div className="mb-8" animate = {
-  { scale[1, 1.1,
-  1] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-=======
         <motion.div className="mb-8" animate = {
   { scale: [1, 1.1,
   1] 
@@ -68,7 +56,6 @@ const NotFound = () => {
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
             <AlertTriangle className="w-16 h-16 text-white"/>
           </div>
@@ -82,7 +69,7 @@ const NotFound = () => {
           Page Not Found
         </h2>
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          The page you're looking for doesn't exist or has been moved. 
+          The page you're looking for doesn't exist or has been moved.
           Let us help you find what you need.
         </p>
 
@@ -196,3 +183,4 @@ const NotFound = () => {
       </motion.div>
     </div>)};
 export default NotFound;
+}

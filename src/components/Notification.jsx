@@ -35,7 +35,7 @@ const notificationStyles = {
         borderColor: 'border-zion-gold/20',
         textColor: 'text-zion-gold',
         iconColor: 'text-zion-gold'
-    }
+
 };
 export function Notification({ id, type, title, message, duration = 5000, onClose }) {
     const [isVisible, setIsVisible] = useState(true);

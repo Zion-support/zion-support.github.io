@@ -5,137 +5,6 @@ import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 import { TrustedBySection } from "../TrustedBySection";
-<<<<<<< HEAD
-const blockchainServices = [
-    {
-        id: "smart-contracts",
-        title: "Smart Contract Development",
-        description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
-        price: 3500,
-        currency: "$",
-        period: "/project",
-        features[
-            "Custom smart contract development",
-            "Security auditing & testing",
-            "Gas optimization",
-            "Multi-chain deployment",
-            "Documentation & training",
-            "Ongoing support"
-        ],
-        icon: <Zap className="h-8 w-8"/>,
-        category: "Development",
-        badge: "Popular",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "defi-platform",
-        title: "DeFi Platform Development",
-        description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
-        price: 15000,
-        currency: "$",
-        period: "/platform",
-        features[
-            "DEX development",
-            "Lending protocols",
-            "Yield farming",
-            "Liquidity management",
-            "Security audits",
-            "UI/UX design"
-        ],
-        icon: <Coins className="h-8 w-8"/>,
-        category: "DeFi",
-        badge: "Enterprise",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "nft-marketplace",
-        title: "NFT Marketplace Development",
-        description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
-        price: 8000,
-        currency: "$",
-        period: "/marketplace",
-        features[
-            "NFT minting & trading",
-            "Auction system",
-            "Royalty distribution",
-            "Multi-chain support",
-            "Admin dashboard",
-            "Analytics & reporting"
-        ],
-        icon: <Database className="h-8 w-8"/>,
-        category: "NFTs",
-        badge: "Featured",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "enterprise-blockchain",
-        title: "Enterprise Blockchain Solutions",
-        description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
-        price: 25000,
-        currency: "$",
-        period: "/solution",
-        features[
-            "Private blockchain setup",
-            "Consensus mechanisms",
-            "Identity management",
-            "Supply chain tracking",
-            "Integration APIs",
-            "Training & support"
-        ],
-        icon: <Network className="h-8 w-8"/>,
-        category: "Enterprise",
-        badge: "Custom",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "blockchain-security",
-        title: "Blockchain Security & Auditing",
-        description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
-        price: 5000,
-        currency: "$",
-        period: "/audit",
-        features[
-            "Smart contract auditing",
-            "Penetration testing",
-            "Vulnerability assessment",
-            "Security best practices",
-            "Compliance checking",
-            "Remediation guidance"
-        ],
-        icon: <Shield className="h-8 w-8"/>,
-        category: "Security",
-        badge: "Critical",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    },
-    {
-        id: "blockchain-consulting",
-        title: "Blockchain Strategy Consulting",
-        description: "Strategic consulting for blockchain adoption, tokenomics design, and regulatory compliance guidance.",
-        price: 3000,
-        currency: "$",
-        period: "/day",
-        features[
-            "Blockchain strategy",
-            "Tokenomics design",
-            "Regulatory compliance",
-            "Technology selection",
-            "Implementation roadmap",
-            "Risk assessment"
-        ],
-        icon: <BarChart3 className="h-8 w-8"/>,
-        category: "Consulting",
-        badge: "Expert",
-        link: "/services",
-        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const blockchainBenefits = [
     {
         title: "Transparency",
@@ -156,7 +25,7 @@ const blockchainBenefits = [
         title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
         icon: <TrendingUp className="h-6 w-6"/>
-    }
+
 ];
 const useCases = [
     {
@@ -178,7 +47,7 @@ const useCases = [
         title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
         icon: <Wallet className="h-6 w-6"/>
-    }
+
 ];
 export default function BlockchainServicesPage() {
     return (<div className="min-h-screen bg-background">
@@ -193,7 +62,7 @@ export default function BlockchainServicesPage() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions, 
+              Transform your business with cutting-edge blockchain technology. From DeFi platforms to enterprise solutions,
               we deliver secure, scalable, and innovative blockchain applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

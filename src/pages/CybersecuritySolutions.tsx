@@ -69,19 +69,12 @@ export default function CybersecuritySolutions(...args[]):  {
     },
     {
       icon: Cloud,
-<<<<<<< HEAD
-      title: "Cloud Security",
-      description: "Secure your cloud infrastructure and applications",
-      features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
-      color: "from-zion-indigo to-zion-purple"
     };
-=======;
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
       color: "from-zion-indigo to-zion-purple";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const threatTypes = [;
@@ -137,19 +130,12 @@ export default function CybersecuritySolutions(...args[]):  {
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
-<<<<<<< HEAD
-      type: "malware",
-      impact: "Critical",
-      solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
-      icon: Bug
     };
-=======;
       type: "malware",;
       impact: "Critical",;
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
       icon: Bug;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const complianceFrameworks = [
@@ -184,19 +170,12 @@ export default function CybersecuritySolutions(...args[]):  {
       icon: CreditCard
     },
     {
-<<<<<<< HEAD
-      name: "NIST Cybersecurity Framework",
-      description: "U.S. government framework for cybersecurity risk management",
-      requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
-      icon: BarChart3
     };
-=======;
       name: "NIST Cybersecurity Framework",;
       description: "U.S. government framework for cybersecurity risk management",;
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
       icon: BarChart3;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const securityMetrics = [;
@@ -236,7 +215,6 @@ export default function CybersecuritySolutions(...args[]):  {
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
     : securityThreats.filter(threat => threat.type === selectedThreat);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -270,7 +248,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">
                 <Shield className="w-12 h-12 text-white" />
@@ -293,7 +271,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Security Assessment
               </motion.button>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
@@ -331,7 +309,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Security Services
             </h2>
@@ -347,7 +325,7 @@ export default function CybersecuritySolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {securityServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -412,7 +390,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Understanding Cyber Threats
             </h2>
@@ -425,22 +403,8 @@ export default function CybersecuritySolutions(...args[]):  {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             {threatTypes.map((threat)  => {
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -465,7 +429,6 @@ export default function CybersecuritySolutions(...args[]):  {
             viewport={{ once: true }};
           >;
             {threatTypes.map((threat) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = threat.icon;
               return (
                 <button
@@ -475,14 +438,6 @@ export default function CybersecuritySolutions(...args[]):  {
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
-<<<<<<< HEAD
-                  }`}
-                >
-                  <Icon className="w-5 h-5" />
-                  {threat.name}
-                </button>
-              )})};
-=======;
                   }`};
                 >;
                   <Icon className="w-5 h-5" />;
@@ -490,7 +445,6 @@ export default function CybersecuritySolutions(...args[]):  {
                 </button>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
 
           {/* Threats Grid */}
@@ -500,7 +454,7 @@ export default function CybersecuritySolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {filteredThreats.map((threat, index) => (
               <motion.div
                 key={index}
@@ -579,7 +533,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Compliance & Standards
             </h2>
@@ -595,7 +549,7 @@ export default function CybersecuritySolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={index}
@@ -663,7 +617,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Security Performance Metrics
             </h2>
@@ -679,13 +633,13 @@ export default function CybersecuritySolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {securityMetrics.map((metric, index) => (
               <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
-              >
+
                 <div className="w-24 h-24 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-3xl font-bold text-white">{metric.metric}</div>
                 </div>
@@ -724,7 +678,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Security Implementation Process
             </h2>
@@ -740,7 +694,7 @@ export default function CybersecuritySolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {[
               {
                 step: "01",
@@ -765,13 +719,13 @@ export default function CybersecuritySolutions(...args[]):  {
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
-              }
+
             ].map((phase, index) => (
               <motion.div
                 key={index}
                 className="relative"
                 variants={itemVariants}
-              >
+
                 <div className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <phase.icon className="w-8 h-8 text-white" />
@@ -818,7 +772,7 @@ export default function CybersecuritySolutions(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>
@@ -832,20 +786,12 @@ export default function CybersecuritySolutions(...args[]):  {
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Security Assessment
               </motion.button>
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -853,4 +799,3 @@ export default function CybersecuritySolutions(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

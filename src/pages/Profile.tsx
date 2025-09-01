@@ -66,13 +66,8 @@ interface SecuritySettings {
   lastLogin: string;
 loginHistory: Array<any>}
 
-<<<<<<< HEAD
-const Profile: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('profile');
-=======
 const Profile: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -143,7 +138,7 @@ const Profile: React.FC = () => {;
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Profile updated successfully!');
       setIsEditing(false)} catch (err) {
       setError('Failed to update profile. Please try again.')} finally {
@@ -168,7 +163,7 @@ const Profile: React.FC = () => {;
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSuccess('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
@@ -177,15 +172,6 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-<<<<<<< HEAD
-  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
-    setNotifications(prev => ({
-      ...prev,;
-      [key]: !prev[key];
-    }))};
-
-  const getPasswordStrength = (password: string)  => {;
-=======;
   const handleNotificationToggle = (key: keyof NotificationSettings) => {;
     setNotifications(prev => ({;
       ...prev,;
@@ -194,7 +180,6 @@ const Profile: React.FC = () => {;
   };
 
   const getPasswordStrength = (password: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -242,7 +227,7 @@ const Profile: React.FC = () => {;
 }}
       transition={{ duration: 0.6 }}
       className="space-y-8"
-    >
+
       {/* Profile Header */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <div className="flex items-center gap-6 mb-8">
@@ -264,7 +249,7 @@ const Profile: React.FC = () => {;
           <button
             onClick={() => setIsEditing(!isEditing)}
             className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2"
-          >
+
             {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
             {isEditing ? 'Cancel' : 'Edit Profile'}
           </button>
@@ -306,7 +291,7 @@ const Profile: React.FC = () => {;
 
 }}
               className="text-center p-4 bg-white/5 rounded-xl border border-slate-600/30"
-            >
+
               <div className="flex justify-center mb-2">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-white">
                   {stat.icon}
@@ -322,7 +307,7 @@ const Profile: React.FC = () => {;
       {/* Profile Form */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Personal Information</h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label className="block text-white font-medium mb-2">First Name</label>
@@ -426,14 +411,6 @@ const Profile: React.FC = () => {;
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
-                value={profile.comp}
-                onChange = {
-  (e) => setProfile(prev => ({ ...prev,
-  comp: e.target.value 
-
-}))}
-=======
                 value={profile.company}
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
@@ -445,7 +422,6 @@ const Profile: React.FC = () => {;
 
 
 }))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -573,7 +549,7 @@ const Profile: React.FC = () => {;
               onClick={handleProfileUpdate}
               disabled={isLoading}
               className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
+
               {isLoading ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -628,11 +604,11 @@ const Profile: React.FC = () => {;
 
 }}
               className={`p-4 rounded-xl border ${
-                achievement.earned 
-                  ? 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30' 
+                achievement.earned
+                  ? 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30'
                   : 'bg-white/5 border-slate-600/30'
               }`}
-            >
+
               <div className={`flex items-center gap-3 mb-3 ${
                 achievement.earned ? 'text-yellow-400' : 'text-slate-400'
               }`}>
@@ -681,11 +657,11 @@ const Profile: React.FC = () => {;
 }}
       transition={{ duration: 0.6 }}
       className="space-y-8"
-    >
+
       {/* Password Change */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Change Password</h3>
-        
+
         <div className="space-y-6">
           <div>
             <label className="block text-white font-medium mb-2">Current Password</label>
@@ -711,7 +687,7 @@ const Profile: React.FC = () => {;
 
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+
                 {showPasswords.current ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -741,7 +717,7 @@ const Profile: React.FC = () => {;
 
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+
                 {showPasswords.new ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -799,7 +775,7 @@ const Profile: React.FC = () => {;
 
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+
                 {showPasswords.confirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -809,7 +785,7 @@ const Profile: React.FC = () => {;
             onClick={handlePasswordChange}
             disabled={isLoading}
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-          >
+
             {isLoading ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -828,7 +804,7 @@ const Profile: React.FC = () => {;
       {/* Security Settings */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Security Settings</h3>
-        
+
         <div className="space-y-6">
           <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
             <div>
@@ -873,7 +849,7 @@ const Profile: React.FC = () => {;
 
 }))}
               className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-            >
+
               <option value={15}>15 minutes</option>
               <option value={30}>30 minutes</option>
               <option value={60}>1 hour</option>
@@ -886,7 +862,7 @@ const Profile: React.FC = () => {;
       {/* Login History */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Login History</h3>
-        
+
         <div className="space-y-4">
           {security.loginHistory.map((login, index) => (
             <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
@@ -900,8 +876,8 @@ const Profile: React.FC = () => {;
                 </div>
               </div>
               <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                login.status === 'success' 
-                  ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                login.status === 'success'
+                  ? 'bg-green-500/20 text-green-400 border border-green-500/30'
                   : 'bg-red-500/20 text-red-400 border border-red-500/30'
               }`}>
                 {login.status === 'success' ? 'Success' : 'Failed'};
@@ -937,10 +913,10 @@ const Profile: React.FC = () => {;
 }}
       transition={{ duration: 0.6 }}
       className="space-y-8"
-    >
+
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Notification Preferences</h3>
-        
+
         <div className="space-y-6">
           {Object.entries(notifications).map(([key, value]) => (
             <div key={key} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
@@ -997,10 +973,10 @@ const Profile: React.FC = () => {;
 }}
       transition={{ duration: 0.6 }}
       className="space-y-8"
-    >
+
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Account Preferences</h3>
-        
+
         <div className="space-y-6">
           <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
             <div>
@@ -1044,7 +1020,7 @@ const Profile: React.FC = () => {;
 
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Data Management</h3>
-        
+
         <div className="space-y-4">
           <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30 hover:bg-white/10 transition-all duration-300 text-left">
             <div>
@@ -1101,7 +1077,7 @@ const Profile: React.FC = () => {;
 }}
           transition={{ duration: 0.6 }}
           className="mb-8"
-        >
+
           <h1 className="text-4xl font-bold text-white mb-2">Profile Settings</h1>
           <p className="text-slate-300 text-lg">Manage your account settings and preferences</p>
         </motion.div>
@@ -1130,7 +1106,7 @@ const Profile: React.FC = () => {;
 
 }}
             className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
-          >
+
             <AlertCircle className="w-5 h-5" />
             {error}
           </motion.div>
@@ -1159,7 +1135,7 @@ const Profile: React.FC = () => {;
 
 }}
             className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
-          >
+
             <CheckCircle className="w-5 h-5" />
             {success}
           </motion.div>
@@ -1181,7 +1157,7 @@ const Profile: React.FC = () => {;
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                   : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-slate-600/30'
               }`}
-            >
+
               {tab.icon}
               {tab.label}
             </button>
@@ -1190,14 +1166,6 @@ const Profile: React.FC = () => {;
 
         {/* Tab Content */}
         {activeTab === 'profile' && renderProfileTab()}
-<<<<<<< HEAD
-        {activeTab === 'security' && renderSecurityTab()}
-        {activeTab === 'notifications' && renderNotificationsTab()}
-        {activeTab === 'preferences' && renderPreferencesTab()}
-      </div>;
-    </div>;
-  )};
-=======
         {activeTab === 'security' && renderSecurityTab()};
         {activeTab === 'notifications' && renderNotificationsTab()};
         {activeTab === 'preferences' && renderPreferencesTab()};
@@ -1205,6 +1173,5 @@ const Profile: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Profile;
+export default Profile;}}}}}}}}}

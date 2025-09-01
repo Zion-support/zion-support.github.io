@@ -12,7 +12,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         setScanProgress(0);
         const links = Array.from(document.querySelectorAll('a[href]'));
         const results = [];
-        for (let i = 0; i < links.length; i++) {
+        for (const i = 0; i < links.length; i++) {
             const link = links[i];
             const href = link.getAttribute('href');
             if (href) {
@@ -56,7 +56,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 
 };
             setFixedLinks(prev => [...prev, fix])}
-=======
   reason: 'Automatically fixed broken internal link'
             
 
@@ -66,7 +65,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 };
             setFixedLinks(prev => [...prev, fix]);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
@@ -237,3 +235,4 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>)}
     </div>)};
 export default LinkMonitor;
+}}}}}}}}

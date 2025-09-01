@@ -3,7 +3,7 @@ import { glob } from "glob";
 function fixUtilsFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
+    const originalContent = content;
     // Fix common patterns in utils files
     content = content.replace(
       /export,\s*interface,\s*([^{]+)\s*{/g,
@@ -116,20 +116,38 @@ function fixUtilsFile(filePath) {
     content = content.replace(/au,\s*t,\s*h/g, "auth");
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
+      // // // // // // // console.log(`Fixed: ${filePath}`);
+      return true;
+
+    return false;
+  } catch (error) {
+    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+
+
+async function fixAllUtilsFiles() {
+  const files = await glob("utils/**/*.{ts,tsx}", {
+    ignore: ["node_modules/**", ".next/**"],
+  });
+  const fixedCount = 0;
+  for (const file of files) {
+    if (fixUtilsFile(file)) {
+      fixedCount++;
+    }
+  }
+  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
+}
       console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-<<<<<<< HEAD
 async function fixedCount = 0;
-=======
-async function fixedCount = 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
   }
   console.log(`Fixed ${fixedCount} utils files.`)}
 fixAllUtilsFiles();
+}}}}}}}}}

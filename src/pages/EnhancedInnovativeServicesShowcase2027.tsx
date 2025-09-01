@@ -29,11 +29,6 @@ import {
   Mail,
   MapPin,
   ExternalLink,
-<<<<<<< HEAD
-  Filter,
-  Search,
-  Grid3X3,
-  List
  } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
 const categoryColors: { [key: string]: string } = {
@@ -62,7 +57,6 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-=======
   CheckCircle,
   Clock,
   Users,
@@ -115,7 +109,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return a.price - b.price;
       case 'innovation':
         const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
@@ -255,7 +248,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     ? 'bg-zion-cyan text-white'
                     : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark/70'
                 }`}
-              >
+
                 All Categories
               </button>
               {enhancedInnovativeServices2027Categories.map((category)  => (
@@ -267,7 +260,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       ? 'bg-zion-cyan text-white'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70'
                   }`}
-                >
+
                   {category}
                 </button>
               ))}
@@ -280,7 +273,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
@@ -288,7 +281,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
-                >
+
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -296,7 +289,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
+
                 <option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="innovation">Sort by Innovation</option>
@@ -305,14 +298,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        {viewMode === 'grid' ? (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {sortedServices.map((service)  => (
@@ -320,7 +305,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 key={service.id}
                 variants={itemVariants}
                 className="group relative"
-              >
+
                 <div className="bg-zion-slate-dark/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                   {/* Category Badge */}
                   <div className="flex items-center gap-2 mb-4">
@@ -383,12 +368,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       target={service.external ? "_blank" : "_self"}
                       rel={service.external ? "noopener noreferrer" : ""}
                       className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                    >
+
                       {service.ctaLabel}
                       {service.external && <ExternalLink className="w-4 h-4" />}
                     </a>
                   </div>
-=======
 
       {/* Services Grid */}
       <div id="services-grid" className="container mx-auto px-4 py-8">
@@ -433,7 +417,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 <div className="flex items-center space-x-2">
                   {getCategoryIcon(service.category)}
                   <span className="text-zion-gray-light text-sm">{service.category}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
                   {service.innovationLevel}
@@ -979,14 +962,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 }
           >
             <ExternalLink className="w-5 h-5" />
-<<<<<<< HEAD
-            <span>Visit Zion Tech Group</span>
-          </motion.button>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             <span>Visit Zion Tech Group</span>;
           </motion.button>;
         </div>;
@@ -996,4 +971,3 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 };
 
 export default EnhancedInnovativeServicesShowcase2027;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

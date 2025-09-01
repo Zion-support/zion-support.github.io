@@ -456,21 +456,12 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
 ];
-<<<<<<< HEAD
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
-  if (industry === 'All') {;
-    return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
-  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
-export const getAllIndustrySolutions = (): IndustrySolution[] => {;
-  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
-=======
 export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-  }
+
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);
 };
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

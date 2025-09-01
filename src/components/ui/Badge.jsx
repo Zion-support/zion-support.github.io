@@ -9,18 +9,6 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t};
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-<<<<<<< HEAD
-import { cn } from '@/lib/utils';
-const Badge = React.forwardRef((_a, ref) => {
-    var { className, variant = 'default' } = _a, props = __rest(_a, ["className", "variant"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2', {
-            'border-transparent bg-primary text-primary-foreground hover:bg-primary/80': variant === 'default',
-            'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
-            'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80': variant === 'destructive',
-            'text-foreground': variant === 'outline',
-        }, className) }, props)))});
-Badge.displayName = 'Badge';
-=======
 
 const Badge = ({ children, className = '', variant = 'default' }) => {
   const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
@@ -38,6 +26,17 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 
 };
   
+import React from 'react';
+
+const Badge = ({ children, className = '', variant = 'default' }) => {
+  const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
+  const variantClasses = {
+    default: 'border-transparent bg-primary text-primary-foreground',
+    secondary: 'border-transparent bg-secondary text-secondary-foreground',
+    destructive: 'border-transparent bg-destructive text-destructive-foreground',
+    outline: 'text-foreground'
+  };
+  
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
@@ -45,5 +44,4 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
   );
 };
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export { Badge };

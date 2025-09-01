@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, Star, Clock, Users, Shield } from 'lucide-react';
-
-export const ITServicePricingTable = () => {
+import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const plans = [
@@ -70,7 +68,7 @@ export const ITServicePricingTable = () => {
       ],
       popular: false,
       icon: Star
-    }
+
   ];
 
   const additionalServices = [
@@ -93,7 +91,7 @@ export const ITServicePricingTable = () => {
       name: 'Training Sessions',
       price: 200,
       description: 'Staff IT training (per session)'
-    }
+
   ];
 
   return (
@@ -107,7 +105,7 @@ export const ITServicePricingTable = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the IT support plan that fits your business needs. All plans include our core services with flexible options for growth.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8">
             <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>
@@ -116,7 +114,7 @@ export const ITServicePricingTable = () => {
             <button
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
+
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
@@ -136,11 +134,11 @@ export const ITServicePricingTable = () => {
             <div
               key={index}
               className={`relative bg-white rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                plan.popular 
-                  ? 'border-blue-500 scale-105' 
+                plan.popular
+                  ? 'border-blue-500 scale-105'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
-            >
+
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -148,7 +146,7 @@ export const ITServicePricingTable = () => {
                   </span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -159,7 +157,7 @@ export const ITServicePricingTable = () => {
                     <p className="text-gray-600 text-sm">{plan.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="mb-8">
                   <div className="flex items-baseline">
                     <span className="text-5xl font-bold text-gray-900">${plan.price}</span>
@@ -168,7 +166,7 @@ export const ITServicePricingTable = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">What's Included:</h4>
                   {plan.features.map((feature, featureIndex) => (
@@ -178,7 +176,7 @@ export const ITServicePricingTable = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">Not Included:</h4>
                   {plan.notIncluded.map((feature, featureIndex) => (
@@ -188,14 +186,14 @@ export const ITServicePricingTable = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                   }`}
-                >
+
                   Get Started
                 </button>
               </div>
@@ -268,13 +266,13 @@ export const ITServicePricingTable = () => {
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+
                 Get Custom Quote
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Schedule Demo
               </a>
             </div>

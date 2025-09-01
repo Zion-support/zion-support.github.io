@@ -22,28 +22,8 @@ import {
   Phone,
   Mail,
   MapPin
-<<<<<<< HEAD
- } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory  } from "../data/innovativeServices2027";
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Consciousness': Brain,
-  'Quantum AI': Atom,
-  'Autonomous AI': Cpu,
-  'Quantum Computing': Atom,
-  'Quantum Finance': TrendingUp,
-  'Space Technology': Rocket,
-  'Quantum Space': Rocket,
-  'Biotechnology': Dna,
-  'Quantum Medicine': Dna,
-  'Quantum Security': Shield,
-  'Nanotechnology': Microscope,
-  'Neural Technology': Eye
-};
-=======
 } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
@@ -60,18 +40,6 @@ const categoryColors: { [key: string]: string } = {
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
 
-<<<<<<< HEAD
-export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)};
-=======;
 export const InnovativeServicesShowcase2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -83,7 +51,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
         if (entry.isIntersecting) {;
           setIsVisible(true);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       },
       { threshold: 0.1 }
     );
@@ -98,14 +65,9 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-<<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: string)  => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)};
-=======
   const toggleServiceExpansion = (serviceId: string) => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const contactInfo = {
   phone: '+1 302 464 0950',
@@ -158,7 +120,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
+
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
             <Star className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
@@ -211,28 +173,19 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
           className="mb-12"
-        >
+
           <div className="flex flex-wrap justify-center gap-3">
             <button
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-<<<<<<< HEAD
-                  : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
-              }`}
-            >
-              All Categories
-            </button>
-            {serviceCategories2027.map((category)  => {
-=======;
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
               }`};
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -242,14 +195,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
-<<<<<<< HEAD
-                  }`}
-                >
-                  {Icon && <Icon className="w-4 h-4" />}
-                  {category}
-                </button>
-              )})};
-=======;
                   }`};
                 >;
                   {Icon && <Icon className="w-4 h-4" />};
@@ -257,30 +202,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 </button>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-<<<<<<< HEAD
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-          animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
-
-} : { opacity: 0, y: 30 }}
-          transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -312,7 +238,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
           {filteredServices.map((service, index)  => (
             <motion.div
@@ -348,7 +273,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
               className="group relative"
-            >
+
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -368,7 +293,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
-                    >
+
                       {tech}
                     </span>
                   ))}
@@ -397,7 +322,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
-                  >
+
                     {expandedService === service.id ? 'Less' : 'Learn More'}
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
@@ -439,7 +364,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 }}
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
-                    >
+
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">
                         {/* Features */}
                         <div>
@@ -485,7 +410,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                           target={service.external ? "_blank" : "_self"}
                           rel={service.external ? "noopener noreferrer" : ""}
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
-                        >
+
                           {service.ctaLabel}
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                           {service.external && <ExternalLink className="w-4 h-4" />}
@@ -532,7 +457,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
           className="text-center"
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -561,7 +486,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Schedule Consultation
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -570,18 +495,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
@@ -589,4 +506,3 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

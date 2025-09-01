@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
     const featuredServices = [
@@ -63,7 +64,7 @@ export default function NextGenServicesShowcase2025() {
             demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai',
             ctaText: 'Unite Your AI',
             path: '/multimodal-ai-platform'
-        }
+
     ];
     const microSaasServices = [
         {
@@ -89,7 +90,7 @@ export default function NextGenServicesShowcase2025() {
             features['Churn prediction modeling', 'Customer lifetime value', 'Behavioral pattern analysis'],
             category: 'Customer Analytics',
             trial: '21 days free'
-        }
+
     ];
     const infrastructureServices = [
         {
@@ -112,7 +113,7 @@ export default function NextGenServicesShowcase2025() {
             price: '$20,000/month',
             features['Multi-protocol blockchain support', 'Smart contract deployment', 'DeFi integration platform'],
             category: 'Blockchain Infrastructure'
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -225,7 +226,7 @@ export default function NextGenServicesShowcase2025() {
                       Most Popular
                     </span>
                   </div>)}
-                
+
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${service.gradient} mr-4`}>
                     <service.icon className="h-8 w-8 text-white"/>
@@ -486,7 +487,7 @@ export default function NextGenServicesShowcase2025() {
             <p className="text-xl text-gray-300 mb-8">
               Contact our experts to discuss your specific needs and get a customized solution quote.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500 rounded-full mb-4">
@@ -495,7 +496,7 @@ export default function NextGenServicesShowcase2025() {
                 <h3 className="text-white font-semibold mb-2">Expert Consultation</h3>
                 <p className="text-gray-300 text-sm">Get personalized recommendations from our technology experts</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500 rounded-full mb-4">
                   <Settings className="h-6 w-6 text-white"/>
@@ -503,7 +504,7 @@ export default function NextGenServicesShowcase2025() {
                 <h3 className="text-white font-semibold mb-2">Custom Solutions</h3>
                 <p className="text-gray-300 text-sm">Tailored implementations designed for your specific requirements</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500 rounded-full mb-4">
                   <Rocket className="h-6 w-6 text-white"/>

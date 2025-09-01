@@ -2,53 +2,6 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
-<<<<<<< HEAD
-    const securityServices = [
-        {
-            icon: Shield,
-            title: "Advanced Threat Detection",
-            description: "AI-powered threat detection and prevention systems",
-            features["Real-time Monitoring", "Behavioral Analysis", "Machine Learning", "Automated Response"],
-            path: "/ai-powered-enterprise-security"
-        },
-        {
-            icon: Lock,
-            title: "SOC2 Compliance Automation",
-            description: "Automated compliance management and reporting",
-            features["Automated Auditing", "Real-time Monitoring", "Compliance Reporting", "Risk Assessment"],
-            path: "/soc2-compliance-automation"
-        },
-        {
-            icon: Eye,
-            title: "Zero Trust Architecture",
-            description: "Comprehensive zero trust security implementation",
-            features["Identity Verification", "Continuous Monitoring", "Least Privilege Access", "Micro-segmentation"],
-            path: "/zero-trust-network-architecture"
-        },
-        {
-            icon: Network,
-            title: "Network Security",
-            description: "Advanced network protection and monitoring",
-            features["Firewall Management", "Intrusion Detection", "Traffic Analysis", "Vulnerability Scanning"],
-            path: "/network-security"
-        },
-        {
-            icon: Database,
-            title: "Data Protection",
-            description: "Comprehensive data security and privacy solutions",
-            features["Encryption", "Access Control", "Data Loss Prevention", "Privacy Compliance"],
-            path: "/data-protection"
-        },
-        {
-            icon: Users,
-            title: "Identity & Access Management",
-            description: "Secure identity management and access control",
-            features["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Identity Governance"],
-            path: "/identity-access-management"
-        }
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const securityFeatures = [
         {
             icon: CheckCircle,
@@ -69,7 +22,7 @@ const Cybersecurity = () => {
             icon: BarChart3,
             title: "Comprehensive Reporting",
             description: "Detailed security analytics and compliance reporting"
-        }
+
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
@@ -83,7 +36,7 @@ const Cybersecurity = () => {
               <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Digital Age</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your digital assets with cutting-edge cybersecurity solutions. 
+              Protect your digital assets with cutting-edge cybersecurity solutions.
               From threat detection to compliance automation, we secure your future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -106,7 +59,7 @@ const Cybersecurity = () => {
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive 
+              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive
               protection for your organization's most valuable assets.
             </p>
           </div>
@@ -191,7 +144,7 @@ const Cybersecurity = () => {
                 Compliance & Regulatory Excellence
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Stay compliant with industry standards and regulations through our automated compliance 
+                Stay compliant with industry standards and regulations through our automated compliance
                 management solutions. From SOC2 to GDPR, we ensure your organization meets all requirements.
               </p>
               <div className="space-y-4">
@@ -250,7 +203,7 @@ const Cybersecurity = () => {
             Ready to Secure Your Digital Future?
           </h2>
           <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-            Don't wait for a security breach. Protect your organization with our comprehensive 
+            Don't wait for a security breach. Protect your organization with our comprehensive
             cybersecurity solutions today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -265,3 +218,4 @@ const Cybersecurity = () => {
       </section>
     </div>)};
 export default Cybersecurity;
+}}}

@@ -31,14 +31,6 @@ export default function LoginErrorFallback(...args[]):  {
           onClick={resetErrorBoundary}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
         >
-<<<<<<< HEAD
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
-      </div>
-    </div>
-  )};
-=======;
           <RefreshCw className="w-4 h-4" />;
           Try Again;
         </button>;
@@ -46,4 +38,3 @@ export default function LoginErrorFallback(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

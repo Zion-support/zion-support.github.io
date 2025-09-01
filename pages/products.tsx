@@ -205,14 +205,9 @@ const Products: NextPage = () => {;
     };
   ];
 
-<<<<<<< HEAD
-  const filteredProducts = activeCategory === 'all' ;
-    ? products: products.filter(product  => product.category === activeCategory);
-=======
   const filteredProducts = activeCategory === 'all' ;
     ? products ;
     : products.filter(product => product.category === activeCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -230,20 +225,20 @@ const Products: NextPage = () => {;
             Our Products
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-            Revolutionary technology products designed to transform how you work, create, and grow. 
+            Revolutionary technology products designed to transform how you work, create, and grow.
             From AI-powered solutions to enterprise-grade security, we deliver innovation that drives results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
+
               📞 Call +1 (302) 464-0950
             </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
+            <a
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
+
               ✉️ Request Demo
             </a>
           </div>
@@ -263,19 +258,6 @@ const Products: NextPage = () => {;
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
-<<<<<<< HEAD
-                }`}
-              >
-                <IconComponent className="w-5 h-5" />
-                <span>{category.name}</span>
-              </button>
-            )})}
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid lg: grid-cols-2 gap-8">
-          {filteredProducts.map((product)  => {;
-=======;
                 }`};
               >;
                 <IconComponent className="w-5 h-5" />;
@@ -288,13 +270,12 @@ const Products: NextPage = () => {;
         {/* Products Grid */}
         <div className = "grid lg:grid-cols-2 gap-8">;
           {filteredProducts.map((product) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const IconComponent = product.icon;
             return (
               <div
                 key = {product.id}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
-              >
+
                 <div className="flex items-start justify-between mb-6">
                   <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -304,7 +285,7 @@ const Products: NextPage = () => {;
                     <p className="text-gray-400 text-sm">per month</p>
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
                 <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
                 <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
@@ -343,20 +324,12 @@ const Products: NextPage = () => {;
                   <a
                     href={product.demoUrl}
                     className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
-                  >
+
                     🚀 Try Demo
                   </a>
                   <a
                     href={product.pricingUrl}
                     className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
-<<<<<<< HEAD
-                  >
-                    💰 View Pricing
-                  </a>
-                </div>
-              </div>
-            )})};
-=======;
                   >;
                     💰 View Pricing;
                   </a>;
@@ -364,7 +337,6 @@ const Products: NextPage = () => {;
               </div>;
             );
           })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
 
         {/* Enterprise Solutions */}
@@ -374,10 +346,10 @@ const Products: NextPage = () => {;
               Enterprise Solutions
             </h2>
             <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              Need custom enterprise solutions? We offer tailored development, white-label options, 
+              Need custom enterprise solutions? We offer tailored development, white-label options,
               and dedicated support for large organizations.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -403,16 +375,16 @@ const Products: NextPage = () => {;
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry" 
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 ✉️ Enterprise Inquiry
               </a>
             </div>
@@ -510,21 +482,21 @@ const Products: NextPage = () => {;
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 text-gray-300">
-              Start your free trial today or schedule a personalized demo to see how our products 
+              Start your free trial today or schedule a personalized demo to see how our products
               can revolutionize your workflow and drive growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 📞 Call +1 (302) 464-0950
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+
                 ✉️ Schedule Demo
               </a>
             </div>
@@ -544,14 +516,6 @@ const Products: NextPage = () => {;
                 <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
                 <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -559,6 +523,5 @@ const Products: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default Products;
+export default Products;}}

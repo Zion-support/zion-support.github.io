@@ -620,4 +620,4 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
   }
 ];
 
-export default innovativeMicroSaasServices2030;
+export default innovativeMicroSaasServices2030;}}}

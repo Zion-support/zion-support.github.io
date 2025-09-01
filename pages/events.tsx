@@ -48,7 +48,7 @@ export default function Events(...args[]):  {
 			type: 'Webinar',
 			description: 'Explore the potential of quantum computing and how it will transform business operations.',
 			speaker: 'Dr. Emily Watson, Quantum Research Lead'
-		}
+
 	]
 
 	const pastEvents = [
@@ -67,7 +67,7 @@ export default function Events(...args[]):  {
 			recording: true,
 			attendees: 180,
 			type: 'Webinar'
-		}
+
 	]
 
 	return (
@@ -137,7 +137,7 @@ export default function Events(...args[]):  {
 										<Link
 											to={`/events/${event.id}`}
 											className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-										>
+
 											Register Now
 											<ArrowRight className="ml-2 h-4 w-4" />
 										</Link>
@@ -225,7 +225,7 @@ export default function Events(...args[]):  {
 										<Link
 											to={`/events/${event.id}/recording`}
 											className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-										>
+
 											Watch Recording
 											<ArrowRight className="ml-2 h-4 w-4" />
 										</Link>
@@ -250,13 +250,13 @@ export default function Events(...args[]):  {
 						<Link
 							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-						>
+
 							Schedule Consultation
 						</Link>
 						<Link
 							to="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
-						>
+
 							View Services <span aria-hidden="true">→</span>
 						</Link>;
 					</div>;

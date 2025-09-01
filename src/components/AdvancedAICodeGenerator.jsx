@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from 'lucide-react';
-const mockCodeSnippets = [
+import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [
     {
         id: '1',
         title: 'React Hook for API Calls',
@@ -22,7 +21,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     try {
       setLoading(true);
       setError(null);
-      
+
       const response = await fetch(url, {
         method,
         headers: {
@@ -102,7 +101,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         description: 'Comprehensive form validation with custom rules and error handling',
         language: 'javascript',
         code: `class FormValidator {
-  constructor(form, options = {}) {
+  constructor(form, options = { /* empty */ }) {
     this.form = form;
     this.options = {
   validateOnBlur: true,
@@ -144,7 +143,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     let isValid = true;
     for (const fieldElement = this.form[field];
     const errors = this.errors.get(field) || [];
-    
+
     if (errors.length > 0) {
       fieldElement.classList.add('error');
       this.showFieldErrors(field, errors)} else {
@@ -154,11 +153,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   showFieldErrors(field, errors) {
     // Implementation for showing field-specific errors
-  }
 
   hideFieldErrors(field) {
     // Implementation for hiding field-specific errors
-  }
 
   init() {
     if (this.options.validateOnBlur) {
@@ -179,46 +176,8 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-    }
+
 ];
-<<<<<<< HEAD
-const mockCodeAnalysis = [
-    {
-        id: '1',
-        snippetId: '1',
-        quality: 92,
-        performance: 88,
-        security: 95,
-        maintainability: 90,
-        suggestions[
-            'Consider adding request timeout handling',
-            'Add retry logic for failed requests',
-            'Implement request cancellation with AbortController'
-        ],
-        warnings[
-            'No input validation for URL parameter',
-            'Consider rate limiting for API calls'
-        ],
-        timestamp: '2024-01-15T10:30:00Z'
-    },
-    {
-        id: '2',
-        snippetId: '2',
-        quality: 85,
-        performance: 95,
-        security: 100,
-        maintainability: 88,
-        suggestions[
-            'Add vendor prefixes for better browser support',
-            'Consider using CSS custom properties for colors',
-            'Add animation performance optimizations'
-        ],
-        warnings[],
-        timestamp: '2024-01-10T14:20:00Z'
-    }
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mockAIGenerations = [
     {
         id: '1',
@@ -229,6 +188,9 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
+      // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      return initialValue;
+
       return item ? JSON.parse(item) : initialValue} catch (error) {
       console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
@@ -238,6 +200,8 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
+      // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
+    }
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
       console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
@@ -251,7 +215,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
             'Alternative 3: With custom serializer'
         ],
         timestamp: '2024-01-15T11:45:00Z'
-    }
+
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);
@@ -291,6 +255,7 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
   id: Date.now().toString(),
                 prompt: aiPrompt,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
   generatedCode: `// Generated code for: ${aiPrompt
 
 
@@ -607,7 +572,7 @@ export function AdvancedAICodeGenerator() {
                         {new Date(analysis.timestamp).toLocaleDateString()}
                       </span>
                     </div>
-                    
+
                     {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
                         <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
                           <CheckCircle className="w-4 h-4 inline mr-1"/>
@@ -619,7 +584,7 @@ export function AdvancedAICodeGenerator() {
                             </li>))}
                         </ul>
                       </div>)}
-                    
+
                     {analysis.warnings.length > 0 && (<div>
                         <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
                           <AlertCircle className="w-4 h-4 inline mr-1"/>
@@ -667,11 +632,11 @@ export function AdvancedAICodeGenerator() {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-48 overflow-y-auto mb-3">
                   <code>{generation.generatedCode}</code>
                 </div>
-                
+
                 {generation.alternatives.length > 0 && (<div>
                     <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Alternative Approaches:

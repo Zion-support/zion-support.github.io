@@ -79,7 +79,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       transition: {
         duration: 0.3,
         ease: "easeOut"
-      }
+
     },
     hover: {
       scale: 1.02,;
@@ -91,69 +91,6 @@ export default function ComprehensivePricing2027(...args[]):  {
     };
   };
 
-<<<<<<< HEAD
-  const getPriceColor = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'text-green-400';
-    if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getPriceTier = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'Starter';
-    if (price < 2500) return 'Professional';
-    return 'Enterprise'};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Header Section */}
-      <motion.section
-        className="relative z-10 pt-20 pb-16 px-6"
-        initial = {
-  { opacity: 0,
-  y: -50 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             initial = {
   { opacity: 0,
   scale: 0.8 
@@ -347,7 +284,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
+
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
                   <option value="rating">Sort by Rating</option>
@@ -360,13 +297,13 @@ export default function ComprehensivePricing2027(...args[]):  {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-                >
+
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
-                >
+
                   <List className="w-5 h-5" />
                 </button>
               </div>
@@ -381,7 +318,7 @@ export default function ComprehensivePricing2027(...args[]):  {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-      >
+
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (
@@ -423,16 +360,16 @@ export default function ComprehensivePricing2027(...args[]):  {
                 {filteredServices.map((service, index)  => (
                   <motion.div
                     key={service.id}
-                    variants={viewMode === 'grid' ? itemVariants : {}}
+                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-                  >
+
                     {viewMode === 'grid' ? (
                       <motion.div
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
                         onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                      >
+
                         {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
@@ -463,7 +400,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                             <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                            >
+
                               {tag}
                             </span>
                           ))}
@@ -536,7 +473,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
                               className="mt-4 pt-4 border-t border-zion-purple/20"
-                            >
+
                               {/* Features */}
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -567,7 +504,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <button
                                 onClick={() => window.open(service.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-                              >
+
                                 Get Started
                               </button>
                             </motion.div>
@@ -623,7 +560,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                                >
+
                                   {tag}
                                 </span>
                               ))}
@@ -632,7 +569,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                             <button
                               onClick={() => window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-                            >
+
                               Get Started
                             </button>
                           </div>
@@ -648,7 +585,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-              >
+
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
@@ -704,23 +641,15 @@ export default function ComprehensivePricing2027(...args[]):  {
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
+
                 Contact Our Team
               </Link>
               <a
                 href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
-              >
+
                 Call +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -728,4 +657,3 @@ export default function ComprehensivePricing2027(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

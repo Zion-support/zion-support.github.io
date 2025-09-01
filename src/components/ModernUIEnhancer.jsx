@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('auto');
     const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -56,17 +55,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark)}
         else {
-<<<<<<< HEAD
-            root.classList.toggle('dark', theme === 'dark')}
-        localStorage.setItem('theme', theme)};
-    const themes = ['light', 'dark', 'auto'];
-=======
             root.classList.toggle('dark', theme === 'dark');
-        }
+
         localStorage.setItem('theme', theme);
     };
     const themes = ['light', 'dark', 'auto'];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const currentIndex = themes.indexOf(currentTheme);
         const nextTheme = themes[(currentIndex + 1) % themes.length];
         setCurrentTheme(nextTheme);
@@ -530,7 +523,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   
 
 }} transition={{
-=======
   
 
 }} animate = {
@@ -541,7 +533,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
                     ease: "linear",
@@ -551,3 +542,4 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         </div>)}
     </>)};
 export default ModernUIEnhancer;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div>}

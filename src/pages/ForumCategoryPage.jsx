@@ -57,7 +57,7 @@ const categoriesInfo = {
         postCount: 12,
         adminOnly: true,
         icon: "Megaphone"
-    }
+
 };
 const iconMap = {
   "Briefcase": Briefcase,

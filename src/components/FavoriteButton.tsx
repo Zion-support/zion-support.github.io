@@ -7,23 +7,21 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
 
-<<<<<<< HEAD
-export function FavoriteButton(...args[]):  {
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  const handleToggleFavorite = (e: React.MouseEvent)  => {;
-=======;
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
 
   const handleToggleFavorite = (e: React.MouseEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.stopPropagation();
     setIsFavorited(!isFavorited);
 
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
+      // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`);
+    } else {
+      // Add to favorites
+      // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`);
+    }
       console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
       // Add to favorites
       console.log(`Added ${itemType} ${itemId} to favorites`)}
@@ -46,7 +44,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       />
     </button>
   )};
-=======;
         className={`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';
         }`} ;
@@ -54,4 +51,3 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     </button>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Download, Star, Users, Award } from 'lucide-react';
-
-export const AppStoreBanner = () => {
+import { Download, Star, Users, Award export const AppStoreBanner = () => {
   const appStores = [
     {
       name: 'App Store',
@@ -18,7 +16,7 @@ export const AppStoreBanner = () => {
       reviews: '1.9k',
       downloadUrl: '#',
       badge: 'Top Rated'
-    }
+
   ];
 
   const features = [
@@ -35,7 +33,7 @@ export const AppStoreBanner = () => {
             Download Zion Mobile App
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your IT asset management experience with our powerful mobile app. 
+            Transform your IT asset management experience with our powerful mobile app.
             Available on iOS and Android devices.
           </p>
         </div>
@@ -53,7 +51,7 @@ export const AppStoreBanner = () => {
                   <p className="text-blue-100 mb-6">
                     Professional IT asset management in your pocket
                   </p>
-                  
+
                   {/* Feature highlights */}
                   <div className="space-y-3 mb-8">
                     {features.map((feature, index) => (
@@ -66,7 +64,7 @@ export const AppStoreBanner = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Background decoration */}
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"></div>
@@ -79,7 +77,7 @@ export const AppStoreBanner = () => {
                 Get Started Today
               </h3>
               <p className="text-lg text-gray-300 mb-8">
-                Choose your platform and start managing your IT assets with ease. 
+                Choose your platform and start managing your IT assets with ease.
                 Free download with no hidden costs.
               </p>
             </div>
@@ -101,7 +99,7 @@ export const AppStoreBanner = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="text-right">
                       <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-semibold rounded-full mb-2">
                         {store.badge}
@@ -109,7 +107,7 @@ export const AppStoreBanner = () => {
                       <a
                         href={store.downloadUrl}
                         className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-                      >
+
                         <Download className="w-4 h-4 mr-2" />
                         Download
                       </a>
@@ -157,13 +155,13 @@ export const AppStoreBanner = () => {
               <a
                 href="#support"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+
                 Get Support
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+
                 Watch Demo
               </a>
             </div>

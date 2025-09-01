@@ -2,8 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
@@ -121,7 +120,7 @@ export default function CategoryDetail() {
             title: "Business Solutions",
             description: "Enterprise AI integrations and services",
             icon: <Briefcase className="w-6 h-6"/>
-        }
+
     };
     useEffect(() => {
         setIsLoading(true);
@@ -190,7 +189,7 @@ export default function CategoryDetail() {
             })}
     };
     return (<>
-      
+
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -198,7 +197,7 @@ export default function CategoryDetail() {
               ← Back to Categories
             </Link>
           </div>
-          
+
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -212,7 +211,7 @@ export default function CategoryDetail() {
               {category.description}
             </p>
           </div>
-          
+
           {isLoading ? (<div className="flex justify-center items-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>
             </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

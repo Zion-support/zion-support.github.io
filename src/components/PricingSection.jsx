@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
-const plans = [
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
     {
         name: "Starter",
         price: 99,
@@ -72,7 +71,7 @@ const plans = [
         notIncluded[],
         popular: false,
         cta: "Contact Sales"
-    }
+
 ];
 const addons = [
     {
@@ -112,8 +111,8 @@ export function PricingSection() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 30,
@@ -131,8 +130,8 @@ export function PricingSection() {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -216,10 +215,10 @@ export function PricingSection() {
                       {plan.icon}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
-                  
+
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">${getDiscountedPrice(plan.price)}</span>
                     <span className="text-zion-slate-light">/{billingPeriod}</span>
@@ -234,7 +233,7 @@ export function PricingSection() {
                       </div>
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>))}
-                  
+
                   {plan.notIncluded.map((feature, idx) => (<div key={idx} className="flex items-center gap-3 opacity-50">
                       <div className="w-5 h-5 rounded-full bg-zion-slate-light/30 flex items-center justify-center flex-shrink-0">
                         <X className="w-3 h-3 text-zion-slate-light"/>
@@ -309,10 +308,10 @@ export function PricingSection() {
                       {addon.icon}
                     </div>
                   </div>
-                  
+
                   <h4 className="text-lg font-semibold text-white mb-2">{addon.name}</h4>
                   <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>
-                  
+
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-zion-cyan">${addon.price}</span>
                     <span className="text-zion-slate-light">/{addon.period}</span>

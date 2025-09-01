@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-08-29T13:40:24-03:00",
-  "overall_status": "unhealthy",
+  "timestamp": "2025-08-30T11:43:24-03:00",
+  "overall_status": "healthy",
   "components": {
-    "monitor_daemon": "healthy",
+    "monitor_daemon": "unknown",
     "reports_directory": "healthy",
     "dependencies": "healthy",
     "disk_space": "healthy",
     "memory_usage": "unknown",
-    "log_files": "unhealthy"
+    "log_files": "healthy"
   },
   "summary": {
     "healthy_components": 4,
-    "unhealthy_components": 1,
-    "unknown_components": 1
+    "unhealthy_components": 0,
+    "unknown_components": 2
   }
 }

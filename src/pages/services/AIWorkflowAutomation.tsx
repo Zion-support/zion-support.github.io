@@ -546,7 +546,6 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
     </div>
   )}
-=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
@@ -555,4 +554,3 @@ export default function AIWorkflowAutomation(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -22,22 +22,22 @@ export default function HealthcareTech(...args: []):  {
                 <Heart className="w-4 h-4 mr-2" />
                 Healthcare Technology
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Healthcare
                 <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Technology</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics, 
+                Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics,
                 patient monitoring, and digital health platforms for better patient outcomes.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function HealthcareTech(...args: []):  {
                 Advanced Healthcare Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery, 
+                Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery,
                 from AI diagnostics to patient management systems.
               </p>
             </div>
@@ -187,7 +187,7 @@ export default function HealthcareTech(...args: []):  {
                 AI-Powered Healthcare
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes, 
+                Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes,
                 and optimize healthcare operations.
               </p>
             </div>
@@ -363,7 +363,7 @@ export default function HealthcareTech(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -379,4 +379,4 @@ export default function HealthcareTech(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}}}

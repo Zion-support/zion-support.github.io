@@ -17,7 +17,7 @@ export default function ResetPasswordPage() {
         if (!token) {
             setError('Invalid or missing reset token.');
             // Consider redirecting to an error page or login page
-        }
+
     }, [token]);
     const handleSubmit = async (e) => {
         e.preventDefault();

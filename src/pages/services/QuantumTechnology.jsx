@@ -16,7 +16,7 @@ const QuantumTechnology = () => {
               Quantum Technology
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Harness the power of quantum computing to solve complex problems that are impossible for classical computers. 
+              Harness the power of quantum computing to solve complex problems that are impossible for classical computers.
               Experience the future of computation with Zion Tech Group's quantum solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -40,8 +40,8 @@ const QuantumTechnology = () => {
                 What is Quantum Computing?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum computing leverages the principles of quantum mechanics to process information in ways that 
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously, 
+                Quantum computing leverages the principles of quantum mechanics to process information in ways that
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously,
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">

@@ -76,7 +76,7 @@ const stats: Stat[] = [
     description: 'Rapidly expanding global presence',
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
-  }
+
 ];
 
 export default function EnhancedStatsSection(...args[]):  {
@@ -102,13 +102,6 @@ export default function EnhancedStatsSection(...args[]):  {
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
-<<<<<<< HEAD
-        clearInterval(timer)}
-      setCountedValues(prev = > ({
-        ...prev,;
-        [target]: Math.floor(current);
-      }))}, 16);
-=======
         clearInterval(timer);
       }
       setCountedValues(prev = > ({;
@@ -116,25 +109,18 @@ export default function EnhancedStatsSection(...args[]):  {
         [target]: Math.floor(current);
       }));
     }, 16);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
-<<<<<<< HEAD
-        const timer = setTimeout(() => {;
-          animateCount(stat.value)}, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer)})}
-=======
         const timer = setTimeout(() => {;
           animateCount(stat.value);
         }, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer);
       });
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   }, [inView]);
 
   return (
@@ -179,7 +165,7 @@ export default function EnhancedStatsSection(...args[]):  {
             }
           }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Proven Results & Global Impact
           </h2>
@@ -223,7 +209,7 @@ export default function EnhancedStatsSection(...args[]):  {
                 }
               }}
               className="group relative"
-            >
+
               <motion.div
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
                 whileHover={{
@@ -240,7 +226,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }}
                 transition={{ duration: 0.3 }}
-              >
+
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
@@ -259,7 +245,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }}
                   transition={{ duration: 0.6 }}
-                >
+
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
                 </motion.div>
 
@@ -338,13 +324,13 @@ export default function EnhancedStatsSection(...args[]):  {
             }
           }}
           className="mt-16"
-        >
+
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">
             <motion.div
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
-            >
+
               <Award className="w-10 h-10 text-white" />
             </motion.div>
 
@@ -368,14 +354,6 @@ export default function EnhancedStatsSection(...args[]):  {
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
                 <div className="text-gray-300">Client Retention</div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </motion.div>;
@@ -383,4 +361,3 @@ export default function EnhancedStatsSection(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

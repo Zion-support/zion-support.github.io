@@ -22,22 +22,22 @@ export default function AISupplyChainOptimization(...args: []):  {
                 <Truck className="w-4 h-4 mr-2" />
                 Intelligent Supply Chain
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Supply Chain
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Optimization</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
+                Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency,
                 and enhance visibility across your entire supply network with intelligent automation.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                 Intelligent Supply Chain Solutions
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI platform provides comprehensive supply chain optimization tools for 
+                Our AI platform provides comprehensive supply chain optimization tools for
                 modern businesses seeking operational excellence.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default function AISupplyChainOptimization(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -378,4 +378,4 @@ export default function AISupplyChainOptimization(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}}}

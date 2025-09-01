@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
 import { format, isPast, parseISO } from "date-fns";
 import Link from "next/link";
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {
@@ -21,6 +22,11 @@ export function UpcomingInterviewsCard() {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
+                // // // // // // // console.error("Error loading upcoming interviews:", error);
+            }
+            finally {
+                setIsLoading(false);
+
                 setUpcomingInterviews(upcoming)}
             catch (error) {
                 console.error("Error loading upcoming interviews:", error)}
@@ -104,7 +110,7 @@ export function UpcomingInterviewsCard() {
                 </div>
               </div>)})}
         </div>
-        
+
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">

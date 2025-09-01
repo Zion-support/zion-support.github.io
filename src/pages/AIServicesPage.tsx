@@ -38,109 +38,53 @@ const AIServices = [
         link: "/request-quote?service=ai-strategy"
     },
     {
-<<<<<<< HEAD
-        title: "Custom AI Model Development",
-        description: "Tailored machine learning models for your specific use case",
-        price: "$5,000 - $50,000",
-        features: ["Data preprocessing", "Model training", "Performance optimization", "Deployment support"],
-        icon: <Server className="h-8 w-8 text-zion-purple"/>,
-        category: "Development",
-        badge: "Premium",
-        link: "/request-quote?service=custom-ai-models"
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+const AIServicesPage = () => {
+  const aiServices = [
+    {
+      id: 'ai-consciousness-simulator',
+      name: 'AI Consciousness Simulator',
+      tagline: 'Simulate and test AI consciousness emergence patterns',
+      price: '$15,999',
+      period: '/month',
+      description: 'Advanced AI consciousness simulation platform for researchers, ethicists, and AI safety organizations. Test consciousness emergence, ethical boundaries, and safety protocols in controlled environments.',
+      features: [
+        'Multi-dimensional consciousness mapping',
+        'Ethical boundary testing framework',
+        'Consciousness emergence prediction',
+        'Safety protocol validation',
+        'Real-time consciousness monitoring',
+        'Ethical decision tree analysis',
+        'Consciousness transfer protocols',
+        'Safety breach prevention',
+        'Regulatory compliance tools',
+        'Research collaboration platform'
+      ],
+      popular: true,
+      icon: Brain,
+      color: 'from-indigo-600 to-purple-700',
+      textColor: 'text-indigo-400',
+      link: '/ai-services/consciousness-simulator',
+      marketPosition: 'First-to-market AI consciousness simulation platform. No direct competitors in this specialized field. Positioned for research institutions and AI safety organizations.',
+      targetAudience: 'AI research institutions, Ethics committees, AI safety organizations, Government agencies, University research departments, AI ethics think tanks',
+      trialDays: 30,
+      setupTime: '2-4 weeks',
+      category: 'AI & Consciousness Research',
+      realService: true,
+      technology: ['Quantum computing', 'Advanced neural networks', 'Consciousness mapping algorithms', 'Ethical AI frameworks', 'Real-time monitoring systems'],
+      integrations: ['Research databases', 'Academic platforms', 'Government systems', 'AI safety protocols', 'Ethics frameworks'],
+      useCases: ['AI consciousness research', 'Ethical AI development', 'Safety protocol testing', 'Regulatory compliance', 'Academic research'],
+      roi: 'Research institutions report 500% ROI through accelerated AI safety research and regulatory compliance.',
+      competitors: ['No direct competitors', 'Academic research tools', 'AI safety platforms'],
+      marketSize: '$500M emerging market',
+      growthRate: '300% annual growth',
+      rating: 4.9,
+      reviews: 18,
+      customers: 25
     },
     {
-        title: "Data Labeling & Annotation",
-        description: "High-quality data preparation for machine learning projects",
-        price: "$0.50 - $5.00 per item",
-        features: ["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
-        category: "Data",
-        link: "/request-quote?service=data-labeling"
-    },
-    {
-        title: "AI-Powered Analytics",
-        description: "Advanced business intelligence with machine learning insights",
-        price: "$1,500 - $8,000/month",
-        features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "API integration"],
-        icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,
-        category: "Analytics",
-        badge: "New",
-        link: "/request-quote?service=ai-analytics"
-    },
-    {
-        title: "Computer Vision Solutions",
-        description: "Image and video analysis for automation and quality control",
-        price: "$3,000 - $25,000",
-        features: ["Object detection", "Image classification", "Video processing", "Edge deployment"],
-        icon: <Eye className="h-8 w-8 text-zion-purple"/>,
-        category: "Vision",
-        link: "/request-quote?service=computer-vision"
-    },
-    {
-        title: "Natural Language Processing",
-        description: "Text analysis, chatbots, and language understanding systems",
-        price: "$2,000 - $20,000",
-        features: ["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],
-        icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,
-        category: "NLP",
-        link: "/request-quote?service=nlp"
-    },
-    {
-        title: "AI Ethics & Compliance",
-        description: "Ensure your AI systems are fair, transparent, and compliant",
-        price: "$1,500 - $10,000",
-        features: ["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],
-        icon: <Shield className="h-8 w-8 text-zion-cyan"/>,
-        category: "Compliance",
-        link: "/request-quote?service=ai-ethics"
-    },
-    {
-        title: "AI Model Optimization",
-        description: "Improve performance and efficiency of existing AI models",
-        price: "$1,000 - $15,000",
-        features: ["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],
-        icon: <Zap className="h-8 w-8 text-zion-purple"/>,
-        category: "Optimization",
-        link: "/request-quote?service=model-optimization"
-    },
-    {
-        title: "AI Training & Workshops",
-        description: "Custom training programs for your team on AI technologies",
-        price: "$500 - $3,000 per person",
-        features: ["Hands-on workshops", "Custom curriculum", "Certification", "Ongoing support"],
-        icon: <Users className="h-8 w-8 text-zion-blue"/>,
-        category: "Training",
-        link: "/request-quote?service=ai-training"
-    },
-    {
-        title: "AI Integration Services",
-        description: "Seamlessly integrate AI solutions into existing systems",
-        price: "$2,000 - $20,000",
-        features: ["API development", "System integration", "Testing", "Maintenance"],
-        icon: <Code className="h-8 w-8 text-zion-cyan"/>,
-        category: "Integration",
-        link: "/request-quote?service=ai-integration"
-    },
-    {
-        title: "AI Security & Testing",
-        description: "Comprehensive security testing for AI systems",
-        price: "$1,500 - $12,000",
-        features: ["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],
-        icon: <Lock className="h-8 w-8 text-zion-purple"/>,
-        category: "Security",
-        link: "/request-quote?service=ai-security"
-    },
-    {
-        title: "AI Content Generation",
-        description: "Automated content creation for marketing and communication",
-        price: "$500 - $5,000/month",
-        features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
-        category: "Content",
-        link: "/request-quote?service=ai-content";
-    };
-];
-=======
       id: 'quantum-emotion-processor',
       name: 'Quantum Emotion Processor',
       tagline: 'Process and analyze emotions using quantum computing',
@@ -229,7 +173,6 @@ const AIServices = [
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const AIServicesPage: React.FC = () => {
   return (
@@ -250,8 +193,9 @@ const AIServicesPage: React.FC = () => {
               Comprehensive artificial intelligence solutions for modern businesses
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
@@ -270,11 +214,6 @@ const AIServicesPage: React.FC = () => {
               <p className="text-gray-300 mb-4">Smart automation and process optimization</p>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-    </>
-=======
 
           {/* AI Solutions Grid */}
           <div className="mb-16">
@@ -314,7 +253,7 @@ const AIServicesPage: React.FC = () => {
 
 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
-                >
+
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
                   <ul className="space-y-2">
@@ -368,7 +307,7 @@ const AIServicesPage: React.FC = () => {
 
 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-                >
+
                   <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
@@ -404,14 +343,14 @@ const AIServicesPage: React.FC = () => {
               Let our AI experts help you implement intelligent solutions that drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Get Started Today
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 View All Services;
@@ -421,8 +360,7 @@ const AIServicesPage: React.FC = () => {
         </div>;
       </div>;
     </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 
-export default AIServicesPage;
+export default AIServicesPage;}}}}

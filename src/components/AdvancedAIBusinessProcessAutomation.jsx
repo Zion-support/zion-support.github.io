@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
+import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
 const mockBusinessProcesses = [
     {
         id: 'bp-001',
@@ -30,7 +30,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 2,
                 cost: 150,
                 efficiency: 94
-            }
+
         ],
         rules[
             {
@@ -43,7 +43,7 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T10:30:00Z'),
                 triggerCount: 156
-            }
+
         ],
         dependencies['vendor_verification', 'budget_approval']
     },
@@ -76,7 +76,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
-            }
+
         ],
         rules[
             {
@@ -89,7 +89,7 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-14T14:15:00Z'),
                 triggerCount: 23
-            }
+
         ],
         dependencies['background_check', 'document_verification']
     },
@@ -122,7 +122,7 @@ const mockBusinessProcesses = [
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
-            }
+
         ],
         rules[
             {
@@ -135,7 +135,7 @@ const mockBusinessProcesses = [
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T16:45:00Z'),
                 triggerCount: 8
-            }
+
         ],
         dependencies['ticket_classification', 'agent_availability']
     }

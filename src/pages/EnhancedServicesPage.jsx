@@ -226,7 +226,7 @@ export default function EnhancedServicesPage() {
                   {category.label}
                 </TabsTrigger>))}
             </TabsList>
-            
+
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (<TabsContent key={category.value} value={category.value} className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES
@@ -313,7 +313,7 @@ export default function EnhancedServicesPage() {
             <p className="text-xl text-zion-slate-light mb-12">
               Get in touch with our experts to discuss your needs and discover how our services can drive your success
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-6 h-6"/>

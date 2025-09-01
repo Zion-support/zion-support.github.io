@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
-const AIAutonomousLegalResearchAssistant = () => {
+import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle const AIAutonomousLegalResearchAssistant = () => {
     const features = [
         "Autonomous case law analysis",
         "Statute interpretation & updates",
@@ -32,7 +31,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             icon: Shield,
             title: "Compliance & Updates",
             description: "Stay current with latest legal changes and regulatory updates"
-        }
+
     ];
     const pricingPlans = [
         {
@@ -79,7 +78,7 @@ const AIAutonomousLegalResearchAssistant = () => {
                 "On-site training & support",
                 "SLA guarantees"
             ]
-        }
+
     ];
     const useCases = [
         {
@@ -101,7 +100,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             title: "Legal Opinions",
             description: "Generate well-researched legal opinions with AI assistance",
             icon: BarChart3
-        }
+
     ];
     const industries = [
         "Corporate Law",
@@ -128,7 +127,7 @@ const AIAutonomousLegalResearchAssistant = () => {
             AI Autonomous Legal Research Assistant
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes, 
+            Advanced AI-powered legal research tool that autonomously analyzes case law, statutes,
             and legal precedents to provide comprehensive legal insights and accelerate your research.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -314,3 +313,4 @@ const AIAutonomousLegalResearchAssistant = () => {
       </section>
     </div>)};
 export default AIAutonomousLegalResearchAssistant;
+}}}}

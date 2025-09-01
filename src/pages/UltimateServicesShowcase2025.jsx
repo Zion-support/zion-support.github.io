@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
-=======
 // import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
 // import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
 // import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
+// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
+// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
 const UltimateServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -65,7 +62,7 @@ const UltimateServicesShowcase2025 = () => {
             Ultimate Services Showcase 2025
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. 
+            Discover our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms.
             Transform your business with cutting-edge technology solutions designed for the future.
           </p>
         </div>
@@ -255,7 +252,7 @@ const UltimateServicesShowcase2025 = () => {
           <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-8 border border-cyan-500/30">
             <h2 className="text-3xl font-bold mb-4 text-cyan-400">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
+              Our team of experts is ready to help you implement these cutting-edge solutions.
               Get in touch today to discuss how we can accelerate your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -271,3 +268,4 @@ const UltimateServicesShowcase2025 = () => {
       </div>
     </div>)};
 export default UltimateServicesShowcase2025;
+}}}

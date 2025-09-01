@@ -27,14 +27,6 @@ const pricingData2028 = {
       roi: '800%',
       setupTime: '4-6 weeks',
       trialDays: 30,
-<<<<<<< HEAD
-      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
-      targetAudience: 'AI research institutions, Government agencies,
-  Ethics committees'
-    
-
-},
-=======
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
   Ethics committees'
@@ -44,7 +36,6 @@ const pricingData2028 = {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -70,7 +61,7 @@ const pricingData2028 = {
       trialDays: 21,
       features['Medical diagnosis', 'Treatment optimization', 'Drug discovery'],
       targetAudience: 'Hospitals, Medical centers, Pharmaceutical companies'
-    }
+
   ],
   microSAAS[
     {
@@ -111,7 +102,7 @@ const pricingData2028 = {
       trialDays: 21,
       features['Multi-language support', 'Bug detection', 'Code optimization'],
       targetAudience: 'Software developers, Development teams, Tech companies'
-    }
+
   ],
   itServices[
     {
@@ -149,16 +140,11 @@ const pricingData2028 = {
       growthRate: '300%',
       roi: '600%',
       setupTime: '4-5 weeks',
-<<<<<<< HEAD
-      trialDays: 21,
-      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
-      targetAudience: 'Development teams, DevOps engineers, Technology companies'
     };
   ];
 };
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
-=======;
       trialDays: 21,;
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
       targetAudience: 'Development teams, DevOps engineers, Technology companies';
@@ -167,7 +153,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
 };
 
 const ComprehensivePricingGuide2028: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
@@ -185,14 +170,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-<<<<<<< HEAD
-  const getAllServices = () => {
-    return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
-      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: 'Micro SAAS' })),;
-      ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }));
-    ]};
-=======
   const getAllServices = () => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
@@ -200,7 +177,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filteredServices = getAllServices().filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
@@ -215,14 +191,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     return matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const calculateROI = (roi: string)  => {;
-    return parseInt(roi.replace('%', ''))};
-=======
   const calculateROI = (roi: string) => {;
     return parseInt(roi.replace('%', ''));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
@@ -237,7 +208,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-          >
+
             Comprehensive Pricing Guide 2028
           </motion.h1>
           <motion.p
@@ -245,7 +216,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-          >
+
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
           </motion.p>
           <motion.div
@@ -253,7 +224,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-4"
-          >
+
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               💰 Transparent Pricing
             </div>
@@ -275,7 +246,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
-          >
+
             Market Overview & Growth Potential
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -284,7 +255,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-center"
-            >
+
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-10 h-10 text-white" />
               </div>
@@ -297,7 +268,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center"
-            >
+
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-10 h-10 text-white" />
               </div>
@@ -310,7 +281,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-center"
-            >
+
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="w-10 h-10 text-white" />
               </div>
@@ -339,7 +310,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-                >
+
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>
@@ -359,7 +330,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
                   }`}
-                >
+
                   {range.name}
                 </motion.button>
               ))}
@@ -406,7 +377,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
 }}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
+
                 {/* Service Type Badge */}
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                   {service.type}
@@ -490,7 +461,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
-          >
+
             ROI Calculator
           </motion.h2>
           <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">
@@ -558,7 +529,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-          >
+
             Ready to Maximize Your ROI?
           </motion.h2>
           <motion.p
@@ -566,7 +537,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
+
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
           <motion.div
@@ -574,28 +545,20 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </motion.div>;
         </div>;
@@ -603,6 +566,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ComprehensivePricingGuide2028;
 export default ComprehensivePricingGuide2028;

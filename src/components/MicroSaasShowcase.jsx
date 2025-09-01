@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud } from 'lucide-react';
-export function MicroSaasShowcase() {
+import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud export function MicroSaasShowcase() {
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = [
         { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },
@@ -107,7 +106,7 @@ export function MicroSaasShowcase() {
             features['AI-powered analysis', 'Competitor insights', 'Keyword research', 'Performance tracking'],
             badge: 'SEO',
             color: 'from-emerald-500 to-blue-500'
-        }
+
     ];
     const filteredServices = activeCategory === 'all'
         ? microSaasServices

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Phone,
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone,
   Mail,
   MapPin,
   Clock,
@@ -17,9 +16,9 @@ import {
   Github,
   Facebook,
   Instagram
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export function ContactPage() {
+export function ContactPage(...args: any[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -33,14 +32,14 @@ export function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -71,21 +70,24 @@ export function ContactPage() {
       value: '+1 302 464 0950',
       icon: Phone,
       description: 'Call us anytime',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600',
+      link: 'tel:+13024640950'
     },
     {
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       icon: Mail,
       description: 'Send us a message',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-500 to-pink-600',
+      link: 'mailto:kleber@ziontechgroup.com'
     },
     {
       title: 'Office',
       value: '364 E Main St STE 1008 Middletown DE 19709',
       icon: MapPin,
       description: 'Visit our headquarters',
-      color: 'from-green-500 to-teal-600'
+      color: 'from-green-500 to-teal-600',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       title: 'Hours',
@@ -103,6 +105,30 @@ export function ContactPage() {
     'Cloud & DevOps',
     'Digital Transformation',
     'Data Analytics',
+    'IoT & Edge Computing',
+    'Space Technology',
+    'AI Healthcare Platform',
+    'AI Sales Copilot',
+    'AI Marketing Automation',
+    'AI Project Management',
+    'Quantum AI Hybrid Platform',
+    'AI Cybersecurity Platform',
+    'Quantum AI Trading Platform',
+    'Space Technology Solutions',
+    'Digital Twin Solutions',
+    'Green IT Solutions',
+    'Zero Trust Network Access',
+    'AI Creative Studio',
+    'AI Health Monitoring',
+    'AI Financial Advisor',
+    'AI Education Platform',
+    'AI Legal Assistant',
+    'AI Real Estate Platform',
+    'AI Supply Chain Optimizer',
+    'AI Energy Management',
+    'AI Manufacturing Platform',
+    'AI Customer Intelligence',
+    'AI Data Governance',
     'Custom Development',
     'Consulting'
   ];
@@ -160,8 +186,8 @@ export function ContactPage() {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {contactMethods.map((method, index)  => (
             <motion.div
               key={method.title}
               initial={{ opacity: 0, y: 20 }}
@@ -173,7 +199,18 @@ export function ContactPage() {
                 <method.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
-              <p className="text-cyan-400 font-medium mb-2">{method.value}</p>
+              {method.link ? (
+                <a 
+                  href={method.link} 
+                  className="text-cyan-400 font-medium mb-2 hover:text-cyan-300 transition-colors cursor-pointer block"
+                  target={method.link.startsWith('http') ? '_blank' : undefined}
+                  rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {method.value}
+                </a>
+              ) : (
+                <p className="text-cyan-400 font-medium mb-2">{method.value}</p>
+              )}
               <p className="text-gray-400 text-sm">{method.description}</p>
             </motion.div>
           ))}
@@ -257,17 +294,17 @@ export function ContactPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="comp"
+                    name="comp"
+                    value={formData.comp}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your Company"
+                    placeholder="Your Comp"
                   />
                 </div>
                 <div>

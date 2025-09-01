@@ -50,7 +50,7 @@ export function ContactSection(...args[]):  {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
+
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Get In Touch
           </h2>
@@ -94,11 +94,11 @@ export function ContactSection(...args[]):  {
 }}
               viewport={{ once: true }}
               className="text-center"
-            >
+
               <a
                 href={contact.link}
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
-              >
+
                 <contact.icon className="h-8 w-8 text-white" />
               </a>
               <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>
@@ -130,20 +130,12 @@ export function ContactSection(...args[]):  {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center"
-        >
+
           <Link
             to="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-          >
+
             Contact Us Today
-<<<<<<< HEAD
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             <ArrowRight className="ml-2 h-5 w-5" />;
           </Link>;
         </motion.div>;
@@ -151,7 +143,6 @@ export function ContactSection(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default ContactSection;
 
 export default ContactSection;

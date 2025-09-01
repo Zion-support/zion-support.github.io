@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Server, 
-  GitBranch, 
+  GitFork, 
   Zap, 
   Shield, 
   CheckCircle, 
@@ -25,30 +25,8 @@ import {
   Wrench
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const cloudDevOpsSolutions = [
-  {
-    id: 1,
-    title: "Cloud Infrastructure Setup",
-    description: "Complete cloud infrastructure design and implementation for scalable applications.",
-    icon: Cloud,
-    features[
-      "Multi-cloud strategy",
-      "Auto-scaling setup",
-      "Load balancing",
-      "High availability"
-    ],
-    price: "From $15,000",
-    timeline: "8-16 weeks",
-    category: "Cloud Infrastructure",
-    platforms["AWS", "Azure", "Google Cloud", "Kubernetes"]
-  },
-  {
-    id: 2,
-    title: "CI/CD Pipeline Development",
-    description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
-    icon: GitBranch,
-    features[
+    icon: GitFork,
+    features: [
       "Automated testing",
       "Build automation",
       "Deployment automation",
@@ -125,8 +103,6 @@ const cloudDevOpsSolutions = [
   }
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",
@@ -149,7 +125,9 @@ const cloudPlatforms = [
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
-    icon: GitBranch,
+          icon: GitFork,
+    features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
+
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
   }
 ];
@@ -181,7 +159,7 @@ const successStories = [
     solution: "Built secure cloud platform with automated compliance",
     results: "Full compliance, enhanced security, 40% faster time-to-market",
     logo: "FS"
-  }
+
 ];
 
 const processSteps = [
@@ -212,7 +190,7 @@ const processSteps = [
     description: "Monitor, optimize, and continuously improve the system",
     icon: Zap,
     duration: "Ongoing"
-  }
+
 ];
 
 export default function CloudDevOps() {
@@ -220,9 +198,9 @@ export default function CloudDevOps() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Cloud Infrastructure', 'DevOps', 'Containerization', 'IaC', 'Monitoring', 'Security'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? cloudDevOpsSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? cloudDevOpsSolutions
     : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -234,7 +212,7 @@ export default function CloudDevOps() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
@@ -259,7 +237,7 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -292,27 +270,27 @@ export default function CloudDevOps() {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Cloud className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cloud & DevOps
               <span className="text-gradient block">Solutions</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Transform your development and operations with modern cloud infrastructure and DevOps practices. 
+              Transform your development and operations with modern cloud infrastructure and DevOps practices.
               From automated deployments to scalable cloud solutions, we help businesses achieve operational excellence.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Cloud className="w-4 h-4" />
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <GitBranch className="w-4 h-4" />
+                <GitFork className="w-4 h-4" />
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
@@ -350,7 +328,7 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Cloud Platforms We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading cloud platforms and technologies
@@ -392,14 +370,14 @@ export default function CloudDevOps() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <platform.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{platform.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{platform.description}</p>
-                
+
                 <div className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
@@ -440,7 +418,7 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful cloud and DevOps implementation
@@ -482,7 +460,7 @@ export default function CloudDevOps() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -491,7 +469,7 @@ export default function CloudDevOps() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -529,7 +507,7 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Cloud & DevOps Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed to modernize your infrastructure and development processes
@@ -547,7 +525,7 @@ export default function CloudDevOps() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -589,14 +567,14 @@ export default function CloudDevOps() {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -605,23 +583,23 @@ export default function CloudDevOps() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.platforms.slice(0, 2).map((platform, platIndex) => (
                     <span
                       key={platIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {platform}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -663,7 +641,7 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with our cloud and DevOps solutions
@@ -705,7 +683,7 @@ export default function CloudDevOps() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -715,7 +693,7 @@ export default function CloudDevOps() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -730,7 +708,7 @@ export default function CloudDevOps() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -769,24 +747,24 @@ export default function CloudDevOps() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Infrastructure?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure, 
+              Let's discuss how our cloud and DevOps solutions can modernize your infrastructure,
               automate your processes, and scale your applications.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>

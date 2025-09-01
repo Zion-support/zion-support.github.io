@@ -354,3 +354,4 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities["Edge AI", "Predictive Maintenance", "Anomaly Detection", "Real-time Optimization"]
     }
 ];
+}

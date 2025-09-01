@@ -16,53 +16,10 @@ import {
   Server
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const TechSolutionsSection: React.FC = (): JSX.Element => {
-  const solutions = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Advanced AI solutions for automation, prediction, and intelligent decision-making.',
-      features['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Deep Learning'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      features['Threat Detection', 'Zero Trust Security', 'Compliance Management', 'Incident Response'],
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Serverless Architecture'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business operations.',
-      features['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Web & Mobile',
-      description: 'Modern web and mobile applications built with cutting-edge technologies.',
-      features['Progressive Web Apps', 'Native Mobile Apps', 'Responsive Design', 'Performance Optimization'],
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Innovation Lab',
-      description: 'Research and development of next-generation technologies and solutions.',
       features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
       color: 'from-indigo-500 to-purple-500';
     };
   ];
-=======
 const techSolutions = [
   {
     icon: "🤖",
@@ -107,7 +64,6 @@ const techSolutions = [
     color: "from-yellow-500 to-orange-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function TechSolutionsSection() {
   return (
@@ -147,38 +103,6 @@ export function TechSolutionsSection() {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {solutions.map((solution, index)  => {;
-            const IconComponent = solution.icon;
-            return (
-              <motion.div
-                key = {solution.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color} mr-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {solution.title}
-                  </h3>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techSolutions.map((solution, index) => (
             <motion.div
@@ -240,7 +164,6 @@ export function TechSolutionsSection() {
               <div className="mt-6 pt-4 border-t border-slate-700">
                 <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
                   Learn More →
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
 
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -259,7 +182,7 @@ export function TechSolutionsSection() {
                 <Link
                   to="/services"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
-                >
+
                   Learn More
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
@@ -313,14 +236,14 @@ export function TechSolutionsSection() {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-              >
+
                 Get Started
                 <Rocket className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-              >
+
                 View All Services
                 <Code className="ml-2 h-5 w-5" />
               </Link>
@@ -332,7 +255,6 @@ export function TechSolutionsSection() {
   )};
 
 export default TechSolutionsSection;
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -340,7 +262,6 @@ export default TechSolutionsSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default TechSolutionsSection;
 export default TechSolutionsSection;

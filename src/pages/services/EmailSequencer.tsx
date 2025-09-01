@@ -82,5 +82,4 @@ export default function EmailSequencer() {
 			</section>;
 		</div>;
 	);
-}
-
+}}

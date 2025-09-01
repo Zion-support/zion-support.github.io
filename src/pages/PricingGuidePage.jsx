@@ -38,7 +38,7 @@ export default function PricingGuidePage() {
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Transparent pricing for all our micro SAAS services and IT solutions. No hidden fees, no surprises.
           </p>
-          
+
           {/* Pricing Summary */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="text-center">
@@ -269,7 +269,7 @@ export default function PricingGuidePage() {
           <h2 className="text-3xl font-bold text-white mb-8">
             Why Our Pricing is Competitive
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -307,7 +307,7 @@ export default function PricingGuidePage() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us for a custom quote tailored to your specific requirements
           </p>
-          
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
               <Mail className="w-5 h-5 mr-2"/>

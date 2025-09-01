@@ -1,274 +1,275 @@
-# Zion Tech Group - Enhanced Website
 
-## 🚀 Project Overview
+# Zion Tech Group - Advanced Technology Solutions Platform
 
-This is the enhanced website for Zion Tech Group, featuring a comprehensive suite of AI, IT, and technology services. The website has been completely restructured and optimized for better user experience, navigation, and content organization.
+## 🚀 Overview
 
-## ✨ Recent Enhancements
+Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
 
-### 🔧 Fixed Issues
-- **Broken Links**: Resolved all broken navigation links throughout the site
-- **Missing Routes**: Added 50+ missing routes to ensure all navigation works properly
-- **Import Errors**: Fixed component import issues and dependency conflicts
-- **Build Errors**: Resolved all build-time errors for successful deployment
+## ✨ Key Features
 
-### 🧭 Enhanced Navigation
-- **Header Navigation**: Completely restructured with organized service categories
-- **Footer Links**: Organized into logical sections with working links
-- **Service Categories**: Grouped services by technology area and year
-- **Quick Links**: Added accessible quick navigation for common pages
+### 🎯 Core Functionality
+- **AI-Powered Services**: Machine learning, automation, and intelligent solutions
+- **Cybersecurity Suite**: Advanced threat detection and compliance tools
+- **Cloud & DevOps**: Scalable infrastructure and deployment solutions
+- **Digital Transformation**: Business process optimization and modernization
 
-### 📱 New Features
-- **Comprehensive Sitemap**: Added `/sitemap` route for easy content discovery
-- **Service Showcases**: Multiple year-based service overviews (2025-2029)
-- **Enhanced Routing**: React Router implementation with lazy loading
-- **Responsive Design**: Mobile-first approach with modern UI components
+### 🔧 Technical Enhancements
+- **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
+- **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
+- **Mobile Experience**: Mobile-first navigation with intuitive swipe gestures
+- **Performance Monitoring**: Real-time Core Web Vitals tracking and optimization
 
-## 🏗️ Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-├── data/               # Service data and configurations
-├── layout/             # Header, footer, and layout components
-├── pages/              # All page components
-│   ├── services/       # Service-specific pages
-│   ├── solutions/      # Solution pages
-│   └── ...            # Other page categories
-├── utils/              # Utility functions and helpers
-└── App.tsx            # Main routing configuration
-```
-
-## 🚀 Available Routes
-
-### Main Pages
-- `/` - Home page
-- `/about` - About Zion Tech Group
-- `/contact` - Contact information
-- `/sitemap` - Complete site navigation
-
-### Services
-- `/services` - Main services overview
-- `/ai-services` - AI services hub
-- `/it-services` - IT services overview
-- `/micro-saas` - Micro SaaS solutions
-
-### Service Showcases
-- `/ultimate-services-showcase-2026` - 2026 services overview
-- `/comprehensive-services-showcase-2027` - 2027 services overview
-- `/zion-cutting-edge-services-2029` - 2029 cutting-edge services
-
-### Specialized Solutions
-- `/ai-solutions` - AI solutions overview
-- `/solutions/enterprise` - Enterprise solutions
-- `/solutions/healthcare` - Healthcare solutions
-- `/space-tech` - Space technology services
-
-### Additional Pages
-- `/blog` - Company blog
-- `/careers` - Career opportunities
-- `/partners` - Partnership information
-- `/news` - Company news
-- `/case-studies` - Success stories
-- `/help` - Help center
-- `/faq` - Frequently asked questions
-- `/pricing` - Service pricing
-- `/marketplace` - Service marketplace
+### 🎨 User Experience
+- **Modern UI/UX**: Futuristic design with smooth animations
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Progressive Web App**: Offline capabilities and app-like experience
+- **Multi-language Support**: Internationalization with language detection
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Routing**: React Router v6
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **State Management**: React Hooks
+### Frontend
+- **React 18** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **React Router** for navigation
+- **Redux Toolkit** for state management
+- **React Query** for data fetching
 
-## 🚀 Getting Started
+### Backend & Services
+- **Node.js** with Express
+- **Supabase** for database and authentication
+- **Stripe** for payment processing
+- **Vercel/Netlify** for deployment
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+### Development Tools
+- **ESLint** and **Prettier** for code quality
+- **Husky** for git hooks
+- **Jest** and **Vitest** for testing
+- **Storybook** for component development
 
-### Installation
-```bash
-# Clone the repository
-git clone <repository-url>
 
-# Navigate to project directory
-cd zion-tech-group-website
+A modern, accessible, and performant AI marketplace platform built with Next.js, TypeScript, and Tailwind CSS.
 
-# Install dependencies
-npm install
+## 🚀 Features
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-## 📁 Project Structure
-# Zion Tech Group Website
-
-A modern, responsive website for Zion Tech Group, showcasing our technology services and solutions.
-
-## Features
-
-- **Modern Design**: Clean, professional design with Zion Tech Group branding
-- **Responsive Layout**: Optimized for all devices and screen sizes
-- **Comprehensive Navigation**: Easy-to-use navigation with organized sections
-- **Service Showcase**: Detailed information about our technology services
-- **Contact Forms**: Easy ways for customers to get in touch
-- **News & Events**: Company updates and upcoming events
-- **Case Studies**: Real-world examples of our work
-- **Career Opportunities**: Job listings and application forms
-
-## Tech Stack
-
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **Deployment**: Optimized for production
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 20.18.1 or higher
-- npm 10.0.0 or higher
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd zion-tech-group-website
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
+
+4. **Start development server**
    ```bash
    npm run dev
    ```
 
-4. Open your browser and navigate to `http://localhost:3000`
+5. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-### Building for Production
+## 📁 Project Structure
 
+```
+zion.app/
+├── src/
+│   ├── components/          # Reusable UI components
+│   │   ├── ui/             # Base UI components
+│   │   ├── layout/         # Layout components
+│   │   └── [feature]/      # Feature-specific components
+│   ├── pages/              # Page components
+│   ├── services/           # API and external services
+│   ├── store/              # Redux store and slices
+│   ├── utils/              # Utility functions
+│   ├── types/              # TypeScript type definitions
+│   └── styles/             # Global styles and CSS
+├── public/                 # Static assets
+├── tests/                  # Test files
+└── docs/                   # Documentation
+```
+
+## 🧪 Testing
+
+### Run all tests
+```bash
+npm run test:all
+```
+
+### Run specific test suites
+```bash
+npm run test:unit          # Unit tests
+npm run test:integration   # Integration tests
+npm run test:e2e          # End-to-end tests
+```
+
+### Test coverage
+```bash
+npm run test:coverage
+```
+
+## 🏗️ Building
+
+### Development build
+```bash
+npm run build:dev
+```
+
+### Production build
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist` directory.
-
-## Project Structure
-
+### Preview production build
+```bash
+npm run preview
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-│   ├── services/       # Service-specific pages
-│   └── ...
-├── layout/             # Layout components (Header, Footer)
-├── data/               # Service data and configurations
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-├── types/              # TypeScript type definitions
-├── styles/             # Global styles and CSS
-└── App.tsx             # Main application component
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main
+
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+
+### Manual Deployment
+```bash
+npm run build
+# Upload dist/ folder to your hosting provider
 ```
 
 ## 🔧 Configuration
 
 ### Environment Variables
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript type checking
+
+Create a `.env.local` file with the following variables:
+
+```env
+# API Configuration
+VITE_API_URL=your_api_url
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_key
+
+# Payment Processing
+VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+
+# Analytics
+VITE_GA_TRACKING_ID=your_ga_id
+
+# Feature Flags
+VITE_ENABLE_ANALYTICS=true
+VITE_ENABLE_PWA=true
 ```
 
-## 🌐 Deployment
+### Tailwind Configuration
 
-The website is configured for deployment on `https://ziontechgroup.com` with:
-- Optimized build output
-- Lazy-loaded components for performance
-- SEO-friendly routing
-- Responsive design for all devices
+The project uses Tailwind CSS with custom configuration. Edit `tailwind.config.js` to customize:
 
-## 📊 Performance Features
+- Colors and theme
+- Content paths
+- Plugins and extensions
 
-- **Lazy Loading**: Components load on-demand for faster initial page load
-- **Code Splitting**: Automatic code splitting by route
-- **Optimized Assets**: Compressed and optimized static assets
-- **Modern Build**: Vite-based build system for optimal performance
+## 📊 Performance Monitoring
 
-## 🔍 SEO & Accessibility
+The application includes built-in performance monitoring:
 
-- **Semantic HTML**: Proper heading hierarchy and semantic markup
-- **Meta Tags**: Comprehensive meta information for search engines
-- **Sitemap**: XML sitemap for search engine indexing
-- **Accessibility**: ARIA labels and keyboard navigation support
+- **Core Web Vitals** tracking
+- **Real-time metrics** collection
+- **Performance scoring** and alerts
+- **User experience** analytics
+
+## ♿ Accessibility Features
+
+### Built-in Accessibility
+- **WCAG 2.1 AA** compliance
+- **Screen reader** support
+- **Keyboard navigation** optimization
+- **High contrast** mode
+- **Reduced motion** support
+
+### User Controls
+- **Font size** adjustment
+- **Color scheme** preferences
+- **Focus indicators** customization
+- **Zoom level** controls
+
+## 🔒 Security
+
+### Security Features
+- **HTTPS** enforcement
+- **Content Security Policy** (CSP)
+- **XSS protection**
+- **CSRF protection**
+- **Input validation** and sanitization
+
+### Best Practices
+- Regular security audits
+- Dependency vulnerability scanning
+- Secure coding guidelines
+- Privacy compliance (GDPR, CCPA)
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+We welcome contributions! Please follow these steps:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+
+### Development Guidelines
+- Follow the existing code style
+- Write tests for new features
+- Update documentation as needed
+- Ensure accessibility compliance
+- Test across different browsers
+
 
 ## 📝 License
 
-This project is proprietary to Zion Tech Group. All rights reserved.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+## 🆘 Support
 
-For technical support or questions about the website:
-- Email: [contact@ziontechgroup.com]
-- Website: [https://ziontechgroup.com]
+### Getting Help
+- **Documentation**: Check the `/docs` folder
+- **Issues**: Create an issue on GitHub
+- **Discussions**: Use GitHub Discussions
+- **Email**: support@ziontechgroup.com
+
+### Community
+- **Discord**: Join our community server
+- **Twitter**: Follow us for updates
+- **LinkedIn**: Connect with our team
+
+## 🏆 Acknowledgments
+
+- **React Team** for the amazing framework
+- **Vite Team** for the fast build tool
+- **Tailwind CSS** for the utility-first CSS framework
+- **All contributors** who have helped improve this project
 
 ---
 
-**Built with ❤️ by Zion Tech Group**
+**Built with ❤️ by the Zion Tech Group Team**
 
-*Transforming businesses through innovative technology solutions*
-├── layout/             # Layout components (header, footer, sidebar)
-├── pages/              # Page components
-├── App.tsx             # Main application component
-├── main.tsx            # Application entry point
-└── index.css           # Global styles
-```
+*Empowering businesses with cutting-edge technology solutions*
 
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is proprietary to Zion Tech Group.
-
-## Contact
-
-For questions or support, please contact our team at [contact@ziontechgroup.com](mailto:contact@ziontechgroup.com)

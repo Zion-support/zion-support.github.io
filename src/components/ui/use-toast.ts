@@ -8,7 +8,6 @@ position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-ce
 export function useToast(...args[]):  {
   const showToast = (message: string, options?: ToastOptions)  => {
     return toast(message, options)
-  }
 
   return { showToast };
 };

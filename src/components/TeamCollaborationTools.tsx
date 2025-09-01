@@ -155,19 +155,6 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
-<<<<<<< HEAD
-  showProjects = true,
-  showCommunication = true,
-  showFileSharing = true,
-  maxItems = 20;
-}) => {;
-  const [activeTab, setActiveTab] = useState<any>('team');
-  const [teamMembers, setTeamMembers] = useState<any>([]);
-  const [projects, setProjects] = useState<any>([]);
-  const [messages, setMessages] = useState<any>([]);
-  const [files, setFiles] = useState<any>([]);
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-=======
   showProjects = true,;
   showCommunication = true,;
   showFileSharing = true,;
@@ -179,7 +166,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   const [messages, setMessages] = useState<Message[]>([]);
   const [files, setFiles] = useState<FileItem[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -188,39 +174,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Sample data
   useEffect(() => {
-<<<<<<< HEAD
-    const sampleMessages: Message[] = [
-      {
-        id: '1',
-        sender: 'Sarah Johnson',
-        content: 'Great progress on the AI model training! The accuracy has improved significantly.',
-        timestamp: '2 minutes ago',
-        type: 'text',
-        reactions[{ type: 'thumbsUp', count: 3 }],
-        isRead: true
-      },
-      {
-        id: '2',
-        sender: 'Michael Chen',
-        content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',
-        timestamp: '15 minutes ago',
-        type: 'text',
-        reactions[{ type: 'check', count: 2 }],
-        isRead: false
-      },
-      {
-        id: '3',
-        sender: 'David Kim',
-        content: 'Security vulnerabilities identified and patched. Report ready for review.',
-        timestamp: '1 hour ago',
-        type: 'text',
-        reactions[{ type: 'star', count: 1 }],
-        isRead: true
-      }
-    ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const sampleFiles: FileItem[] = [
       {
         id: '1',
@@ -260,7 +213,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         sharedWith['Lisa Thompson'],
         permissions: 'view',
         version: '1.0'
-      }
+
     ];
 
     setTeamMembers(sampleTeamMembers);
@@ -269,80 +222,22 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setFiles(sampleFiles)}, []);
 
   // Get status color and icon
-<<<<<<< HEAD
-  const getStatusDisplay = (status: string) => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
-      case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
-      case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
-      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
   };
 
   // Get project status color
-<<<<<<< HEAD
-  const getProjectStatusColor = (status: string) => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'planning': return 'text-blue-400 bg-blue-400/20';
-      case 'active': return 'text-green-400 bg-green-400/20';
-      case 'review': return 'text-yellow-400 bg-yellow-400/20';
-      case 'completed': return 'text-purple-400 bg-purple-400/20';
-      case 'on-hold': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get priority color
-<<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 
   // Get file type icon
-<<<<<<< HEAD
-  const getFileTypeIcon = (type: string) => {;
-    switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'document': return <FileText className="w-5 h-5" />;
-      case 'image': return <img className="w-5 h-5" />;
-      case 'video': return <Video className="w-5 h-5" />;
-      case 'audio': return <File className="w-5 h-5" />;
-      case 'archive': return <Folder className="w-5 h-5" />;
       default: return <File className = "w-5 h-5" />};
   };
 
   // Format file size
-<<<<<<< HEAD
-  const formatFileSize = (size: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
-    if (size < 1024) return `${size.toFixed(1)} MB`;
-    return `${(size / 1024).toFixed(1)} GB`};
-
-  // Handle project selection
-<<<<<<< HEAD
-  const handleProjectSelect = (project: Project)  => {;
-    setSelectedProject(project)};
-
-  // Handle message reactions
-  const handleProjectSelect = (project: Project) => {;
-    setSelectedProject(project);
-  };
-
-  // Handle message reactions
-  const handleMessageReaction = (messageId: string, reactionType: string) => {;
-    setMessages(prev => prev.map(msg => {;
-      if (msg.id === messageId) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        const existingReaction = msg.reactions.find(r => r.type === reactionType);
-        if (existingReaction) {
           existingReaction.count += 1} else {
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
@@ -373,7 +268,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                   ? 'bg-zion-cyan text-white'
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
               }`}
-            >
+
               {tab.icon}
               {tab.label}
             </button>
@@ -405,7 +300,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
           className="space-y-6"
-        >
+
           {/* Team Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
@@ -430,7 +325,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>
               <div className="text-zinc-400">Total Members</div>
             </motion.div>
@@ -458,7 +353,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-green-400 mb-2">
                 {teamMembers.filter(m => m.status === 'online').length}
               </div>
@@ -488,7 +383,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-blue-400 mb-2">
                 {teamMembers.filter(m => m.availability === 'available').length}
               </div>
@@ -518,7 +413,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-zion-cyan mb-2">
                 {Array.from(new Set(teamMembers.map(m => m.department))).length}
               </div>
@@ -553,7 +448,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-              >
+
                 {/* Member Header */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative">
@@ -593,7 +488,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       <span
                         key={skill}
                         className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                      >
+
                         {skill}
                       </span>
                     ))}
@@ -664,7 +559,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
           className="space-y-6"
-        >
+
           {/* Project Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
@@ -689,7 +584,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>
               <div className="text-zinc-400">Total Projects</div>
             </motion.div>
@@ -717,7 +612,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-green-400 mb-2">
                 {projects.filter(p => p.status === 'active').length}
               </div>
@@ -747,7 +642,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-blue-400 mb-2">
                 {projects.filter(p => p.status === 'completed').length}
               </div>
@@ -777,7 +672,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-zion-cyan mb-2">
                 ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M
               </div>
@@ -813,7 +708,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
                 onClick={() => handleProjectSelect(project)}
-              >
+
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
@@ -897,7 +792,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                     <span
                       key={tag}
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                    >
+
                       {tag}
                     </span>
                   ))}
@@ -911,7 +806,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             <button
               onClick={() => setShowProjectForm(true)}
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
-            >
+
               <Plus className="w-5 h-5" />
               Add New Project
             </button>
@@ -943,7 +838,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
           className="space-y-6"
-        >
+
           {/* Communication Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <motion.div
@@ -968,7 +863,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>
               <div className="text-zinc-400">Total Messages</div>
             </motion.div>
@@ -996,7 +891,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-green-400 mb-2">
                 {messages.filter(m => m.isRead).length}
               </div>
@@ -1026,7 +921,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-blue-400 mb-2">
                 {messages.filter(m => !m.isRead).length}
               </div>
@@ -1063,7 +958,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${
                   !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''
                 }`}
-              >
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">
                     {message.sender.split(' ').map(n => n[0]).join('')}
@@ -1098,7 +993,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors"
-                        >
+
                           {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1" />}
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1" />}
                           {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />}
@@ -1172,7 +1067,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
           className="space-y-6"
-        >
+
           {/* File Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
@@ -1197,7 +1092,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>
               <div className="text-zinc-400">Total Files</div>
             </motion.div>
@@ -1225,7 +1120,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-green-400 mb-2">
                 {files.filter(f => f.type === 'document').length}
               </div>
@@ -1255,7 +1150,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-blue-400 mb-2">
                 {files.filter(f => f.type === 'image').length}
               </div>
@@ -1285,7 +1180,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-            >
+
               <div className="text-3xl font-bold text-zion-cyan mb-2">
                 {formatFileSize(files.reduce((sum, f) => sum + f.size, 0))}
               </div>
@@ -1320,7 +1215,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 }}
                 transition={{ delay: index * 0.1 }}
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">
                     {getFileTypeIcon(file.type)}
@@ -1341,7 +1236,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                         <span
                           key={tag}
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                        >
+
                           {tag}
                         </span>
                       ))}
@@ -1373,14 +1268,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
               <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 Choose Files
               </button>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      )};
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
@@ -1388,4 +1275,3 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

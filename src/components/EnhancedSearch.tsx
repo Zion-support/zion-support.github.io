@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield  } from 'lucide-react';
-import { useNavigate  } from 'react-router-dom.ts';
-import { useDebounce  } from '@/hooks/useDebounce';
-=======
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
 
@@ -21,17 +18,15 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number}
+  icon?: React.ComponentType<any>;
+}
 
 interface SearchFilter {
 
   type: string[];
   category: string[];
-<<<<<<< HEAD
-  tags: string[]}
-=======
   tags: string[];
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface SearchSuggestion {
   text: string;
@@ -54,11 +49,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-business-intelligence',
     type: 'service',
     category: 'AI Solutions',
-<<<<<<< HEAD
-    tags['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
-=======
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 95
   },
   {
@@ -68,11 +59,7 @@ const searchData: SearchResult[] = [
     url: '/services/cloud-devops',
     type: 'service',
     category: 'Cloud & DevOps',
-<<<<<<< HEAD
-    tags['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
-=======
     tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 90
   },
   {
@@ -82,11 +69,7 @@ const searchData: SearchResult[] = [
     url: '/services/ai-cybersecurity-suite',
     type: 'service',
     category: 'Cybersecurity',
-<<<<<<< HEAD
-    tags['Security', 'AI', 'Cybersecurity', 'Enterprise'],
-=======
     tags: ['Security', 'AI', 'Cybersecurity', 'Enterprise'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 88
   },
   // Pages
@@ -96,13 +79,8 @@ const searchData: SearchResult[] = [
     description: 'Learn about our mission, values, and commitment to innovation',
     url: '/about',
     type: 'page',
-<<<<<<< HEAD
-    category: 'Comp',
-    tags['About', 'Comp', 'Mission', 'Values'],
-=======
     category: 'Company',
     tags: ['About', 'Company', 'Mission', 'Values'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 85
   },
   {
@@ -112,11 +90,7 @@ const searchData: SearchResult[] = [
     url: '/contact',
     type: 'page',
     category: 'Support',
-<<<<<<< HEAD
-    tags['Contact', 'Support', 'Consultation', 'Help'],
-=======
     tags: ['Contact', 'Support', 'Consultation', 'Help'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 80
   },
   // Blog posts (example)
@@ -127,41 +101,12 @@ const searchData: SearchResult[] = [
     url: '/blog/ai-trends-2025',
     type: 'blog',
     category: 'AI Insights',
-<<<<<<< HEAD
-    tags['AI', 'Trends', '2025', 'Business'],
-=======
     tags: ['AI', 'Trends', '2025', 'Business'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     relevance: 75
-  }
+
 ];
 
 const categories = [
-<<<<<<< HEAD
-  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
-  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
-];
-
-export const EnhancedSearch: React.FC = (): JSX.Element => {;
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<any>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [filters, setFilters] = useState<any>({
-    type[],
-    category[],
-    tags[]
-  });
-  const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<any>([]);
-  const [popularSearches] = useState([
-    'AI Solutions', 'Cloud Services', 'Cybersecurity', 'Digital Transformation'
-  ]);
-
-  const debouncedQuery = useDebounce(query, 300);
-=======
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
@@ -189,28 +134,63 @@ export function EnhancedSearch({
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+// Mock suggestions
+const mockSuggestions: SearchSuggestion[] = [
+  { text: 'AI compliance assistant', type: 'recent' },
+  { text: 'Quantum machine learning', type: 'trending' },
+  { text: 'Digital transformation consulting', type: 'ai' },
+  { text: 'Cloud DevOps automation', type: 'trending' }
+];
+
+export function EnhancedSearch({ 
+  className = '',
+  placeholder = 'Search for AI services, quantum solutions...',
+  onSearch,
+  variant = 'default'
+}: EnhancedSearchProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [filters, setFilters] = useState<SearchFilter>({
+    type: [],
+    category: [],
+    tags: []
+  });
+  
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
-<<<<<<< HEAD = ======;
-  const popularSearches = [;
-    'AI Business Intelligence',;
-    'Cloud DevOps',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'IT Consulting';
-  ];
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  // Load recent searches from localStorage
+  // Handle keyboard navigation
   useEffect(() => {
-    const saved = localStorage.getItem('zion-recent-searches');
-    if (saved) {
-<<<<<<< HEAD
-      setRecentSearches(JSON.parse(saved))}
-  }, []);
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+        setSelectedIndex(-1);
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        setSelectedIndex(prev => 
+          prev < results.length - 1 ? prev + 1 : prev
+        );
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+      } else if (event.key === 'Enter' && selectedIndex >= 0) {
+        event.preventDefault();
+        if (results[selectedIndex]) {
+          handleResultClick(results[selectedIndex]);
+        }
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, results, selectedIndex]);
 
   // Search functionality
   useEffect(() => {
@@ -239,7 +219,6 @@ export function EnhancedSearch({
     const handleClickOutside = (event: MouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
-=======;
       try {;
         setRecentSearches(JSON.parse(saved));
       } catch (error) {
@@ -255,7 +234,6 @@ export function EnhancedSearch({
         setIsOpen(false);
         setSelectedIndex(-1);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -263,12 +241,6 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-<<<<<<< HEAD
-    const handleKeyDown = (event: KeyboardEvent)  => {
-      if (event.key === 'Escape') {;
-        setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {;
-        event.preventDefault();
-        setIsOpen(true);
         inputRef.current?.focus()}
     };
 
@@ -281,7 +253,7 @@ export function EnhancedSearch({
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      
+
       // Navigate to search results or close search
       setIsOpen(false);
       setQuery('')}
@@ -290,7 +262,6 @@ export function EnhancedSearch({
   const handleResultClick = (result: SearchResult)  => {;
     handleSearch(result.title);
     router(result.url);
-=======
     const handleKeyDown = (event: KeyboardEvent) => {;
       if (!isOpen) return;
 
@@ -345,56 +316,19 @@ export function EnhancedSearch({
       return matchesQuery && matchesFilters;
     });
 
-    // Sort by relevance
-    searchResults.sort((a, b) => b.relevance - a.relevance);
-
-    setResults(searchResults);
-    setIsLoading(false);
-
-    // Add to recent searches
-    const updated = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
-    setRecentSearches(updated);
-    localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-
-    if (onSearch) {
-      onSearch(query);
-    }
-  }, [query, filters, recentSearches, onSearch]);
-
-  // Debounced search
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {;
-      if (query.trim().length >= 2) {;
-        handleSearch();
-      } else {
-        setResults([]);
-      }
-    }, 300);
-
-    return () => clearTimeout(timeoutId);
-  }, [query, filters, handleSearch]);
-
-  const handleResultClick = (result: SearchResult) => {;
-    router(result.url);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const handleResultClick = (result: SearchResult) => {
+    navigate(result.url);
     setIsOpen(false);
     setQuery('')};
 
-<<<<<<< HEAD
-  const toggleFilter = (filterType: keyof SearchFilter, value: string)  => {
-    setFilters(prev => ({
-      ...prev,
-      [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value);
-        [...prev[filterType], value];
-    }))};
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    setQuery(suggestion.text);
+    onSearch?.(suggestion.text);
+  };
 
   const clearFilters = () => {;
     setFilters({ type[], category[], tags[] })};
 
-  const getTypeIcon = (type: string)  => {
-    switch (type) {
-=======;
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
     setFilters(prev => ({;
       ...prev,;
@@ -410,13 +344,32 @@ export function EnhancedSearch({
 
   const getTypeIcon = (type: string) => {;
     switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
-<<<<<<< HEAD
-      default: return <Search className = "h-4 w-4" />};
+  const handleInputFocus = () => {
+    if (query.trim() || suggestions.length > 0) {
+      setIsOpen(true);
+    }
+  };
+
+  const clearSearch = () => {
+    setQuery('');
+    setResults([]);
+    setIsOpen(false);
+    setSelectedIndex(-1);
+  };
+
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'futuristic':
+        return 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm';
+      case 'minimal':
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
+      default:
+        return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg';
+    }
   };
 
   return (
@@ -442,9 +395,8 @@ export function EnhancedSearch({
             </button>
           )}
         </div>;
-=======;
       default: return <Search className="h-4 w-4" />;
-    }
+
   };
 
   const getVariantClasses = () => {;
@@ -480,7 +432,6 @@ export function EnhancedSearch({
             <X className="h-4 w-4" />
           </button>
         )}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
 
       <AnimatePresence>
@@ -712,17 +663,6 @@ export function EnhancedSearch({
                           <p className="text-sm text-gray-600 mt-1 line-clamp-2">
                             {result.description}
                           </p>
-<<<<<<< HEAD
-                          <div className="flex flex-wrap gap-1 mt-2">
-                            {result.tags.slice(0, 3).map(tag => (
-                              <span
-                                key={tag}
-                                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full"
-                              >
-                                {tag}
-                              </span>
-                            ))}
-=======
                           <div className="flex items-center gap-2 mt-2">
                             <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                               {result.category}
@@ -730,7 +670,6 @@ export function EnhancedSearch({
                             <span className="text-xs text-gray-500">
                               {result.type}
                             </span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                           </div>
                         </div>
                       </div>
@@ -747,36 +686,6 @@ export function EnhancedSearch({
                     Try adjusting your search terms or filters
                   </p>
                 </div>
-<<<<<<< HEAD
-              </div>
-            )}
-
-            {/* No Results */}
-            {results.length === 0 && query && !isLoading && (
-              <div className="p-8 text-center">
-                <Brain className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                  No results found
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Try adjusting your search terms or browse our services
-                </p>
-              </div>
-            )}
-
-            {/* Loading State */}
-            {isLoading && (
-              <div className="p-8 text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-                <p className="text-gray-500 dark:text-gray-400">Searching...</p>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>;
-    </div>;
-  )};
-=======
               )}
             </div>;
           </motion.div>;
@@ -785,4 +694,3 @@ export function EnhancedSearch({
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

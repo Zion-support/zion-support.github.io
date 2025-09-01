@@ -90,7 +90,7 @@ export default function AIProjectManager() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+
   ];
 
   const benefits = [
@@ -330,4 +330,4 @@ export default function AIProjectManager() {
       </section>
     </div>
   );
-}
+}}}

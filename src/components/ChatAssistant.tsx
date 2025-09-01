@@ -1,8 +1,12 @@
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
   X, 
   Send, 
+
   Bot, 
   User, 
   Sparkles,
@@ -18,15 +22,32 @@ import {
   TrendingUp,
   Shield,
   Clock,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+  ChevronDown,
+  ChevronUp,
+  Minimize2,
+  Maximize2,
+  Volume2,
+  VolumeX,
   Star
+
 } from 'lucide-react';
 
-interface ChatMessage {
+interface Message {
   id: string;
-  type: 'user' | 'assistant' | 'system';
-  content: string;
+  text: string;
+  sender: 'user' | 'assistant';
   timestamp: Date;
+
   isTyping?: boolean;
+  attachments?: Array<{
+    type: 'image' | 'file' | 'video';
+    url: string;
+    name: string;
+    size?: string;
+  }>;
   metadata?: {
     confidence?: number;
     sources?: string[];
@@ -39,6 +60,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
+  language?: string;
   maxMessages?: number;
   enableVoice?: boolean;
   enableFileUpload?: boolean;
@@ -49,6 +71,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enabled = true, 
   position = 'bottom-right',
   theme = 'auto',
+  language = 'en',
   maxMessages = 100,
   enableVoice = false,
   enableFileUpload = false,
@@ -56,11 +79,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
+
   const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+
   const [currentTheme, setCurrentTheme] = useState(theme);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -94,32 +117,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }
   }, [theme]);
 
-  // Voice recognition setup
-  useEffect(() => {
-    if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
-
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setInputValue(transcript);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
-    }
-  }, [enableVoice]);
-
   // Initialize with welcome message
   useEffect(() => {
-    if (enabled && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
+    if (messages.length === 0) {
+      const welcomeMessage: Message = {
         id: 'welcome',
         type: 'assistant',
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
@@ -127,191 +128,225 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         metadata: {
           suggestions: [
             'Tell me about your services',
-            'Help me with pricing',
-            'Schedule a consultation',
-            'Technical support'
+            'How can I get started?',
+            'What are your pricing options?'
           ]
         }
       };
       setMessages([welcomeMessage]);
     }
-  }, [enabled, messages.length]);
+  }, []);
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim() || isProcessing) return;
+  const handleSendMessage = async (content: string) => {
+    if (!content.trim()) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: Message = {
       id: Date.now().toString(),
       type: 'user',
-      content: inputValue,
+      content: content.trim(),
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
-    setIsProcessing(true);
 
-    try {
-      // Simulate AI response
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      const aiMessage: ChatMessage = {
+    // Simulate AI response
+    setTimeout(() => {
+      const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: `I received your message: "${userMessage.content}". This is a simulated response. In a real implementation, this would connect to an AI service.`,
-        timestamp: new Date()
+        content: `I understand you're asking about "${content.trim()}". Let me help you with that.`,
+        timestamp: new Date(),
+        metadata: {
+          confidence: 0.95,
+          suggestions: [
+            'Would you like more details?',
+            'Can I help with something else?',
+            'Let me know if you have questions!'
+          ]
+        }
       };
-
       setMessages(prev => [...prev, aiMessage]);
-    } catch (error) {
-      console.error('Error processing message:', error);
-    } finally {
       setIsTyping(false);
-      setIsProcessing(false);
+    }, 1500);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage(inputValue);
     }
   };
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
-    setIsMinimized(false);
+    if (!isOpen) {
+      inputRef.current?.focus();
+    }
   };
 
-  const minimizeChat = () => {
+  const toggleMinimize = () => {
     setIsMinimized(!isMinimized);
   };
 
-  const startVoiceInput = () => {
-    if (recognitionRef.current) {
-      setIsListening(true);
-      recognitionRef.current.start();
+  const getPositionClasses = () => {
+    switch (position) {
+      case 'bottom-left':
+        return 'bottom-4 left-4';
+      case 'top-right':
+        return 'top-4 right-4';
+      case 'top-left':
+        return 'top-4 left-4';
+      default:
+        return 'bottom-4 right-4';
     }
   };
 
-  const stopVoiceInput = () => {
-    if (recognitionRef.current) {
-      setIsListening(false);
-      recognitionRef.current.stop();
-    }
+  const getThemeClasses = () => {
+    return currentTheme === 'dark' 
+      ? 'bg-gray-900 text-white border-gray-700' 
+      : 'bg-white text-gray-900 border-gray-200 shadow-lg';
   };
 
   if (!enabled) return null;
 
-  const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
-
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <div className={`fixed ${getPositionClasses()} z-50`}>
+
       {/* Chat Toggle Button */}
       {!isOpen && (
-        <button
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           onClick={toggleChat}
-          className="bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan-light transition-all duration-300 hover:scale-110"
+
+          className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
+
         >
           <MessageCircle className="w-6 h-6" />
-        </button>
+        </motion.button>
       )}
 
       {/* Chat Window */}
-      {isOpen && (
-        <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-700 w-80 h-96 flex flex-col">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-700">
-            <div className="flex items-center space-x-2">
-              <Bot className="w-5 h-5 text-zion-cyan" />
-              <span className="font-semibold text-zinc-900 dark:text-white">AI Assistant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={minimizeChat}
-                className="text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
-              >
-                <Settings className="w-4 h-4" />
-              </button>
-              <button
-                onClick={toggleChat}
-                className="text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.2 }}
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                <div
-                  className={`max-w-xs p-3 rounded-lg ${
-                    message.type === 'user'
-                      ? 'bg-zion-cyan text-white'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white'
-                  }`}
-                >
-                  <p className="text-sm">{message.content}</p>
-                  <p className="text-xs opacity-70 mt-1">
-                    {message.timestamp.toLocaleTimeString()}
-                  </p>
-                </div>
+            className={`w-80 h-96 rounded-lg border ${getThemeClasses()} flex flex-col`}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-2">
+                <Bot className="w-5 h-5 text-blue-500" />
+                <span className="font-semibold">AI Assistant</span>
               </div>
-            ))}
-            {isTyping && (
-              <div className="flex justify-start">
-                <div className="bg-zinc-100 dark:bg-zinc-800 p-3 rounded-lg">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={toggleMinimize}
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+
+                >
+                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                </button>
+                <button
+                  onClick={toggleChat}
+
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Messages */}
+            {!isMinimized && (
+              <>
+                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                    >
+                      <div
+                        className={`max-w-xs px-3 py-2 rounded-lg ${
+                          message.type === 'user'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 dark:bg-gray-800'
+                        }`}
+                      >
+                        <p className="text-sm">{message.content}</p>
+                        {message.metadata?.suggestions && (
+                          <div className="mt-2 space-y-1">
+                            {message.metadata.suggestions.map((suggestion, index) => (
+                              <button
+                                key={index}
+                                onClick={() => handleSendMessage(suggestion)}
+                                className="block w-full text-left text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                              >
+                                {suggestion}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="bg-gray-100 dark:bg-gray-800 px-3 py-2 rounded-lg">
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  <div ref={messagesEndRef} />
+                </div>
+
+
+                {/* Input */}
+                <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex space-x-2">
+
+                    <input
+                      ref={inputRef}
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+
+                      onKeyPress={handleKeyPress}
+                      placeholder="Type your message..."
+                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
+                    />
+                    <button
+                      onClick={() => handleSendMessage(inputValue)}
+                      disabled={!inputValue.trim() || isTyping}
+                      className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+
+                    >
+                      <Send className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
-              </div>
+              </>
             )}
-            <div ref={messagesEndRef} />
-          </div>
-
-          {/* Input */}
-          <div className="p-4 border-t border-zinc-200 dark:border-zinc-700">
-            <div className="flex items-center space-x-2">
-              {enableVoice && (
-                <button
-                  onClick={isListening ? stopVoiceInput : startVoiceInput}
-                  className={`p-2 rounded-lg ${
-                    isListening
-                      ? 'bg-red-500 text-white'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
-                  }`}
-                >
-                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                </button>
-              )}
-              <input
-                ref={inputRef}
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                placeholder="Type your message..."
-                className="flex-1 p-2 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                disabled={isProcessing}
-              />
-              <button
-                onClick={handleSendMessage}
-                disabled={!inputValue.trim() || isProcessing}
-                className="p-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <Send className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
+
 };
+

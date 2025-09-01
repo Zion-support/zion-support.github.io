@@ -5,8 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
 export default function EquipmentDetail() {
@@ -42,14 +41,9 @@ export default function EquipmentDetail() {
             })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
-<<<<<<< HEAD
-            router(`/login?next=/equipment/${equipmentId}`);
-            return}
-=======
             router(`/login?next=/equipment/${equipmentId}`);
             return;
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsAdding(true);
         try {
             const response = await fetch('/checkout/create-session', {

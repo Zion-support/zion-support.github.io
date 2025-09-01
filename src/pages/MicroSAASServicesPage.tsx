@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-
-const MicroSAASServicesPage = () => {;
-=======;
 import React from 'react';
 import SEO from '@/components/SEO';
 
@@ -48,12 +42,6 @@ const MicroSAASServicesPage = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD;
-    </>;
-  )};
-
-export default MicroSAASServicesPage;
-=======
       {/* Category Filter */}
       <div className = "py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -160,7 +148,7 @@ export default MicroSAASServicesPage;
             Ready to Transform Your Business with Micro SAAS?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
+            Start with a free trial and see how our micro SAAS solutions can streamline your operations,
             improve productivity, and drive growth. No long-term contracts, cancel anytime.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -178,4 +166,3 @@ export default MicroSAASServicesPage;
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -41,14 +41,6 @@ export function BlogSection(...args[]):  {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
-<<<<<<< HEAD
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </article>;
           ))};
         </div>;
@@ -56,4 +48,3 @@ export function BlogSection(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

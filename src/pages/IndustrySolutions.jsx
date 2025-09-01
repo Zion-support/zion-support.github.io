@@ -1,255 +1,9 @@
 import React, { useState } from 'react';
-import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
-const IndustrySolutions = () => {
+import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data
-<<<<<<< HEAD
-    const industrySolutions = [
-        {
-            id: 1,
-            name: "Healthcare Technology Solutions",
-            industry: "Healthcare",
-            solutionType: "Digital Health",
-            description: "Comprehensive digital health solutions including telemedicine, EHR systems, and patient management platforms",
-            price: 75000,
-            pricingModel: "project-based",
-            industryScore: 96,
-            features["Telemedicine platform", "EHR integration", "Patient portal", "HIPAA compliance"],
-            benefits["Improved patient care", "Operational efficiency", "Regulatory compliance", "Cost reduction"],
-            useCases["Hospitals", "Clinics", "Telemedicine providers", "Health systems"],
-            compliance["HIPAA", "HITECH", "FDA", "SOC 2"],
-            tags["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 2,
-            name: "Financial Technology Platform",
-            industry: "Finance",
-            solutionType: "FinTech",
-            description: "Advanced fintech solutions for banking, payments, and financial services automation",
-            price: 85000,
-            pricingModel: "project-based",
-            industryScore: 95,
-            features["Digital banking", "Payment processing", "Risk management", "Compliance automation"],
-            benefits["Operational efficiency", "Cost reduction", "Enhanced security", "Regulatory compliance"],
-            useCases["Banks", "Credit unions", "Payment processors", "Investment firms"],
-            compliance["PCI DSS", "SOX", "GLBA", "SOC 2"],
-            tags["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 3,
-            name: "Smart Manufacturing Solutions",
-            industry: "Manufacturing",
-            solutionType: "Industry 4.0",
-            description: "Industry 4.0 solutions for smart manufacturing, predictive maintenance, and supply chain optimization",
-            price: 65000,
-            pricingModel: "project-based",
-            industryScore: 94,
-            features["IoT sensors", "Predictive analytics", "Supply chain optimization", "Quality control"],
-            benefits["Increased productivity", "Reduced downtime", "Cost savings", "Quality improvement"],
-            useCases["Automotive", "Electronics", "Pharmaceuticals", "Food & beverage"],
-            compliance["ISO 9001", "ISO 14001", "FDA", "GMP"],
-            tags["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 4,
-            name: "E-commerce & Retail Solutions",
-            industry: "Retail",
-            solutionType: "Digital Commerce",
-            description: "Comprehensive e-commerce solutions for online retail, inventory management, and customer experience",
-            price: 55000,
-            pricingModel: "project-based",
-            industryScore: 93,
-            features["E-commerce platform", "Inventory management", "Customer analytics", "Multi-channel integration"],
-            benefits["Increased sales", "Better customer experience", "Operational efficiency", "Market expansion"],
-            useCases["Online retailers", "Brick & mortar stores", "Marketplaces", "Brands"],
-            compliance["PCI DSS", "GDPR", "CCPA", "SOC 2"],
-            tags["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 5,
-            name: "Educational Technology Platform",
-            industry: "Education",
-            solutionType: "EdTech",
-            description: "Innovative edtech solutions for online learning, student management, and educational analytics",
-            price: 45000,
-            pricingModel: "project-based",
-            industryScore: 92,
-            features["Learning management system", "Student portal", "Assessment tools", "Analytics dashboard"],
-            benefits["Improved learning outcomes", "Administrative efficiency", "Student engagement", "Cost reduction"],
-            useCases["K-12 schools", "Universities", "Corporate training", "Online education"],
-            compliance["FERPA", "COPPA", "GDPR", "SOC 2"],
-            tags["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 6,
-            name: "Logistics & Supply Chain Platform",
-            industry: "Logistics",
-            solutionType: "Supply Chain",
-            description: "Advanced logistics solutions for supply chain optimization, tracking, and automation",
-            price: 70000,
-            pricingModel: "project-based",
-            industryScore: 94,
-            features["Route optimization", "Real-time tracking", "Inventory management", "Analytics dashboard"],
-            benefits["Cost reduction", "Improved efficiency", "Better visibility", "Customer satisfaction"],
-            useCases["Transportation", "Warehousing", "Distribution", "E-commerce"],
-            compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-            tags["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 7,
-            name: "Real Estate Technology Solutions",
-            industry: "Real Estate",
-            solutionType: "PropTech",
-            description: "Property technology solutions for real estate management, virtual tours, and market analytics",
-            price: 50000,
-            pricingModel: "project-based",
-            industryScore: 91,
-            features["Property management", "Virtual tours", "Market analytics", "Client portal"],
-            benefits["Increased sales", "Better client experience", "Operational efficiency", "Market insights"],
-            useCases["Real estate agencies", "Property managers", "Developers", "Investors"],
-            compliance["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
-            tags["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 8,
-            name: "Energy & Utilities Platform",
-            industry: "Energy",
-            solutionType: "Energy Tech",
-            description: "Smart energy solutions for utilities, renewable energy, and energy management",
-            price: 80000,
-            pricingModel: "project-based",
-            industryScore: 95,
-            features["Smart grid management", "Renewable energy integration", "Energy analytics", "Customer portal"],
-            benefits["Energy efficiency", "Cost savings", "Sustainability", "Customer satisfaction"],
-            useCases["Utility companies", "Energy providers", "Industrial facilities", "Smart cities"],
-            compliance["NERC", "FERC", "ISO standards", "SOC 2"],
-            tags["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 9,
-            name: "Cybersecurity & Compliance Solutions",
-            industry: "Cybersecurity",
-            solutionType: "Security",
-            description: "Comprehensive cybersecurity solutions for threat detection, compliance, and risk management",
-            price: 90000,
-            pricingModel: "project-based",
-            industryScore: 97,
-            features["Threat detection", "Compliance automation", "Risk assessment", "Security monitoring"],
-            benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Business continuity"],
-            useCases["Financial services", "Healthcare", "Government", "Enterprise"],
-            compliance["SOC 2", "ISO 27001", "NIST", "GDPR"],
-            tags["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 10,
-            name: "Legal Technology Platform",
-            industry: "Legal",
-            solutionType: "LegalTech",
-            description: "Legal technology solutions for case management, document automation, and legal analytics",
-            price: 60000,
-            pricingModel: "project-based",
-            industryScore: 93,
-            features["Case management", "Document automation", "Legal research", "Client portal"],
-            benefits["Increased efficiency", "Cost reduction", "Better client service", "Compliance"],
-            useCases["Law firms", "Corporate legal", "Government", "Legal services"],
-            compliance["Attorney-client privilege", "Data security", "SOC 2", "GDPR"],
-            tags["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 11,
-            name: "Media & Entertainment Platform",
-            industry: "Media",
-            solutionType: "MediaTech",
-            description: "Digital media solutions for content creation, distribution, and audience engagement",
-            price: 55000,
-            pricingModel: "project-based",
-            industryScore: 92,
-            features["Content management", "Streaming platform", "Analytics dashboard", "Monetization tools"],
-            benefits["Increased engagement", "Revenue growth", "Content efficiency", "Audience insights"],
-            useCases["Streaming services", "Content creators", "Media companies", "Entertainment"],
-            compliance["Copyright", "Licensing", "GDPR", "SOC 2"],
-            tags["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        },
-        {
-            id: 12,
-            name: "Transportation & Mobility Solutions",
-            industry: "Transportation",
-            solutionType: "Mobility",
-            description: "Smart transportation solutions for fleet management, route optimization, and passenger experience",
-            price: 75000,
-            pricingModel: "project-based",
-            industryScore: 94,
-            features["Fleet management", "Route optimization", "Passenger app", "Analytics platform"],
-            benefits["Operational efficiency", "Cost reduction", "Better service", "Safety improvement"],
-            useCases["Public transit", "Logistics", "Ride-sharing", "Fleet operators"],
-            compliance["DOT", "Safety regulations", "GDPR", "SOC 2"],
-            tags["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            }
-        }
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
@@ -304,14 +58,14 @@ const IndustrySolutions = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
             <input type="text" placeholder="Search industry solutions..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
           </div>
-          
+
           <div className="flex flex-wrap gap-4">
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {industries.map(industry => (<option key={industry} value={industry} className="bg-gray-800 text-white">
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>))}
             </select>
-            
+
             <select value={selectedSolutionType} onChange={(e) => setSelectedSolutionType(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {solutionTypes.map(type => (<option key={type} value={type} className="bg-gray-800 text-white">
                   {type === 'all' ? 'All Solution Types' : type}
@@ -341,9 +95,9 @@ const IndustrySolutions = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-4">{solution.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}
@@ -409,3 +163,4 @@ const IndustrySolutions = () => {
       </div>
     </div>)};
 export default IndustrySolutions;
+}}}}}}}}}}}}}}}}

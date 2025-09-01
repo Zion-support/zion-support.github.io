@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
 import SEO from '@/components/SEO';
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitFork } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 const features = [
     {
         title: "Automated Code Analysis",
@@ -27,7 +29,7 @@ const features = [
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,
         color: "from-purple-500 to-indigo-500"
-    }
+
 ];
 const benefits = [
     "Reduce code review time by up to 80%",
@@ -46,7 +48,7 @@ const useCases = [
     {
         title: "Open Source Projects",
         description: "Maintain high code quality standards in open source contributions.",
-        icon: GitBranch
+        icon: GitFork
     },
     {
         title: "Enterprise Applications",
@@ -57,7 +59,7 @@ const useCases = [
         title: "CI/CD Pipelines",
         description: "Integrate automated code review into your continuous integration workflows.",
         icon: Cpu
-    }
+
 ];
 const testimonials = [
     {
@@ -71,7 +73,7 @@ const testimonials = [
         name: "Maria Santos",
         role: "Security Engineer, SecureTech",
         rating: 5
-    }
+
 ];
 export default function AIAutonomousCodeReview() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
@@ -104,18 +106,18 @@ export default function AIAutonomousCodeReview() {
               <Code className="w-4 h-4"/>
               AI-Powered Code Review
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Code Review
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
               Transform your development workflow with intelligent AI that reviews code, detects vulnerabilities, and ensures quality standards automatically.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>

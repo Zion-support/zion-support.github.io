@@ -47,8 +47,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch {
                 // Silently handle parsing errors
-            }
-        }
+
+
     }, []);
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
@@ -64,7 +64,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 };
         saveSettings(newSettings)}, [settings, saveSettings]);
-=======
   ...settings,
   [key]: value !== null ? value : !settings[key]
         
@@ -75,7 +74,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 };
         saveSettings(newSettings);
     }, [settings, saveSettings]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Reset to defaults
     const resetSettings = useCallback(() => {
         const defaults = {
@@ -90,7 +88,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 };
         saveSettings(defaults)}, [saveSettings]);
-=======
   colorBlindMode: 'normal'
         
 
@@ -100,7 +97,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 };
         saveSettings(defaults);
     }, [saveSettings]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Font size controls
     const increaseFontSize = useCallback(() => {
         toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
@@ -129,7 +125,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
-            
+
             {/* Panel */}
             <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
   { opacity: 0, x: 300,
@@ -179,7 +175,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Visual Settings */}
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
-                
+
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -245,7 +241,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Motion Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Settings className="w-5 h-5 text-zion-cyan"/>
@@ -260,7 +256,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Audio Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio</h3>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"/>) : (<VolumeX className="w-5 h-5 text-zinc-400"/>)}
@@ -310,11 +306,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             clip: rect(0, 0, 0,
   0);
             white-space: nowrap;
-<<<<<<< HEAD
-            border: 0
-
-}
-=======
             border: 0;
           
 
@@ -322,7 +313,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
           .high-contrast {
             --zion-cyan: #00ffff;

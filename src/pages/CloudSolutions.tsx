@@ -38,19 +38,13 @@ export default function CloudSolutions(...args[]):  {
       features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: "DevOps Automation",
-      description: "Streamline your development and deployment processes with automation",
       features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
     };
-=======;
       icon: Zap,;
       title: "DevOps Automation",;
       description: "Streamline your development and deployment processes with automation",;
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [
@@ -144,7 +138,7 @@ export default function CloudSolutions(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud Solutions for the{' '}
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -193,7 +187,7 @@ export default function CloudSolutions(...args[]):  {
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
@@ -201,7 +195,7 @@ export default function CloudSolutions(...args[]):  {
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+
                 <Play className="w-5 h-5" />
                 Watch Demo
               </motion.button>
@@ -237,7 +231,7 @@ export default function CloudSolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Cloud Services
             </h2>
@@ -253,7 +247,7 @@ export default function CloudSolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {cloudServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -318,7 +312,7 @@ export default function CloudSolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our Cloud Solutions?
             </h2>
@@ -334,13 +328,13 @@ export default function CloudSolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
@@ -379,7 +373,7 @@ export default function CloudSolutions(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technologies We Master
             </h2>
@@ -395,14 +389,14 @@ export default function CloudSolutions(...args[]):  {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-          >
+
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 className="text-center group"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
-              >
+
                 <div className="w-20 h-20 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:border-zion-cyan/40 transition-colors duration-300">
                   <span className="text-zion-cyan font-bold text-lg">{tech.logo}</span>
                 </div>
@@ -440,7 +434,7 @@ export default function CloudSolutions(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
@@ -452,16 +446,8 @@ export default function CloudSolutions(...args[]):  {
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            >
+
               Start Your Cloud Journey
-<<<<<<< HEAD
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </motion.button>;
           </motion.div>;
         </div>;
@@ -469,4 +455,3 @@ export default function CloudSolutions(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

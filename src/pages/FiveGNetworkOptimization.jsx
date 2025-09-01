@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
-const FiveGNetworkOptimization = () => {
+import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu const FiveGNetworkOptimization = () => {
     return (<>
       <Helmet>
         <title>5G Network Optimization - Zion Tech Group</title>
@@ -26,7 +25,7 @@ const FiveGNetworkOptimization = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Unlock the full potential of your 5G network with our advanced optimization solutions. 
+                Unlock the full potential of your 5G network with our advanced optimization solutions.
                 Enhance speed, coverage, and efficiency with AI-driven network intelligence.
               </p>
             </div>
@@ -74,7 +73,7 @@ const FiveGNetworkOptimization = () => {
                 icon: CheckCircle,
                 title: "Quality Assurance",
                 description: "Automated quality monitoring and self-healing capabilities for consistent service delivery"
-            }
+
         ].map((feature, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-colors">
                   <feature.icon className="w-12 h-12 text-green-400 mb-6"/>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -115,7 +114,7 @@ const FiveGNetworkOptimization = () => {
                 metric: "99.9%",
                 title: "Uptime Guarantee",
                 description: "Enhanced reliability and service availability"
-            }
+
         ].map((metric, index) => (<div key={index} className="text-center">
                   <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 mb-4">
                     <h3 className="text-3xl font-bold text-white mb-2">{metric.metric}</h3>
@@ -154,7 +153,7 @@ const FiveGNetworkOptimization = () => {
             {
                 title: "Autonomous Vehicles",
                 description: "Provide the reliable, low-latency connectivity required for vehicle-to-everything communication."
-            }
+
         ].map((useCase, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
@@ -186,3 +185,4 @@ const FiveGNetworkOptimization = () => {
       </div>
     </>)};
 export default FiveGNetworkOptimization;
+}}}}

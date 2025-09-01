@@ -7,11 +7,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true
     });
-    const [formData, setFormData] = useState({});
-    const [validation, setValidation] = useState({});
+    const [formData, setFormData] = useState({ /* empty */ });
+    const [validation, setValidation] = useState({ /* empty */ });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({});
+    const [showPassword, setShowPassword] = useState({ /* empty */ });
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
@@ -86,16 +86,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 isValid: !error,
                 message: error || '',
                 isTouched: true
-            }
+
         }));
         // Track form interaction
         if (enableAnalytics) {
-<<<<<<< HEAD
-            trackEvent('form', 'field_changed', name, null, { fieldName: name, value: String(value) })}
-=======
             trackEvent('form', 'field_changed', name, null, { fieldName: name, value: String(value) });
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }, [validateField, enableAnalytics, trackEvent]);
     // Handle field blur
     const handleFieldBlur = useCallback((name) => {
@@ -145,6 +141,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (enableAnalytics) {
                 trackEvent('form', 'submission_error', 'form_failed', null, {
                     error: error instanceof Error ? error.message : 'Unknown error'
+            }
+            // // // // // // // console.error('Form submission failed:', error);
+        }
+        finally {
+            setIsSubmitting(false);
+
                 })}
             console.error('Form submission failed:', error)}
         finally {
@@ -318,18 +320,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <p className="text-green-600 dark:text-green-300">
           Your message has been sent successfully. We'll get back to you soon!
         </p>
-<<<<<<< HEAD
-      </motion.div>)}
-    return (<motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
-=======
       </motion.div>);
     }
     return (<motion.div initial = {
@@ -351,7 +341,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
@@ -378,7 +367,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Submit Button */}
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : { /* empty */ }} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : { /* empty */ }}>
           {isSubmitting ? (<>
               <Loader2 className="w-5 h-5 animate-spin"/>
               Sending...

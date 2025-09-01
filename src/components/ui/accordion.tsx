@@ -38,7 +38,6 @@ export function Accordion({
             onToggle: ()  => handleToggle(child.props.value)
           })}
         return child})}
-=======
 export function Accordion({ 
   children, ;
   className = '', ;
@@ -58,7 +57,7 @@ export function Accordion({
           ? prev.filter(item => item !== value);
           : [...prev, value];
       );
-    }
+
   };
 
   return (
@@ -69,10 +68,9 @@ export function Accordion({
             isOpen: openItems.includes(child.props.value),
             onToggle: () => handleToggle(child.props.value)
           });
-        }
+
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
   )}
 
@@ -95,10 +93,9 @@ export function AccordionItem({
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
-        }
+
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
   )}
 
@@ -119,7 +116,7 @@ export function AccordionTrigger({
     <button
       className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
       onClick={onToggle}
-    >
+
       {children}
       <ChevronDown
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
@@ -130,7 +127,6 @@ export function AccordionTrigger({
   )}
 
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;
-=======;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';
         }`} ;
@@ -138,7 +134,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;
     </button>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   children: React.ReactNode;
   className?: string;
@@ -156,7 +151,6 @@ export function AccordionContent({
       {children}
     </div>
   )}
-=======
 export function AccordionContent({ ;
   children, ;
   className = '',;
@@ -170,4 +164,3 @@ export function AccordionContent({ ;
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

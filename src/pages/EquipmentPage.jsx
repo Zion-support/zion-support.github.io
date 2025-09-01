@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
-import { Footer } from '@/components/Footer';
+import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
 
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
@@ -125,7 +124,7 @@ const EquipmentPage = () => {
                 rating: 4.7,
                 reviewCount: 156,
                 description: "Reliable 2U server with excellent performance and enterprise support."
-              }
+
             ].map((equipment, index) => (
               <EquipmentCard key={index} equipment={equipment} />
             ))
@@ -137,3 +136,4 @@ const EquipmentPage = () => {
   )};
 
 export default EquipmentPage;
+}}

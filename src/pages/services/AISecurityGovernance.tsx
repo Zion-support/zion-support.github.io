@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityGovernance() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance() {
   const features = [
     'AI-powered security governance optimization',
     'Intelligent governance policy management and enforcement',;
@@ -13,10 +11,10 @@ export default function AISecurityGovernance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$699/mo', 
-      details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$699/mo',
+      details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityGovernance() {
       </section>;
     </div>;
   );
-}
+}}

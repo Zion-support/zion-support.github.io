@@ -22,29 +22,17 @@ import {
   Mail,
   MapPin,
   ExternalLink
-<<<<<<< HEAD
- } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026  } from "../data/advancedInnovativeServices2026";
-
-const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
 
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
-<<<<<<< HEAD
-  const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)]}, []);
-=======
   const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
     return ['all', ...Array.from(cats)];
   }, []);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
@@ -54,20 +42,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
     // Filter by search term
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     // Sort services
     filtered.sort((a, b) => {
@@ -123,7 +103,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-      >
+
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1
@@ -316,7 +296,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-              >
+
                 <option value="innovation">Sort by Innovation</option>
                 <option value="roi">Sort by ROI</option>
                 <option value="price">Sort by Price</option>
@@ -430,7 +410,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300"
-                >
+
                   Learn More <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -443,7 +423,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             className="text-center py-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-          >
+
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-slate-400">Try adjusting your search criteria or category filter.</p>
@@ -532,17 +512,9 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-            >
+
               Visit Our Website
               <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </motion.div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -550,6 +522,5 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default AdvancedInnovativeServicesShowcase2026;
+export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}

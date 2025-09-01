@@ -309,4 +309,4 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   }
 ];
 
-export default specializedHealthcareAIServices2025;
+export default specializedHealthcareAIServices2025;}}

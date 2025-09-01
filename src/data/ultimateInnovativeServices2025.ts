@@ -56,7 +56,6 @@ export const SERVICE_SUBCATEGORIES = {
   'Biotechnology'['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
   'Space Technology'['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
   'Green Technology'['Renewable Energy', 'Carbon Capture', 'Sustainable Materials', 'Clean Transportation']
-=======
   'AI & Automation': ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation'],
   'Quantum Computing': ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation', 'Quantum Optimization'],
   'Blockchain & Web3': ['DeFi Platforms', 'NFT Marketplaces', 'Smart Contracts', 'Decentralized Identity'],
@@ -77,7 +76,6 @@ export const SERVICE_SUBCATEGORIES = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };
@@ -266,7 +264,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'quantum-cybersecurity-suite',
@@ -321,7 +319,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'iot-edge-intelligence-platform',
@@ -376,7 +374,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'metaverse-creation-platform',
@@ -431,7 +429,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'autonomous-robotics-platform',
@@ -486,7 +484,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'biotech-ai-platform',
@@ -541,7 +539,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'space-tech-platform',
@@ -596,7 +594,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
+
   },
   {
     id: 'green-tech-optimization-platform',
@@ -651,6 +649,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
-    }
-  }
-];
+
+
+];}}}}}}}}}}}

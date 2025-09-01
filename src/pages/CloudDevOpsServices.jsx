@@ -1,141 +1,10 @@
 import React, { useState } from 'react';
-import { Search, Zap, Cloud, Shield, Server, Code, GitBranch, Phone, Mail, MapPin } from 'lucide-react';
+import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data
-<<<<<<< HEAD
-    const cloudDevOpsServices = [
-        {
-            id: 1,
-            name: "Multi-Cloud Infrastructure Management",
-            category: "Cloud Management",
-            pricing: "Enterprise",
-            description: "Comprehensive multi-cloud infrastructure management across AWS, Azure, GCP with unified monitoring and cost optimization",
-            price: 8500,
-            pricingModel: "monthly",
-            userLimit: "Unlimited users",
-            features["Multi-cloud orchestration", "Cost optimization", "Unified monitoring", "Auto-scaling", "Disaster recovery", "Security compliance"],
-            benefits["Reduced cloud costs", "Improved reliability", "Better performance", "Enhanced security", "Simplified management"],
-            targetAudience["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
-            tags["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "4-8 weeks",
-            support: "24/7 cloud support"
-        },
-        {
-            id: 2,
-            name: "Kubernetes Cluster Management",
-            category: "Container Orchestration",
-            pricing: "Professional",
-            description: "Enterprise-grade Kubernetes cluster management with automated scaling, monitoring, and security",
-            price: 4200,
-            pricingModel: "monthly",
-            userLimit: "Up to 50 clusters",
-            features["Cluster automation", "Auto-scaling", "Security hardening", "Monitoring & alerting", "Backup & recovery", "Multi-region support"],
-            benefits["Improved scalability", "Enhanced security", "Reduced operational overhead", "Better resource utilization"],
-            targetAudience["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
-            tags["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "2-4 weeks",
-            support: "24/7 K8s support"
-        },
-        {
-            id: 3,
-            name: "CI/CD Pipeline Automation",
-            category: "DevOps Automation",
-            pricing: "Professional",
-            description: "End-to-end CI/CD pipeline automation with testing, deployment, and rollback capabilities",
-            price: 3800,
-            pricingModel: "monthly",
-            userLimit: "Up to 100 developers",
-            features["Automated testing", "Deployment automation", "Rollback mechanisms", "Security scanning", "Performance testing", "Multi-environment support"],
-            benefits["Faster deployments", "Reduced errors", "Improved quality", "Better collaboration", "Cost savings"],
-            targetAudience["Development teams", "Software companies", "IT departments", "Digital agencies"],
-            tags["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "3-6 weeks",
-            support: "24/7 DevOps support"
-        },
-        {
-            id: 4,
-            name: "Serverless Architecture Design",
-            category: "Serverless",
-            pricing: "Enterprise",
-            description: "Design and implementation of scalable serverless architectures using AWS Lambda, Azure Functions, and GCP Cloud Functions",
-            price: 6500,
-            pricingModel: "monthly",
-            userLimit: "Unlimited users",
-            features["Architecture design", "Function optimization", "Event-driven design", "Cost optimization", "Monitoring setup", "Security implementation"],
-            benefits["Reduced infrastructure costs", "Automatic scaling", "Pay-per-use pricing", "Reduced operational overhead"],
-            targetAudience["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
-            tags["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "6-10 weeks",
-            support: "24/7 serverless support"
-        },
-        {
-            id: 5,
-            name: "Infrastructure as Code (IaC)",
-            category: "Infrastructure",
-            pricing: "Professional",
-            description: "Infrastructure automation using Terraform, CloudFormation, and Ansible for consistent, repeatable deployments",
-            price: 3200,
-            pricingModel: "monthly",
-            userLimit: "Up to 25 environments",
-            features["Terraform automation", "CloudFormation templates", "Ansible playbooks", "Version control", "Testing automation", "Documentation"],
-            benefits["Consistent deployments", "Reduced errors", "Faster provisioning", "Better collaboration", "Cost control"],
-            targetAudience["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
-            tags["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "4-8 weeks",
-            support: "24/7 IaC support"
-        },
-        {
-            id: 6,
-            name: "Cloud Security & Compliance",
-            category: "Security",
-            pricing: "Enterprise",
-            description: "Comprehensive cloud security implementation with compliance monitoring for SOC2, HIPAA, and PCI-DSS",
-            price: 7200,
-            pricingModel: "monthly",
-            userLimit: "Unlimited users",
-            features["Security assessment", "Compliance monitoring", "Threat detection", "Access control", "Data encryption", "Audit logging"],
-            benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Customer trust", "Insurance benefits"],
-            targetAudience["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
-            tags["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
-            contactInfo: {
-                phone: "+1 302 464 0950",
-                email: "kleber@ziontechgroup.com",
-                website: "https://ziontechgroup.com"
-            },
-            deliveryTime: "8-12 weeks",
-            support: "24/7 security support"
-        }
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
     const filteredServices = cloudDevOpsServices.filter(service => {
@@ -145,7 +14,7 @@ const CloudDevOpsServices = () => {
         switch (category) {
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;
-            case 'DevOps Automation': return <GitBranch className="w-6 h-6"/>;
+            case 'DevOps Automation': return <GitFork className="w-6 h-6"/>;
             case 'Serverless': return <Zap className="w-6 h-6"/>;
             case 'Infrastructure': return <Server className="w-6 h-6"/>;
             case 'Security': return <Shield className="w-6 h-6"/>;
@@ -176,14 +45,14 @@ const CloudDevOpsServices = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
             <input type="text" placeholder="Search cloud & DevOps services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
           </div>
-          
+
           <div className="flex flex-wrap gap-4">
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>
-            
+
             <select value={selectedPricing} onChange={(e) => setSelectedPricing(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {pricingOptions.map(pricing => (<option key={pricing} value={pricing} className="bg-gray-800 text-white">
                   {pricing === 'all' ? 'All Pricing Tiers' : pricing}
@@ -213,9 +82,9 @@ const CloudDevOpsServices = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   ${service.price.toLocaleString()}/month
@@ -281,3 +150,4 @@ const CloudDevOpsServices = () => {
       </div>
     </div>)};
 export default CloudDevOpsServices;
+}}}}

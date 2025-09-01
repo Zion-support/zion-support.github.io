@@ -36,7 +36,7 @@ const COLUMNS = [
 ];
 export function KanbanBoard({ jobId }) {
     const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
-    const [columns, setColumns] = useState({});
+    const [columns, setColumns] = useState({ /* empty */ });
     const isMobile = useIsMobile();
     // Initialize columns with applications based on their status
     useEffect(() => {

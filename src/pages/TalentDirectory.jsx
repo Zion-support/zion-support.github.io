@@ -68,7 +68,7 @@ const TalentDirectory = () => {
             rating: 4.9,
             projects: 28,
             avatar: "👨‍💻"
-        }
+
     ];
     const categories = [
         "All",
@@ -286,7 +286,7 @@ const TalentDirectory = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Whether you need a single expert or a complete team, we can connect you with the 
+            Whether you need a single expert or a complete team, we can connect you with the
             perfect technology professionals for your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -301,3 +301,4 @@ const TalentDirectory = () => {
       </section>
     </div>)};
 export default TalentDirectory;
+}}

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
-const services = [
+import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const services = [
     {
         id: 'ai-automation',
         name: 'AI & Automation',
@@ -111,7 +110,7 @@ export default function FuturisticServicesShowcase() {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge technology solutions designed to 
+            Discover our comprehensive suite of cutting-edge technology solutions designed to
             transform your business and accelerate innovation.
           </p>
         </motion.div>
@@ -339,7 +338,7 @@ export default function FuturisticServicesShowcase() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already leveraging our revolutionary technology solutions 
+              Join thousands of companies already leveraging our revolutionary technology solutions
               to accelerate growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

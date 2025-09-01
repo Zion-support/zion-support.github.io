@@ -68,19 +68,11 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
-<<<<<<< HEAD
-  autoAnalyze = true,
-  showDetails = false,
-  onAnalysisComplete;
-}) => {;
-  const [analysis, setAnalysis] = useState<any>(null);
-=======
   autoAnalyze = true,;
   showDetails = false,;
   onAnalysisComplete;
 }) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -116,7 +108,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         impact: 'low',
         fixable: true,
         category: 'accessibility'
-      }
+
     ],
     suggestions[
       {
@@ -142,7 +134,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         priority: 'low',
         effort: 'low',
         estimatedImpact: 5
-      }
+
     ],
     metrics: {
       pageSpeed: 78,
@@ -177,40 +169,10 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-<<<<<<< HEAD
-  const getScoreColor = (score: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (score >= 90) return 'text-green-500';
-    if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500'};
-
-  // Get score background
-<<<<<<< HEAD
-  const getScoreBackground = (score: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (score >= 90) return 'bg-green-100';
-    if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100'};
-
-  // Get impact color
-<<<<<<< HEAD
-  const getImpactColor = (impact: string) => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'high': return 'text-red-500';
-      case 'medium': return 'text-yellow-500';
-      case 'low': return 'text-blue-500';
       default: return 'text-zion-slate'}
   };
 
   // Get priority color
-<<<<<<< HEAD
-  const getPriorityColor = (priority: string) => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'high': return 'text-red-500 bg-red-50 border-red-200';
-      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
-      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
   };
 
@@ -222,14 +184,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
-<<<<<<< HEAD
-      const priorityOrder = {
-  high: 3, medium: 2,;
-  low: 1 ;
-
-};
-      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]);
-=======
       const priorityOrder = {
   high: 3, medium: 2,;
   ;
@@ -248,7 +202,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
   }, [analysis]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   if (!analysis && !isAnalyzing) {
     return (
@@ -257,14 +210,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}
-<<<<<<< HEAD
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors"
-        >
-          Analyze SEO
-        </button>
-      </div>
-    )};
-=======;
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
         >;
           Analyze SEO;
@@ -272,7 +217,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       </div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
@@ -293,7 +237,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             onClick={() => setShowAdvanced(!showAdvanced)}
             className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
-          >
+
             <Settings className="w-5 h-5 text-zion-slate" />
           </button>
 
@@ -301,7 +245,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             onClick={analyzeSEO}
             disabled={isAnalyzing}
             className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
-          >
+
             {isAnalyzing ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -419,7 +363,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                         ? 'bg-zion-cyan text-white'
                         : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'
                     }`}
-                  >
+
                     {category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
                 ))}
@@ -466,7 +410,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
                       'border-blue-500 bg-blue-50'
                     }`}
-                  >
+
                     <div className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
                         <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
@@ -525,7 +469,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 }}
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
-                >
+
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h5 className="font-medium text-zion-slate-dark mb-1">{suggestion.title}</h5>
@@ -581,7 +525,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 }}
                 className="border-t border-zion-slate/20 pt-6"
-              >
+
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 bg-zion-slate/5 rounded-lg">
@@ -603,18 +547,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-            )}
-          </AnimatePresence>
-        </>
-      ) : null};
-    </div>;
-  )};
-
-// Hook for using SEO optimization
-export const useSEOOptimization[, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [analysis, setAnalysis] = useState<any>(null);
-=======
             )};
           </AnimatePresence>;
         </>;
@@ -626,7 +558,6 @@ export const useSEOOptimization[, React.Dispatch<React.SetStateAction<any>>] = (
 // Hook for using SEO optimization
 export const useSEOOptimization = () => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {;

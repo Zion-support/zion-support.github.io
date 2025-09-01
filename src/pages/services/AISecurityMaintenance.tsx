@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityMaintenance() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {
   const features = [
     'AI-powered security maintenance optimization',
     'Intelligent maintenance strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityMaintenance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$399/mo', 
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityMaintenance() {
       </section>;
     </div>;
   );
-}
+}}

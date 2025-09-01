@@ -1,9 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity } from 'lucide-react';
-
-const AIPredictiveMaintenance: React.FC = () => {
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -65,7 +63,7 @@ const AIPredictiveMaintenance: React.FC = () => {
         title="AI Predictive Maintenance Services - Zion Tech Group"
         description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
       />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -92,24 +90,24 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
               <Wrench className="w-5 h-5 text-orange-400 mr-2" />
               <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Predictive
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
                 Maintenance
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment 
+              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment
               failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
                 Get Started
@@ -148,7 +146,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Predictive Maintenance Features
             </h2>
@@ -192,7 +190,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-orange-400" />
                 </div>
@@ -230,7 +228,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -274,7 +272,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{application.icon}</div>
                   <div>
@@ -314,7 +312,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Predictive Maintenance?
             </h2>
@@ -347,7 +345,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -382,10 +380,10 @@ const AIPredictiveMaintenance: React.FC = () => {
 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
-            >
+
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you 
+                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you
                 implement intelligent monitoring systems that prevent failures and optimize performance.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
@@ -421,7 +419,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 }}
             transition={{ duration: 0.6 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready for Predictive Maintenance?
             </h2>
@@ -443,4 +441,4 @@ const AIPredictiveMaintenance: React.FC = () => {
   );
 };
 
-export default AIPredictiveMaintenance;
+export default AIPredictiveMaintenance;}}}

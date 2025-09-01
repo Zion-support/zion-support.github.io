@@ -48,7 +48,6 @@ const InnovativeServicesOverview = () => {
             
 
 };
-=======
   'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
                 'quantum-computing': ['Quantum'],
                 'blockchain': ['Blockchain', 'Web3'],
@@ -65,7 +64,6 @@ const InnovativeServicesOverview = () => {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
     const fadeInUp = {
@@ -110,7 +108,7 @@ const InnovativeServicesOverview = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Discover our comprehensive portfolio of cutting-edge micro SAAS services, AI solutions, 
+            Discover our comprehensive portfolio of cutting-edge micro SAAS services, AI solutions,
             emerging technology innovations, enterprise IT services, and quantum computing solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -169,7 +167,7 @@ const InnovativeServicesOverview = () => {
           <h2 className="text-4xl font-bold text-center mb-12">
             {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
@@ -204,7 +202,7 @@ const InnovativeServicesOverview = () => {
                       POPULAR
                     </span>
                   </div>)}
-                
+
                 <div className="text-center mb-4">
                   <div className={`text-4xl mb-2 ${service.textColor}`}>{service.icon}</div>
                   <h3 className="text-xl font-bold mb-2">{service.name}</h3>

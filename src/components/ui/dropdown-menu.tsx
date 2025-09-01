@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useState } from 'react.ts';
-const DropdownMenu(...args[]):  {
-    const [isOpen, setIsOpen] = useState(false);
-    return (<DropdownMenuContext.Provider value = {
-  { isOpen,
-  setIsOpen 
-
-}}>
-      <div className="relative">
-        {children}
-      </div>
-    </DropdownMenuContext.Provider>)}
-export function DropdownMenuTrigger(...args[]):  {;
-=======;
 import React, { createContext, useContext, useState } from 'react';
 const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,20 +17,15 @@ const DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>);
 }
 export function DropdownMenuTrigger({ children, asChild = false }) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
-<<<<<<< HEAD
-        return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>
-        {children}
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
 export function DropdownMenuContent(...args[]):  {;
-=======;
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>);
@@ -55,7 +35,6 @@ export function DropdownMenuContent(...args[]):  {;
     </div>);
 }
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
@@ -73,7 +52,6 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
       {children}
     </div>)}
 export function DropdownMenuItem(...args[]):  {
-=======;
   start: 'left-0',;
         center: 'left-1/2 transform -translate-x-1/2',;
   ;
@@ -90,7 +68,6 @@ export function DropdownMenuItem(...args[]):  {
     </div>);
 }
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const context = useContext(DropdownMenuContext);
     if (!context)
         throw new Error('DropdownMenuItem must be used within DropdownMenu');
@@ -99,14 +76,10 @@ export function DropdownMenuItem({ children, onClick, asChild = false, className
             onClick();
         context.setIsOpen(false)};
     if (asChild) {
-<<<<<<< HEAD
-        return (<div className = {`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
-        {children}
       </div>)}
     return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}>
       {children}
     </button>)};
-=======;
         return (<div className = {`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>;
         {children};
       </div>);
@@ -115,4 +88,3 @@ export function DropdownMenuItem({ children, onClick, asChild = false, className
       {children};
     </button>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -3,8 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { LockKeyhole } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { LockKeyhole import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
@@ -81,15 +80,11 @@ export default function UpdatePassword() {
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
-<<<<<<< HEAD
-                router("/login")}, 3000)}
-=======
                 router("/login");
             }, 3000);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (error) {
-            console.error("Password update error:", error);
+            // // // // // // // console.error("Password update error:", error);
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
@@ -105,7 +100,7 @@ export default function UpdatePassword() {
             form.setFocus(firstError)}
     };
     return (<>
-      
+
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">

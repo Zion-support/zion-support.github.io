@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
-export function SiteHealthDashboard() {
+import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard() {
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +39,7 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Overall Google Core Web Vitals performance',
-                        }
+
                     ]
                 },
                 {
@@ -79,7 +78,7 @@ export function SiteHealthDashboard() {
                             value: 85,
                             status: 'good',
                             description: 'Structured data implementation',
-                        }
+
                     ]
                 },
                 {
@@ -111,7 +110,7 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Screen reader compatibility',
-                        }
+
                     ]
                 },
                 {
@@ -143,7 +142,7 @@ export function SiteHealthDashboard() {
                             value: 95,
                             status: 'excellent',
                             description: 'CSP header implementation',
-                        }
+
                     ]
                 },
                 {
@@ -176,7 +175,7 @@ export function SiteHealthDashboard() {
                             value: 89,
                             status: 'good',
                             description: 'Recently updated content percentage',
-                        }
+
                     ]
                 },
                 {
@@ -207,9 +206,9 @@ export function SiteHealthDashboard() {
                             value: 77,
                             status: 'good',
                             description: '404 pages and error handling',
-                        }
+
                     ]
-                }
+
             ];
             setHealthData(healthCategories);
             // Calculate overall score
@@ -295,7 +294,7 @@ export function SiteHealthDashboard() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-6 space-y-4">
                 {category.metrics.map((metric, metricIndex) => (<div key={metricIndex} className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -320,7 +319,7 @@ export function SiteHealthDashboard() {
           <TrendingUp className="w-6 h-6 text-blue-600"/>
           <span>Priority Action Items</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-red-600 flex items-center space-x-2">
@@ -338,7 +337,7 @@ export function SiteHealthDashboard() {
               </li>
             </ul>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-yellow-600 flex items-center space-x-2">
               <AlertTriangle className="w-5 h-5"/>

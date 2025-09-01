@@ -22,22 +22,22 @@ export default function FinOpsAdvisor(...args: []):  {
                 <DollarSign className="w-4 h-4 mr-2" />
                 Cloud Financial Operations
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 FinOps
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending, 
+                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending,
                 improve resource utilization, and maximize your cloud investment ROI.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 Cloud Financial Optimization
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our FinOps platform provides comprehensive tools for managing cloud costs, 
+                Our FinOps platform provides comprehensive tools for managing cloud costs,
                 optimizing resources, and improving financial operations.
               </p>
             </div>
@@ -404,7 +404,7 @@ export default function FinOpsAdvisor(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -420,4 +420,4 @@ export default function FinOpsAdvisor(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}}}}

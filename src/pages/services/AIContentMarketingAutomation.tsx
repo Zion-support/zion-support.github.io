@@ -119,7 +119,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
         title="AI Content Marketing Automation Platform - Zion Tech Group"
         description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -145,7 +145,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Marketing
@@ -157,7 +157,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically. 
+              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.
               Increase engagement, reduce costs, and scale your marketing efforts effortlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -165,14 +165,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Watch Demo
               </motion.button>
             </div>
@@ -206,7 +206,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Marketing
             </h2>
@@ -250,7 +250,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -287,7 +287,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Marketing Results
             </h2>
@@ -331,7 +331,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
                 className="text-center"
-              >
+
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
@@ -368,7 +368,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -412,11 +412,11 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-purple-500 ring-2 ring-purple-500/20' 
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
                     : 'border-gray-700'
                 }`}
-              >
+
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -424,7 +424,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -451,7 +451,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
-                >
+
                   {plan.cta}
                 </motion.button>
               </motion.div>
@@ -486,7 +486,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect for Every Marketing Need
             </h2>
@@ -530,7 +530,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -566,7 +566,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?
             </h2>
@@ -578,14 +578,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-              >
+
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-              >
+
                 Schedule Demo
               </motion.button>
             </div>
@@ -605,14 +605,6 @@ export default function AIContentMarketingAutomation(...args[]):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
@@ -620,4 +612,3 @@ export default function AIContentMarketingAutomation(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

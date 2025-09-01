@@ -9,7 +9,7 @@ import { FavoriteButton  } from '@/components/FavoriteButton';
 import { useDispatch  } from 'react-redux.ts';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-; // Import next/image
+// Regular img tag will be used instead of next/image
 
   listing: ProductListing;
   view?: 'grid' | 'list';
@@ -20,34 +20,6 @@ import { addItem } from '@/store/cartSlice';
    */
   detailBasePath?: string}
 
-<<<<<<< HEAD
-export function ProductListingCard({
-  listing,
-  view = 'grid',;
-  onRequestQuote,;
-  detailBasePath = '/marketplace/listing';
-}: ProductListingCardProps) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
-
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`};
-
-  const handleImageError = () => {;
-    if (!imageError) { // Prevent infinite loops if placeholder also fails;
-      setImageSrc('/placeholder.svg');
-      setImageError(true)}
-  };
-
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
@@ -57,15 +29,10 @@ export function ProductListingCard({
     e.stopPropagation();
 
     if (onRequestQuote) {
-<<<<<<< HEAD
-      onRequestQuote(listing.id)} else {
-      router(`/request-quote?listing = ${listing.id}`)};
-=======;
       onRequestQuote(listing.id);
     } else {
       router(`/request-quote?listing=${listing.id}`);
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -82,7 +49,7 @@ export function ProductListingCard({
           e.preventDefault();
           handleViewListing()}
       }}
-    >
+
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
@@ -141,7 +108,7 @@ export function ProductListingCard({
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
+
                   {tag}
                 </span>
               ))}
@@ -170,14 +137,9 @@ export function ProductListingCard({
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-<<<<<<< HEAD
-                router(`${detailBasePath}/${listing.id}`)}}
-              disabled = {loading};
-=======;
                 router(`${detailBasePath}/${listing.id}`);
               }}
               disabled = {loading}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               {loading ? (
                 <>
@@ -197,17 +159,9 @@ export function ProductListingCard({
                 variant="outline"
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
+
                 Request Quote
               </Button>
-<<<<<<< HEAD
-            )}
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             )};
           </div>;
         </div>;
@@ -215,7 +169,6 @@ export function ProductListingCard({
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default React.memo(ProductListingCard);
 

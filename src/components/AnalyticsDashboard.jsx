@@ -29,12 +29,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-<<<<<<< HEAD
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
-=======
         trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Track conversion goal
     const handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
@@ -50,7 +46,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const getPerformanceScore = () => {
         if (!performanceMetrics)
             return 0;
-        let score = 100;
+        const score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
             score -= 20;
@@ -93,17 +89,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}></div>
               {isTracking ? 'Tracking' : 'Stopped'}
             </div>
-            
+
             {/* Time Range Selector */}
             <select value={selectedTimeRange} onChange = {
   (e) => {
             setSelectedTimeRange(e.target.value);
-<<<<<<< HEAD
-            handleDashboardInteraction('time_range_changed',
-  { timeRange: e.target.value 
-
-})}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
-=======
             handleDashboardInteraction('time_range_changed',
   { timeRange: e.target.value 
 
@@ -112,13 +102,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 
 });
         }} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <option value="1h">1 Hour</option>
               <option value="24h">24 Hours</option>
               <option value="7d">7 Days</option>
               <option value="30d">30 Days</option>
             </select>
-            
+
             <button onClick={() => setIsExpanded(!isExpanded)} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label={isExpanded ? 'Collapse dashboard' : 'Expand dashboard'}>
               {isExpanded ? '−' : '+'}
             </button>
@@ -182,7 +171,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events
           {showRealTime && (<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>)}
         </h4>
-        
+
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events.slice(-5).reverse().map((event) => (<div key={event.id} className="flex items-center justify-between text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded">
               <div className="flex items-center gap-2">
@@ -197,7 +186,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 {new Date(event.timestamp).toLocaleTimeString()}
               </span>
             </div>))}
-          
+
           {events.length === 0 && (<div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet
             </div>)}
@@ -207,7 +196,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       {/* Detailed Analytics */}
       {isExpanded && (<div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">
           <h4 className="font-medium text-gray-900 dark:text-white mb-3">Detailed Analytics</h4>
-          
+
           {/* Performance Metrics */}
           {performanceMetrics && (<div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
               <h5 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Performance Metrics</h5>
@@ -286,7 +275,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <RefreshCw className="w-4 h-4"/>
             Refresh Data
           </button>
-          
+
           <button onClick={() => {
             handleTrackConversion();
             handleDashboardInteraction('conversion_tracked')}} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">

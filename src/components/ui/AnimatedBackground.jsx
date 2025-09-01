@@ -82,7 +82,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
             ctx.lineWidth = 2;
             // Draw multiple wave layers
-            for (let layer = 0; layer < 3; layer++) {
+            for (const layer = 0; layer < 3; layer++) {
                 ctx.beginPath();
                 for (let x = 0; x < canvas.width; x++) {
                     const y = canvas.height / 2 +
@@ -129,16 +129,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         window.addEventListener('resize', resizeCanvas);
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-<<<<<<< HEAD
-            cancelAnimationFrame(animationFrameId)}}, [variant]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
-  {
-            background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
-  #0f172a 100%)'
-        
-
-}}/>)}
-=======
             cancelAnimationFrame(animationFrameId);
         };
     }, [variant]);
@@ -155,7 +145,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
 }}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
     return (<div className={`relative ${className}`} style={{

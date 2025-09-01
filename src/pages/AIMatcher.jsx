@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
-const AIMatcher = () => {
+import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight const AIMatcher = () => {
     const [currentStep, setCurrentStep] = useState(1);
-    const [answers, setAnswers] = useState({});
+    const [answers, setAnswers] = useState({ /* empty */ });
     const [recommendations, setRecommendations] = useState([]);
     const questions = [
         {
@@ -64,7 +63,7 @@ const AIMatcher = () => {
                 'Medium-term (6-12 months)',
                 'Long-term (1+ years)'
             ]
-        }
+
     ];
     const aiSolutions = [
         {
@@ -120,7 +119,7 @@ const AIMatcher = () => {
             features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],
             href: '/services/ai-customer-service-automation',
             icon: Users
-        }
+
     ];
     const handlePrevious = () => {
         if (currentStep > 1) {
@@ -156,7 +155,7 @@ const AIMatcher = () => {
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
   { opacity: 0,
@@ -186,7 +185,7 @@ const AIMatcher = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Answer a few questions and discover the perfect AI solutions for your business needs. 
+              Answer a few questions and discover the perfect AI solutions for your business needs.
               Our intelligent matching system will recommend the most suitable technologies for your goals.
             </p>
           </motion.div>
@@ -239,7 +238,7 @@ const AIMatcher = () => {
               <h2 className="text-2xl font-bold text-white mb-6">
                 {questions[currentStep - 1].question}
               </h2>
-              
+
               <div className="space-y-3">
                 {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {
   () => handleAnswer(questions[currentStep - 1].id,
@@ -265,7 +264,7 @@ const AIMatcher = () => {
                 : 'border-slate-500 text-slate-300 hover:border-slate-400 hover:text-white'}`}>
                 Previous
               </button>
-              
+
               <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]
                 ? 'bg-slate-600 text-slate-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>
@@ -341,9 +340,9 @@ const AIMatcher = () => {
                       <p className="text-sm text-blue-400">{solution.category}</p>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-400 text-sm mb-4">{solution.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-medium text-gray-300 mb-2">Best For:</h4>
                     <ul className="space-y-1">
@@ -353,7 +352,7 @@ const AIMatcher = () => {
                         </li>))}
                     </ul>
                   </div>
-                  
+
                   <Link to={solution.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"/>
@@ -398,7 +397,7 @@ const AIMatcher = () => {
               Need More Personalized Guidance?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our AI experts are ready to provide customized recommendations and implementation strategies 
+              Our AI experts are ready to provide customized recommendations and implementation strategies
               tailored specifically to your business requirements.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -414,3 +413,4 @@ const AIMatcher = () => {
       </div>
     </div>)};
 export default AIMatcher;
+}}}}}}}}}}}

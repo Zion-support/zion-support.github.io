@@ -1,16 +1,20 @@
 export interface LinkInfo {
+
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
   error?: string;
+
 }
 
 export interface PageInfo {
+
   path: string;
   title: string;
   links: LinkInfo[];
   exists: boolean;
+
 }
 
 export class LinkChecker {
@@ -90,7 +94,7 @@ export class LinkChecker {
   }
 
   // Check if a page exists
-  async checkPageExists(url: string): Promise<boolean> {
+  async checkPageExists(url: string): Promise<any> {
     try {
       const response = await fetch(url, { method: 'HEAD' });
       return response.ok;
@@ -100,7 +104,7 @@ export class LinkChecker {
   }
 
   // Check all links on a page
-  async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
+  async checkPageLinks(pagePath: string, pageContent: string): Promise<any> {
     const links = this.extractLinks(pageContent, pagePath);
     const checkedLinks: LinkInfo[] = [];
 
@@ -143,10 +147,10 @@ export class LinkChecker {
   // Get analysis summary
   getSummary() {
     return {
-      totalLinks: this.visitedUrls.size,
+      totalLinks: anythis.visitedUrls.size,
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
-      externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
+      externalLinks: Array.from(this.visitedUrls).filter(url  => !this.isInternalLink(url)).length
     };
   }
 

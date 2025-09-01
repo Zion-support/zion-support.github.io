@@ -46,11 +46,9 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
         animate: {
             scale[1, 1.2, 1],
             opacity[0.5, 1, 0.5],
-=======
   animate: {
             scale: [1, 1.2, 1],
             opacity: [0.5, 1, 0.5],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 2,
                 repeat: Infinity,
@@ -71,7 +69,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="31.416" strokeDashoffset="31.416" className="animate-dash"/>
         </svg>
       </motion.div>
-      
+
       {text && (<motion.p variants={pulseVariants} animate="animate" className="text-zion-slate-light text-center font-medium">
           {text}
         </motion.p>)}
@@ -94,14 +92,14 @@ export function CardSkeleton({ className = "" }) {
       <div className="space-y-4">
         {/* Image skeleton */}
         <div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse"/>
-        
+
         {/* Content skeleton */}
         <div className="space-y-3">
           <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4"/>
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full"/>
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"/>
         </div>
-        
+
         {/* Button skeleton */}
         <div className="flex gap-3 pt-4">
           <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1"/>
@@ -122,10 +120,10 @@ export function PageSkeleton({ className = "" }) {
         <div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3"/>
         <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3"/>
       </div>
-      
+
       {/* Content skeleton */}
       <GridSkeleton columns={3} rows={2}/>
-      
+
       {/* Footer skeleton */}
       <div className="space-y-3">
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2"/>

@@ -206,10 +206,6 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-<<<<<<< HEAD
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '300-800%',
       innovationLevel: 'Advanced';
     };
   ];
@@ -221,7 +217,6 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   const toggleCategoryExpansion = (categoryId: string) => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
@@ -260,7 +255,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Comprehensive Services
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
@@ -277,21 +272,21 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+
                 <div className="text-4xl font-bold text-white mb-2">{totalServices}</div>
                 <div className="text-white/80">Revolutionary Services</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+
                 <div className="text-4xl font-bold text-white mb-2">{totalMarketSize}</div>
                 <div className="text-white/80">Total Market Size</div>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+
                 <div className="text-4xl font-bold text-white mb-2">{avgROI}</div>
                 <div className="text-white/80">Average ROI</div>
               </motion.div>
@@ -316,7 +311,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                   ? 'bg-zion-cyan text-white'
                   : 'bg-white/10 text-zion-slate-300 hover: bg-white/20'
               }`}
-            >
+
               All Categories
             </button>
             {serviceCategories.map(category  => (
@@ -328,7 +323,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                     ? 'bg-zion-cyan text-white'
                     : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
                 }`}
-              >
+
                 {category.name}
               </button>
             ))}
@@ -394,7 +389,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 }}
                   className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6"
-                >
+
                   {/* Category Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -458,7 +453,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                   <button
                     onClick={() => toggleCategoryExpansion(category.id)}
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
-                  >
+
                     {expandedCategory === category.id ? (
                       <>
                         <EyeOff className="w-4 h-4" />
@@ -546,7 +541,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                   <span
                                     key={tagIndex}
                                     className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-                                  >
+
                                     {tag}
                                   </span>
                                 ))}
@@ -555,7 +550,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                               <Link
                                 to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
-                              >
+
                                 <MessageCircle className="w-4 h-4" />
                                 Get Started
                               </Link>
@@ -598,7 +593,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore the Future?
             </h2>
@@ -610,14 +605,14 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
               <Link
                 to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-              >
+
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-              >
+
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -625,14 +620,6 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -640,4 +627,3 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

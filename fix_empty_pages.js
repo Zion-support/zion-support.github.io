@@ -9,7 +9,7 @@ function kebabToPascal(str) {
 // Function to create a proper Next.js page template
 function componentName = kebabToPascal(pageName);
   const isApi = filePath.includes('/api/');
-  
+
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,7 +24,7 @@ const ${componentName}: NextPage = () => {
         <title>${componentName} - Zion Tech Solutions</title>
         <meta name="description" content="${componentName} page" />
       </Helmet>
-      
+
       <main>
         <h1>${componentName}</h1>
         <p>This page is under construction.</p>
@@ -38,13 +38,13 @@ function files = fs.readdirSync(dir);
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       fixEmptyFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       const content = fs.readFileSync(filePath, 'utf8').trim();
-      
+
       if (!content) {
-        console.log(`Fixing empty file: ${filePath}`);
+        // // // // // // // console.log(`Fixing empty file: ${filePath}`);
         const fileName = path.basename(file, path.extname(file));
         const pageTemplate = createPageTemplate(fileName, filePath);
         fs.writeFileSync(filePath, pageTemplate)}
@@ -53,7 +53,11 @@ function files = fs.readdirSync(dir);
 // Start fixing from the pages directory
 const pagesDir = './pages';
 if (fs.existsSync(pagesDir)) {
-  console.log('Fixing empty pages...');
+  // // // // // // // console.log('Fixing empty pages...');
   fixEmptyFiles(pagesDir);
+  // // // // // // // console.log('Empty pages fixed successfully!');
+} else {
+  // // // // // // // console.error('Pages directory not found');
+}
   console.log('Empty pages fixed successfully!')} else {
   console.error('Pages directory not found')}

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   BookOpen,
@@ -49,7 +50,7 @@ const Resources: React.FC = (): JSX.Element => {;
     { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
   ];
 
-  const resources = [
+  const featuredResources = [
     {
       id: 1,
       title: 'AI Autonomous Research: The Future of Knowledge Discovery',
@@ -216,76 +217,6 @@ const Resources: React.FC = (): JSX.Element => {;
       ]
     },
     {
-<<<<<<< HEAD
-      id: 7,
-      title: 'Digital Transformation Workshop: Complete Guide',
-      description: 'Step-by-step guide to successful digital transformation implementation.',
-      category: 'webinars',
-      type: 'Workshop Recording',
-      author: 'Digital Transformation Team',
-      date: '2024-12-20',
-      duration: '120 minutes',
-      views: 2800,
-      rating: 4.7,
-      image: '/resources/digital-transformation-workshop.jpg',
-      tags['Digital Transformation', 'Workshop', 'Implementation', 'Guide'],
-      featured: false,
-      fileSize: '680 MB',
-      fileType: 'MP4',
-      downloadUrl: 'https://ziontechgroup.com/resources/digital-transformation-workshop.mp4'
-    },
-    {
-      id: 8,
-      title: 'Healthcare AI Solutions: Patient Outcomes Case Study',
-      description: 'How AI-powered diagnostic tools improved patient outcomes by 40%.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Healthcare Team',
-      date: '2024-12-18',
-      readTime: '12 min read',
-      downloads: 1890,
-      rating: 4.8,
-      image: '/resources/healthcare-ai-case.jpg',
-      tags['Healthcare', 'AI', 'Patient Outcomes', 'Diagnostics'],
-      featured: false,
-      fileSize: '2.8 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf';
-    };
-  ];
-
-  const filteredResources = resources.filter(resource => {;
-    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-
-  const featuredResources = resources.filter(resource => resource.featured);
-  const regularResources = filteredResources.filter(resource => !resource.featured);
-
-  const formatDate = (dateString: string)  => {;
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const getResourceIcon = (type: string)  => {
-    switch (type) {
-      case 'White Paper':;
-      case 'Research Paper':;
-        return FileText;
-      case 'Case Study':
-        return BarChart3;
-      case 'Webinar Recording':
-      case 'Workshop Recording':
-        return Video;
-      default:
-        return FileText}
-  };
-=======
       id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
       icon: DollarSign,
@@ -352,7 +283,6 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -415,9 +345,57 @@ const Resources: React.FC = (): JSX.Element => {;
       </section>
 
       {/* Featured Resources */}
-      {featuredResources.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+
+          <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider">
+            Featured Resources
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredResources.map((resource, index) => (
+              <motion.div
+                key={resource.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+
+                <Link
+                  to={resource.href}
+                  className="block p-6 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full"
+
+                  <div className={`w-12 h-12 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <resource.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
+                    {resource.name}
+                  </h3>
+                  <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                    {resource.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                      resource.badge === 'Essential' ? 'bg-blue-500/20 text-blue-400' :
+                      resource.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :
+                      resource.badge === 'Featured' ? 'bg-purple-500/20 text-purple-400' :
+                      'bg-red-500/20 text-red-400'
+                    }`}>
+                      {resource.badge}
+                    </span>
+                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Resource Categories */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {resourceCategories.map((category, categoryIndex) => (
             <motion.div
               initial = {
   { opacity: 0,
@@ -494,31 +472,21 @@ const Resources: React.FC = (): JSX.Element => {;
                           {resource.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {resource.tags.map((tag, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+                    <Link
+                      to={resource.href}
+                      className="block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group"
 
-                        <div className="flex items-center justify-between">
-                          <div className="text-sm">
-                            <p className="text-zion-cyan font-semibold">{resource.author}</p>
-                            <p className="text-zion-slate-light">{resource.type}</p>
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-start space-x-3 flex-1">
+                          <resource.icon className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
+                          <div className="flex-1">
+                            <h4 className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                              {resource.name}
+                            </h4>
+                            <p className="text-sm text-gray-400 mt-1">
+                              {resource.description}
+                            </p>
                           </div>
-                          <a
-                            href={resource.downloadUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 group"
-                          >
-                            Download
-                            <Download className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -565,47 +533,6 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
-            {regularResources.map((resource, index)  => {;
-              const ResourceIcon = getResourceIcon(resource.type);
-              return (
-                <motion.article
-                  key = {resource.id}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-}}
-                  className="group"
-                >
-                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                    {/* Resource Image Placeholder */}
-                    <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                      <ResourceIcon className="w-12 h-12 text-zion-cyan" />
-                    </div>
-
-                    <div className="p-6 flex-1">
-                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
-                        <span className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {formatDate(resource.date)}
-                        </span>
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          {resource.readTime || resource.duration}
-                        </span>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resourceCategories.filter(cat => cat.featured).map((category, index) => (
               <motion.div
@@ -669,7 +596,6 @@ const Resources: React.FC = (): JSX.Element => {;
                             <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
                           )}
                         </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </div>
 
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
@@ -688,22 +614,8 @@ const Resources: React.FC = (): JSX.Element => {;
                           >
                             {tag}
                           </span>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center justify-between mt-auto">
-                        <div className="text-sm">
-                          <p className="text-zion-cyan font-semibold">{resource.author}</p>
+                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />
                         </div>
-                        <a
-                          href={resource.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300 group"
-                        >
-                          Download
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -711,7 +623,6 @@ const Resources: React.FC = (): JSX.Element => {;
               )})}
           </div>
         </div>
-      </section>
 
       {/* All Resources Grid */}
       <section className="py-20">
@@ -1011,16 +922,6 @@ const Resources: React.FC = (): JSX.Element => {;
                   Schedule Demo
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default Resources;
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -1028,4 +929,3 @@ export default Resources;
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

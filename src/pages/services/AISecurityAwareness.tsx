@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityAwareness() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {
   const features = [
     'AI-powered security awareness optimization',
     'Intelligent awareness strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityAwareness() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$149/mo', 
-      details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$149/mo',
+      details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityAwareness() {
       </section>;
     </div>;
   );
-}
+}}

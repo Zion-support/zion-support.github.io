@@ -99,20 +99,6 @@ import {
   Grid,
   List,
   ChevronDown,
-<<<<<<< HEAD
-  ChevronUp
- } from 'lucide-react';
-import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Badge  } from '@/components/ui/badge';
-const categories = [
-  { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
-  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
-  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
-=======
   ShoppingCart,
   MessageCircle,
   HelpCircle,
@@ -179,7 +165,6 @@ const MICRO_SAAS_SERVICES = [
     tags: ['Analytics', 'Web', 'Performance'],;
     images: ['/images/analytics.jpg'];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const categories = [;
@@ -212,14 +197,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
     if (searchQuery.trim()) {;
       const query = searchQuery.toLowerCase();
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(query) ||
-        service.description.toLowerCase().includes(query) ||
-        service.tags.some(tag => tag.toLowerCase().includes(query)) ||
-        service.subcategory?.toLowerCase().includes(query)
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(query) ||;
         service.description.toLowerCase().includes(query) ||;
@@ -227,7 +204,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         service.subcategory?.toLowerCase().includes(query);
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
@@ -391,6 +367,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       </div>;
     </motion.div>;
   );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -520,7 +497,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     size="sm"
                     onClick={() => setViewMode('grid')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-                  >
+
                     <Grid className="w-4 h-4" />
                   </Button>
                   <Button
@@ -528,7 +505,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     size="sm"
                     onClick={() => setViewMode('list')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-                  >
+
                     <List className="w-4 h-4" />
                   </Button>
                 </div>
@@ -536,7 +513,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
-                >
+
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
@@ -551,7 +528,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-                >
+
                   {category.icon}
                   <span className="ml-2">{category.name}</span>
                   <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
@@ -567,7 +544,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={() => setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
-                >
+
                   {pricing.name}
                 </Button>
               ))}
@@ -644,14 +621,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </Button>;
           </div>;
         </div>;
@@ -659,4 +628,3 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

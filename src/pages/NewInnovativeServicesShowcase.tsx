@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Sparkles, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Sparkles, 
   ArrowRight, 
   CheckCircle, 
   TrendingUp, 
@@ -17,11 +16,11 @@ import {
   Users,
   Target,
   Rocket
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
+ } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { NEW_INNOVATIVE_SERVICES_2025  } from '../data/newInnovativeServices2025';
 
-export default function NewInnovativeServicesShowcase() {
+export default function NewInnovativeServicesShowcase(...args: any[]): any {
   const serviceCategories = [
     {
       title: "AI & Legal Tech",
@@ -128,8 +127,8 @@ export default function NewInnovativeServicesShowcase() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {serviceCategories.map((category, index) => (
+          <div className="grid gap-8 md: anygrid-cols-3">
+            {serviceCategories.map((category, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -175,8 +174,8 @@ export default function NewInnovativeServicesShowcase() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {keyBenefits.map((benefit, index) => (
+          <div className="grid gap-8 md: anygrid-cols-2">
+            {keyBenefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}

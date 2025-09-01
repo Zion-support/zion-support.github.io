@@ -15,14 +15,6 @@ export function Checkbox(...args[]):  {
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-<<<<<<< HEAD
-        disabled={disabled}
-        className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2"
-      />
-      {label && <span className="text-sm text-gray-700">{label}</span>}
-    </label>
-  )};
-=======;
         disabled={disabled};
         className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2";
       />;
@@ -30,4 +22,3 @@ export function Checkbox(...args[]):  {
     </label>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

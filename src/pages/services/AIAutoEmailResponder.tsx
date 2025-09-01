@@ -57,14 +57,6 @@ export default function AIAutoEmailResponder(...args[]):  {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Get a Quote</h3>
-<<<<<<< HEAD
-            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
           </div>;
         </div>;
@@ -72,5 +64,4 @@ export default function AIAutoEmailResponder(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

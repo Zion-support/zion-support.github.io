@@ -22,22 +22,22 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Enterprise Orchestration
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Enterprise
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Orchestrator</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Orchestrate your entire enterprise with intelligent AI agents that coordinate workflows, 
+                Orchestrate your entire enterprise with intelligent AI agents that coordinate workflows,
                 automate processes, and optimize operations across all departments and systems.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 Intelligent Enterprise Orchestration
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI orchestrator seamlessly coordinates complex business processes, 
+                Our AI orchestrator seamlessly coordinates complex business processes,
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 How AI Enterprise Orchestration Works
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our intelligent orchestration platform follows a systematic approach to 
+                Our intelligent orchestration platform follows a systematic approach to
                 transform your enterprise operations.
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -236,4 +236,4 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}

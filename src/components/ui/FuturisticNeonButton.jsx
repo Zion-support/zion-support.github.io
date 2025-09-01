@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
     const getVariantStyles = () => {
@@ -58,7 +57,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 text: 'text-red-500',
                 glow: `shadow-[0_0_20px_rgba(239,68,68,${multiplier})]`,
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(239,68,68,${Math.min(multiplier + 0.3, 1)})]`
-            }
+
         };
         return baseStyles[variant]};
     const getSizeStyles = () => {
@@ -73,7 +72,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 };
         return sizeStyles[size]};
     const styles = getVariantStyles();
-=======
   xl: 'px-8 py-4 text-xl'
         
 
@@ -83,7 +81,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 };
         return sizeStyles[size];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const sizeStyles = getSizeStyles();
     return (<motion.button type={type} onClick={onClick} disabled={disabled || loading} className={`
         relative overflow-hidden rounded-lg font-semibold transition-all duration-300
@@ -147,3 +144,4 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
       </div>
     </motion.button>)};
 export default FuturisticNeonButton;
+</motion.div></motion.div>}

@@ -233,4 +233,4 @@ export default function AIProjectManagementPlatform() {
       </section>
     </div>
   );
-}
+}}}

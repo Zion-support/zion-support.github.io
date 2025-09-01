@@ -1,7 +1,7 @@
 import React from 'react';
-import SEO from "@/components/SEO";
+import EnhancedSEO from "@/components/EnhancedSEO";
 import {Header} from "@/components/Header";
-import Footer from "@/components/Footer";
+import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {CheckCircle, Clock, Users, Zap} from "lucide-react";
@@ -9,14 +9,14 @@ import {CheckCircle, Clock, Users, Zap} from "lucide-react";
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO 
-        title="Request a Quote | Zion Tech Group" 
-        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." 
-        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" 
+      <EnhancedSEO
+        title="Request a Quote | Zion Tech Group"
+        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
+        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
         canonical="https://ziontechgroup.com/request-quote"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -25,7 +25,7 @@ export default function RequestQuote() {
               Get Your Custom Quote
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
+              Whether you need AI services, IT solutions, top talent, or specialized equipment,
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function RequestQuote() {
                 Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
               </p>
             </div>
-            
+
             <QuoteRequestForm />
           </div>
 
@@ -190,7 +190,8 @@ export default function RequestQuote() {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
-  )}
+  );
+}

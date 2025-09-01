@@ -51,21 +51,12 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-<<<<<<< HEAD
-  showHeader = true,
-  showSettings = true,
-  maxMessages = 50,
-  autoScroll = true;
-}) => {;
-  const [messages, setMessages] = useState<any>([]);
-=======
   showHeader = true,;
   showSettings = true,;
   maxMessages = 50,;
   autoScroll = true;
 }) => {;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -93,14 +84,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         status: 'sent',
         metadata: {
           confidence: 0.95,
-<<<<<<< HEAD
-          suggestions['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-  estimatedResponseTime: 2
-        
-
-}
-=======;
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
@@ -110,7 +93,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
@@ -122,43 +104,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [messages, autoScroll]);
 
   // Simulate AI response
-<<<<<<< HEAD
-  const simulateAIResponse = async (userMessage: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setIsTyping(true);
-
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
-    const responses = [
-      {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about  particular service?",
-        suggestions['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
-        relatedServices['AI Consulting', 'Machine Learning', 'Data Analytics']
-      },
-      {
-        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
-        suggestions['Cloud Migration timeline', 'Infrastructure assessment', 'Implementation process', 'Ongoing support'],
-        relatedServices['Cloud Migration', 'Infrastructure Modernization', 'DevOps Services']
-      },
-      {
-        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
-        suggestions['Threat detection', 'Incident response', 'Security audits', 'Employee training'],
-        relatedServices['Cybersecurity', 'Threat Detection', 'Security Training']
-      },
-<<<<<<< HEAD
-      {
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
       };
-=======;
       {;
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
         suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     ];
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
@@ -192,81 +145,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle message submission
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (!inputValue.trim() || isTyping) return;
-
-    const userMessage: ChatMessage = {
-  id: Date.now().toString(),
-      content: inputValue,
-      sender: 'user',
-      timestamp: new Date(),
-      type: 'text',;
-  ;
-  ;
-  ;
-  ;
-  status: 'sent';
-    ;
-
-
-
-
-
-
-};
-
-    setMessages(prev  => [...prev, userMessage]);
-    setInputValue('');
-
-    // Generate AI response
-    await simulateAIResponse(inputValue)};
-
-  // Handle voice input
-  const toggleVoiceInput = () => {;
-    setIsListening(!isListening);
-    // In a real implementation, this would integrate with Web Speech API
-  };
-
-  // Handle file upload
-<<<<<<< HEAD
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const file = e.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {
-  id: Date.now().toString(),
-  content: `Uploaded: ${file.name
-
-
-
-;
-;
-
-}`,;
-        sender: 'user',;
-        timestamp: new Date(),;
-        type: 'file',;
-        status: 'sent';
-      };
       setMessages(prev = > [...prev, fileMessage])};
   };
 
   // Handle suggestion click
-<<<<<<< HEAD
-  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void => {;
-    setInputValue(suggestion)};
-
-  // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative')  => {
-    setMessages(prev => prev.map(msg => 
-      msg.id === messageId 
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } };
-        : msg;
-    ))};
-=======
   const handleSuggestionClick = (suggestion: string) => {;
     setInputValue(suggestion);
   };
@@ -279,7 +161,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         : msg
     ));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   // Clear chat
   const clearChat = () => {;
@@ -295,7 +176,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
-      >
+
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
 
@@ -344,7 +225,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
-          >
+
             {/* Header */}
             {showHeader && (
               <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
@@ -368,7 +249,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
-                      >
+
                         <Settings className="w-4 h-4" />
                       </button>
                     )}
@@ -376,7 +257,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       onClick={clearChat}
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
-                    >
+
                       <RefreshCw className="w-4 h-4" />
                     </button>
                   </div>
@@ -420,7 +301,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 }}
                   transition={{ duration: 0.3 }}
                   className="border-b border-zinc-700/50 overflow-hidden"
-                >
+
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
@@ -440,7 +321,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
-                      >
+
                         {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
                       </button>
                     </div>
@@ -463,7 +344,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
-                      >
+
                         <CheckCircle className="w-4 h-4" />
                       </button>
                     </div>
@@ -498,7 +379,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 }}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
+
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
                     <div className={`p-3 rounded-lg ${
                       message.sender === 'user'
@@ -523,7 +404,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
                                   className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
-                                >
+
                                   {suggestion}
                                 </button>
                               ))}
@@ -536,7 +417,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                                 <span
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
-                                >
+
                                   {service}
                                 </span>
                               ))}
@@ -567,7 +448,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 }
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
-                          >
+
                             <ThumbsUp className="w-3 h-3" />
                           </button>
                           <button
@@ -583,7 +464,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 }
                             className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
-                          >
+
                             <ThumbsDown className="w-3 h-3" />
                           </button>
                         </div>
@@ -614,7 +495,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
-                >
+
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
@@ -665,7 +546,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                     }`}
                     aria-label="Voice input"
-                  >
+
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>
                 )}
@@ -676,7 +557,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
-                >
+
                   <Send className="w-4 h-4" />
                 </button>
               </form>
@@ -692,14 +573,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   <span>24/7 Available</span>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>;
-    </>;
-  )};
-=======
             </div>;
           </motion.div>;
         )};
@@ -707,4 +580,3 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

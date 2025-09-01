@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next.ts';
-import Head from 'next/head.ts';
-import { useState  } from 'react.ts';
-import { EMERGING_TECH_SERVICES_2027  } from "../data/emergingTechServices2027";
-
-const EmergingTechServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-=======
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
@@ -14,7 +5,6 @@ import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
 
 const EmergingTechServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
@@ -44,23 +34,9 @@ const EmergingTechServices: NextPage = () => {;
         return 0}
   });
 
-<<<<<<< HEAD
-  const getInnovationColor = (level: string) => {;
-    switch (level) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'from-red-500 to-pink-600';
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
-      case 'Advanced': return 'from-blue-500 to-cyan-600';
       default: return 'from-gray-500 to-gray-600'}
   };
 
-<<<<<<< HEAD
-  const getBadgeColor = (badge: string) => {;
-    switch (badge) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
@@ -88,7 +64,7 @@ const EmergingTechServices: NextPage = () => {;
             Emerging Tech Services 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the future of technology with our revolutionary emerging tech services. 
+            Discover the future of technology with our revolutionary emerging tech services.
             From quantum computing to biocomputing, we're pioneering the next generation of innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -148,7 +124,7 @@ const EmergingTechServices: NextPage = () => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
+
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -171,7 +147,7 @@ const EmergingTechServices: NextPage = () => {;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-            >
+
               {category.name}
             </button>
           ))}
@@ -184,7 +160,7 @@ const EmergingTechServices: NextPage = () => {;
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-            >
+
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="text-4xl">{service.icon}</div>
@@ -259,7 +235,7 @@ const EmergingTechServices: NextPage = () => {;
               <a
                 href={service.link}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-              >
+
                 Learn More
               </a>
             </div>
@@ -278,22 +254,14 @@ const EmergingTechServices: NextPage = () => {;
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-            >
+
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
+
               📞 Call +1 (302) 464-0950
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -301,6 +269,5 @@ const EmergingTechServices: NextPage = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default EmergingTechServices;
+export default EmergingTechServices;}}}

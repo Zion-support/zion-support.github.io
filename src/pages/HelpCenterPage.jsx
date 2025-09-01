@@ -4,8 +4,7 @@ import { GradientHeading } from '@/components/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings import { Link } from 'react-router-dom';
 export default function HelpCenterPage() {
     const helpCategories = [
         {
@@ -35,7 +34,7 @@ export default function HelpCenterPage() {
             description: "Managing your account and preferences",
             articles["Account settings", "Privacy controls", "Security features"],
             color: "text-zion-purple"
-        }
+
     ];
     const faqs = [
         {
@@ -61,11 +60,11 @@ export default function HelpCenterPage() {
         {
             question: "How do I contact customer support?",
             answer: "You can reach us through multiple channels: live chat on our website, email at support@ziontechgroup.com, or phone at +1 (555) 123-4567. We typically respond within 2 hours."
-        }
+
     ];
     return (<>
       <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com/help"/>
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -74,7 +73,7 @@ export default function HelpCenterPage() {
             <p className="mt-6 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Find answers to your questions, learn how to use our platform, and get the support you need.
             </p>
-            
+
             {/* Search Bar */}
             <div className="mt-8 max-w-2xl mx-auto">
               <div className="relative">

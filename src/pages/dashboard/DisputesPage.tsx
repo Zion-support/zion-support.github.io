@@ -17,7 +17,6 @@ function DisputesPage(...args[]):  {
       </>
     </ProtectedRoute>
   )};
-=======;
         ;
         <DisputeDashboard />;
         ;
@@ -25,7 +24,6 @@ function DisputesPage(...args[]):  {
     </ProtectedRoute>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default DisputesPage;
 

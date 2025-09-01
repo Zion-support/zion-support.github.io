@@ -9,12 +9,10 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-}
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData;
   children: React.ReactNode;
-}
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
@@ -22,23 +20,23 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     const updateMetaTags = () => {;
       // Update title;
       document.title = seoData.title;
-      
+
       // Update meta description
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name', 'description');
         document.head.appendChild(metaDesc);
-      }
+
       metaDesc.setAttribute('content', seoData.description);
-      
+
       // Update keywords
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
-      }
+
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags

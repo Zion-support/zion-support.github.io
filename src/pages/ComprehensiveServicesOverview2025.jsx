@@ -39,7 +39,6 @@ const ComprehensiveServicesOverview2025 = () => {
 
 };
         return icons[category] || '🚀'};
-=======
   'Logistics & Transportation': '🚚'
         
 
@@ -49,7 +48,6 @@ const ComprehensiveServicesOverview2025 = () => {
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getCategoryColor = (category) => {
         const colors = {
   'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
@@ -69,7 +67,6 @@ const ComprehensiveServicesOverview2025 = () => {
 
 };
         return colors[category] || 'from-gray-500 to-slate-500'};
-=======
   'Logistics & Transportation': 'from-orange-500 to-red-500'
         
 
@@ -79,7 +76,6 @@ const ComprehensiveServicesOverview2025 = () => {
 };
         return colors[category] || 'from-gray-500 to-slate-500';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -91,7 +87,7 @@ const ComprehensiveServicesOverview2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Explore our complete portfolio of innovative micro SAAS services, IT solutions, and AI platforms. 
+            Explore our complete portfolio of innovative micro SAAS services, IT solutions, and AI platforms.
             Each service is designed with cutting-edge technology and proven methodologies to drive business transformation.
           </p>
           {/* Navigation */}

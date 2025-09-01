@@ -25,7 +25,7 @@ const ServicePortfolioDashboard = () => {
             icon: <Target className="w-6 h-6 text-zion-orange"/>,
             title: 'Strategic Insights',
             description: 'Data-driven recommendations for portfolio optimization and growth'
-        }
+
     ];
     const benefits = [
         'Comprehensive view of all service offerings and their performance',
@@ -59,7 +59,7 @@ const ServicePortfolioDashboard = () => {
             value: '95%+',
             description: 'Technology market segments',
             icon: <Globe className="w-8 h-8 text-zion-orange"/>
-        }
+
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
@@ -69,7 +69,7 @@ const ServicePortfolioDashboard = () => {
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div initial = {
   { opacity: 0,
@@ -94,7 +94,7 @@ const ServicePortfolioDashboard = () => {
               Service Portfolio Dashboard
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive insights into our revolutionary service portfolio, performance metrics, 
+              Comprehensive insights into our revolutionary service portfolio, performance metrics,
               and strategic analysis for informed decision making and portfolio optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -145,7 +145,7 @@ const ServicePortfolioDashboard = () => {
               Portfolio Overview
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Our comprehensive service portfolio spans cutting-edge technologies across all major sectors, 
+              Our comprehensive service portfolio spans cutting-edge technologies across all major sectors,
               providing unmatched coverage and innovation capabilities.
             </p>
           </motion.div>
@@ -375,7 +375,7 @@ const ServicePortfolioDashboard = () => {
               Interactive Portfolio Dashboard
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Explore our comprehensive service portfolio with real-time analytics, 
+              Explore our comprehensive service portfolio with real-time analytics,
               performance metrics, and strategic insights.
             </p>
           </motion.div>
@@ -410,7 +410,7 @@ const ServicePortfolioDashboard = () => {
               Ready to Optimize Your Portfolio?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our comprehensive portfolio dashboard provides the insights you need to make 
+              Our comprehensive portfolio dashboard provides the insights you need to make
               informed decisions and drive strategic growth in your technology investments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -446,3 +446,4 @@ const ServicePortfolioDashboard = () => {
       </section>
     </div>)};
 export default ServicePortfolioDashboard;
+}}}

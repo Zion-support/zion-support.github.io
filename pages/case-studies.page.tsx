@@ -157,19 +157,12 @@ const caseStudies = [
       operations: "Streamlined",
       mobile: "First priority"
     },
-<<<<<<< HEAD
-    technologies["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
-    duration: "15 months",
-    roi: "500%",
-    image: "/images/case-study-6.jpg"
   };
-=======;
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
     duration: "15 months",;
     roi: "500%",;
     image: "/images/case-study-6.jpg";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
@@ -183,11 +176,6 @@ export default function CaseStudies(...args[]):  {
   const filteredCaseStudies = caseStudies.filter(study => {;
     const matchesTechnology = selectedTechnology === 'All' || ;
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
-<<<<<<< HEAD
-    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                         study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesIndustry && matchesTechnology && matchesSearch});
 
@@ -219,7 +207,7 @@ export default function CaseStudies(...args[]):  {
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
+
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Award className="w-5 h-5" />
               <span className="font-medium">Success Stories</span>
@@ -228,8 +216,8 @@ export default function CaseStudies(...args[]):  {
               Real Results, Real Impact
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover how Zion Tech Group has transformed businesses across industries with 
-              cutting-edge technology solutions. Our case studies showcase measurable results 
+              Discover how Zion Tech Group has transformed businesses across industries with
+              cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
             </p>
           </motion.div>
@@ -322,7 +310,7 @@ export default function CaseStudies(...args[]):  {
 
 }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -404,7 +392,7 @@ export default function CaseStudies(...args[]):  {
                   <Link
                     href={`/case-studies/${study.id}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                  >
+
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -446,36 +434,28 @@ export default function CaseStudies(...args[]):  {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how Zion Tech Group can transform your business with 
+              Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+
                 View Our Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -483,4 +463,3 @@ export default function CaseStudies(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

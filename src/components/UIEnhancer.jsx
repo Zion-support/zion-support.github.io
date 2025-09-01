@@ -154,14 +154,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-<<<<<<< HEAD
-                    scale[0, 1,
-  0]
-                
-
-}} transition = {
-  {
-=======
                     scale: [0, 1,
   0]
                 
@@ -173,7 +165,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
   ease: "linear"
@@ -232,3 +223,4 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       </motion.div>
     </>)};
 export default UIEnhancer;
+}}}}}}}</motion.div>}

@@ -58,7 +58,7 @@ export const EnterpriseDashboard = () => {
             change: -5,
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date()
-        }
+
     ]);
     const [serviceStatuses] = useState([
         {
@@ -92,7 +92,7 @@ export const EnterpriseDashboard = () => {
             uptime: 99.99,
             responseTime: 2,
             errorRate: 0.001
-        }
+
     ]);
     const [securityAlerts] = useState([
         {
@@ -116,7 +116,7 @@ export const EnterpriseDashboard = () => {
             status: 'resolved',
             affected['user-789'],
             source: 'Access Control System'
-        }
+
     ]);
     const [userActivities] = useState([
         {
@@ -140,7 +140,7 @@ export const EnterpriseDashboard = () => {
             ipAddress: '192.168.1.101',
             userAgent: 'Firefox/89.0.2',
             status: 'success'
-        }
+
     ]);
     // Refresh data
     const refreshData = useCallback(async () => {
@@ -150,6 +150,21 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
+            // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+            trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
+                tab: activeTab,
+                dateRange
+            });
+
+        catch (error) {
+            // // // // // // // console.error('Failed to refresh data:', error);
+            trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+
+        finally {
+            setIsRefreshing(false);
+
             console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', null, {
                 tab: activeTab,
@@ -174,17 +189,11 @@ export const EnterpriseDashboard = () => {
         if (searchQuery) {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-                alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
-        return filtered}, [securityAlerts, filterStatus, searchQuery]);
-    const filtered = userActivities;
-=======
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
-        }
+
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
     const filtered = userActivities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -236,7 +245,7 @@ export const EnterpriseDashboard = () => {
               Production
             </div>
           </h2>
-          
+
           <div className="flex items-center gap-3">
             <select value={refreshInterval / 1000} onChange={(e) => setRefreshInterval(Number(e.target.value) * 1000)} className="px-3 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm transition-colors">
               <option value={15}>15s</option>
@@ -244,7 +253,7 @@ export const EnterpriseDashboard = () => {
               <option value={60}>1m</option>
               <option value={300}>5m</option>
             </select>
-            
+
             <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">
               {isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
               Refresh
@@ -332,11 +341,11 @@ export const EnterpriseDashboard = () => {
                         {metric.status}
                       </span>
                     </div>
-                    
+
                     <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                       {metric.value}{metric.unit}
                     </div>
-                    
+
                     <div className="flex items-center gap-2 text-sm">
                       <span className={`flex items-center gap-1 ${metric.trend === 'up' ? 'text-red-600' :
                     metric.trend === 'down' ? 'text-green-600' : 'text-gray-600'}`}>
@@ -473,7 +482,7 @@ export const EnterpriseDashboard = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
@@ -565,14 +574,14 @@ export const EnterpriseDashboard = () => {
                         {alert.timestamp.toLocaleString()}
                       </span>
                     </div>
-                    
+
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {alert.title}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
                       {alert.description}
                     </p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                       <div>
                         <span className="font-medium text-gray-700 dark:text-gray-300">Source:</span>
@@ -678,7 +687,7 @@ export const EnterpriseDashboard = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <div>
                         <span className="font-medium">IP:</span> {activity.ipAddress}
@@ -761,7 +770,7 @@ export const EnterpriseDashboard = () => {
                         {service.status}
                       </span>
                     </div>
-                    
+
                     <div className="space-y-3">
                       <div className="flex justify-between">
                         <span className="text-gray-600 dark:text-gray-400">Uptime</span>
@@ -782,7 +791,7 @@ export const EnterpriseDashboard = () => {
                         </span>
                       </div>
                     </div>
-                    
+
                     {service.lastIncident && (<div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
                         <div className="text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1">
                           Last Incident
@@ -844,7 +853,7 @@ export const EnterpriseDashboard = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">

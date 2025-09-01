@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
-import { Mail } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail import { useToast } from "@/hooks/use-toast";
 export function EnhancedNewsletterForm() {
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,10 +26,21 @@ export function EnhancedNewsletterForm() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: trimmed }),
             });
-            const data = await res.json().catch(() => ({}));
+            const data = await res.json().catch(() => ({ /* empty */ }));
             if (res.ok) {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
+                // // // // // // // console.error('Newsletter subscription failed:', data);
+                toast.error(data.error || "Subscription failed. Please try again.");
+
+
+        catch (err) {
+            // // // // // // // console.error('Newsletter subscription error:', err);
+            toast.error("Unable to subscribe right now. Please try again later.");
+
+        finally {
+            setIsSubmitting(false);
+
                     toast.success(data.message || "You're already subscribed!")}
                 else {
                     toast.success(data.message || "Thanks for subscribing!")}
@@ -57,7 +67,7 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
-      
+
       {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>
@@ -67,7 +77,7 @@ export function EnhancedNewsletterForm() {
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>)}
-      
+
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (<div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">

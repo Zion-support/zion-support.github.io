@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Code, 
-  BookOpen, 
-  Zap, 
-  Shield, 
-  Users, 
-  MessageSquare, 
-  Github, 
-  ExternalLink, 
-  Terminal, 
-  Webhook, 
-  Key, 
-  Mail,
-  ArrowRight,
-  Check,
-  Star,
-  Download,
-  Play,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Rocket,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
-  BarChart3,
-  Target,
-  Award,
-  Lightbulb
- } from 'lucide-react';
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -166,7 +131,7 @@ const data = await response.json();
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -229,7 +194,7 @@ const data = await response.json();
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Developer Tools
             </h2>
@@ -330,7 +295,7 @@ const data = await response.json();
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Learning Resources
             </h2>
@@ -462,7 +427,7 @@ const data = await response.json();
 
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
-              >
+
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{resource.icon}</div>
                   <div className="flex-1">
@@ -531,7 +496,7 @@ const data = await response.json();
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Quick Start
             </h2>
@@ -572,7 +537,7 @@ const data = await response.json();
 
 }}
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-          >
+
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
@@ -596,7 +561,7 @@ const data = await response.json();
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 text-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Building Now
@@ -629,7 +594,6 @@ const data = await response.json();
       </section>;
     </div>;
   )};
-=======
             </div>;
           </motion.div>;
         </div>;
@@ -637,6 +601,6 @@ const data = await response.json();
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default DeveloperPortal;
+}}}}

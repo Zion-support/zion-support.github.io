@@ -13,59 +13,9 @@ import {
   Target
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const InnovationResearchSection: React.FC = (): JSX.Element => {
-  const researchAreas = [
-    {
-      icon: Brain,
-      title: 'Artificial Intelligence',
-      description: 'Advancing the frontiers of machine learning, neural networks, and cognitive computing.',
-      focus['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'AI Ethics'],
-      publications: '25+',
-      patents: '8'
-    },
-    {
-      icon: TestTube,
-      title: 'Quantum Computing',
-      description: 'Exploring quantum algorithms and quantum-classical hybrid systems.',
-      focus['Quantum Algorithms', 'Quantum Cryptography', 'Quantum Machine Learning', 'Error Correction'],
-      publications: '15+',
-      patents: '5'
-    },
-    {
-      icon: Rocket,
-      title: 'Space Technology',
-      description: 'Developing next-generation space exploration and satellite technologies.',
-      focus['Satellite Systems', 'Space Robotics', 'Propulsion Systems', 'Space Mining'],
-      publications: '20+',
-      patents: '12'
-    },
-    {
-      icon: Target,
-      title: 'Biotechnology',
-      description: 'Revolutionizing healthcare through genetic engineering and bioinformatics.',
-      focus['CRISPR Technology', 'Drug Discovery', 'Personalized Medicine', 'Bioinformatics'],
-      publications: '30+',
-      patents: '15'
-    },
-    {
-      icon: Microscope,
-      title: 'Nanotechnology',
-      description: 'Engineering materials and devices at the molecular and atomic scale.',
-      focus['Nano Materials', 'Molecular Electronics', 'Nano Medicine', 'Quantum Dots'],
-      publications: '18+',
-      patents: '9'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sustainable Energy',
-      description: 'Creating clean energy solutions for a sustainable future.',
-      focus['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
-      publications: '22+',
       patents: '11';
     };
   ];
-=======
 const researchAreas = [
   {
     icon: "🧠",
@@ -95,14 +45,6 @@ const researchAreas = [
     progress: 80,;
     color: "from-orange-500 to-red-500";
   };
-];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-const innovationMetrics = [;
-  { label: "Research Papers", value: "30+", icon: "📚" },;
-  { label: "Patents Filed", value: "15+", icon: "📋" },;
-  { label: "R&D Investment", value: "$2M+", icon: "💰" },;
-  { label: "Innovation Awards", value: "8+", icon: "🏆" };
 ];
 
 const innovationMetrics = [
@@ -145,16 +87,28 @@ export function InnovationResearchSection() {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
               </div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">{metric.value}</div>
+              <div className="text-gray-300 text-sm">{metric.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Research Areas */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {innovationMetrics.map((metric, index) => (
+            <div key={metric.label} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">{metric.icon}</span>
+              </div>
             )})}
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Research Areas Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {researchAreas.map((area, index)  => {;
-            const IconComponent = area.icon;
-            return (
-=======
         {/* Research Areas */}
         <motion.div 
           className = "mb-16"
@@ -196,7 +150,6 @@ export function InnovationResearchSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <motion.div
                 key={area.title}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -398,7 +351,6 @@ export function InnovationResearchSection() {
   )};
 
 export default InnovationResearchSection;
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -406,7 +358,6 @@ export default InnovationResearchSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default IconComponent;
 export default IconComponent;

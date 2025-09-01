@@ -168,9 +168,10 @@ export function ErrorBoundary({ children, fallback, onError }) {
             if (onError) {
                 onError(event.error, { componentStack: event.error?.stack });
             }
+
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error);
+                // console.error('ErrorBoundary caught an error:', event.error);
             }
         };
 
@@ -180,9 +181,10 @@ export function ErrorBoundary({ children, fallback, onError }) {
             if (onError) {
                 onError(new Error(event.reason), { componentStack: event.reason?.stack });
             }
+
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+                // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
             }
         };
 

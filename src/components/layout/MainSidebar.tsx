@@ -401,7 +401,6 @@ export function MainSidebar() {
       )}
     </>
   )};
-=======;
             </div>;
           </div>;
         </div>;
@@ -409,4 +408,3 @@ export function MainSidebar() {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

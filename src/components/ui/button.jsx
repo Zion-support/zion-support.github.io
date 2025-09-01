@@ -1,13 +1,14 @@
 import React from 'react';
+
 import { cva } from 'class-variance-authority';
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva("inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none", {
     variants: {
         variant: {
-            default: "bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 focus:ring-blue-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
+            default: "bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-dark hover:to-zion-blue-dark focus:ring-zion-cyan shadow-lg hover:shadow-xl transform hover:-translate-y-1",
             secondary: "bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500 border border-gray-600 hover:border-gray-500",
-            outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500",
+            outline: "border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white focus:ring-zion-cyan",
             ghost: "text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500",
             destructive: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
             success: "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
@@ -55,3 +56,4 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
+

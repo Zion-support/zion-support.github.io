@@ -18,7 +18,6 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import {
   revolutionaryMicroSaasServices2026,
@@ -40,13 +39,13 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
       );
-    }
+
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
+
     if (selectedInnovationLevel !== 'all') {
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
-    }
+
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
   const getCategoryIcon = (category: string) => {;
@@ -59,7 +58,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
       case 'Quantum AI': return <Zap className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
-    }
+
   };
   const getInnovationLevelColor = (level: string) => {;
     switch (level) {;
@@ -67,107 +66,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
     return `$${price.toLocaleString()}`;
   };
 
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary 2026 Services Portfolio: Cutting-edge Micro SaaS, Advanced IT Solutions, 
-              and Next-Generation AI Platforms
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Started Today
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Explore Services
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-900 to-purple-900 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <PhoneIcon className="h-8 w-8 text-blue-400 mb-2" />
-              <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-              <p className="text-blue-200">+1 302 464 0950</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <EnvelopeIcon className="h-8 w-8 text-purple-400 mb-2" />
-              <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-              <p className="text-purple-200">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <GlobeAltIcon className="h-8 w-8 text-green-400 mb-2" />
-              <h3 className="text-lg font-semibold text-white mb-1">Website</h3>
-              <p className="text-green-200">https://ziontechgroup.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div id="services-section" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category Filter */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Explore Our Revolutionary Services
-            </h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <motion.button
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-=======
     <>
       <SEO
         title="Revolutionary Services 2026 - Zion Tech Group"
@@ -184,7 +87,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
+
               Revolutionary Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                 2026
@@ -204,7 +107,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
-            >
+
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 {ALL_REVOLUTIONARY_SERVICES_2026.length} Revolutionary Services
@@ -241,7 +144,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
+
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
@@ -253,7 +156,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   value={selectedInnovationLevel}
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
+
                   {innovationLevels.map(level => (
                     <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
@@ -302,7 +205,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <category.icon className="h-5 w-5" />
                   {category.name}
@@ -312,243 +214,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 </motion.button>
               ))}
             </div>
-<<<<<<< HEAD
-          </div>
-
-          {/* Search and Filter */}
-          <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
-                Price Range: ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
-              </label>
-              <input
-                type="range"
-                min="0"
-                max="100000"
-                value={priceRange[1]}
-                onChange = {
-  (e) => setPriceRange([priceRange[0],
-  parseInt(e.target.value)])
-
-}
-                className="w-full"
-              />
-            </div>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-}}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    {React.createElement(getCategoryIcon(service.category), {
-                      className: "h-8 w-8 text-blue-400"
-                    })}
-                    <div>
-                      <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-gray-400">{service.category}</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-green-400">
-                      {formatPrice(service.price, service.pricingModel)}
-                    </div>
-                    <div className="text-sm text-gray-400">{service.pricingModel}</div>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
-                {/* Features */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                    {service.features.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-600/20 text-gray-300 text-xs rounded-full">
-                        +{service.features.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Benefits */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-300 space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Tags */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* ROI and Innovation Level */}
-                <div className="flex items-center justify-between mb-4 text-sm">
-                  <div className="text-green-400 font-semibold">ROI: {service.roi}</div>
-                  <div className="text-blue-400 font-semibold">{service.innovationLevel}</div>
-                </div>
-
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Get Started - {formatPrice(service.price, service.pricingModel)}
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
-              <button
-                onClick = {;
-  () => {;
-                  setSelectedCategory('all');
-                  setSearchTerm('');
-                  setPriceRange([0,
-  100000]);
-                
-
-}}
-                className = "mt-4 text-blue-400 hover:text-blue-300 underline"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div id="contact-section" className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to discuss how our innovative services can drive your success in 2026 and beyond.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                <PhoneIcon className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-blue-200 text-lg">+1 302 464 0950</p>
-                <p className="text-gray-400 text-sm">Available 24/7</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                <EnvelopeIcon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-purple-200 text-lg">kleber@ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm">Response within 2 hours</p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                <GlobeAltIcon className="h-12 w-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-green-200 text-lg">ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm">Explore our services</p>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4">Company Address</h3>
-              <p className="text-gray-300 text-lg">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709<br />
-                United States
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
-            © 2026 Zion Tech Group. All rights reserved. | 
-            <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 ml-2">
-              Visit our website
-            </a>
-          </p>
-        </div>
-      </footer>
-    </div>;
-=======;
             {filteredServices.length === 0 && (;
               <div className="text-center py-12">;
                 <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
@@ -574,7 +239,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"
-            >
+
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -586,14 +251,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
-                >
+
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
-                >
+
                   <Mail className="w-5 h-5" />
                   Email kleber@ziontechgroup.com
                 </a>
@@ -607,7 +272,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         </section>;
       </div>;
     </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 
@@ -624,4 +288,5 @@ const EnvelopeIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>;
 );
 
+export default ComprehensiveServicesShowcase2026;
 export default ComprehensiveServicesShowcase2026;

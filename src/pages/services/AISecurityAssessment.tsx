@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityAssessment() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment() {
   const features = [
     'AI-powered security assessment optimization',
     'Intelligent assessment strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityAssessment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$499/mo', 
-      details: ['Up to 5 assessments/month', 'Basic AI features', 'Standard assessment', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 5 assessments/month', 'Basic AI features', 'Standard assessment', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityAssessment() {
       </section>;
     </div>;
   );
-}
+}}

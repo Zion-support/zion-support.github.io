@@ -149,7 +149,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -175,7 +175,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
               AI-Powered Business Intelligence
             </Badge>
@@ -184,7 +184,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Actionable Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced AI-powered business intelligence platform that provides real-time insights, 
+              Advanced AI-powered business intelligence platform that provides real-time insights,
               predictive analytics, and automated reporting for data-driven decision making.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -227,12 +227,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform combines cutting-edge technology with intuitive design 
+              Our AI-powered platform combines cutting-edge technology with intuitive design
               to deliver actionable business intelligence.
             </p>
           </motion.div>
@@ -273,7 +273,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
-              >
+
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -312,7 +312,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transform Your Business Performance
             </h2>
@@ -357,7 +357,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
-              >
+
                 <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>
@@ -393,7 +393,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -438,11 +438,11 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                  tier.popular
+                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20'
                     : 'border-slate-700'
                 }`}
-              >
+
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
@@ -469,13 +469,13 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                   ))}
                 </ul>
 
-                <Button 
+                <Button
                   className={`w-full ${
-                    tier.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700' 
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-slate-700 hover:bg-slate-600'
                   }`}
-                >
+
                   Get Started
                 </Button>
               </motion.div>
@@ -511,7 +511,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -556,7 +556,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-              >
+
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
@@ -591,7 +591,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
             </h2>
@@ -637,14 +637,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Get in Touch
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Have questions? Our team is here to help you get started.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
                 <Phone className="h-8 w-8 text-cyan-500 mb-4" />
@@ -670,14 +670,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Send Message
               </Button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -685,4 +677,3 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -38,7 +38,7 @@ export default function EnterpriseSolutions() {
             title: "AI Integration",
             description: "Seamless AI integration into existing enterprise workflows",
             features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
-        }
+
     ];
     const benefits = [
         "Increased operational efficiency by 40-60%",
@@ -62,7 +62,7 @@ export default function EnterpriseSolutions() {
             challenge: "Compliance automation and risk management",
             solution: "AI-driven compliance monitoring and automated reporting",
             results: "90% reduction in compliance violations, 60% faster reporting"
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -85,7 +85,7 @@ export default function EnterpriseSolutions() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
@@ -212,4 +212,4 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
     </div>);
-}
+}}}}

@@ -1,6 +1,4 @@
-import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 } from 'lucide-react';
-
-export default function AIManufacturing() {
+import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing() {
   const features = [
     'AI-powered predictive maintenance and equipment monitoring',
     'Intelligent quality control and defect detection',;
@@ -13,10 +11,10 @@ export default function AIManufacturing() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Manufacturer', 
-      price: '$599/mo', 
-      details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Manufacturer',
+      price: '$599/mo',
+      details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Medium Manufacturer', 
@@ -171,4 +169,4 @@ export default function AIManufacturing() {
       </section>;
     </div>;
   );
-}
+}}

@@ -9,7 +9,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 25000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Quantum-enhanced AI algorithms",
             "Real-time market sentiment analysis",
             "Predictive trading signals",
@@ -21,28 +21,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "API for custom integrations",
             "24/7 market monitoring"
         ],
-        benefits[
+        benefits: [
             "Increase trading accuracy by 300%",
             "Reduce risk exposure by 60%",
             "Real-time market insights",
             "Automated portfolio rebalancing",
             "Compliance automation"
         ],
-        useCases[
+        useCases: [
             "Hedge funds",
             "Investment banks",
             "Trading firms",
             "Asset management companies",
             "Cryptocurrency exchanges"
         ],
-        targetAudience[
+        targetAudience: [
             "Quantitative traders",
             "Financial analysts",
             "Portfolio managers",
             "Risk managers",
             "Compliance officers"
         ],
-        tags["AI", "Quantum Computing", "FinTech", "Trading", "Risk Management"],
+        tags: ["AI", "Quantum Computing", "FinTech", "Trading", "Risk Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $75,000/month",
@@ -51,15 +51,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["IBM Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
-        integrations["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Binance API"],
-        compliance["MiFID II", "Dodd-Frank", "Basel III", "GDPR", "SOC 2"],
+        technology: ["IBM Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
+        integrations: ["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Binance API"],
+        compliance: ["MiFID II", "Dodd-Frank", "Basel III", "GDPR", "SOC 2"],
         roi: "500% within 12 months",
-        competitors["Palantir", "Two Sigma", "Jane Street", "Citadel"],
+        competitors: ["Palantir", "Two Sigma", "Jane Street", "Citadel"],
         demoUrl: "https://ziontechgroup.com/demo/quantum-financial-ai",
-        caseStudies["Hedge fund 400% returns increase", "Bank 80% risk reduction"],
+        caseStudies: ["Hedge fund 400% returns increase", "Bank 80% risk reduction"],
         websiteUrl: "https://ziontechgroup.com/services/quantum-financial-ai",
-        industryTrends["Quantum supremacy in finance", "AI-driven trading", "RegTech innovation"],
+        industryTrends: ["Quantum supremacy in finance", "AI-driven trading", "RegTech innovation"],
         marketSize: "$12.5 billion by 2027",
         growthPotential: "High - 45% CAGR expected"
     },
@@ -73,7 +73,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 35000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Brain-inspired neural architecture",
             "Ultra-low power consumption",
             "Real-time learning capabilities",
@@ -85,28 +85,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "IoT integration framework",
             "Performance analytics"
         ],
-        benefits[
+        benefits: [
             "Reduce power consumption by 90%",
             "Increase processing speed by 5x",
             "Enable real-time learning",
             "Extend battery life significantly",
             "Reduce cloud dependency"
         ],
-        useCases[
+        useCases: [
             "Autonomous vehicles",
             "Smart cities",
             "Industrial IoT",
             "Healthcare monitoring",
             "Robotics systems"
         ],
-        targetAudience[
+        targetAudience: [
             "IoT device manufacturers",
             "Automotive companies",
             "Healthcare providers",
             "Manufacturing companies",
             "Research institutions"
         ],
-        tags["Neuromorphic", "Edge AI", "IoT", "Machine Learning", "Hardware"],
+        tags: ["Neuromorphic", "Edge AI", "IoT", "Machine Learning", "Hardware"],
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$35,000 - $100,000/month",
@@ -115,15 +115,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Python", "C++", "TensorFlow Lite"],
-        integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "OPC UA"],
-        compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA", "IEC 62443"],
+        technology: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Python", "C++", "TensorFlow Lite"],
+        integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "OPC UA"],
+        compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "IEC 62443"],
         roi: "600% within 18 months",
-        competitors["Intel", "IBM", "BrainChip", "Qualcomm"],
+        competitors: ["Intel", "IBM", "BrainChip", "Qualcomm"],
         demoUrl: "https://ziontechgroup.com/demo/neuromorphic-edge-ai",
-        caseStudies["Smart city 70% energy savings", "IoT network 10x efficiency"],
+        caseStudies: ["Smart city 70% energy savings", "IoT network 10x efficiency"],
         websiteUrl: "https://ziontechgroup.com/services/neuromorphic-edge-ai",
-        industryTrends["Edge computing growth", "Neuromorphic hardware", "AI efficiency"],
+        industryTrends: ["Edge computing growth", "Neuromorphic hardware", "AI efficiency"],
         marketSize: "$8.9 billion by 2026",
         growthPotential: "Very High - 55% CAGR expected"
     },
@@ -137,7 +137,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 18000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Distributed model training",
             "Zero data sharing",
             "Differential privacy",
@@ -149,28 +149,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "API integration",
             "Real-time analytics"
         ],
-        benefits[
+        benefits: [
             "Maintain data privacy 100%",
             "Collaborate across organizations",
             "Meet regulatory requirements",
             "Improve model accuracy",
             "Reduce data security risks"
         ],
-        useCases[
+        useCases: [
             "Healthcare research",
             "Financial services",
             "Pharmaceutical research",
             "Cross-border collaboration",
             "Regulated industries"
         ],
-        targetAudience[
+        targetAudience: [
             "Healthcare organizations",
             "Financial institutions",
             "Research institutions",
             "Government agencies",
             "Pharmaceutical companies"
         ],
-        tags["Federated Learning", "Privacy", "AI Collaboration", "Compliance", "Security"],
+        tags: ["Federated Learning", "Privacy", "AI Collaboration", "Compliance", "Security"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$18,000 - $45,000/month",
@@ -179,15 +179,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Python", "React", "PostgreSQL"],
-        integrations["HIPAA-compliant systems", "GDPR tools", "SOC 2 platforms", "Cloud providers"],
-        compliance["HIPAA", "GDPR", "CCPA", "SOC 2", "ISO 27001"],
+        technology: ["TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Python", "React", "PostgreSQL"],
+        integrations: ["HIPAA-compliant systems", "GDPR tools", "SOC 2 platforms", "Cloud providers"],
+        compliance: ["HIPAA", "GDPR", "CCPA", "SOC 2", "ISO 27001"],
         roi: "350% within 10 months",
-        competitors["OpenMined", "Intel", "IBM", "Microsoft"],
+        competitors: ["OpenMined", "Intel", "IBM", "Microsoft"],
         demoUrl: "https://ziontechgroup.com/demo/federated-learning",
-        caseStudies["Healthcare consortium 3x model accuracy", "Bank collaboration 100% privacy"],
+        caseStudies: ["Healthcare consortium 3x model accuracy", "Bank collaboration 100% privacy"],
         websiteUrl: "https://ziontechgroup.com/services/federated-learning",
-        industryTrends["Privacy-first AI", "Collaborative learning", "Regulatory compliance"],
+        industryTrends: ["Privacy-first AI", "Collaborative learning", "Regulatory compliance"],
         marketSize: "$6.2 billion by 2026",
         growthPotential: "High - 40% CAGR expected"
     },
@@ -201,7 +201,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 22000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Bias detection & mitigation",
             "Explainable AI tools",
             "Ethical guidelines framework",
@@ -213,28 +213,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Training & certification",
             "Reporting dashboard"
         ],
-        benefits[
+        benefits: [
             "Ensure AI fairness & transparency",
             "Meet regulatory requirements",
             "Build stakeholder trust",
             "Reduce legal risks",
             "Improve AI adoption"
         ],
-        useCases[
+        useCases: [
             "Financial services",
             "Healthcare",
             "Government",
             "Education",
             "Criminal justice"
         ],
-        targetAudience[
+        targetAudience: [
             "AI developers",
             "Compliance officers",
             "Legal teams",
             "Ethics committees",
             "Government agencies"
         ],
-        tags["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency"],
+        tags: ["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$22,000 - $55,000/month",
@@ -243,15 +243,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "Explainable AI libraries", "React", "Node.js", "MongoDB"],
-        integrations["Compliance platforms", "Legal systems", "Audit tools", "Risk management"],
-        compliance["GDPR", "CCPA", "AI Act", "Algorithmic Accountability", "SOC 2"],
+        technology: ["Python", "TensorFlow", "Explainable AI libraries", "React", "Node.js", "MongoDB"],
+        integrations: ["Compliance platforms", "Legal systems", "Audit tools", "Risk management"],
+        compliance: ["GDPR", "CCPA", "AI Act", "Algorithmic Accountability", "SOC 2"],
         roi: "400% within 12 months",
-        competitors["IBM", "Microsoft", "Google", "Accenture"],
+        competitors: ["IBM", "Microsoft", "Google", "Accenture"],
         demoUrl: "https://ziontechgroup.com/demo/ai-ethics-governance",
-        caseStudies["Bank 100% compliance rate", "Healthcare 0 bias incidents"],
+        caseStudies: ["Bank 100% compliance rate", "Healthcare 0 bias incidents"],
         websiteUrl: "https://ziontechgroup.com/services/ai-ethics-governance",
-        industryTrends["AI regulation", "Ethical AI", "Responsible development"],
+        industryTrends: ["AI regulation", "Ethical AI", "Responsible development"],
         marketSize: "$4.8 billion by 2026",
         growthPotential: "High - 35% CAGR expected"
     },
@@ -265,7 +265,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 28000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Post-quantum cryptography",
             "AI threat detection",
             "Zero-trust architecture",
@@ -277,28 +277,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Security analytics",
             "24/7 monitoring"
         ],
-        benefits[
+        benefits: [
             "Future-proof security",
             "Protect against quantum threats",
             "AI-powered detection",
             "Zero-trust security",
             "Regulatory compliance"
         ],
-        useCases[
+        useCases: [
             "Government agencies",
             "Financial institutions",
             "Healthcare organizations",
             "Critical infrastructure",
             "Defense contractors"
         ],
-        targetAudience[
+        targetAudience: [
             "CISOs",
             "Security architects",
             "IT managers",
             "Compliance officers",
             "Government officials"
         ],
-        tags["Quantum-Safe", "Cybersecurity", "Post-Quantum", "AI Security", "Zero-Trust"],
+        tags: ["Quantum-Safe", "Cybersecurity", "Post-Quantum", "AI Security", "Zero-Trust"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$28,000 - $75,000/month",
@@ -307,15 +307,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Post-quantum algorithms", "AI/ML", "Blockchain", "Python", "React", "Kubernetes"],
-        integrations["SIEM systems", "EDR platforms", "Identity providers", "Cloud security"],
-        compliance["NIST", "ISO 27001", "SOC 2", "FedRAMP", "GDPR"],
+        technology: ["Post-quantum algorithms", "AI/ML", "Blockchain", "Python", "React", "Kubernetes"],
+        integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud security"],
+        compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP", "GDPR"],
         roi: "450% within 15 months",
-        competitors["IBM", "Microsoft", "Cisco", "Palo Alto Networks"],
+        competitors: ["IBM", "Microsoft", "Cisco", "Palo Alto Networks"],
         demoUrl: "https://ziontechgroup.com/demo/quantum-safe-cybersecurity",
-        caseStudies["Government 100% quantum-safe", "Bank 0 security breaches"],
+        caseStudies: ["Government 100% quantum-safe", "Bank 0 security breaches"],
         websiteUrl: "https://ziontechgroup.com/services/quantum-safe-cybersecurity",
-        industryTrends["Quantum threats", "Post-quantum crypto", "AI security"],
+        industryTrends: ["Quantum threats", "Post-quantum crypto", "AI security"],
         marketSize: "$15.3 billion by 2027",
         growthPotential: "Very High - 50% CAGR expected"
     },
@@ -329,7 +329,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 15000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Self-healing infrastructure",
             "AI-powered monitoring",
             "Automated incident response",
@@ -341,28 +341,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Real-time analytics",
             "API management"
         ],
-        benefits[
+        benefits: [
             "Reduce downtime by 95%",
             "Automate 80% of operations",
             "Predict issues before they occur",
             "Optimize costs automatically",
             "Improve security posture"
         ],
-        useCases[
+        useCases: [
             "Cloud-native applications",
             "Microservices architecture",
             "Kubernetes clusters",
             "Multi-cloud environments",
             "Legacy system modernization"
         ],
-        targetAudience[
+        targetAudience: [
             "DevOps engineers",
             "Site reliability engineers",
             "Cloud architects",
             "IT operations teams",
             "Platform teams"
         ],
-        tags["Autonomous DevOps", "Self-Healing", "AI Operations", "Infrastructure", "Automation"],
+        tags: ["Autonomous DevOps", "Self-Healing", "AI Operations", "Infrastructure", "Automation"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$15,000 - $40,000/month",
@@ -371,15 +371,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Kubernetes", "Docker", "Terraform", "Python", "React", "Prometheus"],
-        integrations["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
-        compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
+        technology: ["Kubernetes", "Docker", "Terraform", "Python", "React", "Prometheus"],
+        integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
+        compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         roi: "350% within 8 months",
-        competitors["HashiCorp", "Puppet", "Chef", "Ansible"],
+        competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
         demoUrl: "https://ziontechgroup.com/demo/autonomous-devops",
-        caseStudies["E-commerce 99.99% uptime", "SaaS 90% cost reduction"],
+        caseStudies: ["E-commerce 99.99% uptime", "SaaS 90% cost reduction"],
         websiteUrl: "https://ziontechgroup.com/services/autonomous-devops",
-        industryTrends["Autonomous operations", "AI-driven DevOps", "Self-healing systems"],
+        industryTrends: ["Autonomous operations", "AI-driven DevOps", "Self-healing systems"],
         marketSize: "$18.7 billion by 2026",
         growthPotential: "High - 42% CAGR expected"
     },
@@ -393,7 +393,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 20000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "Distributed AI orchestration",
             "Real-time optimization",
             "Resource management",
@@ -405,28 +405,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Analytics dashboard",
             "Multi-cloud support"
         ],
-        benefits[
+        benefits: [
             "Reduce latency by 80%",
             "Optimize resource usage",
             "Scale AI workloads",
             "Improve reliability",
             "Reduce cloud costs"
         ],
-        useCases[
+        useCases: [
             "IoT networks",
             "Autonomous vehicles",
             "Smart cities",
             "Industrial automation",
             "Retail analytics"
         ],
-        targetAudience[
+        targetAudience: [
             "IoT platform providers",
             "Edge computing companies",
             "Manufacturing companies",
             "Smart city developers",
             "Telecommunications"
         ],
-        tags["Edge AI", "Orchestration", "Distributed Computing", "IoT", "Real-time"],
+        tags: ["Edge AI", "Orchestration", "Distributed Computing", "IoT", "Real-time"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$20,000 - $50,000/month",
@@ -435,15 +435,15 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Kubernetes Edge", "TensorFlow Lite", "MQTT", "Python", "React", "Redis"],
-        integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers", "Edge devices"],
-        compliance["ISO 27001", "SOC 2", "GDPR", "IEC 62443"],
+        technology: ["Kubernetes Edge", "TensorFlow Lite", "MQTT", "Python", "React", "Redis"],
+        integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers", "Edge devices"],
+        compliance: ["ISO 27001", "SOC 2", "GDPR", "IEC 62443"],
         roi: "400% within 10 months",
-        competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
+        competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
         demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestration",
-        caseStudies["Smart city 60% latency reduction", "IoT network 3x efficiency"],
+        caseStudies: ["Smart city 60% latency reduction", "IoT network 3x efficiency"],
         websiteUrl: "https://ziontechgroup.com/services/edge-ai-orchestration",
-        industryTrends["Edge computing growth", "AI at the edge", "5G networks"],
+        industryTrends: ["Edge computing growth", "AI at the edge", "5G networks"],
         marketSize: "$11.2 billion by 2026",
         growthPotential: "Very High - 48% CAGR expected"
     },
@@ -457,7 +457,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         price: 25000,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features: [
             "AI-powered smart contracts",
             "Decentralized AI training",
             "Blockchain analytics",
@@ -469,28 +469,28 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Governance tools",
             "API ecosystem"
         ],
-        benefits[
+        benefits: [
             "Decentralized AI solutions",
             "Transparent operations",
             "Reduced intermediaries",
             "Enhanced security",
             "New business models"
         ],
-        useCases[
+        useCases: [
             "DeFi platforms",
             "Supply chain management",
             "Digital identity",
             "Content creation",
             "Gaming platforms"
         ],
-        targetAudience[
+        targetAudience: [
             "DeFi developers",
             "Blockchain startups",
             "Enterprises",
             "Gaming companies",
             "Content creators"
         ],
-        tags["Blockchain", "AI", "DeFi", "Smart Contracts", "Decentralized"],
+        tags: ["Blockchain", "AI", "DeFi", "Smart Contracts", "Decentralized"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $70,000/month",
@@ -499,17 +499,18 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Ethereum", "Polygon", "Solana", "TensorFlow", "Python", "React"],
-        integrations["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
-        compliance["GDPR", "AML/KYC", "Regulatory frameworks"],
+        technology: ["Ethereum", "Polygon", "Solana", "TensorFlow", "Python", "React"],
+        integrations: ["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
+        compliance: ["GDPR", "AML/KYC", "Regulatory frameworks"],
         roi: "500% within 12 months",
-        competitors["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],
+        competitors: ["Chainlink", "Ocean Protocol", "Fetch.ai", "SingularityNET"],
         demoUrl: "https://ziontechgroup.com/demo/blockchain-ai-integration",
-        caseStudies["DeFi platform 10x user growth", "Supply chain 100% transparency"],
+        caseStudies: ["DeFi platform 10x user growth", "Supply chain 100% transparency"],
         websiteUrl: "https://ziontechgroup.com/services/blockchain-ai-integration",
-        industryTrends["Web3 adoption", "AI decentralization", "DeFi growth"],
+        industryTrends: ["Web3 adoption", "AI decentralization", "DeFi growth"],
         marketSize: "$19.8 billion by 2027",
         growthPotential: "Very High - 55% CAGR expected"
     }
 ];
+
 export default CUTTING_EDGE_SERVICES_2025;

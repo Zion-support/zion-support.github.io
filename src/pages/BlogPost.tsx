@@ -1,29 +1,6 @@
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  User, 
-  Clock, 
-  Tag, 
-  ArrowLeft,
-  ArrowRight,
-  Share2,
-  Bookmark,
-  Heart,
-  MessageCircle,
-  Eye,
-  TrendingUp,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Cpu,
-  Network,
-  BookOpen
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react'
+import { SEO } from '@/components/SEO'
 
 export default function BlogPost() {
   const { slug } = useParams();

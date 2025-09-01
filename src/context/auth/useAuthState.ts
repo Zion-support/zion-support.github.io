@@ -39,6 +39,10 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
               setTokens({
                 accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
+        // // // // // // // console.error('Error checking auth state:', error);
+      } finally {
+        setIsLoading(false);
+
               })}
           }
         }

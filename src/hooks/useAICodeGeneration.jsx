@@ -46,6 +46,14 @@ export const useAICodeGeneration = () => {
                 style: options.style,
                 target: options.target,
                 quality: options.quality
+            // // // // // // // console.error('Failed to generate code:', error);
+            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+
+        finally {
+            setIsGenerating(false);
+
             })}
         catch (error) {
             console.error('Failed to generate code:', error);
@@ -86,6 +94,14 @@ export const useAICodeGeneration = () => {
                 maintainability: analysis.maintainability,
                 security: analysis.security,
                 performance: analysis.performance
+            // // // // // // // console.error('Failed to analyze code:', error);
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+
+        finally {
+            setIsAnalyzing(false);
+
             })}
         catch (error) {
             console.error('Failed to analyze code:', error);
@@ -121,6 +137,12 @@ export const useAICodeGeneration = () => {
                     break;
                 case 'accessibility':
                     optimizedCode = optimizeForAccessibility(code);
+            // // // // // // // console.error('Failed to optimize code:', error);
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+            return code;
+
                     break}
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
             return optimizedCode}
@@ -138,6 +160,12 @@ export const useAICodeGeneration = () => {
             await new Promise(resolve => setTimeout(resolve, 2000));
             let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
+            // // // // // // // console.error('Failed to generate tests:', error);
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+            return '// Failed to generate tests';
+
                 testCode = generateJestTests(code)}
             else if (language === 'python') {
                 testCode = generatePytestTests(code)}
@@ -159,6 +187,12 @@ export const useAICodeGeneration = () => {
             await new Promise(resolve => setTimeout(resolve, 1500));
             let docs = '';
             if (language === 'typescript' || language === 'javascript') {
+            // // // // // // // console.error('Failed to generate documentation:', error);
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+            return '// Failed to generate documentation';
+
                 docs = generateJSDoc(code)}
             else if (language === 'python') {
                 docs = generatePythonDoc(code)}
@@ -223,7 +257,6 @@ import { motion } from 'framer-motion';
 
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
-}
 
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
@@ -241,7 +274,7 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="generated-component"
-    >
+
       {/* TODO: Implement component based on prompt: ${prompt} */}
       <h1>Generated Component</h1>
       <p>This component was generated based on your prompt.</p>
@@ -269,7 +302,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  console.log(\`Server running on port \${PORT}\`);
+  // // // // // // // console.log(\`Server running on port \${PORT}\`);
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -312,18 +345,17 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
+// // // // // // // console.log("Generated code placeholder");
+// // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // console.log("Language:", "${options.language}");`;
+    };
 console.log("Generated code placeholder");
 console.log("Prompt:", "${prompt}");
 console.log("Language:", "${options.language}");`};
     // Helper functions for code analysis
-<<<<<<< HEAD
-    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
-        return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)))};
-=======
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const calculateMaintainability = (code) => {
         const lines = code.split('\n').length;
         const functions = (code.match(/function|=>/g) || []).length;
@@ -517,9 +549,6 @@ def generated_function():
         clearHistory,
         exportCode,
         getCodeMetrics
-<<<<<<< HEAD
-    }};
-=======
     };
 };
 
@@ -528,4 +557,3 @@ export default with;
 export default with;
 export default with;
 export default with;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

@@ -1,6 +1,4 @@
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 } from 'lucide-react';
-
-export default function AIHealthcare() {
+import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
   const features = [
     'AI-powered medical image analysis and diagnosis',
     'Intelligent patient data analysis and risk assessment',;
@@ -13,10 +11,10 @@ export default function AIHealthcare() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Practice', 
-      price: '$399/mo', 
-      details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support'] 
+    {
+      name: 'Small Practice',
+      price: '$399/mo',
+      details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support']
     },
     { 
       name: 'Medium Practice', 
@@ -171,4 +169,4 @@ export default function AIHealthcare() {
       </section>;
     </div>;
   );
-}
+}}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw } from 'lucide-react';
-export const BundleAnalyzer = () => {
+import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -79,7 +78,7 @@ export const BundleAnalyzer = () => {
                         gzipSize: 0,
                         type: 'vendor',
                         optimization: 'critical'
-                    }
+
                 ],
                 recommendations[
                     'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
@@ -91,6 +90,11 @@ export const BundleAnalyzer = () => {
                 score: 78,
                 lastUpdated: new Date()
             };
+            // // // // // // // console.error('Bundle analysis failed:', error);
+        }
+        finally {
+            setIsAnalyzing(false);
+
             setAnalysis(mockAnalysis)}
         catch (error) {
             console.error('Bundle analysis failed:', error)}
@@ -289,7 +293,7 @@ export const BundleAnalyzer = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       {chunk.optimization !== 'good' && (<div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                           {getOptimizationIcon(chunk.optimization)}
                           <span>
@@ -312,7 +316,7 @@ export const BundleAnalyzer = () => {
                         </p>
                       </div>
                     </div>))}
-                  
+
                   <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
                     <div className="flex items-start gap-2">
                       <Info className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0"/>

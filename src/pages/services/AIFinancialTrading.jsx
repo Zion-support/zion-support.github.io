@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
+
 export default function AIFinancialTrading() {
     const features = [
         {
@@ -40,7 +41,7 @@ export default function AIFinancialTrading() {
             price: "$99",
             period: "/month",
             description: "Perfect for individual traders and beginners",
-            features[
+            features: [
                 "Basic AI trading signals",
                 "Up to 10 trades/day",
                 "Standard market data",
@@ -56,7 +57,7 @@ export default function AIFinancialTrading() {
             price: "$299",
             period: "/month",
             description: "Ideal for active traders and small funds",
-            features[
+            features: [
                 "Advanced AI algorithms",
                 "Up to 100 trades/day",
                 "Real-time market data",
@@ -74,7 +75,7 @@ export default function AIFinancialTrading() {
             price: "$1,999",
             period: "/month",
             description: "For hedge funds and large institutions",
-            features[
+            features: [
                 "Custom AI models",
                 "Unlimited trades",
                 "Institutional data feeds",
@@ -160,15 +161,15 @@ export default function AIFinancialTrading() {
             <TrendingUp className="w-4 h-4 mr-2"/>
             AI-Powered Financial Technology
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Trading</span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Revolutionize your trading with AI-powered algorithms. Execute trades with precision, manage risk intelligently, and maximize returns with cutting-edge financial technology.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105">
               Start Free Trial
@@ -204,7 +205,7 @@ export default function AIFinancialTrading() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Trading Features
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -221,7 +222,7 @@ export default function AIFinancialTrading() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Trading Instruments & Markets
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tradingInstruments.map((instrument, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -238,7 +239,7 @@ export default function AIFinancialTrading() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing Plans
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular
                 ? 'border-purple-500 bg-purple-500/5'
@@ -248,7 +249,7 @@ export default function AIFinancialTrading() {
                       Most Popular
                     </span>
                   </div>)}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-purple-400 mb-1">
@@ -257,14 +258,14 @@ export default function AIFinancialTrading() {
                   <div className="text-gray-400 mb-4">{plan.period}</div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (<li key={featureIdx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"/>
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
                 </ul>
-                
+
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
                   {plan.popular ? (<span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white block">
                       {plan.cta}
@@ -281,7 +282,7 @@ export default function AIFinancialTrading() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose AI Financial Trading?
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -313,4 +314,6 @@ export default function AIFinancialTrading() {
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  );
+}

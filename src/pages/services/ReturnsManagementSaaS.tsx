@@ -5,7 +5,7 @@ import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'luci
 const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
+      <SEO
         title="E-commerce Returns Management SaaS - Zion Tech Group"
         description="Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores."
         keywords="returns management, RMA, e-commerce, Shopify, automation, logistics"
@@ -86,3 +86,4 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
 
 export default ReturnsManagementSaaS;
 
+}

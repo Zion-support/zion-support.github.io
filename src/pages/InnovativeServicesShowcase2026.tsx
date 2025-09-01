@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Shield, 
-  Zap, 
-  Cloud, 
-  Lock, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
- } from 'lucide-react';
-import { INNOVATIVE_SERVICES  } from "../data/servicesData";
-export default function InnovativeServicesShowcase2026(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('innovation');
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },;
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' };
-  ];
-  const filteredServices = INNOVATIVE_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-      case 'innovation':
-        return a.innovationLevel === 'Cutting-edge' ? -1 : 1;
-      case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -108,12 +48,10 @@ export default function InnovativeServicesShowcase2026() {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-    }
 
     // Filter by category
     if (selectedCategory !== 'All') {
       filtered = filtered.filter(service => service.category === selectedCategory);
-    }
 
     // Sort services
     filtered.sort((a, b) => {
@@ -126,7 +64,7 @@ export default function InnovativeServicesShowcase2026() {
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
           return 0;
-      }
+
     });
 
     return filtered;
@@ -152,7 +90,6 @@ export default function InnovativeServicesShowcase2026() {
         return <TrendingUp className="w-5 h-5" />;
       case 'Sustainability':
         return <Leaf className="w-5 h-5" />;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       default:
         return 0}
   });
@@ -290,7 +227,7 @@ export default function InnovativeServicesShowcase2026() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-                >
+
                   <option value="innovation">Innovation Level</option>
                   <option value="price">Price</option>
                   <option value="roi">ROI</option>
@@ -374,7 +311,7 @@ export default function InnovativeServicesShowcase2026() {
                       <span
                         key={idx}
                         className="text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded"
-                      >
+
                         {feature}
                       </span>
                     ))}
@@ -421,7 +358,7 @@ export default function InnovativeServicesShowcase2026() {
                     <span
                       key={idx}
                       className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full"
-                    >
+
                       {tag}
                     </span>
                   ))}
@@ -437,13 +374,13 @@ export default function InnovativeServicesShowcase2026() {
                       Support: {service.supportLevel}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-xs text-slate-400">
-                      <a 
+                      <a
                         href={`tel:${service.contactInfo.phone}`}
                         className="text-cyan-300 hover:text-cyan-200 transition-colors"
-                      >
+
                         {service.contactInfo.phone}
                       </a>
                     </div>
@@ -520,13 +457,13 @@ export default function InnovativeServicesShowcase2026() {
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
+
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape. 
+              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
               Let's discuss how we can help you achieve your goals.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -539,7 +476,7 @@ export default function InnovativeServicesShowcase2026() {
                   </a>
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-cyan-400" />
@@ -551,7 +488,7 @@ export default function InnovativeServicesShowcase2026() {
                   </a>
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-cyan-400" />
@@ -600,14 +537,6 @@ export default function InnovativeServicesShowcase2026() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
@@ -617,4 +546,3 @@ export default function InnovativeServicesShowcase2026() {
 };
 
 export default InnovativeServicesShowcase2026;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

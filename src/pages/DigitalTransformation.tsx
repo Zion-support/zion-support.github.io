@@ -27,62 +27,12 @@ import {
   Heart
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const DigitalTransformation = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedPhase, setSelectedPhase] = useState(0);
-
-  const transformationServices = [
-    {
-      title: "Strategy & Planning",
-      description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
-      icon: Rocket,
-      features["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Process Automation",
-      description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
-      icon: Zap,
-      features["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Technology Modernization",
-      description: "Legacy system modernization and cloud-native architecture implementation.",
-      icon: Cpu,
-      features["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Data & Analytics",
-      description: "Data-driven insights and business intelligence solutions for informed decision-making.",
-      icon: Database,
-      features["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Customer Experience",
-      description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
-      icon: Users,
-      features["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
-      icon: Shield,
-      features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
-      color: "from-yellow-500 to-orange-500"
     };
-=======;
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
       icon: Shield,;
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
       color: "from-yellow-500 to-orange-500";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const transformationPhases = [
@@ -154,19 +104,12 @@ const DigitalTransformation = () => {;
       rating: 5
     },
     {
-<<<<<<< HEAD
-      content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
-      name: "Marcus Johnson",
-      role: "CTO, DigitalFirst Inc",
-      rating: 5
     };
-=======;
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
       name: "Marcus Johnson",;
       role: "CTO, DigitalFirst Inc",;
       rating: 5;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const stats = [;
@@ -252,7 +195,7 @@ const DigitalTransformation = () => {;
 
 }}
                 className="text-center"
-              >
+
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
               </motion.div>
@@ -309,7 +252,7 @@ const DigitalTransformation = () => {;
 
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -383,7 +326,7 @@ const DigitalTransformation = () => {;
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
                   }`}
                   onClick={() => setSelectedPhase(index)}
-                >
+
                   {/* Phase Number */}
                   <div className="absolute -top-4 left-6">
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -490,7 +433,7 @@ const DigitalTransformation = () => {;
 
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
@@ -526,14 +469,6 @@ const DigitalTransformation = () => {;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </button>;
           </div>;
         </div>;
@@ -541,6 +476,5 @@ const DigitalTransformation = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default DigitalTransformation;
+export default DigitalTransformation;}}}}

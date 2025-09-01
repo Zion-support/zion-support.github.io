@@ -47,7 +47,7 @@ export default function ServicesPricingGuide() {
             Services Pricing Guide
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Transparent pricing for all our professional IT and AI services. 
+            Transparent pricing for all our professional IT and AI services.
             Compare features, benefits, and costs to find the perfect solution for your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -296,12 +296,12 @@ export default function ServicesPricingGuide() {
                         {service.description}
                       </CardDescription>
                     </CardHeader>
-                    
+
                     <CardContent className="space-y-4">
                       <div className="text-3xl font-bold text-zion-cyan">
                         ${service.price?.toLocaleString()}
                       </div>
-                      
+
                       <div className="space-y-2 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4"/>

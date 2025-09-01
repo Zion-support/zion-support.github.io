@@ -36,7 +36,6 @@ export const AccessibilityProvider = ({ children }) => {
 
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-=======
   colorBlindMode
         
 
@@ -46,7 +45,6 @@ export const AccessibilityProvider = ({ children }) => {
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Apply accessibility settings to document
     useEffect(() => {
         const root = document.documentElement;
@@ -66,13 +64,8 @@ export const AccessibilityProvider = ({ children }) => {
         root.style.filter = colorBlindMode === 'none' ? 'none' :
             colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
                 colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-<<<<<<< HEAD
-                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);
-=======
                     'url(#tritanopia)';
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {
   highContrast,
@@ -275,3 +268,4 @@ export const useFocusTrap = (isActive) => {
 // Screen Reader Only Text
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
 export default AccessibilityPanel;
+}}}}}}}}}}}}}}}

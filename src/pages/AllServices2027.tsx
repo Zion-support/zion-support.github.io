@@ -26,13 +26,8 @@ import {
   Rocket
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const AllServices2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-=======
 const AllServices2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
@@ -60,7 +55,6 @@ const AllServices2027: React.FC = () => {;
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       }};
-=======
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
@@ -72,7 +66,7 @@ const AllServices2027: React.FC = () => {;
         avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
         avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
-    }
+
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
     return {
       count: services.length,
@@ -80,7 +74,6 @@ const AllServices2027: React.FC = () => {;
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
     hidden: { opacity: 0 },;
@@ -147,7 +140,7 @@ const AllServices2027: React.FC = () => {;
 
 }}
             transition={{ duration: 0.8 }}
-          >
+
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               All Services 2027
             </h1>
@@ -159,13 +152,13 @@ const AllServices2027: React.FC = () => {;
               <Link
                 to="/comprehensive-pricing-2027"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+
                 View Pricing
               </Link>
               <Link
                 to="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+
                 Get Started
               </Link>
             </div>
@@ -206,13 +199,11 @@ const AllServices2027: React.FC = () => {;
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category)  => {;
-=======;
               specific business challenges and drive innovation.;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
 
@@ -224,7 +215,7 @@ const AllServices2027: React.FC = () => {;
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
-                >
+
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -239,14 +230,6 @@ const AllServices2027: React.FC = () => {;
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div className="flex justify-between">
-<<<<<<< HEAD
-                      <span>Avg. Rating:</span>
-                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <span>Avg. Rating:</span>;
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
                     </div>;
@@ -254,7 +237,6 @@ const AllServices2027: React.FC = () => {;
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -309,7 +291,7 @@ const AllServices2027: React.FC = () => {;
             <motion.div
               variants={itemVariants}
               className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-            >
+
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
@@ -341,7 +323,7 @@ const AllServices2027: React.FC = () => {;
             <motion.div
               variants={itemVariants}
               className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-            >
+
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
                   <Shield className="w-6 h-6 text-white" />
@@ -477,7 +459,6 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Services':;
-=======;
             </a>;
           </div>;
         </div>;
@@ -491,7 +472,6 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Services':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
         return <Shield className="w-5 h-5" />;
@@ -509,7 +489,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     <motion.div
       variants = {itemVariants}
       className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
-    >
+
       {/* Service Image */}
       <div className="relative h-48 overflow-hidden">
         <img
@@ -543,7 +523,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
-              >
+
                 <CheckCircle className="w-3 h-3" />
                 <span>{feature}</span>
               </span>
@@ -567,7 +547,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           <Link
             to={service.website}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
-          >
+
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
@@ -575,14 +555,6 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
           >
-<<<<<<< HEAD
-            Contact
-          </Link>
-        </div>
-      </div>;
-    </motion.div>;
-  )};
-=======
             Contact;
           </Link>;
         </div>;
@@ -590,5 +562,4 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     </motion.div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default AllServices2027;

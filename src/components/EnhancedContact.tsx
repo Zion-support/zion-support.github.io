@@ -7,6 +7,7 @@ import {
   Send,
   CheckCircle,
   AlertCircle,
+  CheckCircle,
   Clock,
   MessageSquare,
   Building,
@@ -68,38 +69,10 @@ export function EnhancedContact(...args[]):  {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-<<<<<<< HEAD
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setFormData(prev => ({ ...prev, [field]: value }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev = > ({ ...prev, [field]: '' }))};
-  };
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return}
-
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        comp: '',
-        service: 'general',
-        message: ''
+      // // // // // // // console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
       })} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
@@ -254,14 +227,6 @@ export function EnhancedContact(...args[]):  {
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-<<<<<<< HEAD
-          >
-            Send Another Message
-          </motion.button>
-        </div>
-      </motion.div>
-    )};
-=======;
           >;
             Send Another Message;
           </motion.button>;
@@ -269,7 +234,6 @@ export function EnhancedContact(...args[]):  {
       </motion.div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -475,7 +439,7 @@ export function EnhancedContact(...args[]):  {
                   placeholder="Enter your full name"
                 />
                 <AnimatePresence>
-                  {errors.name && (
+                  {errors['name'] && (
                     <motion.p
                       initial = {
   { opacity: 0,
@@ -510,7 +474,7 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.name}
+                      {errors['name']}
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -543,7 +507,7 @@ export function EnhancedContact(...args[]):  {
                   placeholder="Enter your email address"
                 />
                 <AnimatePresence>
-                  {errors.email && (
+                  {errors['email'] && (
                     <motion.p
                       initial = {
   { opacity: 0,
@@ -578,7 +542,7 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.email}
+                      {errors['email']}
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -613,15 +577,6 @@ export function EnhancedContact(...args[]):  {
                     Comp </label>
                   <input
                     type="text"
-<<<<<<< HEAD
-                    id="comp"
-                    value={formData.comp}
-                    onChange = {
-  (e) => handleInputChange('comp',
-  e.target.value)
-
-}
-=======
                     id="company"
                     value={formData.company}
                     onChange = {
@@ -634,7 +589,6 @@ export function EnhancedContact(...args[]):  {
 
 
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
@@ -649,14 +603,6 @@ export function EnhancedContact(...args[]):  {
                 <select
                   id="service"
                   value={formData.service}
-<<<<<<< HEAD
-                  onChange = {
-  (e) => handleInputChange('service',
-  e.target.value)
-
-}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
-=======
                   onChange = {
   (e) => handleInputChange('service',
   e.target.value)
@@ -668,7 +614,6 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   {services.map(service  => (
                     <option key={service.value} value={service.value}>
@@ -705,7 +650,7 @@ export function EnhancedContact(...args[]):  {
                   placeholder="Tell us about your project or inquiry..."
                 />
                 <AnimatePresence>
-                  {errors.message && (
+                  {errors['message'] && (
                     <motion.p
                       initial = {
   { opacity: 0,
@@ -740,7 +685,7 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >
                       <AlertCircle className="w-4 h-4 mr-1" />
-                      {errors.message}
+                      {errors['message']}
                     </motion.p>
                   )}
                 </AnimatePresence>
@@ -766,14 +711,6 @@ export function EnhancedContact(...args[]):  {
                   </>
                 )}
               </motion.button>
-<<<<<<< HEAD
-            </form>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </form>;
           </motion.div>;
         </div>;
@@ -781,4 +718,3 @@ export function EnhancedContact(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

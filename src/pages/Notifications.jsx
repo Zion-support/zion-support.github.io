@@ -1,8 +1,7 @@
 import React from 'react';
 import { useNotifications } from "@/context/notifications/NotificationContext";
 import { formatDistanceToNow } from "date-fns";
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -78,13 +77,6 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 }/>;
         default:
-<<<<<<< HEAD
-            return <Bell className = {
-  cn(className,
-  "text-gray-500")
-
-}/>}
-=======
             return <Bell className = {
   cn(className,
   "text-gray-500")
@@ -96,7 +88,6 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 }/>;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 };
 const getNotificationTypeBadge = (type) => {
     switch (type) {
@@ -121,12 +112,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
         if (!notification.read) {
             onMarkAsRead(notification.id)}
         if (notification.action_url) {
-<<<<<<< HEAD
-            router(notification.action_url)}
-=======
             router(notification.action_url);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     };
     return (<div className = {
   cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
@@ -154,7 +141,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
                 {!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)}
               </div>
             </div>
-            
+
             <div className="flex items-center gap-2">
               {!notification.read && (<Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => onMarkAsRead(notification.id)}>
                   <Check className="h-4 w-4 text-green-400"/>
@@ -166,9 +153,9 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
               </Button>
             </div>
           </div>
-          
+
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
-          
+
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4"/>
@@ -180,7 +167,7 @@ export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
-      
+
       <main className="container mx-auto px-4 py-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">
           <div>
@@ -190,13 +177,13 @@ export default function NotificationsPage() {
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
-          
+
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>
               <Check className="mr-2 h-4 w-4"/>
               Mark all as read
             </Button>)}
         </div>
-        
+
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value)}>
             <TabsList className="grid w-full max-w-md grid-cols-5">

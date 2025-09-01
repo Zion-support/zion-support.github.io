@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Shield, 
-  Brain, 
-  Smartphone, 
-  Server, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Heart,
+  Shield,
+  Brain,
+  Smartphone,
+  Server,
+  Zap,
+  CheckCircle,
+  ArrowRight,
   Star,
   Users,
   Target,
@@ -21,8 +21,6 @@ import {
   Clock,
   Eye,
   AlertTriangle
-} from 'lucide-react';
-
 const healthcareSolutions = [
   {
     id: 1,
@@ -176,7 +174,7 @@ const successStories = [
     solution: "Developed FDA-approved AI diagnostic platform",
     results: "95% accuracy rate, 30% faster diagnosis, FDA clearance",
     logo: "DD"
-  }
+
 ];
 
 const processSteps = [
@@ -207,7 +205,7 @@ const processSteps = [
     description: "Validate compliance and obtain necessary certifications",
     icon: CheckCircle,
     duration: "2-4 weeks"
-  }
+
 ];
 
 export default function HealthcareSolutions() {
@@ -215,9 +213,9 @@ export default function HealthcareSolutions() {
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Mobile Development', 'AI & Analytics', 'Software Systems', 'Platform Solutions', 'IoT & Hardware', 'Security'];
-  
-  const filteredSolutions = selectedCategory === 'All' 
-    ? healthcareSolutions 
+
+  const filteredSolutions = selectedCategory === 'All'
+    ? healthcareSolutions
     : healthcareSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
@@ -229,7 +227,7 @@ export default function HealthcareSolutions() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
@@ -254,7 +252,7 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <motion.div
               initial = {
   { opacity: 0,
@@ -287,21 +285,21 @@ export default function HealthcareSolutions() {
 
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+
               <Heart className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Healthcare
               <span className="text-gradient block">Solutions</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
-              Secure, compliant, and innovative technology solutions designed specifically for healthcare. 
-              From HIPAA-compliant mobile apps to AI-powered diagnostics, we help healthcare organizations 
+              Secure, compliant, and innovative technology solutions designed specifically for healthcare.
+              From HIPAA-compliant mobile apps to AI-powered diagnostics, we help healthcare organizations
               deliver better patient care through technology.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <Shield className="w-4 h-4" />
@@ -346,7 +344,7 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Compliance & Standards</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our solutions meet the highest healthcare compliance standards and regulatory requirements
@@ -388,14 +386,14 @@ export default function HealthcareSolutions() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <standard.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{standard.name}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{standard.description}</p>
-                
+
                 <div className="space-y-2">
                   {standard.requirements.map((req, reqIndex) => (
                     <div key={reqIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">
@@ -436,7 +434,7 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Our Development Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A comprehensive approach that ensures security, compliance, and quality at every step
@@ -478,7 +476,7 @@ export default function HealthcareSolutions() {
 
 }}
                 className="text-center"
-              >
+
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -487,7 +485,7 @@ export default function HealthcareSolutions() {
                     {step.step}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -525,7 +523,7 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive technology solutions designed specifically for healthcare organizations
@@ -543,7 +541,7 @@ export default function HealthcareSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-              >
+
                 {category}
               </button>
             ))}
@@ -585,14 +583,14 @@ export default function HealthcareSolutions() {
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-              >
+
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -601,23 +599,23 @@ export default function HealthcareSolutions() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.compliance.map((comp, compIndex) => (
                     <span
                       key={compIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+
                       {comp}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -659,7 +657,7 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Healthcare organizations that have transformed patient care with our technology solutions
@@ -701,7 +699,7 @@ export default function HealthcareSolutions() {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -711,7 +709,7 @@ export default function HealthcareSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -726,7 +724,7 @@ export default function HealthcareSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -765,24 +763,24 @@ export default function HealthcareSolutions() {
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-          >
+
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Healthcare?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Let's discuss how our healthcare technology solutions can improve patient care, 
+              Let's discuss how our healthcare technology solutions can improve patient care,
               streamline operations, and ensure compliance for your organization.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+
                 Schedule Consultation
               </a>
             </div>

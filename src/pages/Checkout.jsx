@@ -47,17 +47,17 @@ export default function CheckoutPage() {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+                        // // // // // // // console.error('Failed to add points', e);
+                    }
                         })}
                     catch (e) {
                         console.error('Failed to add points', e)}
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
-<<<<<<< HEAD
-                router(`/orders/${result.id}`)}
-=======
+            // // // // // // // console.error('Payment failed', err);
+        }
                 router(`/orders/${result.id}`);
             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         catch (err) {
             console.error('Payment failed', err)}

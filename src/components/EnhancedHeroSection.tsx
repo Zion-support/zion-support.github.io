@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
+import React, { useState, useEffect, memo } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
+  Play, 
+  Star, 
+  CheckCircle, 
+  ChevronLeft, 
   ChevronRight,
   Zap,
   Shield,
@@ -16,6 +15,7 @@ import {
   Target,
   TrendingUp
  } from 'lucide-react';
+} from 'lucide-react';
 
 interface HeroSlide {
 
@@ -31,7 +31,7 @@ interface HeroSlide {
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
 
-export default function EnhancedHeroSection(...args[]):  {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -83,20 +83,15 @@ export default function EnhancedHeroSection(...args[]):  {
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
-    }
+
   ];
 
   useEffect(()  => {
     if (!isAutoPlaying) return;
 
-<<<<<<< HEAD
-    const interval = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}, 6000);
-=======
     const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 6000);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
 
@@ -108,64 +103,13 @@ export default function EnhancedHeroSection(...args[]):  {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
 
-<<<<<<< HEAD
-  const goToSlide = (index: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setCurrentSlide(index);
-    setIsAutoPlaying(false)};
-
-  const currentSlideData = heroSlides[currentSlide];
-
-  return (
-    <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Enhanced animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
-        <motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
+            scale: [1, 1.1, 1]
           }}
-          transition={{ duration: 4, repeat: Infinity }}
+          transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
-        <motion.div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.6, 0.3, 0.6]
-          }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        ></motion.div>
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1,
-  1]
-          
-
-
-
-
-
-
-}}
-          transition = {
-  { duration: 20,
-  repeat: Infinity 
-
-
-
-
-
-
-}}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        ></motion.div>
-
+        
         {/* Floating particles */}
-        {[...Array(6)].map((_, i)  => (
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -173,17 +117,6 @@ export default function EnhancedHeroSection(...args[]):  {
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`,
             }}
-<<<<<<< HEAD
-            animate = {
-  {
-              y[0, -20, 0],
-              opacity[0.4, 1, 0.4],
-  
-
-}}
-            transition = {
-  {
-=======
             animate = {
   {
               y: [0, -20, 0],
@@ -193,7 +126,6 @@ export default function EnhancedHeroSection(...args[]):  {
 }}
             transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               duration: 3 + i * 0.5,
               repeat: Infinity,
               delay: i * 0.3,
@@ -231,7 +163,7 @@ export default function EnhancedHeroSection(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
-          >
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -266,12 +198,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 }}
                 transition={{ duration: 0.5 }}
-              >
+
                 {/* Icon and category */}
                 <motion.div
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
-                >
+
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
@@ -294,8 +226,8 @@ export default function EnhancedHeroSection(...args[]):  {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">
-                  {currentSlideData.features.map((feature, index)  => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
+                  {currentSlideData.features.map((feature, index) => (
                     <motion.div
                       key={feature}
                       initial = {
@@ -320,7 +252,7 @@ export default function EnhancedHeroSection(...args[]):  {
 }}
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
-                    >
+
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
                     </motion.div>
@@ -332,11 +264,11 @@ export default function EnhancedHeroSection(...args[]):  {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
+
                   <Link
                     to={currentSlideData.path}
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
-                  >
+
                     {currentSlideData.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
@@ -382,31 +314,19 @@ export default function EnhancedHeroSection(...args[]):  {
 
 }}
             className="relative"
-          >
+
             {/* Main image */}
             <div className="relative">
               <motion.div
                 className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-              >
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
                     <motion.div
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30"
-<<<<<<< HEAD
-                      animate = {
-  { rotate[0,
-  360] 
-
-}}
-                      transition = {
-  { duration: 20,
-  repeat: Infinity 
-
-}}
-=======
                       animate = {
   { rotate: [0,
   360] 
@@ -427,7 +347,6 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     >
                       <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
                     </motion.div>
@@ -464,7 +383,7 @@ export default function EnhancedHeroSection(...args[]):  {
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                   className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300"
-                >
+
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">
                       <stat.icon className="w-5 h-5 text-zion-cyan" />
@@ -502,7 +421,7 @@ export default function EnhancedHeroSection(...args[]):  {
 }}
               transition={{ delay: 0.8 }}
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
-            >
+
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">
                   <Star className="w-6 h-6 text-zion-cyan" />
@@ -523,7 +442,7 @@ export default function EnhancedHeroSection(...args[]):  {
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          >
+
             <ChevronLeft className="w-6 h-6 text-white" />
           </motion.button>
 
@@ -547,7 +466,7 @@ export default function EnhancedHeroSection(...args[]):  {
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          >
+
             <ChevronRight className="w-6 h-6 text-white" />
           </motion.button>
         </div>
@@ -559,40 +478,8 @@ export default function EnhancedHeroSection(...args[]):  {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+
         <motion.div
-<<<<<<< HEAD
-          animate = {
-  { y[0, 10,
-  0] 
-
-}}
-          transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
-        >
-          <motion.div
-            animate = {
-  { y[0, 12,
-  0] 
-
-}}
-            transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-          />
-        </motion.div>
-        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>
-      </motion.div>
-    </section>
-  )}
-=======
           animate = {
   { y: [0, 10,
   0] 
@@ -644,4 +531,6 @@ export default function EnhancedHeroSection(...args[]):  {
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+});
+
+export default EnhancedHeroSection;

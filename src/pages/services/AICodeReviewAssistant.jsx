@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
 const AICodeReviewAssistant = () => {
     const features = [
         {
@@ -23,7 +23,7 @@ const AICodeReviewAssistant = () => {
         {
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
-            icon: <GitBranch className="w-6 h-6"/>
+            icon: <GitFork className="w-6 h-6"/>
         }
     ];
     const benefits = [
@@ -46,7 +46,7 @@ const AICodeReviewAssistant = () => {
             metric: "24/7",
             description: "Automated review coverage",
             icon: <Zap className="w-5 h-5"/>
-        }
+
     ];
     const pricingPlans = [
         {
@@ -92,7 +92,7 @@ const AICodeReviewAssistant = () => {
                 "SLA guarantees"
             ],
             popular: false
-        }
+
     ];
     const integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
@@ -204,7 +204,7 @@ const AICodeReviewAssistant = () => {
               Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, 
               suggests improvements, and maintains code quality standards across your development team.
             </motion.p>
-            
+
             {/* Key Metrics */}
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {
   { opacity: 0,
@@ -307,7 +307,7 @@ const AICodeReviewAssistant = () => {
                 Comprehensive code review capabilities that integrate seamlessly with your existing workflow
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
   { opacity: 0,
@@ -374,7 +374,7 @@ const AICodeReviewAssistant = () => {
                 Choose the plan that best fits your team size and requirements
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-blue-400 bg-blue-900/20'
@@ -411,7 +411,7 @@ const AICodeReviewAssistant = () => {
                         Most Popular
                       </span>
                     </div>)}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">
@@ -420,14 +420,14 @@ const AICodeReviewAssistant = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {feature}
                       </li>))}
                   </ul>
-                  
+
                   <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular
                 ? 'bg-blue-600 hover:bg-blue-700 text-white'
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>
@@ -663,3 +663,4 @@ const AICodeReviewAssistant = () => {
       </div>
     </>)};
 export default AICodeReviewAssistant;
+}}}}

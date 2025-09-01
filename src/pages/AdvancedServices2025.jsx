@@ -38,7 +38,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Next-generation CX platform for customer-centric businesses",
                     competitors["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
                     competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
-                }
+
             ]
         },
         {
@@ -77,7 +77,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Enterprise blockchain solutions for innovative organizations",
                     competitors["Ethereum Enterprise", "Hyperledger", "Corda"],
                     competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
-                }
+
             ]
         },
         {
@@ -149,7 +149,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Intelligent event management for modern organizations",
                     competitors["Eventbrite", "Cvent", "Hopin"],
                     competitiveAdvantage: "AI-powered automation, intelligent optimization, and comprehensive analytics"
-                }
+
             ]
         },
         {
@@ -221,7 +221,7 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Intelligent data center management for large-scale operations",
                     competitors["Nutanix", "VMware", "OpenStack"],
                     competitiveAdvantage: "AI-driven optimization, predictive maintenance, and comprehensive management"
-                }
+
             ]
         },
         {
@@ -293,9 +293,9 @@ const AdvancedServices2025 = () => {
                     marketPosition: "Energy AI for utility and energy companies",
                     competitors["Schneider Electric", "Siemens", "GE"],
                     competitiveAdvantage: "Specialized energy AI, predictive analytics, and sustainability focus"
-                }
+
             ]
-        }
+
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -311,7 +311,7 @@ const AdvancedServices2025 = () => {
               Cutting-edge technology solutions and innovative micro SaaS services designed to transform your business
             </p>
           </div>
-          
+
           {advancedServices.map((category, categoryIndex) => (<div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -321,13 +321,13 @@ const AdvancedServices2025 = () => {
                   {category.description}
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -362,7 +362,7 @@ const AdvancedServices2025 = () => {
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Competitive Advantage:</h4>
                       <p className="text-sm text-gray-300">{service.competitiveAdvantage}</p>
                     </div>
-                    
+
                     <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                       Get Started
                       <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -406,3 +406,4 @@ const AdvancedServices2025 = () => {
       </section>
     </div>)};
 export default AdvancedServices2025;
+}}}}}}

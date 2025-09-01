@@ -4,12 +4,10 @@ interface Stat {
   label: string;
   value: string;
   description: string;
-}
 
 interface InteractiveStatsProps {
   stats: Stat[];
   className?: string;
-}
 
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
   return (
@@ -28,4 +26,4 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
   );
 };
 
-export default InteractiveStats;
+export default InteractiveStats;}}

@@ -1,6 +1,4 @@
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 } from 'lucide-react';
-
-export default function AIHRRecruitment() {
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',;
@@ -13,10 +11,10 @@ export default function AIHRRecruitment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Starter', 
-      price: '$199/mo', 
-      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support'] 
+    {
+      name: 'Starter',
+      price: '$199/mo',
+      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
     },
     { 
       name: 'Professional', 
@@ -171,4 +169,4 @@ export default function AIHRRecruitment() {
       </section>;
     </div>;
   );
-}
+}}

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
-const EnhancedHero = () => {
+import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const [isMuted, setIsMuted] = useState(false);
@@ -36,7 +35,7 @@ const EnhancedHero = () => {
             ctaLink: "/cloud-solutions",
             background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
             icon: "☁️"
-        }
+
     ];
     useEffect(() => {
         if (!isAutoPlaying)
@@ -254,17 +253,6 @@ const EnhancedHero = () => {
 }} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
-<<<<<<< HEAD
-                  <motion.div animate = {
-  { x[0, 5,
-  0] 
-
-}} transition = {
-  { duration: 1.5,
-  repeat: Infinity 
-
-}} className="ml-2">
-=======
                   <motion.div animate = {
   { x: [0, 5,
   0] 
@@ -284,7 +272,6 @@ const EnhancedHero = () => {
 
 
 }} className="ml-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     →
                   </motion.div>
                 </a>
@@ -342,3 +329,4 @@ const EnhancedHero = () => {
       </div>
     </div>)};
 export default EnhancedHero;
+}}}}

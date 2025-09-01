@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown, Search, User, Bell } from 'lucide-react';
-const MobileNavigation = ({ isOpen, onToggle }) => {
+import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
@@ -66,13 +65,15 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 { label: 'Press', href: '/press' },
                 { label: 'Contact', href: '/contact' }
             ]
-        }
+
     ];
     const toggleDropdown = (label) => {
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
+        // // // // // // // console.log('Search query:', searchQuery);
+    };
         console.log('Search query:', searchQuery)};
     const menuVariants = {
   closed: {
@@ -96,8 +97,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             transition: {
                 duration: 0.3,
                 ease: 'easeInOut'
-            }
-        }
+
+
     };
     const dropdownVariants = {
   closed: {
@@ -121,8 +122,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             transition: {
                 duration: 0.2,
                 ease: 'easeInOut'
-            }
-        }
+
+
     };
     return (<AnimatePresence>
       {isOpen && (<>
@@ -220,3 +221,4 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         </>)}
     </AnimatePresence>)};
 export default MobileNavigation;
+}}}}}}}}}</motion.div>}

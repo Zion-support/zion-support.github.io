@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from "../data/innovativeServices2025";
-
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
-=======;
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025";
 
 const InnovativeServicesShowcase: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -34,20 +27,12 @@ const InnovativeServicesShowcase: React.FC = () => {;
 
     // Filter by search term
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     // Filter by category
     if (selectedCategory !== 'all') {
@@ -56,17 +41,11 @@ const InnovativeServicesShowcase: React.FC = () => {;
     // Filter by price range;
     if (priceRange !== 'all') {;
       const [min, max] = priceRange.split('-').map(Number);
-<<<<<<< HEAD
-      if (priceRange = == '3000+') {
-        filtered = filtered.filter(service => service.price >= 3000)} else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max)};
-=======;
       if (priceRange = == '3000+') {;
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }
 
     // Sort services
@@ -299,14 +278,6 @@ const InnovativeServicesShowcase: React.FC = () => {;
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Download Brochure
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </button>;
           </div>;
         </div>;
@@ -314,6 +285,5 @@ const InnovativeServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-export default InnovativeServicesShowcase;
+export default InnovativeServicesShowcase;}}}}}

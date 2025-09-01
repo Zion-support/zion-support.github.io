@@ -22,22 +22,22 @@ export default function DigitalTwin(...args: []):  {
                 <Cpu className="w-4 h-4 mr-2" />
                 Digital Twin Technology
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Digital
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Twin</span>
               </h1>
-              
+
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Create virtual replicas of your physical systems and assets. Monitor performance, 
+                Create virtual replicas of your physical systems and assets. Monitor performance,
                 simulate scenarios, and optimize operations with real-time digital twin technology.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -58,7 +58,7 @@ export default function DigitalTwin(...args: []):  {
                 Virtual Replication Technology
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our digital twin platform creates accurate virtual representations that enable 
+                Our digital twin platform creates accurate virtual representations that enable
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
@@ -299,7 +299,7 @@ export default function DigitalTwin(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -315,4 +315,4 @@ export default function DigitalTwin(...args: []):  {
       </div>;
     </>;
   );
-}
+}}}}

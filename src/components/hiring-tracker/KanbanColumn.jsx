@@ -41,7 +41,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
           {(provided) => (<div ref={provided.innerRef} {...provided.droppableProps} className="min-h-full space-y-2">
               {applications.map((application, index) => (<CandidateCard key={application.id} application={application} index={index}/>))}
               {provided.placeholder}
-              
+
               {applications.length === 0 && (<div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
                     Drag candidates here

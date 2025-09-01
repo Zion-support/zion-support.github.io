@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
-const BlockchainWeb3 = () => {
+import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {
     const blockchainServices = [
         {
             icon: LinkIcon,
@@ -69,7 +68,7 @@ const BlockchainWeb3 = () => {
             name: "Avalanche",
             description: "Fast consensus protocol",
             icon: "AVAX"
-        }
+
     ];
     const useCases = [
         {
@@ -101,7 +100,7 @@ const BlockchainWeb3 = () => {
             title: "Real Estate",
             description: "Property tokenization and fractional ownership",
             icon: Target
-        }
+
     ];
     const benefits = [
         "Transparent and immutable record-keeping",
@@ -125,7 +124,7 @@ const BlockchainWeb3 = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Decentralized Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We develop cutting-edge blockchain solutions and Web3 applications that enable 
+              We develop cutting-edge blockchain solutions and Web3 applications that enable
               trustless, transparent, and efficient digital ecosystems for the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -148,11 +147,11 @@ const BlockchainWeb3 = () => {
               Our Blockchain & Web3 Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions covering every aspect of blockchain development 
+              Comprehensive solutions covering every aspect of blockchain development
               and Web3 application creation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -179,11 +178,11 @@ const BlockchainWeb3 = () => {
               Supported Blockchain Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with leading blockchain platforms and protocols to deliver 
+              We work with leading blockchain platforms and protocols to deliver
               the best solutions for your specific needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
@@ -204,11 +203,11 @@ const BlockchainWeb3 = () => {
               Blockchain Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how blockchain technology can transform your industry 
+              Discover how blockchain technology can transform your industry
               and create new opportunities for innovation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -230,7 +229,7 @@ const BlockchainWeb3 = () => {
                 Why Choose Blockchain?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Blockchain technology offers unprecedented opportunities to create 
+                Blockchain technology offers unprecedented opportunities to create
                 trust, transparency, and efficiency in digital systems.
               </p>
               <ul className="space-y-3">
@@ -245,7 +244,7 @@ const BlockchainWeb3 = () => {
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>
                 <p className="text-gray-300 mb-6">
-                  We're at the forefront of the Web3 revolution, building 
+                  We're at the forefront of the Web3 revolution, building
                   decentralized applications that empower users and organizations.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -266,10 +265,10 @@ const BlockchainWeb3 = () => {
             Our Development Process
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            A systematic approach to building secure, scalable, and user-friendly 
+            A systematic approach to building secure, scalable, and user-friendly
             blockchain applications.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -310,7 +309,7 @@ const BlockchainWeb3 = () => {
             Ready to Build on the Blockchain?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how blockchain technology can transform your business 
+            Let's discuss how blockchain technology can transform your business
             and create new opportunities for growth and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -325,3 +324,4 @@ const BlockchainWeb3 = () => {
       </section>
     </div>)};
 export default BlockchainWeb3;
+}}}}

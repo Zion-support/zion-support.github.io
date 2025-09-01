@@ -1,32 +1,31 @@
-import React, { useState } from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface User {
-
   id: string;
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-  avatarUrl?: string}
+  avatarUrl?: string;
+}
 
 interface AuthState {
-
   user: User | null;
   isAuthenticated: boolean;
-  isLoading: boolean}
+  isLoading: boolean;
+}
 
-export function useAuth(...args[]):  {
-  const [authState, setAuthState] = useState<any>({
+export function useAuth() {
+  const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  useEffect(()  => {
+  useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {;
+    const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
 
@@ -37,27 +36,31 @@ export function useAuth(...args[]):  {
             user,
             isAuthenticated: true,
             isLoading: false,
-          })} catch (error) {
+          });
+        } catch (error) {
           console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,
             isLoading: false,
-          })}
+          });
+        }
       } else {
         setAuthState({
           user: null,
           isAuthenticated: false,
           isLoading: false,
-        })}
+        });
+      }
     };
 
-    checkAuth()}, []);
+    checkAuth();
+  }, []);
 
-  const login = async (email: string, _password: string)  => {
+  const login = async (email: string, password: string) => {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
-  id: '1',
+      id: '1',
       email,
       name: 'John Doe',
       role: 'user',
@@ -70,28 +73,33 @@ export function useAuth(...args[]):  {
       isLoading: false,
     });
 
-    localStorage.setItem('authToken', 'dummy-token');
+    // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'mock-jwt-token');
 
-    return mockUser;
+    return { success: true, user: mockUser };
   };
 
-  const logout = () => {;
-    setAuthState({;
-      user: null,;
-      isAuthenticated: false,;
-      isLoading: false,;
+  const logout = () => {
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
     });
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
 
-  const register = async (email: string, password: string, name: string)  => {
-    // Implement actual registration logic here
+    // Clear localStorage
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // In a real app, you would make an API call to your backend
     const mockUser: User = {
-  id: '1',
+      id: Date.now().toString(),
       email,
       name,
-      role: 'user'
+      role: 'user',
+      userType: 'creator',
     };
 
     setAuthState({
@@ -100,25 +108,31 @@ export function useAuth(...args[]):  {
       isLoading: false,
     });
 
+    // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('authToken', 'mock-jwt-token');
 
-    return mockUser;
+    return { success: true, user: mockUser };
+  };
+
+  const updateProfile = (updates: Partial<User>) => {
+    if (authState.user) {
+      const updatedUser = { ...authState.user, ...updates };
+      setAuthState(prev => ({
+        ...prev,
+        user: updatedUser,
+      }));
+
+      // Update localStorage
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
+    }
   };
 
   return {
-    user: authState.user,
-    loading: authState.isLoading,
+    ...authState,
     login,
     logout,
     register,
-    isAuthenticated: authState.isAuthenticated,
-    isLoading: authState.isLoading,
-<<<<<<< HEAD
-    isAdmin: authState.user?.role = == 'admin'
-  }};
-=======;
-    isAdmin: authState.user?.role = == 'admin';
+    updateProfile,
   };
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

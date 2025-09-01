@@ -1,79 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 export default function AIBusinessSolutions() {
-<<<<<<< HEAD
-    const businessSolutions = [
-        {
-            category: 'Marketing & Sales',
-            solutions[
-                {
-                    name: 'AI Marketing Automation',
-                    description: 'Automate marketing campaigns with intelligent targeting and optimization',
-                    features['Customer segmentation', 'Predictive analytics', 'Campaign optimization', 'ROI tracking'],
-                    icon: '📈'
-                },
-                {
-                    name: 'AI Sales Intelligence',
-                    description: 'Enhance sales performance with AI-powered insights and automation',
-                    features['Lead scoring', 'Sales forecasting', 'Pipeline optimization', 'Customer insights'],
-                    icon: '💼'
-                }
-            ]
-        },
-        {
-            category: 'Operations & Supply Chain',
-            solutions[
-                {
-                    name: 'AI Supply Chain Optimization',
-                    description: 'Optimize supply chain operations with predictive analytics',
-                    features['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Risk management'],
-                    icon: '🚚'
-                },
-                {
-                    name: 'AI Process Automation',
-                    description: 'Streamline business processes with intelligent automation',
-                    features['Workflow automation', 'Document processing', 'Quality control', 'Performance monitoring'],
-                    icon: '⚙️'
-                }
-            ]
-        },
-        {
-            category: 'Finance & Risk',
-            solutions[
-                {
-                    name: 'AI Financial Analytics',
-                    description: 'Advanced financial analysis and risk assessment',
-                    features['Risk modeling', 'Fraud detection', 'Investment analysis', 'Regulatory compliance'],
-                    icon: '💰'
-                },
-                {
-                    name: 'AI Credit Scoring',
-                    description: 'Intelligent credit assessment and lending decisions',
-                    features['Credit risk analysis', 'Alternative data', 'Real-time scoring', 'Portfolio management'],
-                    icon: '🏦'
-                }
-            ]
-        },
-        {
-            category: 'Customer Experience',
-            solutions[
-                {
-                    name: 'AI Customer Service',
-                    description: '24/7 intelligent customer support and engagement',
-                    features['Chatbots', 'Voice assistants', 'Sentiment analysis', 'Personalized support'],
-                    icon: '🤖'
-                },
-                {
-                    name: 'AI Personalization',
-                    description: 'Deliver personalized experiences across all touchpoints',
-                    features['Recommendation engines', 'Dynamic pricing', 'Content personalization', 'Behavioral analysis'],
-                    icon: '🎯'
-                }
-            ]
-        }
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const benefits = [
         {
             title: 'Increased Efficiency',
@@ -98,7 +25,7 @@ export default function AIBusinessSolutions() {
             description: 'Personalized and responsive customer interactions',
             metric: '50%',
             detail: 'Customer satisfaction improvement'
-        }
+
     ];
     const industries = [
         {
@@ -134,7 +61,7 @@ export default function AIBusinessSolutions() {
             AI Business Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business operations with cutting-edge AI solutions designed to 
+            Transform your business operations with cutting-edge AI solutions designed to
             increase efficiency, reduce costs, and drive growth across all departments.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -241,7 +168,7 @@ export default function AIBusinessSolutions() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join leading organizations that have already transformed their operations 
+              Join leading organizations that have already transformed their operations
               with our AI business solutions and achieved remarkable results.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

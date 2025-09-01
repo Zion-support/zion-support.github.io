@@ -72,7 +72,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
           <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3>
           <p className="text-zinc-300 text-sm">Real-time business metrics and insights</p>
         </div>
-        
+
         <div className="flex items-center gap-2">
           <Button size="sm" variant="ghost" onClick={() => setShowTargets(!showTargets)} className="text-zinc-400 hover:text-white p-2">
             {showTargets ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}

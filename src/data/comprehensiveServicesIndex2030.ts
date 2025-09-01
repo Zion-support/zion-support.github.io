@@ -56,12 +56,9 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
-<<<<<<< HEAD
-  ).length,
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
-=======
   ).length,;
   ;
   ;
@@ -73,7 +70,6 @@ export const SERVICE_STATISTICS_2030 = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };

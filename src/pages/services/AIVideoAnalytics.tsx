@@ -1,6 +1,4 @@
-import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
-export default function AIVideoAnalytics() {
+import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
   const features = [
     'Real-time video analysis with AI-powered object detection',
     'Advanced facial recognition and person tracking',;
@@ -13,10 +11,10 @@ export default function AIVideoAnalytics() {
   ];
 
   const tiers = [
-    { 
-      name: 'Basic', 
-      price: '$199/mo', 
-      details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support'] 
+    {
+      name: 'Basic',
+      price: '$199/mo',
+      details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support']
     },
     { 
       name: 'Professional', 
@@ -171,4 +169,4 @@ export default function AIVideoAnalytics() {
       </section>;
     </div>;
   );
-}
+}}

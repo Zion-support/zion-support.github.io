@@ -1,6 +1,4 @@
-import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe } from 'lucide-react';
-
-export default function AIEnergyOptimization() {
+import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {
   const features = [
     'AI-powered energy consumption forecasting and optimization',
     'Real-time monitoring of energy usage across facilities',;
@@ -13,10 +11,10 @@ export default function AIEnergyOptimization() {
   ];
 
   const tiers = [
-    { 
-      name: 'Basic', 
-      price: '$299/mo', 
-      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support'] 
+    {
+      name: 'Basic',
+      price: '$299/mo',
+      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
     },
     { 
       name: 'Professional', 
@@ -171,4 +169,4 @@ export default function AIEnergyOptimization() {
       </section>;
     </div>;
   );
-}
+}}

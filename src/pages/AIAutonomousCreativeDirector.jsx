@@ -8,7 +8,7 @@ const AIAutonomousCreativeDirector = () => {
         <meta name="keywords" content="AI creative director, autonomous creativity, AI design, creative automation, AI marketing, creative strategy"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creative-director"/>
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-pink-900">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -52,31 +52,31 @@ const AIAutonomousCreativeDirector = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Creative Intelligence</h3>
               <p className="text-gray-300">AI that understands brand voice, audience psychology, and creative trends</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-pink-400 text-4xl mb-4">💡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Idea Generation</h3>
               <p className="text-gray-300">Generate hundreds of creative concepts in minutes, not days</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-rose-400 text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Strategic Thinking</h3>
               <p className="text-gray-300">Creative direction that aligns with business objectives and audience insights</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Lightning Fast</h3>
               <p className="text-gray-300">Create campaigns, designs, and content in real-time</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-green-400 text-4xl mb-4">🔄</div>
               <h3 className="text-xl font-semibold text-white mb-3">Iterative Refinement</h3>
               <p className="text-gray-300">Continuously improve and refine creative work based on feedback</p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">📊</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
@@ -93,19 +93,19 @@ const AIAutonomousCreativeDirector = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Research & Insights</h3>
                 <p className="text-gray-300">Analyze market trends, audience behavior, and competitive landscape</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">2</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Concept Generation</h3>
                 <p className="text-gray-300">Create multiple creative concepts and strategic directions</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">3</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Design & Execution</h3>
                 <p className="text-gray-300">Produce high-quality creative assets across all media types</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4">4</div>
                 <h3 className="text-xl font-semibold text-white mb-3">Optimization</h3>
@@ -122,12 +122,12 @@ const AIAutonomousCreativeDirector = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Brand Campaigns</h3>
                 <p className="text-gray-300">Complete brand campaigns from concept to execution</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Digital Marketing</h3>
                 <p className="text-gray-300">Social media content, ads, and digital experiences</p>
               </div>
-              
+
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-semibold text-white mb-3">Product Design</h3>
                 <p className="text-gray-300">Product packaging, UI/UX, and visual identity</p>

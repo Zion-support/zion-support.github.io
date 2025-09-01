@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
-const MarketingServices = [
+import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart const MarketingServices = [
     {
         title: "Search Engine Optimization (SEO)",
         description: "Improve your website's visibility and rank higher in search results",
@@ -150,7 +149,7 @@ const MarketingServices = [
         icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,
         category: "MarTech",
         link: "/request-quote?service=marketing-technology"
-    }
+
 ];
 const categories = [
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
@@ -185,7 +184,7 @@ export default function DigitalMarketingServicesPage() {
             Digital Marketing Services
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Drive growth and engagement with our comprehensive digital marketing solutions. 
+            Drive growth and engagement with our comprehensive digital marketing solutions.
             From SEO to social media, we help businesses thrive online.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

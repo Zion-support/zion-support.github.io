@@ -1,6 +1,4 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
-export default function AISecurityConsulting() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {
   const features = [
     'AI-powered security consulting optimization',
     'Intelligent consulting strategy management and execution',;
@@ -13,10 +11,10 @@ export default function AISecurityConsulting() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
-      price: '$799/mo', 
-      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support'] 
+    {
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support']
     },
     { 
       name: 'Business', 
@@ -171,4 +169,4 @@ export default function AISecurityConsulting() {
       </section>;
     </div>;
   );
-}
+}}

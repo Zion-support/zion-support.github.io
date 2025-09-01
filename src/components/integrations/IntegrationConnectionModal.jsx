@@ -14,7 +14,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
     });
     const handleConnectOAuth = () => {
         setIsConnecting(true);
-        // Simulate OAuth flow 
+        // Simulate OAuth flow
         setTimeout(() => {
             setIsConnecting(false);
             toast.success(`Connected to ${integration.name} successfully`);
@@ -43,12 +43,12 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             </DialogDescription>
           </div>
         </DialogHeader>
-        
+
         {(integration.status === "connected" || integration.status === "warning") ? (<>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-                
+
                 <div className="flex items-center space-x-2">
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
@@ -62,7 +62,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 })}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
@@ -76,7 +76,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 })}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
@@ -90,7 +90,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 })}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
@@ -105,7 +105,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -115,7 +115,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 </p>
               </div>
             </div>
-            
+
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
                 Disconnect
@@ -127,10 +127,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
           </>) : (<>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-                Connect your {integration.name} account to sync job contacts, applicants, and more. 
+                Connect your {integration.name} account to sync job contacts, applicants, and more.
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
-              
+
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -141,7 +141,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 </ul>
               </div>
             </div>
-            
+
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}

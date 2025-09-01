@@ -27,7 +27,7 @@ export const EnhancedAbout = () => {
             title: 'Excellence',
             description: 'Delivering exceptional quality in every project we undertake',
             color: 'zion-purple'
-        }
+
     ];
     const teamMembers = [
         {
@@ -53,7 +53,7 @@ export const EnhancedAbout = () => {
             role: 'Cybersecurity Experts',
             expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
             avatar: '🔒'
-        }
+
     ];
     const milestones = [
         {
@@ -85,7 +85,7 @@ export const EnhancedAbout = () => {
             title: 'Industry Leader',
             description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
-        }
+
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -93,8 +93,8 @@ export const EnhancedAbout = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-            }
-        }
+
+
     };
     const itemVariants = {
   hidden: { y: 20,
@@ -112,8 +112,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const cardVariants = {
   hidden: { scale: 0.9,
@@ -131,7 +131,7 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+
         },
         hover: {
             scale: 1.02,
@@ -139,8 +139,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     const timelineVariants = {
   hidden: { opacity: 0,
@@ -158,8 +158,8 @@ export const EnhancedAbout = () => {
             transition: {
                 duration: 0.8,
                 ease: "easeOut"
-            }
-        }
+
+
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -198,7 +198,7 @@ export const EnhancedAbout = () => {
                   Our Mission
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage 
+                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage
                   the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.
                 </p>
               </div>
@@ -211,7 +211,7 @@ export const EnhancedAbout = () => {
                   Our Vision
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation 
+                  To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation
                   and creating a future where technology empowers every business to reach its full potential.
                 </p>
               </div>
@@ -231,7 +231,7 @@ export const EnhancedAbout = () => {
               The principles that guide everything we do
             </p>
           </motion.div>
-          
+
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {compValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-4xl mb-4 flex justify-center">
@@ -255,7 +255,7 @@ export const EnhancedAbout = () => {
               Meet the talented professionals driving innovation
             </p>
           </motion.div>
-          
+
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {teamMembers.map((member, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group" variants={cardVariants} whileHover="hover">
                 <div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>
@@ -283,16 +283,16 @@ export const EnhancedAbout = () => {
               Key milestones in our growth and success
             </p>
           </motion.div>
-          
+
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
-            
+
             <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {milestones.map((milestone, index) => (<motion.div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`} variants={timelineVariants}>
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>
-                  
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -316,17 +316,17 @@ export const EnhancedAbout = () => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>
               <div className="text-gray-300">Projects Completed</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-purple mb-2">50+</div>
               <div className="text-gray-300">Happy Clients</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </motion.div>
-            
+
             <motion.div className="text-center" variants={itemVariants}>
               <div className="text-4xl font-bold text-zion-purple mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>

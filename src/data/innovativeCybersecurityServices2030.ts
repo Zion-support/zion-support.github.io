@@ -155,13 +155,8 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
-=======
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
@@ -532,21 +527,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 3 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
   }
-=======;
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
     trending: true;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
 
-export default innovativeCybersecurityServices2030;
+export default innovativeCybersecurityServices2030;}}
