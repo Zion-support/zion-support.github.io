@@ -131,27 +131,25 @@ export default function BlogPage() {
                       </Link>
                     </div>
                   </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          {/* Newsletter Signup */}
-          <section className="mt-20 mx-auto max-w-4xl">
-            <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 backdrop-blur-xl rounded-2xl p-8 text-center">
-              <h2 className="text-3xl font-bold mb-4 text-white">Stay Updated</h2>
-              <p className="text-white/70 mb-6">
-                Get the latest insights on autonomous AI and technology delivered to your inbox
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
-                  Subscribe
-                </button>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">About Us</h3>
+                  <p className="text-white/80 text-sm">Learn about our mission and vision for autonomous technology</p>
+                </a>
+                
+                <a href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Get in Touch</h3>
+                  <p className="text-white/80 text-sm">Have questions? We'd love to hear from you</p>
+                </a>
+                
+                <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-2">Case Studies</h3>
+                  <p className="text-white/80 text-sm">See real-world results from our autonomous systems</p>
+                </a>
               </div>
             </div>
           </section>

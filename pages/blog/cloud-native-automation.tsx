@@ -9,133 +9,147 @@ export default function CloudNativeAutomation() {
         <meta name="description" content="A deep dive into our cloud-native approach to building scalable, reliable automation systems." />
         <meta property="og:title" content="Building Cloud-Native Automation Infrastructure" />
         <meta property="og:description" content="A deep dive into our cloud-native approach to building scalable, reliable automation systems." />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Blog
-            </a>
-          </nav>
-          
-          <article className="max-w-4xl mx-auto">
-            <header className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <span className="px-4 py-2 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
-                  Infrastructure
-                </span>
-                <span className="text-white/60 text-sm">January 12, 2025</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">10 min read</span>
-              </div>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Building Cloud-Native Automation Infrastructure
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Discover how Zion Tech Group leverages cloud-native technologies to create automation systems that scale infinitely, heal automatically, and adapt to changing demands in real-time.
-              </p>
-            </header>
-
-            <div className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Cloud-Native Advantage</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  Cloud-native automation represents the pinnacle of scalable, resilient technology infrastructure. By embracing containerization, microservices, and cloud-native patterns, we've built automation systems that can handle any workload, from a single application to global enterprise deployments.
-                </p>
-                <p className="text-white/70">
-                  Our approach ensures that automation capabilities grow with your business, automatically scaling up during peak periods and optimizing resources during quieter times.
-                </p>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Components of Our Infrastructure</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-cyan-400">Container Orchestration</h3>
-                    <p className="text-white/70 text-sm">Kubernetes-based deployment with automatic scaling and load balancing</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-fuchsia-400">Microservices Architecture</h3>
-                    <p className="text-white/70 text-sm">Independent, scalable services that communicate through APIs</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-green-400">Service Mesh</h3>
-                    <p className="text-white/70 text-sm">Intelligent routing, security, and observability for all services</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-blue-400">Event-Driven Architecture</h3>
-                    <p className="text-white/70 text-sm">Real-time processing and response to system events</p>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <nav className="mb-8">
+              <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Blog
+              </a>
+            </nav>
+            
+            <article className="prose prose-invert prose-lg max-w-none">
+              <header className="mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
+                    Infrastructure
+                  </span>
+                  <span className="text-white/60 text-sm">January 12, 2025</span>
+                  <span className="text-white/60 text-sm">•</span>
+                  <span className="text-white/60 text-sm">10 min read</span>
                 </div>
-              </section>
-
+                
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                  Building Cloud-Native Automation Infrastructure
+                </h1>
+                
+                <p className="text-xl text-white/80 leading-relaxed">
+                  Cloud-native architecture has revolutionized how we build and deploy automation systems. 
+                  At Zion Tech Group, we've embraced this paradigm to create infrastructure that's not just 
+                  scalable, but truly autonomous and self-healing.
+                </p>
+              </header>
+              
               <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-green-400">Scalability Without Limits</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  One of the most powerful aspects of cloud-native automation is its ability to scale horizontally. Our systems can automatically spin up new instances when demand increases and scale down when resources are no longer needed.
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Cloud-Native Advantage</h2>
+                <p className="text-white/90 mb-4">
+                  Traditional infrastructure was built for stability and predictability, but the modern digital 
+                  landscape demands flexibility, scalability, and resilience. Cloud-native automation provides 
+                  all three while maintaining the reliability that businesses require.
                 </p>
-                <div className="bg-white/10 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Auto-Scaling in Action</h3>
-                  <p className="text-white/70 mb-3">
-                    During a recent Black Friday event, one of our e-commerce clients experienced:
-                  </p>
-                  <ul className="text-white/70 space-y-2">
-                    <li>• 10x increase in traffic in under 30 minutes</li>
-                    <li>• Automatic scaling from 10 to 100+ instances</li>
-                    <li>• Zero performance degradation</li>
-                    <li>• Automatic cost optimization after peak</li>
-                  </ul>
-                </div>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-blue-400">Self-Healing Capabilities</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  Cloud-native automation doesn't just scale—it heals. Our infrastructure continuously monitors the health of all components and automatically takes corrective action when issues are detected.
-                </p>
-                <p className="text-white/70">
-                  This includes automatic restarts of failed services, traffic rerouting around unhealthy instances, and even automatic rollbacks to previous stable versions when deployments encounter problems.
-                </p>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-purple-400">Multi-Cloud and Hybrid Deployments</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  Our cloud-native approach isn't limited to a single cloud provider. We design systems that can run across multiple clouds, on-premises infrastructure, and edge locations, providing true flexibility and redundancy.
-                </p>
-                <p className="text-white/70">
-                  This multi-cloud strategy ensures high availability, disaster recovery, and the ability to leverage the best features and pricing from different cloud providers.
-                </p>
-              </section>
-
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-yellow-400">Security and Compliance</h2>
-                <p className="text-lg text-white/80 mb-4">
-                  Security is built into every layer of our cloud-native automation infrastructure. From container security scanning to network policies and identity management, we ensure that your automation systems are as secure as they are powerful.
-                </p>
-                <p className="text-white/70">
-                  Our systems automatically enforce security policies, monitor for threats, and maintain compliance with industry standards like SOC 2, ISO 27001, and GDPR.
-                </p>
-              </section>
-
-              <div className="bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-2xl p-8 border border-blue-400/30">
-                <h3 className="text-2xl font-bold mb-4 text-white">Ready to Build Your Cloud-Native Future?</h3>
                 <p className="text-white/80 mb-6">
-                  Transform your automation infrastructure with cloud-native technologies that scale infinitely and heal automatically.
+                  Our cloud-native approach leverages microservices, containerization, and orchestration to 
+                  create systems that can adapt to changing demands automatically.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="/automation" className="px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-bold rounded-lg hover:from-blue-500 hover:to-cyan-500 transition-all duration-200">
-                    Explore Automation
-                  </a>
-                  <a href="/contact" className="px-6 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">
+                
+                <div className="bg-white/10 rounded-lg p-6 border border-white/20 mb-6">
+                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-3">Key Benefits of Cloud-Native Automation</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-cyan-400 mb-2">Scalability</h4>
+                      <ul className="space-y-1 text-sm text-white/80">
+                        <li>• Auto-scaling based on demand</li>
+                        <li>• Horizontal scaling capabilities</li>
+                        <li>• Resource optimization</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-400 mb-2">Resilience</h4>
+                      <ul className="space-y-1 text-sm text-white/80">
+                        <li>• Fault tolerance</li>
+                        <li>• Self-healing mechanisms</li>
+                        <li>• High availability</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Our Infrastructure Architecture</h2>
+                <p className="text-white/90 mb-4">
+                  Zion Tech Group's cloud-native automation infrastructure is built on a foundation of 
+                  proven technologies and innovative approaches that ensure maximum reliability and performance.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
+                    <div className="text-3xl mb-2">🐳</div>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Containerization</h4>
+                    <p className="text-sm text-white/80">Docker containers for consistent deployment and scaling</p>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
+                    <div className="text-3xl mb-2">☸️</div>
+                    <h4 className="font-semibold text-fuchsia-400 mb-2">Orchestration</h4>
+                    <p className="text-sm text-white/80">Kubernetes for automated deployment and management</p>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
+                    <div className="text-3xl mb-2">🔗</div>
+                    <h4 className="font-semibold text-green-400 mb-2">Microservices</h4>
+                    <p className="text-sm text-white/80">Independent services for better scalability</p>
+                  </div>
+                </div>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-green-400">Automation at Scale</h2>
+                <p className="text-white/90 mb-4">
+                  One of the most impressive aspects of our cloud-native infrastructure is its ability to 
+                  handle automation at unprecedented scale while maintaining performance and reliability.
+                </p>
+                
+                <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-lg p-6 border border-cyan-500/20 mb-6">
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-4">Infrastructure Statistics</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-cyan-400">227</div>
+                      <div className="text-sm text-white/70">Active Automations</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-fuchsia-400">99.9%</div>
+                      <div className="text-sm text-white/70">Uptime</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-green-400">24/7</div>
+                      <div className="text-sm text-white/70">Operation</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-blue-400">Auto</div>
+                      <div className="text-sm text-white/70">Scaling</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-lg p-6 border border-cyan-500/20 mt-12">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Ready to Build Your Cloud-Native Future?</h3>
+                <p className="text-white/80 mb-4">
+                  Discover how Zion Tech Group can help you build scalable, reliable automation infrastructure 
+                  that grows with your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-center">
                     Get Started
                   </a>
+                  <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50 text-center">
+                    Learn More
+                  </a>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </main>
       </div>
     </>
