@@ -406,7 +406,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       <div className="relative z-10">
         {children}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

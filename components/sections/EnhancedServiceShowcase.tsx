@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { 
   ArrowRight, ExternalLink, Star, Users, TrendingUp, 
   Shield, Zap, Brain, Rocket, Dna, Globe, Cpu,
@@ -100,8 +101,17 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
   };
 
   return (
-    <section className={`py-20 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-cyan-900/5" />
+      
+      <motion.div 
+        className="max-w-7xl mx-auto relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -211,6 +221,10 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
                     <span>{service.customers?.toLocaleString() || 'N/A'}</span>
                   </div>
                 </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
                 {/* Features */}
                 <div className="mb-6">

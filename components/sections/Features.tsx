@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../ui/Card';
+import { ArrowRight } from 'lucide-react';
 
 interface Feature {
   icon: React.ReactNode;

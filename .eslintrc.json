@@ -1,44 +1,6 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks",
-    "react-refresh"
-  ],
+  "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/prefer-const": "error",
-    "@typescript-eslint/no-var-requires": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ],
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "prefer-const": "error",
-    "no-var": "error"
-  },
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "rules": {
-    "no-console": "off",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "warn",
-    "@next/next/no-title-in-document-head": "warn",
-    "react-hooks/exhaustive-deps": "warn"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    "react/no-unescaped-entities": "off"
   }
 }
