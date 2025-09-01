@@ -1,9 +1,8 @@
 import { renderHook, act } from '@testing-library/react';
-import { ReactNode } from 'react';
 import { CartProvider, useCart } from '@/context/CartContext';
 
 test('add, remove and clear items', () => {
-  const wrapper = ({ children }: { children: ReactNode }) => (
+  const wrapper = ({ children }: { children: React.ReactNode }) => (
     <CartProvider>{children}</CartProvider>
   );
 
