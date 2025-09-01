@@ -4,8 +4,7 @@ import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
-import { Input } from "@/components/ui/input"; // Added
-import { Menu, X, Search } from 'lucide-react'; // Added Search
+import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
@@ -60,7 +59,7 @@ import { CartIcon } from '@/components/CartIcon';
               )}
             </button>
           </div>
-          <CartIcon className="mx-4" />
+
           <ModeToggle />
         </div>
         {/* Mobile menu */}

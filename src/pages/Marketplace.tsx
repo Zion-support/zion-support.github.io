@@ -21,7 +21,43 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
-import { ListingView } from "@/types/listings";
+import styles from './Marketplace.module.css';
+import { useViewMode } from '@/context/ViewModeContext';
+
+interface ProductContainerProps {
+  listings: ProductListing[];
+  onRequestQuote: (id: string) => void;
+}
+
+function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.grid} gap-6 product-grid`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="grid"
+        />
+      ))}
+    </div>
+  );
+}
+
+function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.list} gap-4 product-list`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="list"
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Marketplace() {
   const navigate = useNavigate();
@@ -32,9 +68,7 @@ export default function Marketplace() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
-  const [view, setView] = useState<ListingView>(() =>
-    (localStorage.getItem('marketplaceView') as ListingView) || 'grid'
-  );
+  const { viewMode, setViewMode } = useViewMode();
 
   const filteredSolutions = solutions.filter(solution => {
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
@@ -259,6 +293,12 @@ export default function Marketplace() {
                   Technology Marketplace
                 </span>
               </div>
+            ) : filteredListings.length > 0 ? (
+              viewMode === 'grid' ? (
+                <ProductGrid listings={filteredListings} onRequestQuote={handleRequestQuote} />
+              ) : (
+                <ProductList listings={filteredListings} onRequestQuote={handleRequestQuote} />
+              )
             ) : (
               <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>
                 {filteredListings.length > 0 ? (
@@ -496,7 +536,7 @@ export default function Marketplace() {
                   Talk to Our Experts
                 </Button>
               </div>
-            </motion.div>
+            )}
           </div>
         </section>
       </div>

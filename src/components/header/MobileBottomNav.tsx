@@ -1,11 +1,9 @@
 
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { useAppSelector } from "@/store/hooks";
-import { selectCartCount } from "@/store/cartSlice";
 
 interface MobileBottomNavProps {
   unreadCount?: number;
@@ -35,13 +33,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/community",
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
-    {
-      name: "Cart",
-      href: "/cart",
-      icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
     },
     {
       name: "Messages",

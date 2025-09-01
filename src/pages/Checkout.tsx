@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
 
 interface CartItem {
   id: string;
@@ -13,17 +13,10 @@ interface CartItem {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
-  const { user } = useAuth();
-  const [showGuest, setShowGuest] = useState(false);
-  const [guestEmail, setGuestEmail] = useState('');
-  const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productParam = params.get('product');
-    const stored = localStorage.getItem('cart');
+    const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as CartItem[];
@@ -35,29 +28,24 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
-    if (productParam) {
-      setItems([
-        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
-      ]);
-    } else {
-      // Provide mock data if cart empty
-      setItems([
-        {
-          id: 'prod_mock',
-          name: 'Test Item',
-          price: 25,
-          quantity: 1,
-        },
-      ]);
-    }
-  }, [location.search]);
+    // Provide mock data if cart empty
+    setItems([
+      {
+        id: 'prod_mock',
+        name: 'Test Item',
+        price: 25,
+        quantity: 1,
+      },
+    ]);
+  }, []);
 
-  const createSession = async (body: any) => {
+  const handleCheckout = async () => {
+    const product = items[0];
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ productId: product.id }),
       });
       const { sessionId } = await response.json();
       const stripe = await getStripe();
@@ -67,25 +55,6 @@ export default function Checkout() {
     } catch (err) {
       console.error('Checkout error', err);
     }
-  };
-
-  const handleCheckout = async () => {
-    const product = items[0];
-    if (!user) {
-      setShowGuest(true);
-      return;
-    }
-    await createSession({ priceId: product.id });
-  };
-
-  const handleGuestSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const product = items[0];
-    await createSession({
-      priceId: product.id,
-      email: guestEmail,
-      shipping: guestAddress,
-    });
   };
 
   const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);

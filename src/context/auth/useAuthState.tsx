@@ -69,6 +69,14 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
     checkAuthState()}, []);
 
+/**
+ * Custom hook to manage auth state
+ */
+export function useAuthState() {
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
+  
   return {
 
     user,
@@ -76,7 +84,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     isLoading,
     setIsLoading,
     onboardingStep,
-    setOnboardingStep,
-    tokens,
-    setTokens
-  }};
+    setOnboardingStep
+  };
+}

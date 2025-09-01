@@ -1,9 +1,22 @@
 <<<<<<< HEAD
 
-interface FilterOption {
-  value: string;
-  label: string;
-  count?: number
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Filter, X, Star } from "lucide-react";
+import { FilterOptions } from "@/types/search";
+
+interface FilterSidebarProps {
+  filters: {
+    selectedProductTypes: string[];
+    selectedLocations: string[];
+    selectedAvailability: string[];
+    selectedRating: number | null;
+  };
+  filterOptions: FilterOptions;
+  onFilterChange: (filterType: string, value: string) => void;
+  onRatingChange: (rating: number | null) => void;
+  onClearFilters: () => void;
 }
 
 interface FilterGroup {
@@ -26,38 +39,47 @@ export function FilterSidebar({
   filters,
   selectedFilters,
   onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
+  onRatingChange,
+  onClearFilters
 }: FilterSidebarProps) {
-
-  return ()
-    <>
-      {/* Mobile overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
-          onClick={onClose}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div className={`
-        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`
-      `}>"
-        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">"
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2">"
-            <Filter className="w-5 h-5"  />
-            Filters
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-          </h3>
-          <button
-            onClick={onClose}"
-            className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-"
-            <X className="w-5 h-5 text-zion-slate-light"  />          </button>
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
+        </h3>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          onClick={onClearFilters}
+        >
+          Clear All
+        </Button>
+      </div>
+      
+      {/* Product Type Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Product Type
+        </label>
+        <div className="space-y-2">
+          {filterOptions.productTypes.map((type) => (
+            <div key={type.value} className="flex items-center space-x-2">
+              <Checkbox 
+                id={`type-${type.value}`} 
+                checked={filters.selectedProductTypes.includes(type.value)}
+                onCheckedChange={() => onFilterChange('productTypes', type.value)}
+                className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label 
+                htmlFor={`type-${type.value}`}
+                className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
+              >
+                {type.label}
+              </label>
+            </div>
+          ))}
         </div>
 "
         <div className="p-4 space-y-6">

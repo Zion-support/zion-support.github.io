@@ -1,7 +1,14 @@
-import React from 'react';
-export default function Dashboard () {
-export default React.memo(function Dashboard (...args[]) :  {
-import { motion  } from 'framer-motion';
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CommunityDiscussion } from "@/components/CommunityDiscussion";
+import { Badge } from "@/components/ui/badge";
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
+import { NotificationCenter } from "@/components/NotificationCenter";
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
  from 'lucide - react';
 
@@ -212,40 +219,23 @@ import { motion  } from 'framer-motion';
                 ZT
               </div>
             </div>
-          </div>
-        </div>
-      </div > initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-              transition = {
-  { duration: 0.5,
-  delay: index * 0.1
-
-}}
-              key={stat.name}
-              initial = {
-  { opacity: 0,
-  y: 20
-
-}}
-              animate = {
-  { opacity: 1,
-  y: 0
-
-}}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-sm border border-gray - 200 p - 6 hover:shadow-md transition -shadow"
-            >
-              <div className="flex items - center justify - between mb-4">
-                <div className="p - 2 bg-zion - purple / 20 rounded-lg">
-                  {stat.icon}
+            
+            {/* Main Content - Dashboard */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white">Dashboard</h2>
+                  <div className="flex items-center gap-2">
+                    <NotificationCenter />
+                    <Button 
+                      variant="outline" 
+                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
+                      onClick={logout}
+                    >
+                      <LogOut size={16} className="mr-2" />
+                      Logout
+                    </Button>
+                  </div>
                 </div>
                 <span className={`text-sm font - medium ${stat.changeType === "positive" ? "text-green - 400" : "text-red - 400"
                 }`}>

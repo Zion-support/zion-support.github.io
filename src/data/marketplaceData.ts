@@ -122,53 +122,110 @@ export const marketplaceItems: MarketplaceItem[] = [{
     warranty: '90 days support'
   },
   {
-
-    id: 'iot-platform',
-    title: 'IoT Edge Computing Platform',
-    category: 'products',
-    description: 'Comprehensive IoT platform with edge computing capabilities for real-time data processing and analytics.',
-    price: '$18,500',
-    rating: 4.6,
-    reviews: 78,
-    views: 1890,
-    likes: 112,
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['IoT',Edge Computing',Real-time',Analytics'],;
-    featured: false,
-    seller: {
-
-      name: 'IoT Solutions Pro',
-      rating: 4.5,
-      verified: true
+    id: "ai-business-10",
+    title: "Enterprise AI Transformation Package",
+    description: "Comprehensive solution for businesses looking to integrate AI across operations. Includes AI readiness assessment, strategy development, implementation roadmap, and staff training.",
+    category: "Business Solutions",
+    price: 15000,
+    currency: "$",
+    tags: ["Enterprise", "Digital Transformation", "AI Strategy"],
+    author: {
+      name: "BusinessAI Consultants",
+      id: "businessai",
+      avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100",
     },
-    location: 'Seattle, WA',
-    availability: 'available',
-    deliveryTime: '3-4 weeks',
-    warranty: '2 years'
+    images: ["https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T11:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 22,
+    location: "North America",
+    availability: "4-6 Weeks",
+    aiScore: 96
   },
   {
-
-    id: 'data-scientist',
-    title: 'Senior Data Scientist',
-    category: 'talent',
-    description: 'Experienced data scientist specializing in machine learning, statistical analysis, and big data processing.',
-    price: '$120/hr',
+    id: "ai-research-11",
+    title: "AI Research Papers Database Access",
+    description: "Subscription-based access to the world's largest collection of AI research papers with advanced search capabilities, citation tools, and summarization features.",
+    category: "Research",
+    price: 299,
+    currency: "$",
+    tags: ["Research", "Academic", "Machine Learning"],
+    author: {
+      name: "AI Research Hub",
+      id: "airesearch",
+    },
+    images: ["https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T15:30:00.000Z",
     rating: 4.7,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Data Science',Machine Learning',Python',Statistics'],;
-    featured: false,
-    seller: {
-
-      name: 'DataGenius Consulting',
-      rating: 4.7,
-      verified: true},;
-    location: 'Remote',;
-    availability: 'available',;
-    deliveryTime: 'Immediate',;
-    warranty: 'N/A'};
+    reviewCount: 65,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 88
+  },
+  {
+    id: "ai-robotics-12",
+    title: "Intelligent Robotics Control System",
+    description: "Advanced AI-powered control system for industrial and commercial robots with reinforcement learning capabilities, adaptive motion planning, and remote management interface.",
+    category: "Robotics",
+    price: 8999,
+    currency: "$",
+    tags: ["Robotics", "Automation", "Control Systems"],
+    author: {
+      name: "RoboticsMind",
+      id: "roboticsmind",
+      avatarUrl: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-25T12:15:00.000Z",
+    rating: 4.8,
+    reviewCount: 19,
+    featured: true,
+    location: "Asia",
+    availability: "3-4 Weeks",
+    aiScore: 93
+  },
+  // Adding equipment listings so they're available in marketplace too
+  {
+    id: "equipment-1",
+    title: "High-Performance AI Workstation",
+    description: "Professional-grade workstation optimized for machine learning and AI model training with NVIDIA RTX GPUs.",
+    category: "Workstations",
+    price: 4999,
+    currency: "$",
+    tags: ["GPU", "Machine Learning", "Workstation"],
+    author: {
+      name: "TechGear Solutions",
+      id: "techgear",
+      avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2023-11-10T12:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 32,
+    featured: true,
+    location: "Global",
+    availability: "1-2 Weeks"
+  },
+  {
+    id: "equipment-2",
+    title: "Enterprise GPU Server Rack",
+    description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.",
+    category: "Servers",
+    price: 24999,
+    currency: "$",
+    tags: ["Server", "Enterprise", "GPU Cluster"],
+    author: {
+      name: "ServerPro Systems",
+      id: "serverpro",
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2023-12-15T09:45:00.000Z",
+    rating: 4.9,
+    reviewCount: 18,
+    featured: true,
+    location: "North America",
+    availability: "2-4 Weeks"
+  }
 ];
 ;
 export 

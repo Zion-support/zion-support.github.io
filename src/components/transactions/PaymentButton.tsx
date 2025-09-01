@@ -45,11 +45,9 @@ export function PaymentButton({
         description: "Please sign in to make a purchase.",
       });
 
-      if (serviceId) {
-        sessionStorage.setItem('intendedProduct', serviceId);
-      }
-
-      navigate('/login?next=/checkout');
+      navigate("/login", {
+        state: { from: window.location.pathname }
+      });
       return;
     }
     

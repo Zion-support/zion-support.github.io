@@ -348,14 +348,35 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [// AI-Powered 
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-"
-      technology["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],;"
-      integrations["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],;
-      apiEndpoints: 400,"
-      uptime: "99.9%","
-      security["Edge security", "Data encryption", "Secure boot", "Device authentication"]},;"
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],;"
-    marketSize: "$12.3 billion by 2025"
-
-]}}"
+    images: [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    ],
+    createdAt: "2023-11-10T08:45:00.000Z",
+    aiScore: 86,
+    rating: 4.6,
+    reviewCount: 67,
+  },
+  {
+    id: "service-6",
+    title: "AI Strategy & Implementation",
+    description:
+      "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+    author: {
+      name: "AI Future Consulting",
+      id: "ai-future",
+      avatarUrl:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
+    ],
+    createdAt: "2024-02-02T10:30:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 85,
+  },
+];

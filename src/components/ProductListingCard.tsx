@@ -2,12 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
+import { Star, DollarSign } from "lucide-react";
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -121,8 +116,8 @@ export function ProductListingCard({
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>
-          )}"
-          <FavoriteButton itemId={listing.id} itemType="product"  />        </div>
+          )}
+        </div>
       </div>
 
       {/* Content */}'`
@@ -133,15 +128,24 @@ export function ProductListingCard({
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}  />) }          </div>
-
-          {/* Title & Description */}"
-          <div onClick={handleViewListing} className="block">"
-            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+            {listing.rating && (
+              <div className="flex items-center text-zion-slate-light">
+                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />
+                <span>{listing.rating}</span>
+                {listing.reviewCount && (
+                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                )}
+              </div>
+            )}
+          </div>
+          
+          {/* Title & Description */}
+          <div onClick={handleViewListing} className="block">
+            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
               {listing.title}
             </h3>
-          </div>"
-          <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
+          </div>
+          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
             {listing.description}
           </p>
 

@@ -18,8 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 );
 
@@ -46,25 +45,16 @@ export function LoginForm() {
     try {
       setIsSubmitting(true);
       const { res, data: resData } = await loginUser(data.email, data.password);
-      if (!res.ok) {
-        toast.error(resData?.error || "Invalid credentials");
+      if (res.status !== 200) {
+        const message = resData?.error || "Invalid credentials";
+        form.setError("root", { message });
         return;
       }
 
       await login(data.email, data.password);
 
       const next = searchParams.get('next') || '/';
-      if (next === '/checkout') {
-        const intended = sessionStorage.getItem('intendedProduct');
-        sessionStorage.removeItem('intendedProduct');
-        if (intended) {
-          navigate(`/checkout?product=${intended}`);
-        } else {
-          navigate('/checkout');
-        }
-      } else {
-        navigate(next);
-      }
+      navigate(next, { replace: true });
     } finally {
       setIsSubmitting(false);
     }

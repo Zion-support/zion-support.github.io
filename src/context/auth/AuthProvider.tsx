@@ -1,7 +1,23 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from '../../integrations/supabase/client';
-export default function Page() {
- = useAuthEventHandlers(setUser, setOnboardingStep);
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";
+import { useAuthOperations } from "../../hooks/useAuthOperations";
+import { AuthContext } from "./AuthContext";
+import { cleanupAuthState } from "../../utils/authUtils";
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuthState } from "./useAuthState";
+import { useAuthEventHandlers } from "./useAuthEventHandlers";
+import { mapProfileToUser } from "./profileMapper";
+
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const {
+    user, setUser,
+    isLoading, setIsLoading,
+    onboardingStep, setOnboardingStep
+  } = useAuthState();
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
 
   const {
     login: loginImpl,
@@ -16,52 +32,8 @@ export default function Page() {
   } = useAuthOperations(setUser, setIsLoading, setAvatarUrl);
 
   // Wrapper for login to match the AuthContextType interface
-  const login = async(email: string, password: string) => {
-    const { res, data } = await loginUser(email, password); // Calls /api/auth/login
-
-    // data will have { error: "message", code: "ERROR_CODE" } from the API if status !== 200
-    // data will have { user, accessToken, refreshToken } from the API if status === 200
-
-    if(res.status === 200) {
-      // Successful API call
-      setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
-      const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side
-
-      if(clientLoginResult?.error) {
-        // loginImpl(useEmailAuth.login) already shows a toast.console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
-        return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
-      }
-
-      // Navigation logic(already present)
-      const params = new URLSearchParams(location.search);
-      const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-      navigate(next, { replace: true });
-
-      return { error: null }; // Successful login
-    }
-
-    // Handle errors from the API call(res.status !== 200)
-    // data is expected to be { error: "message", code: "ERROR_CODE" }
-    let toastMessage = data?.error || "An unknown error occurred.";
-    const errorCode = data?.code;
-
-    if(errorCode === "EMAIL_NOT_CONFIRMED") { // Expected for 403
-      toastMessage = data?.error || "Email not confirmed.Please check your inbox to verify your email.";
-    } else if(errorCode === "INVALID_CREDENTIALS") { // Expected for 401
-      toastMessage = data?.error || "Invalid email or password.";
-    } else if(errorCode === "LOGIN_FAILED" || res.status === 500) { // Expected for 500 or other
-      toastMessage = data?.error || "Login failed due to a server error.Please try again later.";
-    } else if(res.status === 400) { // Bad request(e.g. missing fields, though schema validation is in API)
-        toastMessage = data?.error || "Invalid request.Please check your input.";
-    }
-    // Add any other specific error code handling here if needed
-
-    toast({
-      title: "Login Failed",
-      description: toastMessage,
-      variant: "destructive",
-    });
-    return { error: toastMessage };
+  const login = async (email: string, password: string) => {
+    return loginImpl({ email, password });
   };
 
   // Refactored signup method
@@ -166,24 +138,6 @@ export default function Page() {
               // Show welcome toast when user logs in
               if(event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser);
-                const params = new URLSearchParams(location.search);
-                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict
-
-                const nextPathFromStorage = safeStorage.getItem('nextPath');
-
-                if(nextPathFromStorage) {
-                  safeStorage.removeItem('nextPath');
-                  navigate(decodeURIComponent(nextPathFromStorage), { replace: true });
-                } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
-                  const { id, title, price } = location.state.pendingActionArgs;
-                  dispatch(addItem({ id, title, price }));
-                  // Clear pending action from state first
-                  navigate(location.pathname, { state: {}, replace: true });
-                  // Navigate to checkout
-                  navigate('/checkout', { replace: true });
-                } else if(nextFromUrl) {
-                  navigate(decodeURIComponent(nextFromUrl), { replace: true });
-                }
               }
             } else if(error) {
               console.error("Error fetching user profile:", error);
@@ -206,6 +160,13 @@ export default function Page() {
         setIsLoading(false);
       }
     );
+
+    // Initial session check
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        setIsLoading(false);
+      }
+    });
 
     return () => {
       subscription.unsubscribe();
@@ -238,11 +199,7 @@ export default function Page() {
     loginWithFacebook,
     loginWithTwitter,
     loginWithWeb3,
-    setUser,
-    onboardingStep,
-    tokens,
-    avatarUrl,
-    setAvatarUrl
+    onboardingStep
   };
 
   return (<AuthContext.Provider value={authContextValue}>

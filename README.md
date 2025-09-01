@@ -1,10 +1,10 @@
 # Zion Tech Group - Advanced Technology Solutions Platform
 
-## 🚀 Overview
+# Welcome to your Lovable project
 
 Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
 
-## ✨ Key Features
+**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
 
 ### 🎯 Core Functionality
 
@@ -13,7 +13,13 @@ Zion Tech Group is a comprehensive technology solutions platform offering cuttin
 - **Cloud & DevOps**: Scalable infrastructure and deployment solutions
 - **Digital Transformation**: Business process optimization and modernization
 
-### 🔧 Technical Enhancements
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
 
 - **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
 - **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
@@ -133,15 +139,19 @@ npm run test:coverage
 
 ### Development build
 
-```bash
-npm run build:dev
-```
+Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
 
 ### Production build
 
-```bash
-npm run build
-```
+See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
 
 ### Preview production build
 
@@ -195,9 +205,10 @@ warning.
 
 If the app logs **"Error loading tenant"** during startup, the request to the
 Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
-that you have network connectivity. The tenant hook will retry a few times
-before giving up.
+`VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` (or the Next.js style
+`NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`) are set in your
+environment and that you have network connectivity. The tenant hook will retry
+a few times before giving up.
 
 ## Testing
 

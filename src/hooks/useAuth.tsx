@@ -1,3 +1,7 @@
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { AuthContext } from "@/context/auth/AuthContext";
+import type { UserDetails as AuthUserDetails } from "@/types/auth";
 
 interface User {
 
@@ -28,98 +32,23 @@ export function useAuth(...args: unknown[]): unknown {
     isAuthenticated: false,
     isLoading: true});
 
-  useEffect(: unknown {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-:src/hooks/useAuth.tsx
-
-      if(storedUser && token) {
-
-        try {
-          
-          setAuthState({
-
-            user,
-            isAuthenticated: true,
-:src/hooks/useAuth.tsx
-            isLoading: false})} catch(error) {
-
-          // console.error('Error parsing stored user:', error);
-            isLoading: false,
-          })} catch(error) {
-          console.error('Error parsing stored user:', error);
-          setAuthState({
-
-            user: null,
-            isAuthenticated: false,
-:src/hooks/useAuth.tsx
-            isLoading: false})}
-            isLoading: false,
-          })}
-      } else {
-
-        setAuthState({
-
-          user: null,
-          isAuthenticated: false,
-:src/hooks/useAuth.tsx
-          isLoading: false})}
-    };
-
-    checkAuth()}, []);
-
-          isLoading: false,
-        })}
-    };
-
-    checkAuth()}, []);
-
-    setAuthState({
-
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
-
-:src/hooks/useAuth.tsx
-    return { success: true, user: mockUser }};
-
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-
-    return { success: true, user: mockUser }};
-
-    // Clear localStorage
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-
-    setAuthState({
-
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
-
-    return { success: true, user: mockUser }};
-
-:src/hooks/useAuth.tsx
-  
-      setAuthState(prev => ({
-
-:src/hooks/useAuth.tsx
-        ...prev,
-        user: updatedUser}));
-
-      // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+  // Mock auth functions for now - these would connect to Supabase in a real implementation
+  const signIn = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth
+    console.log("Sign in attempted with:", email);
+    // Mock successful sign-in
+    setUser({
+      id: "mock-user-id", 
+      email, 
+      displayName: "Mock User", 
+      name: "Mock User",
+      avatarUrl: "",
+      profileComplete: true,
+      role: "enterprise_admin",
+      permissions: ["billing_access", "admin_access", "team_management"],
+      companyId: "company-123"
+    });
+    return { error: null };
   };
 
   return {

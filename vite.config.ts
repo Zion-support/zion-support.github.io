@@ -24,8 +24,13 @@ export default defineConfig({
     },
   ],
   build: {
+    sourcemap: false,
+    minify: 'esbuild',
     rollupOptions: {
-      external: ['react-markdown', 'vue'],
+      output: {
+        inlineDynamicImports: false,
+      },
+      external: [],
     },
   },
   resolve: {

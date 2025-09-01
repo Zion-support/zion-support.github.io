@@ -2,35 +2,17 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import {
-  HomeIcon,
-  ShoppingCartIcon,
-  LayoutGridIcon,
-  UsersIcon,
-  HardDriveIcon,
-  MessageCircleIcon, // For Community
-  LayoutDashboardIcon,
-  BarChartIcon,
-  MessageSquare,   // For Messages
-} from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function Page() {
 , []);
 
-  const baseLinks: NavigationLink[] = [{
-
-  const iconMap: { [key: string]: React.ElementType } = {
-    home: HomeIcon,
-    marketplace: ShoppingCartIcon,
-    categories: LayoutGridIcon,
-    talent: UsersIcon,
-    equipment: HardDriveIcon,
-    community: MessageCircleIcon,
-    dashboard: LayoutDashboardIcon,
-    analytics: BarChartIcon,
-    messages: MessageSquare,
-  };
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+  const { t } = useTranslation();
 
   const baseLinks = [
     {
@@ -145,25 +127,21 @@ export default function Page() {
   return (
     <nav className={cn("navbar ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
-        {links.map((link) => {
-          const IconComponent = link.Icon;
-          return (
-            <li key={link.key}> {/* Use link.key for a more stable key */}
-              <Link
-                to={link.href}
-                className={cn(
-                  linkBaseClasses,
-                  link.matches(location.pathname)
-                    ? linkActiveStateClasses
-                    : linkDefaultStateClasses
-                )}
-              >
-                {IconComponent && <IconComponent className="mr-2 h-4 w-4" />}
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
         
         {/* Messages link with unread counter */}
         {isAuthenticated && (
