@@ -49,18 +49,17 @@ export function AppHeader(...args: unknown[]): unknown {
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
     { name: 'Pricing', href: '/pricing', current: false, hasDropdown: true },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/help', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Get Quote', href: '/request-quote', current: false }
   ];
 
   const services = [
-    { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection & Response' },
     { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
     { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Predictive Diagnostics & Care Optimization' },
@@ -341,117 +340,144 @@ export function AppHeader(...args: unknown[]): unknown {
   ];
 
   const solutions = [
-    {
-      name: 'Enterprise Solutions',
-      href: '/solutions/enterprise',
-      icon: Building,
-      description: 'Large-scale business transformation',
-      color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions/startup',
-      icon: Rocket,
-      description: 'Rapid growth and scaling',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions/smb',
-      icon: Building2,
-      description: 'Small business optimization',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      name: 'Industry Solutions',
-      href: '/solutions/industry',
-      icon: Factory,
-      description: 'Sector-specific solutions',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Digital Transformation',
-      href: '/solutions/digital-transformation',
-      icon: Zap,
-      description: 'Complete business modernization',
-      color: 'from-cyan-500 to-blue-500'
-    }
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence & Machine Learning' },
+    { name: 'Cloud Solutions', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud Infrastructure & Services' },
+    { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'Security & Compliance' },
+    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket, description: 'Business Process Modernization' },
+    { name: 'IoT Solutions', href: '/services/iot-edge', icon: Cpu, description: 'Internet of Things & Edge Computing' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'Distributed Ledger Technology' },
+    { name: 'Healthcare Technology', href: '/services/healthcare-tech', icon: Heart, description: 'Medical Technology Solutions' },
+    { name: 'Sustainability Tech', href: '/services/sustainability', icon: Globe, description: 'Green Technology Solutions' }
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about', icon: Building, description: 'Company overview & mission' },
+    { name: 'Our Team', href: '/team', icon: Users, description: 'Executive team profiles' },
+    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Job opportunities' },
+    { name: 'News & Media', href: '/news', icon: FileText, description: 'Press releases & updates' },
+    { name: 'Partners', href: '/partners', icon: HeartHandshake, description: 'Strategic partnerships' },
+    { name: 'Case Studies', href: '/case-studies', icon: Award, description: 'Success stories' }
   ];
 
   const resources = [
     { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support documentation' },
     { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Industry insights & updates' },
     { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Success stories' },
-    { name: 'Whitepapers', href: '/whitepapers', icon: FileText, description: 'Technical resources' },
+    { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Technical resources' },
     { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational content' },
-    { name: 'API Documentation', href: '/api-docs', icon: Code, description: 'Developer resources' }
+    { name: 'Documentation', href: '/documentation', icon: Code, description: 'Developer resources' }
   ];
 
   const featuredServices = [
-    { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics & insights' },
     { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection & Response' },
     { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
     { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Predictive Diagnostics & Care Optimization' }
   ];
 
   const serviceCategories = [
-    { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security & Compliance' },
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'Security & Compliance' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
     { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' }
   ];
 
   const pricingDropdown = [
     {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: FileText,
-      description: 'Success stories and implementations',
-      color: 'from-green-500 to-emerald-500'
+      name: 'Pricing Plans',
+      icon: DollarSign,
+      color: 'from-emerald-600 to-teal-600',
+      services: [
+        { name: 'Pricing Overview', href: '/pricing', description: 'Service pricing', icon: DollarSign },
+        { name: 'Pricing Guide', href: '/pricing-guide', description: 'Detailed pricing info', icon: FileText },
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026', description: 'Future pricing', icon: BarChart3 },
+        { name: 'Comprehensive Pricing 2025', href: '/comprehensive-pricing-guide-2025', description: 'Current pricing', icon: TrendingUp }
+      ]
     },
     {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: BookOpen,
-      description: 'In-depth research and insights',
-      color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      name: 'Webinars',
-      href: '/webinars',
-      icon: Play,
-      description: 'Educational sessions and demos',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Blog',
-      href: '/blog',
-      icon: PenTool,
-      description: 'Latest insights and updates',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: HelpCircle,
-      description: 'Technical guides and APIs',
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      name: 'FAQ',
-      href: '/faq',
-      icon: MessageCircle,
-      description: 'Common questions and answers',
-      color: 'from-teal-500 to-green-500'
+      name: 'Get Started',
+      icon: Star,
+      color: 'from-cyan-600 to-blue-600',
+      services: [
+        { name: 'Request Quote', href: '/request-quote', description: 'Get custom pricing', icon: DollarSign },
+        { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a demo', icon: Calendar },
+        { name: 'Contact Sales', href: '/contact', description: 'Speak with sales', icon: Phone },
+        { name: 'Free Trial', href: '/signup', description: 'Start free trial', icon: Star }
+      ]
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Our story and mission', icon: Building },
+    { name: 'Our Team', href: '/team', description: 'Meet our experts', icon: Users },
+    { name: 'Careers', href: '/careers', description: 'Join our team', icon: Briefcase },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships', icon: Building },
+    { name: 'News & Press', href: '/news', description: 'Latest updates', icon: FileText },
+    { name: 'Events', href: '/events', description: 'Upcoming events', icon: Calendar },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success stories', icon: Award },
+    { name: 'Marketplace', href: '/marketplace', description: 'Service marketplace', icon: ShoppingCart }
+  ];
+
+  const resourceLinks = [
+    { name: 'Help Center', href: '/help', description: 'Support and documentation', icon: HelpCircle },
+    { name: 'Documentation', href: '/documentation', description: 'Technical docs', icon: FileText },
+    { name: 'Training', href: '/training', description: 'Learning resources', icon: GraduationCap },
+    { name: 'Blog', href: '/blog', description: 'Latest insights', icon: BookOpen },
+    { name: 'Webinars', href: '/webinars', description: 'Educational events', icon: Calendar },
+    { name: 'White Papers', href: '/white-papers', description: 'Research papers', icon: FileText },
+    { name: 'FAQ', href: '/faq', description: 'Common questions', icon: HelpCircle },
+    { name: 'Support Center', href: '/support', description: 'Technical support', icon: HelpCircle },
+    { name: 'Community', href: '/community', description: 'User community', icon: Users }
+  ];
+
+  const handleNavClick = (nav: any) => {
+    if (nav.hasDropdown) {
+      setActiveNav(nav);
+      // Close other dropdowns
+      if (nav.name === 'Services') {
+        setServicesDropdownOpen(true);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      } else if (nav.name === 'Solutions') {
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      } else if (nav.name === 'Pricing') {
+        // Use the same dropdown state as solutions for pricing
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      } else if (nav.name === 'Company') {
+        setCompanyDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+      } else if (nav.name === 'Resources') {
+        setResourcesDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+      }
+    } else {
+      setActiveNav(null);
+      setServicesDropdownOpen(false);
+      setSolutionsDropdownOpen(false);
+      setCompanyDropdownOpen(false);
+      setResourcesDropdownOpen(false);
+    }
+  };
+
+  const closeAllDropdowns = () => {
+    setServicesDropdownOpen(false);
+    setSolutionsDropdownOpen(false);
+    setCompanyDropdownOpen(false);
+    setResourcesDropdownOpen(false);
+    setActiveNav(null);
   };
 
   return (

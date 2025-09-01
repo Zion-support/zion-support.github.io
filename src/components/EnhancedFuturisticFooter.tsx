@@ -113,7 +113,6 @@ import { motion } from 'framer - motion';
   ShoppingCart,
   Building,
   MailIcon,
-  BookOpen,
   Calendar,
   Settings
 } from 'lucide - react';
@@ -189,26 +188,43 @@ import { motion } from 'framer - motion';
       ]
     },
     {
+      title: 'IoT & Digital Solutions',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
+        { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Smart Contract Lifecycle Manager', href: '/services/smart-contract-lifecycle-manager' },
+        { name: 'Smart Expense Management', href: '/services/smart-expense-management-saas' },
+        { name: 'AI-Powered Project Management', href: '/services/ai-powered-project-management' },
+        { name: 'Smart Customer Support Automation', href: '/services/smart-customer-support-automation' },
+        { name: 'AI-Powered Marketing Attribution', href: '/services/ai-powered-marketing-attribution' },
+        { name: 'Smart Data Governance Suite', href: '/services/smart-data-governance-suite' }
+      ]
+    },
+    {
       title: 'Core Technologies',
       title: 'AI & Machine Learning Services',
       featured: true,
       icon: Brain,
       color: 'from - indigo - 600 to - purple - 600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services / ai - business - intelligence', featured: true },
-        { name: 'AI Workflow Orchestrator', href: '/services / ai - workflow - orchestrator', featured: true },
-        { name: 'AI Data Governance Platform', href: '/services / ai - data - governance - platform', featured: true },
-        { name: 'AI Customer Experience Analytics', href: '/services / ai - customer - experience - analytics', featured: true },
-        { name: 'AI Healthcare Analytics', href: '/services / ai - healthcare - analytics', featured: true },
-        { name: 'AI Financial Trading', href: '/services / ai - financial - trading', featured: true },
-        { name: 'AI Supply Chain Optimization', href: '/services / ai - supply - chain - optimization', featured: true },
-        { name: 'AI Content Creation', href: '/services / ai - content - creation', featured: true },
-        { name: 'AI HR Platform', href: '/services / ai - hr - platform', featured: true },
-        { name: 'AI Marketing Automation', href: '/services / ai - marketing - automation', featured: true },
-        { name: 'AI Customer Support', href: '/services / ai - customer - support - automation', featured: true },
-        { name: 'AI Project Management', href: '/services / ai - project - management', featured: true },
-        { name: 'AI Predictive Maintenance', href: '/services / ai - predictive - maintenance', featured: true },
-        { name: 'AI Sales Copilot', href: '/services / ai - sales - copilot', featured: true }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
     },
     {
@@ -216,14 +232,11 @@ import { motion } from 'framer - motion';
       icon: Star,
       color: 'from - purple - 600 to - pink - 600',
       links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
-        { name: 'Space Tech Solutions', href: '/services/space-tech', featured: true },
-        { name: 'Biotech AI Platform', href: '/services/biotech-ai', featured: true },
-        { name: 'Metaverse Enterprise', href: '/services/metaverse', featured: true },
-        { name: 'Autonomous Systems', href: '/services/autonomous-systems', featured: true },
-        { name: 'Green Tech Solutions', href: '/services/green-tech', featured: true }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Star, description: 'Future-focused solutions' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: Star, description: 'Complete service portfolio' },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Star, description: 'Cutting-edge technology' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Star, description: 'Sales automation' },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', icon: Star, description: 'Content generation' }
       ]
     },
     {
@@ -289,9 +302,9 @@ import { motion } from 'framer - motion';
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 (800) 123-4567',
+    email: 'info@ziontechgroup.com',
+    address: '123 Innovation Drive, Tech City, TC 12345'
   };
 
   return (

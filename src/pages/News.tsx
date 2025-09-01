@@ -1,10 +1,9 @@
-import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide - react';
-import React, { useState } from 'react';
-export default News;
-import { motion } from 'framer - motion';
+import React from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
 
-
-const News: React.FC = () => {
+export default function News() {
   const newsArticles = [
     {
       id: 1,
@@ -269,9 +268,41 @@ const News: React.FC = () => {
                 Subscribe
               </button>
             </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>;) ;
-};
-
+          </motion.div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Have questions about our news or want to learn more about our solutions? 
+              Our team is here to help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                Contact Us
+              </a>
+              <a
+                href="/services-overview"
+                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-all duration-300"
+              >
+                Explore Services
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+  }

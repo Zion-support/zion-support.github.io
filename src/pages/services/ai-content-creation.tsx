@@ -1,90 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Cpu, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, AlertTriangle, Bug, Network, Key, Server, Monitor, Activity } from 'lucide-react';
+import { PenTool, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Cpu, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, FileText, Image, Video, Music, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AICybersecurity() {
+export default function AIContentCreation() {
   const features = [
     {
+      icon: PenTool,
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality content for blogs, articles, marketing copy, and social media'
+    },
+    {
+      icon: Image,
+      title: 'Visual Content Generation',
+      description: 'Create stunning images, graphics, and visual assets with AI-powered design tools'
+    },
+    {
+      icon: Video,
+      title: 'Video Content Creation',
+      description: 'Generate video scripts, storyboards, and automated video content'
+    },
+    {
       icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms for real-time threat identification and response'
+      title: 'Content Optimization',
+      description: 'AI-powered SEO optimization and content performance analysis'
     },
     {
-      icon: Shield,
-      title: 'Zero Trust Security',
-      description: 'Comprehensive zero trust architecture with AI-powered access control and monitoring'
+      icon: Users,
+      title: 'Multi-Channel Publishing',
+      description: 'Automated content distribution across multiple platforms and formats'
     },
     {
-      icon: Zap,
-      title: 'Automated Response',
-      description: 'Intelligent incident response and automated threat mitigation systems'
-    },
-    {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'AI-powered user behavior analysis for insider threat detection'
-    },
-    {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Advanced network monitoring and intrusion prevention with AI insights'
-    },
-    {
-      icon: Lock,
-      title: 'Compliance Management',
-      description: 'Automated compliance monitoring and reporting for various security standards'
+      icon: TrendingUp,
+      title: 'Performance Analytics',
+      description: 'Comprehensive content performance tracking and optimization insights'
     }
   ];
 
   const benefits = [
-    'Detect threats 10x faster than traditional methods',
-    'Reduce false positives by 80%',
-    'Automate 90% of security responses',
-    'Achieve 99.9% threat detection accuracy',
-    'Ensure compliance with industry standards',
-    'Scale security operations efficiently'
+    'Increase content production by 10x',
+    'Improve SEO rankings and organic traffic',
+    'Reduce content creation costs by 60%',
+    'Maintain consistent brand voice and quality',
+    'Scale content marketing operations efficiently',
+    'Generate personalized content for different audiences'
   ];
 
   const useCases = [
     {
-      title: 'Enterprise Security',
-      description: 'Comprehensive security platform for large organizations with multiple locations'
+      title: 'Blog & Article Writing',
+      description: 'AI-powered content creation for blogs, articles, and long-form content'
     },
     {
-      title: 'Cloud Security',
-      description: 'AI-powered cloud infrastructure protection and compliance monitoring'
+      title: 'Marketing Copy',
+      description: 'Generate compelling marketing copy, ads, and promotional content'
     },
     {
-      title: 'Endpoint Protection',
-      description: 'Advanced endpoint detection and response with behavioral analysis'
+      title: 'Social Media Content',
+      description: 'Create engaging social media posts, captions, and visual content'
     },
     {
-      title: 'Incident Response',
-      description: 'Automated incident detection, analysis, and response workflows'
+      title: 'Email Marketing',
+      description: 'Personalized email campaigns and automated content generation'
     }
   ];
 
-  const securityServices = [
+  const contentTypes = [
     {
-      icon: AlertTriangle,
-      title: 'Threat Intelligence',
-      items: ['Real-time threat feeds', 'Vulnerability assessment', 'Risk scoring', 'Threat hunting']
+      icon: FileText,
+      title: 'Written Content',
+      items: ['Blog posts', 'Articles', 'Whitepapers', 'Case studies', 'Product descriptions']
     },
     {
-      icon: Bug,
-      title: 'Penetration Testing',
-      items: ['Automated testing', 'Manual testing', 'Social engineering', 'Physical security']
+      icon: Image,
+      title: 'Visual Content',
+      items: ['Infographics', 'Social media graphics', 'Banner ads', 'Product images', 'Illustrations']
     },
     {
-      icon: Server,
-      title: 'Infrastructure Security',
-      items: ['Network segmentation', 'Firewall management', 'VPN solutions', 'DDoS protection']
+      icon: Video,
+      title: 'Video Content',
+      items: ['Video scripts', 'Storyboards', 'Tutorial videos', 'Product demos', 'Social media videos']
     },
     {
-      icon: Monitor,
-      title: 'Security Monitoring',
-      items: ['SIEM integration', 'Log analysis', 'Alert management', 'Incident tracking']
+      icon: Code,
+      title: 'Technical Content',
+      items: ['Documentation', 'API guides', 'Tutorials', 'Code examples', 'Technical blogs']
     }
   ];
 
@@ -92,7 +92,7 @@ export default function AICybersecurity() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-teal-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,24 +100,24 @@ export default function AICybersecurity() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 text-green-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
-              AI Cybersecurity
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
+              <PenTool className="w-4 h-4" />
+              AI Content Creation
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                {' '}Cybersecurity
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}Content Creation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your organization with next-generation AI cybersecurity. Our intelligent platform 
-              detects, prevents, and responds to threats in real-time while ensuring compliance and security.
+              Transform your content marketing with our advanced AI platform. Generate high-quality, 
+              engaging content across all formats while maintaining your brand voice and SEO optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
@@ -143,11 +143,11 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Cybersecurity Features
+              Advanced Content Creation Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform combines machine learning, behavioral analytics, and automated response 
-              to provide comprehensive protection against evolving cyber threats.
+              Our AI platform combines natural language processing, creative design, and 
+              marketing expertise to deliver content that engages and converts.
             </p>
           </motion.div>
 
@@ -158,9 +158,9 @@ export default function AICybersecurity() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -171,7 +171,7 @@ export default function AICybersecurity() {
         </div>
       </section>
 
-      {/* Security Services Section */}
+      {/* Content Types Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -181,31 +181,31 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Content Types We Create
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From threat intelligence to incident response, our AI platform provides 
-              end-to-end cybersecurity protection for your organization.
+              From written content to visual assets, our AI platform handles all types 
+              of content creation for your marketing needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityServices.map((service, index) => (
+            {contentTypes.map((type, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                  <type.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{type.title}</h3>
                 <ul className="space-y-2">
-                  {service.items.map((item, itemIndex) => (
+                  {type.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-blue-400" />
                       {item}
                     </li>
                   ))}
@@ -226,16 +226,16 @@ export default function AICybersecurity() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Transform Your Security Posture
+                Transform Your Content Marketing
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                Our AI cybersecurity platform delivers measurable improvements in threat detection, 
-                response time, and overall security effectiveness while reducing operational costs.
+                Our AI content creation platform delivers measurable improvements in content 
+                production, quality, and performance while reducing costs and time investment.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -248,23 +248,23 @@ export default function AICybersecurity() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-500/30">
+              <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl p-8 border border-blue-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">10x</div>
-                    <div className="text-sm text-gray-400">Faster threat detection</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">10x</div>
+                    <div className="text-sm text-gray-400">Content production increase</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-400 mb-2">80%</div>
-                    <div className="text-sm text-gray-400">Fewer false positives</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">60%</div>
+                    <div className="text-sm text-gray-400">Cost reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-teal-400 mb-2">90%</div>
-                    <div className="text-sm text-gray-400">Automated responses</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+                    <div className="text-sm text-gray-400">Faster content creation</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-                    <div className="text-sm text-gray-400">Detection accuracy</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">99%</div>
+                    <div className="text-sm text-gray-400">Quality consistency</div>
                   </div>
                 </div>
               </div>
@@ -283,11 +283,11 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Cybersecurity Use Cases
+              Content Creation Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform addresses the most critical cybersecurity challenges, 
-              providing comprehensive protection for various organizational needs.
+              Our AI platform addresses the most critical challenges in content marketing, 
+              providing comprehensive solutions for various content needs.
             </p>
           </motion.div>
 
@@ -298,13 +298,13 @@ export default function AICybersecurity() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-400 mb-6">{useCase.description}</p>
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4" />
@@ -322,19 +322,19 @@ export default function AICybersecurity() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 rounded-3xl p-12 text-center border border-green-500/30"
+            className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 rounded-3xl p-12 text-center border border-blue-500/30"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Organization?
+              Ready to Scale Your Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading organizations that are already using our AI platform to protect 
-              their digital assets and ensure business continuity.
+              Join leading brands that are already using our AI platform to create 
+              engaging content at scale while maintaining quality and brand consistency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Your Quote
                 <ArrowRight className="w-5 h-5" />

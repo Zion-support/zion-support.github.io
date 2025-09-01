@@ -110,7 +110,16 @@ const benefits: Benefit[] = [;
     { value: "24 / 7", label: "Support Availability", icon: <Clock className="w - 6 h - 6" /> }
   ];
 
-  return (<section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - slate - dark to - zion - blue - dark relative overflow - hidden">;
+  const stats = [
+    { value: "500+", label: "Projects Delivered", icon: <Clock className="w-6 h-6" /> },
+    { value: "50+", label: "Expert Team Members", icon: <Globe className="w-6 h-6" /> },
+    { value: "99.9%", label: "Client Satisfaction", icon: <CheckCircle className="w-6 h-6" /> },
+    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
+  ];
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset - 0 opacity - 5">;
         <div className="absolute inset - 0" style={{

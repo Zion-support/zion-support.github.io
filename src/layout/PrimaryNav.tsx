@@ -140,7 +140,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
               {isLoggedIn && <UserMenu />}
             </div>
           </div>
-
+          
           {/* Mobile menu button */}
           <button
             onClick={: unknown setIsOpen(!isOpen)}

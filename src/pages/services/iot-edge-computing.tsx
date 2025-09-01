@@ -1,90 +1,90 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Cpu, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, AlertTriangle, Bug, Network, Key, Server, Monitor, Activity } from 'lucide-react';
+import { Cpu, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Eye, BarChart3, MessageSquare, Calendar, Phone, Mail, MapPin, Server, Network, Wifi, Cloud, Activity, Gauge, Shield, CircuitBoard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AICybersecurity() {
+export default function IoTEdgeComputing() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms for real-time threat identification and response'
+      icon: Cpu,
+      title: 'Edge Processing',
+      description: 'Real-time data processing and analytics at the network edge for instant insights'
     },
     {
-      icon: Shield,
-      title: 'Zero Trust Security',
-      description: 'Comprehensive zero trust architecture with AI-powered access control and monitoring'
+      icon: Brain,
+      title: 'AI at the Edge',
+      description: 'Machine learning models deployed directly on IoT devices for intelligent decision making'
     },
     {
       icon: Zap,
-      title: 'Automated Response',
-      description: 'Intelligent incident response and automated threat mitigation systems'
+      title: 'Low Latency',
+      description: 'Ultra-fast response times with local processing and minimal network dependency'
     },
     {
-      icon: Eye,
-      title: 'Behavioral Analytics',
-      description: 'AI-powered user behavior analysis for insider threat detection'
+      icon: Server,
+      title: 'Distributed Computing',
+      description: 'Intelligent workload distribution across edge nodes and cloud infrastructure'
     },
     {
       icon: Network,
-      title: 'Network Security',
-      description: 'Advanced network monitoring and intrusion prevention with AI insights'
+      title: '5G Integration',
+      description: 'Seamless integration with 5G networks for high-speed, low-latency connectivity'
     },
     {
-      icon: Lock,
-      title: 'Compliance Management',
-      description: 'Automated compliance monitoring and reporting for various security standards'
+      icon: Shield,
+      title: 'Edge Security',
+      description: 'Advanced security protocols for edge devices and data transmission'
     }
   ];
 
   const benefits = [
-    'Detect threats 10x faster than traditional methods',
-    'Reduce false positives by 80%',
-    'Automate 90% of security responses',
-    'Achieve 99.9% threat detection accuracy',
-    'Ensure compliance with industry standards',
-    'Scale security operations efficiently'
+    'Reduce latency by up to 90%',
+    'Lower bandwidth costs by 60%',
+    'Improve reliability with offline capabilities',
+    'Enable real-time decision making',
+    'Scale IoT deployments efficiently',
+    'Reduce cloud dependency and costs'
   ];
 
   const useCases = [
     {
-      title: 'Enterprise Security',
-      description: 'Comprehensive security platform for large organizations with multiple locations'
+      title: 'Smart Manufacturing',
+      description: 'Real-time monitoring and control of production processes with edge AI'
     },
     {
-      title: 'Cloud Security',
-      description: 'AI-powered cloud infrastructure protection and compliance monitoring'
+      title: 'Connected Vehicles',
+      description: 'Autonomous driving systems with edge computing for instant response'
     },
     {
-      title: 'Endpoint Protection',
-      description: 'Advanced endpoint detection and response with behavioral analysis'
+      title: 'Smart Cities',
+      description: 'Intelligent infrastructure management with distributed edge computing'
     },
     {
-      title: 'Incident Response',
-      description: 'Automated incident detection, analysis, and response workflows'
+      title: 'Healthcare IoT',
+      description: 'Patient monitoring and medical device management at the edge'
     }
   ];
 
-  const securityServices = [
+  const edgeServices = [
     {
-      icon: AlertTriangle,
-      title: 'Threat Intelligence',
-      items: ['Real-time threat feeds', 'Vulnerability assessment', 'Risk scoring', 'Threat hunting']
+      icon: CircuitBoard,
+      title: 'Edge Hardware',
+      items: ['Custom edge devices', 'Gateway solutions', 'Sensor integration', 'Power management']
     },
     {
-      icon: Bug,
-      title: 'Penetration Testing',
-      items: ['Automated testing', 'Manual testing', 'Social engineering', 'Physical security']
+      icon: Cloud,
+      title: 'Edge Software',
+      items: ['Edge operating systems', 'Containerization', 'Orchestration', 'Application deployment']
     },
     {
-      icon: Server,
-      title: 'Infrastructure Security',
-      items: ['Network segmentation', 'Firewall management', 'VPN solutions', 'DDoS protection']
+      icon: Network,
+      title: 'Connectivity',
+      items: ['5G integration', 'WiFi 6', 'LoRaWAN', 'Satellite connectivity']
     },
     {
-      icon: Monitor,
-      title: 'Security Monitoring',
-      items: ['SIEM integration', 'Log analysis', 'Alert management', 'Incident tracking']
+      icon: Database,
+      title: 'Data Management',
+      items: ['Local storage', 'Data synchronization', 'Real-time analytics', 'Edge databases']
     }
   ];
 
@@ -92,7 +92,7 @@ export default function AICybersecurity() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-teal-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-indigo-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,24 +100,24 @@ export default function AICybersecurity() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 text-green-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
-              AI Cybersecurity
+            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
+              <Cpu className="w-4 h-4" />
+              IoT Edge Computing
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                {' '}Cybersecurity
+              IoT Edge
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                {' '}Computing
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your organization with next-generation AI cybersecurity. Our intelligent platform 
-              detects, prevents, and responds to threats in real-time while ensuring compliance and security.
+              Transform your IoT deployments with intelligent edge computing. Process data locally, 
+              reduce latency, and enable real-time decision making with our advanced edge platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
@@ -143,11 +143,11 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Cybersecurity Features
+              Advanced Edge Computing Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform combines machine learning, behavioral analytics, and automated response 
-              to provide comprehensive protection against evolving cyber threats.
+              Our IoT edge computing platform combines cutting-edge hardware, intelligent software, 
+              and AI capabilities to deliver real-time processing at the network edge.
             </p>
           </motion.div>
 
@@ -158,9 +158,9 @@ export default function AICybersecurity() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -171,7 +171,7 @@ export default function AICybersecurity() {
         </div>
       </section>
 
-      {/* Security Services Section */}
+      {/* Edge Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -181,31 +181,31 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Services
+              Comprehensive Edge Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From threat intelligence to incident response, our AI platform provides 
-              end-to-end cybersecurity protection for your organization.
+              From hardware design to software deployment, our platform provides 
+              end-to-end edge computing solutions for your IoT needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityServices.map((service, index) => (
+            {edgeServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
                       {item}
                     </li>
                   ))}
@@ -226,16 +226,16 @@ export default function AICybersecurity() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Transform Your Security Posture
+                Transform Your IoT Operations
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                Our AI cybersecurity platform delivers measurable improvements in threat detection, 
-                response time, and overall security effectiveness while reducing operational costs.
+                Our edge computing platform delivers measurable improvements in performance, 
+                reliability, and cost efficiency while enabling new IoT use cases and applications.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -248,23 +248,23 @@ export default function AICybersecurity() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-500/30">
+              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">10x</div>
-                    <div className="text-sm text-gray-400">Faster threat detection</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
+                    <div className="text-sm text-gray-400">Latency reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-400 mb-2">80%</div>
-                    <div className="text-sm text-gray-400">Fewer false positives</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
+                    <div className="text-sm text-gray-400">Bandwidth cost savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-teal-400 mb-2">90%</div>
-                    <div className="text-sm text-gray-400">Automated responses</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">99.9%</div>
+                    <div className="text-sm text-gray-400">Uptime reliability</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
-                    <div className="text-sm text-gray-400">Detection accuracy</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+                    <div className="text-sm text-gray-400">Processing speed</div>
                   </div>
                 </div>
               </div>
@@ -283,11 +283,11 @@ export default function AICybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Cybersecurity Use Cases
+              Edge Computing Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform addresses the most critical cybersecurity challenges, 
-              providing comprehensive protection for various organizational needs.
+              Our platform addresses the most critical challenges in IoT deployment, 
+              providing real-time processing capabilities for various industry applications.
             </p>
           </motion.div>
 
@@ -298,13 +298,13 @@ export default function AICybersecurity() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-400 mb-6">{useCase.description}</p>
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4" />
@@ -322,19 +322,19 @@ export default function AICybersecurity() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 rounded-3xl p-12 text-center border border-green-500/30"
+            className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-3xl p-12 text-center border border-cyan-500/30"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Organization?
+              Ready to Edge Your IoT?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading organizations that are already using our AI platform to protect 
-              their digital assets and ensure business continuity.
+              Join leading organizations that are already using our edge computing platform to 
+              transform their IoT deployments and enable real-time intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Your Quote
                 <ArrowRight className="w-5 h-5" />
