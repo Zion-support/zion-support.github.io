@@ -1122,7 +1122,7 @@ export default function HomePage() {
                   <li>• Netlify Functions Redundancy</li>
                   <li>• Multi-layer failover protection</li>
                 </ul>
-                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -1137,7 +1137,7 @@ export default function HomePage() {
                   <li>• Innovation Systems</li>
                   <li>• MCP Integration</li>
                 </ul>
-                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -1152,7 +1152,7 @@ export default function HomePage() {
                   <li>• Quality Assurance</li>
                   <li>• Automated Recovery</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
