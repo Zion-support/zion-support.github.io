@@ -45,10 +45,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+              <Zap className="w-6 h-6 text-white" />
+            </div>
+            <div className="hidden sm:block">
+              <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                Zion Tech Group
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
                 Zion Tech

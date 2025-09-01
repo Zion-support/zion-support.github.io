@@ -65,27 +65,52 @@ export default function AboutPage() {
             </Card>
           </div>
 
-          {/* Core Values */}
-          <Card className="mb-16">
-            <CardHeader>
-              <CardTitle className="text-3xl text-green-600 text-center">Core Values</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">Our Core Values</h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              The principles that guide our innovation and shape our future
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="relative">
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                    {value.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">Innovation</h3>
                   <p className="text-gray-600">Constantly pushing boundaries and exploring new frontiers in technology</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+                <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{value.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-cursor-blue">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">What We Do</h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive solutions that drive innovation and transformation
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {services.map((service, index) => (
+              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                      {service.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={`text-2xl font-bold mb-4 ${service.color}`}>{service.title}</h3>
+                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">Autonomy</h3>
                   <p className="text-gray-600">Building systems that can operate independently and make intelligent decisions</p>
@@ -99,6 +124,19 @@ export default function AboutPage() {
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">Impact</h3>
                   <p className="text-gray-600">Creating technology that makes a positive difference in the world</p>
                 </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="text-center group">
+                <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>{achievement.number}</div>
+                <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>
               </div>
             </CardContent>
           </Card>

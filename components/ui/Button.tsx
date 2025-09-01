@@ -46,14 +46,17 @@ const Button: React.FC<ButtonProps> = ({
   iconPosition = 'left',
   style,
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group hover:scale-105 active:scale-95';
-  
-  const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
-    ghost: 'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
-    outline: 'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5',
-  };
+  const baseClasses = cn(
+    'inline-flex items-center justify-center font-semibold transition-all duration-300',
+    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black',
+    'disabled:opacity-50 disabled:cursor-not-allowed',
+    'relative overflow-hidden group',
+    fullWidth && 'w-full',
+    rounded && 'rounded-full',
+    !rounded && 'rounded-xl',
+    animated && 'transform hover:shadow-xl hover:shadow-cyan-500/30 active:scale-95',
+    className
+  );
 
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -63,7 +66,18 @@ const Button: React.FC<ButtonProps> = ({
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-  const content = (
+  const iconClasses = cn(
+    'transition-transform duration-200',
+    iconPosition === 'left' && 'mr-2',
+    iconPosition === 'right' && 'ml-2',
+    animated && 'group-hover:shadow-lg hover:shadow-cyan-400/40'
+  );
+
+  const loadingSpinner = (
+    <div className="animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent" />
+  );
+
+  const buttonContent = (
     <>
       {/* Shine effect for primary buttons */}
       {variant === 'primary' && (

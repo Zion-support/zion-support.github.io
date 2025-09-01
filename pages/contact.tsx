@@ -75,56 +75,11 @@ export default function ContactPage() {
                         required
                       />
                     </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Doe"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="john@example.com"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your Company"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service of Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 hover:shadow-xl hover:shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <option value="">Select a service</option>
                       <option value="ai-development">AI Development</option>
@@ -243,6 +198,38 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
+
+            {/* CTA Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="text-center mt-20"
+            >
+              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-3xl p-12">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our cutting-edge technology solutions can transform your business 
+                  and drive innovation in your industry.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="tel:+13024640950"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 hover:shadow-xl hover:shadow-purple-500/30"
+                  >
+                    Call Now
+                  </a>
+                  <a
+                    href={`mailto:${contactInfo.email}`}
+                    className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
+                  >
+                    Send Email
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

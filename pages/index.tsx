@@ -59,29 +59,141 @@ export default function HomePage({ pageLinks }: HomePageProps) {
         columns={3}
       />
 
-      {/* Technology Stack */}
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
-              Specialized Business Solutions
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Micro SaaS Services
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          {/* Main Heading */}
+          <motion.h1 
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+            <br />
+            <span className="text-3xl sm:text-4xl lg:text-6xl text-gray-300">
+              Revolutionary Technology Solutions
+            </span>
+          </motion.h1>
+
+          {/* Subheading */}
+          <motion.p 
+            className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Leading provider of cutting-edge AI consciousness, quantum computing, space technology, and emerging technology solutions. 
+            Transform your business with our innovative services.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link href="/comprehensive-services-showcase-2025">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 flex items-center gap-2 group">
+                Explore All Services
+                <ArrowRight className="w-5 h-5 group-hover:animate-pulse" />
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/30 flex items-center gap-2 group">
+                <Phone className="w-5 h-5 group-hover:animate-pulse" />
+                Get Started
+              </button>
+            </Link>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div 
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {heroStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+                  {stat.icon}
+                  {stat.value}
+                </div>
+                <div className="text-sm lg:text-base text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Categories Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Revolutionary Technology Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Focused solutions for specific business challenges with competitive pricing and comprehensive features.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {serviceHighlights.map((category, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`text-4xl ${category.color} bg-clip-text`}>
+                    {category.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{category.description}</p>
+                <div className="space-y-2 mb-6">
+                  {category.services.slice(0, 4).map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="flex items-center gap-2 text-sm text-gray-400">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      {service}
+                    </div>
+                  ))}
+                  {category.services.length > 4 && (
+                    <div className="text-sm text-cyan-400">
+                      +{category.services.length - 4} more services
+                    </div>
+                  )}
+                </div>
+                <Link href={category.href}>
+                  <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300">
+                    Explore {category.title}
+                  </button>
+                </Link>
+              </motion.div>
+            ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
             {technologyStack.map((tech, index) => (
               <Card
                 key={index}
-                className="text-center group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
-                style={{ animationDelay: `${(index * 0.05) + 0.2}s` }}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
@@ -197,7 +309,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl hover:shadow-blue-500/25"
             >
               <Link href="/contact">
-                Get Started Today
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/50 group">
+                  Get Started Today
+                </button>
               </Link>
             </Button>
             <Button

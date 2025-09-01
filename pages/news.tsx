@@ -223,6 +223,51 @@ const News = () => {
                   {category.label} ({category.count})
                 </button>
               ))}
+            </motion.div>
+
+            {/* News Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newsArticles.filter(article => !article.featured).map((article, index) => (
+                <motion.article
+                  key={index}
+                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                    {article.icon}
+                  </div>
+                  
+                  <div className="flex items-center space-x-4 mb-4">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+                      {article.category}
+                    </span>
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(article.date)}</span>
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{article.title}</h3>
+                  <p className="text-gray-300 mb-6 line-clamp-4">{article.excerpt}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm flex items-center space-x-1">
+                      <User className="w-4 h-4" />
+                      <span>{article.author}</span>
+                    </span>
+                    <a
+                      href="/blog"
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1"
+                    >
+                      <span>Read More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
 

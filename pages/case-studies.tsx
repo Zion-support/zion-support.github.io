@@ -115,8 +115,94 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Featured Case Study */}
-      <section className="py-24 bg-white">
+      {/* Industry Filter */}
+      <section className="py-12 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {industries.map((industry) => (
+              <button
+                key={industry}
+                className="px-6 py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white transition-all duration-200 border border-gray-700 hover:border-blue-500"
+              >
+                {industry}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <Card
+                key={index}
+                className="group hover:border-blue-400/30 overflow-hidden"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="text-6xl mb-6 text-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                  {study.image}
+                </div>
+                
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full mb-3">
+                    {study.industry}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {study.title}
+                  </h3>
+                  <p className={`text-sm font-medium ${study.color}`}>
+                    {study.company}
+                  </p>
+                </div>
+
+                <p className="text-gray-400 mb-6 leading-relaxed">
+                  {study.description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Results:</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, resultIndex) => (
+                      <li key={resultIndex} className="flex items-start">
+                        <span className="text-green-400 mr-2 mt-1">✓</span>
+                        <span className="text-gray-300 text-sm">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {study.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <Button
+                  href="/contact"
+                  variant="outline"
+                  size="sm"
+                  className="w-full"
+                >
+                  View Full Case Study
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Metrics */}
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

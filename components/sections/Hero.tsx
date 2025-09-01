@@ -91,16 +91,19 @@ const Hero: React.FC<HeroProps> = ({
           )}
         </div>
 
-        {/* Stats Section */}
-        {stats && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative">
-                  <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
-                    {stat.value}
-                  </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        {/* Enhanced stats grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-in-up stagger-5">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="group relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/10"
+            >
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+              
+              <div className="relative z-10">
+                <div className={`text-3xl sm:text-4xl font-bold ${stat.color} mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
                   {stat.label}

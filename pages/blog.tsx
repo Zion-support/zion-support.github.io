@@ -147,8 +147,66 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* All Blog Posts */}
-      <section className="py-24 bg-white">
+      {/* Featured Post */}
+      {blogPosts.filter(post => post.featured).map((post, index) => (
+        <section key={index} className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30 mb-6">
+                Featured Post
+              </span>
+            </div>
+            
+            <Card className="p-12 group hover:border-blue-400/30">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="text-center lg:text-left">
+                  <span className={`inline-block px-3 py-1 bg-gray-800 text-sm rounded-full mb-4 ${post.color}`}>
+                    {post.category}
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                    {post.title}
+                  </h2>
+                  <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        {post.author.charAt(0)}
+                      </div>
+                      <div>
+                        <div className="text-white font-semibold">{post.author}</div>
+                        <div className="text-gray-400 text-sm">{post.date}</div>
+                      </div>
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      {post.readTime}
+                    </div>
+                  </div>
+                  
+                  <Button
+                    href="/blog/ai-automation-trends-2025"
+                    size="lg"
+                    className="group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-200"
+                  >
+                    Read Full Article
+                  </Button>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-8xl group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                    {post.image}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+      ))}
+
+      {/* Blog Posts Grid */}
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -160,19 +218,24 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).map(post => (
-              <Card key={post.id} className="hover-lift">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-                      {post.category}
-                    </span>
-                    <div className="text-xs text-gray-500">
-                      {post.readTime}
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl text-gray-900">{post.title}</CardTitle>
-                  <CardDescription className="text-gray-600">
+            {blogPosts.filter(post => !post.featured).map((post, index) => (
+              <Card
+                key={index}
+                className="group hover:border-blue-400/30 overflow-hidden"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="text-6xl mb-6 text-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                  {post.image}
+                </div>
+                
+                <div className="mb-4">
+                  <span className={`inline-block px-3 py-1 bg-gray-800 text-sm rounded-full mb-3 ${post.color}`}>
+                    {post.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">
                     {post.excerpt}
                   </CardDescription>
                 </CardHeader>

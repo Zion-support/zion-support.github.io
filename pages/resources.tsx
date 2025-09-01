@@ -168,19 +168,24 @@ export default function ResourcesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resources.filter(resource => !resource.featured).map(resource => (
-              <Card key={resource.id} className="hover-lift">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-                      {resource.type}
-                    </span>
-                    <div className="text-xs text-gray-500">
-                      {resource.fileSize}
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl text-gray-900">{resource.title}</CardTitle>
-                  <CardDescription className="text-gray-600">
+            {resources.map((resource, index) => (
+              <Card
+                key={index}
+                className="group hover:border-blue-400/30 overflow-hidden"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="text-6xl mb-6 text-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                  {resource.image}
+                </div>
+                
+                <div className="mb-4">
+                  <span className={`inline-block px-3 py-1 bg-gray-800 text-sm rounded-full mb-3 ${resource.color}`}>
+                    {resource.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-400 mb-6 leading-relaxed">
                     {resource.description}
                   </CardDescription>
                 </CardHeader>
@@ -212,13 +217,15 @@ export default function ResourcesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover-lift text-center">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tools.map((tool, index) => (
+              <Card
+                key={index}
+                className="text-center group hover:border-blue-400/30"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="text-5xl mb-6 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                  {tool.image}
                 </div>
                 <CardTitle className="text-xl text-gray-900">Documentation</CardTitle>
               </CardHeader>
@@ -251,12 +258,39 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover-lift text-center">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Getting Started with AI Automation',
+                duration: '15:32',
+                thumbnail: '🎬',
+                category: 'Beginner'
+              },
+              {
+                title: 'Advanced Cloud Infrastructure Setup',
+                duration: '28:45',
+                thumbnail: '☁️',
+                category: 'Advanced'
+              },
+              {
+                title: 'Security Best Practices for AI Systems',
+                duration: '22:18',
+                thumbnail: '🔒',
+                category: 'Intermediate'
+              }
+            ].map((video, index) => (
+              <Card
+                key={index}
+                className="group hover:border-blue-400/30 overflow-hidden"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="relative">
+                  <div className="text-8xl text-center py-8 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                    {video.thumbnail}
+                  </div>
+                  <div className="absolute top-4 right-4 bg-black/80 text-white text-xs px-2 py-1 rounded">
+                    {video.duration}
+                  </div>
                 </div>
                 <CardTitle className="text-xl text-gray-900">Community</CardTitle>
               </CardHeader>
@@ -270,6 +304,51 @@ export default function ResourcesPage() {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Community & Support */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="p-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Join Our Community
+            </h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Connect with experts, share experiences, and get support from our community of AI and automation professionals.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {[
+                { icon: '💬', title: 'Discord Community', description: 'Join discussions and get real-time help' },
+                { icon: '📧', title: 'Email Support', description: 'Get expert guidance via email' },
+                { icon: '📚', title: 'Documentation', description: 'Comprehensive guides and references' }
+              ].map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl mb-3">{item.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/contact"
+                size="lg"
+                className="group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-200"
+              >
+                Join Discord
+              </Button>
+              <Button
+                href="/contact"
+                variant="outline"
+                size="lg"
+              >
+                Contact Support
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
 
