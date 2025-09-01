@@ -81,56 +81,13 @@ export default function Page() {
       icon: Atom
     },
 
-    // Blog Posts
-    {
-      id: 'ai - trends - 2024',
-      title: 'AI Trends to Watch in 2024',
-      description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
-      url: '/blog / ai - trends - 2024',
-      type: 'blog',
-      category: 'AI & Technology',
-      tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],
-      relevance: 0.82,
-      lastUpdated: '2024 - 12 - 01',
-      icon: BookOpen
-    },
-    {
-      id: 'cloud - migration - guide',
-      title: 'Complete Guide to Cloud Migration',
-      description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
-      url: '/blog / cloud - migration - guide',
-      type: 'blog',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],
-      relevance: 0.79,
-      lastUpdated: '2024 - 11 - 28',
-      icon: Cloud
-    },
-
-    // Case Studies
-    {
-      id: 'healthcare - ai - case - study',
-      title: 'AI Transformation in Healthcare',
-      description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
-      url: '/case - studies / healthcare - ai - transformation',
-      type: 'case - study',
-      category: 'Healthcare',
-      tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],
-      relevance: 0.85,
-      lastUpdated: '2024 - 11 - 20',
-      icon: FileText
-    }
-  ];
-
-  const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case - studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
-  ];
+export default function SearchPage() {
+  const router = useRouter();
+  const initial = (router.query.q as string) || "";
+  const [query, setQuery] = useState(initial);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
 
   useEffect(() => {
     if(searchQuery) {

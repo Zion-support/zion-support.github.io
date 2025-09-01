@@ -14,7 +14,14 @@ export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState([] as TalentProfile[]);
   const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
+  const router = useRouter();
+  // Using router.asPath instead of useLocation
+
+  useEffect(() => {
+    if (!user) {
+      router.push(`/login?next=${encodeURIComponent(router.asPath)}`);
+    }
+  }, [user, router]);
 
   useEffect(() => {
     const fetchSavedTalents = async () => {

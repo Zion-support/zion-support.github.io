@@ -19,8 +19,9 @@ import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 
 export default function TalentProfilePage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+  // Cast to specify the expected route param type since useParams may be untyped
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
