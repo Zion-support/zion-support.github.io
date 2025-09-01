@@ -1,381 +1,383 @@
-export interface EnterpriseSolution {
-
+export interface AdvancedEnterpriseSolution {
   id: string;
   title: string;
   description: string;
-  longDescription: string;
-  icon: string;
-  color: string;
-  category: 'infrastructure' | 'cloud' | 'security' | 'consulting' | 'transformation' | 'integration' | 'analytics' | 'automation';
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom: string};
-  estimatedTime: string;
-  technologies: string[];
-  image?: string;
-  enterpriseScore: number;
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  contactLink: string;
-  status: 'active' | 'beta' | 'coming-soon';
-  sla: string;
-  support: string}
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
+  roi: string;
+  innovationLevel: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+}
+
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution[] = [
+  // Enterprise Resource Planning (ERP) Solutions
   {
-    id: 'enterprise-cloud-migration',
-    title: 'Enterprise Cloud Migration & Strategy',
-    description: 'Comprehensive cloud migration strategy and implementation for large enterprises',
-    longDescription: 'Transform your enterprise infrastructure with our proven cloud migration methodology. We handle everything from strategy planning to implementation and optimization.',
-    icon: 'Cloud',
-    color: 'from-blue-500 to-cyan-600',
-    category: 'cloud',
-    features[;
-      'Cloud readiness assessment',
-      'Migration strategy planning',
-      'Multi-cloud architecture design',
-      'Data migration automation',
-      'Performance optimization',
-      'Cost optimization strategies'
-    ],;
-    benefits[;
-      '40% reduction in infrastructure costs',
-      '99.9% uptime guarantee',
-      'Scalable architecture',
-      'Improved security posture'
-    ],;
-    useCases[;
-      'Large enterprises',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies'
-    ],;
-    pricing: {
-      starter: '$50,000',
-      professional: '$150,000',
-      enterprise: '$500,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '6-18 months',
-    technologies['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],;
-    enterpriseScore: 98,
-    marketPrice: '$50,000-$500,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '99.9% uptime guarantee',
-    support: '24/7 dedicated support team'
-  },
-  {
-    id: 'enterprise-cybersecurity',
-    title: 'Enterprise Cybersecurity Framework',
-    description: 'Comprehensive cybersecurity framework and threat protection',
-    longDescription: 'Protect your enterprise with our comprehensive cybersecurity framework. Includes threat detection, incident response, compliance management, and security training.',
-    icon: 'Shield',
-    color: 'from-red-500 to-orange-600',
-    category: 'security',
-    features[;
-      'Zero-trust architecture',
-      'Advanced threat detection',
-      'Incident response automation',
+    id: 'enterprise-erp-platform',
+    title: 'Enterprise ERP Platform',
+    description: 'Comprehensive enterprise resource planning platform that integrates all business processes including finance, HR, supply chain, and customer relationship management.',
+    category: 'Enterprise Solutions',
+    subcategory: 'ERP',
+    price: 15000,
+    currency: '$',
+    pricingModel: 'monthly',
+    features: [
+      'Integrated business process management',
+      'Real-time financial reporting',
+      'Human resource management',
+      'Supply chain optimization',
+      'Customer relationship management',
+      'Inventory management',
+      'Project management',
+      'Business intelligence dashboard',
+      'Multi-currency support',
       'Compliance management',
-      'Security awareness training',
-      'Vulnerability assessment'
-    ],;
-    benefits[;
-      '99.99% threat detection rate',
-      'Reduced security incidents',
-      'Compliance automation',
-      'Improved security posture'
-    ],;
-    useCases[;
-      'Fortune 500 companies',
-      'Financial services',
-      'Healthcare systems',
-      'Government entities'
-    ],;
-    pricing: {
-      starter: '$75,000',
-      professional: '$200,000',
-      enterprise: '$750,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '3-12 months',
-    technologies['SIEM', 'EDR', 'XDR', 'Zero Trust', 'AI/ML', 'Automation'],;
-    enterpriseScore: 99,
-    marketPrice: '$75,000-$750,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '99.99% security guarantee',
-    support: '24/7 SOC team support'
-  },
-  {
-    id: 'digital-transformation',
-    title: 'Digital Transformation Consulting',
-    description: 'End-to-end digital transformation strategy and implementation',
-    longDescription: 'Lead your industry with our comprehensive digital transformation services. We help enterprises modernize processes, adopt new technologies, and create competitive advantages.',
-    icon: 'Rocket',
-    color: 'from-purple-500 to-pink-600',
-    category: 'transformation',
-    features[;
-      'Digital maturity assessment',
-      'Transformation roadmap',
-      'Process optimization',
-      'Technology adoption',
-      'Change management',
-      'ROI measurement'
-    ],;
-    benefits[;
-      '30% operational efficiency improvement',
-      'Enhanced customer experience',
-      'Competitive advantage',
-      'Future-ready organization'
-    ],;
-    useCases[;
-      'Traditional enterprises',
+      'Workflow automation',
+      'Mobile application access'
+    ],
+    benefits: [
+      'Reduce operational costs by 25-35%',
+      'Improve process efficiency by 40%',
+      'Centralized data management',
+      'Real-time business insights',
+      'Scalable enterprise solution'
+    ],
+    useCases: [
       'Manufacturing companies',
       'Retail chains',
-      'Service organizations'
-    ],;
-    pricing: {
-      starter: '$100,000',
-      professional: '$300,000',
-      enterprise: '$1,000,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '12-36 months',
-    technologies['AI/ML', 'Cloud Computing', 'IoT', 'Blockchain', 'RPA', 'Analytics'],;
-    enterpriseScore: 97,
-    marketPrice: '$100,000-$1,000,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: 'Transformation success guarantee',
-    support: 'Dedicated transformation team'
-  },
-  {
-    id: 'enterprise-data-analytics',
-    title: 'Enterprise Data Analytics Platform',
-    description: 'Advanced data analytics and business intelligence for enterprises',
-    longDescription: 'Unlock the power of your data with our enterprise analytics platform. Features real-time processing, predictive analytics, and automated insights generation.',
-    icon: 'BarChart3',
-    color: 'from-green-500 to-emerald-600',
-    category: 'analytics',
-    features[;
-      'Real-time data processing',
-      'Predictive analytics',
-      'Machine learning models',
-      'Data visualization',
-      'Automated reporting',
-      'Data governance'
-    ],;
-    benefits[;
-      'Data-driven decision making',
-      'Improved operational efficiency',
-      'Predictive insights',
-      'Automated business processes'
-    ],;
-    useCases[;
-      'Financial services',
+      'Service organizations',
       'Healthcare systems',
-      'Manufacturing',
-      'Retail chains'
-    ],;
-    pricing: {
-      starter: '$60,000',
-      professional: '$180,000',
-      enterprise: '$600,000+',
-      custom: 'Contact us'
+      'Educational institutions'
+    ],
+    targetAudience: [
+      'Enterprise businesses',
+      'Multi-location companies',
+      'Manufacturing firms',
+      'Retail chains',
+      'Healthcare organizations'
+    ],
+    tags: ['ERP', 'Enterprise', 'Business Process', 'Integration', 'Management'],
+    estimatedDelivery: '12-16 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$15,000 - $50,000/month',
+    roi: '300-500%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
     },
-    estimatedTime: '4-12 months',
-    technologies['Apache Spark', 'Kafka', 'TensorFlow', 'Tableau', 'Power BI', 'Python'],;
-    enterpriseScore: 96,
-    marketPrice: '$60,000-$600,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '99.9% data availability',
-    support: '24/7 analytics support'
+    technicalSpecs: {
+      technology: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Redis', 'Docker'],
+      integrations: ['SAP', 'Oracle', 'Salesforce', 'QuickBooks', 'ADP'],
+      apiEndpoints: 150,
+      uptime: '99.99%',
+      security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'HIPAA']
+    },
+    competitors: ['SAP', 'Oracle', 'Microsoft Dynamics'],
+    marketSize: '$45 billion',
+    demoUrl: 'https://ziontechgroup.com/demo/erp',
+    documentationUrl: 'https://ziontechgroup.com/docs/erp'
   },
-  {
-    id: 'enterprise-automation',
-    title: 'Enterprise Process Automation',
-    description: 'Intelligent process automation and workflow optimization',
-    longDescription: 'Automate complex business processes with our intelligent automation platform. Reduce manual work, improve accuracy, and increase operational efficiency.',
-    icon: 'Zap',
-    color: 'from-yellow-500 to-orange-600',
-    category: 'automation',
-    features[;
-      'RPA implementation',
-      'Workflow automation',
-      'Process optimization',
-      'Integration services',
-      'Monitoring & analytics',
-      'Continuous improvement'
-    ],;
-    benefits[;
-      '70% process efficiency improvement',
-      'Reduced manual errors',
-      'Cost savings',
-      'Scalable operations'
-    ],;
-    useCases[;
-      'Finance & accounting',
-      'Human resources',
-      'Customer service',
-      'Supply chain management'
-    ],;
-    pricing: {
-      starter: '$40,000',
-      professional: '$120,000',
-      enterprise: '$400,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '3-9 months',
-    technologies['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'RPA'],;
-    enterpriseScore: 94,
-    marketPrice: '$40,000-$400,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '95% automation success rate',
-    support: 'Automation support team'
-  },
-  {
-    id: 'enterprise-integration',
-    title: 'Enterprise System Integration',
-    description: 'Seamless integration of enterprise systems and applications',
-    longDescription: 'Connect your enterprise systems with our comprehensive integration platform. Enable data flow, automate processes, and create unified business operations.',
-    icon: 'Network',
-    color: 'from-indigo-500 to-purple-600',
-    category: 'integration',
-    features[;
-      'API development',
-      'Data integration',
-      'System connectivity',
-      'Real-time synchronization',
-      'Error handling',
-      'Performance monitoring'
-    ],;
-    benefits[;
-      'Unified data view',
-      'Automated workflows',
-      'Improved efficiency',
-      'Reduced manual work'
-    ],;
-    useCases[;
-      'ERP integration',
-      'CRM systems',
-      'Legacy system modernization',
-      'Cloud-to-on-premise'
-    ],;
-    pricing: {
-      starter: '$35,000',
-      professional: '$100,000',
-      enterprise: '$350,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '2-8 months',
-    technologies['MuleSoft', 'Boomi', 'Apache Camel', 'Node.js', 'Python', 'APIs'],;
-    enterpriseScore: 93,
-    marketPrice: '$35,000-$350,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '99.5% integration uptime',
-    support: 'Integration support team'
-  },
-  {
-    id: 'enterprise-infrastructure',
-    title: 'Enterprise Infrastructure Modernization',
-    description: 'Modernize and optimize enterprise infrastructure',
-    longDescription: 'Transform your enterprise infrastructure with modern technologies. Improve performance, reduce costs, and enhance security with our infrastructure modernization services.',
-    icon: 'Server',
-    color: 'from-gray-500 to-slate-600',
-    category: 'infrastructure',
-    features[;
-      'Infrastructure assessment',
-      'Modernization planning',
-      'Performance optimization',
-      'Security enhancement',
-      'Scalability improvements',
-      'Cost optimization'
-    ],;
-    benefits[;
-      'Improved performance',
-      'Reduced operational costs',
-      'Enhanced security',
-      'Scalable architecture'
-    ],;
-    useCases[;
-      'Data centers',
-      'Network infrastructure',
-      'Storage systems',
-      'Computing resources'
-    ],;
-    pricing: {
-      starter: '$80,000',
-      professional: '$250,000',
-      enterprise: '$800,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '6-18 months',
-    technologies['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],;
-    enterpriseScore: 95,
-    marketPrice: '$80,000-$800,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: '99.9% infrastructure uptime',
-    support: '24/7 infrastructure support'
-  },
-  {
-    id: 'enterprise-consulting',
-    title: 'Strategic IT Consulting',
-    description: 'Strategic IT consulting and technology advisory services',
-    longDescription: 'Get expert guidance on your technology strategy with our enterprise consulting services. We help you make informed decisions and optimize your IT investments.',
-    icon: 'Users',
-    color: 'from-teal-500 to-cyan-600',
-    category: 'consulting',
-    features[;
-      'Technology strategy',
-      'Architecture planning',
-      'Vendor selection',
-      'Risk assessment',
-      'ROI analysis',
-      'Implementation guidance'
-    ],;
-    benefits[;
-      'Optimized technology investments',
-      'Reduced risks',
-      'Improved efficiency',
-      'Strategic alignment'
-    ],;
-    useCases[;
-      'Technology strategy',
-      'Digital transformation',
-      'System selection',
-      'Risk management'
-    ],;
-    pricing: {
-      starter: '$25,000',
-      professional: '$75,000',
-      enterprise: '$250,000+',
-      custom: 'Contact us'
-    },
-    estimatedTime: '1-6 months',
-    technologies['Strategy frameworks', 'Architecture tools', 'Analysis methods', 'Best practices'],;
-    enterpriseScore: 96,
-    marketPrice: '$25,000-$250,000+',
-    contactLink: 'https://ziontechgroup.com/contact',
-    status: 'active',
-    sla: 'Consulting success guarantee',
-    support: 'Strategic advisory team'
 
+  // Customer Data Platform (CDP)
+  {
+    id: 'customer-data-platform',
+    title: 'Customer Data Platform (CDP)',
+    description: 'Unified customer data platform that collects, processes, and activates customer data across all touchpoints for personalized marketing and customer experience.',
+    category: 'Enterprise Solutions',
+    subcategory: 'Customer Data',
+    price: 8500,
+    currency: '$',
+    pricingModel: 'monthly',
+    features: [
+      'Real-time customer data collection',
+      'Identity resolution and unification',
+      'Customer journey mapping',
+      'Predictive analytics',
+      'Personalization engine',
+      'Marketing automation integration',
+      'Data governance and compliance',
+      'Real-time segmentation',
+      'Cross-channel attribution',
+      'Customer lifetime value analysis',
+      'Privacy management tools',
+      'API-first architecture'
+    ],
+    benefits: [
+      'Increase customer lifetime value by 30%',
+      'Improve marketing ROI by 40%',
+      'Reduce customer acquisition costs',
+      'Enhanced customer experience',
+      'Compliance with privacy regulations'
+    ],
+    useCases: [
+      'E-commerce platforms',
+      'Financial services',
+      'Healthcare providers',
+      'Retail chains',
+      'Media and entertainment'
+    ],
+    targetAudience: [
+      'Marketing teams',
+      'Data analysts',
+      'Customer success teams',
+      'Product managers',
+      'Business intelligence teams'
+    ],
+    tags: ['CDP', 'Customer Data', 'Marketing', 'Analytics', 'Personalization'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$8,500 - $25,000/month',
+    roi: '250-400%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technicalSpecs: {
+      technology: ['Python', 'Apache Kafka', 'Elasticsearch', 'React', 'Node.js'],
+      integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Google Analytics', 'Facebook'],
+      apiEndpoints: 200,
+      uptime: '99.95%',
+      security: ['GDPR', 'CCPA', 'SOC 2', 'Data encryption']
+    },
+    competitors: ['Segment', 'mParticle', 'RudderStack'],
+    marketSize: '$15 billion',
+    demoUrl: 'https://ziontechgroup.com/demo/cdp',
+    documentationUrl: 'https://ziontechgroup.com/docs/cdp'
+  },
+
+  // Supply Chain Management Platform
+  {
+    id: 'supply-chain-management',
+    title: 'Supply Chain Management Platform',
+    description: 'End-to-end supply chain management solution that optimizes procurement, logistics, inventory, and supplier relationships for maximum efficiency.',
+    category: 'Enterprise Solutions',
+    subcategory: 'Supply Chain',
+    price: 12000,
+    currency: '$',
+    pricingModel: 'monthly',
+    features: [
+      'Procurement automation',
+      'Inventory optimization',
+      'Logistics management',
+      'Supplier relationship management',
+      'Demand forecasting',
+      'Real-time tracking',
+      'Cost optimization',
+      'Risk management',
+      'Compliance monitoring',
+      'Performance analytics',
+      'Mobile logistics app',
+      'IoT integration'
+    ],
+    benefits: [
+      'Reduce supply chain costs by 20-30%',
+      'Improve inventory turnover by 25%',
+      'Reduce lead times by 40%',
+      'Enhanced supplier collaboration',
+      'Better risk mitigation'
+    ],
+    useCases: [
+      'Manufacturing companies',
+      'Retail chains',
+      'E-commerce platforms',
+      'Healthcare systems',
+      'Food and beverage'
+    ],
+    targetAudience: [
+      'Supply chain managers',
+      'Logistics coordinators',
+      'Procurement teams',
+      'Operations managers',
+      'Inventory controllers'
+    ],
+    tags: ['Supply Chain', 'Logistics', 'Procurement', 'Inventory', 'Operations'],
+    estimatedDelivery: '10-14 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$12,000 - $35,000/month',
+    roi: '200-350%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technicalSpecs: {
+      technology: ['Java', 'Spring', 'React', 'PostgreSQL', 'Redis', 'Docker'],
+      integrations: ['SAP', 'Oracle', 'WMS', 'TMS', 'ERP systems'],
+      apiEndpoints: 120,
+      uptime: '99.9%',
+      security: ['ISO 28000', 'C-TPAT', 'GDPR', 'SOC 2']
+    },
+    competitors: ['SAP SCM', 'Oracle SCM', 'Manhattan Associates'],
+    marketSize: '$25 billion',
+    demoUrl: 'https://ziontechgroup.com/demo/supply-chain',
+    documentationUrl: 'https://ziontechgroup.com/docs/supply-chain'
+  },
+
+  // Human Capital Management (HCM)
+  {
+    id: 'human-capital-management',
+    title: 'Human Capital Management Platform',
+    description: 'Comprehensive HCM solution that manages the entire employee lifecycle from recruitment to retirement with AI-powered insights and automation.',
+    category: 'Enterprise Solutions',
+    subcategory: 'Human Resources',
+    price: 9500,
+    currency: '$',
+    pricingModel: 'monthly',
+    features: [
+      'Recruitment and applicant tracking',
+      'Employee onboarding automation',
+      'Performance management',
+      'Learning and development',
+      'Compensation management',
+      'Benefits administration',
+      'Time and attendance',
+      'Payroll integration',
+      'Employee self-service',
+      'Analytics and reporting',
+      'Compliance management',
+      'Mobile HR app'
+    ],
+    benefits: [
+      'Reduce HR administrative costs by 30%',
+      'Improve employee retention by 25%',
+      'Streamline recruitment process',
+      'Enhanced employee experience',
+      'Better compliance management'
+    ],
+    useCases: [
+      'Large enterprises',
+      'Multi-location companies',
+      'Healthcare organizations',
+      'Educational institutions',
+      'Government agencies'
+    ],
+    targetAudience: [
+      'HR professionals',
+      'Recruiters',
+      'Managers',
+      'Employees',
+      'Executives'
+    ],
+    tags: ['HCM', 'HR', 'Recruitment', 'Performance', 'Payroll'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$9,500 - $28,000/month',
+    roi: '180-300%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technicalSpecs: {
+      technology: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Redis'],
+      integrations: ['ADP', 'Workday', 'BambooHR', 'Greenhouse', 'Slack'],
+      apiEndpoints: 100,
+      uptime: '99.9%',
+      security: ['SOC 2', 'GDPR', 'HIPAA', 'Multi-factor authentication']
+    },
+    competitors: ['Workday', 'ADP', 'BambooHR', 'Greenhouse'],
+    marketSize: '$30 billion',
+    demoUrl: 'https://ziontechgroup.com/demo/hcm',
+    documentationUrl: 'https://ziontechgroup.com/docs/hcm'
+  },
+
+  // Financial Management Platform
+  {
+    id: 'financial-management-platform',
+    title: 'Financial Management Platform',
+    description: 'Comprehensive financial management solution that handles accounting, budgeting, forecasting, and financial reporting with real-time analytics.',
+    category: 'Enterprise Solutions',
+    subcategory: 'Finance',
+    price: 11000,
+    currency: '$',
+    pricingModel: 'monthly',
+    features: [
+      'General ledger management',
+      'Accounts payable/receivable',
+      'Budget planning and tracking',
+      'Financial forecasting',
+      'Cash flow management',
+      'Tax compliance',
+      'Financial reporting',
+      'Audit trail',
+      'Multi-currency support',
+      'Real-time analytics',
+      'Mobile financial app',
+      'Bank integration'
+    ],
+    benefits: [
+      'Reduce financial close time by 50%',
+      'Improve budget accuracy by 30%',
+      'Enhanced financial visibility',
+      'Better compliance management',
+      'Streamlined audit process'
+    ],
+    useCases: [
+      'Large corporations',
+      'Financial services',
+      'Healthcare organizations',
+      'Educational institutions',
+      'Non-profit organizations'
+    ],
+    targetAudience: [
+      'CFOs',
+      'Controllers',
+      'Accountants',
+      'Financial analysts',
+      'Auditors'
+    ],
+    tags: ['Finance', 'Accounting', 'Budgeting', 'Reporting', 'Compliance'],
+    estimatedDelivery: '10-14 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$11,000 - $32,000/month',
+    roi: '220-380%',
+    innovationLevel: 'Advanced',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    technicalSpecs: {
+      technology: ['Java', 'Spring', 'React', 'PostgreSQL', 'Redis'],
+      integrations: ['QuickBooks', 'Sage', 'Xero', 'Bank APIs', 'Tax software'],
+      apiEndpoints: 80,
+      uptime: '99.99%',
+      security: ['SOC 2', 'PCI DSS', 'GDPR', 'Encryption']
+    },
+    competitors: ['QuickBooks Enterprise', 'Sage Intacct', 'NetSuite'],
+    marketSize: '$35 billion',
+    demoUrl: 'https://ziontechgroup.com/demo/finance',
+    documentationUrl: 'https://ziontechgroup.com/docs/finance'
+  }
 ];
-export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {;
-  if (category === 'All') {;
-    return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
-};
-export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
-  return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
-};

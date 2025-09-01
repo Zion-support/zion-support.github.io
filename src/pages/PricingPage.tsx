@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 export default PricingPage;
 export function PricingPage () {
 import {
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricingGuide2025';
+import { COMPREHENSIVE_PRICING_2025 } from '../data/comprehensivePricing2025';
 import { motion } from 'framer - motion';
 
 
@@ -70,8 +70,8 @@ import { motion } from 'framer - motion';
     },
   ];
 
-  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025.filter (service =>
-      selectedCategory === 'all' || service.category === selectedCategory) ;
+  const filteredServices = COMPREHENSIVE_PRICING_2025.filter(service =>
+      selectedCategory === 'all' || service.category === selectedCategory);
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find (cat => cat.id === category) ;

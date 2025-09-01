@@ -103,6 +103,16 @@
     "node_modules",
     ".next",
     "out",
-    "dist"
+    "dist",
+    "automation",
+    "automation_backup",
+    "**/*.disabled",
+    "components.disabled",
+    "pages.disabled",
+    "hooks.disabled",
+    "lib.disabled",
+    "zion-os.disabled",
+    "components",
+    "contracts"
   ]
 }

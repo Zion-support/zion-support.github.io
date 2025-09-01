@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  
   // Image optimization
   images: {
     domains: ['ziontechgroup.com'],
@@ -20,18 +19,25 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
-  // Bundle analyzer (optional)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
+  // Webpack configuration to exclude automation files
+  webpack: (config, { isServer }) => {
+    // Exclude automation directory from build
+    config.module.rules.push({
+      test: /automation\/.*\.js$/,
+      use: 'ignore-loader',
+    });
+
+    // Bundle analyzer (optional)
+    if (process.env.ANALYZE === 'true') {
       config.plugins.push(
         new (require('@next/bundle-analyzer'))({
           enabled: true,
         })
       );
-      return config;
-    },
-  }),
+    }
 
+    return config;
+  },
 };
 
 export default nextConfig;

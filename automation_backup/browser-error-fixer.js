@@ -29,7 +29,7 @@ class BrowserErrorFixer {
           {
             regex: /Unexpected token '([^']+)'/,
             fix: (match, filePath) => this.fixUnexpectedToken(match[1], filePath)
-
+          }
         ]
       },
       'Cannot read property': {
@@ -38,7 +38,7 @@ class BrowserErrorFixer {
           {
             regex: /Cannot read property '([^']+)' of (null|undefined)/,
             fix: (match, filePath) => this.fixNullPropertyAccess(match[1], filePath)
-
+          }
         ]
       },
       'is not a function': {
@@ -47,7 +47,7 @@ class BrowserErrorFixer {
           {
             regex: /([a-zA-Z_$][a-zA-Z0-9_$]*) is not a function/,
             fix: (match, filePath) => this.fixFunctionCall(match[1], filePath)
-
+          }
         ]
       },
       'ReferenceError': {
@@ -56,7 +56,7 @@ class BrowserErrorFixer {
           {
             regex: /ReferenceError: ([a-zA-Z_$][a-zA-Z0-9_$]*) is not defined/,
             fix: (match, filePath) => this.fixReferenceError(match[1], filePath)
-
+          }
         ]
       },
       'TypeError': {
@@ -65,9 +65,9 @@ class BrowserErrorFixer {
           {
             regex: /TypeError: Cannot read properties of (undefined|null)/,
             fix: (match, filePath) => this.fixTypeError(match[1], filePath)
-
+          }
         ]
-
+      }
     };
 
   async analyzeError(error) {
@@ -79,7 +79,8 @@ class BrowserErrorFixer {
       await this.applyFixStrategy(fixStrategy, error);
     } else {
       // console.log(`⚠️  No fix strategy identified for this error`);
-
+    }
+  }
 
   identifyFixStrategy(error) {
     const message = error.message || '';
@@ -87,9 +88,11 @@ class BrowserErrorFixer {
     for (const [errorType, strategy] of Object.entries(this.fixPatterns)) {
       if (message.includes(errorType)) {
         return strategy;
-
+      }
+    }
 
     return null;
+  }
 
   async applyFixStrategy(strategy, error) {
     try {
@@ -110,11 +113,12 @@ class BrowserErrorFixer {
             fixes: fixes,
             timestamp: new Date().toISOString()
           });
-
-
+        }
+      }
     } catch (error) {
       console.error(`❌ Error applying fix strategy:`, error);
-
+    }
+  }
 
   async findRelevantSourceFiles(error) {
     const sourceFiles = [];
@@ -134,7 +138,8 @@ class BrowserErrorFixer {
 
         } catch (err) {
           // Directory doesn't exist, skip
-
+        }
+      }
 
       // If no source files found, search project root
       if (sourceFiles.length === 0) {
@@ -145,7 +150,8 @@ class BrowserErrorFixer {
     } catch (error) {
       console.error('Error finding source files:', error);
       return [];
-
+    }
+  }
 
   async findFilesRecursively(dir, extensions, maxDepth = 3) {
     const files = [];

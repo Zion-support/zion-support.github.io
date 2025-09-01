@@ -1,11 +1,14 @@
-import { Link } from 'react - router - dom';
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data / additionalInnovativeServices2025';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data / innovativeMicroSaasServices2025';
-import { SEO } from '@/components / SEO';
-export default React.memo (function ServicesPage () {
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '@/data/additionalInnovativeServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeMicroSaasServices2025';
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from '@/data/advancedEnterpriseSolutions2025';
+import { INNOVATIVE_AI_SERVICES_2025 } from '@/data/innovativeAIServices2025';
+import { CYBERSECURITY_SERVICES_2025 } from '@/data/cybersecurityServices2025';
+import { BLOCKCHAIN_WEB3_SERVICES_2025 } from '@/data/blockchainWeb3Services2025';
+import { IOT_EDGE_SERVICES_2025 } from '@/data/iotEdgeServices2025';
+import { SEO } from '@/components/SEO';
+import { motion, AnimatePresence } from 'framer-motion';
 
 
   Brain,
@@ -35,68 +38,76 @@ import { motion, AnimatePresence } from 'framer - motion';
   Phone,
   Mail,
   MapPin,
+  Building,
   Globe as GlobeIcon,
-} from 'lucide - react';
+  } from 'lucide-react';
 
-  const [searchQuery, setSearchQuery] = useState ('') ;
-  const [selectedCategory, setSelectedCategory] = useState ('all') ;
-  const [selectedPriceRange, setSelectedPriceRange] = useState ('all') ;
-  const [sortBy, setSortBy] = useState ('featured') ;
+export default React.memo(function ServicesPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
 
   const categories = [
     {
       id: 'all',
       name: 'All Services',
       icon: Zap,
-      color: 'from - zion - cyan to - zion - blue',
+      color: 'from-zion-cyan to-zion-blue',
     },
     {
       id: 'ai',
       name: 'AI & Analytics',
       icon: Brain,
-      color: 'from - zion - cyan to - zion - purple',
+      color: 'from-zion-cyan to-zion-purple',
     },
     {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      icon: Rocket,
-      color: 'from - zion - blue to - zion - cyan',
+      id: 'enterprise',
+      name: 'Enterprise Solutions',
+      icon: Building,
+      color: 'from-zion-blue to-zion-purple',
     },
     {
       id: 'blockchain',
-      name: 'Blockchain',
+      name: 'Blockchain & Web3',
       icon: Lock,
-      color: 'from - zion - purple to - zion - blue',
+      color: 'from-zion-purple to-zion-blue',
     },
     {
       id: 'iot',
       name: 'IoT & Edge',
       icon: Cpu,
-      color: 'from - zion - green to - zion - cyan',
+      color: 'from-zion-green to-zion-cyan',
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from - zion - purple to - zion - red',
+      color: 'from-zion-purple to-zion-red',
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: Rocket,
+      color: 'from-zion-blue to-zion-cyan',
     },
     {
       id: 'healthcare',
       name: 'Healthcare',
       icon: Users,
-      color: 'from - zion - pink to - zion - purple',
+      color: 'from-zion-pink to-zion-purple',
     },
     {
       id: 'finance',
       name: 'Finance',
       icon: DollarSign,
-      color: 'from - zion - green to - zion - blue',
+      color: 'from-zion-green to-zion-blue',
     },
     {
       id: 'manufacturing',
       name: 'Manufacturing',
       icon: Server,
-      color: 'from - zion - blue to - zion - purple',
+      color: 'from-zion-blue to-zion-purple',
     },
     {
       id: 'sustainability',
@@ -125,6 +136,11 @@ import { motion, AnimatePresence } from 'framer - motion';
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
+    ...INNOVATIVE_AI_SERVICES_2025,
+    ...CYBERSECURITY_SERVICES_2025,
+    ...BLOCKCHAIN_WEB3_SERVICES_2025,
+    ...IOT_EDGE_SERVICES_2025,
   ];
 
   const filteredServices = allServices.filter (service => {
@@ -227,9 +243,14 @@ import { motion, AnimatePresence } from 'framer - motion';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div role="button" className="text - 3xl font - bold text - zion - cyan mb - 2">
-                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + ADDITIONAL_INNOVATIVE_SERVICES_2025.length}
-                  +
+                <div role="button" className="text-3xl font-bold text-zion-cyan mb-2">
+                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + 
+                   ADDITIONAL_INNOVATIVE_SERVICES_2025.length +
+                   ADVANCED_ENTERPRISE_SOLUTIONS_2025.length +
+                   INNOVATIVE_AI_SERVICES_2025.length +
+                   CYBERSECURITY_SERVICES_2025.length +
+                   BLOCKCHAIN_WEB3_SERVICES_2025.length +
+                   IOT_EDGE_SERVICES_2025.length}+
                 </div>
                 <div role="button" className="text - zion - slate - light">Innovative Services</div>
               </motion.div>

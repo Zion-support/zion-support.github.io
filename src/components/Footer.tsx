@@ -75,7 +75,7 @@ function Footer () {
   Palette
 } from 'lucide - react';
 
-  const currentYear = new Date () .getFullYear () ;
+  const currentYear = new Date().getFullYear();
 
 <<<<<<< HEAD
   // Handle scroll to show / hide scroll to top button
