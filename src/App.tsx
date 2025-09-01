@@ -1,17 +1,17 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import LoadingSpinner from './components/ui/loading-spinner';
+import Header from './components/Header';
 
-// Lazy load pages for better performance;
-const HomePage: any = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage: any = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const ComprehensivePricing: any = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
+const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
+const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
 
-const SimplePage: any = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
-
-// Loading component;
-const PageLoader: any = () => (
+// Loading component
+const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
     <div className="text-center">
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
@@ -20,11 +20,12 @@ const PageLoader: any = () => (
   </div>
 );
 
-function App(function App(function App(function App() {): any {): any {): any {}
+function App() {
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
-        <div className="min-h-screen">
+        <Header />
+        <div className="min-h-screen pt-32">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -64,5 +65,6 @@ function App(function App(function App(function App() {): any {): any {): any {}
       </div>
     </ErrorBoundary>
   );
-}'
-export default App;''
+}
+
+export default App;
