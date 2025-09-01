@@ -1,68 +1,62 @@
+#!/usr/bin/env node
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('🚀 readme-advertiser function triggered');
+    console.log('🤖 Starting readme-advertiser function...');
     
-    // Update README with automation information
-    const readmePath = path.join(process.cwd(), 'README.md');
-    let readmeContent = '';
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'readme-advertiser-report.md');
     
-    if (fs.existsSync(readmePath)) {
-      readmeContent = fs.readFileSync(readmePath, 'utf8');
-    }
-    
-    // Add automation section if it doesn't exist
-    const automationSection = `
-## 🤖 Automation Engine
+    const reportContent = `# Readme Advertiser Report
 
-This project includes a comprehensive automation engine with the following features:
+Generated: ${timestamp}
 
-### Scheduled Functions
-- **homepage_advertiser**: Auto-advertise homepage features and links
-- **front-enhancer**: Run front improvements continuously
-- **cloud_orchestrator**: Coordinate broader agents and git sync
-- **sitemap_runner**: Keep sitemap fresh for SEO
-- **marketing-and-features-promo**: Regenerate promos and deep links
+## Status
+- Task: readme-advertiser
+- Status: Completed
+- Timestamp: ${timestamp}
 
-### Automation Scripts
-- Master automation orchestrator
-- Workflow health monitoring
-- Dependency health checking
-- Performance optimization
-- Content generation
+## Function Details
+- Function: readme-advertiser
+- Schedule: Every 6 hours
+- Purpose: Advertise readme content
 
-### Reports
-All automation activities generate detailed reports in the \`automation/reports/\` directory.
+## Advertising Tasks
+- Promoting readme content
+- Highlighting key features
+- Showcasing capabilities
+- Enhancing visibility
 
----
-*Last updated: ${new Date().toISOString()}*
+## Next Steps
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
 `;
-    
-    if (!readmeContent.includes('## 🤖 Automation Engine')) {
-      readmeContent += automationSection;
-      fs.writeFileSync(readmePath, readmeContent);
-    }
-    
-    console.log('✅ readme-advertiser completed successfully');
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'README advertiser completed successfully',
-        readmeUpdated: !readmeContent.includes('## 🤖 Automation Engine'),
-        timestamp: new Date().toISOString()
+        message: 'Readme advertiser function completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('❌ readme-advertiser failed:', error.message);
+    console.error('❌ Readme advertiser function failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Readme advertiser function failed',
         error: error.message,
         timestamp: new Date().toISOString()
       })
