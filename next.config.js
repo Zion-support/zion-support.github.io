@@ -33,9 +33,14 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/,
       ],
     });
+    
+    // Exclude contracts directory specifically
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'hardhat/config': false,
+    };
     
     // Add fallback for problematic modules
     config.resolve.fallback = {
