@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:13:02.307Z",
+  "generatedAt": "2025-08-11T23:13:50.176Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -56,7 +56,7 @@
     "homepage-updater-scheduler",
     "homepage_advertiser",
     "hyper-front-index-accelerator",
-    "i18n-audit-runner",
+    "i18n-seed-runner",
     "image-optimizer-runner",
     "innovation-generator",
     "innovation-lab",
@@ -74,7 +74,7 @@
     "newsroom-runner",
     "og-coverage-auditor",
     "og-image-update-runner",
-    "perf-budget-guardian",
+    "performance-hints-runner",
     "readme-advertiser",
     "readme-badges-updater",
     "redirect-healer",
@@ -95,6 +95,8 @@
     "sitemap_runner",
     "smart-interlinker",
     "stale-content-auditor-runner",
+    "structured-data-auditor",
+    "terminology-consistency-runner",
     "todo-scanner-runner",
     "todo-summary-runner",
     "trigger-all-and-commit",
