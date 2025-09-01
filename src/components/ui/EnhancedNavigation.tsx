@@ -247,7 +247,7 @@ export const EnhancedNavigation: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -274,23 +274,6 @@ export const EnhancedNavigation: React.FC = () => {
                   <Search className="w-5 h-5" />
                 </button>
               </form>
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
-
-              {/* Contact Info */}
-              <div className="flex items-center space-x-4">
-                {contactInfo.slice(0, 2).map((contact, index) => (
-                  <a
-                    key={index}
-                    href={contact.href}
-                    className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    <contact.icon className="w-4 h-4" />
-                    <span className="hidden xl:inline">{contact.text}</span>
-                  </a>
-                ))}
-              </div>
 
               {/* Mobile Navigation Items */}
               {navigation.map((item) => (
@@ -372,3 +355,5 @@ export const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
+
+export default EnhancedNavigation;
