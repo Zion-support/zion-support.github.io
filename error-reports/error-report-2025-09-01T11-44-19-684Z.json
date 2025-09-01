@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-01T11:59:19.685Z",
-  "reportId": "2025-09-01T11-59-19-685Z",
+  "timestamp": "2025-09-01T11:44:19.684Z",
+  "reportId": "2025-09-01T11-44-19-684Z",
   "summary": {
     "totalErrors": 0,
     "lintErrors": 0,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": true,
       "buildSuccess": false,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.4s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n\n> Build error occurred\n[Error: ENOTEMPTY: directory not empty, rmdir '/workspace/.next/export/_next'] {\n  errno: -39,\n  code: 'ENOTEMPTY',\n  syscall: 'rmdir',\n  path: '/workspace/.next/export/_next'\n}\n"
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.0s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\n\n> Build error occurred\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/edge-runtime-webpack.js'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/edge-runtime-webpack.js'\n}\n"
     },
     "corruptedFiles": []
   },
