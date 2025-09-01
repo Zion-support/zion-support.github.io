@@ -1,8 +1,8 @@
-import React from 'react.ts'
-import Link from 'next/link.ts'
+import React from 'react'
+import Link from 'next/link'
 import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
 
-export default function Blog(...args[]):  {
+export default function Blog() {
   const blogPosts = [
     {
       id: 'ai-automation-trends-2025',
@@ -12,7 +12,7 @@ export default function Blog(...args[]):  {
       date: '2025-01-15',
       readTime: '8 min read',
       category: 'AI & Automation',
-      tags['AI', 'Automation', 'Trends', '2025'],
+      tags: ['AI', 'Automation', 'Trends', '2025'],
       featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
@@ -24,7 +24,7 @@ export default function Blog(...args[]):  {
       date: '2025-01-10',
       readTime: '12 min read',
       category: 'Cybersecurity',
-      tags['Cloud', 'Security', 'DevOps', 'Best Practices'],
+      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
       featured: false,
       image: '/blog/cloud-security.jpg'
     },
@@ -36,7 +36,7 @@ export default function Blog(...args[]):  {
       date: '2025-01-08',
       readTime: '10 min read',
       category: 'Emerging Tech',
-      tags['Quantum', 'Computing', 'Enterprise', 'Future'],
+      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
       featured: false,
       image: '/blog/quantum-computing.jpg'
     },
@@ -48,7 +48,7 @@ export default function Blog(...args[]):  {
       date: '2025-01-05',
       readTime: '15 min read',
       category: 'DevOps',
-      tags['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
+      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
       featured: false,
       image: '/blog/devops-automation.jpg'
     },
@@ -60,7 +60,7 @@ export default function Blog(...args[]):  {
       date: '2025-01-03',
       readTime: '11 min read',
       category: 'AI & Ethics',
-      tags['AI Ethics', 'Governance', 'Compliance', 'Business'],
+      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
       featured: false,
       image: '/blog/ai-ethics.jpg'
     },
@@ -72,10 +72,10 @@ export default function Blog(...args[]):  {
       date: '2024-12-28',
       readTime: '14 min read',
       category: 'Cybersecurity',
-      tags['Cybersecurity', 'Threats', 'Analysis', '2025'],
+      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
       featured: false,
       image: '/blog/cyber-threats.jpg'
-
+    }
   ]
 
   const categories = [
@@ -155,7 +155,7 @@ export default function Blog(...args[]):  {
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-
+                  >
                     Read Full Article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -218,7 +218,7 @@ export default function Blog(...args[]):  {
                   <Link
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
-
+                  >
                     Read More
                     <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
@@ -248,10 +248,10 @@ export default function Blog(...args[]):  {
               <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
                 Subscribe
               </button>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-};
+}

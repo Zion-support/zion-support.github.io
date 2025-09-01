@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { Brain,
   Shield,
   Cloud,
@@ -283,7 +283,7 @@ const featuredSolutions = [
   };
 ];
 
-export default function Solutions(...args[]):  {
+export default function Solutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');

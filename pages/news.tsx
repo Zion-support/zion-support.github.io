@@ -1,9 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
+import React from 'react'
+import { Link  } from 'react-router-dom'
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
 
-export default function News(...args[]):  {
+export default function News() {
 	const newsArticles = [
 		{
 			id: 1,

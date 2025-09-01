@@ -22,7 +22,7 @@ color?: string;
 textColor?: string}
 function collectAllServices(): ServiceItem[] {
 }
-export default function ServiceDetail(...args[]):  {
+export default function ServiceDetail() {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (

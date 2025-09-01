@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
-import { useState  } from 'react.ts'
+import { motion  } from 'framer-motion'
+import { useState  } from 'react'
 import { User,
   Mail,
   Lock,
@@ -17,7 +17,7 @@ import { User,
   Cloud
  } from 'lucide-react'
 
-export default function Signup(...args[]):  {
+export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

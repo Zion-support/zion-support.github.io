@@ -1,7 +1,7 @@
 import Head from 'next/head.ts';
-import Link from 'next/link.ts';
+import Link from 'next/link';
 
-export default function PriceIntelligence(...args[]):  {
+export default function PriceIntelligence() {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>

@@ -1,5 +1,5 @@
 import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
+import { motion  } from 'framer-motion'
 import { Handshake, 
   Shield, 
   Cloud, 
@@ -14,7 +14,7 @@ import { Handshake,
   Rocket
  } from 'lucide-react'
 
-export default function Partners(...args[]):  {
+export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   

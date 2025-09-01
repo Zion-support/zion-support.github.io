@@ -1,6 +1,6 @@
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState  } from 'react.ts';
+import { useState  } from 'react';
 import { Brain, 
   Cloud, 
   Shield, 

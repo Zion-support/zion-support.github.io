@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { Calendar,
   Clock,
   MapPin,
@@ -156,7 +156,7 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 
-export default function Events(...args[]):  {
+export default function Events() {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');

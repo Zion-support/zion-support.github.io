@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { servicesCatalog } from '../../src/data/servicesCatalog';
 
-export default function ServicesIndex(...args[]):  {
+export default function ServicesIndex() {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>

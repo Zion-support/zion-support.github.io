@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { FlaskConical,
   Brain,
   Shield,
@@ -368,7 +368,7 @@ const patents = [
   };
 ];
 
-export default function ResearchDevelopment(...args[]):  {
+export default function ResearchDevelopment() {
   const [selectedArea, setSelectedArea] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');

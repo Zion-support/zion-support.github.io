@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { CheckCircle,
   TrendingUp,
   Users,
@@ -168,7 +168,7 @@ const caseStudies = [
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-export default function CaseStudies(...args[]):  {
+export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');

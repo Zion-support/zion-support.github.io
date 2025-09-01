@@ -1,46 +1,61 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecurityServices2027";
+import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../src/data/advancedCybersecurityServices2027";
 
-const AdvancedCybersecurityServices: NextPage = () => {;
+const AdvancedCybersecurityServices: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const categories = [;
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
-    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
+  const categories = [
+    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
+    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
+    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },
+    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
+    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
+    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
   ];
 
-  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
-
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
-        return a.pricing.monthly - b.pricing.monthly;
-      case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-      case 'roi':
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
-      default:
-        return 0}
+    return matchesCategory && matchesSearch;
   });
 
-      default: return 'from-gray-500 to-gray-600'}
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', ''));
+      case 'innovation':
+        return (b.rating || 0) - (a.rating || 0);
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryColor = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.color : 'from-gray-500 to-gray-600';
   };
 
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
+  const getCategoryBgColor = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? `bg-gradient-to-r ${category.color}` : 'bg-gradient-to-r from-gray-500 to-gray-600';
   };
 
-      default: return '🛡️'}
+  const getCategoryIcon = (categoryId: string) => {
+    switch (categoryId) {
+      case 'AI Security': return '🤖';
+      case 'Quantum Security': return '⚛️';
+      case 'Network Security': return '🌐';
+      case 'Endpoint Security': return '💻';
+      case 'Cloud Security': return '☁️';
+      default: return '🛡️';
+    }
   };
 
   return (
@@ -124,7 +139,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
-
+            >
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                 <span className="text-3xl">{stat.icon}</span>
               </div>
@@ -156,7 +171,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
                 {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
@@ -175,10 +190,10 @@ const AdvancedCybersecurityServices: NextPage = () => {;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-
+              >
                 <option value="innovation">Sort by Innovation Level</option>
                 <option value="price">Sort by Price</option>
-                <option value="roi">Sort by ROI</option>
+                <option value="popularity">Sort by Popularity</option>
               </select>
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -198,105 +213,81 @@ const AdvancedCybersecurityServices: NextPage = () => {;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
               }`}
-
-              <span className="mr-2">{getSecurityIcon(category.name)}</span>
+            >
+              <span className="mr-2">{getCategoryIcon(category.id)}</span>
               {category.name}
             </button>
           ))}
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index) => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
-
+            >
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
-                <div className="text-4xl">{service.icon}</div>
-                <span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${getBadgeColor(service.badge)}`}>
-                  {service.badge}
-                </span>
+                <div className="text-4xl">🛡️</div>
+                {service.popular && (
+                  <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-orange-500 to-red-600">
+                    Popular
+                  </span>
+                )}
               </div>
 
               {/* Service Title and Description */}
-              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+              <p className="text-gray-300 text-sm mb-4">{service.description}</p>
 
-              {/* Innovation Level */}
+              {/* Category */}
               <div className="mb-4">
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} text-white`}>
-                  {service.innovationLevel}
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                  {service.category}
                 </span>
               </div>
 
               {/* Pricing */}
               <div className="mb-4">
                 <div className="text-2xl font-bold text-blue-400">
-                  ${service.pricing.monthly.toLocaleString()}
-                  <span className="text-sm text-gray-400">/month</span>
-                </div>
-                <div className="text-sm text-gray-400">
-                  ${service.pricing.yearly.toLocaleString()}/year
+                  {service.price}
                 </div>
               </div>
 
-              {/* ROI */}
+              {/* Rating */}
               <div className="mb-4">
-                <div className="text-sm text-gray-400">Expected ROI</div>
-                <div className="text-lg font-bold text-green-400">{service.roi}</div>
-              </div>
-
-              {/* Security Features */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Security Features</h4>
-                <div className="space-y-2 text-xs text-gray-300">
-                  <div><span className="text-blue-400 font-medium">Threat Detection:</span> {service.securityFeatures.threatDetection}</div>
-                  <div><span className="text-blue-400 font-medium">Encryption:</span> {service.securityFeatures.encryption}</div>
-                  <div><span className="text-blue-400 font-medium">Monitoring:</span> {service.securityFeatures.monitoring}</div>
+                <div className="flex items-center gap-2">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className={i < Math.floor(service.rating) ? 'text-yellow-400' : 'text-gray-600'}>
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-400">({service.reviewCount} reviews)</span>
                 </div>
               </div>
 
-              {/* Compliance */}
+              {/* Features */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Compliance</h4>
-                <div className="flex flex-wrap gap-1">
-                  {service.securityFeatures.compliance.slice(0, 3).map((compliance, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">
-                      {compliance}
-                    </span>
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
+                <div className="space-y-1">
+                  {service.features.slice(0, 3).map((feature, idx) => (
+                    <div key={idx} className="text-xs text-gray-300 flex items-center">
+                      <span className="text-blue-400 mr-2">•</span>
+                      {feature}
+                    </div>
                   ))}
-                  {service.securityFeatures.compliance.length > 3 && (
-                    <span className="text-xs text-gray-400">
-                      +{service.securityFeatures.compliance.length - 3} more
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Market Size */}
-              <div className="mb-4">
-                <div className="text-sm text-gray-400">Market Size</div>
-                <div className="text-sm font-medium text-white">{service.marketSize}</div>
-              </div>
-
-              {/* Contact Info */}
-              <div className="border-t border-white/20 pt-4 mb-4">
-                <div className="text-xs text-gray-400 mb-2">Contact Information</div>
-                <div className="space-y-1 text-xs text-gray-300">
-                  <div>📞 {service.contactInfo.phone}</div>
-                  <div>✉️ {service.contactInfo.email}</div>
-                  <div>🌐 {service.contactInfo.website}</div>
                 </div>
               </div>
 
               {/* CTA Button */}
               <a
-                href={service.link}
+                href={`/services/${service.id}`}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 block"
-
+              >
                 Learn More
               </a>
             </div>
@@ -315,20 +306,20 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-
+            >
               Get Security Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-
+            >
               📞 Call +1 (302) 464-0950
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default AdvancedCybersecurityServices;}}}}
+export default AdvancedCybersecurityServices;

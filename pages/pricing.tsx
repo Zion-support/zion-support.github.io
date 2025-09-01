@@ -1,6 +1,6 @@
 import Head from 'next/head.ts';
-import Link from 'next/link.ts';
-export default function PricingPage(...args[]):  {
+import Link from 'next/link';
+export default function PricingPage() {
   const pricingTiers = [
     {
       name: 'Starter',

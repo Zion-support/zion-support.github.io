@@ -1,9 +1,9 @@
-import React from 'react.ts';
+import React from 'react';
 import Head from 'next/head.ts';
 
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
-import Link from 'next/link.ts';
-export default function ServicesAdvertisingPage(...args[]):  {
+import Link from 'next/link';
+export default function ServicesAdvertisingPage() {
   const contact = {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

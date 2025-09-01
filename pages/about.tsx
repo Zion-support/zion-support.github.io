@@ -2,10 +2,121 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Target, Zap, Shield, Globe, TrendingUp, Users, Eye, Award } from 'lucide-react';
 
 
 
-export default function About(...args[]):  {
+export default function About() {
+	const companyStats = [
+		{
+			number: '500+',
+			label: 'Active Clients',
+			description: 'Serving businesses worldwide'
+		},
+		{
+			number: '99.9%',
+			label: 'Uptime',
+			description: 'Reliable infrastructure'
+		},
+		{
+			number: '24/7',
+			label: 'Support',
+			description: 'Round-the-clock assistance'
+		},
+		{
+			number: '50+',
+			label: 'Services',
+			description: 'Comprehensive solutions'
+		}
+	];
+
+	const coreValues = [
+		{
+			title: 'Innovation',
+			description: 'Constantly pushing boundaries and exploring new technologies',
+			icon: '🚀'
+		},
+		{
+			title: 'Excellence',
+			description: 'Delivering the highest quality solutions and service',
+			icon: '⭐'
+		},
+		{
+			title: 'Integrity',
+			description: 'Building trust through transparency and ethical practices',
+			icon: '🤝'
+		},
+		{
+			title: 'Collaboration',
+			description: 'Working together to achieve exceptional results',
+			icon: '👥'
+		}
+	];
+
+	const teamMembers = [
+		{
+			name: 'Dr. Sarah Chen',
+			role: 'Chief AI Officer',
+			image: '👩‍💻',
+			bio: 'Leading our AI research and development initiatives',
+			expertise: ['Machine Learning', 'Neural Networks', 'AI Ethics']
+		},
+		{
+			name: 'Marcus Rodriguez',
+			role: 'Head of Cloud Architecture',
+			image: '👨‍💻',
+			bio: 'Designing scalable cloud solutions for enterprise clients',
+			expertise: ['AWS', 'Azure', 'Kubernetes']
+		},
+		{
+			name: 'Dr. Emily Watson',
+			role: 'Cybersecurity Director',
+			image: '👩‍🔬',
+			bio: 'Ensuring the highest security standards across all platforms',
+			expertise: ['Zero Trust', 'Threat Intelligence', 'Compliance']
+		}
+	];
+
+	const technologies = [
+		{
+			category: 'AI & Machine Learning',
+			description: 'Cutting-edge AI solutions and ML models',
+			icon: '🤖',
+			items: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+		},
+		{
+			category: 'Cloud Infrastructure',
+			description: 'Scalable cloud platforms and services',
+			icon: '☁️',
+			items: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
+		},
+		{
+			category: 'Cybersecurity',
+			description: 'Advanced security and threat protection',
+			icon: '🔒',
+			items: ['Zero Trust Security', 'Threat Intelligence', 'Penetration Testing', 'Compliance']
+		},
+		{
+			category: 'Data Analytics',
+			description: 'Business intelligence and insights',
+			icon: '📊',
+			items: ['Big Data', 'Business Intelligence', 'Data Warehousing', 'Real-time Analytics']
+		},
+		{
+			category: 'DevOps & Automation',
+			description: 'Streamlined development and deployment',
+			icon: '⚙️',
+			items: ['CI/CD', 'Infrastructure as Code', 'Monitoring', 'Automation']
+		},
+		{
+			category: 'Blockchain & Web3',
+			description: 'Next-generation decentralized solutions',
+			icon: '⛓️',
+			items: ['Smart Contracts', 'DeFi', 'NFTs', 'Web3 Applications']
+		}
+	];
+
 	return (
 		<>
 			{/* Hero Section */}
@@ -171,13 +282,21 @@ export default function About(...args[]):  {
         </div>
       </section>
 
-
-								Get in Touch
-							</Link>
-							<Link
-								to="/services"
-								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Our Impact</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Delivering measurable results for our clients
+            </p>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyStats.map((stat, index) => (
@@ -348,7 +467,7 @@ export default function About(...args[]):  {
           </motion.div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

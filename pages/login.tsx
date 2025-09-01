@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
-import { useState  } from 'react.ts'
+import { motion  } from 'framer-motion'
+import { useState  } from 'react'
 import { Mail,
   Lock,
   Eye,
@@ -13,7 +13,7 @@ import { Mail,
   ArrowRight
  } from 'lucide-react'
 
-export default function Login(...args[]):  {
+export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: ''

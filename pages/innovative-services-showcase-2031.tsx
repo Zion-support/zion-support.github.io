@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import Head from 'next/head.ts';
 import { innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 

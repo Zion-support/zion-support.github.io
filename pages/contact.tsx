@@ -5,21 +5,27 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-
-
-
+const Contact: NextPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: ''
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-
-		// // // // // // // console.log('Form submitted:', formData)
-		setIsSubmitted(true)
-		// Reset form after submission
-		setTimeout(() => {
-			setIsSubmitted(false)
-			setFormData({ name: '', email: '', company: '', message: '' })
-		}, 3000)
-
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

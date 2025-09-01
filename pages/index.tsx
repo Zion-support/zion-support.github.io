@@ -46,7 +46,7 @@ export default function HomePage() {
 
 
 
-export default function Index(...args[]):  {
+export default function Index() {
 	const features = [
 		{
 			icon: Brain,
