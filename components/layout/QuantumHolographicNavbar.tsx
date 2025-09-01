@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Sparkles, Rocket, Cpu, Database, Brain, Atom, Eye, Lock, BarChart3, Users, Target, TrendingUp, Star, Award, ZapIcon, CloudIcon, BotIcon, ShieldIcon, GlobeIcon, CpuIcon, DatabaseIcon, BrainIcon, AtomIcon, EyeIcon, LockIcon, BarChart3Icon, UsersIcon, TargetIcon, TrendingUpIcon, StarIcon, AwardIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu as HeadlessMenu, X as HeadlessX, Zap as HeadlessZap, Sparkles as HeadlessSparkles, ChevronDown, Globe as HeadlessGlobe, Shield as HeadlessShield, Cpu as HeadlessCpu, Brain as HeadlessBrain } from 'lucide-react';
+import { BookOpen, ShieldCheck } from 'lucide-react';
 
 export default function QuantumHolographicNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,18 @@ export default function QuantumHolographicNavbar() {
       href: '/', 
       icon: <Zap className="w-4 h-4" />,
       description: 'Welcome to the future'
+    },
+    {
+      name: 'AI Services',
+      href: '/ai-services',
+      icon: <Brain className="w-4 h-4" />,
+      description: 'LLM, RAG, MLOps packages'
+    },
+    {
+      name: 'IT Services',
+      href: '/it-services',
+      icon: <Cloud className="w-4 h-4" />,
+      description: 'Cloud, SRE, security'
     },
     { 
       name: 'AI Services', 
@@ -65,6 +78,18 @@ export default function QuantumHolographicNavbar() {
       href: '/micro-saas', 
       icon: <Bot className="w-4 h-4" />,
       description: 'Innovative Solutions'
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      icon: <BookOpen className="w-4 h-4" />,
+      description: 'Docs & reports'
+    },
+    { 
+      name: 'Support', 
+      href: '/support', 
+      icon: <ShieldCheck className="w-4 h-4" />,
+      description: 'Help & SLAs'
     },
     { 
       name: 'Pricing', 
@@ -111,7 +136,7 @@ export default function QuantumHolographicNavbar() {
           {/* Enhanced Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-600 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-all duration-500 shadow-lg shadow-cyan-500/30">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-600 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-500 shadow-lg shadow-cyan-500/30">
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-purple-600 to-blue-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />

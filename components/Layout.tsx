@@ -1,19 +1,17 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import React, { ReactNode } from 'react';
+import Sidebar from './Sidebar';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="pt-16">
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Sidebar />
+      <div className="ml-72 min-h-screen">
         {children}
-      </main>
-      <Footer />
+      </div>
     </div>
   );
 }

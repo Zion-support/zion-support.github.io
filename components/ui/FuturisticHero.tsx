@@ -3,26 +3,21 @@ import AnimatedBackground from './AnimatedBackground';
 
 export default function FuturisticHero() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 p-8 md:p-12">
+    <section className="relative overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-800 bg-cyber text-high-contrast p-8 md:p-12">
       <AnimatedBackground />
-      <div className="relative">
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 px-3 py-1 text-xs text-blue-600 dark:text-blue-300 bg-blue-50/40 dark:bg-blue-900/10 shadow-[0_0_20px_rgba(59,130,246,0.2)]">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-          Live Autonomous Agents
-        </div>
-        <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400">
-          Build the Future of Talent with AI
+      <div className="relative z-10">
+        <div className="inline-block rounded-full border border-white/20 px-3 py-1 text-xs tracking-wider uppercase mb-4 bg-white/5 backdrop-blur">Autonomous • Cloud • AI</div>
+        <h1 className="text-3xl md:text-5xl font-semibold leading-tight animate-fade-in">
+          Build With The Future: <span className="text-neon-blue drop-shadow-[0_0_15px_rgba(0,212,255,0.6)]">Autonomous</span> Automations
         </h1>
-        <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl">
-          Zion unifies learning, AI assistants, certifications, and autonomous cloud agents to accelerate skills and opportunities.
+        <p className="mt-3 md:mt-4 max-w-2xl opacity-90">
+          Zero‑touch, always‑on agents that analyze, optimize, and publish. Experience seamless insights with a neon‑infused, futuristic UI.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/academy"><a className="rounded-lg bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 shadow-[0_0_20px_rgba(59,130,246,0.4)]">Explore Academy</a></Link>
-          <Link href="/academy/insights"><a className="rounded-lg border border-gray-300 dark:border-gray-700 px-5 py-2.5">View Insights</a></Link>
+          <Link href="/automation"><a className="px-5 py-2.5 rounded-md bg-neon-blue text-black font-medium shadow-neon-blue hover:brightness-110">Automation Dashboard</a></Link>
+          <Link href="/services"><a className="px-5 py-2.5 rounded-md bg-white/10 border border-white/20 hover:bg-white/15">Explore Services</a></Link>
         </div>
       </div>
-
-      <div className="absolute -right-12 -bottom-12 w-72 h-72 blur-3xl rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
     </section>
   );
 }

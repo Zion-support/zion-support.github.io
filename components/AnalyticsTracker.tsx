@@ -1,89 +1,79 @@
 import React, { useEffect, useCallback } from 'react';
 
-interface AnalyticsTrackerProps {
-  pageTitle?: string;
-  pagePath?: string;
-  customEvents?: Array<{
-    name: string;
-    parameters?: Record<string, any>;
-  }>;
+// Browser API types are declared globally in PerformanceOptimizer.tsx
+
+const AnalyticsTracker: React.FC = () => {
+  const router = useRouter();
+
+// Performance entry types for Core Web Vitals
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: any | null;
 }
 
-  // Helper function to track metrics
-  const trackMetric = (name: string, value: number | string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'custom_metric', {
-        metric_name: name,
-        metric_value: value,
-        timestamp: Date.now()
-      });
-    }
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
+  pageTitle,
+  pagePath,
+  customEvents = []
+}) => {
+  // Track page view
+  const trackPageView = useCallback((title: string, path: string) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      if (window.gtag) {
+        window.gtag('config', 'G-XXXXXXXXXX', {
+          page_title: title,
+          page_location: window.location.href,
+          page_path: path
+        });
+      }
 
-    // Send to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/metrics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          value,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent
-        })
-      }).catch(() => {
-        // Silently handle fetch errors
-      });
-    }
-  };
+      // Google Tag Manager
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'page_view',
+          page_title: title,
+          page_location: window.location.href,
+          page_path: path,
+          timestamp: Date.now()
+        });
+      }
 
-  // Helper function to track events
-  const trackEvent = (action: string, parameters: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', action, {
-        ...parameters,
-        timestamp: Date.now(),
-        page_url: window.location.href
-      });
-    }
-
-    // Send to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          action,
-          parameters,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent
-        })
-      }).catch(() => {
-        // Silently handle fetch errors
-      });
-    }
-  };
-
-  useEffect(() => {
-    // User interaction tracking
-    let interactionCount = 0;
-    const trackInteraction = () => {
-      interactionCount++;
-      if (interactionCount === 1) {
-        trackMetric('FirstInteraction', Date.now() - (performance.timing?.navigationStart || Date.now()));
+      // Custom analytics
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Page View:', { title, path, url: window.location.href });
       }
     };
 
-    // Viewport tracking
-    const trackViewport = () => {
-      trackMetric('ViewportWidth', window.innerWidth);
-      trackMetric('ViewportHeight', window.innerHeight);
-      trackMetric('PixelRatio', window.devicePixelRatio || 1);
+    // Helper function to track events
+    const trackEvent = (action: string, parameters: Record<string, unknown>) => {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', action, {
+          ...parameters,
+          timestamp: Date.now(),
+          page_url: window.location.href
+        });
+      }
+
+      // Send to custom analytics endpoint
+      if (process.env.NODE_ENV === 'production') {
+        fetch('/api/analytics/events', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            action,
+            parameters,
+            timestamp: Date.now(),
+            url: window.location.href,
+            userAgent: navigator.userAgent
+          })
+        }).catch(() => {
+          // Silently handle fetch errors
+        });
+      }
     };
 
     // Initialize analytics and performance monitoring
@@ -246,36 +236,123 @@ interface AnalyticsTrackerProps {
     };
   }, []);
 
-  // Track page views on route changes
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'G-XXXXXXXXXX', {
-        page_path: router.asPath,
-        page_title: document.title,
-        page_location: window.location.href
-      });
-    }
-
-    // Track custom page view event
-    trackEvent('PageView', {
-      path: router.asPath,
-      title: document.title,
-      referrer: document.referrer,
-      timestamp: Date.now()
-    });
-
-    // Track page performance metrics
-          if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as any;
-        if (navigation) {
-          const startTime = navigation.startTime || 0;
-          trackMetric('PageLoadTime', navigation.loadEventEnd - startTime);
-          trackMetric('DOMReadyTime', navigation.domContentLoadedEventEnd - startTime);
-        }
+  // Track custom events
+  const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      if (window.gtag) {
+        window.gtag('event', eventName, {
+          ...parameters,
+          timestamp: Date.now(),
+          page_location: window.location.href
+        });
       }
-  }, [router.asPath]);
 
-  // Component doesn't render anything
+      // Google Tag Manager
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: eventName,
+          ...parameters,
+          timestamp: Date.now(),
+          page_location: window.location.href
+        });
+      }
+
+      // Custom analytics
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Custom Event:', { eventName, parameters });
+      }
+    }
+  }, []);
+
+  // Track user engagement
+  const trackUserEngagement = useCallback(() => {
+    let startTime = Date.now();
+    let isEngaged = false;
+
+    const trackEngagement = () => {
+      const currentTime = Date.now();
+      const timeOnPage = currentTime - startTime;
+
+      // Track engagement after 10 seconds
+      if (timeOnPage > 10000 && !isEngaged) {
+        isEngaged = true;
+        trackCustomEvent('user_engagement', {
+          engagement_time_msec: timeOnPage,
+          engagement_type: 'time_on_page'
+        });
+      }
+
+      // Track scroll depth
+      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+      if (scrollDepth > 0 && scrollDepth % 25 === 0) {
+        trackCustomEvent('scroll_depth', {
+          scroll_percentage: scrollDepth,
+          page_location: window.location.href
+        });
+      }
+    };
+
+    // Track user interactions
+    const trackUserInteraction = (event: string, data?: any) => {
+      console.log(`[Analytics] User interaction: ${event}`, data);
+      
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', event, data);
+      }
+    };
+
+    // Initialize tracking
+    trackPageView();
+
+    // Track route changes
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+
+    // Add event listeners for user interactions
+    const addTrackingListeners = () => {
+      // Track button clicks
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.tagName === 'BUTTON' || target.closest('button')) {
+          const buttonText = target.textContent || target.innerText || 'Unknown Button';
+          trackUserInteraction('button_click', { button_text: buttonText });
+        }
+      });
+
+      // Track form submissions
+      document.addEventListener('submit', (e) => {
+        const form = e.target as HTMLFormElement;
+        const formId = form.id || form.className || 'Unknown Form';
+        trackUserInteraction('form_submit', { form_id: formId });
+      });
+
+      // Track link clicks
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest('a');
+        if (link) {
+          const linkText = link.textContent || link.innerText || 'Unknown Link';
+          const linkHref = link.href;
+          trackUserInteraction('link_click', { 
+            link_text: linkText, 
+            link_href: linkHref 
+          });
+        }
+      });
+    };
+
+    // Add tracking listeners after a short delay to ensure DOM is ready
+    setTimeout(addTrackingListeners, 1000);
+
+    // Cleanup
+    return () => {
+      // Remove event listeners if needed
+    };
+  }, [trackingId, enableTracking]);
+
+  // This component doesn't render anything visible
   return null;
 };
 
@@ -297,117 +374,6 @@ interface LayoutShiftSource {
   previousRect?: any;
 }
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      action: string,
-      params?: Record<string, unknown>
-    ) => void;
-  }
-}
-
-interface AnalyticsTrackerProps {
-  trackingId?: string;
-  enableDebug?: boolean;
-}
-
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
-  trackingId = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX',
-  enableDebug = false 
-}) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-      // Google Analytics 4
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-
-      // Track page views on route changes
-      const handleRouteChange = (url: string) => {
-        gtag('config', trackingId, {
-          page_title: document.title,
-          page_location: url,
-        });
-        
-        if (enableDebug) {
-          console.log('Analytics: Page view tracked:', url);
-        }
-      };
-
-      router.events.on('routeChangeComplete', handleRouteChange);
-      
-      return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
-      };
-    }
-  }, [trackingId, router, enableDebug]);
-
-  useEffect(() => {
-    // Track user engagement metrics
-    if (typeof window !== 'undefined') {
-      let startTime = Date.now();
-      let isActive = true;
-
-      const trackEngagement = () => {
-        if (isActive) {
-          const timeSpent = Date.now() - startTime;
-          
-          // Track time spent on page
-          if (timeSpent > 30000) { // 30 seconds
-            if (enableDebug) {
-              console.log('Analytics: User engaged for', Math.round(timeSpent / 1000), 'seconds');
-            }
-          }
-        }
-      };
-
-      const handleVisibilityChange = () => {
-        if (document.hidden) {
-          isActive = false;
-        } else {
-          isActive = true;
-          startTime = Date.now();
-        }
-      };
-
-      const handleBeforeUnload = () => {
-        const timeSpent = Date.now() - startTime;
-        if (enableDebug) {
-          console.log('Analytics: Session duration:', Math.round(timeSpent / 1000), 'seconds');
-        }
-      };
-
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('beforeunload', handleBeforeUnload);
-      
-      const interval = setInterval(trackEngagement, 10000); // Check every 10 seconds
-
-      return () => {
-        clearInterval(interval);
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      };
-    }
-  }, [enableDebug]);
-
-  // Return null as this is a utility component
-  return null;
-};
+// gtag is declared globally in PerformanceOptimizer.tsx
 
 export default AnalyticsTracker;

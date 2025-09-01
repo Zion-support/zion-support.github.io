@@ -1,34 +1,28 @@
 import React from 'react';
-import Head from 'next/head';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import dynamic from 'next/dynamic';
 
-type Props = { children?: React.ReactNode };
+interface EnhancedLayoutProps {
+  children: ReactNode;
+}
 
-const EnhancedLayout: React.FC<Props> = ({ children }) => {
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Zion</title>
-      </Head>
-      <div className="min-h-screen bg-high-contrast-secondary text-high-contrast">
-        <div className="max-w-6xl mx-auto py-8 px-4">
-          {children}
-        </div>
-      </div>
-    </>
-  );
-};
+// Lazy-load chat widget to avoid adding to initial critical path
+const ChatWidget = dynamic(() => import('../chat/ChatWidget'), { ssr: false });
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100" style={{ color: 'var(--brand, #111827)' }}>
-      <header>
+    <div className="relative min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
+      <AnimatedBackground />
+      <header className="relative z-10">
         <EnhancedNavigation />
       </header>
-      <main className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
+      <main className="relative z-10 flex-1 container mx-auto px-4 py-6">{children}</main>
+      <footer className="relative z-10">
         <EnhancedFooter />
       </footer>
+      {/* Global chat assistant */}
+      <ChatWidget />
     </div>
   );
 }

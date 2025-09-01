@@ -2,7 +2,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { href: '/explore', label: 'Explore' },
+    { href: '/automation', label: 'Automation' },
+    { href: '/reports', label: 'Reports' },
+    { href: '/components', label: 'Components' },
+    { href: '/newsroom', label: 'Newsroom' },
+    { href: '/search', label: 'Search' },
+  ];
 
   return (
     <header className="sticky top-0 z-50">
@@ -14,105 +23,48 @@ export default function Header() {
               <Link href="/" className="inline-flex items-center gap-2">
                 <span className="text-xl font-extrabold tracking-wide bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
               </Link>
-              <span className="hidden text-xs text-white/60 sm:inline">AI-powered cloud automation & deployment</span>
+              <span className="hidden text-xs text-white/60 sm:inline">Autonomous Cloud Automations</span>
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              Zion Tech
-            </span>
-          </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
-              About
-            </Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
-              Services
-            </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
-              Case Studies
-            </Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
-              Blog
-            </Link>
-            <Link href="/resources" className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium">
-              Resources
-            </Link>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link 
-              href="/contact"
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-xl">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link 
-                href="/about"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                href="/services"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link 
-                href="/case-studies"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link 
-                href="/blog"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link 
-                href="/resources"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Resources
-              </Link>
-              <div className="pt-2">
-                <Link 
-                  href="/contact"
-                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
+            <div className="hidden items-center gap-6 md:flex">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="text-white/80 hover:text-white transition-colors">
+                  {item.label}
                 </Link>
-              </div>
+              ))}
+              <Link href="/main/front#features" className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-1.5 text-sm font-semibold shadow-[0_0_20px_rgba(34,211,238,0.35)] hover:shadow-[0_0_28px_rgba(34,211,238,0.6)] transition-shadow">
+                Get Started
+              </Link>
+            </div>
+
+            <button
+              aria-label="Toggle navigation menu"
+              className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-white/10 text-white/90 hover:bg-white/15"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
+              onClick={() => setMobileOpen((v) => !v)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {mobileOpen ? (
+                  <path d="M18 6L6 18M6 6l12 12" />
+                ) : (
+                  <path d="M3 12h18M3 6h18M3 18h18" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </nav>
+        {mobileOpen && (
+          <div id="mobile-nav" className="md:hidden border-t border-white/10">
+            <div className="mx-auto max-w-7xl px-6 py-3 grid gap-3">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="rounded-md px-3 py-2 text-white/90 hover:bg-white/10">
+                  {item.label}
+                </Link>
+              ))}
+              <Link href="/main/front#features" className="rounded-md bg-white/90 px-3 py-2 text-center font-semibold text-slate-900 hover:bg-white">
+                Get Started
+              </Link>
             </div>
           </div>
         )}
@@ -120,3 +72,5 @@ export default function Header() {
     </header>
   );
 }
+
+
