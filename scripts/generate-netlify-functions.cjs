@@ -13,26 +13,27 @@ function ensureDir(dir) {
 function generateFunctionTemplate(functionName) {
   return `exports.handler = async function(event, context) {
   try {
-    console.log('${functionName} function triggered');
+    console.log('🚀 ${functionName} function triggered');
     
-    // Basic ${functionName} logic
+    // TODO: Implement ${functionName} logic here
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: '${functionName} function executed successfully',
+        message: '${functionName} completed successfully',
         timestamp: new Date().toISOString(),
-        function: '${functionName}',
-        action: 'executing ${functionName} functionality'
+        function: '${functionName}'
       })
     };
     
+    console.log('✅ ${functionName} completed successfully');
     return result;
+    
   } catch (error) {
-    console.error('Error in ${functionName}:', error);
+    console.error('❌ ${functionName} failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
+        error: '${functionName} failed',
         message: error.message,
         function: '${functionName}'
       })
@@ -42,42 +43,53 @@ function generateFunctionTemplate(functionName) {
 `;
 }
 
-function generateMissingFunctions() {
+function generateAllFunctions() {
   ensureDir(FUNCTIONS_DIR);
   
-  // Read the manifest
+  // Read the manifest to get all function names
   let manifest;
   try {
-    manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+    const manifestContent = fs.readFileSync(MANIFEST_PATH, 'utf8');
+    manifest = JSON.parse(manifestContent);
   } catch (error) {
-    console.error('Error reading manifest:', error);
-    return;
+    console.error('❌ Failed to read functions manifest:', error.message);
+    process.exit(1);
   }
   
   const functionNames = manifest.functions || [];
-  const existingFiles = fs.readdirSync(FUNCTIONS_DIR)
-    .filter(f => f.endsWith('.js'))
-    .map(f => f.replace('.js', ''));
+  console.log(`📋 Found ${functionNames.length} functions to generate`);
   
-  const missingFunctions = functionNames.filter(name => !existingFiles.includes(name));
+  let created = 0;
+  let skipped = 0;
   
-  console.log(`Found ${functionNames.length} functions in manifest`);
-  console.log(`Found ${existingFiles.length} existing function files`);
-  console.log(`Need to generate ${missingFunctions.length} missing functions`);
-  
-  let generated = 0;
-  for (const functionName of missingFunctions) {
-    const filePath = path.join(FUNCTIONS_DIR, `${functionName}.js`);
-    if (!fs.existsSync(filePath)) {
-      const content = generateFunctionTemplate(functionName);
-      fs.writeFileSync(filePath, content);
-      console.log(`Generated: ${functionName}.js`);
-      generated++;
+  for (const functionName of functionNames) {
+    const functionPath = path.join(FUNCTIONS_DIR, `${functionName}.js`);
+    
+    if (fs.existsSync(functionPath)) {
+      console.log(`⏭️  Skipping existing: ${functionName}`);
+      skipped++;
+      continue;
+    }
+    
+    try {
+      const template = generateFunctionTemplate(functionName);
+      fs.writeFileSync(functionPath, template);
+      console.log(`✅ Created: ${functionName}`);
+      created++;
+    } catch (error) {
+      console.error(`❌ Failed to create ${functionName}:`, error.message);
     }
   }
   
-  console.log(`\nGenerated ${generated} new function files`);
-  console.log('All functions are now ready for testing');
+  console.log(`\n📊 Summary:`);
+  console.log(`  ✅ Created: ${created}`);
+  console.log(`  ⏭️  Skipped: ${skipped}`);
+  console.log(`  📁 Total: ${functionNames.length}`);
+  
+  if (created > 0) {
+    console.log(`\n🎉 Successfully generated ${created} Netlify functions!`);
+  }
 }
 
-generateMissingFunctions();
+// Run the generator
+generateAllFunctions();
