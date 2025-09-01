@@ -68,11 +68,12 @@ const footerSections: FooterSection[] = [
 ];
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
-  { icon: <Youtube className="w-5 h-5" />, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' },
-  { icon: <Facebook className="w-5 h-5" />, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' }
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-400' },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-sky-400' },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" />, color: 'hover:text-blue-600' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" />, color: 'hover:text-pink-500' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'hover:text-red-500' },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' }
 ];
 
 const contactInfo = {
@@ -294,40 +295,52 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Contact & Social Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 pt-8 border-t border-gray-800/50"
-        >
-          {/* Contact Information */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact Information</h3>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:underline">
-                  {contactInfo.phone}
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:underline">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-start gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                <span>{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                <Globe className="w-4 h-4 text-cyan-400" />
-                <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  {contactInfo.website}
-                </a>
-              </div>
+        {/* Bottom Section - Copyright & Links */}
+        <div className="border-t border-gray-800/50 bg-black/20">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+              {/* Copyright */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center lg:text-left"
+              >
+                <p className="text-gray-400 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved. 
+                  <span className="text-cyan-400 ml-2">Revolutionizing Technology</span>
+                </p>
+              </motion.div>
+
+              {/* Bottom Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex flex-wrap items-center gap-6 text-sm"
+              >
+                <Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  About
+                </Link>
+                <Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Services
+                </Link>
+                <Link href="/contact" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Contact
+                </Link>
+                <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Cookie Policy
+                </Link>
+                <Link href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Sitemap
+                </Link>
+              </motion.div>
             </div>
           </div>
 
