@@ -5,7 +5,7 @@ initialises a Socket.IO server and bridges to Django Channels. Rooms are keyed b
 the related order or service identifier so participants only receive messages for
 their transaction.
 
-Install the Socket.IO packages:
+Install the packages first:
 
 ```bash
 npm install socket.io socket.io-client
