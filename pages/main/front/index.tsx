@@ -350,62 +350,32 @@ export default function FrontLanding() {
               <p className="mt-1 text-sm text-white/75">End-to-end agents launching factories and syncing safe diffs to main.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub →</div>
             </a>
-+            <a href="/.netlify/functions/auto-deps-maintainer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-+              <div className="text-lg font-semibold">Auto Dependency Maintainer</div>
-+              <p className="mt-1 text-sm text-white/75">Upgrades dependencies safely and syncs to main (6h).</p>
-+              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
-+            </a>
-+            <a href="/.netlify/functions/docs-pages-indexer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-+              <div className="text-lg font-semibold">Docs Pages Indexer</div>
-+              <p className="mt-1 text-sm text-white/75">Rebuilds docs/pages index and sitemap (4h).</p>
-+              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
-+            </a>
-+            <a href="/.netlify/functions/dead-code-scan" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-+              <div className="text-lg font-semibold">Dead Code Scanner</div>
-+              <p className="mt-1 text-sm text-white/75">Scans for unused code and proposes cleanups (daily).</p>
-+              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
-+            </a>
-+            <a href="/.netlify/functions/ai-changelog-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-+              <div className="text-lg font-semibold">AI Changelog Generator</div>
-+              <p className="mt-1 text-sm text-white/75">Regenerates the AI changelog (3h).</p>
-+              <div className="mt-3 text-xs text-cyan-300/90">Open →</div>
-+            </a>
-          </div>
-        </motion.section>
-
-        {/* New: Autonomous Cloud Automations (Live Links) */}
-        <motion.section
-          id="new-cloud-automations"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-14"
-        >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">New Autonomous Cloud Automations</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Runs autonomously in the cloud and syncs changes directly to <code>main</code>.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="/.netlify/functions/front-autopilot" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+            <a
+              href="/.netlify/functions/internal-link-graph-runner"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
+            >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Front Autopilot</div>
-              <p className="mt-1 text-sm text-white/75">Continuously refreshes homepage and main/front; commits changes.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Open ↗</div>
+              <div className="text-lg font-semibold">Internal Link Graph</div>
+              <p className="mt-1 text-sm text-white/75">Builds and publishes the site’s internal link graph.</p>
+              <div className="mt-3 text-xs text-cyan-300/90">Trigger / View →</div>
             </a>
-            <a href="/.netlify/functions/auto-heal-and-optimize" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+            <a
+              href="/.netlify/functions/component-usage-index-runner"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
+            >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Auto‑Heal & Optimize</div>
-              <p className="mt-1 text-sm text-white/75">Fixes links, scans broken images, and optimizes media autonomously.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Open ↗</div>
+              <div className="text-lg font-semibold">Component Usage Index</div>
+              <p className="mt-1 text-sm text-white/75">Indexes component usage to guide refactors.</p>
+              <div className="mt-3 text-xs text-cyan-300/90">Trigger / View →</div>
             </a>
-            <a href="/.netlify/functions/content-refresh-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+            <a
+              href="/.netlify/functions/content-freshness-runner"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
+            >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Content Refresh Runner</div>
-              <p className="mt-1 text-sm text-white/75">Curates content, updates docs/search indexes, and changelogs.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Open ↗</div>
+              <div className="text-lg font-semibold">Content Freshness</div>
+              <p className="mt-1 text-sm text-white/75">Audits last updates and highlights stale content.</p>
+              <div className="mt-3 text-xs text-cyan-300/90">Trigger / View →</div>
             </a>
           </div>
         </motion.section>
