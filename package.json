@@ -40,7 +40,14 @@
     "format:check": "prettier --check .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "maintenance": "bash scripts/maintenance.sh",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs",
+    "pm2:delete": "pm2 delete ecosystem.config.cjs || true",
+    "pm2:save": "pm2 save",
+    "pm2:startup": "pm2 startup -u $(whoami) --hp $HOME"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",
@@ -66,8 +73,8 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^20.8.0",
-    "@types/react": "^18.3.7",
-    "@types/react-dom": "^18.2.0",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^8.41.0",
     "@typescript-eslint/parser": "^8.41.0",
     "autoprefixer": "^10.4.21",
@@ -88,12 +95,8 @@
     "postcss": "^8.4.31",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
-<<<<<<< HEAD
     "strip-json-comments": "^5.0.3",
-    "tailwindcss": "^3.3.5",
-=======
     "tailwindcss": "^4.1.12",
->>>>>>> main
     "typescript": "5.9.2"
   }
 }

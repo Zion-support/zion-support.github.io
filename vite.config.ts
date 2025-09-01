@@ -97,14 +97,14 @@ export default defineConfig({
     devSourcemap: true
   },
   define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __DEV__: JSON.stringify(process.env['NODE_ENV'] === 'development'),
+    __PROD__: JSON.stringify(process.env['NODE_ENV'] === 'production'),
+    __APP_VERSION__: JSON.stringify(process.env['npm_package_version']),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
   esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    pure: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info'] : [],
+    drop: process.env['NODE_ENV'] === 'production' ? ['console', 'debugger'] : [],
+    pure: process.env['NODE_ENV'] === 'production' ? ['console.log', 'console.info'] : [],
   },
   worker: {
     format: 'es',

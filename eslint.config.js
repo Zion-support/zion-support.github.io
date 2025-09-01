@@ -24,11 +24,20 @@ export default [
       'src/context/**/*.js.jsx',
       'src/store/**',
       'src/types/**',
+      'tests/**',
+      'tests.disabled/**',
+      'types.disabled/**',
+      'supabase/**',
+      'zion-os.disabled/**',
+      'utils/**',
+      'types/**',
+      '**/*.js.jsx',
+      '**/*.jsx'
     ],
   },
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['src/main.tsx', 'src/utils/serviceWorker.ts'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',

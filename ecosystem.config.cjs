@@ -35,6 +35,21 @@ module.exports = {
       }
     },
 
+    // Simple maintenance script - runs every 6 hours
+    {
+      name: 'zion-maintenance',
+      script: '/bin/bash',
+      args: '/workspace/scripts/maintenance.sh',
+      cwd: '/workspace',
+      interpreter: 'none',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      cron_restart: '0 */6 * * *',
+      out_file: 'logs/maintenance.out.log',
+      error_file: 'logs/maintenance.err.log'
+    },
+
     // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
     {
       name: 'pm2-error-prevention',
@@ -362,56 +377,6 @@ module.exports = {
       log_file: './logs/smart-dependency-intelligence.log',
       error_file: './logs/smart-dependency-intelligence-error.log',
       out_file: './logs/smart-dependency-intelligence-out.log'
-    },
-
-    // Predictive Issue Detection - Anticipates and prevents issues
-    {
-      name: 'predictive-issue-detection',
-      script: './scripts/automation/predictive-issue-detection.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      log_file: './logs/predictive-issue-detection.log',
-      error_file: './logs/predictive-issue-detection-error.log',
-      out_file: './logs/predictive-issue-detection-out.log'
-    },
-
-    // Intelligent Build Pipeline - Optimizes build processes
-    {
-      name: 'intelligent-build-pipeline',
-      script: './scripts/automation/intelligent-build-pipeline.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */8 * * *', // Every 8 hours
-      log_file: './logs/intelligent-build-pipeline.log',
-      error_file: './logs/intelligent-build-pipeline-error.log',
-      out_file: './logs/intelligent-build-pipeline-out.log'
-    },
-
-    // Auto-fix and build automation
-    {
-      name: 'auto-fix-and-build',
-      script: 'bash',
-      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: { NODE_ENV: 'production' },
-      cron_restart: '0 */6 * * *',
-      log_file: 'logs/auto-fix-and-build.log',
-      out_file: 'logs/auto-fix-and-build-out.log',
-      error_file: 'logs/auto-fix-and-build-error.log'
     },
 
     // Watcher to rebuild on changes
