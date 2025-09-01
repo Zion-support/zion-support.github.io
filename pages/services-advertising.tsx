@@ -93,7 +93,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">WHOIS, nameserver, and DNS record drift detection with alerts.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$40/mo</li>
-						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/ssl-tools/ssl-checker/')}</li>
+						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/kb/ssl-checker/sslchecker-intro')}</li>
 					</ul>
 				</section>
 
@@ -266,7 +266,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Freshness SLAs, schema drift detection, and anomaly alerts for your warehouse and lakes.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$500/mo</li>
-						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/pricing')}, {ext('https://soda.io/')}</li>
+						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://docs.bigeye.com/docs/pricing')}, {ext('https://soda.io/')}</li>
 					</ul>
 				</section>
 
