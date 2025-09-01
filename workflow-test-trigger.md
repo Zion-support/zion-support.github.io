@@ -1,1 +1,6 @@
-# Trigger CI workflow test Mon Aug 18 04:47:50 PM UTC 2025
+# Workflow Test Trigger
+
+This file is used to trigger GitHub Actions workflows for testing purposes.
+
+Timestamp: $(date)
+Branch: $(git branch --show-current)
