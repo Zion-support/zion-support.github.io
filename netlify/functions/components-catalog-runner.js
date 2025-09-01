@@ -7,7 +7,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '*/15 * * * *',
+  schedule: '*/30 * * * *',
 };
 
 exports.handler = async () => {
@@ -21,7 +21,7 @@ exports.handler = async () => {
     return res.status || 0;
   }
 
-  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
+  step('components:catalog', () => runNode('automation/components-catalog.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') };
 };
