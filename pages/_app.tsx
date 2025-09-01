@@ -181,9 +181,7 @@ const LoadingScreen: React.FC<{ progress: number }> = ({ progress }) => (
 );
 
 // Provider wrapper with error handling
-const ProviderWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Note: Suspense for dynamic imports is handled individually by next/dynamic.
-  // A top-level Suspense here could be added if there are other suspense-using components.
+const ProviderWrapper: React.FC<{ children: React.ReactNode; queryClient: QueryClient }> = ({ children, queryClient }) => {
   return (
     <AppErrorBoundary>
       <ReduxProvider store={store}>
@@ -387,18 +385,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // Main app render with all providers
   return (
-    <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
-      <ProviderWrapper>
-        <Head>
-          <title>Zion App - AI Marketplace & DAO Platform</title>
-        <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-             <div>
-         <Component {...pageProps} />
-       </div>
-      </ProviderWrapper>
-    </QueryClientProvider>
+    <ProviderWrapper queryClient={queryClient}>
+      <Component {...pageProps} />
+    </ProviderWrapper>
   );
 }
