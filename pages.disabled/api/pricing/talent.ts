@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { TalentRateRequest } from '@/utils/api/aiPricing';
-import { generateTalentRateSuggestion } from '@/utils/api/aiPricing';
-import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
-;
-export { async };
-export default async function handler(...args: unknown[]): unknown {
+import type { TalentRateRequest } from '../../../utils/api/aiPricing';
+import { generateTalentRateSuggestion } from '../../../utils/api/aiPricing';
+import { trackPricingRequest } from '../../../utils/data/pricingAnalytics';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow',POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -27,7 +26,7 @@ export default function TalentPage(...args: unknown[]): unknown {
     };
 
     const suggestion = await generateTalentRateSuggestion(input);
-    await logPricingAnalytics({ kind: 'talent_suggestion', payload: { input, suggestion } });
+    await trackPricingRequest({ input, suggestion });
     return res.status(200).json({ suggestion, disclaimer: 'Based on market data & trends' });
   } catch (error) {
     return res.status(500).json({ error: 'Failed to generate talent rate suggestion' });

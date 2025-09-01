@@ -31,9 +31,8 @@ interface ErrorData {
 // In production, use a proper database;
 let performanceMetrics: PerformanceData[] = [];
 let errorLogs: ErrorData[] = [];
-;
-export { function };
-export default function handler(
+
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise
@@ -86,15 +85,20 @@ export default function Performance-metricsPage() {
             timestamp: Date.now()
           })
         });
+      } catch (error) {
+        console.error('Error sending to analytics:', error);
       }
-    } catch (error) {
-      console.error('Error processing request:', error);
-      res.status(500).json({ 
-        success: false, 
-        message: 'Internal server error' 
-      });
     }
-  } else if (req.method === 'GET') {
+  } catch (error) {
+    console.error('Error processing request:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Internal server error' 
+    });
+    return;
+  }
+  
+  if (req.method === 'GET') {
     try {
       const { type, limit = 100 } = req.query;
       
