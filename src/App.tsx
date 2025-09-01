@@ -19,7 +19,8 @@ import {
   DeveloperRoutes
 } from './routes';
 
-const { lazy } = React;
+const lazy = React.lazy;
+const Suspense = React.Suspense;
 const Home = lazy(() => import('./pages/Home'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
