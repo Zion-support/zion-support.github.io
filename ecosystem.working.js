@@ -1,20 +1,22 @@
 module.exports = {
   apps: [
+    // Main application
     {
       name: 'zion-app',
       script: 'npm',
       args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       error_file: './logs/app-error.log',
       out_file: './logs/app-out.log',
@@ -28,19 +30,16 @@ module.exports = {
       kill_timeout: 5000,
       wait_ready: true,
       listen_timeout: 8000,
-      // Health check configuration
       health_check_grace_period: 30000,
       health_check_fatal_exceptions: true,
-      // Restart daily at 2 AM for memory optimization
       cron_restart: '0 2 * * *',
-      // Process management
       pid_file: './logs/app.pid',
-      // Monitoring
       pmx: true,
-      // Error handling
       max_unstable_restarts: 5,
       unstable_restart_delay: 10000
     },
+
+    // Core automation processes
     {
       name: 'error-monitor',
       script: './scripts/error-monitor.cjs',
@@ -60,9 +59,9 @@ module.exports = {
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 2000,
-      // Run every 5 minutes
       cron_restart: '*/5 * * * *'
     },
+
     {
       name: 'syntax-fixer',
       script: './scripts/syntax-fixer.cjs',
@@ -82,9 +81,9 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '5s',
       restart_delay: 2000,
-      // Run every 10 minutes
       cron_restart: '*/10 * * * *'
     },
+
     {
       name: 'build-health-check',
       script: './scripts/build-health-check.cjs',
@@ -104,9 +103,9 @@ module.exports = {
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 1000,
-      // Run every 15 minutes
       cron_restart: '*/15 * * * *'
     },
+
     {
       name: 'merge-conflict-resolver',
       script: './scripts/merge-conflict-resolver.cjs',
@@ -126,8 +125,27 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
-      // Run every 30 minutes
       cron_restart: '*/30 * * * *'
+    },
+
+    // Enhanced automation processes
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AI_ANALYSIS_MODE: 'true',
+      },
+      cron_restart: '0 */2 * * *',
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     }
   ],
 
@@ -139,7 +157,7 @@ module.exports = {
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/workspace',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.working.js --env production',
       'pre-setup': ''
     }
   }
