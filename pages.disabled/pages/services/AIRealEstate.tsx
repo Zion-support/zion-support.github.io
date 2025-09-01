@@ -6,24 +6,9 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Virtual property tours and 3D visualization',;
     'Integration with major real estate platforms',;
     'Custom AI models for local market insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIRealEstate.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Individual Agent',
-      price: '$199/mo',
-      details: ['Up to 100 properties', 'Basic AI analysis', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Small Agency',
-      price: '$599/mo',
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIRealEstate.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited properties',Custom AI models',Full platform integration',24/7 dedicated support'] },;

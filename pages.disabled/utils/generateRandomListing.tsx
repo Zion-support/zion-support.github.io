@@ -1,16 +1,9 @@
 export function generateRandomListing () : MarketplaceItem {
 export function generateRandomListings (count: number) : MarketplaceItem[] {
 
-<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
-const sampleTitles = [
-  'AI - Powered Analytics Platform',
-  'Cybersecurity Assessment Tool',
-  'Cloud Migration Service',
-  'IoT Edge Computing Solution',;
-=======
 
 
->>>>>>> main:src/utils/generateRandomListing.tsx
+
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;

@@ -12,39 +12,22 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       icon: '🏥'};
   ];
 
-<<<<<<< HEAD
-  
-    'Reduce unplanned downtime by up to 75%',;
-    'Extend equipment lifespan and reliability',;
-    'Lower maintenance costs and labor requirements',;
-    'Improve safety and compliance standards',;
-    'Optimize spare parts inventory management',;
-    'Increase overall operational efficiency';
-=======
+
   const benefits = [;'
     'Reduce unplanned downtime by up to 75%',;'
     'Extend equipment lifespan and reliability',;'
     'Lower maintenance costs and labor requirements',;'
     'Improve safety and compliance standards',;'
     'Optimize spare parts inventory management',;'    'Increase overall operational efficiency';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-predictive-maintenance.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-predictive-maintenance.tsx
-        title="AI Predictive Maintenance Services - Zion Tech Group"
-        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
-       />
-=======
+
         title="AI Predictive Maintenance Services - Zion Tech Group""        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"

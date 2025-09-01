@@ -23,7 +23,6 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Enterprise security features';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   
@@ -43,32 +42,20 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Build sustainable metaverse economies and ecosystems';
   ];
 
-<<<<<<< HEAD
-  
-    'Gaming and Entertainment',;
-    'Real Estate and Architecture',;
-    'Education and Training',;
-    'Healthcare and Telemedicine',;
-    'Retail and E-commerce',;
-    'Corporate and Enterprise';
-=======
+
   const industries = [;'
     'Gaming and Entertainment',;'
     'Real Estate and Architecture',;'
     'Education and Training',;'
     'Healthcare and Telemedicine',;'
     'Retail and E-commerce',;'    'Corporate and Enterprise';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIMetaverseDevelopmentPlatform.tsx
-        title = "AI Metaverse Development Platform | Zion Tech Group"
+>        title = "AI Metaverse Development Platform | Zion Tech Group"
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
        />

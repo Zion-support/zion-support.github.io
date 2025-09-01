@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-=======
 'export type NotificationType = 'success' | 'error' | 'warning' | 'info';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Notification {
   id: string;
@@ -32,14 +28,9 @@ interface NotificationContextType {
 
 ;
 export 
-<<<<<<< HEAD
-  
-  if (!context) {
 
-=======
   const context = useContext(NotificationContext);  if (!context) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 
@@ -66,12 +57,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   clearAll
 
 ;
-<<<<<<< HEAD:src/components/ui/EnhancedNotificationSystem.tsx
-;
-;
 
-=======
->>>>>>> main:backup-pages/ui/EnhancedNotificationSystem.tsx
 }}>;
       {children};
       <NotificationContainer  />;
@@ -136,12 +122,8 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
 "
         return <Info className = "w-5 h-5 text-blue-400"  />}};
-<<<<<<< HEAD
 
-        return 'border-blue-500/30'}
-=======
 '        return 'border-blue-500/30'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
         return 'bg-blue-500/10'}
@@ -184,30 +166,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     </motion.div>;
   )};
 
-<<<<<<< HEAD:src/components/ui/EnhancedNotificationSystem.tsx
-// Utility functions for easy notification creation
-export const notify = {
-  success: (title: string, message: string, options?: Partial<Notification>)  => {
-    // This would be used with the context
-    console.log('Success notification: ', { title, message,
-  ...options
 
-})},
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Error notification: ', { title, message, ...options })},
-  warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Warning notification: ', { title, message, ...options })},
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Info notification:', { title, message, ...options })};
-    console.log('Success notification:', { title, message,;
-  ;
-  ;
-  ;
-  ...options ;
-
-});
-  },
-=======
 // Utility functions for easy notification creation;
 export 
     // console.log('Success notification:', { title, message,;
@@ -215,11 +174,9 @@ export
 '
     // console.log('Info notification:', { title, message, ...options })};'
     // console.log('Success notification:', { title, message,;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options })},
->>>>>>> main:backup-pages/ui/EnhancedNotificationSystem.tsx
   error: (title: string, message: string, options?: Partial<Notification>) => {
 
     // // // // console.log('Error notification:', { title, message, ...options })},

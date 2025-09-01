@@ -16,8 +16,13 @@ const TrustAppealPage: React.FC = () => {
   const [reasonForAppeal, setReasonForAppeal] = useState<string>('');
   const [supportingEvidence, setSupportingEvidence] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const [formErrors, setFormErrors] = useState<{ reasonForAppeal?: string }>({});
+  const [submitMessage, setSubmitMessage] = useState<{
+    type: 'success' | 'error';
+    text: string;
+  } | null>(null);
+  const [formErrors, setFormErrors] = useState<{ reasonForAppeal?: string }>(
+    {}
+  );
 
   useEffect(() => {
     // Simulate fetching current score or getting it from router query
@@ -34,9 +39,8 @@ const TrustAppealPage: React.FC = () => {
     // If userId is also in query (e.g. admin initiated appeal for user)
     const userIdFromQuery = searchParams.get('userId');
     if (userIdFromQuery) {
-        setUserId(userIdFromQuery);
+      setUserId(userIdFromQuery);
     }
-
   }, [searchParams]);
 
   const validateForm = (): boolean => {
@@ -44,7 +48,8 @@ const TrustAppealPage: React.FC = () => {
     if (!reasonForAppeal.trim()) {
       errors.reasonForAppeal = 'Reason for appeal is required.';
     } else if (reasonForAppeal.trim().length < 50) {
-      errors.reasonForAppeal = 'Please provide a detailed reason (at least 50 characters).';
+      errors.reasonForAppeal =
+        'Please provide a detailed reason (at least 50 characters).';
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -72,7 +77,7 @@ const TrustAppealPage: React.FC = () => {
     setIsSubmitting(false);
     setSubmitMessage({
       type: 'success',
-      text: 'Your appeal has been submitted. We will review it within 3-5 business days.'
+      text: 'Your appeal has been submitted. We will review it within 3-5 business days.',
     });
     // Reset form or redirect user
     // setReasonForAppeal('');
@@ -88,35 +93,53 @@ const TrustAppealPage: React.FC = () => {
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold text-gray-800">Trust Score Appeal</h1>
         <p className="text-gray-600 mt-2">
-          If you believe your trust score is inaccurate or has been unfairly affected, please submit an appeal.
+          If you believe your trust score is inaccurate or has been unfairly
+          affected, please submit an appeal.
         </p>
       </header>
 
       {submitMessage && (
-        <div className={`p-4 mb-6 rounded-md text-sm ${
-            submitMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+        <div
+          className={`p-4 mb-6 rounded-md text-sm ${
+            submitMessage.type === 'success'
+              ? 'bg-green-100 text-green-700'
+              : 'bg-red-100 text-red-700'
           }`}
         >
           {submitMessage.text}
           {submitMessage.type === 'success' && userId && (
             <Link href={`/profile/${userId}/trust`} legacyBehavior>
-                <a className="font-semibold underline ml-2">View Your Trust Profile</a>
+              <a className="font-semibold underline ml-2">
+                View Your Trust Profile
+              </a>
             </Link>
           )}
         </div>
       )}
 
       {!canAppeal && !submitMessage && currentScore !== null && (
-         <div className="p-4 mb-6 rounded-md text-sm bg-blue-100 text-blue-700">
-            Your current score ({currentScore}) does not require an appeal at this time. Appeals are generally for scores below 70.
-            {userId && ( <Link href={`/profile/${userId}/trust`} legacyBehavior><a className="font-semibold underline ml-1">View Your Trust Profile</a></Link>)}
+        <div className="p-4 mb-6 rounded-md text-sm bg-blue-100 text-blue-700">
+          Your current score ({currentScore}) does not require an appeal at this
+          time. Appeals are generally for scores below 70.
+          {userId && (
+            <Link href={`/profile/${userId}/trust`} legacyBehavior>
+              <a className="font-semibold underline ml-1">
+                View Your Trust Profile
+              </a>
+            </Link>
+          )}
         </div>
       )}
 
-      {(canAppeal || currentScore === null || submitMessage?.type === 'success') && ( // Show form if eligible, or if successful submit
+      {(canAppeal ||
+        currentScore === null ||
+        submitMessage?.type === 'success') && ( // Show form if eligible, or if successful submit
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="userId" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="userId"
+              className="block text-sm font-medium text-gray-700"
+            >
               User ID
             </label>
             <input
@@ -130,7 +153,10 @@ const TrustAppealPage: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="currentScore" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="currentScore"
+              className="block text-sm font-medium text-gray-700"
+            >
               Current Trust Score (at time of appeal)
             </label>
             <input
@@ -144,7 +170,10 @@ const TrustAppealPage: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="reasonForAppeal" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="reasonForAppeal"
+              className="block text-sm font-medium text-gray-700"
+            >
               Reason for Appeal <span className="text-red-500">*</span>
             </label>
             <textarea
@@ -152,24 +181,32 @@ const TrustAppealPage: React.FC = () => {
               name="reasonForAppeal"
               rows={6}
               value={reasonForAppeal}
-              onChange={(e) => setReasonForAppeal(e.target.value)}
+              onChange={e => setReasonForAppeal(e.target.value)}
               required
               className={`mt-1 block w-full px-3 py-2 border ${formErrors.reasonForAppeal ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`}
               aria-describedby="reasonForAppeal-error"
             />
             {formErrors.reasonForAppeal && (
-              <p className="mt-1 text-xs text-red-500" id="reasonForAppeal-error">
+              <p
+                className="mt-1 text-xs text-red-500"
+                id="reasonForAppeal-error"
+              >
                 {formErrors.reasonForAppeal}
               </p>
             )}
             <p className="mt-1 text-xs text-gray-500">
-              Please provide a detailed explanation for why you believe your score should be reviewed.
-              Include any specific incidents, extenuating circumstances, or corrections you'd like us to consider.
+              Please provide a detailed explanation for why you believe your
+              score should be reviewed. Include any specific incidents,
+              extenuating circumstances, or corrections you'd like us to
+              consider.
             </p>
           </div>
 
           <div>
-            <label htmlFor="supportingEvidence" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="supportingEvidence"
+              className="block text-sm font-medium text-gray-700"
+            >
               Supporting Evidence (Optional)
             </label>
             <textarea
@@ -177,12 +214,12 @@ const TrustAppealPage: React.FC = () => {
               name="supportingEvidence"
               rows={3}
               value={supportingEvidence}
-              onChange={(e) => setSupportingEvidence(e.target.value)}
+              onChange={e => setSupportingEvidence(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
             <p className="mt-1 text-xs text-gray-500">
-              Provide links to documents, screenshots, or any other evidence that supports your appeal.
-              Describe what the evidence shows.
+              Provide links to documents, screenshots, or any other evidence
+              that supports your appeal. Describe what the evidence shows.
             </p>
           </div>
 
@@ -199,7 +236,9 @@ const TrustAppealPage: React.FC = () => {
       )}
       <div className="mt-8 text-center">
         <Link href="/" legacyBehavior>
-          <a className="text-sm text-blue-600 hover:text-blue-800 hover:underline">Return to Homepage</a>
+          <a className="text-sm text-blue-600 hover:text-blue-800 hover:underline">
+            Return to Homepage
+          </a>
         </Link>
       </div>
     </div>

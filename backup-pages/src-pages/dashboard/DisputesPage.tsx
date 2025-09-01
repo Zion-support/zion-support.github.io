@@ -4,14 +4,9 @@
   return()
     <ProtectedRoute>;
       <>
-        <SEO <<<<<<< HEAD
-          title="Dispute Resolution Center | Zion AI Marketplace"
-          description="View and manage disputes between clients and talents"
-         />
-=======
+        <SEO 
           title="Dispute Resolution Center | Zion AI Marketplace""          description="View and manage disputes between clients and talents"
          />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         <DisputeDashboard  />
 

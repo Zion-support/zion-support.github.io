@@ -101,12 +101,7 @@ export default function AIAutonomousBusinessManager() {
 }} animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center">
-            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
-=======
   y: 0 
 
 
@@ -116,7 +111,6 @@ export default function AIAutonomousBusinessManager() {
 "
 }} transition={{ duration: 0.8 }} className="text-center">"
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
               <Brain className="w-4 h-4"/>
               AI-Powered Business Management
             </div>
@@ -157,11 +151,7 @@ export default function AIAutonomousBusinessManager() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -170,7 +160,6 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Intelligent Business Management
             </h2>"
@@ -196,10 +185,7 @@ export default function AIAutonomousBusinessManager() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  delay: index * 0.1
 
-=======
   delay: index * 0.1 
 
 
@@ -207,7 +193,6 @@ export default function AIAutonomousBusinessManager() {
 
 
 "
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>"
                     <IconComponent className="w-8 h-8"/>
@@ -230,11 +215,7 @@ export default function AIAutonomousBusinessManager() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -243,7 +224,6 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Why Choose AI Autonomous Business Manager?
             </h2>"
@@ -266,12 +246,7 @@ export default function AIAutonomousBusinessManager() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  delay: index * 0.1
 
-}} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"/>
-=======
   delay: index * 0.1 
 
 
@@ -281,7 +256,6 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="flex items-start gap-3">"
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"/>"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>))}
           </div>
@@ -299,11 +273,7 @@ export default function AIAutonomousBusinessManager() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -312,7 +282,6 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Perfect For Every Business
             </h2>"
@@ -338,12 +307,7 @@ export default function AIAutonomousBusinessManager() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  delay: index * 0.1
 
-}} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-=======
   delay: index * 0.1 
 
 
@@ -353,7 +317,6 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="text-center">"
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
                     <IconComponent className="w-8 h-8 text-white"/>
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>"
@@ -374,11 +337,7 @@ export default function AIAutonomousBusinessManager() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -387,7 +346,6 @@ export default function AIAutonomousBusinessManager() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               What Our Clients Say
             </h2>"
@@ -410,12 +368,7 @@ export default function AIAutonomousBusinessManager() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/ai-services/AIAutonomousBusinessManager.jsx
-  delay: index * 0.1
 
-}} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8">
-                <div className="flex gap-1 mb-4">
-=======
   delay: index * 0.1 
 
 
@@ -425,7 +378,6 @@ export default function AIAutonomousBusinessManager() {
 "
 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8">"
                 <div className="flex gap-1 mb-4">"
->>>>>>> main:backup-pages/src-pages/ai-services/AIAutonomousBusinessManager.jsx
                   {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-cyan-400 fill-current"/>))}
                 </div>"
                 <p className="text-gray-300 mb-6 leading-relaxed italic">"

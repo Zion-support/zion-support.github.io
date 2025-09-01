@@ -34,7 +34,6 @@ import {
   'Digital Transformation',
 ];'
 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function Events(...args: any[]): any {
 
   const [selectedType, setSelectedType] = useState('All');
@@ -115,12 +114,8 @@ export default function Events(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search events..."
-=======
+
                     type="text""                    placeholder="Search events..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"

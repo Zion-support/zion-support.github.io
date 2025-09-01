@@ -1,48 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
-import { Brain,
-  Database,
-  BarChart3,
-  Users,
-  Clock,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Brain, 
-  Database, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIEnterpriseResourcePlanning.tsx
-  Zap,
-  Shield,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Target,
-  PieChart,
-  Activity'
-  } from 'lucide-react.ts';
-};
-  ];
+<=
 
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$2,999","
-      period: "/month",
-      features[;"
-        "Core ERP modules","
-        "AI-powered analytics","
-        "Basic automation","
-        "Standard support","
-        "Up to 50 users"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -105,21 +62,12 @@ import { Brain,
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIEnterpriseResourcePlanning.tsx
-        title="AI-Powered Enterprise Resource Planning | Zion Tech Group"
-        description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation."
-        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
-       />
-=======
+
         title="AI-Powered Enterprise Resource Planning | Zion Tech Group""
         description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.""        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -278,17 +226,12 @@ import { Brain,
 
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
-                  service.popular
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25'
-                    : 'border-zion-slate/30'
-========
+<=
 
                   service.popular '
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' '
                     : 'border-zion-slate/30'`
->>>>>>>> main:backup-pages/src-pages/services/AIEnterpriseResourcePlanning.tsx
-                }`}
+>                }`}
               >
                 {service.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -297,20 +240,13 @@ import { Brain,
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIEnterpriseResourcePlanning.tsx
-                    <span className="text-zion-slate-light ml-1">{service.period}</span>
+>                    <span className="text-zion-slate-light ml-1">{service.period}</span>
                   </div>
                 </div>
 "

@@ -8,16 +8,10 @@ export default function IoTEdge(...args: []):  {
       title: 'Data Management',;
       description: 'Efficient storage and processing of IoT data streams'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Security & Compliance',;
-      description: 'End-to-end security for IoT ecosystems',;
-      icon: Shield};
-=======
+
     {;'
       title: 'Security & Compliance',;'      description: 'End-to-end security for IoT ecosystems',;
       icon: Shield};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("

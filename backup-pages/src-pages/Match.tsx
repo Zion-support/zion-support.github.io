@@ -1,50 +1,6 @@
-<<<<<<< HEAD
-import {
 
-  Sparkles,
-  Users,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Rocket,
-  MessageCircle,
-  Search,
-  Filter,
-  Settings,
-  RefreshCw,
-  Heart,
-  Bookmark,
-  Share2,
-  Download,
-  Upload,
-  FileText,
-  BarChart3,
-  Globe,
-  Award,
-  TrendingUp,
-  Clock,
-  Eye,
-  Lock,
-  Key,
-  Wifi,
-  Server,
-  Network,
-  Settings as SettingsIcon'
-} from 'lucide-react';
-
-const Match: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-=======
 const Match: React.FC = () => {;'
   const [selectedCategory, setSelectedCategory] = useState('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchQuery, setSearchQuery] = useState('');
 
   
@@ -148,16 +104,10 @@ const Match: React.FC = () => {;'
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Service Matcher - Zion Tech Group"
-        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
-        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
-       />
-=======
+
         title="AI Service Matcher - Zion Tech Group""
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -223,12 +173,8 @@ const Match: React.FC = () => {;'
             <div className="relative mb-8">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search for services, features, or use cases..."
-=======
+
                 type="text""                placeholder="Search for services, features, or use cases..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}"
                 className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"

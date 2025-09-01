@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven maintenance automation and orchestration',;
     'Real-time maintenance performance tracking',;
     'Custom AI models for maintenance applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityMaintenance.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$399/mo',
-      details: ['Up to 10 systems', 'Basic AI features', 'Standard maintenance', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$999/mo',
-      details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityMaintenance.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited systems',Custom AI models',Full maintenance suite',24/7 dedicated support'] },;

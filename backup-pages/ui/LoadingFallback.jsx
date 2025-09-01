@@ -19,10 +19,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
-<<<<<<< HEAD:src/components/ui/LoadingFallback.jsx
-  { duration: 1, repeat: Infinity,
-  ease: "linear"
-=======
+
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
@@ -31,7 +28,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 
->>>>>>> main:backup-pages/ui/LoadingFallback.jsx
 
 }}>`
         <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>

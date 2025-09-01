@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven Grafana automation and orchestration',;
     'Real-time Grafana analytics and insights',;
     'Custom AI models for Grafana applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIGrafana.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$299/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIGrafana.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage',Custom AI models',Full Grafana suite',24/7 dedicated support'] },;

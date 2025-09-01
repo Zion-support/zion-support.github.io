@@ -1,12 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
-const MessagingProvider({ children }) {
-
+import React, { createContext, useContext, useState } from 'react';'const MessagingProvider({ children }) {'
     const [messages, setMessages] = useState([]);
-    const sendMessage = (content) => {
+    const sendMessage = (content) => {;
 
-        const newMessage = {
+        const newMessage = {;
 
-  id: Date.now().toString(),
-            content,
-            timestamp: new Date(),
-            isRead: false,
+  id: Date.now().toString(), content,;
+            timestamp: new Date(), isRead: false,

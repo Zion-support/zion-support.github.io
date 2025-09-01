@@ -6,19 +6,12 @@
         description="Advanced AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages."
         keywords="AI code review, security analysis, vulnerability detection, SAST, DAST, SCA, IAST, code quality, security testing"
         canonical="https://ziontechgroup.com/services/ai-code-review-security"
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-========
+<=
        />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-          <div className="max-w-7xl mx-auto text-center">
+>          <div className="max-w-7xl mx-auto text-center">
             <motion.div
               initial = {
 
@@ -575,17 +568,12 @@
 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-                    plan.popular
-                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400'
-                      : 'bg-white/10 backdrop-blur-sm border border-white/20'
-========
+<=
 
                     plan.popular '
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' '
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'`
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                  }`}
+>                  }`}
                 >
                   {plan.popular && ("
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -594,29 +582,19 @@
                       </span>
                     </div>
                   )}
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                   "
                   <div className="text-center mb-6">"
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                     <div className="flex items-baseline justify-center">"
                       <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                      <span className="text-white/70 ml-1">{plan.period}</span>
+>                      <span className="text-white/70 ml-1">{plan.period}</span>
                     </div>"
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-
-========
+<=
                   "
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                  <ul className="space-y-3 mb-8">
+>                  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-white">"
                         <span className="text-green-400 mr-3">✓</span>
@@ -624,12 +602,9 @@
                       </li>
                     ))}
                   </ul>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-
-========
+<=
                   `
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+>                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
                     plan.popular'
                       ? 'bg-white text-blue-600 hover:bg-gray-100''
@@ -698,22 +673,7 @@
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of developers who trust our AI-powered platform to protect their applications.
               </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>
-                  <div className="space-y-2 text-gray-300">
-                    <p>📱 <span className="text-white">+1 302 464 0950</span></p>
-                    <p>✉️ <span className="text-white">kleber@ziontechgroup.com</span></p>
-                    <p>📍 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span></p>
-                  </div>
-                </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>
-                  <div className="space-y-3">
-========
+<=
               "
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">"
@@ -728,8 +688,7 @@
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">"
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>"
                   <div className="space-y-3">"
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+>                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
                       Schedule Demo
                     </button>"
                     <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
@@ -741,14 +700,10 @@
                   </div>
                 </div>
               </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-code-review-security.tsx
-
-              <div className="text-gray-300">
-========
+<=
               "
               <div className="text-gray-300">"
->>>>>>>> main:backup-pages/src-pages/services/ai-code-review-security.tsx
-                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+>                <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
               </div>
             </motion.div>
           </div>

@@ -294,12 +294,8 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
                 Call SaaS Team
               </h3>
               <a"
-<<<<<<< HEAD
-                href="tel:+13024640950"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
+
                 href="tel:+13024640950""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 +1 (302) 464-0950
               </a>
@@ -313,12 +309,8 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
                 Email SaaS Team
               </h3>
               <a"
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
+
                 href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>

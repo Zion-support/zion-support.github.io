@@ -1,56 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Brain,
-  Rocket,
-  Zap,
-  Cpu,
-  Heart,
-  Globe,
-  Shield,
-  Lock,
-  TrendingUp,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  Phone,
-  Mail,
-  Globe,
-  MapPin,
-  DollarSign,
-  TrendingUp,
-  Users,
-  Clock,
-  Award,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Satellite,
-  Microscope,
-  BarChart3,
-  Workflow,
-  Globe2,
-  Bot,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Zap as ZapIcon,
-  Star as StarIcon,
-  Target as TargetIcon,
-  TrendingUp as TrendingUpIcon'
-} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function RevolutionaryServices2030() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -72,20 +20,12 @@ export default function RevolutionaryServices2030() {
     { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
 
-<<<<<<< HEAD
-  
-    { id: 'featured', name: 'Featured' },;
-    { id: 'price-low', name: 'Price: Low to High' },;
-    { id: 'price-high', name: 'Price: High to Low' },;
-    { id: 'innovation', name: 'Innovation Level' },;
-    { id: 'market-size', name: 'Market Size' };
-=======
+
   const sortOptions = [;'
     { id: 'featured', name: 'Featured' },;'
     { id: 'price-low', name: 'Price: Low to High' },;'
     { id: 'price-high', name: 'Price: High to Low' },;'
     { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   // Combine all revolutionary services
@@ -266,14 +206,9 @@ export default function RevolutionaryServices2030() {
   
   
       case 'itServices':'
-<<<<<<< HEAD
-        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));
-      case 'aiServices':'
-        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
-=======
+
         return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));'
       case 'aiServices':'        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:
         return = ['
           ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const })),
@@ -286,18 +221,11 @@ export default function RevolutionaryServices2030() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Revolutionary Services 2030 - Zion Tech Group"'"
-<<<<<<< HEAD
-        description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."
-        keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group"
-        image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg"
-        url="https://ziontechgroup.com/revolutionary-services-2030"
-      />
-=======
+
         description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment.""
         keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group""
         image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg""        url="https://ziontechgroup.com/revolutionary-services-2030"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

@@ -1,121 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Truck,
-  Brain,
-  Shield,
-  Zap,
-  BarChart3,
-  Target,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Truck, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Target, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Package,
-  Route,
-  Warehouse,
-  TrendingUp,
-  AlertTriangle,
-  Database,
-  Network,
-  Smartphone,
-  Eye,
-  ShoppingCart,
-  Heart,
-  Leaf'
- } from 'lucide-react.ts';
-;
+<=
 
-    {;"
-      title: "End-to-End Visibility",;"
-      description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
-      icon: Eye,;"
-      color: "from-cyan-500 to-blue-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$1,999","
-      period: "/month","
-      description: "Perfect for small to medium businesses",
-      features: ["
-        "AI demand forecasting","
-        "Basic inventory management","
-        "Route optimization","
-        "Up to 5 warehouses","
-        "Email support","
-        "Mobile app access"
-      ],
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$4,999","
-      period: "/month","
-      description: "Ideal for growing enterprises",
-      features: ["
-        "Advanced AI algorithms","
-        "Multi-warehouse management","
-        "Predictive maintenance","
-        "Supplier risk assessment","
-        "Priority support","
-        "API access","
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$12,999","
-      period: "/month","
-      description: "For large corporations and global operations",
-      features: ["
-        "Custom AI model development","
-        "Global supply chain visibility","
-        "Advanced analytics dashboard","
-        "Dedicated support team",;"
-        "SLA guarantees",;"
-        "On-premise deployment",;"
-        "White-label solutions";
-      ],;
-      popular: false};
-  ]},;
-    {;"
-      title: "Risk Mitigation",;"
-      description: "Identify and prevent supply chain disruptions proactively",;"
-      metric: "80% risk reduction"};
-  ];
-
-  
-    {;"
-      title: "Food & Beverage",;"
-      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
-      icon: Leaf,;"
-      color: "from-green-500 to-emerald-500"};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -408,17 +292,12 @@ import { Truck,
 }}
                 viewport={{ once: true }}`
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-                  plan.popular
-                    ? 'border-blue-400 shadow-2xl shadow-blue-500/20'
-                    : 'border-slate-600'
-========
+<=
 
                   plan.popular '
                     ? 'border-blue-400 shadow-2xl shadow-blue-500/20' '
                     : 'border-slate-600'`
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
-                }`}
+>                }`}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -427,20 +306,13 @@ import { Truck,
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-blue-400">{plan.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-5xl font-bold text-blue-400">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+>                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>"
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>

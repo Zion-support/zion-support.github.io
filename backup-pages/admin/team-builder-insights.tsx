@@ -1,12 +1,34 @@
 import type { NextPage } from 'next';
 import { AppLayout } from '@/layout/AppLayout'; // Assuming a general AppLayout for admin too, or an AdminLayout
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components/ui/card';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { supabase } from '@/integrations/supabase/client'; // Ensure this client has admin rights or appropriate RLS
 import { useEffect, useState } from 'react';
 import { ProjectBrief, TeamRecommendation, RecommendedRole } from '@/types';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'; // Assuming recharts is available
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts'; // Assuming recharts is available
 
 interface RoleCount {
   role: string;
@@ -36,17 +58,19 @@ const parseMaxBudget = (budgetString: string): number | null => {
   } else if (budgetString.startsWith('<') || budgetString.startsWith('under')) {
     max = parseFloat(budgetString.replace(/[<$,\sunderk]/g, ''));
     if (budgetString.includes('k')) max = kTo1000(budgetString);
-  } else if (!budgetString.startsWith('>')) { // Single number or approx
+  } else if (!budgetString.startsWith('>')) {
+    // Single number or approx
     max = parseFloat(budgetString.replace(/[$,\sapproxk]/g, ''));
     if (budgetString.includes('k')) max = kTo1000(budgetString);
   }
   return isNaN(max as number) ? null : max;
 };
 
-
 const TeamBuilderInsightsPage: NextPage = () => {
   const [mostRequestedRoles, setMostRequestedRoles] = useState<RoleCount[]>([]);
-  const [highBudgetProjects, setHighBudgetProjects] = useState<HighBudgetProject[]>([]);
+  const [highBudgetProjects, setHighBudgetProjects] = useState<
+    HighBudgetProject[]
+  >([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -64,12 +88,17 @@ const TeamBuilderInsightsPage: NextPage = () => {
         if (recError) throw recError;
 
         // Explicitly type recommendations to help TypeScript understand the structure, especially for JSONB 'roles'
-        const recommendations = recommendationsData as unknown as Array<Pick<TeamRecommendation, 'id' | 'roles' | 'total_project_estimate' | 'project_brief_id'>>;
-
+        const recommendations = recommendationsData as unknown as Array<
+          Pick<
+            TeamRecommendation,
+            'id' | 'roles' | 'total_project_estimate' | 'project_brief_id'
+          >
+        >;
 
         const roleCounts: Record<string, number> = {};
         recommendations?.forEach(rec => {
-          if (rec.roles && Array.isArray(rec.roles)) { // Ensure roles is an array
+          if (rec.roles && Array.isArray(rec.roles)) {
+            // Ensure roles is an array
             (rec.roles as RecommendedRole[]).forEach(role => {
               roleCounts[role.role] = (roleCounts[role.role] || 0) + 1;
             });
@@ -87,23 +116,34 @@ const TeamBuilderInsightsPage: NextPage = () => {
 
         if (briefError) throw briefError;
 
-        const briefs = briefsData as unknown as Array<Pick<ProjectBrief, 'id' | 'project_name' | 'budget'>>;
-
+        const briefs = briefsData as unknown as Array<
+          Pick<ProjectBrief, 'id' | 'project_name' | 'budget'>
+        >;
 
         const highBudgetList: HighBudgetProject[] = [];
         briefs?.forEach(brief => {
           const userMaxBudget = parseMaxBudget(brief.budget);
 
           // Find the corresponding recommendation
-          const recommendationForBrief = recommendations?.find(r => r.project_brief_id === brief.id);
-          const estimatedMaxCost = recommendationForBrief?.total_project_estimate?.max;
+          const recommendationForBrief = recommendations?.find(
+            r => r.project_brief_id === brief.id
+          );
+          const estimatedMaxCost =
+            recommendationForBrief?.total_project_estimate?.max;
 
           let isHigh = false;
-          if (userMaxBudget !== null && userMaxBudget >= HIGH_BUDGET_THRESHOLD) {
+          if (
+            userMaxBudget !== null &&
+            userMaxBudget >= HIGH_BUDGET_THRESHOLD
+          ) {
             isHigh = true;
           }
           // Check estimated cost only if user budget didn't already flag it as high
-          if (!isHigh && estimatedMaxCost !== undefined && estimatedMaxCost >= HIGH_BUDGET_THRESHOLD) {
+          if (
+            !isHigh &&
+            estimatedMaxCost !== undefined &&
+            estimatedMaxCost >= HIGH_BUDGET_THRESHOLD
+          ) {
             isHigh = true;
           }
 
@@ -117,11 +157,14 @@ const TeamBuilderInsightsPage: NextPage = () => {
             });
           }
         });
-        setHighBudgetProjects(highBudgetList.sort((a,b) => (b.estimatedMaxCost || 0) - (a.estimatedMaxCost || 0) ));
-
+        setHighBudgetProjects(
+          highBudgetList.sort(
+            (a, b) => (b.estimatedMaxCost || 0) - (a.estimatedMaxCost || 0)
+          )
+        );
       } catch (err: any) {
-        console.error("Error fetching admin insights:", err);
-        setError(err.message || "Failed to fetch data.");
+        console.error('Error fetching admin insights:', err);
+        setError(err.message || 'Failed to fetch data.');
       } finally {
         setIsLoading(false);
       }
@@ -129,16 +172,30 @@ const TeamBuilderInsightsPage: NextPage = () => {
     fetchData();
   }, []);
 
-  if (isLoading) return <AppLayout><div className="p-4">Loading insights...</div></AppLayout>;
-  if (error) return <AppLayout><div className="p-4 text-red-500">Error: {error}</div></AppLayout>;
+  if (isLoading)
+    return (
+      <AppLayout>
+        <div className="p-4">Loading insights...</div>
+      </AppLayout>
+    );
+  if (error)
+    return (
+      <AppLayout>
+        <div className="p-4 text-red-500">Error: {error}</div>
+      </AppLayout>
+    );
 
   return (
     <AppLayout>
       <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl">Team Builder Insights</CardTitle>
-            <CardDescription>Analytics on generated teams and project briefs.</CardDescription>
+            <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl">
+              Team Builder Insights
+            </CardTitle>
+            <CardDescription>
+              Analytics on generated teams and project briefs.
+            </CardDescription>
           </CardHeader>
         </Card>
 
@@ -150,23 +207,44 @@ const TeamBuilderInsightsPage: NextPage = () => {
             <CardContent>
               {mostRequestedRoles.length > 0 ? (
                 <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={mostRequestedRoles.slice(0, 10)} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+                  <BarChart
+                    data={mostRequestedRoles.slice(0, 10)}
+                    margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+                  >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="role" angle={-30} textAnchor="end" height={70} interval={0} />
+                    <XAxis
+                      dataKey="role"
+                      angle={-30}
+                      textAnchor="end"
+                      height={70}
+                      interval={0}
+                    />
                     <YAxis allowDecimals={false} />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="count" fill="#8884d8" name="Times Requested" />
+                    <Bar
+                      dataKey="count"
+                      fill="#8884d8"
+                      name="Times Requested"
+                    />
                   </BarChart>
                 </ResponsiveContainer>
-              ) : <p>No role data available.</p>}
+              ) : (
+                <p>No role data available.</p>
+              )}
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>High-Budget Projects (Over ${HIGH_BUDGET_THRESHOLD.toLocaleString()})</CardTitle>
-              <CardDescription>Projects with high user-defined budget or high AI-estimated cost.</CardDescription>
+              <CardTitle>
+                High-Budget Projects (Over $
+                {HIGH_BUDGET_THRESHOLD.toLocaleString()})
+              </CardTitle>
+              <CardDescription>
+                Projects with high user-defined budget or high AI-estimated
+                cost.
+              </CardDescription>
             </CardHeader>
             <CardContent>
               {highBudgetProjects.length > 0 ? (
@@ -180,17 +258,25 @@ const TeamBuilderInsightsPage: NextPage = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {highBudgetProjects.slice(0, 10).map((p) => (
+                    {highBudgetProjects.slice(0, 10).map(p => (
                       <TableRow key={p.briefId}>
-                        <TableCell className="font-medium">{p.projectName}</TableCell>
+                        <TableCell className="font-medium">
+                          {p.projectName}
+                        </TableCell>
                         <TableCell>{p.budget}</TableCell>
-                        <TableCell>{p.estimatedMaxCost ? `$${p.estimatedMaxCost.toLocaleString()}` : 'N/A'}</TableCell>
+                        <TableCell>
+                          {p.estimatedMaxCost
+                            ? `$${p.estimatedMaxCost.toLocaleString()}`
+                            : 'N/A'}
+                        </TableCell>
                         {/* <TableCell><Button variant="outline" size="sm">View</Button></TableCell> */}
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
-              ) : <p>No high-budget projects flagged.</p>}
+              ) : (
+                <p>No high-budget projects flagged.</p>
+              )}
             </CardContent>
           </Card>
         </div>

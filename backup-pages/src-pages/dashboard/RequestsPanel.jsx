@@ -89,10 +89,7 @@ export default function RequestsPanel() {
             setSelectedQuote(null);
           }}
         />
-<<<<<<< HEAD:src/pages/dashboard/RequestsPanel.tsx
 
-=======
->>>>>>> main:backup-pages/src-pages/dashboard/RequestsPanel.jsx
       </div>
     </ProtectedRoute>
   );

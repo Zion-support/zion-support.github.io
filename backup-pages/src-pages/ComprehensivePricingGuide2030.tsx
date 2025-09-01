@@ -1,37 +1,6 @@
-<<<<<<< HEAD
-import { CheckCircle, 
 
-
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  ArrowRight,
-  Search'
-} from 'lucide-react';
-
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-=======
 const ComprehensivePricingGuide2030: React.FC = () => {;'
   const [activeCategory, setActiveCategory] = useState('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchTerm, setSearchTerm] = useState('');
 
   
@@ -53,18 +22,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-<<<<<<< HEAD
-  
-    if (category.toLowerCase().includes('ai')) return Brain;
-    if (category.toLowerCase().includes('cybersecurity')) return Shield;
-    if (category.toLowerCase().includes('cloud')) return Cloud;
-    return Star};
-=======
+
   const getCategoryIcon = (category: string) => {;'
     if (category.toLowerCase().includes('ai')) return Brain;'
     if (category.toLowerCase().includes('cybersecurity')) return Shield;'    if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
@@ -84,7 +46,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         'Community forum access','
         'Basic analytics','        'Mobile app access'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       color: 'from-cyan-500 to-blue-600',
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'

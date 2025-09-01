@@ -12,39 +12,22 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       icon: '❤️'};
   ];
 
-<<<<<<< HEAD
-  
-    'Reduce time-to-hire by 50% with AI screening',;
-    'Improve candidate quality and retention rates',;
-    'Automate routine HR tasks and workflows',;
-    'Data-driven insights for better decisions',;
-    'Enhanced employee experience and engagement',;
-    'Compliance automation and risk reduction';
-=======
+
   const benefits = [;'
     'Reduce time-to-hire by 50% with AI screening',;'
     'Improve candidate quality and retention rates',;'
     'Automate routine HR tasks and workflows',;'
     'Data-driven insights for better decisions',;'
     'Enhanced employee experience and engagement',;'    'Compliance automation and risk reduction';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-hr-platform.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-hr-platform.tsx
-        title="AI HR Platform Services - Zion Tech Group"
-        description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
-       />
-=======
+
         title="AI HR Platform Services - Zion Tech Group""        description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"

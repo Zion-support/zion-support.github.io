@@ -1,13 +1,13 @@
-import { 
-  Shield, 
-  Brain, 
-  Lock, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Award, 
-  Clock, 
+import {
+  Shield,
+  Brain,
+  Lock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
   DollarSign,
   Database,
   BarChart3,
@@ -23,14 +23,10 @@ import {
   Smartphone,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 export default function AICybersecurity() {
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -43,15 +39,16 @@ export default function AICybersecurity() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2"  />
+              <Shield className="w-4 h-4 mr-2" />
               AI Cybersecurity
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent mb-6">
               AI Cybersecurity
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your organization with next-generation AI-powered cybersecurity solutions. 
-              Detect, prevent, and respond to threats in real-time with machine learning intelligence.
+              Protect your organization with next-generation AI-powered
+              cybersecurity solutions. Detect, prevent, and respond to threats
+              in real-time with machine learning intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -59,7 +56,7 @@ export default function AICybersecurity() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 Get Your Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -85,8 +82,9 @@ export default function AICybersecurity() {
               Advanced AI Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI cybersecurity platform combines cutting-edge machine learning with security expertise 
-              to deliver comprehensive protection against evolving threats.
+              Our AI cybersecurity platform combines cutting-edge machine
+              learning with security expertise to deliver comprehensive
+              protection against evolving threats.
             </p>
           </motion.div>
 
@@ -102,7 +100,9 @@ export default function AICybersecurity() {
                 <div className="p-3 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-4 inline-block">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -123,8 +123,9 @@ export default function AICybersecurity() {
               Why Choose Our AI Cybersecurity?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver measurable improvements in security posture, threat detection, and incident response 
-              through our proven AI technology and security expertise.
+              We deliver measurable improvements in security posture, threat
+              detection, and incident response through our proven AI technology
+              and security expertise.
             </p>
           </motion.div>
 
@@ -140,7 +141,9 @@ export default function AICybersecurity() {
                 <div className="p-4 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-4 inline-block">
                   <benefit.icon className="w-12 h-12 text-green-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
@@ -161,8 +164,8 @@ export default function AICybersecurity() {
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI cybersecurity platform provides end-to-end security solutions to protect 
-              your organization from all types of threats.
+              Our AI cybersecurity platform provides end-to-end security
+              solutions to protect your organization from all types of threats.
             </p>
           </motion.div>
 
@@ -178,7 +181,9 @@ export default function AICybersecurity() {
                 <div className="p-4 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-4 inline-block">
                   <service.icon className="w-12 h-12 text-green-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-400">{service.description}</p>
               </motion.div>
             ))}
@@ -199,7 +204,8 @@ export default function AICybersecurity() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that best fits your organization's needs and scale as you grow.
+              Choose the security plan that best fits your organization's needs
+              and scale as you grow.
             </p>
           </motion.div>
 
@@ -211,23 +217,27 @@ export default function AICybersecurity() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-8 ${
-                  plan.popular 
-                    ? 'border-green-400/50 ring-2 ring-green-400/20' 
+                  plan.popular
+                    ? 'border-green-400/50 ring-2 ring-green-400/20'
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 mr-2"  />
+                      <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </span>
                   </div>
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-green-400 mb-1">{plan.price}</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.plan}
+                  </h3>
+                  <div className="text-4xl font-bold text-green-400 mb-1">
+                    {plan.price}
+                  </div>
                   <div className="text-gray-400">{plan.period}</div>
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
@@ -235,14 +245,16 @@ export default function AICybersecurity() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  to={plan.plan === 'Enterprise' ? '/contact' : '/request-quote'}
+                  to={
+                    plan.plan === 'Enterprise' ? '/contact' : '/request-quote'
+                  }
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white transform hover:scale-105 shadow-lg hover:shadow-green-500/25'
@@ -250,7 +262,7 @@ export default function AICybersecurity() {
                   }`}
                 >
                   {plan.cta}
-                  <ArrowRight className="ml-2 w-4 h-4"  />
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -271,8 +283,9 @@ export default function AICybersecurity() {
               Ready to Secure Your Organization?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI cybersecurity platform can protect your business, 
-              reduce security risks, and ensure compliance with industry standards.
+              Let's discuss how our AI cybersecurity platform can protect your
+              business, reduce security risks, and ensure compliance with
+              industry standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -280,7 +293,7 @@ export default function AICybersecurity() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
@@ -293,4 +306,5 @@ export default function AICybersecurity() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

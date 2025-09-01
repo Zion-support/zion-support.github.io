@@ -1,48 +1,29 @@
-import { motion } from 'framer-motion';
-export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
+import { motion } from 'framer-motion';'export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {''    const sizeClasses = {;
 
-    const sizeClasses = {
-
-  sm: 'w-6 h-6',
-        md: 'w-12 h-12',
-  lg: 'w-16 h-16'
-    
+  sm: 'w-6 h-6', md: 'w-12 h-12','  lg: 'w-16 h-16''    '
 
 
 
+    const sizeClasses = {;
+  sm: 'w - 6 h - 6', md: 'w - 12 h - 12','  lg: 'w - 16 h - 16'''};
+    const colorClasses = {;
 
-    const sizeClasses = {
-  sm: 'w - 6 h - 6',
-        md: 'w - 12 h - 12',
-  lg: 'w - 16 h - 16'
-
-};
-    const colorClasses = {
-
-  primary: 'text-zion-purple',
-        secondary: 'text-zion-cyan',
-  white: 'text-white'
-    
-
+  primary: 'text-zion-purple', secondary: 'text-zion-cyan','  white: 'text-white''    '
 
 
 
 
 
 };
-    const spinnerVariants = {
+    const spinnerVariants = {;
 
-  animate: {
+  animate: {;
 
-            rotate: 360,
-            transition: {
+            rotate: 360, transition: {;
 
                 duration: 1,
-                repeat: Infinity,
-  ease: "linear"
-
-}
+                repeat: Infinity, ease: "linear"""}
         }
     };
-    const pulseVariants = {
-'"
+    const pulseVariants = {;
+'"'"""

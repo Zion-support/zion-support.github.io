@@ -299,10 +299,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <input type="number" value={value} onChange = {
 
   (e) => setThresholds(prev => ({ ...prev,
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-  [key]: Number(e.target.value)
 
-=======
   [key]: Number(e.target.value) 
 
 
@@ -310,7 +307,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 "
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"/>
                     </div>))}
                 </div>
@@ -332,14 +328,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('FPS', metrics.fps,
   thresholds.fps)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                 {metrics.fps}
               </div>
@@ -356,14 +350,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                 {metrics.memory.percentage}%
               </div>
@@ -380,14 +372,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime,
   thresholds.renderTime)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                 {metrics.renderTime}ms
               </div>
@@ -404,14 +394,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                 {metrics.networkLatency}ms
               </div>
@@ -443,14 +431,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
   thresholds.cpuUsage)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                       {metrics.cpuUsage}%
                     </span>
@@ -469,14 +455,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
 
-<<<<<<< HEAD:src/components/ui/performance-monitor.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/performance-monitor.jsx
 }`}>
                       {metrics.diskUsage}%
                     </span>

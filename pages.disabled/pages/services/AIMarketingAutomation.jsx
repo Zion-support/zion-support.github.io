@@ -171,13 +171,10 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 
                 duration: 0.5
 
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-    };
-========
+<=
 
     };"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
@@ -191,12 +188,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} animate = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  y: 0
-
-}} transition={{ duration: 0.8 }} className="text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">
-========
+<=
   y: 0 
 
 
@@ -206,8 +198,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} transition={{ duration: 0.8 }} className="text-center">"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-              <Target className="w-10 h-10 text-white"/>
+>              <Target className="w-10 h-10 text-white"/>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-600 bg-clip-text text-transparent">
@@ -276,12 +267,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>
-========
+<=
   y: 0 
 
 
@@ -291,8 +277,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI automation solutions across all major marketing channels
               to create cohesive, data-driven marketing strategies.
             </p>
@@ -312,13 +297,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  delay: index * 0.1
-
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
-========
+<=
   delay: index * 0.1 
 
 
@@ -329,8 +308,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"
                 <div className="flex items-center mb-6">"
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-                    <category.icon className="w-6 h-6 text-white"/>
+>                    <category.icon className="w-6 h-6 text-white"/>
                   </div>"
                   <h3 className="text-xl font-semibold text-white">{category.category}</h3>
                 </div>
@@ -356,12 +334,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>
-========
+<=
   y: 0 
 
 
@@ -371,8 +344,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             AI Marketing Automation delivers measurable results that directly impact your bottom line
             and competitive position in the market.
           </p>
@@ -392,12 +364,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  delay: index * 0.1
-
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-========
+<=
   delay: index * 0.1 
 
 
@@ -407,8 +374,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-                <benefit.icon className="w-8 h-8 text-white"/>
+>                <benefit.icon className="w-8 h-8 text-white"/>
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
               <p className="text-gray-400 text-sm">{benefit.description}</p>
@@ -427,12 +393,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
-========
+<=
   y: 0 
 
 
@@ -442,8 +403,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built on cutting-edge AI and marketing technologies to ensure scalability,
               performance, and reliability for enterprise marketing automation.
             </p>
@@ -463,12 +423,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  delay: index * 0.1
-
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-========
+<=
   delay: index * 0.1 
 
 
@@ -478,8 +433,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 "
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-                  <tech.icon className="w-8 h-8 text-white"/>
+>                  <tech.icon className="w-8 h-8 text-white"/>
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>"
                 <p className="text-gray-400 text-sm">{tech.description}</p>
@@ -498,11 +452,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.jsx
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
-========
+<=
   y: 0 
 
 
@@ -511,8 +461,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.jsx
-          <h2 className="text-4xl font-bold text-white mb-6">
+>          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Marketing?
           </h2>"
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

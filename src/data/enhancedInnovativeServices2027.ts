@@ -2,11 +2,7 @@ export interface EnhancedService2027 {
   id: string;
   title: string;
   description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain Solutions' | 'IoT & Edge Computing' | 'FinTech Solutions' | 'HealthTech Solutions' | 'EdTech Solutions' | 'GreenTech Solutions' | 'SpaceTech Solutions' | 'Robotics & Automation' | 'AR/VR Solutions' | 'Biotech Solutions' | 'LegalTech Solutions' | 'Real Estate Tech' | 'Supply Chain Solutions' | 'Web3 Solutions' | 'Metaverse Solutions' | 'Sustainable Tech' | 'NeuroTech Solutions' | 'Fusion Energy Solutions' | 'OceanTech Solutions' | 'AgriTech Solutions' | 'Smart City Solutions' | 'Digital Twin Solutions' | 'Edge AI Solutions' | 'Federated Learning Solutions';
-  price: string;
-  billing: 'month' | 'project' | 'hour' | 'usage';
-  features: string[];
-  benefits: string[];
+  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain Solutions' | 'IoT & Edge Computing' | 'FinTech Solutions' | 'HealthTech Solutions' | 'EdTech Solutions' | 'GreenTech Solutions' | 'SpaceTech Solutions' | 'Robotics & Automation' | 'AR/VR Solutions' | 'Biotech Solutions' | 'LegalTech Solutions' | 'Real Estate Tech' | 'Supply Chain Solutions' | 'Web3 Solutions' | 'Metaverse Solutions' | 'Sustainable Tech' | 'NeuroTech Solutions' | 'Fusion Energy Solutions' | 'OceanTech Solutions' | 'AgriTech Solutions' | 'Smart City Solutions' | 'Digital Twin Solutions' | 'Edge AI Solutions' | 'Federated Learning Solutions';'  price: string;'  billing: 'month' | 'project' | 'hour' | 'usage';'  features: string[];'  benefits: string[];
   targetAudience: string[];
   marketSize: string;
   growthRate: string;
@@ -14,7 +10,7 @@ export interface EnhancedService2027 {
   ctaLabel: string;
   href: string;
   external?: boolean;
-contactInfo: {
+contactInfo: {;
 
     phone: string;
     email: string;
@@ -30,20 +26,9 @@ contactInfo: {
   compliance: string[];
   useCases: string[]}
 
-    compliance['GDPR',HIPAA',SOC2',Data privacy regulations'],
-    useCases['Healthcare AI',Financial modeling',Research collaboration',Privacy-preserving analytics']
-  }
-];
+    compliance['GDPR', HIPAA',SOC2', Data privacy regulations'], ''    useCases['Healthcare AI',Financial modeling', Research collaboration',Privacy-preserving analytics']''  }'];
 
 export 
-  'OceanTech Solutions',;
-  'AgriTech Solutions',;
-  'Smart City Solutions',;
-  'Digital Twin Solutions',;
-  'Edge AI Solutions',;
-  'Federated Learning Solutions';
-];
-;
-export 
-export 
-export 
+  'OceanTech Solutions',;'  'AgriTech Solutions',;'  'Smart City Solutions',;'  'Digital Twin Solutions',;'  'Edge AI Solutions',;'  'Federated Learning Solutions';'];';
+export;
+export export 

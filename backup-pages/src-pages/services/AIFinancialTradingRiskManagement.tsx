@@ -1,60 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { TrendingUp,
-  Shield,
-  Clock,
-  Zap,
-  Search,
-========
-<<<<<<< HEAD
-import { TrendingUp, 
-  Shield, 
-  Clock, 
-  Zap, 
-  Search, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTradingRiskManagement.tsx
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  DollarSign,
-  Activity,
-  AlertTriangle,
-  Target'
- } from 'lucide-react';
-;
-export { function };
-export default function AIFinancialTradingRiskManagement(...args[]):  {
+<=
 
-  
-    },;
-    {;
-      icon: Eye,;"
-      title: "Data Integration",;"
-      description: "Seamless integration with major data providers and trading platforms"};
-  ];
-
-  const servicePackages = [
-    {
-"
-      name: "AI Trading Platform","
-      price: "From $4,999/month",
-      features[;"
-        "Advanced trading algorithms","
-        "Real-time market data","
-        "Portfolio optimization","
-        "Backtesting capabilities","
-        "Multi-asset support","
-        "24/7 monitoring"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -127,12 +72,9 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTradingRiskManagement.tsx
-        title = "AI Financial Trading & Risk Management - Zion Tech Group"
+>        title = "AI Financial Trading & Risk Management - Zion Tech Group"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"

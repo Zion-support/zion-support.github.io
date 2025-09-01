@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven orchestration automation and coordination',;
     'Real-time orchestration performance tracking',;
     'Custom AI models for orchestration applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityOrchestration.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$499/mo',
-      details: ['Up to 25 workflows', 'Basic AI features', 'Standard orchestration', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityOrchestration.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,299/mo', ;
       details: ['Unlimited workflows',Custom AI models',Full orchestration suite',24/7 dedicated support'] },;

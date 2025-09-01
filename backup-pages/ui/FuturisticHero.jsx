@@ -65,23 +65,15 @@ export default function FuturisticHero() {
 }} animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  y: 0
-}} transition={{ duration: 1 }} className="mb-8">
-=======
+
   y: 0 "
 }} transition={{ duration: 1 }} className="mb-8">"
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
           <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" style = {
 
   { y,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  opacity
-}}>
-=======
+
   opacity 
 }}>"
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary
             </span>
@@ -105,17 +97,11 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 1,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  delay: 0.3
-}} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge micro SaaS services,
-            AI solutions, and emerging technologies. From quantum computing to
-=======
+
   delay: 0.3 "
 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our comprehensive suite of cutting-edge micro SaaS services, 
             AI solutions, and emerging technologies. From quantum computing to '
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
             space technology, we're building the future today.
           </motion.p>
         </motion.div>
@@ -131,11 +117,8 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 1,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  delay: 0.6
-=======
+
   delay: 0.6 "
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
           {['"
             { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8"/>, color: 'text-cyan-400' },"
@@ -153,13 +136,9 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 0.5,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  delay: 0.8 + index * 0.1
-}} className="text-center group">
-=======
+
   delay: 0.8 + index * 0.1 "
 }} className="text-center group">`
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
               <div className={`${stat.color} mb-3 group-hover:scale-110 transition-transform duration-300`}>
                 {stat.icon}
               </div>"
@@ -183,15 +162,10 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 1,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  delay: 1
-}} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
-=======
+
   delay: 1 "
 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
           <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">"
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
             <span className="relative z-10 flex items-center">
               Explore Services"
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
@@ -209,11 +183,8 @@ export default function FuturisticHero() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
 
   { duration: 1,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  delay: 1.5
-=======
+
   delay: 1.5 "
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
 
@@ -222,11 +193,8 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 2,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  repeat: Infinity
-=======
+
   repeat: Infinity "
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
             <motion.div animate = {
 
@@ -235,11 +203,8 @@ export default function FuturisticHero() {
 }} transition = {
 
   { duration: 2,
-<<<<<<< HEAD:src/components/ui/FuturisticHero.jsx
-  repeat: Infinity
-=======
+
   repeat: Infinity "
->>>>>>> main:backup-pages/ui/FuturisticHero.jsx
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
           </motion.div>
         </motion.div>

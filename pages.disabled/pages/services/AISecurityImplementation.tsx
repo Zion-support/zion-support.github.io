@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven implementation automation and orchestration',;
     'Real-time implementation performance tracking',;
     'Custom AI models for implementation applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityImplementation.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$699/mo',
-      details: ['Up to 3 projects/month', 'Basic AI features', 'Standard implementation', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,799/mo',
-      details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityImplementation.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited projects',Custom AI models',Full implementation suite',24/7 dedicated support'] },;

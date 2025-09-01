@@ -41,13 +41,7 @@ export function CardSkeleton({ className }) {
   cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",
   className)
 
-<<<<<<< HEAD:src/components/ui/LoadingSkeleton.jsx
-}>
-      <div className="flex items-center space-x-4 mb-4">
-        <LoadingSkeleton className="w-12 h-12 rounded-full"/>
-        <div className="space-y-2 flex-1">
-          <LoadingSkeleton height="h-4" width="w-3/4"/>
-=======
+
 
 
 
@@ -58,7 +52,6 @@ export function CardSkeleton({ className }) {
         <LoadingSkeleton className="w-12 h-12 rounded-full"/>"
         <div className="space-y-2 flex-1">"
           <LoadingSkeleton height="h-4" width="w-3/4"/>"
->>>>>>> main:backup-pages/ui/LoadingSkeleton.jsx
           <LoadingSkeleton height="h-3" width="w-1/2"/>
         </div>
       </div>"
@@ -85,14 +78,7 @@ export function HeroSkeleton({ className }) {
   cn("py-20 md:py-32 min-h-screen flex items-center",
   className)
 
-<<<<<<< HEAD:src/components/ui/LoadingSkeleton.jsx
-}>
-      <div className="container mx-auto px-4 text-center space-y-8">
-        <LoadingSkeleton height="h-16 md:h-20" width="w-3/4" className="mx-auto"/>
-        <LoadingSkeleton height="h-6 md:h-8" width="w-2/3" className="mx-auto"/>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <LoadingSkeleton height="h-14" width="w-32" className="rounded-md"/>
-=======
+
 
 
 
@@ -104,7 +90,6 @@ export function HeroSkeleton({ className }) {
         <LoadingSkeleton height="h-6 md:h-8" width="w-2/3" className="mx-auto"/>"
         <div className="flex flex-col sm:flex-row justify-center gap-4">"
           <LoadingSkeleton height="h-14" width="w-32" className="rounded-md"/>"
->>>>>>> main:backup-pages/ui/LoadingSkeleton.jsx
           <LoadingSkeleton height="h-14" width="w-40" className="rounded-md"/>
         </div>
       </div>

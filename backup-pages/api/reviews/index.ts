@@ -1,6 +1,6 @@
 import { PrismaClient, Prisma, ProductReview } from '@prisma/client'; // Import Prisma types
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '@/integrations/supabase/client'; 
+import { supabase } from '@/integrations/supabase/client';
 
 const prisma = new PrismaClient();
 
@@ -20,7 +20,7 @@ interface ErrorResponse {
 type SuccessResponse = ProductReview;
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<SuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -32,38 +32,63 @@ export default async function handler(
 
   // Input validation
   if (!productId || typeof productId !== 'string') {
-    return res.status(400).json({ error: 'productId is required and must be a string.' });
+    return res
+      .status(400)
+      .json({ error: 'productId is required and must be a string.' });
   }
-  if (rating === undefined || typeof rating !== 'number' || rating < 1 || rating > 5) {
-    return res.status(400).json({ error: 'Rating is required and must be a number between 1 and 5.' });
+  if (
+    rating === undefined ||
+    typeof rating !== 'number' ||
+    rating < 1 ||
+    rating > 5
+  ) {
+    return res
+      .status(400)
+      .json({
+        error: 'Rating is required and must be a number between 1 and 5.',
+      });
   }
-  if (comment && typeof comment !== 'string') { // Comment is optional
-    return res.status(400).json({ error: 'Comment, if provided, must be a string.' });
+  if (comment && typeof comment !== 'string') {
+    // Comment is optional
+    return res
+      .status(400)
+      .json({ error: 'Comment, if provided, must be a string.' });
   }
 
   try {
-    const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+    const {
+      data: { session },
+      error: sessionError,
+    } = await supabase.auth.getSession();
 
     if (sessionError || !session || !session.user) {
       console.error('Session error getting user for review:', sessionError);
-      return res.status(401).json({ error: 'Not authenticated or session error.' });
+      return res
+        .status(401)
+        .json({ error: 'Not authenticated or session error.' });
     }
-    
+
     const userEmail = session.user.email;
     if (!userEmail) {
-        return res.status(401).json({ error: 'User email not found in session.' });
+      return res
+        .status(401)
+        .json({ error: 'User email not found in session.' });
     }
 
     // Find the internal Prisma user ID based on the Supabase user's email
     const prismaUser = await prisma.user.findUnique({
-        where: { email: userEmail },
-        select: { id: true } // Only select the ID
+      where: { email: userEmail },
+      select: { id: true }, // Only select the ID
     });
 
     if (!prismaUser) {
-        // This case might happen if a user exists in Supabase Auth but not in your Prisma `User` table
-        console.warn(`User with email ${userEmail} not found in Prisma database, but exists in Supabase Auth.`);
-        return res.status(404).json({ error: 'User profile not found. Cannot post review.' });
+      // This case might happen if a user exists in Supabase Auth but not in your Prisma `User` table
+      console.warn(
+        `User with email ${userEmail} not found in Prisma database, but exists in Supabase Auth.`
+      );
+      return res
+        .status(404)
+        .json({ error: 'User profile not found. Cannot post review.' });
     }
     const internalUserId = prismaUser.id; // This is the integer ID from your Prisma User model
 
@@ -72,19 +97,26 @@ export default async function handler(
         productId,
         rating,
         comment: comment || '', // Ensure comment is string, even if empty
-        userId: internalUserId, 
+        userId: internalUserId,
       },
     });
     return res.status(201).json(newReview);
-
   } catch (e: unknown) {
     let errorMessage = 'Internal server error while creating review.';
     let errorDetails: string | undefined;
 
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       // Unique constraint violation (user already reviewed this product)
-      if (e.code === 'P2002' && e.meta && typeof e.meta.target === 'string' && e.meta.target.includes('productId') && e.meta.target.includes('userId')) {
-        return res.status(409).json({ error: 'You have already reviewed this product.' });
+      if (
+        e.code === 'P2002' &&
+        e.meta &&
+        typeof e.meta.target === 'string' &&
+        e.meta.target.includes('productId') &&
+        e.meta.target.includes('userId')
+      ) {
+        return res
+          .status(409)
+          .json({ error: 'You have already reviewed this product.' });
       }
       errorMessage = `Database error: ${e.code}`;
       errorDetails = e.message;

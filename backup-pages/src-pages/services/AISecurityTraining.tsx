@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven training automation and orchestration',;
     'Real-time training performance tracking',;
     'Custom AI models for training applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityTraining.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$199/mo',
-      details: ['Up to 25 users', 'Basic AI features', 'Standard training', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$599/mo',
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityTraining.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited users',Custom AI models',Full training suite',24/7 dedicated support'] },;

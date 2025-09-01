@@ -1,61 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { TrendingDown,
-  Brain,
-  BarChart3,
-  Shield,
-  Zap,
-  Users,
-  Target,
-========
-<<<<<<< HEAD
-import { TrendingDown, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  Users, 
-  Target, 
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign'
- } from 'lucide-react';
-;
-const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
+<=
 
-  
-    },;
-    {;
-      icon: Users,;"
-      title: "Customer Segmentation",;"
-      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."};
-  ];
-
-  const benefits = [;"
-    "Reduce customer churn by 40-60%",;"
-    "Increase customer lifetime value by 35%",;"
-    "Save $50K+ annually on customer acquisition",;"
-    "Improve customer satisfaction scores by 25%",;"
-    "Automate 80% of retention workflows";
-  ];
-
-  const integrations = [;"
-    "Salesforce, HubSpot, Pipedrive",;"
-    "Stripe, PayPal, Square",;"
-    "Intercom, Zendesk, Freshdesk",;"
-    "Google Analytics, Mixpanel, Amplitude",;"
-    "Slack, Microsoft Teams, Email";
-  ];
-
-  
-      popular: false
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -76,23 +20,13 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-        title="AI Customer Churn Prediction Platform - Zion Tech Group"
-        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
-        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
-        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
-       />
-=======
+
         title="AI Customer Churn Prediction Platform - Zion Tech Group""
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success""        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -167,12 +101,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Advanced AI capabilities designed to predict, prevent, and manage customer churn effectively
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-          <div className="grid md: grid-cols-2 gap-8">
+>          <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={feature.title}
@@ -235,12 +166,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Our platform delivers measurable business outcomes that directly impact your bottom line
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
@@ -301,12 +229,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Connect with your existing tools and workflows without disruption
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={integration}
@@ -365,12 +290,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Choose the plan that fits your business needs with no hidden fees
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerChurnPrediction.tsx
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+>          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.plan}

@@ -1,82 +1,21 @@
-<<<<<<< HEAD
 
-interface LoadingSpinnerProps {
 
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
 
-export default function LoadingSpinner({
-
-  size = 'md',
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-=======
-
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-export function LoadingSpinner({
-=======
 type LoadingSpinnerProps = {
   size?: 'sm' | 'md' | 'lg' | 'xl';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   className?: string;
   text?: string};
 
-<<<<<<< HEAD
-export function LoadingSpinner({
 
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
-  size = 'md',
-  color = 'text-cyan-400',
-  text,
-  className = ''
-}: LoadingSpinnerProps) {
-
-  
-  
-  
-  return()
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div`
-        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full ${color}`}
-        animate={{ rotate: 360 }}
-        transition={{
-
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}"
-        role="status"
-        aria-label="Loading"
-      />
-
-      {text && (
-        <motion.p`
-          className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >"
-          <span className="text-slate-300 font-medium">{text}</span>
-        </motion.p>
-      )}
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-
-=======
       "
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
       <span className="sr-only">Loading...</span>
     </div>
   );
 
 // Enhanced loading spinner with dots
 export function LoadingDots({
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-=======
 
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
+
   size = 'md',
   color = 'text-cyan-400',
   text,
@@ -118,28 +57,20 @@ export function LoadingDots({
           {text}
         </motion.p>
       )}
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
 
-=======
       "
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
       <span className="sr-only">Loading...</span>
     </div>
   )}
 
 // Skeleton loading component
 export function LoadingSkeleton({
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-  lines = 3,
-  className = ''
-}: {
-=======
+
 
   lines = 3,
   className = ''
 }: {
 
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
   lines?: number;
   className?: string}) {
 
@@ -163,17 +94,12 @@ export function LoadingSkeleton({
 
 // Button loading state
 export function ButtonLoader({
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-  size = 'md',
-  className = ''
-}: {
-=======
+
 
   size = 'md',
   className = '' 
 }: {
 
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string}) {
 
@@ -186,17 +112,12 @@ export function ButtonLoader({
 
 // Page loading overlay
 export function PageLoaderOverlay({
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-  text = "Loading...",
-  className = ''
-}: {
-=======
+
 "
   text = "Loading...",
   className = '' 
 }: {
 
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
   text?: string;
   className?: string}) {
 
@@ -210,10 +131,8 @@ export function PageLoaderOverlay({
 
 // Full page loading component
 export function FullPageLoader({
-<<<<<<< HEAD:src/components/ui/LoadingSpinner.tsx
-=======
+
 "
->>>>>>> main:backup-pages/ui/LoadingSpinner.tsx
   text = "Loading Zion Tech Group...",
   className = ''
 }: {
@@ -425,4 +344,3 @@ export default function LoadingSpinner({ size = 'md', className = '', text }: Lo
       {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null}
     </div>
   )}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

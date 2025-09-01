@@ -10,15 +10,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
-        PM2_HOME: './.pm2',
-=======
+
         AUTOMATION_INTERVAL: '900000', // 15 minutes
         ENABLE_AUTO_FIX: 'true',
         ENABLE_TYPE_CHECK: 'true',
         ENABLE_LINT_FIX: 'true',
-        LOG_LEVEL: 'info'
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+        LOG_LEVEL: 'info',
       },
       cron_restart: '*/15 * * * *', // Restart every 15 minutes
       log_file: './automation/logs/enhanced-error-fixing.log',
@@ -38,11 +35,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
-        PM2_HOME: './.pm2',
-=======
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+        AUTOMATION_INTERVAL: '1800000', // 30 minutes
       },
       cron_restart: '*/30 * * * *', // Restart every 30 minutes
       log_file: './automation/logs/typescript-error-fixer.log',
@@ -62,11 +56,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
-        PM2_HOME: './.pm2',
-=======
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+        AUTOMATION_INTERVAL: '1200000', // 20 minutes
       },
       cron_restart: '*/20 * * * *', // Restart every 20 minutes
       log_file: './automation/logs/eslint-error-fixer.log',
@@ -86,14 +77,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '2400000' // 40 minutes
+        AUTOMATION_INTERVAL: '2400000', // 40 minutes
       },
       cron_restart: '*/40 * * * *', // Restart every 40 minutes
       log_file: './automation/logs/comprehensive-error-fixer.log',
       error_file: './automation/logs/comprehensive-error-fixer-error.log',
       out_file: './automation/logs/comprehensive-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // JSX Error Fixer - JSX-specific fixes
@@ -106,14 +97,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        AUTOMATION_INTERVAL: '1800000', // 30 minutes
       },
       cron_restart: '*/30 * * * *', // Restart every 30 minutes
       log_file: './automation/logs/jsx-error-fixer.log',
       error_file: './automation/logs/jsx-error-fixer-error.log',
       out_file: './automation/logs/jsx-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // Master Error Fixer - Coordinates all error fixers
@@ -126,14 +117,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        AUTOMATION_INTERVAL: '3600000', // 1 hour
       },
       cron_restart: '0 * * * *', // Restart every hour
       log_file: './automation/logs/master-error-fixer.log',
       error_file: './automation/logs/master-error-fixer-error.log',
       out_file: './automation/logs/master-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // Console Error Fixer - Fixes console statements
@@ -146,14 +137,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
+        AUTOMATION_INTERVAL: '900000', // 15 minutes
       },
       cron_restart: '*/15 * * * *', // Restart every 15 minutes
       log_file: './automation/logs/console-error-fixer.log',
       error_file: './automation/logs/console-error-fixer-error.log',
       out_file: './automation/logs/console-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // Build Error Detector - Monitors build errors
@@ -163,37 +154,11 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-<<<<<<< HEAD
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/build-error-detector.log',
-      error_file: './logs/build-error-detector-error.log',
-      out_file: './logs/build-error-detector-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
 
-    // 🚨 Dependency Error Resolver - Fixes dependency conflicts
-    {
-      name: 'dependency-error-resolver',
-      script: './scripts/automation/dependency-error-resolver.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-=======
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+        AUTOMATION_INTERVAL: '600000', // 10 minutes
       },
       cron_restart: '*/10 * * * *', // Restart every 10 minutes
       log_file: './automation/logs/build-error-detector.log',
@@ -203,51 +168,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-<<<<<<< HEAD
-    // 🔧 Configuration Error Fixer - Fixes config file issues
-    {
-      name: 'config-error-fixer',
-      script: './scripts/automation/config-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-      },
-      cron_restart: '0 12 * * *', // Daily at noon
-      log_file: './logs/config-error-fixer.log',
-      error_file: './logs/config-error-fixer-error.log',
-      out_file: './logs/config-error-fixer-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
-
-    // 🚨 Error Prevention Monitor - Proactive error prevention
-    {
-      name: 'error-prevention-monitor',
-      script: './scripts/automation/error-prevention-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './logs/error-prevention-monitor.log',
-      error_file: './logs/error-prevention-monitor-error.log',
-      out_file: './logs/error-prevention-monitor-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
-
-    // 📊 Error Analytics Dashboard - Error reporting and analytics
-=======
     // Error Analytics Dashboard - Monitors error fixing progress
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
     {
       name: 'error-analytics-dashboard',
       script: './scripts/automation/error-analytics-dashboard.cjs',
@@ -257,12 +178,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
-        PM2_HOME: './.pm2',
-        PORT: 3001,
-=======
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
+
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
       },
       cron_restart: '*/5 * * * *', // Restart every 5 minutes
       log_file: './automation/logs/error-analytics-dashboard.log',
@@ -282,14 +199,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
       },
       cron_restart: '*/5 * * * *', // Restart every 5 minutes
       log_file: './automation/logs/error-prevention-monitor.log',
       error_file: './automation/logs/error-prevention-monitor-error.log',
       out_file: './automation/logs/error-prevention-monitor-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // Critical Error Alert System - Alerts on critical errors
@@ -302,14 +219,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '60000' // 1 minute
+        AUTOMATION_INTERVAL: '60000', // 1 minute
       },
       cron_restart: '* * * * *', // Restart every minute
       log_file: './automation/logs/critical-error-alert-system.log',
       error_file: './automation/logs/critical-error-alert-system-error.log',
       out_file: './automation/logs/critical-error-alert-system-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // Auto Recovery Manager - Handles recovery from failures
@@ -322,41 +239,13 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-<<<<<<< HEAD
-        PM2_HOME: './.pm2',
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './logs/auto-recovery-manager.log',
-      error_file: './logs/auto-recovery-manager-error.log',
-      out_file: './logs/auto-recovery-manager-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
 
-    // 🚨 Critical Error Alert System - Notifies about critical errors
-    {
-      name: 'critical-error-alert-system',
-      script: './scripts/automation/critical-error-alert-system.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '256M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-      },
-      cron_restart: '*/1 * * * *', // Every minute
-      log_file: './logs/critical-error-alert-system.log',
-      error_file: './logs/critical-error-alert-system-error.log',
-      out_file: './logs/critical-error-alert-system-out.log',
-=======
-        AUTOMATION_INTERVAL: '120000' // 2 minutes
+        AUTOMATION_INTERVAL: '120000', // 2 minutes
       },
       cron_restart: '*/2 * * * *', // Restart every 2 minutes
       log_file: './automation/logs/auto-recovery-manager.log',
       error_file: './automation/logs/auto-recovery-manager-error.log',
       out_file: './automation/logs/auto-recovery-manager-out.log',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
@@ -367,21 +256,13 @@ module.exports = {
       user: 'root',
       host: 'localhost',
       ref: 'origin/main',
-<<<<<<< HEAD
-      repo: 'git@github.com:username/repo.git',
-      path: '/var/www/production',
-      'post-deploy':
-        'npm install && pm2 reload ecosystem-error-fixing.config.cjs --env production',
-    },
-  },
-};
-=======
+
       repo: 'git@github.com:your-username/bolt.new.zion.app.git',
       path: '/workspace/production',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem-error-fixing.config.cjs --env production',
-      'pre-setup': ''
-    }
-  }
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem-error-fixing.config.cjs --env production',
+      'pre-setup': '',
+    },
+  },
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571

@@ -13,7 +13,7 @@ interface ErrorResponse {
 }
 
 export default function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<HelpArticle[] | ErrorResponse>
 ) {
   if (req.method !== 'GET') {
@@ -22,11 +22,11 @@ export default function handler(
   }
 
   const searchQuery = (req.query?.q as string | undefined)?.toLowerCase() || '';
-  
+
   try {
     // process.cwd() is standard in Node.js environments like Next.js API routes
     const dir = path.join(process.cwd(), 'docs/help');
-    
+
     if (!fs.existsSync(dir)) {
       console.warn(`Help articles directory not found: ${dir}`);
       return res.status(200).json([]); // Return empty if dir doesn't exist
@@ -42,21 +42,24 @@ export default function handler(
         const titleMatch = content.match(/^#\s+(.*)/);
         const title = titleMatch ? titleMatch[1] : slug;
         // For simplicity, returning full content. Could be truncated.
-        return { slug, title, content }; 
+        return { slug, title, content };
       });
 
     const filteredArticles = searchQuery
-      ? articles.filter(a => 
-          a.title.toLowerCase().includes(searchQuery) || 
-          a.content.toLowerCase().includes(searchQuery)
+      ? articles.filter(
+          a =>
+            a.title.toLowerCase().includes(searchQuery) ||
+            a.content.toLowerCase().includes(searchQuery)
         )
       : articles;
-      
-    return res.status(200).json(filteredArticles);
 
+    return res.status(200).json(filteredArticles);
   } catch (error: unknown) {
     console.error('Error reading help articles:', error);
-    const message = error instanceof Error ? error.message : 'An unexpected error occurred.';
-    return res.status(500).json({ error: 'Failed to retrieve help articles.', details: message });
+    const message =
+      error instanceof Error ? error.message : 'An unexpected error occurred.';
+    return res
+      .status(500)
+      .json({ error: 'Failed to retrieve help articles.', details: message });
   }
 }

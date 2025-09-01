@@ -22,14 +22,15 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-  const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (notifications). Service cannot start.';
+  const errorMessage =
+    'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (notifications). Service cannot start.';
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
 const supabase = createClient(supabaseUrl, serviceKey);
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<Notification[] | ErrorResponse>
 ) {
   if (req.method !== 'GET') {
@@ -39,8 +40,11 @@ export default async function handler(
 
   const { userId } = req.query;
 
-  if (!userId || typeof userId !== 'string') { // Validate userId
-    return res.status(400).json({ error: 'Missing or invalid userId query parameter' });
+  if (!userId || typeof userId !== 'string') {
+    // Validate userId
+    return res
+      .status(400)
+      .json({ error: 'Missing or invalid userId query parameter' });
   }
 
   try {
@@ -60,7 +64,10 @@ export default async function handler(
     return res.status(200).json((data as Notification[]) || []);
   } catch (e: unknown) {
     console.error('Unexpected error fetching notifications:', e);
-    const message = e instanceof Error ? e.message : 'An unexpected error occurred.';
-    return res.status(500).json({ error: 'Failed to retrieve notifications.', details: message });
+    const message =
+      e instanceof Error ? e.message : 'An unexpected error occurred.';
+    return res
+      .status(500)
+      .json({ error: 'Failed to retrieve notifications.', details: message });
   }
 }

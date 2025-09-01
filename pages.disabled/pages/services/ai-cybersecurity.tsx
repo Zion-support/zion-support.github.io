@@ -12,42 +12,22 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       icon: '⚡'};
   ];
 
-<<<<<<< HEAD
-  
-    'Real-time threat detection and response',;
-    'Reduced false positives with AI accuracy',;
-    '24/7 automated security monitoring',;
-    'Predictive threat intelligence',;
-    'Cost-effective security operations',;
-    'Compliance and regulatory support';
-=======
+
   const benefits = [;'
     'Real-time threat detection and response',;'
     'Reduced false positives with AI accuracy',;'
     '24/7 automated security monitoring',;'
     'Predictive threat intelligence',;'
     'Cost-effective security operations',;'    'Compliance and regulatory support';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity.tsx
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
-      <SEO
-        title="AI Cybersecurity Services - Zion Tech Group&quot;
-========
+<=
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Services - Zion Tech Group"
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity.tsx
-        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
-       />
-=======
+
         title="AI Cybersecurity Services - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"

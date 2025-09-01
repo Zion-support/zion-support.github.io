@@ -1,41 +1,12 @@
-<<<<<<< HEAD
 
-const AdvancedServicesShowcase2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-
-  
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;
-    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;
-    ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
-  ];
-
-  
-    
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch}) ;
-
-  
-    { id: 'all', name: 'All Services', count: allServices.length },;
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
-    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
-    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Advanced Services Showcase 2025 - Zion Tech Group"
-        description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
-       />
-=======
+
         title="Advanced Services Showcase 2025 - Zion Tech Group""        description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"

@@ -6,24 +6,9 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Smart anti-cheat and security systems',;
     'Integration with major gaming engines and platforms',;
     'Custom AI models for gaming-specific insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIGaming.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Indie Developer',
-      price: '$299/mo',
-      details: ['Up to 10,000 players', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Mid-size Studio',
-      price: '$799/mo',
-      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIGaming.tsx
-    { ;
+>    { ;
       name: 'Large Studio', ;
       price: '$1,999/mo', ;
       details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },;
@@ -47,22 +32,13 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Scale gaming operations efficiently';
   ];
 
-<<<<<<< HEAD
-  
-    'Mobile Gaming',;
-    'PC Gaming',;
-    'Console Gaming',;
-    'VR/AR Gaming',;
-    'Esports & Competitive Gaming',;
-    'Educational & Serious Games';
-=======
+
   const industries = [;'
     'Mobile Gaming',;'
     'PC Gaming',;'
     'Console Gaming',;'
     'VR/AR Gaming',;'
     'Esports & Competitive Gaming',;'    'Educational & Serious Games';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

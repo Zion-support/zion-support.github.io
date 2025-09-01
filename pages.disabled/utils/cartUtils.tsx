@@ -1,17 +1,5 @@
-<<<<<<< HEAD:pages.disabled/utils/cartUtils.tsx
-export const addToCart = (cart: CartItem[], item: CartItem) : CartItem[] => {
-export const calculateCartTotal = (items: CartItem[]) : number => {
-export const clearCart = () : CartItem[] => {
-export const getCartKey = (userId: string) : string => {
-export const mergeCartItems = (existingItems: CartItem[],
-export const removeFromCart = (cart: CartItem[],
-export const updateQuantity = (cart: CartItem[],
-export interface CartItem {
 
-  id: string;
-=======
 export 
->>>>>>> main:src/utils/cartUtils.tsx
   name: string;
   price: number;
   quantity: number;

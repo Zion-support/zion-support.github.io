@@ -1,43 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  FileText,
-  Shield,
-  Users,
-  Globe,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Lock,
-  Eye,
-  Database'
- } from 'lucide-react';
-
-
-  
-  
-    {;
-      id: 'contact',;
-      title: 'Contact Information',;
-      icon: Mail,;`
-      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`};
-  ]},;
-    {;
-      title: 'Termination Rights',;
-      description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
-      icon: AlertTriangle};
-  ]},;
-    {;
-      step: '4',;
-      title: 'Arbitration',;
-      description: 'As a last resort, resolve disputes through binding arbitration'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <>

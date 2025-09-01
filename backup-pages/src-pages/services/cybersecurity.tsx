@@ -1,44 +1,8 @@
 
-<<<<<<<< HEAD:pages.disabled/pages/services/cybersecurity.tsx
-import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { Shield,
-  Brain,
-  Zap,
-  Users,
-  TrendingUp,
-  Lock,
-========
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Lock, 
->>>>>>>> main:backup-pages/src-pages/services/cybersecurity.tsx
-  Clock,
-  BarChart3,
-  AlertTriangle,
-  Eye'
- } from 'lucide-react.ts';
-;
-export { function };
-export default function Cybersecurity(...args: unknown[]): unknown {
-
-export default function Cybersecurity(...args: any[]): any {
-
-  return()
-    <div className = "min-h-screen bg-futuristic">
-      {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">
-<<<<<<<< HEAD:pages.disabled/pages/services/cybersecurity.tsx
-          <motion.div
-========
+<=
+=
           <motion.div "
->>>>>>>> main:backup-pages/src-pages/services/cybersecurity.tsx
-            className="text-center"
+>            className="text-center"
             initial = {
 
   { opacity: 0,
@@ -75,7 +39,6 @@ export default function Cybersecurity(...args: any[]): any {
                 <Play className="mr-2 h-5 w-5"  />
                 Watch Demo
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </button>
             </div>
           </div>

@@ -1,101 +1,11 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Heart,
-  Brain,
-  TrendingUp,
-  Users,
-  Database,
-  BarChart3,
-========
-<<<<<<< HEAD
-import { Heart, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart,
-  Activity,
-  Stethoscope,
-  Pill,
-  Microscope,
-  Shield,
-  Activity as Heartbeat,
-  FileText,
-  UserCheck,
-  Clipboard,
-  TestTube'
-} from 'lucide-react';
-;
-export { function };
-export default function AIHealthcarePredictiveAnalytics(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+<=
+
   ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-  ;
-
-};
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Disease Prediction',
-      description: 'Predict disease onset with 94% accuracy using advanced machine learning on patient data'
-    },
-    {
-      icon: Heart,
-      title: 'Early Risk Detection',
-      description: 'Identify high-risk patients before symptoms appear with predictive risk scoring'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Treatment Outcome Prediction',
-      description: 'Forecast treatment effectiveness and patient response with 89% accuracy'
-    },
-    {
-      icon: Users,
-      title: 'Population Health Analytics',
-      description: 'Analyze population health trends and identify at-risk demographics'
-    },
-    {
-      icon: Database,
-      title: 'Real-time Patient Monitoring',
-      description: 'Continuous monitoring and alerting for critical health indicators';
-    },;
-========
+<=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-    {;
+>    {;
       icon: BarChart3,;
       title: 'Advanced Clinical Insights',;
       description: 'Generate actionable insights from complex medical data and research'};
@@ -122,7 +32,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         'Basic reporting','
         'Up to 10 user licenses','        'Core integrations'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -157,21 +66,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       description: 'Aging-related health decline prediction and prevention',;
       icon: UserCheck};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Insurance Companies',;
-      description: 'Risk assessment and claims prediction for health insurers',;
-      icon: Shield};
-  ];
 
-  
-    'HIPAA Compliance',;
-    'HITECH Act Support',;
-    'SOC 2 Type II Certified',;
-    'GDPR Compliance',;
-    'FDA Guidelines Adherence',;
-    'Clinical Trial Compliance';
-=======
     {;'
       title: 'Insurance Companies',;'      description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield};
@@ -183,26 +78,16 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     'SOC 2 Type II Certified',;'
     'GDPR Compliance',;'
     'FDA Guidelines Adherence',;'    'Clinical Trial Compliance';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
-        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
-        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
-       />
-=======
+
         title="AI Healthcare Predictive Analytics Platform | Zion Tech Group""
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.""        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -277,12 +162,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               Everything you need to predict, prevent, and optimize healthcare delivery
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -345,12 +227,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               Specialized AI solutions for every medical specialty
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {clinicalApplications.map(application: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -413,12 +292,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               Transform your healthcare delivery and unlock new levels of patient care
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -477,12 +353,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               Built with healthcare-grade security and compliance standards
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFeatures.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -541,12 +414,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               From small clinics to large health systems, our platform scales with your needs
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -609,12 +479,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               Choose the plan that fits your healthcare organization size and needs
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}

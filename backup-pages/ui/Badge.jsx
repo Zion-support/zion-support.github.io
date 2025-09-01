@@ -24,11 +24,8 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 
 
 };
-<<<<<<< HEAD:src/components/ui/Badge.jsx
 
-=======
   '
->>>>>>> main:backup-pages/ui/Badge.jsx
 import React from 'react';
 
 const Badge = ({ children, className = '', variant = 'default' }) => {
@@ -41,13 +38,9 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     destructive: 'border-transparent bg-destructive text-destructive-foreground',
     outline: 'text-foreground'
   };
-<<<<<<< HEAD:src/components/ui/Badge.jsx
 
-  return (
-=======
   
   return()
->>>>>>> main:backup-pages/ui/Badge.jsx
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>

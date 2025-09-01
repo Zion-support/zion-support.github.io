@@ -6,24 +6,9 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
     'Carbon footprint tracking and sustainability reporting',;
     'Custom AI models for industry-specific energy patterns',;
     'Integration with major building management systems';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEnergyOptimization.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Basic',
-      price: '$299/mo',
-      details: ['Up to 5 facilities', 'Basic energy monitoring', 'Standard reporting', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIEnergyOptimization.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited facilities',Custom AI models',Full system integration',24/7 dedicated support'] },;

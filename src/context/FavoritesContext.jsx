@@ -1,15 +1,10 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
-
-const FavoritesContext = createContext(null);
+import { createContext, useContext, useEffect, useState } from 'react';'import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';''const FavoritesContext = createContext(null);
 
 export function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    const stored = localStorage.getItem('favorites');
-    if (stored) {
-      try {
+    const stored = localStorage.getItem('favorites');'    if (stored) {'      try {
         setFavorites(JSON.parse(stored));
       } catch {
         // ignore invalid JSON
@@ -18,21 +13,17 @@ export function FavoritesProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
-  const toggleFavorite = async productId => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));'  }, [favorites]);'
+  const toggleFavorite = async productId => {;
     try {
       await toggleFavoriteRequest(productId);
       setFavorites(prev =>
-        prev.includes(productId)
-          ? prev.filter(id => id !== productId)
+        prev.includes(productId);
+          ? prev.filter(id => id !== productId);
           : [...prev, productId]
       );
     } catch (err) {
-      console.error('Toggle favorite failed', err);
-    }
-  };
+      console.error('Toggle favorite failed', err);'    }'  };
 
   const isFavorite = id => favorites.includes(id);
 

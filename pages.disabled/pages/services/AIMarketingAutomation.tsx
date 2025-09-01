@@ -1,15 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Target,
-  TrendingUp,
-  Users,
-  Clock,
-  BarChart3,
-  Shield,
-  Zap,
-========
+<=
 import {
   Target, 
   TrendingUp, 
@@ -18,8 +7,7 @@ import {
   BarChart3, 
   Shield, 
   Zap, 
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.tsx
-  CheckCircle,
+>  CheckCircle,
   Brain,
   Workflow,
   MessageSquare,
@@ -45,17 +33,7 @@ import {
   
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.tsx
-      <SEO
-        title="AI Marketing Automation - Zion Tech Group"
-        description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>
-========
+<=
       <SEO "
         title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
@@ -64,8 +42,7 @@ import {
         {/* Hero Section */}"
         <section className="relative overflow-hidden py-20 px-4">"
           <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.tsx
-          <div className="container mx-auto max-w-7xl relative z-10">
+>          <div className="container mx-auto max-w-7xl relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -206,17 +183,12 @@ import {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.tsx
-                    plan.popular
-                      ? 'border-pink-400 shadow-lg shadow-pink-400/20'
-                      : 'border-slate-700/50'
-========
+<=
 
                     plan.popular '
                       ? 'border-pink-400 shadow-lg shadow-pink-400/20' '
                       : 'border-slate-700/50'`
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.tsx
-                  }`}
+>                  }`}
                 >
                   {plan.popular && ("
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -225,20 +197,13 @@ import {
                       </span>
                     </div>
                   )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMarketingAutomation.tsx
-
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                   "
                   <div className="text-center mb-6">"
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                     <div className="flex items-baseline justify-center mb-2">"
                       <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIMarketingAutomation.tsx
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
+>                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>"
                     <p className="text-gray-300">{plan.description}</p>
                   </div>

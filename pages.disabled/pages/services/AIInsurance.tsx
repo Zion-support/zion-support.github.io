@@ -6,24 +6,9 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     'Smart document processing and compliance monitoring',;
     'Integration with major insurance management systems',;
     'Custom AI models for insurance-specific insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIInsurance.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Insurer',
-      price: '$499/mo',
-      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Insurer',
-      price: '$1,299/mo',
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIInsurance.tsx
-    { ;
+>    { ;
       name: 'Large Insurer', ;
       price: '$3,999/mo', ;
       details: ['Unlimited policies',Custom AI models',Full system integration',24/7 dedicated support'] },;

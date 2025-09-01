@@ -1,14 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Eye,
-  AlertTriangle,
-  TrendingUp,
-  Users,
-  Globe,
-========
+<=
 import {
   Shield, 
   Eye, 
@@ -17,22 +7,13 @@ import {
   Zap, 
   Users, 
   Globe, 
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-  Cpu,
+>  Cpu,
   Database,
   Lock,
   BarChart3,
   Rocket,
   Star,
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-  CheckCircle,
-import { SEO } from "../../components/SEO";
-import {
-  Shield,
-  CheckCircle,
-  BarChart3,
-  Zap,
-========
+<=
   CheckCircle,;
   Shield, 
   CheckCircle, 
@@ -41,8 +22,7 @@ import {
   Clock, 
   Database, 
   Target,
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-  ArrowRight,
+>  ArrowRight,
   Building,
   Calculator,
   ChartBar,
@@ -213,57 +193,36 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-        title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
-        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time."
-        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
-       />
-=======
+
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group""
         description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">"
               <Shield className="w-4 h-4 mr-2"  />              AI-Powered Cybersecurity
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+>            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity"
               <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Threat Intelligence</span>
             </h1>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+>            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Stay ahead of cyber threats with AI-powered threat intelligence that detects,
               analyzes, and responds to security risks in real-time.
             </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-========
+<=
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">"
                 <Play className="w-5 h-5 mr-2"  />
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                Start Free Trial
+>                Start Free Trial
               </button>"
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200 flex items-center justify-center">"
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo
@@ -580,17 +539,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-                  plan.popular
-                    ? 'border-red-500/50 bg-red-500/5'
-                    : 'border-slate-700/50'
-========
+<=
 
                   plan.popular '
                     ? 'border-red-500/50 bg-red-500/5' '
                     : 'border-slate-700/50'`
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                }`}
+>                }`}
 
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -614,14 +568,9 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0"  />
-<<<<<<< HEAD
-                viewport={{ once: true }}`
-                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 
-=======
                 viewport={{ once: true }}`                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`
                 } hover:border-red-500/50 transition-all`}
               >
@@ -630,41 +579,24 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                     <Star className="w-4 h-4 mr-1"  />                    Most Popular
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-========
+<=
                 "
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>"
                 <div className="mb-4">"
                   <span className="text-4xl font-bold text-white">{tier.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                  <span className="text-gray-400">/{tier.period}</span>
+>                  <span className="text-gray-400">/{tier.period}</span>
                 </div>"
                 <p className="text-gray-300 mb-6">{tier.description}</p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-========
+<=
                 "
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                <ul className="space-y-3 mb-8">
+>                <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-                <div className="text-sm text-gray-400 mb-6">
-                  <strong>Best for:</strong> {tier.bestFor}
-                </div>
-
-                <a
-                  href="/contact"
-========
+<=
                 "
                 <div className="text-sm text-gray-400 mb-6">
                   <strong>Best for:</strong> {tier.bestFor}
@@ -672,8 +604,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 
                 <a"
                   href="/contact"`
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+>                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
 
                     index === 1'
                       ? 'bg-red-600 hover:bg-red-700 text-white''
@@ -928,18 +859,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 Contact Sales
               </button>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-
-            <div className="mt-8 text-center">
-              <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
-========
+<=
             "
             <div className="mt-8 text-center">"
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">"
->>>>>>>> main:backup-pages/src-pages/services/AICybersecurityThreatIntelligence.tsx
-                <div className="flex items-center justify-center space-x-2">
+>                <div className="flex items-center justify-center space-x-2">
                   <span>📱</span>
                   <span>+1 302 464 0950</span>
                 </div>"

@@ -1,13 +1,13 @@
-import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Target, 
-  Clock, 
-  CheckCircle, 
+import {
+  BarChart3,
+  Users,
+  TrendingUp,
+  Shield,
+  Zap,
+  Brain,
+  Target,
+  Clock,
+  CheckCircle,
   AlertTriangle,
   MessageSquare,
   Activity,
@@ -28,22 +28,18 @@ import {
   Bell,
   Mail,
   Phone,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 export default function AICustomerSuccessAnalytics() {
-  
-  
-  
-  
-  
   return (
     <>
-      <SEO title="AI Customer Success Analytics Platform - Zion Tech Group"
+      <SEO
+        title="AI Customer Success Analytics Platform - Zion Tech Group"
         description="Advanced AI-powered customer success analytics platform for predicting churn, tracking success metrics, and optimizing customer relationships with real-time insights."
         canonical="/services/ai-customer-success-analytics"
-       />
-      
+      />
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -61,8 +57,9 @@ export default function AICustomerSuccessAnalytics() {
                   </span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
-                  Transform your customer success operations with AI-powered analytics that predict churn, 
-                  track success metrics, and optimize customer relationships in real-time.
+                  Transform your customer success operations with AI-powered
+                  analytics that predict churn, track success metrics, and
+                  optimize customer relationships in real-time.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
@@ -96,7 +93,8 @@ export default function AICustomerSuccessAnalytics() {
                 Powerful Features for Customer Success
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI-powered platform provides comprehensive insights and automation to drive customer success.
+                Our AI-powered platform provides comprehensive insights and
+                automation to drive customer success.
               </p>
             </motion.div>
 
@@ -112,7 +110,9 @@ export default function AICustomerSuccessAnalytics() {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
                   <p className="text-slate-300">{feature.description}</p>
                 </motion.div>
               ))}
@@ -133,7 +133,8 @@ export default function AICustomerSuccessAnalytics() {
                 Comprehensive Analytics Modules
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Get deep insights into every aspect of your customer success operations with our specialized analytics modules.
+                Get deep insights into every aspect of your customer success
+                operations with our specialized analytics modules.
               </p>
             </motion.div>
 
@@ -149,7 +150,9 @@ export default function AICustomerSuccessAnalytics() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <module.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{module.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {module.title}
+                  </h3>
                   <p className="text-slate-300">{module.description}</p>
                 </motion.div>
               ))}
@@ -170,7 +173,8 @@ export default function AICustomerSuccessAnalytics() {
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs and scale as you grow.
+                Choose the plan that fits your business needs and scale as you
+                grow.
               </p>
             </motion.div>
 
@@ -182,8 +186,8 @@ export default function AICustomerSuccessAnalytics() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-green-500/50 bg-green-500/5' 
+                    plan.popular
+                      ? 'border-green-500/50 bg-green-500/5'
                       : 'border-slate-700/50'
                   }`}
                 >
@@ -194,20 +198,27 @@ export default function AICustomerSuccessAnalytics() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
                     <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
                       <span className="text-slate-400 ml-1">{plan.period}</span>
                     </div>
                     <p className="text-slate-300">{plan.description}</p>
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-slate-300">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />
+                    {plan.features.map(feature => (
+                      <li
+                        key={feature}
+                        className="flex items-center text-slate-300"
+                      >
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -242,7 +253,8 @@ export default function AICustomerSuccessAnalytics() {
                 Why Choose AI Customer Success Analytics?
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Transform your customer success operations with data-driven insights and AI-powered automation.
+                Transform your customer success operations with data-driven
+                insights and AI-powered automation.
               </p>
             </motion.div>
 
@@ -259,7 +271,9 @@ export default function AICustomerSuccessAnalytics() {
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {benefit.title}
+                    </h3>
                     <p className="text-slate-300">{benefit.description}</p>
                   </div>
                 </motion.div>
@@ -281,7 +295,8 @@ export default function AICustomerSuccessAnalytics() {
                 Perfect for Every Industry
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our platform is designed to meet the unique needs of businesses across all industries.
+                Our platform is designed to meet the unique needs of businesses
+                across all industries.
               </p>
             </motion.div>
 
@@ -297,7 +312,9 @@ export default function AICustomerSuccessAnalytics() {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {useCase.title}
+                  </h3>
                   <p className="text-slate-300">{useCase.description}</p>
                 </motion.div>
               ))}
@@ -317,7 +334,8 @@ export default function AICustomerSuccessAnalytics() {
                 Ready to Transform Your Customer Success?
               </h2>
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies that have revolutionized their customer success operations with AI-powered analytics.
+                Join hundreds of companies that have revolutionized their
+                customer success operations with AI-powered analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -344,31 +362,44 @@ export default function AICustomerSuccessAnalytics() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-6 h-6 text-white"  />
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                  <a href="tel:+13024640950" className="text-slate-300 hover:text-green-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Phone
+                  </h3>
+                  <a
+                    href="tel:+13024640950"
+                    className="text-slate-300 hover:text-green-400 transition-colors"
+                  >
                     +1 302 464 0950
                   </a>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-6 h-6 text-white"  />
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-green-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Email
+                  </h3>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="text-slate-300 hover:text-green-400 transition-colors"
+                  >
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-white"  />
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Address
+                  </h3>
                   <p className="text-slate-300">
-                    364 E Main St STE 1008<br />
+                    364 E Main St STE 1008
+                    <br />
                     Middletown DE 19709
                   </p>
                 </div>
@@ -378,4 +409,5 @@ export default function AICustomerSuccessAnalytics() {
         </section>
       </div>
     </>
-  )}
+  );
+}

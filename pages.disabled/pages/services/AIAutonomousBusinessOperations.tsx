@@ -1,19 +1,10 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Settings,
-  Brain,
-  Target,
-  BarChart3,
-========
+<=
 import {
   Settings, 
   Brain, 
   Target, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-  CheckCircle,
+>  CheckCircle,
   ArrowRight,
   Star,
   Globe,
@@ -50,32 +41,22 @@ const AIAutonomousBusinessOperations: React.FC = props {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-blue-500/20 border border-teal-500/30 text-teal-400 text-sm font-medium mb-6">"
               <Settings className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Business Operations
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Business Operations with"
               <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your business operations with our AI-powered autonomous platform.
               Optimize processes, automate workflows, and maximize operational efficiency.
             </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-========
+<=
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-              <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg font-semibold hover:from-teal-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+>              <button className="px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-lg font-semibold hover:from-teal-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>"
               <button className="px-8 py-4 border border-teal-500/30 text-teal-400 rounded-lg font-semibold hover:bg-teal-500/10 transition-all duration-300">
@@ -103,12 +84,9 @@ const AIAutonomousBusinessOperations: React.FC = props {
               Our AI platform provides comprehensive business operations capabilities for modern enterprises
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -146,12 +124,9 @@ const AIAutonomousBusinessOperations: React.FC = props {
               Experience measurable improvements in operational efficiency and business performance
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessOperations.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessOperations.tsx
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}

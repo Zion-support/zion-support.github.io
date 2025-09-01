@@ -131,14 +131,8 @@ export const AccessibilityProvider = ({ children }) => {
         toggleReducedMotion,
         toggleLargeText,
         focusTrap,
-<<<<<<< HEAD:src/components/ui/AccessibilityProvider.jsx
-        announceToScreenReader,
 
-
-};
-=======
         announceToScreenReader};
->>>>>>> main:backup-pages/ui/AccessibilityProvider.jsx
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};

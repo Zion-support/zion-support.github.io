@@ -18,18 +18,11 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
   ];
 
   
-<<<<<<< HEAD
-    { ;
-      name: 'Enterprise', ;
-      price: '$999/mo', ;
-      features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
-      popular: false};
-=======
+
     { ;'
       name: 'Enterprise', ;'
       price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   
@@ -56,7 +49,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee Engagement',;'
     'Compliance & Reporting',;'
     'Onboarding & Offboarding',;'    'Succession Planning';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -297,12 +289,9 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
-          <a
-========
+<=
           <a "
->>>>>>>> main:backup-pages/src-pages/services/AIHRTalentPlatform.tsx
-            href="https://ziontechgroup.com"
+>            href="https://ziontechgroup.com"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";

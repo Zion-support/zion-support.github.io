@@ -138,10 +138,7 @@ const AICodeReviewAssistant = () => {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewAssistant.jsx
-  y: 0
-
-========
+<=
   y: 0 
 
 
@@ -149,8 +146,7 @@ const AICodeReviewAssistant = () => {
 
 
 "
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewAssistant.jsx
-}} transition={{ duration: 0.6 }} className="text-6xl mb-6">
+>}} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🔍
             </motion.div>"
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
@@ -446,12 +442,9 @@ const AICodeReviewAssistant = () => {
 }}>
               Join hundreds of development teams already using our AI-powered code review assistant
             </motion.p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewAssistant.jsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewAssistant.jsx
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
+>            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
 
   { opacity: 0,
   y: 20

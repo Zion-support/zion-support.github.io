@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven support automation and orchestration',;
     'Real-time support performance tracking',;
     'Custom AI models for support applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecuritySupport.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$299/mo',
-      details: ['Up to 50 support tickets/month', 'Basic AI features', 'Standard support', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$799/mo',
-      details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecuritySupport.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited support tickets',Custom AI models',Full support suite',24/7 dedicated support'] },;

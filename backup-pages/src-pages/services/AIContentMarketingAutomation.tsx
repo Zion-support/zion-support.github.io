@@ -1,94 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Brain,
-  PenTool,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-========
-<<<<<<< HEAD
-import { Brain, 
-  PenTool, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIContentMarketingAutomation.tsx
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket'
- } from 'lucide-react';
-;
-export { function };
-export default function AIContentMarketingAutomation(...args[]):  {
+<=
 
-  const features = [
-    "AI-powered content generation for multiple formats","
-    "Multi-channel content distribution automation","
-    "Intelligent audience targeting and segmentation","
-    "Real-time performance analytics and optimization","
-    "SEO-optimized content creation","
-    "Social media scheduling and automation",;"
-    "Email marketing campaign automation",;"
-    "Content calendar management",;"
-    "Brand voice consistency maintenance",;"
-    "A/B testing and optimization",;"
-    "Competitor analysis and insights",;"
-    "ROI tracking and attribution modeling";
-  ];
-
-  const benefits = [;"
-    "Increase content production by 300%",;"
-    "Improve engagement rates by 45%",;"
-    "Reduce content creation costs by 60%",;"
-    "Boost SEO rankings by 35%",;"
-    "Automate 80% of marketing workflows";
-  ];
-
-  const useCases = ["
-    "E-commerce content marketing","
-    "B2B lead generation campaigns",;"
-    "Social media management",;"
-    "Email marketing automation",;"
-    "Blog and article creation",;"
-    "Video content marketing",;"
-    "Influencer collaboration",;"
-    "Event marketing campaigns";
-  ];
-
-  const pricing = [
-    {
-"
-      name: "Starter","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for small businesses and startups",
-      features[;"
-        "AI content generation (50 pieces/month)","
-        "Basic social media automation","
-        "Email campaign templates","
-        "Basic analytics dashboard","
-        "Email support"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -131,19 +42,11 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIContentMarketingAutomation.tsx
-        title="AI Content Marketing Automation Platform - Zion Tech Group"
-        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
-       />
-=======
+
         title="AI Content Marketing Automation Platform - Zion Tech Group""        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

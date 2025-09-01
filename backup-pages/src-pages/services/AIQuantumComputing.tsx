@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven quantum automation and orchestration',;
     'Real-time quantum analytics and insights',;
     'Custom AI models for quantum applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIQuantumComputing.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIQuantumComputing.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited storage',Custom AI models',Full quantum suite',24/7 dedicated support'] },;

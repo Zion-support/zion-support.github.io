@@ -9,16 +9,10 @@ export default function AIBusinessIntelligence(...args[]):  {
       title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Automated Reporting',;
-      description: 'Generate reports automatically with AI insights',;
-      icon: Target};
-=======
+
     {;'
       title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
       icon: Target};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -326,36 +320,20 @@ export default function AIBusinessIntelligence(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<<< HEAD:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-  y: 20 ;
-
-}}
-========
+<=
   y: 20 }}
->>>>>>>> main:backup-pages/src-pages/micro-saas/AIBusinessIntelligence.tsx
-              whileInView = {
+>              whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-  y: 0 ;
-
-}}
-========
+<=
   y: 0 }}
->>>>>>>> main:backup-pages/src-pages/micro-saas/AIBusinessIntelligence.tsx
-              transition = {
+>              transition = {
 
   { duration: 0.6,
-<<<<<<<< HEAD:pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-  delay: 0.3 ;
-
-}}
-              viewport={{ once: true }}
-========
+<=
   delay: 0.3 }}
               viewport={{ once: true }}"
->>>>>>>> main:backup-pages/src-pages/micro-saas/AIBusinessIntelligence.tsx
-              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+>              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 "
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>;"
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>"

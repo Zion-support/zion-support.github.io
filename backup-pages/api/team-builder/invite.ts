@@ -16,11 +16,16 @@ export default async function handler(
       talentId,
       roleTitle,
       projectBriefId, // Optional, depends if we save the brief and get an ID
-      teamRecommendationId // Optional, if we save the recommendation
+      teamRecommendationId, // Optional, if we save the recommendation
     } = req.body;
 
     if (!talentId || !roleTitle) {
-      return res.status(400).json({ error: 'Missing required fields: talentId and roleTitle are required.' });
+      return res
+        .status(400)
+        .json({
+          error:
+            'Missing required fields: talentId and roleTitle are required.',
+        });
     }
 
     // Construct the data for insertion, ensuring snake_case for DB columns
@@ -56,24 +61,37 @@ export default async function handler(
     if (error) {
       console.error('Error inserting team invite:', error);
       // Check for specific error types, e.g., RLS violation, FK constraint
-      if (error.code === '42501') { // RLS violation
-        return res.status(403).json({ error: 'Forbidden: You do not have permission to create this invite.' });
+      if (error.code === '42501') {
+        // RLS violation
+        return res
+          .status(403)
+          .json({
+            error:
+              'Forbidden: You do not have permission to create this invite.',
+          });
       }
-      return res.status(500).json({ error: `Database error: ${error.message}` });
+      return res
+        .status(500)
+        .json({ error: `Database error: ${error.message}` });
     }
 
     if (!data) {
-      return res.status(500).json({ error: 'Failed to create team invite: No data returned.' });
+      return res
+        .status(500)
+        .json({ error: 'Failed to create team invite: No data returned.' });
     }
 
     // TODO: Optionally, trigger a notification to the invited talent here
     // (e.g., using Supabase Edge Functions or a direct notification service call).
 
     res.status(201).json(data as TeamInvite);
-
   } catch (error: any) {
     console.error('Error in /api/team-builder/invite:', error);
     // Ensure a generic message for unknown errors if details are sensitive
-    return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown server error'}` });
+    return res
+      .status(500)
+      .json({
+        error: `Failed to create team invite: ${error.message || 'Unknown server error'}`,
+      });
   }
 }

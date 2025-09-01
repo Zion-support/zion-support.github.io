@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown,
-  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart,
-  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage,
-  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart,
-  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent,
-  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
-  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
-  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp'
- } from 'lucide-react';
-
-
-    {
-
-      name: 'Quantum Consciousness AI',
-      price: '$25,999',
-      period: '/month',
-      category: 'AI & Consciousness',
-      marketSize: '$1.2B',
-      growthRate: '500%',
-      roi: '800%',
-=======
 '
       name: 'Quantum Consciousness AI','
       price: '$25,999','
@@ -34,25 +7,13 @@ import {
       marketSize: '$1.2B','
       growthRate: '500%','
       roi: '800%','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       setupTime: '4-6 weeks',
       trialDays: 30,
       features: ['Quantum consciousness mapping',Ethical boundary testing',Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
   Ethics committees';
 
-<<<<<<< HEAD
-},;
-    {
 
-      name: 'Quantum Financial Trading AI',
-      price: '$35,999',
-      period: '/month',
-      category: 'AI & Finance',
-      marketSize: '$15.8B',
-      growthRate: '280%',
-      roi: '600%',
-=======
 },;    {
 '
       name: 'Quantum Financial Trading AI','
@@ -62,7 +23,6 @@ import {
       marketSize: '$15.8B','
       growthRate: '280%','
       roi: '600%','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       setupTime: '2-3 weeks',
       trialDays: 14,
       features['Quantum market analysis',Predictive trading',Risk management'],;
@@ -173,14 +133,9 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
       features: ['AI-powered CI/CD',Automated testing',Performance monitoring'],;
       targetAudience: 'Development teams, DevOps engineers, Technology companies'};
   ]};
-<<<<<<< HEAD
 
-const ComprehensivePricingGuide2028: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-=======
 const ComprehensivePricingGuide2028: React.FC = () => {;'
   const [selectedCategory, setSelectedCategory] = useState('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [priceRange, setPriceRange] = useState('all');
 
   
@@ -198,18 +153,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
   ];
 
   
-<<<<<<< HEAD
-    return [;
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
-      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
-    ]};
-=======
+
     return [;'
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;'
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;'      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   
     

@@ -6,24 +6,9 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     'Smart recommendation engines and cross-selling',;
     'Integration with major e-commerce and POS platforms',;
     'Custom AI models for retail-specific insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIRetail.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Retailer',
-      price: '$299/mo',
-      details: ['Up to 1,000 products', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Retailer',
-      price: '$799/mo',
-      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIRetail.tsx
-    { ;
+>    { ;
       name: 'Large Retailer', ;
       price: '$1,999/mo', ;
       details: ['Unlimited products',Custom AI models',Full platform integration',24/7 dedicated support'] },;

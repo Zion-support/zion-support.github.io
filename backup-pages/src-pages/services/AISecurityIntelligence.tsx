@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven intelligence automation and orchestration',;
     'Real-time intelligence performance tracking',;
     'Custom AI models for intelligence applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityIntelligence.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 100 threat feeds', 'Basic AI features', 'Standard intelligence', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityIntelligence.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited threat feeds',Custom AI models',Full intelligence suite',24/7 dedicated support'] },;

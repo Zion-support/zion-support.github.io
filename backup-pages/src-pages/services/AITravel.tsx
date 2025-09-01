@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven travel automation and orchestration',;
     'Real-time travel analytics and insights',;
     'Custom AI models for travel applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AITravel.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$299/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AITravel.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage',Custom AI models',Full travel suite',24/7 dedicated support'] },;

@@ -1,17 +1,17 @@
-import { 
-  Truck, 
-  Route, 
-  Package, 
-  Globe, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Users, 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock, 
-  Database, 
+import {
+  Truck,
+  Route,
+  Package,
+  Globe,
+  Brain,
+  Shield,
+  Zap,
+  Users,
+  CheckCircle,
+  Star,
+  DollarSign,
+  Clock,
+  Database,
   Target,
   ArrowRight,
   Building,
@@ -38,22 +38,18 @@ import {
   Activity,
   Gauge,
   ShoppingCart,
-  Snowflake
+  Snowflake,
 } from 'lucide-react';
 
 const AILogisticsOptimization: React.FC = () => {
-  
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <SEO title="AI Logistics Optimization Platform | Zion Tech Group"
+      <SEO
+        title="AI Logistics Optimization Platform | Zion Tech Group"
         description="Revolutionize your logistics operations with AI-powered route optimization, predictive analytics, and real-time fleet management. Reduce costs by 30% and improve delivery efficiency."
         keywords="AI logistics optimization, route optimization, fleet management, supply chain AI, logistics automation, predictive analytics"
-       />
-      
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -68,7 +64,8 @@ const AILogisticsOptimization: React.FC = () => {
               AI Logistics Optimization Platform
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100">
-              Transform your logistics operations with AI-powered route optimization, predictive analytics, and real-time fleet management
+              Transform your logistics operations with AI-powered route
+              optimization, predictive analytics, and real-time fleet management
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -101,7 +98,8 @@ const AILogisticsOptimization: React.FC = () => {
               Transform Your Logistics Operations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform delivers measurable results that directly impact your bottom line
+              Our AI platform delivers measurable results that directly impact
+              your bottom line
             </p>
           </motion.div>
 
@@ -114,10 +112,14 @@ const AILogisticsOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${benefit.color} flex items-center justify-center mx-auto mb-6`}>
+                <div
+                  className={`w-20 h-20 rounded-full bg-gradient-to-r ${benefit.color} flex items-center justify-center mx-auto mb-6`}
+                >
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
@@ -138,7 +140,8 @@ const AILogisticsOptimization: React.FC = () => {
               AI-Powered Logistics Intelligence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our advanced AI platform provides comprehensive logistics optimization, real-time monitoring, and predictive analytics
+              Our advanced AI platform provides comprehensive logistics
+              optimization, real-time monitoring, and predictive analytics
             </p>
           </motion.div>
 
@@ -151,10 +154,14 @@ const AILogisticsOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
+                <div
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}
+                >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -175,7 +182,8 @@ const AILogisticsOptimization: React.FC = () => {
               Industry Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform serves diverse industries with specialized logistics optimization solutions
+              Our platform serves diverse industries with specialized logistics
+              optimization solutions
             </p>
           </motion.div>
 
@@ -188,10 +196,14 @@ const AILogisticsOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-6`}>
+                <div
+                  className={`w-20 h-20 rounded-full bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-6`}
+                >
                   <useCase.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-600">{useCase.description}</p>
               </motion.div>
             ))}
@@ -212,7 +224,8 @@ const AILogisticsOptimization: React.FC = () => {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect plan for your logistics optimization needs with no hidden fees
+              Choose the perfect plan for your logistics optimization needs with
+              no hidden fees
             </p>
           </motion.div>
 
@@ -234,11 +247,15 @@ const AILogisticsOptimization: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {plan.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">
+                      ${plan.price}
+                    </span>
                     <span className="text-gray-600">/{plan.period}</span>
                   </div>
                   <p className="text-gray-600">{plan.description}</p>
@@ -247,7 +264,7 @@ const AILogisticsOptimization: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -281,7 +298,8 @@ const AILogisticsOptimization: React.FC = () => {
               Ready to Optimize Your Logistics?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-              Join hundreds of companies who trust our AI platform for logistics optimization
+              Join hundreds of companies who trust our AI platform for logistics
+              optimization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -307,18 +325,24 @@ const AILogisticsOptimization: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phone
+                </h3>
                 <p className="text-gray-600">{contactInfo.phone}</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Email
+                </h3>
                 <p className="text-gray-600">{contactInfo.email}</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Address
+                </h3>
                 <p className="text-gray-600">{contactInfo.address}</p>
               </div>
             </div>
@@ -326,6 +350,7 @@ const AILogisticsOptimization: React.FC = () => {
         </div>
       </section>
     </div>
-  )};
+  );
+};
 
 export default AILogisticsOptimization;

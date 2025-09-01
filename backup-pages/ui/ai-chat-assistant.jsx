@@ -148,10 +148,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
   scale: 0.95
 
 }} transition = {
-<<<<<<< HEAD:src/components/ui/ai-chat-assistant.jsx
-  { duration: 0.3,
-  ease: "easeOut"
-=======
+
 
   { duration: 0.3,"
   ease: "easeOut" 
@@ -160,7 +157,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
->>>>>>> main:backup-pages/ui/ai-chat-assistant.jsx
 
 }}>
               {/* Header */}"
@@ -318,15 +314,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 "
                     <div className="flex-1 relative">"
                         <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me thing..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
-<<<<<<< HEAD:src/components/ui/ai-chat-assistant.jsx
 
-                        {/* Voice input indicator */}
-                        {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-=======
                         
                         {/* Voice input indicator */}"
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">"
->>>>>>> main:backup-pages/ui/ai-chat-assistant.jsx
                             <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"/>
                           </div>)}
                       </div>

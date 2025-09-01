@@ -1,144 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Cpu,
-  Zap,
-  Globe,
-  Server,
-  Network,
-  Cloud,
-  Shield,
-========
-<<<<<<< HEAD
-import { Cpu, 
-  Zap, 
-  Globe, 
-  Server, 
-  Network, 
-  Cloud, 
-  Shield, 
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-  Clock,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Database,
-  Wifi,
-  Satellite,
-  Smartphone,
-  Car,
-  Factory,
-  Home,
-  Building,
-  Truck,
-  Plane,
-  Ship,
-  Train,
-  Rocket,
-  Target,
-  Gauge,
-  BarChart3,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Stop,
-  FastForward,
-  Rewind,
-  Volume2,
-  VolumeX,
-  WifiOff,
-  Signal,
-  Activity,
-  Pulse,
-  Heart,
-  Battery,
-  Power,
-  PowerOff,
-  Sun,
-  Moon,
-  Star,
-  Sparkles,
-  Flame,
-  Lightning,
-  Thunder,
-  Rain,
-  Snow,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  MapPin'
- } from 'lucide-react';
-;
-const EdgeComputingPlatform: React.FC = (): JSX.Element => {
+<=
 
-  
-    {;
-      icon: Shield,;"
-      title: "Edge Security",;"
-      description: "Advanced security protocols and encryption for edge computing environments",;"
-      color: "from-yellow-500 to-orange-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$399","
-      period: "/month","
-      description: "Perfect for small IoT deployments and edge computing experiments",
-      features: ["
-        "Up to 10 edge nodes","
-        "Basic edge processing","
-        "Standard security","
-        "Email support","
-        "Basic monitoring","
-        "5GB data transfer","
-        "Community support"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$1,199","
-      period: "/month","
-      description: "Ideal for growing businesses with significant edge computing needs",
-      features: ["
-        "Up to 100 edge nodes","
-        "Advanced edge AI","
-        "Custom security policies","
-        "Priority support","
-        "Advanced analytics","
-        "100GB data transfer","
-        "API access","
-        "Custom integrations"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$3,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade edge computing",
-      features: ["
-        "Unlimited edge nodes","
-        "Custom AI models","
-        "Advanced security features","
-        "Multi-tenant support","
-        "Dedicated support team","
-        "Custom development",;"
-        "SLA guarantees",;"
-        "On-premise option";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -194,19 +55,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-        title="Edge Computing Platform - Zion Tech Group"
-        description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
-       />
-=======
+
         title="Edge Computing Platform - Zion Tech Group""        description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -266,12 +119,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Everything you need to deploy and manage edge computing infrastructure
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -319,12 +169,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               See how edge computing revolutionizes performance and user experience
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -371,12 +218,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Edge computing solutions for every industry and use case
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -429,12 +273,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Deploy edge nodes worldwide for optimal performance and reliability
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {edgeLocations.map(location: unknown, index: unknown 
               <motion.div
                 key={index}
@@ -488,12 +329,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Choose the plan that fits your edge computing needs
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EdgeComputingPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/EdgeComputingPlatform.tsx
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}

@@ -1,75 +1,5 @@
-<<<<<<< HEAD
-import {
 
-  Brain,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  MessageCircle,
-  Calendar,
-  AlertTriangle,
-  Star'
-} from 'lucide-react';
-;
-const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
-
-  
-    },;
-    {;
-      icon: Zap,;
-      title: 'Automated Alerts',;
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'};
-  ];
-
-  
-    {;
-      title: 'Integration Hub',;
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
-      icon: Database,;
-      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation']};
-  ];
-
-  
-    {;
-      industry: 'Healthcare',;
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
-      icon: Heart,;
-      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization']};
-  ]},;
-    {;
-      icon: Zap,;
-      title: 'Optimize Resource Allocation',;
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'};
-  ];
-
-  
-        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
-      ],;
-=======
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -115,26 +45,16 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
 =======
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-        title="AI Customer Success Prediction Platform | Zion Tech Group"
-        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
-        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
-       />
-=======
+
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -255,12 +175,9 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               Everything you need to predict, prevent, and optimize customer success outcomes
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -322,12 +239,9 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               and drive measurable business outcomes.
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+>          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map(plan: unknown, index: unknown 
               <motion.div
                 key={index}
@@ -409,12 +323,9 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               enabling proactive customer management and driving unprecedented business growth.
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-          <div className="grid md: grid-cols-3 gap-8">
+>          <div className="grid md: grid-cols-3 gap-8">
             {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
@@ -485,12 +396,9 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               and drive measurable business outcomes.
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -736,35 +644,23 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-========
+<=
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a "
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-                href="tel:+13024640950"
+>                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >"
                 <Phone className="w-5 h-5 mr-2"  />
                 Call Us
               </a>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-========
+<=
             "
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
->>>>>>>> main:backup-pages/src-pages/services/AICustomerSuccessPrediction.tsx
-                <span>14-day free trial</span>
+>                <span>14-day free trial</span>
               </div>"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />

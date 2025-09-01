@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven identity automation and orchestration',;
     'Real-time identity analytics and insights',;
     'Custom AI models for identity applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIdentityManagement.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$299/mo',
-      details: ['Up to 1,000 users', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$799/mo',
-      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIIdentityManagement.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited users',Custom AI models',Full identity suite',24/7 dedicated support'] },;

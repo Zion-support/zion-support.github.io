@@ -198,16 +198,13 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
   {
 
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
-<<<<<<< HEAD:src/components/ui/FuturisticBackground.jsx
-  #16213e 100%)';
-=======
+
   #16213e 100%);
         
 
 
 
 
->>>>>>> main:backup-pages/ui/FuturisticBackground.jsx
 
 
 }}/>);
@@ -252,14 +249,12 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
             background: `linear-gradient(45deg, transparent 30%,
   ${glowColor
 
-<<<<<<< HEAD:src/components/ui/FuturisticBackground.jsx
-=======
+
 
 
 
 
 `
->>>>>>> main:backup-pages/ui/FuturisticBackground.jsx
 }20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
         }}/>

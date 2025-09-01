@@ -1,40 +1,4 @@
-<<<<<<< HEAD
-import { Brain, 
 
-
-  Shield, 
-  Activity, 
-  TrendingUp, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  FileText,
-  Heart,
-  DollarSign,
-  Truck,
-  Target'
- } from 'lucide-react';
-
-export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
-
-  const aiServices = [
-    {
-
-      icon: FileText,
-      title: "AI Legal Document Automation","
-      description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research","
-      price: "From $199/month","
-      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],;"
-      link: "/services/ai-legal-document-automation","
-      category: "Legal Tech"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 

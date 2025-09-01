@@ -68,8 +68,7 @@ self.addEventListener('install', (event) => {
   );
 
   self.skipWaiting();
-<<<<<<< HEAD
-=======
+
   '/about',/contact',/offline',/manifest.json',/favicon.ico',/icons/icon-192x192.png',/icons/icon-512x512.png'
 =======
   '/about',
@@ -79,7 +78,6 @@ self.addEventListener('install', (event) => {
   '/favicon.ico',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 // API routes to cache;

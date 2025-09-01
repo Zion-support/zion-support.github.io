@@ -1,14 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  TrendingUp,
-  DollarSign,
-  CheckCircle,
-  Star,
-  Users,
-========
+<=
 import {
   Brain, 
   TrendingUp, 
@@ -16,8 +6,7 @@ import {
   CheckCircle, 
   Star, 
   Users, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTrading.tsx
-  Globe,
+>  Globe,
   Lock,
   Cpu,
   Database,
@@ -53,31 +42,16 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
   
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.tsx
-      <SEO
-        title="AI Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
-========
+<=
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
-       />
-=======
+
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>"
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTrading.tsx
-        <div className="relative max-w-7xl mx-auto text-center">
+>        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,18 +160,12 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                     <p className="text-gray-300 text-sm">{strategy.description}</p>
                   </div>
                 </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.tsx
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-green-400 font-bold text-2xl">{strategy.successRate}</div>
-========
+<=
                 "
                 <div className="grid grid-cols-2 gap-4">"
                   <div className="text-center">"
                     <div className="text-green-400 font-bold text-2xl">{strategy.successRate}</div>"
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTrading.tsx
-                    <div className="text-gray-400 text-sm">Success Rate</div>
+>                    <div className="text-gray-400 text-sm">Success Rate</div>
                   </div>"
                   <div className="text-center">"
                     <div className="text-blue-400 font-bold text-2xl">{strategy.avgReturn}</div>"
@@ -301,17 +269,12 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.tsx
-                  index === 1
-                    ? 'border-green-400/50 shadow-lg shadow-green-500/25'
-                    : 'border-slate-600/50'
-========
+<=
 
                   index === 1 '
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25' '
                     : 'border-slate-600/50'`
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTrading.tsx
-                } relative`}
+>                } relative`}
               >
                 {index === 1 && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -320,20 +283,13 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTrading.tsx
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+>                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
 "

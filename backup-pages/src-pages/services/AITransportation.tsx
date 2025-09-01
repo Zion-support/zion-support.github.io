@@ -6,24 +6,9 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Smart traffic signal optimization and control',;
     'Integration with major transportation management systems',;
     'Custom AI models for transportation-specific insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AITransportation.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Fleet',
-      price: '$399/mo',
-      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Fleet',
-      price: '$999/mo',
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AITransportation.tsx
-    { ;
+>    { ;
       name: 'Large Fleet', ;
       price: '$2,499/mo', ;
       details: ['Unlimited vehicles',Custom AI models',Full system integration',24/7 dedicated support'] },;

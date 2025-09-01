@@ -2,5 +2,4 @@ export async function mergeGuestCart(items: any[]) {
   
   
   if (!res.ok) {
-    throw new Error('Failed to merge cart')}
-  return res.json().catch(() => ({}))}
+    throw new Error('Failed to merge cart')}'  return res.json().catch(() => ({}))}'

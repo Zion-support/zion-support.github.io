@@ -1,49 +1,18 @@
-import { useParams } from "react - router - dom";
-import { useState } from "react";
-import React, { useState } from 'react';
-import { HiringAnalytics } from "@/components / hiring - tracker / HiringAnalytics";
-import { KanbanBoard } from "@/components / hiring - tracker / KanbanBoard";
-import { ProtectedRoute } from "@/components / ProtectedRoute";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";
-import SEO from "@/components / SEO";
-export default function HiringTracker () {
-import { Briefcase function HiringTrackerContent () {
+import { useParams } from "react - router - dom";"import { useState } from "react";"import React, { useState } from 'react';'import { HiringAnalytics } from "@/components / hiring - tracker / HiringAnalytics";"import { KanbanBoard } from "@/components / hiring - tracker / KanbanBoard";"import { ProtectedRoute } from "@/components / ProtectedRoute";"import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components / ui / tabs";"import SEO from "@/components / SEO";"export default function HiringTracker () {"import { Briefcase function HiringTrackerContent () {;
 
     const { jobId } = useParams () ;
-    const [activeTab, setActiveTab] = useState ("kanban") ;
-    return (<>
-      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
-
-      <main className="container mx - auto px - 4 py - 8">
-        <div className="flex justify - between items - center mb - 8">
-          <div>
-            <h1 className="text - 3xl font - bold flex items - center">
-              <Briefcase className="mr - 2 h - 6 w - 6 text - primary"/>
-              Hiring Pipeline
-            </h1>
-            <p className="text - muted - foreground mt - 1">
-              Track and manage your candidates through the hiring process
-            </p>
+    const [activeTab, setActiveTab] = useState ("kanban") ;"    return (<>"      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>""      <main className="container mx - auto px - 4 py - 8">"        <div className="flex justify - between items - center mb - 8">"          <div>"            <h1 className="text - 3xl font - bold flex items - center">"              <Briefcase className="mr - 2 h - 6 w - 6 text - primary"/>"              Hiring Pipeline"            </h1>
+            <p className="text - muted - foreground mt - 1">"              Track and manage your candidates through the hiring process"            </p>
           </div>
         </div>
 
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb - 8">
-          <TabsList>
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb - 8">"          <TabsList>"            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"            <TabsTrigger value="analytics">Analytics</TabsTrigger>"          </TabsList>"
+          <TabsContent value="kanban" className="mt - 6">"            <KanbanBoard jobId={jobId}/>"          </TabsContent>
 
-          <TabsContent value="kanban" className="mt - 6">
-            <KanbanBoard jobId={jobId}/>
-          </TabsContent>
-
-          <TabsContent value="analytics" className="mt - 6">
-            <HiringAnalytics jobId={jobId}/>
-          </TabsContent>
+          <TabsContent value="analytics" className="mt - 6">"            <HiringAnalytics jobId={jobId}/>"          </TabsContent>
         </Tabs>
       </main>
-
-    </>) }
+</>) }
     return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>) }

@@ -1,20 +1,10 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/SmartContractRiskScanner.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import {
-  Shield,
-  Search,
-  AlertTriangle,
-  CheckCircle,
-========
+<=
 import {
   Shield, 
   Search, 
   AlertTriangle, 
   CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/SmartContractRiskScanner.tsx
-  ArrowRight,
+>  ArrowRight,
   Lock,
   Database,
   BarChart3,
@@ -72,7 +62,6 @@ export default function SmartContractRiskScanner(...args: []):  {
         'Custom integrations',;'
         'On-premise deployment',;'        'Compliance certifications';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
@@ -85,22 +74,14 @@ export default function SmartContractRiskScanner(...args: []):  {
     growthRate: '23.4% CAGR','
     averageMarketPrice: '$500-$2,000/month','
     setupTime: '1-2 weeks',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   roi: '300-500% within 6 months'}};
 
-<<<<<<<< HEAD:pages.disabled/pages/services/SmartContractRiskScanner.tsx
-};
-
-  const supportedNetworks = [
-    'Ethereum',
-    'Binance Smart Chain',;
-========
+<=
   
->>>>>>>> main:backup-pages/src-pages/services/SmartContractRiskScanner.tsx
-    'Polygon',;
+>    'Polygon',;
     'Solana',;
     'Avalanche',;
     'Arbitrum',;
@@ -108,39 +89,22 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Base';
   ];
 
-<<<<<<< HEAD
-  
-    'OWASP Top 10',;
-    'Smart Contract Security Verification Standard',;
-    'Ethereum Security Best Practices',;
-    'DeFi Security Guidelines',;
-    'ISO 27001 Compliance',;
-    'SOC 2 Type II';
-=======
+
   const securityStandards = [;'
     'OWASP Top 10',;'
     'Smart Contract Security Verification Standard',;'
     'Ethereum Security Best Practices',;'
     'DeFi Security Guidelines',;'
     'ISO 27001 Compliance',;'    'SOC 2 Type II';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/SmartContractRiskScanner.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/SmartContractRiskScanner.tsx
-        title="Smart Contract Risk Scanner - Zion Tech Group"
-        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
-       />
-=======
+
         title="Smart Contract Risk Scanner - Zion Tech Group""        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 overflow-hidden">"

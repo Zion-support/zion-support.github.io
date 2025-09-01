@@ -1,14 +1,4 @@
-<<<<<<< HEAD:pages.disabled/utils/errorBoundary.tsx
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-export { ErrorBoundary };
-import { motion } from 'framer - motion.ts';
 
-interface Props extends React.PropsWithChildren<{}> {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-=======
->>>>>>> main:src/utils/errorBoundary.tsx
 
 interface State {
   hasError: boolean;

@@ -6,24 +6,9 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
     'Secure cloud storage with enterprise-grade encryption',;
     'Custom workflow automation for document approval',;
     'Integration with major business applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDocumentIntelligence.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Basic',
-      price: '$149/mo',
-      details: ['Up to 1,000 pages/month', '5 user accounts', 'Basic OCR & extraction', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$399/mo',
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIDocumentIntelligence.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$999/mo', ;
       details: ['Unlimited pages',Unlimited users',Custom AI models',24/7 dedicated support'] },;

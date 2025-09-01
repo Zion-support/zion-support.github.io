@@ -20,12 +20,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
-<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
-  { duration: 1, repeat: Infinity,
-  ease: "linear"
 
-}} className={`${sizeClasses[size]} text-zion-purple`}>
-=======
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
@@ -36,7 +31,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 `
 }} className={`${sizeClasses[size]} text-zion-purple`}>"
->>>>>>> main:backup-pages/ui/loading-fallback.jsx
         <Loader2 className="w-full h-full"/>
       </motion.div>
 
@@ -53,14 +47,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 }} transition = {
 
   { delay: 0.2,
-<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
-  duration: 0.3
 
-}} className={`${textSizes[size]} text-zion-slate-light text-center`}>
-        {message}
-      </motion.p>
-
-=======
   duration: 0.3 
 
 
@@ -72,7 +59,6 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
         {message}
       </motion.p>
       "
->>>>>>> main:backup-pages/ui/loading-fallback.jsx
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
 
   { delay: 0.4,
@@ -111,12 +97,7 @@ export function InlineLoading({ message = "Loading..." }) {
 "
     return (<div className="flex items-center space-x-2 text-zion-slate-light">
       <motion.div animate={{ rotate: 360 }} transition = {
-<<<<<<< HEAD:src/components/ui/loading-fallback.jsx
-  { duration: 1, repeat: Infinity,
-  ease: "linear"
 
-}} className="w-4 h-4 text-zion-purple">
-=======
 
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
@@ -127,7 +108,6 @@ export function InlineLoading({ message = "Loading..." }) {
 
 "
 }} className="w-4 h-4 text-zion-purple">"
->>>>>>> main:backup-pages/ui/loading-fallback.jsx
         <Loader2 className="w-full h-full"/>
       </motion.div>"
       <span className="text-sm">{message}</span>

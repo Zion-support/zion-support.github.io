@@ -1,75 +1,11 @@
-<<<<<<< HEAD
-import {
 
-  Leaf,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Sun,
-  Wind,
-  Battery,
-  Recycle,
-  Tree,
-  Lightbulb,
-  Gauge,
-  Target,
-  Award,
-  BarChart3'
-} from 'lucide-react';
-;
-export { function };
-export default function GreenIT(...args: unknown[]): unknown {
-  
-    },;
-    {;
-      icon: Recycle,;
-      title: 'Circular IT Economy',;
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'};
-  ];
-
-  
-    {;
-      title: 'Green Software Development',;
-      description: 'Develop energy-efficient software applications and optimize existing systems',;
-      icon: Code,;
-      benefits: ['Reduced computational overhead',Lower energy consumption',Improved performance']};
-  ];
-
-  
-    {;
-      industry: 'Manufacturing',;
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',;
-      icon: Factory,;
-      metrics: ['Production Efficiency',Energy Consumption',Environmental Compliance']};
-  ]},;
-    {;
-      icon: Award,;
-      title: 'Brand Reputation',;
-      description: 'Enhance brand image through commitment to sustainability'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="Green IT Services - Zion Tech Group"
-        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
-      />
-=======
+
         title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -126,12 +62,9 @@ export default function GreenIT(...args: unknown[]): unknown {
               environmental impact and improve operational efficiency.
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/GreenIT.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/GreenIT.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {greenServices.map((service, index)  => ("
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -166,12 +99,9 @@ export default function GreenIT(...args: unknown[]): unknown {
               environmentally responsible IT solutions.
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/GreenIT.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/GreenIT.tsx
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {greenTechnologies.map((tech, index)  => ("
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"

@@ -9,7 +9,9 @@ import { toast } from 'sonner';
 
 // Mocks
 jest.mock('@/layout/AppLayout', () => ({
-  AppLayout: ({ children }: { children: React.ReactNode }) => <div data-testid="app-layout">{children}</div>,
+  AppLayout: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="app-layout">{children}</div>
+  ),
 }));
 
 jest.mock('@/hooks/useAuth', () => ({
@@ -42,8 +44,9 @@ describe('TeamBuilderPage', () => {
     jest.mocked(toast.info).mockClear();
     // Reset useAuth mock for each test if its behavior needs to change per test,
     // for now, it consistently returns a user.
-    jest.mocked(useAuth).mockImplementation(() => ({ user: { id: 'test-user-id' } } as any));
-
+    jest
+      .mocked(useAuth)
+      .mockImplementation(() => ({ user: { id: 'test-user-id' } }) as any);
   });
 
   it('renders the initial form step correctly', () => {
@@ -58,47 +61,74 @@ describe('TeamBuilderPage', () => {
     render(<TeamBuilderPage />);
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
 
-    expect(await screen.findByText('Project name must be at least 3 characters')).toBeVisible();
-    expect(await screen.findByText('Goals/scope must be at least 10 characters')).toBeVisible();
+    expect(
+      await screen.findByText('Project name must be at least 3 characters')
+    ).toBeVisible();
+    expect(
+      await screen.findByText('Goals/scope must be at least 10 characters')
+    ).toBeVisible();
   });
 
   it('navigates to the second step on valid input for step 1', async () => {
     render(<TeamBuilderPage />);
-    fireEvent.input(screen.getByLabelText(/Project Name/i), { target: { value: 'My New Project' } });
-    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), { target: { value: 'This is a detailed goal for the project.' } });
+    fireEvent.input(screen.getByLabelText(/Project Name/i), {
+      target: { value: 'My New Project' },
+    });
+    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), {
+      target: { value: 'This is a detailed goal for the project.' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
 
     // Check for elements on step 2
     expect(await screen.findByLabelText(/Timeline/i)).toBeVisible();
     expect(screen.getByLabelText(/Budget/i)).toBeVisible();
-    expect(screen.getByRole('button', { name: /Previous/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Previous/i })
+    ).toBeInTheDocument();
   });
 
   it('navigates to the review step (step 3) on valid input for step 2', async () => {
     render(<TeamBuilderPage />);
     // Step 1
-    fireEvent.input(screen.getByLabelText(/Project Name/i), { target: { value: 'My New Project' } });
-    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), { target: { value: 'This is a detailed goal for the project.' } });
+    fireEvent.input(screen.getByLabelText(/Project Name/i), {
+      target: { value: 'My New Project' },
+    });
+    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), {
+      target: { value: 'This is a detailed goal for the project.' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
 
     // Step 2
-    await screen.findByLabelText(/Timeline/i) // ensure step 2 is loaded
-    fireEvent.input(screen.getByLabelText(/Timeline/i), { target: { value: '3 months' } });
-    fireEvent.input(screen.getByLabelText(/Budget/i), { target: { value: '$5000' } });
+    await screen.findByLabelText(/Timeline/i); // ensure step 2 is loaded
+    fireEvent.input(screen.getByLabelText(/Timeline/i), {
+      target: { value: '3 months' },
+    });
+    fireEvent.input(screen.getByLabelText(/Budget/i), {
+      target: { value: '$5000' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
 
     // Check for elements on step 3 (Review)
     expect(await screen.findByText(/Review Your Project Brief/i)).toBeVisible();
-    expect(screen.getByRole('button', { name: /Get Team Recommendation/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Get Team Recommendation/i })
+    ).toBeInTheDocument();
   });
-
 
   it('submits the form and displays recommendation on success', async () => {
     const mockRecommendation = {
       id: 'rec-123', // Added id as TeamRecommendationDisplay might use it
       project_brief_id: 'brief-xyz', // Added project_brief_id
       recommendationSummary: '1 PM, 1 Dev',
-      roles: [{ role: 'Developer', description: 'Writes code', hourlyRateRange: {min: 50, max: 80}, weeklyHours: 40, matchedTalent: [] }],
+      roles: [
+        {
+          role: 'Developer',
+          description: 'Writes code',
+          hourlyRateRange: { min: 50, max: 80 },
+          weeklyHours: 40,
+          matchedTalent: [],
+        },
+      ],
       totalEstimatedRate: { min: 2000, max: 3200 },
       totalWeeklyBurn: { min: 2000, max: 3200 },
       totalProjectEstimate: { min: 24000, max: 38400 },
@@ -111,25 +141,42 @@ describe('TeamBuilderPage', () => {
 
     render(<TeamBuilderPage />);
     // Fill step 1
-    fireEvent.input(screen.getByLabelText(/Project Name/i), { target: { value: 'Final Project' } });
-    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), { target: { value: 'Final goals for submission test.' } });
+    fireEvent.input(screen.getByLabelText(/Project Name/i), {
+      target: { value: 'Final Project' },
+    });
+    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), {
+      target: { value: 'Final goals for submission test.' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
     // Fill step 2
     await screen.findByLabelText(/Timeline/i);
-    fireEvent.input(screen.getByLabelText(/Timeline/i), { target: { value: '6 weeks' } });
-    fireEvent.input(screen.getByLabelText(/Budget/i), { target: { value: '$10000' } });
+    fireEvent.input(screen.getByLabelText(/Timeline/i), {
+      target: { value: '6 weeks' },
+    });
+    fireEvent.input(screen.getByLabelText(/Budget/i), {
+      target: { value: '$10000' },
+    });
     // Optional: Fill talent filters if their absence causes issues or if they are part of default state
     // fireEvent.input(screen.getByLabelText(/Regions/i), { target: { value: 'Global' } });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
     // Submit on step 3
     await screen.findByText(/Review Your Project Brief/i);
-    fireEvent.click(screen.getByRole('button', { name: /Get Team Recommendation/i }));
+    fireEvent.click(
+      screen.getByRole('button', { name: /Get Team Recommendation/i })
+    );
 
-    expect(await screen.findByText('Team Recommendation Generated!')).toBeVisible();
-    expect(screen.getByText(mockRecommendation.recommendationSummary)).toBeVisible();
+    expect(
+      await screen.findByText('Team Recommendation Generated!')
+    ).toBeVisible();
+    expect(
+      screen.getByText(mockRecommendation.recommendationSummary)
+    ).toBeVisible();
     expect(screen.getByText('Developer')).toBeVisible();
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith('/api/team-builder/generate', expect.any(Object));
+    expect(fetch).toHaveBeenCalledWith(
+      '/api/team-builder/generate',
+      expect.any(Object)
+    );
   });
 
   it('shows an error toast if API call fails', async () => {
@@ -140,15 +187,25 @@ describe('TeamBuilderPage', () => {
 
     render(<TeamBuilderPage />);
     // Fill form quickly to get to submit
-    fireEvent.input(screen.getByLabelText(/Project Name/i), { target: { value: 'Error Project' } });
-    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), { target: { value: 'Error goals for failure test.' } });
+    fireEvent.input(screen.getByLabelText(/Project Name/i), {
+      target: { value: 'Error Project' },
+    });
+    fireEvent.input(screen.getByLabelText(/Goals \/ Scope/i), {
+      target: { value: 'Error goals for failure test.' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
     await screen.findByLabelText(/Timeline/i);
-    fireEvent.input(screen.getByLabelText(/Timeline/i), { target: { value: '1 week' } });
-    fireEvent.input(screen.getByLabelText(/Budget/i), { target: { value: '$1000' } });
+    fireEvent.input(screen.getByLabelText(/Timeline/i), {
+      target: { value: '1 week' },
+    });
+    fireEvent.input(screen.getByLabelText(/Budget/i), {
+      target: { value: '$1000' },
+    });
     fireEvent.click(screen.getByRole('button', { name: /Next/i }));
     await screen.findByText(/Review Your Project Brief/i);
-    fireEvent.click(screen.getByRole('button', { name: /Get Team Recommendation/i }));
+    fireEvent.click(
+      screen.getByRole('button', { name: /Get Team Recommendation/i })
+    );
 
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalledWith('AI failed miserably');

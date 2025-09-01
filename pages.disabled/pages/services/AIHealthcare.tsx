@@ -6,24 +6,9 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Telemedicine and remote patient monitoring',;
     'Integration with major EHR and healthcare systems',;
     'Custom AI models for specialized medical domains';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcare.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Practice',
-      price: '$399/mo',
-      details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Practice',
-      price: '$999/mo',
-      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcare.tsx
-    { ;
+>    { ;
       name: 'Large Health System', ;
       price: '$2,999/mo', ;
       details: ['Unlimited patients',Custom AI models',Full system integration',24/7 dedicated support'] },;

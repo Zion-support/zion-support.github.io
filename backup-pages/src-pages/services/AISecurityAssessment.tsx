@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven assessment automation and orchestration',;
     'Real-time assessment performance tracking',;
     'Custom AI models for assessment applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityAssessment.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$499/mo',
-      details: ['Up to 5 assessments/month', 'Basic AI features', 'Standard assessment', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityAssessment.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,199/mo', ;
       details: ['Unlimited assessments',Custom AI models',Full assessment suite',24/7 dedicated support'] },;

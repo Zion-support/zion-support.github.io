@@ -1,75 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Heart,
-  Brain,
-  Activity,
-  Shield,
-  Zap,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Heart, 
-  Brain, 
-  Activity, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  Users,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Lock,
-  Eye,
-  PieChart,
-  TrendingUp,
-  AlertTriangle'
- } from 'lucide-react';
-;
-export { function };
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {
+<=
 
-  
-    },;
-    {;
-      icon: Eye,;
-      title: 'Medical Image Analysis',;
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
-  ];
-
-  
-        'On-premise options',;
-        'SLA guarantees',;
-        'Custom integrations';
-      ],;
-      popular: false};
-  ]},;
-    {;
-      icon: BarChart3,;
-      title: '40% Cost Reduction',;
-      description: 'AI optimization reduces healthcare costs and improves efficiency'};
-  ]},;
-    {;
-      title: 'Drug Safety Monitoring',;
-      description: 'Real-time monitoring of drug interactions and adverse effects',;
-      icon: Shield};
-  ];
-
-  
-    'HIPAA Compliant',;
-    'FDA Approved',;
-    'ISO 13485',;
-    'SOC 2 Type II',;
-    'GDPR Compliant',;
-    'HITECH Certified';
-=======
       icon: Shield};
   ];
 
@@ -79,24 +9,15 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     'ISO 13485',;'
     'SOC 2 Type II',;'
     'GDPR Compliant',;'    'HITECH Certified';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
-        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
-       />
-=======
+
         title="AI Healthcare Analytics Platform - Zion Tech Group""        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -525,12 +446,9 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 Contact Healthcare Team
               </button>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-            <p className="text-gray-400 mt-6">;
+>            <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • HIPAA compliant;
             </p>;
           </motion.div>;

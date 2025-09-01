@@ -1,30 +1,21 @@
-import React from 'react';
-export const calculateRelevanceScore = (result, searchTerm) => {
-export const debounceSearch = (func, delay) => {
-export const filterSearchResults = (results, filters) => {
-export const getSearchSuggestions = (searchHistory = [],
-export const highlightSearchTerms = (text, searchTerm) => {
-export const matchesSearchTerm = (text, searchTerm) => {
-export const performSearch = (data,
-export const sortSearchResults = (results, sortBy, searchTerm) => {
+import React from 'react';'export const calculateRelevanceScore = (result, searchTerm) => {'export const debounceSearch = (func, delay) => {;
+export const filterSearchResults = (results, filters) => {;
+export const getSearchSuggestions = (searchHistory = [], export const highlightSearchTerms = (text, searchTerm) => {;
+export const matchesSearchTerm = (text, searchTerm) => {;
+export const performSearch = (data, export const sortSearchResults = (results, sortBy, searchTerm) => {;
 export default {
 
 /**
- * Highlight search terms in text with HTML mark tags
+ * Highlight search terms in text with HTML mark tags*/
  */
-export const highlightSearchTerms = (text, searchTerm) => {
+export const highlightSearchTerms = (text, searchTerm) => {;
 
     if (!searchTerm.trim())
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');
-    const regex = new RegExp(`(${escaped})`,gi');
-    return text.replace(regex,<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>);
-};
-
-/**
- * Check if a text contains the search term (case-insensitive)
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, \\$&');''    const regex = new RegExp(`(${escaped})`, gi');''    return text.replace(regex, <mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>);"};"`/**
+ * Check if a text contains the search term (case-insensitive)*/
  */
-export const matchesSearchTerm = (text, searchTerm) => {
+export const matchesSearchTerm = (text, searchTerm) => {;
 
     if (!text || !searchTerm.trim())
         return false;
@@ -32,9 +23,9 @@ export const matchesSearchTerm = (text, searchTerm) => {
 };
 
 /**
- * Calculate relevance score for search results
+ * Calculate relevance score for search results*/
  */
-export const calculateRelevanceScore = (result, searchTerm) => {
+export const calculateRelevanceScore = (result, searchTerm) => {;
 
     let score = 0;
 
@@ -81,33 +72,19 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 };
 
 /**
- * Sort search results based on sort option
+ * Sort search results based on sort option*/
  */
-export const sortSearchResults = (results, sortBy, searchTerm) => {
+export const sortSearchResults = (results, sortBy, searchTerm) => {;
 
     const sortedResults = [...results];
     
     switch (sortBy) {
 
-        case 'price_asc':
-            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
-        case 'price_desc':
-            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
-        case 'rating':
-            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
-        case 'date':
-            return sortedResults.sort((a, b) => {
-
-                const dateA = a.date ? new Date(a.date).getTime() : 0;
+        case 'price_asc': return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));'        case 'price_desc': return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));'        case 'rating': return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));'        case 'date': return sortedResults.sort((a, b) => {''                const dateA = a.date ? new Date(a.date).getTime() : 0;
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
             });
-        case 'alphabetical':
-            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
-        case 'relevance':
-        default:
-            return sortedResults.sort((a, b) => {
-
+        case 'alphabetical': return sortedResults.sort((a, b) => a.title.localeCompare(b.title));'        case 'relevance': default:'            return sortedResults.sort((a, b) => {'
                 const scoreA = calculateRelevanceScore(a, searchTerm);
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
@@ -116,9 +93,9 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
 };
 
 /**
- * Filter search results based on active filters
+ * Filter search results based on active filters*/
  */
-export const filterSearchResults = (results, filters) => {
+export const filterSearchResults = (results, filters) => {;
 
     let filteredResults = [...results];
     
@@ -156,17 +133,14 @@ export const filterSearchResults = (results, filters) => {
 };
 
 /**
- * Perform search with filtering and sorting
- */'
-export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {
-
-    if (!searchTerm.trim()) {
+ * Perform search with filtering and sorting*/
+ */'''export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {''    if (!searchTerm.trim()) {;
 
         return sortSearchResults(data, sortBy, searchTerm);
     }
 
     // Filter by search term
-    const searchResults = data.filter(item => 
+    const searchResults = data.filter(item => ;
         matchesSearchTerm(item.title, searchTerm) ||
         matchesSearchTerm(item.description, searchTerm) ||
         matchesSearchTerm(item.category, searchTerm) ||
@@ -181,11 +155,8 @@ export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevanc
 };
 
 /**
- * Get search suggestions based on search history and popular terms
- */'
-export const getSearchSuggestions = (searchHistory = [], popularTerms = [], currentInput = '') => {
-
-    const suggestions = [];
+ * Get search suggestions based on search history and popular terms*/
+ */'''export const getSearchSuggestions = (searchHistory = [], popularTerms = [], currentInput = '') => {''    const suggestions = [];
 
     // Add matching search history
     if (currentInput) {
@@ -207,9 +178,9 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
 };
 
 /**
- * Debounce search function to avoid excessive API calls
+ * Debounce search function to avoid excessive API calls*/
  */
-export const debounceSearch = (func, delay) => {
+export const debounceSearch = (func, delay) => {;
 
     let timeoutId;
     return (...args) => {
@@ -219,17 +190,12 @@ export const debounceSearch = (func, delay) => {
     };
 };
 
-export default {
 
-    highlightSearchTerms,
-    matchesSearchTerm,
-    calculateRelevanceScore,
-    sortSearchResults,
-    filterSearchResults,
-    performSearch,
-    getSearchSuggestions,
-    debounceSearch
+    highlightSearchTerms, matchesSearchTerm,
+    calculateRelevanceScore, sortSearchResults,
+    filterSearchResults, performSearch,
+    getSearchSuggestions, debounceSearch
 };
 
 
-'"`
+'"`'"""`

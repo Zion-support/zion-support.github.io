@@ -1,65 +1,4 @@
-<<<<<<< HEAD
-import { Search, 
 
-
-  ArrowRight, 
-  DollarSign, 
-  ExternalLink, 
-  Workflow, 
-  MessageSquare, 
-  Globe, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Heart, 
-  Lock, 
-  Users, 
-  BarChart3,
-  Target,
-  TrendingUp,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Filter,
-  SortAsc,
-  Eye,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Atom,
-  Sparkles,
-  Bot,
-  Workflow as WorkflowIcon,
-  Globe2,
-  Wifi,
-  ShieldCheck,
-  Server,
-  Chip'
- } from 'lucide-react.ts';
-
-// Mock data for 2027 services;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const Services2027: React.FC = (): JSX.Element => {
 
   const [query, setQuery] = useState('');
@@ -114,18 +53,11 @@ const Services2027: React.FC = (): JSX.Element => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
-<<<<<<< HEAD
-        title="2027 Services - Zion Tech Group"
-        description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology."
-        keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin"
-        canonicalUrl="https://ziontechgroup.com/services2027"
-       />
-=======
+
         title="2027 Services - Zion Tech Group" "
         description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology." "
         keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin""        canonicalUrl="https://ziontechgroup.com/services2027"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -174,12 +106,8 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search 2027 services..."
-=======
+
                     type="text""                    placeholder="Search 2027 services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50"

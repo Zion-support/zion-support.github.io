@@ -1,39 +1,11 @@
-<<<<<<< HEAD
 
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
-  width?: string | number;
-  height?: string | number;
-  lines?: number;
-  animated?: boolean}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-
-  className,
-variant:  'default',;
-  width,;
-  height,;
-  lines = 1,;
-  animated = true,}) => {;
-  
-  
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   card: 'w-full h-32 rounded-lg'};
 
-<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
-};
 
-  const skeletonClasses = cn(;
-=======
   
->>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
     baseClasses,;
     variants[variant],;
     className;
@@ -72,12 +44,7 @@ variant:  'default',;
 
 
 ;
-<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
-;
-;
 
-=======
->>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
 }};
           />;
         ))};
@@ -107,12 +74,7 @@ variant:  'default',;
         repeat: Infinity,;
   ease: 'easeInOut';
       ;
-<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
-;
-;
 
-=======
->>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
 }};
     />;
   )};
@@ -124,16 +86,7 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
   cn('p-6 space-y-4',
   className)
 
-<<<<<<< HEAD:src/components/ui/EnhancedSkeleton.tsx
-}>
-    <Skeleton variant="rectangular" height={24} width="60%" />
-    <Skeleton variant="text" lines={3} />;
-    <div className="flex space-x-2">;
-      <Skeleton variant="circular" width={32} height={32} />;
-      <Skeleton variant="circular" width={32} height={32} />;
-      <Skeleton variant="circular" width={32} height={32} />;
-    </div>;
-=======
+
 
 
 
@@ -146,7 +99,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
       <Skeleton variant="circular" width={32} height={32}  />;"
       <Skeleton variant="circular" width={32} height={32}  />;"
       <Skeleton variant="circular" width={32} height={32}  />;    </div>;
->>>>>>> main:backup-pages/ui/EnhancedSkeleton.tsx
   </div>;
 );
 

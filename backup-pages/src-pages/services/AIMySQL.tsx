@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven MySQL automation and orchestration',;
     'Real-time MySQL analytics and insights',;
     'Custom AI models for MySQL applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMySQL.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$199/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$599/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIMySQL.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited storage',Custom AI models',Full MySQL suite',24/7 dedicated support'] },;

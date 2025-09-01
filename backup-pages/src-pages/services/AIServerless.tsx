@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven serverless automation and orchestration',;
     'Real-time serverless analytics and insights',;
     'Custom AI models for serverless applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServerless.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$299/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$799/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIServerless.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage',Custom AI models',Full serverless suite',24/7 dedicated support'] },;

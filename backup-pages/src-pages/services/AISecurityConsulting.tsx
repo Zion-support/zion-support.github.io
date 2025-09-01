@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven consulting automation and orchestration',;
     'Real-time consulting performance tracking',;
     'Custom AI models for consulting applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityConsulting.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$799/mo',
-      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,999/mo',
-      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityConsulting.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited hours',Custom AI models',Full consulting suite',24/7 dedicated support'] },;

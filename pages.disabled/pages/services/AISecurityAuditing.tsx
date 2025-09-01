@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven auditing automation and orchestration',;
     'Real-time auditing performance tracking',;
     'Custom AI models for auditing applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityAuditing.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 5 audits/month', 'Basic AI features', 'Standard auditing', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityAuditing.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited audits',Custom AI models',Full auditing suite',24/7 dedicated support'] },;

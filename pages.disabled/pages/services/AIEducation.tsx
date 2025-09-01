@@ -6,24 +6,9 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     'Learning analytics and progress tracking',;
     'Integration with major LMS and educational platforms',;
     'Custom AI models for subject-specific learning';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEducation.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Individual Teacher',
-      price: '$99/mo',
-      details: ['Up to 50 students', 'Basic AI features', 'Standard content', 'Email support']
-    },
-    {
-      name: 'School District',
-      price: '$399/mo',
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIEducation.tsx
-    { ;
+>    { ;
       name: 'University', ;
       price: '$999/mo', ;
       details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] },;

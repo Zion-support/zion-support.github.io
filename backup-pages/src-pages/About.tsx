@@ -21,103 +21,110 @@ import {
   Building,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "We push the boundaries of technology to create groundbreaking solutions that shape the future."
+      title: 'Innovation',
+      description:
+        'We push the boundaries of technology to create groundbreaking solutions that shape the future.',
     },
     {
       icon: Shield,
-      title: "Security",
-      description: "Security is at the core of everything we do, ensuring your data and systems are always protected."
+      title: 'Security',
+      description:
+        'Security is at the core of everything we do, ensuring your data and systems are always protected.',
     },
     {
       icon: Heart,
-      title: "Excellence",
-      description: "We maintain the highest standards in all our work, delivering exceptional quality every time."
+      title: 'Excellence',
+      description:
+        'We maintain the highest standards in all our work, delivering exceptional quality every time.',
     },
     {
       icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and building strong partnerships with our clients."
-    }
+      title: 'Collaboration',
+      description:
+        'We believe in the power of teamwork and building strong partnerships with our clients.',
+    },
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "150+", label: "Happy Clients" },
-    { number: "50+", label: "Team Members" },
-    { number: "99.9%", label: "Uptime" }
+    { number: '500+', label: 'Projects Completed' },
+    { number: '150+', label: 'Happy Clients' },
+    { number: '50+', label: 'Team Members' },
+    { number: '99.9%', label: 'Uptime' },
   ];
 
   const team = [
     {
-      name: "Alex Chen",
-      role: "CEO & Founder",
-      description: "Visionary leader with 15+ years in enterprise technology",
-      image: "/api/placeholder/300/300"
+      name: 'Alex Chen',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in enterprise technology',
+      image: '/api/placeholder/300/300',
     },
     {
-      name: "Sarah Rodriguez",
-      role: "CTO",
-      description: "Expert in AI and machine learning with PhD in Computer Science",
-      image: "/api/placeholder/300/300"
+      name: 'Sarah Rodriguez',
+      role: 'CTO',
+      description:
+        'Expert in AI and machine learning with PhD in Computer Science',
+      image: '/api/placeholder/300/300',
     },
     {
-      name: "Michael Johnson",
-      role: "Head of Security",
-      description: "Cybersecurity specialist with experience in defense and finance",
-      image: "/api/placeholder/300/300"
+      name: 'Michael Johnson',
+      role: 'Head of Security',
+      description:
+        'Cybersecurity specialist with experience in defense and finance',
+      image: '/api/placeholder/300/300',
     },
     {
-      name: "Emily Wang",
-      role: "Head of Cloud Operations",
-      description: "Cloud architecture expert with extensive DevOps experience",
-      image: "/api/placeholder/300/300"
-    }
+      name: 'Emily Wang',
+      role: 'Head of Cloud Operations',
+      description: 'Cloud architecture expert with extensive DevOps experience',
+      image: '/api/placeholder/300/300',
+    },
   ];
 
   const timeline = [
     {
-      year: "2018",
-      title: "Company Founded",
-      description: "Started with a vision to revolutionize enterprise technology"
+      year: '2018',
+      title: 'Company Founded',
+      description:
+        'Started with a vision to revolutionize enterprise technology',
     },
     {
-      year: "2019",
-      title: "First Major Client",
-      description: "Secured partnership with Fortune 500 company"
+      year: '2019',
+      title: 'First Major Client',
+      description: 'Secured partnership with Fortune 500 company',
     },
     {
-      year: "2020",
-      title: "AI Division Launch",
-      description: "Launched dedicated AI and machine learning services"
+      year: '2020',
+      title: 'AI Division Launch',
+      description: 'Launched dedicated AI and machine learning services',
     },
     {
-      year: "2021",
-      title: "Global Expansion",
-      description: "Opened offices in London and Singapore"
+      year: '2021',
+      title: 'Global Expansion',
+      description: 'Opened offices in London and Singapore',
     },
     {
-      year: "2022",
-      title: "Security Certification",
-      description: "Achieved SOC 2 Type II and ISO 27001 certifications"
+      year: '2022',
+      title: 'Security Certification',
+      description: 'Achieved SOC 2 Type II and ISO 27001 certifications',
     },
     {
-      year: "2023",
-      title: "Quantum Computing",
-      description: "Launched quantum computing research division"
+      year: '2023',
+      title: 'Quantum Computing',
+      description: 'Launched quantum computing research division',
     },
     {
-      year: "2024",
-      title: "500+ Projects",
-      description: "Reached milestone of 500 completed projects"
-    }
+      year: '2024',
+      title: '500+ Projects',
+      description: 'Reached milestone of 500 completed projects',
+    },
   ];
 
   return (
@@ -133,13 +140,15 @@ const About = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               About
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Zion Tech Group
+                {' '}
+                Zion Tech Group
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We are a forward-thinking technology company dedicated to transforming businesses 
-              through innovative AI, cybersecurity, and cloud solutions. Our mission is to 
-              empower organizations with cutting-edge technology that drives growth and success.
+              We are a forward-thinking technology company dedicated to
+              transforming businesses through innovative AI, cybersecurity, and
+              cloud solutions. Our mission is to empower organizations with
+              cutting-edge technology that drives growth and success.
             </p>
           </motion.div>
         </div>
@@ -182,10 +191,11 @@ const About = () => {
               <Target className="w-12 h-12 text-cyan-400 mb-6" />
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-gray-300 leading-relaxed">
-                To democratize advanced technology by making cutting-edge AI, cybersecurity, 
-                and cloud solutions accessible to businesses of all sizes. We strive to be 
-                the trusted technology partner that accelerates digital transformation and 
-                drives sustainable growth.
+                To democratize advanced technology by making cutting-edge AI,
+                cybersecurity, and cloud solutions accessible to businesses of
+                all sizes. We strive to be the trusted technology partner that
+                accelerates digital transformation and drives sustainable
+                growth.
               </p>
             </motion.div>
 
@@ -199,10 +209,11 @@ const About = () => {
               <Rocket className="w-12 h-12 text-cyan-400 mb-6" />
               <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
               <p className="text-gray-300 leading-relaxed">
-                To be the world's leading technology innovation company, pioneering solutions 
-                that shape the future of business. We envision a world where intelligent 
-                technology seamlessly enhances human potential and creates unprecedented 
-                opportunities for growth and success.
+                To be the world's leading technology innovation company,
+                pioneering solutions that shape the future of business. We
+                envision a world where intelligent technology seamlessly
+                enhances human potential and creates unprecedented opportunities
+                for growth and success.
               </p>
             </motion.div>
           </div>
@@ -262,7 +273,7 @@ const About = () => {
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400"></div>
-            
+
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <motion.div
@@ -273,18 +284,22 @@ const About = () => {
                   viewport={{ once: true }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                  <div
+                    className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}
+                  >
                     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                      <div className="text-cyan-400 font-bold text-2xl mb-2">{item.year}</div>
+                      <div className="text-cyan-400 font-bold text-2xl mb-2">
+                        {item.year}
+                      </div>
                       <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                       <p className="text-gray-300">{item.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="relative z-10">
                     <div className="w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900"></div>
                   </div>
-                  
+
                   <div className="w-1/2"></div>
                 </motion.div>
               ))}
@@ -305,7 +320,8 @@ const About = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Meet Our Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Passionate professionals dedicated to delivering exceptional results
+              Passionate professionals dedicated to delivering exceptional
+              results
             </p>
           </motion.div>
 
@@ -344,7 +360,8 @@ const About = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that trust Zion Tech Group to drive their digital transformation
+              Join hundreds of companies that trust Zion Tech Group to drive
+              their digital transformation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

@@ -23,7 +23,6 @@ export default function AIAutonomousVehiclePlatform() {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Regulatory compliance tools';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   
@@ -43,32 +42,20 @@ export default function AIAutonomousVehiclePlatform() {
     'Reduce carbon emissions through optimized routing';
   ];
 
-<<<<<<< HEAD
-  
-    'Transportation and Logistics',;
-    'Automotive Manufacturing',;
-    'Ride-sharing Services',;
-    'Public Transit',;
-    'Construction and Mining',;
-    'Agriculture and Farming';
-=======
+
   const industries = [;'
     'Transportation and Logistics',;'
     'Automotive Manufacturing',;'
     'Ride-sharing Services',;'
     'Public Transit',;'
     'Construction and Mining',;'    'Agriculture and Farming';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousVehiclePlatform.tsx
-        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
+>        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
         keywords="AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation"
        />

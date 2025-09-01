@@ -36,25 +36,32 @@ const AdminTrustScoresPage: React.FC = () => {
         // ideally via an auth context or environment variable for client-side calls if absolutely necessary,
         // but it's best if admin API calls are made from a secure backend context or with proper session management.
         // For this example, we are simulating a header.
-        const adminSecret = process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY || "your-dev-secret"; // Fallback for dev
+        const adminSecret =
+          process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY || 'your-dev-secret'; // Fallback for dev
 
-        const response = await fetch(`/api/admin/trust-scores?page=${page}&limit=${limit}`, {
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Admin-Secret': adminSecret
+        const response = await fetch(
+          `/api/admin/trust-scores?page=${page}&limit=${limit}`,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Admin-Secret': adminSecret,
+            },
           }
-        });
+        );
 
         if (!response.ok) {
           const errorData = await response.json();
-          throw new Error(errorData.error || `Failed to fetch trust scores: ${response.status}`);
+          throw new Error(
+            errorData.error ||
+              `Failed to fetch trust scores: ${response.status}`
+          );
         }
         const result: ApiResponse = await response.json();
         setUsersTrustData(result.data);
         setTotalPages(result.totalPages);
         setCurrentPage(result.page);
       } catch (err: any) {
-        console.error("Error fetching trust scores:", err);
+        console.error('Error fetching trust scores:', err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -76,14 +83,28 @@ const AdminTrustScoresPage: React.FC = () => {
     }
   };
 
-  if (loading) return <div className="container mx-auto p-4 text-center">Loading trust scores...</div>;
-  if (error) return <div className="container mx-auto p-4 text-center text-red-500">Error: {error}</div>;
+  if (loading)
+    return (
+      <div className="container mx-auto p-4 text-center">
+        Loading trust scores...
+      </div>
+    );
+  if (error)
+    return (
+      <div className="container mx-auto p-4 text-center text-red-500">
+        Error: {error}
+      </div>
+    );
 
   return (
     <div className="container mx-auto p-6 bg-gray-50 min-h-screen">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">Admin Dashboard: User Trust Scores</h1>
-        <p className="text-gray-600">Overview of all user trust scores and GPT analysis.</p>
+        <h1 className="text-3xl font-bold text-gray-800">
+          Admin Dashboard: User Trust Scores
+        </h1>
+        <p className="text-gray-600">
+          Overview of all user trust scores and GPT analysis.
+        </p>
       </header>
 
       {usersTrustData.length === 0 && !loading && (
@@ -99,36 +120,68 @@ const AdminTrustScoresPage: React.FC = () => {
                   <th className="px-4 py-3 text-left font-semibold">User ID</th>
                   <th className="px-4 py-3 text-left font-semibold">Name</th>
                   <th className="px-4 py-3 text-left font-semibold">Email</th>
-                  <th className="px-4 py-3 text-left font-semibold">Trust Score</th>
-                  <th className="px-4 py-3 text-left font-semibold">GPT Analysis Summary</th>
-                  <th className="px-4 py-3 text-left font-semibold">Last Updated</th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Trust Score
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    GPT Analysis Summary
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold">
+                    Last Updated
+                  </th>
                   <th className="px-4 py-3 text-left font-semibold">Actions</th>
                 </tr>
               </thead>
               <tbody className="text-gray-600">
-                {usersTrustData.map((user) => (
-                  <tr key={user.id} className="border-b border-gray-200 hover:bg-gray-100 transition-colors">
+                {usersTrustData.map(user => (
+                  <tr
+                    key={user.id}
+                    className="border-b border-gray-200 hover:bg-gray-100 transition-colors"
+                  >
                     <td className="px-4 py-3">{user.id}</td>
                     <td className="px-4 py-3">{user.name || 'N/A'}</td>
                     <td className="px-4 py-3">{user.email || 'N/A'}</td>
-                    <td className={`px-4 py-3 font-medium ${
-                      user.trustScore === null ? 'text-gray-400' :
-                      user.trustScore > 85 ? 'text-green-600' :
-                      user.trustScore > 70 ? 'text-yellow-600' : 'text-red-600'
-                    }`}>
-                      {user.trustScore !== null ? `${user.trustScore}/100` : 'N/A'}
+                    <td
+                      className={`px-4 py-3 font-medium ${
+                        user.trustScore === null
+                          ? 'text-gray-400'
+                          : user.trustScore > 85
+                            ? 'text-green-600'
+                            : user.trustScore > 70
+                              ? 'text-yellow-600'
+                              : 'text-red-600'
+                      }`}
+                    >
+                      {user.trustScore !== null
+                        ? `${user.trustScore}/100`
+                        : 'N/A'}
                     </td>
-                    <td className="px-4 py-3 text-sm italic truncate" style={{maxWidth: '250px'}} title={user.operatorGptAnalysis || undefined}>
-                      {user.operatorGptAnalysis ?
-                       (user.operatorGptAnalysis.length > 70 ? user.operatorGptAnalysis.substring(0, 70) + '...' : user.operatorGptAnalysis)
-                       : 'N/A'}
+                    <td
+                      className="px-4 py-3 text-sm italic truncate"
+                      style={{ maxWidth: '250px' }}
+                      title={user.operatorGptAnalysis || undefined}
+                    >
+                      {user.operatorGptAnalysis
+                        ? user.operatorGptAnalysis.length > 70
+                          ? user.operatorGptAnalysis.substring(0, 70) + '...'
+                          : user.operatorGptAnalysis
+                        : 'N/A'}
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      {user.trustScoreUpdatedAt ? new Date(user.trustScoreUpdatedAt).toLocaleDateString() : 'N/A'}
+                      {user.trustScoreUpdatedAt
+                        ? new Date(
+                            user.trustScoreUpdatedAt
+                          ).toLocaleDateString()
+                        : 'N/A'}
                     </td>
                     <td className="px-4 py-3">
-                      <Link href={`/admin/trust-history/${user.id}`} legacyBehavior>
-                        <a className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">View History</a>
+                      <Link
+                        href={`/admin/trust-history/${user.id}`}
+                        legacyBehavior
+                      >
+                        <a className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+                          View History
+                        </a>
                       </Link>
                     </td>
                   </tr>
@@ -159,7 +212,7 @@ const AdminTrustScoresPage: React.FC = () => {
           </div>
         </>
       )}
-       <footer className="mt-12 text-center text-sm text-gray-500">
+      <footer className="mt-12 text-center text-sm text-gray-500">
         Zion Admin Trust Management System
       </footer>
     </div>

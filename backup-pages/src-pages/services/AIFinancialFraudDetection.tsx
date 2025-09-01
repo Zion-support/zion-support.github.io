@@ -1,76 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Shield,
-  Brain,
-  BarChart3,
-  AlertTriangle,
-  Zap,
-  Lock,
-  Target,
-========
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  Clock, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-  CheckCircle,
-  Play,
-  Star,
-  Award,
-  DollarSign,
-  Target,
-  Zap,
-  Brain,
-  Globe,
-  Rocket,
-  Eye,
-  Cpu'
- } from 'lucide-react';
-;
-const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
+<=
 
-  
-    },;
-    {;
-      icon: Target,;"
-      title: "Adaptive Learning",;"
-      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."};
-  ];
-
-  const benefits = [;"
-    "Reduce fraud losses by 85-95%",;"
-    "Improve detection accuracy by 40%",;"
-    "Reduce false positives by 60%",;"
-    "Save $100K+ annually on fraud prevention",;"
-    "Comply with PCI DSS, SOC 2, and GDPR requirements";
-  ];
-
-  const useCases = [;"
-    "Credit Card Fraud",;"
-    "Banking & Financial Services",;"
-    "E-commerce & Retail",;"
-    "Insurance Claims",;"
-    "Healthcare Billing",;"
-    "Cryptocurrency Transactions";
-  ];
-
-  const integrations = [;"
-    "Stripe, PayPal, Square",;"
-    "Visa, Mastercard, American Express",;"
-    "Banking APIs (Plaid, Yodlee)",;"
-    "QuickBooks, Xero, NetSuite",;"
-    "Salesforce, HubSpot, Pipedrive";
-  ];
-
-  
-      popular: false
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -91,23 +20,13 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-        title="AI Financial Fraud Detection Platform - Zion Tech Group"
-        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
-        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
-        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
-       />
-=======
+
         title="AI Financial Fraud Detection Platform - Zion Tech Group""
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -182,12 +101,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Cutting-edge AI technology designed to protect your business from sophisticated financial fraud
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-          <div className="grid md: grid-cols-2 gap-8">
+>          <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={feature.title}
@@ -200,11 +116,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-  x: 0
-
-}}
-========
+<=
   x: 0 
 
 
@@ -215,8 +127,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-                viewport={{ once: true }}
+>                viewport={{ once: true }}
                 transition = {
 
   { duration: 0.8,
@@ -263,12 +174,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Our AI platform delivers measurable security improvements that directly protect your bottom line
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
@@ -329,12 +237,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Comprehensive fraud protection solutions for various financial and business sectors
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-          <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase}
@@ -395,12 +300,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Connect with your existing payment processors, banking systems, and business tools
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={integration}
@@ -465,12 +367,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Choose the plan that fits your transaction volume and security requirements
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+>          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.plan}
@@ -483,11 +382,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-  y: 0
-
-}}
-========
+<=
   y: 0 
 
 
@@ -498,8 +393,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialFraudDetection.tsx
-                viewport={{ once: true }}
+>                viewport={{ once: true }}
                 transition = {
 
   { duration: 0.8,

@@ -8,10 +8,7 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<Accor
   cn("border-b",
   className)
 
-<<<<<<< HEAD:src/components/ui/accordion.jsx
-} {...props}/>));
-AccordionItem.displayName = "AccordionItem";
-=======
+
 
 
 
@@ -19,7 +16,6 @@ AccordionItem.displayName = "AccordionItem";
 
 } {...props}/>));"
 AccordionItem.displayName = "AccordionItem";"
->>>>>>> main:backup-pages/ui/accordion.jsx
 const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (<AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger ref={ref} className = {
 "

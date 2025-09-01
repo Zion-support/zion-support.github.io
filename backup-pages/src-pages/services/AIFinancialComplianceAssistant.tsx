@@ -1,91 +1,11 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Shield,
-  FileText,
-  TrendingUp,
-  Users,
-  Database,
-  BarChart3,
-========
-<<<<<<< HEAD
-import { Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart'
-} from 'lucide-react';
-;
-export { function };
-export default function AIFinancialComplianceAssistant(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+<=
+
   ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-  ;
-
-};
-
-  const features = [
-    {
-      icon: Shield,
-      title: 'Automated Compliance Monitoring',
-      description: '24/7 monitoring of financial transactions and regulatory requirements with real-time alerts'
-    },
-    {
-      icon: FileText,
-      title: 'AI-Powered Document Analysis',
-      description: 'Automatically analyze financial documents, contracts, and reports for compliance issues'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Risk Assessment',
-      description: 'Identify potential compliance risks before they become violations using advanced AI algorithms'
-    },
-    {
-      icon: Users,
-      title: 'Multi-Stakeholder Collaboration',
-      description: 'Enable seamless collaboration between compliance officers, auditors, and management teams'
-    },
-    {
-      icon: Database,
-      title: 'Centralized Compliance Hub',
-      description: 'Single source of truth for all compliance-related data, policies, and procedures';
-    },;
-========
+<=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-    {;
+>    {;
       icon: BarChart3,;
       title: 'Advanced Analytics & Reporting',;
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
@@ -112,7 +32,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         'Basic reporting','
         'Up to 5 user licenses','        'Core compliance frameworks'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -147,35 +66,20 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       description: 'Accounting standards compliance with automated financial reporting',;
       icon: BookOpen};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Fintech Startups',;
-      description: 'Rapid compliance scaling for growing financial technology companies',;
-      icon: Zap};
-=======
+
     {;'
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-        title="AI Financial Compliance Assistant | Zion Tech Group"
-        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
-        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
-       />
-=======
+
         title="AI Financial Compliance Assistant | Zion Tech Group""
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -250,12 +154,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               Everything you need to stay compliant with evolving financial regulations
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -318,12 +219,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               Comprehensive coverage of all major financial compliance requirements
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map(framework: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -386,12 +284,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -450,12 +345,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               From startups to enterprise institutions, our platform scales with your needs
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -518,12 +410,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               Choose the plan that fits your organization size and compliance needs
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}

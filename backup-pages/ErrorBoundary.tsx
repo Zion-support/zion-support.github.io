@@ -1,23 +1,6 @@
 export default ErrorBoundary;
 import {
-<<<<<<< HEAD
 
-
-  AlertTriangle,
-  RefreshCw,
-  Home,
-  Mail,
-  Bug,
-  Shield,
-  ArrowLeft} from 'lucide-react';
-
-interface Props {
-
-  children: ReactNode;
-  fallback?: ReactNode}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface State {
 
   hasError: boolean;
@@ -192,12 +175,8 @@ class ErrorBoundary extends Component<Props, State> {
                   onClick={this.toggleDetails}"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >"
-<<<<<<< HEAD
-                  <Bug className="w-4 h-4"  />
-                  {showDetails ? 'Hide' : 'Show'} Technical Details
-=======
+
                   <Bug className="w-4 h-4"  />'                  {showDetails ? 'Hide' : 'Show'} Technical Details
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </button>
               </div>
 

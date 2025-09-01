@@ -6,24 +6,9 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Interactive dashboards and visualization tools',;
     'API integration with existing business systems',;
     'Automated model retraining and performance monitoring';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIPredictiveAnalytics.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIPredictiveAnalytics.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] },;

@@ -6,24 +6,9 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     'Automated reference checking and verification',;
     'Integration with major ATS and HR platforms',;
     'Custom AI models for industry-specific hiring';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHRRecruitment.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Starter',
-      price: '$199/mo',
-      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIHRRecruitment.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,299/mo', ;
       details: ['Unlimited job postings',Custom AI models',Full platform integration',24/7 dedicated support'] },;

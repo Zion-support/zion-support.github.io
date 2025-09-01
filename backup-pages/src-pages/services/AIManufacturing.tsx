@@ -6,24 +6,9 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
     'Smart factory automation and IoT integration',;
     'Integration with major ERP and MES systems',;
     'Custom AI models for industry-specific processes';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIManufacturing.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Manufacturer',
-      price: '$599/mo',
-      details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Manufacturer',
-      price: '$1,299/mo',
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIManufacturing.tsx
-    { ;
+>    { ;
       name: 'Large Manufacturer', ;
       price: '$2,999/mo', ;
       details: ['Unlimited production lines',Custom AI models',Full system integration',24/7 dedicated support'] },;

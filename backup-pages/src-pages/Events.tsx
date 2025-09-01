@@ -1,44 +1,5 @@
 
-<<<<<<< HEAD
-import { Calendar,
 
-
-  Clock,
-  MapPin,
-  Users,
-  Video,
-  ExternalLink,
-  Filter,
-  Search,
-  ArrowRight,
-  Star,
-  Award,
-
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-
-  TrendingUp,
-  MessageCircle,
-  BookOpen,
-  CheckCircle'
- } from 'lucide-react.ts';
-
-
-
-
-
-;
-export { function };
-export default function Events(...args: unknown[]): unknown {
-  const [selectedType, setSelectedType] = useState<typeof 'All'>('All');
-  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
-  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function Events(...args: any[]): any {
 
   const [selectedType, setSelectedType] = useState('All');
@@ -107,12 +68,8 @@ export default function Events(...args: any[]): any {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search events, topics, or speakers..."
-=======
+
                   type="text""                  placeholder="Search events, topics, or speakers..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
@@ -154,12 +111,8 @@ export default function Events(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search events..."
-=======
+
                     type="text""                    placeholder="Search events..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"

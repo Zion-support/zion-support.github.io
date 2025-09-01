@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from 'react';
+import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface LazyLoadProps {
   height?: string | number;
@@ -11,8 +11,8 @@ interface LazyLoadProps {
 }
 
 export function LazyLoad({
-  height = "200px",
-  width = "100%",
+  height = '200px',
+  width = '100%',
   children,
   loadingComponent,
   className,
@@ -24,14 +24,14 @@ export function LazyLoad({
   useEffect(() => {
     const currentRef = containerRef.current; // Store current ref value
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         if (entries[0].isIntersecting) {
           setIsVisible(true);
           observer.disconnect();
         }
       },
       {
-        rootMargin: "200px", 
+        rootMargin: '200px',
         threshold: 0.1,
       }
     );
@@ -41,7 +41,8 @@ export function LazyLoad({
     }
 
     return () => {
-      if (currentRef) { // Use the stored ref value in cleanup
+      if (currentRef) {
+        // Use the stored ref value in cleanup
         observer.unobserve(currentRef);
       }
     };
@@ -67,8 +68,9 @@ export function LazyLoad({
   return (
     <div
       ref={containerRef}
-      className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0",
+      className={cn(
+        'transition-opacity duration-500',
+        isLoaded ? 'opacity-100' : 'opacity-0',
         className
       )}
     >

@@ -272,10 +272,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   scale: 0.95
 
 }} transition = {
-<<<<<<< HEAD:src/components/ui/ai-search.jsx
-  { duration: 0.2,
-  ease: "easeOut"
-=======
+
 
   { duration: 0.2,"
   ease: "easeOut" 
@@ -284,7 +281,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
->>>>>>> main:backup-pages/ui/ai-search.jsx
 
 }}>
             {/* Header */}"
@@ -353,10 +349,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <select value={filters.rating} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
-<<<<<<< HEAD:src/components/ui/ai-search.jsx
-  rating: Number(e.target.value)
 
-=======
   rating: Number(e.target.value) 
 
 
@@ -364,7 +357,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 "
->>>>>>> main:backup-pages/ui/ai-search.jsx
 }))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
                         <option value={3}>3+ Stars</option>
@@ -379,10 +371,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         <input type="checkbox" checked={filters.verified} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
-<<<<<<< HEAD:src/components/ui/ai-search.jsx
-  verified: e.target.checked
 
-=======
   verified: e.target.checked 
 
 
@@ -390,7 +379,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 "
->>>>>>> main:backup-pages/ui/ai-search.jsx
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
@@ -401,10 +389,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         <input type="checkbox" checked={filters.featured} onChange = {
 
   (e) => setFilters(prev => ({ ...prev,
-<<<<<<< HEAD:src/components/ui/ai-search.jsx
-  featured: e.target.checked
 
-=======
   featured: e.target.checked 
 
 
@@ -412,7 +397,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 "
->>>>>>> main:backup-pages/ui/ai-search.jsx
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>

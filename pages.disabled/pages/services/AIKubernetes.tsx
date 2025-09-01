@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven Kubernetes automation and orchestration',;
     'Real-time Kubernetes analytics and insights',;
     'Custom AI models for Kubernetes applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIKubernetes.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$399/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIKubernetes.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage',Custom AI models',Full Kubernetes suite',24/7 dedicated support'] },;

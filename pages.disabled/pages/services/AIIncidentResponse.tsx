@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven incident investigation and forensics',;
     'Real-time incident analytics and insights',;
     'Custom AI models for incident applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentResponse.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 100 incidents/month', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,599/mo',
-      details: ['Up to 500 incidents/month', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentResponse.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited incidents',Custom AI models',Full incident suite',24/7 dedicated support'] },;

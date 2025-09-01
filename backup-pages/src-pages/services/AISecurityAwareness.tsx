@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven awareness automation and orchestration',;
     'Real-time awareness performance tracking',;
     'Custom AI models for awareness applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityAwareness.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$149/mo',
-      details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$449/mo',
-      details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityAwareness.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,199/mo', ;
       details: ['Unlimited employees',Custom AI models',Full awareness suite',24/7 dedicated support'] },;

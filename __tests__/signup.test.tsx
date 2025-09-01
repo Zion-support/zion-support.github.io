@@ -19,7 +19,15 @@ vi.mock('@/hooks/useAuth', () => ({
     loginWithFacebook: vi.fn(),
     loginWithTwitter: vi.fn(),
     // Ensure the mock for signup matches the expected signature from AuthContextType
-    signup: vi.fn().mockResolvedValue({ error: null, data: { user: { id: 'test-user-id'}, session: {access_token: 'jwt'} } }),
+    signup: vi
+      .fn()
+      .mockResolvedValue({
+        error: null,
+        data: {
+          user: { id: 'test-user-id' },
+          session: { access_token: 'jwt' },
+        },
+      }),
     isAuthenticated: false,
     user: null,
   }),
@@ -38,7 +46,10 @@ vi.mock('@/hooks/use-toast', () => ({
 // Mock react-router-dom specifically for useNavigate
 const mockNavigate = vi.fn();
 vi.mock('react-router-dom', async () => {
-  const actual = await vi.importActual<typeof import('react-router-dom')>('react-router-dom');
+  const actual =
+    await vi.importActual<typeof import('react-router-dom')>(
+      'react-router-dom'
+    );
   return {
     ...actual,
     useNavigate: () => mockNavigate, // Ensure this mock is used
@@ -61,7 +72,6 @@ function setupMockFetch(responses: MockResponse[]) {
   global.fetch = mockFetchFn;
 }
 
-
 describe('Signup Page', () => {
   beforeEach(() => {
     vi.clearAllMocks(); // Clears all mocks including useNavigate's mockNavigate
@@ -78,33 +88,38 @@ describe('Signup Page', () => {
 
     setupMockFetch([
       // Assuming the first fetch is for the signup API endpoint
-      { status: 201, body: { token: 'jwt', message: 'Signup successful, please login.' } }, 
+      {
+        status: 201,
+        body: { token: 'jwt', message: 'Signup successful, please login.' },
+      },
       // Assuming an immediate login attempt after signup (behavior might vary)
       // This mock might not be strictly necessary if signup directly logs in or if useAuth's signup mock handles it
       // For this test, we assume the component might call /api/auth/login or similar via useAuth().login
       // which is also mocked by useAuth mock. The key is that useAuth().signup is called.
     ]);
-    
-    // Mock the useAuth().signup specifically for this test if its default mock isn't sufficient
-    const { useAuth: actualUseAuth } = await vi.importActual<typeof import('@/hooks/useAuth')>('@/hooks/useAuth');
 
-    const mockSignupFn = vi.fn().mockResolvedValue({ 
-        error: null, 
-        data: { 
-            user: { id: 'test-user-id', email: 'john@example.com' }, 
-            session: { access_token: 'jwt', expires_in: 3600 } 
-        } 
+    // Mock the useAuth().signup specifically for this test if its default mock isn't sufficient
+    const { useAuth: actualUseAuth } =
+      await vi.importActual<typeof import('@/hooks/useAuth')>(
+        '@/hooks/useAuth'
+      );
+
+    const mockSignupFn = vi.fn().mockResolvedValue({
+      error: null,
+      data: {
+        user: { id: 'test-user-id', email: 'john@example.com' },
+        session: { access_token: 'jwt', expires_in: 3600 },
+      },
     });
 
     (useAuth as vi.Mock).mockReturnValue({
-        loginWithGoogle: vi.fn(),
-        loginWithFacebook: vi.fn(),
-        loginWithTwitter: vi.fn(),
-        signup: mockSignupFn, // Use this specific mock for the signup call
-        isAuthenticated: false,
-        user: null,
+      loginWithGoogle: vi.fn(),
+      loginWithFacebook: vi.fn(),
+      loginWithTwitter: vi.fn(),
+      signup: mockSignupFn, // Use this specific mock for the signup call
+      isAuthenticated: false,
+      user: null,
     });
-
 
     render(
       <MemoryRouter>
@@ -125,8 +140,10 @@ describe('Signup Page', () => {
       target: { value: 'Password123' },
     });
     fireEvent.click(screen.getByLabelText(/i agree/i));
-    
-    const createAccountButton = screen.getByRole('button', { name: /create account/i });
+
+    const createAccountButton = screen.getByRole('button', {
+      name: /create account/i,
+    });
     fireEvent.submit(createAccountButton);
 
     await waitFor(() => {
@@ -136,7 +153,7 @@ describe('Signup Page', () => {
         { name: 'John Doe', displayName: 'John Doe' } // Or just { name: 'John Doe' } depending on what Signup page passes
       );
     });
-    
+
     // Assuming successful signup (mocked above) leads to onAuthStateChange setting token and navigating
     // The test relies on the mocked useAuth().signup to simulate a successful registration
     // and then checks for its side effects (toast, navigation, localStorage).
@@ -144,7 +161,7 @@ describe('Signup Page', () => {
     await waitFor(() => {
       expect(toast.success).toHaveBeenCalledWith('Welcome to ZionAI 🎉');
     });
-    
+
     // If token is set by the signup function directly or via context update:
     // This depends on how AuthProvider and useAuth().signup are implemented.
     // If signup sets the token via AuthContext which then updates localStorage, this is valid.

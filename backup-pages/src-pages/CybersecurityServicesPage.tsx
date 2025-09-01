@@ -1,35 +1,5 @@
 
-<<<<<<< HEAD
-import { Shield,
 
-
-  Lock,
-  Eye,
-  AlertTriangle,
-  Users,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Brain,
-  Network,
-  Server,
-  Database,
-  Key,
-  Monitor,
-  TrendingUp
-
- } from 'lucide-react.ts';
-
-// Filter cybersecurity services
-
-  CheckCircle,
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Star,
   Clock,
   TrendingUp,
@@ -74,7 +44,6 @@ import { Shield,
     id: anyzero-trust',;'
     name: 'Zero Trust Security','    description: 'Identity verification and access management',
     icon: Lock,'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Zero Trust'))
   }
 ];
@@ -95,19 +64,13 @@ export default function CybersecurityServicesPage(...args: any[]): any {
       case 'monthly': return 'Monthly';'
       case 'hourly': return 'Hourly';'      case 'project-based': return 'Project-based';
       default: return model}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return()
     <>
       <SEOHead
-<<<<<<< HEAD
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."'
-        keywords={['cybersecurity',security services',threat detection',compliance',zero trust']}
-=======
+
         title="Cybersecurity Services - Zion Tech Group""
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."'        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         structuredData={{
 "
           "@context": "https://schema.org","
@@ -407,12 +370,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 // Security Service Card Component
 
 function SecurityServiceCard(...args: any[]): any {
-<<<<<<< HEAD
 
-import { Search,
-=======
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   Star,
   Clock,
@@ -473,7 +432,6 @@ import { Search,
       case 'monthly': return 'Monthly';'
       case 'hourly': return 'Hourly';'      case 'project-based': return 'Project-based';
       default: return model}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return ("
     <Card className="hover:shadow-lg transition-shadow border-red-500/20">"

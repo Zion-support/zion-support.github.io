@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven security analytics and insights',;
     'Real-time security performance monitoring',;
     'Custom AI models for security applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityOperations.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$699/mo',
-      details: ['Up to 1,000 events/day', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,799/mo',
-      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityOperations.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited events',Custom AI models',Full security suite',24/7 dedicated support'] },;

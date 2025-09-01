@@ -1,10 +1,13 @@
+describe('BlogPost', () => {
+  it('renders without crashing', () => {
+    render(<BlogPost />);
+    expect(
+      screen.getByRole('main') || screen.getByText(/.*/)
+    ).toBeInTheDocument();
+  });
 
-describe ('BlogPost', () => {
-  it ('renders without crashing', () => {
-    render (<BlogPost  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
-    render (<BlogPost  />) ;
+  it('displays expected content', () => {
+    render(<BlogPost />);
     // Add specific test assertions based on component content
-  }) }) ;
+  });
+});

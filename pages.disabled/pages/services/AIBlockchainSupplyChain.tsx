@@ -1,47 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
-import { Brain,
-  Link as LinkIcon,
-  Shield,
-  Clock,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Brain, 
-  Link as LinkIcon, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  Database,
-  Activity,
-  BarChart3,
-  Network'
-  } from 'lucide-react.ts';
-};
-  ];
+<=
 
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$5,999","
-      period: "/month",
-      features[;"
-        "Basic blockchain tracking","
-        "AI analytics dashboard","
-        "Standard compliance","
-        "Up to 1000 transactions/month","
-        "Basic reporting"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -104,21 +62,12 @@ import { Brain,
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
-        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
-        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
-       />
-=======
+
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -277,17 +226,12 @@ import { Brain,
 
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-                  service.popular
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25'
-                    : 'border-zion-slate/30'
-========
+<=
 
                   service.popular '
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' '
                     : 'border-zion-slate/30'`
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-                }`}
+>                }`}
               >
                 {service.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -296,20 +240,13 @@ import { Brain,
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-                    <span className="text-zion-slate-light ml-1">{service.period}</span>
+>                    <span className="text-zion-slate-light ml-1">{service.period}</span>
                   </div>
                 </div>
 "

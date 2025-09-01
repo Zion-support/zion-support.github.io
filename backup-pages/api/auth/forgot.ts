@@ -11,16 +11,22 @@ if (process.env.SENDGRID_API_KEY) {
 }
 
 // Actual email sending function using SendGrid
-const sendPasswordResetEmail = async (to: string, token: string, userId: string) => { // Added userId for the link
+const sendPasswordResetEmail = async (
+  to: string,
+  token: string,
+  userId: string
+) => {
+  // Added userId for the link
   if (!process.env.SENDGRID_API_KEY) {
     console.error('SendGrid API Key not configured. Cannot send email.');
     // In a real app, you might want to throw an error or handle this more gracefully
     // For now, returning success: false to indicate failure to send.
-    return { success: false, message: "Email service not configured." };
+    return { success: false, message: 'Email service not configured.' };
   }
 
   const resetUrl = `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/reset-password/${userId}/${token}`;
-  const senderEmail = process.env.SENDGRID_SENDER_EMAIL || 'no-reply@example.com'; // Configure your sender email
+  const senderEmail =
+    process.env.SENDGRID_SENDER_EMAIL || 'no-reply@example.com'; // Configure your sender email
 
   const msg = {
     to: to,
@@ -47,10 +53,15 @@ const sendPasswordResetEmail = async (to: string, token: string, userId: string)
   }
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
-    return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+    return res
+      .status(405)
+      .json({ message: `Method ${req.method} Not Allowed` });
   }
 
   const { email } = req.body;
@@ -67,7 +78,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!user) {
       console.log(`Forgot password attempt for non-existent email: ${email}`);
       // Important: Always return a generic message to prevent email enumeration
-      return res.status(200).json({ message: 'If your email address exists in our system, you will receive a password reset link.' });
+      return res
+        .status(200)
+        .json({
+          message:
+            'If your email address exists in our system, you will receive a password reset link.',
+        });
     }
 
     const resetToken = crypto.randomBytes(32).toString('hex'); // This is the raw token for the URL
@@ -87,18 +103,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     // Use the new email sending function, passing user.id for the reset link
-    const emailResult = await sendPasswordResetEmail(user.email, resetToken, user.id);
+    const emailResult = await sendPasswordResetEmail(
+      user.email,
+      resetToken,
+      user.id
+    );
 
     if (!emailResult.success) {
-        // Log the error, but still return a generic message to the client
-        console.error(`Failed to send password reset email to: ${user.email}. Error: ${emailResult.error || emailResult.message}`);
+      // Log the error, but still return a generic message to the client
+      console.error(
+        `Failed to send password reset email to: ${user.email}. Error: ${emailResult.error || emailResult.message}`
+      );
     }
 
-    return res.status(200).json({ message: 'If your email address exists in our system, you will receive a password reset link.' });
-
+    return res
+      .status(200)
+      .json({
+        message:
+          'If your email address exists in our system, you will receive a password reset link.',
+      });
   } catch (error) {
     console.error('Forgot Password Error:', error);
-    return res.status(500).json({ message: 'An error occurred. Please try again later.' });
+    return res
+      .status(500)
+      .json({ message: 'An error occurred. Please try again later.' });
   } finally {
     await prisma.$disconnect();
   }

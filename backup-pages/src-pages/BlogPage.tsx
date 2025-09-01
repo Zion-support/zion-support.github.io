@@ -9,7 +9,7 @@ import {
   Filter,
   Tag,
   Clock,
-  Eye
+  Eye,
 } from 'lucide-react';
 
 export function BlogPage() {
@@ -19,86 +19,94 @@ export function BlogPage() {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Enterprise: Quantum Computing Revolution",
-      excerpt: "Exploring how quantum computing is set to revolutionize artificial intelligence in enterprise environments.",
-      category: "AI & Machine Learning",
-      author: "Dr. Sarah Chen",
-      date: "2024-03-15",
-      readTime: "8 min read",
-      views: "2.4k",
-      image: "/api/placeholder/400/250",
-      featured: true
+      title: 'The Future of AI in Enterprise: Quantum Computing Revolution',
+      excerpt:
+        'Exploring how quantum computing is set to revolutionize artificial intelligence in enterprise environments.',
+      category: 'AI & Machine Learning',
+      author: 'Dr. Sarah Chen',
+      date: '2024-03-15',
+      readTime: '8 min read',
+      views: '2.4k',
+      image: '/api/placeholder/400/250',
+      featured: true,
     },
     {
       id: 2,
-      title: "Zero Trust Security: A Complete Implementation Guide",
-      excerpt: "Learn how to implement zero trust architecture for maximum security in your organization.",
-      category: "Cybersecurity",
-      author: "Michael Rodriguez",
-      date: "2024-03-12",
-      readTime: "12 min read",
-      views: "1.8k",
-      image: "/api/placeholder/400/250"
+      title: 'Zero Trust Security: A Complete Implementation Guide',
+      excerpt:
+        'Learn how to implement zero trust architecture for maximum security in your organization.',
+      category: 'Cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2024-03-12',
+      readTime: '12 min read',
+      views: '1.8k',
+      image: '/api/placeholder/400/250',
     },
     {
       id: 3,
-      title: "Cloud Migration Best Practices for 2024",
-      excerpt: "Essential strategies and considerations for successful cloud migration projects.",
-      category: "Cloud Computing",
-      author: "Emily Wang",
-      date: "2024-03-10",
-      readTime: "6 min read",
-      views: "3.1k",
-      image: "/api/placeholder/400/250"
+      title: 'Cloud Migration Best Practices for 2024',
+      excerpt:
+        'Essential strategies and considerations for successful cloud migration projects.',
+      category: 'Cloud Computing',
+      author: 'Emily Wang',
+      date: '2024-03-10',
+      readTime: '6 min read',
+      views: '3.1k',
+      image: '/api/placeholder/400/250',
     },
     {
       id: 4,
-      title: "Data Analytics Trends Shaping Business Intelligence",
-      excerpt: "Discover the latest trends in data analytics and how they're transforming business decisions.",
-      category: "Data Analytics",
-      author: "Alex Johnson",
-      date: "2024-03-08",
-      readTime: "10 min read",
-      views: "1.5k",
-      image: "/api/placeholder/400/250"
+      title: 'Data Analytics Trends Shaping Business Intelligence',
+      excerpt:
+        "Discover the latest trends in data analytics and how they're transforming business decisions.",
+      category: 'Data Analytics',
+      author: 'Alex Johnson',
+      date: '2024-03-08',
+      readTime: '10 min read',
+      views: '1.5k',
+      image: '/api/placeholder/400/250',
     },
     {
       id: 5,
-      title: "DevOps Automation: Streamlining Your Development Pipeline",
-      excerpt: "Best practices for implementing DevOps automation to improve development efficiency.",
-      category: "DevOps",
-      author: "Lisa Chen",
-      date: "2024-03-05",
-      readTime: "7 min read",
-      views: "2.2k",
-      image: "/api/placeholder/400/250"
+      title: 'DevOps Automation: Streamlining Your Development Pipeline',
+      excerpt:
+        'Best practices for implementing DevOps automation to improve development efficiency.',
+      category: 'DevOps',
+      author: 'Lisa Chen',
+      date: '2024-03-05',
+      readTime: '7 min read',
+      views: '2.2k',
+      image: '/api/placeholder/400/250',
     },
     {
       id: 6,
-      title: "The Rise of Edge Computing: Benefits and Challenges",
-      excerpt: "Understanding edge computing and its impact on modern application architecture.",
-      category: "Cloud Computing",
-      author: "David Park",
-      date: "2024-03-02",
-      readTime: "9 min read",
-      views: "1.9k",
-      image: "/api/placeholder/400/250"
-    }
+      title: 'The Rise of Edge Computing: Benefits and Challenges',
+      excerpt:
+        'Understanding edge computing and its impact on modern application architecture.',
+      category: 'Cloud Computing',
+      author: 'David Park',
+      date: '2024-03-02',
+      readTime: '9 min read',
+      views: '1.9k',
+      image: '/api/placeholder/400/250',
+    },
   ];
 
   const categories = [
-    "All",
-    "AI & Machine Learning",
-    "Cybersecurity",
-    "Cloud Computing",
-    "Data Analytics",
-    "DevOps"
+    'All',
+    'AI & Machine Learning',
+    'Cybersecurity',
+    'Cloud Computing',
+    'Data Analytics',
+    'DevOps',
   ];
 
   const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === 'All' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -134,13 +142,13 @@ export function BlogPage() {
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
               />
             </div>
-            
+
             <div className="flex gap-2 flex-wrap">
-              {categories.map((category) => (
+              {categories.map(category => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -165,7 +173,9 @@ export function BlogPage() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h2 className="text-2xl font-bold mb-6 text-cyan-400">Featured Article</h2>
+            <h2 className="text-2xl font-bold mb-6 text-cyan-400">
+              Featured Article
+            </h2>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="aspect-video lg:aspect-auto bg-gradient-to-br from-cyan-500/20 to-blue-500/20"></div>
@@ -222,12 +232,16 @@ export function BlogPage() {
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Tag className="w-4 h-4 text-cyan-400" />
-                  <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
+                  <span className="text-cyan-400 text-sm font-medium">
+                    {post.category}
+                  </span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-white hover:text-cyan-400 transition-colors cursor-pointer line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center gap-2">
                     <User className="w-4 h-4" />
@@ -263,8 +277,12 @@ export function BlogPage() {
         {filteredPosts.length === 0 && (
           <div className="text-center py-16">
             <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-300 mb-2">No articles found</h3>
-            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            <h3 className="text-xl font-semibold text-gray-300 mb-2">
+              No articles found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search or filter criteria
+            </p>
           </div>
         )}
 

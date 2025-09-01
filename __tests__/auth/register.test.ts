@@ -23,7 +23,13 @@ interface MockApiResponse extends NextApiResponse {
 
 // Helper to create mock request object
 function mockReq(body: unknown, method: string = 'POST'): NextApiRequest {
-  return { method, body, headers: {}, query: {}, cookies: {} } as NextApiRequest;
+  return {
+    method,
+    body,
+    headers: {},
+    query: {},
+    cookies: {},
+  } as NextApiRequest;
 }
 
 // Helper to create mock response object
@@ -43,7 +49,13 @@ describe('/api/auth/register', () => {
 
   test('should return 405 if method is not POST', async () => {
     // Explicitly type req, ensure it has minimal properties handler might expect for a 405
-    const req = { method: 'GET', body: undefined, headers: {}, query: {}, cookies: {} } as NextApiRequest;
+    const req = {
+      method: 'GET',
+      body: undefined,
+      headers: {},
+      query: {},
+      cookies: {},
+    } as NextApiRequest;
     const res = mockRes();
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(405);
@@ -55,9 +67,11 @@ describe('/api/auth/register', () => {
     const res = mockRes();
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
-    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({
-      message: expect.any(String) // zod error message
-    }));
+    expect(res.json).toHaveBeenCalledWith(
+      expect.objectContaining({
+        message: expect.any(String), // zod error message
+      })
+    );
   });
 
   describe('Successful Registration Scenarios', () => {
@@ -67,29 +81,49 @@ describe('/api/auth/register', () => {
           user: {
             id: 'user-id-123',
             email: 'test@example.com',
-            identities: [], 
-            user_metadata: { display_name: 'Test User' }
+            identities: [],
+            user_metadata: { display_name: 'Test User' },
           },
-          session: null, 
+          session: null,
         },
         error: null,
       });
 
-      const req = mockReq({ name: 'Test User', email: 'test@example.com', password: 'Password123!' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'test@example.com',
+        password: 'Password123!',
+      });
       const res = mockRes();
       await handler(req, res);
 
       expect(res.status).toHaveBeenCalledWith(201);
       expect(res.json).toHaveBeenCalledWith({
-        message: 'Registration successful. Please check your email to verify your account.',
+        message:
+          'Registration successful. Please check your email to verify your account.',
         emailVerificationRequired: true,
-        user: { email: 'test@example.com', id: 'user-id-123', display_name: 'Test User' },
+        user: {
+          email: 'test@example.com',
+          id: 'user-id-123',
+          display_name: 'Test User',
+        },
       });
-      expect(res.setHeader).not.toHaveBeenCalledWith('Set-Cookie', expect.any(String));
+      expect(res.setHeader).not.toHaveBeenCalledWith(
+        'Set-Cookie',
+        expect.any(String)
+      );
     });
 
     test('handles successful registration with auto-confirmation (email already verified)', async () => {
-      const mockSession = { access_token: 'mock-access-token', refresh_token: 'mock-refresh-token', user: { id: 'user-id-123', email: 'test@example.com', user_metadata: { display_name: 'Test User' } } };
+      const mockSession = {
+        access_token: 'mock-access-token',
+        refresh_token: 'mock-refresh-token',
+        user: {
+          id: 'user-id-123',
+          email: 'test@example.com',
+          user_metadata: { display_name: 'Test User' },
+        },
+      };
       signUpMock.mockResolvedValue({
         data: {
           user: mockSession.user,
@@ -98,7 +132,11 @@ describe('/api/auth/register', () => {
         error: null,
       });
 
-      const req = mockReq({ name: 'Test User', email: 'test@example.com', password: 'Password123!' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'test@example.com',
+        password: 'Password123!',
+      });
       const res = mockRes();
       await handler(req, res);
 
@@ -117,30 +155,42 @@ describe('/api/auth/register', () => {
   describe('Registration Failure Scenarios', () => {
     test('handles registration failure when email already exists', async () => {
       signUpMock.mockResolvedValue({
-        data: { user: null, session: null }, 
-        error: { message: 'User already registered', status: 400 }, 
+        data: { user: null, session: null },
+        error: { message: 'User already registered', status: 400 },
       });
 
-      const req = mockReq({ name: 'Test User', email: 'exists@example.com', password: 'Password123!' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'exists@example.com',
+        password: 'Password123!',
+      });
       const res = mockRes();
       await handler(req, res);
 
       expect(res.status).toHaveBeenCalledWith(409);
-      expect(res.json).toHaveBeenCalledWith({ message: 'Email already registered' });
+      expect(res.json).toHaveBeenCalledWith({
+        message: 'Email already registered',
+      });
     });
 
     test('handles registration failure due to weak password', async () => {
       signUpMock.mockResolvedValue({
         data: { user: null, session: null },
-        error: { message: 'Password should be stronger', status: 400 }, 
+        error: { message: 'Password should be stronger', status: 400 },
       });
 
-      const req = mockReq({ name: 'Test User', email: 'test@example.com', password: 'weak' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'test@example.com',
+        password: 'weak',
+      });
       const res = mockRes();
       await handler(req, res);
 
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.json).toHaveBeenCalledWith({ message: 'Password is too weak' });
+      expect(res.json).toHaveBeenCalledWith({
+        message: 'Password is too weak',
+      });
     });
 
     test('handles other Supabase sign-up errors', async () => {
@@ -149,23 +199,35 @@ describe('/api/auth/register', () => {
         error: { message: 'Some generic Supabase error', status: 500 },
       });
 
-      const req = mockReq({ name: 'Test User', email: 'test@example.com', password: 'Password123!' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'test@example.com',
+        password: 'Password123!',
+      });
       const res = mockRes();
       await handler(req, res);
 
-      expect(res.status).toHaveBeenCalledWith(500); 
-      expect(res.json).toHaveBeenCalledWith({ message: 'Some generic Supabase error' });
+      expect(res.status).toHaveBeenCalledWith(500);
+      expect(res.json).toHaveBeenCalledWith({
+        message: 'Some generic Supabase error',
+      });
     });
 
     test('handles network error during signUp', async () => {
       signUpMock.mockRejectedValue(new Error('Network failure'));
 
-      const req = mockReq({ name: 'Test User', email: 'test@example.com', password: 'Password123!' });
+      const req = mockReq({
+        name: 'Test User',
+        email: 'test@example.com',
+        password: 'Password123!',
+      });
       const res = mockRes();
       await handler(req, res);
 
       expect(res.status).toHaveBeenCalledWith(503);
-      expect(res.json).toHaveBeenCalledWith({ message: 'Network error. Please try again.' });
+      expect(res.json).toHaveBeenCalledWith({
+        message: 'Network error. Please try again.',
+      });
     });
   });
 });

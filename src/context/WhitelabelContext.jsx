@@ -1,2 +1,1 @@
-import React, { createContext, useContext } from 'react';
-const defaultConfig = {
+import React, { createContext, useContext } from 'react';'const defaultConfig = {'

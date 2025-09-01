@@ -22,16 +22,10 @@ export default function AIContentOptimizer(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
-        description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today."
-        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
-      />
-=======
+
         title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group""
         description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.""        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

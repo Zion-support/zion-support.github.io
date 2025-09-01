@@ -1,4 +1,8 @@
-import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
+import {
+  createClient,
+  PostgrestError,
+  SupabaseClient,
+} from '@supabase/supabase-js';
 import { withErrorLogging } from '@/utils/withErrorLogging';
 import { randomUUID } from 'crypto';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -32,14 +36,15 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-  const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (orders/guest). Service cannot start.';
+  const errorMessage =
+    'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (orders/guest). Service cannot start.';
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
 const supabase: SupabaseClient = createClient(supabaseUrl, serviceKey);
 
 async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<GuestOrderSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -66,27 +71,29 @@ async function handler(
   try {
     const { data, error } = await supabase
       .from('orders')
-      .insert({ 
-        user_id: null, 
-        email, 
+      .insert({
+        user_id: null,
+        email,
         items: items, // Removed 'as any'. Supabase client should handle typed arrays for JSONB.
-        total, 
-        status: 'pending', 
-        token 
+        total,
+        status: 'pending',
+        token,
       })
-      .select('id') 
+      .select('id')
       .single();
 
     if (error || !data) {
       console.error('Guest Order Creation Error (Supabase):', error);
-      return res.status(500).json({ error: error?.message || 'Failed to create guest order' });
+      return res
+        .status(500)
+        .json({ error: error?.message || 'Failed to create guest order' });
     }
 
     return res.status(200).json({ orderId: data.id, token });
-
   } catch (e: unknown) {
     console.error('Unexpected error creating guest order:', e);
-    const message = e instanceof Error ? e.message : 'An unexpected server error occurred.';
+    const message =
+      e instanceof Error ? e.message : 'An unexpected server error occurred.';
     return res.status(500).json({ error: message });
   }
 }

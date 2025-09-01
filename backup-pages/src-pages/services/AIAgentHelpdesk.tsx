@@ -4,32 +4,9 @@ import {
   MessageSquare,
   Headphones,
   Zap,
-<<<<<<< HEAD
-  PieChart,
-  CheckCircle2} from 'lucide-react.ts';
 
-export default function AIAgentHelpdesk(...args: any[]): any {
-
-  
-  
-  return()
-    <div className="min-h-screen bg-futuristic">
-      <SEO"
-        title="AI Agent Helpdesk - Zion Tech Group"
-        description="AI-powered customer support with autonomous triage, agent assist, and omnichannel messaging."
-        canonical="https://ziontechgroup.com/services/customer-support-chatbot"
-      />
-"
-      <section className="relative pt-28 pb-16">"
-        <div className="container-responsive">"
-          <h1 className="heading-responsive text-gradient">
-            AI Agent Helpdesk
-          </h1>"
-          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
-=======
   PieChart,'
   CheckCircle2} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             Reduce response times and scale support with production-grade AI
             agents.
           </p>"

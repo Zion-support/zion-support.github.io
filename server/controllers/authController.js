@@ -13,7 +13,7 @@ if (SENDGRID_API_KEY) {
 
 const resetRequests = {};
 
-exports.login = async function(req, res) {
+exports.login = async function (req, res) {
   console.info('[LOGIN]', req.body.email);
   console.info('[ENV] JWT_SECRET:', jwtSecret);
   try {
@@ -23,7 +23,8 @@ exports.login = async function(req, res) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
     const isMatch = await bcrypt.compare(req.body.password, user.passwordHash);
-    if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
+    if (!isMatch)
+      return res.status(401).json({ message: 'Invalid credentials' });
 
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
     res.json({
@@ -36,7 +37,7 @@ exports.login = async function(req, res) {
   }
 };
 
-exports.forgotPassword = async function(req, res) {
+exports.forgotPassword = async function (req, res) {
   const { email } = req.body;
   if (!email) return res.status(400).json({ message: 'Email is required' });
 
@@ -58,7 +59,7 @@ exports.forgotPassword = async function(req, res) {
   res.json({ message: 'If account exists, a verification code was sent' });
 };
 
-exports.verifyCode = function(req, res) {
+exports.verifyCode = function (req, res) {
   const { email, code } = req.body;
   const entry = resetRequests[email];
   if (!entry || entry.code !== code || entry.expires < Date.now()) {
@@ -68,7 +69,7 @@ exports.verifyCode = function(req, res) {
   res.json({ token });
 };
 
-exports.resetPassword = async function(req, res) {
+exports.resetPassword = async function (req, res) {
   const { token, password } = req.body;
   try {
     const { email } = jwt.verify(token, jwtSecret);

@@ -38,16 +38,10 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
       <SEO"
-<<<<<<< HEAD
-        title="AI Business Intelligence Analytics | Zion Tech Group"
-        description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence."
-        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
-      />
-=======
+
         title="AI Business Intelligence Analytics | Zion Tech Group""
         description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.""        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -417,16 +411,10 @@ import {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
-<<<<<<< HEAD
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-=======
+
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-green-400 hover:text-green-300 transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>

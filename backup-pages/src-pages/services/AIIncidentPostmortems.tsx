@@ -1,85 +1,11 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { AlertTriangle,
-  Clock,
-  TrendingUp,
-  Shield,
-  Users,
-  Database,
-  BarChart3,
-========
-<<<<<<< HEAD
-import { AlertTriangle, 
-  Clock, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  Database, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  FileText,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Server'
-} from 'lucide-react';
-;
-export { function };
-export default function AIIncidentPostmortems(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+<=
+
   ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-  ;
-
-};
-
-  const features = [
-    {
-      icon: AlertTriangle,
-      title: 'AI-Powered Root Cause Analysis',
-      description: 'Advanced machine learning algorithms automatically identify the root causes of incidents with 95% accuracy'
-    },
-    {
-      icon: Clock,
-      title: 'Real-time Incident Tracking',
-      description: 'Monitor incidents in real-time with automated alerts and escalation workflows'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Incident Prevention',
-      description: 'Predict potential incidents before they occur using historical data and AI analytics'
-    },
-    {
-      icon: Shield,
-      title: 'Automated Documentation',
-      description: 'Generate comprehensive incident reports automatically with AI-powered insights'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration Tools',
-      description: 'Built-in communication and collaboration features for incident response teams';
-    },;
-========
+<=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-    {;
+>    {;
       icon: Database,;
       title: 'Centralized Knowledge Base',;
       description: 'Maintain a searchable repository of all incidents and resolutions'};
@@ -105,7 +31,6 @@ export default function AIIncidentPostmortems(...args[]): {
         'Standard reporting','
         'Team collaboration (up to 5 users)','        'Basic integrations'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -135,35 +60,20 @@ export default function AIIncidentPostmortems(...args[]): {
       cta: 'Contact Sales',;
       popular: false};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Customer Support',;
-      description: 'Improve customer experience with faster incident resolution and communication',;
-      icon: MessageSquare};
-=======
+
     {;'
       title: 'Customer Support',;'      description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-        title="AI Incident Postmortems Platform | Zion Tech Group"
-        description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
-        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
-       />
-=======
+
         title="AI Incident Postmortems Platform | Zion Tech Group""
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.""        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -238,12 +148,9 @@ export default function AIIncidentPostmortems(...args[]): {
               Everything you need to manage incidents effectively and build a culture of continuous improvement
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -306,12 +213,9 @@ export default function AIIncidentPostmortems(...args[]): {
               Transform your incident management process and unlock new levels of efficiency
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -370,12 +274,9 @@ export default function AIIncidentPostmortems(...args[]): {
               Choose the plan that fits your team size and incident volume
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -471,12 +372,9 @@ export default function AIIncidentPostmortems(...args[]): {
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}

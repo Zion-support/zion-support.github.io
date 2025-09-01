@@ -5,7 +5,8 @@ const prisma = new PrismaClient();
 
 // Define the structure of the review object that will be returned
 // This includes selected fields from the related User
-interface ReviewWithUser extends Omit<ProductReview, 'userId'> { // Omit userId if you're replacing it with the user object
+interface ReviewWithUser extends Omit<ProductReview, 'userId'> {
+  // Omit userId if you're replacing it with the user object
   user: {
     id: string;
     name: string | null; // Prisma User.name can be null
@@ -30,7 +31,11 @@ export default async function handler(
   const { productId } = req.query;
 
   if (!productId || typeof productId !== 'string') {
-    return res.status(400).json({ error: 'productId is required in the URL path and must be a string.' });
+    return res
+      .status(400)
+      .json({
+        error: 'productId is required in the URL path and must be a string.',
+      });
   }
 
   try {
@@ -39,7 +44,7 @@ export default async function handler(
         productId: productId,
       },
       include: {
-        user: { 
+        user: {
           select: {
             id: true,
             name: true,
@@ -60,16 +65,17 @@ export default async function handler(
       if (!review.user) {
         // This case should ideally not happen if review.userId is a non-null foreign key
         // and data integrity is maintained. Handle as an error or provide default user.
-        console.warn(`Review ${review.id} has no associated user. This might indicate data inconsistency.`);
+        console.warn(
+          `Review ${review.id} has no associated user. This might indicate data inconsistency.`
+        );
         // Fallback or skip this review
         return {
           ...review,
-          user: { id: 'unknown', name: 'Anonymous' } // Provide a fallback user object
+          user: { id: 'unknown', name: 'Anonymous' }, // Provide a fallback user object
         } as ReviewWithUser; // Cast needed if user was potentially null from Prisma's perspective initially
       }
       return review as unknown as ReviewWithUser; // Cast if Prisma's included 'user' doesn't perfectly match ReviewWithUser.user
     });
-
 
     return res.status(200).json(reviews);
   } catch (e: unknown) {
@@ -85,7 +91,7 @@ export default async function handler(
     } else if (typeof e === 'string') {
       errorMessage = e;
     }
-    
+
     return res.status(500).json({ error: errorMessage, details: errorDetails });
   } finally {
     await prisma.$disconnect();

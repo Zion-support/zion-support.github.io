@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven 5G automation and orchestration',;
     'Real-time 5G analytics and insights',;
     'Custom AI models for 5G applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AI5GNetwork.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AI5GNetwork.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited storage',Custom AI models',Full 5G suite',24/7 dedicated support'] },;

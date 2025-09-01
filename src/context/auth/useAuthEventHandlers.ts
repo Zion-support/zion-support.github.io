@@ -3,5 +3,4 @@
 
   return {
 
-    handleSignedIn,
-    handleSignedOut}};
+    handleSignedIn, handleSignedOut}};

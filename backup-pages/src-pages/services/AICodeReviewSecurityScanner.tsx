@@ -19,7 +19,6 @@
         'Advanced integrations',;'
         'Custom workflows',;'        'On-premise deployment';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
@@ -36,14 +35,9 @@
     {;
       title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
-<<<<<<< HEAD
-      icon: Package,;
-      examples: ['Dependency scanning',Vulnerability databases',Update automation',License compliance']};
-  ];
-=======
+
       icon: Package,;'
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -298,17 +292,12 @@
 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
-                  plan.popular
-                    ? 'border-green-500/50 ring-2 ring-green-500/20'
-                    : 'border-gray-700'
-========
+<=
 
                   plan.popular '
                     ? 'border-green-500/50 ring-2 ring-green-500/20' '
                     : 'border-gray-700'`
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewSecurityScanner.tsx
-                } hover:border-green-500/50 transition-all duration-300`}
+>                } hover:border-green-500/50 transition-all duration-300`}
               >
                 {plan.popular && ("
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -317,20 +306,13 @@
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
-
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+<=
                 "
                 <div className="text-center mb-6">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewSecurityScanner.tsx
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+>                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>"
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>

@@ -62,14 +62,9 @@ const Signup: React.FC = () => {
 
   
       return false;
-<<<<<<< HEAD
-    }
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
 
-=======
     }    if (!/\S+@\S+\.\S+/.test(formData.email)) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       setError('Please enter a valid email address');
       return false}
     if (formData.password.length < 8) {
@@ -213,14 +208,9 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
-<<<<<<< HEAD
-                  <input"
-                    type="email"
-                    value={formData.email}
-=======
+
                   <input"                    type="email"
                     value={formData.email}'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('email', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your email"
@@ -235,14 +225,9 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
-<<<<<<< HEAD
-                  <input"
-                    type="tel"
-                    value={formData.phone}
-=======
+
                   <input"                    type="tel"
                     value={formData.phone}'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('phone', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your phone number"
@@ -258,14 +243,9 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
-<<<<<<< HEAD
-                  <input"
-                    type="text"
-                    value={formData.company}
-=======
+
                   <input"                    type="text"
                     value={formData.company}'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     onChange={e => handleInputChange('company', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your company name"

@@ -1,16 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AISalesCopilot.tsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Users,
-  TrendingUp,
-  Target,
-  Zap,
-  MessageCircle,
-  BarChart3,
-  Clock,
-  Award,
-========
+<=
 import {
   Users, 
   TrendingUp, 
@@ -20,8 +8,7 @@ import {
   BarChart3, 
   Clock, 
   Award, 
->>>>>>>> main:backup-pages/src-pages/services/AISalesCopilot.tsx
-  Star,
+>  Star,
   Globe,
   Cpu,
   Database,
@@ -48,24 +35,16 @@ import {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Sales Copilot - Zion Tech Group"
-        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
-      />
-=======
+
         title="AI Sales Copilot - Zion Tech Group""        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20"></div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISalesCopilot.tsx
-
-========
+<=
         "
->>>>>>>> main:backup-pages/src-pages/services/AISalesCopilot.tsx
-        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+>        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

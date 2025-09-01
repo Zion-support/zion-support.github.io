@@ -1,10 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 
-const stripeSecretKey = process.env.STRIPE_TEST_SECRET_KEY || process.env.STRIPE_SECRET_KEY;
+const stripeSecretKey =
+  process.env.STRIPE_TEST_SECRET_KEY || process.env.STRIPE_SECRET_KEY;
 
 if (!stripeSecretKey) {
-  const errorMessage = 'CRITICAL: STRIPE_SECRET_KEY is missing. Webhook cannot function.';
+  const errorMessage =
+    'CRITICAL: STRIPE_SECRET_KEY is missing. Webhook cannot function.';
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
@@ -31,7 +33,7 @@ interface ErrorResponse {
 }
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<WebhookSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -45,7 +47,9 @@ export default async function handler(
   const { sessionId } = req.body as WebhookRequestBody;
 
   if (!sessionId || typeof sessionId !== 'string') {
-    return res.status(400).json({ error: 'Missing or invalid sessionId in request body' });
+    return res
+      .status(400)
+      .json({ error: 'Missing or invalid sessionId in request body' });
   }
 
   try {
@@ -53,14 +57,17 @@ export default async function handler(
 
     if (session.payment_status === 'paid') {
       // TODO: Update your database to mark order paid using session.metadata.orderId or similar
-      console.log(`Order for session ${session.id} (metadata: ${JSON.stringify(session.metadata)}) marked as paid.`);
+      console.log(
+        `Order for session ${session.id} (metadata: ${JSON.stringify(session.metadata)}) marked as paid.`
+      );
       // Example: await updateOrderStatus(session.metadata.orderId, 'paid');
     } else {
-      console.log(`Session ${session.id} payment_status is ${session.payment_status}.`);
+      console.log(
+        `Session ${session.id} payment_status is ${session.payment_status}.`
+      );
     }
 
     return res.status(200).json({ session });
-
   } catch (err: unknown) {
     console.error('Webhook error:', err);
     let errorMessage = 'An unexpected error occurred.';
@@ -70,13 +77,15 @@ export default async function handler(
       errorMessage = `Stripe Error: ${err.message}`;
       errorDetails = err.code ? `Code: ${err.code}` : undefined;
       // Use err.statusCode if appropriate for the response, otherwise default
-      return res.status(err.statusCode || 500).json({ error: errorMessage, details: errorDetails });
+      return res
+        .status(err.statusCode || 500)
+        .json({ error: errorMessage, details: errorDetails });
     } else if (err instanceof Error) {
       errorMessage = err.message;
     } else if (typeof err === 'string') {
       errorMessage = err;
     }
-    
+
     return res.status(500).json({ error: errorMessage, details: errorDetails });
   }
 }

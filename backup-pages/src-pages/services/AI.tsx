@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Brain,
-  Cpu,
-  Zap,
-  Target,
-  Users,
-  Shield,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Eye,
-  MessageSquare,
-  Heart,
-  DollarSign,
-  Factory,
-  ShoppingCart'
- } from 'lucide-react';
-;
-export { function };
-export default function AIServices(...args[]):  {
-
-  const aiServices = [
-    {
-
-      name: "AI Strategy & Consulting","
-      description: "Strategic guidance on implementing AI solutions across your organization",
-      icon: Target,
-      features[;"
-        "AI readiness assessment","
-        "Technology roadmap planning","
-        "ROI analysis and business case development","
-        "Change management strategies"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       price: "From $2,500","
       duration: "2-4 weeks"

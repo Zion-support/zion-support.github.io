@@ -44,22 +44,15 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
         'SAML SSO and audit trails',;'
         'Custom data retention + warehouse sync',;'        'Dedicated CSM and 99.9% SLA';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-<<<<<<< HEAD
-        title="Affiliate Tracking Platform - Zion Tech Group"
-        description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
-        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
-      />
-=======
+
         title="Affiliate Tracking Platform - Zion Tech Group""
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.""        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"

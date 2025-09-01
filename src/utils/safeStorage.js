@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-export const safeStorage = {
-export default safeStorage;
 
-// In - memory storage for fallback with optimizations
-=======
 // In-memory storage for fallback with optimizations
->>>>>>> main
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
@@ -14,7 +8,7 @@ const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 function isLocalStorageAvailable() {
   const now = Date.now();
   // Use cached result if checked recently
-  if()
+  if();
     localStorageAvailable !== null &&
     now - lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL
   ) {
@@ -24,16 +18,11 @@ function isLocalStorageAvailable() {
 
   lastAvailabilityCheck = now;
   try {
-    if (typeof window === 'undefined') {
-
-      localStorageAvailable = false;
+    if (typeof window === 'undefined') {''      localStorageAvailable = false;
       return false;
     }
 
-    const testKey = '__localStorage_test__';
-    localStorage.setItem(testKey,test');
-    localStorage.removeItem(testKey);
-    localStorageAvailable = true;
+    const testKey = '__localStorage_test__';'    localStorage.setItem(testKey, test');''    localStorage.removeItem(testKey);'    localStorageAvailable = true;
     return true;
   } catch {
 
@@ -44,18 +33,14 @@ function isLocalStorageAvailable() {
 
 function safeConsoleError(message, error) {
 
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-  // Prevent infinite recursion in console logging'
-  if (env === 'production') return;
-
-  try {
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';'  // Prevent infinite recursion in console logging'''  if (env === 'production') return;''  try {
     // console.error(message, error);
   } catch {
 
     // Silent fail if console.error causes recursion
   }}
 
-export const safeStorage = {
+export const safeStorage = {;
 
   getItem: key => {
 
@@ -63,75 +48,41 @@ export const safeStorage = {
       return localStorage.getItem(key);
     } catch (error) {
 
-      // console.warn('Failed to get item from localStorage:', error);
-      return null;
-    }
-  },
-
-  setItem: (key, value) => {
+      // console.warn('Failed to get item from localStorage: ', error);'      return null;'    }
+  }, setItem: (key, value) => {
 
     try {
       localStorage.setItem(key, value);
       return true;
     } catch (error) {
 
-      // console.warn('Failed to set item in localStorage:', error);
-      return false;
-    }
-  },
-
-  removeItem: key => {
+      // console.warn('Failed to set item in localStorage: ', error);'      return false;'    }
+  }, removeItem: key => {
 
     try {
       localStorage.removeItem(key);
       return true;
     } catch (error) {
 
-      // console.warn('Failed to remove item from localStorage:', error);
-      return false;
-    }
-  },
-
-  clear: () => {
+      // console.warn('Failed to remove item from localStorage: ', error);'      return false;'    }
+  }, clear: () => {
     try {
       localStorage.clear();
       return true;
     } catch (error) {
 
-      // console.warn('Failed to clear localStorage:', error);
-      return false;
-    }
-  },
-
-  key: index => {
+      // console.warn('Failed to clear localStorage: ', error);'      return false;'    }
+  }, key: index => {
 
     try {
       return localStorage.key(index);
     } catch (error) {
-<<<<<<< HEAD
 
-      // console.warn('Failed to get key from localStorage:', error);
-      return null;
-=======
-'
-      // console.warn('Failed to get key from localStorage:', error);      return null;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    }
-  },
-
-  get length() {
+'''      // console.warn('Failed to get key from localStorage: ', error);      return null;'    }'  }, get length() {
     try {
       return localStorage.length;
     } catch (error) {
-<<<<<<< HEAD
 
-      // console.warn('Failed to get localStorage length:', error);
-      return 0;
-=======
-'
-      // console.warn('Failed to get localStorage length:', error);      return 0;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    }
-  }};
+'''      // console.warn('Failed to get localStorage length: ', error);      return 0;'    }'  }};
 
 export default safeStorage;

@@ -85,12 +85,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center">
-            <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">
-=======
   y: 0 
 
 
@@ -100,7 +95,6 @@ export default function AIAutonomousBusinessPlatform() {
 "
 }} transition={{ duration: 0.8 }} className="text-center">"
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
               <Cpu className="w-4 h-4"/>
               Complete Business Solution
             </div>
@@ -141,11 +135,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -154,7 +144,6 @@ export default function AIAutonomousBusinessPlatform() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Platform Features
             </h2>"
@@ -180,10 +169,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  delay: index * 0.1
 
-=======
   delay: index * 0.1 
 
 
@@ -191,7 +177,6 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 "
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>"
                     <IconComponent className="w-8 h-8"/>
@@ -214,11 +199,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -227,7 +208,6 @@ export default function AIAutonomousBusinessPlatform() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Why Choose Our Platform?
             </h2>"
@@ -250,12 +230,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  delay: index * 0.1
 
-}} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
-=======
   delay: index * 0.1 
 
 
@@ -265,7 +240,6 @@ export default function AIAutonomousBusinessPlatform() {
 "
 }} className="flex items-start gap-3">"
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>))}
           </div>
@@ -283,11 +257,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  y: 0
 
-}} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 
@@ -296,7 +266,6 @@ export default function AIAutonomousBusinessPlatform() {
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Integrated Modules
             </h2>"
@@ -322,12 +291,7 @@ export default function AIAutonomousBusinessPlatform() {
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:src/pages/AIServices/AIAutonomousBusinessPlatform.jsx
-  delay: index * 0.1
 
-}} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
-=======
   delay: index * 0.1 
 
 
@@ -337,7 +301,6 @@ export default function AIAutonomousBusinessPlatform() {
 "
 }} className="text-center">"
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">"
->>>>>>> main:backup-pages/src-pages/AIServices/AIAutonomousBusinessPlatform.jsx
                     <IconComponent className="w-8 h-8 text-white"/>
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{module.title}</h3>"

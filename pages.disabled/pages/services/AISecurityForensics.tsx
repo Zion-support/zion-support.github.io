@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven forensics automation and orchestration',;
     'Real-time forensics performance tracking',;
     'Custom AI models for forensics applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityForensics.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$799/mo',
-      details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,999/mo',
-      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityForensics.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited investigations',Custom AI models',Full forensics suite',24/7 dedicated support'] },;

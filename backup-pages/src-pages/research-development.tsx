@@ -1,49 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  FlaskConical,
-  Brain,
-  Shield,
-  Cloud,
-  TrendingUp,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  Award,
-  Clock,
-  DollarSign,
-  Search,
-  Filter,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Target,
-  BookOpen,
-  GraduationCap,
-  Lightbulb,
-  Microscope,
-  TestTube,
-  Atom,
-  Satellite,
-  Telescope'
- } from 'lucide-react';
-
-
-      'Deep Learning Architectures',Natural Language Processing',Computer Vision & Image Recognition',Reinforcement Learning',AI Ethics & Responsible AI',Edge AI & Federated Learning'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     publications: 15,
     patents: 8,
@@ -139,7 +94,6 @@ import {
       '95% accuracy in threat classification','
       '3 pending patents','
       '5 research publications'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
@@ -233,7 +187,6 @@ import {
     id: 1,'
     title: 'Advanced Neural Network Architectures for Cybersecurity','
     authors['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],;'    journal: 'IEEE Transactions on Cybersecurity',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     year: 2027,
     citations: 45,
     area: 'AI & ML',
@@ -298,7 +251,6 @@ import {
     status: 'Granted','
     patentNumber: 'US 11,234,567','
     area: 'AI & ML','    description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   },
   {
 
@@ -403,12 +355,8 @@ export default function ResearchDevelopment(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search research..."
-=======
+
                     type="text""                    placeholder="Search research..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"

@@ -1,9 +1,5 @@
 export class ContentOptimizer {
-<<<<<<< HEAD
-export default ContentOptimizer;
 
-=======
->>>>>>> main
   static MIN_WORD_COUNT = 300;
   static MIN_HEADING_COUNT = 2;
   static MIN_IMAGE_COUNT = 1;
@@ -17,24 +13,18 @@ export default ContentOptimizer;
     const linkCount = this.countLinks(content);
     const readabilityScore = this.calculateReadabilityScore(content);
     const seoScore = this.calculateSEOScore(content, page);
-    const issues = this.identifyIssues(content, page, {
+    const issues = this.identifyIssues(content, page, {;
 
-      wordCount,
-      headingCount,
-      imageCount,
-      linkCount});
+      wordCount, headingCount,
+      imageCount, linkCount});
     const suggestions = this.generateSuggestions(issues, page);
 
     return {
 
-      page,
-      wordCount,
-      headingCount,
-      imageCount,
-      linkCount,
-      readabilityScore,
-      seoScore,
-      issues,
+      page, wordCount,
+      headingCount, imageCount,
+      linkCount, readabilityScore,
+      seoScore, issues,
       suggestions};
   }
 
@@ -67,7 +57,7 @@ export default ContentOptimizer;
 
     const textContent = content.replace(/<[^>]*>/g,).trim();
     const sentences = textContent;
-      .split(/[.!?]+/)
+      .split(/[.!?]+/);
       .filter(s => s.trim().length > 0);
     const words = textContent.split(/\s+/).filter(w => w.length > 0);
     const syllables = this.countSyllables(textContent);
@@ -75,8 +65,7 @@ export default ContentOptimizer;
     if (sentences.length === 0 || words.length === 0) return 0;
 
     // Flesch Reading Ease formula
-    const score =
-      206.835 -
+    const score = 206.835 -;
       1.015 * (words.length / sentences.length) -
       84.6 * (syllables / words.length);
     return Math.max(0, Math.min(100, score));
@@ -108,30 +97,11 @@ export default ContentOptimizer;
 
     let score = 100;
 
-    // Check for title'
-    if (!content.includes('<title>)) score -= 20;
-
-    // Check for meta description'
-    if (!content.includes('name="description"')) score -= 15;
-
-    // Check for headings'
-    if (!content.includes('<h1>)) score -= 10;
-    if (!content.includes('<h2>)) score -= 5;
-
-    // Check for images with alt text
+    // Check for title'''    if (!content.includes('<title>)) score -= 20;'''    // Check for meta description'''    if (!content.includes('name="description"')) score -= 15;''    // Check for headings'''    if (!content.includes('<h1>)) score -= 10;''    if (!content.includes('<h2>)) score -= 5;'''    // Check for images with alt text
     const images = content.match(/<img[^>]*>/gi) || [];
-    const imagesWithAlt = images.filter(img => img.includes('alt='));
-    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
+    const imagesWithAlt = images.filter(img => img.includes('alt='));'    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;'
 
-<<<<<<< HEAD
-    // Check for internal links
-    const internalLinks = content.match (/href="/[^"]*"/g) || [];
-=======
-    // Check for internal links"
-    const internalLinks = content.match(/href="\/[^"]*"/g) || [];
->>>>>>> main
-    if (internalLinks.length < 2) score -= 10;
-
+    // Check for internal links"""    const internalLinks = content.match(/href="\/[^"]*"/g) || [];""    if (internalLinks.length < 2) score -= 10;"
     return Math.max(0, score);
   }
 
@@ -143,38 +113,22 @@ export default ContentOptimizer;
 
       issues.push({
 
-        type: 'word_count',
-        severity: 'medium',
-        message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`});
-    }
-
+        type: 'word_count', severity: 'medium','        message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`});'    }`
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
 
       issues.push({
 
-        type: 'heading_count',
-        severity: 'low',`
-        message: `Add more headings to improve content structure.`});
-    }
-
+        type: 'heading_count', severity: 'low',`'        message: `Add more headings to improve content structure.`});'    }`
     if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
 
       issues.push({
 
-        type: 'image_count',
-        severity: 'low',`
-        message: `Consider adding images to make content more engaging.`});
-    }
-
+        type: 'image_count', severity: 'low',`'        message: `Consider adding images to make content more engaging.`});'    }`
     if (metrics.linkCount < this.MIN_LINK_COUNT) {
 
       issues.push({
 
-        type: 'link_count',
-        severity: 'low',`
-        message: `Add more internal and external links for better SEO.`});
-    }
-
+        type: 'link_count', severity: 'low',`'        message: `Add more internal and external links for better SEO.`});'    }`
     return issues;
   }
 
@@ -186,26 +140,10 @@ export default ContentOptimizer;
 
       switch (issue.type) {
 
-        case 'word_count':
-          suggestions.push('
-            'Expand your content with more detailed information, examples, or related topics.'
-          );
-          break;
-        case 'heading_count':
-          suggestions.push('
-            'Break down your content into sections with descriptive headings (H2, H3).'
-          );
-          break;
-        case 'image_count':
-          suggestions.push('
-            'Add relevant images, diagrams, or infographics to illustrate your points.'
-          );
-          break;
-        case 'link_count':
-          suggestions.push('
-            'Include links to related pages on your site and authoritative external sources.'
-          );
-          break;
+        case 'word_count': suggestions.push('''            'Expand your content with more detailed information, examples, or related topics.''          );'          break;
+        case 'heading_count': suggestions.push('''            'Break down your content into sections with descriptive headings (H2, H3).''          );'          break;
+        case 'image_count': suggestions.push('''            'Add relevant images, diagrams, or infographics to illustrate your points.''          );'          break;
+        case 'link_count': suggestions.push('''            'Include links to related pages on your site and authoritative external sources.''          );'          break;
       }
     });
 
@@ -221,14 +159,9 @@ export default ContentOptimizer;
     if (analysis.issues.length > 0) {
 
       // Add suggestions as comments
-      const optimizationComments = analysis.suggestions`
-        .map(suggestion => `<!-- TODO: ${suggestion} -->`)
-        .join('\n');`
-      return `${optimizationComments}\n\n${optimizedContent}`;
-    }
-
+      const optimizationComments = analysis.suggestions``        .map(suggestion => `<!-- TODO: ${suggestion} -->`)`        .join('\n');`'      return `${optimizationComments}\n\n${optimizedContent}`;'    }`
     return optimizedContent;
   }}
 
 export default ContentOptimizer;
-'"`
+'"`'"""`

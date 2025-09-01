@@ -77,12 +77,9 @@ export default function AISupportHelpdesk(...args[]):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-        title = "AI Support Helpdesk - Zion Tech Group"
+>        title = "AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
        />
@@ -146,12 +143,9 @@ export default function AISupportHelpdesk(...args[]):  {
                 Everything you need to deliver exceptional customer support with AI assistance
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -197,12 +191,9 @@ export default function AISupportHelpdesk(...args[]):  {
                 Intelligent automation that understands and helps your customers
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map(capability: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -248,12 +239,9 @@ export default function AISupportHelpdesk(...args[]):  {
                 Meet your customers where they are with comprehensive support channels
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map(channel: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -299,12 +287,9 @@ export default function AISupportHelpdesk(...args[]):  {
                 Professional support tools that transform customer service with AI
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -352,12 +337,9 @@ export default function AISupportHelpdesk(...args[]):  {
                 Choose the support plan that fits your team size and requirements
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AISupportHelpdesk.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AISupportHelpdesk.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

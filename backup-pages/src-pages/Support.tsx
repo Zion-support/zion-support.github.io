@@ -25,7 +25,7 @@ import {
   Headphones,
   MessageSquare,
   VideoCall,
-  Mailbox
+  Mailbox,
 } from 'lucide-react';
 
 export const Support = () => {
@@ -61,7 +61,7 @@ export const Support = () => {
               Get the help you need with our comprehensive support resources,
               documentation, and expert assistance
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -70,7 +70,7 @@ export const Support = () => {
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
                 />
               </div>
@@ -90,8 +90,12 @@ export const Support = () => {
             className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
           >
             <div className="text-4xl mb-4">📚</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
-            <p className="text-gray-300 mb-4">Comprehensive guides, tutorials, and API documentation</p>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Documentation
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive guides, tutorials, and API documentation
+            </p>
             <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
               Browse Docs <ArrowRight className="w-4 h-4 ml-2" />
             </button>
@@ -106,7 +110,9 @@ export const Support = () => {
           >
             <div className="text-4xl mb-4">👥</div>
             <h3 className="text-xl font-semibold text-white mb-3">Community</h3>
-            <p className="text-gray-300 mb-4">Connect with other users and share knowledge</p>
+            <p className="text-gray-300 mb-4">
+              Connect with other users and share knowledge
+            </p>
             <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
               Join Community <ArrowRight className="w-4 h-4 ml-2" />
             </button>
@@ -120,8 +126,12 @@ export const Support = () => {
             className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
           >
             <div className="text-4xl mb-4">💬</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Live Support</h3>
-            <p className="text-gray-300 mb-4">Get real-time help from our support team</p>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Live Support
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Get real-time help from our support team
+            </p>
             <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
               Start Chat <ArrowRight className="w-4 h-4 ml-2" />
             </button>
@@ -137,8 +147,12 @@ export const Support = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">Need More Help?</h2>
-          <p className="text-gray-300">Our support team is here to assist you</p>
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need More Help?
+          </h2>
+          <p className="text-gray-300">
+            Our support team is here to assist you
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,7 +165,9 @@ export const Support = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4">
               <Phone className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Phone Support</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              Phone Support
+            </h3>
             <p className="text-gray-300 mb-3">+1 302 464 0950</p>
             <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
           </motion.div>
@@ -165,7 +181,9 @@ export const Support = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full mb-4">
               <MessageCircle className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              Email Support
+            </h3>
             <p className="text-gray-300 mb-3">kleber@ziontechgroup.com</p>
             <p className="text-sm text-gray-400">Response within 24 hours</p>
           </motion.div>

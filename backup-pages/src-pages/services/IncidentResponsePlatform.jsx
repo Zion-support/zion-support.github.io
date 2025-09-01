@@ -139,10 +139,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
-  y: 0
-
-========
+<=
   y: 0 
 
 
@@ -150,8 +147,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 
 "
->>>>>>>> main:backup-pages/src-pages/services/IncidentResponsePlatform.jsx
-}} transition={{ duration: 0.6 }} className="text-6xl mb-6">
+>}} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🚨
             </motion.div>"
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
@@ -447,12 +443,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>
               Join organizations already using our intelligent incident response platform
             </motion.p>
-<<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/IncidentResponsePlatform.jsx
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
+>            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
 
   { opacity: 0,
   y: 20

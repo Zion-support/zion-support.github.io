@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven testing automation and orchestration',;
     'Real-time testing analytics and insights',;
     'Custom AI models for testing applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIPenetrationTesting.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$799/mo',
-      details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,999/mo',
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIPenetrationTesting.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] },;

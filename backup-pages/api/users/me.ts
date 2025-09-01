@@ -46,12 +46,14 @@ type UserMeApiHandler = (
   res: NextApiResponse<UserMe | MutationSuccessResponse | ErrorResponse>
 ) => void | Promise<void>;
 
-
 const handler: UserMeApiHandler = async (req, res) => {
   if (req.method === 'GET') {
     // Simulate fetching user data
-    if (mockUser.softDeleted) { // Check if user is "deleted"
-        return res.status(404).json({ error: 'User not found or has been deleted.' });
+    if (mockUser.softDeleted) {
+      // Check if user is "deleted"
+      return res
+        .status(404)
+        .json({ error: 'User not found or has been deleted.' });
     }
     return res.status(200).json(mockUser);
   }
@@ -59,18 +61,22 @@ const handler: UserMeApiHandler = async (req, res) => {
   if (req.method === 'PUT') {
     // Assume req.body is Partial<UserMe> for updates
     const updateData = req.body as Partial<UserMe>;
-    
+
     // Prevent changing ID or re-activating a soft-deleted user via this simple PUT
     if (updateData.id && updateData.id !== mockUser.id) {
-        return res.status(400).json({ error: 'Cannot change user ID.' });
+      return res.status(400).json({ error: 'Cannot change user ID.' });
     }
     if (mockUser.softDeleted && updateData.softDeleted === false) {
-        return res.status(403).json({ error: 'Cannot re-activate user via this endpoint.'});
+      return res
+        .status(403)
+        .json({ error: 'Cannot re-activate user via this endpoint.' });
     }
-    if (updateData.softDeleted === true) { // If PUT request tries to soft delete
-        return res.status(400).json({ error: 'Use DELETE method to soft delete user.'})
+    if (updateData.softDeleted === true) {
+      // If PUT request tries to soft delete
+      return res
+        .status(400)
+        .json({ error: 'Use DELETE method to soft delete user.' });
     }
-
 
     mockUser = { ...mockUser, ...updateData };
     return res.status(200).json(mockUser);
@@ -80,7 +86,9 @@ const handler: UserMeApiHandler = async (req, res) => {
     mockUser.softDeleted = true;
     // Optionally, you might clear out some user data here or log the deletion
     console.log(`User ${mockUser.id} soft deleted.`);
-    return res.status(200).json({ success: true, message: 'User account has been deactivated.' });
+    return res
+      .status(200)
+      .json({ success: true, message: 'User account has been deactivated.' });
   }
 
   res.setHeader('Allow', ['GET', 'PUT', 'DELETE']);

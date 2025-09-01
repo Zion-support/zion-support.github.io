@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven Terraform automation and orchestration',;
     'Real-time Terraform analytics and insights',;
     'Custom AI models for Terraform applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AITerraform.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$399/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$999/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AITerraform.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage',Custom AI models',Full Terraform suite',24/7 dedicated support'] },;

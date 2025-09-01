@@ -16,14 +16,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
         {props.children}
       </div>)}
     if (isMobile) {
-<<<<<<< HEAD:src/components/ui/sidebar/sidebar-main.jsx
-        return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
-        <SheetContent data-sidebar="sidebar" data-mobile="true" className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden" style = {
-  {
-                "--sidebar-width": "18rem",
 
-=======
->>>>>>> main:backup-pages/ui/sidebar/sidebar-main.jsx
 
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>"
         <SheetContent data-sidebar="sidebar" data-mobile="true" className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden" style = {
@@ -55,16 +48,13 @@ export const Sidebar = React.forwardRef((props, ref) => {
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
   props.className)
 
-<<<<<<< HEAD:src/components/ui/sidebar/sidebar-main.jsx
-} {...props}>
-=======
+
 
 
 
 
 
 } {...props}>"
->>>>>>> main:backup-pages/ui/sidebar/sidebar-main.jsx
         <div data-sidebar="sidebar" className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow">
           {props.children}
         </div>

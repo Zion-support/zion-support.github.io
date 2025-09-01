@@ -1,44 +1,10 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
->>>>>>> main
-import { useState, useEffect } from 'react';
-import { DragDropContext } from '@hello-pangea/dnd';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { toast } from '@/hooks/use-toast';
-import { KanbanColumn } from './KanbanColumn';
-import { useIsMobile } from '@/hooks/use-mobile';
-// Define the kanban board columns based on application statuses
-const COLUMNS = [
+
+import { useState, useEffect } from 'react';'import { DragDropContext } from '@hello-pangea/dnd';'import { useJobApplications } from '@/hooks/useJobApplications';'import { Card, CardContent, CardHeader } from '@/components/ui/card';'import { Skeleton } from '@/components/ui/skeleton';'import { toast } from '@/hooks/use-toast';'import { KanbanColumn } from './KanbanColumn';'import { useIsMobile } from '@/hooks/use-mobile';'// Define the kanban board columns based on application statuses'const COLUMNS = [;
   {
 
-    id: 'new',
-    title: 'Applied',
-    description: 'New applications'},
-  {
-
-    id: 'shortlisted',
-    title: 'Shortlisted',
-    description: 'Candidates selected for review'},
-  {
-
-    id: 'interview',
-    title: 'Interview',
-    description: 'Scheduled for interview'},
-  {
-
-    id: 'hired',
-    title: 'Hired',
-    description: 'Successful candidates'},
-  {
-
-    id: 'rejected',
-    title: 'Rejected',
-    description: 'Not moving forward'},
-];
-export function KanbanBoard({ jobId }) {
+    id: 'new', title: 'Applied','    description: 'New applications'}, {''    id: 'shortlisted','    title: 'Shortlisted', description: 'Candidates selected for review'},'  {';
+    id: 'interview', title: 'Interview','    description: 'Scheduled for interview'}, {''    id: 'hired','    title: 'Hired', description: 'Successful candidates'},'  {';
+    id: 'rejected', title: 'Rejected','    description: 'Not moving forward'}, '];'export function KanbanBoard({ jobId }) {
 
   const { applications, isLoading, updateApplicationStatus } =
     useJobApplications(jobId);
@@ -52,7 +18,7 @@ export function KanbanBoard({ jobId }) {
     if (applications) {
 
       // Group applications by status
-      const groupedApplications = COLUMNS.reduce((acc, column) => {
+      const groupedApplications = COLUMNS.reduce((acc, column) => {;
 
         acc[column.id] = applications.filter(app => app.status === column.id);
         return acc;
@@ -61,12 +27,10 @@ export function KanbanBoard({ jobId }) {
     }
   }, [applications]);
   // Handle drag end event to update the application status
-  const handleDragEnd = async result => {
+  const handleDragEnd = async result => {;
 
     const { destination, source, draggableId } = result;
-    // If there's no destination or the item is dropped in the same place, do nothing
-    if()
-      !destination ||
+    // If there&apos;s no destination or the item is dropped in the same place, do nothing''    if()'      !destination ||
       (destination.droppableId === source.droppableId &&
         destination.index === source.index)
     ) {
@@ -85,64 +49,32 @@ export function KanbanBoard({ jobId }) {
     destColumn.splice(destination.index, 0, { ...removed, status: newStatus });
     setColumns({
 
-      ...columns,
-      [source.droppableId]: sourceColumn,
-      [destination.droppableId]: destColumn});
+      ...columns, [source.droppableId]: sourceColumn, [destination.droppableId]: destColumn});
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus);
       toast({
 
-        title: 'Status updated',
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
-    } catch (error) {
-      // Revert the UI changes if the database update fails
-      toast({
+        title: 'Status updated', description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});'    } catch (error) {'      // Revert the UI changes if the database update fails`      toast({
 
-        title: 'Failed to update status',
-        description: 'Please try again',
-        variant: 'destructive'});
-    }
-  };
+        title: 'Failed to update status', description: 'Please try again','        variant: 'destructive'});'    }'  };
   if (isLoading) {
 
-    return()
-      <div'`
-        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
-      >
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
-          <Card key={i} className="h-[500px]">
-            <CardHeader>"
-              <Skeleton className="h-8 w-24" />
-            </CardHeader>
-            <CardContent>"
-              <Skeleton className="h-[400px] w-full" />
-            </CardContent>
-          </Card>
+    return();
+      <div'`''        className={`grid grid-cols-1 ${!isMobile ? 'md: grid-cols-3 lg:grid-cols-5' : ''} gap-4`}'      >'        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (`          <Card key={i} className="h-[500px]">"            <CardHeader>"""              <Skeleton className="h-8 w-24" />"            </CardHeader>"            <CardContent>"""              <Skeleton className="h-[400px] w-full" />"            </CardContent>"          </Card>
         ))}
       </div>
     );
   }
   if (!applications || applications.length === 0) {
 
-    return ("
-      <Card className="text-center py-16">
-        <CardContent>"
-          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>"
-          <p className="text-muted-foreground mb-6">
-            You haven't received applications for this job yet.
-          </p>
-        </CardContent>
+    return ("""      <Card className="text-center py-16">"        <CardContent>"""          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>"""          <p className="text-muted-foreground mb-6">"            You haven&apos;t received applications for this job yet.''          </p>'        </CardContent>
       </Card>
     );
   }
-  return()
+  return();
     <DragDropContext onDragEnd={handleDragEnd}>
-      <div'`
-        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
-      >
-        {COLUMNS.map(column => (
-          <KanbanColumn
+      <div'`''        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}'      >'        {COLUMNS.map(column => (`          <KanbanColumn
             key={column.id}
             id={column.id}
             title={column.title}
@@ -155,4 +87,4 @@ export function KanbanBoard({ jobId }) {
     </DragDropContext>
   );
 }
-'"`
+'"`'"""`

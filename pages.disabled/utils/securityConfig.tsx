@@ -1,14 +1,5 @@
-<<<<<<< HEAD:pages.disabled/utils/securityConfig.tsx
-export const generateCSPHeader = () : string => {
-export const sanitizeInput = {
-export const securityConfig = {
-export const securityMiddleware = {
-export const validateInput = {
-export default securityConfig;
 
-=======
 export 
->>>>>>> main:src/utils/securityConfig.tsx
 // Security Configuration and Utilities
   // Content Security Policy
   csp: {

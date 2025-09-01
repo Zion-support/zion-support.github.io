@@ -1,4 +1,4 @@
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -12,7 +12,7 @@ interface UsePerformanceOptimizationOptions {
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
   threshold?: number
 }
 ;
@@ -24,12 +24,12 @@ export const {;
     enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
     threshold = 0.1} = options;
 ;
     threshold = 0.1} = options;
 
-const metricsRef:  useRef<PerformanceMetrics>({;
+const metricsRef: useRef<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
     memoryUsage: 0,;
@@ -41,21 +41,14 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   // Measure initial load time
   useEffect(() => {
 
-    if (typeof window !== 'null') {
-:src/hooks/usePerformanceOptimization.tsx
-
+    if (typeof window !== 'null') {': src/hooks/usePerformanceOptimization.tsx'
       
       metricsRef.current.loadTime = loadTime;
 
       // Report to analytics if available
       if (window.gtag) {
 
-        window.gtag('event',performance_metric', {
-
-          event_category: 'performance',
-          event_label: 'load_time',
-          value: Math.round(loadTime)
-        })}
+        window.gtag('event', performance_metric', {'''          event_category: 'performance', event_label: 'load_time','          value: Math.round(loadTime)'        })}
     }
   }, []);
 
@@ -65,7 +58,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
     let animationFrameId: number;
 
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
     
       
       frameCountRef.current++;
@@ -84,13 +77,9 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
         // Log low FPS for debugging
         if (fps < 30) {
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
 
-          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
-          // console.warn(`Low FPS detected: ${fps}`)}
-          // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
-          console.warn(`Low FPS detected: ${fps}`)}
-      }
+          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}``          // console.warn(`Low FPS detected: ${fps}`)}`          // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`          console.warn(`Low FPS detected: ${fps}`)}`      }
 
       animationFrameId = requestAnimationFrame(measureFPS)};
 
@@ -106,32 +95,18 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   useEffect(: unknown {
     if (!enableMemoryManagement) return;
 
-<<<<<<< HEAD
-    
-=======
-:src/hooks/usePerformanceOptimization.tsx
-    const checkMemoryUsage = () => {;'
-    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      if ('memory' in performance) {;
-        
-        metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+
+: src/hooks/usePerformanceOptimization.tsx
+    const checkMemoryUsage = () => {;'''    '      if ('memory' in performance) {;'        '        metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
-:src/hooks/usePerformanceOptimization.tsx
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
-      }
-    };
+: src/hooks/usePerformanceOptimization.tsx
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'''          // // // // // // // // console.warn('High memory usage detected: ', metricsRef.current.memoryUsage.toFixed(2), MB')}''          // console.warn('High memory usage detected: ', metricsRef.current.memoryUsage.toFixed(2), MB')}''      }'    };
 
     
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
-      }
-    };
+          // // // // // // // console.warn('High memory usage detected: ', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'          console.warn('High memory usage detected: ', metricsRef.current.memoryUsage.toFixed(2), 'MB')}'      }'    };
 
     
     return () => clearInterval(intervalId)}, [enableMemoryManagement]);
@@ -158,27 +133,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
 
-:src/hooks/usePerformanceOptimization.tsx
-  // Performance monitoring'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
-<<<<<<< HEAD
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
-=======
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-  // Performance monitoring
-        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+: src/hooks/usePerformanceOptimization.tsx
+  // Performance monitoring'`''        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), ms')}'`''        // console.warn(`Slow render detected in ${componentName}: `, renderTime.toFixed(2), 'ms')}'  // Performance monitoring'        // // // // // // // console.warn(`Slow render detected in ${componentName}: `, renderTime.toFixed(2), 'ms')}'        console.warn(`Slow render detected in ${componentName}: `, renderTime.toFixed(2), 'ms')}''      // Report to analytics if available`      if (window.gtag) {
 
-      // Report to analytics if available
-      if (window.gtag) {
-
-        window.gtag('event',performance_metric', {
-
-          event_category: 'performance',
-          event_label: 'render_time',
-          value: Math.round(renderTime)
-        })}
+        window.gtag('event', performance_metric', {'''          event_category: 'performance', event_label: 'render_time','          value: Math.round(renderTime)'        })}
     }}, []);
 
   // Debounced function utility
@@ -191,7 +149,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   // Throttled function utility
 
     return (...args: Parameters<T>)  => {
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
 
       
       if (now - lastCall >= delay) {
@@ -205,13 +163,12 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }, []);
 
   // Get current metrics
-:src/hooks/usePerformanceOptimization.tsx
+: src/hooks/usePerformanceOptimization.tsx
   
   // Memoized performance data
   
-  // Memoized performance data
-  
-    metrics: getMetrics(),;
+  // Memoized performance data,
+  metrics: getMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
     isSlowRender: metricsRef.current.renderTime > 16}), [getMetrics]);
@@ -222,14 +179,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   return {
 
-    lazyLoad,
-    measureRenderTime,
-    debounce,
-    throttle,
-    createIntersectionObserver,
-    getMetrics,
-    performanceData,
-    cleanup
+    lazyLoad, measureRenderTime,
+    debounce, throttle,
+    createIntersectionObserver, getMetrics,
+    performanceData, cleanup
   }};
 
 // Type declaration for gtag
@@ -238,4 +191,4 @@ declare global {
   interface Window {
     gtag?: (...args[])  => void}
 }
-'`
+'`'''`

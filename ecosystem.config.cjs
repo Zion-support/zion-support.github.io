@@ -11,12 +11,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'console-error-fixer'
+        PM2_PROCESS: 'console-error-fixer',
       },
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: 'logs/console-error-fixer.log',
       out_file: 'logs/console-error-fixer-out.log',
-      error_file: 'logs/console-error-fixer-error.log'
+      error_file: 'logs/console-error-fixer-error.log',
     },
 
     // Link Checker - Checks for broken links
@@ -30,12 +30,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'link-checker'
+        PM2_PROCESS: 'link-checker',
       },
       cron_restart: '0 2 * * 1', // Restart every Monday at 2 AM
       log_file: 'logs/link-checker.log',
       out_file: 'logs/link-checker-out.log',
-      error_file: 'logs/link-checker-error.log'
+      error_file: 'logs/link-checker-error.log',
     },
 
     // Continuous Improvement - Runs code quality checks
@@ -49,12 +49,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'continuous-improvement'
+        PM2_PROCESS: 'continuous-improvement',
       },
       cron_restart: '0 2 * * 1', // Restart every Monday at 2 AM
       log_file: 'logs/continuous-improvement.log',
       out_file: 'logs/continuous-improvement-out.log',
-      error_file: 'logs/continuous-improvement-error.log'
+      error_file: 'logs/continuous-improvement-error.log',
     },
 
     // Daily Build Test - Runs build and tests daily
@@ -68,12 +68,12 @@ module.exports = {
       max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'daily-build-test'
+        PM2_PROCESS: 'daily-build-test',
       },
       cron_restart: '0 3 * * *', // Restart daily at 3 AM
       log_file: 'logs/daily-build-test.log',
       out_file: 'logs/daily-build-test-out.log',
-      error_file: 'logs/daily-build-test-error.log'
+      error_file: 'logs/daily-build-test-error.log',
     },
 
     // Security Audit - Runs security checks
@@ -87,12 +87,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'security-audit'
+        PM2_PROCESS: 'security-audit',
       },
       cron_restart: '0 4 * * 1', // Restart every Monday at 4 AM
       log_file: 'logs/security-audit.log',
       out_file: 'logs/security-audit-out.log',
-      error_file: 'logs/security-audit-error.log'
+      error_file: 'logs/security-audit-error.log',
     },
 
     // Dependency Updates - Checks and updates dependencies
@@ -106,12 +106,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'dependency-updates'
+        PM2_PROCESS: 'dependency-updates',
       },
       cron_restart: '0 2 * * 1', // Restart every Monday at 2 AM
       log_file: 'logs/dependency-updates.log',
       out_file: 'logs/dependency-updates-out.log',
-      error_file: 'logs/dependency-updates-error.log'
+      error_file: 'logs/dependency-updates-error.log',
     },
 
     // Performance Monitor - Monitors application performance
@@ -125,12 +125,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'dependency-updates'
+        PM2_PROCESS: 'dependency-updates',
       },
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       log_file: 'logs/performance-monitor.log',
       out_file: 'logs/performance-monitor-out.log',
-      error_file: 'logs/performance-monitor-error.log'
+      error_file: 'logs/performance-monitor-error.log',
     },
 
     // Quality Checks - Runs quality assurance checks
@@ -144,12 +144,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'quality-checks'
+        PM2_PROCESS: 'quality-checks',
       },
       cron_restart: '0 5 * * *', // Restart daily at 5 AM
       log_file: 'logs/quality-checks.log',
       out_file: 'logs/quality-checks-out.log',
-      error_file: 'logs/quality-checks-error.log'
+      error_file: 'logs/quality-checks-error.log',
     },
 
     // Link Integrity - Ensures link integrity
@@ -163,12 +163,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'link-integrity'
+        PM2_PROCESS: 'link-integrity',
       },
       cron_restart: '0 6 * * *', // Restart daily at 6 AM
       log_file: 'logs/link-integrity.log',
       out_file: 'logs/link-integrity-out.log',
-      error_file: 'logs/link-integrity-error.log'
+      error_file: 'logs/link-integrity-error.log',
     },
 
     // Front Maximizer - Optimizes frontend performance
@@ -182,12 +182,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'front-maximizer'
+        PM2_PROCESS: 'front-maximizer',
       },
       cron_restart: '0 7 * * *', // Restart daily at 7 AM
       log_file: 'logs/front-maximizer.log',
       out_file: 'logs/front-maximizer-out.log',
-      error_file: 'logs/front-maximizer-error.log'
+      error_file: 'logs/front-maximizer-error.log',
     },
 
     // Sitemap Runner - Generates and updates sitemap
@@ -201,68 +201,89 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'sitemap-runner'
+        PM2_PROCESS: 'sitemap-runner',
       },
-<<<<<<< HEAD
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/ai-code-review.log',
-      error_file: './logs/ai-code-review-error.log',
-      out_file: './logs/ai-code-review-out.log'
-    },
-
-    {
-      name: 'smart-dependency-intelligence',
-      script: './scripts/automation/smart-dependency-intelligence.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: './logs/smart-dependency-intelligence.log',
-      error_file: './logs/smart-dependency-intelligence-error.log',
-      out_file: './logs/smart-dependency-intelligence-out.log'
-    },
-
-    {
-      name: 'predictive-issue-detection',
-      script: './scripts/automation/predictive-issue-detection.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */3 * * *', // Every 3 hours
-      log_file: './logs/predictive-issue-detection.log',
-      error_file: './logs/predictive-issue-detection-error.log',
-      out_file: './logs/predictive-issue-detection-out.log'
-    },
-
-    {
-      name: 'intelligent-build-pipeline',
-      script: './scripts/automation/intelligent-build-pipeline.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production'
-      },
-      cron_restart: '0 */8 * * *', // Every 8 hours
-      log_file: './logs/intelligent-build-pipeline.log',
-      error_file: './logs/intelligent-build-pipeline-error.log',
-      out_file: './logs/intelligent-build-pipeline-out.log'
-=======
       cron_restart: '0 8 * * *', // Restart daily at 8 AM
       log_file: 'logs/sitemap-runner.log',
       out_file: 'logs/sitemap-runner-out.log',
-      error_file: 'logs/sitemap-runner-error.log'
->>>>>>> main
-    }
+      error_file: 'logs/sitemap-runner-error.log',
+    },
+
+    // AI Code Review - Automated code review and suggestions
+    {
+      name: 'ai-code-review',
+      script: 'scripts/automation-wrapper.js',
+      args: 'code-review',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PROCESS: 'ai-code-review',
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: 'logs/ai-code-review.log',
+      error_file: 'logs/ai-code-review-error.log',
+      out_file: 'logs/ai-code-review-out.log',
+    },
+
+    // Smart Dependency Intelligence - Intelligent dependency management
+    {
+      name: 'smart-dependency-intelligence',
+      script: 'scripts/automation-wrapper.js',
+      args: 'smart-deps',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PROCESS: 'smart-dependency-intelligence',
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: 'logs/smart-dependency-intelligence.log',
+      error_file: 'logs/smart-dependency-intelligence-error.log',
+      out_file: 'logs/smart-dependency-intelligence-out.log',
+    },
+
+    // Predictive Issue Detection - Identifies potential issues before they occur
+    {
+      name: 'predictive-issue-detection',
+      script: 'scripts/automation-wrapper.js',
+      args: 'predict',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PROCESS: 'predictive-issue-detection',
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: 'logs/predictive-issue-detection.log',
+      error_file: 'logs/predictive-issue-detection-error.log',
+      out_file: 'logs/predictive-issue-detection-out.log',
+    },
+
+    // Intelligent Build Pipeline - Smart build optimization
+    {
+      name: 'intelligent-build-pipeline',
+      script: 'scripts/automation-wrapper.js',
+      args: 'build-pipeline',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PM2_PROCESS: 'intelligent-build-pipeline',
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: 'logs/intelligent-build-pipeline.log',
+      error_file: 'logs/intelligent-build-pipeline-error.log',
+      out_file: 'logs/intelligent-build-pipeline-out.log',
+    },
   ],
 
   deploy: {
@@ -272,7 +293,8 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:username/repo.git',
       path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
-    }
-  }
+      'post-deploy':
+        'npm install && pm2 reload ecosystem.config.cjs --env production',
+    },
+  },
 };

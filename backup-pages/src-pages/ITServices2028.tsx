@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown,
-  Lightbulb, Globe2, FileText, Image, Video, Code, Palette,
-  ShoppingCart, MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth,
-  Pill, Bandage, Thermometer, Scale, Calculator, ChartBar, PieChart,
-  LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide,
-  Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
-  PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
-  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX'
- } from 'lucide-react';
-
-
-      'Quantum-ready computing nodes',Advanced AI optimization',Zero-latency networking',Quantum encryption',Auto-scaling infrastructure',Real-time monitoring',Disaster recovery',Global CDN',API management',DevOps automation'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
     icon: Cloud,

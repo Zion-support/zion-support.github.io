@@ -1,17 +1,11 @@
 export 
-      sessionStorage.removeItem('auth')}
-  } catch (error) {
-
-    // console.error('Error cleaning up auth state:', error)}
-};
-
+      sessionStorage.removeItem('auth')}'  } catch (error) {'
+    // console.error('Error cleaning up auth state: ', error)}'};'
 export 
       return !!auth}
     return false} catch (error) {
 
-    // console.error('Error checking authentication status:', error);
-    return false}
-};
+    // console.error('Error checking authentication status: ', error);'    return false}'};
 
 export 
       if (auth) {
@@ -21,9 +15,7 @@ export
     }
     return null} catch (error) {
 
-    // console.error('Error getting auth token:', error);
-
-      return null}
+    // console.error('Error getting auth token: ', error);''      return null}
   };
 
 export 
@@ -34,7 +26,5 @@ export
     }
     return null} catch (error) {
 
-    // console.error('Error getting user data:', error);
-
-    return null}
+    // console.error('Error getting user data: ', error);''    return null}
 };

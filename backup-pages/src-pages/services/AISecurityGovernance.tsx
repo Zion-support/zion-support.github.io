@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven governance automation and orchestration',;
     'Real-time governance performance tracking',;
     'Custom AI models for governance applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityGovernance.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$699/mo',
-      details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,799/mo',
-      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityGovernance.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited policies',Custom AI models',Full governance suite',24/7 dedicated support'] },;

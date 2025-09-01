@@ -1,76 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Shield,
-  Eye,
-  AlertTriangle,
-  Zap,
-  Lock,
-  Activity,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Shield, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Activity, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  Globe,
-  Server,
-  Network,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Brain,
-  Users'
- } from 'lucide-react';
-;
-export { function };
-export default function AICybersecurityThreatDetection(...args: []):  {
+<=
 
-  
-    },;
-    {;
-      icon: Zap,;
-      title: 'Real-Time Intelligence',;
-      description: 'Live threat intelligence feeds and global attack pattern recognition'};
-  ];
-
-  
-        'On-premise options',;
-        'SLA guarantees',;
-        'Custom integrations';
-      ],;
-      popular: false};
-  ]},;
-    {;
-      icon: BarChart3,;
-      title: '60% Cost Reduction',;
-      description: 'Automated security reduces manual intervention and operational costs'};
-  ]},;
-    {;
-      title: 'Insider Threats',;
-      description: 'Behavioral analysis detects unusual user activities and data access patterns',;
-      icon: Users};
-  ];
-
-  
-    'SOC 2 Type II',;
-    'ISO 27001',;
-    'GDPR',;
-    'HIPAA',;
-    'PCI DSS',;
-    'NIST Cybersecurity Framework';
-=======
       icon: Users};
   ];
 
@@ -80,24 +9,15 @@ export default function AICybersecurityThreatDetection(...args: []):  {
     'GDPR',;'
     'HIPAA',;'
     'PCI DSS',;'    'NIST Cybersecurity Framework';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-        title="AI Cybersecurity Threat Detection - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
-       />
-=======
+
         title="AI Cybersecurity Threat Detection - Zion Tech Group""        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -526,12 +446,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 Contact Security Team
               </button>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-            <p className="text-gray-400 mt-6">;
+>            <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • 24/7 security monitoring;
             </p>;
           </motion.div>;

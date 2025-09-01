@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven security task automation',;
     'Real-time automation performance monitoring',;
     'Custom AI models for automation applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AISecurityAutomation.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$599/mo',
-      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,499/mo',
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AISecurityAutomation.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited workflows',Custom AI models',Full automation suite',24/7 dedicated support'] },;

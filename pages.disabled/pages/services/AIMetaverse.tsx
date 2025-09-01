@@ -6,24 +6,9 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'AI-driven metaverse automation and orchestration',;
     'Real-time metaverse analytics and insights',;
     'Custom AI models for metaverse applications';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIMetaverse.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Developer',
-      price: '$499/mo',
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
-    },
-    {
-      name: 'Business',
-      price: '$1,299/mo',
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIMetaverse.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$3,499/mo', ;
       details: ['Unlimited storage',Custom AI models',Full metaverse suite',24/7 dedicated support'] },;

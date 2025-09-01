@@ -6,24 +6,9 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     'Smart content scheduling and distribution',;
     'Integration with major entertainment platforms',;
     'Custom AI models for entertainment-specific insights';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEntertainment.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Small Creator',
-      price: '$199/mo',
-      details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Medium Creator',
-      price: '$599/mo',
-      details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIEntertainment.tsx
-    { ;
+>    { ;
       name: 'Large Creator', ;
       price: '$1,499/mo', ;
       details: ['Unlimited views',Custom AI models',Full platform integration',24/7 dedicated support'] },;

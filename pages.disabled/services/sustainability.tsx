@@ -242,16 +242,11 @@ export default function Sustainability(...args: []):  {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Sustainability Solutions
-<<<<<<<< HEAD:pages.disabled/services/sustainability.tsx
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
-              Discover how sustainable technology can transform various aspects of your business
-========
+<=
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Discover how sustainable technology can transform various aspects of your business 
->>>>>>>> main:backup-pages/src-pages/services/sustainability.tsx
-              and create positive environmental impact
+>              and create positive environmental impact
             </p>
           </motion.div>
 "

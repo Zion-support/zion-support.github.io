@@ -144,14 +144,9 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ];
   const external = {
 
-<<<<<<< HEAD
-  <<<<<<< HEAD
-    privacy = ['
-      { name: 'OneTrust',
-=======
+
       privacy = ['
       { name: 'OneTrust','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   href: 'https://www.onetrust.com/pricing/' 
 
 },

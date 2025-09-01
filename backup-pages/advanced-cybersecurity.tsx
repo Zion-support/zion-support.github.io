@@ -8,16 +8,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-  const categories = [
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
-    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
-=======
+
   const categories = [;'
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;'
     { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;'
@@ -31,9 +22,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
     { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
->>>>>>> main:pages/advanced-cybersecurity.tsx
     { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
   ];
 
   const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
@@ -42,15 +31,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
     return matchesCategory && matchesSearch;
   });
 
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.pricing.monthly - b.pricing.monthly;
-      case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-      case 'roi':
-=======
+
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
@@ -58,33 +39,15 @@ const AdvancedCybersecurityServices: NextPage = () => {;
       case 'innovation':'
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':'
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
         return 0;
     }
   });
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
-      {/* Animated Security Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-
-        {/* Security Pattern Overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-=======
 '
 =======
 
->>>>>>> main:pages/advanced-cybersecurity.tsx
       default: return 'from-gray-500 to-gray-600'}
   };
 
@@ -118,7 +81,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;
 
 
 }}></div>
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
         </div>
       </div>
 
@@ -167,16 +129,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
           </div>
         </div>
 
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-        {/* Security Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          {[
-            { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
-            { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
-            { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
-            { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
-          ].map((stat, index) => (
-=======
+
         {/* Security Stats */}"
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
           {['
@@ -185,7 +138,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
           ].map(stat: unknown, index: unknown (
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
             <div
               key={index}"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"

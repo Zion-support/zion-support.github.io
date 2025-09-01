@@ -1,15 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import {
-  PenTool,
-  FileText,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-========
+<=
 import {
   PenTool, 
   FileText, 
@@ -17,8 +6,7 @@ import {
   Zap, 
   Shield, 
   Users, 
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
-  Globe,
+>  Globe,
   Star,
   CheckCircle,
   ArrowRight,
@@ -120,7 +108,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Basic templates','
         'Email support','        'Standard quality output'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -153,19 +140,11 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
-        title="AI Content Generation Platform - Zion Tech Group"
-        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
-       />
-=======
+
         title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -220,41 +199,22 @@ export default function AIContentGenerationPlatform(...args[]):  {
             initial = {
 
   { opacity: 0,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-  y: 30 ;
-
-}}
-========
+<=
   y: 30 }}
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
-            animate = {
+>            animate = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-  y: 0 ;
-
-}}
-========
+<=
   y: 0 }}
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
-            transition = {
+>            transition = {
 
   { duration: 0.8,
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-  delay: 0.2 ;
-
-}}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-
-            <div className="text-center">;
-              <div className="text-3xl font-bold text-white mb-2">80-90%</div>
-========
+<=
   delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
 "
             <div className="text-center">;"
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
-              <div className="text-slate-400">Time Savings</div>
+>              <div className="text-slate-400">Time Savings</div>
             </div>"
             <div className="text-center">"
               <div className="text-3xl font-bold text-white mb-2">40-60%</div>"

@@ -1,21 +1,5 @@
-<<<<<<< HEAD
 
-interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
-
-  className?: string}
-
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {;
-  const [isOpen, setIsOpen] = useState(false);
-
-  
-      icon: Mail,;
-      label: 'Email',;
-      href: 'mailto:info@ziontechgroup.com',;
-      color: 'from-purple-500 to-pink-500',;
       delay: 0.3};
-=======
-      delay: 0.3};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   

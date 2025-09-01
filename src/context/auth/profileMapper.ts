@@ -30,8 +30,8 @@ interface MappedUser {
   updatedAt?: string
 }
 ;
-export 
-    role: profile.role,;
+export,
+  role: profile.role,;
     isEmailVerified: profile.is_email_verified || false,;
     createdAt: profile.created_at || supabaseUser.created_at,;
     updatedAt: profile.updated_at || supabaseUser.updated_at}};

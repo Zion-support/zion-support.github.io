@@ -1,32 +1,11 @@
-<<<<<<< HEAD
-import {
 
-  Zap, Sparkles, TrendingUp, Route, Users, PenTool,
-  CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
-  BarChart3, Shield, Briefcase, Package, Target'
-} from 'lucide-react';
-
-  
-        'Supplier performance analytics and risk assessment';
-      ],;
-      benefits: ['20-30% reduced inventory costs',25% improved delivery times',40% fewer disruptions'],;
-      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
-      route: '/services/ai-supply-chain-optimization'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
-<<<<<<< HEAD
-        title="Innovative AI Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
-       />
-=======
+
         title="Innovative AI Services Showcase - Zion Tech Group""        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-24">"

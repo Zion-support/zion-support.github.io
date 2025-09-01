@@ -6,24 +6,9 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
     'Custom AI models for industry-specific use cases',;
     'Cloud-based processing with edge computing options',;
     'Integration with major security and analytics platforms';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIVideoAnalytics.tsx
-  ];
-
-  const tiers = [
-    {
-      name: 'Basic',
-      price: '$199/mo',
-      details: ['Up to 10 cameras', 'Basic AI detection', '7-day storage', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$599/mo',
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] ;
-    },;
-========
+<=
   ]},;
->>>>>>>> main:backup-pages/src-pages/services/AIVideoAnalytics.tsx
-    { ;
+>    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited cameras',Custom AI models',90-day storage',24/7 dedicated support'] },;

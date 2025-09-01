@@ -8,46 +8,28 @@ export interface Listing {
   subcategory?: string;
   tags: string[];
   images: string[];
-seller: {
+seller: {;
     id: string;
     name: string;
     rating: number;
-<<<<<<< HEAD
-    reviews: number;
 
-};
-  location: string;
-=======
     reviews: number};  location: string;
->>>>>>> main
   createdAt: string;
   updatedAt: string;
-  status: 'active' | 'inactive' | 'sold' | 'pending';
-  views: number;
-  likes: number;
+  status: 'active' | 'inactive' | 'sold' | 'pending';'  views: number;'  likes: number;
   shares: number}
 ;export interface ProductListing extends Listing {
 
   brand?: string;
   model?: string;
-  condition: 'new' | 'used' | 'refurbished';
-  warranty?: string;
-  shipping: {
+  condition: 'new' | 'used' | 'refurbished';'  warranty?: string;'  shipping: {;
 
     cost: number;
     method: string;
     estimatedDays: number}}
-<<<<<<< HEAD
-;
-export interface ServiceListing extends Listing {
 
-=======
 ;export interface ServiceListing extends Listing {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
-  duration?: string;
-  availability: string[];
+'''  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';'  duration?: string;'  availability: string[];
   experience: number;
   certifications: string[];
   portfolio?: string[]}
@@ -67,11 +49,8 @@ export interface ServiceListing extends Listing {
   title: string;
   price: number;
   quantity: number;
-  type: 'product' | 'service' | 'talent';
-  image?: string}
-;export interface WishlistItem {
+  type: 'product' | 'service' | 'talent';'  image?: string}';export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;
-  type: 'product' | 'service' | 'talent';
-  addedAt: string}
+  type: 'product' | 'service' | 'talent';'  addedAt: string}'

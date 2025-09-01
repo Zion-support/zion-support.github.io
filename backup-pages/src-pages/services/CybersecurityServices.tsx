@@ -11,84 +11,88 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  Search
+  Search,
 } from 'lucide-react';
 
 const CybersecurityServices = () => {
   const securityServices = [
     {
-      title: "AI Cybersecurity Platform",
-      description: "Advanced threat detection and response using machine learning algorithms",
-      path: "/services/ai-cybersecurity-platform",
+      title: 'AI Cybersecurity Platform',
+      description:
+        'Advanced threat detection and response using machine learning algorithms',
+      path: '/services/ai-cybersecurity-platform',
       icon: Shield,
       featured: true,
-      tags: ["AI Security", "Threat Detection", "Machine Learning"]
+      tags: ['AI Security', 'Threat Detection', 'Machine Learning'],
     },
     {
-      title: "Zero Trust Architecture",
-      description: "Comprehensive zero-trust network security implementation",
-      path: "/services/ZeroTrustNetworkArchitecture",
+      title: 'Zero Trust Architecture',
+      description: 'Comprehensive zero-trust network security implementation',
+      path: '/services/ZeroTrustNetworkArchitecture',
       icon: Lock,
-      tags: ["Zero Trust", "Network Security", "Access Control"]
+      tags: ['Zero Trust', 'Network Security', 'Access Control'],
     },
     {
-      title: "SOC2 Compliance Tracker",
-      description: "Automated compliance monitoring and reporting for SOC2 requirements",
-      path: "/services/SOC2ComplianceTracker",
+      title: 'SOC2 Compliance Tracker',
+      description:
+        'Automated compliance monitoring and reporting for SOC2 requirements',
+      path: '/services/SOC2ComplianceTracker',
       icon: CheckCircle,
-      tags: ["Compliance", "SOC2", "Audit"]
+      tags: ['Compliance', 'SOC2', 'Audit'],
     },
     {
-      title: "Incident Response Platform",
-      description: "24/7 incident response and threat containment services",
-      path: "/services/incident-response-platform",
+      title: 'Incident Response Platform',
+      description: '24/7 incident response and threat containment services',
+      path: '/services/incident-response-platform',
       icon: AlertTriangle,
-      tags: ["Incident Response", "Threat Management", "24/7 Support"]
+      tags: ['Incident Response', 'Threat Management', '24/7 Support'],
     },
     {
-      title: "Security Headers & CSP Manager",
-      description: "Web application security hardening and policy management",
-      path: "/services/SecurityHeadersCSPManager",
+      title: 'Security Headers & CSP Manager',
+      description: 'Web application security hardening and policy management',
+      path: '/services/SecurityHeadersCSPManager',
       icon: Server,
-      tags: ["Web Security", "CSP", "Headers"]
+      tags: ['Web Security', 'CSP', 'Headers'],
     },
     {
-      title: "Smart Contract Risk Scanner",
-      description: "Blockchain smart contract security analysis and vulnerability detection",
-      path: "/services/SmartContractRiskScanner",
+      title: 'Smart Contract Risk Scanner',
+      description:
+        'Blockchain smart contract security analysis and vulnerability detection',
+      path: '/services/SmartContractRiskScanner',
       icon: Search,
-      tags: ["Blockchain", "Smart Contracts", "Risk Analysis"]
-    }
+      tags: ['Blockchain', 'Smart Contracts', 'Risk Analysis'],
+    },
   ];
 
   const benefits = [
-    { metric: "99.9%", label: "Threat Detection" },
-    { metric: "24/7", label: "Monitoring" },
-    { metric: "< 5min", label: "Response Time" },
-    { metric: "100%", label: "SOC2 Compliance" }
+    { metric: '99.9%', label: 'Threat Detection' },
+    { metric: '24/7', label: 'Monitoring' },
+    { metric: '< 5min', label: 'Response Time' },
+    { metric: '100%', label: 'SOC2 Compliance' },
   ];
 
   const securityFeatures = [
     {
       icon: Eye,
-      title: "Real-time Monitoring",
-      description: "Continuous security monitoring with instant threat alerts"
+      title: 'Real-time Monitoring',
+      description: 'Continuous security monitoring with instant threat alerts',
     },
     {
       icon: Shield,
-      title: "Advanced Protection",
-      description: "Multi-layered security defense against sophisticated attacks"
+      title: 'Advanced Protection',
+      description:
+        'Multi-layered security defense against sophisticated attacks',
     },
     {
       icon: Network,
-      title: "Network Security",
-      description: "Comprehensive network protection and access control"
+      title: 'Network Security',
+      description: 'Comprehensive network protection and access control',
     },
     {
       icon: Lock,
-      title: "Data Encryption",
-      description: "End-to-end encryption for data at rest and in transit"
-    }
+      title: 'Data Encryption',
+      description: 'End-to-end encryption for data at rest and in transit',
+    },
   ];
 
   return (
@@ -107,14 +111,15 @@ const CybersecurityServices = () => {
               <h1 className="text-5xl md:text-6xl font-bold">
                 Cybersecurity
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                  {' '}Services
+                  {' '}
+                  Services
                 </span>
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Protect your digital assets with our comprehensive cybersecurity solutions. 
-              From threat detection to compliance management, we safeguard your business 
-              against evolving cyber threats.
+              Protect your digital assets with our comprehensive cybersecurity
+              solutions. From threat detection to compliance management, we
+              safeguard your business against evolving cyber threats.
             </p>
           </motion.div>
         </div>
@@ -155,7 +160,8 @@ const CybersecurityServices = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Security Framework</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Multi-layered security approach designed to protect against modern cyber threats
+              Multi-layered security approach designed to protect against modern
+              cyber threats
             </p>
           </motion.div>
 
@@ -190,7 +196,8 @@ const CybersecurityServices = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Our Security Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity services to protect, detect, and respond to threats
+              Comprehensive cybersecurity services to protect, detect, and
+              respond to threats
             </p>
           </motion.div>
 
@@ -218,7 +225,7 @@ const CybersecurityServices = () => {
                 <service.icon className="w-12 h-12 text-red-400 mb-6" />
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, tagIndex) => (
                     <span
@@ -256,8 +263,9 @@ const CybersecurityServices = () => {
               Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait for a security breach. Let our cybersecurity experts 
-              assess your current security posture and implement robust protection.
+              Don't wait for a security breach. Let our cybersecurity experts
+              assess your current security posture and implement robust
+              protection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
