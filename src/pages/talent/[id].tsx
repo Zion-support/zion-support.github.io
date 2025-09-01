@@ -18,8 +18,8 @@ export default function TalentProfilePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const env = (import.meta as any)?.env ?? process.env;
-  const API_URL = env.VITE_API_URL || env.API_URL || '';
+  const API_URL =
+    process.env.API_URL || process.env.VITE_API_URL || '';
 
   useEffect(() => {
     const fetchProfile = async () => {
