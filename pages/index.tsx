@@ -180,8 +180,7 @@ const Index: NextPage = () => {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Engine — New Tools</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Now powered by scheduled cloud functions — no GitHub Actions required. Live homepage promos, health checks, and link integrity run automatically.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <a className="sr-only" href="#new-intelligent-automations">Skip to new intelligent automations</a>
-                         {[
+                        {[
                { title: 'Frontpage Enhancer', desc: 'Auto‑advertises features and refreshes homepage content hourly.', href: '/.netlify/functions/frontpage-enhancer' },
                { title: 'Link & Health Scheduler', desc: 'Runs link checks, health scans, and sitemap updates every 6h.', href: '/.netlify/functions/link-and-health-scheduler' },
                { title: 'Marketing & Features Promo', desc: 'Regenerates homepage promos and deep links every 2h.', href: '/.netlify/functions/marketing-and-features-promo' },
@@ -211,14 +210,9 @@ const Index: NextPage = () => {
                { title: 'Innovation Lab (10m)', desc: 'Invents, curates, and promotes fresh ideas across the site.', href: '/.netlify/functions/innovation-lab' },
                { title: 'Auto Scheduler (15m)', desc: 'Smart time-based runner that chooses and executes the best tasks.', href: '/.netlify/functions/auto-scheduler' },
                { title: 'Broken Image Scanner (6h)', desc: 'Finds broken images, optimizes assets, and syncs fixes.', href: '/.netlify/functions/broken-image-scanner' },
-               { title: 'Performance Budget Checker (5m)', desc: 'Checks asset sizes and enforces performance budgets.', href: '/.netlify/functions/performance-budget-checker' },
-               { title: 'Accessibility Quickscan (5m)', desc: 'Lightweight a11y checks for common issues.', href: '/.netlify/functions/accessibility-quickscan' },
-               { title: 'OG Preview Validator (15m)', desc: 'Validates Open Graph tags and image reachability.', href: '/.netlify/functions/og-preview-validator' },
-               { title: 'Content Freshness Runner (30m)', desc: 'Assesses staleness of key content paths.', href: '/.netlify/functions/content-freshness-runner' },
-               { title: 'Redirect 404 Suggester (hourly)', desc: 'Suggests redirects for 404s from sitemap.', href: '/.netlify/functions/redirect-404-suggester' },
-               { title: 'AI Issue Labeler (5m)', desc: 'Labels GitHub issues via rules and AI.', href: '/.netlify/functions/ai-issue-labeler' },
-             ].map((tool) => (
-              <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" id={tool.title === 'New Intelligent Automations' ? 'new-intelligent-automations' : undefined}>
+               { title: 'Dependency Health Radar', desc: 'Audits npm dependencies and publishes a live report.', href: '/.netlify/functions/dependency-health-radar-runner' },
+            ].map((tool) => (
+<a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{tool.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{tool.desc}</p>
