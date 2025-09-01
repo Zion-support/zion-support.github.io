@@ -1,488 +1,166 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Heart, 
+  Brain, 
   Activity, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Sparkles,
-  Search,
-  Zap,
+  Shield, 
+  Users, 
+  TrendingUp,
   Globe,
-  Building,
-  DollarSign,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare,
-  UserPlus,
-  UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  Star2,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  PhoneCall,
-  Video,
-  MailOpen,
-  Send,
-  Archive,
-  Trash2,
-  Edit3,
-  Copy,
-  Share2,
-  Download,
-  Upload,
-  ExternalLink,
-  Link,
-  Unlink,
-  Lock3,
-  Unlock,
-  Eye2,
-  EyeOff,
-  Bell,
-  BellOff,
-  Volume2,
-  VolumeX,
-  Wifi2,
-  WifiOff,
-  Bluetooth2,
-  BluetoothOff,
-  Radio2,
-  RadioOff,
-  Sensor2,
-  SensorOff,
-  Chip2,
-  ChipOff,
-  Circuit2,
-  CircuitOff,
-  Orbit2,
-  OrbitOff,
-  Planet2,
-  PlanetOff,
-  Star2 as StarIcon,
-  StarOff,
-  Telescope2,
-  TelescopeOff,
-  Antenna2,
-  AntennaOff,
-  Signal2,
-  SignalOff,
-  Navigation2,
-  NavigationOff,
-  Earth2,
-  EarthOff,
-  Moon2,
-  MoonOff,
-  Sun2,
-  SunOff,
-  Binary2,
-  BinaryOff,
-  Network2,
-  NetworkOff,
-  Database3,
-  DatabaseOff,
-  Lock3 as LockIcon,
-  LockOff,
-  Key3,
-  KeyOff,
-  Fingerprint3,
-  FingerprintOff,
-  Eye3,
-  EyeOff2,
-  Brain3,
-  BrainOff,
-  Cpu3,
-  CpuOff,
-  Memory2,
-  MemoryOff,
-  HardDrive2,
-  HardDriveOff,
-  Server3,
-  ServerOff,
-  Phone2,
-  PhoneOff,
-  Mail2,
-  MailOff,
-  Calendar2,
-  CalendarOff,
-  MessageSquare3,
-  MessageSquareOff,
-  UserPlus2 as UserPlusIcon,
-  UserCheck2 as UserCheckIcon,
-  UserX2 as UserXIcon,
-  UserMinus2 as UserMinusIcon,
-  UserEdit2 as UserEditIcon,
-  UserSearch2 as UserSearchIcon,
-  UserList2,
-  UserListOff,
-  UserSettings2,
-  UserSettingsOff,
-  UserCog2,
-  UserCogOff,
-  UserShield2,
-  UserShieldOff,
-  UserStar2,
-  UserStarOff,
-  UserHeart2,
-  UserHeartOff,
-  UserCheck3,
-  UserCheckOff,
-  UserX3,
-  UserXOff,
-  UserMinus3,
-  UserMinusOff,
-  UserPlus3,
-  UserPlusOff,
-  UserEdit3,
-  UserEditOff,
-  UserSearch3,
-  UserSearchOff,
-  MapPin,
-  Clock,
-  AlertTriangle,
-  CheckCircle2,
-  XCircle,
-  Info,
-  HelpCircle,
-  FileText2,
   BarChart3,
-  PieChart2,
-  LineChart2,
-  AreaChart,
-  ScatterChart,
-  RadarChart,
-  Thermometer,
-  Droplets,
-  Wind,
-  CloudRain,
-  CloudLightning,
-  Sun2 as SunIcon,
-  Moon2 as MoonIcon,
-  Star3,
-  Cloud2,
-  CloudOff,
-  CloudDrizzle,
-  CloudFog,
-  CloudHail,
-  CloudSnow,
-  CloudSleet,
-  CloudRain2,
-  CloudLightning2,
-  CloudOff2,
-  CloudDrizzle2,
-  CloudFog2,
-  CloudHail2,
-  CloudSnow2,
-  CloudSleet2,
-  CloudRain3,
-  CloudLightning3,
-  CloudOff3,
-  CloudDrizzle3,
-  CloudFog3,
-  CloudHail3,
-  CloudSnow3,
-  CloudSleet3,
-  CloudRain4,
-  CloudLightning4,
-  CloudOff4,
-  CloudDrizzle4,
-  CloudFog4,
-  CloudHail4,
-  CloudSnow4,
-  CloudSleet4,
-  CloudRain5,
-  CloudLightning5,
-  CloudOff5,
-  CloudDrizzle5,
-  CloudFog5,
-  CloudHail5,
-  CloudSnow5,
-  CloudSleet5,
-  CloudRain6,
-  CloudLightning6,
-  CloudOff6,
-  CloudDrizzle6,
-  CloudFog6,
-  CloudHail6,
-  CloudSnow6,
-  CloudSleet6,
-  CloudRain7,
-  CloudLightning7,
-  CloudOff7,
-  CloudDrizzle7,
-  CloudFog7,
-  CloudHail7,
-  CloudSnow7,
-  CloudSleet7,
-  CloudRain8,
-  CloudLightning8,
-  CloudOff8,
-  CloudDrizzle8,
-  CloudFog8,
-  CloudHail8,
-  CloudSnow8,
-  CloudSleet8,
-  CloudRain9,
-  CloudLightning9,
-  CloudOff9,
-  CloudDrizzle9,
-  CloudFog9,
-  CloudHail9,
-  CloudSnow9,
-  CloudSleet9,
-  CloudRain10,
-  CloudLightning10,
-  CloudOff10,
-  CloudDrizzle10,
-  CloudFog10,
-  CloudHail10,
-  CloudSnow10,
-  CloudSleet10
-<<<<<<< HEAD
+  LineChart,
+  Target,
+  Clock,
+  DollarSign,
+  Star,
+  Award,
+  CheckCircle,
+  Database,
+  Lock,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Settings,
+  AlertCircle,
+  Mail,
+  Zap,
+  Cpu,
+  PieChart
 } from 'lucide-react';
-=======
-             } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const AIHealthcareAnalyticsPlatform = () => {
+const AIHealthcareAnalyticsPlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Patient Analytics',
-      description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
+      icon: Heart,
+      title: "Patient Outcome Prediction",
+      description: "AI models that predict patient outcomes with 94% accuracy using comprehensive health data analysis"
     },
     {
-      icon: Heart,
-      title: 'Clinical Decision Support',
-      description: 'AI-driven recommendations for treatment plans and medication management'
+      icon: Brain,
+      title: "Clinical Decision Support",
+      description: "Real-time AI recommendations for treatment plans based on patient history and medical research"
     },
     {
       icon: Activity,
-      title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring of patient vitals and health indicators'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Health Analytics',
-      description: 'Forecast patient outcomes and identify at-risk populations'
+      title: "Population Health Analytics",
+      description: "Advanced analytics for identifying health trends and managing population health outcomes"
     },
     {
       icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
+      title: "HIPAA Compliant Security",
+      description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit"
     },
     {
-      icon: BarChart4,
-      title: 'Population Health Insights',
-      description: 'Comprehensive analytics for population health management and public health'
+      icon: Users,
+      title: "Care Team Collaboration",
+      description: "Integrated platform for seamless communication and coordination among healthcare providers"
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast disease outbreaks, patient readmissions, and resource utilization with AI precision"
     }
   ];
+
+  const pricingPlans = [
+    {
+      name: "Community Health",
+      price: "$2,499",
+      period: "/month",
+      description: "For community health centers and small healthcare organizations",
+      features: [
+        "Up to 10,000 patient records",
+        "Basic AI analytics",
+        "Standard reporting",
+        "Email support",
+        "HIPAA compliance",
+        "Basic integrations",
+        "Monthly updates",
+        "Training sessions"
+      ],
+      popular: false
+    },
+    {
+      name: "Hospital System",
+      price: "$8,999",
+      period: "/month",
+      description: "For hospital systems and large healthcare networks",
+      features: [
+        "Up to 100,000 patient records",
+        "Advanced AI algorithms",
+        "Custom dashboards",
+        "Priority support",
+        "Full HIPAA compliance",
+        "Advanced integrations",
+        "Real-time analytics",
+        "Dedicated success manager"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise Healthcare",
+      price: "$24,999",
+      period: "/month",
+      description: "For large healthcare systems and research institutions",
+      features: [
+        "Unlimited patient records",
+        "Custom AI model training",
+        "White-label solutions",
+        "24/7 dedicated support",
+        "Advanced compliance tools",
+        "Custom integrations",
+        "Research collaboration",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
   const benefits = [
-    'Improve patient outcomes by 35%',
-    'Reduce readmission rates by 40%',
-    'Lower healthcare costs by 25-30%',
-    'Enhance clinical decision-making by 50%',
-    'Streamline administrative processes by 60%',
-    'Ensure 99.9% HIPAA compliance'
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "35%+",
+      description: "Average reduction in healthcare operational costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "50+ hours",
+      description: "Per week saved on manual data analysis"
+    },
+    {
+      icon: TrendingUp,
+      title: "Patient Outcomes",
+      value: "28%+",
+      description: "Improvement in patient outcome scores"
+    },
+    {
+      icon: Users,
+      title: "Provider Satisfaction",
+      value: "92%+",
+      description: "Healthcare provider satisfaction rate"
+    }
   ];
+
   const useCases = [
-    {
-      industry: 'Hospitals & Health Systems',
-      description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
-    },
-    {
-      industry: 'Primary Care Practices',
-      description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
-    },
-    {
-      industry: 'Specialty Clinics',
-      description: 'Streamline specialty care workflows and improve treatment outcomes'
-    },
-    {
-      industry: 'Health Insurance',
-      description: 'Risk assessment, fraud detection, and population health management'
-    }
+    "Patient Risk Stratification",
+    "Treatment Optimization",
+    "Resource Allocation",
+    "Population Health Management",
+    "Clinical Research",
+    "Quality Improvement",
+    "Cost Containment",
+    "Regulatory Compliance"
   ];
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$2,800/month',
-      features: [
-        'Up to 50 providers',
-        'Basic AI analytics',
-        'Patient monitoring',
-        'Clinical decision support',
-        'Basic reporting',
-        'Email support'
-      ]
-    },
-    {
-      plan: 'Professional',
-      price: '$5,500/month',
-      features: [
-        'Up to 200 providers',
-        'Advanced AI analytics',
-        'Population health insights',
-        'Custom workflows',
-        'Advanced reporting',
-        'Priority support',
-        'API access'
-      ]
-    },
-    {
-      plan: 'Enterprise',
-      price: '$12,000/month',
-      features: [
-        'Unlimited providers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated health manager',
-        '24/7 phone support',
-        'Custom training'
-      ]
-    }
-  ];
-  const integrations = [
-    'Epic EHR',
-    'Cerner',
-    'Allscripts',
-    'Meditech',
-    'Athenahealth',
-    'Practice Fusion',
-    'eClinicalWorks',
-    'NextGen',
-    'Greenway Health',
-    'DrChrono',
-    'Kareo',
-    'Webhook APIs'
-  ];
-  const keyMetrics = [
-    {
-      metric: '35%',
-      label: 'Patient Outcome Improvement'
-    },
-    {
-      metric: '40%',
-      label: 'Readmission Rate Reduction'
-    },
-    {
-      metric: '30%',
-      label: 'Cost Reduction'
-    },
-    {
-      metric: '50%',
-      label: 'Decision Enhancement'
-    }
-  ];
-  const complianceStandards = [
-    'HIPAA',
-    'HITECH',
-    'SOC 2 Type II',
-    'ISO 27001',
-    'HITRUST',
-    'GDPR',
-    'CCPA',
-    'FDA 21 CFR Part 11',
-    'ONC Health IT',
-    'Meaningful Use',
-    'MIPS',
-    'APMs'
-  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -490,88 +168,32 @@ const AIHealthcareAnalyticsPlatform = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare Analytics Platform
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-full">
+                <Heart className="h-8 w-8 text-white" />
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Healthcare with
-              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
-                {' '}AI Intelligence
-              </span>
+              AI-Powered Healthcare Analytics Platform
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Leverage artificial intelligence to improve patient outcomes, reduce costs, and 
-              enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform healthcare delivery with our advanced AI platform. Get real-time insights, 
+              predictive analytics, and evidence-based recommendations that improve patient outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
-              >
-                <Settings className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-              </motion.button>
+              </button>
+              <button className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Key Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (
-=======
 
-<<<<<<< HEAD
-      {/* Key Benefits */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Healthcare Delivery
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable improvements in patient care and operational efficiency
-            </p>
-          </div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
-=======
-      {/* Key Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {keyMetrics.map((item, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">{item.metric}</div>
-                <div className="text-zion-slate-light text-lg">{item.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -580,76 +202,34 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Features
+              Advanced Healthcare Intelligence
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with healthcare best practices
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform combines cutting-edge technology with healthcare expertise to deliver 
+              insights that transform patient care and operational efficiency.
             </p>
           </motion.div>
-<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-=======
-          
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg w-fit mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Healthcare Impact
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See real results with our AI-powered healthcare analytics platform
-            </p>
-          </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-=======
-          
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
-                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
-                <span className="text-zion-slate-light text-lg">{benefit}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -660,36 +240,34 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Healthcare Solutions
+              Healthcare Applications
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for various healthcare organizations and specialties
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform addresses the most critical challenges in modern healthcare delivery.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-=======
-          
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-700 p-6 rounded-xl text-center hover:bg-slate-600 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                <p className="text-zion-slate-light">{useCase.description}</p>
+                <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg w-fit mx-auto mb-4">
+                  <BarChart3 className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      {/* Compliance Standards Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -698,33 +276,34 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Healthcare Compliance Standards
+              Measurable Impact
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Meet all major healthcare compliance and regulatory requirements
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join hundreds of healthcare organizations that have transformed their operations.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (
-=======
-          
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
               >
-                <span className="text-zion-slate-light font-medium text-sm">{standard}</span>
+                <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -735,57 +314,55 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Choose Your Healthcare Plan
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your healthcare organization and scale as you grow
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Flexible pricing designed for healthcare organizations of all sizes.
             </p>
-<<<<<<< HEAD
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
-<<<<<<< HEAD
-          </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)              => (
-=======
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-                  index === 1 
-                    ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' 
-                    : 'border-zion-slate-light/20'
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`bg-slate-700 p-8 rounded-xl relative ${
+                  plan.popular ? 'ring-2 ring-green-500' : ''
                 }`}
               >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
-                  {index === 1 && (
-                    <span className="inline-block bg-pink-500 text-white text-sm px-3 py-1 rounded-full">
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  )}
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-6">
+
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200">
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                    : 'bg-slate-600 text-white hover:bg-slate-500'
+                }`}>
                   Get Started
                 </button>
               </motion.div>
@@ -793,8 +370,9 @@ const AIHealthcareAnalyticsPlatform = () => {
           </div>
         </div>
       </section>
-      {/* Integrations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+
+      {/* Compliance Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -803,76 +381,56 @@ const AIHealthcareAnalyticsPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
+              Healthcare Compliance & Security
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Connect with your existing EHR systems and healthcare platforms
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with healthcare-grade security and full regulatory compliance.
             </p>
-<<<<<<< HEAD
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
-=======
-<<<<<<< HEAD
-          </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-slate-700 p-6 rounded-xl text-center"
+            >
+              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">HIPAA Compliant</h3>
+              <p className="text-gray-300">Full HIPAA compliance with audit trails and data encryption</p>
+            </motion.div>
 
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-slate-300 mb-4">{useCase.description}</p>
-                <ul className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-slate-300">
-                      <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                      {metric}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-slate-700 p-6 rounded-xl text-center"
+            >
+              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                <Lock className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Data Security</h3>
+              <p className="text-gray-300">Enterprise-grade security with role-based access control</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-slate-700 p-6 rounded-xl text-center"
+            >
+              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                <Eye className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Audit Trails</h3>
+              <p className="text-gray-300">Comprehensive logging and monitoring for compliance</p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Integrations */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless EHR Integrations
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing electronic health record systems and healthcare platforms
-            </p>
-          </div>
-
-=======
-          </motion.div>
-          
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
-              >
-                <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -884,73 +442,66 @@ const AIHealthcareAnalyticsPlatform = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join leading healthcare organizations using AI to improve patient care
+            <p className="text-xl text-gray-300 mb-8">
+              Join leading healthcare organizations that are already improving patient outcomes 
+              with AI-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
-                <ArrowRight className="w-5 h-5 mr-2" />
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300">
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
-              >
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </motion.button>
+              </button>
+              <button className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+
+      {/* Contact Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Get in Touch
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Ready to discuss how AI can transform your healthcare operations?
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-pink-400" />
-                <span className="text-zion-slate-light">+1 302 464 0950</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                  <Globe className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
               </div>
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-pink-400" />
-                <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
+              <div className="text-center">
+                <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                  <Zap className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300">
+                  <a href="tel:+13024640950" className="hover:text-green-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </p>
               </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-pink-400" />
-                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+              <div className="text-center">
+                <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+                  <Mail className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300">
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-green-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
               </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
-              </a>
-              <a
-                href="https://ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
-              >
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Website
-              </a>
             </div>
           </motion.div>
         </div>
@@ -958,4 +509,5 @@ const AIHealthcareAnalyticsPlatform = () => {
     </div>
   );
 };
-export default AIHealthcareAnalyticsPlatform;}}}}}
+
+export default AIHealthcareAnalyticsPlatform;
