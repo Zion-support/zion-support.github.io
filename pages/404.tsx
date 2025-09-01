@@ -1,11 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-export default function Custom404() {
+export default function NotFoundPage() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Page not found</h1>
-      <Link href="/"><a className="underline">Return home</a></Link>
-    </div>
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">404</h1>
+      <p className="text-gray-600">Page not found.</p>
+    </EnhancedLayout>
   );
 }

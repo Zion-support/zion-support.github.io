@@ -1,10 +1,11 @@
 import React from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">About Zion</h1>
-      <p className="text-gray-600">Zion explores alternative economies and sovereign AI coordination.</p>
-    </div>
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold">About</h1>
+      <p className="text-gray-600">About Zion. Content coming soon.</p>
+    </EnhancedLayout>
   );
 }

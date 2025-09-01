@@ -1,10 +1,11 @@
 import React from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function ContactPage() {
   return (
-    <div className="space-y-4">
+    <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Contact</h1>
-      <p className="text-gray-600">Reach out to the Zion team.</p>
-    </div>
+      <p className="text-gray-600">Reach us at contact@zion.org.</p>
+    </EnhancedLayout>
   );
 }
