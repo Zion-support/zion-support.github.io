@@ -10,7 +10,15 @@ vi.mock('axios', () => {
   return { default: { create: () => instance } };
 }, { virtual: true });
 
+vi.mock('axios', () => {
+  const instance = { post: vi.fn(), interceptors: { request: { use: vi.fn() } } };
+  return { default: { create: () => instance } };
+}, { virtual: true });
+
 vi.mock('@/services/auth');
+
+// Get the mocked axios instance
+const mockedAxios: any = (axios as any).create();
 
 // Get the mocked axios instance
 const mockedAxios: any = (axios as any).create();
