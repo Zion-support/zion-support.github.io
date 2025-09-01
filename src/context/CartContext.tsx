@@ -1,8 +1,36 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import { CartContextType, CartItem, CartAction } from '@/types/cart';
+import { saveCart, getCart } from '@/lib/db';
 
-export interface CartItem {
-  id: string;
-  quantity: number;
+interface CartState { items: CartItem[]; }
+
+const initialState: CartState = { items: [] };
+
+function cartReducer(state: CartState, action: CartAction): CartState {
+  switch (action.type) {
+    case 'ADD_ITEM': {
+      const existing = state.items.find(i => i.id === action.payload.id);
+      let items;
+      if (existing) {
+        items = state.items.map(i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        );
+      } else {
+        items = [...state.items, action.payload];
+      }
+      return { items };
+    }
+    case 'REMOVE_ITEM':
+      return { items: state.items.filter(i => i.id !== action.payload) };
+    case 'CLEAR_CART':
+      return { items: [] };
+    case 'SET_ITEMS':
+      return { items: action.payload };
+    default:
+      return state;
+  }
 }
 
 export interface CartContextType {
@@ -23,17 +51,24 @@ export function useCart(): CartContextType {
   return useContext(CartContext);
 }
 
-export function CartProvider({ children }: { children: ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
+export function CartProvider({ children }: { children: React.ReactNode }) {
+  const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  const addItem = (item: CartItem) => {
-    setItems(prev => {
-      const existing = prev.find(i => i.id === item.id);
-      if (existing) {
-        return prev.map(i => i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i);
+  useEffect(() => {
+    getCart().then(items => {
+      if (items.length) {
+        dispatch({ type: 'SET_ITEMS', payload: items as CartItem[] });
       }
-      return [...prev, item];
     });
+  }, []);
+
+  useEffect(() => {
+    saveCart(state.items);
+  }, [state.items]);
+
+  const value: CartContextType = {
+    items: state.items,
+    dispatch,
   };
 
   const removeItem = (id: string) => {
