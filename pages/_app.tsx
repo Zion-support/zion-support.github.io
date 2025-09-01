@@ -1,12 +1,20 @@
-import type { AppProps } from 'next/app'
-import Layout from '../components/Layout'
-import '../styles/globals.css'
-import AnimatedBackground from '../components/AnimatedBackground'
+import type { AppProps } from 'next/app';
+import React, { useRef } from 'react';
+import '../styles/globals.css';
+import { SEOContext } from '../components/SEOContext';
+import DefaultSEO from '../components/DefaultSEO';
+import Analytics from '../components/Analytics';
+import Layout from '../components/layout/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+	const renderedRef = useRef(false);
+	return (
+		<SEOContext.Provider value={{ renderedRef }}>
+			<DefaultSEO />
+			<Analytics />
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</SEOContext.Provider>
+	);
 }
