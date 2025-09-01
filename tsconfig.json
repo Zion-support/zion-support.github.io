@@ -92,16 +92,13 @@
       }
     ]
   },
-  "include": ["src/main.tsx", "src/App.tsx", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "automation",
-    "components.disabled",
-    "**/*.disabled",
-    "**/*.backup",
-    "**/*.tsbackup"
+    "node_modules"
   ]
 }

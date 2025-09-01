@@ -1,26 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-=======
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-736f
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-=======
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -65,7 +54,6 @@ module.exports = {
         'zion-slate-light': '#94a3b8',
         'zion-slate': '#64748b',
         'zion-slate-dark': '#475569',
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-736f
       },
     },
   },
