@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
+export { function };
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();

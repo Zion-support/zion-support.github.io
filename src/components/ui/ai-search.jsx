@@ -530,3 +530,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
           </motion.div>)}
       </AnimatePresence>
     </div>)}
+
+
+
+
+}
+
+
+}
+
+}
+}

@@ -108,7 +108,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
           </div>
         </div>)}
     </div>)}
-// Avatar image component
+// Avatar image component;
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses = {
   sm: 'w-8 h-8',
@@ -123,7 +123,7 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
   className)
 
 } {...props}/>)}
-// Hero image component
+// Hero image component;
 export function HeroImage({ src, alt, className, ...props }) {
     return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
   cn('w-full',

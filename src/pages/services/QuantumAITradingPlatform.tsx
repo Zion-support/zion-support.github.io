@@ -38,12 +38,13 @@ import { Atom,
   LineChart,
   PieChart
  } from 'lucide-react.ts';
+;
+export { function };
+export default function QuantumAITradingPlatform(...args: unknown[]): unknown {
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-export default function QuantumAITradingPlatform(...args: any[]): any {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
+  useEffect(: unknown {
     setIsVisible(true);
   }, []);
 
@@ -106,7 +107,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
         
         {/* Floating particles with neon glow */}
         <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
+          {[...Array(25)].map(_: unknown, i: unknown (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50"
@@ -114,7 +115,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 x: [0, 120, 0],
                 y: [0, -120, 0],
                 opacity: [0.4, 1, 0.4],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
                 duration: 3 + i * 0.2,
@@ -124,7 +125,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               }}
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -135,7 +136,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
             duration: 4,
@@ -148,7 +149,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.2, 0.5],
+            opacity: [0.5, 0.2, 0.5]
           }}
           transition={{
             duration: 5,
@@ -229,10 +230,9 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
-              <button
+            {['overview', 'features', 'pricing', 'technical', 'contact'].map(tab: unknown <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={(: unknown setActiveTab(tab)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25'
@@ -316,7 +316,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 
-            {activeTab === 'features' && (
+            {activeTab === 'features' && 
               <motion.div
                 key="features"
                 initial={{ opacity: 0, y: 20 }}
@@ -335,7 +335,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 </div>
 
                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index)  => (
+                  {features.map((feature, index (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -382,7 +382,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                       <div className="text-5xl font-bold text-purple-400 mb-2">{pricing.monthly}</div>
                       <div className="text-gray-400 mb-6">per month</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.slice(0, 3).map((feature, index) => (
+                        {pricing.features.slice(0, 3).map(feature: unknown, index: unknown (
                           <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -407,7 +407,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                       <div className="text-5xl font-bold text-purple-400 mb-2">{pricing.yearly}</div>
                       <div className="text-gray-400 mb-6">per year (Save 17%)</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.map((feature, index) => (
+                        {pricing.features.map(feature: unknown, index: unknown (
                           <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -453,7 +453,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 
-            {activeTab === 'technical' && (
+            {activeTab === 'technical' && 
               <motion.div
                 key="technical"
                 initial={{ opacity: 0, y: 20 }}
@@ -479,7 +479,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                         Technology Stack
                       </h3>
                       <div className="grid grid-cols-2 gap-3">
-                        {technicalSpecs.technology.map((tech, index) => (
+                        {technicalSpecs.technology.map((tech, index (
                           <div key={index} className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300">
                             {tech}
                           </div>
@@ -493,7 +493,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                         Integrations
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.integrations.map((integration, index) => (
+                        {technicalSpecs.integrations.map(integration: unknown, index: unknown (
                           <div key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {integration}
@@ -531,7 +531,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                         Security Standards
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.security.map((standard, index) => (
+                        {technicalSpecs.security.map(standard: unknown, index: unknown (
                           <div key={index} className="flex items-center text-gray-300">
                             <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {standard}

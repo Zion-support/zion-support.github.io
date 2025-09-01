@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIContentGenerationAutomation() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Content Generation Automation - Zion Tech Group" description="AI-powered content generation automation solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content generation automation, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentgenerationautomation/"/>

@@ -7,8 +7,9 @@ import {
   BarChart3, Shield, Briefcase, Package, Target
 } from 'lucide-react';
 import SEO from '@/components/SEO';
-
-export default function InnovativeAIServicesShowcase() {
+;
+export { function };
+export default function InnovativeAIServicesShowcase(...args: unknown[]): unknown {
   const services = [
     {
       id: 'ai-project-manager',
@@ -92,7 +93,7 @@ export default function InnovativeAIServicesShowcase() {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Innovative AI Services Showcase - Zion Tech Group"
@@ -212,7 +213,7 @@ export default function InnovativeAIServicesShowcase() {
       <section className="pb-20">;
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => (
+            {services.map((service, index (
               <motion.div
                 key={service.id}
                 initial = {
@@ -262,7 +263,7 @@ export default function InnovativeAIServicesShowcase() {
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-300 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                    {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-start text-xs text-slate-300">
                         <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         {feature}
@@ -274,7 +275,7 @@ export default function InnovativeAIServicesShowcase() {
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-300 mb-2">Benefits:</h4>
                   <ul className="space-y-1">
-                    {service.benefits.map((benefit, benefitIndex) => (
+                    {service.benefits.map(benefit: unknown, benefitIndex: unknown (
                       <li key={benefitIndex} className="text-xs text-slate-300">
                         • {benefit}
                       </li>

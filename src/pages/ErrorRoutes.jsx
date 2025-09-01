@@ -93,5 +93,6 @@ const ErrorRoutes = () => {
       <Route path="/500" element={<ServerError />}/>
       <Route path="*" element={<NotFound />}/>
     </Routes>)};
+export { ErrorRoutes };
 export default ErrorRoutes;
 }

@@ -25,7 +25,7 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
     return (<Component className={classes} onClick={onClick}>
       {children}
     </Component>)}
-// Enhanced Card Header component
+// Enhanced Card Header component;
 export function EnhancedCardFooter({ children, className }) {
     return (<div className = {
   cn('p-6 pt-0',

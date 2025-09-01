@@ -1,5 +1,6 @@
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading";
+export { function };
 export default function Categories() {
     return (<>
       

@@ -1,6 +1,7 @@
 import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award } from 'lucide-react';
-
-export default function AIESGCompliancePlatform() {
+;
+export { function };
+export default function AIESGCompliancePlatform(...args: unknown[]): unknown {
   const features = [
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
@@ -64,7 +65,7 @@ export default function AIESGCompliancePlatform() {
     'Compliance Monitoring'
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-800 py-20 text-center text-white">
@@ -99,7 +100,7 @@ export default function AIESGCompliancePlatform() {
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
             <ul className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((feature, index (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
@@ -111,7 +112,7 @@ export default function AIESGCompliancePlatform() {
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">ESG Categories</h3>
             <div className="grid grid-cols-1 gap-3">
-              {esgCategories.map((category, index) => (
+              {esgCategories.map(category: unknown, index: unknown (
                 <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
                   <Award className="w-4 h-4 text-green-500 mr-3" />
                   <span className="text-gray-700">{category}</span>
@@ -131,7 +132,7 @@ export default function AIESGCompliancePlatform() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-green-600" />
@@ -151,7 +152,7 @@ export default function AIESGCompliancePlatform() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+          {useCases.map(useCase: unknown, index: unknown (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <Database className="w-5 h-5 text-green-600" />
@@ -171,7 +172,7 @@ export default function AIESGCompliancePlatform() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                 plan.popular ? 'border-green-500' : 'border-gray-200'
               } p-8`}>
@@ -190,7 +191,7 @@ export default function AIESGCompliancePlatform() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>

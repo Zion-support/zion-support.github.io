@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export default function StatusIncidentHub(...args: any[]): any {
-  return (
+;
+export { function };
+export default function StatusIncidentHub(...args: unknown[]): unknown {
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">
@@ -15,8 +16,8 @@ export default function StatusIncidentHub(...args: any[]): any {
             { title: 'Multi‑service monitoring', desc: 'Track APIs, regions and dependencies.' },
             { title: 'Incident comms', desc: 'Templates, timelines, and subscriber updates.' },
             { title: 'SLA/SLO dashboards', desc: 'Burn rates, availability and error budgets.' },
-            { title: 'Webhooks & integrations', desc: 'PagerDuty, Opsgenie, Slack, Email.' },
-          ].map((f)  => (
+            { title: 'Webhooks & integrations', desc: 'PagerDuty, Opsgenie, Slack, Email.' }
+          ].map((f (
             <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
               <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

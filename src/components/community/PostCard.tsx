@@ -14,7 +14,8 @@ post: {
 author: {
       name: string;
       avatar: string}}}
-
+;
+export { function };
 export default function PostCard(...args[]):  {
   return (
     <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">;

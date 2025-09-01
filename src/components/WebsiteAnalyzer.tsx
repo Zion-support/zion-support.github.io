@@ -13,23 +13,25 @@ import { CheckCircle,
 
 interface AnalysisResult {
 
+
 summary: {;
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
     externalLinks: number;
   
+
 };
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
   missingPages: string[];
 }
-
+;
 export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState<typeof false>(false);
   const [analysisResult, setAnalysisResult] = useState<any>(null);
-  const [currentPage, setCurrentPage] = useState('');
-  const [progress, setProgress] = useState(0);
+  const [currentPage, setCurrentPage] = useState<typeof ''>('');
+  const [progress, setProgress] = useState<typeof 0>(0);
 
   const pagesToAnalyze = [
     '/',
@@ -82,7 +84,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     '/mobile-launch'
   ];
 
-  const analyzeWebsite = async () => {
+  const analyzeWebsite = async : unknown {
     setIsAnalyzing(true);
     setProgress(0);
     
@@ -129,7 +131,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const exportReport = () => {
+  const exportReport = (...args: unknown[]): unknown => {
     if (!analysisResult) return;
 
     const report = {
@@ -151,7 +153,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     URL.revokeObjectURL(url);
   };
 
-  const getStatusIcon = (status: anystring)  => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     switch (status) {
       case 'working':
         return <CheckCircle className="w-4 h-4 text-green-500" />;
@@ -166,7 +168,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'working':
         return 'text-green-600 bg-green-100';
@@ -236,7 +238,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
           </div>
         )}
 
-        {analysisResult && (
+        {analysisResult && 
           <div className="space-y-6">
             {/* Summary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -291,7 +293,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                   Broken Links Found
                 </h3>
                 <div className="space-y-2">
-                  {analysisResult.brokenLinks.map((link, index) => (
+                  {analysisResult.brokenLinks.map((link, index (
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-red-200">
                       <div className="flex-1">
                         <p className="font-mono text-sm text-red-800">{link.url}</p>
@@ -307,14 +309,13 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
             )}
 
             {/* Missing Pages */}
-            {analysisResult.missingPages.length > 0 && (
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            {analysisResult.missingPages.length > 0 && <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">
                   <AlertTriangle className="w-5 h-5 mr-2" />
                   Missing Pages
                 </h3>
                 <div className="space-y-2">
-                  {analysisResult.missingPages.map((page, index) => (
+                  {analysisResult.missingPages.map((page: unknown, index: unknown (
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-yellow-200">
                       <div className="flex-1">
                         <p className="font-mono text-sm text-yellow-800">{page}</p>
@@ -335,7 +336,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 Page Analysis
               </h3>
               <div className="space-y-3">
-                {analysisResult.pages.map((page, index) => (
+                {analysisResult.pages.map(page: unknown, index: unknown (
                   <div key={index} className="bg-white p-4 rounded border border-gray-200">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="font-medium text-gray-900">{page.title || page.path}</h4>
@@ -344,7 +345,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>
                     {page.links.length > 0 && (
                       <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
-                        {page.links.slice(0, 6).map((link, linkIndex)  => (
+                        {page.links.slice(0, 6).map(link: unknown, linkIndex: unknown (
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}
                             <span className="font-mono text-xs truncate">{link.url}</span>
@@ -365,5 +366,6 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { WebsiteAnalyzer };
 export default WebsiteAnalyzer;

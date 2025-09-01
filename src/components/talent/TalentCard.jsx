@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { MapPin, Clock, CheckCircle2 } from "lucide-react";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useNavigate } from "react-router-dom";
-
+;
 const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => {
     const navigate = useNavigate();
     
@@ -155,5 +155,6 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
         </Card>
     );
 };
-
+;
+export { TalentCardComponent };
 export default TalentCardComponent;

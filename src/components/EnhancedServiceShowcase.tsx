@@ -22,10 +22,12 @@ import {
 
 interface Service {
 
+
   id: string;
   title: string;
   description: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -34,7 +36,7 @@ icon: React.ComponentType<{ className?: string}>;
   color: string;
   popular?: boolean;
   link: string}
-
+;
 const services: Service[] = [
   {
     id: 'ai-business-intelligence',
@@ -143,7 +145,7 @@ const services: Service[] = [
     link: '/ai-services/healthcare'
 
 ];
-
+;
 const categories = [
   'All Services',
   'AI & Machine Learning',
@@ -165,14 +167,14 @@ const categories = [
     if (element) {
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return : unknown observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
 
-  const renderStars = (rating: number)  => {
-    return Array.from({ length: 5 }, (_, i)  => (
+  const renderStars = (...args: unknown[]): unknown => {
+    return Array.from{ length: 5 }, (_, i (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -190,7 +192,7 @@ const categories = [
     ));
   };
 
-  return (
+  return 
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -263,10 +265,9 @@ const categories = [
 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
 
-          {categories.map((category, index) => (
-            <button
+          {categories.map((category, index <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={(: unknown setSelectedCategory(category)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
@@ -295,7 +296,7 @@ const categories = [
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown 
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -315,8 +316,8 @@ const categories = [
 
 }}
                 whileHover={{ y: -10 }}
-                onHoverStart={() => setHoveredService(service.id)}
-                onHoverEnd={() => setHoveredService(null)}
+                onHoverStart={( setHoveredService(service.id)}
+                onHoverEnd={: unknown setHoveredService(null)}
                 className="relative group"
 
                 <Link to={service.link}>
@@ -345,7 +346,7 @@ const categories = [
 
                       {/* Features */}
                       <div className="space-y-2">
-                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                           <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                             {feature}

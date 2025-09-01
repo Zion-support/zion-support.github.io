@@ -169,4 +169,5 @@ const AIAutonomousLearningSystem = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousLearningSystem };
 export default AIAutonomousLearningSystem;

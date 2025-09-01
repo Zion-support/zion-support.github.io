@@ -171,6 +171,7 @@ const categories = [
     { name: "Expansion", value: "expansion", icon: <Globe className="h-4 w-4"/> },
     { name: "Sustainability", value: "sustainability", icon: <Leaf className="h-4 w-4"/> }
 ];
+export { function };
 export default function BusinessSolutionsPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredSolutions = selectedCategory === "all"
@@ -274,3 +275,7 @@ export default function BusinessSolutionsPage() {
         </div>
       </div>
     </div>)}
+
+
+}
+}

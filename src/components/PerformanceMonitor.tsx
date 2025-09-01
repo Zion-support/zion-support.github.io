@@ -1,19 +1,24 @@
 
-
+;
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
 
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
+
 }
 
 interface PerformanceMonitorProps {
+  // Add your props here
+
+
   showDetails?: boolean;
   threshold?: {
     fcp: number;
@@ -21,10 +26,11 @@ interface PerformanceMonitorProps {
     fid: number;
     cls: number;
     ttfb: number;
-  };
+  
+};
 }
-
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+;
+export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = {
   showDetails = false,
   threshold = {
     fcp: 1800,
@@ -33,9 +39,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     cls: 0.1,
     ttfb: 800
   }
-}) => {
+} {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
 
   const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
@@ -80,7 +86,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, []);
 
-  const getMetricIcon = useCallback((status: 'good' | 'needs-improvement' | 'poor') => {
+  const getMetricIcon = useCallback(status: 'good' | 'needs-improvement' | 'poor' {
     switch (status) {
       case 'good': return <CheckCircle className="w-4 h-4" />;
       case 'needs-improvement': return <AlertTriangle className="w-4 h-4" />;
@@ -89,11 +95,11 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if ('PerformanceObserver' in window) {
       // Observe FCP
 
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
@@ -107,7 +113,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Observe LCP
 
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const lcpEntry = entries[entries.length - 1];
         if (lcpEntry) {
@@ -121,7 +127,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Observe FID
 
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const fidEntry = entries[entries.length - 1];
         if (fidEntry) {
@@ -135,7 +141,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Observe CLS
 
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list: unknown {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
@@ -155,7 +161,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       }
 
-      return () => {
+      return : unknown {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -164,7 +170,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
 
     if (metrics) {
       const score = calculatePerformanceScore(metrics);
@@ -172,10 +178,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, calculatePerformanceScore]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Show monitor after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
+    const timer = setTimeout(: unknown setIsVisible(true), 3000);
+    return : unknown clearTimeout(timer);
   }, []);
 
   if (!isVisible || !showDetails) return null;
@@ -270,7 +276,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </motion.div>
   );
 };
-
+;
+export { PerformanceMonitor };
 export default PerformanceMonitor;
 
 

@@ -15,9 +15,18 @@ import {
   Building,
   Globe
 } from 'lucide-react';
-
-const EnhancedContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const EnhancedContactForm: React.FC = props {
+  const [formData, setFormData] = useState<typeof {
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: ''
+  }>({
     name: '',
     email: '',
     company: '',
@@ -29,9 +38,9 @@ const EnhancedContactForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [selectedService, setSelectedService] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [isSubmitted, setIsSubmitted] = useState<typeof false>(false);
+  const [selectedService, setSelectedService] = useState<typeof ''>('');
 
   const services = [
     { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
@@ -60,7 +69,7 @@ const EnhancedContactForm: React.FC = () => {
     { value: '12-plus-months', label: '12+ Months' }
   ];
 
-  const validateForm = () => {
+  const validateForm = (...args: unknown[]): unknown => {
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
@@ -85,7 +94,7 @@ const EnhancedContactForm: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -101,7 +110,7 @@ const EnhancedContactForm: React.FC = () => {
     setIsSubmitted(true);
 
     // Reset form after successful submission
-    setTimeout(() => {
+    setTimeout(: unknown {
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -117,7 +126,7 @@ const EnhancedContactForm: React.FC = () => {
     }, 5000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (...args: unknown[]): unknown => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
@@ -133,9 +142,9 @@ const EnhancedContactForm: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
+        delayChildren: 0.2
+      }
+    }
   };
 
   const itemVariants = {
@@ -143,8 +152,8 @@ const EnhancedContactForm: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
+      transition: { duration: 0.6 }
+    }
   };
 
   if (isSubmitted) {
@@ -396,11 +405,10 @@ const EnhancedContactForm: React.FC = () => {
                     Service of Interest *
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {services.map((service) => (
-                      <button
+                    {services.map(service: unknown <button
                         key={service.id}
                         type="button"
-                        onClick={() => {
+                        onClick={(: unknown {
                           setFormData(prev => ({ ...prev, service: service.id }));
                           setSelectedService(service.id);
                           if (errors.service) {
@@ -439,7 +447,7 @@ const EnhancedContactForm: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
                     >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((budget) => (
+                      {budgetRanges.map(budget: unknown (
                         <option key={budget.value} value={budget.value}>
                           {budget.label}
                         </option>
@@ -459,7 +467,7 @@ const EnhancedContactForm: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
                     >
                       <option value="">Select timeline</option>
-                      {timelineOptions.map((timeline) => (
+                      {timelineOptions.map(timeline: unknown (
                         <option key={timeline.value} value={timeline.value}>
                           {timeline.label}
                         </option>
@@ -525,5 +533,6 @@ const EnhancedContactForm: React.FC = () => {
     </section>
   );
 };
-
+;
+export { EnhancedContactForm };
 export default EnhancedContactForm;

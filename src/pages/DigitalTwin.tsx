@@ -50,8 +50,9 @@ import { Eye,
   Plane,
   Ship
  } from 'lucide-react.ts';
-
-export default function DigitalTwin(...args: any[]): any {
+;
+export { function };
+export default function DigitalTwin(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,
@@ -123,7 +124,7 @@ export default function DigitalTwin(...args: any[]): any {
     "5G Networks", "Blockchain", "AR/VR", "Computer Vision", "Robotics"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -180,7 +181,7 @@ export default function DigitalTwin(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -219,7 +220,7 @@ export default function DigitalTwin(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {applications.map((application, index)  => (
+            {applications.map(application: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -236,7 +237,7 @@ export default function DigitalTwin(...args: any[]): any {
                 </div>
                 <p className="text-gray-300 mb-6">{application.description}</p>
                 <ul className="space-y-2">
-                  {application.benefits.map((benefit, benefitIndex) => (
+                  {application.benefits.map((benefit, benefitIndex (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {benefit}
@@ -268,7 +269,7 @@ export default function DigitalTwin(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -5,6 +5,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchResultCard } from "@/components/search/SearchResultCard";
 import { SearchBar } from "@/components/SearchBar";
 const LIMIT = 20;
+export { function };
 export default function SearchResultsPage() {
     const router = useNavigate();
     const initialQuery = router.query.q || "";

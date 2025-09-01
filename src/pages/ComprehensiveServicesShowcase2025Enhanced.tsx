@@ -24,25 +24,25 @@ import { Search,
     ExternalLink
  } from 'lucide-react.ts';
 import { comprehensiveServices2025Enhanced, EnhancedService  } from '../data/comprehensive-services-2025-enhanced';
-
+;
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState<typeof ''>('');
     const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [sortBy, setSortBy] = useState<any>('name');
 
     const categories = [
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },;
+        { id: unknown'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },;
         { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'fintech').length },
-        { id: any'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'healthtech').length },;
-        { id: any'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'edutech').length },;
-        { id: any'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'martech').length },;
-        { id: any'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'micro-saas').length },;
-        { id: any'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'ai-services').length },;
-        { id: any'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'it-services').length },;
-        { id: any'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'emerging-tech').length }
+        { id: unknown'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'healthtech').length },;
+        { id: unknown'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'edutech').length },;
+        { id: unknown'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'martech').length },;
+        { id: unknown'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'micro-saas').length },;
+        { id: unknown'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'ai-services').length },;
+        { id: unknown'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'it-services').length },;
+        { id: unknown'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'emerging-tech').length }
     ];
 
-    const filteredServices = useMemo(() => {
+    const filteredServices = useMemo(: unknown {
         let filtered = comprehensiveServices2025Enhanced;
 
         if (searchTerm) {
@@ -58,7 +58,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         }
 
         // Sort services
-        filtered.sort((a, b) => {
+        filtered.sort(a: unknown, b: unknown {
             switch (sortBy) {
                 case 'price':
                     const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, ''));
@@ -74,7 +74,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory, sortBy]);
 
-    const getCategoryColor = (category: anystring)  => {
+    const getCategoryColor = (...args: unknown[]): unknown => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600',
             'healthtech': 'from-red-500 to-pink-600',
@@ -88,7 +88,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anystring)  => {
+    const getCategoryIcon = (...args: unknown[]): unknown => {
         const icons: { [key: string]: React.ReactNode } = {
             'fintech': <DollarSign className="w-5 h-5" />,
             'healthtech': <Heart className="w-5 h-5" />,
@@ -102,7 +102,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         return icons[category] || <Globe className="w-5 h-5" />;
     };
 
-    return (
+    return 
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <Helmet>
                 <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
@@ -187,7 +187,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    onChange={(e setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
@@ -197,7 +197,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <select
                                 value={selectedCategory}
-                                onChange={(e) => setSelectedCategory(e.target.value)}
+                                onChange={e: unknown setSelectedCategory(e.target.value)}
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                                 {categories.map(category  => (
@@ -212,7 +212,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <select
                                 value={sortBy}
-                                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
+                                onChange={e: unknown setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                                 <option value="name">Sort by Name</option>
@@ -233,9 +233,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                             <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
                             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
-                    ) : (
+                    ) : 
                         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                            {filteredServices.map((service, index)  => (
+                            {filteredServices.map((service, index (
                                 <motion.div
                                     key={service.id}
                                     initial={{ opacity: 0, y: 20 }}
@@ -285,7 +285,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                                         <div className="mb-4">
                                             <h4 className="font-semibold text-gray-800 mb-2">Key Benefits</h4>
                                             <ul className="space-y-1">
-                                                {service.benefits.slice(0, 3).map((benefit, idx) => (
+                                                {service.benefits.slice(0, 3).map(benefit: unknown, idx: unknown (
                                                     <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
                                                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                         <span>{benefit}</span>
@@ -392,5 +392,6 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         </div>
     );
 };
-
+;
+export { ComprehensiveServicesShowcase2025Enhanced };
 export default ComprehensiveServicesShowcase2025Enhanced;

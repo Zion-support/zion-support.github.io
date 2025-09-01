@@ -163,4 +163,5 @@ const AIAutonomousEducationProfessor = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousEducationProfessor };
 export default AIAutonomousEducationProfessor;

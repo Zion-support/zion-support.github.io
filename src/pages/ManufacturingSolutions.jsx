@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Link } from 'react-router-dom';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
+export { function };
 export default function ManufacturingSolutions() {
     const solutions = [
         {
@@ -211,3 +212,5 @@ export default function ManufacturingSolutions() {
         </div>
       </section>
     </div>)}
+
+}

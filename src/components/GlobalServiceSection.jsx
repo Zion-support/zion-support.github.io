@@ -92,3 +92,5 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       </div>
     </section>;
   )};
+
+}

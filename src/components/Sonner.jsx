@@ -10,7 +10,7 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
     warning: (message) => // // // // // // // console.log('Warning:', message),
     loading: (message) => // // // // // // // console.log('Loading:', message),
     dismiss: (toastId) => // // // // // // // console.log('Dismiss:', toastId)
-    </div>)}
+    </div>)};
 export const toast = {
   success: (message) => console.log('Success:', message),
     error: (message) => console.log('Error:', message),

@@ -2,10 +2,10 @@ import React, { useState } from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
-
+;
 const AllServicesIndex: React.FC = (): JSX.Element => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
   const allServices = [
     // AI-Powered Micro SAAS Services
@@ -169,7 +169,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory});
 
-  return (
+  return 
     <>
       <SEO
         title = "All Services Index | Zion Tech Group - Complete Service Directory"
@@ -211,14 +211,14 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
+                      onChange={(e setSearchTerm(e.target.value)}
                       className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
                   <div className="lg:w-64">
                     <select
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      onChange={e: unknown setSelectedCategory(e.target.value)}
                       className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       {categories.map(category   => (
@@ -236,10 +236,10 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                   Found <span className="text-blue-400 font-semibold">{filteredServices.length}</span> services
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  {categories.map(category => (
+                  {categories.mapcategory => (
                     <button
                       key={category}
-                      onClick={() => setSelectedCategory(category)}
+                      onClick={(: unknown setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                         selectedCategory === category
                           ? 'bg-blue-600 text-white'
@@ -258,7 +258,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            {filteredServices.length === 0 ? (
+            {filteredServices.length === 0 ? 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -270,7 +270,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                   Try adjusting your search terms or category filter
                 </p>
                 <button;
-                  onClick={() => {;
+                  onClick={( {;
                     setSearchTerm('');
                     setSelectedCategory('all')}}
                   className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
@@ -278,9 +278,9 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                   Clear Filters
                 </button>
               </motion.div>;
-            ) : (
+            ) : 
               <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index)   => (
+                {filteredServices.map((service, index (
                   <motion.div
                     key={service.id}
                     initial = {
@@ -318,7 +318,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                           <li key={featureIndex} className="text-blue-300 text-sm flex items-center">
                             <span className="text-green-400 mr-2">✓</span>
                             {feature}
@@ -330,7 +330,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                       <ul className="space-y-1">
-                        {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                        {service.benefits.slice(0, 2).map(benefit: unknown, benefitIndex: unknown (
                           <li key={benefitIndex} className="text-green-300 text-sm flex items-center">
                             <span className="text-green-400 mr-2">🚀</span>
                             {benefit}
@@ -441,5 +441,6 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       </div>;
     </>;
   )};
-
+;
+export { AllServicesIndex };
 export default AllServicesIndex;

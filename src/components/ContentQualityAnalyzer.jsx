@@ -365,5 +365,6 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
           </motion.div>
         </motion.div>)}
     </>)};
+export { ContentQualityAnalyzer };
 export default ContentQualityAnalyzer;
 }}}}}}

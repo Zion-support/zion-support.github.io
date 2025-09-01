@@ -146,4 +146,5 @@ const ContactForm = () => {
         </p>
       </form>
     </div>)};
+export { ContactForm };
 export default ContactForm;

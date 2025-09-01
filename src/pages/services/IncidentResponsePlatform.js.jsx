@@ -465,4 +465,5 @@ const IncidentResponsePlatform = () => {
       </div>
     </>);
 };
+export { IncidentResponsePlatform };
 export default IncidentResponsePlatform;

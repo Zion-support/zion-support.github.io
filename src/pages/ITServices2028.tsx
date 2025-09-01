@@ -15,7 +15,7 @@ import {
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
  } from 'lucide-react';
-
+;
 const itServices2028 = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -206,5 +206,6 @@ const itServices2028 = [
     </div>;
   );
 };
-
+;
+export { ITServices2028 };
 export default ITServices2028;}}

@@ -40,7 +40,8 @@ function generateInnovationListing(index) {
         location: "Global",
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
-    }}
+    }};
+export { function };
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -160,7 +161,7 @@ export default function CategoryDetail() {
             innovationCounterRef.current += 1;
             setListings((prev) => [
                 generateInnovationListing(innovationCounterRef.current),
-                ...prev,
+                ...prev
             ])}, 120000); // every 2 minutes
         return () => clearInterval(interval)}, [slug]);
     // Handle requesting a quote

@@ -29,10 +29,10 @@ import {
   VideoCall,
   Mailbox
 } from 'lucide-react';
-
-const Support = () => {
-  const [selectedCategory, setSelectedCategory] = useState('general');
-  const [contactMethod, setContactMethod] = useState('email');
+;
+const Support = (...args: unknown[]): unknown => {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'general'>('general');
+  const [contactMethod, setContactMethod] = useState<typeof 'email'>('email');
 
   const supportCategories = [
     {
@@ -119,7 +119,7 @@ const Support = () => {
     }
   ];
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -127,7 +127,7 @@ const Support = () => {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700/50">
@@ -165,7 +165,7 @@ const Support = () => {
               type="text"
               placeholder="Search for help articles, documentation, or support topics..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
             />
             <button
@@ -181,13 +181,13 @@ const Support = () => {
       {/* Support Categories */}
       <div className="container-responsive py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {supportCategories.map((category, index) => (
+          {supportCategories.map(category: unknown, index: unknown 
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              onClick={() => setActiveTab(category.id)}
+              onClick={( setActiveTab(category.id)}
               className={`cursor-pointer p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 activeTab === category.id
                   ? 'bg-slate-700/50 border-cyan-400/50'
@@ -207,7 +207,7 @@ const Support = () => {
       {/* Tab Content */}
       <div className="container-responsive pb-16">
         {/* Help Center Tab */}
-        {activeTab === 'help' && (
+        {activeTab === 'help' && 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -222,7 +222,7 @@ const Support = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {helpTopics.map((section, index) => (
+              {helpTopics.map((section, index 
                 <motion.div
                   key={section.category}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -237,7 +237,7 @@ const Support = () => {
                     <h3 className="text-xl font-semibold text-white">{section.category}</h3>
                   </div>
                   <div className="space-y-3">
-                    {section.topics.map((topic, topicIndex) => (
+                    {section.topics.map((topic, topicIndex (
                       <Link
                         key={topicIndex}
                         to={topic.href}
@@ -258,7 +258,7 @@ const Support = () => {
             <div className="mt-16">
               <h3 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h3>
               <div className="max-w-4xl mx-auto space-y-4">
-                {faqItems.map((item, index) => (
+                {faqItems.map(item: unknown, index: unknown (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -276,7 +276,7 @@ const Support = () => {
         )}
 
         {/* Contact Support Tab */}
-        {activeTab === 'contact' && (
+        {activeTab === 'contact' && 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -291,7 +291,7 @@ const Support = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {contactMethods.map((method, index) => (
+              {contactMethods.map((method, index (
                 <motion.div
                   key={method.type}
                   initial={{ opacity: 0, y: 20 }}
@@ -326,7 +326,7 @@ const Support = () => {
         )}
 
         {/* Resources Tab */}
-        {activeTab === 'resources' && (
+        {activeTab === 'resources' && 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -341,7 +341,7 @@ const Support = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {supportResources.map((resource, index) => (
+              {supportResources.map((resource, index (
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -367,7 +367,7 @@ const Support = () => {
         )}
 
         {/* System Status Tab */}
-        {activeTab === 'status' && (
+        {activeTab === 'status' && 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -388,7 +388,7 @@ const Support = () => {
                 { name: 'Data Analytics', status: 'operational', icon: TrendingUp },
                 { name: 'API Services', status: 'operational', icon: Globe },
                 { name: 'Support Portal', status: 'operational', icon: HelpCircle }
-              ].map((service, index) => (
+              ].map((service, index (
                 <motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}

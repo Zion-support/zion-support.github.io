@@ -24,4 +24,5 @@ const MicroSAASServices = () => {
         </div>
       </div>
     </>)};
+export { MicroSAASServices };
 export default MicroSAASServices;

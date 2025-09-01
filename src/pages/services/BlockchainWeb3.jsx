@@ -323,5 +323,6 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
     </div>)};
+export { BlockchainWeb3 };
 export default BlockchainWeb3;
 }}}}

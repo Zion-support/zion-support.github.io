@@ -1,6 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-
+;
+export { function };
 export default function Cookies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">

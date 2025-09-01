@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Shield, AlertTriangle, Eye import { Link } from "react-router-dom";
+export { function };
 export default function CybersecuritySuite() {
     const features = [
         "24/7 threat monitoring and detection",
@@ -278,3 +279,10 @@ export default function CybersecuritySuite() {
         </div>
       </section>
     </div>)}
+
+
+
+}
+
+}
+}

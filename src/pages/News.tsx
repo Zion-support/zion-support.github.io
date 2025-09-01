@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
-
-const News: React.FC = () => {
+;
+const News: React.FC = props {
   const newsArticles = [
     {
       id: 1,
@@ -193,7 +193,7 @@ const News: React.FC = () => {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsArticles.slice(1).map((article, index) => (
+            {newsArticles.slice(1).map(article: unknown, index: unknown (
               <motion.div
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -279,5 +279,6 @@ const News: React.FC = () => {
     </div>;
   );
 };
-
+;
+export { News };
 export default News;

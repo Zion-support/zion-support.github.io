@@ -6,15 +6,16 @@ import {
   MessageSquare, Heart, Star, CheckCircle, 
   Shield, Database, Settings, Activity
 } from 'lucide-react';
-
-const AICustomerSuccessPlatform: React.FC = () => {
+;
+const AICustomerSuccessPlatform: React.FC = props {
   const platformFeatures = [
     {
       title: "Intelligent Customer Insights",
       icon:
-
+;
+export { function };
 export default function Ai-customer-success-platformPage() {
-  return (
+  return 
     <Brain className="w-8 h-8 text-purple-400" />,
       description: "AI-powered analytics that provide deep insights into customer behavior and satisfaction",
       features: [
@@ -112,7 +113,7 @@ export default function Ai-customer-success-platformPage() {
               </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {platformFeatures.map((feature, index) => (
+              {platformFeatures.map((feature, index 
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -127,7 +128,7 @@ export default function Ai-customer-success-platformPage() {
               </div>
         <p className="text-white/70 mb-6">{feature.description}</p>
         <ul className="space-y-2">
-                    {feature.features.map((feat, featureIndex) => (
+                    {feature.features.map((feat, featureIndex (
                       <li key={featureIndex} className="flex items-center text-white/80">
         <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
                         {feat}
@@ -175,7 +176,7 @@ export default function Ai-customer-success-platformPage() {
                   title: "Team Efficiency",
                   description: "Maximize success team productivity with automated workflows and insights."
                 }
-              ].map((benefit, index) => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

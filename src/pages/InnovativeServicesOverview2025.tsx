@@ -23,8 +23,8 @@ import { Brain,
   Zap,
   Globe
  } from 'lucide-react.ts';
-
-const InnovativeServicesOverview2025 = () => {
+;
+const InnovativeServicesOverview2025 = (...args: unknown[]): unknown => {
   const serviceCategories = [
     {
       id: 'ai-customer-success',
@@ -99,7 +99,7 @@ const InnovativeServicesOverview2025 = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -164,7 +164,7 @@ const InnovativeServicesOverview2025 = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {serviceCategories.map((service, index)  => (
+            {serviceCategories.map((service, index 
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -186,7 +186,7 @@ const InnovativeServicesOverview2025 = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex (
                       <li key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-zion-slate-light">{feature}</span>
@@ -198,7 +198,7 @@ const InnovativeServicesOverview2025 = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Business Impact:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
+                    {service.benefits.map(benefit: unknown, benefitIndex: unknown (
                       <li key={benefitIndex} className="flex items-center space-x-2">
                         <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />
                         <span className="text-zion-slate-light">{benefit}</span>
@@ -238,7 +238,7 @@ const InnovativeServicesOverview2025 = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index)  => (
+            {additionalServices.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -311,5 +311,6 @@ const InnovativeServicesOverview2025 = () => {
     </div>
   );
 };
-
+;
+export { InnovativeServicesOverview2025 };
 export default InnovativeServicesOverview2025;

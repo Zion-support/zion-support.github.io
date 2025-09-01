@@ -176,4 +176,5 @@ const AISolutions = () => {
         </div>
       </section>
     </div>)};
+export { AISolutions };
 export default AISolutions;

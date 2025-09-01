@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart } from "lucide-react";
+export { function };
 export default function MicroSAASServicesPage() {
     const microSAASServices = [
         {

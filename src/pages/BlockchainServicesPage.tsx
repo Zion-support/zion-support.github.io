@@ -36,9 +36,9 @@ import {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: 'all', name: 'All Services', count: blockchainServices.length }
               }
-            ].map((feature, index)  => (
+            ].map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -109,6 +109,7 @@ import {
     </div>;
   );
 };
-
+;
+export { BlockchainServicesPage };
 export default BlockchainServicesPage;
 }}}

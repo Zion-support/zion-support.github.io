@@ -676,5 +676,6 @@ const AdvancedServiceInnovationHub = () => {
         </div>
       </motion.div>
     </div>)};
+export { AdvancedServiceInnovationHub };
 export default AdvancedServiceInnovationHub;
 }}}}}}

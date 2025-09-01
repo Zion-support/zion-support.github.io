@@ -220,5 +220,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
           </motion.div>
         </>)}
     </AnimatePresence>)};
+export { MobileNavigation };
 export default MobileNavigation;
 }}}}}}}}}</motion.div>}

@@ -3,7 +3,8 @@ import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
-
+;
+export { function };
 export default function SOC2ComplianceTracker(...args: []):  {
   const features = [
     {
@@ -177,7 +178,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title = "SOC2 Compliance Tracker - Zion Tech Group"
@@ -255,7 +256,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -314,7 +315,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceAreas.map((area, index)  => (
+              {complianceAreas.map(area: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -373,7 +374,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceSteps.map((step, index)  => (
+              {complianceSteps.map(step: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -432,7 +433,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -493,7 +494,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -550,7 +551,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>

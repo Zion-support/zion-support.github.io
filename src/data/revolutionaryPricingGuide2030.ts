@@ -1,7 +1,8 @@
 // Revolutionary Pricing Guide 2030 - Zion Tech Group
 // Comprehensive pricing for cutting-edge micro SAAS, IT, and AI services
-
+;
 export interface PricingTier {
+
   id: string;
   name: string;
   price: number;
@@ -12,9 +13,11 @@ export interface PricingTier {
   recommendedFor: string[];
   savings?: number;
   popular?: boolean;
-}
 
+}
+;
 export interface EnterprisePricing {
+
   id: string;
   name: string;
   description: string;
@@ -26,9 +29,11 @@ export interface EnterprisePricing {
     phone: string;
     email: string;
     website: string;
-  };
-
+  
+};
+;
 export interface ServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -38,17 +43,18 @@ export interface ServicePricing {
     competitors: string[];
     ourAdvantage: string;
     priceDifference: string;
-  };
+  
+};
 }
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com"
 };
 
-// Revolutionary Micro SAAS Services Pricing
+// Revolutionary Micro SAAS Services Pricing;
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   {
     serviceId: "neuralflow-enterprise",
@@ -265,7 +271,7 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   }
 ];
 
-// Revolutionary IT Services Pricing
+// Revolutionary IT Services Pricing;
 export const revolutionaryITServicesPricing: ServicePricing[] = [
   {
     serviceId: "quantum-infrastructure-consulting",
@@ -352,7 +358,7 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
   }
 ];
 
-// Revolutionary AI Services Pricing
+// Revolutionary AI Services Pricing;
 export const revolutionaryAIServicesPricing: ServicePricing[] = [
   {
     serviceId: "multimodal-ai-orchestration",
@@ -461,7 +467,7 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
   }
 ];
 
-// Pricing Comparison and Recommendations
+// Pricing Comparison and Recommendations;
 export const pricingRecommendations = {
   smallBusiness: {
     recommendedServices: ["NeuralFlow Starter", "QuantumSync Researcher", "Multimodal AI Starter"],
@@ -480,10 +486,12 @@ export const pricingRecommendations = {
   }
 };
 
-// Export all pricing data
+// Export all pricing data;
 export const allRevolutionaryPricing2030 = {
   microSaas: revolutionaryMicroSaasPricing,
   itServices: revolutionaryITServicesPricing,
   aiServices: revolutionaryAIServicesPricing,
   recommendations: pricingRecommendations
 };
+
+}

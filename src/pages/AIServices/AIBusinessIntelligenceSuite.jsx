@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIBusinessIntelligenceSuite() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Business Intelligence Suite - Zion Tech Group" description="AI-powered business intelligence suite solution that transforms your operations with intelligent automation and real-time insights." keywords="AI business intelligence suite, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibusinessintelligencesuite/"/>
@@ -273,3 +274,5 @@ export default function AIBusinessIntelligenceSuite() {
         </div>
       </section>
     </div>)}
+
+}

@@ -283,5 +283,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
         </div>
       </div>
     </div>)};
+export { ServicesShowcase };
 export default ServicesShowcase;
 }}}}}}}}}}}

@@ -9,7 +9,7 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from "lucide-react";
-// Categories for filtering
+// Categories for filtering;
 const CATEGORIES = [
     "All Categories",
     "Trends",
@@ -19,6 +19,7 @@ const CATEGORIES = [
     "Recruitment",
     "Infrastructure"
 ];
+export { function };
 export default function Blog() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");

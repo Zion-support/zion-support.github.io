@@ -4,7 +4,8 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield export default function HowItWorks() {
+import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield export { function };
+export default function HowItWorks() {
     const clientSteps = [
         {
             icon: Search,
@@ -248,3 +249,19 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
         </div>
       </main>
     </>)}
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

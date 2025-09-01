@@ -16,7 +16,8 @@ import {
   Settings,
   Users
  } from 'lucide-react';
-
+;
+export { function };
 export default function CloudSolutions(...args[]):  {
   const cloudServices = [
     {
@@ -106,7 +107,7 @@ export default function CloudSolutions(...args[]):  {
     };
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
@@ -248,7 +249,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {cloudServices.map((service, index) => (;
+            {cloudServices.map((service, index ;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -272,7 +273,7 @@ export default function CloudSolutions(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       {feature}
@@ -329,7 +330,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (;
+            {benefits.map(benefit: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -390,7 +391,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {technologies.map((tech, index) => (;
+            {technologies.map(tech: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="text-center group"

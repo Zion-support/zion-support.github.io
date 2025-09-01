@@ -19,9 +19,9 @@ import { FileText,
   MapPin,
   ExternalLink
  } from 'lucide-react.ts';
-
+;
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
 
   const features = [
     "Contract risk assessment",
@@ -180,10 +180,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map((tab) => (
-              <button
+            {['overview', 'features', 'pricing', 'competitors', 'contact'].map(tab: unknown <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={(: unknown setActiveTab(tab)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
@@ -255,7 +254,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Features Tab */}
-          {activeTab === 'features' && (
+          {activeTab === 'features' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -266,7 +265,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index)  => (
+                {features.map((feature, index (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -307,7 +306,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {['DocuSign', 'Adobe Acrobat', 'Microsoft Office', 'Legal databases'].map((integration, index) => (
+                    {['DocuSign', 'Adobe Acrobat', 'Microsoft Office', 'Legal databases'].map(integration: unknown, index: unknown (
                       <div key={index} className="bg-gray-800/50 p-3 rounded-lg text-center">
                         {integration}
                       </div>
@@ -319,7 +318,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Pricing Tab */}
-          {activeTab === 'pricing' && (
+          {activeTab === 'pricing' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -330,7 +329,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-                {pricingPlans.map((plan, index)  => (
+                {pricingPlans.map((plan, index (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -360,7 +359,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                     </div>
                     
                     <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map(feature: unknown, featureIndex: unknown (
                         <li key={featureIndex} className="flex items-center gap-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -385,7 +384,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Competitors Tab */}
-          {activeTab === 'competitors' && (
+          {activeTab === 'competitors' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -396,7 +395,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
-                {competitors.map((competitor, index)  => (
+                {competitors.map((competitor, index (
                   <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-semibold">{competitor.name}</h3>
@@ -496,5 +495,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AILegalDocumentAnalyzer };
 export default AILegalDocumentAnalyzer;

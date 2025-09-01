@@ -25,10 +25,11 @@ import {
   Lock,
   Eye
  } from 'lucide-react';
-
+;
+export { function };
 export default function QuantumTechnology(...args[]):  {
-  const [selectedApplication, setSelectedApplication] = useState('all');
-  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedApplication, setSelectedApplication] = useState<typeof 'all'>('all');
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
 
   const quantumServices = [
     {
@@ -67,7 +68,7 @@ export default function QuantumTechnology(...args[]):  {
       color: "from-zion-red to-zion-pink"
     },
     {
-      icon: Zap,
+      icon: Zap
     };
       title: "Quantum Sensors",;
       description: "Ultra-sensitive detection using quantum phenomena",;
@@ -122,7 +123,7 @@ export default function QuantumTechnology(...args[]):  {
       icon: Lightbulb
     },
     {
-      title: "AI Training",
+      title: "AI Training"
     };
       description: "Quantum-enhanced machine learning and neural networks",;
       category: "research",;
@@ -209,7 +210,7 @@ export default function QuantumTechnology(...args[]):  {
     ? quantumApplications
     : quantumApplications.filter(app => app.category === selectedApplication);
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">
@@ -319,7 +320,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumServices.map((service, index) => (;
+            {quantumServices.map((service, index ;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -343,7 +344,7 @@ export default function QuantumTechnology(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx (
                     <li key={idx} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
@@ -397,7 +398,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {applications.map((app)  => {
+            {applications.map(app: unknown {
             initial = {
   { opacity: 0,
   y: 20 ;
@@ -421,12 +422,11 @@ export default function QuantumTechnology(...args[]):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
-            {applications.map((app) => {;
+            {applications.map(app: unknown {;
               const Icon = app.icon;
-              return (
-                <button
+              return <button
                   key = {app.id}
-                  onClick={() => setSelectedApplication(app.id)}
+                  onClick={(: unknown setSelectedApplication(app.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedApplication === app.id
                       ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25'
@@ -448,7 +448,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {filteredApplications.map((app, index) => (
+            {filteredApplications.map(app: unknown, index: unknown 
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -476,7 +476,7 @@ export default function QuantumTechnology(...args[]):  {
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Key Benefits:</h4>
                   <ul className="space-y-1">
-                    {app.benefits.map((benefit, idx) => (
+                    {app.benefits.map((benefit, idx (
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {benefit}
@@ -534,7 +534,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumTechnologies.map((tech, index) => (;
+            {quantumTechnologies.map(tech: unknown, index: unknown ;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -560,7 +560,7 @@ export default function QuantumTechnology(...args[]):  {
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Advantages:</h4>
                   <ul className="space-y-1">
-                    {tech.advantages.map((advantage, idx) => (
+                    {tech.advantages.map((advantage, idx (
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {advantage}
@@ -618,7 +618,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumAdvantages.map((advantage, index) => (;
+            {quantumAdvantages.map(advantage: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -704,7 +704,7 @@ export default function QuantumTechnology(...args[]):  {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="relative"

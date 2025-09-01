@@ -2,38 +2,38 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
-
+;
 const categories = [
   {
     title: "AI Services",
     description: "Cutting-edge AI solutions, chatbots, and machine learning",
     icon: "🤖",
     link: "/ai-services",
-    color: "from-purple-500 to-indigo-600",
+    color: "from-purple-500 to-indigo-600"
   },
   {
     title: "Micro SAAS",
     description: "Cloud-based software solutions for modern businesses",
     icon: "☁️",
     link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600",
+    color: "from-cyan-500 to-blue-600"
   },
   {
     title: "IT Services",
     description: "Infrastructure, security, and technical consulting",
     icon: "⚡",
     link: "/all-services",
-    color: "from-amber-500 to-orange-600",
+    color: "from-amber-500 to-orange-600"
   },
   {
     title: "Digital Transformation",
     description: "Business modernization and digital strategy",
     icon: "📈",
     link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-  },
+    color: "from-emerald-500 to-green-600"
+  }
 ];
-
+;
 const specialServices = [
   {
     title: "IT Onsite Services",
@@ -50,9 +50,13 @@ const specialServices = [
 ];
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  // Add your props here
 
+
+  showTitle?: boolean;
+
+}
+;
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -63,7 +67,7 @@ const containerVariants = {
     }
   }
 };
-
+;
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -75,8 +79,8 @@ const itemVariants = {
     }
   }
 };
-
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+;
+export function CategoriesSection(...args: unknown[]): unknown {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}
@@ -112,7 +116,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index) => (
+          {categories.map(category: unknown, index: unknown (
             <motion.div
               key={category.title}
               variants={itemVariants}
@@ -142,7 +146,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {specialServices.map((service) => (
+            {specialServices.map(service: unknown (
               <Link
                 key={service.title}
                 to={service.link}

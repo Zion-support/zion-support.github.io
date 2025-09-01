@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ShieldAlert export default function Unauthorized() {
+import { ShieldAlert export { function };
+export default function Unauthorized() {
     return (<>
 
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">
@@ -25,3 +26,5 @@ import { ShieldAlert export default function Unauthorized() {
       </div>
       
     </>)}
+
+}

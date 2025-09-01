@@ -23,4 +23,5 @@ const ServiceRecommendations = () => {
       </section>
     </div>);
 };
+export { ServiceRecommendations };
 export default ServiceRecommendations;

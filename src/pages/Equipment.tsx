@@ -16,10 +16,10 @@ import {
   Network,
   Zap
 } from 'lucide-react';
-
-const Equipment: React.FC = () => {
+;
+const Equipment: React.FC = props {
   const [view, setView] = useState<'grid' | 'list'>('grid');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const equipmentItems = [
     {
@@ -59,7 +59,7 @@ const Equipment: React.FC = () => {
     item.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
@@ -87,7 +87,7 @@ const Equipment: React.FC = () => {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 placeholder="Search equipment..."
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -95,7 +95,7 @@ const Equipment: React.FC = () => {
             
             <div className="flex gap-2">
               <button
-                onClick={() => setView('grid')}
+                onClick={: unknown setView('grid')}
                 className={`p-3 rounded-lg transition-colors ${
                   view === 'grid' 
                     ? 'bg-blue-600 text-white' 
@@ -105,7 +105,7 @@ const Equipment: React.FC = () => {
                 <Grid className="w-5 h-5" />
               </button>
               <button
-                onClick={() => setView('list')}
+                onClick={: unknown setView('list')}
                 className={`p-3 rounded-lg transition-colors ${
                   view === 'list' 
                     ? 'bg-blue-600 text-white' 
@@ -124,9 +124,9 @@ const Equipment: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          {filteredItems.length > 0 ? (
+          {filteredItems.length > 0 ? 
             <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
-              {filteredItems.map((item, index) => (
+              {filteredItems.map((item, index (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -175,8 +175,7 @@ const Equipment: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-          ) : (
-            <div className="text-center py-16">
+          ) : <div className="text-center py-16">
               <div className="w-20 h-20 bg-gray-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-10 h-10 text-gray-400" />
               </div>
@@ -185,7 +184,7 @@ const Equipment: React.FC = () => {
                 No equipment matches your search criteria. Try adjusting your search terms.
               </p>
               <button
-                onClick={() => setSearchQuery('')}
+                onClick={(: unknown setSearchQuery('')}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
               >
                 Clear Search
@@ -197,5 +196,6 @@ const Equipment: React.FC = () => {
     </div>
   );
 };
-
+;
+export { Equipment };
 export default Equipment;

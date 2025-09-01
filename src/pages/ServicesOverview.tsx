@@ -53,7 +53,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-
+;
 const categoryIcons: Record<string, React.ReactNode> = {
   'AI & Analytics': <Brain className="w-6 h-6" />,
   'AI & Sales': <TrendingUp className="w-6 h-6" />,
@@ -83,7 +83,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   'Innovation': <Lightbulb className="w-6 h-6" />,
   'Emerging Tech': <Sparkles className="w-6 h-6" />
 };
-
+;
 const categoryColors: Record<string, string> = {
   'AI & Analytics': 'from-purple-600 to-pink-600',
   'AI & Sales': 'from-blue-600 to-cyan-600',
@@ -113,7 +113,7 @@ const categoryColors: Record<string, string> = {
   'Innovation': 'from-yellow-600 to-orange-600',
   'Emerging Tech': 'from-purple-600 to-indigo-600'
 };
-
+;
 const serviceCategories = [
   {
     name: 'AI & Machine Learning',
@@ -172,21 +172,22 @@ const serviceCategories = [
     count: 0
   }
 ];
-
-export default function ServicesOverview() {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function ServicesOverview(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const categories = useMemo(() => {
+  const categories = useMemo(: unknown {
     const cats = [...new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(service => service.category))];
     return cats.sort();
   }, []);
 
   // Calculate service counts for each category
-  const categoriesWithCounts = useMemo(() => {
+  const categoriesWithCounts = useMemo(: unknown {
     return serviceCategories.map(cat => {
       const count = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
         if (cat.name === 'AI & Machine Learning') {
@@ -212,7 +213,7 @@ export default function ServicesOverview() {
     });
   }, []);
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo(: unknown {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
     // Filter by search query
@@ -247,7 +248,7 @@ export default function ServicesOverview() {
     }
 
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'name':
           return a.title.localeCompare(b.title);
@@ -367,14 +368,14 @@ export default function ServicesOverview() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categoriesWithCounts.map((category, index) => (
+            {categoriesWithCounts.map(category: unknown, index: unknown 
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group cursor-pointer"
-                onClick={() => setSelectedCategory(category.name === 'all' ? 'all' : 'all')}
+                onClick={( setSelectedCategory(category.name === 'all' ? 'all' : 'all')}
               >
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 h-full">
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
@@ -411,7 +412,7 @@ export default function ServicesOverview() {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -420,7 +421,7 @@ export default function ServicesOverview() {
               <div>
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">All Categories</option>
@@ -434,7 +435,7 @@ export default function ServicesOverview() {
               <div>
                 <select
                   value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
+                  onChange={e: unknown setPriceRange(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">All Prices</option>
@@ -448,7 +449,7 @@ export default function ServicesOverview() {
               <div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="name">Sort by Name</option>
@@ -461,7 +462,7 @@ export default function ServicesOverview() {
               {/* View Mode Toggle */}
               <div className="flex space-x-2">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
                     viewMode === 'grid' 
                       ? 'bg-blue-600 text-white' 
@@ -471,7 +472,7 @@ export default function ServicesOverview() {
                   Grid
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
                     viewMode === 'list' 
                       ? 'bg-blue-600 text-white' 
@@ -498,9 +499,9 @@ export default function ServicesOverview() {
             </p>
           </div>
 
-          {viewMode === 'grid' ? (
+          {viewMode === 'grid' ? 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service, index (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -548,7 +549,7 @@ export default function ServicesOverview() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                       <div className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                           <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
@@ -610,9 +611,8 @@ export default function ServicesOverview() {
                 </motion.div>
               ))}
             </div>
-          ) : (
-            <div className="space-y-4">
-              {filteredServices.map((service, index) => (
+          ) : <div className="space-y-4">
+              {filteredServices.map((service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
@@ -682,11 +682,10 @@ export default function ServicesOverview() {
             </div>
           )}
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length === 0 && <div className="text-center py-12">
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick={(: unknown {
                   setSearchQuery('');
                   setSelectedCategory('all');
                   setPriceRange('all');

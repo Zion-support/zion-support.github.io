@@ -352,4 +352,5 @@ const AIAutonomousBusinessProcessAutomation = () => {
         </div>
       </section>
     </div>)};
+export { AIAutonomousBusinessProcessAutomation };
 export default AIAutonomousBusinessProcessAutomation;

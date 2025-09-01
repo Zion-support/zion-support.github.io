@@ -395,4 +395,5 @@ const SEOOptimizer = () => {
           </div>
         </div>)}
     </div>)};
+export { SEOOptimizer };
 export default SEOOptimizer;

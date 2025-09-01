@@ -31,7 +31,8 @@ import {
   Users,
   TrendingUp
  } from 'lucide-react';
-
+;
+export { function };
 export default function SmartContractRiskScanner(...args: []):  {
   const features = [
     {
@@ -260,7 +261,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       <section className="py-16 px-4">;
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md: grid-cols-5 gap-6">
-            {Object.entries(marketInfo).map(([key, value])  => (
+            {Object.entries(marketInfo).map([key: unknown, value]: unknown (
               <motion.div
                 key={key}
                 initial = {
@@ -333,7 +334,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -376,7 +377,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                      {feature.benefits.map((benefit, idx (
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-red-400" />
                           <span>{benefit}</span>
@@ -428,7 +429,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {scanningCapabilities.map((capability, index)  => (
+            {scanningCapabilities.map(capability: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -473,7 +474,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                   </div>
                 </div>
                 <ul className="space-y-2">
-                  {capability.features.map((feature, idx) => (
+                  {capability.features.map((feature, idx (
                     <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
                       <span>{feature}</span>
@@ -523,7 +524,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportedNetworks.map((network, index)  => (
+            {supportedNetworks.map(network: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -605,7 +606,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityStandards.map((standard, index)  => (
+            {securityStandards.map(standard: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -687,7 +688,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -744,7 +745,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
                       <span>{feature}</span>

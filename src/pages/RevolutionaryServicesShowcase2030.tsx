@@ -46,16 +46,17 @@ import { ArrowRight,
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
-
+;
+export { function };
 export default function RevolutionaryServicesShowcase2030(...args[]):  {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('aiScore');
-  const [sortOrder, setSortOrder] = useState('desc');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(12);
-  const [selectedService, setSelectedService] = useState(null);
-  const [viewMode, setViewMode] = useState('grid');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [sortBy, setSortBy] = useState<typeof 'aiScore'>('aiScore');
+  const [sortOrder, setSortOrder] = useState<typeof 'desc'>('desc');
+  const [currentPage, setCurrentPage] = useState<typeof 1>(1);
+  const [itemsPerPage] = useState<typeof 12>(12);
+  const [selectedService, setSelectedService] = useState<typeof null>(null);
+  const [viewMode, setViewMode] = useState<typeof 'grid'>('grid');
 
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
@@ -68,7 +69,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
     
     return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     let comparison = 0;
     switch (sortBy) {
       case 'aiScore':
@@ -100,15 +101,15 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handleServiceSelect = (service: any) => {;
+  const handleServiceSelect = (...args: unknown[]): unknown => {;
     setSelectedService(service);
   };
 
-  const closeModal = () => {;
+  const closeModal = (...args: unknown[]): unknown => {;
     setSelectedService(null);
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -142,7 +143,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -279,7 +280,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       type="text"
                       placeholder="Search revolutionary services..."
                       value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
+                      onChange={e: unknown setSearchTerm(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     />
                   </div>
@@ -287,7 +288,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 <div className="flex gap-4">
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
+                    onChange={e: unknown setSortBy(e.target.value)}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
 
                     <option value="aiScore">Sort by AI Score</option>
@@ -298,7 +299,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <option value="setupTime">Sort by Setup Time</option>
                   </select>
                   <button
-                    onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                    onClick={: unknown setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
 
                     {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
@@ -306,7 +307,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 </div>
                 <div className="flex gap-4">
                   <button
-                    onClick={() => setViewMode('grid')}
+                    onClick={: unknown setViewMode('grid')}
                     className={`px-4 py-3 rounded-lg transition-colors ${
                       viewMode === 'grid'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
@@ -316,7 +317,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     Grid
                   </button>
                   <button
-                    onClick={() => setViewMode('list')}
+                    onClick={: unknown setViewMode('list')}
                     className={`px-4 py-3 rounded-lg transition-colors ${
                       viewMode === 'list'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
@@ -330,10 +331,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
               {/* Category Filters */}
               <div className="flex flex-wrap gap-4 mb-8">;
-                {categories.map((category) => (;
+                {categories.map(category: unknown ;
                   <button
                     key={category}
-                    onClick={() => setActiveCategory(category)}
+                    onClick={(: unknown setActiveCategory(category)}
                     className={`px-6 py-3 rounded-full transition-all duration-300 ${
                       activeCategory === category
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
@@ -358,7 +359,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   </div>
                   <div className="flex items-center space-x-4 text-sm">
                     <span className="text-gray-300">Total Value:</span>
-                    <span className="text-green-400 font-semibold">${filteredServices.reduce((sum, service) => sum + service.price, 0).toLocaleString()}</span>
+                    <span className="text-green-400 font-semibold">${filteredServices.reduce(sum: unknown, service: unknown sum + service.price, 0).toLocaleString()}</span>
                   </div>
                 </div>
               </div>;
@@ -366,7 +367,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
-              {currentServices.map((service, index)  => (;
+              {currentServices.map(service: unknown, index: unknown ;
                 <motion.div
                   key={service.id}
                   initial = {
@@ -400,7 +401,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer group"
-                  onClick={() => handleServiceSelect(service)}
+                  onClick={( handleServiceSelect(service)}
 
                   <div className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                     <div className="flex items-center justify-between">
@@ -448,7 +449,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                      {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                         <span
                           key={tagIndex}
                           className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
@@ -470,21 +471,19 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
             </div>
 
             {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="mt-16 flex justify-center">
+            {totalPages > 1 && <div className="mt-16 flex justify-center">
                 <div className="flex space-x-2">
                   <button
-                    onClick={() => handlePageChange(currentPage - 1)}
+                    onClick={(: unknown handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
-                  {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
-                    <button
+                  {Array.from{ length: totalPages }, (_, i i + 1).map(page: unknown <button
                       key={page}
-                      onClick={() => handlePageChange(page)}
+                      onClick={(: unknown handlePageChange(page)}
                       className={`px-4 py-2 rounded-lg transition-colors ${
                         currentPage === page
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
@@ -496,7 +495,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   ))}
 
                   <button
-                    onClick={() => handlePageChange(currentPage + 1)}
+                    onClick={: unknown handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 
@@ -596,7 +595,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   />
                   <select className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
                     <option value="">Select Service Category</option>
-                    {categories.filter(cat => cat !== 'all').map((category) => (
+                    {categories.filter(cat => cat !== 'all').map(category: unknown (
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
@@ -787,7 +786,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Key Features</h3>
                   <div className="space-y-3">
-                    {selectedService.tags.slice(0, 5).map((tag, index) => (
+                    {selectedService.tags.slice(0, 5).map(tag: unknown, index: unknown (
                       <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         <span className="text-gray-300">{tag}</span>
@@ -805,7 +804,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Integrations</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedService.integrations.map((integration, index) => (
+                  {selectedService.integrations.map(integration: unknown, index: unknown (
                     <span
                       key={index}
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
@@ -819,7 +818,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Competitors</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedService.competitors.map((competitor, index) => (
+                  {selectedService.competitors.map(competitor: unknown, index: unknown (
                     <span
                       key={index}
                       className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"

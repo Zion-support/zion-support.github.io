@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-
-export const FuturisticAnimatedBackground: React.FC = () => {;
+;
+export const FuturisticAnimatedBackground: React.FC = props {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  useEffect(: unknown {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -11,7 +11,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {;
+    const resizeCanvas = (...args: unknown[]): unknown => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -49,7 +49,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     const time = 0;
 
     // Particle system
-    const particles: Array<{
+    const particles: {
       x: number;
       y: number;
       vx: number;
@@ -58,10 +58,10 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       color: string;
       life: number;
       maxLife: number;
-    }> = [];
+    }[] = [];
 
     // Create particles
-    const createParticle = () => {;
+    const createParticle = (...args: unknown[]): unknown => {;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const angle = Math.random() * Math.PI * 2;
@@ -80,7 +80,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     };
 
     // Update and draw particles
-    const animate = () => {;
+    const animate = (...args: unknown[]): unknown => {;
       time += 0.01;
 
       // Clear canvas with fade effect
@@ -197,7 +197,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
     animate();
 
-    return () => {
+    return : unknown {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
@@ -221,6 +221,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     />;
   );
 };
-
+;
+export { FuturisticAnimatedBackground };
 export default FuturisticAnimatedBackground;
 }}}}}}

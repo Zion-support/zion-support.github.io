@@ -1,9 +1,9 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
-
+;
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO title="Developer Productivity Copilot - Zion Tech Group" description="AI PR reviews, test generation, flaky test triage, and CI insights." />
       <section className="container mx-auto px-4 py-16">
@@ -19,8 +19,8 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
             'Unit/integration test generation',
             'Flaky test clustering and ownership',
             'CI insights: bottlenecks and failures',
-            'Jira/GitHub/GitLab/Bitbucket integrations',
-          ].map((b)  => (
+            'Jira/GitHub/GitLab/Bitbucket integrations'
+          ].map((b (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
@@ -50,6 +50,7 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { DeveloperProductivityCopilot };
 export default DeveloperProductivityCopilot;
 

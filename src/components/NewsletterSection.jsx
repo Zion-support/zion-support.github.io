@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send, CheckCircle, Star, Zap, Shield, Users, TrendingUp } from 'lucide-react';
-
+;
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);

@@ -1,6 +1,7 @@
 import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } from 'lucide-react';
-
-export default function ITHelpdesk() {
+;
+export { function };
+export default function ITHelpdesk(...args: unknown[]): unknown {
   const features = [;
     'Ticketing with SLA and automation rules',;
     'Self-service knowledge base and chat widget',;
@@ -16,7 +17,7 @@ export default function ITHelpdesk() {
     { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },;
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -32,7 +33,7 @@ export default function ITHelpdesk() {
         <div>
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Capabilities</h2>
           <ul className="space-y-3">
-            {features.map((f) => (
+            {features.map((f (
               <li key={f} className="flex items-start">
                 <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                 <span className="text-zion-slate-dark">{f}</span>
@@ -43,12 +44,11 @@ export default function ITHelpdesk() {
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>
           <div className="grid md:grid-cols-3 gap-4">
-            {pricing.map((p) => (
-              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+            {pricing.map(p: unknown <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                 <div className="text-lg font-semibold mb-1">{p.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>
                 <ul className="text-sm text-zion-slate-dark space-y-1">
-                  {p.details.map((d) => (<li key={d}>{d}</li>))}
+                  {p.details.map((d: unknown (<li key={d}>{d}</li>))}
                 </ul>
               </div>
             ))}
@@ -61,7 +61,7 @@ export default function ITHelpdesk() {
 
       <section className="pb-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
-          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => (
+          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map(c: unknown (
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>

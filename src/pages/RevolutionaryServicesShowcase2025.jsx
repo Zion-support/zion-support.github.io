@@ -231,4 +231,5 @@ const RevolutionaryServicesShowcase2025 = () => {
         </div>
       </div>
     </div>)};
+export { RevolutionaryServicesShowcase2025 };
 export default RevolutionaryServicesShowcase2025;

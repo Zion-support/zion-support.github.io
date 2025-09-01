@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+export { function };
 export default function AIPoweredContent() {
     useFeatureUsage('ZionGPT');
     const schema = {

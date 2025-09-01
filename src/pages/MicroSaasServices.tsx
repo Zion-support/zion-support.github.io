@@ -28,4 +28,5 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 </>;
 	);
 };
+export { MicroSaasServices };
 export default MicroSaasServices;

@@ -428,5 +428,6 @@ const EnhancedServicesShowcase = () => {
         </div>
       </section>
     </div>)};
+export { EnhancedServicesShowcase };
 export default EnhancedServicesShowcase;
 }}}

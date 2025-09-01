@@ -61,6 +61,7 @@ const comparisonFeatures = [
     "30-Day Money Back Guarantee",
     "Free Migration Support"
 ];
+export { function };
 export default function PricingPage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
@@ -398,3 +399,7 @@ export default function PricingPage() {
         </div>
       </section>
     </div>)}
+
+
+}
+}

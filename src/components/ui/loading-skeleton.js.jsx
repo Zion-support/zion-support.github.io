@@ -5,7 +5,7 @@ export function Skeleton({ className, ...props }) {
   cn("animate-pulse rounded-md bg-zion-slate/20",
   className)
 
-} {...props}/>)}
+} {...props}/>)};
 export function CardSkeleton() {
     return (<div className="rounded-lg border border-zion-slate/20 p-6 space-y-4">
       <Skeleton className="h-4 w-3/4"/>
@@ -15,7 +15,7 @@ export function CardSkeleton() {
         <Skeleton className="h-6 w-16"/>
         <Skeleton className="h-6 w-20"/>
       </div>
-    </div>)}
+    </div>)};
 export function ProfileSkeleton() {
     return (<div className="space-y-6">
       <div className="flex items-center space-x-4">
@@ -33,7 +33,7 @@ export function ProfileSkeleton() {
       <div className="flex flex-wrap gap-2">
         {Array.from({ length: 5 }).map((_, i) => (<Skeleton key={i} className="h-6 w-20"/>))}
       </div>
-    </div>)}
+    </div>)};
 export function GridSkeleton({ count = 6 }) {
     return (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i}/>))}

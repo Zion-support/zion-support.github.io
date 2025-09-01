@@ -37,18 +37,17 @@ import { Brain,
   X
  } from 'lucide-react.ts';
 
-// Lazy load components for better performance
-const LazyTestimonials = lazy(() => import('../components/Testimonials'));
-const LazyServicesGrid = lazy(() => import('../components/ServicesGrid'));
-const LazyStatsSection = lazy(() => import('../components/StatsSection'));
+// Lazy load components for better performance;
+const LazyTestimonials = lazy(: unknown import('../components/Testimonials'));
+const LazyServicesGrid = lazy(: unknown import('../components/ServicesGrid'));
+const LazyStatsSection = lazy(: unknown import('../components/StatsSection'));
 
-// Loading skeleton components
-const HeroSkeleton = () => (
-  <div className="animate-pulse">
+// Loading skeleton components;
+const HeroSkeleton = : unknown <div className="animate-pulse">
     <div className="h-20 bg-gray-700 rounded mb-6"></div>
     <div className="h-8 bg-gray-700 rounded mb-8 max-w-4xl mx-auto"></div>
     <div className="flex justify-center gap-6 mb-10">
-      {[1, 2, 3, 4].map((i) => (
+      {[1: unknown, 2: unknown, 3: unknown, 4].map((i: unknown (
         <div key={i} className="h-10 w-32 bg-gray-700 rounded-full"></div>
       ))}
     </div>
@@ -58,8 +57,8 @@ const HeroSkeleton = () => (
     </div>
   </div>
 );
-
-export function HomePage(...args: any[]): any {
+;
+export function HomePage(...args: unknown[]): unknown {
   const heroFeatures = [
     { icon: Brain, text: 'AI-Powered Solutions', description: 'Transform your business with cutting-edge artificial intelligence' },
     { icon: Atom, text: 'Quantum Computing', description: 'Harness the power of quantum mechanics for unprecedented computational capabilities' },
@@ -158,7 +157,7 @@ export function HomePage(...args: any[]): any {
             
             {/* Hero Features */}
             <div className="flex flex-wrap justify-center gap-6 mb-10">
-              {heroFeatures.map((feature, index) => (
+              {heroFeatures.map(feature: unknown, index: unknown (
                 <motion.div
                   key={feature.text}
                   initial={{ opacity: 0, scale: 0.8 }}

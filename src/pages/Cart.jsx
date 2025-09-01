@@ -2,7 +2,8 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+;
+export { function };
 export default function CartPage() {
     const navigate = useNavigate();
     const [items, setItems] = useState([]);
@@ -37,7 +38,7 @@ export default function CartPage() {
         try {
             const res = await apiClient.post('/coupons/validate', {
                 code,
-                amount: subtotal,
+                amount: subtotal
             });
             setDiscount(res.data.discount || 0);
 

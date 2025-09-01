@@ -25,7 +25,7 @@ import { BookOpen,
   Users,
   Scale
  } from 'lucide-react.ts';
-
+;
 const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -69,7 +69,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
     'Real-time legal updates'
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -125,7 +125,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -229,5 +229,6 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AIAutonomousLegalResearch };
 export default AIAutonomousLegalResearch;

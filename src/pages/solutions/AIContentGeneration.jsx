@@ -254,5 +254,6 @@ const AIContentGeneration = () => {
       </section>
     </div>);
 };
+export { AIContentGeneration };
 export default AIContentGeneration;
 }}}}

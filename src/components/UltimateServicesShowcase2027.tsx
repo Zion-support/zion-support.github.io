@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-export const UltimateServicesShowcase2027 = () => {
+export const UltimateServicesShowcase2027 = (...args: unknown[]): unknown => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -42,4 +42,5 @@ export const UltimateServicesShowcase2027 = () => {
     </section>;
   );
 };
+export { UltimateServicesShowcase2027 };
 export default UltimateServicesShowcase2027;

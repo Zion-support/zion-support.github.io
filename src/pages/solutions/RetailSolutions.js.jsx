@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store } from 'lucide-react';
+export { function };
 export default function RetailSolutions() {
     const features = [
         {

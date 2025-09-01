@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-
+;
 import { 
   Briefcase, 
   Users, 
@@ -23,11 +23,12 @@ import {
   Phone,
   Search
 } from 'lucide-react';
-
-export default function Careers() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
+;
+export { function };
+export default function Careers(...args: unknown[]): unknown {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedDepartment, setSelectedDepartment] = useState<typeof 'all'>('all');
+  const [selectedLocation, setSelectedLocation] = useState<typeof 'all'>('all');
   const [expandedJob, setExpandedJob] = useState<string | null>(null);
 
 
@@ -235,11 +236,11 @@ export default function Careers() {
     return matchesSearch && matchesDepartment && matchesLocation;
   });
 
-  const toggleJob = (jobId: string) => {
+  const toggleJob = (...args: unknown[]): unknown => {
     setExpandedJob(expandedJob === jobId ? null : jobId);
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-24">
         {/* Header */}
@@ -271,7 +272,7 @@ export default function Careers() {
               type="text"
               placeholder="Search job titles, skills, or keywords..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
             />
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -284,10 +285,10 @@ export default function Careers() {
               <label className="block text-white font-medium mb-3">Department</label>
               <select
                 value={selectedDepartment}
-                onChange={(e) => setSelectedDepartment(e.target.value)}
+                onChange={e: unknown setSelectedDepartment(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               >
-                {departments.map((dept) => (
+                {departments.map(dept: unknown (
                   <option key={dept.id} value={dept.id} className="bg-gray-800 text-white">
                     {dept.name} ({dept.count})
                   </option>
@@ -300,10 +301,10 @@ export default function Careers() {
               <label className="block text-white font-medium mb-3">Location</label>
               <select
                 value={selectedLocation}
-                onChange={(e) => setSelectedLocation(e.target.value)}
+                onChange={e: unknown setSelectedLocation(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               >
-                {locationFilters.map((loc) => (
+                {locationFilters.map(loc: unknown (
                   <option key={loc.id} value={loc.id} className="bg-gray-800 text-white">
                     {loc.name} ({loc.count})
                   </option>
@@ -326,8 +327,7 @@ export default function Careers() {
               <h3 className="text-xl font-semibold text-white mb-2">No jobs found</h3>
               <p className="text-gray-400">Try adjusting your search terms or filters.</p>
             </div>
-          ) : (
-            filteredJobs.map((job, index) => (
+          ) : filteredJobs.map((job: unknown, index: unknown 
               <motion.div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -365,7 +365,7 @@ export default function Careers() {
                       </div>
                     </div>
                     <button
-                      onClick={() => toggleJob(job.id)}
+                      onClick={( toggleJob(job.id)}
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       {expandedJob === job.id ? (
@@ -380,7 +380,7 @@ export default function Careers() {
                   <p className="text-gray-300 mb-4">{job.description}</p>
 
                   {/* Expandable Content */}
-                  {expandedJob === job.id && (
+                  {expandedJob === job.id && 
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
@@ -395,7 +395,7 @@ export default function Careers() {
                           Requirements
                         </h4>
                         <ul className="space-y-2">
-                          {job.requirements.map((req, idx) => (
+                          {job.requirements.map((req, idx (
                             <li key={idx} className="flex items-start space-x-2 text-gray-300">
                               <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                               <span>{req}</span>
@@ -411,7 +411,7 @@ export default function Careers() {
                           Benefits
                         </h4>
                         <ul className="space-y-2">
-                          {job.benefits.map((benefit, idx) => (
+                          {job.benefits.map(benefit: unknown, idx: unknown (
                             <li key={idx} className="flex items-start space-x-2 text-gray-300">
                               <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                               <span>{benefit}</span>
@@ -507,22 +507,22 @@ export default function Careers() {
   );
 }
 
-// Missing Search component
-const Search = ({ className }: { className?: string }) => (
+// Missing Search component;
+const Search = { className }: { className?: string } (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
   </svg>
 );
 
-// Missing ChevronDown component
-const ChevronDown = ({ className }: { className?: string }) => (
+// Missing ChevronDown component;
+const ChevronDown = { className }: { className?: string } (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
   </svg>
 );
 
-// Missing ChevronUp component
-const ChevronUp = ({ className }: { className?: string }) => (
+// Missing ChevronUp component;
+const ChevronUp = { className }: { className?: string } (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
   </svg>

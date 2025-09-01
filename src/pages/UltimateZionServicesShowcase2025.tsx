@@ -1,9 +1,9 @@
 import React from 'react';
 import { SEO } from "../components/SEO";
 import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025 } from "../data/ultimateZionServices2025";
-
+;
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
-  return (
+  return 
     <>
       <SEO
         title="Ultimate Zion Services 2025 - Revolutionary Micro SAAS, IT & AI Solutions"
@@ -98,7 +98,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {ultimateMicroSaasServices2025.map((service)  => (
+              {ultimateMicroSaasServices2025.map((service (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold rounded-full">
@@ -122,7 +122,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                      {service.benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                         <li key={index} className="text-sm text-gray-300 flex items-center">
                           <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -134,7 +134,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {service.tags.slice(0, 4).map((tag, index) => (
+                    {service.tags.slice(0, 4).map(tag: unknown, index: unknown (
                       <span key={index} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                         {tag}
                       </span>
@@ -174,7 +174,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
 
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-              {ultimateITInfrastructureServices2025.map((service)  => (
+              {ultimateITInfrastructureServices2025.map(service: unknown (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -192,7 +192,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, index) => (
+                      {service.features.slice(0, 4).map(feature: unknown, index: unknown (
                         <li key={index} className="text-sm text-gray-300 flex items-center">
                           <svg className="w-4 h-4 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -242,7 +242,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
             </div>
 
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-              {ultimateAIServices2025.map((service)  => (
+              {ultimateAIServices2025.map(service: unknown (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-semibold rounded-full">
@@ -266,7 +266,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">AI Models:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.aiModels.slice(0, 3).map((model, index) => (
+                      {service.aiModels.slice(0, 3).map(model: unknown, index: unknown (
                         <span key={index} className="px-2 py-1 bg-green-700 text-green-100 text-xs rounded">
                           {model}
                         </span>
@@ -277,7 +277,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Use Cases:</h4>
                     <ul className="space-y-1">
-                      {service.useCases.slice(0, 3).map((useCase, index) => (
+                      {service.useCases.slice(0, 3).map(useCase: unknown, index: unknown (
                         <li key={index} className="text-sm text-gray-300 flex items-center">
                           <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -449,5 +449,6 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { UltimateZionServicesShowcase2025 };
 export default UltimateZionServicesShowcase2025;

@@ -1,4 +1,5 @@
 export interface FinancialAIService2028 {
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface FinancialAIService2028 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -33,7 +35,7 @@ export interface FinancialAIService2028 {
   marketSize?: string;
   regulatoryCompliance?: string[];
 }
-
+;
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = [
   // AI-Powered Algorithmic Trading Platform
   {
@@ -365,5 +367,6 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     regulatoryCompliance: ["Insurance regulations", "SOC 2", "ISO 27001", "Data privacy laws"]
   }
 ];
-
+;
+export { SPECIALIZED_FINANCIAL_AI_SERVICES_2028 };
 export default SPECIALIZED_FINANCIAL_AI_SERVICES_2028;

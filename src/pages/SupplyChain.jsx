@@ -51,7 +51,7 @@ import {
   Settings,
   Palette
 } from 'lucide-react';
-
+;
 const SupplyChain = () => {
   const supplyChainSolutions = [
     {
@@ -367,5 +367,6 @@ const SupplyChain = () => {
     </div>
   );
 };
-
+;
+export { SupplyChain };
 export default SupplyChain;

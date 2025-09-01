@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
 // // console.log('🔧 Build Health Monitor Starting...\n');
-
+;
 class BuildHealthMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -363,10 +363,11 @@ class BuildHealthMonitor {
   }
 
   generateCleanViteConfig() {
-    return `import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+    return `import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'path'
-
+;
+export { defineConfig };
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -652,7 +653,7 @@ process.on('SIGTERM', async () => {
   }
 });
 
-// Start the monitor
+// Start the monitor;
 const monitor = new BuildHealthMonitor();
 
 // Keep the process alive
@@ -661,7 +662,7 @@ setInterval(() => {
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 300000); // Every 5 minutes
-
+;
 export default traverse;
 export default traverse;
 export default traverse;

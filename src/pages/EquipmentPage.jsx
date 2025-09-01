@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
-
+;
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -134,6 +134,7 @@ const EquipmentPage = () => {
       <Footer />
     </div>
   )};
-
+;
+export { EquipmentPage };
 export default EquipmentPage;
 }}

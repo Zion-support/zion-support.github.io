@@ -36,4 +36,11 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             FID: <MousePointer className="w-4 h-4"/>,
             CLS: <BarChart3 className="w-4 h-4"/>,
             TTFB: <Clock className="w-4 h-4"/>,
-            DOMLOAD: <Activity className="w-4 h-4"/>,
+            DOMLOAD: <Activity className="w-4 h-4"/>
+
+
+
+}
+
+}
+}

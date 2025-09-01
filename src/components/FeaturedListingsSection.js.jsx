@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom'; // Added Link import
-
+;
 const featuredListings = [
     {
         id: 1,

@@ -4,7 +4,7 @@ import { Button  } from '../../components/ui/Button';
 import { Card  } from '../../components/ui/Card';
 import { Badge  } from '../../components/ui/Badge';
 import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart  } from 'lucide-react.ts';
-
+;
 const AIFinTechPlatform: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -406,5 +406,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AIFinTechPlatform };
 export default AIFinTechPlatform;

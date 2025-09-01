@@ -1,9 +1,9 @@
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage, } from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
 import { Mail, PaperPlane import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
@@ -15,14 +15,14 @@ const schema = z.object({
     message: z
         .string()
         .min(20, 'Message must be at least 20 characters')
-        .nonempty('Message is required'),
+        .nonempty('Message is required')
 });
-export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail, }) {
+export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail }) {
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const form = useForm({
         resolver: zodResolver(schema),
         mode: 'onChange',
-        defaultValues: { subject: '', message: '' },
+        defaultValues: { subject: '', message: '' }
     });
     const handleSend = async () => {
         const values = form.getValues();
@@ -31,7 +31,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             await api.post('/messages', {
                 productId,
                 subject: values.subject,
-                body: values.message,
+                body: values.message
             });
             toast.success('Message sent!');
             form.reset();
@@ -79,3 +79,5 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
         </Form>
       </DialogContent>
     </Dialog>)}
+
+}

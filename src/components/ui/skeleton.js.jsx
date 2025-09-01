@@ -4,5 +4,5 @@ function Skeleton({ className, ...props }) {
   cn("animate-pulse rounded-md bg-muted",
   className)
 
-} {...props}/>)}
+} {...props}/>)};
 export { Skeleton };

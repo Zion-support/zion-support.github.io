@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
 export function BlogSection(...args[]):  {
   const blogPosts = [
     {
@@ -19,7 +19,7 @@ export function BlogSection(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <section className = "py-16">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
@@ -29,7 +29,7 @@ export function BlogSection(...args[]):  {
           </Link>
         </div>
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {blogPosts.map((post)  => (
+          {blogPosts.map((post (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">

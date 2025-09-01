@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { 
   Store, 
   Search, 
@@ -20,11 +21,11 @@ import {
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
-const Marketplace: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
+;
+const Marketplace: React.FC = props {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedType, setSelectedType] = useState<typeof 'all'>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
@@ -309,7 +310,7 @@ const Marketplace: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const sortedSolutions = [...filteredSolutions].sort((a, b) => {
+  const sortedSolutions = [...filteredSolutions].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
@@ -324,7 +325,7 @@ const Marketplace: React.FC = () => {
     }
   });
 
-  const getTypeColor = (type: string) => {
+  const getTypeColor = (...args: unknown[]): unknown => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -333,7 +334,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
       case 'popular': return 'bg-blue-500/20 text-blue-400';
@@ -342,7 +343,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars = (...args: unknown[]): unknown => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -363,17 +364,17 @@ const Marketplace: React.FC = () => {
     return stars;
   };
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : Globe;
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName = (...args: unknown[]): unknown => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (...args: unknown[]): unknown => {
     switch (badge) {
       case 'Most Popular':
         return 'bg-gradient-to-r from-yellow-500 to-orange-500';
@@ -392,7 +393,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  return (
+  return 
     <>
       <SEO 
         title="Technology Marketplace - Zion Tech Group"
@@ -432,7 +433,7 @@ const Marketplace: React.FC = () => {
                     type="text"
                     placeholder="Search solutions, vendors, or technologies..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e setSearchTerm(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
                   />
                 </div>
@@ -445,10 +446,9 @@ const Marketplace: React.FC = () => {
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-zion-purple text-white shadow-lg'
@@ -472,7 +472,7 @@ const Marketplace: React.FC = () => {
                 <span className="text-white font-medium">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
                 >
                   <option value="popularity">Popularity</option>
@@ -505,9 +505,9 @@ const Marketplace: React.FC = () => {
                   Try adjusting your search terms or category filter.
                 </p>
               </motion.div>
-            ) : (
+            ) : 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {sortedSolutions.map((solution, index) => (
+                {sortedSolutions.map((solution, index (
                   <motion.div
                     key={solution.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -557,7 +557,7 @@ const Marketplace: React.FC = () => {
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                           <div className="grid grid-cols-2 gap-2">
-                            {solution.features.map((feature, featureIndex) => (
+                            {solution.features.map(feature: unknown, featureIndex: unknown (
                               <div key={featureIndex} className="flex items-center space-x-2 text-sm">
                                 <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                                 <span className="text-gray-300">{feature}</span>
@@ -650,5 +650,6 @@ const Marketplace: React.FC = () => {
     </>
   );
 };
-
+;
+export { Marketplace };
 export default Marketplace;

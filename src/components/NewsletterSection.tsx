@@ -12,7 +12,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   ];
 
   if (isSubscribed) {
-    return (
+    return 
       <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -48,7 +48,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
               service announcements, and exclusive content.
             </p>
             <button
-              onClick={() => setIsSubscribed(false)}
+              onClick={( setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
               Subscribe Another Email;
@@ -59,7 +59,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
     );
   }
 
-  return (
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -96,7 +96,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             </p>
 
             <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -199,7 +199,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                     type="email"
                     id="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={e: unknown setEmail(e.target.value)}
                     placeholder="Enter your email address"
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                     required
@@ -244,5 +244,6 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
     </section>;
   );
 };
-
+;
+export { NewsletterSection };
 export default NewsletterSection;}}}

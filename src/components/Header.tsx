@@ -68,16 +68,20 @@ import { MainNavigation } from './header/MainNavigation';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
-  className?: string;
-}
+  // Add your props here
 
-export function Header({ className }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  className?: string;
+
+}
+;
+export function Header(...args: unknown[]): unknown {
+  const [isScrolled, setIsScrolled] = useState<typeof false>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<typeof false>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<typeof false>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<typeof false>(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const navigation = [
     {
@@ -147,29 +151,29 @@ export function Header({ className }: HeaderProps) {
     }
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {
       setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return : unknown window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = (...args: unknown[]): unknown => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (...args: unknown[]): unknown => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (...args: unknown[]): unknown => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     e.preventDefault();
     // Add search logic here
     console.log('Searching for:', searchQuery);
@@ -222,7 +226,7 @@ export function Header({ className }: HeaderProps) {
             
             {/* Search Button */}
             <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={: unknown setIsSearchOpen(!isSearchOpen)}
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
             >
@@ -247,7 +251,7 @@ export function Header({ className }: HeaderProps) {
             {/* User Menu */}
             <div className="relative">
               <button
-                onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+                onClick={: unknown setIsUserMenuOpen(!isUserMenuOpen)}
                 className="flex items-center space-x-2 p-2 text-gray-300 hover:text-blue-400 transition-colors rounded-lg hover:bg-gray-800/50"
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
@@ -257,7 +261,7 @@ export function Header({ className }: HeaderProps) {
               </button>
 
               <AnimatePresence>
-                {isUserMenuOpen && (
+                {isUserMenuOpen && 
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -279,7 +283,7 @@ export function Header({ className }: HeaderProps) {
                       <Link
                         to="/profile"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
+                        onClick={( setIsUserMenuOpen(false)}
                       >
                         <User className="w-4 h-4" />
                         <span>Profile</span>
@@ -287,7 +291,7 @@ export function Header({ className }: HeaderProps) {
                       <Link
                         to="/dashboard"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
+                        onClick={: unknown setIsUserMenuOpen(false)}
                       >
                         <BarChart3 className="w-4 h-4" />
                         <span>Dashboard</span>
@@ -295,7 +299,7 @@ export function Header({ className }: HeaderProps) {
                       <Link
                         to="/settings"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
+                        onClick={: unknown setIsUserMenuOpen(false)}
                       >
                         <Settings className="w-4 h-4" />
                         <span>Settings</span>
@@ -303,7 +307,7 @@ export function Header({ className }: HeaderProps) {
                       <div className="border-t border-gray-700 my-2"></div>
                       <button
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
-                        onClick={() => {
+                        onClick={: unknown {
                           // Add logout logic here
                           setIsUserMenuOpen(false);
                         }}
@@ -331,7 +335,7 @@ export function Header({ className }: HeaderProps) {
 
       {/* Enhanced Search Bar */}
       <AnimatePresence>
-        {isSearchOpen && (
+        {isSearchOpen && 
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -345,7 +349,7 @@ export function Header({ className }: HeaderProps) {
                   <input
                     type="text"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e setSearchQuery(e.target.value)}
                     placeholder="Search services, solutions, or resources..."
                     className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -353,12 +357,12 @@ export function Header({ className }: HeaderProps) {
                 
                 {/* Quick Links */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
-                  {quickLinks.map((link) => (
+                  {quickLinks.map(link: unknown 
                     <Link
                       key={link.name}
                       to={link.href}
                       className="flex items-center space-x-2 p-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-lg transition-colors"
-                      onClick={() => setIsSearchOpen(false)}
+                      onClick={( setIsSearchOpen(false)}
                     >
                       <link.icon className="w-4 h-4" />
                       <span className="text-sm">{link.name}</span>

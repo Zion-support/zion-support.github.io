@@ -3,6 +3,7 @@ import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+export { function };
 export default function Services() {
     const contact = {
   mobile: '+1 302 464 0950',

@@ -27,4 +27,11 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
 } style = {
   {
             width: width,
-            height: height,
+            height: height
+
+
+
+}
+
+}
+}

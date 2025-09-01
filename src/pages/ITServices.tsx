@@ -2,8 +2,9 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
-
-export default function ITServices() {
+;
+export { function };
+export default function ITServices(...args: unknown[]): unknown {
   const offerings = [
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'CI/CD, IaC, Kubernetes, cost optimization and SRE with 24/7 runbooks.', price: '$6,000 - $80,000+' },
     { icon: Server, title: 'Migrations & Modernization', desc: 'On-prem to cloud, containerization, monolith-to-microservices, and zero-downtime cutovers.', price: '$10,000 - $120,000+' },
@@ -21,7 +22,7 @@ export default function ITServices() {
     { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       <SEO 
         title="IT Services - Zion Tech Group"
@@ -41,7 +42,7 @@ export default function ITServices() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {offerings.map((o) => (
+            {offerings.map((o (
               <div key={o.title} className="card-futuristic">
                 <div className="flex items-center gap-3">
                   <o.icon className="w-6 h-6 text-cyan-400" />
@@ -53,12 +54,11 @@ export default function ITServices() {
           </div>
 
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {prices.map((p) => (
-              <div key={p.name} className="card-futuristic">
+            {prices.map(p: unknown <div key={p.name} className="card-futuristic">
                 <h3 className="text-white font-semibold">{p.name}</h3>
                 <div className="mt-2 text-3xl font-extrabold text-white">{p.price}</div>
                 <ul className="mt-4 space-y-2 text-slate-300">
-                  {p.includes.map((i) => (
+                  {p.includes.map((i: unknown (
                     <li key={i}>• {i}</li>
                   ))}
                 </ul>

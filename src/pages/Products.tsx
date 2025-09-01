@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+;
 const Products: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -31,5 +31,6 @@ const Products: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { Products };
 export default Products;

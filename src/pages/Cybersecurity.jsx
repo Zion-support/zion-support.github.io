@@ -217,5 +217,6 @@ const Cybersecurity = () => {
         </div>
       </section>
     </div>)};
+export { Cybersecurity };
 export default Cybersecurity;
 }}}

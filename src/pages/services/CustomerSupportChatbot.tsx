@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
-
+;
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -20,8 +20,8 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
             'Multilingual (50+ locales) and tone control',
             'Auto-categorize, prioritize, and tag tickets',
             'Secure PII redaction and audit logs',
-            'Fallback to live agents with summaries',
-          ].map((b)  => (
+            'Fallback to live agents with summaries'
+          ].map(b: unknown (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
@@ -51,6 +51,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { CustomerSupportChatbot };
 export default CustomerSupportChatbot;
 

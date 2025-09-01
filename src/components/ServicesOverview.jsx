@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
+import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information;
 const serviceCategories = [
     {
         title: "AI Services",
@@ -250,7 +250,7 @@ const serviceCategories = [
         link: "/micro-saas-services"
 
 ];
-// Why choose Zion Tech Group
+// Why choose Zion Tech Group;
 const whyChooseUs = [
     {
         title: "Expert Team",
@@ -391,3 +391,10 @@ export function ServicesOverview() {
         </div>
       </div>
     </div>)}
+
+
+
+}
+
+}
+}

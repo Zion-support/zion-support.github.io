@@ -12,10 +12,11 @@ import {
   ArrowRight,
   Star,
   CheckCircle,
-  Rocket
+  Rocket;
 import { Link } from 'react-router-dom';
 
 interface AIService {
+
   id: string;
   name: string;
   description: string;
@@ -25,12 +26,13 @@ interface AIService {
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  
+};
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
-
-const AdvancedAIServicesHub: React.FC = () => {;
+;
+const AdvancedAIServicesHub: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
@@ -120,7 +122,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'name':;
         return a.name.localeCompare(b.name);
@@ -133,7 +135,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
   });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -200,7 +202,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                 type="text"
                 placeholder="Search AI services..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
               <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -209,7 +211,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
             {/* Sort Options */}
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
+              onChange={e: unknown setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               <option value="popularity">Most Popular</option>
@@ -245,10 +247,9 @@ const AdvancedAIServicesHub: React.FC = () => {;
           className="mb-12"
         >
           <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-purple-600 border-purple-500 text-white'
@@ -288,7 +289,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -354,7 +355,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                   <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {feature}
@@ -433,5 +434,6 @@ const AdvancedAIServicesHub: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { AdvancedAIServicesHub };
 export default AdvancedAIServicesHub;}}}}}}

@@ -36,8 +36,9 @@ import {
   TrendingUp,
   BarChart3
 } from 'lucide-react';
-
-export default function Compliance() {
+;
+export { function };
+export default function Compliance(...args: unknown[]): unknown {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',
@@ -202,7 +203,7 @@ export default function Compliance() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
@@ -245,7 +246,7 @@ export default function Compliance() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map((framework, index 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,7 +294,7 @@ export default function Compliance() {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Benefits</h4>
                     <ul className="space-y-2">
-                      {framework.benefits.map((benefit, benefitIndex) => (
+                      {framework.benefits.map((benefit, benefitIndex (
                         <li key={benefitIndex} className="flex items-start">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{benefit}</span>
@@ -322,7 +323,7 @@ export default function Compliance() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {complianceMetrics.map((metric, index) => (
+            {complianceMetrics.map(metric: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -356,7 +357,7 @@ export default function Compliance() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityMeasures.map((category, index) => (
+            {securityMeasures.map(category: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -372,7 +373,7 @@ export default function Compliance() {
                 </div>
 
                 <ul className="space-y-3">
-                  {category.measures.map((measure, measureIndex) => (
+                  {category.measures.map((measure, measureIndex (
                     <li key={measureIndex} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{measure}</span>
@@ -400,7 +401,7 @@ export default function Compliance() {
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {contactInfo.map((contact, index) => (
+              {contactInfo.map(contact: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

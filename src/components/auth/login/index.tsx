@@ -1,5 +1,5 @@
 import { LoginForm } from "./LoginForm";
-
+;
 export function LoginContent(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">

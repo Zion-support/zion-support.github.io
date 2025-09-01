@@ -18,11 +18,11 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import the new service data
+// Import the new service data;
 import { revolutionary2027AdvancedMicroSaasServices } from "../../data/revolutionary-2027-advanced-micro-saas";
 import { revolutionary2027ITInfrastructureCybersecurityServices } from "../../data/revolutionary-2027-it-infrastructure-cybersecurity";
 import { revolutionary2027AIInnovationServices } from "../../data/revolutionary-2027-ai-innovation-services";
-
+;
 const serviceCategories = [
   {
     id: 'micro-saas',
@@ -46,7 +46,7 @@ const serviceCategories = [
     services: revolutionary2027AIInnovationServices
   }
 ];
-
+;
 export function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);

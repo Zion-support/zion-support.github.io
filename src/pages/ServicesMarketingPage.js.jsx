@@ -321,4 +321,5 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
     </div>)};
+export { ServicesMarketingPage };
 export default ServicesMarketingPage;

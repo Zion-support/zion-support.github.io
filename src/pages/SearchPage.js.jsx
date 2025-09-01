@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useAISearch } from "@/hooks/useAISearch";
+export { function };
 export default function SearchPage() {
     const [params] = useSearchParams();
     const navigate = useNavigate();

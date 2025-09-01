@@ -169,4 +169,5 @@ const AIAutonomousWriting = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousWriting };
 export default AIAutonomousWriting;

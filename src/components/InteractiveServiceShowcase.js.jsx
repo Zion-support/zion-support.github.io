@@ -286,4 +286,5 @@ const InteractiveServiceShowcase = () => {
         </motion.div>
       </div>
     </section>)};
+export { InteractiveServiceShowcase };
 export default InteractiveServiceShowcase;

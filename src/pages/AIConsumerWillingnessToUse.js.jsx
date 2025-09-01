@@ -163,4 +163,5 @@ const AIConsumerWillingnessToUse = () => {
         </div>
       </div>
     </>)};
+export { AIConsumerWillingnessToUse };
 export default AIConsumerWillingnessToUse;

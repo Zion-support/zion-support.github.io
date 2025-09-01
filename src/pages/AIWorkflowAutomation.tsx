@@ -264,9 +264,9 @@ import {
   RedBlackTree,
   AVLTree,
   SplayTree,
-  Treap,
+  Treap
  } from 'lucide-react';
-
+;
 const workflowSolutions = [
   {
     id: 1,
@@ -367,7 +367,7 @@ const workflowSolutions = [
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
 ];
-
+;
 const workflowTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -398,7 +398,7 @@ const workflowTechnologies = [
     reliability: "High";
   };
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -428,7 +428,7 @@ const successStories = [
     logo: "HTL";
   };
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -459,7 +459,7 @@ const processSteps = [
     duration: "4-8 weeks";
   };
 ];
-
+;
 const workflowBenefits = [
   {
     title: "Increased Efficiency",
@@ -488,10 +488,11 @@ const workflowBenefits = [
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
 ];
-
+;
+export { function };
 export default function AIWorkflowAutomation(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [selectedSolution, setSelectedSolution] = useState<typeof null>(null);
 
   const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
 
@@ -499,7 +500,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     ? workflowSolutions
     : workflowSolutions.filter(solution => solution.category === selectedCategory);
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -632,7 +633,7 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {workflowBenefits.map((benefit, index)  => (
+            {workflowBenefits.map((benefit, index 
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -675,8 +676,8 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
 
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
-                  {benefit.examples.map((example, exampleIndex)  => (
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: unknown</h4>
+                  {benefit.examples.map((example, exampleIndex (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{example}</span>
@@ -723,7 +724,7 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {workflowTechnologies.map((technology, index)  => (
+            {workflowTechnologies.map(technology: unknown, index: unknown (
               <motion.div
                 key={technology.name}
                 initial = {
@@ -815,7 +816,7 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index)  => (
+            {processSteps.map(step: unknown, index: unknown (
               <motion.div
                 key={step.step}
                 initial = {
@@ -905,10 +906,9 @@ export default function AIWorkflowAutomation(...args[]):  {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={(: unknown setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -921,7 +921,7 @@ export default function AIWorkflowAutomation(...args[]):  {
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)  => (
+            {filteredSolutions.map(solution: unknown, index: unknown 
               <motion.div
                 key={solution.id}
                 initial = {
@@ -955,7 +955,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedSolution(solution)}
+                onClick={( setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
@@ -965,7 +965,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
 
                 <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
@@ -974,7 +974,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {solution.technologies.slice(0, 2).map((tech, techIndex) => (
+                  {solution.technologies.slice(0, 2).map(tech: unknown, techIndex: unknown (
                     <span
                       key={techIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
@@ -1038,7 +1038,7 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index)  => (
+            {successStories.map(story: unknown, index: unknown (
               <motion.div
                 key={story.id}
                 initial = {
@@ -1099,7 +1099,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array(5)].map(_: unknown, i: unknown (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>

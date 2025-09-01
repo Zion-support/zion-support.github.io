@@ -94,8 +94,8 @@ import {
   Shield as ShieldIcon5,
   BookOpen as BookOpenIcon5
 } from 'lucide-react';
-
-export const EnhancedFuturisticFooter: React.FC = () => {
+;
+export const EnhancedFuturisticFooter: React.FC = props {
   Search,
   BookOpen,
   MessageCircle,
@@ -114,8 +114,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   Calendar,
   Settings
 } from 'lucide-react';
-
-export const EnhancedFuturisticFooter: React.FC = () => {
+;
+export const EnhancedFuturisticFooter: React.FC = props {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -255,7 +255,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
+  const createMissingPage = (...args: unknown[]): unknown => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -269,7 +269,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     );
   };
 
-  return (
+  return 
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
@@ -287,7 +287,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, staggerChildren: 0.1 }}
           >
-            {stats.map((stat, index) => (
+            {stats.map((stat, index (
               <motion.div
                 key={stat.label}
                 className="text-center"
@@ -354,7 +354,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
               {/* Social Links */}
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social: unknown (
                   <a
                     key={social.name}
                     href={social.href}
@@ -375,14 +375,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </p>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <div key={section.title}>
+            {footerSections.map(section: unknown, index: unknown <div key={section.title}>
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>
                   {section.title}
                 </h4>
                 <ul className="space-y-3">
-                  {section.links.map((link) => (
+                  {section.links.map((link: unknown (
                     <li key={link.name}>
                       <Link
                         to={link.href}
@@ -405,7 +404,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
               <ul className="space-y-3">
-                {companyInfo.map((link) => (
+                {companyInfo.map(link: unknown (
                   <li key={link.name}>
                     <Link
                       to={link.href}
@@ -422,7 +421,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
               <ul className="space-y-3">
-                {supportResources.map((link) => (
+                {supportResources.map(link: unknown (
                   <li key={link.name}>
                     <Link
                       to={link.href}
@@ -439,7 +438,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
               <ul className="space-y-3">
-                {legalLinks.map((link) => (
+                {legalLinks.map(link: unknown (
                   <li key={link.name}>
                     <Link
                       to={link.href}
@@ -456,7 +455,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
               <div className="flex space-x-4 mb-6">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social: unknown (
                   <a
                     key={social.name}
                     href={social.href}
@@ -597,7 +596,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     address: '123 Innovation Drive, Tech City, TC 12345'
   };
 
-  return (
+  return 
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -627,7 +626,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.
               </p>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map((social (
                   <a
                     key={social.name}
                     href={social.href}

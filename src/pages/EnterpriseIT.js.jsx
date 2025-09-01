@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight } from 'lucide-react';
+export { function };
 export default function EnterpriseIT() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}

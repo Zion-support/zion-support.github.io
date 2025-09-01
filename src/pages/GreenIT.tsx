@@ -173,10 +173,11 @@ import {
   BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
 } from 'lucide-react';
-
-export default function GreenIT() {
+;
+export { function };
+export default function GreenIT(...args: unknown[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Solutions', count: 12 },
@@ -588,7 +589,7 @@ export default function GreenIT() {
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection = (...args: unknown[]): unknown => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
@@ -596,7 +597,7 @@ export default function GreenIT() {
     ? greenSolutions 
     : greenSolutions.filter(solution => solution.category === selectedCategory);
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Green IT Solutions - Zion Tech Group"
@@ -651,7 +652,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {environmentalImpact.map((impact, index) => (
+            {environmentalImpact.map((impact, index (
               <motion.div
                 key={impact.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -688,10 +689,9 @@ export default function GreenIT() {
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'
@@ -704,7 +704,7 @@ export default function GreenIT() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index) => (
+            {filteredSolutions.map(solution: unknown, index: unknown (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -754,13 +754,13 @@ export default function GreenIT() {
                     </div>
                     
                     <button
-                      onClick={() => toggleSection(solution.id)}
+                      onClick={: unknown toggleSection(solution.id)}
                       className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                     >
                       {expandedSection === solution.id ? 'Show Less' : 'Learn More'}
                     </button>
                     
-                    {expandedSection === solution.id && (
+                    {expandedSection === solution.id && 
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
@@ -771,7 +771,7 @@ export default function GreenIT() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                           <ul className="space-y-1">
-                            {solution.features.map((feature, featureIndex) => (
+                            {solution.features.map((feature, featureIndex (
                               <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
@@ -783,7 +783,7 @@ export default function GreenIT() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                           <ul className="space-y-1">
-                            {solution.benefits.map((benefit, benefitIndex) => (
+                            {solution.benefits.map(benefit: unknown, benefitIndex: unknown (
                               <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                                 <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {benefit}
@@ -817,7 +817,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
+            {certifications.map(cert: unknown, index: unknown (
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -852,7 +852,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map(study: unknown, index: unknown 
               <motion.div
                 key={study.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -884,7 +884,7 @@ export default function GreenIT() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Results:</h4>
                     <ul className="space-y-1">
-                      {study.results.map((result, resultIndex) => (
+                      {study.results.map((result, resultIndex (
                         <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {result}

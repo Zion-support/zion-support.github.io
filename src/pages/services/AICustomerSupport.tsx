@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-export default function AICustomerSupport() {
+;
+export { function };
+export default function AICustomerSupport(...args: unknown[]): unknown {
   const features = [
     {
       title: "24/7 AI Chat Support",
@@ -198,7 +199,7 @@ export default function AICustomerSupport() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -238,7 +239,7 @@ export default function AICustomerSupport() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="text-center"
@@ -278,7 +279,7 @@ export default function AICustomerSupport() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index) => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="text-center"
@@ -317,7 +318,7 @@ export default function AICustomerSupport() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -347,7 +348,7 @@ export default function AICustomerSupport() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>

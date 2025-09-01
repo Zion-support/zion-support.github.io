@@ -8,7 +8,7 @@ export const useAccessibility = () => {
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
-// Accessibility Provider Component
+// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
@@ -71,7 +71,7 @@ export const AccessibilityProvider = ({ children }) => {
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
-// Accessibility Panel Component
+// Accessibility Panel Component;
 export const AccessibilityPanel = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
@@ -203,11 +203,11 @@ export const AccessibilityPanel = () => {
           </motion.div>)}
       </AnimatePresence>
     </>)};
-// Skip to Content Link
+// Skip to Content Link;
 export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
     Skip to main content
   </a>);
-// Focus Trap Hook
+// Focus Trap Hook;
 export const useFocusTrap = (isActive) => {
     useEffect(() => {
         if (!isActive)
@@ -234,6 +234,7 @@ export const useFocusTrap = (isActive) => {
         };
         document.addEventListener('keydown', handleTabKey);
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};
-// Screen Reader Only Text
+// Screen Reader Only Text;
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
+export { AccessibilityPanel };
 export default AccessibilityPanel;

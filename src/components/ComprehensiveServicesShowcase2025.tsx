@@ -406,24 +406,26 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
 interface ServiceContact {
+
   mobile: string;
   email: string;
   address: string;
   website: string;
-
-const ComprehensiveServicesShowcase2025: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+const ComprehensiveServicesShowcase2025: React.FC = props {;
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [selectedService, setSelectedService] = useState<any>(null);
-  const [sortBy, setSortBy] = useState('rating');
+  const [sortBy, setSortBy] = useState<typeof 'rating'>('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [innovationLevel, setInnovationLevel] = useState('all');
+  const [innovationLevel, setInnovationLevel] = useState<typeof 'all'>('all');
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' 
+},
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
     { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
@@ -454,7 +456,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
@@ -514,7 +516,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     };
   };
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
@@ -531,7 +533,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   };
 
-  const getInnovationIcon = (level: string) => {;
+  const getInnovationIcon = (...args: unknown[]): unknown => {;
     switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
@@ -639,7 +641,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 type="text"
                 placeholder="Search services, categories, or features..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e: unknown setSearchTerm(e.target.value)}
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
               />
             </div>
@@ -650,10 +652,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <div className="relative">
                 <select
                   value={activeCategory}
-                  onChange={(e) => setActiveCategory(e.target.value)}
+                  onChange={e: unknown setActiveCategory(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {categories.map((category) => (;
+                  {categories.map(category: unknown (;
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -666,10 +668,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <div className="relative">
                 <select
                   value={innovationLevel}
-                  onChange={(e) => setInnovationLevel(e.target.value)}
+                  onChange={e: unknown setInnovationLevel(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {innovationLevels.map((level) => (;
+                  {innovationLevels.map(level: unknown (;
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -682,7 +684,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
                   <option value="name">Sort by Name</option>
@@ -696,7 +698,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               {/* View Mode Toggle */}
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'grid'
                       ? 'bg-zion-cyan text-white'
@@ -706,7 +708,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <Grid className="w-4 h-4 mx-auto" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'list'
                       ? 'bg-zion-cyan text-white'
@@ -730,7 +732,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   max="10000"
                   value={priceRange[0]}
                   onChange = {
-  (e) => setPriceRange([parseInt(e.target.value),
+  e: unknown setPriceRange([parseInt(e.target.value),
   priceRange[1]])
 
 
@@ -747,7 +749,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   max="10000"
                   value={priceRange[1]}
                   onChange = {
-  (e) => setPriceRange([priceRange[0],
+  e: unknown setPriceRange([priceRange[0],
   parseInt(e.target.value)])
 
 
@@ -783,14 +785,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
 
-            {sortedServices.map((service) => (;
+            {sortedServices.map(service: unknown ;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${
                   viewMode === 'list' ? 'flex items-center gap-6' : ''
                 }`}
-                onClick={() => handleServiceClick(service)}
+                onClick={( handleServiceClick(service)}
 
                 {viewMode === 'grid' ? (;
                   // Grid View
@@ -816,7 +818,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
+                      {service.tags.slice(0, 3).map(tag: unknown, index: unknown (
                         <span
                           key={index}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
@@ -874,7 +876,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       </p>
 
                       <div className="flex flex-wrap gap-2">
-                        {service.tags.slice(0, 5).map((tag, index) => (
+                        {service.tags.slice(0, 5).map(tag: unknown, index: unknown (
                           <span
                             key={index}
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
@@ -902,7 +904,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
+          {filteredServices.length === 0 && 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -920,7 +922,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   ;
   ;
   ;
-  () => {;
+  ( {;
                   setSearchTerm('');
                   setActiveCategory('all');
                   setPriceRange([0,
@@ -945,7 +947,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
+        {selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -985,7 +987,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 }}
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e e.stopPropagation()}
 
               <div className="p-8">
                 {/* Header */}
@@ -1040,7 +1042,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       Key Features
                     </h3>
                     <ul className="space-y-2">
-                      {selectedService.features.map((feature, index) => (
+                      {selectedService.features.map(feature: unknown, index: unknown (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
                           {feature}
@@ -1054,7 +1056,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       Benefits
                     </h3>
                     <ul className="space-y-2">
-                      {selectedService.benefits.map((benefit, index) => (
+                      {selectedService.benefits.map(benefit: unknown, index: unknown (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
                           {benefit}
@@ -1072,7 +1074,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       Use Cases
                     </h3>
                     <ul className="space-y-2">
-                      {selectedService.useCases.map((useCase, index) => (
+                      {selectedService.useCases.map(useCase: unknown, index: unknown (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
                           {useCase}
@@ -1086,7 +1088,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       Target Audience
                     </h3>
                     <ul className="space-y-2">
-                      {selectedService.targetAudience.map((audience, index) => (
+                      {selectedService.targetAudience.map(audience: unknown, index: unknown (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
                           {audience}
@@ -1097,7 +1099,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 </div>
 
                 {/* Technical Specs */}
-                {selectedService.technicalSpecs && (
+                {selectedService.technicalSpecs && 
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                       <Code className="w-5 h-5 text-zion-cyan" />
@@ -1107,7 +1109,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       <div>
                         <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.technology.map((tech, index) => (
+                          {selectedService.technicalSpecs.technology.map((tech, index (
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">
                               {tech}
                             </span>
@@ -1117,7 +1119,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       <div>
                         <h4 className="font-medium text-zion-slate-300 mb-2">Integrations</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.integrations.map((integration, index) => (
+                          {selectedService.technicalSpecs.integrations.map(integration: unknown, index: unknown (
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-purple text-sm rounded-lg">
                               {integration}
                             </span>
@@ -1156,5 +1158,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     </div>;
   );
 </div></div></div></div></div></div></div>};
-
+;
+export { ComprehensiveServicesShowcase2025 };
 export default ComprehensiveServicesShowcase2025;}}}}}}}}}}

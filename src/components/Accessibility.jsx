@@ -8,7 +8,7 @@ export const useAccessibility = () => {
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
-// Accessibility Provider Component
+// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
@@ -29,4 +29,11 @@ export const AccessibilityProvider = ({ children }) => {
         const settings = {
   highContrast,
             reducedMotion,
-            fontSize,
+            fontSize
+
+
+
+}
+
+}
+}

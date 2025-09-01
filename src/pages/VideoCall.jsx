@@ -14,7 +14,8 @@ import {
     Settings,
     MessageCircle
 } from 'lucide-react';
-
+;
+export { function };
 export default function VideoCall() {
     const { roomId } = useParams();
     const navigate = useNavigate();

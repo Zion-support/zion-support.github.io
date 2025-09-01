@@ -30,11 +30,12 @@ import {
   CheckCircle
 } from 'lucide-react';
 import SEO from '@/components/SEO';
-
+;
+export { function };
 export default function EnhancedServicesPage(...args[]):  {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
 
   const filteredServices = ENHANCED_SERVICES.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -79,7 +80,7 @@ export default function EnhancedServicesPage(...args[]):  {
               </p>
               <Button
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
+                onClick={: unknown window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
 
                 Request Enterprise Consultation
               </Button>

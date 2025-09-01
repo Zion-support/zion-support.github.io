@@ -45,8 +45,9 @@ import { Star,
   BookOpen,
   ExternalLink
  } from 'lucide-react.ts';
-
-export default function UltimateServicesShowcase2026(...args: any[]): any {
+;
+export { function };
+export default function UltimateServicesShowcase2026(...args: unknown[]): unknown {
   const services = [
     {
       category: 'AI & Machine Learning',
@@ -146,7 +147,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -196,7 +197,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((category, categoryIndex)  => (
+            {services.map((category, categoryIndex 
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -212,12 +213,11 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
                 </div>
                 
                 <div className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={service.name} className="border-l-2 border-blue-500 pl-4">
+                  {category.services.map((service, serviceIndex <div key={service.name} className="border-l-2 border-blue-500 pl-4">
                       <h4 className="text-lg font-medium text-white mb-2">{service.name}</h4>
                       <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                       <div className="flex flex-wrap gap-2 mb-3">
-                        {service.features.map((feature, featureIndex) => (
+                        {service.features.map((feature: unknown, featureIndex: unknown (
                           <span
                             key={featureIndex}
                             className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"

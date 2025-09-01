@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+;
 export function MainNavigation() {
   return (
     <nav className="hidden md:flex space-x-8">

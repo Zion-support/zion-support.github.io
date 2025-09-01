@@ -100,3 +100,5 @@ import { Search, X, ArrowDown export const EnhancedSearchInput = ({ placeholder 
             </button>))}
         </div>)}
     </div>)};
+
+}

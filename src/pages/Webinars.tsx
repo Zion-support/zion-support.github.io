@@ -28,11 +28,11 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Webinars: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [filterType, setFilterType] = useState('all');
+;
+const Webinars: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [filterType, setFilterType] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Video, count: 0 },
@@ -149,7 +149,7 @@ const Webinars: React.FC = () => {
     return matchesSearch && matchesCategory && matchesType;
   });
 
-  return (
+  return 
     <>
       <SEO 
         title="Webinars - Zion Tech Group"
@@ -193,7 +193,7 @@ const Webinars: React.FC = () => {
                   type="text"
                   placeholder="Search webinars..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -202,10 +202,9 @@ const Webinars: React.FC = () => {
               <div className="mb-6">
                 <h3 className="text-white font-semibold mb-3">Categories</h3>
                 <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <button
+                  {categories.map(category: unknown <button
                       key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
+                      onClick={(: unknown setActiveCategory(category.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeCategory === category.id
                           ? 'bg-blue-500 text-white'
@@ -226,10 +225,9 @@ const Webinars: React.FC = () => {
               <div>
                 <h3 className="text-white font-semibold mb-3">Type</h3>
                 <div className="flex flex-wrap gap-2">
-                  {filterTypes.map((type) => (
-                    <button
+                  {filterTypes.map(type: unknown <button
                       key={type.id}
-                      onClick={() => setFilterType(type.id)}
+                      onClick={(: unknown setFilterType(type.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         filterType === type.id
                           ? 'bg-purple-500 text-white'
@@ -250,7 +248,7 @@ const Webinars: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredWebinars.map((webinar, index) => (
+              {filteredWebinars.map(webinar: unknown, index: unknown (
                 <motion.div
                   key={webinar.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -308,7 +306,7 @@ const Webinars: React.FC = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1 mb-4">
-                      {webinar.tags.slice(0, 3).map((tag, idx) => (
+                      {webinar.tags.slice(0, 3).map(tag: unknown, idx: unknown (
                         <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                           {tag}
                         </span>
@@ -352,5 +350,6 @@ const Webinars: React.FC = () => {
     </>
   );
 };
-
+;
+export { Webinars };
 export default Webinars;

@@ -14,7 +14,7 @@ import {
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
  } from 'lucide-react';
-
+;
 const pricingData2028 = {
   aiServices[;
     {
@@ -139,11 +139,11 @@ const pricingData2028 = {
       marketSize: '$9.8B',
       growthRate: '300%',
       roi: '600%',
-      setupTime: '4-5 weeks',
+      setupTime: '4-5 weeks'
     };
   ];
 };
-
+;
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
       trialDays: 21,;
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
@@ -151,10 +151,10 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
     };
   ];
 };
-
-const ComprehensivePricingGuide2028: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+;
+const ComprehensivePricingGuide2028: React.FC = props {;
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [priceRange, setPriceRange] = useState<typeof 'all'>('all');
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
@@ -170,7 +170,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-  const getAllServices = () => {;
+  const getAllServices = (...args: unknown[]): unknown => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
@@ -191,13 +191,13 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: string) => {;
+  const calculateROI = (...args: unknown[]): unknown => {;
     return parseInt(roi.replace('%', ''));
   };
 
-  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
+  const sortedServices = filteredServices.sort(a: unknown, b: unknown calculateROI(b.roi) - calculateROI(a.roi));
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -299,12 +299,12 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
+              {categories.map((category 
                 <motion.button
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={( setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
@@ -319,12 +319,12 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
             {/* Price Range Filter */}
             <div className="flex flex-wrap gap-3">
-              {priceRanges.map((range) => (
+              {priceRanges.map(range: unknown 
                 <motion.button
                   key={range.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setPriceRange(range.id)}
+                  onClick={( setPriceRange(range.id)}
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                     priceRange === range.id
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
@@ -343,7 +343,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       <section className="py-20">;
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {sortedServices.map((service, index)  => (
+            {sortedServices.map(service: unknown, index: unknown 
               <motion.div
                 key={`${service.type}-${service.name}`}
                 initial = {
@@ -425,7 +425,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Key Features</h4>
                   <div className="space-y-2">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
                         {feature}
@@ -566,6 +566,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     </div>;
   );
 };
+;
+export { ComprehensivePricingGuide2028 };
+export default ComprehensivePricingGuide2028;
+export default ComprehensivePricingGuide2028;
 
-export default ComprehensivePricingGuide2028;
-export default ComprehensivePricingGuide2028;
+}

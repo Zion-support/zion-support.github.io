@@ -1,4 +1,4 @@
-export const cleanupAuthState = () => {
+export const cleanupAuthState = (...args: unknown[]): unknown => {
   // Clean up stored authentication state
   try {
 
@@ -14,7 +14,7 @@ export const cleanupAuthState = () => {
 
   }
 };
-
+;
 export const isAuthenticated = (): boolean => {
   try {
     if (typeof window !== 'undefined') {
@@ -29,7 +29,7 @@ export const isAuthenticated = (): boolean => {
     return false;
   }
 };
-
+;
 export const getAuthToken = (): string | null => {
   try {
     if (typeof window !== 'undefined') {
@@ -47,8 +47,8 @@ export const getAuthToken = (): string | null => {
     return null;
   }
 };
-
-export const getUserData = (): any => {
+;
+export const getUserData = (): unknown => {
   try {
     if (typeof window !== 'undefined') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');

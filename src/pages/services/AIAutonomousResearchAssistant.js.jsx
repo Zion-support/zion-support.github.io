@@ -407,4 +407,5 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
     </div>)};
+export { AIAutonomousResearchAssistant };
 export default AIAutonomousResearchAssistant;

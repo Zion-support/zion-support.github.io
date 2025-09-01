@@ -164,7 +164,8 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
-            ))}
+            ))};
+export { function };
 export default function AutonomousBusinessOperationsPlatform() {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
@@ -1367,5 +1368,5 @@ export default function AutonomousBusinessOperationsPlatform() {}
       </section>
     </div>
   )};
-
+;
 export default AutonomousBusinessOperationsPlatform;

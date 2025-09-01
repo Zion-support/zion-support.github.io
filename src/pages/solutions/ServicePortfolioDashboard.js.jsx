@@ -23,4 +23,5 @@ const ServicePortfolioDashboard = () => {
       </section>
     </div>);
 };
+export { ServicePortfolioDashboard };
 export default ServicePortfolioDashboard;

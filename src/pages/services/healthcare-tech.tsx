@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function HealthcareTech(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>Healthcare Technology Solutions - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function HealthcareTech(...args: []):  {
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function HealthcareTech(...args: []):  {
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
                 }
-              ].map((application, index)  => (
+              ].map(application: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function HealthcareTech(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
                   <p className="text-slate-300 mb-4">{application.description}</p>
                   <ul className="space-y-1">
-                    {application.benefits.map((benefit, benefitIndex) => (
+                    {application.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-pink-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -202,7 +203,7 @@ export default function HealthcareTech(...args: []):  {
                     "Machine learning algorithms for treatment optimization and personalized medicine",
                     "Computer vision for surgical assistance and medical device guidance",
                     "Intelligent chatbots for patient triage and healthcare information"
-                  ].map((capability, index) => (
+                  ].map(capability: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-pink-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{capability}</span>
@@ -219,7 +220,7 @@ export default function HealthcareTech(...args: []):  {
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-pink-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.benefit}</div>
@@ -282,7 +283,7 @@ export default function HealthcareTech(...args: []):  {
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
                 }
-              ].map((compliance, index)  => (
+              ].map(compliance: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                     <compliance.icon className="w-6 h-6 text-white" />
@@ -290,7 +291,7 @@ export default function HealthcareTech(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{compliance.title}</h3>
                   <p className="text-slate-300 mb-4">{compliance.description}</p>
                   <ul className="space-y-1">
-                    {compliance.features.map((feature, featureIndex) => (
+                    {compliance.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-sm text-pink-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}
@@ -337,7 +338,7 @@ export default function HealthcareTech(...args: []):  {
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

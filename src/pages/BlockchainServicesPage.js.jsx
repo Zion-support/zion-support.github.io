@@ -49,6 +49,7 @@ const useCases = [
         icon: <Wallet className="h-6 w-6"/>
     }
 ];
+export { function };
 export default function BlockchainServicesPage() {
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}

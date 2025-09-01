@@ -27,7 +27,8 @@ import { Wrench,
   Globe
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
-
+;
+export { function };
 export default function OnsiteSupport(...args[]):  {
   const services = [
     {
@@ -187,7 +188,7 @@ export default function OnsiteSupport(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Onsite IT Support Services - Zion Tech Group"
@@ -342,7 +343,7 @@ export default function OnsiteSupport(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index)  => (
+            {services.map((service, index 
               <motion.div
                 key={service.title}
                 initial = {
@@ -383,7 +384,7 @@ export default function OnsiteSupport(...args[]):  {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
@@ -435,7 +436,7 @@ export default function OnsiteSupport(...args[]):  {
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {coverageAreas.map((area, index) => (
+          {coverageAreas.map(area: unknown, index: unknown 
             <motion.div
               key={area.title}
               initial = {
@@ -481,7 +482,7 @@ export default function OnsiteSupport(...args[]):  {
               <div className="space-y-4">
                 <div className="space-y-3">
                   <h4 className="text-slate-300 font-medium">Coverage:</h4>
-                  {area.areas.map((location, idx) => (
+                  {area.areas.map((location, idx (
                     <div key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm">{location}</span>
@@ -545,7 +546,7 @@ export default function OnsiteSupport(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={tier.title}
                 initial = {
@@ -630,7 +631,7 @@ export default function OnsiteSupport(...args[]):  {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {responseProcess.map((step, index) => (
+          {responseProcess.map(step: unknown, index: unknown (
             <motion.div
               key={step.step}
               initial = {
@@ -721,7 +722,7 @@ export default function OnsiteSupport(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index)  => (
+            {responseTimes.map(item: unknown, index: unknown (
               <motion.div
                 key={item.priority}
                 initial = {
@@ -796,7 +797,7 @@ export default function OnsiteSupport(...args[]):  {
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {contactInfo.map((contact, index) => (
+          {contactInfo.map(contact: unknown, index: unknown (
             <motion.div
               key={contact.title}
               initial = {

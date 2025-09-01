@@ -318,5 +318,6 @@ const Leadership = () => {
         </div>
       </section>
     </div>)};
+export { Leadership };
 export default Leadership;
 }}}

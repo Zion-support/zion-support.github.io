@@ -1,9 +1,9 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { CheckCircle2, Globe, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
-
+;
 const LandingPageGenerator: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO title="Landing Page Generator - Zion Tech Group" description="Generate, A/B test, and deploy high-converting landing pages with AI." />
       <section className="container mx-auto px-4 py-16">
@@ -20,8 +20,8 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
             'A/B testing and analytics hooks',
             'One-click deploy to Vercel/Netlify/S3',
             'Forms with spam protection and CRM sync',
-            'Localization and accessibility checks',
-          ].map((b)  => (
+            'Localization and accessibility checks'
+          ].map((b (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
@@ -51,6 +51,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { LandingPageGenerator };
 export default LandingPageGenerator;
 

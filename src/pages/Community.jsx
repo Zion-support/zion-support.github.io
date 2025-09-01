@@ -24,4 +24,5 @@ const Community = () => {
         </div>
       </div>
     </>)};
+export { Community };
 export default Community;

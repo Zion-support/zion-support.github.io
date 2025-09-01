@@ -37,6 +37,7 @@ import { User,
 
 interface UserProfile {
 
+
   firstName: string;
   lastName: string;
   email: string;
@@ -47,31 +48,36 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
-  avatar: string}
+  avatar: string
+}
 
 interface NotificationSettings {
+
 
   emailNotifications: boolean;
   pushNotifications: boolean;
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-  weeklyReports: boolean}
+  weeklyReports: boolean
+}
 
 interface SecuritySettings {
+
 
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-loginHistory: Array<any>}
-
-const Profile: React.FC = () => {;
+loginHistory: unknown[]
+}
+;
+const Profile: React.FC = props {;
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
-  const [isEditing, setIsEditing] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [success, setSuccess] = useState('');
-  const [error, setError] = useState('');
+  const [isEditing, setIsEditing] = useState<typeof false>(false);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
+  const [success, setSuccess] = useState<typeof ''>('');
+  const [error, setError] = useState<typeof ''>('');
 
   const [profile, setProfile] = useState<any>({
     firstName: 'John',
@@ -109,10 +115,14 @@ const Profile: React.FC = () => {;
     ]
   });
 
-  const [currentPassword, setCurrentPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [showPasswords, setShowPasswords] = useState({
+  const [currentPassword, setCurrentPassword] = useState<typeof ''>('');
+  const [newPassword, setNewPassword] = useState<typeof ''>('');
+  const [confirmPassword, setConfirmPassword] = useState<typeof ''>('');
+  const [showPasswords, setShowPasswords] = useState<typeof {
+    current: false,
+    new: false,
+    confirm: false
+  }>({
     current: false,
     new: false,
     confirm: false
@@ -130,7 +140,7 @@ const Profile: React.FC = () => {;
     'Other';
   ];
 
-  const handleProfileUpdate = async () => {;
+  const handleProfileUpdate = async : unknown {;
     setIsLoading(true);
     setError('');
     setSuccess('');
@@ -145,7 +155,7 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-  const handlePasswordChange = async () => {;
+  const handlePasswordChange = async : unknown {;
     if (!currentPassword || !newPassword || !confirmPassword) {;
       setError('Please fill in all password fields');
       return}
@@ -172,14 +182,14 @@ const Profile: React.FC = () => {;
       setIsLoading(false)}
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
+  const handleNotificationToggle = (...args: unknown[]): unknown => {;
 setNotifications(prev: > ({;
       ...prev,;
       [key]: !prev[key];
     }));
   };
 
-  const getPasswordStrength = (password: string) => {;
+  const getPasswordStrength = (...args: unknown[]): unknown => {;
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -203,7 +213,7 @@ setNotifications(prev: > ({;
     { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false };
   ];
 
-  const renderProfileTab = () => (
+  const renderProfileTab = : unknown (
     <motion.div
       initial = {
   { opacity: 0,
@@ -247,7 +257,7 @@ setNotifications(prev: > ({;
             <p className="text-slate-400">{profile.comp}</p>
           </div>
           <button
-            onClick={() => setIsEditing(!isEditing)}
+            onClick={: unknown setIsEditing(!isEditing)}
             className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2"
 
             {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
@@ -257,7 +267,7 @@ setNotifications(prev: > ({;
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
-          {stats.map((stat, index)  => (
+          {stats.map(stat: unknown, index: unknown (
             <motion.div
               key={stat.label}
               initial = {
@@ -317,7 +327,7 @@ setNotifications(prev: > ({;
                 type="text"
                 value={profile.firstName}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   firstName: e.target.value 
 
 
@@ -340,7 +350,7 @@ setNotifications(prev: > ({;
                 type="text"
                 value={profile.lastName}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   lastName: e.target.value 
 
 
@@ -365,7 +375,7 @@ setNotifications(prev: > ({;
                 type="email"
                 value={profile.email}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   email: e.target.value 
 
 
@@ -388,7 +398,7 @@ setNotifications(prev: > ({;
                 type="tel"
                 value={profile.phone}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   phone: e.target.value 
 
 
@@ -413,7 +423,7 @@ setNotifications(prev: > ({;
                 type="text"
                 value={profile.company}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   company: e.target.value 
 
 
@@ -434,7 +444,7 @@ setNotifications(prev: > ({;
               type="text"
               value={profile.position}
               onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   position: e.target.value 
 
 
@@ -457,7 +467,7 @@ setNotifications(prev: > ({;
               <select
                 value={profile.industry}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   industry: e.target.value 
 
 
@@ -469,7 +479,7 @@ setNotifications(prev: > ({;
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {industries.map((industry)  => (
+                {industries.map(industry: unknown (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
@@ -484,7 +494,7 @@ setNotifications(prev: > ({;
                 type="text"
                 value={profile.location}
                 onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   location: e.target.value 
 
 
@@ -508,7 +518,7 @@ setNotifications(prev: > ({;
               type="url"
               value={profile.website}
               onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   website: e.target.value 
 
 
@@ -528,7 +538,7 @@ setNotifications(prev: > ({;
           <textarea
             value={profile.bio}
             onChange = {
-  (e) => setProfile(prev => ({ ...prev,
+  e: unknown setProfile(prev => ({ ...prev,
   bio: e.target.value 
 
 
@@ -570,7 +580,7 @@ setNotifications(prev: > ({;
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">;
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((achievement, index)  => (
+          {achievements.map(achievement: unknown, index: unknown (
             <motion.div
               key={achievement.title}
               initial = {
@@ -633,7 +643,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderSecurityTab = () => (
+  const renderSecurityTab = : unknown 
     <motion.div
       initial = {
   { opacity: 0,
@@ -670,14 +680,14 @@ setNotifications(prev: > ({;
               <input
                 type={showPasswords.current ? 'text' : 'password'}
                 value={currentPassword}
-                onChange={(e) => setCurrentPassword(e.target.value)}
+                onChange={(e setCurrentPassword(e.target.value)}
                 className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Enter current password"
               />
               <button
                 type="button"
                 onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
+  : unknown setShowPasswords(prev => ({ ...prev,
   current: !prev.current 
 
 
@@ -700,14 +710,14 @@ setNotifications(prev: > ({;
               <input
                 type={showPasswords.new ? 'text' : 'password'}
                 value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
+                onChange={e: unknown setNewPassword(e.target.value)}
                 className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Enter new password"
               />
               <button
                 type="button"
                 onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
+  : unknown setShowPasswords(prev => ({ ...prev,
   new: !prev.new 
 
 
@@ -721,10 +731,9 @@ setNotifications(prev: > ({;
                 {showPasswords.new ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
-            {newPassword && (
-              <div className="mt-2">
+            {newPassword && <div className="mt-2">
                 <div className="flex gap-1 mb-1">
-                  {[1, 2, 3, 4].map((level) => (
+                  {[1: unknown, 2: unknown, 3: unknown, 4].map((level: unknown (
                     <div
                       key={level}
                       className = {
@@ -758,14 +767,14 @@ setNotifications(prev: > ({;
               <input
                 type={showPasswords.confirm ? 'text' : 'password'}
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={e: unknown setConfirmPassword(e.target.value)}
                 className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 placeholder="Confirm new password"
               />
               <button
                 type="button"
                 onClick = {
-  () => setShowPasswords(prev => ({ ...prev,
+  : unknown setShowPasswords(prev => ({ ...prev,
   confirm: !prev.confirm 
 
 
@@ -816,7 +825,7 @@ setNotifications(prev: > ({;
                 type="checkbox"
                 checked={security.twoFactorEnabled}
                 onChange = {
-  (e) => setSecurity(prev => ({ ...prev,
+  e: unknown setSecurity(prev => ({ ...prev,
   twoFactorEnabled: e.target.checked 
 
 
@@ -839,7 +848,7 @@ setNotifications(prev: > ({;
             <select
               value={security.sessionTimeout}
               onChange = {
-  (e) => setSecurity(prev => ({ ...prev,
+  e: unknown setSecurity(prev => ({ ...prev,
   sessionTimeout: Number(e.target.value) 
 
 
@@ -864,7 +873,7 @@ setNotifications(prev: > ({;
         <h3 className="text-xl font-semibold text-white mb-6">Login History</h3>
 
         <div className="space-y-4">
-          {security.loginHistory.map((login, index) => (
+          {security.loginHistory.map(login: unknown, index: unknown (
             <div key={index} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
               <div className="flex items-center gap-4">
                 <div className={`w-3 h-3 rounded-full ${
@@ -889,7 +898,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderNotificationsTab = () => (
+  const renderNotificationsTab = : unknown (
     <motion.div
       initial = {
   { opacity: 0,
@@ -918,7 +927,7 @@ setNotifications(prev: > ({;
         <h3 className="text-xl font-semibold text-white mb-6">Notification Preferences</h3>
 
         <div className="space-y-6">
-          {Object.entries(notifications).map(([key, value]) => (
+          {Object.entries(notifications).map([key: unknown, value]: unknown (
             <div key={key} className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-slate-600/30">
               <div>
                 <h4 className="font-medium text-white mb-1">
@@ -937,7 +946,7 @@ setNotifications(prev: > ({;
                 <input
                   type="checkbox"
                   checked={value}
-                  onChange={() => handleNotificationToggle(key as keyof NotificationSettings)}
+                  onChange={: unknown handleNotificationToggle(key as keyof NotificationSettings)}
                   className="sr-only peer"
                 />
                 <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;
@@ -949,7 +958,7 @@ setNotifications(prev: > ({;
     </motion.div>;
   );
 
-  const renderPreferencesTab = () => (
+  const renderPreferencesTab = : unknown (
     <motion.div
       initial = {
   { opacity: 0,
@@ -1148,10 +1157,9 @@ setNotifications(prev: > ({;
             { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },
             { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5" /> },
             { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5" /> }
-          ].map((tab) => (
-            <button
+          ].map(tab: unknown <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key as )}
+              onClick={(: unknown setActiveTab(tab.key as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
@@ -1173,5 +1181,6 @@ setNotifications(prev: > ({;
     </div>;
   );
 };
-
+;
+export { Profile };
 export default Profile;}}}}}}}}}

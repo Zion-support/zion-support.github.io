@@ -182,5 +182,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
         </motion.p>
       </motion.div>
     </div>)};
+export { NotFound };
 export default NotFound;
 }

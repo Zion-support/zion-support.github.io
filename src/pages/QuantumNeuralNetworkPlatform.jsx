@@ -266,5 +266,6 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
     </div>)};
+export { QuantumNeuralNetworkPlatform };
 export default QuantumNeuralNetworkPlatform;
 }}}

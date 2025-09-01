@@ -2,8 +2,9 @@
 import { specializedIndustrySolutions2026 } from '@/data/2026-specialized-industry-solutions';
 
 
-// Interface for the existing service structure
+// Interface for the existing service structure;
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -26,7 +27,8 @@ export interface Service {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -39,7 +41,7 @@ export interface Service {
   compliance?: string[];
 }
 
-// Map 2026 services to existing service structure
+// Map 2026 services to existing service structure;
 export function map2026ServicesToExistingStructure(): Service[] {
 
   return specializedIndustrySolutions2026.map(service => ({
@@ -49,7 +51,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     description: service.description,
     category: service.category,
     subcategory: service.category, // Use category as subcategory for now
-    price: parseInt(service.price.replace(/[$,]/g, '')), // Convert "$18,999" to 18999
+    price: parseInt(service.price.replace(/[$]/g, '')), // Convert "$18,999" to 18999
     currency: "$",
     pricingModel: "monthly",
     features: service.features,

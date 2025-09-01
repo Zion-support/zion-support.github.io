@@ -24,7 +24,8 @@ import { Brain,
   Rocket,
   Sparkles
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIEnterpriseOrchestrator(...args[]):  {
   const features = [
     {
@@ -165,7 +166,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Enterprise Orchestrator - Zion Tech Group"
@@ -274,7 +275,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
@@ -319,7 +320,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
                 <p className="text-gray-300 mb-6">{feature.description}</p>
 
                 <ul className="space-y-3">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
@@ -369,7 +370,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -426,7 +427,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -488,7 +489,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -525,7 +526,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
-                  {useCase.applications.map((application, appIndex) => (
+                  {useCase.applications.map((application, appIndex (
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">
                       <ArrowRight className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {application}

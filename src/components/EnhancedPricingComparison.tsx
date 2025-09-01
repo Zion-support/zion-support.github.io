@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export const EnhancedPricingComparison = () => {
+;
+export const EnhancedPricingComparison = (...args: unknown[]): unknown => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -88,5 +88,6 @@ export const EnhancedPricingComparison = () => {
     </section>;
   );
 };
-
+;
+export { EnhancedPricingComparison };
 export default EnhancedPricingComparison;

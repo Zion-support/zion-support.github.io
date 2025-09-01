@@ -3,21 +3,25 @@ import { motion } from 'framer-motion';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Send } from 'lucide-react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: error: Error, errorInfo: ErrorInfo void;
   showReportButton?: boolean;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
   isReporting: boolean;
   reportSent: boolean;
-}
 
+}
+;
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -61,29 +65,29 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         error: {
           name: error.name,
           message: error.message,
-          stack: error.stack,
+          stack: error.stack
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack,
+          componentStack: errorInfo.componentStack
         },
         userAgent: navigator.userAgent,
         url: window.location.href,
         timestamp: new Date().toISOString(),
-        errorId: this.state.errorId,
+        errorId: this.state.errorId
       };
 
       // Send to your error reporting endpoint
       await fetch('/api/error-report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(errorReport),
+        body: JSON.stringify(errorReport)
       });
     } catch (reportError) {
       console.error('Failed to report error:', reportError);
     }
   }
 
-  private handleRetry = () => {
+  private handleRetry = : unknown {
     this.setState({
       hasError: false,
       error: null,
@@ -93,15 +97,15 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
   };
 
-  private handleGoHome = () => {
+  private handleGoHome = : unknown {
     window.location.href = '/';
   };
 
-  private handleGoBack = () => {
+  private handleGoBack = : unknown {
     window.history.back();
   };
 
-  private handleReportError = async () => {
+  private handleReportError = async : unknown {
     this.setState({ isReporting: true });
     
     try {
@@ -109,7 +113,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       this.setState({ reportSent: true });
       
       // Reset report status after 3 seconds
-      setTimeout(() => {
+      setTimeout(: unknown {
         this.setState({ reportSent: false });
       }, 3000);
     } catch (error) {
@@ -119,7 +123,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private handleRetry = () => {
+  private handleRetry = : unknown {
     this.setState({
       hasError: false,
       error: null,
@@ -133,11 +137,11 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     this.forceUpdate();
   };
 
-  private handleGoHome = () => {
+  private handleGoHome = : unknown {
     window.location.href = '/';
   };
 
-  private handleCopyError = async () => {
+  private handleCopyError = async : unknown {
     if (this.state.error) {
       const errorText = `
 Error Details:
@@ -158,7 +162,7 @@ Timestamp: ${new Date().toISOString()}
     }
   };
 
-  private toggleDetails = () => {
+  private toggleDetails = : unknown {
     this.setState(prev => ({ showDetails: !prev.showDetails }));
   };
 

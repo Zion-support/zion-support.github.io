@@ -6,7 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,20 +14,20 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
-// Define the form schema with zod
+// Define the form schema with zod;
 const productSchema = z.object({
     title: z.string().min(3, "Title must be at least 3 characters"),
     description: z.string().min(10, "Description must be at least 10 characters"),
     price: z
         .string()
         .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-        message: "Price must be a valid number",
+        message: "Price must be a valid number"
     }),
     category: z.string().min(1, "Please select a category"),
     image: z.instanceof(File).optional(),
     video: z.instanceof(File).optional(),
     model: z.instanceof(File).optional(),
-    tags: z.string().optional(),
+    tags: z.string().optional()
 });
 export function ProductSubmissionForm() {
     const { user } = useAuth();
@@ -46,8 +46,8 @@ export function ProductSubmissionForm() {
             category: "",
             video: null,
             model: null,
-            tags: "",
-        },
+            tags: ""
+        }
     });
     // Handle image upload preview
     const handleImageChange = (e) => {
@@ -84,7 +84,7 @@ export function ProductSubmissionForm() {
             toast({
                 title: "Authentication Required",
                 description: "You must be logged in to publish products",
-                variant: "destructive",
+                variant: "destructive"
             });
             return}
         setIsSubmitting(true);
@@ -99,11 +99,11 @@ export function ProductSubmissionForm() {
                 tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],;
                 author: {
                     name: user.displayName || "Anonymous Creator",
-                    id: user.id,
+                    id: user.id
   
 
 },
-                createdAt: new Date().toISOString(),
+                createdAt: new Date().toISOString()
             };
             const { data: productRecord, error: productError } = await supabase
                 .from('product_listings')
@@ -173,7 +173,7 @@ export function ProductSubmissionForm() {
             // Show success message
             toast({
                 title: "Product Published!",
-                description: "Your product has been successfully published on Zion.",
+                description: "Your product has been successfully published on Zion."
             });
             // Redirect to product page
             router(`/marketplace/listing/${productRecord.id}`)}
@@ -181,7 +181,7 @@ export function ProductSubmissionForm() {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
-                variant: "destructive",
+                variant: "destructive"
             })}
         finally {
             setIsSubmitting(false)}

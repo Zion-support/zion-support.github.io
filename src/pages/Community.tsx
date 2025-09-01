@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -24,8 +24,9 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
-
-export default function Community() {
+;
+export { function };
+export default function Community(...args: unknown[]): unknown {
   const communityStats = [;
     { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
     { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
@@ -181,9 +182,9 @@ export default function Community() {
       color: 'from-orange-500 to-red-500';
     };
   ];
-
+;
 export default function Community(...args[]):  {
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO 
         title="Community - Zion Tech Group"
@@ -224,13 +225,14 @@ export default function Community(...args[]):  {
               Join Our Community
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with technology professionals, share knowledge, and stay ahead of industry trends.
+              Connect with technology professionals, share knowledge, and stay ahead of industry trends.;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface CommunityPost {
+
   id: string;
   title: string;
   content: string;
@@ -239,7 +241,8 @@ interface CommunityPost {
     avatar: string;
     role: string;
     verified: boolean;
-  };
+  
+};
   category: string;
   tags: string[];
   likes: number;
@@ -251,17 +254,19 @@ interface CommunityPost {
 }
 
 interface CommunityCategory {
+
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   postCount: number;
   topics: string[];
-}
 
-const Community: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+}
+;
+const Community: React.FC = (props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('latest');
 
@@ -428,7 +433,7 @@ const Community: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedPosts = [...filteredPosts].sort((a, b) => {
+  const sortedPosts = [...filteredPosts].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'latest':
         return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -443,17 +448,17 @@ const Community: React.FC = () => {
     }
   });
 
-  const getCategoryColor = (categoryId: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.color : 'from-gray-500 to-gray-600';
   };
 
-  const getCategoryName = (categoryId: string) => {
+  const getCategoryName = (...args: unknown[]): unknown => {
     const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -518,7 +523,7 @@ const Community: React.FC = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {upcomingEvents.map((event, index) => (
+          {upcomingEvents.map((event, index (
             <motion.div
               key={event.title}
               initial = {
@@ -641,7 +646,7 @@ const Community: React.FC = () => {
           </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredDiscussions.map((discussion, index) => (
+            {featuredDiscussions.map(discussion: unknown, index: unknown 
               <motion.div
                 key={discussion.title}
                 initial = {
@@ -704,7 +709,7 @@ const Community: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {discussion.tags.map((tag) => (
+                    {discussion.tags.map((tag 
                       <span
                         key={tag}
                         className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full"
@@ -721,7 +726,7 @@ const Community: React.FC = () => {
                   type="text"
                   placeholder="Search community posts..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -731,11 +736,11 @@ const Community: React.FC = () => {
             <div className="lg:w-48">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all" className="bg-slate-800 text-white">All Categories</option>
-                {communityCategories.map((category) => (
+                {communityCategories.map(category: unknown (
                   <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                     {category.name}
                   </option>
@@ -747,7 +752,7 @@ const Community: React.FC = () => {
             <div className="lg:w-48">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="latest" className="bg-slate-800 text-white">Latest</option>
@@ -761,14 +766,14 @@ const Community: React.FC = () => {
 
         {/* Community Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {communityCategories.map((category, index) => (
+          {communityCategories.map(category: unknown, index: unknown 
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={( setSelectedCategory(category.id)}
             >
               <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-4`}>
                 <category.icon className="w-6 h-6 text-white" />
@@ -778,7 +783,7 @@ const Community: React.FC = () => {
               <div className="flex items-center justify-between">
                 <span className="text-blue-400 text-sm font-medium">{category.postCount} posts</span>
                 <div className="flex flex-wrap gap-1">
-                  {category.topics.slice(0, 2).map((topic, topicIndex) => (
+                  {category.topics.slice(0, 2).map(topic: unknown, topicIndex: unknown (
                     <span
                       key={topicIndex}
                       className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
@@ -794,7 +799,7 @@ const Community: React.FC = () => {
 
         {/* Community Posts */}
         <div className="space-y-6">
-          {sortedPosts.map((post, index) => (
+          {sortedPosts.map(post: unknown, index: unknown (
             <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
@@ -837,7 +842,7 @@ const Community: React.FC = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag, tagIndex) => (
+                    {post.tags.map(tag: unknown, tagIndex: unknown (
                       <span
                         key={tagIndex}
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full hover:bg-white/20 transition-colors cursor-pointer"
@@ -977,4 +982,11 @@ const Community: React.FC = () => {
       </div>;
     </div>;
   );
+}
+
+
+
+}
+
+}
 }

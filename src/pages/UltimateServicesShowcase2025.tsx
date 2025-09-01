@@ -21,12 +21,13 @@ import {
   Mail,
   MapPin,
   ExternalLink,
-  Search
+  Search;
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
-export default function UltimateServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+export { function };
+export default function UltimateServicesShowcase2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
@@ -37,14 +38,14 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w-6 h-6" />;
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
@@ -135,7 +136,7 @@ export default function UltimateServicesShowcase2025() {
                   type="text"
                   placeholder="Search innovative services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 />
                 <div className="absolute right-3 top-3 text-gray-400">
@@ -148,7 +149,7 @@ export default function UltimateServicesShowcase2025() {
             <div className="lg:w-64">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
 
                 {categories.map(category => (;
@@ -199,7 +200,7 @@ export default function UltimateServicesShowcase2025() {
             <p className="text-xl text-gray-300">We stand behind every solution with comprehensive guarantees</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(ULTIMATE_SERVICE_GUARANTEES_2025).map(([key, value]) => (
+            {Object.entries(ULTIMATE_SERVICE_GUARANTEES_2025).map([key: unknown, value]: unknown (
               <div key={key} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">
                   <CheckCircle className="w-6 h-6 text-green-400" />
@@ -222,13 +223,12 @@ export default function UltimateServicesShowcase2025() {
             <p className="text-xl text-gray-300">Choose the perfect solution for your business needs</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {Object.entries(ULTIMATE_PRICING_TIERS_2025).map(([tier, details]) => (
-              <div key={tier} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+            {Object.entries(ULTIMATE_PRICING_TIERS_2025).map([tier: unknown, details]: unknown <div key={tier} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-2">{tier}</h3>
                 <p className="text-3xl font-bold text-blue-400 mb-4">{details.range}</p>
                 <p className="text-gray-300 mb-6">{details.description}</p>
                 <ul className="space-y-3 mb-8">
-                  {details.features.map((feature, index) => (
+                  {details.features.map((feature: unknown, index: unknown (
                     <li key={index} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-gray-300">{feature}</span>
@@ -250,7 +250,7 @@ export default function UltimateServicesShowcase2025() {
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">;
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {filteredServices.map(service: unknown (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"
@@ -283,7 +283,7 @@ export default function UltimateServicesShowcase2025() {
               {/* Tags */}
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 4).map((tag, index) => (
+                  {service.tags.slice(0, 4).map(tag: unknown, index: unknown (
                     <span
                       key={index}
                       className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
@@ -315,7 +315,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Integrations</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.integrations.slice(0, 4).map((integration, index) => (
+                  {service.integrations.slice(0, 4).map(integration: unknown, index: unknown (
                     <span
                       key={index}
                       className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
@@ -391,13 +391,13 @@ export default function UltimateServicesShowcase2025() {
         </div>
 
         {/* No Results Message */}
-        {filteredServices.length === 0 && (;
+        {filteredServices.length === 0 && ;
           <div className="text-center py-16">;
             <div className="text-gray-400 text-xl mb-4">;
               No services found matching your criteria;
             </div>;
             <button;
-              onClick={() => {;
+              onClick={(: unknown {;
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
@@ -506,9 +506,13 @@ export default function UltimateServicesShowcase2025() {
     </div>;
   );
 
-// Search icon component
-const Search = ({ className }: { className?: string }) => (;
+// Search icon component;
+const Search = { className }: { className?: string } (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
   </svg>;
 );
+
+
+}
+}

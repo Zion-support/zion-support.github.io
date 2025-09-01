@@ -5,7 +5,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
     } finally {
       setIsSubmitting(false);
 
-      setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
+      setTimeout(: unknown setIsSubmitted(false), 3000)} catch (error) {
       console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false)}
   };
@@ -31,12 +31,12 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
             <CheckCircle className="w-5 h-5" />
             <span>Successfully subscribed!</span>
           </div>
-        ) : (
+        ) : 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e setEmail(e.target.value)}
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               required

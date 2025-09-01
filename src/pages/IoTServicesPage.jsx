@@ -27,6 +27,7 @@ const iotUseCases = [
         icon: <Settings className="h-6 w-6"/>
 
 ];
+export { function };
 export default function IoTServicesPage() {
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -198,3 +199,5 @@ export default function IoTServicesPage() {
 
       <TrustedBySection />
     </div>)}
+
+}

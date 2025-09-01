@@ -4,11 +4,12 @@ import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Gl
 import { SEO  } from '@/components/SEO';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
-
-export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+;
+export { function };
+export default function RevolutionaryServicesShowcase2029(...args: unknown[]): unknown {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'popularity'>('popularity');
 
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
 
@@ -44,7 +45,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price-low':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
@@ -59,7 +60,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Analytics': <BarChart3 className="w-5 h-5" />,
       'AI & Automation': <Zap className="w-5 h-5" />,
@@ -85,7 +86,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
     return iconMap[category] || <Cpu className="w-5 h-5" />;
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Revolutionary 2029 Services Showcase - Zion Tech Group"
@@ -183,7 +184,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                   type="text"
                   placeholder="Search revolutionary services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -193,7 +194,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
             <div className="lg:w-64">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 {categories.map(category  => (
@@ -208,7 +209,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
             <div className="lg:w-48">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="popularity" className="bg-slate-800 text-white">Most Popular</option>
@@ -225,7 +226,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map(service: unknown, index: unknown (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -273,7 +274,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-gray-400 text-sm">
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         {feature}
@@ -302,7 +303,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                   <div className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                         {benefit}

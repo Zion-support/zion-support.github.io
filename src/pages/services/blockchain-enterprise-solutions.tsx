@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function BlockchainEnterpriseSolutions(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
                 }
-              ].map((useCase, index)  => (
+              ].map(useCase: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-slate-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-1">
-                    {useCase.benefits.map((benefit, benefitIndex) => (
+                    {useCase.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-yellow-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -201,7 +202,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Enterprise-grade security with encryption and access controls",
                     "Scalable infrastructure for high-volume transactions",
                     "Integration APIs for existing enterprise systems"
-                  ].map((technology, index) => (
+                  ].map(technology: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-yellow-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{technology}</span>
@@ -218,7 +219,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -258,7 +259,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Asset tokenization and fractional ownership",
                     "Automated market makers (AMM) for liquidity",
                     "Cross-chain bridges for multi-network operations"
-                  ].map((application, index) => (
+                  ].map(application: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{application}</span>
@@ -277,7 +278,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                     "Automate complex financial processes with smart contracts",
                     "Access to new financial instruments and investment opportunities",
                     "Enhanced security and reduced fraud through blockchain technology"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -323,7 +324,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

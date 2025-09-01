@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-
+;
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
     const navigate = useNavigate();
     const maxRetries = 3;
@@ -155,7 +155,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
         </div>
     );
 }
-
+;
 export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState(null);
@@ -219,7 +219,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
     return <>{children}</>;
 }
 
-// Hook for functional components to handle errors
+// Hook for functional components to handle errors;
 export function useErrorHandler() {
     const [error, setError] = useState(null);
 
@@ -235,7 +235,7 @@ export function useErrorHandler() {
     return { error, handleError, clearError };
 }
 
-// Higher-order component for error handling
+// Higher-order component for error handling;
 export function withErrorBoundary(Component, fallback = null) {
     return function WrappedComponent(props) {
         return (

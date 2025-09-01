@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Navigation } from "@/components/Navigation";
-
+;
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
@@ -13,11 +13,12 @@ export const metadata = {
     title: "Zion OS - Sovereign AI-Powered Digital Economies",
     description: "Launch sovereign AI-powered digital economies with one click",
     type: "website",
-    locale: "en_US",
-  },
+    locale: "en_US"
+  }
 };
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+;
+export { function };
+export default function RootLayout(...args: unknown[]): unknown {
   return (
     <html lang="en" className="scroll-smooth">
       <head>

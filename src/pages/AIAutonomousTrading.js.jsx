@@ -179,4 +179,5 @@ const AIAutonomousTrading = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousTrading };
 export default AIAutonomousTrading;

@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
 import { useRef } from "react";
-
+;
 export function HeroSection() {
     const { t } = useTranslation();
     const containerRef = useRef(null);

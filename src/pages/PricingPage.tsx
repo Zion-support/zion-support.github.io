@@ -23,10 +23,10 @@ import {
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-
-export function PricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+;
+export function PricingPage(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [billingCycle, setBillingCycle] = useState<typeof 'monthly'>('monthly');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Globe, color: 'from-blue-500 to-cyan-600' },
@@ -41,23 +41,23 @@ export function PricingPage() {
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceColor = (price: number) => {
+  const getPriceColor = (...args: unknown[]): unknown => {
     if (price < 1000) return 'text-green-400';
     if (price <= 3000) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -94,10 +94,9 @@ export function PricingPage() {
         {/* Category Filter */}
         <div className="flex justify-center mb-8">
           <div className="bg-gray-800 rounded-xl p-2 border border-gray-700">
-            {categories.map((category) => (
-              <button
+            {categories.map((category <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
@@ -115,7 +114,7 @@ export function PricingPage() {
 
         {/* Services Pricing */}
         <div className="space-y-12">
-          {filteredServices.map((service, serviceIndex) => (
+          {filteredServices.map(service: unknown, serviceIndex: unknown (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -150,7 +149,7 @@ export function PricingPage() {
 
               {/* Pricing Tiers */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {service.pricingTiers.map((tier, tierIndex) => (
+                {service.pricingTiers.map(tier: unknown, tierIndex: unknown (
                   <motion.div
                     key={tier.id}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -182,7 +181,7 @@ export function PricingPage() {
 
                     {/* Features */}
                     <div className="space-y-3 mb-6">
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map(feature: unknown, featureIndex: unknown (
                         <div key={featureIndex} className="flex items-start space-x-3">
                           <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-300 text-sm">{feature}</span>
@@ -279,5 +278,6 @@ export function PricingPage() {
     </div>
   );
 }
-
+;
+export { PricingPage };
 export default PricingPage;

@@ -1,7 +1,8 @@
 // Expanded Innovative Services 2027 - Zion Tech Group
 // Additional Micro SAAS, IT Infrastructure, and AI Services
-
+;
 export interface ExpandedService2027 {
+
 
   id: string;
   name: string;
@@ -20,7 +21,8 @@ pricingTiers: {
       starter: number;
       professional: number;
       enterprise: number;
-      custom: string};
+      custom: string
+};
     freeTier: boolean;
     trialPeriod: string};
   marketPrice: string;
@@ -49,7 +51,7 @@ pricingTiers: {
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
 
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
+// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
   {
     id: 'quantum-threat-hunter',
@@ -215,7 +217,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
 
 ];
 
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
+// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
   {
     id: 'predictive-insights-engine',
@@ -381,7 +383,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
 
 ];
 
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
+// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
   {
     id: 'multi-cloud-orchestrator',
@@ -547,7 +549,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
 
 ];
 
-// 4. ADVANCED IOT & EDGE COMPUTING
+// 4. ADVANCED IOT & EDGE COMPUTING;
 export const advancedIoTServices: ExpandedService2027[] = [
   {
     id: 'industrial-iot-intelligence',
@@ -713,7 +715,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
 
 ];
 
-// 5. ADVANCED FINANCIAL TECHNOLOGY
+// 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
   {
     id: 'quantum-financial-modeling',
@@ -879,7 +881,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
 
 ];
 
-// 6. ADVANCED HEALTHCARE TECHNOLOGY
+// 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
   {
     id: 'ai-diagnostic-assistant',
@@ -1045,7 +1047,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
 
 ];
 
-// Export all expanded services
+// Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027 = [;
   ...advancedCybersecurityServices,;
   ...advancedDataAnalyticsServices,;
@@ -1055,7 +1057,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [;
   ...advancedHealthcareServices;
 ];
 
-// Service categories for filtering
+// Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
   'All',;
   'Cybersecurity',;
@@ -1066,7 +1068,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'Healthcare Technology';
 ];
 
-// Helper function to get services by category
+// Helper function to get services by category;
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
@@ -1074,12 +1076,12 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 };
 
-// Helper function to get services by subcategory
+// Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
 };
 
-// Helper function to search services
+// Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service =>
@@ -1090,3 +1092,32 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
 };
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

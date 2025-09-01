@@ -3,12 +3,12 @@ import React from 'react.ts';
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: anyError;
-  resetErrorBoundary: ()  => void;
+  resetErrorBoundary: : unknown void;
 
 }
-
-export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
-  return (
+;
+export const ErrorFallback: React.FC<ErrorFallbackProps> = { error: unknown, resetErrorBoundary }: unknown {
+  return 
     <div className = "min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
         <div className="text-red-500 text-6xl mb-4">⚠️</div>
@@ -24,7 +24,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
             Try Again
           </button>
           <button
-            onClick={() => window.location.href = '/'}
+            onClick={( window.location.href = '/'}
             className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home

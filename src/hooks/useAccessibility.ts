@@ -2,21 +2,25 @@ import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface UseAccessibilityOptions {
 
+
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
-  enableLargeText?: boolean}
+  enableLargeText?: boolean
+}
 
 interface AccessibilityFeatures {
+
 
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
-  isScreenReader: boolean}
-
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
+  isScreenReader: boolean
+}
+;
+export const useAccessibility = (...args: unknown[]): unknown => {
   const {;
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;
@@ -106,7 +110,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     element.classList.add('focus-visible');
 
     // Remove focus indicator after animation
-    setTimeout(() => {
+    setTimeout(: unknown {
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -116,7 +120,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
 
   // Remove focus trap
-  const removeFocusTrap = useCallback(() => {;
+  const removeFocusTrap = useCallback(: unknown {;
     if (focusTrapRef.current && lastFocusedElementRef.current) {;
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
@@ -171,7 +175,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, [manageFocus]);
 
   // Close active elements
-  const closeActiveElements = useCallback(() => {;
+  const closeActiveElements = useCallback(: unknown {;
     // Close modals, dropdowns, etc.;
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
 activeElements.forEach(element:  > {;
@@ -182,7 +186,7 @@ activeElements.forEach(element:  > {;
     removeFocusTrap()}, [removeFocusTrap]);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
+  const announceToScreenReader = useCallback(message: string, priority: 'polite' | 'assertive' = 'polite' {;
     if (!enableScreenReaderSupport) return;
 
     const announcement = document.createElement('div');
@@ -194,11 +198,11 @@ activeElements.forEach(element:  > {;
     document.body.appendChild(announcement);
 
     // Remove after announcement
-    setTimeout(() => {
+    setTimeout(: unknown {
       document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
 
   // High contrast mode
-  const toggleHighContrast = useCallback(() => {;
+  const toggleHighContrast = useCallback(: unknown {;
     if (!enableHighContrast) return;
 
     document.documentElement.classList.toggle('high-contrast');
@@ -211,7 +215,7 @@ activeElements.forEach(element:  > {;
     localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
 
   // Reduced motion mode
-  const toggleReducedMotion = useCallback(() => {;
+  const toggleReducedMotion = useCallback(: unknown {;
     if (!enableReducedMotion) return;
 
     document.documentElement.classList.toggle('reduced-motion');
@@ -224,7 +228,7 @@ activeElements.forEach(element:  > {;
     localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
 
   // Large text mode
-  const toggleLargeText = useCallback(() => {;
+  const toggleLargeText = useCallback(: unknown {;
     if (!enableLargeText) return;
 
     document.documentElement.classList.toggle('large-text');
@@ -237,7 +241,7 @@ activeElements.forEach(element:  > {;
     localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]);
 
   // Initialize accessibility features
-  useEffect(() => {
+  useEffect(: unknown {
     // Load saved preferences
     const highContrast = localStorage.getItem('highContrast') === 'true';
     const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
@@ -252,7 +256,7 @@ activeElements.forEach(element:  > {;
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup
-    return () => {
+    return : unknown {
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {

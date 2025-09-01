@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
+import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
@@ -32,7 +32,7 @@ export function OnChainExport() {
             setIsConnected(true);
             toast({
                 title: "Wallet connected",
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
+                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`
             })}
         catch (error) {
             toast({
@@ -50,7 +50,7 @@ export function OnChainExport() {
             setExportStatus('success');
             toast({
                 title: "Tokens exported",
-                description: "Your ZION$ tokens have been exported to your wallet",
+                description: "Your ZION$ tokens have been exported to your wallet"
             })}
         catch (error) {
             setExportStatus('error');
@@ -103,3 +103,5 @@ export function OnChainExport() {
           </div>)}
       </CardContent>
     </Card>)}
+
+}

@@ -47,15 +47,16 @@ import { Brain,
   X
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data/innovativeServices2025';
-
-export default function InnovativeServicesShowcase2025(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+export { function };
+export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('name');
   const [sortOrder, setSortOrder] = useState<any>('desc');
   const [selectedService, setSelectedService] = useState<any>(null);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState<typeof false>(false);
 
   const categories = ['all', ...Object.keys(INNOVATIVE_SERVICE_CATEGORIES_2025)];
 
@@ -67,7 +68,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     let aValue, bValue;
     
     switch (sortBy) {
@@ -99,29 +100,29 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
       <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500';
   };
 
-  const openServiceModal = (service: any)  => {
+  const openServiceModal = (...args: unknown[]): unknown => {
     setSelectedService(service);
     setShowModal(true);
   };
 
-  const closeModal = () => {
+  const closeModal = (...args: unknown[]): unknown => {
     setShowModal(false);
     setSelectedService(null);
   };
 
-  return (
+  return 
     <div className="min-h-screen futuristic-bg">
       {/* Matrix Rain Background Effect */}
       <div className="matrix-rain"></div>
@@ -153,7 +154,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="futuristic-btn inline-flex items-center px-8 py-4"
-                onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={( document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Explore Services
@@ -213,19 +214,19 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e: unknown setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex gap-2">
-              {categories.map((category) => (
+              {categories.map(category: unknown 
                 <motion.button
                   key={category}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={( setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
@@ -244,7 +245,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="flex gap-2">
               <div className="flex bg-gray-800/50 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
@@ -252,7 +253,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                   <Grid className="w-5 h-5" />
                 </button>
                                   <button
-                    onClick={() => setViewMode('list')}
+                    onClick={: unknown setViewMode('list')}
                     className={`p-2 rounded-md transition-all duration-300 ${
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
                     }`}
@@ -263,7 +264,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
               <select
                 value={`${sortBy}-${sortOrder}`}
-                onChange={(e) => {
+                onChange={e: unknown {
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as );
                   setSortOrder(newSortOrder as );
@@ -284,7 +285,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         {/* Services Grid/List */}
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -348,7 +349,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => openServiceModal(service)}
+                        onClick={: unknown openServiceModal(service)}
                         className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
                         Learn More
@@ -386,7 +387,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => openServiceModal(service)}
+                        onClick={: unknown openServiceModal(service)}
                         className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
                         Learn More
@@ -411,7 +412,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
       {/* Service Details Modal */}
       <AnimatePresence>
-        {showModal && selectedService && (
+        {showModal && selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -424,7 +425,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="futuristic-card max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e e.stopPropagation()}
             >
               <div className="p-6">
                 <div className="flex items-start justify-between mb-6">
@@ -493,7 +494,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                       <div className="flex flex-wrap gap-2">
-                        {selectedService.tags.map((tag: anystring)  => (
+                        {selectedService.tags.map(tag: anystring (
                           <span
                             key={tag}
                             className="px-3 py-1 bg-gray-800/50 border border-gray-600 rounded-full text-sm text-gray-300"
@@ -517,7 +518,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className="w-full futuristic-btn py-3"
-                          onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
+                          onClick={: unknown window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
                         >
                           Get Started
                         </motion.button>
@@ -526,7 +527,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-                          onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
+                          onClick={: unknown window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
                         >
                           Call for Quote
                         </motion.button>
@@ -536,7 +537,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>
                       <div className="space-y-2">
-                        {selectedService.integrations.map((integration: anystring)  => (
+                        {selectedService.integrations.map(integration: anystring (
                           <div key={integration} className="flex items-center gap-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400" />
                             <span className="text-sm">{integration}</span>
@@ -548,7 +549,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Competitors</h4>
                       <div className="space-y-2">
-                        {selectedService.competitors.map((competitor: anystring)  => (
+                        {selectedService.competitors.map(competitor: anystring (
                           <div key={competitor} className="flex items-center gap-2 text-gray-300">
                             <Target className="w-4 h-4 text-red-400" />
                             <span className="text-sm">{competitor}</span>
@@ -572,7 +573,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         </div>
         
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-          {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map(([key, value])  => (
+          {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map([key: unknown, value]: unknown (
             <motion.div
               key={key}
               whileHover={{ scale: 1.05 }}

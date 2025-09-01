@@ -12,10 +12,11 @@ import { Shield,
   AlertTriangle,
   Eye
  } from 'lucide-react.ts';
+;
+export { function };
+export default function Cybersecurity(...args: unknown[]): unknown {
 
-export default function Cybersecurity(...args: any[]): any {
-
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -88,7 +89,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cyberServices.map((service, index) => (
+            {cyberServices.map((service, index 
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -103,7 +104,7 @@ export default function Cybersecurity(...args: any[]): any {
                   </div>
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -139,7 +140,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index) => (
+            {securityTechnologies.map(tech: unknown, index: unknown (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -166,7 +167,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map(framework: unknown, index: unknown (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"

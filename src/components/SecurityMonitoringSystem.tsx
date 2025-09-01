@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 
 interface SecurityThreat {
+
   id: string;
   type: 'critical' | 'high' | 'medium' | 'low';
   severity: number;
@@ -18,9 +19,11 @@ interface SecurityThreat {
   status: 'active' | 'resolved' | 'investigating';
   affectedSystems: string[];
   recommendations: string[];
+
 }
 
 interface VulnerabilityAssessment {
+
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
   risk: 'critical' | 'high' | 'medium' | 'low';
@@ -30,9 +33,11 @@ interface VulnerabilityAssessment {
   affectedComponents: string[];
   remediation: string;
   estimatedTime: string;
+
 }
 
 interface ComplianceStatus {
+
   framework: string;
   status: 'compliant' | 'non-compliant' | 'partial';
   score: number;
@@ -43,43 +48,43 @@ interface ComplianceStatus {
     compliant: number;
     nonCompliant: number;
     pending: number;
-  };
+  
+};
 }
 
 interface SecurityMonitoringSystemProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
-  onThreatDetected?: (threat: SecurityThreat) => void;
-}
+  onThreatDetected?: threat: SecurityThreat void;
 
-export function SecurityMonitoringSystem({
-  enabled = true,
-  showRealTime = true,
-  autoScan = true,
-  onThreatDetected
-}: SecurityMonitoringSystemProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [scanComplete, setScanComplete] = useState(false);
+}
+;
+export function SecurityMonitoringSystem(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [isFullscreen, setIsFullscreen] = useState<typeof false>(false);
+  const [isScanning, setIsScanning] = useState<typeof false>(false);
+  const [scanComplete, setScanComplete] = useState<typeof false>(false);
   const [threats, setThreats] = useState<SecurityThreat[]>([]);
   const [vulnerabilities, setVulnerabilities] = useState<VulnerabilityAssessment[]>([]);
   const [complianceStatus, setComplianceStatus] = useState<ComplianceStatus[]>([]);
   const [selectedView, setSelectedView] = useState<'threats' | 'vulnerabilities' | 'compliance'>('threats');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [securityScore, setSecurityScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
+  const [showAdvanced, setShowAdvanced] = useState<typeof false>(false);
+  const [securityScore, setSecurityScore] = useState<typeof 0>(0);
+  const [targetScore, setTargetScore] = useState<typeof 95>(95);
   
   const scanIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Generate sample security threats
-  const generateSecurityThreats = useCallback(() => {
+  const generateSecurityThreats = useCallback(: unknown {
     const threatTypes = ['critical', 'high', 'medium', 'low'];
     const threatSources = ['External Attack', 'Internal Breach', 'Malware', 'Phishing', 'DDoS'];
     const systems = ['Web Server', 'Database', 'API Gateway', 'Load Balancer', 'CDN'];
     
-    const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
+    const newThreats: SecurityThreat[] = threatTypes.map(type: unknown, index: unknown ({
       id: `threat-${index}`,
       type: type as any,
       severity: Math.floor(Math.random() * 100) + 1,
@@ -100,12 +105,12 @@ export function SecurityMonitoringSystem({
   }, []);
 
   // Generate vulnerability assessments
-  const generateVulnerabilities = useCallback(() => {
+  const generateVulnerabilities = useCallback(: unknown {
     const categories = ['network', 'application', 'infrastructure', 'data'];
     const risks = ['critical', 'high', 'medium', 'low'];
     const components = ['Firewall', 'Web App', 'Database', 'API', 'Load Balancer'];
     
-    const newVulnerabilities: VulnerabilityAssessment[] = categories.map((category, index) => ({
+    const newVulnerabilities: VulnerabilityAssessment[] = categories.map(category: unknown, index: unknown ({
       id: `vuln-${index}`,
       category: category as any,
       risk: risks[Math.floor(Math.random() * risks.length)] as any,
@@ -121,10 +126,10 @@ export function SecurityMonitoringSystem({
   }, []);
 
   // Generate compliance status
-  const generateComplianceStatus = useCallback(() => {
+  const generateComplianceStatus = useCallback(: unknown {
     const frameworks = ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA', 'PCI DSS'];
     
-    const newCompliance: ComplianceStatus[] = frameworks.map((framework, index) => {
+    const newCompliance: ComplianceStatus[] = frameworks.map(framework: unknown, index: unknown {
       const score = Math.floor(Math.random() * 30) + 70;
       const total = Math.floor(Math.random() * 50) + 100;
       const compliant = Math.floor((score / 100) * total);
@@ -148,12 +153,12 @@ export function SecurityMonitoringSystem({
   }, []);
 
   // Start security scan
-  const startSecurityScan = useCallback(() => {
+  const startSecurityScan = useCallback(: unknown {
     setIsScanning(true);
     setScanComplete(false);
     
     // Simulate scan process
-    setTimeout(() => {
+    setTimeout(: unknown {
       generateSecurityThreats();
       generateVulnerabilities();
       generateComplianceStatus();
@@ -161,7 +166,7 @@ export function SecurityMonitoringSystem({
       setScanComplete(true);
       
       // Calculate overall security score
-      const avgCompliance = complianceStatus.reduce((sum, item) => sum + item.score, 0) / complianceStatus.length;
+      const avgCompliance = complianceStatus.reduce(sum: unknown, item: unknown sum + item.score, 0) / complianceStatus.length;
       const threatScore = Math.max(0, 100 - (threats.filter(t => t.status === 'active').length * 10));
       const vulnScore = Math.max(0, 100 - (vulnerabilities.filter(v => v.risk === 'critical' || v.risk === 'high').length * 15));
       
@@ -171,22 +176,22 @@ export function SecurityMonitoringSystem({
   }, [generateSecurityThreats, generateVulnerabilities, generateComplianceStatus, complianceStatus, threats, vulnerabilities]);
 
   // Auto-scan when component opens
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoScan && isOpen && !scanComplete) {
       startSecurityScan();
     }
   }, [autoScan, isOpen, scanComplete, startSecurityScan]);
 
   // Setup real-time updates
-  useEffect(() => {
+  useEffect(: unknown {
     if (showRealTime && isOpen && scanComplete) {
-      scanIntervalRef.current = setInterval(() => {
+      scanIntervalRef.current = setInterval(: unknown {
         generateSecurityThreats();
         generateVulnerabilities();
         generateComplianceStatus();
       }, 60000); // Update every minute
       
-      return () => {
+      return : unknown {
         if (scanIntervalRef.current) {
           clearInterval(scanIntervalRef.current);
         }
@@ -195,7 +200,7 @@ export function SecurityMonitoringSystem({
   }, [showRealTime, isOpen, scanComplete, generateSecurityThreats, generateVulnerabilities, generateComplianceStatus]);
 
   // Get threat color
-  const getThreatColor = (type: string) => {
+  const getThreatColor = (...args: unknown[]): unknown => {
     const colors = {
       critical: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       high: 'text-orange-600 bg-orange-100 dark:bg-orange-900/30 dark:text-orange-400',
@@ -206,7 +211,7 @@ export function SecurityMonitoringSystem({
   };
 
   // Get status icon
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     const icons = {
       active: <AlertTriangle className="w-4 h-4 text-red-500" />,
       investigating: <Eye className="w-4 h-4 text-yellow-500" />,
@@ -216,7 +221,7 @@ export function SecurityMonitoringSystem({
   };
 
   // Get compliance color
-  const getComplianceColor = (status: string) => {
+  const getComplianceColor = (...args: unknown[]): unknown => {
     const colors = {
       compliant: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400',
       partial: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
@@ -227,11 +232,10 @@ export function SecurityMonitoringSystem({
 
   if (!enabled) return null;
 
-  return (
-    <>
+  return <>
       {/* Floating Security Monitoring Button */}
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick={(: unknown setIsOpen(true)}
         className="fixed bottom-6 right-48 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -245,7 +249,7 @@ export function SecurityMonitoringSystem({
 
       {/* Security Monitoring Modal */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
             initial={{ opacity: 0 }}
@@ -285,14 +289,14 @@ export function SecurityMonitoringSystem({
                   </button>
                   
                   <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
+                    onClick={( setIsFullscreen(!isFullscreen)}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
                     {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
                   </button>
                   
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
                     <X className="w-5 h-5" />
@@ -362,10 +366,9 @@ export function SecurityMonitoringSystem({
                         { key: 'threats', label: 'Threats', icon: AlertTriangle, count: threats.length },
                         { key: 'vulnerabilities', label: 'Vulnerabilities', icon: Zap, count: vulnerabilities.length },
                         { key: 'compliance', label: 'Compliance', icon: CheckCircle, count: complianceStatus.length }
-                      ].map(({ key, label, icon: Icon, count }) => (
-                        <button
+                      ].map({ key, label, icon: Icon, count } <button
                           key={key}
-                          onClick={() => setSelectedView(key as any)}
+                          onClick={(: unknown setSelectedView(key as any)}
                           className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
                             selectedView === key
                               ? 'bg-white dark:bg-gray-700 text-red-600 dark:text-red-400 shadow-sm'
@@ -382,14 +385,14 @@ export function SecurityMonitoringSystem({
                     </div>
 
                     {/* Threats View */}
-                    {selectedView === 'threats' && (
+                    {selectedView === 'threats' && 
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
                           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                             Active Security Threats
                           </h3>
                           <button
-                            onClick={() => setShowAdvanced(!showAdvanced)}
+                            onClick={( setShowAdvanced(!showAdvanced)}
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
                           >
                             {showAdvanced ? 'Hide' : 'Show'} Advanced
@@ -397,7 +400,7 @@ export function SecurityMonitoringSystem({
                         </div>
                         
                         <div className="grid gap-4">
-                          {threats.map((threat, index) => (
+                          {threats.map(threat: unknown, index: unknown (
                             <motion.div
                               key={threat.id}
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
@@ -430,11 +433,11 @@ export function SecurityMonitoringSystem({
                                     <span>Affected: {threat.affectedSystems.length} systems</span>
                                   </div>
                                   
-                                  {showAdvanced && (
+                                  {showAdvanced && 
                                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
                                       <h5 className="font-medium text-gray-900 dark:text-white mb-2">Recommendations:</h5>
                                       <ul className="space-y-1">
-                                        {threat.recommendations.map((rec, idx) => (
+                                        {threat.recommendations.map((rec, idx (
                                           <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2">
                                             <CheckCircle className="w-3 h-3 text-green-500" />
                                             <span>{rec}</span>
@@ -457,14 +460,14 @@ export function SecurityMonitoringSystem({
                     )}
 
                     {/* Vulnerabilities View */}
-                    {selectedView === 'vulnerabilities' && (
+                    {selectedView === 'vulnerabilities' && 
                       <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Vulnerability Assessment
                         </h3>
                         
                         <div className="grid gap-4">
-                          {vulnerabilities.map((vuln, index) => (
+                          {vulnerabilities.map((vuln, index (
                             <motion.div
                               key={vuln.id}
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
@@ -507,14 +510,14 @@ export function SecurityMonitoringSystem({
                     )}
 
                     {/* Compliance View */}
-                    {selectedView === 'compliance' && (
+                    {selectedView === 'compliance' && 
                       <div className="space-y-4">
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Compliance Status
                         </h3>
                         
                         <div className="grid gap-4">
-                          {complianceStatus.map((compliance, index) => (
+                          {complianceStatus.map((compliance, index (
                             <motion.div
                               key={compliance.framework}
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"

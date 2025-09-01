@@ -25,15 +25,15 @@ import {
 } from 'lucide-react';
 import { servicesCatalog } from "../data/servicesCatalog";
 import { innovativeServices2027 } from "../data/innovativeServices2027";
-
-export const ComprehensivePricingGuide2027: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export const ComprehensivePricingGuide2027: React.FC = props {;
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [priceRange, setPriceRange] = useState<any>('All');
   const [sortBy, setSortBy] = useState<any>('name');
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
         }
       },;
       { threshold: 0.1 }
@@ -43,7 +43,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     if (element) {
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return : unknown observer.disconnect()}, []);
 
   // Combine all services
   const allServices = [
@@ -80,7 +80,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     return matchesSearch && matchesCategory && matchesPrice});
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'name':;
         return a.title.localeCompare(b.title);
@@ -112,7 +112,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 };
 
-  const getPriceRange = (price: string) => {;
+  const getPriceRange = (...args: unknown[]): unknown => {;
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
@@ -121,7 +121,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       default: return 'text-white'}
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -146,7 +146,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     };
     return iconMap[category] || Target};
 
-  return (
+  return 
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -242,7 +242,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
                 />
               </div>
@@ -250,7 +250,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               {/* Category Filter */}
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {categories.map(category  => (
@@ -263,7 +263,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               {/* Price Range Filter */}
               <select
                 value={priceRange}
-                onChange={(e) => setPriceRange(e.target.value)}
+                onChange={e: unknown setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {priceRanges.map(range  => (
@@ -276,7 +276,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               {/* Sort By */}
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
 
                 <option value="name" className="bg-zion-slate-dark text-white">Sort by Name</option>
@@ -333,7 +333,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index)  => (;
+          {sortedServices.map(service: unknown, index: unknown (;
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
@@ -389,7 +389,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                 {service.features && service.features.length > 0 && (
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                         <span
                           key={featureIndex}
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"

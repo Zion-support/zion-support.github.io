@@ -149,7 +149,7 @@ import {
   Handshake,
   Calendar
  } from 'lucide-react';
-
+;
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -499,7 +499,7 @@ const microSAASServices2028 = [
           return b.popular ? 1 : -1}
     });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -546,12 +546,12 @@ const microSAASServices2028 = [
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
+              {categories.map((category 
                 <motion.button
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={( setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
@@ -571,14 +571,14 @@ const microSAASServices2028 = [
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-64 px-4 py-2 pl-10 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
 
                 <option value="popularity">Most Popular</option>
@@ -595,7 +595,7 @@ const microSAASServices2028 = [
       <section className="py-20">;
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -661,7 +661,7 @@ const microSAASServices2028 = [
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan" />
                       {feature}
@@ -756,5 +756,6 @@ const microSAASServices2028 = [
     </div>;
   );
 };
-
+;
+export { MicroSAASServices2028 };
 export default MicroSAASServices2028;}}}

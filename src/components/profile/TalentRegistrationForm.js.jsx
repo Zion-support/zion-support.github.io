@@ -8,14 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
-// Define form schema
+// Define form schema;
 const talentProfileSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters long"),
     title: z.string().min(5, "Professional title is required"),
@@ -23,10 +23,10 @@ const talentProfileSchema = z.object({
     location: z.string().min(2, "Location is required"),
     skills: z.string().min(2, "Enter at least one skill"),
     hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-        message: "Hourly rate must be a number",
+        message: "Hourly rate must be a number"
     }),
     availability: z.enum(["available", "limited", "unavailable"]),
-    enhancedProfile: z.boolean().default(true),
+    enhancedProfile: z.boolean().default(true)
 });
 export function TalentRegistrationForm() {
     // Remove the useToast() hook since we're importing the toast function directly
@@ -47,8 +47,8 @@ export function TalentRegistrationForm() {
             skills: "",
             hourlyRate: "",
             availability: "available",
-            enhancedProfile: true,
-        },
+            enhancedProfile: true
+        }
     });
     // Handle adding skill tags
     const handleAddSkill = () => {
@@ -81,7 +81,7 @@ export function TalentRegistrationForm() {
         if (!formData.bio || formData.bio.length < 20) {
             toast({
                 title: "More information needed",
-                description: "Please provide at least a detailed bio before generating enhanced content.",
+                description: "Please provide at least a detailed bio before generating enhanced content."
             });
             return}
         try {
@@ -103,14 +103,14 @@ export function TalentRegistrationForm() {
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
-                description: "AI has created a professional bio and suggested additional skills for your profile.",
+                description: "AI has created a professional bio and suggested additional skills for your profile."
             })}
         catch (error) {
             console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
-                variant: "destructive",
+                variant: "destructive"
             })}
         finally {
             setIsGenerating(false)}
@@ -173,7 +173,7 @@ export function TalentRegistrationForm() {
             toast({
                 title: "Skills required",
                 description: "Please add at least one skill to your profile.",
-                variant: "destructive",
+                variant: "destructive"
             });
             return}
         setIsSubmitting(true);
@@ -227,7 +227,7 @@ export function TalentRegistrationForm() {
             setTimeout(() => {
                 toast({
                     title: "Profile Created Successfully",
-                    description: "Your talent profile has been published and is now visible in the directory.",
+                    description: "Your talent profile has been published and is now visible in the directory."
                 });
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {
@@ -258,7 +258,7 @@ export function TalentRegistrationForm() {
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
-                variant: "destructive",
+                variant: "destructive"
             });
             setIsSubmitting(false)}
     };

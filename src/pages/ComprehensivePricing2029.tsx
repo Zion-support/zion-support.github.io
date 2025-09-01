@@ -46,10 +46,11 @@ import { Star,
 import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
 import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
-
-export default function ComprehensivePricing2029(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function ComprehensivePricing2029(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('popularity');
 
@@ -71,7 +72,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
@@ -84,8 +85,8 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
-    const iconMap: { [key: string]: any } = {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
+    const iconMap: { [key: string]: unknown } = {
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
       'AI & Operations': Workflow,
@@ -116,23 +117,23 @@ export default function ComprehensivePricing2029(...args: any[]): any {
         
         {/* Floating Particles */}
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
+          {[...Array(50)].map(_: unknown, i: unknown (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
-                delay: Math.random() * 5,
+                delay: Math.random() * 5
               }}
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -224,17 +225,16 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                   type="text"
                   placeholder="Search services by name, description, or features..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
+                {categories.map(category: unknown <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={(: unknown setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
@@ -251,7 +251,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                 <span className="text-gray-400 text-sm">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as )}
+                  onChange={e: unknown setSortBy(e.target.value as )}
                   className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="popularity">Popularity</option>
@@ -263,7 +263,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
               {/* View Mode Toggle */}
               <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
@@ -271,7 +271,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-300 ${
                     viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
@@ -298,7 +298,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             }`}
           >
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -365,7 +365,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                           Key Features
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                             <div key={idx} className="flex items-center text-sm text-gray-400">
                               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                               {feature}

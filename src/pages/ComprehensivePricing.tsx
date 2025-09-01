@@ -6,14 +6,14 @@ import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-ed
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
+;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
+;
 const pricingTiers = [
   {
     name: 'Starter',
@@ -61,8 +61,9 @@ const pricingTiers = [
     popular: false
   }
 ];
-
-export default function ComprehensivePricing() {
+;
+export { function };
+export default function ComprehensivePricing(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
@@ -97,7 +98,7 @@ export default function ComprehensivePricing() {
     return matchesCategory && matchesPrice;
   });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header */}
       <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
@@ -138,7 +139,7 @@ export default function ComprehensivePricing() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Choose Your Plan</h2>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)  => (
+            {pricingTiers.map((tier, index (
               <Card key={index} className={`relative ${tier.popular ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -155,7 +156,7 @@ export default function ComprehensivePricing() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature, featureIndex) => (
+                    {tier.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"/>
                         <span className="text-zion-slate-dark">{feature}</span>
@@ -185,7 +186,7 @@ export default function ComprehensivePricing() {
             <select
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={e: unknown setSelectedCategory(e.target.value)}
             >
               <option value="all">All Categories</option>
               {categories.map(category => (
@@ -195,7 +196,7 @@ export default function ComprehensivePricing() {
             <select
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedPriceRange}
-              onChange={(e) => setSelectedPriceRange(e.target.value)}
+              onChange={e: unknown setSelectedPriceRange(e.target.value)}
             >
               <option value="all">All Prices</option>
               <option value="under-1000">Under $1,000</option>
@@ -207,7 +208,7 @@ export default function ComprehensivePricing() {
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service)  => (
+            {filteredServices.map(service: unknown (
               <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -237,8 +238,8 @@ export default function ComprehensivePricing() {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: any</h4>
-                    {service.features.slice(0, 3).map((feature, index)  => (
+                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: unknown</h4>
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <div key={index} className="flex items-center text-sm text-zion-slate-dark">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
                         {feature}
@@ -294,11 +295,10 @@ export default function ComprehensivePricing() {
             ))}
           </div>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length === 0 && <div className="text-center py-12">
               <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>
               <Button
-                onClick={() => {
+                onClick={(: unknown {
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}

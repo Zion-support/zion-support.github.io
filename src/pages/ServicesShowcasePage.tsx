@@ -52,12 +52,12 @@ import {
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-
-export function ServicesShowcasePage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+;
+export function ServicesShowcasePage(...args: unknown[]): unknown {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [priceRange, setPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'innovation'>('innovation');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Globe, color: 'from-blue-500 to-cyan-600' },
@@ -105,7 +105,7 @@ export function ServicesShowcasePage() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'innovation':
         const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
@@ -126,23 +126,23 @@ export function ServicesShowcasePage() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-gray-500 to-slate-600';
   };
 
-  const getPriceRange = (price: number) => {
+  const getPriceRange = (...args: unknown[]): unknown => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: number) => {
+  const getPriceColor = (...args: unknown[]): unknown => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -152,7 +152,7 @@ export function ServicesShowcasePage() {
     }
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400';
       case 'Cutting-edge': return 'text-blue-400';
@@ -161,7 +161,7 @@ export function ServicesShowcasePage() {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -206,7 +206,7 @@ export function ServicesShowcasePage() {
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
             </div>
@@ -214,10 +214,10 @@ export function ServicesShowcasePage() {
             {/* Category Filter */}
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={e: unknown setSelectedCategory(e.target.value)}
               className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
-              {categories.map((category) => (
+              {categories.map(category: unknown (
                 <option key={category.id} value={category.id}>
                   {category.name}
                 </option>
@@ -227,10 +227,10 @@ export function ServicesShowcasePage() {
             {/* Price Filter */}
             <select
               value={priceRange}
-              onChange={(e) => setPriceRange(e.target.value)}
+              onChange={e: unknown setPriceRange(e.target.value)}
               className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
-              {priceRanges.map((range) => (
+              {priceRanges.map(range: unknown (
                 <option key={range.id} value={range.id}>
                   {range.name}
                 </option>
@@ -240,10 +240,10 @@ export function ServicesShowcasePage() {
             {/* Sort By */}
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={e: unknown setSortBy(e.target.value)}
               className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
-              {sortOptions.map((option) => (
+              {sortOptions.map(option: unknown (
                 <option key={option.id} value={option.id}>
                   {option.name}
                 </option>
@@ -254,7 +254,7 @@ export function ServicesShowcasePage() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {sortedServices.map((service, index) => (
+          {sortedServices.map(service: unknown, index: unknown (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -290,7 +290,7 @@ export function ServicesShowcasePage() {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                 <div className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
@@ -404,5 +404,6 @@ export function ServicesShowcasePage() {
     </div>
   );
 }
-
+;
+export { ServicesShowcasePage };
 export default ServicesShowcasePage;

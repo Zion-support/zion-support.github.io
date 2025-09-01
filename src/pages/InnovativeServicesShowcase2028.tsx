@@ -62,10 +62,11 @@ import {
   Rocket as RocketIcon,
   Leaf as LeafIcon
 } from 'lucide-react';
-
-export default function InnovativeServicesShowcase2028() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   // Enhanced service categories with real market prices and features
   const serviceCategories = [
@@ -325,7 +326,7 @@ export default function InnovativeServicesShowcase2028() {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
         title="2028 Innovative Services Showcase - Zion Tech Group"
@@ -380,7 +381,7 @@ export default function InnovativeServicesShowcase2028() {
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
@@ -389,7 +390,7 @@ export default function InnovativeServicesShowcase2028() {
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               <button
-                onClick={() => setActiveCategory('all')}
+                onClick={: unknown setActiveCategory('all')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   activeCategory === 'all'
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
@@ -398,10 +399,9 @@ export default function InnovativeServicesShowcase2028() {
               >
                 All Services
               </button>
-              {serviceCategories.map((category) => (
-                <button
+              {serviceCategories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={(: unknown setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     activeCategory === category.id
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
@@ -426,7 +426,7 @@ export default function InnovativeServicesShowcase2028() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -475,7 +475,7 @@ export default function InnovativeServicesShowcase2028() {
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     <h4 className="font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                    {service.features.map((feature, idx) => (
+                    {service.features.map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-sm text-slate-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -486,7 +486,7 @@ export default function InnovativeServicesShowcase2028() {
                   {/* Benefits */}
                   <div className="space-y-2 mb-6">
                     <h4 className="font-semibold text-green-400 mb-3">Business Benefits:</h4>
-                    {service.benefits.map((benefit, idx) => (
+                    {service.benefits.map(benefit: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-sm text-slate-400">
                         <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {benefit}
@@ -660,7 +660,7 @@ export default function InnovativeServicesShowcase2028() {
                 title: '24/7 Support',
                 description: 'Round-the-clock technical support and maintenance services'
               }
-            ].map((item, index) => (
+            ].map(item: unknown, index: unknown (
               <motion.div
                 key={index}
                 variants={itemVariants}

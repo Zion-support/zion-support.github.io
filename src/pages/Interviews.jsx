@@ -110,7 +110,8 @@ function InterviewsContent() {
         </Tabs>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />

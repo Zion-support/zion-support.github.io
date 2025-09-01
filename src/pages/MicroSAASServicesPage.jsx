@@ -19,6 +19,7 @@ const pricingModels = [
     { id: 'one-time', name: 'One-time' },
     { id: 'usage-based', name: 'Usage-based' }
 ];
+export { function };
 export default function MicroSaasServicesPage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
@@ -83,7 +84,7 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-
+;
 import React, {useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -113,7 +114,7 @@ import {Star,
             Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
-
+;
 export default function MicroSaasServicesPage() { /* empty */ }
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');

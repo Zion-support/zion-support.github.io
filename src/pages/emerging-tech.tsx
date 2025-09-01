@@ -14,7 +14,7 @@ import { Atom,
   Star
  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
 const EmergingTech: React.FC = (): JSX.Element => {
   const technologies = [
     {
@@ -100,7 +100,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       {/* Technologies Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index)  => (
+          {technologies.map(tech: unknown, index: unknown 
             <motion.div
               key={tech.title}
               initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {tech.features.map((feature, idx) => (
+                  {tech.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
@@ -176,5 +176,6 @@ const EmergingTech: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { EmergingTech };
 export default EmergingTech;

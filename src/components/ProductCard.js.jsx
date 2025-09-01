@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
 import Image from 'next/image';
@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
+export { function };
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();
@@ -20,7 +21,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const enqueueSnackbar = useEnqueueSnackbar();
     if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
         captureException(new Error('Invalid product data received by ProductCard'), {
-            extra: { product },
+            extra: { product }
         });
         return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
@@ -36,7 +37,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             id: product.id,
             title: productTitle,
             price: product.price ?? 0,
-            image: imageUrl || null,
+            image: imageUrl || null
         }))};
     const imageAltText = productTitle;
     const handleImageError = (error) => {
@@ -44,7 +45,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             setImageError(true);
             captureException(error, {
                 product: product.id,
-                imageUrl,
+                imageUrl
             })}
     };
     const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';

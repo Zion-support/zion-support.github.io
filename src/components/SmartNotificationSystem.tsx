@@ -23,8 +23,9 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
-
+;
 export interface Notification {
+
   id: string;
   title: string;
   message: string;
@@ -37,38 +38,46 @@ export interface Notification {
   actions?: NotificationAction[];
   metadata?: Record<string, any>;
   expiresAt?: Date;
-}
 
+}
+;
 export interface NotificationAction {
+
   label: string;
-  action: () => void;
+  action: : unknown void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType<any>;
+
 }
 
 interface SmartNotificationSystemProps {
+  // Add your props here
+
+
   enabled?: boolean;
   maxNotifications?: number;
   autoDismiss?: boolean;
   autoDismissDelay?: number;
   soundEnabled?: boolean;
-  onNotificationAction?: (notification: Notification, action: string) => void;
-}
+  onNotificationAction?: notification: Notification, action: string void;
 
-export function SmartNotificationSystem({
-  enabled = true,
-  maxNotifications = 5,
-  autoDismiss = true,
-  autoDismissDelay = 5000,
-  soundEnabled = true,
-  onNotificationAction
-}: SmartNotificationSystemProps) {
+}
+;
+export function SmartNotificationSystem(...args: unknown[]): unknown {
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [showSettings, setShowSettings] = useState<typeof false>(false);
   const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [settings, setSettings] = useState({
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [settings, setSettings] = useState<typeof {
+    sound: soundEnabled,
+    desktop: true,
+    autoDismiss: autoDismiss,
+    autoDismissDelay,
+    showPreview: true,
+    grouping: true,
+    priority: true
+  }>({
     sound: soundEnabled,
     desktop: true,
     autoDismiss: autoDismiss,
@@ -82,7 +91,7 @@ export function SmartNotificationSystem({
   const notificationCount = notifications.filter(n => !n.read).length;
 
   // Initialize audio for notification sounds
-  useEffect(() => {
+  useEffect(: unknown {
     if (settings.sound) {
       audioRef.current = new Audio('/notification-sound.mp3');
       audioRef.current.volume = 0.3;
@@ -90,7 +99,7 @@ export function SmartNotificationSystem({
   }, [settings.sound]);
 
   // Add notification
-  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+  const addNotification = useCallback(notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'> {
     const newNotification: Notification = {
       ...notification,
       id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -106,14 +115,14 @@ export function SmartNotificationSystem({
 
     // Play sound if enabled
     if (settings.sound && audioRef.current) {
-      audioRef.current.play().catch(() => {
+      audioRef.current.play().catch(: unknown {
         // Ignore audio play errors
       });
     }
 
     // Auto-dismiss if enabled
     if (settings.autoDismiss && notification.priority !== 'critical') {
-      setTimeout(() => {
+      setTimeout(: unknown {
         dismissNotification(newNotification.id);
       }, settings.autoDismissDelay);
     }
@@ -130,31 +139,31 @@ export function SmartNotificationSystem({
   }, [maxNotifications, settings, autoDismissDelay]);
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: string) => {
+  const dismissNotification = useCallback(id: string {
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
   // Mark as read
-  const markAsRead = useCallback((id: string) => {
+  const markAsRead = useCallback(id: string {
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
   }, []);
 
   // Archive notification
-  const archiveNotification = useCallback((id: string) => {
+  const archiveNotification = useCallback(id: string {
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, archived: true } : n)
     );
   }, []);
 
   // Mark all as read
-  const markAllAsRead = useCallback(() => {
+  const markAllAsRead = useCallback(: unknown {
     setNotifications(prev => prev.map(n => ({ ...n, read: true })));
   }, []);
 
   // Clear all notifications
-  const clearAllNotifications = useCallback(() => {
+  const clearAllNotifications = useCallback(: unknown {
     setNotifications([]);
   }, []);
 
@@ -168,7 +177,7 @@ export function SmartNotificationSystem({
   });
 
   // Get notification icon
-  const getNotificationIcon = (type: Notification['type']) => {
+  const getNotificationIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'success': return CheckCircle;
       case 'error': return XCircle;
@@ -180,7 +189,7 @@ export function SmartNotificationSystem({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     switch (priority) {
       case 'critical': return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
       case 'high': return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
@@ -191,7 +200,7 @@ export function SmartNotificationSystem({
   };
 
   // Get category icon
-  const getCategoryIcon = (category: Notification['category']) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'user': return Eye;
       case 'system': return Zap;
@@ -203,7 +212,7 @@ export function SmartNotificationSystem({
   };
 
   // Request notification permission
-  const requestNotificationPermission = useCallback(async () => {
+  const requestNotificationPermission = useCallbackasync (: unknown {
     if ('Notification' in window && Notification.permission === 'default') {
       const permission = await Notification.requestPermission();
       if (permission === 'granted') {
@@ -213,7 +222,7 @@ export function SmartNotificationSystem({
   }, []);
 
   // Handle notification action
-  const handleNotificationAction = useCallback((notification: Notification, action: NotificationAction) => {
+  const handleNotificationAction = useCallback(notification: Notification, action: NotificationAction {
     action.action();
     markAsRead(notification.id);
     
@@ -224,7 +233,7 @@ export function SmartNotificationSystem({
 
   // Group notifications by category
   const groupedNotifications = settings.grouping 
-    ? filteredNotifications.reduce((groups, notification) => {
+    ? filteredNotifications.reduce(groups: unknown, notification: unknown {
         const category = notification.category;
         if (!groups[category]) groups[category] = [];
         groups[category].push(notification);
@@ -234,11 +243,10 @@ export function SmartNotificationSystem({
 
   if (!enabled) return null;
 
-  return (
-    <>
+  return <>
       {/* Notification Bell */}
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick={(: unknown setIsOpen(true)}
         className="relative p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -258,7 +266,7 @@ export function SmartNotificationSystem({
 
       {/* Notification Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -286,13 +294,13 @@ export function SmartNotificationSystem({
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => setShowSettings(!showSettings)}
+                    onClick={( setShowSettings(!showSettings)}
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >
                     <Settings className="w-5 h-5" />
                   </button>
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >
                     <X className="w-5 h-5" />
@@ -302,7 +310,7 @@ export function SmartNotificationSystem({
 
               {/* Settings Panel */}
               <AnimatePresence>
-                {showSettings && (
+                {showSettings && 
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
@@ -315,7 +323,7 @@ export function SmartNotificationSystem({
                           <input
                             type="checkbox"
                             checked={settings.sound}
-                            onChange={(e) => setSettings(prev => ({ ...prev, sound: e.target.checked }))}
+                            onChange={(e setSettings(prev => ({ ...prev, sound: e.target.checked }))}
                             className="w-4 h-4 text-blue-600"
                           />
                           <span className="text-sm">Sound</span>
@@ -324,7 +332,7 @@ export function SmartNotificationSystem({
                           <input
                             type="checkbox"
                             checked={settings.desktop}
-                            onChange={(e) => setSettings(prev => ({ ...prev, desktop: e.target.checked }))}
+                            onChange={e: unknown setSettings(prev => ({ ...prev, desktop: e.target.checked }))}
                             className="w-4 h-4 text-blue-600"
                           />
                           <span className="text-sm">Desktop</span>
@@ -333,7 +341,7 @@ export function SmartNotificationSystem({
                           <input
                             type="checkbox"
                             checked={settings.autoDismiss}
-                            onChange={(e) => setSettings(prev => ({ ...prev, autoDismiss: e.target.checked }))}
+                            onChange={e: unknown setSettings(prev => ({ ...prev, autoDismiss: e.target.checked }))}
                             className="w-4 h-4 text-blue-600"
                           />
                           <span className="text-sm">Auto-dismiss</span>
@@ -342,7 +350,7 @@ export function SmartNotificationSystem({
                           <input
                             type="checkbox"
                             checked={settings.grouping}
-                            onChange={(e) => setSettings(prev => ({ ...prev, grouping: e.target.checked }))}
+                            onChange={e: unknown setSettings(prev => ({ ...prev, grouping: e.target.checked }))}
                             className="w-4 h-4 text-blue-600"
                           />
                           <span className="text-sm">Group by category</span>
@@ -365,10 +373,9 @@ export function SmartNotificationSystem({
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex space-x-1">
-                    {(['all', 'unread', 'important'] as const).map((filterType) => (
-                      <button
+                    {(['all', 'unread', 'important'] as const).map(filterType: unknown <button
                         key={filterType}
-                        onClick={() => setFilter(filterType)}
+                        onClick={(: unknown setFilter(filterType)}
                         className={`px-3 py-1 text-sm rounded-lg transition-colors ${
                           filter === filterType
                             ? 'bg-blue-600 text-white'
@@ -400,7 +407,7 @@ export function SmartNotificationSystem({
                     type="text"
                     placeholder="Search notifications..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={e: unknown setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -408,7 +415,7 @@ export function SmartNotificationSystem({
 
               {/* Notifications List */}
               <div className="overflow-y-auto max-h-[60vh]">
-                {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (
+                {Object.entries(groupedNotifications).map([category: unknown, categoryNotifications]: unknown (
                   <div key={category} className="border-b border-gray-200 dark:border-gray-700 last:border-b-0">
                     {settings.grouping && (
                       <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800">
@@ -424,7 +431,7 @@ export function SmartNotificationSystem({
                       </div>
                     )}
                     <div className="divide-y divide-gray-200 dark:divide-gray-700">
-                      {categoryNotifications.map((notification) => (
+                      {categoryNotifications.map(notification: unknown (
                         <motion.div
                           key={notification.id}
                           initial={{ opacity: 0, y: 10 }}
@@ -460,9 +467,8 @@ export function SmartNotificationSystem({
                                   </div>
                                 </div>
                                 <div className="flex items-center space-x-1 ml-2">
-                                  {!notification.read && (
-                                    <button
-                                      onClick={() => markAsRead(notification.id)}
+                                  {!notification.read && <button
+                                      onClick={(: unknown markAsRead(notification.id)}
                                       className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                       title="Mark as read"
                                     >
@@ -470,14 +476,14 @@ export function SmartNotificationSystem({
                                     </button>
                                   )}
                                   <button
-                                    onClick={() => archiveNotification(notification.id)}
+                                    onClick={: unknown archiveNotification(notification.id)}
                                     className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                     title="Archive"
                                   >
                                     <Archive className="w-4 h-4" />
                                   </button>
                                   <button
-                                    onClick={() => dismissNotification(notification.id)}
+                                    onClick={: unknown dismissNotification(notification.id)}
                                     className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                     title="Dismiss"
                                   >
@@ -487,12 +493,10 @@ export function SmartNotificationSystem({
                               </div>
                               
                               {/* Actions */}
-                              {notification.actions && notification.actions.length > 0 && (
-                                <div className="flex space-x-2 mt-3">
-                                  {notification.actions.map((action, index) => (
-                                    <button
+                              {notification.actions && notification.actions.length > 0 && <div className="flex space-x-2 mt-3">
+                                  {notification.actions.map((action: unknown, index: unknown <button
                                       key={index}
-                                      onClick={() => handleNotificationAction(notification, action)}
+                                      onClick={(: unknown handleNotificationAction(notification, action)}
                                       className={`px-3 py-1 text-xs rounded-lg transition-colors ${
                                         action.variant === 'primary'
                                           ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -531,8 +535,8 @@ export function SmartNotificationSystem({
   );
 }
 
-// Export the addNotification function for external use
-export const addNotification = (notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+// Export the addNotification function for external use;
+export const addNotification = (...args: unknown[]): unknown => {
   // This will be implemented by the component instance
   console.warn('addNotification called before component initialization');
 };

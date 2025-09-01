@@ -147,6 +147,7 @@ const benefits = [
         description: "Regular updates and new features to keep you ahead"
     }
 ];
+export { function };
 export default function ServicesPricing() {
     const [selectedTier, setSelectedTier] = useState('professional');
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">

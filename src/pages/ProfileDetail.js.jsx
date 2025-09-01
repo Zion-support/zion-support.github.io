@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+export { function };
 export default function ProfileDetail() {
     // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
@@ -39,7 +40,7 @@ export default function ProfileDetail() {
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
-                    variant: "destructive",
+                    variant: "destructive"
                 })}
             finally {
                 setIsLoading(false)}

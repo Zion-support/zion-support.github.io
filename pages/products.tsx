@@ -21,9 +21,9 @@ import { Brain,
   Users,
   CheckCircle
  } from 'lucide-react';
-
-const Products: NextPage = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
+;
+const Products: NextPage = : unknown {;
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
 
   const productCategories = [;
     { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },;
@@ -248,12 +248,11 @@ const Products: NextPage = () => {;
       {/* Category Filter */};
       <div className="container mx-auto px-4 py-16">;
         <div className="flex flex-wrap justify-center gap-4 mb-16">;
-          {productCategories.map((category) => {;
+          {productCategories.map(category: unknown {;
             const IconComponent = category.icon;
-            return (
-              <button
+            return <button
                 key = {category.id}
-                onClick={() => setActiveCategory(category.id)}
+                onClick={(: unknown setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
@@ -269,7 +268,7 @@ const Products: NextPage = () => {;
 
         {/* Products Grid */}
         <div className = "grid lg:grid-cols-2 gap-8">;
-          {filteredProducts.map((product) => {;
+          {filteredProducts.map(product: unknown {;
             const IconComponent = product.icon;
             return (
               <div
@@ -296,7 +295,7 @@ const Products: NextPage = () => {;
                     Key Features
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
-                    {product.features.slice(0, 6).map((feature, index) => (
+                    {product.features.slice(0, 6).map(feature: unknown, index: unknown (
                       <div key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span className="truncate">{feature}</span>
@@ -311,7 +310,7 @@ const Products: NextPage = () => {;
                     Key Benefits
                   </h4>
                   <ul className="space-y-2">
-                    {product.benefits.map((benefit, index) => (
+                    {product.benefits.map(benefit: unknown, index: unknown (
                       <li key={index} className="flex items-center text-gray-300">
                         <span className="text-green-400 mr-2">→</span>
                         {benefit}
@@ -523,5 +522,6 @@ const Products: NextPage = () => {;
     </div>;
   );
 };
-
+;
+export { Products };
 export default Products;}}

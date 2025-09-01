@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+;
 import { motion } from 'framer-motion';
 import {
   Menu,
@@ -18,7 +18,7 @@ import {
   Shield
 
 } from 'lucide-react';
-
+;
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -60,11 +60,11 @@ export function AppHeader() {
         { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },
         { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
+        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' }
       ]
     },
     { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
+    { name: 'Contact', path: '/contact', icon: null }
   ];
 
   const isActiveRoute = (path) => {

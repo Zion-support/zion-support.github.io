@@ -25,7 +25,7 @@ import { Bot,
   Star
   } from 'lucide-react.ts';
 import { SEO   } from '@/components/SEO';
-
+;
 const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -114,7 +114,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title = "AI Autonomous Business Operations Platform | Zion Tech Group"
@@ -169,7 +169,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index)   => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -213,7 +213,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-              {useCases.map((useCase, index)   => (
+              {useCases.map(useCase: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -257,7 +257,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index)   => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -298,7 +298,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
             
             <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
-              {industries.map((industry, index)   => (
+              {industries.map(industry: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -338,7 +338,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)   => (
+              {testimonials.map(testimonial: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -359,7 +359,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_: unknown, i: unknown (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -454,5 +454,6 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       </div>;
     </>;
   )};
-
+;
+export { AutonomousBusinessOperationsPlatform };
 export default AutonomousBusinessOperationsPlatform;

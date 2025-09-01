@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-// Function to fix corrupted TypeScript files
+// Function to fix corrupted TypeScript files;
 function fixCorruptedFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
@@ -62,7 +62,7 @@ function fixCorruptedFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false}
 }
-// Function to recursively find and fix corrupted files
+// Function to recursively find and fix corrupted files;
 function files = fs.readdirSync(directory);
   for (const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
@@ -77,7 +77,8 @@ fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
 // // // // // // // console.log("Finished fixing corrupted files.");
 console.log("Finished fixing corrupted files.");
-
+;
+export { fixCorruptedFile };
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;

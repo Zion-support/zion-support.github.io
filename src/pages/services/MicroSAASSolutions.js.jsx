@@ -1,6 +1,7 @@
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
+export { function };
 export default function MicroSAASSolutions() {
     const services = [
         {

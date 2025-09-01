@@ -2,8 +2,9 @@ import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu  } from 'lucide-react.ts';
-
-export default function QuantumComputingSolutions(...args: any[]): any {
+;
+export { function };
+export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,
@@ -69,7 +70,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Quantum Computing Solutions - Zion Tech Group"
@@ -128,7 +129,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -166,7 +167,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index)  => (
+            {solutions.map(solution: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -205,7 +206,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                 complex problems and gain competitive advantages in your industry.
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>

@@ -82,8 +82,9 @@ import {
   DollarSign as DollarSignIcon2
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-export default function ComprehensiveServicesShowcase2031() {
+;
+export { function };
+export default function ComprehensiveServicesShowcase2031(...args: unknown[]): unknown {
   const featuredServices = [
     {
       id: "ai-quantum-hybrid-platform",
@@ -280,7 +281,7 @@ export default function ComprehensiveServicesShowcase2031() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Showcase 2031 - Zion Tech Group"
@@ -354,7 +355,7 @@ export default function ComprehensiveServicesShowcase2031() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+            {featuredServices.map((service, index (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -390,7 +391,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 </div>
                 
                 <ul className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start text-sm">
                       <CheckCircle className="w-4 h-4 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -431,7 +432,7 @@ export default function ComprehensiveServicesShowcase2031() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category: unknown, index: unknown 
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -445,7 +446,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
                 <ul className="space-y-2">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map((service, serviceIndex (
                     <li key={serviceIndex} className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       <span className="text-gray-300">{service}</span>
@@ -478,7 +479,7 @@ export default function ComprehensiveServicesShowcase2031() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -504,7 +505,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 <p className="text-gray-300 mb-6">{tier.description}</p>
                 
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -548,7 +549,7 @@ export default function ComprehensiveServicesShowcase2031() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

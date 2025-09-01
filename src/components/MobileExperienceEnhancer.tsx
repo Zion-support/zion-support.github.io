@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
-
+;
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
@@ -25,35 +25,39 @@ import {
 } from 'lucide-react';
 
 interface TouchGesture {
+
   type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
   duration?: number;
+
 }
 
 interface MobileExperienceEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showGestures?: boolean;
   enableSwipeNavigation?: boolean;
-}
 
-export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
-  enabled = true,
-  showGestures = false,
-  enableSwipeNavigation = true
-}) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
+}
+;
+export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = {
+  enabled = true: unknown, showGestures = false: unknown, enableSwipeNavigation = true
+}: unknown {
+  const [isMobile, setIsMobile] = useState<typeof false>(false);
+  const [isTablet, setIsTablet] = useState<typeof false>(false);
   const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
   const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showGestureGuide, setShowGestureGuide] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState<typeof false>(false);
+  const [showGestureGuide, setShowGestureGuide] = useState<typeof false>(false);
 
   // Detect device type and orientation
-  useEffect(() => {
-    const checkDevice = () => {
+  useEffect(: unknown {
+    const checkDevice = (...args: unknown[]): unknown => {
       const userAgent = navigator.userAgent;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);
@@ -69,12 +73,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleResize = () => {
+    const handleResize = (...args: unknown[]): unknown => {
       checkDevice();
     };
 
-    const handleOrientationChange = () => {
-      setTimeout(() => {
+    const handleOrientationChange = (...args: unknown[]): unknown => {
+      setTimeout(: unknown {
         if (window.innerHeight > window.innerWidth) {
           setDeviceOrientation('portrait');
         } else {
@@ -87,7 +91,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', handleOrientationChange);
 
-    return () => {
+    return : unknown {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange);
 
@@ -95,11 +99,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, []);
 
   // Touch gesture handling
-  useEffect(() => {
+  useEffect(: unknown {
 
     if (!enabled || !enableSwipeNavigation) return;
 
-    const handleTouchStart = (e: TouchEvent) => {
+    const handleTouchStart = (...args: unknown[]): unknown => {
       const touch = e.touches[0];
       setTouchStart({
         x: touch.clientX,
@@ -108,11 +112,11 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       });
     };
 
-    const handleTouchMove = (e: TouchEvent) => {
+    const handleTouchMove = (...args: unknown[]): unknown => {
       e.preventDefault();
     };
 
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd = (...args: unknown[]): unknown => {
       if (!touchStart) return;
 
       const touch = e.changedTouches[0];
@@ -182,7 +186,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
     document.addEventListener('touchend', handleTouchEnd, { passive: false });
 
-    return () => {
+    return : unknown {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
@@ -190,7 +194,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, [enabled, enableSwipeNavigation, touchStart]);
 
   // Enhanced mobile navigation
-  const handleMobileNavigation = useCallback((action: string) => {
+  const handleMobileNavigation = useCallback(action: string {
     switch (action) {
       case 'home':
         window.location.href = '/';
@@ -219,7 +223,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   }, [showMobileMenu]);
 
   // Mobile-specific optimizations
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled || !isMobile) return;
 
     // Add mobile-specific CSS classes
@@ -253,7 +257,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     `;
     document.head.appendChild(style);
 
-    return () => {
+    return : unknown {
       document.documentElement.classList.remove('mobile-device');
       if (style.parentNode) {
         style.parentNode.removeChild(style);
@@ -264,7 +268,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   if (!enabled) return null;
 
-  return (
+  return 
     <>
 
       {/* Mobile Navigation Bar */}
@@ -277,14 +281,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           <div className="flex items-center justify-between px-4 py-3">
             <div className="flex items-center space-x-3">
               <button
-                onClick={() => handleMobileNavigation('back')}
+                onClick={( handleMobileNavigation('back')}
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go back"
               >
                 <ArrowLeft className="w-5 h-5" />
               </button>
               <button
-                onClick={() => handleMobileNavigation('home')}
+                onClick={: unknown handleMobileNavigation('home')}
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go home"
               >
@@ -294,14 +298,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
             <div className="flex items-center space-x-3">
               <button
-                onClick={() => handleMobileNavigation('search')}
+                onClick={: unknown handleMobileNavigation('search')}
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />
               </button>
               <button
-                onClick={() => handleMobileNavigation('menu')}
+                onClick={: unknown handleMobileNavigation('menu')}
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Menu"
               >
@@ -314,7 +318,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {showMobileMenu && isMobile && (
+        {showMobileMenu && isMobile && 
           <motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
@@ -324,7 +328,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>
               <button
-                onClick={() => setShowMobileMenu(false)}
+                onClick={( setShowMobileMenu(false)}
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Close menu"
               >
@@ -366,13 +370,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       </AnimatePresence>
 
       {/* Floating Action Button for Mobile */}
-      {isMobile && (
+      {isMobile && 
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setShowGestureGuide(!showGestureGuide)}
+          onClick={( setShowGestureGuide(!showGestureGuide)}
           className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
           aria-label="Show gesture guide"
           title="Gesture Guide"
@@ -383,19 +387,19 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
       {/* Gesture Guide */}
       <AnimatePresence>
-        {showGestureGuide && isMobile && (
+        {showGestureGuide && isMobile && 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
-            onClick={() => setShowGestureGuide(false)}
+            onClick={( setShowGestureGuide(false)}
           >
             <motion.div
               initial={{ y: 20 }}
               animate={{ y: 0 }}
               className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-sm w-full"
-              onClick={(e) => e.stopPropagation()}
+              onClick={e: unknown e.stopPropagation()}
             >
               <div className="text-center mb-6">
                 <Touch className="w-12 h-12 text-blue-600 mx-auto mb-3" />
@@ -446,7 +450,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               </div>
               
               <button
-                onClick={() => setShowGestureGuide(false)}
+                onClick={: unknown setShowGestureGuide(false)}
                 className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Got it!
@@ -482,7 +486,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         >
           <div className="font-medium mb-2">Recent Gestures</div>
           <div className="space-y-1">
-            {gestureHistory.slice(0, 5).map((gesture, index) => (
+            {gestureHistory.slice(0, 5).map(gesture: unknown, index: unknown (
               <div key={index} className="flex items-center space-x-2">
                 <Touch className="w-3 h-3" />
                 <span>
@@ -496,6 +500,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     </>
   );
 };
-
+;
+export { MobileExperienceEnhancer };
 export default MobileExperienceEnhancer;
 

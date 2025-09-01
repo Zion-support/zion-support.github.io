@@ -15,26 +15,21 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 }
 
 interface EnhancedLoadingSpinnerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showProgress?: boolean;
   showEstimatedTime?: boolean;
   size?: 'small' | 'medium' | 'large';
   variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: () => void;
+  onComplete?: : unknown void;
   autoComplete?: boolean;
   autoCompleteDelay?: number;
-}
 
-export function EnhancedLoadingSpinner({
-  enabled = true,
-  showProgress = true,
-  showEstimatedTime = true,
-  size = 'medium',
-  variant = 'futuristic',
-  onComplete,
-  autoComplete = false,
-  autoCompleteDelay = 3000
-}: EnhancedLoadingSpinnerProps) {
+}
+;
+export function EnhancedLoadingSpinner(...args: unknown[]): unknown {
   const [loadingState, setLoadingState] = useState<LoadingState>({
     type: 'loading',
     message: 'Loading...',
@@ -42,8 +37,8 @@ export function EnhancedLoadingSpinner({
     estimatedTime: 3
   });
 
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [isVisible, setIsVisible] = useState<typeof true>(true);
+  const [currentStep, setCurrentStep] = useState<typeof 0>(0);
 
   // Size configurations
   const sizeConfig = {
@@ -63,22 +58,22 @@ export function EnhancedLoadingSpinner({
   ];
 
   // Progress simulation
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled || !showProgress) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       setLoadingState(prev => {
         if (prev.progress! >= 100) {
           clearInterval(interval);
           if (autoComplete) {
-            setTimeout(() => {
+            setTimeout(: unknown {
               setLoadingState({
                 type: 'success',
                 message: 'Ready!',
                 progress: 100,
                 estimatedTime: 0
               });
-              setTimeout(() => {
+              setTimeout(: unknown {
                 setIsVisible(false);
                 onComplete?.();
               }, 1000);
@@ -98,14 +93,14 @@ export function EnhancedLoadingSpinner({
       });
     }, 200);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]);
 
   // Step progression for themed variant
-  useEffect(() => {
+  useEffect(: unknown {
     if (variant !== 'themed') return;
 
-    const stepInterval = setInterval(() => {
+    const stepInterval = setInterval(: unknown {
       setCurrentStep(prev => {
         if (prev >= loadingSteps.length - 1) {
           clearInterval(stepInterval);
@@ -115,13 +110,13 @@ export function EnhancedLoadingSpinner({
       });
     }, 1000);
 
-    return () => clearInterval(stepInterval);
+    return : unknown clearInterval(stepInterval);
   }, [variant]);
 
   // Auto-complete effect
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoComplete && enabled) {
-      const timer = setTimeout(() => {
+      const timer = setTimeout(: unknown {
         setLoadingState({
           type: 'success',
           message: 'Loading complete!',
@@ -129,19 +124,19 @@ export function EnhancedLoadingSpinner({
           estimatedTime: 0
         });
         
-        setTimeout(() => {
+        setTimeout(: unknown {
           setIsVisible(false);
           onComplete?.();
         }, 1000);
       }, autoCompleteDelay);
 
-      return () => clearTimeout(timer);
+      return : unknown clearTimeout(timer);
     }
   }, [autoComplete, enabled, autoCompleteDelay, onComplete]);
 
   if (!enabled || !isVisible) return null;
 
-  const renderSpinner = () => {
+  const renderSpinner = (...args: unknown[]): unknown => {
     switch (variant) {
       case 'futuristic':
         return (
@@ -168,7 +163,7 @@ export function EnhancedLoadingSpinner({
             />
             
             {/* Orbiting particles */}
-            {[...Array(3)].map((_, i) => (
+            {[...Array(3)].map(_: unknown, i: unknown (
               <motion.div
                 key={i}
                 className="absolute w-2 h-2 bg-zion-yellow rounded-full"
@@ -236,7 +231,7 @@ export function EnhancedLoadingSpinner({
     }
   };
 
-  const renderMessage = () => {
+  const renderMessage = (...args: unknown[]): unknown => {
     if (variant === 'themed') {
       return (
         <motion.div
@@ -264,7 +259,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderProgress = () => {
+  const renderProgress = (...args: unknown[]): unknown => {
     if (!showProgress || loadingState.progress === undefined) return null;
 
     return (
@@ -285,7 +280,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderEstimatedTime = () => {
+  const renderEstimatedTime = (...args: unknown[]): unknown => {
     if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
 
     return (
@@ -300,7 +295,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderStatusIcon = () => {
+  const renderStatusIcon = (...args: unknown[]): unknown => {
     if (loadingState.type === 'loading') return null;
 
     const iconConfig = {
@@ -319,8 +314,8 @@ export function EnhancedLoadingSpinner({
 };
   };
 };
-
-export function EnhancedLoadingSpinner(...args: any[]): any {
+;
+export function EnhancedLoadingSpinner(...args: unknown[]): unknown {
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-12 h-12',;
@@ -355,7 +350,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
 };
 
-  const getIcon = () => {;
+  const getIcon = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'ai':;
         return <Brain className="w-full h-full text-cyan-400" />;
@@ -368,7 +363,7 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
     }
   };
 
-  const getBackground = () => {;
+  const getBackground = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'ai':;
         return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
@@ -420,9 +415,8 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
         {renderEstimatedTime()}
 
         {/* Loading steps for themed variant */}
-        {variant === 'themed' && (
-          <div className="flex space-x-2 mt-4">
-            {loadingSteps.map((step, index) => (
+        {variant === 'themed' && <div className="flex space-x-2 mt-4">
+            {loadingSteps.map((step: unknown, index: unknown (
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-colors duration-300 ${
@@ -446,7 +440,8 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   );
 }
 
-// Export as ZionLoadingSpinner for backward compatibility
+// Export as ZionLoadingSpinner for backward compatibility;
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;
-
+;
+export { EnhancedLoadingSpinner };
 export default EnhancedLoadingSpinner;

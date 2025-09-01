@@ -2,14 +2,17 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface BadgeProps {
+  // Add your props here
+
+
   variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'success' | 'warning';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   className?: string;
-}
 
-const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
-  ({ variant = 'default', size = 'md', children, className, ...props }, ref) => {
+}
+;
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>({ variant = 'default': unknown, size = 'md': unknown, children: unknown, className: unknown, ...props }: unknown, ref: unknown {
     const baseClasses = 'inline-flex items-center rounded-full font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
     
     const variantClasses = {
@@ -45,5 +48,5 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
 );
 
 Badge.displayName = 'Badge';
-
+;
 export { Badge };

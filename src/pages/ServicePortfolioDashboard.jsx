@@ -445,5 +445,6 @@ const ServicePortfolioDashboard = () => {
         </div>
       </section>
     </div>)};
+export { ServicePortfolioDashboard };
 export default ServicePortfolioDashboard;
 }}}

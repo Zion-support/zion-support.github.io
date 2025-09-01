@@ -16,7 +16,7 @@ import {
   Users,
   BarChart3
 } from 'lucide-react';
-
+;
 const valueMetrics = [
   {
     icon: <TrendingUp className="w-8 h-8" />,
@@ -47,7 +47,7 @@ const valueMetrics = [
     color: "from-red-500 to-pink-600"
   }
 ];
-
+;
 const competitiveAdvantages = [
   {
     title: "AI-Powered Intelligence",
@@ -74,7 +74,7 @@ const competitiveAdvantages = [
     color: "from-orange-500 to-red-600"
   }
 ];
-
+;
 const marketComparison = [
   {
     category: "AI Business Intelligence",
@@ -101,7 +101,7 @@ const marketComparison = [
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
   }
 ];
-
+;
 const successStories = [
   {
     comp: "TechCorp Solutions",
@@ -128,7 +128,7 @@ const successStories = [
     roi: "400% in 6 months"
   }
 ];
-
+;
 export function ValuePropositionShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },

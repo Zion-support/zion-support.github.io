@@ -1,5 +1,6 @@
 export interface MicroSaasService {
 
+
   id: string;
   title: string;
   description: string;
@@ -30,9 +31,10 @@ author: {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+    verified: boolean
+};
   images: string[];
-  createdAt: string}
+  createdAt: string};
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // AI & Machine Learning Services
   {
@@ -667,5 +669,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
 };
+
+}

@@ -1,13 +1,13 @@
 // Service Worker for Zion Tech Group
 // Provides offline support, caching, and performance improvements
-
+;
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-
+;
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
 
-// Files to cache immediately
+// Files to cache immediately;
 const STATIC_FILES = [
   '/',
 
@@ -86,7 +86,7 @@ self.addEventListener('install', (event) => {
   '/icons/icon-512x512.png'
 ];
 
-// API routes to cache
+// API routes to cache;
 const API_ROUTES = [
   '/api/health',
   '/api/analytics/performance',

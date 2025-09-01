@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
+export { function };
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ export default function EquipmentDetail() {
             setIsAdding(false);
             toast({
                 title: "Added to cart",
-                description: `${quantity}x ${equipment.name} added to your cart.`,
+                description: `${quantity}x ${equipment.name} added to your cart.`
             })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
@@ -49,7 +50,7 @@ export default function EquipmentDetail() {
             const response = await fetch('/checkout/create-session', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ productId: equipmentId }),
+                body: JSON.stringify({ productId: equipmentId })
             });
             const { url } = await response.json();
             if (url) {
@@ -234,3 +235,5 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>)}
+
+}

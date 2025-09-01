@@ -8,7 +8,7 @@ import {
   TrendingUp,
   Shield,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 export function AboutSection() {
     const achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },
@@ -130,3 +130,7 @@ export function AboutSection() {
         </div>
       </div>
     </section>)}
+
+
+}
+}

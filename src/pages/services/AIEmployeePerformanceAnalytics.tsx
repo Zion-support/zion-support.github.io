@@ -38,8 +38,9 @@ import { Users,
   TrendingDown,
   Lightbulb
  } from 'lucide-react.ts';
-
-export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
+;
+export { function };
+export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -266,7 +267,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Employee Performance Analytics - Zion Tech Group"
@@ -333,7 +334,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
-            {keyMetrics.map((metric, index)  => (
+            {keyMetrics.map((metric, index (
               <motion.div
                 key={metric.metric}
                 initial = {
@@ -421,7 +422,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -519,7 +520,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {performanceIndicators.map((category, index)  => (
+            {performanceIndicators.map(category: unknown, index: unknown 
               <motion.div
                 key={category.category}
                 initial = {
@@ -559,7 +560,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                   {category.category}
                 </h3>
                 <ul className="space-y-2">
-                  {category.indicators.map((indicator, indicatorIndex) => (
+                  {category.indicators.map((indicator, indicatorIndex (
                     <li key={indicatorIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {indicator}
@@ -609,7 +610,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -707,7 +708,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial = {
@@ -765,7 +766,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
@@ -823,7 +824,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -921,7 +922,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown 
               <motion.div
                 key={integration.name}
                 initial = {
@@ -961,7 +962,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                   {integration.name}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {integration.platforms.map((platform, platformIndex) => (
+                  {integration.platforms.map((platform, platformIndex (
                     <span
                       key={platformIndex}
                       className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"

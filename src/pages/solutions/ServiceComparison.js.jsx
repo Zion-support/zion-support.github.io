@@ -23,4 +23,5 @@ const ServiceComparison = () => {
       </section>
     </div>);
 };
+export { ServiceComparison };
 export default ServiceComparison;

@@ -4,6 +4,7 @@ import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } fro
 import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -11,7 +12,7 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-
+;
 const benefits: Benefit[] = [;
   {
     title: "AI-Powered Matchmaking",
@@ -26,7 +27,8 @@ const benefits: Benefit[] = [;
       "Expert talent matching",
       "Personalized recommendations"
     ]
-  },
+  
+},
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
@@ -70,8 +72,8 @@ const benefits: Benefit[] = [;
     ]
 
 ];
-
-export function BenefitsSection() {
+;
+export function BenefitsSection(...args: unknown[]): unknown {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const containerVariants = {
@@ -155,7 +157,7 @@ export function BenefitsSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map(stat: unknown, index: unknown (;
             <motion.div
               key={index}
               variants={statsVariants}
@@ -184,7 +186,7 @@ export function BenefitsSection() {
 
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown 
               <motion.div
                 key={index}
                 className="relative group"
@@ -192,8 +194,8 @@ export function BenefitsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredIndex(index)}
-                onHoverEnd={() => setHoveredIndex(null)}
+                onHoverStart={( setHoveredIndex(index)}
+                onHoverEnd={: unknown setHoveredIndex(null)}
               >
                 {/* Connection point */}
                 <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
@@ -226,7 +228,7 @@ export function BenefitsSection() {
 
                   {/* Features */}
                   <ul className="space-y-3">
-                    {benefit.features.map((feature, featureIndex) => (
+                    {benefit.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light">
                         <div className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                         {feature}
@@ -286,7 +288,8 @@ export function BenefitsSection() {
     </section>
   );
 </div>};
-
+;
+export { BenefitsSection };
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
       </div>
     </section>

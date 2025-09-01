@@ -33,7 +33,7 @@ import {
     technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
 ];
-
+;
 const quantumTechnologies = [
   {
     name: "Superconducting Qubits",
@@ -64,7 +64,7 @@ const quantumTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -94,7 +94,7 @@ const successStories = [
     logo: "LO"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -125,7 +125,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const quantumAdvantages = [
   {
     title: "Exponential Speedup",
@@ -152,7 +152,8 @@ const quantumAdvantages = [
     examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
   }
 ];
-
+;
+export { function };
 export default function QuantumComputing() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -826,3 +827,7 @@ export default function QuantumComputing() {
       </section>
     </div>
   )}
+
+
+}
+}

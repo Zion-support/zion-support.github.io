@@ -24,4 +24,5 @@ const Talents = () => {
         </div>
       </div>
     </>)};
+export { Talents };
 export default Talents;

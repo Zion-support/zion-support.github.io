@@ -41,27 +41,27 @@ import { Brain,
   Zap as ZapIcon
  } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
-
+;
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [selectedServices, setSelectedServices] = useState<any>([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
   const [viewMode, setViewMode] = useState<any>('matrix');
   const [expandedFeatures, setExpandedFeatures] = useState<any>([]);
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [
-    { id: any'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
+    { id: unknown'all', name: 'All Services', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },;
     { id: 'AI & Business Intelligence', name: 'AI & BI', icon: Brain, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Intelligence').length },
-    { id: any'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
-    { id: any'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
-    { id: any'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
-    { id: any'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
-    { id: any'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
-    { id: any'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
-    { id: any'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
-    { id: any'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
-    { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
+    { id: unknown'AI & Customer Experience', name: 'AI & CX', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Customer Experience').length },;
+    { id: unknown'AI & Finance', name: 'AI & Finance', icon: TrendingUp, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Finance').length },;
+    { id: unknown'AI & Logistics', name: 'AI & Logistics', icon: Globe, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Logistics').length },;
+    { id: unknown'AI & Marketing', name: 'AI & Marketing', icon: BarChart3, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Marketing').length },;
+    { id: unknown'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Project Management').length },;
+    { id: unknown'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Human Resources').length },;
+    { id: unknown'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Cybersecurity').length },;
+    { id: unknown'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Data Management').length },;
+    { id: unknown'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
@@ -72,7 +72,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
+    .sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'name':
           return a.title.localeCompare(b.title);
@@ -87,7 +87,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       }
     });
 
-  const toggleServiceSelection = (serviceId: anystring)  => {;
+  const toggleServiceSelection = (...args: unknown[]): unknown => {;
     if (selectedServices.includes(serviceId)) {;
       setSelectedServices(selectedServices.filter(id => id !== serviceId));
     } else {
@@ -97,7 +97,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const toggleFeatureExpansion = (feature: anystring)  => {;
+  const toggleFeatureExpansion = (...args: unknown[]): unknown => {;
     if (expandedFeatures.includes(feature)) {;
       setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
     } else {
@@ -105,7 +105,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
@@ -118,7 +118,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getROIColor = (roi: anystring)  => {;
+  const getROIColor = (...args: unknown[]): unknown => {;
     const minROI = parseInt(roi.split('-')[0]);
     if (minROI >= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (minROI >= 300) return 'text-blue-600 bg-blue-100 border-blue-200';
@@ -126,7 +126,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     return 'text-gray-600 bg-gray-100 border-gray-200';
   };
 
-  const getPriceTier = (price: anynumber)  => {;
+  const getPriceTier = (...args: unknown[]): unknown => {;
     if (price <= 500) return 'text-green-600 bg-green-100 border-green-200';
     if (price <= 1000) return 'text-blue-600 bg-blue-100 border-blue-200';
     if (price <= 2000) return 'text-yellow-600 bg-yellow-100 border-yellow-200';
@@ -143,7 +143,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     );
   ));
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -244,7 +244,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -253,7 +253,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             <div className="flex items-center gap-4">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 {categories.map(category  => (
@@ -265,7 +265,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'innovation' | 'roi')}
+                onChange={e: unknown setSortBy(e.target.value as 'name' | 'price' | 'innovation' | 'roi')}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="innovation">Sort by Innovation</option>
@@ -276,7 +276,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
 
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setViewMode('matrix')}
+                  onClick={: unknown setViewMode('matrix')}
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === 'matrix' 
                       ? 'bg-blue-100 text-blue-600' 
@@ -286,7 +286,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === 'list' 
                       ? 'bg-blue-100 text-blue-600' 
@@ -313,7 +313,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             </p>
           </div>
 
-          {selectedServices.length > 0 && (
+          {selectedServices.length > 0 && 
             <div className="mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Selected Services:</h3>
               <div className="flex flex-wrap gap-2">
@@ -324,7 +324,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   >
                     <span className="text-sm font-medium">{service?.title}</span>
                     <button
-                      onClick={() => toggleServiceSelection(service?.id || '')}
+                      onClick={( toggleServiceSelection(service?.id || '')}
                       className="text-blue-600 hover:text-blue-800"
                     >
                       <X className="w-4 h-4" />
@@ -336,7 +336,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
           )}
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredServices.map((service)  => (
+            {filteredServices.map(service: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -355,7 +355,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                     ? 'border-blue-500 bg-blue-50 shadow-md'
                     : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
                 }`}
-                onClick={() => toggleServiceSelection(service.id)}
+                onClick={: unknown toggleServiceSelection(service.id)}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
@@ -390,7 +390,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       </section>
 
       {/* Comparison Matrix */}
-      {selectedServices.length > 0 && (
+      {selectedServices.length > 0 && 
         <section id="comparison" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -408,7 +408,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-900 p-4 bg-gray-50 rounded-lg">
                     Features & Metrics
                   </div>
-                  {selectedServicesData.map((service, index) => (
+                  {selectedServicesData.map((service, index (
                     <div key={service?.id} className="text-center p-4 bg-blue-50 rounded-lg">
                       <h3 className="font-semibold text-gray-900 text-sm mb-2">
                         {service?.title}
@@ -426,7 +426,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Basic Information
                   </div>
-                  {selectedServicesData.map((service) => (
+                  {selectedServicesData.map(service: unknown (
                     <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="text-xs text-gray-600 mb-1">Category</div>
                       <div className="text-sm font-medium text-gray-900">{service?.category}</div>
@@ -443,7 +443,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Pricing & ROI
                   </div>
-                  {selectedServicesData.map((service) => (
+                  {selectedServicesData.map(service: unknown (
                     <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="text-xs text-gray-600 mb-1">Monthly Price</div>
                       <div className="text-lg font-bold text-green-600">${service?.price.toLocaleString()}</div>
@@ -462,10 +462,10 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Key Features
                   </div>
-                  {selectedServicesData.map((service) => (
+                  {selectedServicesData.map(service: unknown (
                     <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="space-y-2">
-                        {service?.features.slice(0, 5).map((feature, idx) => (
+                        {service?.features.slice(0, 5).map(feature: unknown, idx: unknown (
                           <div key={idx} className="flex items-center gap-2 text-xs">
                             <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                             <span className="text-gray-700">{feature}</span>
@@ -481,10 +481,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Benefits
                   </div>
-                  {selectedServicesData.map((service) => (
-                    <div key={service?.id} className="p-3 bg-white border rounded-lg">
+                  {selectedServicesData.map(service: unknown <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="space-y-2">
-                        {service?.benefits.map((benefit, idx) => (
+                        {service?.benefits.map((benefit: unknown, idx: unknown (
                           <div key={idx} className="flex items-center gap-2 text-xs">
                             <Star className="w-3 h-3 text-yellow-500 flex-shrink-0" />
                             <span className="text-gray-700">{benefit}</span>
@@ -496,12 +495,11 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 </div>
 
                 {/* Technical Specifications */}
-                {selectedServicesData.some(service => service?.technicalSpecs) && (
-                  <div className="grid grid-cols-6 gap-4 mb-4">
+                {selectedServicesData.some(service => service?.technicalSpecs) && <div className="grid grid-cols-6 gap-4 mb-4">
                     <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                       Technical Specs
                     </div>
-                    {selectedServicesData.map((service) => (
+                    {selectedServicesData.map((service: unknown (
                       <div key={service?.id} className="p-3 bg-white border rounded-lg">
                         {service?.technicalSpecs ? (
                           <div className="space-y-2 text-xs">
@@ -528,7 +526,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Support & Delivery
                   </div>
-                  {selectedServicesData.map((service) => (
+                  {selectedServicesData.map(service: unknown (
                     <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="text-xs text-gray-600 mb-1">Delivery Time</div>
                       <div className="text-sm text-gray-900">{service?.estimatedDelivery}</div>
@@ -543,7 +541,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   <div className="font-semibold text-gray-700 p-3 bg-gray-100 rounded-lg">
                     Get Started
                   </div>
-                  {selectedServicesData.map((service) => (
+                  {selectedServicesData.map(service: unknown (
                     <div key={service?.id} className="p-3 bg-white border rounded-lg">
                       <div className="space-y-2">
                         <a
@@ -568,10 +566,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </div>
-          ) : (
-            /* List View */
+          ) : /* List View */
             <div className="space-y-6">
-              {selectedServicesData.map((service, index) => (
+              {selectedServicesData.map((service: unknown, index: unknown (
                 <motion.div
                   key={service?.id}
                   initial = {
@@ -616,7 +613,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-3">Key Features</h4>
                         <ul className="space-y-2">
-                          {service?.features.map((feature, idx) => (
+                          {service?.features.map(feature: unknown, idx: unknown (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                               <span>{feature}</span>
@@ -627,7 +624,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
                         <ul className="space-y-2">
-                          {service?.benefits.map((benefit, idx) => (
+                          {service?.benefits.map(benefit: unknown, idx: unknown (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />
                               <span>{benefit}</span>
@@ -804,5 +801,6 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     </div>
   );
 };
-
+;
+export { ServicesComparisonMatrix2025 };
 export default ServicesComparisonMatrix2025;

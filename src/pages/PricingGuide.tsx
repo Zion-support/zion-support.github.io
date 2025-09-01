@@ -27,10 +27,11 @@ import { Calculator,
   Satellite
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
-
+;
+export { function };
 export default function PricingGuide(...args[]):  {
-  const [selectedCurrency, setSelectedCurrency] = useState('USD');
-  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
+  const [selectedCurrency, setSelectedCurrency] = useState<typeof 'USD'>('USD');
+  const [selectedPeriod, setSelectedPeriod] = useState<typeof 'monthly'>('monthly');
 
   const currencyRates = {
   USD: { symbol: '$',
@@ -183,7 +184,7 @@ export default function PricingGuide(...args[]):  {
                 <span className="text-slate-300">Currency:</span>
                 <select
                   value={selectedCurrency}
-                  onChange={(e) => setSelectedCurrency(e.target.value)}
+                  onChange={e: unknown setSelectedCurrency(e.target.value)}
                   className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400"
 
                   <option value="USD">USD ($)</option>
@@ -196,7 +197,7 @@ export default function PricingGuide(...args[]):  {
                 <span className="text-slate-300">Billing:</span>
                 <div className="flex bg-slate-700 rounded-lg p-1">
                   <button
-                    onClick={() => setSelectedPeriod('monthly')}
+                    onClick={: unknown setSelectedPeriod('monthly')}
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       selectedPeriod === 'monthly'
                         ? 'bg-cyan-500 text-white'
@@ -206,7 +207,7 @@ export default function PricingGuide(...args[]):  {
                     Monthly
                   </button>
                   <button
-                    onClick={() => setSelectedPeriod('yearly')}
+                    onClick={: unknown setSelectedPeriod('yearly')}
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       selectedPeriod === 'yearly'
                         ? 'bg-cyan-500 text-white'
@@ -243,7 +244,7 @@ export default function PricingGuide(...args[]):  {
           </div>
           
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
@@ -286,18 +287,18 @@ export default function PricingGuide(...args[]):  {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
-                  {plan.features.map((feature, featureIndex)  => (
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknown</h4>
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
 
-                  {plan.notIncluded.length > 0 && (
+                  {plan.notIncluded.length > 0 && 
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
-                      {plan.notIncluded.map((feature, featureIndex)  => (
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>
+                      {plan.notIncluded.map((feature, featureIndex (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -321,8 +322,7 @@ export default function PricingGuide(...args[]):  {
           </div>
           
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {servicePricing.map((category, index)  => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
+            {servicePricing.map(category: unknown, index: unknown <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <category.icon className="h-8 w-8 text-white" />
@@ -331,7 +331,7 @@ export default function PricingGuide(...args[]):  {
                 </div>
 
                 <div className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map((service: unknown, serviceIndex: unknown (
                     <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="text-lg font-semibold text-white">{service.name}</h4>

@@ -56,8 +56,9 @@ import {
   Network,
   Rocket
 } from 'lucide-react';
-
-export default function ITConsulting() {
+;
+export { function };
+export default function ITConsulting(...args: unknown[]): unknown {
   const features = [
     {
       icon: Users,
@@ -117,7 +118,7 @@ export default function ITConsulting() {
     "Government", "Technology", "Energy", "Transportation", "Media"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
@@ -234,7 +235,7 @@ export default function ITConsulting() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,7 +281,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {consultingServices.map((service, index) => (;
+            {consultingServices.map(service: unknown, index: unknown ;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -300,7 +301,7 @@ export default function ITConsulting() {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       {feature}
@@ -357,7 +358,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (;
+            {benefits.map(benefit: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -401,7 +402,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {industries.map((industry, index) => (;
+            {industries.map(industry: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

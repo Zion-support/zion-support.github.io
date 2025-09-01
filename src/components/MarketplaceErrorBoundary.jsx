@@ -46,7 +46,7 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
           </a>
         </div>
       </div>
-    </div>)}
+    </div>)};
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
@@ -54,10 +54,12 @@ export function MarketplaceErrorBoundary({ children }) {
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
-                componentStack: errorInfo.componentStack || null,
+                componentStack: errorInfo.componentStack || null
             });
             scope.setLevel('error');
             Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
     </ErrorBoundary>)}
+
+}

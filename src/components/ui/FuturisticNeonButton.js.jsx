@@ -103,4 +103,5 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
       </div>
     </motion.button>)};
+export { FuturisticNeonButton };
 export default FuturisticNeonButton;

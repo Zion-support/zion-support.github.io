@@ -1,8 +1,9 @@
 
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO'
-
-export default function BlogPost() {
+;
+export { function };
+export default function BlogPost(...args: unknown[]): unknown {
   const { slug } = useParams();
 
   // Mock blog post data - in a real app, this would come from an API
@@ -158,7 +159,7 @@ export default function BlogPost() {
     ]
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (...args: unknown[]): unknown => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -166,8 +167,8 @@ export default function BlogPost() {
     });
   };
 
-  const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
+    const categoryIcons: { [key: string]: unknown } = {
       ai: Brain,
       quantum: Cpu,
       security: Shield,
@@ -179,7 +180,7 @@ export default function BlogPost() {
     return categoryIcons[category] || BookOpen;
   };
 
-  const getCategoryName = (category: string) => {
+  const getCategoryName = (...args: unknown[]): unknown => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
@@ -317,7 +318,7 @@ export default function BlogPost() {
               <Tag className="w-5 h-5 text-cyan-400" />
               <span className="text-white font-medium">Tags:</span>
               <div className="flex flex-wrap gap-2">
-                {blogPost.tags.map((tag) => (
+                {blogPost.tags.map(tag: unknown (
                   <span
                     key={tag}
                     className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200"
@@ -373,7 +374,7 @@ export default function BlogPost() {
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (
+            {blogPost.relatedPosts.map(post: unknown, index: unknown (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -79,23 +79,25 @@ import {
 import { SEO } from '@/components/SEO';
 
 interface Service {
+
   id: string;
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-  };
+  
+};
   benefits: string[];
   useCases: string[];
   link: string;
   status: 'available' | 'coming-soon' | 'beta';
 }
-
+;
 const services: Service[] = [
   // AI Services
   {
@@ -425,7 +427,7 @@ const services: Service[] = [
     status: 'available'
   }
 ];
-
+;
 const categories = [
   { id: 'all', name: 'All Services', icon: Globe, count: services.length },
   { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },
@@ -434,10 +436,11 @@ const categories = [
   { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
-
-export default function ComprehensiveServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const filteredServices = services.filter(service => {
@@ -448,15 +451,15 @@ export default function ComprehensiveServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleServiceClick = (service: Service) => {
+  const handleServiceClick = (...args: unknown[]): unknown => {
     setSelectedService(service);
   };
 
-  const closeModal = () => {
+  const closeModal = (...args: unknown[]): unknown => {
     setSelectedService(null);
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Showcase 2025 | Zion Tech Group"
@@ -513,7 +516,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   type="text"
                   placeholder="Search for services, features, or use cases..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
                 />
               </div>
@@ -521,10 +524,9 @@ export default function ComprehensiveServicesShowcase2025() {
 
             {/* Category Filters */}
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
@@ -534,7 +536,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   Grid
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     viewMode === 'list' 
                       ? 'bg-zion-cyan text-white' 
@@ -560,7 +562,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   min="0"
                   max="10000"
                   value={priceRange[0]}
-                  onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                  onChange={e: unknown setPriceRange([parseInt(e.target.value), priceRange[1]])}
                   className="flex-1"
                 />
                 <input
@@ -568,7 +570,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   min="0"
                   max="10000"
                   value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  onChange={e: unknown setPriceRange([priceRange[0], parseInt(e.target.value)])}
                   className="flex-1"
                 />
               </div>
@@ -581,7 +583,7 @@ export default function ComprehensiveServicesShowcase2025() {
               </label>
               <select
                 value={innovationLevel}
-                onChange={(e) => setInnovationLevel(e.target.value)}
+                onChange={e: unknown setInnovationLevel(e.target.value)}
                 className="w-full px-3 py-2 bg-zion-slate-dark border border-zion-slate-light/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 <option value="all">All Levels</option>
@@ -605,10 +607,9 @@ export default function ComprehensiveServicesShowcase2025() {
       <section className="py-8">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category.id}
-                onClick={() => setActiveCategory(category.id)}
+                onClick={(: unknown setActiveCategory(category.id)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category.id
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
@@ -627,14 +628,14 @@ export default function ComprehensiveServicesShowcase2025() {
       <section className="py-16">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown 
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer"
-                onClick={() => handleServiceClick(service)}
+                onClick={( handleServiceClick(service)}
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -669,7 +670,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 {/* Features Preview */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <span
                         key={idx}
                         className="px-2 py-1 bg-zion-purple/20 text-zion-slate-light text-xs rounded"
@@ -747,7 +748,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
+        {selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -760,7 +761,7 @@ export default function ComprehensiveServicesShowcase2025() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zion-blue-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-zion-purple/30"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e e.stopPropagation()}
             >
               {/* Modal Header */}
               <div className="flex items-start justify-between mb-6">
@@ -791,7 +792,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <ul className="space-y-3">
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService.features.map(feature: unknown, index: unknown (
                       <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                         <span className="text-zion-slate-light">{feature}</span>
@@ -804,7 +805,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Benefits</h3>
                   <ul className="space-y-3">
-                    {selectedService.benefits.map((benefit, index) => (
+                    {selectedService.benefits.map(benefit: unknown, index: unknown (
                       <li key={index} className="flex items-center space-x-3">
                         <Star className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                         <span className="text-zion-slate-light">{benefit}</span>
@@ -818,7 +819,7 @@ export default function ComprehensiveServicesShowcase2025() {
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Use Cases</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {selectedService.useCases.map((useCase, index) => (
+                  {selectedService.useCases.map(useCase: unknown, index: unknown (
                     <div key={index} className="bg-zion-blue-darker rounded-lg p-4 border border-zion-purple/20">
                       <span className="text-zion-slate-light">{useCase}</span>
                     </div>
@@ -868,4 +869,6 @@ export default function ComprehensiveServicesShowcase2025() {
       </AnimatePresence>
     </div>
   );
+}
+
 }

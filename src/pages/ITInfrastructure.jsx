@@ -129,7 +129,7 @@ import {
   ServiceAccount,
   X
 } from 'lucide-react';
-
+;
 const infrastructureSolutions = [
   {
     id: 1,
@@ -228,7 +228,7 @@ const infrastructureSolutions = [
     technologies: ["Data Center Design", "Implementation", "Management", "Optimization"]
   }
 ];
-
+;
 const ITInfrastructure = () => {
   const [selectedSolution, setSelectedSolution] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -378,5 +378,6 @@ const ITInfrastructure = () => {
     </div>
   );
 };
-
+;
+export { ITInfrastructure };
 export default ITInfrastructure;

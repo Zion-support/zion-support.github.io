@@ -1,5 +1,6 @@
 export interface AdvancedInnovativeService2026 {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface AdvancedInnovativeService2026 {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -30,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
-
+;
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
   {
     id: 'quantum-ai-neural-networks-2026',

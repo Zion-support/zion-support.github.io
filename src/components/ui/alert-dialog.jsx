@@ -21,14 +21,14 @@ const AlertDialog({ children, open, onOpenChange }) {
       <div className="relative">
         {children}
       </div>
-    </AlertDialogContext.Provider>)}
+    </AlertDialogContext.Provider>)};
 export function AlertDialogTrigger({ children }) {
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
-    </div>)}
+    </div>)};
 export function AlertDialogContent({ children, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -40,7 +40,7 @@ export function AlertDialogContent({ children, className = '' }) {
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}
       </div>
-    </div>)}
+    </div>)};
 export function AlertDialogAction({ children, onClick, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)
@@ -51,7 +51,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
         context.setIsOpen(false)};
     return (<button className={`px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors ${className}`} onClick={handleClick}>
       {children}
-    </button>)}
+    </button>)};
 export function AlertDialogCancel({ children, className = '' }) {
     const context = useContext(AlertDialogContext);
     if (!context)

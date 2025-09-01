@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
-
+;
 const highlights = [
     {
         icon: Brain,
@@ -31,18 +31,18 @@ const highlights = [
         borderColor: 'border-zion-blue/20'
     }
 ];
-
+;
 const achievements = [
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
     { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
     { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
     { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
 ];
-
+;
 const technologies = [
     'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
-
+;
 export function FeatureHighlights() {
     const containerVariants = {
         hidden: { opacity: 0 },

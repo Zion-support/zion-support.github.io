@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -15,9 +18,10 @@ interface SEOProps {
   tags?: string[];
   noindex?: boolean;
   canonical?: string;
-}
 
-export const EnhancedSEO: React.FC<SEOProps> = ({
+}
+;
+export const EnhancedSEO: React.FC<SEOProps> = {
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
   description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
   keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
@@ -46,7 +50,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     'Zion Tech Group'
   ];
 
-  const generateStructuredData = useCallback(() => {
+  const generateStructuredData = useCallback(( {
     const baseData = {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'Organization',
@@ -76,7 +80,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "logo": "https://ziontechgroup.com/images/zion-logo.png",
     "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
   noindex = false,
-  canonical,
+  canonical
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
@@ -272,7 +276,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
+      {tags.map(tag: unknown, index: unknown (
         <meta key={index} property="article:tag" content={tag} />
       ))}
     </Helmet>

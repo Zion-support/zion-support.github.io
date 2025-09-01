@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { ReactNode } from 'react';
 interface LayoutProps {
-  children: ReactNode;
+  // Add your props here
 
+
+  children: ReactNode;
+;
 const navigation: NavItem[] = [;
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/' 
+},
   {
     label: 'Services',
     href: '/services',
@@ -25,16 +29,17 @@ const navigation: NavItem[] = [;
   },;
   { label: 'Contact', href: '/contact' }
 ];
+export { function };
 export default function Layout(...args[]):  {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<typeof false>(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {;
+  const isActive = href: string location.pathname === href;
+  const toggleSidebarDropdown = (...args: unknown[]): unknown => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
       <header className="bg-white/10 backdrop-blur-sm border-b border-white/20">
@@ -81,12 +86,11 @@ export default function Layout(...args[]):  {
         } md:translate-x-0`}>
           <div className="p-4">
             <nav className="space-y-2">
-              {sidebarNavigation.map((item) => (
-                <div key={item.label}>
+              {sidebarNavigation.map((item <div key={item.label}>
                   {item.children ? (
                     <div>
                       <button
-                        onClick={() => toggleSidebarDropdown(item.label)}
+                        onClick={(: unknown toggleSidebarDropdown(item.label)}
                         className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
 
                         <span className="flex items-center space-x-2">
@@ -97,9 +101,9 @@ export default function Layout(...args[]):  {
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''
                         }`} />
                       </button>
-                      {sidebarDropdownOpen === item.label && (;
+                      {sidebarDropdownOpen === item.label && ;
                         <div className="ml-4 mt-2 space-y-1">
-                          {item.children.map((child) => (
+                          {item.children.map((child: unknown (
                             <a
                               key={child.label}
                               href={child.href}
@@ -132,4 +136,6 @@ export default function Layout(...args[]):  {
       </div>;
     </div>;
   );
+}
+
 }

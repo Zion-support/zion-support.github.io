@@ -15,7 +15,7 @@ const LanguageProvider({ children }) {
 
 }}>
       {children}
-    </LanguageContext.Provider>)}
+    </LanguageContext.Provider>)};
 export function useLanguage() {
     const context = useContext(LanguageContext);
     if (!context) {

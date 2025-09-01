@@ -2,7 +2,7 @@ import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
-
+;
 const categories = [
     {
         title: "Comprehensive Services",
@@ -43,9 +43,9 @@ const categories = [
         gradient: "from-zion-purple-light/20 to-zion-purple/20",
         features: ["Latest Tech", "AI Solutions", "Future-Ready"],
         stats: "100+ Innovations"
-    },
+    }
 ];
-
+;
 const specialServices = [
     {
         title: "Enhanced AI & IT Services",
@@ -76,7 +76,7 @@ const specialServices = [
         description: "Scalable cloud infrastructure"
     }
 ];
-
+;
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {
         hidden: { opacity: 0 },

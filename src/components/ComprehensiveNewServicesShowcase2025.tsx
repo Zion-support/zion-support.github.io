@@ -28,11 +28,11 @@ import { Search,
   Satellite,
   Cpu
  } from 'lucide-react.ts';
-
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+;
+export function ComprehensiveNewServicesShowcase2025(...args: unknown[]): unknown {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'featured'>('featured');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -55,19 +55,19 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
+    .sort(a: unknown, b: unknown {
       if (sortBy === 'featured') return b.featured ? 1 : -1;
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
       return 0;
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colors: { [key: string]: string } = {
       'ai-services': 'from-purple-500 to-pink-600',
       'quantum-computing': 'from-indigo-500 to-purple-600',
@@ -82,7 +82,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
     return colors[category] || 'from-gray-500 to-gray-600';
   };
 
-  return (
+  return 
     <div className="min-h-screen py-8 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
@@ -112,17 +112,16 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex gap-2 overflow-x-auto pb-2">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
@@ -138,7 +137,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
             {/* Sort */}
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={e: unknown setSortBy(e.target.value)}
               className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               <option value="featured">Featured First</option>
@@ -150,7 +149,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index)  => (
+          {filteredServices.map(service: unknown, index: unknown (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +204,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                 <div className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center space-x-2 text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
                       <span>{feature}</span>
@@ -223,7 +222,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
                 <div className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                  {service.benefits.slice(0, 2).map(benefit: unknown, benefitIndex: unknown (
                     <div key={benefitIndex} className="flex items-center space-x-2 text-xs text-gray-300">
                       <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0" />
                       <span>{benefit}</span>
@@ -411,5 +410,6 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
     </div>
   );
 }
-
+;
+export { ComprehensiveNewServicesShowcase2025 };
 export default ComprehensiveNewServicesShowcase2025;

@@ -153,4 +153,5 @@ const QuantumAIServices = () => {
       </div>
     </div>);
 };
+export { QuantumAIServices };
 export default QuantumAIServices;

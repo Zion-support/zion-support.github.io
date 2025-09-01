@@ -10,5 +10,5 @@ function Skeleton({ className, ...props }) {
 
 
 } {...props}/>);
-}
+};
 export { Skeleton };

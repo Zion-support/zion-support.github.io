@@ -24,4 +24,5 @@ const API = () => {
         </div>
       </div>
     </>)};
+export { API };
 export default API;

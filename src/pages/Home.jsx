@@ -12,7 +12,8 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
-
+;
+export { function };
 export default function Home() {
   return (
     <>

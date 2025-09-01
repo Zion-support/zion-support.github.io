@@ -1,6 +1,7 @@
 import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3  } from 'lucide-react.ts';
-
-export default function AICybersecurityThreatHunter(...args: any[]): any {
+;
+export { function };
+export default function AICybersecurityThreatHunter(...args: unknown[]): unknown {
   const features = [
     'AI-powered threat detection and hunting',
     'Real-time security monitoring 24/7',
@@ -47,7 +48,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
       name: 'Enterprise', 
       price: '$15,999/mo', 
       details: ['Unlimited endpoints', 'Custom AI models', 'Dedicated team', 'White-label solution'] 
-    },
+    }
   ];
 
   const securityFeatures = [
@@ -59,7 +60,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
     'Compliance automation'
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -76,7 +77,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Security Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f (
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-red-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
@@ -90,12 +91,11 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Security Plans</h3>
             <div className="grid md: anygrid-cols-1 gap-4">
-              {tiers.map((t)  => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+              {tiers.map(t: unknown <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d: unknown (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -115,7 +115,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Security Benefits</h3>
             <ul className="space-y-3">
-              {benefits.map((b) => (
+              {benefits.map(b: unknown (
                 <li key={b} className="flex items-start">
                   <Eye className="w-5 h-5 text-red-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{b}</span>
@@ -126,7 +126,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Use Cases</h3>
             <ul className="space-y-3">
-              {useCases.map((u) => (
+              {useCases.map(u: unknown (
                 <li key={u} className="flex items-start">
                   <Target className="w-5 h-5 text-red-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{u}</span>
@@ -139,7 +139,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI Security Technology Stack</h3>
           <div className="grid md: anygrid-cols-3 gap-6">
-            {securityFeatures.map((f)  => (
+            {securityFeatures.map(f: unknown (
               <div key={f} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-red-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{f}</div>

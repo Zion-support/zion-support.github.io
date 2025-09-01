@@ -1,5 +1,5 @@
 
-// Service Worker Registration Utility
+// Service Worker Registration Utility;
 export function registerServiceWorker(): void {
   if ('serviceWorker' in navigator) {
     const isDev = process.env.NODE_ENV === 'development';
@@ -7,12 +7,12 @@ export function registerServiceWorker(): void {
 
     navigator.serviceWorker
       .register(swUrl)
-      .then((registration) => {
+      .then(registration: unknown {
         // Handle updates
-        registration.addEventListener('updatefound', () => {
+        registration.addEventListener'updatefound': unknown, (: unknown {
           const newWorker = registration.installing;
           if (newWorker) {
-            newWorker.addEventListener('statechange', () => {
+            newWorker.addEventListener'statechange': unknown, (: unknown {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                 // New content is available
                 console.log('New content is available; please refresh.');
@@ -21,19 +21,19 @@ export function registerServiceWorker(): void {
           }
         });
       })
-      .catch((registrationError) => {
+      .catch(registrationError: unknown {
         console.error('SW registration failed: ', registrationError);
       });
   }
 }
-
+;
 export function unregisterServiceWorker(): void {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
-      .then((registration) => {
+      .then(registration: unknown {
         registration.unregister();
       })
-      .catch((error) => {
+      .catch(error: unknown {
         console.error(error.message);
       });
   }

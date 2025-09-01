@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { servicesCatalog } from '../../src/data/servicesCatalog';
-
+;
+export { function };
 export default function ServicesIndex(...args[]):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -48,9 +49,9 @@ export default function ServicesIndex(...args[]):  {
           <h2 className="mb-6 text-2xl font-bold">More Services</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {servicesCatalog
-              .flatMap((c) => c.items.map((item) => ({...item, categoryName: c.name})))
+              .flatMap(c: unknown c.items.map(item: unknown ({...item, categoryName: c.name})))
               .slice(0, 18)
-              .map((item) => (
+              .map(item: unknown (
                 <a
                   key={item.id}
                   href={item.href}
@@ -66,7 +67,7 @@ export default function ServicesIndex(...args[]):  {
                   <p className="mt-1 text-sm text-white/75">{item.description}</p>
                   <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">
-                    {item.features.slice(0,4).map((f, i) => (
+                    {item.features.slice(0,4).map(f: unknown, i: unknown (
                       <li key={i}>{f}</li>
                     ))}
                   </ul>
@@ -87,8 +88,8 @@ export default function ServicesIndex(...args[]):  {
               { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
-              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
-            ].map((s)  => (
+              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' }
+            ].map(s: unknown (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

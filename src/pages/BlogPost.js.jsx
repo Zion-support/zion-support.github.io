@@ -4,8 +4,9 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-// Importing the sample blog posts - in a real app, you would fetch this from an API
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
 import { BLOG_POSTS } from "@/data/blog-posts";
+export { function };
 export default function BlogPost() {
     const { slug } = useParams();
     const navigate = useNavigate();

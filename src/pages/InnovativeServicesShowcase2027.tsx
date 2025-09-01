@@ -8,9 +8,10 @@ import {
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
+export { function };
 export default function InnovativeServicesShowcase2027(...args[]):  {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('aiScore');
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
@@ -23,7 +24,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
-    .sort((a, b) => b[sortBy] - a[sortBy]);
+    .sort(a: unknown, b: unknown b[sortBy] - a[sortBy]);
   const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;
@@ -85,7 +86,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(20)].map(_: unknown, i: unknown (
             <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
@@ -232,10 +233,10 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
+              { label: 'AI Score Avg', value: `${Math.roundallServices.reduce((acc: unknown, s: unknown acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${allServices.reduce((acc: unknown, s: unknown acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
-            ].map((stat, index)  => (
+            ].map(stat: unknown, index: unknown (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -292,7 +293,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                     type="text"
                     placeholder="Search services, features, or technologies..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   />
                 </div>
@@ -301,7 +302,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               <div className="relative">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
@@ -314,7 +315,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}
+                  onChange={e: unknown setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
 
                   <option value="aiScore">Sort by AI Score</option>
@@ -326,13 +327,13 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
               {/* View Mode Toggle */}
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 
                   <List className="w-5 h-5" />
@@ -351,7 +352,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
         <div className="max-w-7xl mx-auto">;
           <AnimatePresence mode="wait">
-            {filteredServices.length > 0 ? (
+            {filteredServices.length > 0 ? 
               <motion.div
                 className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
@@ -387,7 +388,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 }}
                 transition={{ duration: 0.3 }}
               >
-                {filteredServices.map((service, index)  => (
+                {filteredServices.map((service, index 
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
@@ -399,7 +400,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                         variants={cardVariants}
                         whileHover="hover"
                         onClick = {
-  () => window.open(service.website,
+  ( window.open(service.website,
   '_blank')
 
 
@@ -436,7 +437,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                           </p>
                           {/* Tags */}
                           <div className="flex flex-wrap gap-2">
-                            {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                            {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                               <span
                                 key={tagIndex}
                                 className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
@@ -508,7 +509,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
-                              {service.tags.slice(0, 4).map((tag, tagIndex) => (
+                              {service.tags.slice(0, 4).map(tag: unknown, tagIndex: unknown (
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
@@ -518,7 +519,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                               ))}
                             </div>
                             <button
-                              onClick={() => window.open(service.website, '_blank')}
+                              onClick={: unknown window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                               View Details
@@ -607,4 +608,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       </motion.section>;
     </div>;
   );
+}
+
 }

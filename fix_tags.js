@@ -1,11 +1,11 @@
 const fs = require('fs');
 
-// Read the file
+// Read the file;
 const filePath = 'data/2027-cutting-edge-comprehensive-services.ts';
 let content = fs.readFileSync(filePath, 'utf8');
 
 // Add tags to all services that don't have them
-// This regex finds services that don't have tags and adds appropriate tags
+// This regex finds services that don't have tags and adds appropriate tags;
 const serviceRegex = /(\s+technology: \[[^\]]+\],\s+integrations: \[[^\]]+\],\s+useCases: \[[^\]]+\],)(\s+roi:)/g;
 
 content = content.replace(serviceRegex, (match, p1, p2) => {

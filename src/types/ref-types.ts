@@ -1,3 +1,3 @@
 
-// A type that safely handles all possible reference types without relying on React types
-export type SafeRef<T> = { current: anyT } | ((value: T)  => void) | null;
+// A type that safely handles all possible reference types without relying on React types;
+export type SafeRef<T> = { current: anyT } | (value: T void) | null;

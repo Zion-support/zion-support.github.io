@@ -36,6 +36,7 @@ import {
 } from 'lucide-react';
 
 interface SecurityStatus {
+
   csp: boolean;
   hsts: boolean;
   xss: boolean;
@@ -43,9 +44,11 @@ interface SecurityStatus {
   contentType: boolean;
   referrerPolicy: boolean;
   permissionsPolicy: boolean;
+
 }
 
 interface SecurityEvent {
+
   id: string;
   type: 'info' | 'warning' | 'error' | 'success';
   message: string;
@@ -53,29 +56,32 @@ interface SecurityEvent {
   source: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   details?: string;
+
 }
 
 interface SecurityMetrics {
+
   totalRequests: number;
   blockedRequests: number;
   suspiciousActivity: number;
   lastScan: Date;
   vulnerabilities: number;
   complianceScore: number;
-}
 
-export function SecurityEnhancer() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+}
+;
+export function SecurityEnhancer(...args: unknown[]): unknown {
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
+  const [isExpanded, setIsExpanded] = useState<typeof false>(false);
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus | null>(null);
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
   const [securityMetrics, setSecurityMetrics] = useState<SecurityMetrics | null>(null);
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanning, setIsScanning] = useState<typeof false>(false);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   // Initialize security monitoring
-  useEffect(() => {
+  useEffect(: unknown {
     if (isVisible) {
       initializeSecurityMonitoring();
       runSecurityScan();
@@ -83,7 +89,7 @@ export function SecurityEnhancer() {
   }, [isVisible]);
 
   // Initialize security monitoring
-  const initializeSecurityMonitoring = useCallback(() => {
+  const initializeSecurityMonitoring = useCallback(: unknown {
     // Set up security headers
     setSecurityHeaders();
     
@@ -91,15 +97,15 @@ export function SecurityEnhancer() {
     setupSecurityEventListeners();
     
     // Start periodic security checks
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       checkSecurityStatus();
     }, 30000); // Check every 30 seconds
     
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, []);
 
   // Set security headers
-  const setSecurityHeaders = useCallback(() => {
+  const setSecurityHeaders = useCallback(: unknown {
     // Content Security Policy
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
@@ -144,7 +150,7 @@ export function SecurityEnhancer() {
   }, []);
 
   // Setup security event listeners
-  const setupSecurityEventListeners = useCallback(() => {
+  const setupSecurityEventListeners = useCallback(: unknown {
     // Monitor for potential XSS attempts
     const originalInnerHTML = Element.prototype.innerHTML;
     Element.prototype.innerHTML = function(value: string) {
@@ -167,7 +173,7 @@ export function SecurityEnhancer() {
 
     // Monitor for console access attempts
     const originalConsoleLog = console.log;
-    console.log = function(...args: any[]) {
+    console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && arg.includes('password'))) {
         logSecurityEvent('warning', 'Potential sensitive data logging detected', 'Console Access', 'medium');
       }
@@ -176,7 +182,7 @@ export function SecurityEnhancer() {
   }, []);
 
   // Log security events
-  const logSecurityEvent = useCallback((type: string, message: string, source: string, severity: string) => {
+  const logSecurityEvent = useCallback(type: string, message: string, source: string, severity: string {
     const event: SecurityEvent = {
       id: `event-${Date.now()}`,
       type: type as any,
@@ -190,7 +196,7 @@ export function SecurityEnhancer() {
   }, []);
 
   // Check security status
-  const checkSecurityStatus = useCallback(() => {
+  const checkSecurityStatus = useCallback(: unknown {
     try {
       const status: SecurityStatus = {
         csp: !!document.querySelector('meta[http-equiv="Content-Security-Policy"]'),
@@ -209,7 +215,7 @@ export function SecurityEnhancer() {
   }, []);
 
   // Run security scan
-  const runSecurityScan = useCallback(async () => {
+  const runSecurityScan = useCallbackasync (: unknown {
     setIsScanning(true);
     
     try {
@@ -247,14 +253,14 @@ export function SecurityEnhancer() {
   });
 
   // Get status icon
-  const getStatusIcon = (status: boolean) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     return status ? 
       <CheckCircle className="w-4 h-4 text-green-500" /> : 
       <XCircle className="w-4 h-4 text-red-500" />;
   };
 
   // Get event icon
-  const getEventIcon = (type: string) => {
+  const getEventIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'info': return <Info className="w-4 h-4 text-blue-500" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
@@ -265,7 +271,7 @@ export function SecurityEnhancer() {
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'critical': return 'border-red-600 bg-red-50 dark:bg-red-900/20';
       case 'high': return 'border-red-500 bg-red-50 dark:bg-red-900/20';
@@ -275,12 +281,12 @@ export function SecurityEnhancer() {
     }
   };
 
-  return (
+  return 
     <>
       {/* Floating Action Button */}
       <motion.button
         className="fixed bottom-6 right-24 z-50 bg-zion-blue hover:bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={( setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Security Panel"
@@ -291,7 +297,7 @@ export function SecurityEnhancer() {
 
       {/* Security Panel */}
       <AnimatePresence>
-        {isVisible && (
+        {isVisible && 
           <motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -311,14 +317,14 @@ export function SecurityEnhancer() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => setIsExpanded(!isExpanded)}
+                    onClick={( setIsExpanded(!isExpanded)}
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                   <button
-                    onClick={() => setIsVisible(false)}
+                    onClick={: unknown setIsVisible(false)}
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close security panel"
                   >
@@ -328,7 +334,7 @@ export function SecurityEnhancer() {
               </div>
 
               {/* Security Status */}
-              {securityStatus && (
+              {securityStatus && 
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
                     Security Status
@@ -342,7 +348,7 @@ export function SecurityEnhancer() {
                       { key: 'contentType', label: 'Content Type Options' },
                       { key: 'referrerPolicy', label: 'Referrer Policy' },
                       { key: 'permissionsPolicy', label: 'Permissions Policy' }
-                    ].map((item) => (
+                    ].map((item (
                       <div key={item.key} className="flex items-center justify-between p-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
                         <span className="text-sm text-gray-700 dark:text-gray-300">{item.label}</span>
                         {getStatusIcon(securityStatus[item.key as keyof SecurityStatus])}
@@ -415,10 +421,9 @@ export function SecurityEnhancer() {
                 {/* Filters and Search */}
                 <div className="mb-3 space-y-2">
                   <div className="flex space-x-2">
-                    {['info', 'warning', 'error', 'success'].map((type) => (
-                      <button
+                    {['info', 'warning', 'error', 'success'].map(type: unknown <button
                         key={type}
-                        onClick={() => {
+                        onClick={(: unknown {
                           setActiveFilters(prev => 
                             prev.includes(type) 
                               ? prev.filter(t => t !== type)
@@ -439,15 +444,14 @@ export function SecurityEnhancer() {
                     type="text"
                     placeholder="Search events..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={e: unknown setSearchTerm(e.target.value)}
                     className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   />
                 </div>
 
                 {/* Events List */}
                 <div className="space-y-2 max-h-64 overflow-y-auto">
-                  {filteredEvents.length > 0 ? (
-                    filteredEvents.map((event) => (
+                  {filteredEvents.length > 0 ? filteredEvents.map((event: unknown (
                       <div
                         key={event.id}
                         className={`p-3 rounded-lg border-l-4 ${getSeverityColor(event.severity)}`}
@@ -489,7 +493,7 @@ export function SecurityEnhancer() {
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   <button
-                    onClick={() => logSecurityEvent('info', 'Manual security check initiated', 'User Action', 'low')}
+                    onClick={: unknown logSecurityEvent('info', 'Manual security check initiated', 'User Action', 'low')}
                     className="flex items-center justify-center space-x-2 p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
                   >
                     <Activity className="w-4 h-4" />
@@ -497,7 +501,7 @@ export function SecurityEnhancer() {
                   </button>
                   
                   <button
-                    onClick={() => setSecurityEvents([])}
+                    onClick={: unknown setSecurityEvents([])}
                     className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                   >
                     <Trash2 className="w-4 h-4" />

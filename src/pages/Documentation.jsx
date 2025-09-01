@@ -24,4 +24,5 @@ const Documentation = () => {
         </div>
       </div>
     </>)};
+export { Documentation };
 export default Documentation;

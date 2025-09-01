@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import { BookOpen, Terminal } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -58,7 +59,7 @@ export function ApiDocumentation() {
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
             python: `import requests
@@ -134,7 +135,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
     'Content-Type': 'application/json'
   }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
             python: `import requests
@@ -230,10 +231,10 @@ print(data)`
     deadline: '2025-06-30T23:59:59Z'
   })
 });
-
+;
 const data = await response.json();
 console.log(data);`,
-            python: `import requests
+            python: `import requests;
 import json
 
 headers = {
@@ -315,7 +316,7 @@ print(data)`
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
             python: `import requests
@@ -385,7 +386,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
     'Content-Type': 'application/json'
   }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
             python: `import requests
@@ -491,10 +492,10 @@ print(data)`
     requester_email: 'john@example.com'
   })
 });
-
+;
 const data = await response.json();
 console.log(data);`,
-            python: `import requests
+            python: `import requests;
 import json
 
 headers = {
@@ -572,7 +573,7 @@ print(data)`
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
             python: `import requests
@@ -638,7 +639,7 @@ print(data)`
               <CodeBlock code = {
   `import crypto from 'crypto';
 
-// Function to verify webhook signature
+// Function to verify webhook signature;
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
   const expectedSignature = hmac.update(payload).digest('hex');
@@ -815,7 +816,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
         </Tabs>
       </CardContent>
     </Card>)}
-// Helper component for API endpoint documentation
+// Helper component for API endpoint documentation;
 function EndpointSection({ method, endpoint, description, note, params = [], codeExamples, responseExamples }) {
     const [activeTab, setActiveTab] = useState("curl");
     return (<div className="border border-zinc-800 rounded-md">

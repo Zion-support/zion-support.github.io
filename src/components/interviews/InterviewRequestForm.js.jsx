@@ -16,7 +16,7 @@ import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 const formSchema = z.object({
     date: z.date({
-        required_error: "Please select a date for the interview.",
+        required_error: "Please select a date for the interview."
     }).refine(date => date > new Date(), {
         message: "Interview date must be in the future"
     }),
@@ -25,7 +25,7 @@ const formSchema = z.object({
     platform: z.string().min(1, "Please select a meeting platform."),
     meetingLink: z.string().optional(),
     title: z.string().min(3, "Please provide a brief title for the interview."),
-    notes: z.string().optional(),
+    notes: z.string().optional()
 });
 export function InterviewRequestForm({ talent, onClose, userDetails }) {
     const { requestInterview } = useInterviews();
@@ -37,15 +37,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             duration: "30",
             platform: "zoom",
             notes: "",
-            meetingLink: "",
-        },
+            meetingLink: ""
+        }
     });
     async function onSubmit(values) {
         if (!userDetails?.id) {
             toast({
                 title: "Authentication required",
                 description: "Please log in to schedule an interview",
-                variant: "destructive",
+                variant: "destructive"
             });
             return}
         setIsSubmitting(true);
@@ -68,7 +68,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             });
             toast({
                 title: "Interview requested",
-                description: `Your interview request with ${talent.full_name} has been sent.`,
+                description: `Your interview request with ${talent.full_name} has been sent.`
             });
             onClose()}
         catch (error) {
@@ -76,7 +76,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
-                variant: "destructive",
+                variant: "destructive"
             })}
         finally {
             setIsSubmitting(false)}

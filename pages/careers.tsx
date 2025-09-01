@@ -1,8 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
 
-
+;
+export { function };
 export default function Careers(...args[]):  {
 	const openPositions = [
 		{
@@ -35,7 +36,7 @@ export default function Careers(...args[]):  {
 
 	]
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -164,7 +165,7 @@ export default function Careers(...args[]):  {
 						</p>
 					</div>
 					<div className="grid gap-6 lg: grid-cols-2">
-						{openPositions.map((position)  => (
+						{openPositions.map((position (
 							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
 								<div className="flex items-start justify-between mb-4">
 									<div>
@@ -223,3 +224,5 @@ export default function Careers(...args[]):  {
 	);
 };
 ;
+
+}

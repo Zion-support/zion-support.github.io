@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
-import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
+import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell } from '@/components/ui/table';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 const initialProducts = [
     { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
-    { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
+    { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' }
 ];
+export { function };
 export default function ProductsAdminPage() {
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState(initialProducts);
@@ -16,7 +17,7 @@ export default function ProductsAdminPage() {
         setProducts((prev) => prev.map((p) => p.id === id
             ? {
                 ...p,
-                status: p.status === 'approved' ? 'rejected' : 'approved',
+                status: p.status === 'approved' ? 'rejected' : 'approved'
             }
             : p))};
     return (<AdminLayout>

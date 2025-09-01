@@ -84,5 +84,6 @@ const FloatingActionButton = ({ className = '' }) => {
     </div>
   );
 };
-
+;
+export { FloatingActionButton };
 export default FloatingActionButton;

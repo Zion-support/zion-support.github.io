@@ -22,8 +22,9 @@ import {
   MapPin
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
-export default function Leadership() {
+;
+export { function };
+export default function Leadership(...args: unknown[]): unknown {
   const leadershipTeam = [
     {
       name: 'Kleber Santos',
@@ -113,7 +114,7 @@ export default function Leadership() {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Leadership - Zion Tech Group"
@@ -150,7 +151,7 @@ export default function Leadership() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {leadershipTeam.map((leader, index) => (
+            {leadershipTeam.map((leader, index 
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
                   <div className="flex-shrink-0">
@@ -168,7 +169,7 @@ export default function Leadership() {
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {leader.expertise.map((skill, skillIndex) => (
+                        {leader.expertise.map((skill, skillIndex (
                           <span
                             key={skillIndex}
                             className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
@@ -225,7 +226,7 @@ export default function Leadership() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map(value: unknown, index: unknown (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-cyan-400" />
@@ -251,7 +252,7 @@ export default function Leadership() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map(achievement: unknown, index: unknown (
               <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>

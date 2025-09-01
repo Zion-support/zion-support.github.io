@@ -58,7 +58,7 @@ import { Mail,
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       setSuccess('Password reset successfully! Redirecting to login...');
-      setTimeout(() => {
+      setTimeout(: unknown {
         window.location.href = '/login'}, 2000)} catch (err) {
       setError('Failed to reset password. Please try again.')} finally {;
       setIsLoading(false)};
@@ -91,7 +91,7 @@ import { Mail,
     };
   ];
 
-  const renderEmailStep = () => (
+  const renderEmailStep = : unknown 
     <motion.div
       initial = {
   { opacity: 0,
@@ -137,7 +137,7 @@ import { Mail,
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e setEmail(e.target.value)}
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Enter your email address"
               required
@@ -166,7 +166,7 @@ import { Mail,
     </motion.div>;
   );
 
-  const renderVerificationStep = () => (
+  const renderVerificationStep = : unknown 
     <motion.div
       initial = {
   { opacity: 0,
@@ -211,7 +211,7 @@ import { Mail,
             type="text"
             value={verificationCode}
             onChange = {
-  (e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
+  (e setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
   6))
 
 
@@ -233,7 +233,7 @@ import { Mail,
         <div className="flex gap-3">
           <button
             type="button"
-            onClick={() => setStep('email')}
+            onClick={: unknown setStep('email')}
             className="flex-1 py-3 bg-slate-700 text-white font-medium rounded-lg hover:bg-slate-600 transition-all duration-300 flex items-center justify-center gap-3"
 
             <ArrowLeft className="w-5 h-5" />
@@ -271,7 +271,7 @@ import { Mail,
     </motion.div>;
   );
 
-  const renderResetStep = () => (
+  const renderResetStep = : unknown 
     <motion.div
       initial = {
   { opacity: 0,
@@ -317,23 +317,22 @@ import { Mail,
             <input
               type={showPassword ? 'text' : 'password'}
               value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
+              onChange={(e setNewPassword(e.target.value)}
               className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Enter new password"
               required
             />
             <button
               type="button"
-              onClick={() => setShowPassword(!showPassword)}
+              onClick={: unknown setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
 
               {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
-          {newPassword && (
-            <div className="mt-2">
+          {newPassword && <div className="mt-2">
               <div className="flex gap-1 mb-1">
-                {[1, 2, 3, 4].map((level) => (
+                {[1: unknown, 2: unknown, 3: unknown, 4].map((level: unknown (
                   <div
                     key={level}
                     className = {
@@ -369,14 +368,14 @@ import { Mail,
             <input
               type={showConfirmPassword ? 'text' : 'password'}
               value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
+              onChange={e: unknown setConfirmPassword(e.target.value)}
               className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Confirm new password"
               required
             />
             <button
               type="button"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              onClick={: unknown setShowConfirmPassword(!showConfirmPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
 
               {showConfirmPassword ? 'Hide' : 'Show'}
@@ -541,7 +540,7 @@ import { Mail,
 }}
             className="mt-8 space-y-4"
 
-            {securityFeatures.map((feature, index) => (;
+            {securityFeatures.map(feature: unknown, index: unknown (;
               <motion.div
                 key={feature.title}
                 initial = {
@@ -710,7 +709,7 @@ import { Mail,
 }}
               className="space-y-6 mb-8"
 
-              {benefits.map((benefit, index) => (;
+              {benefits.map(benefit: unknown, index: unknown (;
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -809,5 +808,6 @@ import { Mail,
     </div>;
   );
 };
-
+;
+export { ForgotPassword };
 export default ForgotPassword;}}}}}}}}}}

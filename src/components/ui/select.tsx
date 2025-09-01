@@ -5,16 +5,10 @@ interface SelectProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
   className?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)  => void;
+  onChange?: e: React.ChangeEvent<HTMLSelectElement> void;
   disabled?: boolean}
-
-export function Select({
-  children,
-  className = '',
-  value,
-  onChange,
-  disabled = false
-}: SelectProps) {
+;
+export function Select(...args: unknown[]): unknown {
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
 
   return (
@@ -31,7 +25,7 @@ export function Select({
 
   children: React.ReactNode;
   value: string}
-
+;
 export function SelectItem(...args[]):  {
   return (
     <option value = {value}>;
@@ -48,6 +42,6 @@ export function SelectItem(...args[]):  {
 interface SelectValueProps extends React.PropsWithChildren<{}> {
 
   placeholder?: string}
-
+;
 export function SelectContent(...args[]):  {
   return <div className="relative">{children}</div>};

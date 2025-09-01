@@ -173,4 +173,5 @@ const AIAutonomousLegalCounsel = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousLegalCounsel };
 export default AIAutonomousLegalCounsel;

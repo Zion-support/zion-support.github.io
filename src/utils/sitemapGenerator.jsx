@@ -166,8 +166,9 @@ Sitemap: ${baseUrl}/sitemap.xml
     </div>
   );
 };
-
+;
+export { SitemapGenerator };
 export default SitemapGenerator;
-
+;
 export default to;
 export default to;

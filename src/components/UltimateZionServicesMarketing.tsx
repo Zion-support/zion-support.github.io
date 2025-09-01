@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
-
+;
 const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
   const categories = [
     { 
@@ -71,14 +71,14 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
     };
   ];
 
-  const getServicesByCategory = (categoryId: anystring)  => {;
+  const getServicesByCategory = (...args: unknown[]): unknown => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };
 
   const selectedServices = getServicesByCategory(selectedCategory);
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -302,10 +302,9 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
 }} 
             transition={{ duration: any0.6 }}
           >
-            {categories.map((category)  => (
-              <button 
+            {categories.map((category <button 
                 key={category.id} 
-                onClick={() => setSelectedCategory(category.id)} 
+                onClick={(: unknown setSelectedCategory(category.id)} 
                 className={`px-6 py-3 rounded-xl border transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400 text-white shadow-lg'
@@ -321,10 +320,10 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
       </section>;
 ;
       {/* Category Overview */};
-      {selectedCategory !== 'all' && (;
+      {selectedCategory !== 'all' && ;
         <section className="py-12 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
-            {(() => {;
+            {(( {;
               const category = categories.find(c => c.id === selectedCategory);
               if (!category) return null;
               
@@ -425,7 +424,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
-            {selectedServices.map((service, index)  => (
+            {selectedServices.map(service: unknown, index: unknown (
               <motion.div 
                 key={service.id} 
                 variants = {
@@ -501,7 +500,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                     <p className="text-green-400 text-sm font-semibold">{service.roi}</p>
                   </div>
                   <div className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    {service.benefits.slice(0, 3).map(benefit: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <span className="text-green-400 mr-2">✓</span>
                         {benefit}
@@ -514,7 +513,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                 <div className="mb-6">
                   <h4 className="text-purple-400 font-semibold mb-2">🛠️ Technology Stack</h4>
                   <div className="flex flex-wrap gap-2">
-                    {service.technology.slice(0, 4).map((tech, idx) => (
+                    {service.technology.slice(0, 4).map(tech: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                         {tech}
                       </span>
@@ -626,5 +625,6 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-
+;
+export { UltimateZionServicesMarketing };
 export default UltimateZionServicesMarketing;

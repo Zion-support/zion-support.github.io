@@ -40,10 +40,10 @@ import {
   Settings as SettingsIcon
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
-const Match: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+;
+const Match: React.FC = props {;
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const categories = [;
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;
@@ -141,7 +141,7 @@ const Match: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Service Matcher - Zion Tech Group"
@@ -226,17 +226,16 @@ const Match: React.FC = () => {;
                 type="text"
                 placeholder="Search for services, features, or use cases..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
               />
             </div>
 
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
@@ -292,7 +291,7 @@ const Match: React.FC = () => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -355,7 +354,7 @@ const Match: React.FC = () => {;
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
                     <div className="flex items-center text-yellow-400 mr-2">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_: unknown, i: unknown (
                         <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`} />
                       ))}
                     </div>
@@ -366,7 +365,7 @@ const Match: React.FC = () => {;
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center text-sm text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
@@ -488,7 +487,7 @@ const Match: React.FC = () => {;
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index) => (;
+            ].map(step: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {
@@ -590,5 +589,6 @@ const Match: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { Match };
 export default Match;}}}

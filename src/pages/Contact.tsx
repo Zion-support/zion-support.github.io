@@ -14,9 +14,17 @@ import {
   Building,
   Rocket
 } from 'lucide-react';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
+;
+export { function };
+export default function Contact(...args: unknown[]): unknown {
+  const [formData, setFormData] = useState<typeof {
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: '',
+    service: 'general'
+  }>({
     name: '',
     email: '',
     company: '',
@@ -43,15 +51,15 @@ export default function Contact() {
     { value: 'custom-development', label: 'Custom Development' }
   ];
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('idle');
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [submitStatus, setSubmitStatus] = useState<typeof 'idle'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (...args: unknown[]): unknown => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -76,7 +84,7 @@ export default function Contact() {
 
   const isFormValid = formData.name && formData.email && formData.message;
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-24">
         {/* Header Section */}
@@ -264,7 +272,7 @@ export default function Contact() {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                 >
-                  {serviceOptions.map((option) => (
+                  {serviceOptions.map((option (
                     <option key={option.value} value={option.value} className="bg-gray-800 text-white">
                       {option.label}
                     </option>

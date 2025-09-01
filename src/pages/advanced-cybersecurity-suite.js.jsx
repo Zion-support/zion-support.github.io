@@ -248,4 +248,5 @@ const AdvancedCybersecuritySuite = () => {
         </div>
       </section>
     </div>)};
+export { AdvancedCybersecuritySuite };
 export default AdvancedCybersecuritySuite;

@@ -41,8 +41,8 @@ import {
   ScatterPlot
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
-const Analytics: React.FC = () => {
+;
+const Analytics: React.FC = props {
   const analyticsFeatures = [
     {
       title: "Real-time Monitoring",
@@ -117,7 +117,7 @@ const Analytics: React.FC = () => {
     { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Analytics - Zion Tech Group"
@@ -195,7 +195,7 @@ const Analytics: React.FC = () => {
       <section className="py-16 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
+            {metrics.map((metric, index (
               <motion.div
                 key={index}
                 initial = {
@@ -279,7 +279,7 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index) => (
+            {analyticsFeatures.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -363,7 +363,7 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
+            {analyticsTypes.map(type: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -406,7 +406,7 @@ const Analytics: React.FC = () => {
                 <p className="text-slate-300 mb-6">{type.description}</p>
 
                 <div className="space-y-3 mb-6">
-                  {type.features.map((feature, featureIndex) => (
+                  {type.features.map((feature, featureIndex (
                     <div key={featureIndex} className="flex items-center text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -464,7 +464,7 @@ const Analytics: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -563,5 +563,6 @@ const Analytics: React.FC = () => {
     </div>;
   );
 };
-
+;
+export { Analytics };
 export default Analytics;}}}

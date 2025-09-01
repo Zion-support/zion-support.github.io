@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Security configuration
+// Security configuration;
 const SECURITY_HEADERS = {
   'X-Frame-Options': 'DENY',
   'X-Content-Type-Options': 'nosniff',
@@ -11,15 +11,15 @@ const SECURITY_HEADERS = {
   'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
 };
 
-// Rate limiting configuration
+// Rate limiting configuration;
 const RATE_LIMIT = {
   windowMs: 15 * 60 * 1000, // 15 minutes
   maxRequests: 100, // limit each IP to 100 requests per windowMs
 };
 
-// Simple in-memory store for rate limiting (in production, use Redis)
+// Simple in-memory store for rate limiting (in production, use Redis);
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
-
+;
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const record = requestCounts.get(ip);
@@ -36,7 +36,7 @@ function isRateLimited(ip: string): boolean {
   record.count++;
   return false;
 }
-
+;
 function getClientIP(request: NextRequest): string {
   const forwarded = request.headers.get('x-forwarded-for');
   const realIP = request.headers.get('x-real-ip');
@@ -54,12 +54,12 @@ function getClientIP(request: NextRequest): string {
   
   return 'unknown';
 }
-
-export async function middleware(request: NextRequest) {
+;
+export async function middleware(...args: unknown[]): unknown {
   const response = NextResponse.next();
   
   // Apply security headers
-  Object.entries(SECURITY_HEADERS).forEach(([key, value]) => {
+  Object.entries(SECURITY_HEADERS).forEach([key: unknown, value]: unknown {
     response.headers.set(key, value);
   });
   
@@ -125,10 +125,10 @@ export async function middleware(request: NextRequest) {
   
   return response;
 }
-
+;
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'
   ],
-  runtime: 'nodejs',
+  runtime: 'nodejs'
 };

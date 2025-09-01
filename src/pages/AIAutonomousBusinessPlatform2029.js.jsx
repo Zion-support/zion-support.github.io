@@ -283,4 +283,5 @@ const AIAutonomousBusinessPlatform2029 = () => {
         </div>
       </section>
     </div>)};
+export { AIAutonomousBusinessPlatform2029 };
 export default AIAutonomousBusinessPlatform2029;

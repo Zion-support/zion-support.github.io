@@ -24,11 +24,11 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
-
-const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+;
+const AdvancedInnovativeServicesShowcase2026: React.FC = props {;
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'innovation'>('innovation');
 
   const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
     return ['all', ...Array.from(cats)];
@@ -50,7 +50,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     }
 
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'innovation':
           return b.innovationLevel.localeCompare(a.innovationLevel);
@@ -95,7 +95,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     };
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
       <motion.div
@@ -268,7 +268,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
                 type="text"
                 placeholder="Search innovative services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
               />
             </div>
@@ -278,7 +278,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               <Filter className="text-slate-400 w-5 h-5" />
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
               >
                 {categories.map(category  => (
@@ -294,7 +294,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               <TrendingUp className="text-slate-400 w-5 h-5" />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
 
                 <option value="innovation">Sort by Innovation</option>
@@ -315,7 +315,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         animate="visible"
       >
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <motion.div
               key={service.id}
               className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -383,7 +383,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               <div className="mb-4">
                 <div className="text-sm text-slate-400 mb-2">Key Features:</div>
                 <div className="flex flex-wrap gap-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
+                  {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                     <span key={index} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
                       {feature}
                     </span>
@@ -522,5 +522,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { AdvancedInnovativeServicesShowcase2026 };
 export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}

@@ -1,6 +1,6 @@
 /**
  * Highlight search terms in text with HTML mark tags
- */
+ */;
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim())
         return text;
@@ -10,7 +10,7 @@ export const highlightSearchTerms = (text, searchTerm) => {
 };
 /**
  * Check if a text contains the search term (case-insensitive)
- */
+ */;
 export const matchesSearchTerm = (text, searchTerm) => {
     if (!text || !searchTerm.trim())
         return false;
@@ -18,7 +18,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
 };
 /**
  * Calculate relevance score for search results
- */
+ */;
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
     const title = result.title.toLowerCase();
@@ -56,7 +56,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 };
 /**
  * Sort search results based on sort option
- */
+ */;
 export const sortedResults = [...results];
     switch (sortBy) {
         case 'price_asc':
@@ -82,7 +82,7 @@ export const sortedResults = [...results];
 };
 /**
  * Filter search results based on active filters
- */
+ */;
 export const filteredResults = [...results];
     // Filter by type
     if (filters.types.length > 0) {
@@ -107,7 +107,7 @@ export const filteredResults = [...results];
 };
 /**
  * Generate search suggestions based on query
- */
+ */;
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
     const suggestions = [];
     const lowerQuery = query.toLowerCase();
@@ -156,7 +156,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
 };
 /**
  * Calculate search metrics for analytics
- */
+ */;
 export const calculateSearchMetrics = (results, searchTime) => {
     const totalResults = results.length;
     // Calculate top categories
@@ -190,7 +190,7 @@ export const calculateSearchMetrics = (results, searchTime) => {
 };
 /**
  * Debounce function for search input
- */
+ */;
 export const debounce = (func, wait) => {
     let timeout;
     return (...args) => {
@@ -200,7 +200,7 @@ export const debounce = (func, wait) => {
 };
 /**
  * Extract keywords from search query for better matching
- */
+ */;
 export const extractKeywords = (query) => {
     return query
         .toLowerCase()
@@ -210,13 +210,13 @@ export const extractKeywords = (query) => {
 };
 /**
  * Format search query for display
- */
+ */;
 export const formatSearchQuery = (query) => {
     return query.trim().replace(/\s+/g, ' ');
 };
 /**
  * Check if filters are active (not default values)
- */
+ */;
 export const hasActiveFilters = (filters) => {
     return (filters.types.length > 0 ||
         filters.category !== '' ||
@@ -227,7 +227,7 @@ export const hasActiveFilters = (filters) => {
 };
 /**
  * Get filter count for display
- */
+ */;
 export const getActiveFilterCount = (filters) => {
     let count = 0;
     if (filters.types.length > 0)
@@ -244,7 +244,7 @@ export const getActiveFilterCount = (filters) => {
 };
 /**
  * Reset filters to default values
- */
+ */;
 export const getDefaultFilters = () => ({
     types: [],
     category: '',
@@ -268,6 +268,7 @@ export default {
     getActiveFilterCount,
     getDefaultFilters
 };
-
+;
+export { for };
 export default for;
 export default for;

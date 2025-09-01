@@ -13,7 +13,7 @@ const CHAINS = [
     { id: 'arbitrum', name: 'Arbitrum', logo: '/logos/arbitrum-logo.svg' },
     { id: 'optimism', name: 'Optimism', logo: '/logos/optimism-logo.svg' },
     { id: 'avalanche', name: 'Avalanche', logo: '/logos/avalanche-logo.svg' },
-    { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' },
+    { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' }
 ];
 function suggestChain(region, stake) {
     if (stake > 1000)
@@ -22,7 +22,8 @@ function suggestChain(region, stake) {
         return 'bnb';
     if (region === 'europe')
         return 'polygon';
-    return 'optimism'}
+    return 'optimism'};
+export { function };
 export default function TokenIntegrations() {
     const { address, isConnected } = useWallet();
     const [fromChain, setFromChain] = useState('ethereum');

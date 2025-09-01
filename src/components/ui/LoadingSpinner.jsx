@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-
+;
 export function LoadingSpinner({ 
   size = 'md', 
   color = 'primary', 
@@ -59,7 +59,7 @@ export function LoadingSpinner({
   );
 }
 
-// Skeleton loading component for content
+// Skeleton loading component for content;
 export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
   return (
     <div className={cn('space-y-3', className)}>
@@ -76,7 +76,7 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
   );
 }
 
-// Page loading component
+// Page loading component;
 export function PageLoader({ text = 'Loading page...', className }) {
   return (
     <div className={cn('min-h-screen flex items-center justify-center', className)}>
@@ -87,7 +87,7 @@ export function PageLoader({ text = 'Loading page...', className }) {
   );
 }
 
-// Button loading state
+// Button loading state;
 export function ButtonLoader({ size = 'sm', className }) {
   return (
     <div className={cn('inline-flex items-center', className)}>

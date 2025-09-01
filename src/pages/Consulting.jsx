@@ -268,5 +268,6 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
         </div>
       </section>
     </div>)};
+export { Consulting };
 export default Consulting;
 }}}}

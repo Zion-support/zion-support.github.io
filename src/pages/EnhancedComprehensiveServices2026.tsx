@@ -57,11 +57,12 @@ import { Brain,
   List
  } from 'lucide-react';
 
-// Import our existing service data
+// Import our existing service data;
 import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
 import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
 
 interface Service {
+
 
   id: string;
   name: string;
@@ -74,7 +75,8 @@ pricing: {
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string};
+    billingCycle: string
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -142,20 +144,20 @@ pricing: {
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort(a: unknown, b: unknown a.name.localeCompare(b.name));
         break;
       case 'price':
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
+        filtered.sort(a: unknown, b: unknown a.pricing.starter - b.pricing.starter);
         break;
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort(a: unknown, b: unknown b.rating - a.rating);
         break;
       case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        filtered.sort(a: unknown, b: unknown new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
-        filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
+        filtered.sort(a: unknown, b: unknown (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
         break}
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
@@ -166,7 +168,7 @@ pricing: {
         return 'bg-gray-100 text-gray-800'}
   };
 
-  const getInnovationBadge = (service: Service) => {;
+  const getInnovationBadge = (...args: unknown[]): unknown => {;
     if (service.innovationLevel === 'Revolutionary') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting-Edge') {;
@@ -175,7 +177,7 @@ pricing: {
     return null;
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
@@ -246,7 +248,7 @@ pricing: {
                   type="text"
                   placeholder="Search revolutionary services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
@@ -256,7 +258,7 @@ pricing: {
             <div className="flex-shrink-0">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category  => (
@@ -269,7 +271,7 @@ pricing: {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as )}
+                onChange={e: unknown setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
 
                 <option value="name">Sort by Name</option>
@@ -284,7 +286,7 @@ pricing: {
             <div className="flex-shrink-0">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`px-3 py-2 rounded-md transition-colors ${
                     viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
@@ -292,7 +294,7 @@ pricing: {
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`px-3 py-2 rounded-md transition-colors ${
                     viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'
                   }`}
@@ -307,10 +309,10 @@ pricing: {
 
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
-        {viewMode === 'grid' ? (;
+        {viewMode === 'grid' ? ;
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
+              {filteredServices.map((service, index 
                 <motion.div
                   key={service.id}
                   initial = {
@@ -345,7 +347,7 @@ pricing: {
 }}
                   whileHover={{ y: -5 }}
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
-                  onClick={() => setSelectedService(service)}
+                  onClick={( setSelectedService(service)}
 
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
@@ -389,7 +391,7 @@ pricing: {
                   {/* Features Preview */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
@@ -418,10 +420,9 @@ pricing: {
               ))}
             </AnimatePresence>
           </div>
-        ) : (
-          <div className="space-y-4">
+        ) : <div className="space-y-4">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((service: unknown, index: unknown 
                 <motion.div
                   key={service.id}
                   initial = {
@@ -455,7 +456,7 @@ pricing: {
 
 }}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
-                  onClick={() => setSelectedService(service)}
+                  onClick={( setSelectedService(service)}
 
                   <div className="flex items-center gap-6">
                     <div className="flex-shrink-0">
@@ -514,13 +515,13 @@ pricing: {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
+        {selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedService(null)}
+            onClick={( setSelectedService(null)}
 
             <motion.div
               initial = {
@@ -554,7 +555,7 @@ pricing: {
 
 }}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              onClick={e: unknown e.stopPropagation()}
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-6">
@@ -571,7 +572,7 @@ pricing: {
                     </div>
                   </div>
                   <button
-                    onClick={() => setSelectedService(null)}
+                    onClick={: unknown setSelectedService(null)}
                     className="p-2 hover:bg-white/10 rounded-lg transition-colors"
 
                     <X className="w-6 h-6 text-gray-400" />
@@ -586,7 +587,7 @@ pricing: {
 
                     <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.features.map((feature, idx) => (
+                      {selectedService.features.map(feature: unknown, idx: unknown (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
@@ -596,7 +597,7 @@ pricing: {
 
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedService.benefits.map((benefit, idx) => (
+                      {selectedService.benefits.map(benefit: unknown, idx: unknown (
                         <li key={idx} className="flex items-center gap-2 text-gray-300">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           {benefit}
@@ -738,5 +739,6 @@ pricing: {
     </div>;
   );
 };
-
+;
+export { EnhancedComprehensiveServices2026 };
 export default EnhancedComprehensiveServices2026;}}}}}}

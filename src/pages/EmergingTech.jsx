@@ -412,5 +412,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
         </motion.div>
       </div>
     </div>)};
+export { EmergingTech };
 export default EmergingTech;
 }}}}}}}}}}}}}}

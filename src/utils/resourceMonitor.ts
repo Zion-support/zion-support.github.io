@@ -1,12 +1,14 @@
 interface ResourceError {
 
+
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
   timestamp: number;
 
-}
 
+}
+;
 class ResourceMonitor {
   private errors: ResourceError[] = [];
   private isMonitoring = false;
@@ -31,7 +33,7 @@ class ResourceMonitor {
 
   private setupErrorListeners() {
     // Listen for script loading errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener'error': unknown, (event: unknown {
       if (event.target && event.target !== window) {
         const target = event.target as HTMLElement;
         const url = (target as HTMLScriptElement).src || (target as HTMLLinkElement).href;
@@ -43,7 +45,7 @@ class ResourceMonitor {
     }, true);
 
     // Listen for unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener'unhandledrejection': unknown, (event: unknown {
       if (event.reason && typeof event.reason === 'string' && event.reason.includes('MIME')) {
         this.handleResourceError('unknown', 'other', `MIME type error: ${event.reason}`);
       }
@@ -53,9 +55,9 @@ class ResourceMonitor {
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
     if (window.MutationObserver) {
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          mutation.addedNodes.forEach((node) => {
+      const observer = new MutationObserver(mutations: unknown {
+        mutations.forEach(mutation: unknown {
+          mutation.addedNodes.forEach(node: unknown {
             if (node.nodeType === Node.ELEMENT_NODE) {
               const element = node as HTMLElement;
               this.monitorElement(element);
@@ -82,13 +84,13 @@ class ResourceMonitor {
   }
 
   private monitorScript(script: anyHTMLScriptElement) {
-    script.addEventListener('error', ()  => {
+    script.addEventListener'error': unknown, (: unknown {
       this.handleResourceError(script.src, 'script', 'Script loading failed');
     });
   }
 
   private monitorStylesheet(link: anyHTMLLinkElement) {
-    link.addEventListener('error', ()  => {
+    link.addEventListener'error': unknown, (: unknown {
       this.handleResourceError(link.href, 'stylesheet', 'Stylesheet loading failed');
     });
   }
@@ -164,7 +166,7 @@ class ResourceMonitor {
 
     this.retryAttempts.set(url, attempts + 1);
     
-    setTimeout(() => {
+    setTimeout(: unknown {
       this.retryResource(url, type);
     }, Math.pow(2, attempts) * 1000); // Exponential backoff
   }
@@ -183,11 +185,11 @@ class ResourceMonitor {
     const script = document.createElement('script');
     script.src = src;
     script.async = true;
-    script.onload = () => {
+    script.onload = : unknown {
       console.log(`✅ Script loaded successfully: ${src}`);
       this.retryAttempts.delete(src);
     };
-    script.onerror = () => {
+    script.onerror = : unknown {
       console.error(`❌ Script retry failed: ${src}`);
     };
     document.head.appendChild(script);
@@ -197,11 +199,11 @@ class ResourceMonitor {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
-    link.onload = () => {
+    link.onload = : unknown {
       console.log(`✅ Stylesheet loaded successfully: ${href}`);
       this.retryAttempts.delete(href);
     };
-    link.onerror = () => {
+    link.onerror = : unknown {
       console.error(`❌ Stylesheet retry failed: ${href}`);
     };
     document.head.appendChild(link);
@@ -247,7 +249,8 @@ class ResourceMonitor {
   }
 }
 
-// Create singleton instance
+// Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
-
+;
+export { resourceMonitor };
 export default resourceMonitor;

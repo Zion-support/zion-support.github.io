@@ -1,5 +1,5 @@
 import { MarketplaceItem   } from '@/data/marketplaceData';
-
+;
 const sampleTitles = [
   'AI-Powered Analytics Platform',
   'Cybersecurity Assessment Tool',
@@ -12,7 +12,7 @@ const sampleTitles = [
   'DevOps Automation Tool',;
   'Network Security Solution';
 ];
-
+;
 const sampleDescriptions = [
   'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
   'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
@@ -25,7 +25,7 @@ const sampleDescriptions = [
   'DevOps automation tools for continuous integration and deployment pipelines.',;
   'Network security solution with advanced threat detection and prevention.';
 ];
-
+;
 const sampleTags = [
   ['AI', 'Analytics', 'Business Intelligence'],
   ['Security', 'Cybersecurity', 'Monitoring'],
@@ -38,7 +38,7 @@ const sampleTags = [
   ['DevOps', 'Automation', 'CI/CD'],;
   ['Network', 'Security', 'Threat Detection'];
 ];
-
+;
 const sampleImages = [;
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
@@ -47,19 +47,19 @@ const sampleImages = [;
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
 ];
-
-const categories: Array<any> = [
+;
+const categories: unknown[] = [
   'products', 'talent', 'equipment', 'services'
 ];
-
+;
 const priceRanges = [;
   '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000';
 ];
-
+;
 const locations = [;
   'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote';
 ];
-
+;
 const sellerNames = [
   'TechCorp Solutions',
   'SecureNet Professionals',;
@@ -70,7 +70,7 @@ const sellerNames = [
   'Innovation Labs',;
   'FutureTech Systems';
 ];
-
+;
 export function generateRandomListing(): MarketplaceItem {
   const randomIndex = Math.floor(Math.random() * sampleTitles.length);
   const category = categories[Math.floor(Math.random() * categories.length)];
@@ -101,7 +101,7 @@ export function generateRandomListing(): MarketplaceItem {
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`;
   };
-
+;
 export function generateRandomListings(count: number): MarketplaceItem[] {
   const listings: MarketplaceItem[] = [];
   for (let i = 0; i < count; i++) {

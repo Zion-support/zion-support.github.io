@@ -7,11 +7,10 @@ import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 
   children: ReactNode;
   showSidebar?: boolean}
-
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-  children,
-  showSidebar = true
-}) => {
+;
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
+  children: unknown, showSidebar = true
+}: unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
       {/* Futuristic Animated Background */}

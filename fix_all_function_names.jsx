@@ -65,7 +65,7 @@ function fileName = path.basename(filePath, path.extname(filePath));
 
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
+    ignore: ["node_modules/**", ".next/**"]
   });
   const fixedCount = 0;
   for (const file of files) {
@@ -89,7 +89,7 @@ async function fixedCount = 0;
   }
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();
-
+;
 export default fileName;
 export default fileName;
 export default fileName;

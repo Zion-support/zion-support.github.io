@@ -4,12 +4,14 @@ import { Star, Users  } from 'lucide-react.ts';
 
 interface Testimonial {
 
+
   quote: string;
   author: string;
   role: string;
   company: string;
   rating: number;
   avatar: string;
+
 
 }
 
@@ -18,9 +20,9 @@ interface TestimonialsProps extends React.PropsWithChildren<{}> {
   testimonials: Testimonial[];
 
 }
-
-export function Testimonials(...args: any[]): any {
-  return (
+;
+export function Testimonials(...args: unknown[]): unknown {
+  return 
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -43,7 +45,7 @@ export function Testimonials(...args: any[]): any {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-          {testimonials.map((testimonial, index)  => (
+          {testimonials.map((testimonial, index (
             <motion.div
               key={testimonial.author}
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +55,7 @@ export function Testimonials(...args: any[]): any {
               whileHover={{ y: -5 }}
             >
               <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map(_: unknown, i: unknown (
                   <motion.div
                     key={i}
                     initial={{ scale: 0 }}
@@ -97,5 +99,6 @@ export function Testimonials(...args: any[]): any {
     </section>
   );
 }
-
+;
+export { Testimonials };
 export default Testimonials;

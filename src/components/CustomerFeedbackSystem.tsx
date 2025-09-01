@@ -22,23 +22,25 @@ import {
 
 interface FeedbackStats {
 
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-  topCategories: Array<any>}
+  topCategories: unknown[]
+}
 
 interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
 
   showStats?: boolean;
   showFilters?: boolean;
   maxFeedback?: number}
-
-export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
+;
+export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = {
 showStats:  true,;
   showFilters = true,;
   maxFeedback = 10;
-}) => {;
+} {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
@@ -50,16 +52,20 @@ showStats:  true,;
   });
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
-  const [newFeedback, setNewFeedback] = useState({
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [showFeedbackForm, setShowFeedbackForm] = useState<typeof false>(false);
+  const [newFeedback, setNewFeedback] = useState<typeof {
+    rating: 0,
+    comment: '',
+    category: 'overall' as Feedback['category']
+  }>({
     rating: 0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
 
   // Sample feedback data
-  useEffect(()  => {
+  useEffect(: unknown {
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -132,24 +138,24 @@ showStats:  true,;
     setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(()  => {
+  useEffect(: unknown {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
-      const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
+      const averageRating = feedback.reduce(sum: unknown, f: unknown sum + f.rating, 0) / totalFeedback;
       const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
       const responseRate = 95; // Simulated response rate
 
-      const categoryCounts = feedback.reduce((acc, f) => {;
+      const categoryCounts = feedback.reduce(acc: unknown, f: unknown {;
         acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record<string, any>);
 
       const topCategories = Object.entries(categoryCounts)
-        .map(([category, count]) => ({
+        .map([category: unknown, count]: unknown ({
           category: category.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
-        .sort((a, b) => b.count - a.count);
+        .sort(a: unknown, b: unknown b.count - a.count);
         .slice(0, 4);
 
       setStats({
@@ -162,7 +168,7 @@ showStats:  true,;
   }, [feedback]);
 
   // Filter feedback
-  useEffect(() => {
+  useEffect(: unknown {
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
@@ -187,7 +193,7 @@ showStats:  true,;
     setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
   // Handle feedback submission
-  const handleSubmitFeedback = () => {;
+  const handleSubmitFeedback = (...args: unknown[]): unknown => {;
     if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return;
 
     const feedback: Feedback = {
@@ -216,7 +222,7 @@ showStats:  true,;
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
+  const handleVote = (...args: unknown[]): unknown => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {;
         return {;
@@ -230,7 +236,7 @@ showStats:  true,;
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  const getSentimentColor = (...args: unknown[]): unknown => {;
     switch (sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -238,7 +244,7 @@ showStats:  true,;
   };
 
   // Get category color
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -320,7 +326,7 @@ showStats:  true,;
             <div className="flex items-center justify-center gap-2 mb-2">
               <div className="text-3xl font-bold text-white">{stats.averageRating.toFixed(1)}</div>
               <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
+                {[1, 2, 3, 4, 5].map(star: unknown (
                   <Star
                     key={star}
                     className={`w-5 h-5 ${
@@ -392,11 +398,11 @@ showStats:  true,;
       )}
 
       {/* Top Categories */}
-      {showStats && (
+      {showStats && 
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index)  => (
+            {stats.topCategories.map((category, index (
               <motion.div
                 key={category.category}
                 initial = {
@@ -432,12 +438,11 @@ showStats:  true,;
       )}
 
       {/* Filters and Search */}
-      {showFilters && (
-        <div className="flex flex-wrap items-center gap-4 mb-6">
+      {showFilters && <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
           <select
             value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
+            onChange={(e: unknown setSelectedCategory(e.target.value)}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 
             <option value="all">All Categories</option>
@@ -450,7 +455,7 @@ showStats:  true,;
           {/* Rating Filter */}
           <select
             value={selectedRating}
-            onChange={(e) => setSelectedRating(Number(e.target.value))}
+            onChange={e: unknown setSelectedRating(Number(e.target.value))}
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 
             <option value={0}>All Ratings</option>
@@ -467,7 +472,7 @@ showStats:  true,;
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={e: unknown setSearchQuery(e.target.value)}
               placeholder="Search feedback..."
               className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
@@ -475,7 +480,7 @@ showStats:  true,;
 
           {/* Add Feedback Button */}
           <button
-            onClick={() => setShowFeedbackForm(!showFeedbackForm)}
+            onClick={: unknown setShowFeedbackForm(!showFeedbackForm)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
 
             <MessageCircle className="w-4 h-4" />;
@@ -486,7 +491,7 @@ showStats:  true,;
 
       {/* Feedback Form */}
       <AnimatePresence>
-        {showFeedbackForm && (
+        {showFeedbackForm && 
           <motion.div
             initial = {
   { height: 0,
@@ -529,11 +534,10 @@ showStats:  true,;
                 <div>
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Rating</label>
                   <div className="flex gap-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <button
+                    {[1, 2, 3, 4, 5].map((star <button
                         key={star}
                         onClick = {
-  () => setNewFeedback(prev => ({ ...prev,
+  (: unknown setNewFeedback(prev => ({ ...prev,
   rating: star 
 
 
@@ -560,7 +564,7 @@ showStats:  true,;
                   <select
                     value={newFeedback.category}
                     onChange = {
-  (e) => setNewFeedback(prev => ({ ...prev,
+  e: unknown setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category'] 
 
 
@@ -584,7 +588,7 @@ showStats:  true,;
                   <textarea
                     value={newFeedback.comment}
                     onChange = {
-  (e) => setNewFeedback(prev => ({ ...prev,
+  e: unknown setNewFeedback(prev => ({ ...prev,
   comment: e.target.value 
 
 
@@ -610,7 +614,7 @@ showStats:  true,;
                     Submit Feedback
                   </button>
                   <button
-                    onClick={() => setShowFeedbackForm(false)}
+                    onClick={: unknown setShowFeedbackForm(false)}
                     className="px-6 py-2 bg-zinc-700 text-white rounded-lg hover:bg-zinc-600 transition-colors"
 
                     Cancel
@@ -624,7 +628,7 @@ showStats:  true,;
 
       {/* Feedback List */}
       <div className="space-y-4">;
-        {filteredFeedback.map((item, index) => (;
+        {filteredFeedback.map(item: unknown, index: unknown (;
           <motion.div
             key={item.id}
             initial = {
@@ -682,7 +686,7 @@ showStats:  true,;
 
             {/* Rating */}
             <div className="flex items-center gap-2 mb-3">;
-              {[1, 2, 3, 4, 5].map((star) => (;
+              {[1, 2, 3, 4, 5].map(star: unknown (;
                 <Star
                   key={star}
                   className={`w-5 h-5 ${
@@ -697,9 +701,9 @@ showStats:  true,;
             <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>;
 
             {/* Tags */}
-            {item.tags.length > 0 && (;
+            {item.tags.length > 0 && ;
               <div className="flex flex-wrap gap-2 mb-4">
-                {item.tags.map((tag) => (
+                {item.tags.map((tag: unknown (
                   <span
                     key={tag}
                     className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
@@ -715,7 +719,7 @@ showStats:  true,;
               <div className="flex items-center gap-4">
                 <button
                   onClick = {
-  () => handleVote(item.id,
+  : unknown handleVote(item.id,
   'helpful')
 
 
@@ -731,7 +735,7 @@ showStats:  true,;
                 </button>
                 <button
                   onClick = {
-  () => handleVote(item.id,
+  : unknown handleVote(item.id,
   'unhelpful')
 
 
@@ -760,7 +764,7 @@ showStats:  true,;
       </div>
 
       {/* No Results */}
-      {filteredFeedback.length === 0 && (
+      {filteredFeedback.length === 0 && 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -772,7 +776,7 @@ showStats:  true,;
             Try adjusting your filters or be the first to share your experience!
           </p>
           <button
-            onClick={() => setShowFeedbackForm(true)}
+            onClick={( setShowFeedbackForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
             Add Feedback;

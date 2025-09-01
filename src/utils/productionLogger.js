@@ -1,4 +1,4 @@
-// Simple production logger utility
+// Simple production logger utility;
 export const logErrorToProduction = (message, error) => {
   // In production, you might want to send this to a logging service
   // For now, we'll just log to console in development
@@ -14,19 +14,19 @@ export const logErrorToProduction = (message, error) => {
   // - Custom logging service
   // - Analytics service
 };
-
+;
 export const logInfoToProduction = (message, data) => {
   if (process.env.NODE_ENV === 'development') {
     console.log(message, data);
   }
 };
-
+;
 export const logWarningToProduction = (message, data) => {
   if (process.env.NODE_ENV === 'development') {
     console.warn(message, data);
   }
 };
-
+;
 export default {
   logErrorToProduction,
   logInfoToProduction,

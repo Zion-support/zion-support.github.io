@@ -32,30 +32,36 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean}
+  keyboardNavigation: boolean
+}
 
-interface EnhancedAccessibilityProps {;
+interface EnhancedAccessibilityProps {
+  // Add your props here
+
+;
   enabled?: boolean;
   showControls?: boolean;
   className?: string;
-
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  enabled = true,;
-  showControls = true,;
+;
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = {
+  enabled = true: unknown, ;
+  showControls = true: unknown, ;
   className = '';
-}) => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<any>({
+
+}: unknown {;
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [settings, setSettings] = useState<any>{
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
 }
-
-export const EnhancedAccessibility: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+;
+export const EnhancedAccessibility: React.FC = (props {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -68,22 +74,22 @@ export const EnhancedAccessibility: React.FC = () => {
   });
 
   // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
-  const [isVisible, setIsVisible] = useState(false);
+  const applySettings = useCallback(newSettings: AccessibilitySettings {;
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   // Auto-hide accessibility panel
-  useEffect(() => {
+  useEffect(: unknown {
     if (isOpen) {
       setIsVisible(true);
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     } else {
-      timeoutRef.current = setTimeout(() => setIsVisible(false), 300);
+      timeoutRef.current = setTimeout(: unknown setIsVisible(false), 300);
     }
   }, [isOpen]);
 
   // Apply accessibility settings
-  useEffect(() => {
+  useEffect(: unknown {
     const root = document.documentElement;
 
     // High contrast
@@ -136,14 +142,14 @@ export const EnhancedAccessibility: React.FC = () => {
     // Save settings to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Load saved settings
     const saved = localStorage.getItem('accessibility-settings');
     if (saved) {
       setSettings(JSON.parse(saved))}
   }, []);
 
-  const toggleSetting = (key: keyof AccessibilitySettings)  => {
+  const toggleSetting = (...args: unknown[]): unknown => {
     setSettings(prev => ({
       ...prev,;
       [key]: !prev[key];
@@ -159,7 +165,7 @@ export const EnhancedAccessibility: React.FC = () => {
     document.body.appendChild(announcement);
 
     // Remove after announcement
-    setTimeout(() => {
+    setTimeout(: unknown {
       document.body.removeChild(announcement);
     }, 1000);
 
@@ -167,10 +173,10 @@ export const EnhancedAccessibility: React.FC = () => {
   }, []);
 
   // Enhanced keyboard navigation
-  useEffect(() => {
+  useEffect(: unknown {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       const target = e.target as HTMLElement;
 
       // Skip if in input/textarea
@@ -183,7 +189,7 @@ export const EnhancedAccessibility: React.FC = () => {
           target.style.outline = '2px solid #3b82f6';
           target.style.outlineOffset = '2px';
 
-          setTimeout(() => {
+          setTimeout(: unknown {
             target.style.outline = '';
             target.style.outlineOffset = '';
           }, 2000);
@@ -209,10 +215,10 @@ modals.forEach(modal:  > {;
           break;
 
   // Keyboard navigation support
-  useEffect(() => {
+  useEffect(: unknown {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       // Skip to main content
       if (e.key === 'Tab' && e.altKey) {
         e.preventDefault();
@@ -233,7 +239,7 @@ modals.forEach(modal:  > {;
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
 
         const label = target.getAttribute('aria-label') || ;
@@ -243,7 +249,7 @@ modals.forEach(modal:  > {;
 
     };
 
-    const handleFocusOut = (e: FocusEvent) => {;
+    const handleFocusOut = (...args: unknown[]): unknown => {;
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -252,14 +258,14 @@ modals.forEach(modal:  > {;
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 
-    return () => {
+    return : unknown {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.focusIndicator, settings.screenReader, announce]);
 
   // Skip to main content link
-  useEffect(() => {
+  useEffect(: unknown {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -267,7 +273,7 @@ modals.forEach(modal:  > {;
 
     document.body.insertBefore(skipLink, document.body.firstChild);
 
-    return () => {
+    return : unknown {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink);
 
@@ -279,7 +285,7 @@ modals.forEach(modal:  > {;
     {
       icon: Contrast,
       label: 'Toggle High Contrast',
-      action: () => {
+      action: : unknown {
         const newSettings = {
   ...settings,;
   ;
@@ -303,7 +309,7 @@ modals.forEach(modal:  > {;
     {
       icon: Type,
       label: 'Toggle Large Text',
-      action: () => {
+      action: : unknown {
         const newSettings = {
   ...settings,;
   ;
@@ -327,7 +333,7 @@ modals.forEach(modal:  > {;
     {
       icon: ZoomIn,
       label: 'Increase Zoom',
-      action: () => {
+      action: : unknown {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.min(currentZoom + 0.1, 2.0);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
@@ -338,7 +344,7 @@ modals.forEach(modal:  > {;
     {
       icon: ZoomOut,
       label: 'Decrease Zoom',
-      action: () => {
+      action: : unknown {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.max(currentZoom - 0.1, 0.5);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
@@ -349,7 +355,7 @@ modals.forEach(modal:  > {;
     {
       icon: RotateCcw,
       label: 'Reset Zoom',
-      action: () => {
+      action: : unknown {
         document.documentElement.style.fontSize = '16px';
         announce('Zoom reset to 100%');
       },
@@ -359,7 +365,7 @@ modals.forEach(modal:  > {;
 
   if (!enabled) return null;
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (...args: unknown[]): unknown => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -368,13 +374,13 @@ modals.forEach(modal:  > {;
       announcement.textContent = message;
       document.body.appendChild(announcement);
       
-      setTimeout(() => {
+      setTimeout(: unknown {
         document.body.removeChild(announcement);
       }, 1000);
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+  const toggleSetting = (...args: unknown[]): unknown => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings(prev => ({ ...prev, [key]: newValue }));
     
@@ -393,11 +399,10 @@ modals.forEach(modal:  > {;
     announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`);
   };
 
-  return (
-    <>
+  return <>
       {/* Accessibility Toggle Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className="fixed top-4 right-4 z-50 bg-zion-cyan text-zion-slate-dark p-3 rounded-full shadow-lg hover:bg-zion-cyan/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
@@ -417,7 +422,7 @@ modals.forEach(modal:  > {;
 ;
               {/* Settings Grid */};
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">;
-                {Object.entries(settings).map(([key, value]) => {;
+                {Object.entries(settings).map([key: unknown, value]: unknown {;
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
                   const Icon = key === 'highContrast' ? Contrast : ;
                               key === 'largeText' ? Type : ;
@@ -428,15 +433,14 @@ modals.forEach(modal:  > {;
                               key === 'colorBlind' ? Eye : ;
                               key === 'dyslexia' ? Type : Settings;
 
-                  return (
-                    <div key = {key} className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                  return <div key = {key} className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
                       <div className="flex items-center space-x-3">
                         <Icon className="w-5 h-5 text-cyan-400" />
                         <span className="text-white font-medium">{label}</span>
                       </div>
                       <button
                         onClick = {
-  () => {
+  (: unknown {
                           const newSettings = { ...settings,;
   ;
   ;
@@ -503,7 +507,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.highContrast}
-                    onChange={() => toggleSetting('highContrast')}
+                    onChange={: unknown toggleSetting('highContrast')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>High Contrast</span>
@@ -513,7 +517,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.largeText}
-                    onChange={() => toggleSetting('largeText')}
+                    onChange={: unknown toggleSetting('largeText')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>Large Text</span>
@@ -523,7 +527,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <label className="block text-sm font-medium">Font Size</label>
                   <select
                     value={settings.fontSize}
-                    onChange={(e) => toggleSetting('fontSize', e.target.value)}
+                    onChange={e: unknown toggleSetting('fontSize', e.target.value)}
                     className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   >
                     <option value="small">Small</option>
@@ -537,7 +541,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <label className="block text-sm font-medium">Color Blindness</label>
                   <select
                     value={settings.colorBlindness}
-                    onChange={(e) => toggleSetting('colorBlindness', e.target.value)}
+                    onChange={e: unknown toggleSetting('colorBlindness', e.target.value)}
                     className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   >
                     <option value="normal">Normal</option>
@@ -559,7 +563,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.reducedMotion}
-                    onChange={() => toggleSetting('reducedMotion')}
+                    onChange={: unknown toggleSetting('reducedMotion')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>Reduced Motion</span>
@@ -577,7 +581,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.keyboardNavigation}
-                    onChange={() => toggleSetting('keyboardNavigation')}
+                    onChange={: unknown toggleSetting('keyboardNavigation')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>Enhanced Keyboard Navigation</span>
@@ -587,7 +591,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.focusIndicator}
-                    onChange={() => toggleSetting('focusIndicator')}
+                    onChange={: unknown toggleSetting('focusIndicator')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>Focus Indicator</span>
@@ -605,7 +609,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <input
                     type="checkbox"
                     checked={settings.screenReader}
-                    onChange={() => toggleSetting('screenReader')}
+                    onChange={: unknown toggleSetting('screenReader')}
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
                   <span>Enhanced Screen Reader Support</span>
@@ -628,7 +632,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
 
       {/* Screen reader only content */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
-        {announcements.map((announcement, index) => (;
+        {announcements.map(announcement: unknown, index: unknown (;
           <div key={index}>{announcement}</div>;
         ))};
       </div>;
@@ -641,7 +645,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
   );
 };
 
-// CSS for accessibility features
+// CSS for accessibility features;
 const accessibilityStyles = `
   .sr-only {
     position: absolute;
@@ -708,5 +712,22 @@ if (typeof document !== 'undefined') {
   style.textContent = accessibilityStyles;
   document.head.appendChild(style);
 }
-
+;
+export { EnhancedAccessibility };
 export default EnhancedAccessibility;
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

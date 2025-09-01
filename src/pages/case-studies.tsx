@@ -17,7 +17,7 @@ import {
   Brain,
   Globe
 } from 'lucide-react';
-
+;
 const caseStudies = [
   {
     id: 1,
@@ -116,10 +116,10 @@ const caseStudies = [
     image: "/images/case-study-4.jpg"
   }
 ];
-
-const CaseStudies = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+;
+const CaseStudies = (...args: unknown[]): unknown => {
+  const [selectedIndustry, setSelectedIndustry] = useState<typeof 'All'>('All');
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState<typeof null>(null);
 
   const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking'];
 
@@ -127,7 +127,7 @@ const CaseStudies = () => {
     ? caseStudies
     : caseStudies.filter(study => study.industry === selectedIndustry);
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -155,10 +155,9 @@ const CaseStudies = () => {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            {industries.map((industry) => (
-              <button
+            {industries.map((industry <button
                 key={industry}
-                onClick={() => setSelectedIndustry(industry)}
+                onClick={(: unknown setSelectedIndustry(industry)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   selectedIndustry === industry
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25'
@@ -176,14 +175,14 @@ const CaseStudies = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index) => (
+            {filteredCaseStudies.map(study: unknown, index: unknown 
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-blue-400/40 transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedCaseStudy(study)}
+                onClick={( setSelectedCaseStudy(study)}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white">
@@ -266,5 +265,6 @@ const CaseStudies = () => {
     </div>
   );
 };
-
+;
+export { CaseStudies };
 export default CaseStudies;

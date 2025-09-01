@@ -27,8 +27,9 @@ import { Brain,
   Award
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
-
-export default function Solutions(...args: any[]): any {
+;
+export { function };
+export default function Solutions(...args: unknown[]): unknown {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',
@@ -138,7 +139,7 @@ export default function Solutions(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Solutions - Zion Tech Group"
@@ -199,7 +200,7 @@ export default function Solutions(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSolutions.map((solution, index)  => (
+            {featuredSolutions.map((solution, index (
               <motion.div
                 key={solution.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -251,7 +252,7 @@ export default function Solutions(...args: any[]): any {
           </motion.div>
 
           <div className="space-y-12">
-            {solutionCategories.map((category, categoryIndex) => (
+            {solutionCategories.map(category: unknown, categoryIndex: unknown 
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -270,7 +271,7 @@ export default function Solutions(...args: any[]): any {
                 </div>
 
                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.solutions.map((solution, solutionIndex)  => (
+                  {category.solutions.map((solution, solutionIndex (
                     <Link
                       key={solution.name}
                       to={solution.href}

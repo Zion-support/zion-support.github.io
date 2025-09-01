@@ -16,8 +16,8 @@ import {
   Eye,
   Database
  } from 'lucide-react';
-
-const TermsOfService = () => {;
+;
+const TermsOfService = (...args: unknown[]): unknown => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
@@ -712,7 +712,7 @@ const TermsOfService = () => {;
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
+                {sections.map(section: unknown, index: unknown (
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -800,7 +800,7 @@ const TermsOfService = () => {;
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {keyProvisions.map((provision, index) => (
+                {keyProvisions.map(provision: unknown, index: unknown (
                   <motion.div
                     key={provision.title}
                     initial = {
@@ -882,7 +882,7 @@ const TermsOfService = () => {;
 
 }}
             >
-              {sections.map((section, index) => (
+              {sections.map(section: unknown, index: unknown (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
@@ -940,7 +940,7 @@ const TermsOfService = () => {;
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {disputeResolution.map((step, index) => (
+                {disputeResolution.map(step: unknown, index: unknown (
                   <motion.div
                     key={step.step}
                     initial = {
@@ -1055,5 +1055,6 @@ const TermsOfService = () => {;
     </>;
   );
 };
-
+;
+export { TermsOfService };
 export default TermsOfService;}

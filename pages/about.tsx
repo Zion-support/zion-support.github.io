@@ -4,9 +4,10 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
-
+;
+export { function };
 export default function About(...args[]):  {
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className = "bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -180,7 +181,7 @@ export default function About(...args[]):  {
 
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyStats.map((stat, index) => (
+            {companyStats.map((stat, index (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -215,7 +216,7 @@ export default function About(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {coreValues.map((value, index) => (
+            {coreValues.map(value: unknown, index: unknown (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -250,7 +251,7 @@ export default function About(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map(member: unknown, index: unknown 
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,7 +265,7 @@ export default function About(...args[]):  {
                 <div className="text-blue-400 font-semibold mb-3">{member.role}</div>
                 <p className="text-gray-300 mb-4">{member.bio}</p>
                 <div className="space-y-1">
-                  {member.expertise.map((skill, skillIndex) => (
+                  {member.expertise.map((skill, skillIndex (
                     <div key={skillIndex} className="text-sm text-gray-400 flex items-center">
                       <span className="text-green-400 mr-2">•</span>
                       {skill}
@@ -294,7 +295,7 @@ export default function About(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown 
               <motion.div
                 key={tech.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,7 +306,7 @@ export default function About(...args[]):  {
               >
                 <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
                 <div className="space-y-2">
-                  {tech.items.map((item, itemIndex) => (
+                  {tech.items.map((item, itemIndex (
                     <div key={itemIndex} className="text-gray-300 flex items-center">
                       <span className="text-blue-400 mr-2">▸</span>
                       {item}

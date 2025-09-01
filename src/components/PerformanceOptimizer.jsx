@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-
+;
 export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
 
@@ -101,7 +101,7 @@ export const PerformanceOptimizer = ({ children }) => {
                 });
             }, {
                 rootMargin: '50px',
-                threshold: 0.1,
+                threshold: 0.1
             });
 
             // Observe all images with data-src
@@ -135,5 +135,6 @@ if (typeof window !== 'undefined') {
         }
     }
 }
-
+;
+export { PerformanceOptimizer };
 export default PerformanceOptimizer;

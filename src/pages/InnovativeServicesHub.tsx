@@ -33,7 +33,7 @@ import {
   Globe2,
   ShieldCheck
  } from 'lucide-react';
-
+;
 const InnovativeServicesHub: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
@@ -70,7 +70,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       id: 'green-tech',
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
-      icon: Globe,
+      icon: Globe
     };
       color: 'from-emerald-600 to-green-600',;
       route: '/green-it',;
@@ -135,7 +135,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
     };
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <motion.div
@@ -336,9 +336,9 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         </div>;
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-          {serviceCategories.map((category) => {;
+          {serviceCategories.map((category {;
             const IconComponent = category.icon;
-            return (
+            return 
               <motion.div
                 key = {category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -372,7 +372,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 <div className="mb-6">
                   <div className="text-sm text-slate-400 mb-3">Key Features:</div>
                   <div className="flex flex-wrap gap-2">
-                    {category.features.map((feature, index) => (
+                    {category.features.map((feature, index (
                       <span key={index} className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
                         {feature}
                       </span>
@@ -427,7 +427,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         </div>
 
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-          {featuredServices.map((service, index)  => (
+          {featuredServices.map(service: unknown, index: unknown (
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
@@ -598,5 +598,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { InnovativeServicesHub };
 export default InnovativeServicesHub;}}}}}}}

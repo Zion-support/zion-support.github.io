@@ -33,7 +33,8 @@ import { Brain,
   Award,
   Lightbulb
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIEducationPlatform(...args[]):  {
   const features = [
     "AI-powered personalized learning paths",
@@ -122,7 +123,7 @@ export default function AIEducationPlatform(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Education Platform - Zion Tech Group"
@@ -225,7 +226,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -306,7 +307,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -387,7 +388,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -468,7 +469,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -525,7 +526,7 @@ export default function AIEducationPlatform(...args[]):  {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>

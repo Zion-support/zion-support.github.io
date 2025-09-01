@@ -13,8 +13,8 @@ import {
   HardDrive,
   Check
 } from 'lucide-react';
-
-const ITInfrastructure = () => {
+;
+const ITInfrastructure = (...args: unknown[]): unknown => {
   const services = [
     {
       icon: <Server className="w-8 h-8" />,
@@ -63,7 +63,7 @@ const ITInfrastructure = () => {
     "Compliance ready"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-zion-slate-dark">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
@@ -111,7 +111,7 @@ const ITInfrastructure = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+            {services.map((service, index 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ const ITInfrastructure = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx (
                     <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {feature}
@@ -161,7 +161,7 @@ const ITInfrastructure = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -212,5 +212,6 @@ const ITInfrastructure = () => {
     </div>
   );
 };
-
+;
+export { ITInfrastructure };
 export default ITInfrastructure;

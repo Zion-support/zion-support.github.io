@@ -19,7 +19,8 @@ import {
   Users,
   Sparkles
 } from 'lucide-react';
-
+;
+export { function };
 export default function AIContentGenerator(...args[]):  {
   const features = [
     {
@@ -190,7 +191,7 @@ export default function AIContentGenerator(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title = "AI Content Generator - Create Engaging Content with AI"
@@ -283,7 +284,7 @@ export default function AIContentGenerator(...args[]):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -342,7 +343,7 @@ export default function AIContentGenerator(...args[]):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {contentTypes.map((type, index)  => (
+              {contentTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -386,7 +387,7 @@ export default function AIContentGenerator(...args[]):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index)  => (
+              {useCases.map(useCase: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -454,7 +455,7 @@ export default function AIContentGenerator(...args[]):  {
             </div>
             
             <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -534,7 +535,7 @@ export default function AIContentGenerator(...args[]):  {
             </div>
             
             <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -591,7 +592,7 @@ export default function AIContentGenerator(...args[]):  {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>

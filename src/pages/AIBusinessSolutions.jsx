@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+export { function };
 export default function AIBusinessSolutions() {
     const benefits = [
         {
@@ -183,3 +184,5 @@ export default function AIBusinessSolutions() {
         </div>
       </div>
     </div>)}
+
+}

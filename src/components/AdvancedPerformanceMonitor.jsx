@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
-
+;
 const mockSystemMetrics = [
   {
     id: '1',
@@ -75,7 +75,7 @@ const mockSystemMetrics = [
     lastUpdated: '2024-01-15T10:00:00.000Z'
   }
 ];
-
+;
 const mockPerformanceAlerts = [
   {
     id: '1',
@@ -100,7 +100,7 @@ const mockPerformanceAlerts = [
     status: 'active'
   }
 ];
-
+;
 export function AdvancedPerformanceMonitor({ enabled = true }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);

@@ -43,7 +43,7 @@ import {
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
 ];
-
+;
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",
@@ -74,7 +74,7 @@ const digitalTwinTechnologies = [
     reliability: "Critical"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -104,7 +104,7 @@ const successStories = [
     logo: "RPG"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -135,7 +135,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const digitalTwinBenefits = [
   {
     title: "Real-time Monitoring",
@@ -162,7 +162,8 @@ const digitalTwinBenefits = [
     examples["Energy optimization", "Maintenance planning", "Resource allocation"]
   }
 ];
-
+;
+export { function };
 export default function DigitalTwin() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -836,3 +837,7 @@ export default function DigitalTwin() {
       </section>
     </div>
   )}
+
+
+}
+}

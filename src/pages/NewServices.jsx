@@ -569,13 +569,25 @@ export function NewServices() {
             </div>
           </motion.div>
         </div>)}
-    </div>)}
+    </div>)};
+export { NewServices };
+export default NewServices;
+;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
+export default NewServices;
 export default NewServices;
 
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
+
+
+
+}
+
+
+}
+
+}
+}

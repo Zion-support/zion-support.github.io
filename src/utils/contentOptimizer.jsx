@@ -193,5 +193,6 @@ export class ContentOptimizer {
     }
 }
 
-
+;
+export { ContentOptimizer };
 export default ContentOptimizer;

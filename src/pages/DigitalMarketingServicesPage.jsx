@@ -170,6 +170,7 @@ const categories = [
     { name: "Branding", value: "branding", icon: <Eye className="h-4 w-4"/> },
     { name: "MarTech", value: "martech", icon: <Monitor className="h-4 w-4"/> }
 ];
+export { function };
 export default function DigitalMarketingServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
@@ -273,3 +274,7 @@ export default function DigitalMarketingServicesPage() {
         </div>
       </div>
     </div>)}
+
+
+}
+}

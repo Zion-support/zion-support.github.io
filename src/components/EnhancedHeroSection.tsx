@@ -19,6 +19,7 @@ import { ArrowRight,
 
 interface HeroSlide {
 
+
   title: string;
   subtitle: string;
   description: string;
@@ -29,11 +30,12 @@ interface HeroSlide {
   gradient: string;
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> 
-}[]}
 
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+}[]}
+;
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: unknown[]): unknown {
+  const [currentSlide, setCurrentSlide] = useState<typeof 0>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
   const heroSlides: HeroSlide[] = [
     {
@@ -86,21 +88,21 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
   ];
 
-  useEffect(()  => {
+  useEffect(: unknown {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    const interval = setInterval(: unknown {;
+      setCurrentSlide(prev: unknown (prev + 1) % heroSlides.length);
     }, 6000);
 
-    return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
+    return : unknown clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
 
-  const nextSlide = () => {;
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  const nextSlide = (...args: unknown[]): unknown => {;
+    setCurrentSlide(prev: unknown (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false)};
 
-  const prevSlide = () => {;
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  const prevSlide = (...args: unknown[]): unknown => {;
+    setCurrentSlide(prev: unknown (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
 
             scale: [1, 1.1, 1]
@@ -109,18 +111,18 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         ></motion.div>
         
         {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map(_: unknown, i: unknown (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
             style={{
               left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
+              top: `${30 + i * 10}%`
             }}
             animate = {
   {
               y: [0, -20, 0],
-              opacity: [0.4, 1, 0.4],
+              opacity: [0.4, 1, 0.4]
   
 
 }}
@@ -128,7 +130,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   {
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              delay: i * 0.3,
+              delay: i * 0.3
   
 
 }}
@@ -227,7 +229,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData.features.map((feature, index) => (
+                  {currentSlideData.features.map(feature: unknown, index: unknown (
                     <motion.div
                       key={feature}
                       initial = {
@@ -358,7 +360,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
             {/* Enhanced floating stats cards */}
             <div className="absolute -bottom-6 -left-6 space-y-4">;
-              {currentSlideData.stats.map((stat, index) => (;
+              {currentSlideData.stats.map(stat: unknown, index: unknown (;
                 <motion.div
                   key={stat.label}
                   initial = {
@@ -447,10 +449,9 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           </motion.button>
 
           <div className="flex space-x-2">
-            {heroSlides.map((_, index) => (
-              <motion.button
+            {heroSlides.map(_: unknown, index: unknown <motion.button
                 key={index}
-                onClick={() => goToSlide(index)}
+                onClick={(: unknown goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
                     ? 'bg-zion-cyan w-8'
@@ -532,5 +533,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   );
 }
 });
-
+;
+export { EnhancedHeroSection };
 export default EnhancedHeroSection;

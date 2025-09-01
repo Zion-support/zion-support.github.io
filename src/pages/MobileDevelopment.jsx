@@ -49,7 +49,7 @@ import {
     technologies["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
   }
 ];
-
+;
 const mobileTechnologies = [
   {
     name: "iOS Development",
@@ -80,7 +80,7 @@ const mobileTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -110,7 +110,7 @@ const successStories = [
     logo: "LC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -141,7 +141,7 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
 const mobileBenefits = [
   {
     title: "Enhanced User Experience",
@@ -168,7 +168,8 @@ const mobileBenefits = [
     examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"];
   }
 ];
-
+;
+export { function };
 export default function MobileDevelopment() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -842,3 +843,7 @@ export default function MobileDevelopment() {
       </section>
     </div>
   )}
+
+
+}
+}

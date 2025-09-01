@@ -5,12 +5,14 @@ import { ArrowRight, CheckCircle, LucideIcon  } from 'lucide-react.ts';
 
 interface Service {
 
+
   title: string;
   description: string;
   icon: LucideIcon;
   href: string;
   features: string[];
   color: string;
+
 
 }
 
@@ -19,11 +21,11 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {
   services: Service[];
 
 }
-
-export function ServicesGrid(...args: any[]): any {
-  return (
+;
+export function ServicesGrid(...args: unknown[]): unknown {
+  return 
     <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-      {services.map((service, index)  => (
+      {services.map((service, index 
         <motion.div
           key={service.title}
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +53,7 @@ export function ServicesGrid(...args: any[]): any {
           </p>
           
           <div className="grid grid-cols-2 gap-3 mb-6">
-            {service.features.map((feature) => (
+            {service.features.map((feature (
               <motion.div 
                 key={feature} 
                 className="flex items-center space-x-2 text-sm text-gray-300 group-hover:text-gray-200 transition-colors"
@@ -81,5 +83,6 @@ export function ServicesGrid(...args: any[]): any {
     </div>
   );
 }
-
+;
+export { ServicesGrid };
 export default ServicesGrid;

@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIBrainInterface() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Brain Interface - Zion Tech Group" description="AI-powered brain interface solution that transforms your operations with intelligent automation and real-time insights." keywords="AI brain interface, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibraininterface/"/>
@@ -273,3 +274,5 @@ export default function AIBrainInterface() {
         </div>
       </section>
     </div>)}
+
+}

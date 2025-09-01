@@ -193,4 +193,5 @@ const Sitemap = () => {
         </div>
       </div>
     </div>)};
+export { Sitemap };
 export default Sitemap;

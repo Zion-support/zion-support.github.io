@@ -71,4 +71,5 @@ const SpaceTech = () => {
         </div>
       </section>
     </div>)};
+export { SpaceTech };
 export default SpaceTech;

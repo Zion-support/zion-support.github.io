@@ -238,5 +238,6 @@ const CuttingEdgeServicesShowcase = () => {
         </div>
       </div>
     </div>)};
+export { CuttingEdgeServicesShowcase };
 export default CuttingEdgeServicesShowcase;
 }}}}}}}}

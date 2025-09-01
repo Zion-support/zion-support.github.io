@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
+import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = props {;
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
@@ -62,9 +62,9 @@ const pricingTiers = [
     color: "from-green-500 to-emerald-500";
   };
 ];
-
-export function PricingSection() {
-  return (
+;
+export function PricingSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -102,7 +102,7 @@ export function PricingSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index) => (
+          {pricingTiers.map((tier, index 
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
@@ -146,7 +146,7 @@ export function PricingSection() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
@@ -217,6 +217,9 @@ export function PricingSection() {
     </section>;
   );
 }
+;
+export { PricingSection };
+export default PricingSection;
+export default PricingSection;
 
-export default PricingSection;
-export default PricingSection;
+}

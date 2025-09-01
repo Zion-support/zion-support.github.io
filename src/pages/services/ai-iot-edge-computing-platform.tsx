@@ -1,9 +1,9 @@
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
-
+;
 const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
-  return (
+  return 
     <>
       <SEO
         title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
@@ -105,7 +105,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   description: "Built-in security features with local data processing and privacy-preserving AI algorithms.",
                   icon: "🔒"
                 }
-              ].map((feature, index)   => (
+              ].map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -169,7 +169,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                 { metric: "80%", description: "Reduction in cloud costs" },
                 { metric: "95%", description: "Data processing accuracy" },
                 { metric: "60%", description: "Improvement in reliability" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -246,7 +246,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   description: "Precision farming and crop monitoring with AI-powered edge analytics.",
                   features: ["Crop monitoring", "Soil analysis", "Irrigation optimization"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -270,7 +270,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
-                    {useCase.features.map((feature, featureIndex) => (
+                    {useCase.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-blue-300 flex items-center">
                         <span className="text-green-400 mr-2">✓</span>
                         {feature}
@@ -313,7 +313,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               {[
                 "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",
                 "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB"
-              ].map((tech, index)   => (
+              ].map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -418,7 +418,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -461,7 +461,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-white">
                         <span className="text-green-400 mr-3">✓</span>
                         {feature}
@@ -569,5 +569,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { AIIoTEdgeComputingPlatform };
 export default AIIoTEdgeComputingPlatform;

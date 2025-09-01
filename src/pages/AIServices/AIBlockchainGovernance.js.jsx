@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIBlockchainGovernance() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Blockchain Governance - Zion Tech Group" description="AI-powered blockchain governance solution that transforms your operations with intelligent automation and real-time insights." keywords="AI blockchain governance, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiblockchaingovernance/"/>

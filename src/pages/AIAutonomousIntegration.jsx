@@ -169,4 +169,5 @@ const AIAutonomousIntegration = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousIntegration };
 export default AIAutonomousIntegration;

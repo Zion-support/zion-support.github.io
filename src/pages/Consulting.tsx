@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
-
-const Consulting = () => {
+;
+const Consulting = (...args: unknown[]): unknown => {
   const consultingServices = [
     {
       icon: Lightbulb,
@@ -108,7 +108,7 @@ const Consulting = () => {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -152,7 +152,7 @@ const Consulting = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultingServices.map((service, index) => (
+            {consultingServices.map((service, index 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -160,7 +160,7 @@ const Consulting = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
@@ -187,7 +187,7 @@ const Consulting = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
+            {industries.map(industry: unknown, index: unknown (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
@@ -213,7 +213,7 @@ const Consulting = () => {
                 solutions that drive real business value and competitive advantage.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
                     {benefit}
@@ -252,7 +252,7 @@ const Consulting = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((phase, index) => (
+            {process.map(phase: unknown, index: unknown (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
@@ -289,5 +289,6 @@ const Consulting = () => {
     </div>;
   );
 };
-
+;
+export { Consulting };
 export default Consulting;}}}}

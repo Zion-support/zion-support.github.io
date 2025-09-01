@@ -144,4 +144,5 @@ const AIAnalyticsCopilot = () => {
         </section>
       </div>
     </>)};
+export { AIAnalyticsCopilot };
 export default AIAnalyticsCopilot;

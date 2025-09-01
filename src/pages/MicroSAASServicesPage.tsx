@@ -1,8 +1,8 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
-const MicroSAASServicesPage = () => {
-  return (
+;
+const MicroSAASServicesPage = (...args: unknown[]): unknown => {
+  return 
     <>
       <SEO
         title="Micro SAAS Services - Zion Tech Group"
@@ -46,10 +46,9 @@ const MicroSAASServicesPage = () => {
       <div className = "py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <Button
+            {categories.map((category <Button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={(: unknown setSelectedCategory(category)}
                 className={`${
                   selectedCategory === category
                     ? "bg-zion-purple text-white"
@@ -66,7 +65,7 @@ const MicroSAASServicesPage = () => {
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
+            {filteredServices.map(service: unknown (
               <Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
@@ -90,7 +89,7 @@ const MicroSAASServicesPage = () => {
                   <div className="mb-4">
                     <p className="text-sm text-zion-slate-light mb-3">{service.details}</p>
                     <div className="grid grid-cols-2 gap-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, index) => (
+                      {service.features.slice(0, 4).map(feature: unknown, index: unknown (
                         <div key={index} className="flex items-center text-xs text-zion-cyan">
                           <CheckCircle className="w-3 h-3 mr-2" />
                           {feature}
@@ -100,7 +99,7 @@ const MicroSAASServicesPage = () => {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white mb-2">Pricing Plans:</h4>
                       <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (
+                        {Object.entries(service.pricing).map([plan: unknown, price]: unknown (
                           <div key={plan} className="flex justify-between text-xs">
                             <span className="text-zion-slate-light capitalize">{plan}:</span>
                             <span className="text-zion-cyan font-semibold">{String(price)}</span>
@@ -113,7 +112,7 @@ const MicroSAASServicesPage = () => {
                       <span className="text-zion-cyan font-semibold">{service.freeTrial}</span>
                     </div>
                     <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_: unknown, i: unknown (
                         <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`} />
                       ))}
                       <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>

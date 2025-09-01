@@ -10,7 +10,7 @@ import { formatDistanceToNow } from "date-fns";
 import PostCard from "@/components/community/PostCard";
 import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
-// Mock user data
+// Mock user data;
 const mockUser = {
   id: "user1",
     name: "Alex Johnson",
@@ -47,7 +47,7 @@ const mockUser = {
     isVerified: true,
     isModerator: false
 };
-// Mock posts by this user
+// Mock posts by this user;
 const userPosts = [
     {
         id: "1",
@@ -100,6 +100,7 @@ const userPosts = [
         replyCount: 6
     }
 ];
+export { function };
 export default function CommunityProfilePage() {
     const { userId } = useParams();
     const [user, setUser] = useState(null);

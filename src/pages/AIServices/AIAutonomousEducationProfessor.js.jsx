@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIAutonomousEducationProfessor() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Education Professor - Zion Tech Group" description="AI-powered autonomous education professor solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous education professor, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouseducationprofessor/"/>

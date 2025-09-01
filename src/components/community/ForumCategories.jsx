@@ -1,3 +1,4 @@
+export { function };
 export default function ForumCategories() {
     const categories = [
         {
@@ -37,3 +38,10 @@ export default function ForumCategories() {
           </div>
         </div>))}
     </div>)}
+
+
+
+}
+
+}
+}

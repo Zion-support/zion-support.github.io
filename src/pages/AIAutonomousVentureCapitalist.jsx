@@ -581,7 +581,7 @@ import {
     technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]
   }
 ];
-
+;
 const vcTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -612,7 +612,7 @@ const vcTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -642,7 +642,7 @@ const successStories = [
     logo: "SVL"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -673,7 +673,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const vcBenefits = [
   {
     title: "Better Investment Decisions",
@@ -700,7 +700,8 @@ const vcBenefits = [
     examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];
   }
 ];
-
+;
+export { function };
 export default function AIAutonomousVentureCapitalist() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1374,3 +1375,7 @@ export default function AIAutonomousVentureCapitalist() {
       </section>
     </div>
   )}
+
+
+}
+}

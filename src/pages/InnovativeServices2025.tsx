@@ -139,11 +139,12 @@ import { Brain,
   CalendarMonth2,
   CalendarYear2
  } from 'lucide-react.ts';
-
-export default function InnovativeServices2025(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
+;
+export { function };
+export default function InnovativeServices2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [sortBy, setSortBy] = useState<typeof 'popularity'>('popularity');
 
   // Enhanced Services Catalog 2025
   const services = [
@@ -397,11 +398,11 @@ export default function InnovativeServices2025(...args: any[]): any {
   ];
 
   const categories = [
-    { id: any'all', name: 'All Services', icon: Star, count: services.length },;
+    { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
-    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
-    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
-    { id: any'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
+    { id: unknown'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
+    { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
+    { id: unknown'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
   ];
 
   const filteredServices = services.filter(service => {
@@ -411,7 +412,7 @@ export default function InnovativeServices2025(...args: any[]): any {
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price-low':
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -425,7 +426,7 @@ export default function InnovativeServices2025(...args: any[]): any {
     }
   });
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">
@@ -495,10 +496,9 @@ export default function InnovativeServices2025(...args: any[]): any {
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
+              {categories.map((category <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-zion-blue text-white'
@@ -521,14 +521,14 @@ export default function InnovativeServices2025(...args: any[]): any {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
                 />
                 <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light" />
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="px-4 py-2 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
               >
                 <option value="popularity">Most Popular</option>
@@ -553,7 +553,7 @@ export default function InnovativeServices2025(...args: any[]): any {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -592,7 +592,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-zion-blue-light mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                         <li key={idx} className="text-xs text-zion-blue-light flex items-center gap-2">
                           <div className="w-1.5 h-1.5 bg-zion-blue rounded-full"></div>
                           {feature}
@@ -610,7 +610,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                     </div>
                     <div className="text-center">
                       <div className="flex items-center gap-1 mb-1">
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map(_: unknown, i: unknown (
                           <Star
                             key={i}
                             className={`w-4 h-4 ${

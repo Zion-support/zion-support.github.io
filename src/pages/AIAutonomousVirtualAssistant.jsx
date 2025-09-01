@@ -169,4 +169,5 @@ const AIAutonomousVirtualAssistant = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousVirtualAssistant };
 export default AIAutonomousVirtualAssistant;

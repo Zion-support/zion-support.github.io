@@ -20,7 +20,7 @@ import {
   FileText,
   Clock,
   Eye,
-  AlertTriangle
+  AlertTriangle;
 const healthcareSolutions = [
   {
     id: 1,
@@ -119,7 +119,7 @@ const healthcareSolutions = [
     compliance["NIST", "ISO 27001", "HITRUST"]
   }
 ];
-
+;
 const complianceStandards = [
   {
     name: "HIPAA",
@@ -146,7 +146,7 @@ const complianceStandards = [
     requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -176,7 +176,7 @@ const successStories = [
     logo: "DD"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -207,7 +207,8 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
+export { function };
 export default function HealthcareSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -789,3 +790,10 @@ export default function HealthcareSolutions() {
       </section>
     </div>
   )}
+
+
+
+}
+
+}
+}

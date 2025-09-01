@@ -27,8 +27,9 @@ import { TrendingUp,
   Filter,
   PieChart
  } from 'lucide-react.ts';
-
-export default function AIMarketingAutomation(...args: any[]): any {
+;
+export { function };
+export default function AIMarketingAutomation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -129,7 +130,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
@@ -202,7 +203,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
             </motion.div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -240,7 +241,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
             </motion.div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {marketingChannels.map((channel, index)  => (
+              {marketingChannels.map(channel: unknown, index: unknown (
                 <motion.div
                   key={channel.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -278,7 +279,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
             </motion.div>
             
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index)  => (
+              {useCases.map(useCase: unknown, index: unknown (
                 <motion.div
                   key={useCase.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -316,7 +317,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-6">
-                {benefits.slice(0, 4).map((benefit, index) => (
+                {benefits.slice(0, 4).map(benefit: unknown, index: unknown (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -330,7 +331,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                 ))}
               </div>
               <div className="space-y-6">
-                {benefits.slice(4).map((benefit, index) => (
+                {benefits.slice(4).map(benefit: unknown, index: unknown (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: 20 }}

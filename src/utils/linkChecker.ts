@@ -1,22 +1,26 @@
 export interface LinkInfo {
 
+
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
   error?: string;
 
-}
 
+}
+;
 export interface PageInfo {
+
 
   path: string;
   title: string;
   links: LinkInfo[];
   exists: boolean;
 
-}
 
+}
+;
 export class LinkChecker {
   private baseUrl: string;
   private visitedUrls: Set<string> = new Set();
@@ -164,5 +168,6 @@ export class LinkChecker {
     return this.missingPages;
   }
 }
-
+;
+export { LinkChecker };
 export default LinkChecker;

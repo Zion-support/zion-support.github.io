@@ -10,8 +10,8 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   animation?: 'pulse' | 'wave' | 'none';
 
 }
-
-export function Skeleton(...args: any[]): any {
+;
+export function Skeleton(...args: unknown[]): unknown {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   
   const variantClasses = {
@@ -45,11 +45,11 @@ export function Skeleton(...args: any[]): any {
   );
 }
 
-// Predefined skeleton components for common use cases
-export function SkeletonText(...args: any[]): any {
+// Predefined skeleton components for common use cases;
+export function SkeletonText(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: anylines }).map((_, i)  => (
+      {Array.from({ length: anylines }).map(_: unknown, i: unknown (
         <Skeleton
           key={i}
           variant="text"
@@ -60,8 +60,8 @@ export function SkeletonText(...args: any[]): any {
     </div>
   );
 }
-
-export function SkeletonCard(...args: any[]): any {
+;
+export function SkeletonCard(...args: unknown[]): unknown {
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
@@ -79,21 +79,21 @@ export function SkeletonCard(...args: any[]): any {
     </div>
   );
 }
-
-export function SkeletonTable(...args: any[]): any {
+;
+export function SkeletonTable(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: anycolumns }).map((_, i)  => (
+        {Array.from({ length: anycolumns }).map(_: unknown, i: unknown (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
       {/* Rows */}
-      {Array.from({ length: anyrows }).map((_, rowIndex)  => (
+      {Array.from({ length: anyrows }).map(_: unknown, rowIndex: unknown (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+          {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
             <Skeleton
               key={colIndex}
               variant="text"
@@ -106,8 +106,8 @@ export function SkeletonTable(...args: any[]): any {
     </div>
   );
 }
-
-export function SkeletonGrid(...args: any[]): any {
+;
+export function SkeletonGrid(...args: unknown[]): unknown {
   return (
     <div className={cn(
       'grid gap-6',
@@ -117,14 +117,14 @@ export function SkeletonGrid(...args: any[]): any {
       columns === 4 && 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4',
       className
     )}>
-      {Array.from({ length: items }).map((_, i)  => (
+      {Array.from({ length: items }).map(_: unknown, i: unknown (
         <SkeletonCard key={i} />
       ))}
     </div>
   );
 }
-
-export function SkeletonHero(...args: any[]): any {
+;
+export function SkeletonHero(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-8', className)}>
       {/* Title */}

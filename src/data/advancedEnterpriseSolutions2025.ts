@@ -1,5 +1,6 @@
 export interface EnterpriseSolution {
 
+
   id: string;
   title: string;
   description: string;
@@ -14,7 +15,8 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,7 +25,7 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-  support: string}
+  support: string};
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
     id: 'enterprise-cloud-migration',
@@ -379,3 +381,7 @@ export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSo
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 };
+
+
+}
+}

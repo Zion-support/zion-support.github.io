@@ -17,11 +17,11 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
       },
-      isFallback: false,
+      isFallback: false
     };
-  },
+  }
 }));
 
 // Mock Next.js Image component
@@ -30,7 +30,7 @@ jest.mock('next/image', () => ({
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
-  },
+  }
 }));
 
 // Mock Next.js Link component
@@ -42,14 +42,14 @@ jest.mock('next/link', () => ({
         {children}
       </a>
     );
-  },
+  }
 }));
 
 // Global test utilities
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
+  disconnect: jest.fn()
 }));
 
 global.matchMedia = jest.fn().mockImplementation((query) => ({
@@ -60,5 +60,5 @@ global.matchMedia = jest.fn().mockImplementation((query) => ({
   removeListener: jest.fn(),
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn(),
+  dispatchEvent: jest.fn()
 }));

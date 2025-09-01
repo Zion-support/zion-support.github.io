@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
-describe('AccessibilityEnhancer', () => {
-  it('renders children correctly', () => {
+describe'AccessibilityEnhancer': unknown, (: unknown {
+  it'renders children correctly': unknown, (: unknown {
     render(
       <AccessibilityEnhancer>
         <div data-testid="test-child">Test Content</div>
@@ -14,7 +14,7 @@ describe('AccessibilityEnhancer', () => {
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 
-  it('applies accessibility props correctly', () => {
+  it'applies accessibility props correctly': unknown, (: unknown {
     render(
       <AccessibilityEnhancer
         role="button"
@@ -30,7 +30,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '0');
   });
 
-  it('handles keyboard events correctly', () => {
+  it'handles keyboard events correctly': unknown, (: unknown {
     const mockOnKeyDown = jest.fn();
     
     render(
@@ -48,7 +48,7 @@ describe('AccessibilityEnhancer', () => {
     expect(mockOnKeyDown).toHaveBeenCalled();
   });
 
-  it('applies focus styles when focusable', () => {
+  it'applies focus styles when focusable': unknown, (: unknown {
     render(
       <AccessibilityEnhancer focusable={true}>
         <span>Content</span>
@@ -59,7 +59,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveClass('focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500');
   });
 
-  it('disables focus when not focusable', () => {
+  it'disables focus when not focusable': unknown, (: unknown {
     render(
       <AccessibilityEnhancer focusable={false}>
         <span>Content</span>

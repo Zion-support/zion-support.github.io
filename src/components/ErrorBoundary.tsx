@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-
+;
 import { 
   AlertTriangle, 
   RefreshCw, 
@@ -13,20 +13,24 @@ import {
 } from 'lucide-react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
+
 
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 
   errorId: string;
   showDetails: boolean;
-}
 
+}
+;
 class ErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
@@ -67,7 +71,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Example: Sentry.captureException(error, { extra: errorInfo });
   }
 
-  handleRetry = () => {
+  handleRetry = : unknown {
 
     this.setState({
       hasError: false,
@@ -79,11 +83,11 @@ class ErrorBoundary extends Component<Props, State> {
     });
   };
 
-  handleGoHome = () => {
+  handleGoHome = : unknown {
     window.location.href = '/';
   };
 
-  handleReportError = () => {
+  handleReportError = : unknown {
     const { error, errorInfo, errorId } = this.state;
     const errorReport = {
       errorId,
@@ -103,7 +107,7 @@ class ErrorBoundary extends Component<Props, State> {
     alert('Error report copied to clipboard. Please send this to support.');
   };
 
-  toggleDetails = () => {
+  toggleDetails = : unknown {
     this.setState(prev => ({ showDetails: !prev.showDetails }));
   };
 
@@ -234,6 +238,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-
+;
+export { ErrorBoundary };
 export default ErrorBoundary;
 

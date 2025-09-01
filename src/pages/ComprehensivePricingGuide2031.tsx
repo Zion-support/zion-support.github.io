@@ -44,19 +44,19 @@ import {
   Truck
 } from 'lucide-react';
 import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
-
-const ComprehensivePricingGuide2031: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+const ComprehensivePricingGuide2031: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [selectedTier, setSelectedTier] = useState<string>('Professional');
 
-  const categories = useMemo(() => {
+  const categories = useMemo(: unknown {
     const cats = ['All', ...Array.from(new Set(COMPREHENSIVE_PRICING_GUIDE_2031.map(service => service.category)))];
     return cats;
   }, []);
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo(: unknown {
     let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
 
     if (searchQuery) {
@@ -74,7 +74,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     return filtered;
   }, [searchQuery, selectedCategory]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'FinTech & Trading': Coins,
       'Healthcare & AI': Heart,
@@ -90,7 +90,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     return iconMap[category] || Globe;
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       'Revolutionary': 'from-purple-500 to-pink-500',
       'Cutting-edge': 'from-blue-500 to-indigo-500',
@@ -100,11 +100,11 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     return colorMap[level] || 'from-gray-500 to-slate-500';
   };
 
-  const toggleServiceExpansion = (id: string) => {
+  const toggleServiceExpansion = (...args: unknown[]): unknown => {
     setExpandedService(expandedService === id ? null : id);
   };
 
-  const getTierColor = (tierName: string) => {
+  const getTierColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       'Starter': 'from-gray-500 to-slate-500',
       'Basic': 'from-blue-500 to-cyan-500',
@@ -116,7 +116,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     return colorMap[tierName] || 'from-gray-500 to-slate-500';
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -196,17 +196,16 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={(: unknown setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     selectedCategory === category
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
@@ -223,7 +222,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               <span className="text-gray-400 text-sm">Pricing Tier:</span>
               <select
                 value={selectedTier}
-                onChange={(e) => setSelectedTier(e.target.value)}
+                onChange={e: unknown setSelectedTier(e.target.value)}
                 className="bg-white/10 border border-cyan-400/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
               >
                 <option value="Starter">Starter</option>
@@ -242,7 +241,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredServices.map((service) => {
+            {filteredServices.map(service: unknown {
               const CategoryIcon = getCategoryIcon(service.category);
               const selectedPricingTier = service.pricingTiers.find(tier => tier.name === selectedTier) || service.pricingTiers[1];
               
@@ -269,7 +268,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                         </div>
                       </div>
                       <button
-                        onClick={() => toggleServiceExpansion(service.id)}
+                        onClick={: unknown toggleServiceExpansion(service.id)}
                         className="text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         {expandedService === service.id ? (
@@ -285,10 +284,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                     {/* Pricing Tiers */}
                     <div className="mb-4">
                       <div className="flex flex-wrap gap-2 mb-3">
-                        {service.pricingTiers.map((tier) => (
-                          <button
+                        {service.pricingTiers.map(tier: unknown <button
                             key={tier.name}
-                            onClick={() => setSelectedTier(tier.name)}
+                            onClick={(: unknown setSelectedTier(tier.name)}
                             className={`px-3 py-1 rounded-lg text-xs font-medium transition-all ${
                               selectedTier === tier.name
                                 ? `bg-gradient-to-r ${getTierColor(tier.name)} text-white shadow-lg`
@@ -331,7 +329,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                   </div>
 
                   {/* Expanded Content */}
-                  {expandedService === service.id && (
+                  {expandedService === service.id && 
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
@@ -347,7 +345,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             Features - {selectedPricingTier.name} Tier
                           </h4>
                           <div className="grid grid-cols-1 gap-2">
-                            {selectedPricingTier.features.map((feature, index) => (
+                            {selectedPricingTier.features.map((feature, index (
                               <div key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                 <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                                 <span>{feature}</span>
@@ -363,7 +361,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             Limitations - {selectedPricingTier.name} Tier
                           </h4>
                           <div className="grid grid-cols-1 gap-2">
-                            {selectedPricingTier.limitations.map((limitation, index) => (
+                            {selectedPricingTier.limitations.map(limitation: unknown, index: unknown (
                               <div key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                 <div className="w-1.5 h-1.5 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
                                 <span>{limitation}</span>
@@ -401,7 +399,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             Market Competitors
                           </h4>
                           <div className="flex flex-wrap gap-2">
-                            {service.competitors.map((competitor, index) => (
+                            {service.competitors.map(competitor: unknown, index: unknown (
                               <span
                                 key={index}
                                 className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
@@ -478,5 +476,6 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     </div>
   );
 };
-
+;
+export { ComprehensivePricingGuide2031 };
 export default ComprehensivePricingGuide2031;

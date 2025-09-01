@@ -11,8 +11,8 @@ import { FileText,
   Clock,
   Eye
  } from 'lucide-react';
-
-export function BlogPage(...args: any[]): any {
+;
+export function BlogPage(...args: unknown[]): unknown {
   const blogPosts = [
     {
       id: 1,
@@ -92,7 +92,7 @@ export function BlogPage(...args: any[]): any {
     'Healthcare AI'
   ];
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -127,7 +127,7 @@ export function BlogPage(...args: any[]): any {
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
               <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-                {categories.map((category)  => (
+                {categories.map((category (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -137,7 +137,7 @@ export function BlogPage(...args: any[]): any {
 
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index)  => (
+          {blogPosts.map(post: unknown, index: unknown (
             <motion.article
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
@@ -187,7 +187,7 @@ export function BlogPage(...args: any[]): any {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.slice(0, 3).map((tag) => (
+                  {post.tags.slice(0, 3).map(tag: unknown (
                     <span key={tag} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                       {tag}
                     </span>

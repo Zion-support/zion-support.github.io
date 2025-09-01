@@ -25,8 +25,8 @@ import {
   MessageCircle,
   Zap as ZapIcon
 } from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {;
-  const scrollToTop = () => {;
+export const FuturisticFooter: React.FC = props {;
+  const scrollToTop = (...args: unknown[]): unknown => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const currentYear = new Date().getFullYear();
@@ -90,7 +90,7 @@ export const FuturisticFooter: React.FC = () => {;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
   ];
-  return (
+  return 
     <footer className = "relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />
@@ -159,7 +159,7 @@ export const FuturisticFooter: React.FC = () => {;
               </motion.div>
             </div>
             {/* Footer Links */}
-            {footerSections.map((section, index) => (
+            {footerSections.map((section, index 
               <div key={section.title}>
                 <motion.div
                   initial = {
@@ -202,7 +202,7 @@ export const FuturisticFooter: React.FC = () => {;
                     {section.title}
                   </h3>
                   <ul className="space-y-2">
-                    {section.links.map((link) => (
+                    {section.links.map((link (
                       <li key={link.name}>
                         <Link
                           to={link.href}
@@ -340,7 +340,7 @@ export const FuturisticFooter: React.FC = () => {;
               </div>
               {/* Social Links */}
               <div className="flex items-center space-x-4">;
-                {socialLinks.map((social) => (;
+                {socialLinks.map(social: unknown (;
                   <a
                     key={social.name}
                     href={social.href}

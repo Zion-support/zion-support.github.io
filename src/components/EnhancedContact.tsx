@@ -16,17 +16,21 @@ import {
 
 interface ContactFormData {
 
+
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-  message: string}
+  message: string
+}
 
 interface ContactFormErrors {
 
-  [key: string]: string}
 
+  [key: string]: string
+}
+;
 export function EnhancedContact(...args[]):  {
   const [formData, setFormData] = useState<any>({
     name: '',;
@@ -38,8 +42,8 @@ export function EnhancedContact(...args[]):  {
   });
 
   const [errors, setErrors] = useState<any>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [isSubmitted, setIsSubmitted] = useState<typeof false>(false);
 
   const services = [
     { value: 'general', label: 'General Inquiry' },
@@ -106,7 +110,7 @@ export function EnhancedContact(...args[]):  {
   ];
 
   if (isSubmitted) {
-    return (
+    return 
       <motion.div
         initial = {
   { opacity: 0,
@@ -225,7 +229,7 @@ export function EnhancedContact(...args[]):  {
 
 }}
             transition={{ delay: 0.5 }}
-            onClick={() => setIsSubmitted(false)}
+            onClick={( setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
           >;
             Send Another Message;
@@ -235,7 +239,7 @@ export function EnhancedContact(...args[]):  {
     );
   }
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -299,7 +303,7 @@ export function EnhancedContact(...args[]):  {
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
 
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info, index (
                 <motion.div
                   key={info.title}
                   initial = {
@@ -422,7 +426,7 @@ export function EnhancedContact(...args[]):  {
                   id="name"
                   value={formData.name}
                   onChange = {
-  (e) => handleInputChange('name',
+  e: unknown handleInputChange('name',
   e.target.value)
 
 
@@ -490,7 +494,7 @@ export function EnhancedContact(...args[]):  {
                   id="email"
                   value={formData.email}
                   onChange = {
-  (e) => handleInputChange('email',
+  e: unknown handleInputChange('email',
   e.target.value)
 
 
@@ -559,7 +563,7 @@ export function EnhancedContact(...args[]):  {
                     id="phone"
                     value={formData.phone}
                     onChange = {
-  (e) => handleInputChange('phone',
+  e: unknown handleInputChange('phone',
   e.target.value)
 
 
@@ -580,7 +584,7 @@ export function EnhancedContact(...args[]):  {
                     id="company"
                     value={formData.company}
                     onChange = {
-  (e) => handleInputChange('company',
+  e: unknown handleInputChange('company',
   e.target.value)
 
 
@@ -604,7 +608,7 @@ export function EnhancedContact(...args[]):  {
                   id="service"
                   value={formData.service}
                   onChange = {
-  (e) => handleInputChange('service',
+  e: unknown handleInputChange('service',
   e.target.value)
 
 
@@ -633,7 +637,7 @@ export function EnhancedContact(...args[]):  {
                   rows={4}
                   value={formData.message}
                   onChange = {
-  (e) => handleInputChange('message',
+  e: unknown handleInputChange('message',
   e.target.value)
 
 

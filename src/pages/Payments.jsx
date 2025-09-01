@@ -2,6 +2,7 @@ import React from "react";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export { function };
 export default function Payments() {
     return (<>
 
@@ -91,7 +92,7 @@ export default function Payments() {
       </div>
       
     </>)}
-// Import UI components for Payment Settings tab
+// Import UI components for Payment Settings tab;
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";

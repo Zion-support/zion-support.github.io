@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react';
-
-export default function Solutions() {
+;
+export { function };
+export default function Solutions(...args: unknown[]): unknown {
 	const industrySolutions = [
 		{
 			icon: Building,
@@ -127,7 +128,7 @@ export default function Solutions() {
 		{ number: '99.9%', label: 'Uptime SLA', icon: Clock }
 	];
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -165,7 +166,7 @@ export default function Solutions() {
 						<p className="text-gray-600">Our solutions consistently deliver measurable business value</p>
 					</div>
 					<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-						{successMetrics.map((metric) => (
+						{successMetrics.map((metric (
 							<div key={metric.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
 									<metric.icon className="h-8 w-8 text-blue-600" />
@@ -188,7 +189,7 @@ export default function Solutions() {
 						</p>
 					</div>
 					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{industrySolutions.map((solution) => (
+						{industrySolutions.map(solution: unknown 
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -196,7 +197,7 @@ export default function Solutions() {
 								<h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
 								<p className="text-gray-600 mb-4">{solution.description}</p>
 								<ul className="space-y-2 mb-6">
-									{solution.features.map((feature, index) => (
+									{solution.features.map((feature, index (
 										<li key={index} className="flex items-center text-sm text-gray-600">
 											<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 											{feature}
@@ -225,7 +226,7 @@ export default function Solutions() {
 						</p>
 					</div>
 					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{technologySolutions.map((solution) => (
+						{technologySolutions.map(solution: unknown 
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-200">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 									<solution.icon className="w-8 h-8 text-white" />
@@ -233,7 +234,7 @@ export default function Solutions() {
 								<h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
 								<p className="text-gray-600 mb-4">{solution.description}</p>
 								<ul className="space-y-2 mb-6">
-									{solution.features.map((feature, index) => (
+									{solution.features.map((feature, index (
 										<li key={index} className="flex items-center text-sm text-gray-600">
 											<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 											{feature}
@@ -262,7 +263,7 @@ export default function Solutions() {
 						</p>
 					</div>
 					<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{useCaseSolutions.map((solution) => (
+						{useCaseSolutions.map(solution: unknown (
 							<div key={solution.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 group">
 								<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
 									<solution.icon className="w-6 h-6 text-blue-600" />

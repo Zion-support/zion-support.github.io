@@ -2,9 +2,9 @@ import React, { useState } from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
-
+;
 const PricingComparison: React.FC = (): JSX.Element => {;
-  const [selectedPlan, setSelectedPlan] = useState('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<typeof 'monthly'>('monthly');
 
   const pricingData = [
     {
@@ -329,13 +329,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;
     };
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number)   => {;
+  const calculateSavings = (...args: unknown[]): unknown => {;
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
     const savingsPercent = Math.round((savings / monthlyTotal) * 100);
     return { savings, savingsPercent }};
 
-  return (
+  return 
     <>
       <SEO
         title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
@@ -375,7 +375,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                   Monthly
                 </span>
                 <button
-                  onClick={() => setSelectedPlan(selectedPlan === 'monthly' ? 'yearly' : 'monthly')}
+                  onClick={( setSelectedPlan(selectedPlan === 'monthly' ? 'yearly' : 'monthly')}
                   className="relative w-16 h-8 bg-gray-600 rounded-full p-1 transition-colors duration-300"
                 >
                   <motion.div
@@ -398,7 +398,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
         {/* Pricing Tables */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-20">
-            {pricingData.map((category, categoryIndex) => (
+            {pricingData.map(category: unknown, categoryIndex: unknown 
               <motion.div
                 key={category.category}
                 initial = {
@@ -428,7 +428,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 </div>
 
                 <div className="space-y-16">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map((service, serviceIndex 
                     <motion.div
                       key={service.name}
                       initial = {
@@ -458,7 +458,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                       </div>
 
                       <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">;
-                        {service.plans.map((plan, planIndex)   => {;
+                        {service.plans.map((plan, planIndex {;
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (
                             <motion.div
@@ -509,7 +509,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                               </div>
 
                               <ul className="space-y-3 mb-8">
-                                {plan.features.map((feature, featureIndex) => (
+                                {plan.features.map(feature: unknown, featureIndex: unknown (
                                   <li key={featureIndex} className="flex items-center text-gray-300">
                                     <span className="text-green-400 mr-3">✓</span>
                                     {feature}
@@ -667,5 +667,6 @@ const PricingComparison: React.FC = (): JSX.Element => {;
       </div>;
     </>;
   )};
-
+;
+export { PricingComparison };
 export default PricingComparison;

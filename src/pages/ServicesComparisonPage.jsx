@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { PRICING_TIERS } from '@/data/advancedServices';
-// Service comparison data
+// Service comparison data;
 const SERVICE_COMPARISONS = [
     {
         category: "AI & Automation",
@@ -77,6 +77,7 @@ const SERVICE_COMPARISONS = [
         ]
 
 ];
+export { function };
 export default function ServicesComparisonPage() {
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
     return (<div className="min-h-screen bg-background">
@@ -304,3 +305,5 @@ export default function ServicesComparisonPage() {
         </div>
       </section>
     </div>)}
+
+}

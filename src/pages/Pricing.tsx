@@ -93,6 +93,7 @@ import {
 
   const savings = billingCycle === 'annual' ? 20 : 0;
 interface PricingTier {
+
   name: string;
   description: string;
   price: string;
@@ -100,11 +101,12 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: unknown;
   cta: string;
   ctaLink: string;
-}
 
+}
+;
 const pricingTiers: PricingTier[] = [
   {
     name: 'Starter',
@@ -178,7 +180,7 @@ const pricingTiers: PricingTier[] = [
     ctaLink: '/contact'
   }
 ];
-
+;
 const servicePricing = [
   {
     category: 'AI & Machine Learning',
@@ -222,7 +224,7 @@ const servicePricing = [
   }
 ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Pricing - Zion Tech Group"
@@ -261,7 +263,7 @@ const servicePricing = [
           >
             <div className="bg-slate-800/50 rounded-xl p-1 border border-slate-600/50">
               <button
-                onClick={() => setBillingCycle('monthly')}
+                onClick={( setBillingCycle('monthly')}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   billingCycle === 'monthly'
                     ? 'bg-cyan-400 text-white'
@@ -271,7 +273,7 @@ const servicePricing = [
                 Monthly
               </button>
               <button
-                onClick={() => setBillingCycle('annual')}
+                onClick={: unknown setBillingCycle('annual')}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   billingCycle === 'annual'
                     ? 'bg-cyan-400 text-white'
@@ -334,7 +336,7 @@ const servicePricing = [
         </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-3 mb-20">
-          {pricingTiers.map((tier, index) => (
+          {pricingTiers.map(tier: unknown, index: unknown 
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
@@ -349,7 +351,7 @@ const servicePricing = [
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -358,7 +360,7 @@ const servicePricing = [
                   </ul>
 
                   <button
-                    onClick={() => setSelectedPlan(plan.name)}
+                    onClick={: unknown setSelectedPlan(plan.name)}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
@@ -384,7 +386,7 @@ const servicePricing = [
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {servicePackages.map((pkg, index) => (
+            {servicePackages.map(pkg: unknown, index: unknown 
               <motion.div
                 key={pkg.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -405,7 +407,7 @@ const servicePricing = [
                 </div>
 
                 <ul className="space-y-2 mb-6">
-                  {pkg.features.map((feature, featureIndex) => (
+                  {pkg.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
@@ -442,7 +444,7 @@ const servicePricing = [
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {addOns.map((addon, index) => (
+            {addOns.map(addon: unknown, index: unknown (
               <motion.div
                 key={addon.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -494,7 +496,7 @@ const servicePricing = [
                 question: "Do you offer discounts for nonprofits?",
                 answer: "Yes, we offer special pricing for qualified nonprofit organizations. Contact us for more details about our nonprofit discount program."
               }
-            ].map((faq, index) => (
+            ].map(faq: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -529,7 +531,7 @@ const servicePricing = [
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -567,7 +569,7 @@ const servicePricing = [
         </motion.div>
 
         <div className="space-y-12">
-          {servicePricing.map((category, categoryIndex) => (
+          {servicePricing.map(category: unknown, categoryIndex: unknown 
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 30 }}
@@ -582,7 +584,7 @@ const servicePricing = [
               </div>
               
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map((service, serviceIndex (
                   <motion.div
                     key={service.name}
                     initial={{ opacity: 0, y: 20 }}
@@ -823,5 +825,6 @@ const servicePricing = [
     </div>
   );
 }
-
+;
+export { Pricing };
 export default Pricing;

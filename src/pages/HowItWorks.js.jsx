@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
+export { function };
 export default function HowItWorks() {
     const clientSteps = [
         {

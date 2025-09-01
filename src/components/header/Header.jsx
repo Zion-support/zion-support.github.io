@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
-
+;
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();

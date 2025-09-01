@@ -34,7 +34,7 @@ import {
   TrendingUp,
   MapPin,
   Layers,
-  RefreshCw,
+  RefreshCw,;
 import { 
   Wrench, 
   Clock, 
@@ -53,7 +53,7 @@ import {
   HardDrive,
   Router
 } from 'lucide-react';
-
+;
 const onsiteSupportSolutions = [
   {
     id: 1,
@@ -152,7 +152,7 @@ const onsiteSupportSolutions = [
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -182,7 +182,7 @@ const successStories = [
     logo: "FSF"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -213,7 +213,7 @@ const processSteps = [
     duration: "1-2 hours"
 
 ];
-
+;
 const supportBenefits = [
   {
     title: "Rapid Response",
@@ -240,7 +240,8 @@ const supportBenefits = [
     examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
 ];
-
+;
+export { function };
 export default function OnsiteSupport() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -914,3 +915,10 @@ export default function OnsiteSupport() {
       </section>
     </div>
   )}
+
+
+
+}
+
+}
+}

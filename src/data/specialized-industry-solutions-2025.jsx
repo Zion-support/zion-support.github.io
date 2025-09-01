@@ -520,5 +520,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         competitiveAdvantage: "AI-powered market intelligence with predictive analytics"
     }
 ];
-
+;
+export { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 };
 export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;

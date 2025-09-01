@@ -2,9 +2,9 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
-
+;
 const initialState = { items: [] };
-
+;
 function cartReducer(state, action) {
   switch (action.type) {
     case 'ADD_ITEM': {
@@ -43,9 +43,9 @@ function cartReducer(state, action) {
       return state;
   }
 }
-
+;
 const CartContext = createContext(null);
-
+;
 export function useCart() {
   const ctx = useContext(CartContext);
   if (!ctx) {
@@ -53,7 +53,7 @@ export function useCart() {
   }
   return ctx;
 }
-
+;
 export function CartProvider({ children }) {
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);

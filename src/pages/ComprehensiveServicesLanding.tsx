@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
-
+;
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
   const serviceCategories = [
     {
@@ -122,7 +122,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO
         title = "Comprehensive Services | Zion Tech Group"
@@ -200,7 +200,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="space-y-16">
-              {serviceCategories.map((category, categoryIndex) => (
+              {serviceCategories.map((category, categoryIndex 
                 <motion.div
                   key={category.name}
                   initial = {
@@ -230,7 +230,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                   </div>
 
                   <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                    {category.services.map((service, serviceIndex)   => (
+                    {category.services.map((service, serviceIndex (
                       <motion.div
                         key={service.title}
                         initial = {
@@ -320,7 +320,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                   url: "/services/ai-customer-experience-analytics",
                   cta: "Analyze Customer Data"
                 }
-              ].map((service, index)   => (
+              ].map(service: unknown, index: unknown 
                 <motion.div
                   key={service.title}
                   initial = {
@@ -347,7 +347,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
                     <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex (
                         <li key={benefitIndex} className="text-blue-300 flex items-center">
                           <span className="text-green-400 mr-2">✓</span>
                           {benefit}
@@ -440,5 +440,6 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
       </div>;
     </>;
   )};
-
+;
+export { ComprehensiveServicesLanding };
 export default ComprehensiveServicesLanding;

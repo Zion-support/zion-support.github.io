@@ -43,16 +43,16 @@ const globalOffices = [
     description: "Canadian market and development center";
   };
 ];
-
+;
 const globalStats = [
   { label: "Countries Served", value: "25+", icon: "🌍" },
   { label: "Global Clients", value: "500+", icon: "👥" },
   { label: "Languages Supported", value: "15+", icon: "🗣️" },
   { label: "24/7 Support", value: "Global", icon: "⏰" }
 ];
-
-export function GlobalPresenceSection() {
-  return (
+;
+export function GlobalPresenceSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -124,9 +124,9 @@ export function GlobalPresenceSection() {
 
 }}
         >;
-          {globalStats.map((stat, index)  => {;
+          {globalStats.map((stat, index {;
             const IconComponent = stat.icon;
-            return (
+            return 
               <div key = {stat.label} className="text-center">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 bg-blue-100 rounded-lg">
@@ -142,7 +142,7 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {globalStats.map((stat, index) => (
+          {globalStats.map((stat, index (
             <div key={stat.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{stat.icon}</span>
@@ -190,7 +190,7 @@ export function GlobalPresenceSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
+            {globalOffices.map(office: unknown, index: unknown (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
@@ -348,7 +348,8 @@ export function GlobalPresenceSection() {
       </div>;
     </section>;
   )};
-
+;
+export { GlobalPresenceSection };
 export default GlobalPresenceSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -357,6 +358,6 @@ export default GlobalPresenceSection;
     </section>;
   );
 }
-
+;
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;

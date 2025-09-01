@@ -29,7 +29,7 @@ import {
   Clock
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
-
+;
 export function ServicesOverview(...args[]):  {
   const serviceCategories = [
     {
@@ -132,7 +132,7 @@ export function ServicesOverview(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "py-20 bg-futuristic relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-10">
@@ -179,7 +179,7 @@ export function ServicesOverview(...args[]):  {
 
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {serviceCategories.map((category, index)  => (
+          {serviceCategories.map((category, index (
             <motion.div
               key={category.id}
               className="group"
@@ -281,7 +281,7 @@ export function ServicesOverview(...args[]):  {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
+            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 className="card-futuristic group"

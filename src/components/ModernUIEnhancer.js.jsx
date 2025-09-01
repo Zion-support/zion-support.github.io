@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('auto');
     const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -66,7 +66,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: 'smooth'
         })};
     // Add CSS animations to the document
     useEffect(() => {
@@ -401,7 +401,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
           {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {
   {
                     x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
+                    y: Math.random() * window.innerHeight
   
 
 }} animate = {
@@ -414,10 +414,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   {
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "linear"
   
 
 }}/>))}
         </div>)}
     </>)};
+export { ModernUIEnhancer };
 export default ModernUIEnhancer;

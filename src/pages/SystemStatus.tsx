@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Brain, Zap, BarChart3, TrendingUp, RefreshCw } from 'lucide-react';
 
 interface ServiceStatus {
+
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -11,9 +12,11 @@ interface ServiceStatus {
   lastUpdated: string;
   description: string;
   icon: React.ComponentType<any>;
+
 }
 
 interface Incident {
+
   id: string;
   title: string;
   description: string;
@@ -22,8 +25,9 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-}
 
+}
+;
 const services: ServiceStatus[] = [
   {
     id: 'api',
@@ -86,7 +90,7 @@ const services: ServiceStatus[] = [
     icon: BarChart3
   }
 ];
-
+;
 const incidents: Incident[] = [
   {
     id: 'inc-001',
@@ -99,20 +103,20 @@ const incidents: Incident[] = [
     affectedServices: ['database']
   }
 ];
+;
+const SystemStatus: React.FC = props {
+  const [lastUpdated, setLastUpdated] = useState<typeof new Date(>(new Date());
+  const [isRefreshing, setIsRefreshing] = useState<typeof false>(false);
 
-const SystemStatus: React.FC = () => {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const refreshData = () => {
+  const refreshData = (...args: unknown[]): unknown => {
     setIsRefreshing(true);
-    setTimeout(() => {
+    setTimeout(: unknown {
       setLastUpdated(new Date());
       setIsRefreshing(false);
     }, 1000);
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
@@ -127,7 +131,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5" />;
@@ -142,7 +146,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'critical':
         return 'text-red-400 bg-red-500/20';
@@ -226,7 +230,7 @@ const SystemStatus: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -344,7 +348,7 @@ const SystemStatus: React.FC = () => {
       </section>
 
       {/* Recent Incidents */}
-      {incidents.length > 0 && (
+      {incidents.length > 0 && 
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -357,7 +361,7 @@ const SystemStatus: React.FC = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              {incidents.map((incident, index) => (
+              {incidents.map((incident, index (
                 <motion.div
                   key={incident.id}
                   initial={{ opacity: 0, x: -20 }}
@@ -391,11 +395,11 @@ const SystemStatus: React.FC = () => {
                     </div>
                   </div>
 
-                  {incident.affectedServices.length > 0 && (
+                  {incident.affectedServices.length > 0 && 
                     <div>
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Affected Services:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {incident.affectedServices.map((serviceId) => {
+                        {incident.affectedServices.map((serviceId {
                           const service = services.find(s => s.id === serviceId);
                           return service ? (
                             <span
@@ -451,5 +455,6 @@ const SystemStatus: React.FC = () => {
     </div>
   );
 };
-
+;
+export { SystemStatus };
 export default SystemStatus;

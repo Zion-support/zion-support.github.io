@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
-function PodcastTranscription() {
+;
+function PodcastTranscription(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -40,14 +40,17 @@ function PodcastTranscription() {
       </section>;
     </div>;
   );
-
+;
+export { PodcastTranscription };
 export default PodcastTranscription;
 
+;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
+export default PodcastTranscription;
 
-export default PodcastTranscription;
-export default PodcastTranscription;
-export default PodcastTranscription;
-export default PodcastTranscription;
-export default PodcastTranscription;
-export default PodcastTranscription;
-export default PodcastTranscription;
+}

@@ -307,4 +307,5 @@ const QuantumTechnology = () => {
       </section>
     </div>);
 };
+export { QuantumTechnology };
 export default QuantumTechnology;

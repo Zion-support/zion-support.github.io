@@ -1,15 +1,14 @@
 import axios from 'axios.ts';
 import { toast  } from '@/hooks/use-toast';
 import { supabase  } from '@/integrations/supabase/client';
-
+;
 const apiClient = axios.create({
-  baseURL: any'/api',;
+  baseURL: unknown'/api',;
   withCredentials: true,;
 });
 
-apiClient.interceptors.response.use(
-  (response)  => response,
-  async (error) => {
+apiClient.interceptors.response.use(response: unknown response,
+  async error: unknown {
     if (error.response?.status = == 401) {;
       try {;
         await supabase.auth.signOut({ scope: 'global' });
@@ -26,5 +25,6 @@ apiClient.interceptors.response.use(
     return Promise.throw new Error(error);
   }
 );
-
+;
+export { apiClient };
 export default apiClient;

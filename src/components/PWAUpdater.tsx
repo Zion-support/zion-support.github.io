@@ -3,29 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 interface PWAUpdaterProps {
+  // Add your props here
+
+
   autoCheck?: boolean;
   checkInterval?: number;
   showUpdatePrompt?: boolean;
+
 }
-
-const PWAUpdater: React.FC<PWAUpdaterProps> = ({
-  autoCheck = true,
-  checkInterval = 300000, // 5 minutes
+;
+const PWAUpdater: React.FC<PWAUpdaterProps> = {
+  autoCheck = true: unknown, checkInterval = 300000: unknown, // 5 minutes
   showUpdatePrompt = true
-}) => {
-  const [updateAvailable, setUpdateAvailable] = useState(false);
-  const [updating, setUpdating] = useState(false);
-  const [updateComplete, setUpdateComplete] = useState(false);
+}: unknown {
+  const [updateAvailable, setUpdateAvailable] = useState<typeof false>(false);
+  const [updating, setUpdating] = useState<typeof false>(false);
+  const [updateComplete, setUpdateComplete] = useState<typeof false>(false);
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
-  const [showPrompt, setShowPrompt] = useState(false);
+  const [showPrompt, setShowPrompt] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // // // // // // // console.log('Service worker not available');
       // Register service worker
       navigator.serviceWorker.register('/sw.js')
-        .then((reg) => {
+        .then(reg: unknown {
           setRegistration(reg);
           console.log('Service Worker registered successfully:', reg);
           
@@ -35,12 +38,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           }
           
           // Listen for updates
-          reg.addEventListener('updatefound', () => {
+          reg.addEventListener'updatefound': unknown, (: unknown {
             console.log('Service Worker update found');
             const newWorker = reg.installing;
             
             if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
+              newWorker.addEventListener'statechange': unknown, (: unknown {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                   setUpdateAvailable(true);
                   if (showUpdatePrompt) {
@@ -52,36 +55,36 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           });
           
           // Listen for controller change (update applied)
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
+          navigator.serviceWorker.addEventListener'controllerchange': unknown, (: unknown {
             console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
             
             // Hide prompt after a delay
-            setTimeout(() => {
+            setTimeout(: unknown {
               setShowPrompt(false);
               setUpdateComplete(false);
             }, 3000);
           });
         })
-        .catch((error) => {
+        .catch(error: unknown {
           console.error('Service Worker registration failed:', error);
         });
     }
   }, [autoCheck, showUpdatePrompt]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoCheck && registration) {
-      const interval = setInterval(() => {
+      const interval = setInterval(: unknown {
         checkForUpdates(registration);
       }, checkInterval);
       
-      return () => clearInterval(interval);
+      return : unknown clearInterval(interval);
     }
   }, [autoCheck, checkInterval, registration]);
 
-  const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
+  const checkForUpdates = async reg: ServiceWorkerRegistration {
     try {
       await reg.update();
       console.log('Service Worker update check completed');
@@ -90,7 +93,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     }
   };
 
-  const applyUpdate = async () => {
+  const applyUpdate = async : unknown {
     if (!registration) return;
     
     setUpdating(true);
@@ -103,7 +106,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       }
       
       // Reload the page to apply the update
-      setTimeout(() => {
+      setTimeout(: unknown {
         window.location.reload();
       }, 1000);
     } catch (error) {
@@ -116,10 +119,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     }
   };
 
-  const dismissUpdate = () => {
+  const dismissUpdate = (...args: unknown[]): unknown => {
     setShowPrompt(false);
     // Auto-show again after 1 hour
-    setTimeout(() => {
+    setTimeout(: unknown {
       if (updateAvailable) {
         setShowPrompt(true);
       }
@@ -248,12 +251,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       </AnimatePresence>
 
       {/* Floating Update Indicator */}
-      {updateAvailable && !showPrompt && !updating && (
+      {updateAvailable && !showPrompt && !updating && 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           className="fixed bottom-6 left-6 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-2xl shadow-cyan-500/25 z-40 cursor-pointer hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-110"
-          onClick={() => setShowPrompt(true)}
+          onClick={( setShowPrompt(true)}
           title="Update available - Click to update"
         >
           <div className="w-full h-full flex items-center justify-center">
@@ -267,5 +270,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     </>
   );
 };
-
+;
+export { PWAUpdater };
 export default PWAUpdater;

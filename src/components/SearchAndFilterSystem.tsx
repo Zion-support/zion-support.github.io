@@ -20,6 +20,7 @@ import {
 
 interface SearchResult {
 
+
   id: string;
   title: string;
   description: string;
@@ -28,55 +29,55 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology'}
+  type: 'service' | 'article' | 'team' | 'technology'
+}
 
 interface FilterOption {
+
 
   id: string;
   label: string;
   value: string;
-  count: number}
+  count: number
+}
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[])  => void;
+  onResultsChange?: results: SearchResult[] void;
   placeholder?: string;
   showFilters?: boolean}
-
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-  data,
-  onResultsChange,
-  placeholder = "Search services, articles, team members...",
-  showFilters = true
-}) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
+;
+export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = {
+  data: unknown, onResultsChange: unknown, placeholder = "Search services: unknown, articles: unknown, team members...": unknown, showFilters = true
+}: unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [isSearchFocused, setIsSearchFocused] = useState<typeof false>(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
+  const [showFilterPanel, setShowFilterPanel] = useState<typeof false>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [sortBy, setSortBy] = useState<any>('relevance');
 
   // Filter options
-  const filterOptions = useMemo(() => {
-    const categories = data.reduce((acc, item) => {
+  const filterOptions = useMemo(: unknown {
+    const categories = data.reduce(acc: unknown, item: unknown {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
     }, {} as Record<string, any>);
 
-    const types = data.reduce((acc, item) => {
+    const types = data.reduce(acc: unknown, item: unknown {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
     }, {} as Record<string, any>);
 
     return {
-      categories: Object.entries(categories).map(([key, count])  => ({
+      categories: Object.entries(categories).map([key: unknown, count]: unknown ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
         count
       })),
-      types: Object.entries(types).map(([key, count]) => ({
+      types: Object.entries(types).map([key: unknown, count]: unknown ({
         id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
@@ -86,7 +87,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [data]);
 
   // Filtered and sorted results
-  const filteredResults = useMemo(() => {
+  const filteredResults = useMemo(: unknown {
     let results = data.filter(item => {
       // Search query filter
       const matchesSearch = searchQuery === '' ||
@@ -111,19 +112,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     // Sort results
     switch (sortBy) {
       case 'date':
-        results = results.sort((a, b) => {
+        results = results.sort(a: unknown, b: unknown {
           if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         });
         break;
       case 'rating':
-        results = results.sort((a, b) => {
+        results = results.sort(a: unknown, b: unknown {
           if (!a.rating || !b.rating) return 0;
           return b.rating - a.rating;
         });
         break;
       case 'name':
-        results = results.sort((a, b) => a.title.localeCompare(b.title));
+        results = results.sort(a: unknown, b: unknown a.title.localeCompare(b.title));
         break;
       default: // relevance
         // Keep original order for relevance
@@ -133,12 +134,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
 
   // Update parent component with results
-  useEffect(() => {
+  useEffect(: unknown {
     onResultsChange?.(filteredResults);
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (...args: unknown[]): unknown => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -149,14 +150,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Clear all filters
-  const clearAllFilters = () => {
+  const clearAllFilters = (...args: unknown[]): unknown => {
     setActiveFilters(new Set());
     setSelectedCategory('all');
     setSortBy('relevance');
   };
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -167,7 +168,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',
@@ -179,8 +180,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     return colors[category as keyof typeof colors] || 'text-zinc-400';
   };
 
-  return (
-    <div className="w-full max-w-6xl mx-auto">
+  return <div className="w-full max-w-6xl mx-auto">
       {/* Search Bar */}
       <div className="relative mb-6">
         <div className="relative">
@@ -188,15 +188,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <input
             type="text"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => setIsSearchFocused(true)}
-            onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+            onChange={(e: unknown setSearchQuery(e.target.value)}
+            onFocus={: unknown setIsSearchFocused(true)}
+            onBlur={: unknown setTimeout(: unknown setIsSearchFocused(false), 200)}
             placeholder={placeholder}
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 backdrop-blur-md"
           />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery('')}
+          {searchQuery && <button
+              onClick={(: unknown setSearchQuery('')}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
 
               <X className="w-5 h-5" />
@@ -213,7 +212,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
 
-              {filteredResults.slice(0, 5).map((result) => (;
+              {filteredResults.slice(0, 5).map(result: unknown (;
                 <div
                   key={result.id}
                   className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
@@ -238,17 +237,16 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       </div>
 
       {/* Filters and Sort */}
-      {showFilters && (
-        <div className="flex flex-wrap items-center gap-4 mb-6">
+      {showFilters && <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
           <div className="relative">
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e: unknown setSelectedCategory(e.target.value)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
 
               <option value="all">All Categories</option>
-              {filterOptions.categories.map((category) => (
+              {filterOptions.categories.map(category: unknown (
                 <option key={category.id} value={category.value}>
                   {category.label} ({category.count})
                 </option>
@@ -261,7 +259,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <div className="relative">
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={e: unknown setSortBy(e.target.value)}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
 
               <option value="relevance">Relevance</option>
@@ -274,7 +272,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
           {/* Filter Toggle */}
           <button
-            onClick={() => setShowFilterPanel(!showFilterPanel)}
+            onClick={: unknown setShowFilterPanel(!showFilterPanel)};
 className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
               showFilterPanel
                 ? 'bg-zion-cyan text-white'
@@ -304,7 +302,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
       {/* Filter Panel */}
       <AnimatePresence>
-        {showFilterPanel && (
+        {showFilterPanel && 
           <motion.div
             initial = {
   { height: 0,
@@ -356,12 +354,12 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>
                   <div className="space-y-2">
-                    {filterOptions.types.map((type) => (
+                    {filterOptions.types.map((type (
                       <label key={type.id} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={activeFilters.has(type.value)}
-                          onChange={() => toggleFilter(type.value)}
+                          onChange={: unknown toggleFilter(type.value)}
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
                         />
                         <span className="text-sm text-zinc-300">{type.label}</span>
@@ -375,10 +373,9 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map((tag) => (
-                      <button
+                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map(tag: unknown <button
                         key={tag}
-                        onClick={() => toggleFilter(tag.toLowerCase())}
+                        onClick={(: unknown toggleFilter(tag.toLowerCase())}
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
                           activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white'
@@ -395,12 +392,12 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>
                   <div className="space-y-2">
-                    {['Global', 'North America', 'Europe', 'Asia Pacific'].map((location) => (
+                    {['Global', 'North America', 'Europe', 'Asia Pacific'].map(location: unknown (
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={activeFilters.has(location.toLowerCase())}
-                          onChange={() => toggleFilter(location.toLowerCase())}
+                          onChange={: unknown toggleFilter(location.toLowerCase())}
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
                         />
                         <span className="text-sm text-zinc-300">{location}</span>
@@ -422,7 +419,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
       {/* Search Results */}
       <div className="space-y-4">;
-        {filteredResults.map((result) => (;
+        {filteredResults.map(result: unknown (;
           <motion.div
             key={result.id}
             initial = {
@@ -519,4 +516,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
       )}
     </div>
   );
+}
+
+
+
+}
+
+}
 }

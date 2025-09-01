@@ -213,4 +213,5 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="service:area" content="Worldwide"/>
       <meta name="service:type" content="Technology Consulting, AI Solutions, Cloud Services, Cybersecurity"/>
     </Helmet>)};
+export { SEOEnhancer };
 export default SEOEnhancer;

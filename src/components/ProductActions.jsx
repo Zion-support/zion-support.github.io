@@ -20,3 +20,5 @@ export function ProductActions({ onAddToCart }) {
           {label}
         </span>) : (label)}
     </Button>)}
+
+}

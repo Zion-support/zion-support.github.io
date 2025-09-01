@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
+export { function };
 export default function Unauthorized() {
     return (<>
       

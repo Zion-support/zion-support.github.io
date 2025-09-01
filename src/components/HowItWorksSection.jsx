@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
+;
 const steps = [
     {
         icon: <Search className="w-8 h-8"/>,
@@ -79,14 +79,14 @@ const steps = [
         success: "100% client retention"
     }
 ];
-
+;
 const stats = [
     { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Implementation" },
     { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
     { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
     { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Services Delivered" }
 ];
-
+;
 export function HowItWorksSection() {
     const [hoveredStep, setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);

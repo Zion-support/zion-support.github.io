@@ -18,8 +18,8 @@ import {
   Heart
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Accessibility: React.FC = () => {
+;
+const Accessibility: React.FC = props {
   const complianceStandards = [
     {
       standard: 'WCAG 2.1 AA',
@@ -152,7 +152,7 @@ const Accessibility: React.FC = () => {
     }
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title="Accessibility - Zion Tech Group"
@@ -199,7 +199,7 @@ const Accessibility: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceStandards.map((standard, index) => (
+              {complianceStandards.map((standard, index (
                 <motion.div
                   key={standard.standard}
                   initial={{ opacity: 0, y: 20 }}
@@ -236,7 +236,7 @@ const Accessibility: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {assistiveTechnologies.map((tech, index) => (
+              {assistiveTechnologies.map(tech: unknown, index: unknown 
                 <motion.div
                   key={tech.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -253,7 +253,7 @@ const Accessibility: React.FC = () => {
                   </div>
                   <p className="text-gray-300 text-sm mb-4">{tech.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {tech.examples.map((example, idx) => (
+                    {tech.examples.map((example, idx (
                       <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                         {example}
                       </span>
@@ -279,7 +279,7 @@ const Accessibility: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {accessibilityTools.map((tool, index) => (
+              {accessibilityTools.map(tool: unknown, index: unknown (
                 <motion.div
                   key={tool.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -318,7 +318,7 @@ const Accessibility: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {accessibilityFeatures.map((category, index) => (
+              {accessibilityFeatures.map(category: unknown, index: unknown 
                 <motion.div
                   key={category.category}
                   initial={{ opacity: 0, y: 20 }}
@@ -334,7 +334,7 @@ const Accessibility: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white">{category.category}</h3>
                   </div>
                   <ul className="space-y-3">
-                    {category.features.map((feature, idx) => (
+                    {category.features.map((feature, idx (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
@@ -384,6 +384,7 @@ const Accessibility: React.FC = () => {
     </>
   );
 };
-
+;
+export { Accessibility };
 export default Accessibility;
 

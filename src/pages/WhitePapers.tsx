@@ -1,13 +1,14 @@
 
-
+;
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
 import SEO from '@/components/SEO';
-
-export default function WhitePapers() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('newest');
+;
+export { function };
+export default function WhitePapers(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'newest'>('newest');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
@@ -136,7 +137,7 @@ export default function WhitePapers() {
     }
   ];
 
-  const getCategoryCount = (categoryId: string) => {
+  const getCategoryCount = (...args: unknown[]): unknown => {
     if (categoryId === 'all') {
       return whitePapers.length;
     }
@@ -158,7 +159,7 @@ export default function WhitePapers() {
     return matchesSearch && matchesCategory;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (...args: unknown[]): unknown => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -166,7 +167,7 @@ export default function WhitePapers() {
     });
   };
 
-  const formatDownloads = (downloads: number) => {
+  const formatDownloads = (...args: unknown[]): unknown => {
     if (downloads >= 1000000) {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
@@ -175,8 +176,7 @@ export default function WhitePapers() {
     return downloads.toString();
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -189,7 +189,7 @@ export default function WhitePapers() {
             White Papers & Research
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Access our latest research, insights, and thought leadership content on emerging technologies, digital transformation, and industry trends.
+            Access our latest research: unknown, insights: unknown, and thought leadership content on emerging technologies: unknown, digital transformation: unknown, and industry trends.
           </p>
         </div>
       </div>
@@ -204,7 +204,7 @@ export default function WhitePapers() {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e: unknown setSearchQuery(e.target.value)}
                 placeholder="Search white papers..."
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
@@ -214,10 +214,9 @@ export default function WhitePapers() {
             <div className="flex flex-col lg:flex-row gap-6 mb-8">
               {/* Categories */}
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
+                {categories.map(category: unknown <button
                     key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
+                    onClick={(: unknown setActiveCategory(category.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                       activeCategory === category.id
                         ? 'bg-zion-cyan text-zion-slate-dark'
@@ -238,10 +237,10 @@ export default function WhitePapers() {
                 <span className="text-zion-slate-light">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option) => (
+                  {sortOptions.map(option: unknown (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -264,19 +263,19 @@ export default function WhitePapers() {
                 type="text"
                 placeholder="Search white papers..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={e: unknown setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
+              {categories.map(category: unknown 
                 <motion.button
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={( setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/30'
@@ -302,7 +301,7 @@ export default function WhitePapers() {
             Featured Insights
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {featuredInsights.map((insight, index) => (
+            {featuredInsights.map(insight: unknown, index: unknown (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -330,9 +329,9 @@ export default function WhitePapers() {
             White Papers Library
           </h2>
 
-          {filteredPapers.length > 0 ? (
+          {filteredPapers.length > 0 ? 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPapers.map((paper) => (
+              {filteredPapers.map((paper (
                 <div
                   key={paper.id}
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
@@ -360,7 +359,7 @@ export default function WhitePapers() {
                   <p className="text-zion-slate-light mb-4">{paper.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {paper.tags.map((tag, index) => (
+                    {paper.tags.map(tag: unknown, index: unknown (
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"

@@ -28,4 +28,5 @@ const BlockchainServices = () => {
         </div>
       </section>
     </div>)};
+export { BlockchainServices };
 export default BlockchainServices;

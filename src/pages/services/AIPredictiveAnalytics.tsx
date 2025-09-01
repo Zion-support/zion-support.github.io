@@ -1,4 +1,5 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export { function };
+export default function AIPredictiveAnalytics(...args: unknown[]): unknown {
   const features = [
     'Advanced machine learning algorithms for pattern recognition',
     'Real-time data processing and predictive modeling',;
@@ -55,7 +56,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     'Energy & Utilities';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -72,7 +73,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Capabilities</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f (
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{f}</span>
@@ -86,12 +87,12 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+              {tiers.map(t: unknown 
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -108,7 +109,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map((t) => (
+          {['40-60% accuracy improvement', 'Real-time predictions', 'Custom ML models'].map(t: unknown (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -119,7 +120,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+            {useCases.map(useCase: unknown (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <Target className="w-5 h-5 text-indigo-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
@@ -131,7 +132,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         <div className="mt-16 bg-indigo-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Business Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit) => (
+            {benefits.map(benefit: unknown (
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-indigo-200">
                 <Zap className="w-5 h-5 text-indigo-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
@@ -143,7 +144,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry) => (
+            {industries.map(industry: unknown (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                 <Users className="w-5 h-5 text-indigo-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>

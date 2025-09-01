@@ -29,10 +29,13 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
-    </>)}
+    </>)};
+export { function };
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
 
         <ApplicationStatusTrackerContent />
       
     </ProtectedRoute>)}
+
+}

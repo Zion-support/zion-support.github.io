@@ -8,10 +8,11 @@ import {
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-
+;
+export { function };
 export default function ComprehensivePricing2027(...args[]):  {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
   const [sortBy, setSortBy] = useState<any>('price');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
@@ -28,7 +29,7 @@ export default function ComprehensivePricing2027(...args[]):  {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
-    .sort((a, b) => {
+    .sort(a: unknown, b: unknown {
       if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating});
@@ -198,9 +199,9 @@ export default function ComprehensivePricing2027(...args[]):  {
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
               { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
-            ].map((stat, index)  => (
+              { label: 'AI Score Avg', value: `${Math.roundallServices.reduce((acc: unknown, s: unknown acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${allServices.reduce((acc: unknown, s: unknown acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
+            ].map(stat: unknown, index: unknown (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -258,7 +259,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                     type="text"
                     placeholder="Search services, features, or technologies..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   />
                 </div>
@@ -268,7 +269,7 @@ export default function ComprehensivePricing2027(...args[]):  {
               <div className="relative">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
@@ -282,7 +283,7 @@ export default function ComprehensivePricing2027(...args[]):  {
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}
+                  onChange={e: unknown setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
 
                   <option value="price">Sort by Price</option>
@@ -295,13 +296,13 @@ export default function ComprehensivePricing2027(...args[]):  {
               {/* View Mode Toggle */}
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 
                   <List className="w-5 h-5" />
@@ -321,7 +322,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
         <div className="max-w-7xl mx-auto">;
           <AnimatePresence mode="wait">
-            {filteredServices.length > 0 ? (
+            {filteredServices.length > 0 ? 
               <motion.div
                 className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
                 key={viewMode}
@@ -357,7 +358,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 }}
                 transition={{ duration: 0.3 }}
               >
-                {filteredServices.map((service, index)  => (
+                {filteredServices.map((service, index 
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
@@ -368,7 +369,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                        onClick={( setExpandedService(expandedService === service.id ? null : service.id)}
 
                         {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">
@@ -396,7 +397,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-4">;
-                          {service.tags.slice(0, 3).map((tag, tagIndex) => (;
+                          {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (;
                             <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
@@ -478,7 +479,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                                 <ul className="space-y-1">
-                                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                                  {service.features.slice(0, 4).map(feature: unknown, featureIndex: unknown (
                                     <li key={featureIndex} className="flex items-center gap-2 text-xs text-gray-300">
                                       <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
                                       {feature}
@@ -491,7 +492,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                                 <ul className="space-y-1">
-                                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                                  {service.benefits.slice(0, 3).map(benefit: unknown, benefitIndex: unknown (
                                     <li key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-300">
                                       <Zap className="w-3 h-3 text-yellow-500 flex-shrink-0" />
                                       {benefit}
@@ -502,7 +503,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                               {/* CTA Button */}
                               <button
-                                onClick={() => window.open(service.website, '_blank')}
+                                onClick={: unknown window.open(service.website, '_blank')}
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
 
                                 Get Started
@@ -556,7 +557,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                           <div className="flex items-center justify-between">
                             <div className="flex flex-wrap gap-2">
-                              {service.tags.slice(0, 4).map((tag, tagIndex) => (
+                              {service.tags.slice(0, 4).map(tag: unknown, tagIndex: unknown (
                                 <span
                                   key={tagIndex}
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
@@ -567,7 +568,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                             </div>
 
                             <button
-                              onClick={() => window.open(service.website, '_blank')}
+                              onClick={: unknown window.open(service.website, '_blank')}
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                               Get Started
@@ -656,4 +657,6 @@ export default function ComprehensivePricing2027(...args[]):  {
       </motion.section>;
     </div>;
   );
+}
+
 }

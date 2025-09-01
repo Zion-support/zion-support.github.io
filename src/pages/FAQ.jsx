@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { GradientHeading } from '@/components/ui/GradientHeading';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-
+;
 const faqData = [
   {
     question: "What is Zion Tech Group?",
@@ -56,7 +56,7 @@ const faqData = [
   }
 ];
 
-// Custom Accordion Component
+// Custom Accordion Component;
 const CustomAccordion = ({ items }) => {
   const [openItems, setOpenItems] = useState(new Set());
 
@@ -100,7 +100,8 @@ const CustomAccordion = ({ items }) => {
     </div>
   );
 };
-
+;
+export { function };
 export default function FAQ() {
   return (
     <>

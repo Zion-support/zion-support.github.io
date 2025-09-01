@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export default function RequestQuote() {
+import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export { function };
+export default function RequestQuote() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -570,3 +571,5 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
         </div>
       </section>
     </div>)}
+
+}

@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
+;
+export { function };
 export default function AIContentGenerator() {
     const features = [
         {

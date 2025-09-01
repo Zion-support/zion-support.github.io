@@ -169,4 +169,5 @@ const AIAutonomousMonitoring = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousMonitoring };
 export default AIAutonomousMonitoring;

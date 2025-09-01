@@ -441,5 +441,6 @@ const ServiceRecommendations = () => {
         </div>
       </section>
     </div>)};
+export { ServiceRecommendations };
 export default ServiceRecommendations;
 }}}

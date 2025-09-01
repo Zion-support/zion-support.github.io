@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
-
+;
 const ServicesSitemap: React.FC = (): JSX.Element => {
   const allServices = [
     {
@@ -157,7 +157,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
     { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
   ];
 
-  return (
+  return 
     <>
       <SEO
         title = "Services Sitemap | Zion Tech Group - Complete Service Directory"
@@ -235,7 +235,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {quickAccessLinks.map((link, index)   => (
+              {quickAccessLinks.map((link, index (
                 <motion.div
                   key={link.title}
                   initial = {
@@ -299,7 +299,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="space-y-16">
-              {allServices.map((category, categoryIndex) => (
+              {allServices.map(category: unknown, categoryIndex: unknown 
                 <motion.div
                   key={category.category}
                   initial = {
@@ -330,7 +330,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                   </div>
 
                   <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-                    {category.services.map((service, serviceIndex)   => (
+                    {category.services.map((service, serviceIndex 
                       <motion.div
                         key={service.title}
                         initial = {
@@ -367,7 +367,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                         <div className="mb-4">
                           <h5 className="text-sm font-semibold text-white mb-2">Key Features:</h5>
                           <ul className="space-y-1">
-                            {service.features.map((feature, featureIndex) => (
+                            {service.features.map((feature, featureIndex (
                               <li key={featureIndex} className="text-blue-300 text-sm flex items-center">
                                 <span className="text-green-400 mr-2">✓</span>
                                 {feature}
@@ -450,5 +450,6 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
       </div>;
     </>;
   )};
-
+;
+export { ServicesSitemap };
 export default ServicesSitemap;

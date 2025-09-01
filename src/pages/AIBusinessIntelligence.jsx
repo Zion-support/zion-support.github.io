@@ -245,5 +245,6 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
         </section>
       </div>
     </>)};
+export { AIBusinessIntelligence };
 export default AIBusinessIntelligence;
 }

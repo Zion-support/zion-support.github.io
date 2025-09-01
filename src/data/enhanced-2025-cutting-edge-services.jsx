@@ -512,5 +512,6 @@ export const CUTTING_EDGE_SERVICES_2025 = [
         growthPotential: "Very High - 55% CAGR expected"
     }
 ];
-
+;
+export { CUTTING_EDGE_SERVICES_2025 };
 export default CUTTING_EDGE_SERVICES_2025;

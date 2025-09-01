@@ -30,7 +30,7 @@ import { Shield,
  } from 'lucide-react.ts';
 import { ENHANCED_SERVICES  } from '@/data/enhancedServices';
 
-// Filter cybersecurity services
+// Filter cybersecurity services;
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Cybersecurity') ||
   service.category.includes('Security') ||
@@ -54,37 +54,38 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   Server,
   Key
 } from 'lucide-react';
-
+;
 import { COMPREHENSIVE_SERVICES  } from '@/data/comprehensiveServices';
 import { TrustedBySection  } from '@/components/TrustedBySection';
-
+;
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: any'threat-detection',;
+    id: unknown'threat-detection',;
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-    id: any'zero-trust',;
+    id: unknown'zero-trust',;
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Zero Trust'))
   }
 ];
-
-export default function CybersecurityServicesPage(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const getCategoryIcon = (category: anystring)  => {
+;
+export { function };
+export default function CybersecurityServicesPage(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelLabel = (...args: unknown[]): unknown => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -94,7 +95,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
       default: return model;
     }
   };
-  return (
+  return 
     <>
       <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
@@ -161,7 +162,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             </div>
 
             <div className="grid gap-6 md: anygrid-cols-2">
-              {SECURITY_SERVICE_CATEGORIES.map((category)  => {
+              {SECURITY_SERVICE_CATEGORIES.map((category {
 
                 const IconComponent = category.icon;
                 return (
@@ -196,7 +197,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="all">All Security Services</TabsTrigger>
-                {SECURITY_SERVICE_CATEGORIES.map((category) => (
+                {SECURITY_SERVICE_CATEGORIES.map(category: unknown (
                   <TabsTrigger key={category.id} value={category.id}>
                     {category.name}
                   </TabsTrigger>
@@ -205,17 +206,17 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               <TabsContent value="all" className="space-y-6">
 
                 <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
-                  {CYBERSECURITY_SERVICES.map((service)  => (
+                  {CYBERSECURITY_SERVICES.map(service: unknown (
 
                     <SecurityServiceCard key={service.id} service={service} />
                   ))}
                 </div>
               </TabsContent>
-              {SECURITY_SERVICE_CATEGORIES.map((category) => (
+              {SECURITY_SERVICE_CATEGORIES.map(category: unknown 
                 <TabsContent key={category.id} value={category.id} className="space-y-6">
 
                   <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
-                    {category.services.map((service)  => (
+                    {category.services.map((service (
 
                       <SecurityServiceCard key={service.id} service={service} />
                     ))}
@@ -343,7 +344,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                 { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
 
-              ].map((standard)  => (
+              ].map(standard: unknown 
 
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -359,7 +360,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -411,8 +412,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   );
 }
 // Security Service Card Component
-
-function SecurityServiceCard(...args: any[]): any {
+;
+function SecurityServiceCard(...args: unknown[]): unknown {;
 import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Search,
@@ -442,7 +443,7 @@ import { Search,
 
  } from 'lucide-react.ts';
 import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>('all');
 
@@ -462,7 +463,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
 
-  const getPricingModelIcon = (model: anystring)  => {
+  const getPricingModelIcon = (...args: unknown[]): unknown => {
 
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />;
@@ -472,8 +473,8 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     }
   };
 
-  const getPricingModelText = (model: anystring)  => {
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelText = (...args: unknown[]): unknown => {
+  const getPricingModelLabel = (...args: unknown[]): unknown => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -545,7 +546,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
           <h4 className="font-medium text-sm">Key Features:</h4>
           <ul className="space-y-1">
 
-            {service.features.slice(0, 3).map((feature: anystring, index: number)  => (
+            {service.features.slice(0, 3).map(feature: anystring, index: number (
 
               <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-3 w-3 text-green-600" />
@@ -598,11 +599,11 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
   Database,
   Monitor
 } from "lucide-react";
-
+;
 import { CYBERSECURITY_SERVICES  } from '@/data/expandedServices';
-
-const CybersecurityServicesPage = () => {
-  return (
+;
+const CybersecurityServicesPage = (...args: unknown[]): unknown => {
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white">
@@ -721,7 +722,7 @@ const CybersecurityServicesPage = () => {
           </div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {CYBERSECURITY_SERVICES.map((service)  => (
+            {CYBERSECURITY_SERVICES.map((service (
 
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
@@ -763,7 +764,7 @@ const CybersecurityServicesPage = () => {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.map((tag) => (
+                    {service.tags.map(tag: unknown (
                       <Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
@@ -784,11 +785,10 @@ const CybersecurityServicesPage = () => {
               </Card>
             ))}
           </div>
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
+          {filteredServices.length === 0 && <div className="text-center py-16">
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
-              <Button onClick={() => {
+              <Button onClick={(: unknown {
                 setSearchQuery('');
                 setSelectedSubcategory('all');
                 setPriceRange('all');
@@ -842,7 +842,7 @@ const CybersecurityServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {securityServices.map((service)  => (
+            {securityServices.map(service: unknown (
 
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <div className="flex items-center mb-4">
@@ -860,7 +860,7 @@ const CybersecurityServicesPage = () => {
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -904,7 +904,7 @@ const CybersecurityServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-            {securityTechnologies.map((tech, index)  => (
+            {securityTechnologies.map(tech: unknown, index: unknown (
 
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -930,7 +930,7 @@ const CybersecurityServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-            {complianceStandards.map((standard, index)  => (
+            {complianceStandards.map(standard: unknown, index: unknown (
 
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -956,7 +956,7 @@ const CybersecurityServicesPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-            {threatIntelligence.map((intel, index)  => (
+            {threatIntelligence.map(intel: unknown, index: unknown (
 
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">

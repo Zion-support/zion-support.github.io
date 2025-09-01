@@ -320,8 +320,8 @@ import { Shield,
   CloudSnow10,
   CloudSleet10
  } from 'lucide-react.ts';
-
-const AIFinancialCompliancePlatform = () => {
+;
+const AIFinancialCompliancePlatform = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -473,7 +473,7 @@ const AIFinancialCompliancePlatform = () => {
     'Anti-Money Laundering'
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -524,7 +524,7 @@ const AIFinancialCompliancePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
-            {keyMetrics.map((item, index)  => (
+            {keyMetrics.map((item, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -558,7 +558,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -595,7 +595,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -629,7 +629,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -663,7 +663,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">
-            {regulations.map((regulation, index)  => (
+            {regulations.map(regulation: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -696,7 +696,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -718,7 +718,7 @@ const AIFinancialCompliancePlatform = () => {
                   )}
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
@@ -752,7 +752,7 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           
           <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -853,5 +853,6 @@ const AIFinancialCompliancePlatform = () => {
     </div>
   );
 };
-
+;
+export { AIFinancialCompliancePlatform };
 export default AIFinancialCompliancePlatform;

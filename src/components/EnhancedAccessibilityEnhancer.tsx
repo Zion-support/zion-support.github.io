@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -26,10 +27,11 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   zoomLevel: number;
-}
 
-export const EnhancedAccessibilityEnhancer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+}
+;
+export const EnhancedAccessibilityEnhancer: React.FC = props {
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -45,7 +47,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
 
   // Apply accessibility settings
-  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+  const applySettings = useCallback(newSettings: Partial<AccessibilitySettings> {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
 
@@ -78,7 +80,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, [settings]);
 
   // Load saved settings
-  useEffect(() => {
+  useEffect(: unknown {
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       const parsedSettings = JSON.parse(savedSettings);
@@ -88,10 +90,10 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, [applySettings]);
 
   // Enhanced keyboard navigation
-  useEffect(() => {
+  useEffect(: unknown {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       const focusableElements = document.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
@@ -123,13 +125,13 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
 
   }, [settings.keyboardNavigation]);
 
   // Enhanced focus management
-  useEffect(() => {
-    const handleFocusChange = (event: FocusEvent) => {
+  useEffect(: unknown {
+    const handleFocusChange = (...args: unknown[]): unknown => {
       const target = event.target as HTMLElement;
       setCurrentFocus(target);
 
@@ -139,7 +141,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       }
     };
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut = (...args: unknown[]): unknown => {
       const target = event.target as HTMLElement;
       if (settings.focusIndicator) {
         target.style.outline = '';
@@ -150,14 +152,14 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
     document.addEventListener('focusin', handleFocusChange);
     document.addEventListener('focusout', handleFocusOut);
 
-    return () => {
+    return : unknown {
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.focusIndicator]);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
+  const announceToScreenReader = useCallback(message: string {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -166,14 +168,14 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       announcement.textContent = message;
       document.body.appendChild(announcement);
       
-      setTimeout(() => {
+      setTimeout(: unknown {
         document.body.removeChild(announcement);
       }, 1000);
     }
   }, [settings.screenReader]);
 
   // Toggle settings
-  const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
+  const toggleSetting = useCallback(key: keyof AccessibilitySettings {
     const newValue = !settings[key];
     applySettings({ [key]: newValue });
     
@@ -185,7 +187,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, [settings, applySettings, announceToScreenReader]);
 
   // Zoom controls
-  const adjustZoom = useCallback((direction: 'in' | 'out') => {
+  const adjustZoom = useCallback(direction: 'in' | 'out' {
     const newZoom = direction === 'in' 
       ? Math.min(settings.zoomLevel + 25, 200)
       : Math.max(settings.zoomLevel - 25, 75);
@@ -194,7 +196,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
     announceToScreenReader(`Zoom level ${newZoom}%`);
   }, [settings.zoomLevel, applySettings, announceToScreenReader]);
 
-  return (
+  return 
     <>
       {/* Accessibility Toggle Button */}
       <motion.button
@@ -202,7 +204,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={( setIsVisible(!isVisible)}
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
@@ -212,7 +214,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isVisible && (
+        {isVisible && 
           <motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -226,7 +228,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                 <h3 className="font-semibold">Accessibility</h3>
               </div>
               <button
-                onClick={() => setIsVisible(false)}
+                onClick={( setIsVisible(false)}
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 aria-label="Close accessibility panel"
               >
@@ -246,7 +248,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">High Contrast</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('highContrast')}
+                    onClick={: unknown toggleSetting('highContrast')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -264,7 +266,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">Large Text</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('largeText')}
+                    onClick={: unknown toggleSetting('largeText')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.largeText ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -282,7 +284,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">Focus Indicator</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('focusIndicator')}
+                    onClick={: unknown toggleSetting('focusIndicator')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -305,7 +307,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">Keyboard Navigation</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('keyboardNavigation')}
+                    onClick={: unknown toggleSetting('keyboardNavigation')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.keyboardNavigation ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -323,7 +325,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">Reduced Motion</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('reducedMotion')}
+                    onClick={: unknown toggleSetting('reducedMotion')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -344,14 +346,14 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                   <span className="text-sm text-slate-700 dark:text-slate-300">{settings.zoomLevel}%</span>
                   <div className="flex items-center space-x-2">
                     <button
-                      onClick={() => adjustZoom('out')}
+                      onClick={: unknown adjustZoom('out')}
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom out"
                     >
                       <ZoomOut className="w-4 h-4" />
                     </button>
                     <button
-                      onClick={() => adjustZoom('in')}
+                      onClick={: unknown adjustZoom('in')}
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                       aria-label="Zoom in"
                     >
@@ -373,7 +375,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     <span className="text-sm text-slate-700 dark:text-slate-300">Enhanced Support</span>
                   </div>
                   <button
-                    onClick={() => toggleSetting('screenReader')}
+                    onClick={: unknown toggleSetting('screenReader')}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'
                     }`}
@@ -431,6 +433,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
     </>
   );
 };
-
+;
+export { EnhancedAccessibilityEnhancer };
 export default EnhancedAccessibilityEnhancer;
 

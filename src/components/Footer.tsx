@@ -65,14 +65,14 @@ import {
   Settings,
   Palette
 } from 'lucide-react';
-
-export function Footer() {
+;
+export function Footer(...args: unknown[]): unknown {
   const currentYear = new Date().getFullYear();
 
 <<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
-  React.useEffect(() => {
-    const handleScroll = () => {
+  React.useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {
       setShowScrollTop(window.scrollY > 400);
     };
 
@@ -151,11 +151,11 @@ export function Footer() {
   ];
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return : unknown window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+  const toggleSection = (...args: unknown[]): unknown => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -168,7 +168,7 @@ export function Footer() {
   };
 
   // Scroll to top function
-  const scrollToTop = () => {
+  const scrollToTop = (...args: unknown[]): unknown => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

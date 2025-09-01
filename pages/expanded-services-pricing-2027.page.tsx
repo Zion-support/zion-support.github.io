@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_PRICING } from "../data/expandedServicesPricing2027";
-
-const ExpandedServicesPricingGuide2027: NextPage = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+;
+const ExpandedServicesPricingGuide2027: NextPage = : unknown {;
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<typeof 'all'>('all');
 
   // Get unique categories and subcategories
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
@@ -20,7 +20,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
     return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -30,7 +30,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
       
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {;
+  const resetFilters = (...args: unknown[]): unknown => {;
     setSearchTerm('');
     setSelectedCategory('all');
     setSelectedSubcategory('all')};
@@ -38,7 +38,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
       default: return 'bg-gray-600'}
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Expanded Services Pricing Guide 2027 - Zion Tech Group</title>
@@ -88,13 +88,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)};
+              onChange={(e setSearchTerm(e.target.value)};
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400";
             />;
             ;
             <select;
               value={selectedCategory};
-              onChange={(e) => {;
+              onChange={e: unknown {;
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
@@ -109,7 +109,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
 
             <select
               value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
+              onChange={e: unknown setSelectedSubcategory(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => (
@@ -134,7 +134,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
 
         {/* Services Pricing Grid */}
         <div className="grid gap-8">
-          {filteredServices.map((service) => (
+          {filteredServices.map(service: unknown (
             <div
               key={service.serviceId}
               className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"
@@ -164,7 +164,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
 
               {/* Pricing Tiers */}
               <div className="grid grid-cols-1 lg: grid-cols-4 gap-6 mb-8">
-                {Object.entries(service.pricingTiers).map(([tier, details])  => (
+                {Object.entries(service.pricingTiers).map([tier: unknown, details]: unknown (
                   <div key={tier} className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>
 
@@ -180,7 +180,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Features:</h4>
                       <ul className="text-white/70 text-sm space-y-1">
-                        {details.features.slice(0, 3).map((feature, index) => (
+                        {details.features.slice(0, 3).map(feature: unknown, index: unknown (
                           <li key={index} className="flex items-center">
                             <span className="text-green-400 mr-2">✓</span>
                             {feature}
@@ -192,7 +192,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Best For:</h4>
                       <ul className="text-white/70 text-sm space-y-1">
-                        {details.bestFor.slice(0, 2).map((item, index) => (
+                        {details.bestFor.slice(0, 2).map(item: unknown, index: unknown (
                           <li key={index} className="flex items-center">
                             <span className="text-blue-400 mr-2">•</span>
                             {item}
@@ -336,5 +336,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
     </div>;
   );
 };
-
+;
+export { ExpandedServicesPricingGuide2027 };
 export default ExpandedServicesPricingGuide2027;}}

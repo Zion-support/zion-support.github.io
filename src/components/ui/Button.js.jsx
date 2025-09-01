@@ -10,24 +10,24 @@ const buttonVariants = cva("inline-flex items-center justify-center rounded-lg f
             ghost: "text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500",
             destructive: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
             success: "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
-            warning: "bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500",
+            warning: "bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500"
         },
         size: {
             sm: "h-8 px-3 text-sm",
             md: "h-10 px-4 text-sm",
             lg: "h-12 px-6 text-base",
-            xl: "h-14 px-8 text-lg",
+            xl: "h-14 px-8 text-lg"
         },
         fullWidth: {
             true: "w-full",
-            false: "",
-        },
+            false: ""
+        }
     },
     defaultVariants: {
         variant: "default",
         size: "md",
-        fullWidth: false,
-    },
+        fullWidth: false
+    }
 });
 const Button = React.forwardRef(({ className, variant, size, fullWidth, loading = false, leftIcon, rightIcon, children, disabled, ...props }, ref) => {
     return (<button className = {

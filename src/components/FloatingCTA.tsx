@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
-
+;
 const FloatingCTA: React.FC = (): JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Show CTA after 5 seconds
-    const timer = setTimeout(() => {;
+    const timer = setTimeout(: unknown {;
       setIsVisible(true)}, 5000);
 
-    return () => clearTimeout(timer)}, []);
+    return : unknown clearTimeout(timer)}, []);
 
   const contactMethods = [
     {
@@ -46,11 +46,11 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
 
   if (!isVisible) return null;
 import { Link } from 'react-router-dom';
+;
+export function FloatingCTA(...args: unknown[]): unknown {
+  const [isExpanded, setIsExpanded] = useState<typeof false>(false);
 
-export function FloatingCTA() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
+  return 
     <>
       {/* Floating Action Button */}
       <motion.div
@@ -71,7 +71,7 @@ export function FloatingCTA() {
         <div className="relative">
           {/* Main Button */}
           <motion.button
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={( setIsExpanded(!isExpanded)}
             className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -81,7 +81,7 @@ export function FloatingCTA() {
 
           {/* Expanded Menu */}
           <AnimatePresence>
-            {isExpanded && (
+            {isExpanded && 
               <motion.div
                 className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]"
                 initial = {
@@ -120,7 +120,7 @@ export function FloatingCTA() {
                   <Link
                     to="/contact"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
+                    onClick={( setIsExpanded(false)}
                   >
                     <span className="text-xl">📞</span>
                     <div>
@@ -132,7 +132,7 @@ export function FloatingCTA() {
                   <Link
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
+                    onClick={: unknown setIsExpanded(false)}
                   >
                     <span className="text-xl">🚀</span>
                     <div>
@@ -144,7 +144,7 @@ export function FloatingCTA() {
                   <Link
                     to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
+                    onClick={: unknown setIsExpanded(false)}
                   >
                     <span className="text-xl">💰</span>
                     <div>
@@ -171,21 +171,22 @@ export function FloatingCTA() {
 
       {/* Backdrop */}
       <AnimatePresence>
-        {isExpanded && (
+        {isExpanded && 
           <motion.div
             className="fixed inset-0 bg-black/20 z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsExpanded(false)}
+            onClick={( setIsExpanded(false)}
           />
         )}
       </AnimatePresence>;
     </>;
   )};
-
+;
+export { FloatingCTA };
 export default FloatingCTA;
-            onClick={() => setIsExpanded(false)};
+            onClick={: unknown setIsExpanded(false)};
           />;
         )};
       </AnimatePresence>;

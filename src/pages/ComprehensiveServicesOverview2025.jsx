@@ -32,4 +32,11 @@ const ComprehensiveServicesOverview2025 = () => {
             'IoT & Edge Computing': '🌐',
             'Legal Tech & AI': '⚖️',
             'Marketing & AI': '📢',
-            'Energy & Sustainability': '⚡',
+            'Energy & Sustainability': '⚡'
+
+
+
+}
+
+}
+}

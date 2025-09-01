@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
+export { function };
 export default function CartPage() {
     const navigate = useNavigate();
     const { items, dispatch } = useCart();
@@ -34,7 +35,7 @@ export default function CartPage() {
                 await fetch('/api/cart', {
                     method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
+                    body: JSON.stringify({ id, quantity: qty })
                 })}
             catch (err) {
                 console.error('Failed to update cart', err)}
@@ -54,7 +55,7 @@ export default function CartPage() {
         try {
             const res = await apiClient.post('/coupons/validate', {
                 code,
-                amount: subtotal,
+                amount: subtotal
             });
             setDiscount(res.data.discount || 0)}
         catch (e) {

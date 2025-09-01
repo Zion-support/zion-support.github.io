@@ -20,15 +20,15 @@ import { Search,
   Lightbulb
  } from 'lucide-react.ts';
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data/zionTechGroup2025ComprehensiveServices';
-
+;
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>([0, 10000]);
   const [sortBy, setSortBy] = useState<any>('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     let services = zionTechGroup2025Services;
 
     // Apply search filter
@@ -45,7 +45,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     services = getServicesByPriceRange(priceRange[0], priceRange[1]);
 
     // Apply sorting
-    services = [...services].sort((a, b) => {;
+    services = [...services].sort(a: unknown, b: unknown {;
       switch (sortBy) {;
         case 'price':;
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
@@ -69,7 +69,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     const categoryData = categories.find(cat => cat.id === category);
     if (categoryData) {
       const IconComponent = categoryData.icon;
@@ -78,12 +78,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     return <Globe className="w-5 h-5" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {;
+  const getCategoryColor = (...args: unknown[]): unknown => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.color || 'bg-gray-500';
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -219,7 +219,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -228,11 +228,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
               <div className="relative">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >
                   <option value="all">All Categories</option>
-                  {categories.slice(1).map((category) => (
+                  {categories.slice(1).map(category: unknown (
                     <option key={category.id} value={category.id}>
                       {category.name}
                     </option>
@@ -248,7 +248,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   placeholder="Min Price"
                   value={priceRange[0]}
                   onChange = {
-  (e) => setPriceRange([parseInt(e.target.value) || 0,
+  e: unknown setPriceRange([parseInt(e.target.value) || 0,
   priceRange[1]])
 
 
@@ -264,7 +264,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   placeholder="Max Price"
                   value={priceRange[1]}
                   onChange = {
-  (e) => setPriceRange([priceRange[0],
+  e: unknown setPriceRange([priceRange[0],
   parseInt(e.target.value) || 10000])
 
 
@@ -281,7 +281,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+                  onChange={e: unknown setSortBy(e.target.value as 'name' | 'price' | 'category')}
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >
                   <option value="name">Sort by Name</option>
@@ -300,7 +300,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
+              {filteredServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -371,7 +371,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                         <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span>{feature}</span>
@@ -389,7 +389,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
                     <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                         <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400" />
                           <span>{benefit}</span>
@@ -402,7 +402,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Perfect for:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.targetAudience.slice(0, 3).map((audience, idx) => (
+                      {service.targetAudience.slice(0, 3).map(audience: unknown, idx: unknown (
                         <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                           {audience}
                         </span>
@@ -412,7 +412,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
 
                   {/* CTA Button */}
                   <button
-                    onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                    onClick={: unknown setExpandedService(expandedService === service.id ? null : service.id)}
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:transform hover:scale-105 mb-4"
                   >
                     {expandedService === service.id ? 'Show Less' : service.ctaLabel}
@@ -435,7 +435,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
 
                   {/* Expanded Details */}
                   <AnimatePresence>
-                    {expandedService === service.id && (
+                    {expandedService === service.id && 
                       <motion.div
                         initial = {
   { opacity: 0,
@@ -474,7 +474,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Complete Feature List</h4>
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
-                            {service.features.map((feature, idx)  => (
+                            {service.features.map((feature, idx (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span>{feature}</span>
@@ -487,7 +487,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Complete Benefits</h4>
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
-                            {service.benefits.map((benefit, idx)  => (
+                            {service.benefits.map(benefit: unknown, idx: unknown (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />
                                 <span>{benefit}</span>
@@ -500,7 +500,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Use Cases</h4>
                           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
-                            {service.useCases.map((useCase, idx)  => (
+                            {service.useCases.map(useCase: unknown, idx: unknown (
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                                 <Target className="w-4 h-4 text-orange-400 flex-shrink-0" />
                                 <span>{useCase}</span>
@@ -547,7 +547,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
           </div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
+          {filteredServices.length === 0 && 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -561,7 +561,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
   ;
   ;
   ;
-  () => {;
+  ( {;
                   setSearchQuery('');
                   setSelectedCategory('all');
                   setPriceRange([0,
@@ -620,5 +620,6 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-
+;
+export { ZionTechGroup2025ComprehensiveShowcase };
 export default ZionTechGroup2025ComprehensiveShowcase;

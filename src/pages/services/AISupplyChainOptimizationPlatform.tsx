@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '../
 import { Badge   } from '../../components/ui/badge';
 import { Button   } from '../../components/ui/button';
 import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3   } from 'lucide-react.ts';
-
+;
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -131,7 +131,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
@@ -169,7 +169,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
         
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index)   => (
+          {benefits.map((benefit, index (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>
               <p className="text-gray-300">{benefit.description}</p>
@@ -186,7 +186,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
         
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index)   => (
+          {features.map(feature: unknown, index: unknown (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>
                 <div className="flex items-center gap-3">
@@ -210,7 +210,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
         
         <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-          {useCases.map((useCase, index)   => (
+          {useCases.map(useCase: unknown, index: unknown (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors">
               <CardHeader>
                 <CardTitle className="text-white">{useCase.title}</CardTitle>
@@ -231,7 +231,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         </div>
         
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-          {pricingTiers.map((tier, index)   => (
+          {pricingTiers.map(tier: unknown, index: unknown (
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>
               {tier.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-slate-900">
@@ -248,7 +248,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 mb-6">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -315,5 +315,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       </div>;
     </div>;
   )};
-
+;
+export { AISupplyChainOptimizationPlatform };
 export default AISupplyChainOptimizationPlatform;

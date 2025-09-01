@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+;
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronDown, 
@@ -18,13 +18,15 @@ import {
 import { Link } from 'react-router-dom';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
   category: string;
   icon: React.ComponentType<any>;
-}
 
+}
+;
 const faqData: FAQItem[] = [
   {
     id: 'ai-services',
@@ -104,13 +106,14 @@ const faqData: FAQItem[] = [
     icon: Cloud
   }
 ];
-
+;
 const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
-
-export default function FAQ() {
+;
+export { function };
+export default function FAQ(...args: unknown[]): unknown {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const filteredFAQs = faqData.filter(faq => {
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
@@ -119,11 +122,11 @@ export default function FAQ() {
     return matchesCategory && matchesSearch;
   });
 
-  const toggleItem = (id: string) => {
+  const toggleItem = (...args: unknown[]): unknown => {
     setActiveItem(activeItem === id ? null : id);
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-24">
         {/* Header */}
@@ -155,17 +158,16 @@ export default function FAQ() {
               type="text"
               placeholder="Search questions..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
             />
           </div>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={(: unknown setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
@@ -186,7 +188,7 @@ export default function FAQ() {
           className="max-w-4xl mx-auto space-y-4"
         >
           <AnimatePresence>
-            {filteredFAQs.map((faq, index) => (
+            {filteredFAQs.map(faq: unknown, index: unknown 
               <motion.div
                 key={faq.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -196,7 +198,7 @@ export default function FAQ() {
                 className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden"
               >
                 <button
-                  onClick={() => toggleItem(faq.id)}
+                  onClick={( toggleItem(faq.id)}
                   className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                 >
                   <div className="flex items-center space-x-4">

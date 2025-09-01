@@ -1,10 +1,10 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
-
+;
 const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
@@ -52,7 +52,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
     };
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -233,14 +233,13 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
               type="text" 
               placeholder="Search revolutionary services..." 
               value={searchTerm} 
-              onChange={(e) => setSearchTerm(e.target.value)} 
+              onChange={(e setSearchTerm(e.target.value)} 
               className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 w-full md:w-80"
             />
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button 
+              {categories.map(category: unknown <button 
                   key={category.id} 
-                  onClick={() => setSelectedCategory(category.id)} 
+                  onClick={(: unknown setSelectedCategory(category.id)} 
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400 text-white'
@@ -266,7 +265,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div 
                 key={service.id} 
                 variants={itemVariants} 
@@ -326,7 +325,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
                     <p className="text-green-400 text-sm font-semibold">{service.roi}</p>
                   </div>
                   <div className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    {service.benefits.slice(0, 3).map(benefit: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <span className="text-green-400 mr-2">✓</span>
                         {benefit}
@@ -339,7 +338,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
                 <div className="mb-6">
                   <h4 className="text-purple-400 font-semibold mb-2">🛠️ Technology Stack</h4>
                   <div className="flex flex-wrap gap-2">
-                    {service.technology.slice(0, 4).map((tech, idx) => (
+                    {service.technology.slice(0, 4).map(tech: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                         {tech}
                       </span>
@@ -450,5 +449,6 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-
+;
+export { UltimateZionServicesShowcase };
 export default UltimateZionServicesShowcase;

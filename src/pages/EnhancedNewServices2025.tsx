@@ -166,8 +166,8 @@ import { Brain,
   MapPin,
   Package
  } from 'lucide-react.ts';
-
-export function EnhancedNewServices2025(...args: any[]): any {
+;
+export function EnhancedNewServices2025(...args: unknown[]): unknown {
   const newServices = [
     {
       id: 'agent-ops-monitor',
@@ -705,7 +705,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
 
   const categories = [...new Set(newServices.map(service => service.category))];
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -723,7 +723,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
               Each service is designed with proven ROI, market-leading capabilities, and real-world implementation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
+              {categories.map((category, index (
                 <motion.div
                   key={category}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -739,7 +739,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
         </div>
 
         {/* Services Grid by Category */}
-        {categories.map((category, categoryIndex) => (
+        {categories.map(category: unknown, categoryIndex: unknown (
           <div key={category} className="mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -754,7 +754,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {newServices
                 .filter(service  => service.category === category)
-                .map((service, index) => (
+                .map(service: unknown, index: unknown (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -797,7 +797,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
 
                     {/* Features Preview */}
                     <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                         <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400" />
                           <span>{feature}</span>
@@ -814,7 +814,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-2">Technology Stack:</div>
                       <div className="flex flex-wrap gap-2">
-                        {service.technology.slice(0, 3).map((tech, techIndex) => (
+                        {service.technology.slice(0, 3).map(tech: unknown, techIndex: unknown (
                           <span key={techIndex} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded border border-gray-600">
                             {tech}
                           </span>

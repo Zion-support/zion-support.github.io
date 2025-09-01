@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 
 // // console.log('🚀 Build Automation Starting...\n');
-
+;
 class BuildAutomation {
   constructor() {
     this.projectRoot = process.cwd();
@@ -368,10 +368,11 @@ class BuildAutomation {
   }
 
   generateDefaultViteConfig() {
-    return `import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+    return `import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'path'
-
+;
+export { defineConfig };
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -445,16 +446,16 @@ export default defineConfig({
   }
 
   generateDefaultTailwindConfig() {
-    return `/** @type {import('tailwindcss').Config} */
+    return `/** @type {import('tailwindcss').Config} */;
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }`;
   }
 
@@ -462,8 +463,8 @@ export default {
     return `export default {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
-  },
+    autoprefixer: {}
+  }
 }`;
   }
 
@@ -684,7 +685,7 @@ process.on('SIGTERM', async () => {
   }
 });
 
-// Start the automation
+// Start the automation;
 const automation = new BuildAutomation();
 
 // Keep the process alive

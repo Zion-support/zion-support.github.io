@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists;
 import { toast } from '@/hooks/use-toast'; // Assuming this hook exists
-// Placeholder for the actual API call, to be implemented in a later step
+// Placeholder for the actual API call, to be implemented in a later step;
 import { resetPassword } from '@/services/auth';
+export { function };
 export default function ResetPasswordPage() {
     const { token } = useParams();
     const navigate = useNavigate();
@@ -62,3 +63,5 @@ export default function ResetPasswordPage() {
         </Button>
       </form>
     </div>)}
+
+}

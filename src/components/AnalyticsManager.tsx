@@ -16,45 +16,49 @@ import {
 } from 'lucide-react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
+  topPages: { path: string; views: number 
+}[];
+  userAgents: { device: string; count: number }[];
   performance: {
     fcp: number;
     lcp: number;
     fid: number;
     cls: number;
   };
-  events: Array<{ name: string; count: number; timestamp: string }>;
+  events: { name: string; count: number; timestamp: string }[];
 }
 
 interface UserSession {
+
   id: string;
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: { name: string; timestamp: number; data?: unknown 
+}[];
   userAgent: string;
   referrer: string;
 }
-
-export function AnalyticsManager() {
+;
+export function AnalyticsManager(...args: unknown[]): unknown {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
   const [currentSession, setCurrentSession] = useState<UserSession | null>(null);
-  const [isTracking, setIsTracking] = useState(false);
-  const [showAnalytics, setShowAnalytics] = useState(false);
+  const [isTracking, setIsTracking] = useState<typeof false>(false);
+  const [showAnalytics, setShowAnalytics] = useState<typeof false>(false);
 
   // Initialize analytics tracking
-  useEffect(() => {
+  useEffect(: unknown {
     initializeAnalytics();
-    return () => cleanupAnalytics();
+    return : unknown cleanupAnalytics();
   }, []);
 
-  const initializeAnalytics = useCallback(() => {
+  const initializeAnalytics = useCallback(: unknown {
     setIsTracking(true);
     
     // Create or retrieve session
@@ -96,7 +100,7 @@ export function AnalyticsManager() {
     console.log('Analytics initialized for session:', sessionId);
   }, []);
 
-  const cleanupAnalytics = useCallback(() => {
+  const cleanupAnalytics = useCallback(: unknown {
     // Clean up event listeners
     document.removeEventListener('click', handleClick);
     document.removeEventListener('scroll', handleScroll);
@@ -108,11 +112,11 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const generateSessionId = () => {
+  const generateSessionId = (...args: unknown[]): unknown => {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
 
-  const setupEventListeners = useCallback(() => {
+  const setupEventListeners = useCallback(: unknown {
     // Click tracking
     document.addEventListener('click', handleClick, { passive: true });
     
@@ -123,7 +127,7 @@ export function AnalyticsManager() {
     window.addEventListener('beforeunload', handleBeforeUnload);
   }, []);
 
-  const handleClick = useCallback((event: Event) => {
+  const handleClick = useCallback(event: Event {
     const target = event.target as HTMLElement;
     
     // Track button clicks
@@ -154,7 +158,7 @@ export function AnalyticsManager() {
     }
   }, []);
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback(: unknown {
     // Track scroll depth
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     
@@ -163,7 +167,7 @@ export function AnalyticsManager() {
     }
   }, []);
 
-  const handleBeforeUnload = useCallback(() => {
+  const handleBeforeUnload = useCallback(: unknown {
     // Track session end
     if (currentSession) {
       trackEvent('session_end', {
@@ -173,10 +177,10 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const setupPerformanceMonitoring = useCallback(() => {
+  const setupPerformanceMonitoring = useCallback(: unknown {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const fcp = entries[entries.length - 1];
         if (fcp) {
@@ -186,7 +190,7 @@ export function AnalyticsManager() {
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const lcp = entries[entries.length - 1];
         if (lcp) {
@@ -196,7 +200,7 @@ export function AnalyticsManager() {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const fid = entries[entries.length - 1];
         if (fid) {
@@ -206,7 +210,7 @@ export function AnalyticsManager() {
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list: unknown {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
@@ -219,18 +223,18 @@ export function AnalyticsManager() {
     }
   }, []);
 
-  const setupSessionTracking = useCallback(() => {
+  const setupSessionTracking = useCallback(: unknown {
     // Update last activity every 30 seconds
-    const activityInterval = setInterval(() => {
+    const activityInterval = setInterval(: unknown {
       if (currentSession) {
         setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null);
       }
     }, 30000);
 
-    return () => clearInterval(activityInterval);
+    return : unknown clearInterval(activityInterval);
   }, [currentSession]);
 
-  const trackPageView = useCallback((path: string) => {
+  const trackPageView = useCallback(path: string {
     if (currentSession) {
       setCurrentSession(prev => prev ? {
         ...prev,
@@ -245,7 +249,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const trackEvent = useCallback((name: string, data?: any) => {
+  const trackEvent = useCallback(name: string, data?: unknown {
     if (currentSession) {
       const event = { name, timestamp: Date.now(), data };
       
@@ -260,19 +264,19 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const trackUserAgent = useCallback((userAgent: string) => {
+  const trackUserAgent = useCallback(userAgent: string {
     trackEvent('user_agent', { userAgent });
   }, []);
 
-  const trackReferrer = useCallback((referrer: string) => {
+  const trackReferrer = useCallback(referrer: string {
     trackEvent('referrer', { referrer });
   }, []);
 
-  const trackPerformance = useCallback((metric: string, value: number) => {
+  const trackPerformance = useCallback(metric: string, value: number {
     trackEvent('performance_metric', { metric, value });
   }, []);
 
-  const sendAnalyticsData = useCallback(async (type: string, data: any) => {
+  const sendAnalyticsData = useCallbackasync (type: string, data: unknown {
     try {
       // In production, send to your analytics endpoint
       // await fetch('/api/analytics', {
@@ -288,7 +292,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const saveSessionData = useCallback(async (session: UserSession) => {
+  const saveSessionData = useCallbackasync (session: UserSession {
     try {
       // Save session data to localStorage as backup
       localStorage.setItem('zion_session_backup', JSON.stringify(session));
@@ -300,7 +304,7 @@ export function AnalyticsManager() {
     }
   }, [sendAnalyticsData]);
 
-  const generateAnalyticsReport = useCallback(() => {
+  const generateAnalyticsReport = useCallback(: unknown {
     if (!currentSession) return null;
 
     const sessionDuration = Date.now() - currentSession.startTime;
@@ -322,7 +326,7 @@ export function AnalyticsManager() {
       sessionDuration: Math.round(sessionDuration / 1000), // in seconds
       bounceRate,
       conversionRate: Math.round(conversionRate),
-      topPages: currentSession.pageViews.reduce((acc, path) => {
+      topPages: currentSession.pageViews.reduce(acc: unknown, path: unknown {
         acc[path] = (acc[path] || 0) + 1;
         return acc;
       }, {} as Record<string, number>),
@@ -332,7 +336,7 @@ export function AnalyticsManager() {
     };
   }, [currentSession]);
 
-  const getDeviceType = (userAgent: string) => {
+  const getDeviceType = (...args: unknown[]): unknown => {
     if (/Mobile|Android|iPhone|iPad/.test(userAgent)) {
       return 'Mobile';
     } else if (/Tablet|iPad/.test(userAgent)) {
@@ -343,7 +347,7 @@ export function AnalyticsManager() {
   };
 
   // Update analytics data when session changes
-  useEffect(() => {
+  useEffect(: unknown {
     if (currentSession) {
       const report = generateAnalyticsReport();
       setAnalyticsData(report);
@@ -351,11 +355,11 @@ export function AnalyticsManager() {
   }, [currentSession, generateAnalyticsReport]);
 
   if (!showAnalytics) {
-    return (
+    return 
       <motion.button
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        onClick={() => setShowAnalytics(true)}
+        onClick={( setShowAnalytics(true)}
         className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
         title="Show Analytics"
       >
@@ -364,7 +368,7 @@ export function AnalyticsManager() {
     );
   }
 
-  return (
+  return 
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -376,7 +380,7 @@ export function AnalyticsManager() {
           <span className="font-medium">Analytics</span>
         </div>
         <button
-          onClick={() => setShowAnalytics(false)}
+          onClick={( setShowAnalytics(false)}
           className="text-gray-400 hover:text-white"
         >
           ×
@@ -435,7 +439,7 @@ export function AnalyticsManager() {
 
       <div className="mt-4 pt-4 border-t border-gray-600">
         <button
-          onClick={() => {
+          onClick={: unknown {
             if (currentSession) {
               saveSessionData(currentSession);
             }

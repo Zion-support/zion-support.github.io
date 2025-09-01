@@ -265,4 +265,5 @@ const Accessibility = () => {
         </div>
       </section>
     </div>)};
+export { Accessibility };
 export default Accessibility;

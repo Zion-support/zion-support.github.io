@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
-
-const EnhancedZionTechServices2025: React.FC = () => {;
+;
+const EnhancedZionTechServices2025: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
@@ -15,7 +15,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
@@ -28,7 +28,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
 
   });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -102,14 +102,14 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e setSearchTerm(e.target.value)}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="flex gap-4">
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={e: unknown setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
               {categories.map(category => (;
@@ -118,7 +118,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
             </select>
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={e: unknown setSortBy(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
               <option value="name">Sort by Name</option>
@@ -131,7 +131,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service) => (
+          {sortedServices.map(service: unknown (
             <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
               {/* Service Header */}
               <div className="mb-4">
@@ -166,7 +166,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
+                  {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                     <li key={index} className="text-xs text-gray-400 flex items-center">
                       <span className="text-green-400 mr-2">✓</span>
                       {feature}
@@ -179,7 +179,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
                 <ul className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                  {service.benefits.slice(0, 2).map(benefit: unknown, index: unknown (
                     <li key={index} className="text-xs text-gray-400 flex items-center">
                       <span className="text-blue-400 mr-2">→</span>
                       {benefit}
@@ -204,7 +204,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               {/* Tags */}
               <div className="mb-4">
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 3).map((tag, index) => (
+                  {service.tags.slice(0, 3).map(tag: unknown, index: unknown (
                     <span key={index} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">
                       {tag}
                     </span>
@@ -291,5 +291,6 @@ const EnhancedZionTechServices2025: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { EnhancedZionTechServices2025 };
 export default EnhancedZionTechServices2025;}

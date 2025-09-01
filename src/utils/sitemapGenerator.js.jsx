@@ -176,7 +176,7 @@ Crawl-delay: 1`;
         return html;
     }
 }
-// Default sitemap configuration for Zion Tech Group
+// Default sitemap configuration for Zion Tech Group;
 export const defaultSitemapConfig = {
   baseUrl: 'https://ziontechgroup.com',
     urls: [
@@ -222,7 +222,7 @@ export const defaultSitemapConfig = {
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
     ]
 };
-// Utility function to generate all sitemap files
+// Utility function to generate all sitemap files;
 export const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap
@@ -245,7 +245,8 @@ export const generator = new SitemapGenerator(config);
         throw error;
     }
 };
+export { SitemapGenerator };
 export default SitemapGenerator;
-
+;
 export default to;
 export default to;

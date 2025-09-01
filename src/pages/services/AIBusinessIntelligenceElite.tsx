@@ -22,7 +22,7 @@ import { Brain,
   MapPin,
   ExternalLink
  } from 'lucide-react.ts';
-
+;
 const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -121,7 +121,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -183,7 +183,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,7 +223,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -254,7 +254,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-white">{feature}</span>
@@ -294,7 +294,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -413,5 +413,6 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AIBusinessIntelligenceElite };
 export default AIBusinessIntelligenceElite;

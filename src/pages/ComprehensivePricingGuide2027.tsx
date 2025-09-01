@@ -120,8 +120,9 @@ import { SEO } from '../components/SEO';
 import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
 import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
 import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
-
-export default function ComprehensivePricingGuide2027() {
+;
+export { function };
+export default function ComprehensivePricingGuide2027(...args: unknown[]): unknown {
   const serviceCategories = [
     {
       name: "AI & Machine Learning Services",
@@ -392,7 +393,7 @@ export default function ComprehensivePricingGuide2027() {
               </p>
             </motion.div>
 
-            {serviceCategories.map((category, categoryIndex) => (
+            {serviceCategories.map(category: unknown, categoryIndex: unknown 
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
@@ -410,7 +411,7 @@ export default function ComprehensivePricingGuide2027() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map((service, serviceIndex (
                     <motion.div
                       key={serviceIndex}
                       initial={{ opacity: 0, y: 20 }}
@@ -437,7 +438,7 @@ export default function ComprehensivePricingGuide2027() {
                       </div>
                       
                       <ul className="space-y-3 mb-6">
-                        {service.features.map((feature, idx) => (
+                        {service.features.map(feature: unknown, idx: unknown (
                           <li key={idx} className="flex items-center text-zion-slate-300">
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                             {feature}
@@ -485,7 +486,7 @@ export default function ComprehensivePricingGuide2027() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {enterprisePackages.map((pkg, index) => (
+              {enterprisePackages.map(pkg: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -516,7 +517,7 @@ export default function ComprehensivePricingGuide2027() {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-                    {pkg.features.map((feature, idx) => (
+                    {pkg.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-zion-slate-300">
                         <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
@@ -572,7 +573,7 @@ export default function ComprehensivePricingGuide2027() {
                     </tr>
                   </thead>
                   <tbody>
-                    {marketComparison.map((item, index) => (
+                    {marketComparison.map(item: unknown, index: unknown (
                       <tr key={index} className="border-b border-zion-slate-700/50">
                         <td className="py-4 px-4 text-white font-medium">{item.feature}</td>
                         <td className="py-4 px-4 text-center text-zion-cyan font-bold">{item.zion}</td>
@@ -651,5 +652,5 @@ export default function ComprehensivePricingGuide2027() {
     </div>
   );
 };
-
+;
 export default ComprehensivePricingGuide2027;

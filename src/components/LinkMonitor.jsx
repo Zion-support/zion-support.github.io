@@ -49,4 +49,15 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             const fix = {
   originalUrl,
                 newUrl,
-                type: 'redirect',
+                type: 'redirect'
+
+
+
+
+}
+
+
+}
+
+}
+}

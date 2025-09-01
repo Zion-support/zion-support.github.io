@@ -39,3 +39,5 @@ export function FeaturesGuideSection() {
         </div>
       </div>
     </section>)}
+
+}

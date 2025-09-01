@@ -10,15 +10,15 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   height?: string | number;
   lines?: number;
   animated?: boolean}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-  className,
+;
+const Skeleton: React.FC<SkeletonProps> = {
+  className,;
 variant:  'default',;
   width,;
   height,;
   lines = 1,;
   animated = true,;
-}) => {;
+} {;
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
 
   const variants = {
@@ -50,7 +50,7 @@ variant:  'default',;
   if (variant = == 'text' && lines > 1) {
     return (
       <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, index)  => (
+        {Array.from({ length: lines }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             className = {
@@ -133,8 +133,8 @@ variant:  'default',;
   );
 };
 
-// Specialized skeleton components
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
+// Specialized skeleton components;
+export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
   cn('p-6 space-y-4',
   className)
@@ -154,12 +154,10 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
     </div>;
   </div>;
 );
-
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
-  rows = 5,
-  columns = 4,
-  className
-}) => (
+;
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = {
+  rows = 5: unknown, columns = 4: unknown, className
+}: unknown (
   <div className = {
   cn('space-y-3',
   className)
@@ -172,25 +170,24 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
 }>
     {/* Header */}
     <div className="flex space-x-4">
-      {Array.from({ length: columns }).map((_, index)  => (
+      {Array.from({ length: columns }).map(_: unknown, index: unknown (
         <Skeleton key={index} variant="rectangular" height={20} width="100%" />
       ))}
     </div>
     {/* Rows */}
-    {Array.from({ length: rows }).map((_, rowIndex)  => (
+    {Array.from({ length: rows }).map(_: unknown, rowIndex: unknown (
       <div key={rowIndex} className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, colIndex) => (;
+        {Array.from({ length: columns }).map(_: unknown, colIndex: unknown (;
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
       </div>;
     ))};
   </div>;
 );
-
-export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
-  items = 5,
-  className
-}) => (
+;
+export const ListSkeleton: React.FC<{ items?: number; className?: string }> = {
+  items = 5: unknown, className
+}: unknown (
   <div className = {
   cn('space-y-4',
   className)
@@ -201,7 +198,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 
 }>
-    {Array.from({ length: items }).map((_, index) => (
+    {Array.from({ length: items }).map(_: unknown, index: unknown (
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">;
@@ -212,17 +209,14 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
     ))};
   </div>;
 );
-
+;
 export const GridSkeleton: React.FC<{
   rows?: number;
   columns?: number;
   className?: string;
-  itemHeight?: number}> = ({
-  rows = 3,
-  columns = 3,
-  className,
-  itemHeight = 120
-}) => (
+  itemHeight?: number}> = {
+  rows = 3: unknown, columns = 3: unknown, className: unknown, itemHeight = 120
+}: unknown (
   <div className = {
   cn('grid gap-4',
   className)
@@ -235,10 +229,11 @@ export const GridSkeleton: React.FC<{
 } style={{
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
   }}>;
-    {Array.from({ length: rows * columns }).map((_, index) => (;
+    {Array.from({ length: rows * columns }).map(_: unknown, index: unknown (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
     ))};
   </div>;
 );
-
+;
+export { Skeleton };
 export default Skeleton;}</motion.div></motion.div>}

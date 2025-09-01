@@ -464,11 +464,12 @@ import {
   YellowIndianBean,
   YellowWaxBean
 } from 'lucide-react';
-
-export default function Talent() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedExperience, setSelectedExperience] = useState('all');
+;
+export { function };
+export default function Talent(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedExperience, setSelectedExperience] = useState<typeof 'all'>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
 
@@ -605,7 +606,7 @@ export default function Talent() {
     }
   ];
 
-  const toggleTalentExpansion = (talentId: string) => {
+  const toggleTalentExpansion = (...args: unknown[]): unknown => {
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
 
@@ -620,7 +621,7 @@ export default function Talent() {
     return true;
   });
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -631,7 +632,7 @@ export default function Talent() {
     }
   };
 
-  const getExperienceColor = (experience: string) => {
+  const getExperienceColor = (...args: unknown[]): unknown => {
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -641,12 +642,12 @@ export default function Talent() {
     }
   };
 
-  const getAvailabilityColor = (availability: string) => {
+  const getAvailabilityColor = (...args: unknown[]): unknown => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (...args: unknown[]): unknown => {
+    return Array.from{ length: 5 }, (_, i (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -656,7 +657,7 @@ export default function Talent() {
     ));
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Talent Pool - Zion Tech Group"
@@ -700,7 +701,7 @@ export default function Talent() {
                     type="text"
                     placeholder="Search by name, skills, or expertise..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                   />
                 </div>
@@ -710,10 +711,10 @@ export default function Talent() {
               <div className="lg:w-48">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {categories.map((category) => (
+                  {categories.map(category: unknown (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -725,10 +726,10 @@ export default function Talent() {
               <div className="lg:w-48">
                 <select
                   value={selectedExperience}
-                  onChange={(e) => setSelectedExperience(e.target.value)}
+                  onChange={e: unknown setSelectedExperience(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {experienceLevels.map((level) => (
+                  {experienceLevels.map(level: unknown (
                     <option key={level.id} value={level.id}>
                       {level.name} ({level.count})
                     </option>
@@ -739,7 +740,7 @@ export default function Talent() {
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-200 ${
                     viewMode === 'grid' 
                       ? 'bg-blue-400/20 text-blue-400' 
@@ -749,7 +750,7 @@ export default function Talent() {
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-200 ${
                     viewMode === 'list' 
                       ? 'bg-blue-400/20 text-blue-400' 
@@ -778,7 +779,7 @@ export default function Talent() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {talentPool.filter(t => t.featured).map((talent, index) => (
+            {talentPool.filter(t => t.featured).map(talent: unknown, index: unknown (
               <motion.div
                 key={talent.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -828,7 +829,7 @@ export default function Talent() {
                     <div className="mb-4">
                       <div className="text-sm text-gray-400 mb-2">Skills</div>
                       <div className="flex flex-wrap gap-2">
-                        {talent.skills.slice(0, 5).map((skill, skillIndex) => (
+                        {talent.skills.slice(0, 5).map(skill: unknown, skillIndex: unknown (
                           <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                             {skill}
                           </span>
@@ -851,13 +852,13 @@ export default function Talent() {
                     </div>
                     
                     <button
-                      onClick={() => toggleTalentExpansion(talent.id)}
+                      onClick={: unknown toggleTalentExpansion(talent.id)}
                       className="w-full px-4 py-2 bg-gradient-to-r from-blue-400 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-500 hover:to-purple-600 transition-all duration-200 hover:scale-105"
                     >
                       {expandedTalent === talent.id ? 'Show Less' : 'View Full Profile'}
                     </button>
                     
-                    {expandedTalent === talent.id && (
+                    {expandedTalent === talent.id && 
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
@@ -868,7 +869,7 @@ export default function Talent() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-white mb-2">Certifications:</h4>
                           <div className="flex flex-wrap gap-2">
-                            {talent.certifications.map((cert, certIndex) => (
+                            {talent.certifications.map((cert, certIndex (
                               <span key={certIndex} className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">
                                 {cert}
                               </span>
@@ -879,7 +880,7 @@ export default function Talent() {
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-white mb-2">Recent Projects:</h4>
                           <ul className="space-y-1">
-                            {talent.projects.map((project, projectIndex) => (
+                            {talent.projects.map(project: unknown, projectIndex: unknown (
                               <li key={projectIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {project}
@@ -912,9 +913,9 @@ export default function Talent() {
             </p>
           </motion.div>
 
-          {viewMode === 'grid' ? (
+          {viewMode === 'grid' ? 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTalent.map((talent, index) => (
+              {filteredTalent.map((talent, index (
                 <motion.div
                   key={talent.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -950,7 +951,7 @@ export default function Talent() {
                       <div className="mb-3">
                         <div className="text-xs text-gray-400 mb-1">Skills</div>
                         <div className="flex flex-wrap gap-1">
-                          {talent.skills.slice(0, 3).map((skill, skillIndex) => (
+                          {talent.skills.slice(0, 3).map(skill: unknown, skillIndex: unknown (
                             <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                               {skill}
                             </span>
@@ -979,9 +980,8 @@ export default function Talent() {
                 </motion.div>
               ))}
             </div>
-          ) : (
-            <div className="space-y-4">
-              {filteredTalent.map((talent, index) => (
+          ) : <div className="space-y-4">
+              {filteredTalent.map((talent: unknown, index: unknown (
                 <motion.div
                   key={talent.id}
                   initial={{ opacity: 0, x: -20 }}
@@ -1028,7 +1028,7 @@ export default function Talent() {
                         <div className="mb-3">
                           <div className="text-sm text-gray-400 mb-1">Skills</div>
                           <div className="flex flex-wrap gap-2">
-                            {talent.skills.slice(0, 6).map((skill, skillIndex) => (
+                            {talent.skills.slice(0, 6).map(skill: unknown, skillIndex: unknown (
                               <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                 {skill}
                               </span>

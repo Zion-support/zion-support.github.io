@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default function FuturisticHero() {
+import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export { function };
+export default function FuturisticHero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
@@ -15,7 +16,7 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
         { icon: <Zap className="w-6 h-6"/>, delay: 0.5, color: 'text-cyan-400' },
         { icon: <Brain className="w-6 h-6"/>, delay: 1, color: 'text-purple-400' },
         { icon: <Shield className="w-6 h-6"/>, delay: 1.5, color: 'text-green-400' },
-        { icon: <Globe className="w-6 h-6"/>, delay: 2, color: 'text-blue-400' },
+        { icon: <Globe className="w-6 h-6"/>, delay: 2, color: 'text-blue-400' }
     ];
     return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Animated Background Elements */}
@@ -39,7 +40,7 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
   duration: 1 
 }} className={`absolute ${item.color} opacity-20`} style={{
                 left: `${20 + index * 15}%`,
-                top: `${30 + (index % 2) * 20}%`,
+                top: `${30 + (index % 2) * 20}%`
             }}>
           {item.icon}
         </motion.div>))}
@@ -47,7 +48,7 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
       <div className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference" style = {
   {
             left: mousePosition.x - 8,
-            top: mousePosition.y - 8,
+            top: mousePosition.y - 8
 }}/>
       {/* Main Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -105,7 +106,7 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
             { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8"/>, color: 'text-cyan-400' },
             { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8"/>, color: 'text-green-400' },
             { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8"/>, color: 'text-yellow-400' },
-            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8"/>, color: 'text-purple-400' },
+            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8"/>, color: 'text-purple-400' }
         ].map((stat, index) => (<motion.div key={stat.label} initial = {
   { opacity: 0,
   scale: 0.8 
@@ -180,4 +181,20 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
   {
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
-                opacity: Math.random(),
+                opacity: Math.random()
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

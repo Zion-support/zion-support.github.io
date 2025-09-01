@@ -22,13 +22,16 @@ import {
 
 interface SEOAnalysis {
 
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
-  lastUpdated: Date}
+  lastUpdated: Date
+}
 
 interface SEOIssue {
+
 
   id: string;
   type: 'error' | 'warning' | 'info';
@@ -36,18 +39,22 @@ interface SEOIssue {
   description: string;
   impact: 'high' | 'medium' | 'low';
   fixable: boolean;
-  category: 'content' | 'technical' | 'performance' | 'accessibility'}
+  category: 'content' | 'technical' | 'performance' | 'accessibility'
+}
 
 interface SEOSuggestion {
+
 
   id: string;
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number}
+  estimatedImpact: number
+}
 
 interface SEOMetrics {
+
 
   pageSpeed: number;
   mobileFriendliness: number;
@@ -57,29 +64,30 @@ interface SEOMetrics {
 coreWebVitals: {
     lcp: number;
     fid: number;
-    cls: number}}
+    cls: number
+}}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis)  => void}
-
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  onAnalysisComplete?: analysis: SEOAnalysis void}
+;
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = {
   url,
 autoAnalyze:  true,;
   showDetails = false,;
   onAnalysisComplete;
-}) => {;
+} {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState<typeof false>(false);
+  const [currentUrl, setCurrentUrl] = useState<typeof url || window.location.href>(url || window.location.href);
+  const [showAdvanced, setShowAdvanced] = useState<typeof false>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
-  const mockAnalysis: SEOAnalysis = useMemo(() => ({
+  const mockAnalysis: SEOAnalysis = useMemo(: unknown ({
     score: 87,
     issues[;
       {
@@ -152,7 +160,7 @@ autoAnalyze:  true,;
   }), []);
 
   // Analyze SEO
-  const analyzeSEO = useCallback(async () => {;
+  const analyzeSEO = useCallbackasync (: unknown {;
     setIsAnalyzing(true);
 
     // Simulate analysis delay
@@ -163,7 +171,7 @@ autoAnalyze:  true,;
     onAnalysisComplete?.(mockAnalysis)}, [mockAnalysis, onAnalysisComplete]);
 
   // Auto-analyze on mount
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoAnalyze) {
       analyzeSEO()}
   }, [autoAnalyze, analyzeSEO]);
@@ -177,13 +185,13 @@ autoAnalyze:  true,;
   };
 
   // Filter issues by category
-  const filteredIssues = useMemo(() => {;
+  const filteredIssues = useMemo(: unknown {;
     if (selectedCategory === 'all') return analysis?.issues || [];
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]);
 
   // Filter suggestions by priority
-  const filteredSuggestions = useMemo(() => {
-    return analysis?.suggestions.sort((a, b) => {
+  const filteredSuggestions = useMemo(: unknown {
+    return analysis?.suggestions.sort(a: unknown, b: unknown {
       const priorityOrder = {
   high: 3, medium: 2,;
   ;
@@ -218,8 +226,7 @@ autoAnalyze:  true,;
     );
   }
 
-  return (
-    <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
+  return <div className = "bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
@@ -234,7 +241,7 @@ autoAnalyze:  true,;
 
         <div className="flex items-center space-x-2">
           <button
-            onClick={() => setShowAdvanced(!showAdvanced)}
+            onClick={(: unknown setShowAdvanced(!showAdvanced)}
             className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 
@@ -354,10 +361,9 @@ autoAnalyze:  true,;
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
 
               <div className="flex space-x-1">
-                {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
-                  <button
+                {['all', 'content', 'technical', 'performance', 'accessibility'].map(category: unknown <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={(: unknown setSelectedCategory(category)}
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${
                       selectedCategory === category
                         ? 'bg-zion-cyan text-white'
@@ -372,7 +378,7 @@ autoAnalyze:  true,;
 
             <div className="space-y-3">
               <AnimatePresence>
-                {filteredIssues.map((issue) => (
+                {filteredIssues.map(issue: unknown (
                   <motion.div
                     key={issue.id}
                     initial = {
@@ -445,7 +451,7 @@ autoAnalyze:  true,;
           <div className="mb-6">;
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>
             <div className="space-y-3">
-              {filteredSuggestions.slice(0, 3).map((suggestion) => (
+              {filteredSuggestions.slice(0, 3).map(suggestion: unknown (
                 <motion.div
                   key={suggestion.id}
                   initial = {
@@ -555,12 +561,12 @@ autoAnalyze:  true,;
   );
 };
 
-// Hook for using SEO optimization
-export const useSEOOptimization = () => {;
+// Hook for using SEO optimization;
+export const useSEOOptimization = (...args: unknown[]): unknown => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isOptimizing, setIsOptimizing] = useState<typeof false>(false);
 
-  const optimizePage = useCallback(async () => {;
+  const optimizePage = useCallbackasync (: unknown {;
     setIsOptimizing(true);
     // Implement actual optimization logic here
     await new Promise(resolve => setTimeout(resolve, 3000));

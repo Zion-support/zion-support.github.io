@@ -17,9 +17,17 @@ import { Phone,
   Facebook,
   Instagram
  } from 'lucide-react.ts';
-
-export function ContactPage(...args: any[]): any {
-  const [formData, setFormData] = useState({
+;
+export function ContactPage(...args: unknown[]): unknown {
+  const [formData, setFormData] = useState<typeof {
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  }>({
     firstName: '',
     lastName: '',
     email: '',
@@ -29,17 +37,17 @@ export function ContactPage(...args: any[]): any {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [isSubmitted, setIsSubmitted] = useState<typeof false>(false);
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (...args: unknown[]): unknown => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async e: anyReact.FormEvent {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -50,7 +58,7 @@ export function ContactPage(...args: any[]): any {
     setIsSubmitted(true);
     
     // Reset form after 3 seconds
-    setTimeout(() => {
+    setTimeout(: unknown {
       setIsSubmitted(false);
       setFormData({
         firstName: '',
@@ -167,7 +175,7 @@ export function ContactPage(...args: any[]): any {
     );
   }
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -187,7 +195,7 @@ export function ContactPage(...args: any[]): any {
 
         {/* Contact Methods */}
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contactMethods.map((method, index)  => (
+          {contactMethods.map((method, index (
             <motion.div
               key={method.title}
               initial={{ opacity: 0, y: 20 }}
@@ -319,7 +327,7 @@ export function ContactPage(...args: any[]): any {
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    {services.map((service) => (
+                    {services.map(service: unknown (
                       <option key={service} value={service}>{service}</option>
                     ))}
                   </select>
@@ -431,7 +439,7 @@ export function ContactPage(...args: any[]): any {
             <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Connect With Us</h3>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social: unknown (
                   <a
                     key={social.label}
                     href={social.href}

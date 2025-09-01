@@ -4,10 +4,11 @@ import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp,
 import { SEO  } from '@/components/SEO';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
-
-export default function ComprehensivePricingGuide2029(...args: any[]): any {
-  const [selectedPlan, setSelectedPlan] = useState('enterprise');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+;
+export { function };
+export default function ComprehensivePricingGuide2029(...args: unknown[]): unknown {
+  const [selectedPlan, setSelectedPlan] = useState<typeof 'enterprise'>('enterprise');
+  const [billingCycle, setBillingCycle] = useState<typeof 'monthly'>('monthly');
 
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
 
@@ -129,9 +130,9 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
     }
   ];
 
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
+  const getDiscountMultiplier = : unknown billingCycle === 'yearly' ? 0.83 : 1;
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Pricing Guide 2029 - Zion Tech Group"
@@ -160,7 +161,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                onClick={( setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
                 }`}
@@ -185,7 +186,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
       {/* Pricing Plans */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-          {pricingPlans.map((plan, index)  => (
+          {pricingPlans.map(plan: unknown, index: unknown (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
@@ -221,7 +222,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
 
                 {/* Features */}
                 <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -256,7 +257,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         </motion.div>
 
         <div className="space-y-12">
-          {serviceCategories.map((category, index) => (
+          {serviceCategories.map(category: unknown, index: unknown (
             <motion.div
               key={category.name}
               initial={{ opacity: 0, y: 20 }}
@@ -270,9 +271,9 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                 <span className="text-gray-400 text-sm">({category.services.length} services)</span>
               </div>
 
-              {category.services.length > 0 ? (
+              {category.services.length > 0 ? 
                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.services.map((service)  => (
+                  {category.services.map((service (
                     <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-start justify-between mb-3">
                         <div className="text-2xl">{service.icon}</div>
@@ -298,7 +299,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                       </div>
 
                       <div className="space-y-2 mb-4">
-                        {service.features.slice(0, 2).map((feature, idx) => (
+                        {service.features.slice(0, 2).map(feature: unknown, idx: unknown (
                           <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                             <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                             {feature}
@@ -393,7 +394,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
         <div className="space-y-6">
           {[
             {
-              question: any"Can I mix and match services from different categories?",;
+              question: unknown"Can I mix and match services from different categories?",;
               answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
             },
             {
@@ -412,7 +413,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
               question: "Do you offer free trials?",
               answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
             }
-          ].map((faq, index)  => (
+          ].map(faq: unknown, index: unknown (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}

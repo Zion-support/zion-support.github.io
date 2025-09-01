@@ -24,4 +24,5 @@ const OpenApp = () => {
         </div>
       </div>
     </>)};
+export { OpenApp };
 export default OpenApp;

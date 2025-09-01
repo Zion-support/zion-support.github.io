@@ -49,7 +49,7 @@ function ErrorFallback({ error, resetError }) {
           </p>
         </div>
       </div>
-    </div>)}
+    </div>)};
 export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState(null);
@@ -85,7 +85,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             return fallback}
         return (<ErrorFallback error={error || null} resetError={resetError}/>)}
     return <>{children}</>}
-// Hook for functional components to handle errors
+// Hook for functional components to handle errors;
 export function useErrorHandler() {
     const [error, setError] = useState(null);
     const handleError = React.useCallback((error) => {
@@ -94,7 +94,7 @@ export function useErrorHandler() {
     const clearError = React.useCallback(() => {
         setError(null)}, []);
     return { error, handleError, clearError }}
-// Higher-order component for wrapping components with error handling
+// Higher-order component for wrapping components with error handling;
 export function withErrorBoundary(Component, errorBoundaryProps) {
     return function WithErrorBoundary(props) {
         return (<ErrorBoundary {...errorBoundaryProps}>

@@ -581,7 +581,7 @@ import {
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
-
+;
 const businessTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -612,7 +612,7 @@ const businessTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -642,7 +642,7 @@ const successStories = [
     logo: "RCN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -673,7 +673,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const businessBenefits = [
   {
     title: "Intelligent Decision Making",
@@ -700,7 +700,8 @@ const businessBenefits = [
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];
   }
 ];
-
+;
+export { function };
 export default function AIAutonomousBusinessManager() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1374,3 +1375,7 @@ export default function AIAutonomousBusinessManager() {
       </section>
     </div>
   )}
+
+
+}
+}

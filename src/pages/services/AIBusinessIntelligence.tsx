@@ -43,8 +43,8 @@ import {
   DollarSign,
   Lightbulb
  } from 'lucide-react';
-
-const AIBusinessIntelligence: React.FC = () => {
+;
+const AIBusinessIntelligence: React.FC = props {
   const features = [
     {
       icon: Brain,
@@ -122,8 +122,9 @@ const AIBusinessIntelligence: React.FC = () => {
       ],
       cta: 'Contact Sales',
       popular: false
-
-export default function AIBusinessIntelligence() {
+;
+export { function };
+export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   const features = [;
     {
       icon: Brain,
@@ -200,7 +201,7 @@ export default function AIBusinessIntelligence() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
         <title>AI Business Intelligence Platform - Zion Tech Group</title>
@@ -379,7 +380,7 @@ export default function AIBusinessIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index) => (
+            {features.map((feature, index 
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Powerful Features
@@ -391,7 +392,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>;
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial = {
@@ -450,7 +451,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -520,7 +521,7 @@ export default function AIBusinessIntelligence() {
                   <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
                   
                   <ul className="space-y-3">
-                    {feature.benefits.map((benefit, idx) => (
+                    {feature.benefits.map(benefit: unknown, idx: unknown (
                       <li key={idx} className="flex items-center gap-3 text-gray-700">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -557,7 +558,7 @@ export default function AIBusinessIntelligence() {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <motion.div
                     key={index}
                     initial = {
@@ -669,7 +670,7 @@ export default function AIBusinessIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Industry Applications
@@ -681,7 +682,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>;
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+            {useCases.map((useCase, index 
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -733,7 +734,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index 
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -752,7 +753,7 @@ export default function AIBusinessIntelligence() {
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
                 
                 <div className="space-y-3">
-                  {useCase.metrics.map((metric, idx) => (
+                  {useCase.metrics.map((metric, idx (
                     <div key={idx} className="flex items-center gap-3 text-gray-700">
                       <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span className="font-semibold">{metric}</span>
@@ -781,7 +782,7 @@ export default function AIBusinessIntelligence() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'
               }`}>
@@ -804,7 +805,7 @@ export default function AIBusinessIntelligence() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center gap-3 text-gray-700">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span>{feature}</span>
@@ -935,5 +936,9 @@ export default function AIBusinessIntelligence() {
                 Contact Sales
               </motion.button>
 };
-
+;
 export default AIBusinessIntelligence;
+
+
+}
+}

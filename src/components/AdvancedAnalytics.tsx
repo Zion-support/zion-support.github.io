@@ -27,14 +27,16 @@ import {
 } from 'lucide-react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  locations: Array<{ country: string; count: number }>;
+  topPages: { path: string; views: number 
+}[];
+  userAgents: { device: string; count: number }[];
+  locations: { country: string; count: number }[];
   performance: {
     loadTime: number;
     firstPaint: number;
@@ -50,21 +52,19 @@ interface AnalyticsData {
 }
 
 interface AdvancedAnalyticsProps {
+  // Add your props here
+
+
   enabled: boolean;
   trackingId?: string;
   enableHeatmap?: boolean;
   enableSessionRecording?: boolean;
   enableAITesting?: boolean;
-}
 
-export function AdvancedAnalytics({ 
-  enabled, 
-  trackingId,
-  enableHeatmap = false,
-  enableSessionRecording = false,
-  enableAITesting = false
-}: AdvancedAnalyticsProps) {
-  const [isOpen, setIsOpen] = useState(false);
+}
+;
+export function AdvancedAnalytics(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,
     uniqueVisitors: 0,
@@ -88,11 +88,11 @@ export function AdvancedAnalytics({
     }
   });
 
-  const [isTracking, setIsTracking] = useState(false);
+  const [isTracking, setIsTracking] = useState<typeof false>(false);
   const [sessionStart, setSessionStart] = useState<number>(Date.now());
   const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
   const [userSession, setUserSession] = useState<string>('');
-  const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
+  const [heatmapData, setHeatmapData] = useState<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }[]>([]);
   
   const trackingRef = useRef<{
     pageViews: number;
@@ -111,14 +111,14 @@ export function AdvancedAnalytics({
   });
 
   // Generate unique session ID
-  useEffect(() => {
+  useEffect(: unknown {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId);
   }, []);
 
   // Track page views
-  const trackPageView = useCallback((path: string) => {
+  const trackPageView = useCallback(path: string {
     if (!enabled) return;
 
     setCurrentPage(path);
@@ -147,7 +147,7 @@ export function AdvancedAnalytics({
   }, [enabled, userSession]);
 
   // Track user interactions
-  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
+  const trackInteraction = useCallback(type: 'click' | 'scroll' | 'form' | 'error', data?: unknown {
     if (!enabled) return;
 
     const interactionData = {
@@ -191,7 +191,7 @@ export function AdvancedAnalytics({
   }, [enabled, userSession, currentPage]);
 
   // Track performance metrics
-  const trackPerformance = useCallback(() => {
+  const trackPerformance = useCallback(: unknown {
     if (!enabled) return;
 
     // Use Performance API to get metrics
@@ -225,7 +225,7 @@ export function AdvancedAnalytics({
   }, [enabled, userSession]);
 
   // Setup event listeners
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     setIsTracking(true);
@@ -237,7 +237,7 @@ export function AdvancedAnalytics({
     trackPerformance();
 
     // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (...args: unknown[]): unknown => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
       
@@ -251,9 +251,9 @@ export function AdvancedAnalytics({
 
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
-    const handleScroll = () => {
+    const handleScroll = (...args: unknown[]): unknown => {
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
+      scrollTimeout = setTimeout(: unknown {
         trackInteraction('scroll', { 
           scrollY: window.scrollY, 
           scrollHeight: document.documentElement.scrollHeight 
@@ -262,7 +262,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
+    const handleFormSubmit = (...args: unknown[]): unknown => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', { 
         formId: form.id || form.className,
@@ -272,7 +272,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup error tracking
-    const handleError = (e: ErrorEvent) => {
+    const handleError = (...args: unknown[]): unknown => {
       trackInteraction('error', {
         message: e.message,
         filename: e.filename,
@@ -283,7 +283,7 @@ export function AdvancedAnalytics({
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
+    const handleUnhandledRejection = (...args: unknown[]): unknown => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
@@ -298,7 +298,7 @@ export function AdvancedAnalytics({
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Track page visibility changes
-    const handleVisibilityChange = () => {
+    const handleVisibilityChange = (...args: unknown[]): unknown => {
       if (document.hidden) {
         // Page hidden - track session end
         const sessionDuration = Date.now() - sessionStart;
@@ -315,7 +315,7 @@ export function AdvancedAnalytics({
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
-    return () => {
+    return : unknown {
       document.removeEventListener('click', handleClick);
       document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('submit', handleFormSubmit);
@@ -327,11 +327,11 @@ export function AdvancedAnalytics({
   }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]);
 
   // Setup performance observer for LCP
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled || !('PerformanceObserver' in window)) return;
 
     try {
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
@@ -347,14 +347,14 @@ export function AdvancedAnalytics({
 
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      return () => lcpObserver.disconnect();
+      return : unknown lcpObserver.disconnect();
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]);
 
   // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
+  const sendAnalyticsData = useCallbackasync (eventType: string, data: unknown {
     if (!trackingId) return;
 
     try {
@@ -370,9 +370,9 @@ export function AdvancedAnalytics({
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(analyticsPayload),
+        body: JSON.stringify(analyticsPayload)
       });
     } catch (error) {
       console.warn('Failed to send analytics data:', error);
@@ -380,7 +380,7 @@ export function AdvancedAnalytics({
   }, [trackingId, userSession]);
 
   // Generate mock data for demonstration
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     // Simulate data collection
@@ -426,11 +426,10 @@ export function AdvancedAnalytics({
 
   if (!enabled) return null;
 
-  return (
-    <>
+  return <>
       {/* Analytics Toggle Button */}
       <motion.button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -443,7 +442,7 @@ export function AdvancedAnalytics({
 
       {/* Analytics Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -459,7 +458,7 @@ export function AdvancedAnalytics({
                 Analytics Dashboard
               </h2>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={( setIsOpen(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="Close analytics dashboard"
               >
@@ -532,7 +531,7 @@ export function AdvancedAnalytics({
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>
               <div className="space-y-2">
-                {analyticsData.topPages.map((page, index) => (
+                {analyticsData.topPages.map(page: unknown, index: unknown (
                   <div key={index} className="flex justify-between items-center text-xs">
                     <span className="truncate flex-1">{page.path}</span>
                     <span className="font-mono text-gray-600">{page.views}</span>
@@ -545,7 +544,7 @@ export function AdvancedAnalytics({
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>
               <div className="space-y-2">
-                {analyticsData.userAgents.map((device, index) => (
+                {analyticsData.userAgents.map(device: unknown, index: unknown (
                   <div key={index} className="flex items-center gap-2 text-xs">
                     {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}
                     {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}
@@ -565,7 +564,7 @@ export function AdvancedAnalytics({
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
                 <button
-                  onClick={() => window.location.reload()}
+                  onClick={: unknown window.location.reload()}
                   className="text-blue-500 hover:text-blue-600"
                 >
                   <RefreshCw className="w-3 h-3" />

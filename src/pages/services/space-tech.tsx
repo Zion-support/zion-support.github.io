@@ -25,8 +25,9 @@ import { Rocket,
   Mail,
   MapPin
  } from 'lucide-react.ts';
-
-export default function SpaceTechnology(...args: any[]): any {
+;
+export { function };
+export default function SpaceTechnology(...args: unknown[]): unknown {
   const features = [
     {
       icon: Satellite,
@@ -187,7 +188,7 @@ export default function SpaceTechnology(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -201,7 +202,7 @@ export default function SpaceTechnology(...args: any[]): any {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
                       <Star className="w-4 h-4 text-blue-400 mr-2" />
                       {benefit}
@@ -231,7 +232,7 @@ export default function SpaceTechnology(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {applications.map((app, index)  => (
+            {applications.map(app: unknown, index: unknown 
               <motion.div
                 key={app.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -244,7 +245,7 @@ export default function SpaceTechnology(...args: any[]): any {
                   {app.category}
                 </h3>
                 <ul className="space-y-3">
-                  {app.services.map((service, idx) => (
+                  {app.services.map((service, idx (
                     <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {service}
@@ -274,7 +275,7 @@ export default function SpaceTechnology(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,5 @@
 export interface PricingTier2031 {
+
   id: string;
   name: string;
   price: number;
@@ -12,13 +13,15 @@ export interface PricingTier2031 {
     name: string;
     price: number;
     description: string;
-  }[];
+  
+}[];
   roi: string;
   implementationTime: string;
   supportLevel: string;
 }
-
+;
 export interface ServiceCategory2031 {
+
   id: string;
   name: string;
   description: string;
@@ -40,10 +43,11 @@ export interface ServiceCategory2031 {
       phone: string;
       email: string;
       website: string;
-    };
+    
+};
   }[];
 }
-
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   {
     id: "ai-powered-micro-saas",
@@ -679,9 +683,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
     ]
   }
 ];
-
+;
 export const PRICING_SUMMARY_2031 = {
-  totalServices: COMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category) => acc + category.services.length, 0),
+  totalServices: COMPREHENSIVE_PRICING_GUIDE_2031.reduce(acc: unknown, category: unknown acc + category.services.length, 0),
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
   priceRange: {
     min: "$399/month",

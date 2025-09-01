@@ -25,13 +25,13 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const ApiPlayground: React.FC = () => {
+;
+const ApiPlayground: React.FC = props {
   const [selectedApi, setSelectedApi] = useState<any>(null);
-  const [requestBody, setRequestBody] = useState('');
-  const [responseData, setResponseData] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState('playground');
+  const [requestBody, setRequestBody] = useState<typeof ''>('');
+  const [responseData, setResponseData] = useState<typeof ''>('');
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
+  const [activeTab, setActiveTab] = useState<typeof 'playground'>('playground');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Code, count: 0 },
@@ -159,7 +159,7 @@ const ApiPlayground: React.FC = () => {
     }
   ];
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (...args: unknown[]): unknown => {
     switch (method) {
       case 'GET': return 'text-green-400';
       case 'POST': return 'text-blue-400';
@@ -169,7 +169,7 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'stable': return 'bg-green-500/20 text-green-400';
       case 'beta': return 'bg-yellow-500/20 text-yellow-400';
@@ -178,30 +178,30 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (...args: unknown[]): unknown => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
   };
 
-  const handleTestApi = async () => {
+  const handleTestApi = async : unknown {
     if (!selectedApi) return;
     
     setIsLoading(true);
     setResponseData('');
     
     // Simulate API call
-    setTimeout(() => {
+    setTimeout(: unknown {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
       setIsLoading(false);
     }, 2000);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (...args: unknown[]): unknown => {
     navigator.clipboard.writeText(text);
   };
 
-  return (
+  return 
     <>
       <SEO 
         title="API Playground - Zion Tech Group"
@@ -243,7 +243,7 @@ const ApiPlayground: React.FC = () => {
                   <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
                   
                   <div className="space-y-4">
-                    {apis.map((api, index) => (
+                    {apis.map((api, index 
                       <motion.div
                         key={api.id}
                         initial={{ opacity: 0, x: -20 }}
@@ -254,7 +254,7 @@ const ApiPlayground: React.FC = () => {
                             ? 'border-blue-500 bg-blue-500/10'
                             : 'border-slate-700/50 bg-slate-700/30 hover:border-slate-600/50'
                         }`}
-                        onClick={() => handleApiSelect(api)}
+                        onClick={( handleApiSelect(api)}
                       >
                         <div className="flex items-start justify-between mb-2">
                           <h3 className="text-white font-semibold">{api.name}</h3>
@@ -290,7 +290,7 @@ const ApiPlayground: React.FC = () => {
                   {/* Tabs */}
                   <div className="flex border-b border-slate-700/50">
                     <button
-                      onClick={() => setActiveTab('playground')}
+                      onClick={: unknown setActiveTab('playground')}
                       className={`px-6 py-3 text-sm font-medium transition-colors ${
                         activeTab === 'playground'
                           ? 'text-blue-400 border-b-2 border-blue-400'
@@ -300,7 +300,7 @@ const ApiPlayground: React.FC = () => {
                       Playground
                     </button>
                     <button
-                      onClick={() => setActiveTab('documentation')}
+                      onClick={: unknown setActiveTab('documentation')}
                       className={`px-6 py-3 text-sm font-medium transition-colors ${
                         activeTab === 'documentation'
                           ? 'text-blue-400 border-b-2 border-blue-400'
@@ -341,7 +341,7 @@ const ApiPlayground: React.FC = () => {
                               <div className="flex items-center justify-between mb-3">
                                 <h4 className="text-white font-medium">Request Body</h4>
                                 <button
-                                  onClick={() => copyToClipboard(requestBody)}
+                                  onClick={: unknown copyToClipboard(requestBody)}
                                   className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
                                 >
                                   <Copy className="w-4 h-4" />
@@ -350,7 +350,7 @@ const ApiPlayground: React.FC = () => {
                               </div>
                               <textarea
                                 value={requestBody}
-                                onChange={(e) => setRequestBody(e.target.value)}
+                                onChange={e: unknown setRequestBody(e.target.value)}
                                 className="w-full h-32 bg-slate-900 border border-slate-600 rounded-lg p-3 text-gray-300 font-mono text-sm resize-none"
                                 placeholder="Enter request body..."
                               />
@@ -376,12 +376,11 @@ const ApiPlayground: React.FC = () => {
                             </button>
 
                             {/* Response */}
-                            {responseData && (
-                              <div>
+                            {responseData && <div>
                                 <div className="flex items-center justify-between mb-3">
                                   <h4 className="text-white font-medium">Response</h4>
                                   <button
-                                    onClick={() => copyToClipboard(responseData)}
+                                    onClick={(: unknown copyToClipboard(responseData)}
                                     className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm"
                                   >
                                     <Copy className="w-4 h-4" />
@@ -402,7 +401,7 @@ const ApiPlayground: React.FC = () => {
                           </div>
                         )}
                       </div>
-                    ) : (
+                    ) : 
                       <div>
                         {selectedApi ? (
                           <div className="space-y-6">
@@ -416,7 +415,7 @@ const ApiPlayground: React.FC = () => {
                               <div className="bg-slate-700/50 rounded-lg p-4 mb-4">
                                 <h4 className="text-white font-medium mb-2">Parameters</h4>
                                 <div className="space-y-2">
-                                  {selectedApi.parameters.map((param: any, idx: number) => (
+                                  {selectedApi.parameters.map((param: unknown, idx: number (
                                     <div key={idx} className="flex items-center justify-between text-sm">
                                       <div>
                                         <span className="text-white font-medium">{param.name}</span>
@@ -470,5 +469,6 @@ const ApiPlayground: React.FC = () => {
     </>
   );
 };
-
+;
+export { ApiPlayground };
 export default ApiPlayground;

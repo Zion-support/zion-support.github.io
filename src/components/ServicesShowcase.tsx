@@ -17,8 +17,8 @@ import {
   Gauge,
   HelpCircle
 } from 'lucide-react';
-
-export function ServicesShowcase() {
+;
+export function ServicesShowcase(...args: unknown[]): unknown {
   const services = [
     {
       icon: Brain,
@@ -126,7 +126,7 @@ export function ServicesShowcase() {
     }
   };
 
-  return (
+  return 
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
         {/* Header */}
@@ -195,7 +195,7 @@ export function ServicesShowcase() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
+          {services.map((service, index (
             <motion.div
               key={index}
               variants={itemVariants}

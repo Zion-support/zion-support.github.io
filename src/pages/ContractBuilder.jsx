@@ -12,9 +12,10 @@ function ContractBuilderPage() {
         </main>
 
       </>
-    </ProtectedRoute>)}
+    </ProtectedRoute>)};
+export { ContractBuilderPage };
 export default ContractBuilderPage;
-
+;
 export default ContractBuilderPage;
 export default ContractBuilderPage;
 export default ContractBuilderPage;

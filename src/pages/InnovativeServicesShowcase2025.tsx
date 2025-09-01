@@ -7,8 +7,9 @@ import {
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-export default function InnovativeServicesShowcase2025() {
+;
+export { function };
+export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
   const services = [
     {
       id: 'ai-workflow-orchestrator',
@@ -214,7 +215,7 @@ export default function InnovativeServicesShowcase2025() {
 
   const categories = [...new Set(services.map(service => service.category))];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <SEO 
         title="Innovative AI Services Showcase 2025 - Zion Tech Group"
@@ -254,7 +255,7 @@ export default function InnovativeServicesShowcase2025() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Service Categories</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
+            {categories.map((category (
               <span key={category} className="px-4 py-2 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm font-medium">
                 {category}
               </span>
@@ -263,7 +264,7 @@ export default function InnovativeServicesShowcase2025() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map(service: unknown, index: unknown (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -293,7 +294,7 @@ export default function InnovativeServicesShowcase2025() {
               <div className="mb-4">
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span>{feature}</span>
@@ -305,7 +306,7 @@ export default function InnovativeServicesShowcase2025() {
               <div className="mb-6">
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Key Benefits:</h4>
                 <ul className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, idx) => (
+                  {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">
                       <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span>{benefit}</span>
@@ -375,7 +376,7 @@ export default function InnovativeServicesShowcase2025() {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -383,7 +384,7 @@ export default function InnovativeServicesShowcase2025() {
               <div>
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">All Categories</option>
@@ -396,7 +397,7 @@ export default function InnovativeServicesShowcase2025() {
               <div>
                 <select
                   value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
+                  onChange={e: unknown setPriceRange(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">All Prices</option>
@@ -409,7 +410,7 @@ export default function InnovativeServicesShowcase2025() {
               <div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="name">Sort by Name</option>
@@ -434,7 +435,7 @@ export default function InnovativeServicesShowcase2025() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -478,7 +479,7 @@ export default function InnovativeServicesShowcase2025() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
+                      {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                           <span className="line-clamp-1">{feature}</span>
@@ -495,7 +496,7 @@ export default function InnovativeServicesShowcase2025() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                     <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
                           <TrendingUp className="w-3 h-3 text-blue-400 flex-shrink-0" />
                           <span className="line-clamp-1">{benefit}</span>
@@ -507,7 +508,7 @@ export default function InnovativeServicesShowcase2025() {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Technology:</h4>
                     <div className="flex flex-wrap gap-1">
-                      {service.technicalSpecs?.technology.slice(0, 3).map((tech, idx) => (
+                      {service.technicalSpecs?.technology.slice(0, 3).map(tech: unknown, idx: unknown (
                         <span key={idx} className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded">
                           {tech}
                         </span>
@@ -584,7 +585,7 @@ export default function InnovativeServicesShowcase2025() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
+            {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -615,7 +616,7 @@ export default function InnovativeServicesShowcase2025() {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
+                    {service.features.slice(0, 4).map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>

@@ -8,7 +8,8 @@ import { ProductListingCard } from "@/components/ProductListingCard";
 import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";
 import { generateRandomListing } from "@/utils/generateRandomListing";
 import { useNavigate } from "react-router-dom";
-
+;
+export { function };
 export default function Marketplace() {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");

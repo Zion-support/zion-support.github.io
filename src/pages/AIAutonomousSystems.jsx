@@ -581,7 +581,7 @@ import {
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
   }
 ];
-
+;
 const autonomousTechnologies = [
   {
     name: "Computer Vision",
@@ -612,7 +612,7 @@ const autonomousTechnologies = [
     reliability: "Critical"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -642,7 +642,7 @@ const successStories = [
     logo: "AC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -673,7 +673,7 @@ const processSteps = [
     duration: "8-16 weeks"
 
 ];
-
+;
 const autonomousBenefits = [
   {
     title: "Increased Efficiency",
@@ -700,7 +700,8 @@ const autonomousBenefits = [
     examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];
   }
 ];
-
+;
+export { function };
 export default function AIAutonomousSystems() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1374,3 +1375,7 @@ export default function AIAutonomousSystems() {
       </section>
     </div>
   )}
+
+
+}
+}

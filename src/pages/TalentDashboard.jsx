@@ -180,8 +180,11 @@ function TalentDashboardContent() {
         </div>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)}
+
+}

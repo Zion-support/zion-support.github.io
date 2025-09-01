@@ -76,7 +76,7 @@ export const PerformanceOptimizer = ({ children }) => {
                     }
                 })}, {
                 rootMargin: '50px',
-                threshold: 0.1,
+                threshold: 0.1
             });
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
@@ -100,5 +100,6 @@ if (typeof window !== 'null') {
                 window.gc()}
         }
     }
-}
+};
+export { PerformanceOptimizer };
 export default PerformanceOptimizer;

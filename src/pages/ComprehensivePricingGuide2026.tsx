@@ -18,22 +18,22 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
-
+;
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
-
-const ComprehensivePricingGuide2026: React.FC = () => {;
+;
+const ComprehensivePricingGuide2026: React.FC = props {;
   const [selectedService, setSelectedService] = useState<string>('all');
   const [selectedTier, setSelectedTier] = useState<string>('all');
 
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
 
-  const filteredPricing = useMemo(() => {
+  const filteredPricing = useMemo(: unknown {
     let filtered = ALL_PRICING_GUIDES_2026;
 
     if (selectedService !== 'all') {
@@ -49,7 +49,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
       default: return 'from-gray-500 to-gray-600'}
   };
 
-  return (
+  return 
     <>
       <SEO
         title="Comprehensive Pricing Guide 2026 - Zion Tech Group"
@@ -116,7 +116,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                   <label className="block text-white mb-2 font-medium">Select Service</label>
                   <select
                     value={selectedService}
-                    onChange={(e) => setSelectedService(e.target.value)}
+                    onChange={(e setSelectedService(e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {services.map(service  => (
@@ -132,7 +132,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                   <label className="block text-white mb-2 font-medium">Select Tier</label>
                   <select
                     value={selectedTier}
-                    onChange={(e) => setSelectedTier(e.target.value)}
+                    onChange={e: unknown setSelectedTier(e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {tiers.map(tier  => (
@@ -150,7 +150,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
         {/* Pricing Details Section */}
         <section className="py-12">;
           <div className="container mx-auto px-4">
-            {filteredPricing.map((servicePricing, index) => (
+            {filteredPricing.map(servicePricing: unknown, index: unknown (
               <motion.div
                 key={servicePricing.serviceId}
                 initial = {
@@ -220,7 +220,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                   <div className="mt-6">;
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
-                      {servicePricing.marketAnalysis.competitors.map((competitor, idx)  => (
+                      {servicePricing.marketAnalysis.competitors.map(competitor: unknown, idx: unknown (
                         <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
                           <span className="text-zinc-300">{competitor}</span>
                         </div>
@@ -231,7 +231,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
                 {/* Pricing Tiers */}
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
-                  {servicePricing.pricingTiers.map((tier, tierIndex)  => (;
+                  {servicePricing.pricingTiers.map(tier: unknown, tierIndex: unknown (;
                     <motion.div
                       key={tier.name}
                       initial = {
@@ -282,7 +282,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
                         <div className="space-y-2">
-                          {tier.features.map((feature, idx) => (
+                          {tier.features.map(feature: unknown, idx: unknown (
                             <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                               <span>{feature}</span>
@@ -292,11 +292,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       </div>;
 
                       {/* Limitations */}
-                      {tier.limitations.length > 0 && (;
+                      {tier.limitations.length > 0 && ;
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Limitations</h4>
                           <div className="space-y-2">
-                            {tier.limitations.map((limitation, idx) => (
+                            {tier.limitations.map((limitation: unknown, idx: unknown (
                               <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">
                                 <div className="w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
                                 <span>{limitation}</span>
@@ -310,7 +310,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
                         <div className="flex flex-wrap gap-2">
-                          {tier.targetAudience.map((audience, idx) => (
+                          {tier.targetAudience.map(audience: unknown, idx: unknown (
                             <span key={idx} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
                               {audience}
                             </span>
@@ -346,7 +346,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                       <div className="mb-6">;
                         <h4 className="text-lg font-semibold text-white mb-3">Volume Discounts</h4>
                         <div className="space-y-2">
-                          {tier.volumeDiscounts.map((discount, idx) => (
+                          {tier.volumeDiscounts.map(discount: unknown, idx: unknown (
                             <div key={idx} className="text-sm text-zinc-300 text-center p-2 bg-white/5 rounded-lg">
                               {discount}
                             </div>
@@ -405,7 +405,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Key Trends</h3>
                   <div className="space-y-4">
-                    {marketSummary2026.keyTrends.map((trend, idx) => (
+                    {marketSummary2026.keyTrends.map(trend: unknown, idx: unknown (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-zinc-300">{trend}</span>
@@ -418,7 +418,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantages</h3>
                   <div className="space-y-4">
-                    {marketSummary2026.competitiveAdvantages.map((advantage, idx) => (
+                    {marketSummary2026.competitiveAdvantages.map(advantage: unknown, idx: unknown (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-zinc-300">{advantage}</span>
@@ -474,6 +474,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
     </>;
   );
 };
-
+;
+export { ComprehensivePricingGuide2026 };
 export default ComprehensivePricingGuide2026;
 export default ComprehensivePricingGuide2026;

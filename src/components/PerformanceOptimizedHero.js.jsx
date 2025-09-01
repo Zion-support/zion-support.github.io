@@ -96,4 +96,5 @@ const PerformanceOptimizedHero = memo(() => {
         </>)}
     </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
+export { PerformanceOptimizedHero };
 export default PerformanceOptimizedHero;

@@ -2,21 +2,25 @@ import React, { useEffect, useState, useCallback } from 'react.ts';
 import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
   cls: number | null; // Cumulative Layout Shift
   ttfb: number | null; // Time to First Byte
   fmp: number | null; // First Meaningful Paint
+
 }
 
 interface PerformanceScore {
+
   score: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   color: string;
-}
 
-const AdvancedPerformanceMonitor: React.FC = () => {
+}
+;
+const AdvancedPerformanceMonitor: React.FC = props {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -26,7 +30,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     fmp: null
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
   const [overallScore, setOverallScore] = useState<PerformanceScore>({
     score: 0,
     rating: 'good',
@@ -90,10 +94,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Measure Core Web Vitals
-  useEffect(() => {
+  useEffect(: unknown {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
@@ -103,7 +107,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
@@ -113,7 +117,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         entries.forEach(entry => {
           if (entry.processingStart && entry.startTime) {
@@ -125,9 +129,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list: unknown {
         let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
+        list.getEntries().forEach(entry: unknown {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -136,7 +140,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-      return () => {
+      return : unknown {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -146,7 +150,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Measure Time to First Byte
-  useEffect(() => {
+  useEffect(: unknown {
     if (performance.timing) {
       const ttfb = performance.timing.responseStart - performance.timing.requestStart;
       setMetrics(prev => ({ ...prev, ttfb }));
@@ -154,7 +158,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Update overall score when metrics change
-  useEffect(() => {
+  useEffect(: unknown {
     const score = calculateScore(metrics);
     setOverallScore(score);
   }, [metrics, calculateScore]);
@@ -190,9 +194,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   };
 
   if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
+    return <button
+        onClick={(: unknown setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
         aria-label="Open Performance Monitor"
       >
@@ -201,15 +204,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     );
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">
+  return <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-white flex items-center">
           <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
           Performance Monitor
         </h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={(: unknown setIsVisible(false)}
           className="text-zion-slate-light hover:text-white transition-colors"
         >
           ×
@@ -301,5 +303,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-
+;
+export { AdvancedPerformanceMonitor };
 export default AdvancedPerformanceMonitor;

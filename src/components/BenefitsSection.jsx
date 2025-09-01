@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award } from 'lucide-react';
-
+;
 const benefits = [
   {
     icon: <Zap className="w-10 h-10" />,
@@ -60,14 +60,14 @@ const benefits = [
     ]
   }
 ];
-
+;
 const additionalStats = [
   { icon: <Users className="w-8 h-8" />, value: "500+", label: "Happy Clients" },
   { icon: <Clock className="w-8 h-8" />, value: "24/7", label: "Support" },
   { icon: <Star className="w-8 h-8" />, value: "4.9/5", label: "Rating" },
   { icon: <Award className="w-8 h-8" />, value: "50+", label: "Awards" }
 ];
-
+;
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 

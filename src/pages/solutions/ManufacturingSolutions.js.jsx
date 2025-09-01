@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog } from 'lucide-react';
+export { function };
 export default function ManufacturingSolutions() {
     const features = [
         {

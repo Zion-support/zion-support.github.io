@@ -38,9 +38,24 @@ import {
   Truck,
   Headphones
 } from 'lucide-react';
-
-export default function RequestQuote() {
-  const [formData, setFormData] = useState({
+;
+export { function };
+export default function RequestQuote(...args: unknown[]): unknown {
+  const [formData, setFormData] = useState<typeof {
+    companyName: '',
+    contactName: '',
+    email: '',
+    phone: '',
+    companySize: '',
+    industry: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
+    description: '',
+    services: [] as string[],
+    urgency: 'medium',
+    preferredContact: 'email'
+  }>({
     companyName: '',
     contactName: '',
     email: '',
@@ -56,10 +71,10 @@ export default function RequestQuote() {
     preferredContact: 'email'
   });
 
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState<typeof 1>(1);
   const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isSubmitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setSubmitting] = useState<typeof false>(false);
+  const [submitted, setSubmitted] = useState<typeof false>(false);
 
   const companySizes = [
     '1-10 employees',
@@ -285,14 +300,14 @@ export default function RequestQuote() {
     }
   ];
 
-  const handleInputChange = (field: string, value: string | string[]) => {
+  const handleInputChange = (...args: unknown[]): unknown => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
 
-  const toggleService = (serviceId: string) => {
+  const toggleService = (...args: unknown[]): unknown => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(serviceId)
@@ -301,23 +316,23 @@ export default function RequestQuote() {
     }));
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (...args: unknown[]): unknown => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  const nextStep = () => {
+  const nextStep = (...args: unknown[]): unknown => {
     if (formStep < 3) {
       setFormStep(formStep + 1);
     }
   };
 
-  const prevStep = () => {
+  const prevStep = (...args: unknown[]): unknown => {
     if (formStep > 1) {
       setFormStep(formStep - 1);
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async e: React.FormEvent {;
     e.preventDefault();
     setSubmitting(true);
     
@@ -328,7 +343,7 @@ export default function RequestQuote() {
     setSubmitted(true);
   };
 
-  const resetForm = () => {
+  const resetForm = (...args: unknown[]): unknown => {
     setFormData({
       companyName: '',
       contactName: '',
@@ -422,7 +437,7 @@ export default function RequestQuote() {
     );
   }
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Request Quote - Zion Tech Group"
@@ -457,7 +472,7 @@ export default function RequestQuote() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -491,7 +506,7 @@ export default function RequestQuote() {
                 >
                   {/* Progress Steps */}
                   <div className="flex items-center justify-between mb-8">
-                    {[1, 2, 3].map((step) => (
+                    {[1, 2, 3].map(step: unknown (
                       <div key={step} className="flex items-center">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
                           formStep >= step 
@@ -511,7 +526,7 @@ export default function RequestQuote() {
 
                   <form onSubmit={handleSubmit}>
                     {/* Step 1: Basic Information */}
-                    {formStep === 1 && (
+                    {formStep === 1 && 
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -527,7 +542,7 @@ export default function RequestQuote() {
                               type="text"
                               required
                               value={formData.companyName}
-                              onChange={(e) => handleInputChange('companyName', e.target.value)}
+                              onChange={(e handleInputChange('companyName', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="Your company name"
                             />
@@ -539,7 +554,7 @@ export default function RequestQuote() {
                               type="text"
                               required
                               value={formData.contactName}
-                              onChange={(e) => handleInputChange('contactName', e.target.value)}
+                              onChange={e: unknown handleInputChange('contactName', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="Your full name"
                             />
@@ -553,7 +568,7 @@ export default function RequestQuote() {
                               type="email"
                               required
                               value={formData.email}
-                              onChange={(e) => handleInputChange('email', e.target.value)}
+                              onChange={e: unknown handleInputChange('email', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="your.email@company.com"
                             />
@@ -564,7 +579,7 @@ export default function RequestQuote() {
                             <input
                               type="tel"
                               value={formData.phone}
-                              onChange={(e) => handleInputChange('phone', e.target.value)}
+                              onChange={e: unknown handleInputChange('phone', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                               placeholder="+1 (555) 123-4567"
                             />
@@ -576,11 +591,11 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Company Size</label>
                             <select
                               value={formData.companySize}
-                              onChange={(e) => handleInputChange('companySize', e.target.value)}
+                              onChange={e: unknown handleInputChange('companySize', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
                               <option value="">Select company size</option>
-                              {companySizes.map((size) => (
+                              {companySizes.map(size: unknown (
                                 <option key={size} value={size}>{size}</option>
                               ))}
                             </select>
@@ -590,11 +605,11 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Industry</label>
                             <select
                               value={formData.industry}
-                              onChange={(e) => handleInputChange('industry', e.target.value)}
+                              onChange={e: unknown handleInputChange('industry', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
                               <option value="">Select industry</option>
-                              {industries.map((industry) => (
+                              {industries.map(industry: unknown (
                                 <option key={industry} value={industry}>{industry}</option>
                               ))}
                             </select>
@@ -604,7 +619,7 @@ export default function RequestQuote() {
                     )}
 
                     {/* Step 2: Project Details */}
-                    {formStep === 2 && (
+                    {formStep === 2 && 
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -618,11 +633,11 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Project Type</label>
                             <select
                               value={formData.projectType}
-                              onChange={(e) => handleInputChange('projectType', e.target.value)}
+                              onChange={(e handleInputChange('projectType', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
                               <option value="">Select project type</option>
-                              {projectTypes.map((type) => (
+                              {projectTypes.map(type: unknown (
                                 <option key={type} value={type}>{type}</option>
                               ))}
                             </select>
@@ -632,11 +647,11 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Budget Range</label>
                             <select
                               value={formData.budget}
-                              onChange={(e) => handleInputChange('budget', e.target.value)}
+                              onChange={e: unknown handleInputChange('budget', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
                               <option value="">Select budget range</option>
-                              {budgets.map((budget) => (
+                              {budgets.map(budget: unknown (
                                 <option key={budget} value={budget}>{budget}</option>
                               ))}
                             </select>
@@ -648,11 +663,11 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Timeline</label>
                             <select
                               value={formData.timeline}
-                              onChange={(e) => handleInputChange('timeline', e.target.value)}
+                              onChange={e: unknown handleInputChange('timeline', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
                               <option value="">Select timeline</option>
-                              {timelines.map((timeline) => (
+                              {timelines.map(timeline: unknown (
                                 <option key={timeline} value={timeline}>{timeline}</option>
                               ))}
                             </select>
@@ -662,10 +677,10 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Urgency Level</label>
                             <select
                               value={formData.urgency}
-                              onChange={(e) => handleInputChange('urgency', e.target.value)}
+                              onChange={e: unknown handleInputChange('urgency', e.target.value)}
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
-                              {urgencyLevels.map((level) => (
+                              {urgencyLevels.map(level: unknown (
                                 <option key={level.value} value={level.value}>
                                   {level.label} - {level.description}
                                 </option>
@@ -680,7 +695,7 @@ export default function RequestQuote() {
                             required
                             rows={4}
                             value={formData.description}
-                            onChange={(e) => handleInputChange('description', e.target.value)}
+                            onChange={e: unknown handleInputChange('description', e.target.value)}
                             className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             placeholder="Describe your project requirements, goals, and any specific features you need..."
                           />
@@ -701,13 +716,13 @@ export default function RequestQuote() {
                         <div>
                           <label className="block text-white font-medium mb-4">Select Services (Optional)</label>
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {services.map((service) => (
+                            {services.map(service: unknown (
                               <div key={service.id} className="relative">
                                 <input
                                   type="checkbox"
                                   id={service.id}
                                   checked={formData.services.includes(service.id)}
-                                  onChange={() => toggleService(service.id)}
+                                  onChange={: unknown toggleService(service.id)}
                                   className="sr-only"
                                 />
                                 <label
@@ -737,15 +752,14 @@ export default function RequestQuote() {
                         <div>
                           <label className="block text-white font-medium mb-4">Preferred Contact Method</label>
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {contactMethods.map((method) => (
-                              <div key={method.value} className="relative">
+                            {contactMethods.map(method: unknown <div key={method.value} className="relative">
                                 <input
                                   type="radio"
                                   id={method.value}
                                   name="preferredContact"
                                   value={method.value}
                                   checked={formData.preferredContact === method.value}
-                                  onChange={(e) => handleInputChange('preferredContact', e.target.value)}
+                                  onChange={(e: unknown handleInputChange('preferredContact', e.target.value)}
                                   className="sr-only"
                                 />
                                 <label
@@ -820,10 +834,9 @@ export default function RequestQuote() {
                     </p>
                     
                     <div className="space-y-3">
-                      {services.map((service) => (
-                        <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">
+                      {services.map(service: unknown <div key={service.id} className="border border-slate-600/50 rounded-lg overflow-hidden">
                           <button
-                            onClick={() => toggleServiceExpansion(service.id)}
+                            onClick={(: unknown toggleServiceExpansion(service.id)}
                             className="w-full p-3 text-left hover:bg-slate-700/50 transition-colors duration-200"
                           >
                             <div className="flex items-center justify-between">
@@ -839,7 +852,7 @@ export default function RequestQuote() {
                             </div>
                           </button>
                           
-                          {expandedService === service.id && (
+                          {expandedService === service.id && 
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
@@ -849,7 +862,7 @@ export default function RequestQuote() {
                             >
                               <p className="text-gray-300 text-sm mt-3 mb-3">{service.description}</p>
                               <div className="space-y-2">
-                                {service.features.map((feature, index) => (
+                                {service.features.map((feature, index (
                                   <div key={index} className="flex items-center text-gray-300 text-sm">
                                     <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                     {feature}

@@ -64,9 +64,9 @@ const techSolutions = [
     color: "from-yellow-500 to-orange-500";
   };
 ];
-
-export function TechSolutionsSection() {
-  return (
+;
+export function TechSolutionsSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -104,7 +104,7 @@ export function TechSolutionsSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techSolutions.map((solution, index) => (
+          {techSolutions.map((solution, index 
             <motion.div
               key={solution.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
@@ -153,7 +153,7 @@ export function TechSolutionsSection() {
               </p>
               
               <ul className="space-y-2">
-                {solution.benefits.map((benefit, benefitIndex) => (
+                {solution.benefits.map((benefit, benefitIndex (
                   <li key={benefitIndex} className="flex items-center gap-2 text-sm">
                     <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                     <span className="text-gray-300">{benefit}</span>
@@ -171,7 +171,7 @@ export function TechSolutionsSection() {
                 </p>
 
                 <ul className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
+                  {solution.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
@@ -253,7 +253,8 @@ export function TechSolutionsSection() {
       </div>;
     </section>;
   )};
-
+;
+export { TechSolutionsSection };
 export default TechSolutionsSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -262,6 +263,6 @@ export default TechSolutionsSection;
     </section>;
   );
 }
-
+;
 export default TechSolutionsSection;
 export default TechSolutionsSection;

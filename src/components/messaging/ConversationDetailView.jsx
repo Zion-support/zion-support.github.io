@@ -119,3 +119,5 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>)}
+
+}

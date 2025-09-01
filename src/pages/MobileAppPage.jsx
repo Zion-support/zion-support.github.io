@@ -20,4 +20,5 @@ const MobileAppPage = () => {
                                             <DownloadSection />
                                                 ,
                                                     <AppStoreBanner />)};
+export { MobileAppPage };
 export default MobileAppPage;

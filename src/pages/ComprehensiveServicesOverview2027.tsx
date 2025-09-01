@@ -112,7 +112,7 @@ import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-// Sample data for demonstration
+// Sample data for demonstration;
 const MICRO_SAAS_SERVICES = [
   {
     id: 'micro-crm',
@@ -166,14 +166,14 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images/analytics.jpg'];
   };
 ];
-
+;
 const categories = [;
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
-
+;
 const pricingModels = [;
   { id: 'all', name: 'All Pricing' },;
   { id: 'monthly', name: 'Monthly' },;
@@ -181,15 +181,16 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
+export { function };
 export default function ComprehensiveServicesOverview2027(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricing, setSelectedPricing] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPricing, setSelectedPricing] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [filteredServices, setFilteredServices] = useState<typeof MICRO_SAAS_SERVICES>(MICRO_SAAS_SERVICES);
   const [sortBy, setSortBy] = useState<any>('rating');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
-  useEffect(() => {
+  useEffect(: unknown {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
@@ -204,7 +205,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         service.subcategory?.toLowerCase().includes(query);
       );
     }
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'rating':
           return (b.rating || 0) - (a.rating || 0);
@@ -218,7 +219,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           return 0}
     });
     setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service})  => (
+  const ServiceCard = { service }: { service} (
     <motion.div
       initial = {
   { opacity: 0,
@@ -303,13 +304,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+              onClick={: unknown setExpandedService(expandedService === service.id ? null : service.id)}
               className="text-zion-cyan hover:text-zion-cyan-light"
             >
               {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </Button>
           </div>
-          {expandedService === service.id && (
+          {expandedService === service.id && 
             <motion.div
               initial = {
   { opacity: 0,
@@ -328,7 +329,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: string, index: number)  => (
+              {service.benefits.map((benefit: string, index: number (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -368,7 +369,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
     </motion.div>;
   );
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Comprehensive Services Overview 2027 - Zion Tech Group"
@@ -437,7 +438,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="pl-10 pr-4 py-2 bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
@@ -445,7 +446,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
                   size="sm"
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={viewMode === 'grid' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >
                   <Grid className="w-4 h-4" />
@@ -453,7 +454,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size="sm"
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={viewMode === 'list' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >
                   <List className="w-4 h-4" />
@@ -461,7 +462,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as )}
+                onChange={e: unknown setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
               >
                 <option value="rating">Sort by Rating</option>
@@ -485,7 +486,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   <Input
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
                   />
                 </div>
@@ -495,7 +496,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   <Button
                     variant={viewMode === 'grid' ? 'default' : 'outline'}
                     size="sm"
-                    onClick={() => setViewMode('grid')}
+                    onClick={: unknown setViewMode('grid')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 
                     <Grid className="w-4 h-4" />
@@ -503,7 +504,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   <Button
                     variant={viewMode === 'list' ? 'default' : 'outline'}
                     size="sm"
-                    onClick={() => setViewMode('list')}
+                    onClick={: unknown setViewMode('list')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 
                     <List className="w-4 h-4" />
@@ -511,7 +512,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 </div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={e: unknown setSortBy(e.target.value as any)}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
 
                   <option value="rating">Sort by Rating</option>
@@ -522,11 +523,11 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
-              {categories.map((category) => (
+              {categories.map(category: unknown 
                 <Button
                   key={category.id}
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={( setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
 
                   {category.icon}
@@ -538,11 +539,11 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               ))}
             </div>
             <div className="flex flex-wrap gap-4">
-              {pricingModels.map((pricing) => (
+              {pricingModels.map(pricing: unknown 
                 <Button
                   key={pricing.id}
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                  onClick={() => setSelectedPricing(pricing.id)}
+                  onClick={( setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
 
                   {pricing.name}
@@ -556,14 +557,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service) => (;
+            {filteredServices.map(service: unknown (;
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
           <div className="flex flex-wrap gap-4">
-            {pricingModels.map((pricing) => (
-              <Button;
-                onClick={() => {;
+            {pricingModels.map(pricing: unknown <Button;
+                onClick={(: unknown {;
                   setSelectedCategory('all');
                   setSelectedPricing('all');
                   setSearchQuery('')}}
@@ -580,15 +580,15 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service) => (;
+          {filteredServices.map(service: unknown (;
             <ServiceCard key={service.id} service={service} />
           ))};
         </div>;
-        {filteredServices.length === 0 && (;
+        {filteredServices.length === 0 && ;
           <div className="text-center py-16">;
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
             <Button;
-              onClick={() => {;
+              onClick={(: unknown {;
                 setSelectedCategory('all');
                 setSelectedPricing('all');
                 setSearchQuery('');

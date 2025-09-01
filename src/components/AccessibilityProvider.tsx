@@ -4,22 +4,24 @@ import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react
 
 interface AccessibilityContextType {
 
+
   highContrast: boolean;
-  toggleHighContrast: ()  => void;
+  toggleHighContrast: : unknown void;
   reducedMotion: boolean;
-  toggleReducedMotion: ()  => void;
+  toggleReducedMotion: : unknown void;
   fontSize: number;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: ()  => void;
-  resetFontSize: ()  => void;
+  increaseFontSize: : unknown void;
+  decreaseFontSize: : unknown void;
+  resetFontSize: : unknown void;
   showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean)  => void;
+  setShowSkipLinks: show: boolean void;
   voiceNavigation: boolean;
-  toggleVoiceNavigation: ()  => void}
-
+  toggleVoiceNavigation: : unknown void
+}
+;
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-
-export const useAccessibility = () => {;
+;
+export const useAccessibility = (...args: unknown[]): unknown => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
@@ -28,16 +30,16 @@ export const useAccessibility = () => {;
 interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [showSkipLinks, setShowSkipLinks] = useState(false);
-  const [voiceNavigation, setVoiceNavigation] = useState(false);
+;
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = { children }: unknown {
+  const [highContrast, setHighContrast] = useState<typeof false>(false);
+  const [reducedMotion, setReducedMotion] = useState<typeof false>(false);
+  const [fontSize, setFontSize] = useState<typeof 16>(16);
+  const [showSkipLinks, setShowSkipLinks] = useState<typeof false>(false);
+  const [voiceNavigation, setVoiceNavigation] = useState<typeof false>(false);
 
   // Load accessibility preferences from localStorage
-  useEffect(() => {
+  useEffect(: unknown {
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 
     setHighContrast(savedHighContrast);
@@ -46,7 +48,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setVoiceNavigation(savedVoiceNavigation)}, []);
 
   // Apply accessibility settings to document
-  useEffect(() => {
+  useEffect(: unknown {
     const root = document.documentElement;
 
     // Apply high contrast
@@ -63,8 +65,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
 
   // Keyboard navigation support
-  useEffect(() => {
-        setTimeout(() => setShowSkipLinks(false), 5000)}
+  useEffect(: unknown {
+        setTimeout(: unknown setShowSkipLinks(false), 5000)}
 
       // High contrast toggle (Alt + H)
       if (event.altKey && event.key = == 'h') {;
@@ -82,33 +84,33 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+    return : unknown document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {;
+  const toggleHighContrast = (...args: unknown[]): unknown => {;
     const newValue = !highContrast;
     setHighContrast(newValue);
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {;
+  const toggleReducedMotion = (...args: unknown[]): unknown => {;
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  const increaseFontSize = () => {;
+  const increaseFontSize = (...args: unknown[]): unknown => {;
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize = (...args: unknown[]): unknown => {;
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const resetFontSize = () => {;
+  const resetFontSize = (...args: unknown[]): unknown => {;
     setFontSize(16);
     localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {;
+  const toggleVoiceNavigation = (...args: unknown[]): unknown => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
@@ -140,7 +142,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 };
 
-  return (
+  return 
     <AccessibilityContext.Provider value = {value}>
       {/* Skip Links */}
       <AnimatePresence>
@@ -192,7 +194,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
                 Skip to navigation
               </a>;
               <button
-                onClick={() => setShowSkipLinks(false)}
+                onClick={( setShowSkipLinks(false)}
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
 
                 Close
@@ -285,14 +287,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   );
 };
 
-// Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
-  children,
-  isActive = true
-}) => {
+// Focus trap component for modals;
+export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = {
+  children: unknown, isActive = true
+}: unknown {
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!isActive) return;
 
     const focusableElements = document.querySelectorAll(;
@@ -311,6 +312,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
+    return : unknown document.removeEventListener('keydown', handleKeyDown)}, [isActive]);
 
   return <>{children}</>};

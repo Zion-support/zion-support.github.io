@@ -56,8 +56,9 @@ import {
   Home as HomeIcon2,
   Car as CarIcon2
 } from 'lucide-react';
-
-export default function ComprehensivePricingGuide2025() {
+;
+export { function };
+export default function ComprehensivePricingGuide2025(...args: unknown[]): unknown {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -201,7 +202,7 @@ export default function ComprehensivePricingGuide2025() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -262,7 +263,7 @@ export default function ComprehensivePricingGuide2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier, index (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -294,7 +295,7 @@ export default function ComprehensivePricingGuide2025() {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, idx) => (
+                    {tier.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -338,7 +339,7 @@ export default function ComprehensivePricingGuide2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {serviceCategories.map((category, index) => (
+            {serviceCategories.map(category: unknown, index: unknown 
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -354,7 +355,7 @@ export default function ComprehensivePricingGuide2025() {
                 <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
                 
                 <div className="space-y-4">
-                  {category.services.map((service, idx) => (
+                  {category.services.map((service, idx (
                     <div key={idx} className="flex items-center justify-between p-4 bg-slate-700/30 rounded-lg">
                       <div>
                         <h4 className="font-semibold text-white">{service.name}</h4>
@@ -391,7 +392,7 @@ export default function ComprehensivePricingGuide2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industrySolutions.map((solution, index) => (
+            {industrySolutions.map(solution: unknown, index: unknown (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}

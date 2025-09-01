@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+;
 const Sitemap = () => {
     const sitemapSections = [
         {
@@ -135,5 +135,6 @@ const Sitemap = () => {
 };
 
 
-
+;
+export { Sitemap };
 export default Sitemap;

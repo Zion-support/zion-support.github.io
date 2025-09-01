@@ -1,4 +1,5 @@
 export interface SpecializedITInfrastructureService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface SpecializedITInfrastructureService2026 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -32,7 +34,7 @@ export interface SpecializedITInfrastructureService2026 {
   competitors?: string[];
   marketSize?: string;
 }
-
+;
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
   // 5G Enterprise Network Solutions
   {
@@ -619,5 +621,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketSize: "$12.8 billion by 2026"
   }
 ];
-
+;
+export { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026 };
 export default SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026;

@@ -169,4 +169,5 @@ const AIAutonomousForensics = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousForensics };
 export default AIAutonomousForensics;

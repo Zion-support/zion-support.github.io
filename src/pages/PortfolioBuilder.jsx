@@ -28,7 +28,8 @@ function PortfolioBuilderContent() {
         </Tabs>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function PortfolioBuilder() {
     return (<ProtectedRoute>
       <PortfolioBuilderContent />

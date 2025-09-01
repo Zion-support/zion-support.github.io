@@ -163,4 +163,5 @@ const IndustrySolutions = () => {
         </div>
       </div>
     </div>)};
+export { IndustrySolutions };
 export default IndustrySolutions;

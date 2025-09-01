@@ -5,8 +5,10 @@ import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
 
 interface Service {
 
+
   category: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string
+}>;
   color: string;
   items: string[];
   description?: string}
@@ -14,9 +16,9 @@ icon: React.ComponentType<{ className?: string}>;
 interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
 
   services: Service[]}
-
-const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
-  return (
+;
+const ServicesOverview: React.FC<ServicesOverviewProps> = { services }: unknown {
+  return 
     <section className = "py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -59,7 +61,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
-          {services.map((service, index)  => (
+          {services.map((service, index (
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
@@ -127,7 +129,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               )}
 
               <ul className="relative space-y-3 mb-6">
-                {service.items.map((item, itemIndex) => (
+                {service.items.map(item: unknown, itemIndex: unknown (
                   <motion.li
                     key={itemIndex}
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
@@ -187,5 +189,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
     </section>;
   );
 };
-
+;
+export { ServicesOverview };
 export default ServicesOverview;}}}

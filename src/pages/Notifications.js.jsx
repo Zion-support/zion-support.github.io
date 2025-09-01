@@ -122,6 +122,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
         </div>
       </div>
     </div>)};
+export { function };
 export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>

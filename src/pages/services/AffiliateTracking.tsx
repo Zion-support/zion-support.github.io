@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
+export default function AffiliateTracking(...args: unknown[]): unknown {
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',
@@ -72,7 +73,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Affiliate Tracking Platform - Zion Tech Group"
@@ -134,7 +135,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f) => (
+            {features.map((f (
               <motion.div
                 key={f.title}
                 initial = {
@@ -201,7 +202,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, i) => (
+            {plans.map(plan: unknown, i: unknown (
               <motion.div
                 key={plan.name}
                 initial = {
@@ -250,7 +251,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                   <span className="text-zion-slate-light">/{plan.unit}</span>
                 </div>
                 <div className="space-y-2 mb-6">
-                  {plan.bullets.map((b) => (
+                  {plan.bullets.map(b: unknown (
                     <div key={b} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5" />
                       <span className="text-zion-slate-light text-sm">{b}</span>

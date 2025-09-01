@@ -1,6 +1,6 @@
 import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
-
-const AIHealthcareAnalytics = () => {
+;
+const AIHealthcareAnalytics = (...args: unknown[]): unknown => {
   const features = [
     'AI-powered patient outcome prediction',
     'Real-time health monitoring and alerts',
@@ -128,7 +128,7 @@ const AIHealthcareAnalytics = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -149,7 +149,7 @@ const AIHealthcareAnalytics = () => {
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</h2>
             <ul className="space-y-3">
-              {features.map((feature) => (
+              {features.map((feature (
                 <li key={feature} className="flex items-start">
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{feature}</span>
@@ -160,7 +160,7 @@ const AIHealthcareAnalytics = () => {
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Healthcare Benefits</h2>
             <ul className="space-y-3">
-              {benefits.map((benefit) => (
+              {benefits.map(benefit: unknown (
                 <li key={benefit} className="flex items-start">
                   <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{benefit}</span>
@@ -173,7 +173,7 @@ const AIHealthcareAnalytics = () => {
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {useCases.map((useCase) => (
+            {useCases.map(useCase: unknown (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Activity className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
@@ -185,11 +185,10 @@ const AIHealthcareAnalytics = () => {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Specialty Solutions</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {healthcareSolutions.map((solution) => (
-              <div key={solution.specialty} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+            {healthcareSolutions.map(solution: unknown <div key={solution.specialty} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.specialty}</h3>
                 <ul className="space-y-2">
-                  {solution.solutions.map((sol) => (
+                  {solution.solutions.map((sol: unknown (
                     <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
                       {sol}
@@ -204,12 +203,11 @@ const AIHealthcareAnalytics = () => {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (
-              <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+            {tiers.map(tier: unknown <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>
                 <ul className="text-sm text-zion-slate-dark space-y-1">
-                  {tier.details.map((detail) => (<li key={detail}>{detail}</li>))}
+                  {tier.details.map((detail: unknown (<li key={detail}>{detail}</li>))}
                 </ul>
               </div>
             ))}
@@ -223,7 +221,7 @@ const AIHealthcareAnalytics = () => {
               <div>
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>
                 <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.technology.map((tech) => (
+                  {technicalSpecs.technology.map(tech: unknown (
                     <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
                       {tech}
                     </span>
@@ -233,7 +231,7 @@ const AIHealthcareAnalytics = () => {
               <div>
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">EHR Integrations</h3>
                 <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.integrations.map((integration) => (
+                  {technicalSpecs.integrations.map(integration: unknown (
                     <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
                       {integration}
                     </span>
@@ -245,7 +243,7 @@ const AIHealthcareAnalytics = () => {
               <div>
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>
                 <div className="space-y-1">
-                  {technicalSpecs.security.map((sec) => (
+                  {technicalSpecs.security.map(sec: unknown (
                     <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
                       {sec}
@@ -260,7 +258,7 @@ const AIHealthcareAnalytics = () => {
               <div>
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</h4>
                 <div className="space-y-1">
-                  {technicalSpecs.compliance.map((comp) => (
+                  {technicalSpecs.compliance.map(comp: unknown (
                     <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
                       {comp}
@@ -292,5 +290,6 @@ const AIHealthcareAnalytics = () => {
     </div>
   );
 };
-
+;
+export { AIHealthcareAnalytics };
 export default AIHealthcareAnalytics;

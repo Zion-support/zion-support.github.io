@@ -19,8 +19,9 @@ import { Sparkles,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025  } from '../data/newInnovativeServices2025';
-
-export default function NewInnovativeServicesShowcase(...args: any[]): any {
+;
+export { function };
+export default function NewInnovativeServicesShowcase(...args: unknown[]): unknown {
   const serviceCategories = [
     {
       title: "AI & Legal Tech",
@@ -65,7 +66,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="New Innovative Services 2025 - Zion Tech Group"
@@ -128,7 +129,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
           </div>
 
           <div className="grid gap-8 md: anygrid-cols-3">
-            {serviceCategories.map((category, index)  => (
+            {serviceCategories.map((category, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -175,7 +176,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
           </div>
 
           <div className="grid gap-8 md: anygrid-cols-2">
-            {keyBenefits.map((benefit, index)  => (
+            {keyBenefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -208,7 +209,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
           </div>
 
           <div className="space-y-12">
-            {NEW_INNOVATIVE_SERVICES_2025.map((service, index) => (
+            {NEW_INNOVATIVE_SERVICES_2025.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -265,7 +266,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                   <div>
                     <h4 className="font-semibold text-lg mb-4 text-purple-400">Key Features</h4>
                     <div className="space-y-3 mb-6">
-                      {service.features.slice(0, 6).map((feature, featureIndex) => (
+                      {service.features.slice(0, 6).map(feature: unknown, featureIndex: unknown (
                         <div key={featureIndex} className="flex items-start">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-slate-300">{feature}</span>
@@ -275,7 +276,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
 
                     <h4 className="font-semibold text-lg mb-4 text-purple-400">Target Audience</h4>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {service.targetAudience.slice(0, 4).map((audience, audienceIndex) => (
+                      {service.targetAudience.slice(0, 4).map(audience: unknown, audienceIndex: unknown (
                         <span
                           key={audienceIndex}
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"

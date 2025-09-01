@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+;
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,12 +13,13 @@ import {
 } from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
-
+;
+export { function };
 export default function RequestsPanel(...args[]):  {
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState<typeof false>(false);
 
   const {
     quotes,
@@ -39,10 +40,9 @@ export default function RequestsPanel(...args[]):  {
   };
 
   // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+  const archivedQuotes = quotes.filter(q: QuoteRequest q.is_archived);
 
-  return (
-    <ProtectedRoute>
+  return <ProtectedRoute>
       <div>
 
         <div className="min-h-screen bg-zion-blue px-4 py-8">
@@ -91,7 +91,7 @@ export default function RequestsPanel(...args[]):  {
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-          onClose={() => {
+          onClose={(: unknown {
             setShowDetails(false);
             setSelectedQuote(null)}}
         />

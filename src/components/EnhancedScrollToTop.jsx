@@ -49,5 +49,6 @@ const EnhancedScrollToTop = () => {
           <ChevronUpIcon className="w-6 h-6"/>
         </motion.button>)}
     </AnimatePresence>)};
+export { EnhancedScrollToTop };
 export default EnhancedScrollToTop;
 }}

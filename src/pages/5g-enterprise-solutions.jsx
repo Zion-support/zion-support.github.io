@@ -578,5 +578,6 @@ const FiveGEnterpriseSolutions = () => {
         </div>
       </section>
     </div>)};
+export { FiveGEnterpriseSolutions };
 export default FiveGEnterpriseSolutions;
 }}}}

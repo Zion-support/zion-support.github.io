@@ -100,4 +100,11 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             'Cloud': Globe,
             'Development': Rocket,
             'Analytics': Zap,
-            'Infrastructure': Settings,
+            'Infrastructure': Settings
+
+
+
+}
+
+}
+}

@@ -9,7 +9,7 @@ import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture'
 import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner';
 import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload';
 import { CommunityTrust } from '../components/mobile-app/CommunityTrust';
-
+;
 export const MobileLaunchPage = () => {
   return (
     <>

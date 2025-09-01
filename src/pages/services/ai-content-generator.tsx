@@ -11,8 +11,9 @@ import { FileText,
   Headphones,
   Bot
  } from 'lucide-react.ts';
-
-export default function AIContentGenerator(...args: any[]): any {
+;
+export { function };
+export default function AIContentGenerator(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 

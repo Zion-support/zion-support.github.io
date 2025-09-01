@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, Download, Calendar, User } from 'lucide-react';
-
+;
 const WhitePapers = () => {
 	const whitePapers = [
 		{
@@ -74,5 +74,6 @@ const WhitePapers = () => {
 		</div>
 	);
 };
-
+;
+export { WhitePapers };
 export default WhitePapers;

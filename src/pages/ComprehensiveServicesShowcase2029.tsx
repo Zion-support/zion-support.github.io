@@ -32,10 +32,11 @@ import { Brain,
   Server
  } from 'lucide-react.ts';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service  } from '../data/innovativeServices2029';
-
-export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+export { function };
+export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const categories = {
     'all': { name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },
@@ -211,7 +212,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
     website: 'https://ziontechgroup.com'
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <SEO 
         title="Comprehensive Services Showcase 2029 | Zion Tech Group"
@@ -277,17 +278,16 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {Object.entries(categories).map(([key, category]) => (
-                <button
+              {Object.entries(categories).map([key: unknown, category]: unknown <button
                   key={key}
-                  onClick={() => setSelectedCategory(key)}
+                  onClick={(: unknown setSelectedCategory(key)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === key
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
@@ -324,7 +324,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -362,7 +362,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                     </div>
                     
                     <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -380,7 +380,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             ))}
           </div>
 
-          {filteredServices.length === 0 && (
+          {filteredServices.length === 0 && 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -392,7 +392,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-gray-300 mb-8">Try adjusting your search or filter criteria</p>
               <button
-                onClick={() => {
+                onClick={( {
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
@@ -491,5 +491,5 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
     </div>
   );
 };
-
+;
 export default ComprehensiveServicesShowcase2029;

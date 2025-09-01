@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function AIAutoEmailResponder(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
                 }
-              ].map((useCase, index)  => (
+              ].map(useCase: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-slate-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-1">
-                    {useCase.benefits.map((benefit, benefitIndex) => (
+                    {useCase.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -213,7 +214,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -248,7 +249,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                     "Eliminate repetitive email tasks and manual responses",
                     "Integrate seamlessly with existing email and CRM systems",
                     "Provide 24/7 customer support and communication"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -265,7 +266,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                     { metric: "10x", label: "Email Volume Capacity" },
                     { metric: "24/7", label: "Availability" },
                     { metric: "95%", label: "Customer Satisfaction" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-blue-400">{item.metric}</span>
@@ -327,7 +328,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
                 }
-              ].map((integration, index)  => (
+              ].map(integration: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <integration.icon className="w-6 h-6 text-white" />
@@ -335,7 +336,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{integration.title}</h3>
                   <p className="text-slate-300 mb-4">{integration.description}</p>
                   <ul className="space-y-1">
-                    {integration.features.map((feature, featureIndex) => (
+                    {integration.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}

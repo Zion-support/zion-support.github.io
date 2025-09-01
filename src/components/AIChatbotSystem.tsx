@@ -31,6 +31,7 @@ import {
 
 interface ChatMessage {
 
+
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -41,7 +42,8 @@ metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-    estimatedResponseTime?: number}}
+    estimatedResponseTime?: number
+}}
 
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
 
@@ -49,31 +51,37 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean}
-
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+;
+export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = {
 showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
   autoScroll = true;
-}) => {;
+} {;
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-  const [settings, setSettings] = useState({
+  const [inputValue, setInputValue] = useState<typeof ''>('');
+  const [isTyping, setIsTyping] = useState<typeof false>(false);
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState<typeof false>(false);
+  const [settings, setSettings] = useState<typeof {
+    voiceEnabled: false,
+    autoResponse: true,
+    language: 'en',
+    theme: 'dark',
+    responseSpeed: 'normal'
+  }>({
     voiceEnabled: false,
     autoResponse: true,
     language: 'en',
     theme: 'dark',
     responseSpeed: 'normal'
   });
-  const [isListening, setIsListening] = useState(false);
+  const [isListening, setIsListening] = useState<typeof false>(false);
   const [chatHistory, setChatHistory] = useState<any>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Sample welcome message
-  useEffect(() => {
+  useEffect(: unknown {
     if (isOpen && messages.length = == 0) {
       const welcomeMessage: ChatMessage = {
   id: 'welcome',
@@ -98,7 +106,7 @@ showHeader:  true,;
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(()  => {
+  useEffect(: unknown {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
@@ -149,12 +157,12 @@ showHeader:  true,;
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
+  const handleSuggestionClick = (...args: unknown[]): unknown => {;
     setInputValue(suggestion);
   };
 
   // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
+  const rateResponse = (...args: unknown[]): unknown => {
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
@@ -163,15 +171,14 @@ showHeader:  true,;
   };
 
   // Clear chat
-  const clearChat = () => {;
+  const clearChat = (...args: unknown[]): unknown => {;
     setMessages([]);
     setChatHistory([])};
 
-  return (
-    <>
+  return <>
       {/* Chat Toggle Button */}
       <motion.button
-        onClick = {() => setIsOpen(!isOpen)}
+        onClick = {(: unknown setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -182,7 +189,7 @@ showHeader:  true,;
 
       {/* Chat Window */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial = {
   { opacity: 0, scale: 0.9,
@@ -246,7 +253,7 @@ showHeader:  true,;
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
                       <button
-                        onClick={() => setShowSettingsPanel(!showSettingsPanel)}
+                        onClick={( setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
 
@@ -267,7 +274,7 @@ showHeader:  true,;
 
             {/* Settings Panel */}
             <AnimatePresence>
-              {showSettingsPanel && (
+              {showSettingsPanel && 
                 <motion.div
                   initial = {
   { height: 0,
@@ -307,7 +314,7 @@ showHeader:  true,;
                       <span className="text-sm text-zinc-300">Voice Input</span>
                       <button
                         onClick = {
-  () => setSettings(prev => ({ ...prev,
+  ( setSettings(prev => ({ ...prev,
   voiceEnabled: !prev.voiceEnabled 
 
 
@@ -330,7 +337,7 @@ showHeader:  true,;
                       <span className="text-sm text-zinc-300">Auto Response</span>
                       <button
                         onClick = {
-  () => setSettings(prev => ({ ...prev,
+  : unknown setSettings(prev => ({ ...prev,
   autoResponse: !prev.autoResponse 
 
 
@@ -355,7 +362,7 @@ showHeader:  true,;
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">;
-              {messages.map((message) => (;
+              {messages.map(message: unknown (;
                 <motion.div
                   key={message.id}
                   initial = {
@@ -397,12 +404,10 @@ showHeader:  true,;
                             </div>
                           )}
 
-                          {message.metadata.suggestions && (
-                            <div className="flex flex-wrap gap-1 mb-2">
-                              {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
+                          {message.metadata.suggestions && <div className="flex flex-wrap gap-1 mb-2">
+                              {message.metadata.suggestions.map((suggestion: unknown, index: unknown <button
                                   key={index}
-                                  onClick={() => handleSuggestionClick(suggestion)}
+                                  onClick={(: unknown handleSuggestionClick(suggestion)}
                                   className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
 
                                   {suggestion}
@@ -411,9 +416,8 @@ showHeader:  true,;
                             </div>
                           )}
 
-                          {message.metadata.relatedServices && (
-                            <div className="flex flex-wrap gap-1">
-                              {message.metadata.relatedServices.map((service, index) => (
+                          {message.metadata.relatedServices && <div className="flex flex-wrap gap-1">
+                              {message.metadata.relatedServices.map((service: unknown, index: unknown (
                                 <span
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
@@ -433,11 +437,10 @@ showHeader:  true,;
                         {message.timestamp.toLocaleTimeString()}
                       </span>
 
-                      {message.sender === 'bot' && (
-                        <div className="flex items-center gap-1">
+                      {message.sender === 'bot' && <div className="flex items-center gap-1">
                           <button
                             onClick = {
-  () => rateResponse(message.id,
+  (: unknown rateResponse(message.id,
   'positive')
 
 
@@ -453,7 +456,7 @@ showHeader:  true,;
                           </button>
                           <button
                             onClick = {
-  () => rateResponse(message.id,
+  : unknown rateResponse(message.id,
   'negative')
 
 
@@ -517,7 +520,7 @@ showHeader:  true,;
                   <input
                     type="text"
                     value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    onChange={e: unknown setInputValue(e.target.value)}
                     placeholder="Ask me thing about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping}

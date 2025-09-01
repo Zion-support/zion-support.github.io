@@ -41,3 +41,5 @@ export function BlogSection() {
         </div>
       </div>
     </section>)}
+
+}

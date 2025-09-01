@@ -112,7 +112,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         </div>
       </div>
     </section>)}
-// Compact version for smaller spaces
+// Compact version for smaller spaces;
 export function TrustIndicatorsCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">
@@ -132,3 +132,7 @@ export function TrustIndicatorsCompact({ className }) {
         <span>99.9% Uptime</span>
       </div>
     </div>)}
+
+
+}
+}

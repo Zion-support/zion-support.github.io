@@ -23,4 +23,5 @@ const Solutions = () => {
         </div>
       </div>
     </>)};
+export { Solutions };
 export default Solutions;

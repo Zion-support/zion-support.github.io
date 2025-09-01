@@ -9,8 +9,8 @@ import { Home,
   Shield,
   Cpu
  } from 'lucide-react.ts';
-
-export function NotFoundPage(...args: any[]): any {
+;
+export function NotFoundPage(...args: unknown[]): unknown {
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },
@@ -19,7 +19,7 @@ export function NotFoundPage(...args: any[]): any {
     { name: 'Contact', href: '/contact', icon: Cpu }
   ];
 
-  return (
+  return 
     <div className="min-h-screen py-8 flex items-center justify-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -58,7 +58,7 @@ export function NotFoundPage(...args: any[]): any {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Popular Pages</h2>
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
-              {popularPages.map((page, index)  => (
+              {popularPages.map((page, index (
                 <motion.div
                   key={page.name}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -94,7 +94,7 @@ export function NotFoundPage(...args: any[]): any {
             </Link>
             
             <button
-              onClick={() => window.history.back()}
+              onClick={: unknown window.history.back()}
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-all duration-200 font-semibold text-lg border border-gray-700"
             >
               <ArrowLeft className="w-5 h-5" />

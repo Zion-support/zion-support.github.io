@@ -336,5 +336,6 @@ const ContentQualityDashboard = ({ className = '' }) => {
           </div>
         </div>)}
     </div>)};
+export { ContentQualityDashboard };
 export default ContentQualityDashboard;
 }}}}}}}}}

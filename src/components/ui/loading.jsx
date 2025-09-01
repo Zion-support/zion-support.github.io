@@ -38,7 +38,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
     </div>)}
-// Skeleton loading for content
+// Skeleton loading for content;
 export function Skeleton({ className, ...props }) {
     return (<div className = {
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
@@ -51,7 +51,7 @@ export function Skeleton({ className, ...props }) {
 
 } {...props}/>);
 }
-// Page loading component
+// Page loading component;
 export function PageLoading() {
     return (<div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
@@ -60,7 +60,7 @@ export function PageLoading() {
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
     </div>)}
-// Content skeleton loading
+// Content skeleton loading;
 export function CardSkeleton() {
     return (<div className="bg-card border border-border rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>

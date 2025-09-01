@@ -1,8 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react'
 
-
+;
+export { function };
 export default function Events(...args[]):  {
 	const upcomingEvents = [
 		{
@@ -70,7 +71,7 @@ export default function Events(...args[]):  {
 
 	]
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -96,7 +97,7 @@ export default function Events(...args[]):  {
 						</p>
 					</div>
 					<div className="space-y-8">
-						{upcomingEvents.map((event) => (
+						{upcomingEvents.map((event (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
 								<div className="lg:flex lg:items-start lg:justify-between">
 									<div className="flex-1">
@@ -200,7 +201,7 @@ export default function Events(...args[]):  {
 						</p>
 					</div>
 					<div className="grid gap-6 lg: grid-cols-2">
-						{pastEvents.map((event)  => (
+						{pastEvents.map(event: unknown (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-lg p-6">
 								<div className="flex items-start justify-between">
 									<div>
@@ -265,3 +266,7 @@ export default function Events(...args[]):  {
 		</>;
 	);
 };
+
+
+}
+}

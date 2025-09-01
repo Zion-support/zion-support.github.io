@@ -24,8 +24,9 @@ import {
   Phone
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-
-export default function AIQuantumHybridPlatform() {
+;
+export { function };
+export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,
@@ -151,7 +152,7 @@ export default function AIQuantumHybridPlatform() {
     "Expert quantum computing consultation"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="AI Quantum Hybrid Platform - Zion Tech Group"
@@ -224,7 +225,7 @@ export default function AIQuantumHybridPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,7 +265,7 @@ export default function AIQuantumHybridPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -290,7 +291,7 @@ export default function AIQuantumHybridPlatform() {
                 <p className="text-gray-300 mb-6">{tier.description}</p>
                 
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -338,7 +339,7 @@ export default function AIQuantumHybridPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -378,7 +379,7 @@ export default function AIQuantumHybridPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

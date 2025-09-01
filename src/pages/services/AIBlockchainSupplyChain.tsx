@@ -17,8 +17,8 @@ import { Brain,
   Network
   } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
-
-const AIBlockchainSupplyChain = () => {
+;
+const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -130,7 +130,7 @@ const AIBlockchainSupplyChain = () => {
     "Predictive Modeling";
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO 
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
@@ -205,7 +205,7 @@ const AIBlockchainSupplyChain = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)   => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -264,7 +264,7 @@ const AIBlockchainSupplyChain = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)   => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -306,7 +306,7 @@ const AIBlockchainSupplyChain = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
@@ -358,7 +358,7 @@ const AIBlockchainSupplyChain = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)   => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -385,7 +385,7 @@ const AIBlockchainSupplyChain = () => {
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex (
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">
                       <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {benefit}
@@ -425,7 +425,7 @@ const AIBlockchainSupplyChain = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)   => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -523,5 +523,6 @@ const AIBlockchainSupplyChain = () => {
       </section>;
     </div>;
   )};
-
+;
+export { AIBlockchainSupplyChain };
 export default AIBlockchainSupplyChain;

@@ -22,7 +22,7 @@ function ReviewsModerationContent() {
             toast({
                 title: "Error",
                 description: "Failed to load reviews. Please try again later.",
-                variant: "destructive",
+                variant: "destructive"
             });
             setIsLoading(false)}
     };
@@ -76,8 +76,11 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>)}
+
+}

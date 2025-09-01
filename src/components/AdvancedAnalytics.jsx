@@ -258,5 +258,6 @@ export function AdvancedAnalytics() {
     </div>
   );
 }
-
+;
+export { AdvancedAnalytics };
 export default AdvancedAnalytics;

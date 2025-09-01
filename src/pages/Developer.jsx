@@ -24,4 +24,5 @@ const Developer = () => {
         </div>
       </div>
     </>)};
+export { Developer };
 export default Developer;

@@ -2,6 +2,7 @@ import React from 'react.ts';
 
 interface ForumCategoryInfo {
 
+
   id: string;
   name: string;
   description: string;
@@ -11,8 +12,10 @@ interface ForumCategoryInfo {
 lastPost?: {
     title: string;
     author: string;
-    date: string}}
-
+    date: string
+}}
+;
+export { function };
 export default function ForumCategories(...args[]):  {
   const categories: ForumCategoryInfo[] = [;
     {
@@ -95,7 +98,7 @@ export default function ForumCategories(...args[]):  {
 
   ];
 
-  return (
+  return 
     <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">;
@@ -116,7 +119,7 @@ export default function ForumCategories(...args[]):  {
 
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
+          {categories.map((category (
             <div
               key={category.id}
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
@@ -179,4 +182,33 @@ export default function ForumCategories(...args[]):  {
       </div>;
     </section>;
   );
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
 }

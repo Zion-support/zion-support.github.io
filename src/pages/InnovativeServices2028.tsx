@@ -28,11 +28,12 @@ import {
   ChevronUp
 } from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
-
+;
+export { function };
 export default function InnovativeServices2028(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [sortBy, setSortBy] = useState<typeof 'name'>('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
   const filteredServices = innovativeServices2028.filter(service => {
@@ -43,7 +44,7 @@ export default function InnovativeServices2028(...args[]):  {
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;

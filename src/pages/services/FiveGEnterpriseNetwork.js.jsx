@@ -23,4 +23,5 @@ const FiveGEnterpriseNetwork = () => {
       </section>
     </div>);
 };
+export { FiveGEnterpriseNetwork };
 export default FiveGEnterpriseNetwork;

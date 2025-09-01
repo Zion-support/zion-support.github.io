@@ -169,4 +169,5 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           </p>
         </div>)}
     </div>)};
+export { LinkHealthChecker };
 export default LinkHealthChecker;

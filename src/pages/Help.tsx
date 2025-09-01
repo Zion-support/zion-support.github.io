@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -27,9 +27,10 @@ import {
   Globe,
   Rocket
 } from 'lucide-react';
-
-export default function Help() {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function Help(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const helpCategories = [
@@ -122,8 +123,7 @@ export default function Help() {
     )
   );
 
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
+  return <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-12">
@@ -132,7 +132,7 @@ export default function Help() {
               Help Center
             </h1>
             <p className="text-xl text-slate-300 mb-8">
-              Find answers, learn best practices, and get the most out of Zion Tech Group services
+              Find answers: unknown, learn best practices: unknown, and get the most out of Zion Tech Group services
             </p>
             
             {/* Search Bar */}
@@ -141,9 +141,9 @@ export default function Help() {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Search for help articles, guides, and solutions..."
+                  placeholder="Search for help articles: unknown, guides: unknown, and solutions..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e: unknown setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
                 />
               </div>
@@ -166,7 +166,7 @@ export default function Help() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
+            {quickLinks.map(link: unknown, index: unknown (
               <motion.a
                 key={index}
                 href={link.url}
@@ -201,7 +201,7 @@ export default function Help() {
 
           <div className="max-w-2xl mx-auto">
             <div className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden">
-              {supportHours.map((schedule, index) => (
+              {supportHours.map(schedule: unknown, index: unknown (
                 <div
                   key={index}
                   className={`flex items-center justify-between p-4 ${
@@ -241,7 +241,7 @@ export default function Help() {
           </motion.div>
 
           <div className="space-y-6">
-            {filteredCategories.map((category, index) => (
+            {filteredCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -312,7 +312,7 @@ export default function Help() {
                 url: '/help/downloads',
                 color: 'from-purple-500 to-purple-600'
               }
-            ].map((resource, index) => (
+            ].map(resource: unknown, index: unknown (
               <motion.a
                 key={index}
                 href={resource.url}
@@ -365,4 +365,5 @@ export default function Help() {
       </section>
     </div>
   );
+}
 }

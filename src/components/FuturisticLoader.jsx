@@ -138,5 +138,6 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
           </div>
         </div>)}
     </div>)};
+export { FuturisticLoader };
 export default FuturisticLoader;
 }

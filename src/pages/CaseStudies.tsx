@@ -27,11 +27,12 @@ import {
   MapPin,
   Factory
 } from 'lucide-react';
-
-export default function CaseStudies() {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [selectedService, setSelectedService] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export { function };
+export default function CaseStudies(...args: unknown[]): unknown {
+  const [selectedIndustry, setSelectedIndustry] = useState<typeof 'all'>('all');
+  const [selectedService, setSelectedService] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const industries = [
     { id: 'all', name: 'All Industries', icon: Building, count: 0 },
@@ -187,7 +188,7 @@ export default function CaseStudies() {
     { label: 'Time to Value', value: '6 months', icon: Clock }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
@@ -221,7 +222,7 @@ export default function CaseStudies() {
                   type="text"
                   placeholder="Search case studies..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
@@ -229,7 +230,7 @@ export default function CaseStudies() {
             <div className="flex gap-4">
               <select
                 value={selectedIndustry}
-                onChange={(e) => setSelectedIndustry(e.target.value)}
+                onChange={e: unknown setSelectedIndustry(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 {industries.map(industry => (
@@ -240,7 +241,7 @@ export default function CaseStudies() {
               </select>
               <select
                 value={selectedService}
-                onChange={(e) => setSelectedService(e.target.value)}
+                onChange={e: unknown setSelectedService(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 {services.map(service => (
@@ -258,7 +259,7 @@ export default function CaseStudies() {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
+              {filteredCaseStudies.filter(cs => cs.featured).map(cs: unknown, index: unknown (
                 <motion.article
                   key={cs.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -308,7 +309,7 @@ export default function CaseStudies() {
             {filteredCaseStudies.length} Case Studies Found
           </h2>
           <div className="space-y-6">
-            {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
+            {filteredCaseStudies.filter(cs => !cs.featured).map(cs: unknown, index: unknown (
               <motion.article
                 key={cs.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -358,7 +359,7 @@ export default function CaseStudies() {
                   <div className="lg:col-span-1">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Results</h4>
                     <ul className="space-y-2">
-                      {cs.results.slice(0, 3).map((result, idx) => (
+                      {cs.results.slice(0, 3).map(result: unknown, idx: unknown (
                         <li key={idx} className="flex items-start text-sm text-gray-600">
                           <TrendingUp className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                           {result}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
@@ -21,10 +21,16 @@ import {
 } from 'lucide-react';
 import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-export default function Cookies() {
+;
+export { function };
+export default function Cookies(...args: unknown[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [cookiePreferences, setCookiePreferences] = useState({
+  const [cookiePreferences, setCookiePreferences] = useState<typeof {
+    essential: true,
+    analytics: false,
+    marketing: false,
+    functional: false
+  }>({
     essential: true,
     analytics: false,
     marketing: false,
@@ -132,11 +138,11 @@ export default function Cookies() {
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
+  const toggleSection = (...args: unknown[]): unknown => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
 
-  const updateCookiePreference = (type: string, enabled: boolean) => {
+  const updateCookiePreference = (...args: unknown[]): unknown => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences(prev => ({
@@ -145,14 +151,14 @@ export default function Cookies() {
     }));
   };
 
-  const savePreferences = () => {
+  const savePreferences = (...args: unknown[]): unknown => {
     // In a real app, this would save preferences and update cookies
     console.log('Cookie preferences saved:', cookiePreferences);
     // Show success message
     alert('Cookie preferences saved successfully!');
   };
 
-  const acceptAll = () => {
+  const acceptAll = (...args: unknown[]): unknown => {
     setCookiePreferences({
       essential: true,
       analytics: true,
@@ -162,7 +168,7 @@ export default function Cookies() {
     savePreferences();
   };
 
-  const rejectAll = () => {
+  const rejectAll = (...args: unknown[]): unknown => {
     setCookiePreferences({
       essential: true,
       analytics: false,
@@ -172,7 +178,7 @@ export default function Cookies() {
     savePreferences();
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -266,8 +272,7 @@ export default function Cookies() {
               </div>
 
               <div className="space-y-6 mb-8">
-                {cookieTypes.map((type) => (
-                  <div key={type.id} className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50">
+                {cookieTypes.map((type <div key={type.id} className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${type.color} rounded-xl mr-4`}>
@@ -283,7 +288,7 @@ export default function Cookies() {
                           <input
                             type="checkbox"
                             checked={cookiePreferences[type.id as keyof typeof cookiePreferences]}
-                            onChange={(e) => updateCookiePreference(type.id, e.target.checked)}
+                            onChange={(e: unknown updateCookiePreference(type.id, e.target.checked)}
                             disabled={type.alwaysActive}
                             className="sr-only peer"
                           />
@@ -295,7 +300,7 @@ export default function Cookies() {
                     <div className="ml-16">
                       <h4 className="text-sm font-semibold text-white mb-2">Examples:</h4>
                       <ul className="space-y-1">
-                        {type.examples.map((example, index) => (
+                        {type.examples.map(example: unknown, index: unknown (
                           <li key={index} className="flex items-center text-gray-300 text-sm">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             {example}
@@ -348,7 +353,7 @@ export default function Cookies() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cookieTypes.map((type, index) => (
+            {cookieTypes.map(type: unknown, index: unknown 
               <motion.div
                 key={type.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -369,7 +374,7 @@ export default function Cookies() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-white">Examples:</h4>
                     <ul className="space-y-1">
-                      {type.examples.map((example, exampleIndex) => (
+                      {type.examples.map((example, exampleIndex (
                         <li key={exampleIndex} className="flex items-center text-gray-300 text-xs">
                           <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                           {example}
@@ -411,7 +416,7 @@ export default function Cookies() {
                 </div>
                 
                 <div className="space-y-3">
-                  {cookieDetails.map((cookie, index) => (
+                  {cookieDetails.map(cookie: unknown, index: unknown (
                     <motion.div
                       key={cookie.name}
                       initial={{ opacity: 0, x: -20 }}
@@ -564,7 +569,7 @@ export default function Cookies() {
     </div>
         {/* Cookie Categories */}
         <div className="space-y-6">
-          {cookieCategories.map((category, index) => (
+          {cookieCategories.map(category: unknown, index: unknown (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
@@ -589,7 +594,7 @@ export default function Cookies() {
                     <strong>Purpose:</strong> {category.purpose}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {category.cookies.map((cookie, cookieIndex) => (
+                    {category.cookies.map(cookie: unknown, cookieIndex: unknown (
                       <span
                         key={cookieIndex}
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full font-mono"
@@ -606,9 +611,8 @@ export default function Cookies() {
                       <CheckCircle className="w-6 h-6 mr-2" />
                       <span className="text-sm font-medium">Required</span>
                     </div>
-                  ) : (
-                    <button
-                      onClick={() => handleCookieToggle(category.id)}
+                  ) : <button
+                      onClick={(: unknown handleCookieToggle(category.id)}
                       className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
                         cookiePreferences[category.id as keyof typeof cookiePreferences]
                           ? 'bg-green-600 hover:bg-green-700 text-white'

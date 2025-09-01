@@ -24,7 +24,7 @@ import {
   MapPin
 } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
-
+;
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
   'Quantum AI': 'from-blue-500 to-cyan-500',
@@ -39,15 +39,15 @@ const categoryColors: { [key: string]: string } = {
   'Nanotechnology': 'from-gray-500 to-slate-500',
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
-
-export const InnovativeServicesShowcase2027: React.FC = () => {;
+;
+export const InnovativeServicesShowcase2027: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
+  useEffect(: unknown {
+    const observer = new IntersectionObserver;
+      ([entry]: unknown {;
         if (entry.isIntersecting) {;
           setIsVisible(true);
         }
@@ -59,13 +59,13 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
     if (element) {
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return : unknown observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion = (...args: unknown[]): unknown => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -86,7 +86,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 };
 
-  return (
+  return 
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -176,7 +176,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
           <div className="flex flex-wrap justify-center gap-3">
             <button
-              onClick={() => setSelectedCategory('All')}
+              onClick={( setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -185,12 +185,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map((category) => {;
+            {serviceCategories2027.map(category: unknown {;
               const Icon = categoryIcons[category];
-              return (
-                <button
+              return <button
                   key = {category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={(: unknown setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -239,7 +238,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index)  => (;
+          {filteredServices.map(service: unknown, index: unknown (;
             <motion.div
               key={service.id}
               initial = {
@@ -289,7 +288,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
                 {/* Technology Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {service.technology.slice(0, 3).map((tech, techIndex) => (
+                  {service.technology.slice(0, 3).map(tech: unknown, techIndex: unknown (
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
@@ -320,7 +319,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 <div className="flex items-center justify-between mb-4">;
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
-                    onClick={() => toggleServiceExpansion(service.id)}
+                    onClick={: unknown toggleServiceExpansion(service.id)}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
 
                     {expandedService === service.id ? 'Less' : 'Learn More'}
@@ -330,7 +329,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>
-                  {expandedService === service.id && (;
+                  {expandedService === service.id && ;
                     <motion.div
                       initial = {
   { opacity: 0,
@@ -370,7 +369,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                         <div>
                           <h4 className="text-zion-cyan font-semibold mb-2">Key Features</h4>
                           <ul className="space-y-1">
-                            {service.features.map((feature, featureIndex) => (
+                            {service.features.map((feature, featureIndex (
                               <li key={featureIndex} className="text-gray-300 text-sm flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                                 {feature}
@@ -383,7 +382,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                         <div>
                           <h4 className="text-zion-purple font-semibold mb-2">Benefits</h4>
                           <ul className="space-y-1">
-                            {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                            {service.benefits.slice(0, 3).map(benefit: unknown, benefitIndex: unknown (
                               <li key={benefitIndex} className="text-gray-300 text-sm flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"></div>
                                 {benefit}

@@ -19,8 +19,9 @@ import {
   Mail,
   MessageCircle
 } from 'lucide-react';
-
-export default function AccessibilityPage() {
+;
+export { function };
+export default function AccessibilityPage(...args: unknown[]): unknown {
   const currentYear = new Date().getFullYear();
 
   const accessibilityFeatures = [
@@ -152,7 +153,7 @@ export default function AccessibilityPage() {
     }
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +175,7 @@ export default function AccessibilityPage() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -189,7 +190,7 @@ export default function AccessibilityPage() {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index)  => (
+                {complianceStandards.map(standard: unknown, index: unknown (
                   <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
                   </div>
@@ -202,11 +203,10 @@ export default function AccessibilityPage() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-              {testingAreas.map((area, index)  => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {testingAreas.map(area: unknown, index: unknown <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
-                    {area.items.map((item, idx) => (
+                    {area.items.map((item: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {item}

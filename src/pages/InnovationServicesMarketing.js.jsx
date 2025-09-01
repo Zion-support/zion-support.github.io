@@ -292,4 +292,5 @@ const InnovationServicesMarketing = () => {
         </div>
       </div>
     </div>)};
+export { InnovationServicesMarketing };
 export default InnovationServicesMarketing;

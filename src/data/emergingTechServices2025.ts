@@ -1,5 +1,6 @@
 export interface EmergingTechService {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface EmergingTechService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -32,7 +34,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string;
 }
-
+;
 export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing Solutions
   {
@@ -359,5 +361,6 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketSize: "$82.5 billion by 2025"
   }
 ];
-
+;
+export { EMERGING_TECH_SERVICES_2025 };
 export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}}

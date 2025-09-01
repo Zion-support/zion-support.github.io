@@ -240,5 +240,6 @@ const InnovativeNewServices2025 = () => {
         </div>
       </section>
     </div>)};
+export { InnovativeNewServices2025 };
 export default InnovativeNewServices2025;
 }}}

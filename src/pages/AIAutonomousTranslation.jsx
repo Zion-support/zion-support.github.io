@@ -169,4 +169,5 @@ const AIAutonomousTranslation = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousTranslation };
 export default AIAutonomousTranslation;

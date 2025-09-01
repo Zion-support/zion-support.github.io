@@ -13,18 +13,18 @@ import { addItem } from '@/store/cartSlice';
 
   listing: ProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: id: string void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
 
-  const handleViewListing = () => {
+  const handleViewListing = (...args: unknown[]): unknown => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (...args: unknown[]): unknown => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -37,14 +37,14 @@ import { addItem } from '@/store/cartSlice';
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
-  return (
+  return 
     <div
       data-testid = "equipment-link";
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
       tabIndex={0};
       role="button";
-      onKeyDown={(e) => {;
+      onKeyDown={(e {;
         if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault();
           handleViewListing()}
@@ -56,7 +56,7 @@ import { addItem } from '@/store/cartSlice';
         onClick={handleViewListing} // Keep existing onClick for navigation;
         role="button";
         tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;
+        onKeyDown={e: unknown {;
           if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault();
             handleViewListing()}
@@ -102,9 +102,8 @@ import { addItem } from '@/store/cartSlice';
           </p>
 
           {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
+          {listing.tags && listing.tags.length > 0 && <div className="flex flex-wrap gap-1 mb-4">
+              {listing.tags.map((tag: unknown, idx: unknown (
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
@@ -135,7 +134,7 @@ import { addItem } from '@/store/cartSlice';
             <Button
               size="sm"
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+              onClick={e: unknown {
                 e.stopPropagation();
                 router(`${detailBasePath}/${listing.id}`);
               }}
@@ -169,9 +168,10 @@ import { addItem } from '@/store/cartSlice';
     </div>;
   );
 }
-
+;
+export { React };
 export default React.memo(ProductListingCard);
-
+;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

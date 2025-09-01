@@ -48,19 +48,19 @@ const ServiceCard = ({ service, index, isVisible }) => {
   {
                 x: [0, Math.random() * 100 - 50],
                 y: [0, Math.random() * 100 - 50],
-                opacity: [0.6, 0.2, 0.6],
+                opacity: [0.6, 0.2, 0.6]
   
 
 }} transition = {
   {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut"
   
 
 }} style={{
                 left: `${20 + Math.random() * 60}%`,
-                top: `${20 + Math.random() * 60}%`,
+                top: `${20 + Math.random() * 60}%`
             }}/>))}
           </div>
 
@@ -188,7 +188,7 @@ export const FuturisticServicesShowcase = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
+                animationDuration: `${3 + Math.random() * 4}s`
             }}/>))}
       </div>
 

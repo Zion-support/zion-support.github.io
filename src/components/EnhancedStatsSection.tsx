@@ -14,14 +14,16 @@ import {
 
 interface Stat {
 
+
   id: string;
   icon: React.ComponentType<any>;
   value: string;
   label: string;
   description: string;
   color: string;
-  gradient: string}
-
+  gradient: string
+}
+;
 const stats: Stat[] = [
   {
     id: 'clients',
@@ -78,7 +80,8 @@ const stats: Stat[] = [
     gradient: 'from-zion-blue to-zion-cyan'
 
 ];
-
+;
+export { function };
 export default function EnhancedStatsSection(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
@@ -87,18 +90,18 @@ export default function EnhancedStatsSection(...args[]):  {
     triggerOnce: true
   });
 
-  useEffect(()  => {
+  useEffect(: unknown {
     if (inView) {
       controls.start('visible')}
   }, [controls, inView]);
 
-  const animateCount = (target: string, duration: number = 2000) => {;
+  const animateCount = (...args: unknown[]): unknown => {;
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
     const start = 0;
     const increment = numericValue / (duration / 16); // 60fps
 
     let current = start;
-    const timer = setInterval(() => {;
+    const timer = setInterval(: unknown {;
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
@@ -112,18 +115,18 @@ setCountedValues(prev:  > ({;
 
     return timer};
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (inView) {
-      stats.forEach((stat) => {
-        const timer = setTimeout(() => {;
+      stats.forEach(stat: unknown {
+        const timer = setTimeout(: unknown {;
           animateCount(stat.value);
         }, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer);
+        return : unknown clearTimeout(timer);
       });
     }
   }, [inView]);
 
-  return (
+  return 
     <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}
       <div className="absolute inset-0">
@@ -176,7 +179,7 @@ setCountedValues(prev:  > ({;
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.id}
               initial = {
@@ -231,7 +234,7 @@ setCountedValues(prev:  > ({;
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
                 {/* Icon */}
-                <motion.div
+                <motion.div;
 className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
                     rotate: 360,
@@ -360,4 +363,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
       </div>;
     </section>;
   );
+}
+
 }

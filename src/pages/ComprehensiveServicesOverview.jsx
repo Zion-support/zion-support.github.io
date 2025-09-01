@@ -8,7 +8,7 @@ import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { motion } from 'framer-motion';
-// Combine all services
+// Combine all services;
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,
     ...COMPREHENSIVE_SERVICES,
@@ -59,6 +59,7 @@ const supportLevelColors = {
 
 
 };
+export { function };
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

@@ -55,8 +55,9 @@ import {
   MapPin as MapPinIcon
 } from 'lucide-react';
 import EnhancedSEOManager from "../components/EnhancedSEOManager";
-
-export default function ComprehensiveImprovements2025() {
+;
+export { function };
+export default function ComprehensiveImprovements2025(...args: unknown[]): unknown {
   const improvements = [
     {
       category: 'AI & Machine Learning Services',
@@ -214,7 +215,7 @@ export default function ComprehensiveImprovements2025() {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager 
         title="Comprehensive Improvements 2025 - Zion Tech Group"
@@ -333,7 +334,7 @@ export default function ComprehensiveImprovements2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {improvements.map((improvement, index) => (
+            {improvements.map((improvement, index 
               <motion.div
                 key={improvement.category}
                 initial = {
@@ -385,7 +386,7 @@ export default function ComprehensiveImprovements2025() {
                     {improvement.title}
                   </h3>
                   <ul className="space-y-2">
-                    {improvement.items.map((item, itemIndex) => (
+                    {improvement.items.map((item, itemIndex (
                       <li key={itemIndex} className="flex items-start text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
@@ -440,7 +441,7 @@ export default function ComprehensiveImprovements2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -539,7 +540,7 @@ export default function ComprehensiveImprovements2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial = {

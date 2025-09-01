@@ -1,5 +1,6 @@
 export interface UltimateInnovativeService2027 {
 
+
   id: string;
   title: string;
   description: string;
@@ -22,7 +23,8 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string};
+    address: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -43,7 +45,7 @@ contactInfo: {
     caseStudies?: string[];
   };
 }
-
+;
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
   // AI-Powered Quantum Computing Platform
   {
@@ -1032,5 +1034,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     }
   }
 ];
-
+;
+export { ULTIMATE_INNOVATIVE_SERVICES_2027 };
 export default ULTIMATE_INNOVATIVE_SERVICES_2027;

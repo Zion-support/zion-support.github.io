@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -26,8 +26,8 @@ import {
   Database,
   Lock
 } from 'lucide-react';
-
-const API: React.FC = () => {
+;
+const API: React.FC = props {
   const endpoints = [
     {
       method: 'GET',
@@ -94,13 +94,13 @@ print(response.json())`,
     language: 'JavaScript',
     description: 'Example of managing cloud resources through our infrastructure API.',
     code: `const axios = require('axios');
-
+;
 const api = axios.create({
     baseURL: 'https://api.ziontechgroup.com/v1/cloud',
     headers: {'Authorization': 'Bearer YOUR_API_KEY'}
 });
-
-const createInstance = async () => {
+;
+const createInstance = async : unknown {
     const response = await api.post('/instances', {
         type: 'compute',
         size: 'medium',
@@ -129,10 +129,11 @@ def check_threat(ip_address):;
     category: 'Security'
   }
 ];
-
-export default function API() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+;
+export { function };
+export default function API(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -235,7 +236,7 @@ export default function API() {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {apiCategories.map((category, index)  => (
+            {apiCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -317,7 +318,7 @@ export default function API() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {quickStartExamples.map((example, index)  => (
+            {quickStartExamples.map(example: unknown, index: unknown (
               <motion.div
                 key={endpoint.path}
                 initial = {
@@ -413,7 +414,7 @@ export default function API() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sdks.map((sdk, index) => (
+            {sdks.map(sdk: unknown, index: unknown (
               <motion.div
                 key={sdk.name}
                 initial = {
@@ -513,5 +514,5 @@ export default function API() {
     </div>;
   );
 };
-
+;
 export default API;

@@ -33,6 +33,7 @@ import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rock
         description: 'Get in touch with us'
 
 ];
+export { function };
 export default function FuturisticNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -238,3 +239,7 @@ export default function FuturisticNavigation() {
           </motion.div>)}
       </AnimatePresence>
     </nav>)}
+
+
+}
+}

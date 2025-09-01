@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
-
-const InfrastructureServices = () => {
+;
+const InfrastructureServices = (...args: unknown[]): unknown => {
   const infrastructureServices = [
     {
       title: "Network Design & Management",
@@ -56,7 +56,7 @@ const InfrastructureServices = () => {
     "Future-proof technology solutions";
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -100,7 +100,7 @@ const InfrastructureServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {infrastructureServices.map((service, index) => (
+            {infrastructureServices.map((service, index 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -109,7 +109,7 @@ const InfrastructureServices = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-purple-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
@@ -136,7 +136,7 @@ const InfrastructureServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -144,7 +144,7 @@ const InfrastructureServices = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
                 <ul className="space-y-2">
-                  {tech.features.map((feature, idx) => (
+                  {tech.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400">
                       {feature}
                     </li>
@@ -169,7 +169,7 @@ const InfrastructureServices = () => {
                 and scalability your business needs to succeed.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
@@ -219,5 +219,6 @@ const InfrastructureServices = () => {
     </div>;
   );
 };
-
+;
+export { InfrastructureServices };
 export default InfrastructureServices;}}}

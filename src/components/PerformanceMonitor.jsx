@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+;
 export const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState({
     fcp: null,

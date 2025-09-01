@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 
 interface SecurityThreat {
+
   id: string;
   type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -37,9 +38,11 @@ interface SecurityThreat {
   status: 'active' | 'blocked' | 'investigating' | 'resolved';
   description: string;
   impact: string;
+
 }
 
 interface SecurityMetric {
+
   id: string;
   name: string;
   value: number;
@@ -48,21 +51,23 @@ interface SecurityMetric {
   changeType: 'increase' | 'decrease';
   status: 'secure' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
+
 }
 
 interface EnhancedSecurityDashboardProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   showThreats?: boolean;
   autoRefresh?: boolean;
-}
 
-const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
-  title = "Enhanced Security Dashboard",
-  subtitle = "Real-time threat monitoring and security analytics for comprehensive protection",
-  showThreats = true,
-  autoRefresh = true
-}) => {
+}
+;
+const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = {
+  title = "Enhanced Security Dashboard": unknown, subtitle = "Real-time threat monitoring and security analytics for comprehensive protection": unknown, showThreats = true: unknown, autoRefresh = true
+}: unknown {
   const [threats, setThreats] = useState<SecurityThreat[]>([
     {
       id: '1',
@@ -145,10 +150,10 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const [selectedThreat, setSelectedThreat] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoRefresh) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       // Simulate new threats
       if (Math.random() > 0.7) {
         const threatTypes = ['malware', 'phishing', 'ddos', 'brute-force'] as const;
@@ -170,10 +175,10 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       }
     }, 10000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [autoRefresh]);
 
-  const getThreatTypeIcon = (type: string) => {
+  const getThreatTypeIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'malware': return <Bug className="w-5 h-5" />;
       case 'phishing': return <Mail className="w-5 h-5" />;
@@ -185,7 +190,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100 border-red-200';
       case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
@@ -195,7 +200,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'active': return 'text-red-600 bg-red-100';
       case 'blocked': return 'text-green-600 bg-green-100';
@@ -205,7 +210,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     }
   };
 
-  const getMetricStatusColor = (status: string) => {
+  const getMetricStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'secure': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
@@ -220,9 +225,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
+        delayChildren: 0.2
+      }
+    }
   };
 
   const itemVariants = {
@@ -232,12 +237,12 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
-      },
-    },
+        ease: "easeOut"
+      }
+    }
   };
 
-  return (
+  return 
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="container mx-auto px-4">
         <motion.div
@@ -263,7 +268,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {metrics.map((metric) => {
+          {metrics.map((metric {
             const IconComponent = metric.icon;
             
             return (
@@ -322,10 +327,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           className="flex justify-center mb-12"
         >
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
-              <button
+            {(['1h', '6h', '24h', '7d'] as const).map(range: unknown <button
                 key={range}
-                onClick={() => setTimeRange(range)}
+                onClick={(: unknown setTimeRange(range)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
                   timeRange === range
                     ? 'bg-blue-600 text-white shadow-lg'
@@ -339,7 +343,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         </motion.div>
 
         {/* Security Threats */}
-        {showThreats && (
+        {showThreats && 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -358,14 +362,14 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
             </div>
 
             <div className="space-y-4">
-              {threats.map((threat) => (
+              {threats.map((threat 
                 <motion.div
                   key={threat.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300 cursor-pointer"
-                  onClick={() => setSelectedThreat(selectedThreat === threat.id ? null : threat.id)}
+                  onClick={( setSelectedThreat(selectedThreat === threat.id ? null : threat.id)}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
@@ -501,5 +505,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     </section>
   );
 };
-
+;
+export { EnhancedSecurityDashboard };
 export default EnhancedSecurityDashboard;

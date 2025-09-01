@@ -40,8 +40,9 @@ import {
   Clock,
   Globe
 } from 'lucide-react';
-
-export default function NotFound() {
+;
+export { function };
+export default function NotFound(...args: unknown[]): unknown {
   const popularPages = [
     { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
     { name: 'Services', path: '/services', icon: Zap, description: 'All our services' },
@@ -86,7 +87,7 @@ export default function NotFound() {
     }
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* 404 Icon */}
@@ -196,7 +197,7 @@ export default function NotFound() {
             Explore Our Services
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, categoryIndex) => (
+            {serviceCategories.map((category, categoryIndex (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -212,7 +213,7 @@ export default function NotFound() {
                 </div>
                 
                 <div className="space-y-3">
-                  {category.services.map((service, serviceIndex) => (
+                  {category.services.map(service: unknown, serviceIndex: unknown (
                     <Link
                       key={service.path}
                       to={service.path}
@@ -271,7 +272,7 @@ export default function NotFound() {
         {/* Back Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">;
           <button
-            onClick={() => window.history.back()}
+            onClick={: unknown window.history.back()}
             className="inline-flex items-center gap-2 px-6 py-3 bg-zion-slate-light text-zion-slate-dark rounded-lg hover:bg-zion-slate-light/80 transition-colors"
 
             <ArrowLeft className="w-4 h-4" />

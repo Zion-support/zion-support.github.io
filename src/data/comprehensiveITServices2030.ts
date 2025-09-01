@@ -1,14 +1,17 @@
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
-
+;
 export interface ServiceContact {
+
 
   phone: string;
   email: string;
   website: string;
-  address: string}
-
+  address: string
+}
+;
 export interface ITService {
+
 
   id: number;
   name: string;
@@ -33,9 +36,10 @@ export interface ITService {
   technologies: string[];
   useCases: string[];
   roi: string;
-  setupTime: string}
+  setupTime: string
+}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -54,7 +58,7 @@ const zionContact: ServiceContact = {
 
 };
 
-// Comprehensive IT Services 2030
+// Comprehensive IT Services 2030;
 export const comprehensiveITServices2030: ITService[] = [
   {
     id: 1,
@@ -627,5 +631,6 @@ export const comprehensiveITServices2030: ITService[] = [
     setupTime: "4-16 weeks"
 
 ];
-
+;
+export { comprehensiveITServices2030 };
 export default comprehensiveITServices2030;}}}

@@ -169,4 +169,5 @@ const AIAutonomousMicroserviceSecurity = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousMicroserviceSecurity };
 export default AIAutonomousMicroserviceSecurity;

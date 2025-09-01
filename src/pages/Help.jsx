@@ -17,7 +17,8 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-
+;
+export { function };
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);

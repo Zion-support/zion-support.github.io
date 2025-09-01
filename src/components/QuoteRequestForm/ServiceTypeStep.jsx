@@ -132,3 +132,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           </div>
         </div>)}
     </div>)}
+
+
+}
+}

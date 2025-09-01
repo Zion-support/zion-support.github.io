@@ -89,5 +89,6 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
         </div>
       </div>
     </div>)};
+export { NotFoundPage };
 export default NotFoundPage;
 }

@@ -5,18 +5,18 @@ import { Input  } from '@/components/ui/input';
 import { useNavigate  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
-
+;
 export function ITServiceRequestHero(...args[]):  {
-  const [location, setLocation] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [location, setLocation] = useState<typeof "">("");
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent)  => {;
+  const handleSubmit = async e: React.FormEvent {;
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
       // Simulate API call
-      setTimeout(() => {
+      setTimeout(: unknown {
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
   };
@@ -54,13 +54,13 @@ export function ITServiceRequestHero(...args[]):  {
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-
-import React from 'react';
+;
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-export function ITServiceRequestHero() {
-  return (
+;
+export function ITServiceRequestHero(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -119,7 +119,7 @@ export function ITServiceRequestHero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={( document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
 
                 Request Service Now
@@ -228,4 +228,6 @@ export function ITServiceRequestHero() {
       </div>;
     </section>;
   );
+}
+
 }

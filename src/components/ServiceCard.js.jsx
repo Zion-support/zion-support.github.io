@@ -193,4 +193,5 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
     </motion.div>)};
+export { ServiceCard };
 export default ServiceCard;

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
-// Using regular img tag instead of Next.js Image
+// Using regular img tag instead of Next.js Image;
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const isGrid = view === 'grid';
     const navigate = useNavigate();

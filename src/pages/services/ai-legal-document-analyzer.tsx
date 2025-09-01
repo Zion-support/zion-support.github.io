@@ -27,8 +27,8 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-
-const AILegalDocumentAnalyzer = () => {
+;
+const AILegalDocumentAnalyzer = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -135,7 +135,7 @@ const AILegalDocumentAnalyzer = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Legal Document Analyzer - Zion Tech Group"
@@ -209,7 +209,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
@@ -248,7 +248,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
@@ -287,7 +287,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${
@@ -318,7 +318,7 @@ const AILegalDocumentAnalyzer = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>
@@ -424,5 +424,6 @@ const AILegalDocumentAnalyzer = () => {
     </div>
   );
 };
-
+;
+export { AILegalDocumentAnalyzer };
 export default AILegalDocumentAnalyzer;

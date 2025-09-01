@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-
+;
 const HealthcareSolutions = () => {
     const solutions = [
         {
@@ -181,5 +181,6 @@ const HealthcareSolutions = () => {
     </div>
   );
 };
-
+;
+export { HealthcareSolutions };
 export default HealthcareSolutions;

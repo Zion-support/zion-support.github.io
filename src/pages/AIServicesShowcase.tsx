@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO   } from '../components/SEO';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
-
+;
 const AIServicesShowcase: React.FC = (): JSX.Element => {
   const aiServices = [
     {
@@ -53,7 +53,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
 
   const categories = ['All', 'Security & Development', 'Analytics & Customer Success', 'DevOps & Infrastructure', 'IoT & Edge Computing'];
 
-  return (
+  return 
     <>
       <SEO
         title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group"
@@ -131,7 +131,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {aiServices.map((service, index)   => (
+              {aiServices.map((service, index 
                 <motion.div
                   key={service.id}
                   initial = {
@@ -170,7 +170,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex (
                         <li key={featureIndex} className="text-blue-300 flex items-center">
                           <span className="text-green-400 mr-2">✓</span>
                           {feature}
@@ -182,7 +182,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Business Impact:</h4>
                     <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map(benefit: unknown, benefitIndex: unknown (
                         <li key={benefitIndex} className="text-green-300 flex items-center">
                           <span className="text-green-400 mr-2">🚀</span>
                           {benefit}
@@ -274,7 +274,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   description: "Dedicated support team available around the clock for enterprise customers.",
                   icon: "🛟"
                 }
-              ].map((feature, index)   => (
+              ].map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -363,5 +363,6 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
       </div>;
     </>;
   )};
-
+;
+export { AIServicesShowcase };
 export default AIServicesShowcase;

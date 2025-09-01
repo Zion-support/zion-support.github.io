@@ -11,11 +11,11 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
     { label: 'Highest Rating', value: 'rating-high' },
     { label: 'Highest AI Match', value: 'ai-match' },
     { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' },
+    { label: 'Z-A', value: 'z-a' }
 ], filterOptions = [
     { label: 'All', value: 'all' },
     { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' },
+    { label: 'Best AI Match', value: 'best-match' }
 ] }) {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
@@ -140,3 +140,5 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
       </div>
       <Footer />
     </>)}
+
+}

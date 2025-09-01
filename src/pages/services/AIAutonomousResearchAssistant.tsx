@@ -20,7 +20,7 @@ import {
   Lock,
   Activity,
   Award,
-  Rocket,
+  Rocket,;
 import { 
   Brain, 
   Search, 
@@ -54,8 +54,9 @@ import {
   MapPin
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-
-export default function AIAutonomousResearchAssistant() {
+;
+export { function };
+export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -188,12 +189,12 @@ export default function AIAutonomousResearchAssistant() {
   Mail,
   MapPin
 } from 'lucide-react';
+;
+export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-export default function AIAutonomousResearchAssistant() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
+  useEffect(: unknown {
     setIsVisible(true);
   }, []);
 
@@ -292,7 +293,7 @@ export default function AIAutonomousResearchAssistant() {
     ]
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 
         title="AI Autonomous Research Assistant - Zion Tech Group"
@@ -395,7 +396,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -441,7 +442,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchCapabilities.map((capability, index) => (
+            {researchCapabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -481,7 +482,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -507,7 +508,7 @@ export default function AIAutonomousResearchAssistant() {
                 <p className="text-gray-300 mb-6">{tier.description}</p>
                 
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -555,7 +556,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -595,7 +596,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -610,10 +611,9 @@ export default function AIAutonomousResearchAssistant() {
                 <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
-              <button
+            {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={(: unknown setActiveTab(tab)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === tab
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
@@ -697,7 +697,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )}
 
-            {activeTab === 'features' && (
+            {activeTab === 'features' && 
               <motion.div
                 key="features"
                 initial={{ opacity: 0, y: 20 }}
@@ -716,7 +716,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (
+                  {features.map((feature, index (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -763,7 +763,7 @@ export default function AIAutonomousResearchAssistant() {
                       <div className="text-5xl font-bold text-cyan-400 mb-2">{pricing.monthly}</div>
                       <div className="text-gray-400 mb-6">per month</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.slice(0, 3).map((feature, index) => (
+                        {pricing.features.slice(0, 3).map(feature: unknown, index: unknown (
                           <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -788,7 +788,7 @@ export default function AIAutonomousResearchAssistant() {
                       <div className="text-5xl font-bold text-cyan-400 mb-2">{pricing.yearly}</div>
                       <div className="text-gray-400 mb-6">per year (Save 17%)</div>
                       <ul className="space-y-3 mb-8 text-left">
-                        {pricing.features.map((feature, index) => (
+                        {pricing.features.map(feature: unknown, index: unknown (
                           <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -834,7 +834,7 @@ export default function AIAutonomousResearchAssistant() {
               </motion.div>
             )}
 
-            {activeTab === 'technical' && (
+            {activeTab === 'technical' && 
               <motion.div
                 key="technical"
                 initial={{ opacity: 0, y: 20 }}
@@ -860,7 +860,7 @@ export default function AIAutonomousResearchAssistant() {
                         Technology Stack
                       </h3>
                       <div className="grid grid-cols-2 gap-3">
-                        {technicalSpecs.technology.map((tech, index) => (
+                        {technicalSpecs.technology.map((tech, index (
                           <div key={index} className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300">
                             {tech}
                           </div>
@@ -874,7 +874,7 @@ export default function AIAutonomousResearchAssistant() {
                         Integrations
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.integrations.map((integration, index) => (
+                        {technicalSpecs.integrations.map(integration: unknown, index: unknown (
                           <div key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {integration}
@@ -912,7 +912,7 @@ export default function AIAutonomousResearchAssistant() {
                         Security Standards
                       </h3>
                       <div className="space-y-2">
-                        {technicalSpecs.security.map((standard, index) => (
+                        {technicalSpecs.security.map(standard: unknown, index: unknown (
                           <div key={index} className="flex items-center text-gray-300">
                             <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {standard}
@@ -1037,4 +1037,6 @@ export default function AIAutonomousResearchAssistant() {
     </div>
   );
 }
+}
+
 }

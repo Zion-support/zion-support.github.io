@@ -186,4 +186,5 @@ const AutonomousBusinessOperationsPlatform = () => {
         </div>
       </div>
     </div>)};
+export { AutonomousBusinessOperationsPlatform };
 export default AutonomousBusinessOperationsPlatform;

@@ -235,4 +235,5 @@ const AffiliateAttributionHub = () => {
         </div>
       </section>
     </div>)};
+export { AffiliateAttributionHub };
 export default AffiliateAttributionHub;

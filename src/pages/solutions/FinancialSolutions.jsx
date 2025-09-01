@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export default function FinancialSolutions() {
+import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export { function };
+export default function FinancialSolutions() {
     const features = [
         {
             icon: Brain,

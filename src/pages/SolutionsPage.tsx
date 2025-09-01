@@ -28,8 +28,8 @@ import { Building,
   Mail,
   MapPin
  } from 'lucide-react.ts';
-
-export function SolutionsPage(...args: any[]): any {
+;
+export function SolutionsPage(...args: unknown[]): unknown {
   const solutions = [
     {
       title: 'Enterprise Solutions',
@@ -169,7 +169,7 @@ export function SolutionsPage(...args: any[]): any {
     { number: '24/7', label: 'Support Available', icon: Users }
   ];
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -189,7 +189,7 @@ export function SolutionsPage(...args: any[]): any {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -212,7 +212,7 @@ export function SolutionsPage(...args: any[]): any {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Solutions</h2>
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index)  => (
+            {solutions.map(solution: unknown, index: unknown (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ export function SolutionsPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{solution.description}</p>
                 
                 <div className="space-y-3 mb-6">
-                  {solution.features.slice(0, 4).map((feature, featureIndex) => (
+                  {solution.features.slice(0, 4).map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       <span>{feature}</span>
@@ -243,7 +243,7 @@ export function SolutionsPage(...args: any[]): any {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Industries:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {solution.industries.slice(0, 3).map((industry, industryIndex) => (
+                    {solution.industries.slice(0, 3).map(industry: unknown, industryIndex: unknown (
                       <span key={industryIndex} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                         {industry}
                       </span>
@@ -267,7 +267,7 @@ export function SolutionsPage(...args: any[]): any {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Industries We Serve</h2>
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index)  => (
+            {industries.map(industry: unknown, index: unknown 
               <motion.div
                 key={industry.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -285,8 +285,8 @@ export function SolutionsPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{industry.description}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: any</h4>
-                  {industry.solutions.map((solution, solutionIndex)  => (
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: unknown</h4>
+                  {industry.solutions.map((solution, solutionIndex (
                     <div key={solutionIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span>{solution}</span>

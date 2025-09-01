@@ -26,24 +26,24 @@ import { Search,
     Sparkles
  } from 'lucide-react.ts';
 import { comprehensivePricingGuide2025, ServicePricing  } from '../data/comprehensive-pricing-guide-2025';
-
+;
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState<typeof ''>('');
     const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [selectedService, setSelectedService] = useState<any>(null);
 
     const categories = [
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
+        { id: unknown'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
         { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },
-        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
-        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
-        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
-        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
-        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
-        { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
+        { id: unknown'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
+        { id: unknown'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
+        { id: unknown'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
+        { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
+        { id: unknown'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
+        { id: unknown'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 
-    const filteredServices = useMemo(() => {
+    const filteredServices = useMemo(: unknown {
         let filtered = comprehensivePricingGuide2025;
 
         if (searchTerm) {
@@ -61,7 +61,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory]);
 
-    const getCategoryColor = (category: anystring)  => {
+    const getCategoryColor = (...args: unknown[]): unknown => {
         const colors: { [key: string]: string } = {
             'Fintech': 'from-green-500 to-emerald-600',
             'Healthtech': 'from-red-500 to-pink-600',
@@ -74,7 +74,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anystring)  => {
+    const getCategoryIcon = (...args: unknown[]): unknown => {
         const icons: { [key: string]: React.ReactNode } = {
             'Fintech': <DollarSign className="w-5 h-5" />,
             'Healthtech': <Heart className="w-5 h-5" />,
@@ -87,7 +87,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         return icons[category] || <Globe className="w-5 h-5" />;
     };
 
-    return (
+    return 
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <Helmet>
                 <title>Comprehensive Pricing Guide 2025 - Zion Tech Group</title>
@@ -172,7 +172,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    onChange={(e setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
@@ -182,7 +182,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <select
                                 value={selectedCategory}
-                                onChange={(e) => setSelectedCategory(e.target.value)}
+                                onChange={e: unknown setSelectedCategory(e.target.value)}
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                                 {categories.map(category  => (
@@ -205,9 +205,8 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
                             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
-                    ) : (
-                        <div className="space-y-12">
-                            {filteredServices.map((service, index) => (
+                    ) : <div className="space-y-12">
+                            {filteredServices.map((service: unknown, index: unknown (
                                 <motion.div
                                     key={service.id}
                                     initial={{ opacity: 0, y: 20 }}
@@ -247,7 +246,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                     <div className="p-8">
                                         <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">Pricing Plans</h4>
                                         <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
-                                            {service.pricing.map((tier, tierIndex)  => (
+                                            {service.pricing.map(tier: unknown, tierIndex: unknown (
                                                 <div
                                                     key={tierIndex}
                                                     className={`relative rounded-xl border-2 p-6 ${
@@ -279,7 +278,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     </div>
 
                                                     <ul className="space-y-3 mb-6">
-                                                        {tier.features.map((feature, featureIndex) => (
+                                                        {tier.features.map(feature: unknown, featureIndex: unknown (
                                                             <li key={featureIndex} className="flex items-start space-x-3">
                                                                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                                                                 <span className="text-gray-700">{feature}</span>
@@ -288,7 +287,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     </ul>
 
                                                     <button
-                                                        onClick={() => setSelectedService(service)}
+                                                        onClick={: unknown setSelectedService(service)}
                                                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2"
                                                     >
                                                         <span>Get Started</span>
@@ -306,7 +305,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     <span>Key Features</span>
                                                 </h5>
                                                 <ul className="space-y-2">
-                                                    {service.features.slice(0, 6).map((feature, idx) => (
+                                                    {service.features.slice(0, 6).map(feature: unknown, idx: unknown (
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">
                                                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                             <span>{feature}</span>
@@ -320,7 +319,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     <span>Key Benefits</span>
                                                 </h5>
                                                 <ul className="space-y-2">
-                                                    {service.benefits.map((benefit, idx) => (
+                                                    {service.benefits.map(benefit: unknown, idx: unknown (
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">
                                                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                             <span>{benefit}</span>
@@ -334,7 +333,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
                                             <h5 className="text-sm font-medium text-gray-600 mb-2">Competitive Alternatives</h5>
                                             <div className="flex flex-wrap gap-2">
-                                                {service.competitors.map((competitor, idx) => (
+                                                {service.competitors.map(competitor: unknown, idx: unknown (
                                                     <span key={idx} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm text-gray-600">
                                                         {competitor}
                                                     </span>
@@ -417,5 +416,6 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         </div>
     );
 };
-
+;
+export { ComprehensivePricingShowcase2025 };
 export default ComprehensivePricingShowcase2025;

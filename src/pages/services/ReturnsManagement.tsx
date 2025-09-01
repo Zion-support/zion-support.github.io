@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
-function ReturnsManagement() {
+;
+function ReturnsManagement(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -46,7 +46,7 @@ function ReturnsManagement() {
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns', '3 brand portals', 'All major carriers']
           },{
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns', 'SLA + SSO', 'Dedicated success manager']
-          }].map(({ plan, price, features }) => (
+          }].map({ plan: unknown, price: unknown, features }: unknown (
             <div key={plan} className="card-futuristic">
               <h3 className="text-lg font-semibold">{plan}</h3>
               <p className="text-2xl mt-2">{price}</p>
@@ -64,14 +64,17 @@ function ReturnsManagement() {
       </section>;
     </div>;
   );
-
+;
+export { ReturnsManagement };
 export default ReturnsManagement;
 
+;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;
 
-export default ReturnsManagement;
-export default ReturnsManagement;
-export default ReturnsManagement;
-export default ReturnsManagement;
-export default ReturnsManagement;
-export default ReturnsManagement;
-export default ReturnsManagement;
+}

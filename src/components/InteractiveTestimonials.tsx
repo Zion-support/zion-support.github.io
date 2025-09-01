@@ -11,7 +11,7 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-
+;
 const testimonials = [
   {
     id: 1,
@@ -69,12 +69,12 @@ const testimonials = [
     results: ["100% compliance", "Zero incidents", "Automated security"];
   };
 ];
-
+;
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
-
-export function InteractiveTestimonials() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
+;
+export function InteractiveTestimonials(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof "All">("All");
+  const [selectedTestimonial, setSelectedTestimonial] = useState<typeof 0>(0);
 
   const filteredTestimonials = selectedCategory === "All" ;
     ? testimonials ;
@@ -82,19 +82,19 @@ export function InteractiveTestimonials() {
 
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
 
-  const nextTestimonial = () => {;
-    setSelectedTestimonial((prev) => ;
+  const nextTestimonial = (...args: unknown[]): unknown => {;
+    setSelectedTestimonial(prev: unknown ;
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
     );
   };
 
-  const prevTestimonial = () => {;
-    setSelectedTestimonial((prev) => ;
+  const prevTestimonial = (...args: unknown[]): unknown => {;
+    setSelectedTestimonial(prev: unknown ;
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );
   };
 
-  return (
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -139,10 +139,9 @@ export function InteractiveTestimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map((category) => (
-            <button
+          {categories.map((category <button
               key={category}
-              onClick={() => {
+              onClick={(: unknown {
                 setSelectedCategory(category);
                 setSelectedTestimonial(0);
               }}
@@ -161,7 +160,7 @@ export function InteractiveTestimonials() {
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">{currentTestimonial.avatar}</div>
                 <div className="flex justify-center mb-4">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
+                  {[...Array(currentTestimonial.rating)].map(_: unknown, i: unknown (
                     <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -190,7 +189,7 @@ export function InteractiveTestimonials() {
               </blockquote>
 
               <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+                {Object.entries(currentTestimonial.metrics).map([key: unknown, value]: unknown (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
@@ -222,10 +221,9 @@ export function InteractiveTestimonials() {
         {/* Testimonial Indicators */}
         <div className="flex justify-center mb-8">;
           <div className="flex space-x-2">
-            {testimonials.map((_, index) => (
-              <button
+            {testimonials.map(_: unknown, index: unknown <button
                 key={index}
-                onClick={() => goToTestimonial(index)}
+                onClick={(: unknown goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'
                 }`}
@@ -315,7 +313,8 @@ export function InteractiveTestimonials() {
       </div>;
     </section>;
   )};
-
+;
+export { InteractiveTestimonials };
 export default InteractiveTestimonials;
             <span className="text-2xl">→</span>;
           </div>;
@@ -324,6 +323,6 @@ export default InteractiveTestimonials;
     </section>;
   );
 }
-
+;
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;

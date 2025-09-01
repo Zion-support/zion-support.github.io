@@ -1,26 +1,26 @@
 // Comprehensive Services Index
 // This file exports all our innovative technology services
 
-// Core Innovative Services
+// Core Innovative Services;
 export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025";
 
-// Emerging Technology Services
+// Emerging Technology Services;
 export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";
 export type { EmergingTechService } from "./emergingTechServices2025";
 
-// Ultimate Micro SAAS Services
+// Ultimate Micro SAAS Services;
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 
-// Combined Services Array
+// Combined Services Array;
 export const ALL_COMPREHENSIVE_SERVICES = [;
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
 
-// Service Categories
+// Service Categories;
 export const SERVICE_CATEGORIES = [
   'AI & Analytics',
   'AI & Customer Experience',
@@ -45,21 +45,21 @@ export const SERVICE_CATEGORIES = [
   'Autonomous Vehicles & Fleet Management';
 ];
 
-// Innovation Levels
+// Innovation Levels;
 export const INNOVATION_LEVELS = [;
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
 
-// Support Levels
+// Support Levels;
 export const SUPPORT_LEVELS = [;
   'enterprise',;
   'professional',;
   'basic';
 ];
 
-// Pricing Models
+// Pricing Models;
 export const PRICING_MODELS = [;
   'monthly',;
   'annual',;
@@ -67,7 +67,7 @@ export const PRICING_MODELS = [;
   'usage-based';
 ];
 
-// Contact Information
+// Contact Information;
 export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -87,7 +87,7 @@ export const CONTACT_INFO = {
 
 };
 
-// Service Statistics
+// Service Statistics;
 export const SERVICE_STATS = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
   categories: SERVICE_CATEGORIES.length,
@@ -107,27 +107,27 @@ export const SERVICE_STATS = {
 
 };
 
-// Helper Functions
-export const getServicesByCategory = (category: string) => {;
+// Helper Functions;
+export const getServicesByCategory = (...args: unknown[]): unknown => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
-
-export const getServicesByInnovationLevel = (level: string) => {;
+;
+export const getServicesByInnovationLevel = (...args: unknown[]): unknown => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+;
+export const getServicesByPriceRange = (...args: unknown[]): unknown => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-
-export const getServicesByTags = (tags: string[]) => {;
+;
+export const getServicesByTags = (...args: unknown[]): unknown => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );
 };
-
+;
 export const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
@@ -136,5 +136,5 @@ export const searchTerm = query.toLowerCase();
     service.category.toLowerCase().includes(searchTerm);
   );
 };
-
+;
 export default ALL_COMPREHENSIVE_SERVICES;

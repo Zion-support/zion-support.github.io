@@ -80,5 +80,6 @@ const MicroSAAS = () => {
         </div>
       </section>
     </div>)};
+export { MicroSAAS };
 export default MicroSAAS;
 }

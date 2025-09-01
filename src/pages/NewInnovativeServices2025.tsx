@@ -116,8 +116,9 @@ import {
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
 } from 'lucide-react';
-
-export default function NewInnovativeServices2025() {
+;
+export { function };
+export default function NewInnovativeServices2025(...args: unknown[]): unknown {
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",
@@ -340,7 +341,7 @@ export default function NewInnovativeServices2025() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
+              {featuredServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -399,7 +400,7 @@ export default function NewInnovativeServices2025() {
                   </div>
                   
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-zion-slate-300">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
@@ -463,7 +464,7 @@ export default function NewInnovativeServices2025() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -509,7 +510,7 @@ export default function NewInnovativeServices2025() {
                   <div className="space-y-3">
                     <h4 className="font-semibold text-zion-cyan">Services Include:</h4>
                     <ul className="space-y-2">
-                      {category.services.map((service, idx) => (
+                      {category.services.map((service, idx (
                         <li key={idx} className="flex items-center text-zion-slate-300">
                           <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                           {service}
@@ -560,7 +561,7 @@ export default function NewInnovativeServices2025() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

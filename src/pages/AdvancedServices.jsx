@@ -12,7 +12,7 @@ const AdvancedServices = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
+                animationDuration: `${3 + Math.random() * 4}s`
             }}/>))}
         </div>
 
@@ -351,5 +351,6 @@ const AdvancedServices = () => {
         </div>
       </section>
     </div>)};
+export { AdvancedServices };
 export default AdvancedServices;
 }}

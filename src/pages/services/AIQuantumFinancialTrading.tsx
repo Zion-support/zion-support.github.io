@@ -21,8 +21,8 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-
-const AIQuantumFinancialTrading = () => {
+;
+const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
   const features = [
     {
       title: "Quantum-AI Algorithm Trading",
@@ -142,7 +142,7 @@ const AIQuantumFinancialTrading = () => {
     "Predictive Modeling";
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -302,7 +302,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -399,7 +399,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -451,7 +451,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -506,7 +506,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -564,7 +564,7 @@ const AIQuantumFinancialTrading = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -707,5 +707,6 @@ const AIQuantumFinancialTrading = () => {
     </div>;
   );
 };
-
+;
+export { AIQuantumFinancialTrading };
 export default AIQuantumFinancialTrading;

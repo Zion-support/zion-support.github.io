@@ -1,4 +1,4 @@
-// Security Configuration and Utilities
+// Security Configuration and Utilities;
 export const securityConfig = {
   // Content Security Policy
   csp: {
@@ -34,16 +34,16 @@ export const securityConfig = {
     max: 100, // limit each IP to 100 requests per windowMs
     message: 'Too many requests from this IP, please try again later.',
     standardHeaders: true,
-    legacyHeaders: false,
+    legacyHeaders: false
   },
 
   // Input validation patterns
   validation: {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^\+?[\d\s\-\(\)]{10,}$/,
+    phone: /^\+?[\d\s\-\(\)]{10}$/,
     name: /^[a-zA-Z\s\-']{2,50}$/,
     username: /^[a-zA-Z0-9_-]{3,20}$/,
-    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
     url: /^https?:\/\/[^\s/$.?#].[^\s]*$/,
     alphanumeric: /^[a-zA-Z0-9\s]+$/,
     numeric: /^\d+$/,
@@ -59,12 +59,12 @@ export const securityConfig = {
       secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
-      sameSite: 'strict',
-    },
-  },
+      sameSite: 'strict'
+    }
+  }
 };
 
-// Input sanitization functions
+// Input sanitization functions;
 export const sanitizeInput = {
   // Remove potentially dangerous HTML tags
   html: (input: string): string => {
@@ -96,10 +96,10 @@ export const sanitizeInput = {
   }
 };
 
-// Helper function to generate CSP header string
+// Helper function to generate CSP header string;
 export const generateCSPHeader = (): string => {
   return Object.entries(securityConfig.csp)
-    .map(([key, values]) => {
+    .map([key: unknown, values]: unknown {
       if (Array.isArray(values)) {
         return `${key} ${values.join(' ')}`;
       }
@@ -109,7 +109,7 @@ export const generateCSPHeader = (): string => {
 };
 
 // Validate input against patterns
-
+;
 export const validateInput = {
   email: (email: string): boolean => securityConfig.validation.email.test(email),
   phone: (phone: string): boolean => securityConfig.validation.phone.test(phone),
@@ -123,10 +123,10 @@ export const validateInput = {
 };
 
 
-// Security middleware configuration
+// Security middleware configuration;
 export const securityMiddleware = {
   // Enable all security features
-  enableAll: () => ({
+  enableAll: : unknown ({
     csp: true,
     headers: true,
     rateLimit: true,
@@ -136,7 +136,7 @@ export const securityMiddleware = {
 
 
   // Enable only essential security features
-  enableEssential: () => ({
+  enableEssential: : unknown ({
     csp: true,
     headers: true,
     rateLimit: false,
@@ -145,7 +145,7 @@ export const securityMiddleware = {
   }),
 
   // Enable only basic security features
-  enableBasic: () => ({
+  enableBasic: : unknown ({
     csp: false,
     headers: true,
     rateLimit: false,
@@ -155,5 +155,6 @@ export const securityMiddleware = {
 };
 
 
-
+;
+export { securityConfig };
 export default securityConfig;

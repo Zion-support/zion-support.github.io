@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data/enhancedZionTechServices2025";
-
-const ComprehensiveZionTechPricing2025: React.FC = () => {;
+;
+const ComprehensiveZionTechPricing2025: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
@@ -21,5 +21,6 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { ComprehensiveZionTechPricing2025 };
 export default ComprehensiveZionTechPricing2025;}}

@@ -182,7 +182,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
 
 }}/>);
 }
-// Neon text component
+// Neon text component;
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style = {
@@ -204,7 +204,7 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
         }}>
       {children}
     </span>)}
-// Futuristic card component
+// Futuristic card component;
 export function FuturisticCard({ children, className = '', glowColor = '#00ffff', intensity = 'medium' }) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
     return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style={{
@@ -229,7 +229,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
             animation: 'shimmer 3s ease-in-out infinite'
         }}/>
     </div>)}
-// Add CSS animations
+// Add CSS animations;
 const style = document.createElement('style');
 style.textContent = `
   @keyframes neon-pulse {

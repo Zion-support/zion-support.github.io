@@ -7,6 +7,7 @@ import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
 import { Steps, Step } from "@/components/ui/steps";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+export { function };
 export default function Onboarding() {
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
@@ -40,7 +41,7 @@ export default function Onboarding() {
             toast({
                 title: "Authentication Error",
                 description: "Your session may have expired. Please log in again.",
-                variant: "destructive",
+                variant: "destructive"
             });
             router('/login');
             return}
@@ -62,7 +63,7 @@ export default function Onboarding() {
             });
             toast({
                 title: 'Profile completed!',
-                description: 'Your profile has been set up successfully.',
+                description: 'Your profile has been set up successfully.'
             });
             // Get the appropriate dashboard route based on user type
             const dashboardRoute = userType === "client"
@@ -75,12 +76,12 @@ export default function Onboarding() {
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
-                variant: 'destructive',
+                variant: 'destructive'
             })}
     };
     const steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
-        { label: "Create Profile", description: "Tell us about yourself" },
+        { label: "Create Profile", description: "Tell us about yourself" }
     ];
     if (!user) {
         router('/login');

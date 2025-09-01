@@ -38,12 +38,23 @@ import {
   Tablet,
   Laptop
 } from 'lucide-react';
-
-export default function Login() {
-  const [isLogin, setIsLogin] = useState(true);
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [formData, setFormData] = useState({
+;
+export { function };
+export default function Login(...args: unknown[]): unknown {
+  const [isLogin, setIsLogin] = useState<typeof true>(true);
+  const [showPassword, setShowPassword] = useState<typeof false>(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState<typeof false>(false);
+  const [formData, setFormData] = useState<typeof {
+    email: '',
+    password: '',
+    confirmPassword: '',
+    firstName: '',
+    lastName: '',
+    company: '',
+    phone: '',
+    acceptTerms: false,
+    acceptMarketing: false
+  }>({
     email: '',
     password: '',
     confirmPassword: '',
@@ -54,10 +65,10 @@ export default function Login() {
     acceptTerms: false,
     acceptMarketing: false
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [submitted, setSubmitted] = useState<typeof false>(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (...args: unknown[]): unknown => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -66,7 +77,7 @@ export default function Login() {
   };
 
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -77,7 +88,7 @@ export default function Login() {
     setSubmitted(true);
     
     // Reset form after 5 seconds
-    setTimeout(() => {
+    setTimeout(: unknown {
       setSubmitted(false);
       setFormData({
         email: '',
@@ -93,7 +104,7 @@ export default function Login() {
     }, 5000);
   };
 
-  const toggleForm = () => {
+  const toggleForm = (...args: unknown[]): unknown => {
     setIsLogin(!isLogin);
     setFormData({
       email: '',
@@ -108,7 +119,7 @@ export default function Login() {
     });
   };
 
-  const isFormValid = () => {
+  const isFormValid = (...args: unknown[]): unknown => {
     if (isLogin) {
       return formData.email && formData.password;
     } else {
@@ -250,7 +261,7 @@ export default function Login() {
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={: unknown setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                 >
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -258,7 +269,7 @@ export default function Login() {
               </div>
             </div>
 
-            {!isLogin && (
+            {!isLogin && 
               <div>
                 <label htmlFor="confirmPassword" className="block text-white font-medium mb-2">
                   <Lock className="w-4 h-4 inline mr-2" />
@@ -277,7 +288,7 @@ export default function Login() {
                   />
                   <button
                     type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    onClick={( setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                   >
                     {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}

@@ -11,6 +11,7 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
+export { function };
 export default function TranslationManager() {
     const { t, i18n } = useTranslation();
     const isMobile = useIsMobile();
@@ -91,7 +92,7 @@ export default function TranslationManager() {
             setIsSaving(false);
             toast({
                 title: t("translation.saved"),
-                description: t("translation.changes_saved"),
+                description: t("translation.changes_saved")
             })}, 1000)};
     const handleTranslateKey = async (key) => {
         // Find first non-empty translation to use as source
@@ -106,7 +107,7 @@ export default function TranslationManager() {
             toast({
                 title: t('translation.no_content'),
                 description: t('translation.add_content_first'),
-                variant: "destructive",
+                variant: "destructive"
             });
             return}
         try {
@@ -115,7 +116,7 @@ export default function TranslationManager() {
                 toast({
                     title: t('translation.translation_failed'),
                     description: error,
-                    variant: "destructive",
+                    variant: "destructive"
                 });
                 return}
             // Update edited translations with auto-translated content
@@ -125,14 +126,14 @@ export default function TranslationManager() {
             });
             toast({
                 title: t('translation.translation_success'),
-                description: t('translation.content_translated'),
+                description: t('translation.content_translated')
             })}
         catch (error) {
             console.error(`Error translating key ${key}:`, error);
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
-                variant: "destructive",
+                variant: "destructive"
             })}
     };
     const handleChange = (lang, key, value) => {

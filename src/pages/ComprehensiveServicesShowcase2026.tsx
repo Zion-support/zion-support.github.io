@@ -17,7 +17,7 @@ import {
   Users,
   Clock,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 import { SEO } from '../components/SEO';
 import {
   revolutionaryMicroSaasServices2026,
@@ -25,10 +25,10 @@ import {
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
 } from "../data/comprehensiveServices2026";
-const ComprehensiveServicesShowcase2026: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+const ComprehensiveServicesShowcase2026: React.FC = props {;
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<typeof 'all'>('all');
   const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
   const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
@@ -48,7 +48,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
       case 'Neural Networks': return <Brain className="w-5 h-5" />;
@@ -60,7 +60,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       default: return <Zap className="w-5 h-5" />;
 
   };
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor = (...args: unknown[]): unknown => {;
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -70,7 +70,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     return `$${price.toLocaleString()}`;
   };
 
-  return (
+  return 
     <>
       <SEO
         title="Revolutionary Services 2026 - Zion Tech Group"
@@ -135,14 +135,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                   {categories.map(category => (;
@@ -154,7 +154,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 {/* Innovation Level Filter */}
                 <select
                   value={selectedInnovationLevel}
-                  onChange={(e) => setSelectedInnovationLevel(e.target.value)}
+                  onChange={e: unknown setSelectedInnovationLevel(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                   {innovationLevels.map(level => (;
@@ -171,7 +171,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
         <section className="py-12">;
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service, index) => (
+              {filteredServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -214,11 +214,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 </motion.button>
               ))}
             </div>
-            {filteredServices.length === 0 && (;
+            {filteredServices.length === 0 && ;
               <div className="text-center py-12">;
                 <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
                 <button;
-                  onClick={() => {;
+                  onClick={(: unknown {;
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedInnovationLevel('all');
@@ -275,18 +275,30 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   );
 };
 
-// Icon components
-const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (
+// Icon components;
+const PhoneIcon: React.FC<{ className?: string }> = { className }: unknown (
   <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />;
   </svg>;
 );
-
-const EnvelopeIcon: React.FC<{ className?: string }> = ({ className }) => (
+;
+const EnvelopeIcon: React.FC<{ className?: string }> = { className }: unknown (
   <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />;
   </svg>;
 );
+;
+export { ComprehensiveServicesShowcase2026 };
+export default ComprehensiveServicesShowcase2026;
+export default ComprehensiveServicesShowcase2026;
 
-export default ComprehensiveServicesShowcase2026;
-export default ComprehensiveServicesShowcase2026;
+
+
+
+}
+
+
+}
+
+}
+}

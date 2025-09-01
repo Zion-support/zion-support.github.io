@@ -577,7 +577,7 @@ import {
   Zap,
   Brain
 } from 'lucide-react';
-
+;
 const successStories = [
   {
     id: 1,
@@ -607,7 +607,7 @@ const successStories = [
     logo: "CSP"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -638,7 +638,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const soc2Benefits = [
   {
     title: "Automated Compliance",
@@ -665,7 +665,8 @@ const soc2Benefits = [
     examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];
   }
 ];
-
+;
+export { function };
 export default function SOC2ComplianceAutomation() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1339,3 +1340,7 @@ export default function SOC2ComplianceAutomation() {
       </section>
     </div>
   )}
+
+
+}
+}

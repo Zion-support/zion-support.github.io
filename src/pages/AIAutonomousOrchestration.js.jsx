@@ -169,4 +169,5 @@ const AIAutonomousOrchestration = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousOrchestration };
 export default AIAutonomousOrchestration;

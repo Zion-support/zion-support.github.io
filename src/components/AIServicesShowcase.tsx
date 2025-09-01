@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export const AIServicesShowcase = () => {
+;
+export const AIServicesShowcase = (...args: unknown[]): unknown => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -46,5 +46,6 @@ export const AIServicesShowcase = () => {
     </section>;
   );
 };
-
+;
+export { AIServicesShowcase };
 export default AIServicesShowcase;

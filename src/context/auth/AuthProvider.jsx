@@ -9,7 +9,7 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
 import { safeStorage } from "@/utils/safeStorage";
-import { toast } from "@/hooks/use-toast"; // Import toast
+import { toast } from "@/hooks/use-toast"; // Import toast;
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
 export const AuthProvider = ({ children }) => {
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
             toast({
                 title: "Login Failed",
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.",
-                variant: "destructive",
+                variant: "destructive"
             });
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }}
         // Handle other errors from the API call
@@ -173,3 +173,10 @@ export const AuthProvider = ({ children }) => {
     return (<AuthContext.Provider value={authContextValue}>
       {children}
     </AuthContext.Provider>)};
+
+
+
+}
+
+}
+}

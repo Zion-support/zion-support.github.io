@@ -179,4 +179,5 @@ const HealthcareSolutions = () => {
       </div>
     </div>);
 };
+export { HealthcareSolutions };
 export default HealthcareSolutions;

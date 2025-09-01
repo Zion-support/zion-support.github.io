@@ -1,10 +1,10 @@
 
-// In-memory storage for fallback with optimizations
+// In-memory storage for fallback with optimizations;
 const inMemoryStore = {};
-let localStorageAvailable = null; // Cache the availability check
+let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
-
+;
 function isLocalStorageAvailable() {
     const now = Date.now();
     // Use cached result if checked recently
@@ -30,7 +30,7 @@ function isLocalStorageAvailable() {
     }
 }
 
-
+;
 function safeConsoleError(message, error) {
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging
@@ -44,7 +44,7 @@ function safeConsoleError(message, error) {
     }
 
 }
-
+;
 export const safeStorage = {
   getItem: (key) => {
     try {
@@ -112,6 +112,7 @@ export const safeStorage = {
     }
   }
 };
-
+;
+export { safeStorage };
 export default safeStorage;
 

@@ -7,7 +7,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string)  => location.pathname === path;
+  const isActive = path: string location.pathname === path;
 
   const navigationSections = [
     {
@@ -59,13 +59,13 @@ import { Link, useLocation  } from 'react-router-dom.ts';
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
-  return (
+  return 
     <>
       {/* Mobile Menu Button */}
       <motion.button
         whileHover = {{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={( setIsOpen(!isOpen)}
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -73,7 +73,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <>
             {/* Backdrop */}
             <motion.div
@@ -82,7 +82,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-              onClick={() => setIsOpen(false)}
+              onClick={( setIsOpen(false)}
             />
 
             {/* Mobile Sidebar */}
@@ -117,7 +117,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                     </div>
                   </div>
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 
                     <X className="w-5 h-5" />
@@ -128,7 +128,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                 <div className="mb-8">
                   <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
                   <div className="space-y-2">
-                    {quickActions.map((action, index) => (
+                    {quickActions.map(action: unknown, index: unknown 
                       <motion.div
                         key={action.name}
                         initial = {
@@ -164,7 +164,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                       >
                         <Link
                           to={action.href}
-                          onClick={() => setIsOpen(false)}
+                          onClick={( setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
                             action.variant === 'primary'
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
@@ -181,7 +181,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
 
                 {/* Navigation Sections */}
                 <div className="space-y-6">;
-                  {navigationSections.map((section, sectionIndex) => (;
+                  {navigationSections.map(section: unknown, sectionIndex: unknown ;
                     <motion.div
                       key={section.title}
                       initial = {
@@ -216,7 +216,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
 }}
                     >
                       <button
-                        onClick={() => toggleSection(section.title)}
+                        onClick={( toggleSection(section.title)}
                         className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
 
                         <div className="flex items-center space-x-3">
@@ -231,7 +231,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                       </button>
 
                       <AnimatePresence>
-                        {expandedSections.has(section.title) && (
+                        {expandedSections.has(section.title) && 
                           <motion.div
                             initial = {
   { opacity: 0,
@@ -266,7 +266,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                             transition={{ duration: 0.3 }}
                             className="ml-7 mt-2 space-y-1"
 
-                            {section.items.map((item, itemIndex) => (;
+                            {section.items.map((item, itemIndex ;
                               <motion.div
                                 key={item.name}
                                 initial = {
@@ -302,7 +302,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                               >
                                 <Link
                                   to={item.href}
-                                  onClick={() => setIsOpen(false)}
+                                  onClick={( setIsOpen(false)}
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
                                     isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'

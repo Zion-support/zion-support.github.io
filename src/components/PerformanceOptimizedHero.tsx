@@ -15,18 +15,22 @@ import {
   Globe,
   Rocket
 interface HeroProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   description?: string;
   ctaText?: string;
   ctaLink?: string;
-  features?: Array<{
-    icon: React.ComponentType<any>;
+  features?: {
+    icon: React.ComponentType<any[];
     text: string;
     color: string;
-  }>;
-
-const PerformanceOptimizedHero: React.FC<HeroProps> = ({
+  
+}>;
+;
+const PerformanceOptimizedHero: React.FC<HeroProps> = {
   title = "Revolutionary AI & Technology Solutions",
   subtitle = "2025-2026 Innovation Hub",
   description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.",
@@ -38,22 +42,22 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
   ];
-}) => {;
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+} {;
+  const [currentFeature, setCurrentFeature] = useState<typeof 0>(0);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setIsVisible(true);
     
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % features.length);
+    const interval = setInterval(: unknown {;
+      setCurrentFeature(prev: unknown (prev + 1) % features.length);
     }, 3000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [features.length]);
 
     // // // // // // // console.log('Hero CTA clicked');
-  const handleCTAClick = useCallback(() => {;
+  const handleCTAClick = useCallback(: unknown {;
     // Analytics tracking could be added here;
     console.log('Hero CTA clicked');
   }, []);
@@ -175,7 +179,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           variants={itemVariants}
 
-          {features.map((feature, index) => (
+          {features.map(feature: unknown, index: unknown (
             <motion.div
               key={index}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
@@ -220,7 +224,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           animate = {
   {
             y: [0, -20, 0],
-            opacity: [0.5, 1, 0.5],
+            opacity: [0.5, 1, 0.5]
   
 
 }}
@@ -243,7 +247,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           animate = {
   {
             y: [0, 20, 0],
-            opacity: [0.5, 1, 0.5],
+            opacity: [0.5, 1, 0.5]
   
 
 }}
@@ -266,5 +270,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     </section>;
   );
 </div></div></div></div>};
-
+;
+export { React };
 export default React.memo(PerformanceOptimizedHero);}}}</motion.div>}

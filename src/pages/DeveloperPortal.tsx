@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import {
@@ -33,9 +33,9 @@ import {
   Award,
   Lightbulb
 } from 'lucide-react';
-
-const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+;
+const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = : unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
   const apiFeatures = [
     {
@@ -100,7 +100,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
     'Content-Type': 'application/json';
   };
 });
-
+;
 const data = await response.json();
 // // // // console.log(data);`,
       icon: Code
@@ -125,7 +125,7 @@ const data = await response.json();
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
@@ -204,7 +204,7 @@ const data = await response.json();
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {quickStartSteps.map((step, index)  => (
+            {quickStartSteps.map((step, index (
               <motion.div
                 key={tool.title}
                 initial = {
@@ -305,7 +305,7 @@ const data = await response.json();
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index) => (
+            {apiFeatures.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -350,7 +350,7 @@ const data = await response.json();
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index) => (
+            {codeExamples.map(example: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -393,7 +393,7 @@ const data = await response.json();
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (
+            {resources.map(resource: unknown, index: unknown (
               <motion.div
                 key={resource.title}
                 initial = {
@@ -601,6 +601,7 @@ const data = await response.json();
     </div>;
   );
 };
-
+;
+export { DeveloperPortal };
 export default DeveloperPortal;
 }}}}

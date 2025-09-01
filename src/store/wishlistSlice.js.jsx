@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const initialState = {
-  items: [],
+  items: []
   
 
 };
@@ -26,13 +26,14 @@ const wishlistSlice = createSlice({
         },
         removeFromWishlist(state, action) {
             state.items = state.items.filter((item) => item.id !== action.payload.id);
-        },
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
             state.items = action.payload;
         });
-    },
+    }
 });
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
+export { wishlistSlice };
 export default wishlistSlice.reducer;

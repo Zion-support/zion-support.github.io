@@ -1,8 +1,9 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp  } from 'lucide-react.ts';
-
-export default function AICustomerExperienceSupport(...args: any[]): any {
+;
+export { function };
+export default function AICustomerExperienceSupport(...args: unknown[]): unknown {
   const features = [
     'AI-powered chatbot with 95% accuracy and natural language processing',
     'Intelligent ticket routing and priority classification',;
@@ -113,7 +114,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
               <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>
             <ul className="space-y-3">
-              {features.slice(0, 4).map((item) => (
+              {features.slice(0, 4).map(item: unknown (
                 <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
                   {item}
@@ -130,7 +131,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
               <h3 className="ml-3 text-xl font-semibold text-white">Support Channels</h3>
             </div>
             <ul className="space-y-3">
-              {supportChannels.slice(0, 5).map((item) => (
+              {supportChannels.slice(0, 5).map(item: unknown (
                 <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
                   {item}
@@ -207,7 +208,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>
           <div className="flex flex-wrap gap-3">
-            {aiCapabilities.map((capability) => (
+            {aiCapabilities.map(capability: unknown (
               <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {capability}
               </span>
@@ -220,7 +221,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>
           <div className="flex flex-wrap gap-3">
-            {integrations.map((integration) => (
+            {integrations.map(integration: unknown (
               <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {integration}
               </span>
@@ -233,7 +234,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>
           <div className="flex flex-wrap gap-3">
-            {stack.map((s) => (
+            {stack.map(s: unknown (
               <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
                 {s.name}
               </a>

@@ -68,6 +68,7 @@ import {
 
 interface TeamMember {
 
+
   id: string;
   name: string;
   role: string;
@@ -77,9 +78,11 @@ interface TeamMember {
   lastSeen: string;
   skills: string[];
   projects: string[];
-  availability: 'available' | 'busy' | 'unavailable'}
+  availability: 'available' | 'busy' | 'unavailable'
+}
 
 interface Project {
+
 
   id: string;
   name: string;
@@ -93,9 +96,11 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-  tags: string[]}
+  tags: string[]
+}
 
 interface Task {
+
 
   id: string;
   title: string;
@@ -108,18 +113,22 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-  comments: Comment[]}
+  comments: Comment[]
+}
 
 interface Comment {
+
 
   id: string;
   author: string;
   content: string;
   timestamp: string;
   likes: number;
-  replies: Comment[]}
+  replies: Comment[]
+}
 
 interface Message {
+
 
   id: string;
   sender: string;
@@ -128,10 +137,12 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
   reactions: { type: string; count: number 
+
 }[];
   isRead: boolean}
 
 interface FileItem {
+
 
   id: string;
   name: string;
@@ -143,7 +154,8 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-  version: string}
+  version: string
+}
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
@@ -152,28 +164,28 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showCommunication?: boolean;
   showFileSharing?: boolean;
   maxItems?: number}
-
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
+;
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = {
   showTeamMembers = true,
 showProjects:  true,;
   showCommunication = true,;
   showFileSharing = true,;
   maxItems = 20;
-}) => {;
+} {;
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
   const [files, setFiles] = useState<FileItem[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [showProjectForm, setShowProjectForm] = useState(false);
-  const [showTaskForm, setShowTaskForm] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [showProjectForm, setShowProjectForm] = useState<typeof false>(false);
+  const [showTaskForm, setShowTaskForm] = useState<typeof false>(false);
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 
   // Sample data
-  useEffect(() => {
+  useEffect(: unknown {
     const sampleFiles: FileItem[] = [
       {
         id: '1',
@@ -243,7 +255,7 @@ showProjects:  true,;
       }
       return msg}))};
 
-  return (
+  return 
     <div className = "w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div className="text-center mb-8">
@@ -259,10 +271,9 @@ showProjects:  true,;
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4" /> },
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4" /> },
             { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4" /> }
-          ].map((tab) => (
-            <button
+          ].map((tab <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as )}
+              onClick={(: unknown setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-zion-cyan text-white'
@@ -423,7 +434,7 @@ showProjects:  true,;
 
           {/* Team Members Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;
-            {teamMembers.map((member, index)  => (;
+            {teamMembers.map(member: unknown, index: unknown (;
               <motion.div
                 key={member.id}
                 initial = {
@@ -484,7 +495,7 @@ showProjects:  true,;
                 <div className="mb-4">;
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {member.skills.slice(0, 3).map((skill) => (
+                    {member.skills.slice(0, 3).map(skill: unknown (
                       <span
                         key={skill}
                         className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
@@ -504,7 +515,7 @@ showProjects:  true,;
                 <div className="mb-4">;
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Active Projects</h4>
                   <div className="space-y-1">
-                    {member.projects.slice(0, 2).map((project) => (
+                    {member.projects.slice(0, 2).map(project: unknown (
                       <div key={project} className="text-xs text-zinc-400">
                         • {project}
                       </div>
@@ -674,7 +685,7 @@ showProjects:  true,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
               <div className="text-3xl font-bold text-zion-cyan mb-2">
-                ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M
+                ${projects.reduce((sum: unknown, p: unknown sum + p.budget, 0) / 1000000).toFixed(1)}M
               </div>
               <div className="text-zinc-400">Total Budget</div>
             </motion.div>
@@ -682,7 +693,7 @@ showProjects:  true,;
 
           {/* Projects List */}
           <div className="space-y-6">;
-            {projects.map((project, index) => (;
+            {projects.map(project: unknown, index: unknown ;
               <motion.div
                 key={project.id}
                 initial = {
@@ -707,7 +718,7 @@ showProjects:  true,;
 }}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
-                onClick={() => handleProjectSelect(project)}
+                onClick={( handleProjectSelect(project)}
 
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -788,7 +799,7 @@ showProjects:  true,;
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">;
-                  {project.tags.map((tag) => (;
+                  {project.tags.map(tag: unknown (;
                     <span
                       key={tag}
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
@@ -804,7 +815,7 @@ showProjects:  true,;
           {/* Add Project Button */}
           <div className="text-center">;
             <button
-              onClick={() => setShowProjectForm(true)}
+              onClick={: unknown setShowProjectForm(true)}
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
 
               <Plus className="w-5 h-5" />
@@ -931,7 +942,7 @@ showProjects:  true,;
 
           {/* Messages */}
           <div className="space-y-4">;
-            {messages.map((message, index) => (;
+            {messages.map(message: unknown, index: unknown (;
               <motion.div
                 key={message.id}
                 initial = {
@@ -979,11 +990,10 @@ showProjects:  true,;
 
                     {/* Reactions */}
                     <div className="flex items-center gap-2">
-                      {message.reactions.map((reaction, idx) => (
-                        <button
+                      {message.reactions.map(reaction: unknown, idx: unknown <button
                           key={idx}
                           onClick = {
-  () => handleMessageReaction(message.id,
+  (: unknown handleMessageReaction(message.id,
   reaction.type)
 
 
@@ -1182,7 +1192,7 @@ showProjects:  true,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 
               <div className="text-3xl font-bold text-zion-cyan mb-2">
-                {formatFileSize(files.reduce((sum, f) => sum + f.size, 0))}
+                {formatFileSizefiles.reduce((sum: unknown, f: unknown sum + f.size, 0))}
               </div>
               <div className="text-zinc-400">Total Size</div>
             </motion.div>
@@ -1190,7 +1200,7 @@ showProjects:  true,;
 
           {/* Files List */}
           <div className="space-y-4">;
-            {files.map((file, index) => (;
+            {files.map(file: unknown, index: unknown (;
               <motion.div
                 key={file.id}
                 initial = {
@@ -1232,7 +1242,7 @@ showProjects:  true,;
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {file.tags.map((tag) => (
+                      {file.tags.map(tag: unknown (
                         <span
                           key={tag}
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"

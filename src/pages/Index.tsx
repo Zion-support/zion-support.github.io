@@ -1,5 +1,5 @@
 import React from 'react';
-
+;
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -29,8 +29,9 @@ import {
   BarChart3,
   Smartphone
 } from "lucide-react";
-
-export default function Index() {
+;
+export { function };
+export default function Index(...args: unknown[]): unknown {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
@@ -103,7 +104,7 @@ export default function Index() {
           </div>
 
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
+            {toolsFeatures.map(feature: unknown, index: unknown (
               <Link
                 key={index}
                 to={feature.link}
@@ -151,5 +152,5 @@ export default function Index() {
     </div>;
   );
 };
-
+;
 export default Home;

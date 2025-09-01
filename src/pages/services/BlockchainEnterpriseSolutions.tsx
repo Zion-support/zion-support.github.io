@@ -2,7 +2,8 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
-
+;
+export { function };
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
     {
@@ -81,7 +82,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
     { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Blockchain Enterprise Solutions - Zion Tech Group"
@@ -188,7 +189,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -270,7 +271,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={service.title}
                 initial = {
@@ -309,7 +310,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-sm text-slate-300">
                       <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
                       {feature}
@@ -366,7 +367,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.name}
                 initial = {

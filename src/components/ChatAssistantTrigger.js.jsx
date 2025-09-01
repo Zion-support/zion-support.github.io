@@ -11,7 +11,7 @@ export function ChatAssistantTrigger() {
             const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     messages[{ role: "user", content: message }];

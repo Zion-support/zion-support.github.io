@@ -60,7 +60,7 @@ const securityFeatures = [
     color: "from-teal-500 to-green-600";
   };
 ];
-
+;
 const complianceFeatures = [
   {
     category: "Data Protection",
@@ -90,9 +90,9 @@ const complianceFeatures = [
     ];
   };
 ];
-
-export function SecurityComplianceSection() {
-  return (
+;
+export function SecurityComplianceSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -146,16 +146,16 @@ export function SecurityComplianceSection() {
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {securityMetrics.map((metric, index)  => {;
+          {securityMetrics.map((metric, index {;
             const IconComponent = metric.icon;
-            return (
+            return 
               <div key = {metric.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-600 rounded-full">
                     <IconComponent className="h-8 w-8 text-white" />
         {/* Security Certifications */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {securityFeatures.map((feature, index) => (
+          {securityFeatures.map((feature, index (
             <motion.div
               key={feature.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -251,13 +251,12 @@ export function SecurityComplianceSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {complianceFeatures.map((category, index) => (
-              <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
+            {complianceFeatures.map(category: unknown, index: unknown <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
                   {category.category}
                 </h4>
                 <ul className="space-y-3">
-                  {category.features.map((feature, featureIndex) => (
+                  {category.features.map((feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></div>
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -388,7 +387,8 @@ export function SecurityComplianceSection() {
       </div>;
     </section>;
   )};
-
+;
+export { SecurityComplianceSection };
 export default SecurityComplianceSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -397,6 +397,6 @@ export default SecurityComplianceSection;
     </section>;
   );
 }
-
+;
 export default SecurityComplianceSection;
 export default SecurityComplianceSection;

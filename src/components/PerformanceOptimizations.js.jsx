@@ -1,8 +1,8 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { LoadingSpinner } from "./ui/loading-spinner";
-// Lazy load heavy components
+// Lazy load heavy components;
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
-// Memoized component for expensive calculations
+// Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {
     const processedData = useMemo(() => {
         return data.map(item => ({
@@ -26,7 +26,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
         </div>))}
     </div>)});
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
-// Virtual scrolling component for large lists
+// Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
     const [scrollTop, setScrollTop] = React.useState(0);
     const visibleItems = useMemo(() => {
@@ -62,7 +62,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
           </div>))}
       </div>
     </div>)};
-// Main performance optimizations component
+// Main performance optimizations component;
 export function PerformanceOptimizations() {
     const [showExpensive, setShowExpensive] = React.useState(false);
     const [data, setData] = React.useState([
@@ -70,7 +70,7 @@ export function PerformanceOptimizations() {
         { id: 2, title: 'Service 2', description: 'Description 2', value: 200 },
         { id: 3, title: 'Service 3', description: 'Description 3', value: 300 },
         { id: 4, title: 'Service 4', description: 'Description 4', value: 400 },
-        { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
+        { id: 5, title: 'Service 5', description: 'Description 5', value: 500 }
     ]);
     const handleItemClick = useCallback((item) => {
         console.log('Item clicked:', item)}, []);

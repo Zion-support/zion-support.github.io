@@ -49,4 +49,20 @@ export function AdvancedCollaborationPlatform() {
                 senderName: 'Sarah Johnson',
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
-                type: 'text',
+                type: 'text'
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

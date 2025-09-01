@@ -16,8 +16,8 @@ import {
   Trash2,
   Download
 } from 'lucide-react';
-
-const Privacy: React.FC = () => {
+;
+const Privacy: React.FC = props {
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
@@ -143,7 +143,7 @@ const Privacy: React.FC = () => {
     }
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title="Privacy Policy - Zion Tech Group"
@@ -192,7 +192,7 @@ const Privacy: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {privacyPrinciples.map((principle, index) => (
+              {privacyPrinciples.map((principle, index (
                 <motion.div
                   key={principle.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -228,7 +228,7 @@ const Privacy: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dataCategories.map((category, index) => (
+              {dataCategories.map(category: unknown, index: unknown 
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -240,7 +240,7 @@ const Privacy: React.FC = () => {
                   <h3 className="text-white font-semibold mb-2">{category.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>
                   <div className="space-y-1">
-                    {category.examples.map((example, idx) => (
+                    {category.examples.map((example, idx (
                       <div key={idx} className="flex items-center gap-2">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         <span className="text-gray-400 text-xs">{example}</span>
@@ -267,7 +267,7 @@ const Privacy: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {dataUses.map((use, index) => (
+              {dataUses.map(use: unknown, index: unknown (
                 <motion.div
                   key={use.purpose}
                   initial={{ opacity: 0, y: 20 }}
@@ -298,7 +298,7 @@ const Privacy: React.FC = () => {
             </motion.h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {userRights.map((right, index) => (
+              {userRights.map(right: unknown, index: unknown (
                 <motion.div
                   key={right.right}
                   initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ const Privacy: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {contactInfo.map((contact, index) => (
+              {contactInfo.map(contact: unknown, index: unknown (
                 <a
                   key={contact.label}
                   href={contact.href}
@@ -355,5 +355,6 @@ const Privacy: React.FC = () => {
     </>
   );
 };
-
+;
+export { Privacy };
 export default Privacy;

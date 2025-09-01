@@ -2,20 +2,22 @@ import React, { useState, useRef } from 'react.ts';
 import { X, Send  } from 'lucide-react';
 export interface Message {
 
+
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean}
+  read?: boolean
+};
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
   isOpen?: boolean;
-  onClose?: () => void;
-}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
+  onClose?: : unknown void;
+};
+export function ChatAssistant(...args: unknown[]): unknown {;
+  const [isChatOpen, setIsChatOpen] = useState<typeof isOpen>(isOpen);
   const [messages, setMessages] = useState<any>([]);
-  const [inputMessage, setInputMessage] = useState('');
+  const [inputMessage, setInputMessage] = useState<typeof ''>('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
       timestamp: new Date(),;
   ;
@@ -30,7 +32,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response
-    setTimeout(() => {
+    setTimeout(: unknown {
       const aiMessage: Message = {
   id: (Date.now() + 1).toString(),
         role: 'assistant',
@@ -48,14 +50,14 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: React.FormEvent) => {;
+  const handleSubmit = (...args: unknown[]): unknown => {;
     e.preventDefault();
     handleSendMessage(inputMessage);
   };
-  const toggleChat = () => {;
+  const toggleChat = (...args: unknown[]): unknown => {;
     setIsChatOpen(!isChatOpen);
   };
-  const closeChat = () => {;
+  const closeChat = (...args: unknown[]): unknown => {;
     setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {
@@ -89,8 +91,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           <div className="text-center text-gray-500 mt-8">
             <p>How can we help you today?</p>
           </div>
-        ) : (
-          messages.map((message) => (
+        ) : messages.map((message: unknown (
             <div
               key={message.id}
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
@@ -118,7 +119,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           <input
             type="text"
             value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
+            onChange={e: unknown setInputMessage(e.target.value)}
             placeholder="Type your message..."
             className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           />

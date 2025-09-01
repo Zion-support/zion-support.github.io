@@ -207,3 +207,5 @@ export function CollaborationPlatform() {
           </div>)}
       </div>
     </div>)}
+
+}

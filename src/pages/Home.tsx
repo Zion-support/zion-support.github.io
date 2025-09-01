@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+;
 import { 
   Users, 
   TrendingUp, 
@@ -46,10 +46,10 @@ import {
   Pause
 } from 'lucide-react';
 
-// Optimized futuristic animated background component
-const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() => 
-    [...Array(20)].map((_, i) => ({
+// Optimized futuristic animated background component;
+const FuturisticBackground = React.memo(: unknown {
+  const particles = useMemo(: unknown 
+    [...Array(20)].map(_: unknown, i: unknown ({
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
@@ -64,7 +64,7 @@ const FuturisticBackground = React.memo(() => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
       
       {/* Optimized floating particles */}
-      {particles.map((particle) => (
+      {particles.map(particle: unknown (
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
@@ -93,13 +93,13 @@ const FuturisticBackground = React.memo(() => {
 });
 
 
-// Floating Action Button Component
-const FloatingActionButton = React.memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+// Floating Action Button Component;
+const FloatingActionButton = React.memo(: unknown {
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
+  const [isExpanded, setIsExpanded] = useState<typeof false>(false);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
+  useEffect(: unknown {
+    const toggleVisibility = (...args: unknown[]): unknown => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
       } else {
@@ -108,17 +108,17 @@ const FloatingActionButton = React.memo(() => {
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return : unknown window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (...args: unknown[]): unknown => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
 
-  return (
+  return 
     <AnimatePresence>
       {isVisible && (
         <motion.div
@@ -141,7 +141,7 @@ const FloatingActionButton = React.memo(() => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-                    onClick={() => window.open('mailto:contact@ziontechgroup.com')}
+                    onClick={( window.open('mailto:contact@ziontechgroup.com')}
                     aria-label="Contact us via email"
                   >
                     <Mail className="h-5 w-5" />
@@ -150,7 +150,7 @@ const FloatingActionButton = React.memo(() => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-                    onClick={() => window.open('tel:+15551234567')}
+                    onClick={: unknown window.open('tel:+15551234567')}
                     aria-label="Call us"
                   >
                     <Phone className="h-5 w-5" />
@@ -159,7 +159,7 @@ const FloatingActionButton = React.memo(() => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-                    onClick={() => window.open('/help', '_blank')}
+                    onClick={: unknown window.open('/help', '_blank')}
                     aria-label="Get help"
                   >
                     <HelpCircle className="h-5 w-5" />
@@ -173,7 +173,7 @@ const FloatingActionButton = React.memo(() => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={: unknown setIsExpanded(!isExpanded)}
               aria-label="Quick actions menu"
             >
               {isExpanded ? (
@@ -191,10 +191,10 @@ const FloatingActionButton = React.memo(() => {
 
 FloatingActionButton.displayName = 'FloatingActionButton';
 
-// Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+// Enhanced hero section component;
+const HeroSection = React.memo({ onGetStarted }: { onGetStarted: ( void }) => {
+  const [currentSlide, setCurrentSlide] = useState<typeof 0>(0);
+  const [isPlaying, setIsPlaying] = useState<typeof true>(true);
   
   const heroSlides = [
     {
@@ -226,17 +226,17 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ], []);
 
   // Auto-advance slides
-  useEffect(() => {
+  useEffect(: unknown {
     if (!isPlaying) return;
     
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    const interval = setInterval(: unknown {
+      setCurrentSlide(prev: unknown (prev + 1) % heroSlides.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [isPlaying, heroSlides.length]);
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
+  const togglePlayPause = : unknown setIsPlaying(!isPlaying);
 
   const serviceCategories = [
     {
@@ -257,11 +257,11 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  useEffect(: unknown {
+    const timer = setInterval(: unknown {
+      setCurrentSlide(prev: unknown (prev + 1) % heroSlides.length);
     }, 5000);
-    return () => clearInterval(timer);
+    return : unknown clearInterval(timer);
   }, [heroSlides.length]);
 
   const heroStats = [
@@ -320,10 +320,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-12 space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
+          {heroSlides.map(_: unknown, index: unknown <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={(: unknown setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'
               }`}
@@ -338,7 +337,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-          {heroStats.map((stat, index) => (
+          {heroStats.map(stat: unknown, index: unknown (
             <motion.div 
               key={stat.label} 
               className="text-center"
@@ -358,10 +357,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
         {/* Slide indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
+          {heroSlides.map(_: unknown, index: unknown <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={(: unknown setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-blue-400 scale-125' : 'bg-gray-600 hover:bg-gray-500'
               }`}
@@ -382,8 +380,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 };
 
 
-// Features Section Component
-const FeaturesSection = () => {
+// Features Section Component;
+const FeaturesSection = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -430,7 +428,7 @@ const FeaturesSection = () => {
     }
   ];
 
-  return (
+  return 
 
     <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4">
@@ -452,7 +450,7 @@ const FeaturesSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((feature, index (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
@@ -488,8 +486,8 @@ const FeaturesSection = () => {
 
 };
 
-// Stats Section Component
-const StatsSection = () => {
+// Stats Section Component;
+const StatsSection = (...args: unknown[]): unknown => {
   const stats = [
     { number: "500+", label: "Projects Completed", icon: CheckCircle },
     { number: "50+", label: "Team Members", icon: Users },
@@ -497,11 +495,11 @@ const StatsSection = () => {
     { number: "99%", label: "Client Satisfaction", icon: Star }
   ];
 
-  return (
+  return 
     <section className="py-24 bg-gradient-to-br from-slate-800 via-blue-800 to-indigo-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -523,8 +521,8 @@ const StatsSection = () => {
   );
 };
 
-// CTA Section Component
-const CTASection = () => {
+// CTA Section Component;
+const CTASection = (...args: unknown[]): unknown => {
   return (
     <section className="py-24 bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 text-center">
@@ -584,8 +582,9 @@ const CTASection = () => {
 
 };
 
-// Main Home component
-export default function Home() {
+// Main Home component;
+export { function };
+export default function Home(...args: unknown[]): unknown {
   return (
 
         {/* Services Showcase */}
@@ -606,6 +605,6 @@ export default function Home() {
     </>
   );
 };
-
+;
 export default Home;
 

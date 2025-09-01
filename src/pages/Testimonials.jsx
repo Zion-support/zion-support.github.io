@@ -12,7 +12,7 @@ import {
   Filter,
   Search
 } from 'lucide-react';
-
+;
 const testimonials = [
   {
     id: 1,
@@ -119,7 +119,7 @@ const testimonials = [
     featured: false
   }
 ];
-
+;
 const industries = [
   'All Industries',
   'Technology',
@@ -131,14 +131,15 @@ const industries = [
   'Startup',
   'Research & Development'
 ];
-
+;
 const ratings = [
   'All Ratings',
   '5 Stars',
   '4+ Stars',
   '3+ Stars'
 ];
-
+;
+export { function };
 export default function Testimonials() {
   const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
   const [selectedRating, setSelectedRating] = useState('All Ratings');

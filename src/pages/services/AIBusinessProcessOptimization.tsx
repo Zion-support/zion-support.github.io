@@ -22,7 +22,7 @@ import { Brain,
   Gauge
  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -165,7 +165,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -224,7 +224,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -263,7 +263,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -299,7 +299,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -340,7 +340,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -371,7 +371,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -407,7 +407,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {roi.map((metric, index)  => (
+            {roi.map(metric: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -497,5 +497,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AIBusinessProcessOptimization };
 export default AIBusinessProcessOptimization;

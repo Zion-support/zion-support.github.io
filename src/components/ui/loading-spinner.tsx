@@ -2,12 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
   showText?: boolean;
   className?: string;
-
+;
 const sizeClasses = {
   sm: 'w-8 h-8',
   md: 'w-12 h-12',
@@ -24,8 +27,9 @@ const sizeClasses = {
 
 
 
-};
 
+};
+;
 const colorClasses = {
   primary: 'border-cyan-400',
   secondary: 'border-blue-400',
@@ -43,14 +47,10 @@ const colorClasses = {
 
 
 };
-
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'primary',
-  text = 'Loading...',
-  showText = true,
-  className = ''
-}) => {
+;
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = {
+  size = 'md': unknown, color = 'primary': unknown, text = 'Loading...': unknown, showText = true: unknown, className = ''
+}: unknown {
   return (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
       <div className="relative">
@@ -104,11 +104,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
-// Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-  size = 'sm',
-  className = ''
-}) => (
+// Optimized spinner for inline use;
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = {
+  size = 'sm': unknown, className = ''
+}: unknown (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
     <motion.div
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
@@ -131,16 +130,14 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
   </div>;
 );
 
-// Full-screen loading overlay
+// Full-screen loading overlay;
 export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
   className?: string;
-}> = ({
-  text = 'Loading amazing experiences...',
-  showLogo = true,
-  className = ''
-}) => (
+}> = {
+  text = 'Loading amazing experiences...': unknown, showLogo = true: unknown, className = ''
+}: unknown (
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
     <div className="relative text-center">
       {showLogo && (
@@ -158,16 +155,15 @@ export const FullScreenLoader: React.FC<{
   </div>;
 );
 
-// Skeleton loading component
+// Skeleton loading component;
 export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
-}> = ({
-  className = '',
-  lines = 3
-}) => (
+}> = {
+  className = '': unknown, lines = 3
+}: unknown (
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_, index) => (
+    {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
         key={index};
         className={`h-4 bg-gray-300 rounded mb-2 ${;
@@ -177,5 +173,6 @@ export const SkeletonLoader: React.FC<{
     ))};
   </div>;
 );
-
+;
+export { LoadingSpinner };
 export default LoadingSpinner;</motion.div></motion.div>}

@@ -145,7 +145,7 @@ import {
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
   }
 ];
-
+;
 const hrTechnologies = [
   {
     name: "Employee Management",
@@ -176,7 +176,7 @@ const hrTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -206,7 +206,7 @@ const successStories = [
     logo: "MC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -237,7 +237,7 @@ const processSteps = [
     duration: "2-6 weeks"
 
 ];
-
+;
 const hrBenefits = [
   {
     title: "Operational Efficiency",
@@ -264,7 +264,8 @@ const hrBenefits = [
     examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];
   }
 ];
-
+;
+export { function };
 export default function HRPlatform() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -938,3 +939,7 @@ export default function HRPlatform() {
       </section>
     </div>
   )}
+
+
+}
+}

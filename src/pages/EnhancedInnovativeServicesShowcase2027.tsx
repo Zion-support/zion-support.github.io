@@ -28,7 +28,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
+  ExternalLink
  } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
 const categoryColors: { [key: string]: string } = {
@@ -44,9 +44,10 @@ const categoryColors: { [key: string]: string } = {
   'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
+export { function };
 export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('name');
   const filteredServices = enhancedInnovativeServices2027.filter(service => {;
@@ -54,7 +55,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price':
   CheckCircle,
@@ -84,15 +85,15 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   Beaker;
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
-
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
+;
+const EnhancedInnovativeServicesShowcase2027: React.FC = props {;
   const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'title'>('title');
   const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState<typeof 0>(0);
 
   const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];
@@ -106,7 +107,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     return matchesSearch && matchesCategory && matchesInnovation;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
@@ -120,7 +121,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         return 0}
   });
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
@@ -136,7 +137,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor = (...args: unknown[]): unknown => {;
     switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -145,24 +146,24 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     }
   };
 
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
+  const handleServiceClick = (...args: unknown[]): unknown => {;
     setSelectedService(service);
     setCurrentSlide(0);
   };
 
-  const nextSlide = () => {;
+  const nextSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev + 1) % 4);
+      setCurrentSlide(prev: unknown (prev + 1) % 4);
     }
   };
 
-  const prevSlide = () => {;
+  const prevSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4);
+      setCurrentSlide(prev: unknown (prev - 1 + 4) % 4);
     }
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -204,7 +205,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={( document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Eye className="w-5 h-5" />
                 <span>Explore Services</span>
@@ -213,7 +214,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={: unknown document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Phone className="w-5 h-5" />
                 <span>Contact Us</span>
@@ -234,7 +235,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e: unknown setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan"
               />
             </div>
@@ -242,7 +243,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               <button
-                onClick={() => setSelectedCategory('All')}
+                onClick={: unknown setSelectedCategory('All')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
@@ -251,10 +252,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
                 All Categories
               </button>
-              {enhancedInnovativeServices2027Categories.map((category)  => (
-                <button
+              {enhancedInnovativeServices2027Categories.map(category: unknown <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={(: unknown setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     selectedCategory === category
                       ? 'bg-zion-cyan text-white'
@@ -269,7 +269,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 bg-zion-slate-dark/50 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
@@ -277,7 +277,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-all ${
                     viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
                   }`}
@@ -287,7 +287,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as )}
+                onChange={e: unknown setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
 
                 <option value="name">Sort by Name</option>
@@ -300,7 +300,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
       </div>
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8";
           >
-            {sortedServices.map((service)  => (;
+            {sortedServices.map(service: unknown (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -330,7 +330,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, index) => (
+                      {service.features.slice(0, 4).map(feature: unknown, index: unknown (
                         <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
                           <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                           <span>{feature}</span>
@@ -377,7 +377,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
       {/* Services Grid */}
       <div id="services-grid" className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index) => (
+          {sortedServices.map(service: unknown, index: unknown 
             <motion.div
               key={service.id}
               initial = {
@@ -411,7 +411,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
-              onClick={() => handleServiceClick(service)}
+              onClick={( handleServiceClick(service)}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
@@ -442,7 +442,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               </div>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                   <span
                     key={tagIndex}
                     className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full"
@@ -516,7 +516,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   </div>
                 </div>
                 <button
-                  onClick={() => setSelectedService(null)}
+                  onClick={: unknown setSelectedService(null)}
                   className="text-zion-gray-light hover:text-white transition-colors"
                 >
                   <X className="w-6 h-6" />
@@ -525,10 +525,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
               {/* Navigation Tabs */}
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
-                {['Overview', 'Features', 'Technical Specs', 'Contact'].map((tab, index) => (
-                  <button
+                {['Overview', 'Features', 'Technical Specs', 'Contact'].map(tab: unknown, index: unknown <button
                     key={tab}
-                    onClick={() => setCurrentSlide(index)}
+                    onClick={(: unknown setCurrentSlide(index)}
                     className={`pb-2 px-4 transition-colors ${
                       currentSlide === index
                         ? 'text-zion-cyan border-b-2 border-zion-cyan'
@@ -543,7 +542,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               {/* Content Slides */}
               <div className="relative">
                 {/* Overview Slide */}
-                {currentSlide === 0 && (
+                {currentSlide === 0 && 
                   <motion.div
                     initial = {
   { opacity: 0,
@@ -579,7 +578,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Key Benefits</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.benefits.map((benefit, index) => (
+                          {selectedService.benefits.map((benefit, index (
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{benefit}</span>
@@ -594,7 +593,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Target Audience</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.targetAudience.map((audience, index) => (
+                          {selectedService.targetAudience.map(audience: unknown, index: unknown (
                             <span
                               key={index}
                               className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full"
@@ -609,7 +608,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 )}
 
                 {/* Features Slide */}
-                {currentSlide === 1 && (
+                {currentSlide === 1 && 
                   <motion.div
                     initial = {
   { opacity: 0,
@@ -640,7 +639,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Key Features</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.features.map((feature, index) => (
+                          {selectedService.features.map((feature, index (
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{feature}</span>
@@ -655,7 +654,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Use Cases</span>
                         </h4>
                         <ul className="space-y-2">
-                          {selectedService.useCases.map((useCase, index) => (
+                          {selectedService.useCases.map(useCase: unknown, index: unknown (
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">
                               <ArrowRight className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                               <span>{useCase}</span>
@@ -668,7 +667,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 )}
 
                 {/* Technical Specs Slide */}
-                {currentSlide === 2 && selectedService.technicalSpecs && (
+                {currentSlide === 2 && selectedService.technicalSpecs && 
                   <motion.div
                     initial = {
   { opacity: 0,
@@ -699,7 +698,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Technology Stack</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.technology.map((tech, index) => (
+                          {selectedService.technicalSpecs.technology.map((tech, index (
                             <span
                               key={index}
                               className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full"
@@ -716,7 +715,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           <span>Integrations</span>
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.integrations.map((integration, index) => (
+                          {selectedService.technicalSpecs.integrations.map(integration: unknown, index: unknown (
                             <span
                               key={index}
                               className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full"
@@ -746,7 +745,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Security</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.security.map((security, index) => (
+                          {selectedService.technicalSpecs.security.map(security: unknown, index: unknown (
                             <span
                               key={index}
                               className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full"
@@ -760,7 +759,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Compliance</h4>
                         <div className="flex flex-wrap gap-2">
-                          {selectedService.technicalSpecs.compliance.map((compliance, index) => (
+                          {selectedService.technicalSpecs.compliance.map(compliance: unknown, index: unknown (
                             <span
                               key={index}
                               className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full"
@@ -863,7 +862,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                          onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
+                          onClick={: unknown window.open(`tel:${selectedService.contactInfo.phone}`)}
                         >
                           <Phone className="w-5 h-5" />
                           <span>Call Now</span>
@@ -872,7 +871,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                          onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
+                          onClick={: unknown window.open(`mailto:${selectedService.contactInfo.email}`)}
                         >
                           <Mail className="w-5 h-5" />
                           <span>Email Us</span>
@@ -894,10 +893,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 </button>
 
                 <div className="flex space-x-2">
-                  {[0, 1, 2, 3].map((index) => (
-                    <button
+                  {[0, 1, 2, 3].map(index: unknown <button
                       key={index}
-                      onClick={() => setCurrentSlide(index)}
+                      onClick={(: unknown setCurrentSlide(index)}
                       className={`w-2 h-2 rounded-full transition-colors ${
                         currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'
                       }`}
@@ -951,7 +949,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
             onClick = {
-  () => window.open('https://ziontechgroup.com',
+  : unknown window.open('https://ziontechgroup.com',
   '_blank')
 
 
@@ -969,5 +967,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     </div>;
   );
 };
-
+;
 export default EnhancedInnovativeServicesShowcase2027;
+
+
+
+}
+
+}
+}

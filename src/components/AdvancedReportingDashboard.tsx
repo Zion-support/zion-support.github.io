@@ -16,12 +16,13 @@ import {
   ChevronDown,
   ChevronUp,
   Shield,
-  Server,
+  Server
  } from 'lucide-react';
   X
 } from 'lucide-react';
 
 interface ReportData {
+
 
   id: string;
   title: string;
@@ -35,17 +36,20 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number}
+  rating: number
+}
 
 interface ReportMetrics {
+
 
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
-  topCategories: Array<any>;
-  recentActivity: Array<any>}
+  topCategories: unknown[];
+  recentActivity: unknown[]
+}
 
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
@@ -53,28 +57,28 @@ interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
   showFilters?: boolean;
   showCharts?: boolean;
   maxReports?: number}
-
-export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+;
+export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = {
 showMetrics:  true,;
   showFilters = true,;
   showCharts = true,;
   maxReports = 15;
-}) => {;
+} {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [viewMode, setViewMode] = useState<any>('grid');
-  const [showReportForm, setShowReportForm] = useState(false);
+  const [showReportForm, setShowReportForm] = useState<typeof false>(false);
   const [selectedReport, setSelectedReport] = useState<any>(null);
-  const [showReportDetails, setShowReportDetails] = useState(false);
+  const [showReportDetails, setShowReportDetails] = useState<typeof false>(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
 
   // Sample report data
-  useEffect(() => {
+  useEffect(: unknown {
     const sampleReports: ReportData[] = [
       {
         id: '1',
@@ -192,7 +196,7 @@ showMetrics:  true,;
     setFilteredReports(sampleReports)}, []);
 
   // Filter and sort reports
-  useEffect(()  => {
+  useEffect(: unknown {
     let filtered = reports;
 
     if (selectedType !== 'all') {
@@ -218,8 +222,8 @@ showMetrics:  true,;
     }
 
     // Sort reports
-    filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+    filtered.sort(a: unknown, b: unknown {
+      let aValue: unknown, bValue: unknown;
 
       switch (sortBy) {
         case 'date':
@@ -272,3 +276,5 @@ showMetrics:  true,;
 
   // Calculate report metrics
   const reportMetrics = {
+
+}

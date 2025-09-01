@@ -39,12 +39,12 @@ import {
   Star as StarIcon 
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Research: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeStatus, setActiveStatus] = useState('all');
-  const [activeType, setActiveType] = useState('all');
+;
+const Research: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [activeStatus, setActiveStatus] = useState<typeof 'all'>('all');
+  const [activeType, setActiveType] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: FlaskConical, count: 0 },
@@ -195,7 +195,7 @@ const Research: React.FC = () => {
     }
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'active': return 'bg-green-500/20 text-green-400';
       case 'completed': return 'bg-blue-500/20 text-blue-400';
@@ -205,7 +205,7 @@ const Research: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (...args: unknown[]): unknown => {
     switch (impact) {
       case 'very-high': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
@@ -215,7 +215,7 @@ const Research: React.FC = () => {
     }
   };
 
-  const getProgressColor = (progress: number) => {
+  const getProgressColor = (...args: unknown[]): unknown => {
     if (progress >= 80) return 'bg-green-500';
     if (progress >= 60) return 'bg-blue-500';
     if (progress >= 40) return 'bg-yellow-500';
@@ -259,7 +259,7 @@ const Research: React.FC = () => {
     }
   });
 
-  return (
+  return 
     <>
       <SEO 
         title="Research & Development - Zion Tech Group"
@@ -302,7 +302,7 @@ const Research: React.FC = () => {
                   type="text"
                   placeholder="Search research projects..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -313,10 +313,9 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Categories</h3>
                   <div className="flex flex-wrap gap-2">
-                    {categories.map((category) => (
-                      <button
+                    {categories.map(category: unknown <button
                         key={category.id}
-                        onClick={() => setActiveCategory(category.id)}
+                        onClick={(: unknown setActiveCategory(category.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeCategory === category.id
                             ? 'bg-blue-500 text-white'
@@ -334,10 +333,9 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Status</h3>
                   <div className="flex flex-wrap gap-2">
-                    {statuses.map((status) => (
-                      <button
+                    {statuses.map(status: unknown <button
                         key={status.id}
-                        onClick={() => setActiveStatus(status.id)}
+                        onClick={(: unknown setActiveStatus(status.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeStatus === status.id
                             ? 'bg-blue-500 text-white'
@@ -355,10 +353,9 @@ const Research: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Type</h3>
                   <div className="flex flex-wrap gap-2">
-                    {types.map((type) => (
-                      <button
+                    {types.map(type: unknown <button
                         key={type.id}
-                        onClick={() => setActiveType(type.id)}
+                        onClick={(: unknown setActiveType(type.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeType === type.id
                             ? 'bg-blue-500 text-white'
@@ -380,7 +377,7 @@ const Research: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredProjects.map((project, index) => (
+              {filteredProjects.map(project: unknown, index: unknown (
                 <motion.div
                   key={project.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -448,7 +445,7 @@ const Research: React.FC = () => {
                     <div className="mb-4">
                       <h4 className="text-white font-medium text-sm mb-2">Publications ({project.publications.length})</h4>
                       <div className="space-y-2">
-                        {project.publications.slice(0, 2).map((pub, idx) => (
+                        {project.publications.slice(0, 2).map(pub: unknown, idx: unknown (
                           <div key={idx} className="bg-slate-700/50 rounded p-2">
                             <p className="text-gray-300 text-xs font-medium">{pub.title}</p>
                             <p className="text-gray-400 text-xs">{pub.journal}, {pub.year}</p>
@@ -460,7 +457,7 @@ const Research: React.FC = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {project.tags.slice(0, 4).map((tag, idx) => (
+                    {project.tags.slice(0, 4).map(tag: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                         {tag}
                       </span>
@@ -493,5 +490,6 @@ const Research: React.FC = () => {
     </>
   );
 };
-
+;
+export { Research };
 export default Research;

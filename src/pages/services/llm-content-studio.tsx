@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function LLMContentStudio(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function LLMContentStudio(...args: []):  {
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
                 }
-              ].map((contentType, index)  => (
+              ].map(contentType: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <contentType.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function LLMContentStudio(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{contentType.title}</h3>
                   <p className="text-slate-300 mb-4">{contentType.description}</p>
                   <ul className="space-y-1">
-                    {contentType.benefits.map((benefit, benefitIndex) => (
+                    {contentType.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -201,7 +202,7 @@ export default function LLMContentStudio(...args: []):  {
                     "Style transfer to match different writing styles and tones",
                     "Content optimization for SEO and search engine visibility",
                     "Real-time collaboration and version control for team projects"
-                  ].map((capability, index) => (
+                  ].map(capability: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{capability}</span>
@@ -218,7 +219,7 @@ export default function LLMContentStudio(...args: []):  {
                     { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },
                     { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },
                     { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -269,7 +270,7 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -305,7 +306,7 @@ export default function LLMContentStudio(...args: []):  {
                     "Enable rapid content scaling for marketing campaigns",
                     "Maintain brand voice consistency across all content",
                     "Accelerate time-to-market for content-driven initiatives"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -324,7 +325,7 @@ export default function LLMContentStudio(...args: []):  {
                     "Support sales teams with compelling marketing materials",
                     "Enable content personalization at scale",
                     "Drive higher conversion rates through targeted messaging"
-                  ].map((impact, index) => (
+                  ].map(impact: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{impact}</span>
@@ -370,7 +371,7 @@ export default function LLMContentStudio(...args: []):  {
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
                 }
-              ].map((metric, index)  => (
+              ].map(metric: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>

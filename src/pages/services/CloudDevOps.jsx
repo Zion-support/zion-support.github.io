@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
+;
 const CloudDevOps = () => {
   const cloudServices = [
     {
@@ -179,5 +179,6 @@ const CloudDevOps = () => {
     </div>
   );
 };
-
+;
+export { CloudDevOps };
 export default CloudDevOps;

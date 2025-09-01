@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
-
-const Tutorials = () => {
+;
+const Tutorials = (...args: unknown[]): unknown => {
   const tutorialCategories = [
     {
       title: "Beginner",
@@ -93,9 +93,9 @@ const Tutorials = () => {
     }
   ];
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'popular'>('popular');
 
   const filteredTutorials = featuredTutorials.filter(tutorial => {
     const matchesSearch = tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -104,7 +104,7 @@ const Tutorials = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedTutorials = [...filteredTutorials].sort((a, b) => {
+  const sortedTutorials = [...filteredTutorials].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
@@ -117,7 +117,7 @@ const Tutorials = () => {
     }
   });
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       {/* Header */}
       <div className="bg-white dark:bg-slate-800 shadow-sm border-b border-slate-200 dark:border-slate-700">
@@ -145,7 +145,7 @@ const Tutorials = () => {
                   type="text"
                   placeholder="Search tutorials..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -155,7 +155,7 @@ const Tutorials = () => {
             <div className="lg:w-48">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 <option value="all">All Categories</option>
@@ -170,7 +170,7 @@ const Tutorials = () => {
             <div className="lg:w-48">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
                 <option value="popular">Most Popular</option>
@@ -184,7 +184,7 @@ const Tutorials = () => {
 
         {/* Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {tutorialCategories.map((category, index) => (
+          {tutorialCategories.map(category: unknown, index: unknown (
             <div
               key={index}
               className={`bg-gradient-to-br ${category.color} rounded-lg p-6 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
@@ -202,7 +202,7 @@ const Tutorials = () => {
 
         {/* Tutorials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedTutorials.map((tutorial, index) => (
+          {sortedTutorials.map(tutorial: unknown, index: unknown (
             <div
               key={index}
               className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
@@ -289,7 +289,7 @@ const Tutorials = () => {
         )}
 
         {/* Empty State */}
-        {sortedTutorials.length === 0 && (
+        {sortedTutorials.length === 0 && 
           <div className="text-center py-16">
             <BookOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
@@ -299,7 +299,7 @@ const Tutorials = () => {
               Try adjusting your search terms or filters to find what you're looking for.
             </p>
             <button
-              onClick={() => {
+              onClick={( {
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSortBy('popular');
@@ -314,5 +314,6 @@ const Tutorials = () => {
     </div>
   );
 };
-
+;
+export { Tutorials };
 export default Tutorials;

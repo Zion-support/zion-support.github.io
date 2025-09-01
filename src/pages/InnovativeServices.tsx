@@ -22,7 +22,7 @@ import {
   Target,
   Award
  } from 'lucide-react';
-
+;
 const InnovativeServices: React.FC = (): JSX.Element => {
   const innovations = [
     {
@@ -131,7 +131,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       features[;
         'Renewable energy optimization',
         'Carbon footprint tracking',
-        'Sustainable infrastructure',
+        'Sustainable infrastructure'
     };
         'Green data centers';
       ],;
@@ -147,7 +147,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
     { label: 'Client Success Rate', value: '99.8%', icon: Award };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -208,7 +208,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+            {stats.map((stat, index (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -291,7 +291,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index)  => (
+            {innovations.map(innovation: unknown, index: unknown 
               <motion.div
                 key={innovation.id}
                 initial = {
@@ -342,7 +342,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-zion-cyan font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {innovation.features.map((feature, idx) => (
+                      {innovation.features.map((feature, idx (
                         <li key={idx} className="flex items-center text-zion-slate-light">
                           <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                           {feature}
@@ -354,7 +354,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                   <div className="mb-6">
                     <h4 className="text-zion-cyan font-semibold mb-3">Benefits:</h4>
                     <ul className="space-y-2">
-                      {innovation.benefits.map((benefit, idx) => (
+                      {innovation.benefits.map(benefit: unknown, idx: unknown (
                         <li key={idx} className="flex items-center text-zion-slate-light">
                           <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
                           {benefit}
@@ -431,5 +431,6 @@ const InnovativeServices: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { InnovativeServices };
 export default InnovativeServices;}}

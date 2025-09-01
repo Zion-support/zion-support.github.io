@@ -4,14 +4,16 @@ import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react
 
 interface ServiceWorkerState {
 
+
   isInstalled: boolean;
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
 
-}
 
-export function ServiceWorker(...args: any[]): any {
+}
+;
+export function ServiceWorker(...args: unknown[]): unknown {
   const [swState, setSwState] = useState<any>({
     isInstalled: anyfalse,
     isOnline: navigator.onLine,
@@ -19,23 +21,23 @@ export function ServiceWorker(...args: any[]): any {
     isInstalling: false
   });
 
-  useEffect(()  => {
+  useEffect(: unknown {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Register service worker
       navigator.serviceWorker
         .register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: any', registration);
+        .then(registration: unknown {
+          console.log('SW registered: unknown', registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates
-          registration.addEventListener('updatefound', ()  => {
+          registration.addEventListener'updatefound': unknown, (: unknown {
             const newWorker = registration.installing;
             if (newWorker) {
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               
-              newWorker.addEventListener('statechange', ()  => {
+              newWorker.addEventListener'statechange': unknown, (: unknown {
                 if (newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
                     ...prev, ;
@@ -48,30 +50,30 @@ setSwState(prev: > ({ ;
           });
 
           // Handle updates
-          navigator.serviceWorker.addEventListener('controllerchange', ()  => {
+          navigator.serviceWorker.addEventListener'controllerchange': unknown, (: unknown {
             window.location.reload();
           });
         })
-        .catch((registrationError) => {
+        .catch(registrationError: unknown {
           console.log('SW registration failed: ', registrationError);
         });
     }
 
     // Online/offline detection
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
+    const handleOffline = : unknown setSwState(prev => ({ ...prev, isOnline: anyfalse }));
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
-    return ()  => {
+    return : unknown {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
 
-  const handleUpdate = () => {;
+  const handleUpdate = (...args: unknown[]): unknown => {;
     if ('serviceWorker' in navigator) {;
-      navigator.serviceWorker.ready.then((registration) => {;
+      navigator.serviceWorker.ready.then(registration: unknown {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
       });
     }

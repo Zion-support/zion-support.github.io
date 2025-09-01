@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, ArrowRight } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-const MicroCRM: React.FC = () => {
+;
+const MicroCRM: React.FC = props {
   const services = [
     {
       title: "Contact Management",
@@ -46,7 +46,7 @@ const MicroCRM: React.FC = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
         title="Micro CRM for Local Businesses"
@@ -100,7 +100,7 @@ const MicroCRM: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -138,7 +138,7 @@ const MicroCRM: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -187,5 +187,6 @@ const MicroCRM: React.FC = () => {
     </div>
   );
 };
-
+;
+export { MicroCRM };
 export default MicroCRM;

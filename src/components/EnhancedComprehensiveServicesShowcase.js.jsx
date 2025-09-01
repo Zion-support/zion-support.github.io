@@ -290,4 +290,5 @@ const EnhancedComprehensiveServicesShowcase = () => {
           </div>
         </div>)}
     </div>)};
+export { EnhancedComprehensiveServicesShowcase };
 export default EnhancedComprehensiveServicesShowcase;

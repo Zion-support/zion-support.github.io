@@ -22,4 +22,5 @@ export const InstallPrompt = () => {
     return (<div className="fixed bottom-4 right-4 z-50">
       <Button onClick={onClick}>Install App</Button>
     </div>)};
+export { InstallPrompt };
 export default InstallPrompt;

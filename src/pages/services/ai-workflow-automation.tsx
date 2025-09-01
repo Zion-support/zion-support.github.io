@@ -2,8 +2,9 @@ import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle  } from 'lucide-react.ts';
-
-export default function AIWorkflowAutomation(...args: any[]): any {
+;
+export { function };
+export default function AIWorkflowAutomation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Workflow,
@@ -46,7 +47,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
     'Scale operations seamlessly'
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Workflow Automation - Zion Tech Group"
@@ -105,7 +106,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -141,7 +142,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                 From cost reduction to improved customer satisfaction, the benefits are clear and quantifiable.
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>

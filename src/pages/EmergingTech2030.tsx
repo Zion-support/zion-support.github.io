@@ -30,7 +30,8 @@ import { Brain,
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { emergingTechServices2030 } from "../data/emergingTechServices2030";
-
+;
+export { function };
 export default function EmergingTech2030(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },;
@@ -170,7 +171,7 @@ export default function EmergingTech2030(...args[]):  {
             </motion.div>;
 ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {emergingTechServices2030.map((service, index) => {;
+              {emergingTechServices2030.map(service: unknown, index: unknown {;
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
 
                 return (
@@ -209,7 +210,7 @@ export default function EmergingTech2030(...args[]):  {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                      {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                         <span
                           key={tagIndex}
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
@@ -298,7 +299,7 @@ export default function EmergingTech2030(...args[]):  {
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
                 }
-              ].map((feature, index)  => (
+              ].map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   variants={itemVariants}

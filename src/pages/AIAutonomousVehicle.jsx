@@ -575,7 +575,7 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
+  Brain;
 const autonomousVehicleSolutions = [;
   {
     id: 1,
@@ -674,7 +674,7 @@ const autonomousVehicleSolutions = [;
     technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"];
   }
 ];
-
+;
 const vehicleTechnologies = [
   {
     name: "Computer Vision",
@@ -705,7 +705,7 @@ const vehicleTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -735,7 +735,7 @@ const successStories = [
     logo: "IAL"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -766,7 +766,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const vehicleBenefits = [
   {
     title: "Enhanced Safety",
@@ -793,7 +793,8 @@ const vehicleBenefits = [
     examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"];
   }
 ];
-
+;
+export { function };
 export default function AIAutonomousVehicle() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1467,3 +1468,14 @@ export default function AIAutonomousVehicle() {
       </section>
     </div>
   )}
+
+
+
+
+}
+
+
+}
+
+}
+}

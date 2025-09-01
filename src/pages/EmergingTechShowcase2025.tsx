@@ -28,12 +28,12 @@ import { Brain,
   RotateCcw
 } from 'lucide-react';
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
-
-const EmergingTechShowcase2025: React.FC = () => {;
+;
+const EmergingTechShowcase2025: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [autoPlay, setAutoPlay] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoPlay, setAutoPlay] = useState<typeof true>(true);
+  const [currentSlide, setCurrentSlide] = useState<typeof 0>(0);
 
   const categories = [
     { id: 'all', name: 'All Technologies', icon: Globe, color: 'from-blue-500 to-purple-600' },
@@ -55,22 +55,22 @@ const EmergingTechShowcase2025: React.FC = () => {;
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoPlay) {
-      const interval = setInterval(() => {;
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length);
+      const interval = setInterval(: unknown {;
+        setCurrentSlide(prev: unknown (prev + 1) % filteredServices.length);
       }, 5000);
-      return () => clearInterval(interval);
+      return : unknown clearInterval(interval);
 
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
 
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown 
               <motion.div
                 key={service.id}
                 initial = {
@@ -105,7 +105,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 }}
                 whileHover={{ y: -10 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 hover:shadow-2xl transition-all cursor-pointer"
-                onClick={() => setSelectedService(service.id)}
+                onClick={( setSelectedService(service.id)}
 
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
@@ -202,13 +202,13 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
+        {selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedService(null)}
+            onClick={( setSelectedService(null)}
 
             <motion.div
               initial = {
@@ -242,9 +242,9 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 }};
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
-              onClick={(e) => e.stopPropagation()};
+              onClick={e: unknown e.stopPropagation()};
             >;
-              {(() => {;
+              {(: unknown {;
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service) return null;
 
@@ -262,7 +262,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                         </div>
                       </div>
                       <button
-                        onClick={() => setSelectedService(null)}
+                        onClick={: unknown setSelectedService(null)}
                         className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
 
                         <ChevronLeft className="w-6 h-6 text-white" />
@@ -276,7 +276,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                         <div className="space-y-2">
-                          {service.features.map((feature, index) => (
+                          {service.features.map(feature: unknown, index: unknown (
                             <div key={index} className="flex items-center gap-2 text-gray-300">
                               <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                               <span>{feature}</span>
@@ -288,7 +288,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                         <div className="space-y-2">
-                          {service.benefits.map((benefit, index) => (
+                          {service.benefits.map(benefit: unknown, index: unknown (
                             <div key={index} className="flex items-center gap-2 text-gray-300">
                               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                               <span>{benefit}</span>
@@ -327,7 +327,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => setSelectedService(null)}
+                        onClick={: unknown setSelectedService(null)}
                         className="px-8 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all"
                       >;
                         Close;
@@ -342,5 +342,6 @@ const EmergingTechShowcase2025: React.FC = () => {;
       </AnimatePresence>
     </div>
   )};
-
+;
+export { EmergingTechShowcase2025 };
 export default EmergingTechShowcase2025;}}

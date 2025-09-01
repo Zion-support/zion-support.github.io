@@ -100,6 +100,7 @@ const stats = [
     { label: "Process Efficiency Gain", value: "60%", icon: Zap },
     { label: "Customer Satisfaction", value: "95%", icon: Users }
 ];
+export { function };
 export default function DigitalTransformation() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
@@ -552,3 +553,14 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>)}
+
+
+
+
+}
+
+
+}
+
+}
+}

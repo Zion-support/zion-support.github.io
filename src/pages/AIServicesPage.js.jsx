@@ -132,6 +132,7 @@ const categories = [
     { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },
     { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
 ];
+export { function };
 export default function AIServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"

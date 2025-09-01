@@ -6,12 +6,13 @@ import { safeStorage } from '@/utils/safeStorage';
 import { getCartKey } from '@/utils/cartUtils';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
+export { function };
 export default function CheckoutPage() {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
     const form = useForm({
-        defaultValues: { name: '', email: '', address: '', city: '', country: '' },
+        defaultValues: { name: '', email: '', address: '', city: '', country: '' }
     });
     useEffect(() => {
         if (sku) {
@@ -36,8 +37,8 @@ export default function CheckoutPage() {
                 const payment = await stripe.confirmCardPayment(result.clientSecret, {
                     payment_method: {
                         card: { token: 'tok_visa' },
-                        billing_details: { name: data.name, email: data.email },
-                    },
+                        billing_details: { name: data.name, email: data.email }
+                    }
                 });
                 if (payment.error)
                     throw payment.error;
@@ -46,7 +47,7 @@ export default function CheckoutPage() {
                         await fetch('/api/points/add', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id })
                         })}
                     catch (e) {
                         console.error('Failed to add points', e)}

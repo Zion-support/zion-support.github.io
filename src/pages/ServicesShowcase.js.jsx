@@ -259,4 +259,5 @@ const ServicesShowcase = () => {
         </div>
       </div>
     </div>)};
+export { ServicesShowcase };
 export default ServicesShowcase;

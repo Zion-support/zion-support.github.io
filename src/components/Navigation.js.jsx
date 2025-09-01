@@ -9,7 +9,7 @@ const Navigation = () => {
         { name: 'Home', href: '/', icon: Globe },
         { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },
         { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },
-        { name: 'Pricing', href: '/pricing', icon: Building },
+        { name: 'Pricing', href: '/pricing', icon: Building }
     ];
     const serviceCategories = [
         {
@@ -17,7 +17,7 @@ const Navigation = () => {
             services[;
                 { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },
                 { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },
-                { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' },
+                { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' }
             ]
         },;
         {
@@ -25,7 +25,7 @@ const Navigation = () => {
             services[;
                 { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },
                 { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },
-                { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' },
+                { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' }
             ]
         },;
         {
@@ -33,7 +33,7 @@ const Navigation = () => {
             services[;
                 { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
-                { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },
+                { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' }
             ]
         }
     ];
@@ -142,4 +142,5 @@ const Navigation = () => {
           </div>
         </div>)}
     </nav>)};
+export { Navigation };
 export default Navigation;

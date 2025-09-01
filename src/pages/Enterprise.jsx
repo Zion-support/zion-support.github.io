@@ -2,7 +2,8 @@ import React from 'react';
 import SEO from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise() {
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export { function };
+export default function Enterprise() {
     const features = [
         {
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,
@@ -193,3 +194,10 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
         </div>
       </section>
     </div>)}
+
+
+
+}
+
+}
+}

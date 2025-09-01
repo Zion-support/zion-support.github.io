@@ -39,7 +39,7 @@ import { FlaskConical,
   Satellite,
   Telescope
  } from 'lucide-react';
-
+;
 const researchAreas = [
   {
     id: 'ai-ml',
@@ -150,7 +150,7 @@ const researchAreas = [
     projects: 16;
   };
 ];
-
+;
 const researchProjects = [
   {
     id: 1,
@@ -261,7 +261,7 @@ const researchProjects = [
     color: 'from-purple-500 to-indigo-600';
   };
 ];
-
+;
 const publications = [
   {
     id: 1,
@@ -314,7 +314,7 @@ const publications = [
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
 ];
-
+;
 const patents = [
   {
     id: 1,
@@ -367,11 +367,12 @@ const patents = [
     description: 'A security architecture pattern for cloud-native applications.';
   };
 ];
-
+;
+export { function };
 export default function ResearchDevelopment(...args[]):  {
-  const [selectedArea, setSelectedArea] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedArea, setSelectedArea] = useState<typeof 'All'>('All');
+  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const areas = ['All', ...researchAreas.map(area => area.name)];
   const statuses = ['All', 'Active', 'Completed', 'Planning'];
@@ -385,7 +386,7 @@ export default function ResearchDevelopment(...args[]):  {
     }
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
@@ -442,7 +443,7 @@ export default function ResearchDevelopment(...args[]):  {
                     type="text"
                     placeholder="Search research..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   />
                 </div>
@@ -452,7 +453,7 @@ export default function ResearchDevelopment(...args[]):  {
               <div>
                 <select
                   value={selectedArea}
-                  onChange={(e) => setSelectedArea(e.target.value)}
+                  onChange={e: unknown setSelectedArea(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area  => (
@@ -465,7 +466,7 @@ export default function ResearchDevelopment(...args[]):  {
               <div>
                 <select
                   value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  onChange={e: unknown setSelectedStatus(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
@@ -511,7 +512,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {researchAreas.map((area, index) => {;
+            {researchAreas.map(area: unknown, index: unknown {;
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -558,7 +559,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>
                     <div className="space-y-1">
-                      {area.focus.slice(0, 4).map((focus, idx) => (
+                      {area.focus.slice(0, 4).map(focus: unknown, idx: unknown (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{focus}</span>
@@ -621,7 +622,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredProjects.map((project, index) => {;
+            {filteredProjects.map(project: unknown, index: unknown {;
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -699,7 +700,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Team</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.team.map((member, idx) => (
+                      {project.team.map(member: unknown, idx: unknown (
                         <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
                           {member}
                         </span>
@@ -711,7 +712,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Expected Outcomes</h4>
                     <div className="space-y-1">
-                      {project.outcomes.map((outcome, idx) => (
+                      {project.outcomes.map(outcome: unknown, idx: unknown (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                           <Star className="w-3 h-3 text-yellow-400" />
                           <span>{outcome}</span>
@@ -774,7 +775,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 
           <div className="space-y-6">
-            {publications.map((pub, index) => (
+            {publications.map(pub: unknown, index: unknown (
               <motion.div
                 key={pub.id}
                 initial = {
@@ -887,7 +888,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {patents.map((patent, index)  => (
+            {patents.map(patent: unknown, index: unknown (
               <motion.div
                 key={patent.id}
                 initial = {

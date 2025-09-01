@@ -1,4 +1,5 @@
 import React from 'react';
+export { function };
 export default function ReplyCard({ reply, className = '', onMarkAnswer, canMarkAnswer }) {
     return (<div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>
       <div className="flex items-start space-x-3">

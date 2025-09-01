@@ -22,8 +22,9 @@ import { Shield,
   Mail,
   MapPin
  } from 'lucide-react.ts';
-
-export default function IncidentResponsePlatform(...args: any[]): any {
+;
+export { function };
+export default function IncidentResponsePlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: AlertTriangle,
@@ -195,7 +196,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -209,7 +210,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
                       <Star className="w-4 h-4 text-red-400 mr-2" />
                       {benefit}
@@ -239,7 +240,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+            {capabilities.map(capability: unknown, index: unknown 
               <motion.div
                 key={capability.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -252,7 +253,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                   {capability.category}
                 </h3>
                 <ul className="space-y-3">
-                  {capability.services.map((service, idx) => (
+                  {capability.services.map((service, idx (
                     <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                       {service}
@@ -282,7 +283,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -320,7 +321,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {responseMetrics.map((metric, index)  => (
+            {responseMetrics.map(metric: unknown, index: unknown (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}

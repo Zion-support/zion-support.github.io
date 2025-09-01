@@ -12,7 +12,7 @@ interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?;headers?: Record<string, string>}
-
+;
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
@@ -27,9 +27,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         method,
         headers: {
           'Content-Type': 'application/json',
-          ...headers,
+          ...headers
         },
-        body: body ? JSON.stringify(body) : null,
+        body: body ? JSON.stringify(body) : null
       });
 
       if (!response.ok) {
@@ -181,7 +181,7 @@ const mockAIGenerations = [
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',
         generatedCode: `import { useState, useEffect } from 'react';
-
+;
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {

@@ -18,15 +18,15 @@ import { Search,
   ExternalLink
  } from 'lucide-react.ts';
 import { zion2026AIMarketplaceServices  } from '../../data/zion-2026-ai-marketplace-services';
-
+;
 const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [viewMode, setViewMode] = useState<any>('grid');
 
   const categories = ['all', 'AI Marketplace', 'AI Integration', 'AI Automation', 'AI Analytics', 'AI Development'];
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return zion2026AIMarketplaceServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -35,7 +35,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     });
   }, [searchTerm, selectedCategory]);
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI Marketplace': return Globe;
       case 'AI Integration': return Zap;
@@ -46,7 +46,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {;
+  const getCategoryColor = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
       case 'AI Integration': return 'from-purple-500 to-pink-500';
@@ -57,7 +57,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     }
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -148,7 +148,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
                     type="text"
                     placeholder="Search AI marketplace services..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -158,7 +158,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
               <div className="flex-shrink-0">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   {categories.map(category  => (
@@ -173,7 +173,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
               <div className="flex-shrink-0">
                 <div className="flex bg-slate-700 rounded-lg p-1">
                   <button
-                    onClick={() => setViewMode('grid')}
+                    onClick={: unknown setViewMode('grid')}
                     className={`p-2 rounded-md transition-colors ${
                       viewMode === 'grid' 
                         ? 'bg-blue-500 text-white' 
@@ -183,7 +183,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
                     <Grid3X3 className="w-5 h-5" />
                   </button>
                   <button
-                    onClick={() => setViewMode('list')}
+                    onClick={: unknown setViewMode('list')}
                     className={`p-2 rounded-md transition-colors ${
                       viewMode === 'list' 
                         ? 'bg-blue-500 text-white' 
@@ -208,12 +208,12 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
               <h3 className="text-xl text-gray-300 mb-2">No services found</h3>
               <p className="text-gray-500">Try adjusting your search or filter criteria</p>
             </div>
-          ) : (
+          ) : 
             <div className={viewMode === 'grid' 
               ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'
               : 'space-y-6'
             }>
-              {filteredServices.map((service, index)  => (
+              {filteredServices.map((service, index (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -280,7 +280,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">
-                        {service.benefits.slice(0, 3).map((benefit, idx) => (
+                        {service.benefits.slice(0, 3).map(benefit: unknown, idx: unknown (
                           <li key={idx} className="text-sm text-gray-400 flex items-center">
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2" />
                             {benefit}
@@ -389,5 +389,6 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
-
+;
+export { Zion2026AIMarketplaceShowcase };
 export default Zion2026AIMarketplaceShowcase;

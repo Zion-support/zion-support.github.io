@@ -234,4 +234,5 @@ const GetStarted = () => {
         </div>
       </section>
     </div>)};
+export { GetStarted };
 export default GetStarted;

@@ -173,4 +173,5 @@ const Mobile = () => {
         </main>
       </div>
     </>)};
+export { Mobile };
 export default Mobile;

@@ -55,7 +55,7 @@ import {
   Smartphone as IoT,
   Server as Edge,
   Monitor as Healthcare,
-  Cpu as FinTech
+  Cpu as FinTech;
 import { SEO } from '@/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_2027,
@@ -74,14 +74,14 @@ import {
         return 'from-gray-500 to-slate-600'}
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+  const formatPrice = (...args: unknown[]): unknown => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
+  const renderServiceCard = (...args: unknown[]): unknown => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -158,15 +158,14 @@ import {
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
             <div className="space-y-1">
-              {service.features.slice(0, 3).map((feature, index) => (
+              {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                 <div key={index} className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
                   <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                 </div>
               ))}
-              {service.features.length > 3 && (
-                <button
-                  onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+              {service.features.length > 3 && <button
+                  onClick={(: unknown setExpandedService(expandedService === service.id ? null : service.id)}
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
 
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
@@ -212,7 +211,7 @@ import {
                 className="mb-4"
 
                 <div className="space-y-1">
-                  {service.features.slice(3).map((feature, index) => (
+                  {service.features.slice(3).map(feature: unknown, index: unknown (
                     <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
@@ -227,7 +226,7 @@ import {
           <div className="mb-4">;
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Benefits</h4>
             <div className="grid grid-cols-2 gap-2">
-              {service.benefits.slice(0, 4).map((benefit, index) => (
+              {service.benefits.slice(0, 4).map(benefit: unknown, index: unknown (
                 <div key={index} className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
@@ -305,7 +304,7 @@ import {
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {;
+  const renderServiceList = (...args: unknown[]): unknown => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
@@ -410,7 +409,7 @@ import {
     );
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
         title="Expanded Innovative Services 2027 - Zion Tech Group"
@@ -564,7 +563,7 @@ import {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
                 />
               </div>
@@ -574,10 +573,10 @@ import {
             <div className="flex items-center space-x-4">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
+                {EXPANDED_SERVICE_CATEGORIES.map(category: unknown (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -587,7 +586,7 @@ import {
               {/* View Mode Toggle */}
               <div className="flex items-center space-x-2 bg-gray-100 dark:bg-slate-700 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
                     viewMode === 'grid'
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
@@ -597,7 +596,7 @@ import {
                   <Grid3X3 className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-colors duration-200 ${
                     viewMode === 'list'
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm'
@@ -619,9 +618,9 @@ import {
         </div>
 
         {/* Services Grid/List */}
-        {filteredServices.length > 0 ? (
+        {filteredServices.length > 0 ? 
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>
+            {filteredServices.map((service
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>
@@ -669,5 +668,6 @@ import {
     </div>;
   );
 };
-
+;
+export { ExpandedServicesShowcase2027 };
 export default ExpandedServicesShowcase2027;}}}}}

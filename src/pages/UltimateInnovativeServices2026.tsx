@@ -58,12 +58,13 @@ import {
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
+;
+export { function };
 export default function UltimateInnovativeServices2026(...args[]):  {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'featured'>('featured');
   const [expandedService, setExpandedService] = useState<any>(null);
 
   const categories = [
@@ -99,11 +100,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
         return 0}
   });
 
-  const toggleServiceExpansion = (serviceId: string) => {;
+  const toggleServiceExpansion = (...args: unknown[]): unknown => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Ultimate Innovative Services 2026 | Zion Tech Group"
@@ -190,7 +191,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                   type="text"
                   placeholder="Search innovative services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
@@ -200,7 +201,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             <div>
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category  => (
@@ -215,7 +216,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             <div>
               <select
                 value={selectedPriceRange}
-                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                onChange={e: unknown setSelectedPriceRange(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {priceRanges.map(range  => (
@@ -229,11 +230,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by: any</span>
-            {sortOptions.map(option  => (
+            <span className="text-zion-slate-300">Sort by: unknown</span>
+            {sortOptions.mapoption  => (
               <button
                 key={option.id}
-                onClick={() => setSortBy(option.id)}
+                onClick={(: unknown setSortBy(option.id)}
                 className={`px-4 py-2 rounded-lg transition-all duration-200 ${
                   sortBy === option.id
                     ? 'bg-zion-cyan text-white'
@@ -261,7 +262,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -350,7 +351,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                      {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
@@ -367,7 +368,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
                     {/* Expand/Collapse Button */}
                     <button
-                      onClick={() => toggleServiceExpansion(service.id)}
+                      onClick={: unknown toggleServiceExpansion(service.id)}
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
 
                       {expandedService === service.id ? (
@@ -424,7 +425,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                             <ul className="space-y-1">
-                              {service.features.slice(0, 5).map((feature, featureIndex) => (
+                              {service.features.slice(0, 5).map(feature: unknown, featureIndex: unknown (
                                 <li key={featureIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
                                   <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />
                                   {feature}
@@ -437,7 +438,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                             <ul className="space-y-1">
-                              {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                              {service.benefits.slice(0, 3).map(benefit: unknown, benefitIndex: unknown (
                                 <li key={benefitIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
                                   <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
                                   {benefit}
@@ -478,15 +479,14 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           </div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
+          {filteredServices.length === 0 && <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>;
               <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
               <p className="text-zion-slate-300 mb-6">;
                 Try adjusting your search criteria or browse all our innovative services.;
               </p>;
               <button;
-                onClick={() => {;
+                onClick={(: unknown {;
                   setSearchQuery('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');

@@ -1,3 +1,4 @@
+import React from 'react';
 import { TalentProfile  } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -8,12 +9,12 @@ import { DollarSign, Briefcase, User  } from 'lucide-react';
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
   talent: TalentProfile;
-  onInvite: (talentId: string, role: string)  => void; // role is passed for context
+  onInvite: talentId: string, role: string void; // role is passed for context
   roleTitle: string; // To specify which role the invite is for
 
 }
-
-export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPreviewProps) => {
+;
+export const TalentCardPreview = (...args: unknown[]): unknown => {
   return (
     <Card className="w-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <CardContent className="p-4">
@@ -35,7 +36,7 @@ export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPre
         </div>
         {talent.skills && talent.skills.length > 0 && (
           <div className="mt-2.5">
-            {talent.skills.slice(0, 3).map((skill, index) => (
+            {talent.skills.slice(0, 3).map(skill: unknown, index: unknown (
               <Badge key={index} variant="outline" className="mr-1 mb-1 text-xs">{skill}</Badge>
             ))}
             {talent.skills.length > 3 && <Badge variant="outline" className="text-xs">...</Badge>}
@@ -43,7 +44,7 @@ export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPre
         )}
         <Button
           onClick = {
-  () => onInvite(talent.id,
+  : unknown onInvite(talent.id,
   roleTitle)
 
 }

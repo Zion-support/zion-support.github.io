@@ -6,7 +6,7 @@ import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
+;
 export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',

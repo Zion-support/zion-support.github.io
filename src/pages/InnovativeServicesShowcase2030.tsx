@@ -21,10 +21,10 @@ import { Brain,
 import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
 import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
-
-const InnovativeServicesShowcase2030: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+const InnovativeServicesShowcase2030: React.FC = props {;
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const allServices = [;
     ...innovativeAIServices2030,;
@@ -45,7 +45,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -127,17 +127,16 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={(: unknown setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                     activeCategory === category.id
                       ? 'bg-purple-600 border-purple-500 text-white'
@@ -160,7 +159,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -229,7 +228,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                     Key Features
                   </h4>
                   <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <div key={idx} className="text-gray-300 text-sm flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
                         {feature}
@@ -250,7 +249,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                     Benefits
                   </h4>
                   <div className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                       <div key={idx} className="text-gray-300 text-sm flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         {benefit}
@@ -262,7 +261,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 3).map((tag, idx) => (
+                    {service.tags.slice(0, 3).map(tag: unknown, idx: unknown (
                       <span
                         key={idx}
                         className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
@@ -313,11 +312,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             ))}
           </div>;
 ;
-          {filteredServices.length === 0 && (;
+          {filteredServices.length === 0 && ;
             <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;
+                onClick={(: unknown {;
                   setSearchTerm('');
                   setActiveCategory('all');
                 }}
@@ -388,7 +387,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
               }
-            ].map((feature, index)  => (
+            ].map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -538,5 +537,6 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { InnovativeServicesShowcase2030 };
 export default InnovativeServicesShowcase2030;}}

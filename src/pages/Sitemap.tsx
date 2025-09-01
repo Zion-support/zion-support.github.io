@@ -40,20 +40,24 @@ import {
 } from 'lucide-react';
 
 interface SitemapSection {
+
   title: string;
-  icon: any;
+  icon: unknown;
   color: string;
   pages: SitemapPage[];
+
 }
 
 interface SitemapPage {
+
   name: string;
   href: string;
   description: string;
   featured?: boolean;
-}
 
-const Sitemap: React.FC = () => {
+}
+;
+const Sitemap: React.FC = props {
   const sitemapSections: SitemapSection[] = [
     {
       title: 'Main Pages',
@@ -213,7 +217,7 @@ const Sitemap: React.FC = () => {
     { name: 'Try Demos', href: '/demo', icon: Zap, color: 'from-yellow-500 to-orange-500' }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-slate-900 text-white pt-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
@@ -229,8 +233,7 @@ const Sitemap: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {siteStructure.map((section, sectionIndex) => (
-            <div key={section.title} className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+          {siteStructure.map((section, sectionIndex <div key={section.title} className="bg-slate-800 rounded-2xl p-6 border border-slate-700">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
                   <section.icon className="w-5 h-5 text-white" />
@@ -239,7 +242,7 @@ const Sitemap: React.FC = () => {
               </div>
               
               <div className="space-y-4">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link: unknown, linkIndex: unknown (
                   <div key={link.path} className="group">
                     <Link
                       to={link.path}

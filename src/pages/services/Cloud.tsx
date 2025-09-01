@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
-
-const CloudServices = () => {
+;
+const CloudServices = (...args: unknown[]): unknown => {
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",
@@ -18,7 +18,7 @@ const CloudServices = () => {
       icon: Server
     },
     {
-      title: "Cloud Security & Compliance",
+      title: "Cloud Security & Compliance"
     };
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
       price: "From $6,500/month",;
@@ -59,7 +59,7 @@ const CloudServices = () => {
     "Automated scaling and resource management";
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -103,7 +103,7 @@ const CloudServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((service, index 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -112,7 +112,7 @@ const CloudServices = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-blue-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
@@ -139,7 +139,7 @@ const CloudServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudPlatforms.map((platform, index) => (
+            {cloudPlatforms.map(platform: unknown, index: unknown 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <platform.icon className="w-8 h-8 text-white"/>
@@ -147,7 +147,7 @@ const CloudServices = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300 mb-4">{platform.description}</p>
                 <ul className="space-y-2">
-                  {platform.features.map((feature, idx) => (
+                  {platform.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400">
                       {feature}
                     </li>
@@ -172,7 +172,7 @@ const CloudServices = () => {
                 your business operations and drive innovation.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                     {benefit}
@@ -221,5 +221,6 @@ const CloudServices = () => {
     </div>;
   );
 };
-
+;
+export { CloudServices };
 export default CloudServices;}}}

@@ -34,12 +34,13 @@ import {
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "@/data/additionalInnovativeServices2025";
-
-export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+;
+export { function };
+export default function ServicesPage(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'featured'>('featured');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
@@ -93,7 +94,7 @@ export default function ServicesPage() {
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price-low':
         return a.price - b.price;
@@ -106,17 +107,17 @@ export default function ServicesPage() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
 
-  return (
+  return 
     <>
       <SEO 
         title="Innovative Micro SAAS Services - Zion Tech Group"
@@ -159,7 +160,7 @@ export default function ServicesPage() {
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
                 />
               </div>
@@ -209,10 +210,9 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {categories.map((category) => (
-              <button
+            {categories.map(category: unknown <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
@@ -238,10 +238,10 @@ export default function ServicesPage() {
                 <Filter className="w-4 h-4 text-zion-cyan" />
                 <select
                   value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  onChange={e: unknown setSelectedPriceRange(e.target.value)}
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {priceRanges.map((range) => (
+                  {priceRanges.map(range: unknown (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
                 </select>
@@ -252,10 +252,10 @@ export default function ServicesPage() {
                 <TrendingUp className="w-4 h-4 text-zion-cyan" />
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {sortOptions.map((option) => (
+                  {sortOptions.map(option: unknown (
                     <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
                 </select>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
       <section className="py-16 bg-zion-slate-dark">
         <div className="container-responsive">
           <AnimatePresence mode="wait">
-            {sortedServices.length > 0 ? (
+            {sortedServices.length > 0 ? 
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 initial={{ opacity: 0 }}
@@ -281,7 +281,7 @@ export default function ServicesPage() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {sortedServices.map((service, index) => (
+                {sortedServices.map((service, index (
                   <motion.div
                     key={service.id}
                     className="card-futuristic group"
@@ -340,7 +340,7 @@ export default function ServicesPage() {
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                             <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                               <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               {feature}
@@ -374,7 +374,7 @@ export default function ServicesPage() {
                   </motion.div>
                 ))}
               </motion.div>
-            ) : (
+            ) : 
               <motion.div 
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
@@ -387,7 +387,7 @@ export default function ServicesPage() {
                   Try adjusting your search criteria or browse all categories
                 </p>
                 <button
-                  onClick={() => {
+                  onClick={( {
                     setSearchQuery('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
@@ -420,7 +420,7 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map((service, index) => (
+            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"

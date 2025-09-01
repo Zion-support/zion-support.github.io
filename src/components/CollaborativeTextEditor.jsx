@@ -461,3 +461,5 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             </motion.div>))}
         </div>)}
     </div>)};
+
+}

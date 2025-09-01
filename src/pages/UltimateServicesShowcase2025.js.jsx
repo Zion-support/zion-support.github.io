@@ -264,4 +264,5 @@ const UltimateServicesShowcase2025 = () => {
         </div>
       </div>
     </div>)};
+export { UltimateServicesShowcase2025 };
 export default UltimateServicesShowcase2025;

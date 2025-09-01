@@ -28,7 +28,7 @@ import {
     integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
   }
 ];
-
+;
 const aiCapabilities = [
   {
     title: "Machine Learning",
@@ -55,7 +55,7 @@ const aiCapabilities = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -85,7 +85,7 @@ const successStories = [
     logo: "HN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -116,7 +116,8 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
+export { function };
 export default function AIAnalytics() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -698,3 +699,7 @@ export default function AIAnalytics() {
       </section>
     </div>
   )}
+
+
+}
+}

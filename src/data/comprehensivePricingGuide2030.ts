@@ -3,17 +3,20 @@ import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
-
+;
 export interface PricingTier {
+
 
   name: string;
   price: number;
   features: string[];
   bestFor: string;
   setupTime: string;
-  support: string}
-
+  support: string
+}
+;
 export interface ServicePricing {
+
 
   serviceId: string;
   serviceName: string;
@@ -26,8 +29,9 @@ export interface ServicePricing {
   setupTime: string;
   paymentOptions: string[];
   volumeDiscounts: string[];
-  enterpriseFeatures: string[]}
-
+  enterpriseFeatures: string[]
+}
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
   {
@@ -329,10 +333,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   }
 ];
 
-// Pricing Analysis and Insights
+// Pricing Analysis and Insights;
 export const PRICING_ANALYSIS_2030 = {
-  averagePrice: Math.round(
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
+  averagePrice: Math.roundCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum: unknown, service: unknown sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
@@ -344,7 +347,7 @@ export const PRICING_ANALYSIS_2030 = {
 ;
 
 },;
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
     if (!acc[service.category]) {;
       acc[service.category] = [];
     }
@@ -359,7 +362,7 @@ export const PRICING_ANALYSIS_2030 = {
   }));
 };
 
-// Payment and Discount Information
+// Payment and Discount Information;
 export const PAYMENT_OPTIONS_2030 = {
   paymentMethods["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],;
   installmentPlans["3-month plan", "6-month plan", "12-month plan"],;
@@ -389,7 +392,7 @@ export const PAYMENT_OPTIONS_2030 = {
 
 };
 
-// Contact Information for Pricing Inquiries
+// Contact Information for Pricing Inquiries;
 export const PRICING_CONTACT_2030 = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -409,3 +412,19 @@ export const PRICING_CONTACT_2030 = {
 
 
 };
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

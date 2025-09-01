@@ -134,5 +134,6 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
       <meta name="renderer" content="webkit"/>
       <meta name="force-rendering" content="webkit"/>
     </Helmet>)};
+export { SEOMeta };
 export default SEOMeta;
 }}}}

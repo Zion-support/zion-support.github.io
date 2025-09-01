@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function DigitalTransformation(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function DigitalTransformation(...args: []):  {
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function DigitalTransformation(...args: []):  {
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
                 }
-              ].map((area, index)  => (
+              ].map(area: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function DigitalTransformation(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                   <p className="text-slate-300 mb-4">{area.description}</p>
                   <ul className="space-y-1">
-                    {area.benefits.map((benefit, benefitIndex) => (
+                    {area.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -229,7 +230,7 @@ export default function DigitalTransformation(...args: []):  {
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
                 }
-              ].map((tech, index)  => (
+              ].map(tech: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -237,7 +238,7 @@ export default function DigitalTransformation(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>
                   <p className="text-slate-300 mb-4">{tech.description}</p>
                   <ul className="space-y-1">
-                    {tech.features.map((feature, featureIndex) => (
+                    {tech.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-sm text-purple-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}
@@ -272,7 +273,7 @@ export default function DigitalTransformation(...args: []):  {
                     "Improved decision-making with data insights",
                     "Increased agility and market responsiveness",
                     "Better employee productivity and satisfaction"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -289,7 +290,7 @@ export default function DigitalTransformation(...args: []):  {
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -336,7 +337,7 @@ export default function DigitalTransformation(...args: []):  {
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

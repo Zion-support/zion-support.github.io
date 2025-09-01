@@ -46,7 +46,7 @@ import {
   Battery,
   Thermometer
 } from 'lucide-react';
-
+;
 const Sustainability = () => {
   const sustainabilitySolutions = [
     {
@@ -362,5 +362,6 @@ const Sustainability = () => {
     </div>
   );
 };
-
+;
+export { Sustainability };
 export default Sustainability;

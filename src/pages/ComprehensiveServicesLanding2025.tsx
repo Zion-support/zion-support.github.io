@@ -41,9 +41,9 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
-
-const ComprehensiveServicesLanding2025: React.FC = () => {;
-  const getCategoryIcon = (category: string) => {;
+;
+const ComprehensiveServicesLanding2025: React.FC = props {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
@@ -70,7 +70,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
   };
 
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';
@@ -105,8 +105,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
     color: getCategoryColor(category);
   }));
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.price, 0);
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown {;
     const roi = parseInt(service.roi.replace('%', ''));
     return sum + roi;
   }, 0) / totalServices;
@@ -209,7 +209,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
 
           <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {featuredCategories.map((category, index)  => (
+            {featuredCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={categoryData.category}
                 initial = {
@@ -286,7 +286,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
 
           <div className="grid gap-6 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {filteredCategories.map((category, index)  => (
+            {filteredCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={category.id}
                 initial = {
@@ -321,7 +321,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     </p>
 
                     <div className="space-y-3 mb-6">
-                      {categoryData.services.slice(0, 3).map((service, idx) => (
+                      {categoryData.services.slice(0, 3).map(service: unknown, idx: unknown (
                         <div key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           <span className="truncate">{service.title}</span>
@@ -359,7 +359,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
+            {INNOVATIVE_SERVICES_2025.slice(0, 6).map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -420,7 +420,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 </p>
 
                 <div className="space-y-2 mb-4">
-                  {service.features.slice(0, 2).map((feature, idx) => (
+                  {service.features.slice(0, 2).map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       <span>{feature}</span>
@@ -499,7 +499,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
 
-            ].map((feature, index) => (;
+            ].map(feature: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {
@@ -620,5 +620,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { ComprehensiveServicesLanding2025 };
 export default ComprehensiveServicesLanding2025;}}}}

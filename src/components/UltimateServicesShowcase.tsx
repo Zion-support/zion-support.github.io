@@ -22,12 +22,13 @@ import {
   MapPin
  } from 'lucide-react';
 
-// Import the new services
+// Import the new services;
 import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 
 interface Service {
+
 
   id: string;
   name: string;
@@ -58,7 +59,8 @@ contactInfo: {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -69,7 +71,7 @@ contactInfo: {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string}
-
+;
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -87,7 +89,7 @@ const contact = {
 
 
 };
-
+;
 const categories = [
   {
     id: 'ai-services',
@@ -114,7 +116,7 @@ const categories = [
     services: innovativeMicroSaasSolutions2025;
   };
 ];
-
+;
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700',
   'Breakthrough': 'from-purple-600 to-violet-700',
@@ -132,7 +134,7 @@ const innovationLevelColors = {
 
 
 };
-
+;
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700',
   'Patent Pending': 'from-yellow-600 to-orange-700',
@@ -150,9 +152,9 @@ const patentStatusColors = {
 
 
 };
-
+;
 export function UltimateServicesShowcase(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
   const allServices = [;
@@ -196,7 +198,7 @@ export function UltimateServicesShowcase(...args[]):  {
     };
   };
 
-  return (
+  return 
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -288,7 +290,7 @@ export function UltimateServicesShowcase(...args[]):  {
 }}
         >
           <button
-            onClick={() => setSelectedCategory('all')}
+            onClick={( setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
@@ -297,10 +299,9 @@ export function UltimateServicesShowcase(...args[]):  {
 
             All Services ({allServices.length})
           </button>
-          {categories.map((category)  => (
-            <button
+          {categories.map(category: unknown <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={(: unknown setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
@@ -319,7 +320,7 @@ export function UltimateServicesShowcase(...args[]):  {
           initial="hidden"
           animate="visible"
 
-          {filteredServices.map((service) => (
+          {filteredServices.map(service: unknown (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -373,7 +374,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <li key={index} className="flex items-center gap-2 text-sm text-zion-gray-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -408,7 +409,7 @@ export function UltimateServicesShowcase(...args[]):  {
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setSelectedService(service)}
+                    onClick={: unknown setSelectedService(service)}
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
 
                     Learn More
@@ -490,8 +491,7 @@ export function UltimateServicesShowcase(...args[]):  {
       </div>
 
       {/* Service Detail Modal */}
-      {selectedService && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      {selectedService && <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-zion-slate-light rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-start mb-6">
@@ -505,7 +505,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   </p>
                 </div>
                 <button
-                  onClick={() => setSelectedService(null)}
+                  onClick={(: unknown setSelectedService(null)}
                   className="text-zion-gray-light hover:text-white text-2xl"
 
                   ×
@@ -521,7 +521,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
                   <h3 className="text-xl font-bold text-white mb-3">Features</h3>
                   <ul className="space-y-2 mb-4">
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService.features.map(feature: unknown, index: unknown (
                       <li key={index} className="flex items-center gap-2 text-zion-gray-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -531,7 +531,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
                   <h3 className="text-xl font-bold text-white mb-3">AI Capabilities</h3>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {selectedService.aiCapabilities.map((capability, index) => (
+                    {selectedService.aiCapabilities.map(capability: unknown, index: unknown (
                       <span key={index} className="bg-zion-cyan text-white text-sm px-3 py-1 rounded-full">
                         {capability}
                       </span>
@@ -565,7 +565,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     <div>
                       <span className="text-zion-cyan font-semibold">Technology:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {selectedService.technology.map((tech, index) => (
+                        {selectedService.technology.map(tech: unknown, index: unknown (
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {tech}
                           </span>
@@ -575,7 +575,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     <div>
                       <span className="text-zion-cyan font-semibold">Integrations:</span>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {selectedService.integrations.map((integration, index) => (
+                        {selectedService.integrations.map(integration: unknown, index: unknown (
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {integration}
                           </span>
@@ -609,7 +609,8 @@ export function UltimateServicesShowcase(...args[]):  {
     </section>;
   );
 }
-
+;
+export { UltimateServicesShowcase };
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

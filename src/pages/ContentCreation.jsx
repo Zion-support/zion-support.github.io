@@ -121,7 +121,7 @@ import {
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
 ];
-
+;
 const contentTechnologies = [
   {
     name: "Content Creation Tools",
@@ -152,7 +152,7 @@ const contentTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -182,7 +182,7 @@ const successStories = [
     logo: "EB"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -213,7 +213,7 @@ const processSteps = [
     duration: "Ongoing"
 
 ];
-
+;
 const contentBenefits = [
   {
     title: "Increased Productivity",
@@ -240,7 +240,8 @@ const contentBenefits = [
     examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];
   }
 ];
-
+;
+export { function };
 export default function ContentCreation() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -914,3 +915,7 @@ export default function ContentCreation() {
       </section>
     </div>
   )}
+
+
+}
+}

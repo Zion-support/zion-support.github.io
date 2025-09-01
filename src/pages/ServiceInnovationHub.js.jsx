@@ -320,4 +320,5 @@ const ServiceInnovationHub = () => {
         </div>
       </section>
     </div>)};
+export { ServiceInnovationHub };
 export default ServiceInnovationHub;

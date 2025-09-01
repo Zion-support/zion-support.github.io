@@ -4,13 +4,15 @@ type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
 
+
   theme: Theme;
-  setTheme: (theme: Theme)  => void;
-  isDark: boolean}
-
+  setTheme: theme: Theme void;
+  isDark: boolean
+}
+;
 const ThemeContext = createContext<ThemeContextType | null>(null);
-
-export const useTheme = () => {;
+;
+export const useTheme = (...args: unknown[]): unknown => {;
   const context = useContext(ThemeContext);
   if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
@@ -21,9 +23,9 @@ export const useTheme = () => {;
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+;
+export const ThemeProvider: React.FC<ThemeProviderProps> = { children }: unknown {
+  const [theme, setTheme] = useState<Theme>(: unknown {
     if (typeof window !== 'null') {
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
@@ -31,12 +33,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }
     return 'system'});
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
     const root = window.document.documentElement;
     
-    const updateTheme = () => {;
+    const updateTheme = (...args: unknown[]): unknown => {;
       let effectiveTheme: 'light' | 'dark';
       
       if (theme = == 'system') {;
@@ -59,10 +61,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     if (theme = == 'system') {;
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+      return : unknown mediaQuery.removeEventListener('change', updateTheme)}
   }, [theme]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     localStorage.setItem('theme', theme)}, [theme]);
 
   const value = {
@@ -89,3 +91,5 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     </ThemeContext.Provider>;
   );
 };
+
+}

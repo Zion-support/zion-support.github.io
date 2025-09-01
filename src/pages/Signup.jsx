@@ -12,8 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-// Form validation schema
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+// Form validation schema;
 const signupSchema = z
     .object({
     displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -25,13 +25,14 @@ const signupSchema = z
         .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
-        message: "You must accept the terms and conditions",
-    }),
+        message: "You must accept the terms and conditions"
+    })
 })
     .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
+    path: ["confirmPassword"]
 });
+export { function };
 export default function Signup() {
     const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
     const navigate = useNavigate();
@@ -49,8 +50,8 @@ export default function Signup() {
             email: "",
             password: "",
             confirmPassword: "",
-            termsAccepted: false,
-        },
+            termsAccepted: false
+        }
     });
     // Form submission handler
     const onSubmit = async (data) => {

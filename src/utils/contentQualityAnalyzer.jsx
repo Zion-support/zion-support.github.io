@@ -52,10 +52,10 @@
     clearCache() {
         this.analyzedPages.clear();
     }
-}
+};
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+;
 const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
   const [analysis, setAnalysis] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -176,6 +176,7 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
     </div>
   );
 };
-
+;
+export { ContentQualityAnalyzer };
 export default ContentQualityAnalyzer;
 }}}}}}}}}}}}}}}}

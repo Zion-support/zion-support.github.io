@@ -2,7 +2,8 @@ import React from 'react.ts';
 import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
-
+;
+export { function };
 export default function IoTEdge(...args: []):  {
   const features = [
     {
@@ -50,7 +51,7 @@ export default function IoTEdge(...args: []):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -145,7 +146,7 @@ export default function IoTEdge(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -229,7 +230,7 @@ export default function IoTEdge(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={service.title}
                 initial = {
@@ -269,7 +270,7 @@ export default function IoTEdge(...args: []):  {
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-emerald-400 mb-4">{service.price}</div>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-sm text-slate-300">
                       <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                       {feature}
@@ -316,7 +317,7 @@ export default function IoTEdge(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
-            {industries.map((industry, index)  => (
+            {industries.map(industry: unknown, index: unknown (
               <motion.div
                 key={industry.name}
                 initial = {

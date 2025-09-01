@@ -15,8 +15,8 @@ import {
   Info,
   Share
  } from 'lucide-react';
-
-const PrivacyPolicy = () => {;
+;
+const PrivacyPolicy = (...args: unknown[]): unknown => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
@@ -648,7 +648,7 @@ const PrivacyPolicy = () => {;
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
+                {sections.map(section: unknown, index: unknown (
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -731,7 +731,7 @@ const PrivacyPolicy = () => {;
 
 }}
             >
-              {sections.map((section, index) => (
+              {sections.map(section: unknown, index: unknown (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -789,7 +789,7 @@ const PrivacyPolicy = () => {;
               </h2>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {dataCategories.map((category, index) => (
+                {dataCategories.map(category: unknown, index: unknown 
                   <motion.div
                     key={category.category}
                     initial = {
@@ -830,7 +830,7 @@ const PrivacyPolicy = () => {;
                       <div>
                         <h4 className="font-medium text-slate-700 mb-2">Examples:</h4>
                         <ul className="list-disc list-inside text-slate-600 space-y-1">
-                          {category.examples.map((example, idx) => (
+                          {category.examples.map((example, idx (
                             <li key={idx}>{example}</li>
                           ))}
                         </ul>
@@ -893,7 +893,7 @@ const PrivacyPolicy = () => {;
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure, index) => (
+                {securityMeasures.map(measure: unknown, index: unknown (
                   <motion.div
                     key={measure.measure}
                     initial = {
@@ -1365,5 +1365,6 @@ const PrivacyPolicy = () => {;
     </>;
   );
 };
-
+;
+export { PrivacyPolicy };
 export default PrivacyPolicy;}

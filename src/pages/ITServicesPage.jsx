@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive, Brain, Cpu, Lock, Wifi, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Code as CodeIcon, Monitor as MonitorIcon, Smartphone as SmartphoneIcon, Settings as SettingsIcon, Users as UsersIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, CheckCircle as CheckCircleIcon, Search as SearchIcon, HardDrive as HardDriveIcon, Brain as BrainIcon, Cpu as CpuIcon, Lock as LockIcon, Wifi as WifiIcon } from 'lucide-react';
-
+;
 const ITServicesPage = () => {
   const itServices = [
     {
@@ -233,5 +233,6 @@ const ITServicesPage = () => {
     </>
   );
 };
-
+;
+export { ITServicesPage };
 export default ITServicesPage;

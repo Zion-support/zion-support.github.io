@@ -36,26 +36,30 @@ import {
 } from 'lucide-react';
 
 interface HelpSection {
+
   id: string;
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
-  articles: Array<{
+  articles: {
     title: string;
     description: string;
     path?: string;
     external?: boolean;
     difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
     readTime: string;
-  }>;
+  
+}[];
 }
 
 interface FAQItem {
+
   question: string;
   answer: string;
   category: string;
-}
 
+}
+;
 const helpSections: HelpSection[] = [
   {
     title: 'Getting Started',
@@ -273,7 +277,7 @@ const helpSections: HelpSection[] = [
     ]
   }
 ];
-
+;
 const faqData: FAQItem[] = [
   {
     question: 'What services does Zion Tech Group offer?',
@@ -306,13 +310,13 @@ const faqData: FAQItem[] = [
     category: 'Security'
   }
 ];
-
-export function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+export function HelpCenter(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const handleSearch = (query: string) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -332,7 +336,7 @@ export function HelpCenter() {
 
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
         {/* Header */}
@@ -360,7 +364,7 @@ export function HelpCenter() {
               type="text"
               placeholder="Search for help articles, FAQs, or guides..."
               value={searchQuery}
-              onChange={(e) => handleSearch(e.target.value)}
+              onChange={(e handleSearch(e.target.value)}
               className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg"
             />
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6" />
@@ -376,7 +380,7 @@ export function HelpCenter() {
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index) => (
+            {helpCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -411,7 +415,7 @@ export function HelpCenter() {
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index) => (
+            {supportOptions.map(option: unknown, index: unknown (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -449,7 +453,7 @@ export function HelpCenter() {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <button
-                onClick={() => setSelectedCategory('all')}
+                onClick={: unknown setSelectedCategory('all')}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
@@ -458,10 +462,10 @@ export function HelpCenter() {
 
                 All Categories
               </button>
-              {helpCategories.map(category => (
+              {helpCategories.mapcategory => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-zion-cyan text-white'
@@ -489,7 +493,7 @@ export function HelpCenter() {
               <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
               
               <div className="space-y-6">
-                {helpSections.map((section, index) => (
+                {helpSections.map(section: unknown, index: unknown 
                   <motion.div
                     key={section.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -498,7 +502,7 @@ export function HelpCenter() {
                     className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden"
                   >
                     <button
-                      onClick={() => toggleSection(section.id)}
+                      onClick={( toggleSection(section.id)}
                       className="w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors"
                     >
                       <div className="flex items-center justify-between">
@@ -520,7 +524,7 @@ export function HelpCenter() {
                     </button>
 
                     <AnimatePresence>
-                      {expandedSections.has(section.id) && (
+                      {expandedSections.has(section.id) && 
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
@@ -529,7 +533,7 @@ export function HelpCenter() {
                           className="border-t border-cyan-400/20"
                         >
                           <div className="p-6 space-y-4">
-                            {section.articles.map((article, articleIndex) => (
+                            {section.articles.map((article, articleIndex (
                               <motion.div
                                 key={article.title}
                                 initial={{ opacity: 0, x: -20 }}
@@ -607,7 +611,7 @@ export function HelpCenter() {
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           
           <div className="grid gap-4">
-            {filteredFAQ.map((faq, index) => (
+            {filteredFAQ.map(faq: unknown, index: unknown (
               <motion.div
                 key={faq.question}
                 initial={{ opacity: 0, y: 20 }}
@@ -635,5 +639,8 @@ export function HelpCenter() {
     </div>
   );
 }
-
+;
+export { HelpCenter };
 export default HelpCenter;
+
+}

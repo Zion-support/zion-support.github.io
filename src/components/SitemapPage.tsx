@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-
-export function SitemapPage(...args: any[]): any {
+;
+export function SitemapPage(...args: unknown[]): unknown {
   const sitemapData = [
     {
       title: 'Main Pages',
@@ -11,7 +11,7 @@ export function SitemapPage(...args: any[]): any {
         { name: 'Services', url: '/services' },
         { name: 'Contact', url: '/contact' },
         { name: 'Blog', url: '/blog' },
-        { name: 'Careers', url: '/careers' },
+        { name: 'Careers', url: '/careers' }
       ]
     },
     {
@@ -21,7 +21,7 @@ export function SitemapPage(...args: any[]): any {
         { name: 'IT Services', url: '/services/it' },
         { name: 'Cloud Solutions', url: '/services/cloud' },
         { name: 'Cybersecurity', url: '/services/cybersecurity' },
-        { name: 'Digital Transformation', url: '/services/digital-transformation' },
+        { name: 'Digital Transformation', url: '/services/digital-transformation' }
       ]
     },
     {
@@ -30,7 +30,7 @@ export function SitemapPage(...args: any[]): any {
         { name: 'Enterprise', url: '/solutions/enterprise' },
         { name: 'Healthcare', url: '/solutions/healthcare' },
         { name: 'Financial Services', url: '/solutions/financial' },
-        { name: 'Manufacturing', url: '/solutions/manufacturing' },
+        { name: 'Manufacturing', url: '/solutions/manufacturing' }
       ]
     },
     {
@@ -45,7 +45,7 @@ export function SitemapPage(...args: any[]): any {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-slate-900 text-white py-16">
       <SEO 
         title="Sitemap - Zion Tech Group" 
@@ -63,13 +63,12 @@ export function SitemapPage(...args: any[]): any {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {sitemapData.map((section, sectionIndex)  => (
-            <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+          {sitemapData.map((section, sectionIndex <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">
                 {section.title}
               </h2>
               <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link: unknown, linkIndex: unknown (
                   <li key={linkIndex}>
                     <a 
                       href={link.url}

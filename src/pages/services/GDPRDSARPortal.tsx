@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export default function GDPRDSARPortal(...args: any[]): any {
-  return (
+;
+export { function };
+export default function GDPRDSARPortal(...args: unknown[]): unknown {
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <div className="flex items-start justify-between gap-8 flex-col lg:flex-row">
@@ -20,8 +21,8 @@ export default function GDPRDSARPortal(...args: any[]): any {
                 { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' },
                 { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' },
                 { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
-                { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' },
-              ].map((f)  => (
+                { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' }
+              ].map((f (
                 <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
                   <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

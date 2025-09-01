@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+export { function };
 export default function ComprehensiveServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

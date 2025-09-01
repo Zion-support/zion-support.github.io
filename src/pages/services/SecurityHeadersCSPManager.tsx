@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export default function SecurityHeadersCSPManager(...args: any[]): any {
-  return (
+;
+export { function };
+export default function SecurityHeadersCSPManager(...args: unknown[]): unknown {
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <div className="max-w-3xl">
@@ -18,8 +19,8 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {
               { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' },
               { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' },
               { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' },
-              { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' },
-            ].map((f)  => (
+              { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' }
+            ].map((f (
               <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
                 <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

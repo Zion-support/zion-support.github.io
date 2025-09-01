@@ -4,6 +4,7 @@ import { CASE_STUDIES } from "@/data/case-studies";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+export { function };
 export default function CaseStudy() {
     const router = useRouter();
     const { slug } = router.query;

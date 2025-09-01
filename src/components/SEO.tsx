@@ -2,6 +2,9 @@ import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -29,31 +32,19 @@ interface SEOProps {
   manifest?: string;
   preconnect?: string[];
   dnsPrefetch?: string[];
-  preload?: Array<{
+  preload?: {
     href: string;
     as: string;
     type?: string;
     crossorigin?: boolean;
-  }>;
+  
+}[];
   prefetch?: string[];
   dnsPrefetch?: string[];
   preconnect?: string[];
 }
-
-export function SEO({
-  title = 'Zion Tech Group - AI-Powered Enterprise Solutions & Cybersecurity',
-  description = 'Transform your business with Zion Tech Group\'s cutting-edge AI solutions, cybersecurity platforms, and enterprise technology services. Leading the future of digital transformation.',
-  keywords = 'AI solutions, cybersecurity, enterprise technology, quantum computing, healthcare AI, supply chain optimization, Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  canonical
-}: SEOProps) {
+;
+export function SEO(...args: unknown[]): unknown {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   
@@ -94,24 +85,23 @@ export function SEO({
     }
   };
 
-  return (
-    <Helmet>
+  return <Helmet>
       {/* Basic HTML tags */}
       <title>{title}</title>
       <html lang={language} />
       
       {/* Meta tags */}
-      {metaTags.map((tag, index) => (
+      {metaTags.map((tag: unknown, index: unknown (
         <meta key={index} {...tag} />
       ))}
       
       {/* Link tags */}
-      {linkTags.map((link, index) => (
+      {linkTags.map(link: unknown, index: unknown (
         <link key={index} {...link} />
       ))}
       
       {/* Script tags for structured data */}
-      {scriptTags.map((script, index) => (
+      {scriptTags.map(script: unknown, index: unknown (
         <script key={index} {...script} />
       ))}
       
@@ -168,7 +158,7 @@ export function SEO({
         {`
           // Performance monitoring
           if ('performance' in window) {
-            window.addEventListener('load', () => {
+            window.addEventListener'load': unknown, (: unknown {
               const navigation = performance.getEntriesByType('navigation')[0];
               if (navigation) {
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
@@ -187,7 +177,7 @@ export function SEO({
           
           // Core Web Vitals monitoring
           if ('web-vital' in window) {
-            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            import('web-vitals').then({ getCLS: unknown, getFID: unknown, getFCP: unknown, getLCP: unknown, getTTFB }: unknown {
               getCLS(console.log);
               getFID(console.log);
               getFCP(console.log);

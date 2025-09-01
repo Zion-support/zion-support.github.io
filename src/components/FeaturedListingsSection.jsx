@@ -4,7 +4,7 @@ import { Star, Eye, Heart, ArrowRight, Clock, Users, Award, Zap, Shield, Rocket,
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-
+;
 const featuredListings = [
   {
     id: 1,
@@ -107,7 +107,7 @@ const featuredListings = [
     link: "/services/iot-smart-city"
   }
 ];
-
+;
 export function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null);
 

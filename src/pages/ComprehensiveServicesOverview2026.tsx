@@ -84,9 +84,10 @@ import {
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
+;
+export { function };
 export default function ComprehensiveServicesOverview2026(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
 
   const serviceCategories = [
@@ -214,14 +215,14 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
     ? serviceCategories
     : serviceCategories.filter(cat => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: string) => {;
+  const toggleCategoryExpansion = (...args: unknown[]): unknown => {;
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Comprehensive Services Overview 2026 | Zion Tech Group"
@@ -305,7 +306,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
           <div className="flex flex-wrap justify-center gap-4">
             <button
-              onClick={() => setSelectedCategory('all')}
+              onClick={( setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg transition-all duration-200 ${
                 selectedCategory === 'all'
                   ? 'bg-zion-cyan text-white'
@@ -314,10 +315,10 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
               All Categories
             </button>
-            {serviceCategories.map(category  => (
+            {serviceCategories.mapcategory  => (
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-zion-cyan text-white'
@@ -345,7 +346,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
           <div className="space-y-8">
             <AnimatePresence>
-              {filteredCategories.map((category, index) => (
+              {filteredCategories.map(category: unknown, index: unknown (
                 <motion.div
                   key={category.id}
                   initial = {
@@ -426,7 +427,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
                   {/* Services Preview */}
                   <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    {category.services.slice(0, 3).map((service, serviceIndex)  => (
+                    {category.services.slice(0, 3).map(service: unknown, serviceIndex: unknown (
                       <div key={service.id} className="bg-zion-slate-800/50 rounded-lg p-4">
                         <h4 className="font-semibold text-white mb-2">{service.title}</h4>
                         <div className="text-zion-cyan font-bold text-lg mb-2">
@@ -451,7 +452,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
                   {/* Expand/Collapse Button */}
                   <button
-                    onClick={() => toggleCategoryExpansion(category.id)}
+                    onClick={: unknown toggleCategoryExpansion(category.id)}
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
 
                     {expandedCategory === category.id ? (;
@@ -469,7 +470,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
                   {/* Expanded Services Details */}
                   <AnimatePresence>
-                    {expandedCategory === category.id && (
+                    {expandedCategory === category.id && 
                       <motion.div
                         initial = {
   { opacity: 0,
@@ -505,7 +506,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
                       >
                         <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
-                          {category.services.map((service, serviceIndex)  => (
+                          {category.services.map((service, serviceIndex (
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">
                                 <h4 className="text-lg font-semibold text-white">{service.title}</h4>
@@ -537,7 +538,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                               </div>
 
                               <div className="flex flex-wrap gap-2 mb-4">
-                                {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                                {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                                   <span
                                     key={tagIndex}
                                     className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"

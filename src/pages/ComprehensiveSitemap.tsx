@@ -280,8 +280,8 @@ import {
   USDY,
   USDZ
 } from 'lucide-react';
-
-export function ComprehensiveSitemap() {
+;
+export function ComprehensiveSitemap(...args: unknown[]): unknown {
   const currentYear = new Date().getFullYear();
 
   // Define all the main sections and their pages
@@ -430,7 +430,7 @@ export function ComprehensiveSitemap() {
     ]
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     switch (status) {
       case 'exists':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -441,7 +441,7 @@ export function ComprehensiveSitemap() {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'exists':
         return 'text-green-500';
@@ -452,7 +452,7 @@ export function ComprehensiveSitemap() {
     }
   };
 
-  const renderSection = (title: string, items: any[], icon: any) => (
+  const renderSection = title: string, items: unknown[], icon: unknown (
     <motion.div
       key={title}
       initial={{ opacity: 0, y: 20 }}
@@ -467,7 +467,7 @@ export function ComprehensiveSitemap() {
       </div>
       
       <div className="grid gap-3">
-        {items.map((item, index) => (
+        {items.map(item: unknown, index: unknown (
           <motion.div
             key={item.path}
             initial={{ opacity: 0, x: -20 }}
@@ -549,7 +549,7 @@ export function ComprehensiveSitemap() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
-          {Object.entries(siteStructure).map(([key, items]) => {
+          {Object.entries(siteStructure).map([key: unknown, items]: unknown {
             const existing = items.filter(item => item.status === 'exists').length;
             const missing = items.filter(item => item.status === 'missing').length;
             const total = items.length;
@@ -663,5 +663,6 @@ export function ComprehensiveSitemap() {
     </div>
   );
 }
-
+;
+export { ComprehensiveSitemap };
 export default ComprehensiveSitemap;

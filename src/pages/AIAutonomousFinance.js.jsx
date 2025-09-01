@@ -163,4 +163,5 @@ const AIAutonomousFinance = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousFinance };
 export default AIAutonomousFinance;

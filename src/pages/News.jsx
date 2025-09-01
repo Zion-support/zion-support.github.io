@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe } from 'lucide-react';
-
+;
 const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -243,5 +243,6 @@ const News = () => {
     </div>
   );
 }
-
+;
+export { News };
 export default News;

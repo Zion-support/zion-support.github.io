@@ -28,4 +28,5 @@ const ConsultingServices = () => {
         </div>
       </section>
     </div>)};
+export { ConsultingServices };
 export default ConsultingServices;

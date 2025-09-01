@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
-// Enhanced service listings with new micro SAAS services
+// Enhanced service listings with new micro SAAS services;
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
     {
@@ -16,13 +16,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion AI Labs",
             id: "zion-ai-labs",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-15T10:00:00.000Z",
         aiScore: 98,
         rating: 4.9,
-        reviewCount: 156,
+        reviewCount: 156
     },
     {
         id: "ai-media-editing",
@@ -35,13 +35,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Media Studio",
             id: "zion-media-studio",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-20T14:30:00.000Z",
         aiScore: 95,
         rating: 4.8,
-        reviewCount: 89,
+        reviewCount: 89
     },
     {
         id: "ai-code-assistant",
@@ -54,13 +54,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Dev Tools",
             id: "zion-dev-tools",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-25T09:15:00.000Z",
         aiScore: 97,
         rating: 4.9,
-        reviewCount: 203,
+        reviewCount: 203
     },
     {
         id: "ai-analytics",
@@ -73,13 +73,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Analytics",
             id: "zion-analytics",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-01T11:00:00.000Z",
         aiScore: 96,
         rating: 4.8,
-        reviewCount: 67,
+        reviewCount: 67
     },
     // Cybersecurity Services
     {
@@ -93,13 +93,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Security",
             id: "zion-security",
-            avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-18T16:45:00.000Z",
         aiScore: 94,
         rating: 4.9,
-        reviewCount: 134,
+        reviewCount: 134
     },
     {
         id: "zero-trust-security",
@@ -112,13 +112,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Enterprise Security",
             id: "zion-enterprise-security",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-22T13:20:00.000Z",
         aiScore: 93,
         rating: 4.7,
-        reviewCount: 78,
+        reviewCount: 78
     },
     {
         id: "penetration-testing",
@@ -131,13 +131,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Security Testing",
             id: "zion-security-testing",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-28T10:30:00.000Z",
         aiScore: 91,
         rating: 4.8,
-        reviewCount: 92,
+        reviewCount: 92
     },
     // Cloud & Infrastructure Services
     {
@@ -151,13 +151,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Cloud Solutions",
             id: "zion-cloud-solutions",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-30T15:15:00.000Z",
         aiScore: 89,
         rating: 4.6,
-        reviewCount: 145,
+        reviewCount: 145
     },
     {
         id: "devops-automation",
@@ -170,13 +170,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion DevOps",
             id: "zion-devops",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-03T12:00:00.000Z",
         aiScore: 92,
         rating: 4.7,
-        reviewCount: 167,
+        reviewCount: 167
     },
     {
         id: "edge-computing",
@@ -189,13 +189,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Edge Computing",
             id: "zion-edge-computing",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-26T08:45:00.000Z",
         aiScore: 88,
         rating: 4.5,
-        reviewCount: 73,
+        reviewCount: 73
     },
     // Business Intelligence Services
     {
@@ -209,13 +209,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Business Solutions",
             id: "zion-business-solutions",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-24T14:20:00.000Z",
         aiScore: 90,
         rating: 4.6,
-        reviewCount: 189,
+        reviewCount: 189
     },
     {
         id: "business-automation",
@@ -228,13 +228,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Automation",
             id: "zion-automation",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-29T11:30:00.000Z",
         aiScore: 87,
         rating: 4.5,
-        reviewCount: 156,
+        reviewCount: 156
     },
     {
         id: "ai-market-research",
@@ -247,13 +247,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Market Intelligence",
             id: "zion-market-intelligence",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-02T09:15:00.000Z",
         aiScore: 93,
         rating: 4.8,
-        reviewCount: 98,
+        reviewCount: 98
     },
     // Communication & Collaboration Services
     {
@@ -267,13 +267,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Communication",
             id: "zion-communication",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-27T13:45:00.000Z",
         aiScore: 95,
         rating: 4.9,
-        reviewCount: 234,
+        reviewCount: 234
     },
     {
         id: "virtual-events",
@@ -286,13 +286,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Events",
             id: "zion-events",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-31T10:00:00.000Z",
         aiScore: 91,
         rating: 4.7,
-        reviewCount: 112,
+        reviewCount: 112
     },
     {
         id: "ai-translation",
@@ -305,13 +305,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Global",
             id: "zion-global",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-23T15:30:00.000Z",
         aiScore: 94,
         rating: 4.8,
-        reviewCount: 178,
+        reviewCount: 178
     },
     // Specialized Tools
     {
@@ -325,13 +325,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Legal Tech",
             id: "zion-legal-tech",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-19T12:15:00.000Z",
         aiScore: 89,
         rating: 4.6,
-        reviewCount: 87,
+        reviewCount: 87
     },
     {
         id: "ai-financial-advisor",
@@ -344,13 +344,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Financial",
             id: "zion-financial",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-21T16:00:00.000Z",
         aiScore: 92,
         rating: 4.7,
-        reviewCount: 143,
+        reviewCount: 143
     },
     {
         id: "ai-healthcare",
@@ -363,13 +363,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "Zion Health",
             id: "zion-health",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-17T14:45:00.000Z",
         aiScore: 90,
         rating: 4.8,
-        reviewCount: 267,
+        reviewCount: 267
     },
     // Legacy services (keeping existing ones)
     {
@@ -383,13 +383,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "TechSolutions Inc.",
             id: "tech-solutions",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2023-12-10T14:48:00.000Z",
         aiScore: 95,
         rating: 4.9,
-        reviewCount: 124,
+        reviewCount: 124
     },
     {
         id: "service-2",
@@ -401,13 +401,13 @@ const SERVICE_LISTINGS = [
         tags["Cloud", "DevOps", "Security"],;
         author: {
             name: "CloudPro Experts",
-            id: "cloud-pro",
+            id: "cloud-pro"
         },
         images["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2023-11-20T09:30:00.000Z",
         aiScore: 88,
         rating: 4.7,
-        reviewCount: 92,
+        reviewCount: 92
     },
     {
         id: "service-3",
@@ -420,13 +420,13 @@ const SERVICE_LISTINGS = [
         author: {
             name: "DataMind Solutions",
             id: "datamind",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-05T11:15:00.000Z",
         aiScore: 92,
         rating: 4.8,
-        reviewCount: 78,
+        reviewCount: 78
     },
     {
         id: "service-4",
@@ -438,13 +438,13 @@ const SERVICE_LISTINGS = [
         tags["Cybersecurity", "Penetration Testing", "Compliance"],;
         author: {
             name: "SecureNet Team",
-            id: "secure-net",
+            id: "secure-net"
         },
         images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2023-12-28T16:22:00.000Z",
         aiScore: 89,
         rating: 4.9,
-        reviewCount: 103,
+        reviewCount: 103
     },
     {
         id: "service-5",
@@ -456,13 +456,13 @@ const SERVICE_LISTINGS = [
         tags["Digital Transformation", "Legacy Systems", "Infrastructure"],;
         author: {
             name: "ModernizeIT Consulting",
-            id: "modernize-it",
+            id: "modernize-it"
         },
         images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2023-11-10T08:45:00.000Z",
         aiScore: 86,
         rating: 4.6,
-        reviewCount: 67,
+        reviewCount: 67
     },
     {
         id: "service-6",
@@ -475,14 +475,14 @@ const SERVICE_LISTINGS = [
         author: {
             name: "AI Future Consulting",
             id: "ai-future",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
         },
         images["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-02T10:30:00.000Z",
         aiScore: 94,
         rating: 4.8,
-        reviewCount: 85,
-    },
+        reviewCount: 85
+    }
 ];
 function generateRandomService(idNum) {
     const templates = [
@@ -527,7 +527,7 @@ function generateRandomService(idNum) {
             min: 6000,
             max: 14000,
             tags["Transformation", "Strategy", "Business"],;
-        },
+        }
     ];
     const authors = [
         "Global AI Experts",
@@ -535,13 +535,13 @@ function generateRandomService(idNum) {
         "SecureFuture",
         "CloudOps Partners",
         "DataVisor",
-        "NexGen Solutions",
+        "NexGen Solutions"
     ];
     const images = [
         "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
         "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
         "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
-        "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
+        "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"
     ];
     const template = getRandomItem(templates);
     const author = getRandomItem(authors);
@@ -559,9 +559,9 @@ function generateRandomService(idNum) {
         createdAt: new Date().toISOString(),
         aiScore: Math.floor(90 + Math.random() * 10),
         rating: parseFloat((4 + Math.random()).toFixed(1)),
-        reviewCount: Math.floor(50 + Math.random() * 150),
+        reviewCount: Math.floor(50 + Math.random() * 150)
     }}
-// Enhanced filter options for all service categories
+// Enhanced filter options for all service categories;
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
     { label: 'Cybersecurity', value: 'cybersecurity' },
@@ -574,8 +574,9 @@ const SERVICE_FILTERS = [
     { label: 'Security', value: 'security' },
     { label: 'Analytics', value: 'analytics' },
     { label: 'Consulting', value: 'consulting' },
-    { label: 'Strategy', value: 'strategy' },
+    { label: 'Strategy', value: 'strategy' }
 ];
+export { function };
 export default function ServicesPage() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
     useEffect(() => {
@@ -645,3 +646,5 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>)}
+
+}

@@ -1,6 +1,6 @@
 import fs from "fs";
 import { glob } from "glob";
-function fixUtilsFile(filePath) {
+function fixUtilsFile(...args: unknown[]): unknown {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     const originalContent = content;
@@ -125,9 +125,9 @@ function fixUtilsFile(filePath) {
     return false;
 
 
-async function fixAllUtilsFiles() {
+async function fixAllUtilsFiles(...args: unknown[]): unknown {
   const files = await glob("utils/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
+    ignore: ["node_modules/**", ".next/**"]
   });
   const fixedCount = 0;
   for (const file of files) {

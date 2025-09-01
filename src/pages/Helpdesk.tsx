@@ -42,10 +42,11 @@ import { HelpCircle,
   Code,
   DollarSign
  } from 'lucide-react.ts';
-
-export default function Helpdesk(...args: any[]): any {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+;
+export { function };
+export default function Helpdesk(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);
 
   const supportCategories = [
@@ -216,7 +217,7 @@ export default function Helpdesk(...args: any[]): any {
   const filteredIssues = selectedCategory === 'all' 
     ? commonIssues: anycommonIssues.filter(issue  => issue.category === selectedCategory);
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (...args: unknown[]): unknown => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Implement search functionality
@@ -224,7 +225,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     switch (priority) {
       case 'high': return 'text-red-400 bg-red-400/20 border-red-400/30';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -233,7 +234,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'resolved': return 'text-green-400 bg-green-400/20 border-green-400/30';
       case 'investigating': return 'text-yellow-400 bg-yellow-400/20 border-yellow-400/30';
@@ -242,7 +243,7 @@ export default function Helpdesk(...args: any[]): any {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
       <div className="bg-slate-800/50 border-b border-slate-700/50">
@@ -280,7 +281,7 @@ export default function Helpdesk(...args: any[]): any {
               type="text"
               placeholder="Search for help articles, common issues, or solutions..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
             />
             <button
@@ -303,7 +304,7 @@ export default function Helpdesk(...args: any[]): any {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-          {supportChannels.map((channel, index)  => (
+          {supportChannels.map(channel: unknown, index: unknown (
             <motion.div
               key={channel.type}
               initial={{ opacity: 0, y: 20 }}
@@ -348,7 +349,7 @@ export default function Helpdesk(...args: any[]): any {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-          {quickSolutions.map((solution, index)  => (
+          {quickSolutions.map(solution: unknown, index: unknown (
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 20 }}
@@ -386,7 +387,7 @@ export default function Helpdesk(...args: any[]): any {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-          {systemStatus.map((service, index)  => (
+          {systemStatus.map(service: unknown, index: unknown (
             <motion.div
               key={service.service}
               initial={{ opacity: 0, y: 20 }}
@@ -423,10 +424,9 @@ export default function Helpdesk(...args: any[]): any {
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-3 justify-center mb-8">
-          {supportCategories.map((category) => (
-            <button
+          {supportCategories.map(category: unknown <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={(: unknown setSelectedCategory(category.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 selectedCategory === category.id
                   ? 'bg-slate-700/50 border-cyan-400/50 text-cyan-400'
@@ -440,7 +440,7 @@ export default function Helpdesk(...args: any[]): any {
         </div>
 
         <div className="space-y-4">
-          {filteredIssues.map((issue, index) => (
+          {filteredIssues.map(issue: unknown, index: unknown (
             <motion.div
               key={issue.id}
               initial={{ opacity: 0, y: 20 }}
@@ -467,7 +467,7 @@ export default function Helpdesk(...args: any[]): any {
                     </div>
                   </div>
                   <button
-                    onClick={() => setExpandedTicket(expandedTicket === issue.id ? null : issue.id)}
+                    onClick={: unknown setExpandedTicket(expandedTicket === issue.id ? null : issue.id)}
                     className="p-2 text-gray-400 hover:text-white transition-colors"
                   >
                     {expandedTicket === issue.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
@@ -476,7 +476,7 @@ export default function Helpdesk(...args: any[]): any {
 
                 <p className="text-gray-300 mb-4">{issue.description}</p>
 
-                {expandedTicket === issue.id && (
+                {expandedTicket === issue.id && 
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
@@ -490,7 +490,7 @@ export default function Helpdesk(...args: any[]): any {
                     </div>
                     
                     <div className="flex flex-wrap gap-2">
-                      {issue.tags.map((tag, tagIndex) => (
+                      {issue.tags.map((tag, tagIndex (
                         <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                           {tag}
                         </span>

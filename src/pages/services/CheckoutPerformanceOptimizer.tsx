@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Zap, CheckCircle, CreditCard, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
-export default function CheckoutPerformanceOptimizer(...args: any[]): any {
-  return (
+;
+export { function };
+export default function CheckoutPerformanceOptimizer(...args: unknown[]): unknown {
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">
@@ -15,8 +16,8 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
             { title: 'RUM & Session Replay', desc: 'Find slow steps and rage clicks across funnels.' },
             { title: 'Experimentation', desc: 'One‑click A/B templates for forms, shipping, and offers.' },
             { title: 'Payment resilience', desc: 'Smart retries, 3DS prompts, and dunning flows.' },
-            { title: 'Analytics & alerts', desc: 'Error budgets, drop‑off heatmaps and Slack alerts.' },
-          ].map((f)  => (
+            { title: 'Analytics & alerts', desc: 'Error budgets, drop‑off heatmaps and Slack alerts.' }
+          ].map((f (
             <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
               <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

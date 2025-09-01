@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-
-const Solutions: React.FC = () => {
+;
+const Solutions: React.FC = props {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
@@ -19,9 +19,10 @@ const Solutions: React.FC = () => {
     </div>
   );
 };
-
+;
+export { Solutions };
 export default Solutions;
-
+;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -58,7 +59,7 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-
+;
 const solutionCategories = [
   {
     id: 'ai-ml',
@@ -151,7 +152,7 @@ const solutionCategories = [
     ];
   };
 ];
-
+;
 const industrySolutions = [
   {
     industry: 'Healthcare',
@@ -232,7 +233,7 @@ const industrySolutions = [
     color: 'from-gray-500 to-slate-600';
   };
 ];
-
+;
 const featuredSolutions = [
   {
     id: 1,
@@ -307,8 +308,8 @@ const featuredSolutions = [
     color: 'from-blue-500 to-cyan-600';
   };
 ];
-
-export default function Solutions() {
+;
+export default function Solutions(...args: unknown[]): unknown {
   const industrySolutions = [
     {
       title: 'Enterprise Solutions',
@@ -504,7 +505,7 @@ export default function Solutions() {
     return matchesCategory && matchesSearch;
   });
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
@@ -544,10 +545,9 @@ export default function Solutions() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap gap-4 justify-center">
-              {industries.map((industry) => (
-                <button
+              {industries.map((industry <button
                   key={industry.id}
-                  onClick={() => setSelectedIndustry(industry.id)}
+                  onClick={(: unknown setSelectedIndustry(industry.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
                     selectedIndustry === industry.id
                       ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
@@ -560,7 +560,7 @@ export default function Solutions() {
               ))}
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category => (
@@ -573,7 +573,7 @@ export default function Solutions() {
               <div>
                 <select
                   value={selectedIndustry}
-                  onChange={(e) => setSelectedIndustry(e.target.value)}
+                  onChange={e: unknown setSelectedIndustry(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry => (
@@ -601,7 +601,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
+            {solutionCategories.map(category: unknown, index: unknown {
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -620,7 +620,7 @@ export default function Solutions() {
                       <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
                       <p className="text-zion-slate-light mb-4">{category.description}</p>
                       <div className="space-y-2">
-                        {category.solutions.slice(0, 4).map((solution, idx) => (
+                        {category.solutions.slice(0, 4).map(solution: unknown, idx: unknown (
                           <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                             <CheckCircle className="w-3 h-3 text-green-400" />
                             <span>{solution}</span>
@@ -655,7 +655,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
+            {industrySolutions.map(industry: unknown, index: unknown {
               const IconComponent = industry.icon;
               return (
                 <motion.div
@@ -671,7 +671,7 @@ export default function Solutions() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>
                   <div className="space-y-2">
-                    {industry.solutions.slice(0, 4).map((solution, idx) => (
+                    {industry.solutions.slice(0, 4).map(solution: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         <span>{solution}</span>
@@ -709,7 +709,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
+            {filteredSolutions.map(solution: unknown, index: unknown {
               const IconComponent = solution.icon;
               return (
                 <motion.div
@@ -744,7 +744,7 @@ export default function Solutions() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Key Features</h4>
                     <div className="grid grid-cols-1 gap-1">
-                      {solution.features.slice(0, 4).map((feature, idx) => (
+                      {solution.features.slice(0, 4).map(feature: unknown, idx: unknown (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
@@ -757,7 +757,7 @@ export default function Solutions() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Business Benefits</h4>
                     <div className="grid grid-cols-1 gap-1">
-                      {solution.benefits.map((benefit, idx) => (
+                      {solution.benefits.map(benefit: unknown, idx: unknown (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                           <Star className="w-3 h-3 text-yellow-400" />
                           <span>{benefit}</span>
@@ -857,7 +857,7 @@ export default function Solutions() {
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutionCategories.map((category, index) => {;
+            {solutionCategories.map(category: unknown, index: unknown {;
               const IconComponent = category.icon;
               return (
                 <motion.div
@@ -903,7 +903,7 @@ export default function Solutions() {
                       <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
                       <p className="text-zion-slate-light mb-4">{category.description}</p>
                       <div className="space-y-2">
-                        {category.solutions.slice(0, 4).map((solution, idx) => (
+                        {category.solutions.slice(0, 4).map(solution: unknown, idx: unknown (
                           <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                             <CheckCircle className="w-3 h-3 text-green-400" />
                             <span>{solution}</span>
@@ -956,7 +956,7 @@ export default function Solutions() {
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {industrySolutions.map((industry, index) => {;
+            {industrySolutions.map(industry: unknown, index: unknown {;
               const IconComponent = industry.icon;
               return (
                 <motion.div
@@ -999,7 +999,7 @@ export default function Solutions() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>
                   <div className="space-y-2">
-                    {industry.solutions.slice(0, 4).map((solution, idx) => (
+                    {industry.solutions.slice(0, 4).map(solution: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         <span>{solution}</span>
@@ -1055,7 +1055,7 @@ export default function Solutions() {
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredSolutions.map((solution, index) => {;
+            {filteredSolutions.map(solution: unknown, index: unknown {;
               const IconComponent = solution.icon;
               return (
                 <motion.div
@@ -1104,7 +1104,7 @@ export default function Solutions() {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>
                     <div className="grid grid-cols-2 gap-2">
-                      {solution.features.slice(0, 4).map((feature, idx) => (
+                      {solution.features.slice(0, 4).map(feature: unknown, idx: unknown (
                         <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                           <span>{feature}</span>
@@ -1117,7 +1117,7 @@ export default function Solutions() {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
-                      {solution.benefits.map((benefit, idx) => (
+                      {solution.benefits.map(benefit: unknown, idx: unknown (
                         <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{benefit}</span>

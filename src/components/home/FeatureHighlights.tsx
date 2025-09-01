@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+;
 const features = [
   {
     icon: "🚀",
@@ -77,9 +77,9 @@ const features = [
       transition: { duration: 0.5 };
     };
   };
-
-export function FeatureHighlights() {
-  return (
+;
+export function FeatureHighlights(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -123,7 +123,7 @@ export function FeatureHighlights() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((feature, index (
             <motion.div
               key={index}
               variants={itemVariants}

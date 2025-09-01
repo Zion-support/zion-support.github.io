@@ -238,4 +238,5 @@ const ServiceComparison = () => {
         </div>
       </section>
     </div>)};
+export { ServiceComparison };
 export default ServiceComparison;

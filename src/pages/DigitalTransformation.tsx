@@ -119,7 +119,7 @@ import {
     { number: "92%", label: "Customer satisfaction increase" };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
@@ -161,7 +161,7 @@ import {
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index)  => (
+            {stats.map((stat, index (
               <motion.div
                 key={index}
                 initial = {
@@ -218,7 +218,7 @@ import {
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {transformationServices.map((service, index)  => (
+            {transformationServices.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -261,7 +261,7 @@ import {
                 <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{service.description}</p>
 
                 <div className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <div key={featureIndex} className="flex items-center gap-3">
                       <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
@@ -289,7 +289,7 @@ import {
 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {transformationPhases.map((phase, index)  => (
+              {transformationPhases.map(phase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -325,7 +325,7 @@ import {
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
                   }`}
-                  onClick={() => setSelectedPhase(index)}
+                  onClick={( setSelectedPhase(index)}
 
                   {/* Phase Number */}
                   <div className="absolute -top-4 left-6">
@@ -344,7 +344,7 @@ import {
                     </div>
 
                     {/* Activities */}
-                    {selectedPhase === index && (
+                    {selectedPhase === index && 
                       <motion.div
                         initial = {
   { opacity: 0,
@@ -369,8 +369,8 @@ import {
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
-                        {phase.activities.map((activity, activityIndex)  => (
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: unknown</div>
+                        {phase.activities.map((activity, activityIndex (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
@@ -399,7 +399,7 @@ import {
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index)  => (
+            {testimonials.map(testimonial: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -435,7 +435,7 @@ import {
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(_: unknown, i: unknown (
                     <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
                   ))}
                 </div>
@@ -476,5 +476,6 @@ import {
     </div>;
   );
 };
-
+;
+export { DigitalTransformation };
 export default DigitalTransformation;}}}}

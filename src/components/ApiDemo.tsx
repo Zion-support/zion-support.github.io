@@ -3,26 +3,30 @@ import { api, ApiResponse  } from '@/services/api';
 
 interface User {
 
+
   id: number;
   name: string;
   email: string;
   createdAt?: string;
-
+;
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<typeof false>(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: '';
+const [newUser, setNewUser] = useState<typeof { name: '', email: '';
+
+}>({ name: '', email: '';
+
 });
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
-  useEffect(() => {
+  useEffect(: unknown {
     checkHealth();
     fetchUsers();
   }, []);
 
-  const checkHealth = async () => {;
+  const checkHealth = async : unknown {;
     try {;
       const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
@@ -31,7 +35,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  const fetchUsers = async () => {;
+  const fetchUsers = async : unknown {;
     setLoading(true);
     setError(null);
 
@@ -47,7 +51,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  const handleCreateUser = async (e: anyReact.FormEvent)  => {;
+  const handleCreateUser = async e: anyReact.FormEvent {;
     e.preventDefault();
 
     if (!newUser.name.trim() || !newUser.email.trim()) {
@@ -70,7 +74,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  return (
+  return 
     <div className = "max-w-4xl mx-auto p-6 space-y-6">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -93,7 +97,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
                 placeholder="Name"
                 value={newUser.name}
                 onChange = {
-  (e) => setNewUser(prev => ({ ...prev,
+  (e setNewUser(prev => ({ ...prev,
   name: e.target.value 
 
 
@@ -110,7 +114,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
                 placeholder="Email"
                 value={newUser.email}
                 onChange = {
-  (e) => setNewUser(prev => ({ ...prev,
+  e: unknown setNewUser(prev => ({ ...prev,
   email: e.target.value 
 
 
@@ -160,9 +164,8 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
             </div>
           ) : users.length === 0 ? (
             <p className="text-gray-500 text-center py-8">No users found. Create one above!</p>
-          ) : (
-            <div className="space-y-3">
-              {users.map((user) => (
+          ) : <div className="space-y-3">
+              {users.map((user: unknown (
                 <div key={user.id} className="flex justify-between items-center p-3 bg-white rounded-md border">
                   <div>
                     <p className="font-medium text-gray-900">{user.name}</p>
@@ -196,5 +199,6 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
     </div>;
   );
 };
-
+;
+export { ApiDemo };
 export default ApiDemo;}}}}}}}

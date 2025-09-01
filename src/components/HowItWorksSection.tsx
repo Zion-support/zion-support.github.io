@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
+;
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -80,15 +80,15 @@ const steps = [
     success: "100% client retention";
   };
 ];
-
+;
 const stats = [;
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },;
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
 ];
-
-export function HowItWorksSection() {
+;
+export function HowItWorksSection(...args: unknown[]): unknown {
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
   const [activeStep, setActiveStep] = useState<number>(0);
 
@@ -237,7 +237,7 @@ export function HowItWorksSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map(stat: unknown, index: unknown (;
             <motion.div 
               key={index} 
               variants={statsVariants}
@@ -266,13 +266,12 @@ export function HowItWorksSection() {
 
           {/* Steps grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative">
-            {steps.map((step, index) => (
-              <motion.div
+            {steps.map(step: unknown, index: unknown <motion.div
                 key={index}
                 variants={containerVariants}
                 className="relative group"
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
+                onHoverStart={(: unknown setHoveredStep(index)}
+                onHoverEnd={: unknown setHoveredStep(null)}
                 whileHover={{ y: -8 }}
                 transition = {
   { type: "spring",
@@ -317,7 +316,7 @@ export function HowItWorksSection() {
                   
                   {/* Interactive details on hover */}
                   <AnimatePresence>
-                    {hoveredStep === index && (
+                    {hoveredStep === index && 
                       <motion.div 
                         className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
                         initial = {
@@ -339,7 +338,7 @@ export function HowItWorksSection() {
                       >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
                         <div className="space-y-2">
-                          {step.details.map((detail, idx) => (
+                          {step.details.map((detail, idx (
                             <motion.div 
                               key={idx} 
                               className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
@@ -372,7 +371,7 @@ export function HowItWorksSection() {
 
                 {/* Hover details */}
                 <AnimatePresence>
-                  {hoveredStep === index && (
+                  {hoveredStep === index && 
                     <motion.div
                       className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 p-4 bg-zion-blue-dark rounded-xl border border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20 backdrop-blur-sm z-10 min-w-[280px]"
                       initial = {
@@ -409,7 +408,7 @@ export function HowItWorksSection() {
 
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
-                        {step.details.map((detail, idx) => (
+                        {step.details.map((detail, idx (
                           <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             {detail}
@@ -477,4 +476,8 @@ export function HowItWorksSection() {
       </div>;
     </section>;
   );
+}
+
+
+}
 }

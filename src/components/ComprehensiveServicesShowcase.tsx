@@ -32,6 +32,7 @@ import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeSer
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
 
+
   id: string;
   title: string;
   description: string;
@@ -53,7 +54,8 @@ interface Service {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -61,8 +63,8 @@ contactInfo: {
     uptime: string;
     security: string[];
   };
-}
-const ComprehensiveServicesShowcase: React.FC = () => {;
+};
+const ComprehensiveServicesShowcase: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -76,17 +78,17 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
     return cats;
   }, [allServices]);
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {;
+  const innovationLevels = useMemo(: unknown {;
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
     return levels}, [allServices]);
   // Filter services
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return allServices.filter(service => {;
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;
@@ -128,7 +130,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
   };
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
@@ -200,7 +202,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
@@ -211,7 +213,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <span className="text-gray-700 font-medium">Category:</span>
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category  => (
@@ -226,7 +228,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <span className="text-gray-700 font-medium">Innovation:</span>
               <select
                 value={selectedInnovationLevel}
-                onChange={(e) => setSelectedInnovationLevel(e.target.value)}
+                onChange={e: unknown setSelectedInnovationLevel(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {innovationLevels.map(level  => (
@@ -243,7 +245,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       <section className="py-16">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -331,7 +333,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       Key Features
                     </h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.features.slice(0, 5).map((feature, idx) => (
+                      {service.features.slice(0, 5).map(feature: unknown, idx: unknown (
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                           {feature}
@@ -351,7 +353,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       Benefits
                     </h4>
                     <div className="space-y-2">
-                      {service.benefits.slice(0, 3).map((benefit, idx) => (
+                      {service.benefits.slice(0, 3).map(benefit: unknown, idx: unknown (
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">
                           {benefit}
                         </div>
@@ -361,7 +363,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   {/* Tags */}
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
-                      {service.tags.slice(0, 5).map((tag, idx) => (
+                      {service.tags.slice(0, 5).map(tag: unknown, idx: unknown (
                         <span
                           key={idx}
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
@@ -390,11 +392,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </motion.div>
             ))};
           </div>;
-          {filteredServices.length === 0 && (;
+          {filteredServices.length === 0 && ;
             <div className="text-center py-16">;
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;
+                onClick={(: unknown {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
                   setSearchTerm('');
@@ -438,5 +440,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
+export { ComprehensiveServicesShowcase };
 export default ComprehensiveServicesShowcase;
 }}}}

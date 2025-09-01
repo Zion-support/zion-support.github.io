@@ -1,9 +1,10 @@
 import React from 'react';
 import GithubComplianceBot from '../github-compliance-bot';
-
-export default function GithubComplianceBotWrapper() {
+;
+export { function };
+export default function GithubComplianceBotWrapper(...args: unknown[]): unknown {
 	return
-
+;
 export default function Github-compliance-botPage() {
   return (
     <GithubComplianceBot />;

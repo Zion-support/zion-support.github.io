@@ -21,7 +21,8 @@ import { Brain,
   Target
  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   const aiServices = [
     {
@@ -72,7 +73,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
     {
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
-      description: "Transform data into actionable insights with AI-powered business intelligence",
+      description: "Transform data into actionable insights with AI-powered business intelligence"
     };
       price: "From $1,499/month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
@@ -226,7 +227,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index)  => (
+              {aiServices.map(service: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -280,7 +281,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -338,7 +339,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index)  => (
+              {industrySolutions.map(solution: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -421,7 +422,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {advancedTechnologies.map((tech, index)  => (
+              {advancedTechnologies.map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

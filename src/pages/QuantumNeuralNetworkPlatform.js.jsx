@@ -267,4 +267,5 @@ const QuantumNeuralNetworkPlatform = () => {
         </div>
       </section>
     </div>)};
+export { QuantumNeuralNetworkPlatform };
 export default QuantumNeuralNetworkPlatform;

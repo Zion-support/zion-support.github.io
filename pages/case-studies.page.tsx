@@ -16,7 +16,7 @@ import { CheckCircle,
   Brain,
   Globe
  } from 'lucide-react';
-
+;
 const caseStudies = [
   {
     id: 1,
@@ -156,7 +156,7 @@ const caseStudies = [
       customerExperience: "Enhanced",
       operations: "Streamlined",
       mobile: "First priority"
-    },
+    }
   };
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
     duration: "15 months",;
@@ -164,14 +164,15 @@ const caseStudies = [
     image: "/images/case-study-6.jpg";
   };
 ];
-
+;
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
-
+;
+export { function };
 export default function CaseStudies(...args[]):  {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedTechnology, setSelectedTechnology] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState<typeof 'All'>('All');
+  const [selectedTechnology, setSelectedTechnology] = useState<typeof 'All'>('All');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const filteredCaseStudies = caseStudies.filter(study => {;
     const matchesTechnology = selectedTechnology === 'All' || ;
@@ -179,7 +180,7 @@ export default function CaseStudies(...args[]):  {
     
     return matchesIndustry && matchesTechnology && matchesSearch});
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
@@ -236,7 +237,7 @@ export default function CaseStudies(...args[]):  {
                     type="text"
                     placeholder="Search case studies..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e setSearchTerm(e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   />
                 </div>
@@ -246,7 +247,7 @@ export default function CaseStudies(...args[]):  {
               <div>
                 <select
                   value={selectedIndustry}
-                  onChange={(e) => setSelectedIndustry(e.target.value)}
+                  onChange={e: unknown setSelectedIndustry(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry  => (
@@ -259,7 +260,7 @@ export default function CaseStudies(...args[]):  {
               <div>
                 <select
                   value={selectedTechnology}
-                  onChange={(e) => setSelectedTechnology(e.target.value)}
+                  onChange={e: unknown setSelectedTechnology(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {technologies.map(tech  => (
@@ -276,7 +277,7 @@ export default function CaseStudies(...args[]):  {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index)  => (
+            {filteredCaseStudies.map(study: unknown, index: unknown (
               <motion.div
                 key={study.id}
                 initial = {
@@ -357,7 +358,7 @@ export default function CaseStudies(...args[]):  {
                     Key Results
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
-                    {study.results.slice(0, 4).map((result, idx) => (
+                    {study.results.slice(0, 4).map(result: unknown, idx: unknown (
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         <span>{result}</span>
@@ -369,7 +370,7 @@ export default function CaseStudies(...args[]):  {
                 {/* Technologies & Metrics */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {study.technologies.slice(0, 3).map((tech, idx) => (
+                    {study.technologies.slice(0, 3).map(tech: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {tech}
                       </span>

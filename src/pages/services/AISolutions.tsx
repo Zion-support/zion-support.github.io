@@ -89,8 +89,8 @@ import {
   Ridge,
   Joy
 } from 'lucide-react';
-
-export function AISolutions() {
+;
+export function AISolutions(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -166,7 +166,7 @@ export function AISolutions() {
     { name: 'Natural Language APIs', description: 'Text processing and understanding', icon: Users }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20">
@@ -225,7 +225,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -242,7 +242,7 @@ export function AISolutions() {
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       {benefit}
@@ -275,7 +275,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -291,7 +291,7 @@ export function AISolutions() {
                   <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {useCase.applications.map((application, idx) => (
+                  {useCase.applications.map((application, idx (
                     <li key={idx} className="flex items-center gap-3 text-gray-300">
                       <ArrowRight className="w-4 h-4 text-cyan-400" />
                       {application}
@@ -324,7 +324,7 @@ export function AISolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -380,5 +380,6 @@ export function AISolutions() {
     </div>
   );
 }
-
+;
+export { AISolutions };
 export default AISolutions;

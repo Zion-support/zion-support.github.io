@@ -1,8 +1,9 @@
 import React from 'react.ts';
 import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
-
-export default function MicroCRM(...args: any[]): any {
+;
+export { function };
+export default function MicroCRM(...args: unknown[]): unknown {
   const features = [
     {
       icon: Users,
@@ -58,7 +59,7 @@ export default function MicroCRM(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Micro CRM - Zion Tech Group"
@@ -110,7 +111,7 @@ export default function MicroCRM(...args: any[]): any {
           </div>
           
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -137,7 +138,7 @@ export default function MicroCRM(...args: any[]): any {
           </div>
           
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
@@ -161,7 +162,7 @@ export default function MicroCRM(...args: any[]): any {
           </div>
           
           <div className="grid md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-cyan-400" />

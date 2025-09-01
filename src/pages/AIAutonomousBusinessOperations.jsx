@@ -245,5 +245,6 @@ const AIAutonomousBusinessOperations = () => {
         </div>
       </section>
     </div>)};
+export { AIAutonomousBusinessOperations };
 export default AIAutonomousBusinessOperations;
 }}}}

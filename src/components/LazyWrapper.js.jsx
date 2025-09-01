@@ -33,4 +33,5 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
 }} transition={{ duration: 0.6 }} className={className}>
       {children}
     </motion.div>)};
+export { LazyWrapper };
 export default LazyWrapper;

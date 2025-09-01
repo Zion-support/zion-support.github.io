@@ -245,4 +245,5 @@ const TalentDirectory = () => {
         </div>
       </section>
     </div>)};
+export { TalentDirectory };
 export default TalentDirectory;

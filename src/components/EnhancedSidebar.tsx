@@ -41,7 +41,7 @@ import {
   HeartPulse,
   DollarSign,
   Leaf,
-  Building,
+  Building
  } from 'lucide-react';
   User,
   Factory,
@@ -106,19 +106,19 @@ import {
   Play as PlayIcon,
   MailIcon as MailIcon2
 } from 'lucide-react';
-
-export const EnhancedSidebar: React.FC = () => {;
+;
+export const EnhancedSidebar: React.FC = props {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {;
+  const toggleSection = (...args: unknown[]): unknown => {;
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string)  => location.pathname === path;
+  const isActive = path: string location.pathname === path;
 
   const navigationSections = [
     {
@@ -176,7 +176,7 @@ export const EnhancedSidebar: React.FC = () => {;
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
-  return (
+  return 
     <div className = "w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">
       <div className="p-6">
         {/* Logo */}
@@ -268,7 +268,7 @@ export const EnhancedSidebar: React.FC = () => {;
         >
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
-            {quickActions.map((action, index) => (
+            {quickActions.map((action, index (
               <motion.div
                 key={action.name}
                 initial = {
@@ -320,7 +320,7 @@ export const EnhancedSidebar: React.FC = () => {;
 
         {/* Navigation Sections */}
         <div className="space-y-6">
-          {navigationSections.map((section, sectionIndex) => (
+          {navigationSections.map(section: unknown, sectionIndex: unknown 
             <motion.div
               key={section.title}
               initial = {
@@ -355,7 +355,7 @@ export const EnhancedSidebar: React.FC = () => {;
 }}
             >
               <button
-                onClick={() => toggleSection(section.title)}
+                onClick={( toggleSection(section.title)}
                 className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
               >
                 <div className="flex items-center space-x-3">
@@ -372,7 +372,7 @@ export const EnhancedSidebar: React.FC = () => {;
               </button>
 
               <AnimatePresence>
-                {expandedSections.has(section.title) && (
+                {expandedSections.has(section.title) && 
                   <motion.div
                     initial = {
   { opacity: 0,
@@ -407,7 +407,7 @@ export const EnhancedSidebar: React.FC = () => {;
                     transition={{ duration: 0.3 }}
                     className="ml-7 mt-2 space-y-1"
                   >
-                    {section.items.map((item) => (
+                    {section.items.map((item (
                       <Link
                         key={item.name}
                         initial = {

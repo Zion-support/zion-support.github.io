@@ -5,9 +5,9 @@ import { Plus, MessageCircle, Phone, Mail, ArrowUp, X  } from 'lucide-react';
 interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
 
   className?: string}
-
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {;
-  const [isOpen, setIsOpen] = useState(false);
+;
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = { className = '' }: unknown {;
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
 
   const actions = [
     {
@@ -33,11 +33,11 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     };
   ];
 
-  const scrollToTop = () => {;
+  const scrollToTop = (...args: unknown[]): unknown => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
+  return 
     <div className = {`fixed bottom-6 right-6 z-50 ${className}`}>
       {/* Scroll to top button */}
       <motion.button
@@ -109,7 +109,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={( setIsOpen(!isOpen)}
         className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
 
         <AnimatePresence mode="wait">
@@ -193,9 +193,8 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
       {/* Action buttons */}
       <AnimatePresence>
-        {isOpen && (
-          <div className="absolute bottom-20 right-0 space-y-3">
-            {actions.map((action, index) => (
+        {isOpen && <div className="absolute bottom-20 right-0 space-y-3">
+            {actions.map((action: unknown, index: unknown (
               <motion.a
                 key={action.label}
                 href={action.href}

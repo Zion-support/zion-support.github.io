@@ -3,17 +3,17 @@
  * Provides comprehensive cart management functionality
  */
 
-// Constants
+// Constants;
 const CART_STORAGE_KEY = 'zion_cart_guest';
-const TAX_RATE = 0.08; // 8% tax rate
-const SHIPPING_THRESHOLD = 100; // Free shipping over $100
+const TAX_RATE = 0.08; // 8% tax rate;
+const SHIPPING_THRESHOLD = 100; // Free shipping over $100;
 const SHIPPING_COST = 9.99;
 
 /**
  * Validate cart item structure
  * @param {Object} item - Cart item to validate
  * @returns {boolean} Whether item is valid
- */
+ */;
 export const validateCartItem = (item) => {
   if (!item || typeof item !== 'object') return false;
   
@@ -26,7 +26,7 @@ export const validateCartItem = (item) => {
  * @param {Array} cart - Current cart array
  * @param {Object} newItem - Item to add
  * @returns {Array} Updated cart
- */
+ */;
 export const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {
     console.error('Invalid cart item:', newItem);
@@ -54,7 +54,7 @@ export const addToCart = (cart, newItem) => {
  * @param {Array} cart - Current cart array
  * @param {string} itemId - ID of item to remove
  * @returns {Array} Updated cart
- */
+ */;
 export const removeFromCart = (cart, itemId) => {
   return cart.filter(item => item.id !== itemId);
 };
@@ -65,7 +65,7 @@ export const removeFromCart = (cart, itemId) => {
  * @param {string} itemId - ID of item to update
  * @param {number} quantity - New quantity
  * @returns {Array} Updated cart
- */
+ */;
 export const updateItemQuantity = (cart, itemId, quantity) => {
   if (quantity <= 0) {
     return removeFromCart(cart, itemId);
@@ -81,7 +81,7 @@ export const updateItemQuantity = (cart, itemId, quantity) => {
 /**
  * Clear cart
  * @returns {Array} Empty cart
- */
+ */;
 export const clearCart = () => {
   return [];
 };
@@ -90,7 +90,7 @@ export const clearCart = () => {
  * Check if cart is empty
  * @param {Array} cart - Cart array
  * @returns {boolean} Whether cart is empty
- */
+ */;
 export const isCartEmpty = (cart) => {
   return !Array.isArray(cart) || cart.length === 0;
 };
@@ -99,7 +99,7 @@ export const isCartEmpty = (cart) => {
  * Get cart item count
  * @param {Array} cart - Cart array
  * @returns {number} Total item count
- */
+ */;
 export const getCartItemCount = (cart) => {
   if (isCartEmpty(cart)) return 0;
   return cart.reduce((total, item) => total + (item.quantity || 0), 0);
@@ -109,7 +109,7 @@ export const getCartItemCount = (cart) => {
  * Calculate cart subtotal
  * @param {Array} cart - Cart array
  * @returns {number} Subtotal amount
- */
+ */;
 export const calculateCartSubtotal = (cart) => {
   if (isCartEmpty(cart)) return 0;
   return cart.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 0)), 0);
@@ -119,7 +119,7 @@ export const calculateCartSubtotal = (cart) => {
  * Calculate tax amount
  * @param {number} subtotal - Cart subtotal
  * @returns {number} Tax amount
- */
+ */;
 export const calculateTax = (subtotal) => {
   return subtotal * TAX_RATE;
 };
@@ -128,7 +128,7 @@ export const calculateTax = (subtotal) => {
  * Calculate shipping cost
  * @param {number} subtotal - Cart subtotal
  * @returns {number} Shipping cost
- */
+ */;
 export const calculateShipping = (subtotal) => {
   return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
 };
@@ -137,7 +137,7 @@ export const calculateShipping = (subtotal) => {
  * Calculate cart total
  * @param {Array} cart - Cart array
  * @returns {Object} Cart totals
- */
+ */;
 export const calculateCartTotal = (cart) => {
   const subtotal = calculateCartSubtotal(cart);
   const tax = calculateTax(subtotal);
@@ -159,7 +159,7 @@ export const calculateCartTotal = (cart) => {
  * @param {number} price - Price to format
  * @param {string} currency - Currency code (default: USD)
  * @returns {string} Formatted price
- */
+ */;
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
     return '$0.00';
@@ -175,7 +175,7 @@ export const formatPrice = (price, currency = 'USD') => {
  * Get cart summary for display
  * @param {Array} cart - Cart items array
  * @returns {Object} Cart summary
- */
+ */;
 export const getCartSummary = (cart) => {
   const total = calculateCartTotal(cart);
 
@@ -194,7 +194,7 @@ export const getCartSummary = (cart) => {
  * Export cart data (useful for debugging or backup)
  * @param {Array} cart - Cart items array
  * @returns {string} JSON string of cart data
- */
+ */;
 export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
@@ -208,7 +208,7 @@ export const exportCartData = (cart) => {
  * Import cart data (useful for restoring from backup)
  * @param {string} cartData - JSON string of cart data
  * @returns {Array} Parsed cart array
- */
+ */;
 export const importCartData = (cartData) => {
   try {
     const parsed = JSON.parse(cartData);
@@ -226,7 +226,7 @@ export const importCartData = (cartData) => {
  * Get cart key for storage (useful for user-specific carts)
  * @param {string} userId - User ID (optional)
  * @returns {string} Cart storage key
- */
+ */;
 export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`;
@@ -239,7 +239,7 @@ export const getCartKey = (userId = null) => {
  * @param {Array} cart1 - First cart
  * @param {Array} cart2 - Second cart
  * @returns {Array} Merged cart
- */
+ */;
 export const mergeCarts = (cart1, cart2) => {
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
@@ -273,7 +273,7 @@ export const mergeCarts = (cart1, cart2) => {
  * @param {Array} cart1 - First cart
  * @param {Array} cart2 - Second cart
  * @returns {Array} Merged cart
- */
+ */;
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
 };

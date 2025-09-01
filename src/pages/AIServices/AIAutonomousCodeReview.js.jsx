@@ -47,6 +47,7 @@ const supportedLanguages = [
     "PHP",
     "Ruby"
 ];
+export { function };
 export default function AIAutonomousCodeReview() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https://ziontechgroup.com/ai-autonomous-code-review/"/>

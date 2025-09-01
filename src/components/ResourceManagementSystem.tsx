@@ -46,6 +46,7 @@ import {
 
 interface ResourceStats {
 
+
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -53,7 +54,8 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<any>}
+  topDepartments: unknown[]
+}
 
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
 
@@ -61,25 +63,25 @@ interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   showFilters?: boolean;
   showCharts?: boolean;
   maxResources?: number}
-
-export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
+;
+export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = {
 showStats:  true,;
   showFilters = true,;
   showCharts = true,;
   maxResources = 20;
-}) => {;
+} {;
   const [resources, setResources] = useState<Resource[]>([]);
   const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [selectedPriority, setSelectedPriority] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [viewMode, setViewMode] = useState<any>('grid');
-  const [showResourceForm, setShowResourceForm] = useState(false);
+  const [showResourceForm, setShowResourceForm] = useState<typeof false>(false);
   const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
-  useEffect(() => {
+  useEffect(: unknown {
     const sampleResources: Resource[] = [
       {
         id: '1',
@@ -177,7 +179,7 @@ showStats:  true,;
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(: unknown {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -208,3 +210,5 @@ showStats:  true,;
 
   // Calculate resource stats
   const resourceStats = {
+
+}

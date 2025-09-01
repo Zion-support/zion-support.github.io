@@ -154,4 +154,5 @@ const AIAutonomousSystemsPlatform = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousSystemsPlatform };
 export default AIAutonomousSystemsPlatform;

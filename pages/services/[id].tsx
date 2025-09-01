@@ -1,14 +1,15 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import React from 'react'
-import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services"
-import { advancedITServices } from "../../data/advanced-it-services"
-import { innovativeAIServices } from "../../data/innovative-ai-services"
-import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas"
-import { addedITServices2025 } from "../../data/2025-added-it-services"
+import React from 'react';
+import { innovativeRealMicroSaasServices2025 } from "../../data/2025-innovative-real-micro-saas-services";
+import { advancedITServices } from "../../data/advanced-it-services";
+import { innovativeAIServices } from "../../data/innovative-ai-services";
+import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas";
+import { addedITServices2025 } from "../../data/2025-added-it-services";
 import { addedAIServices2025 } from "../../data/2025-added-ai-services"
 interface ServiceItem {
+
 
 id: string;
 name: string;
@@ -19,9 +20,11 @@ description?: string;
 features: string[];
 icon?: string;
 color?: string;
-textColor?: string}
+textColor?: string
+};
 function collectAllServices(): ServiceItem[] {
-}
+};
+export { function };
 export default function ServiceDetail(...args[]):  {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
@@ -41,7 +44,7 @@ export default function ServiceDetail(...args[]):  {
 					<section className="mt-8">
 						<h2 className="text-xl font-medium">Key features</h2>
 						<ul className="mt-2 list-disc pl-5 text-gray-700">
-							{service.features.slice(0, 10).map((f, idx) => (<li key={idx}>{f}</li>))}
+							{service.features.slice(0, 10).map(f: unknown, idx: unknown (<li key={idx}>{f}</li>))}
 						</ul>
 					</section>
 				)}

@@ -24,7 +24,7 @@ export function EnhancedNewsletterForm() {
             const res = await fetch("/api/newsletter", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: trimmed }),
+                body: JSON.stringify({ email: trimmed })
             });
             const data = await res.json().catch(() => ({ /* empty */ }));
             if (res.ok) {
@@ -87,3 +87,10 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>)}
+
+
+
+}
+
+}
+}

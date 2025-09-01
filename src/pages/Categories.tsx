@@ -25,10 +25,10 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Categories: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
+;
+const Categories: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
 
   const categories = [
     {
@@ -255,7 +255,7 @@ const Categories: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-  return (
+  return 
     <>
       <SEO 
         title="Technology Categories - Zion Tech Group"
@@ -298,7 +298,7 @@ const Categories: React.FC = () => {
                   type="text"
                   placeholder="Search categories..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -308,7 +308,7 @@ const Categories: React.FC = () => {
                 <h3 className="text-white font-semibold mb-3">Categories</h3>
                 <div className="flex flex-wrap gap-2">
                   <button
-                    onClick={() => setActiveCategory('all')}
+                    onClick={: unknown setActiveCategory('all')}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       activeCategory === 'all'
                         ? 'bg-blue-500 text-white'
@@ -317,10 +317,9 @@ const Categories: React.FC = () => {
                   >
                     All Categories
                   </button>
-                  {categories.map((category) => (
-                    <button
+                  {categories.map(category: unknown <button
                       key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
+                      onClick={(: unknown setActiveCategory(category.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeCategory === category.id
                           ? 'bg-blue-500 text-white'
@@ -340,7 +339,7 @@ const Categories: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCategories.map((category, index) => (
+              {filteredCategories.map(category: unknown, index: unknown (
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -368,7 +367,7 @@ const Categories: React.FC = () => {
                     <div className="space-y-3 mb-6">
                       <h4 className="text-white font-medium text-sm">Subcategories</h4>
                       <div className="space-y-2">
-                        {subCategories[category.id as keyof typeof subCategories].slice(0, 3).map((sub, idx) => (
+                        {subCategories[category.id as keyof typeof subCategories].slice(0, 3).map(sub: unknown, idx: unknown (
                           <div key={idx} className="flex items-center justify-between text-sm">
                             <div className="flex items-center gap-2">
                               <sub.icon className="w-4 h-4 text-gray-400" />
@@ -389,13 +388,13 @@ const Categories: React.FC = () => {
                     </div>
                     <div className="text-center">
                       <div className="text-white font-semibold">
-                        {subCategories[category.id as keyof typeof subCategories]?.reduce((acc, sub) => acc + sub.talent, 0) || 0}
+                        {subCategories[category.id as keyof typeof subCategories]?.reduce(acc: unknown, sub: unknown acc + sub.talent, 0) || 0}
                       </div>
                       <div className="text-gray-400 text-xs">Experts</div>
                     </div>
                     <div className="text-center">
                       <div className="text-white font-semibold">
-                        {subCategories[category.id as keyof typeof subCategories]?.reduce((acc, sub) => acc + sub.equipment, 0) || 0}
+                        {subCategories[category.id as keyof typeof subCategories]?.reduce(acc: unknown, sub: unknown acc + sub.equipment, 0) || 0}
                       </div>
                       <div className="text-gray-400 text-xs">Tools</div>
                     </div>
@@ -423,5 +422,6 @@ const Categories: React.FC = () => {
     </>
   );
 };
-
+;
+export { Categories };
 export default Categories;

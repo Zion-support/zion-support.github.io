@@ -169,4 +169,5 @@ const AIAutonomousIncidentResponse = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousIncidentResponse };
 export default AIAutonomousIncidentResponse;

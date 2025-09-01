@@ -149,4 +149,5 @@ const CloudDevOpsServices = () => {
         </div>
       </div>
     </div>)};
+export { CloudDevOpsServices };
 export default CloudDevOpsServices;

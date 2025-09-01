@@ -162,5 +162,6 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
         </div>
       </div>
     </div>)};
+export { IndustrySolutions };
 export default IndustrySolutions;
 }}}}}}}}}}}}}}}}

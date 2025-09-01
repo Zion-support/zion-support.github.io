@@ -8,7 +8,7 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { Search, Filter, LayoutGrid, List, Star import { toast } from "@/hooks/use-toast";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = {
   min: 0,
   max: 10000 

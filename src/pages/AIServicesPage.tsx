@@ -25,7 +25,7 @@ import {
   Heart
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
+;
 const AIServices = [
     {
         title: "AI Strategy Consulting",
@@ -40,8 +40,8 @@ const AIServices = [
     {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const AIServicesPage = () => {
+;
+const AIServicesPage = (...args: unknown[]): unknown => {
   const aiServices = [
     {
       id: 'ai-consciousness-simulator',
@@ -173,9 +173,9 @@ const AIServicesPage = () => {
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
   ];
-
-const AIServicesPage: React.FC = () => {
-  return (
+;
+const AIServicesPage: React.FC = props {
+  return 
     <>
       <SEO
         title="AI Services - Zion Tech Group"
@@ -219,7 +219,7 @@ const AIServicesPage: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiSolutions.map((solution, index) => (
+              {aiSolutions.map((solution, index 
                 <motion.div
                   key={index}
                   initial = {
@@ -257,7 +257,7 @@ const AIServicesPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.benefits.map((benefit, idx) => (
+                    {solution.benefits.map((benefit, idx (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                         {benefit}
@@ -273,7 +273,7 @@ const AIServicesPage: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
+              {caseStudies.map(study: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -322,7 +322,7 @@ const AIServicesPage: React.FC = () => {
                     <div>
                       <h4 className="text-white font-medium">Results:</h4>
                       <ul className="text-gray-300 text-sm space-y-1">
-                        {study.results.map((result, idx) => (
+                        {study.results.map((result, idx (
                           <li key={idx} className="flex items-center">
                             <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
                             {result}
@@ -362,5 +362,6 @@ const AIServicesPage: React.FC = () => {
     </>;
   );
 };
-
+;
+export { AIServicesPage };
 export default AIServicesPage;}}}}

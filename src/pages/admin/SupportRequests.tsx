@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+;
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
 import SEO from "@/components/SEO";
 
-// Mock data for support requests
+// Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: "SR-1001",
@@ -91,9 +91,10 @@ const MOCK_SUPPORT_REQUESTS = [
     category: "profile";
   };
 ];
-
-export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
+;
+export { function };
+export default function SupportRequests(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof "">("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
@@ -132,14 +133,14 @@ export default function SupportRequests() {
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
 
-  const resetFilters = () => {
+  const resetFilters = (...args: unknown[]): unknown => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
 
-  return (
+  return 
 
       <SEO
         title="Support Requests | Admin Dashboard"
@@ -210,12 +211,12 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: ) => setSearchQuery(e.target.value)}
+                  onChange={(e:  setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
-              <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>
+              <Select value={statusFilter || ""} onValueChange={value: string setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -227,7 +228,7 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
 
-              <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>
+              <Select value={priorityFilter || ""} onValueChange={value: string setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -239,7 +240,7 @@ export default function SupportRequests() {
                 </SelectContent>
               </Select>
 
-              <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>
+              <Select value={categoryFilter || ""} onValueChange={value: string setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -277,7 +278,7 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredRequests.map((request) => (
+                    {filteredRequests.map(request: unknown (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>

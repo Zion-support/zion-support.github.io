@@ -15,7 +15,8 @@ import { motion } from 'framer-motion';
   Star,
   ArrowRight
  } from 'lucide-react';
-
+;
+export { function };
 export default function Dashboard(...args[]):  {
   const stats = [
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
@@ -138,7 +139,7 @@ export default function Dashboard(...args[]):  {
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
   ];
 
-  const getStatusColor = (status: string)  => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {;
       case "Completed":;
         return "bg-green-100 text-green-800";
@@ -150,7 +151,7 @@ export default function Dashboard(...args[]):  {
         return "bg-gray-100 text-gray-800"}
   };
 
-  const getPriorityColor = (priority: string)  => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     switch (priority) {;
       case "High":;
         return "bg-red-100 text-red-800";
@@ -178,7 +179,7 @@ export default function Dashboard(...args[]):  {
             </button>
             <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
               <Settings className="h-6 w-6" />
-            </button>
+            </button>;
 import { 
   BarChart3, 
   Users, 
@@ -229,8 +230,8 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-
-export default function Dashboard() {
+;
+export default function Dashboard(...args: unknown[]): unknown {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;
     { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
@@ -264,7 +265,7 @@ export default function Dashboard() {
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
@@ -343,7 +344,7 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.name}
               initial={{ opacity: 0, y: 20 }}
@@ -394,7 +395,7 @@ export default function Dashboard() {
               </div>
 
               <div className="space-y-4">
-                {recentServices.map((service, index) => (
+                {recentServices.map(service: unknown, index: unknown 
                   <motion.div
                     key={service.name}
                     initial = {
@@ -429,7 +430,7 @@ export default function Dashboard() {
                 </button>
               </div>
               <div className="space-y-4">
-                {recentServices.map((service, index) => (
+                {recentServices.map((service, index 
                   <motion.div
                     key={service.name}
                     initial={{ opacity: 0, x: -20 }}
@@ -458,7 +459,7 @@ export default function Dashboard() {
             >
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 gap-3">
-                {quickActions.map((action, index) => (
+                {quickActions.map((action, index (
                   <motion.button
                     key={action.name}
                     initial = {
@@ -544,7 +545,7 @@ export default function Dashboard() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="grid grid-cols-2 gap-3">
-                {quickActions.map((action, index) => (
+                {quickActions.map(action: unknown, index: unknown (
                   <motion.button
                     key={action.name}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -563,7 +564,7 @@ export default function Dashboard() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Events</h3>
               <div className="space-y-3">
-                {upcomingEvents.map((event, index) => (
+                {upcomingEvents.map(event: unknown, index: unknown (
                   <motion.div
                     key={event.title}
                     initial = {

@@ -87,19 +87,19 @@ import {
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2";
 import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services";
-// Combine all services
+// Combine all services;
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = () => {;
+const Revolutionary2025ServicesShowcase: React.FC = props {;
   const [services, setServices] = useState<any[]>(ALL_SERVICES);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
+  const [selectedROI, setSelectedROI] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'title'>('title');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [selectedServices, setSelectedServices] = useState<any>([]);
   // Filter services based on search and filters
-  useEffect(() => {
+  useEffect(: unknown {
     let filtered = ALL_SERVICES;
     if (searchTerm) {
       filtered = filtered.filter(service =>;
@@ -125,7 +125,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           return roi >= min && roi <= max}
         return roi >= min})}
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'price':
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
@@ -138,7 +138,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     });
     setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect = (...args: unknown[]): unknown => {
     setSelectedServices(prev =>
       prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
@@ -146,7 +146,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     );
   };
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-20">
@@ -181,7 +181,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
               />
             </div>
@@ -189,7 +189,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <div className="flex flex-wrap gap-4">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
 
                 <option value="all">All Categories</option>
@@ -199,7 +199,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </select>
               <select
                 value={selectedPriceRange}
-                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                onChange={e: unknown setSelectedPriceRange(e.target.value)}
                 className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
 
                 <option value="all">All Prices</option>
@@ -210,7 +210,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </select>
               <select
                 value={selectedROI}
-                onChange={(e) => setSelectedROI(e.target.value)}
+                onChange={e: unknown setSelectedROI(e.target.value)}
                 className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
 
                 <option value="all">All ROI</option>
@@ -221,7 +221,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </select>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
 
                 <option value="title">Sort by Name</option>
@@ -233,7 +233,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             {/* View Mode Toggle */}
             <div className="flex gap-2">;
               <button
-                onClick={() => setViewMode('grid')}
+                onClick={: unknown setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
                   viewMode === 'grid'
                     ? 'bg-cyan-500 text-white'
@@ -243,7 +243,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 <Grid className="w-5 h-5" />
               </button>
               <button
-                onClick={() => setViewMode('list')}
+                onClick={: unknown setViewMode('list')}
                 className={`p-3 rounded-lg transition-colors ${
                   viewMode === 'list'
                     ? 'bg-cyan-500 text-white'
@@ -253,7 +253,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 <List className="w-5 h-5" />
               </button>
               <button
-                onClick={() => setViewMode('comparison')}
+                onClick={: unknown setViewMode('comparison')}
                 className={`p-3 rounded-lg transition-colors ${
                   viewMode === 'comparison'
                     ? 'bg-cyan-500 text-white'
@@ -751,9 +751,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               Explore our cutting-edge solutions designed to transform your business operations
             </p>
           </div>
-          {viewMode === 'grid' && (
+          {viewMode === 'grid' && 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index)  => (
+              {services.map((service, index (
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -807,7 +807,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                     </div>
                   </div>
                   <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                         {feature}
@@ -829,9 +829,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               ))}
             </div>
           )}
-          {viewMode === 'list' && (
-            <div className="space-y-6">
-              {services.map((service, index) => (
+          {viewMode === 'list' && <div className="space-y-6">
+              {services.map((service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
@@ -892,7 +891,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex gap-2">
-                          {service.features.slice(0, 4).map((feature, idx) => (
+                          {service.features.slice(0, 4).map(feature: unknown, idx: unknown (
                             <span key={idx} className="px-3 py-1 bg-slate-700 rounded-full text-xs text-gray-300">
                               {feature}
                             </span>
@@ -977,7 +976,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         {selectedServicesData.map(service => (
                           <td key={service.id} className="p-4 text-white">
                             <ul className="space-y-1">
-                              {service.features.slice(0, 5).map((feature, idx) => (
+                              {service.features.slice(0, 5).map(feature: unknown, idx: unknown (
                                 <li key={idx} className="text-sm flex items-center">
                                   <CheckCircle className="w-3 h-3 text-cyan-400 mr-2" />
                                   {feature}
@@ -990,11 +989,10 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                     </tbody>
                   </table>
                 </div>
-              ) : (
-                <div className="text-center py-12">
+              ) : <div className="text-center py-12">
                   <p className="text-gray-400 mb-4">Select services from the grid or list view to compare</p>
                   <button
-                    onClick={() => setViewMode('grid')}
+                    onClick={(: unknown setViewMode('grid')}
                     className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
 
                     View Services
@@ -2093,7 +2091,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
-                onClick={() => setViewMode('grid')}
+                onClick={: unknown setViewMode('grid')}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 Explore All Services
@@ -2679,7 +2677,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 
               <div className="flex items-center justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map(_: unknown, i: unknown (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -2726,7 +2724,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 
               <div className="flex items-center justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map(_: unknown, i: unknown (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -2773,7 +2771,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 
               <div className="flex items-center justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map(_: unknown, i: unknown (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -2835,15 +2833,16 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
-// Grid and List icons for the view mode toggle
-const Grid = ({ className }: { className?: string }) => (;
+// Grid and List icons for the view mode toggle;
+const Grid = { className }: { className?: string } (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
   </svg>;
 );
-const List = ({ className }: { className?: string }) => (;
+const List = { className }: { className?: string } (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
   </svg>;
 );
+export { Revolutionary2025ServicesShowcase };
 export default Revolutionary2025ServicesShowcase;}}}}}}}}

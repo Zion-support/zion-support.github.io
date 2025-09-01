@@ -35,8 +35,9 @@ import { BarChart3,
   XCircle,
   Info
  } from 'lucide-react.ts';
-
-export default function DataAnalytics(...args: any[]): any {
+;
+export { function };
+export default function DataAnalytics(...args: unknown[]): unknown {
   const features = [
     {
       icon: BarChart3,
@@ -108,7 +109,7 @@ export default function DataAnalytics(...args: any[]): any {
     "AWS Redshift", "Google BigQuery", "Snowflake", "Apache Kafka", "Elasticsearch"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -165,7 +166,7 @@ export default function DataAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -204,7 +205,7 @@ export default function DataAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -221,7 +222,7 @@ export default function DataAnalytics(...args: any[]): any {
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <ul className="space-y-2">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {benefit}
@@ -253,7 +254,7 @@ export default function DataAnalytics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

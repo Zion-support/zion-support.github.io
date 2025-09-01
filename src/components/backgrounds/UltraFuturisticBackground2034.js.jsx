@@ -132,4 +132,5 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         
 
 }}/>)};
+export { UltraFuturisticBackground2034 };
 export default UltraFuturisticBackground2034;

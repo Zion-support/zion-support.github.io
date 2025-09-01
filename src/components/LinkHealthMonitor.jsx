@@ -274,5 +274,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
           </motion.div>
         </motion.div>)}
     </>)};
+export { LinkHealthMonitor };
 export default LinkHealthMonitor;
 }}}}

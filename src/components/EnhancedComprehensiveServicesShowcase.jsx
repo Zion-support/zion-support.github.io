@@ -17,7 +17,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-
+;
 const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -345,5 +345,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
             )}
         </div>
     )};
-
+;
+export { EnhancedComprehensiveServicesShowcase };
 export default EnhancedComprehensiveServicesShowcase;

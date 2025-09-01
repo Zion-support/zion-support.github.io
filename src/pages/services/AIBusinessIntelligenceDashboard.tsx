@@ -26,8 +26,8 @@ import { BarChart3,
   MapPin
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
-
-const AIBusinessIntelligenceDashboard = () => {
+;
+const AIBusinessIntelligenceDashboard = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -160,7 +160,7 @@ const AIBusinessIntelligenceDashboard = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
@@ -241,7 +241,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -288,7 +288,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -335,7 +335,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -367,7 +367,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -410,7 +410,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)  => (
+            {testimonials.map(testimonial: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -421,7 +421,7 @@ const AIBusinessIntelligenceDashboard = () => {
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_: unknown, i: unknown (
                       <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />
                     ))}
                   </div>
@@ -506,5 +506,6 @@ const AIBusinessIntelligenceDashboard = () => {
     </div>
   );
 };
-
+;
+export { AIBusinessIntelligenceDashboard };
 export default AIBusinessIntelligenceDashboard;

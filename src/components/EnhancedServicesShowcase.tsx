@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -16,8 +16,8 @@ import {
   CheckCircle,
   Search
  } from 'lucide-react';
-
-export const EnhancedServicesShowcase: React.FC = () => {
+;
+export const EnhancedServicesShowcase: React.FC = props {
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -102,18 +102,19 @@ export const EnhancedServicesShowcase: React.FC = () => {
       };
     };
   };
-
+;
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
-
-export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+;
+export { function };
+export default function EnhancedServicesShowcase(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   const filteredServices = selectedCategory === 'All'
     ? services
     : services.filter(service => service.category === selectedCategory);
 
-  return (
+  return 
     <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -173,7 +174,7 @@ export default function EnhancedServicesShowcase() {
 
 }}
         >
-          {services.map((service, index) => (
+          {services.map((service, index 
             <motion.div
               key={index}
               variants={itemVariants}
@@ -213,7 +214,7 @@ export default function EnhancedServicesShowcase() {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx (
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
@@ -226,7 +227,7 @@ export default function EnhancedServicesShowcase() {
                 <div className="mb-8">
                   <h4 className="text-white font-semibold mb-3">Business Impact:</h4>
                   <div className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
+                    {service.benefits.map(benefit: unknown, idx: unknown (
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">
                         <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -254,7 +255,7 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
+            {filteredServices.map(service: unknown, index: unknown 
               <motion.div
                 key={service.id}
                 layout
@@ -263,8 +264,8 @@ export default function EnhancedServicesShowcase() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
-                onHoverStart={() => setHoveredService(service.id)}
-                onHoverEnd={() => setHoveredService(null)}
+                onHoverStart={( setHoveredService(service.id)}
+                onHoverEnd={: unknown setHoveredService(null)}
               >
                 <motion.div
                   className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
@@ -304,7 +305,7 @@ export default function EnhancedServicesShowcase() {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map(feature: unknown, featureIndex: unknown (
                       <motion.div
                         key={feature}
                         className="flex items-center text-sm text-gray-300"
@@ -395,10 +396,10 @@ export default function EnhancedServicesShowcase() {
 
 }}
         >
-          {categories.map((category, index) => (;
+          {categories.map(category: unknown, index: unknown ;
             <motion.button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={(: unknown setSelectedCategory(category)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -460,3 +461,5 @@ export default function EnhancedServicesShowcase() {
     </section>
   );
 };
+
+}

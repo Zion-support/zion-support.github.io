@@ -348,4 +348,5 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
           </motion.div>)}
       </AnimatePresence>
     </>)};
+export { AccessibilityPanel };
 export default AccessibilityPanel;

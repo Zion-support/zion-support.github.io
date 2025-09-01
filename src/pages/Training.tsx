@@ -40,12 +40,12 @@ import {
   Star as StarIcon 
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Training: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeLevel, setActiveLevel] = useState('all');
-  const [activeFormat, setActiveFormat] = useState('all');
+;
+const Training: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [activeLevel, setActiveLevel] = useState<typeof 'all'>('all');
+  const [activeFormat, setActiveFormat] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: GraduationCap, count: 0 },
@@ -161,7 +161,7 @@ const Training: React.FC = () => {
     }
   ];
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (...args: unknown[]): unknown => {
     switch (level) {
       case 'beginner': return 'bg-green-500/20 text-green-400';
       case 'intermediate': return 'bg-yellow-500/20 text-yellow-400';
@@ -171,7 +171,7 @@ const Training: React.FC = () => {
     }
   };
 
-  const getFormatColor = (format: string) => {
+  const getFormatColor = (...args: unknown[]): unknown => {
     switch (format) {
       case 'online': return 'bg-blue-500/20 text-blue-400';
       case 'in-person': return 'bg-purple-500/20 text-purple-400';
@@ -218,7 +218,7 @@ const Training: React.FC = () => {
     }
   });
 
-  return (
+  return 
     <>
       <SEO 
         title="Training & Education - Zion Tech Group"
@@ -261,7 +261,7 @@ const Training: React.FC = () => {
                   type="text"
                   placeholder="Search training programs..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -272,10 +272,9 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Categories</h3>
                   <div className="flex flex-wrap gap-2">
-                    {categories.map((category) => (
-                      <button
+                    {categories.map(category: unknown <button
                         key={category.id}
-                        onClick={() => setActiveCategory(category.id)}
+                        onClick={(: unknown setActiveCategory(category.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeCategory === category.id
                             ? 'bg-blue-500 text-white'
@@ -293,10 +292,9 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Level</h3>
                   <div className="flex flex-wrap gap-2">
-                    {levels.map((level) => (
-                      <button
+                    {levels.map(level: unknown <button
                         key={level.id}
-                        onClick={() => setActiveLevel(level.id)}
+                        onClick={(: unknown setActiveLevel(level.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeLevel === level.id
                             ? 'bg-blue-500 text-white'
@@ -314,10 +312,9 @@ const Training: React.FC = () => {
                 <div>
                   <h3 className="text-white font-semibold mb-3">Format</h3>
                   <div className="flex flex-wrap gap-2">
-                    {formats.map((format) => (
-                      <button
+                    {formats.map(format: unknown <button
                         key={format.id}
-                        onClick={() => setActiveFormat(format.id)}
+                        onClick={(: unknown setActiveFormat(format.id)}
                         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
                           activeFormat === format.id
                             ? 'bg-blue-500 text-white'
@@ -339,7 +336,7 @@ const Training: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredPrograms.map((program, index) => (
+              {filteredPrograms.map(program: unknown, index: unknown (
                 <motion.div
                   key={program.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -396,7 +393,7 @@ const Training: React.FC = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {program.tags.slice(0, 3).map((tag, idx) => (
+                    {program.tags.slice(0, 3).map(tag: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                         {tag}
                       </span>
@@ -407,7 +404,7 @@ const Training: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-white font-medium text-sm mb-2">What you'll learn:</h4>
                     <ul className="space-y-1">
-                      {program.features.slice(0, 2).map((feature, idx) => (
+                      {program.features.slice(0, 2).map(feature: unknown, idx: unknown (
                         <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                           <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                           {feature}
@@ -443,5 +440,6 @@ const Training: React.FC = () => {
     </>
   );
 };
-
+;
+export { Training };
 export default Training;

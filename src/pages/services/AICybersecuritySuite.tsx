@@ -24,7 +24,8 @@ import { Shield,
   Monitor,
   Activity
  } from 'lucide-react';
-
+;
+export { function };
 export default function AICybersecuritySuite(...args[]):  {
   const features = [
     {
@@ -279,7 +280,7 @@ export default function AICybersecuritySuite(...args[]):  {
     { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Cybersecurity Suite - Zion Tech Group"
@@ -386,7 +387,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
+            {securityMetrics.map((metric, index (
               <motion.div
                 key={index}
                 initial = {
@@ -470,7 +471,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -552,7 +553,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -595,7 +596,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="text-3xl font-bold text-blue-400 mb-6">{service.price}</div>
                 <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       {feature}
@@ -644,7 +645,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map((module, index)  => (
+            {securityModules.map(module: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -682,7 +683,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
                 <p className="text-gray-300 mb-6">{module.description}</p>
                 <ul className="space-y-3">
-                  {module.features.map((feature, featureIndex) => (
+                  {module.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       {feature}
@@ -721,7 +722,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -778,7 +779,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

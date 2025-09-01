@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   largeText: boolean;
@@ -23,16 +24,21 @@ interface AccessibilitySettings {
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
+
 }
 
 interface AccessibilityEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showSettings?: boolean;
+
 }
 
   // Keyboard navigation support
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
+  useEffect(: unknown {
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
 
@@ -75,11 +81,11 @@ interface AccessibilityEnhancerProps {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
 
   // Arrow key navigation helper
-  const navigateWithArrows = (container: Element, direction: string) => {
+  const navigateWithArrows = (...args: unknown[]): unknown => {
     const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
@@ -110,14 +116,14 @@ interface AccessibilityEnhancerProps {
       
       document.body.appendChild(announcement);
       
-      setTimeout(() => {
+      setTimeout(: unknown {
         document.body.removeChild(announcement);
       }, 1000);
     }
   }, [settings.screenReader]);
 
   // Add accessibility attributes to interactive elements
-  useEffect(() => {
+  useEffect(: unknown {
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
 interactiveElements.forEach(element:  > {;
@@ -144,7 +150,7 @@ interactiveElements.forEach(element:  > {;
   }, [settings.focusIndicator]);
 
   // Add CSS for accessibility features
-  useEffect(() => {
+  useEffect(: unknown {
     const style = document.createElement('style');
     style.textContent = `
       /* High contrast mode */;
@@ -224,13 +230,13 @@ interactiveElements.forEach(element:  > {;
     `;
     document.head.appendChild(style);
 
-    return () => {
+    return : unknown {
       document.head.removeChild(style);
     };
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (...args: unknown[]): unknown => {
     const root = document.documentElement;
     
     // High contrast
@@ -275,30 +281,30 @@ interactiveElements.forEach(element:  > {;
   };
 
   // Save settings to localStorage
-  const saveSettings = (newSettings: AccessibilitySettings) => {
+  const saveSettings = (...args: unknown[]): unknown => {
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
   };
 
   // Update individual setting
-  const updateSetting = <K extends keyof AccessibilitySettings>(
+  const updateSetting = <K extends keyof AccessibilitySettings>
     key: K, 
     value: AccessibilitySettings[K]
-  ) => {
+   {
     const newSettings = { ...settings, [key]: value };
     saveSettings(newSettings);
     
     // Show notification
     const notification = `Updated ${key.replace(/([A-Z])/g, ' $1').toLowerCase()}`;
     setNotifications(prev => [...prev, notification]);
-    setTimeout(() => {
+    setTimeout(: unknown {
       setNotifications(prev => prev.filter(n => n !== notification));
     }, 3000);
   };
 
   // Reset to default settings
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
       largeText: false,
@@ -310,7 +316,7 @@ interactiveElements.forEach(element:  > {;
     };
     saveSettings(defaultSettings);
     setNotifications(prev => [...prev, 'Settings reset to default']);
-    setTimeout(() => {
+    setTimeout(: unknown {
       setNotifications(prev => prev.filter(n => n !== 'Settings reset to default'));
     }, 3000);
   };
@@ -320,28 +326,28 @@ interactiveElements.forEach(element:  > {;
     {
       name: 'High Contrast',
       icon: Contrast,
-      action: () => updateSetting('highContrast', !settings.highContrast),
+      action: : unknown updateSetting('highContrast', !settings.highContrast),
       active: settings.highContrast,
       description: 'Increase contrast for better readability'
     },
     {
       name: 'Large Text',
       icon: Type,
-      action: () => updateSetting('largeText', !settings.largeText),
+      action: : unknown updateSetting('largeText', !settings.largeText),
       active: settings.largeText,
       description: 'Increase text size for better readability'
     },
     {
       name: 'Reduced Motion',
       icon: EyeOff,
-      action: () => updateSetting('reducedMotion', !settings.reducedMotion),
+      action: : unknown updateSetting('reducedMotion', !settings.reducedMotion),
       active: settings.reducedMotion,
       description: 'Reduce animations for motion sensitivity'
     },
     {
       name: 'High Saturation',
       icon: Eye,
-      action: () => updateSetting('highSaturation', !settings.highSaturation),
+      action: : unknown updateSetting('highSaturation', !settings.highSaturation),
       active: settings.highSaturation,
       description: 'Increase color saturation'
     }
@@ -350,15 +356,15 @@ interactiveElements.forEach(element:  > {;
   // Font size controls
   const fontSizes = [12, 14, 16, 18, 20, 24, 28, 32];
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Show accessibility panel after page load
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
+    const timer = setTimeout(: unknown setIsVisible(true), 3000);
+    return : unknown clearTimeout(timer);
   }, []);
 
   if (!enabled || !isVisible) return null;
 
-  return (
+  return 
     <>
       {/* Accessibility Toggle Button */}
       <div className="fixed bottom-4 left-4 z-50">
@@ -367,7 +373,7 @@ interactiveElements.forEach(element:  > {;
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={( setIsExpanded(!isExpanded)}
           className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
           aria-label="Accessibility settings"
           title="Accessibility Settings"
@@ -378,7 +384,7 @@ interactiveElements.forEach(element:  > {;
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isExpanded && (
+        {isExpanded && 
           <motion.div
             initial={{ opacity: 0, x: -100, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -394,7 +400,7 @@ interactiveElements.forEach(element:  > {;
                   Accessibility
                 </h2>
                 <button
-                  onClick={() => setIsExpanded(false)}
+                  onClick={( setIsExpanded(false)}
                   className="p-2 hover:bg-cyan-400/20 text-cyan-400 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >
@@ -406,7 +412,7 @@ interactiveElements.forEach(element:  > {;
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {quickActions.map((action) => (
+                  {quickActions.map(action: unknown (
                     <button
                       key={action.name}
                       onClick={action.action}
@@ -432,10 +438,9 @@ interactiveElements.forEach(element:  > {;
                 <div className="flex items-center space-x-2">
                   <ZoomOut className="w-5 h-5 text-cyan-400" />
                   <div className="flex-1 grid grid-cols-4 gap-2">
-                    {fontSizes.map((size) => (
-                      <button
+                    {fontSizes.map(size: unknown <button
                         key={size}
-                        onClick={() => updateSetting('fontSize', size)}
+                        onClick={(: unknown updateSetting('fontSize', size)}
                         className={`p-2 rounded text-xs font-medium transition-colors ${
                           settings.fontSize === size
                             ? 'bg-cyan-500 text-white'
@@ -454,10 +459,9 @@ interactiveElements.forEach(element:  > {;
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Line Height</h3>
                 <div className="space-y-2">
-                  {[1.2, 1.4, 1.6, 1.8, 2.0].map((height) => (
-                    <button
+                  {[1.2, 1.4, 1.6, 1.8, 2.0].map(height: unknown <button
                       key={height}
-                      onClick={() => updateSetting('lineHeight', height)}
+                      onClick={(: unknown updateSetting('lineHeight', height)}
                       className={`w-full p-2 rounded text-sm transition-colors ${
                         settings.lineHeight === height
                           ? 'bg-cyan-500 text-white'
@@ -474,10 +478,9 @@ interactiveElements.forEach(element:  > {;
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Letter Spacing</h3>
                 <div className="space-y-2">
-                  {[-1, 0, 1, 2, 3].map((spacing) => (
-                    <button
+                  {[-1, 0, 1, 2, 3].map(spacing: unknown <button
                       key={spacing}
-                      onClick={() => updateSetting('letterSpacing', spacing)}
+                      onClick={(: unknown updateSetting('letterSpacing', spacing)}
                       className={`w-full p-2 rounded text-sm transition-colors ${
                         settings.letterSpacing === spacing
                           ? 'bg-cyan-500 text-white'
@@ -524,9 +527,8 @@ interactiveElements.forEach(element:  > {;
                 </button>
               </div>
 
-              {issues.length > 0 && (
-                <div className="space-y-2 max-h-32 overflow-y-auto">
-                  {issues.map((issue) => (
+              {issues.length > 0 && <div className="space-y-2 max-h-32 overflow-y-auto">
+                  {issues.map((issue: unknown (
                     <div
                       key={issue.id}
                       className={`p-2 rounded-lg text-xs ${
@@ -566,20 +568,20 @@ interactiveElements.forEach(element:  > {;
                 Reset All
               </button>
               <button
-                onClick={() => setIsExpanded(false)}
+                onClick={: unknown setIsExpanded(false)}
                 className="flex-1 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm rounded-lg transition-colors"
               >
                 Apply
               </button>
             </div>
           </motion.div>
-        ) : (;
+        ) : ;
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setIsExpanded(true)}
+            onClick={( setIsExpanded(true)}
             className="w-14 h-14 bg-green-600 hover:bg-green-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-200"
             aria-label="Accessibility Settings"
           >
@@ -587,7 +589,7 @@ interactiveElements.forEach(element:  > {;
           </motion.button>
         )}
       </AnimatePresence>
-
+;
 const DEFAULT_SETTINGS: AccessibilitySettings = {
   fontSize: 16,;
   highContrast: false,
@@ -596,17 +598,15 @@ const DEFAULT_SETTINGS: AccessibilitySettings = {
   keyboardNavigation: false,
   focusIndicator: true
 };
-
-export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  className = '',
-  showPanel = false,
-  onSettingsChange
-}) => {
-  const [isOpen, setIsOpen] = useState(showPanel);
+;
+export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = {
+  className = '': unknown, showPanel = false: unknown, onSettingsChange
+}: unknown {
+  const [isOpen, setIsOpen] = useState<typeof showPanel>(showPanel);
   const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS);
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
 
-  useEffect(() => {
+  useEffect(: unknown {
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
     if (savedSettings) {
       try {
@@ -619,7 +619,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback(newSettings: AccessibilitySettings {
     const root = document.documentElement;
     
     // Apply font size
@@ -667,7 +667,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback(key: keyof AccessibilitySettings, value: unknown {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -675,40 +675,40 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     onSettingsChange?.(newSettings);
   }, [settings, applySettings, onSettingsChange]);
 
-  const resetSettings = useCallback(() => {
+  const resetSettings = useCallback(: unknown {
     setSettings(DEFAULT_SETTINGS);
     applySettings(DEFAULT_SETTINGS);
     localStorage.removeItem('zion-accessibility-settings');
     onSettingsChange?.(DEFAULT_SETTINGS);
   }, [applySettings, onSettingsChange]);
 
-  const increaseFontSize = useCallback(() => {
+  const increaseFontSize = useCallback(: unknown {
     const newSize = Math.min(settings.fontSize + 2, 24);
     updateSetting('fontSize', newSize);
   }, [settings.fontSize, updateSetting]);
 
-  const decreaseFontSize = useCallback(() => {
+  const decreaseFontSize = useCallback(: unknown {
     const newSize = Math.max(settings.fontSize - 2, 12);
     updateSetting('fontSize', newSize);
   }, [settings.fontSize, updateSetting]);
 
-  const toggleHighContrast = useCallback(() => {
+  const toggleHighContrast = useCallback(: unknown {
     updateSetting('highContrast', !settings.highContrast);
   }, [settings.highContrast, updateSetting]);
 
-  const toggleReducedMotion = useCallback(() => {
+  const toggleReducedMotion = useCallback(: unknown {
     updateSetting('reducedMotion', !settings.reducedMotion);
   }, [settings.reducedMotion, updateSetting]);
 
-  const toggleScreenReader = useCallback(() => {
+  const toggleScreenReader = useCallback(: unknown {
     updateSetting('screenReader', !settings.screenReader);
   }, [settings.screenReader, updateSetting]);
 
-  const toggleKeyboardNavigation = useCallback(() => {
+  const toggleKeyboardNavigation = useCallback(: unknown {
     updateSetting('keyboardNavigation', !settings.keyboardNavigation);
   }, [settings.keyboardNavigation, updateSetting]);
 
-  const toggleFocusIndicator = useCallback(() => {
+  const toggleFocusIndicator = useCallback(: unknown {
     updateSetting('focusIndicator', !settings.focusIndicator);
   }, [settings.focusIndicator, updateSetting]);
 
@@ -718,11 +718,10 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     { id: 'navigation', label: 'Navigation', icon: Keyboard }
   ] as const;
 
-  return (
-    <>
+  return <>
       {/* Floating Action Button */}
       <motion.button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2 ${className}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -734,13 +733,13 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
+            onClick={( setIsOpen(false)}
           >
             <motion.div
               className="fixed bottom-24 right-6 w-96 max-h-[80vh] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
@@ -748,7 +747,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={e: unknown e.stopPropagation()}
             >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
@@ -759,7 +758,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   </h2>
                 </div>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={: unknown setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >
@@ -769,14 +768,13 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
               {/* Tabs */}
               <div className="flex border-b border-gray-200 dark:border-gray-700">
-                {tabs.map((tab) => {
+                {tabs.map(tab: unknown {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
                   
-                  return (
-                    <button
+                  return <button
                       key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
+                      onClick={(: unknown setActiveTab(tab.id)}
                       className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 text-sm font-medium transition-colors ${
                         isActive
                           ? 'text-cyan-600 border-b-2 border-cyan-500 bg-cyan-50 dark:bg-cyan-900/20'
@@ -1018,7 +1016,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* Notifications */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>
-          {notifications.map((notification, index) => (
+          {notifications.map(notification: unknown, index: unknown (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: 100, scale: 0.9 }}

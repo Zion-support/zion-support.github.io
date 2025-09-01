@@ -18,6 +18,7 @@ import {
  } from 'lucide-react';
 interface ServiceShowcase {
 
+
 	id: string;
 	title: string;
 	description: string;
@@ -25,7 +26,8 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-	status: 'active' | 'beta' | 'new'}
+	status: 'active' | 'beta' | 'new'
+};
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -88,17 +90,18 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 
 ];
+export { function };
 export default function FuturisticServicesShowcase(...args[]):  {
-	const [currentService, setCurrentService] = useState(0);
-	const [isPlaying, setIsPlaying] = useState(true);
-	useEffect(() => {
+	const [currentService, setCurrentService] = useState<typeof 0>(0);
+	const [isPlaying, setIsPlaying] = useState<typeof true>(true);
+	useEffect(: unknown {
 		if (!isPlaying) return;
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
+		const interval = setInterval(: unknown {;
+			setCurrentService(prev: unknown (prev + 1) % futuristicServices.length);
 		}, 5000);
-		return () => clearInterval(interval);
+		return : unknown clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {;
+	const getStatusColor = (...args: unknown[]): unknown => {;
 		switch (status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
@@ -107,7 +110,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	};
 			default: return 'UNKNOWN'}
 	};
-	return (
+	return 
 		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
 			<div className="container mx-auto px-4">
 				{/* Header */}
@@ -138,16 +141,15 @@ export default function FuturisticServicesShowcase(...args[]):  {
 					<div className="flex justify-center mb-8">
 						<div className="bg-white/10 backdrop-blur-sm rounded-full p-2 flex items-center gap-2">
 							<button
-								onClick={() => setIsPlaying(!isPlaying)}
+								onClick={( setIsPlaying(!isPlaying)}
 								className="p-3 bg-white/20 hover:bg-white/30 rounded-full transition-colors"
 
 								{isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
 							</button>
 							<div className="flex gap-2">
-								{futuristicServices.map((_, index) => (
-									<button
+								{futuristicServices.map(_: unknown, index: unknown <button
 										key={index}
-										onClick={() => setCurrentService(index)}
+										onClick={(: unknown setCurrentService(index)}
 										className={`w-3 h-3 rounded-full transition-all ${
 											index === currentService
 												? 'bg-zion-cyan scale-125'
@@ -217,7 +219,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 											{futuristicServices[currentService].price}
 										</div>
 										<ul className="space-y-3">
-											{futuristicServices[currentService].features.map((feature, index) => (
+											{futuristicServices[currentService].features.map(feature: unknown, index: unknown (
 												<motion.li
 													key={index}
 													initial = {
@@ -295,7 +297,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						Explore All Services
 					</h3>
 					<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index)  => (
+						{futuristicServices.map(service: unknown, index: unknown 
 							<motion.div
 								key={service.id}
 								initial = {
@@ -329,7 +331,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 }}
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
-								onClick={() => setCurrentService(index)}
+								onClick={( setCurrentService(index)}
 
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>

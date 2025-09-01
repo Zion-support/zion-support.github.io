@@ -1,9 +1,9 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
-
+;
 const AISEOAuditor: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO title="AI SEO Auditor - Zion Tech Group" description="Autonomous on-site SEO audits, fixes, and monitoring with AI." />
 
@@ -21,8 +21,8 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
             'Schema.org and OpenGraph validation',
             'Internal linking and orphan page detection',
             'AI-generated meta tags and headings',
-            'CI-ready fix PRs with human-in-the-loop',
-          ].map((b)  => (
+            'CI-ready fix PRs with human-in-the-loop'
+          ].map((b (
             <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
@@ -52,6 +52,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AISEOAuditor };
 export default AISEOAuditor;
 

@@ -1,6 +1,7 @@
 import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe } from 'lucide-react';
-
-export default function AIIoTEdgeComputing() {
+;
+export { function };
+export default function AIIoTEdgeComputing(...args: unknown[]): unknown {
   const features = [
     'AI-powered edge computing and processing',
     'Real-time IoT device management and monitoring',
@@ -50,7 +51,7 @@ export default function AIIoTEdgeComputing() {
     }
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -67,7 +68,7 @@ export default function AIIoTEdgeComputing() {
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Edge Computing Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f (
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
@@ -78,7 +79,7 @@ export default function AIIoTEdgeComputing() {
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">Key Benefits</h3>
               <ul className="space-y-2">
-                {benefits.map((b) => (
+                {benefits.map(b: unknown (
                   <li key={b} className="flex items-start">
                     <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
                     <span className="text-zion-slate-dark text-sm">{b}</span>
@@ -91,12 +92,11 @@ export default function AIIoTEdgeComputing() {
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
             <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
-                <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
+              {tiers.map(t: unknown <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
                   <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d: unknown (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -117,7 +117,7 @@ export default function AIIoTEdgeComputing() {
             { icon: Wifi, title: 'Device Connectivity', desc: 'Advanced IoT device management and monitoring' },
             { icon: TrendingUp, title: 'Real-time Processing', desc: 'Local AI processing for instant decisions' },
             { icon: Shield, title: 'Edge Security', desc: 'Advanced security and encryption at the edge' }
-          ].map((item) => (
+          ].map(item: unknown (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold mb-2">{item.title}</div>
@@ -129,7 +129,7 @@ export default function AIIoTEdgeComputing() {
         <div className="mt-14 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Perfect For These Industries</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {useCases.map((uc) => (
+            {useCases.map(uc: unknown (
               <div key={uc} className="flex items-center">
                 <Target className="w-5 h-5 text-zion-cyan mr-3" />
                 <span className="text-zion-slate-dark">{uc}</span>

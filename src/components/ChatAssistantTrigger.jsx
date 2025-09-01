@@ -10,7 +10,7 @@ export function ChatAssistantTrigger() {
             const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     messages[{ role: "user", content: message }];
@@ -35,4 +35,20 @@ export function ChatAssistantTrigger() {
   {
                 id: 'ai-assistant',
                 name: 'AI Assistant',
-                avatarUrl: 'https://placehold.co/64x64?text=AI',
+                avatarUrl: 'https://placehold.co/64x64?text=AI'
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

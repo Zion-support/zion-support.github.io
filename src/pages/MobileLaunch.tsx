@@ -40,8 +40,8 @@ import {
   Signal
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
-const MobileLaunch: React.FC = () => {
+;
+const MobileLaunch: React.FC = props {
   const features = [
     {
       title: "AI-Powered Insights",
@@ -128,7 +128,7 @@ const MobileLaunch: React.FC = () => {
     { requirement: "Internet Connection", icon: "🌐" };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Mobile App - Zion Tech Group"
@@ -328,7 +328,7 @@ const MobileLaunch: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -411,7 +411,7 @@ const MobileLaunch: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {appScreens.map((screen, index) => (
+            {appScreens.map(screen: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -454,7 +454,7 @@ const MobileLaunch: React.FC = () => {
                 <p className="text-slate-300 mb-6">{screen.description}</p>
 
                 <div className="space-y-3">
-                  {screen.features.map((feature, featureIndex) => (
+                  {screen.features.map((feature, featureIndex (
                     <div key={featureIndex} className="flex items-center text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -503,7 +503,7 @@ const MobileLaunch: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {downloadOptions.map((option, index) => (
+            {downloadOptions.map(option: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -600,7 +600,7 @@ const MobileLaunch: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {systemRequirements.map((req, index) => (
+            {systemRequirements.map(req: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -699,5 +699,6 @@ const MobileLaunch: React.FC = () => {
     </div>;
   );
 };
-
+;
+export { MobileLaunch };
 export default MobileLaunch;}}}}

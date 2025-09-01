@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface HeroSlide {
+
   id: string;
   title: string;
   subtitle: string;
@@ -29,9 +30,10 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[];
 }
-
+;
 const heroSlides: HeroSlide[] = [
   {
     id: 'ai-solutions',
@@ -85,9 +87,9 @@ const heroSlides: HeroSlide[] = [
     ]
   }
 ];
-
+;
 const slideVariants = {
-  enter: (direction: number) => ({
+  enter: direction: number ({
     x: direction > 0 ? 1000 : -1000,
     opacity: 0
   }),
@@ -96,61 +98,61 @@ const slideVariants = {
     x: 0,
     opacity: 1
   },
-  exit: (direction: number) => ({
+  exit: direction: number ({
     zIndex: 0,
     x: direction < 0 ? 1000 : -1000,
     opacity: 0
   })
 };
-
+;
 const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
+const swipePower = (...args: unknown[]): unknown => {
   return Math.abs(offset) * velocity;
 };
-
-export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+;
+export default function HeroSection(...args: unknown[]): unknown {
+  const [currentSlide, setCurrentSlide] = useState<typeof 0>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
+  const [direction, setDirection] = useState<typeof 0>(0);
+  const [isLoading, setIsLoading] = useState<typeof true>(true);
 
   // Memoize slides to prevent unnecessary re-renders
-  const memoizedSlides = useMemo(() => heroSlides, []);
+  const memoizedSlides = useMemo(: unknown heroSlides, []);
 
   // Optimized slide navigation with useCallback
-  const nextSlide = useCallback(() => {
+  const nextSlide = useCallback(: unknown {
     setDirection(1);
-    setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
+    setCurrentSlide(prev: unknown (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false);
   }, [memoizedSlides.length]);
 
-  const prevSlide = useCallback(() => {
+  const prevSlide = useCallback(: unknown {
     setDirection(-1);
-    setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
+    setCurrentSlide(prev: unknown (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false);
   }, [memoizedSlides.length]);
 
-  const goToSlide = useCallback((index: number) => {
+  const goToSlide = useCallback(index: number {
     setDirection(index > currentSlide ? 1 : -1);
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   }, [currentSlide]);
 
   // Auto-play functionality with pause on hover
-  useEffect(() => {
+  useEffect(: unknown {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       setDirection(1);
-      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
+      setCurrentSlide(prev: unknown (prev + 1) % memoizedSlides.length);
     }, 6000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [isAutoPlaying, memoizedSlides.length]);
 
   // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+  useEffect(: unknown {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
@@ -160,14 +162,14 @@ export default function HeroSection() {
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return : unknown window.removeEventListener('keydown', handleKeyDown);
   }, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
-  useEffect(() => {
-    const preloadImages = async () => {
-      const imagePromises = memoizedSlides.map(slide => {
-        return new Promise((resolve) => {
+  useEffect(: unknown {
+    const preloadImages = async : unknown {
+      const imagePromises = memoizedSlides.mapslide => {
+        return new Promise((resolve: unknown {
           const img = new Image();
           img.onload = resolve;
           img.onerror = resolve;
@@ -261,7 +263,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 1.2 }}
               className="grid grid-cols-2 gap-3"
             >
-              {currentSlideData.features.map((feature, index) => (
+              {currentSlideData.features.map(feature: unknown, index: unknown (
                 <div key={feature} className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-slate-300 text-sm">{feature}</span>
@@ -285,7 +287,7 @@ export default function HeroSection() {
               </Link>
 
               <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                onClick={: unknown setIsAutoPlaying(!isAutoPlaying)}
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'}
               >
@@ -300,7 +302,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 1.6 }}
               className="grid grid-cols-3 gap-6 pt-8"
             >
-              {currentSlideData.stats.map((stat, index) => (
+              {currentSlideData.stats.map(stat: unknown, index: unknown (
                 <div key={stat.label} className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.value}</div>
                   <div className="text-sm text-slate-400">{stat.label}</div>
@@ -333,10 +335,9 @@ export default function HeroSection() {
       {/* Navigation Controls */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-2">
-          {memoizedSlides.map((_, index) => (
-            <button
+          {memoizedSlides.map(_: unknown, index: unknown <button
               key={index}
-              onClick={() => goToSlide(index)}
+              onClick={(: unknown goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide
                   ? 'bg-cyan-400 scale-125'
@@ -367,5 +368,5 @@ export default function HeroSection() {
     </section>
   );
 }
-
+;
 export { HeroSection };

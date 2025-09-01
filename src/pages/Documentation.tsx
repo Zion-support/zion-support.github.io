@@ -21,10 +21,10 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Documentation: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
+;
+const Documentation: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Documentation', count: 0 },
@@ -146,7 +146,7 @@ const Documentation: React.FC = () => {
     }
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyColor = (...args: unknown[]): unknown => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-500';
       case 'intermediate': return 'bg-yellow-500';
@@ -155,7 +155,7 @@ const Documentation: React.FC = () => {
     }
   };
 
-  const getDifficultyText = (difficulty: string) => {
+  const getDifficultyText = (...args: unknown[]): unknown => {
     switch (difficulty) {
       case 'beginner': return 'Beginner';
       case 'intermediate': return 'Intermediate';
@@ -183,7 +183,7 @@ const Documentation: React.FC = () => {
     }
   });
 
-  return (
+  return 
     <>
       <SEO 
         title="Documentation & Resources - Zion Tech Group"
@@ -226,7 +226,7 @@ const Documentation: React.FC = () => {
                   type="text"
                   placeholder="Search documentation..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -235,10 +235,9 @@ const Documentation: React.FC = () => {
               <div>
                 <h3 className="text-white font-semibold mb-3">Categories</h3>
                 <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <button
+                  {categories.map(category: unknown <button
                       key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
+                      onClick={(: unknown setActiveCategory(category.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeCategory === category.id
                           ? 'bg-blue-500 text-white'
@@ -259,7 +258,7 @@ const Documentation: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item, index) => (
+              {filteredItems.map(item: unknown, index: unknown (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -300,7 +299,7 @@ const Documentation: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {item.tags.slice(0, 3).map((tag, idx) => (
+                    {item.tags.slice(0, 3).map(tag: unknown, idx: unknown (
                       <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                         {tag}
                       </span>
@@ -339,7 +338,7 @@ const Documentation: React.FC = () => {
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {featuredResources.map((resource, index) => (
+              {featuredResources.map(resource: unknown, index: unknown (
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -370,5 +369,6 @@ const Documentation: React.FC = () => {
     </>
   );
 };
-
+;
+export { Documentation };
 export default Documentation;

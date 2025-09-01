@@ -71,4 +71,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
-            focusIndicator: true,
+            focusIndicator: true
+
+
+}
+}

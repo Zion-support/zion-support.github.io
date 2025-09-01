@@ -79,5 +79,6 @@ const SpaceTech = () => {
     </div>
   );
 };
-
+;
+export { SpaceTech };
 export default SpaceTech;

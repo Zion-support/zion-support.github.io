@@ -43,7 +43,8 @@ import { Heart,
   TestTube
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
-
+;
+export { function };
 export default function AIHealthcarePredictiveAnalytics(...args[]):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
@@ -232,7 +233,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     'Clinical Trial Compliance';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO 
         title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
@@ -332,7 +333,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -416,7 +417,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index)  => (
+            {clinicalApplications.map(application: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -500,7 +501,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -581,7 +582,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index)  => (
+            {complianceFeatures.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -662,7 +663,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -746,7 +747,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
           </motion.div>
           
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -804,7 +805,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>

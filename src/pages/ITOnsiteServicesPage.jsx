@@ -12,6 +12,7 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+export { function };
 export default function ITOnsiteServicesPage() {
     const [searchParams] = useSearchParams();
     const [selectedCountry, setSelectedCountry] = useState(null);
@@ -23,7 +24,7 @@ export default function ITOnsiteServicesPage() {
         if (success === "true") {
             toast({
                 title: "Payment Successful",
-                description: "Your IT onsite service request has been received. Our team will contact you shortly.",
+                description: "Your IT onsite service request has been received. Our team will contact you shortly."
             })}
     }, [success]);
     // Popular countries for the featured cards

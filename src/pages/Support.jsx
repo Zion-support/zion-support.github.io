@@ -1,4 +1,5 @@
 import { useState } from 'react';
+export { function };
 export default function Support() {
     const [activeCategory, setActiveCategory] = useState('general');
     const faqCategories = {
@@ -42,7 +43,7 @@ export default function Support() {
             {
                 question: 'Can I change my plan mid-contract?',
                 answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate any billing adjustments and ensure a smooth transition between plans.'
-            },
+            }
         ],
         compliance: [
             {

@@ -169,4 +169,5 @@ const AIAutonomousWorkflow = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousWorkflow };
 export default AIAutonomousWorkflow;

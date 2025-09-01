@@ -59,7 +59,7 @@ import {
   ChevronRight,
   Info,
   AlertTriangle,
-  Zap
+  Zap;
 import { SEO } from '@/components/SEO';
 import {
   ALL_EXPANDED_SERVICES_PRICING,
@@ -75,7 +75,7 @@ import {
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'Cybersecurity':;
       pricing = pricing.filter(p => ;
@@ -87,7 +87,7 @@ import {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;
@@ -119,7 +119,7 @@ import {
     );
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
@@ -273,7 +273,7 @@ import {
                   type="text"
                   placeholder="Search pricing..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
                 />
               </div>
@@ -283,10 +283,10 @@ import {
             <div className="flex items-center space-x-4">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category)  => (
+                {categories.map(category: unknown (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -304,9 +304,9 @@ import {
         </div>
 
         {/* Pricing Grid */}
-        {filteredPricing.length > 0 ? (
+        {filteredPricing.length > 0 ? 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
+            {filteredPricing.map((pricing renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -352,5 +352,6 @@ import {
     </div>;
   );
 };
-
+;
+export { ExpandedServicesPricingGuide2027 };
 export default ExpandedServicesPricingGuide2027;}}}}}}

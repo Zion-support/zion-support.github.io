@@ -23,8 +23,9 @@ import { PenTool,
   BarChart3
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
-
-export default function AIContentCreation(...args: any[]): any {
+;
+export { function };
+export default function AIContentCreation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -86,7 +87,7 @@ export default function AIContentCreation(...args: any[]): any {
     "Content Analytics"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
         title="AI Content Creation Services - Zion Tech Group"
@@ -163,7 +164,7 @@ export default function AIContentCreation(...args: any[]): any {
           </motion.div>
           
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -201,7 +202,7 @@ export default function AIContentCreation(...args: any[]): any {
           </motion.div>
           
           <div className="grid md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -215,7 +216,7 @@ export default function AIContentCreation(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 text-lg mb-6">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {feature}
@@ -246,7 +247,7 @@ export default function AIContentCreation(...args: any[]): any {
           </motion.div>
           
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

@@ -25,11 +25,11 @@ import type { RootState } from '@/store';
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
-// Theme toggle component
-const ModeToggle = () => {;
-  const [isDark, setIsDark] = useState(false);
+// Theme toggle component;
+const ModeToggle = (...args: unknown[]): unknown => {;
+  const [isDark, setIsDark] = useState<typeof false>(false);
 
-  const toggleTheme = () => {;
+  const toggleTheme = (...args: unknown[]): unknown => {;
     setIsDark(!isDark);
     // Add theme switching logic here
   };
@@ -52,7 +52,7 @@ const ModeToggle = () => {;
 
                   // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
                 onSelectSuggestion = {
-  (sugg) => {
+  sugg: unknown {
                   // // // // console.log('PrimaryNav search suggestion selected:',;
   ;
   sugg);
@@ -143,7 +143,7 @@ const ModeToggle = () => {;
 
           {/* Mobile menu button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={: unknown setIsOpen(!isOpen)}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -152,7 +152,7 @@ const ModeToggle = () => {;
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isOpen && (
+          {isOpen && 
             <motion.div
               initial = {
   { opacity: 0,
@@ -188,18 +188,17 @@ const ModeToggle = () => {;
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
             >
               <div className="px-4 py-6 space-y-4">
-                {services.map((category, index) => (
-                  <div key={index}>
+                {services.map((category, index <div key={index}>
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">
                       {category.category}
                     </h3>
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service, serviceIndex) => (
+                      {category.items.map((service: unknown, serviceIndex: unknown 
                         <Link
                           key={serviceIndex}
                           to={service.path}
                           className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={() => setIsOpen(false)}
+                          onClick={( setIsOpen(false)}
                         >
                           {service.name}
                         </Link>
@@ -212,28 +211,28 @@ const ModeToggle = () => {;
                   <Link 
                     to="/solutions" 
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
                   <Link 
                     to="/about" 
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
                   <Link 
                     to="/blog" 
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link 
                     to="/contact" 
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Contact
                   </Link>

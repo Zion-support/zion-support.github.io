@@ -1,5 +1,6 @@
 export interface UltimateInnovativeService {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface UltimateInnovativeService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -30,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
-
+;
 export const SERVICE_CATEGORIES = [
   'AI & Automation',
   'Quantum Computing',
@@ -43,5 +45,7 @@ export const SERVICE_CATEGORIES = [
   'Space Technology',;
   'Green Technology';
 ];
-
+;
 export const SERVICE_SUBCATEGORIES = {
+
+}

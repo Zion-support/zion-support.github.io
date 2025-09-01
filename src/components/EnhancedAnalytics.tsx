@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
@@ -29,12 +30,13 @@ interface AnalyticsData {
     desktop: number;
     mobile: number;
     tablet: number;
-  };
-  topPages: Array<{
+  
+};
+  topPages: {
     path: string;
     views: number;
     title: string;
-  }>;
+  }[];
   userEngagement: {
     scrollDepth: number;
     timeOnPage: number;
@@ -52,29 +54,31 @@ interface AnalyticsData {
 }
 
 interface EnhancedAnalyticsProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-}
 
-export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  enabled = true,
-  showDashboard = false,
-  trackingId = 'G-XXXXXXXXXX'
-}) => {
+}
+;
+export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = {
+  enabled = true: unknown, showDashboard = false: unknown, trackingId = 'G-XXXXXXXXXX'
+}: unknown {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentPage, setCurrentPage] = useState(window.location.pathname);
-  const [sessionStart, setSessionStart] = useState(Date.now());
-  const [userInteractions, setUserInteractions] = useState(0);
-  const [scrollDepth, setScrollDepth] = useState(0);
-  const [timeOnPage, setTimeOnPage] = useState(0);
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
+  const [currentPage, setCurrentPage] = useState<typeof window.location.pathname>(window.location.pathname);
+  const [sessionStart, setSessionStart] = useState<typeof Date.now(>(Date.now());
+  const [userInteractions, setUserInteractions] = useState<typeof 0>(0);
+  const [scrollDepth, setScrollDepth] = useState<typeof 0>(0);
+  const [timeOnPage, setTimeOnPage] = useState<typeof 0>(0);
   
   const sessionRef = useRef<NodeJS.Timeout>();
   const scrollRef = useRef<NodeJS.Timeout>();
 
   // Initialize analytics
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     // Initialize Google Analytics (if tracking ID provided)
@@ -86,7 +90,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script);
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
+      function gtag(...args: unknown[]): unknown {
         window.dataLayer.push(args);
       }
       gtag('js', new Date());
@@ -118,7 +122,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     });
 
-    return () => {
+    return : unknown {
       if (script) {
         document.head.removeChild(script);
       }
@@ -126,10 +130,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   }, [enabled, trackingId]);
 
   // Track page changes
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
-    const handleRouteChange = () => {
+    const handleRouteChange = (...args: unknown[]): unknown => {
       const newPage = window.location.pathname;
       if (newPage !== currentPage) {
         // Track page view
@@ -157,16 +161,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       is_initial_page: true
     });
 
-    return () => {
+    return : unknown {
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, [enabled, currentPage, timeOnPage]);
 
   // Track user interactions
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
-    const trackInteraction = () => {
+    const trackInteraction = (...args: unknown[]): unknown => {
       setUserInteractions(prev => prev + 1);
       trackEvent('user_interaction', {
         interaction_type: 'click',
@@ -175,7 +179,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       });
     };
 
-    const trackScroll = () => {
+    const trackScroll = (...args: unknown[]): unknown => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / docHeight) * 100);
@@ -196,7 +200,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
 
-    const trackTimeOnPage = () => {
+    const trackTimeOnPage = (...args: unknown[]): unknown => {
       setTimeOnPage(prev => prev + 1);
     };
 
@@ -207,7 +211,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Update time on page every second
     sessionRef.current = setInterval(trackTimeOnPage, 1000);
 
-    return () => {
+    return : unknown {
       document.removeEventListener('click', trackInteraction);
       window.removeEventListener('scroll', trackScroll);
       if (sessionRef.current) {
@@ -217,10 +221,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   }, [enabled, currentPage, scrollDepth]);
 
   // Track performance metrics
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
-    const trackPerformance = () => {
+    const trackPerformance = (...args: unknown[]): unknown => {
       if ('performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
@@ -243,15 +247,15 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       trackPerformance();
     } else {
       window.addEventListener('load', trackPerformance);
-      return () => window.removeEventListener('load', trackPerformance);
+      return : unknown window.removeEventListener('load', trackPerformance);
     }
   }, [enabled, currentPage]);
 
   // Track session end
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
-    const handleBeforeUnload = () => {
+    const handleBeforeUnload = (...args: unknown[]): unknown => {
       const sessionDuration = Date.now() - sessionStart;
       
       trackEvent('session_end', {
@@ -263,11 +267,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     };
 
     window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+    return : unknown window.removeEventListener('beforeunload', handleBeforeUnload);
   }, [enabled, sessionStart, userInteractions, timeOnPage]);
 
   // Track event function
-  const trackEvent = useCallback((eventName: string, parameters: Record<string, any> = {}) => {
+  const trackEvent = useCallback(eventName: string, parameters: Record<string, any> = {} {
     if (!enabled) return;
 
     // Google Analytics 4
@@ -315,7 +319,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   }, [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]);
 
   // Initialize mock data for dashboard
-  useEffect(() => {
+  useEffect(: unknown {
     if (showDashboard) {
       setAnalyticsData({
         pageViews: 1247,
@@ -353,7 +357,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   if (!enabled) return null;
 
-  return (
+  return 
     <>
       {/* Analytics Toggle Button */}
       {showDashboard && (
@@ -362,7 +366,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setIsVisible(!isVisible)}
+          onClick={( setIsVisible(!isVisible)}
           className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
           aria-label="Toggle analytics dashboard"
           title="Analytics Dashboard"
@@ -373,7 +377,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       {/* Analytics Dashboard */}
       <AnimatePresence>
-        {isVisible && showDashboard && analyticsData && (
+        {isVisible && showDashboard && analyticsData && 
           <motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -387,7 +391,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 <h3 className="font-semibold">Analytics</h3>
               </div>
               <button
-                onClick={() => setIsVisible(false)}
+                onClick={( setIsVisible(false)}
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 aria-label="Close analytics dashboard"
               >
@@ -487,7 +491,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               <div className="space-y-3">
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">Top Pages</h4>
                 <div className="space-y-2">
-                  {analyticsData.topPages.map((page, index) => (
+                  {analyticsData.topPages.map(page: unknown, index: unknown (
                     <div key={page.path} className="flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-700 rounded">
                       <div className="flex items-center space-x-2">
                         <span className="text-xs font-medium text-slate-500">{index + 1}</span>
@@ -505,5 +509,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     </>
   );
 };
-
+;
+export { EnhancedAnalytics };
 export default EnhancedAnalytics;

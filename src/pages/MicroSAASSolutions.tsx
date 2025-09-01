@@ -23,7 +23,8 @@ import {
   ArrowRight,
   Brain
  } from 'lucide-react';
-
+;
+export { function };
 export default function MicroSAASSolutions(...args[]):  {
   const services = [
     {
@@ -147,7 +148,7 @@ export default function MicroSAASSolutions(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO
         title="Micro SAAS Solutions - Custom Software Development"
@@ -209,7 +210,7 @@ export default function MicroSAASSolutions(...args[]):  {
             </div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index)  => (
+              {services.map((service, index 
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -222,7 +223,7 @@ export default function MicroSAASSolutions(...args[]):  {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                   <div className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex (
                       <div key={featureIndex} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                         <span className="text-zion-slate-light text-sm">{feature}</span>
@@ -246,7 +247,7 @@ export default function MicroSAASSolutions(...args[]):  {
             </div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -274,7 +275,7 @@ export default function MicroSAASSolutions(...args[]):  {
             </div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index)  => (
+              {industries.map(industry: unknown, index: unknown (
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -302,7 +303,7 @@ export default function MicroSAASSolutions(...args[]):  {
             </div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index)  => (
+              {processSteps.map(step: unknown, index: unknown (
                 <div key={step.step} className="text-center">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">

@@ -61,9 +61,9 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
-
-export function CaseStudiesSection() {
-  return (
+;
+export function CaseStudiesSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -101,7 +101,7 @@ export function CaseStudiesSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
+          {caseStudies.map((study, index 
             <motion.div
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -160,7 +160,7 @@ export function CaseStudiesSection() {
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>
                 <ul className="space-y-2">
-                  {study.results.map((result, resultIndex) => (
+                  {study.results.map((result, resultIndex (
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                       {result}
@@ -244,7 +244,8 @@ export function CaseStudiesSection() {
       </div>;
     </section>;
   )};
-
+;
+export { CaseStudiesSection };
 export default CaseStudiesSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -253,6 +254,6 @@ export default CaseStudiesSection;
     </section>;
   );
 }
-
+;
 export default CaseStudiesSection;
 export default CaseStudiesSection;

@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
-
-const EmergingTechServices: NextPage = () => {;
+;
+const EmergingTechServices: NextPage = : unknown {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = [;
@@ -22,7 +22,7 @@ const EmergingTechServices: NextPage = () => {;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {;
     switch (sortBy) {;
       case 'price':;
         return a.pricing.monthly - b.pricing.monthly;
@@ -40,7 +40,7 @@ const EmergingTechServices: NextPage = () => {;
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -92,7 +92,7 @@ const EmergingTechServices: NextPage = () => {;
                 type="text"
                 placeholder="Search emerging tech services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50"
               />
               <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,10 +104,10 @@ const EmergingTechServices: NextPage = () => {;
             <div className="relative">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category)  => (
+                {categories.map(category: unknown (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -122,7 +122,7 @@ const EmergingTechServices: NextPage = () => {;
             <div className="relative">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
 
                 <option value="innovation">Sort by Innovation Level</option>
@@ -138,10 +138,9 @@ const EmergingTechServices: NextPage = () => {;
 
         {/* Category Pills */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
+          {categories.map(category: unknown <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={(: unknown setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
@@ -155,7 +154,7 @@ const EmergingTechServices: NextPage = () => {;
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map(service: unknown, index: unknown (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -201,7 +200,7 @@ const EmergingTechServices: NextPage = () => {;
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
                 <div className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center text-xs text-gray-300">
                       <span className="text-green-400 mr-2">✓</span>
                       {feature}
@@ -269,5 +268,6 @@ const EmergingTechServices: NextPage = () => {;
     </div>;
   );
 };
-
+;
+export { EmergingTechServices };
 export default EmergingTechServices;}}}

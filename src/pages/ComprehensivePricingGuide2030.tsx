@@ -28,10 +28,10 @@ import { CheckCircle,
 import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
 import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
-
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+const ComprehensivePricingGuide2030: React.FC = props {;
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const allServices = [;
     ...innovativeAIServices2030,;
@@ -53,14 +53,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star;
   };
 
-  const getPricingTier = (price: number) => {;
+  const getPricingTier = (...args: unknown[]): unknown => {;
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
@@ -239,17 +239,16 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   type="text"
                   placeholder="Search services by name, description, or tags..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={e: unknown setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5" />
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onClick={(: unknown setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                     activeCategory === category.id
                       ? 'bg-purple-600 border-purple-500 text-white'
@@ -298,7 +297,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             Market Insights & Trends
           </motion.h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index)  => (
+            {marketInsights.map(insight: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -351,7 +350,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredServices.map((service, index) => {;
+            {filteredServices.map(service: unknown, index: unknown {;
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               
@@ -438,7 +437,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <div className="mb-4">
                     <div className="text-xs text-slate-400 mb-2">Key Benefits:</div>
                     <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                         <div key={idx} className="flex items-center text-xs text-slate-300">
                           <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -469,11 +468,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             })}
           </div>
 
-          {filteredServices.length = == 0 && (;
+          {filteredServices.length = == 0 && ;
             <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;
+                onClick={(: unknown {;
                   setSearchTerm('');
                   setActiveCategory('all');
                 }}
@@ -554,7 +553,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
 
-            ].map((benefit, index) => (;
+            ].map(benefit: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {
@@ -797,5 +796,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { ComprehensivePricingGuide2030 };
 export default ComprehensivePricingGuide2030;}}

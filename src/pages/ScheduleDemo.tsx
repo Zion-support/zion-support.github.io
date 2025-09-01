@@ -5,6 +5,7 @@ import { SEO } from "../components/SEO";
 
 interface DemoFormData {
 
+
   firstName: string;
   lastName: string;
   email: string;
@@ -14,8 +15,9 @@ interface DemoFormData {
   preferredTime: string;
   attendees: string;
   services: string[];
-  message: string}
-
+  message: string
+}
+;
 const ScheduleDemo: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
     firstName: '',
@@ -30,8 +32,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     message: '';
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
+  const [isSubmitted, setIsSubmitted] = useState<typeof false>(false);
 
   const timeSlots = [;
     '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',;
@@ -137,7 +139,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     );
   }
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Schedule a Demo - Zion Tech Group"
@@ -251,7 +253,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.firstName}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  (e setFormData(prev => ({ ...prev,
   firstName: e.target.value 
 
 
@@ -273,7 +275,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.lastName}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   lastName: e.target.value 
 
 
@@ -298,7 +300,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.email}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   email: e.target.value 
 
 
@@ -320,7 +322,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.company}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   company: e.target.value 
 
 
@@ -343,7 +345,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       type="tel"
                       value={formData.phone}
                       onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   phone: e.target.value 
 
 
@@ -368,7 +370,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.preferredDate}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   preferredDate: e.target.value 
 
 
@@ -389,7 +391,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         required
                         value={formData.preferredTime}
                         onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   preferredTime: e.target.value 
 
 
@@ -415,7 +417,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <select
                       value={formData.attendees}
                       onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   attendees: e.target.value 
 
 
@@ -439,12 +441,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       Services of Interest
                     </label>
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
-                      {availableServices.map((service)  => (
+                      {availableServices.map(service: unknown (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input
                             type="checkbox"
                             checked={formData.services.includes(service.id)}
-                            onChange={() => handleServiceToggle(service.id)}
+                            onChange={: unknown handleServiceToggle(service.id)}
                             className="w-4 h-4 text-cyan-500 bg-slate-600 border-slate-500 rounded focus:ring-cyan-500 focus:ring-2"
                           />
                           <div className="flex items-center gap-2">
@@ -463,7 +465,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <textarea
                       value={formData.message}
                       onChange = {
-  (e) => setFormData(prev => ({ ...prev,
+  e: unknown setFormData(prev => ({ ...prev,
   message: e.target.value 
 
 
@@ -611,5 +613,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { ScheduleDemo };
 export default ScheduleDemo;}}}}

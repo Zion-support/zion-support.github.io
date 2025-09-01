@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+export { function };
 export default function OrderConfirmation() {
     const router = useRouter();
     const { orderId } = router.query;

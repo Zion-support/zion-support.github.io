@@ -2,7 +2,7 @@
 import * as React from "react";
 const initialState = {
   theme: "dark",
-    setTheme: () => null,
+    setTheme: () => null
   
 
 };
@@ -16,11 +16,11 @@ export const ThemeProvider({ children }) {
   theme,
   setTheme: () => { 
 
-},
+}
     };
     return (<ThemeContext.Provider value={value}>
       {children}
-    </ThemeContext.Provider>)}
+    </ThemeContext.Provider>)};
 export const useTheme = () => {
     const context = useContext(ThemeProviderContext);
     if (context === null)

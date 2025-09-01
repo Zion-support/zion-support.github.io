@@ -21,7 +21,7 @@ const ServiceCategory = ({ category, services }) => {
             'Education & Training': <GraduationCap className="w-6 h-6"/>,
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
             'Real Estate & Property': <Home className="w-6 h-6"/>,
-            'Legal & Compliance': <Lock className="w-6 h-6"/>,
+            'Legal & Compliance': <Lock className="w-6 h-6"/>
   
 
 };
@@ -38,7 +38,7 @@ const ServiceCategory = ({ category, services }) => {
             'Education & Training': 'from-indigo-500 to-purple-600',
             'Supply Chain & Logistics': 'from-teal-500 to-green-600',
             'Real Estate & Property': 'from-amber-500 to-yellow-600',
-            'Legal & Compliance': 'from-slate-500 to-gray-600',
+            'Legal & Compliance': 'from-slate-500 to-gray-600'
   
 
 };
@@ -271,6 +271,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
       </div>
     </div>
   </section>);
+export { function };
 export default function EnhancedServicesOverview() {
     return (<div className="space-y-16">
       {/* Hero Section */}

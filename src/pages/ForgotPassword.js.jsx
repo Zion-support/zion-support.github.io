@@ -4,11 +4,12 @@ import { z } from "zod";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
-// Form validation schema
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+// Form validation schema;
 const forgotPasswordSchema = z.object({
-    email: z.string().email("Please enter a valid email"),
+    email: z.string().email("Please enter a valid email")
 });
+export { function };
 export default function ForgotPassword() {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);

@@ -49,8 +49,8 @@ import {
   Chord,
   Treemap
 } from 'lucide-react';
-
-export function Cybersecurity() {
+;
+export function Cybersecurity(...args: unknown[]): unknown {
   const features = [
     {
       icon: Shield,
@@ -149,7 +149,7 @@ export function Cybersecurity() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 py-20">
@@ -209,7 +209,7 @@ export function Cybersecurity() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -226,7 +226,7 @@ export function Cybersecurity() {
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-red-400" />
                       {benefit}
@@ -259,7 +259,7 @@ export function Cybersecurity() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={service.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -275,7 +275,7 @@ export function Cybersecurity() {
                   <h3 className="text-2xl font-bold text-white">{service.category}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {service.services.map((item, idx) => (
+                  {service.services.map((item, idx (
                     <li key={idx} className="flex items-center gap-3 text-gray-300">
                       <ArrowRight className="w-4 h-4 text-red-400" />
                       {item}
@@ -308,7 +308,7 @@ export function Cybersecurity() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,7 +348,7 @@ export function Cybersecurity() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map(framework: unknown, index: unknown (
               <motion.div
                 key={framework.name}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -407,5 +407,6 @@ export function Cybersecurity() {
     </div>
   );
 }
-
+;
+export { Cybersecurity };
 export default Cybersecurity;

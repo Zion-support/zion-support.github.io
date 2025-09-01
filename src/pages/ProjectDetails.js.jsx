@@ -7,16 +7,16 @@ import { useProjects } from "@/hooks/useProjects";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react";
 function ProjectDetailsContent() {
     const router = useRouter();
     // Get projectId from Next.js router query params
@@ -44,7 +44,7 @@ function ProjectDetailsContent() {
                 toast({
                     title: "Project not found",
                     description: "The requested project could not be found.",
-                    variant: "destructive",
+                    variant: "destructive"
                 });
                 router.push("/dashboard")}
             setIsLoading(false)}
@@ -75,7 +75,7 @@ function ProjectDetailsContent() {
                 .insert({
                 project_id: project.id,
                 user_id: user.id,
-                content: newNote,
+                content: newNote
             })
                 .select();
             if (error)
@@ -85,14 +85,14 @@ function ProjectDetailsContent() {
             setNewNote("");
             toast({
                 title: "Note added",
-                description: "Your note has been added to the project.",
+                description: "Your note has been added to the project."
             })}
         catch (err) {
             console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
-                variant: "destructive",
+                variant: "destructive"
             })}
         finally {
             setIsSubmittingNote(false)}
@@ -104,13 +104,13 @@ function ProjectDetailsContent() {
         if (success) {
             setProject({
                 ...project,
-                status: newStatus,
+                status: newStatus
             });
             // If offer was accepted, show a special toast
             if (newStatus === "offer_accepted") {
                 toast({
                     title: "Offer Accepted! 🎉",
-                    description: "The project is now in progress. Congratulations!",
+                    description: "The project is now in progress. Congratulations!"
                 })}
         }
     };
@@ -514,7 +514,8 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />

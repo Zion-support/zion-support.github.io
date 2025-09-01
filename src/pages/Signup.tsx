@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 
 interface SignupForm {
+
   firstName: string;
   lastName: string;
   email: string;
@@ -36,9 +37,10 @@ interface SignupForm {
   confirmPassword: string;
   agreeToTerms: boolean;
   agreeToMarketing: boolean;
-}
 
-const Signup: React.FC = () => {
+}
+;
+const Signup: React.FC = props {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<SignupForm>({
     firstName: '',
@@ -54,11 +56,11 @@ const Signup: React.FC = () => {
     agreeToMarketing: false
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [showPassword, setShowPassword] = useState<typeof false>(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState<typeof false>(false);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
+  const [error, setError] = useState<typeof ''>('');
+  const [success, setSuccess] = useState<typeof ''>('');
 
   const industries = [
     'Technology',
@@ -81,7 +83,7 @@ const Signup: React.FC = () => {
     '1000+ employees'
   ];
 
-  const handleInputChange = (field: keyof SignupForm, value: string | boolean) => {
+  const handleInputChange = (...args: unknown[]): unknown => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -89,7 +91,7 @@ const Signup: React.FC = () => {
     setError('');
   };
 
-  const validateForm = () => {
+  const validateForm = (...args: unknown[]): unknown => {
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.company || !formData.password || !formData.confirmPassword) {
       setError('Please fill in all required fields');
       return false;
@@ -113,7 +115,7 @@ const Signup: React.FC = () => {
     return true;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
     if (!validateForm()) return;
 
@@ -126,7 +128,7 @@ const Signup: React.FC = () => {
       
       // Mock successful signup
       setSuccess('Account created successfully! Welcome to Zion Tech Group.');
-      setTimeout(() => {
+      setTimeout(: unknown {
         navigate('/dashboard');
       }, 2000);
     } catch (err) {
@@ -136,7 +138,7 @@ const Signup: React.FC = () => {
     }
   };
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (...args: unknown[]): unknown => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -242,7 +244,7 @@ const Signup: React.FC = () => {
                   <input
                     type="text"
                     value={formData.firstName}
-                    onChange={(e) => handleInputChange('firstName', e.target.value)}
+                    onChange={e: unknown handleInputChange('firstName', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your first name"
                     required
@@ -259,7 +261,7 @@ const Signup: React.FC = () => {
                   <input
                     type="text"
                     value={formData.lastName}
-                    onChange={(e) => handleInputChange('lastName', e.target.value)}
+                    onChange={e: unknown handleInputChange('lastName', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your last name"
                     required
@@ -278,7 +280,7 @@ const Signup: React.FC = () => {
                   <input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    onChange={e: unknown handleInputChange('email', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your email"
                     required
@@ -295,7 +297,7 @@ const Signup: React.FC = () => {
                   <input
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    onChange={e: unknown handleInputChange('phone', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
@@ -313,7 +315,7 @@ const Signup: React.FC = () => {
                   <input
                     type="text"
                     value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    onChange={e: unknown handleInputChange('company', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your company name"
                     required
@@ -329,11 +331,11 @@ const Signup: React.FC = () => {
                   <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <select
                     value={formData.industry}
-                    onChange={(e) => handleInputChange('industry', e.target.value)}
+                    onChange={e: unknown handleInputChange('industry', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="">Select your industry</option>
-                    {industries.map((industry) => (
+                    {industries.map(industry: unknown (
                       <option key={industry} value={industry}>{industry}</option>
                     ))}
                   </select>
@@ -349,11 +351,11 @@ const Signup: React.FC = () => {
                 <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <select
                   value={formData.companySize}
-                  onChange={(e) => handleInputChange('companySize', e.target.value)}
+                  onChange={e: unknown handleInputChange('companySize', e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select company size</option>
-                  {companySizes.map((size) => (
+                  {companySizes.map(size: unknown (
                     <option key={size} value={size}>{size}</option>
                   ))}
                 </select>
@@ -370,23 +372,22 @@ const Signup: React.FC = () => {
                   <input
                     type={showPassword ? 'text' : 'password'}
                     value={formData.password}
-                    onChange={(e) => handleInputChange('password', e.target.value)}
+                    onChange={e: unknown handleInputChange('password', e.target.value)}
                     className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Create a password"
                     required
                   />
                   <button
                     type="button"
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={: unknown setShowPassword(!showPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
                 </div>
-                {formData.password && (
-                  <div className="mt-2">
+                {formData.password && <div className="mt-2">
                     <div className="flex gap-1 mb-1">
-                      {[1, 2, 3, 4].map((level) => (
+                      {[1: unknown, 2: unknown, 3: unknown, 4].map((level: unknown (
                         <div
                           key={level}
                           className={`h-1 flex-1 rounded-full transition-all duration-300 ${
@@ -413,14 +414,14 @@ const Signup: React.FC = () => {
                   <input
                     type={showConfirmPassword ? 'text' : 'password'}
                     value={formData.confirmPassword}
-                    onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
+                    onChange={e: unknown handleInputChange('confirmPassword', e.target.value)}
                     className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Confirm your password"
                     required
                   />
                   <button
                     type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    onClick={: unknown setShowConfirmPassword(!showConfirmPassword)}
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -434,7 +435,7 @@ const Signup: React.FC = () => {
                 <input
                   type="checkbox"
                   checked={formData.agreeToTerms}
-                  onChange={(e) => handleInputChange('agreeToTerms', e.target.checked)}
+                  onChange={e: unknown handleInputChange('agreeToTerms', e.target.checked)}
                   className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
                   required
                 />
@@ -455,7 +456,7 @@ const Signup: React.FC = () => {
                 <input
                   type="checkbox"
                   checked={formData.agreeToMarketing}
-                  onChange={(e) => handleInputChange('agreeToMarketing', e.target.checked)}
+                  onChange={e: unknown handleInputChange('agreeToMarketing', e.target.checked)}
                   className="mt-1 w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
                 />
                 <span className="text-slate-300 text-sm">
@@ -534,7 +535,7 @@ const Signup: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="space-y-6 mb-8"
             >
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, x: 20 }}
@@ -563,7 +564,7 @@ const Signup: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.2 }}
               className="grid grid-cols-2 gap-6"
             >
-              {stats.map((stat, index) => (
+              {stats.map(stat: unknown, index: unknown (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
@@ -603,5 +604,6 @@ const Signup: React.FC = () => {
     </div>
   );
 };
-
+;
+export { Signup };
 export default Signup;

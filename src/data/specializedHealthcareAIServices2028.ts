@@ -1,4 +1,5 @@
 export interface HealthcareAIService2028 {
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface HealthcareAIService2028 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -33,7 +35,7 @@ export interface HealthcareAIService2028 {
   marketSize?: string;
   regulatoryCompliance?: string[];
 }
-
+;
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
   // AI-Powered Medical Imaging Analysis
   {
@@ -365,5 +367,6 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     regulatoryCompliance: ["HIPAA", "SOC 2", "GDPR", "ISO 27001"]
   }
 ];
-
+;
+export { SPECIALIZED_HEALTHCARE_AI_SERVICES_2028 };
 export default SPECIALIZED_HEALTHCARE_AI_SERVICES_2028;

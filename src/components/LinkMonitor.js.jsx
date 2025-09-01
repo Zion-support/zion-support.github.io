@@ -214,4 +214,5 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </ul>
         </div>)}
     </div>)};
+export { LinkMonitor };
 export default LinkMonitor;

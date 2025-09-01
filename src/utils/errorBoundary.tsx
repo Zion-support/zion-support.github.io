@@ -10,13 +10,15 @@ interface Props extends React.PropsWithChildren<{}> {
 
 interface State {
 
+
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   retryCount: number;
 
-}
 
+}
+;
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -45,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: anyError, errorInfo: ErrorInfo)  => {
+  logError = error: anyError, errorInfo: ErrorInfo {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');
@@ -58,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Example: Sentry, LogRocket, etc.
   };
 
-  handleRetry = () => {
+  handleRetry = : unknown {
     this.setState(prevState => ({
       hasError: false,
       error: undefined,
@@ -67,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
     }));
   };
 
-  handleReload = () => {
+  handleReload = : unknown {
     window.location.reload();
   };
 
@@ -177,5 +179,5 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
+;
 export { ErrorBoundary };

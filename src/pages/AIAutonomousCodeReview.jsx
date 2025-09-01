@@ -136,4 +136,5 @@ const AIAutonomousCodeReview = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousCodeReview };
 export default AIAutonomousCodeReview;

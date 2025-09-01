@@ -2,10 +2,10 @@ import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+;
 const featuredListings = [
   {
     id: 1,
@@ -69,9 +69,9 @@ const featuredListings = [
     reviews: 178;
   };
 ];
-
-export function FeaturedListingsSection() {
-  return (
+;
+export function FeaturedListingsSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -108,7 +108,7 @@ export function FeaturedListingsSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredListings.map((listing, index) => (
+          {featuredListings.map((listing, index 
             <motion.div
               key={listing.id}
               className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -144,7 +144,7 @@ export function FeaturedListingsSection() {
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature, idx (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
                         {feature}

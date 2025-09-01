@@ -23,7 +23,7 @@ import {
   Eye,
   Share2
  } from 'lucide-react';
-
+;
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const contactInfo = {
   phone: '+1 302 464 0950',
@@ -176,7 +176,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       rating: 5
     },
     {
-      name: 'Sarah Williams',
+      name: 'Sarah Williams'
     };
       role: 'Content Creator',;
       company: 'Creative Content Studio',;
@@ -185,7 +185,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO
         title = "AI Content Optimizer Pro | Zion Tech Group"
@@ -297,7 +297,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index 
                 <motion.div
                   key={index}
                   initial = {
@@ -339,7 +339,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   </div>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0" />
                         {benefit}
@@ -389,7 +389,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              {useCases.map((useCase, index)  => (
+              {useCases.map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -428,7 +428,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="space-y-2">
-                    {useCase.metrics.map((metric, metricIndex) => (
+                    {useCase.metrics.map((metric, metricIndex (
                       <div key={metricIndex} className="flex items-center text-green-400 text-sm">
                         <TrendingUp className="w-4 h-4 mr-2" />
                         {metric}
@@ -478,7 +478,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -536,7 +536,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-white">
                         <span className="text-green-400 mr-3">✓</span>
                         {feature}
@@ -636,7 +636,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)  => (
+              {testimonials.map(testimonial: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -673,7 +673,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
 
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(_: unknown, i: unknown (
                       <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
                     ))}
                   </div>
@@ -773,5 +773,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { AIContentOptimizerPro };
 export default AIContentOptimizerPro;}}}}}

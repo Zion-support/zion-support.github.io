@@ -12,24 +12,28 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
   score: number; // Overall performance score
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
-}
 
-const PerformanceOptimizer: React.FC = () => {
+}
+;
+const PerformanceOptimizer: React.FC = props {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
 
     fcp: 0,
@@ -92,11 +96,11 @@ const PerformanceOptimizer: React.FC = () => {
     }
   ]);
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState<typeof false>(false);
   const [history, setHistory] = useState<PerformanceMetrics[]>([]);
 
   // Simulate performance monitoring
-  const measurePerformance = useCallback(() => {
+  const measurePerformance = useCallback(: unknown {
     const newMetrics: PerformanceMetrics = {
       fcp: Math.random() * 2000 + 500, // 500-2500ms
       lcp: Math.random() * 3000 + 1000, // 1000-4000ms
@@ -119,31 +123,31 @@ const PerformanceOptimizer: React.FC = () => {
     setHistory(prev => [...prev.slice(-9), newMetrics]);
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (isMonitoring) {
       const interval = setInterval(measurePerformance, 5000);
-      return () => clearInterval(interval);
+      return : unknown clearInterval(interval);
     }
   }, [isMonitoring, measurePerformance]);
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (...args: unknown[]): unknown => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (...args: unknown[]): unknown => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
     if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
     return <AlertTriangle className="w-5 h-5 text-red-500" />;
   };
 
-  const getMetricStatus = (value: number, threshold: number, lowerIsBetter = true) => {
+  const getMetricStatus = (...args: unknown[]): unknown => {
     const isGood = lowerIsBetter ? value <= threshold : value >= threshold;
     return isGood ? 'text-green-500' : 'text-red-500';
   };
 
-  const toggleSuggestion = (id: string) => {
+  const toggleSuggestion = (...args: unknown[]): unknown => {
     setSuggestions(prev => 
       prev.map(suggestion => 
         suggestion.id === id 
@@ -153,15 +157,14 @@ const PerformanceOptimizer: React.FC = () => {
     );
   };
 
-  return (
-    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+  return <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <Activity className="w-6 h-6 text-zion-cyan" />
           <h2 className="text-xl font-bold text-white">Performance Optimizer</h2>
         </div>
         <button
-          onClick={() => setIsMonitoring(!isMonitoring)}
+          onClick={(: unknown setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             isMonitoring 
               ? 'bg-red-500 hover:bg-red-600 text-white' 
@@ -228,7 +231,7 @@ const PerformanceOptimizer: React.FC = () => {
           <h3 className="text-lg font-semibold text-white">Optimization Suggestions</h3>
         </div>
         <div className="space-y-3">
-          {suggestions.map((suggestion) => (
+          {suggestions.map(suggestion: unknown 
             <div
               key={suggestion.id}
               className={`p-4 rounded-lg border transition-colors ${
@@ -259,7 +262,7 @@ const PerformanceOptimizer: React.FC = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => toggleSuggestion(suggestion.id)}
+                  onClick={( toggleSuggestion(suggestion.id)}
                   className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
                     suggestion.implemented
                       ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -275,8 +278,7 @@ const PerformanceOptimizer: React.FC = () => {
       </div>
 
       {/* Performance History */}
-      {history.length > 0 && (
-        <div>
+      {history.length > 0 && <div>
           <div className="flex items-center gap-2 mb-4">
             <BarChart3 className="w-5 h-5 text-zion-cyan" />
             <h3 className="text-lg font-semibold text-white">Performance History</h3>
@@ -287,7 +289,7 @@ const PerformanceOptimizer: React.FC = () => {
               <span>Score trend</span>
             </div>
             <div className="flex items-end gap-1 h-20">
-              {history.map((metric, index) => (
+              {history.map((metric: unknown, index: unknown (
                 <div
                   key={index}
                   className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-cyan-light rounded-t"
@@ -302,6 +304,7 @@ const PerformanceOptimizer: React.FC = () => {
     </div>
   );
 };
-
+;
+export { PerformanceOptimizer };
 export default PerformanceOptimizer;
 

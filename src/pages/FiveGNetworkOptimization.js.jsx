@@ -185,4 +185,5 @@ const FiveGNetworkOptimization = () => {
         </section>
       </div>
     </>)};
+export { FiveGNetworkOptimization };
 export default FiveGNetworkOptimization;

@@ -293,4 +293,5 @@ const DigitalTransformation = () => {
       </section>
     </div>);
 };
+export { DigitalTransformation };
 export default DigitalTransformation;

@@ -46,16 +46,16 @@ const researchAreas = [
     color: "from-orange-500 to-red-500";
   };
 ];
-
+;
 const innovationMetrics = [
   { label: "Research Papers", value: "30+", icon: "📚" },
   { label: "Patents Filed", value: "15+", icon: "📋" },
   { label: "R&D Investment", value: "$2M+", icon: "💰" },
   { label: "Innovation Awards", value: "8+", icon: "🏆" }
 ];
-
-export function InnovationResearchSection() {
-  return (
+;
+export function InnovationResearchSection(...args: unknown[]): unknown {
+  return 
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -82,7 +82,7 @@ export function InnovationResearchSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {innovationMetrics.map((metric, index) => (
+          {innovationMetrics.map((metric, index (
             <div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
@@ -101,7 +101,7 @@ export function InnovationResearchSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {innovationMetrics.map((metric, index) => (
+          {innovationMetrics.map(metric: unknown, index: unknown (
             <div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
@@ -149,7 +149,7 @@ export function InnovationResearchSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (
+            {researchAreas.map(area: unknown, index: unknown (
               <motion.div
                 key={area.title}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -349,7 +349,8 @@ export function InnovationResearchSection() {
       </div>;
     </section>;
   )};
-
+;
+export { InnovationResearchSection };
 export default InnovationResearchSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -358,6 +359,6 @@ export default InnovationResearchSection;
     </section>;
   );
 }
-
+;
 export default IconComponent;
 export default IconComponent;

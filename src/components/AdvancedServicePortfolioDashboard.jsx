@@ -684,5 +684,6 @@ const AdvancedServicePortfolioDashboard = () => {
         </div>
       </motion.div>
     </div>)};
+export { AdvancedServicePortfolioDashboard };
 export default AdvancedServicePortfolioDashboard;
 }}}}}}

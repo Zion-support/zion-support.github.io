@@ -28,8 +28,8 @@ import {
   Monitor
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const AICustomerExperienceAnalytics: React.FC = () => {
+;
+const AICustomerExperienceAnalytics: React.FC = props {
   const features = [
     {
       icon: Brain,
@@ -156,7 +156,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     'Conversion Funnel Tracking'
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -217,7 +217,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -254,7 +254,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {analyticsCapabilities.map((capability, index) => (
+            {analyticsCapabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -290,7 +290,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -320,7 +320,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -362,7 +362,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -441,5 +441,6 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     </div>
   );
 };
-
+;
+export { AICustomerExperienceAnalytics };
 export default AICustomerExperienceAnalytics;

@@ -74,9 +74,9 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
-
-export function ClientSuccessStoriesSection() {
-  return (
+;
+export function ClientSuccessStoriesSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -130,7 +130,7 @@ export function ClientSuccessStoriesSection() {
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {successMetrics.map((metric, index)  => {;
+          {successMetrics.map((metric, index {;
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
@@ -149,9 +149,9 @@ export function ClientSuccessStoriesSection() {
 
         {/* Testimonials Grid */}
         <div className="grid md: grid-cols-2 gap-8 mb-12">
-          {testimonials.map((testimonial, index)  => (
+          {testimonials.map(testimonial: unknown, index: unknown 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {successStories.map((story, index) => (
+          {successStories.map((story, index (
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -198,7 +198,7 @@ export function ClientSuccessStoriesSection() {
                 </div>
                 <div className="absolute top-3 right-3">
                   <div className="flex items-center gap-1">
-                    {[...Array(story.rating)].map((_, i) => (
+                    {[...Array(story.rating)].map(_: unknown, i: unknown (
                       <span key={i} className="text-yellow-400 text-sm">★</span>
                     ))}
                   </div>
@@ -223,7 +223,7 @@ export function ClientSuccessStoriesSection() {
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Results:</h4>
                   <ul className="space-y-1">
-                    {story.results.map((result, resultIndex) => (
+                    {story.results.map(result: unknown, resultIndex: unknown (
                       <li key={resultIndex} className="flex items-center gap-2 text-sm">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                         <span className="text-gray-300">{result}</span>
@@ -371,7 +371,8 @@ export function ClientSuccessStoriesSection() {
       </div>;
     </section>;
   )};
-
+;
+export { ClientSuccessStoriesSection };
 export default ClientSuccessStoriesSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -380,6 +381,6 @@ export default ClientSuccessStoriesSection;
     </section>;
   );
 }
-
+;
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;

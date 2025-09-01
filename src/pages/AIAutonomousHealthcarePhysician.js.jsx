@@ -173,4 +173,5 @@ const AIAutonomousHealthcarePhysician = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousHealthcarePhysician };
 export default AIAutonomousHealthcarePhysician;

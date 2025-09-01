@@ -169,4 +169,5 @@ const AIAutonomousPenetrationTesting = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousPenetrationTesting };
 export default AIAutonomousPenetrationTesting;

@@ -210,5 +210,6 @@ const AccessibilityAuditor = () => {
         </div>
       </section>
     </div>)};
+export { AccessibilityAuditor };
 export default AccessibilityAuditor;
 }}

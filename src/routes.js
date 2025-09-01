@@ -1,5 +1,5 @@
 // routes.ts - Route configurations for the application
-// Auth routes
+// Auth routes;
 export const AuthRoutes = {
   login: '/login',
     signup: '/signup',
@@ -13,7 +13,7 @@ export const AuthRoutes = {
 
 
 };
-// Dashboard routes
+// Dashboard routes;
 export const DashboardRoutes = {
   dashboard: '/dashboard',
     profile: '/profile',
@@ -26,7 +26,7 @@ export const DashboardRoutes = {
 
 
 };
-// Marketplace routes
+// Marketplace routes;
 export const MarketplaceRoutes = {
   marketplace: '/marketplace',
     services: '/services',
@@ -39,7 +39,7 @@ export const MarketplaceRoutes = {
 
 
 };
-// Talent routes
+// Talent routes;
 export const TalentRoutes = {
   talent: '/talent',
     talents: '/talents',
@@ -52,7 +52,7 @@ export const TalentRoutes = {
 
 
 };
-// Admin routes
+// Admin routes;
 export const AdminRoutes = {
   admin: '/admin',
     users: '/admin/users',
@@ -65,7 +65,7 @@ export const AdminRoutes = {
 
 
 };
-// Mobile app routes
+// Mobile app routes;
 export const MobileAppRoutes = {
   mobileLaunch: '/mobile-launch',
   openApp: '/open-app'
@@ -77,7 +77,7 @@ export const MobileAppRoutes = {
 
 
 };
-// Content routes
+// Content routes;
 export const ContentRoutes = {
   blog: '/blog',
     blogPost: '/blog/:slug',
@@ -98,7 +98,7 @@ export const ContentRoutes = {
 
 
 };
-// Error routes
+// Error routes;
 export const ErrorRoutes = {
   notFound: '/404',
   error: '/error'
@@ -110,7 +110,7 @@ export const ErrorRoutes = {
 
 
 };
-// Enterprise routes
+// Enterprise routes;
 export const EnterpriseRoutes = {
   enterprise: '/enterprise',
     solutions: '/solutions',
@@ -123,7 +123,7 @@ export const EnterpriseRoutes = {
 
 
 };
-// Community routes
+// Community routes;
 export const CommunityRoutes = {
   community: '/community',
     partners: '/partners',
@@ -136,7 +136,7 @@ export const CommunityRoutes = {
 
 
 };
-// Developer routes
+// Developer routes;
 export const DeveloperRoutes = {
   api: '/api',
     docs: '/docs',

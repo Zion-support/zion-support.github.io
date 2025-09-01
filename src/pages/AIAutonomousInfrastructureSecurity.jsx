@@ -169,4 +169,5 @@ const AIAutonomousInfrastructureSecurity = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousInfrastructureSecurity };
 export default AIAutonomousInfrastructureSecurity;

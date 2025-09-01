@@ -21,8 +21,8 @@ import {
   Cpu,
   FileText
 } from 'lucide-react';
-
-const Terms: React.FC = () => {
+;
+const Terms: React.FC = props {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [
@@ -116,7 +116,7 @@ const Terms: React.FC = () => {
     }
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title="Terms of Service - Zion Tech Group"
@@ -155,7 +155,7 @@ const Terms: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {termsSections.map((section, index) => (
+              {termsSections.map((section, index (
                 <motion.div
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ const Terms: React.FC = () => {
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">User Obligations</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {userObligations.map((obligation, index) => (
+                {userObligations.map(obligation: unknown, index: unknown (
                   <div key={obligation.obligation} className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30">
                     <h4 className="text-white font-semibold mb-2">{obligation.obligation}</h4>
                     <p className="text-gray-300 text-sm">{obligation.description}</p>
@@ -205,7 +205,7 @@ const Terms: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Prohibited Activities</h2>
               <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {prohibitedActivities.map((activity, index) => (
+                  {prohibitedActivities.map(activity: unknown, index: unknown (
                     <div key={index} className="flex items-start gap-3">
                       <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{activity}</span>
@@ -226,7 +226,7 @@ const Terms: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination Conditions</h2>
               <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-xl p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {terminationConditions.map((condition, index) => (
+                  {terminationConditions.map(condition: unknown, index: unknown (
                     <div key={index} className="flex items-start gap-3">
                       <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{condition}</span>
@@ -249,7 +249,7 @@ const Terms: React.FC = () => {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {contactInfo.map((contact, index) => (
+                {contactInfo.map(contact: unknown, index: unknown (
                   <a
                     key={contact.label}
                     href={contact.href}
@@ -272,5 +272,6 @@ const Terms: React.FC = () => {
     </>
   );
 };
-
+;
+export { Terms };
 export default Terms;

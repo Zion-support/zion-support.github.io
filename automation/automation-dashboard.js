@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
-
+;
 class AutomationDashboard {
   constructor() {
     this.automationSystems = new Map();

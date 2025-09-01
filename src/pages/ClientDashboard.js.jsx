@@ -110,7 +110,8 @@ function ClientDashboardContent() {
         </div>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />

@@ -24,4 +24,5 @@ const Admin = () => {
         </div>
       </div>
     </>)};
+export { Admin };
 export default Admin;

@@ -348,4 +348,5 @@ const AIMatcher = () => {
         </div>
       </div>
     </div>)};
+export { AIMatcher };
 export default AIMatcher;

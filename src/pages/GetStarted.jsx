@@ -233,5 +233,6 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
         </div>
       </section>
     </div>)};
+export { GetStarted };
 export default GetStarted;
 }}}

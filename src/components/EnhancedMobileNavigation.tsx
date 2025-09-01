@@ -37,19 +37,23 @@ import {
 
 interface NavigationItem {
 
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 }>;
 } from 'lucide-react';
 
 interface NavigationItem {
+
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   children?: NavigationItem[];
   description?: string}
-
+;
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
@@ -119,7 +123,7 @@ const navigationItems: NavigationItem[] = [
     description: 'Get in touch with us'
 
 ];
-
+;
 const quickActions = [
   {
     label: 'Get Quote',
@@ -140,19 +144,19 @@ const quickActions = [
     color: 'bg-zion-blue';
   };
 ];
-
-export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+;
+export const EnhancedMobileNavigation: React.FC = props {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
+  const [activePath, setActivePath] = useState<typeof '/'>('/');
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setActivePath(location.pathname)}, [location]);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+  useEffect(: unknown {
+    const handleClickOutside = (...args: unknown[]): unknown => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -162,11 +166,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
 ;
-    return () => {;
+    return : unknown {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
+  const toggleExpanded = (...args: unknown[]): unknown => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -174,20 +178,20 @@ export const EnhancedMobileNavigation: React.FC = () => {
         newSet.add(label)}
       return newSet})};
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (...args: unknown[]): unknown => {
     setIsOpen(false);
     setExpandedItems(new Set())};
 
-  const isActive = (path: string) => {;
+  const isActive = (...args: unknown[]): unknown => {;
     if (path === '/') {;
-  const isActive = (path: string) => {
+  const isActive = (...args: unknown[]): unknown => {
     if (path === '/') {
       return activePath === '/';
 
     return activePath.startsWith(path);
   };
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
+  const renderNavigationItem = (...args: unknown[]): unknown => {;
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
@@ -210,7 +214,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
           <Link
             to={item.path}
-            onClick={() => handleNavigation(item.path)}
+            onClick={: unknown handleNavigation(item.path)}
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
               isItemActive
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
@@ -239,9 +243,9 @@ export const EnhancedMobileNavigation: React.FC = () => {
             )}
           </Link>
 
-          {hasChildren && (;
+          {hasChildren && ;
             <button
-              onClick={() => toggleExpanded(item.label)}
+              onClick={(: unknown toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
@@ -312,11 +316,10 @@ export const EnhancedMobileNavigation: React.FC = () => {
     );
   };
 
-  return (
-    <>
+  return <>
       {/* Mobile Menu Toggle */}
       <button
-        onClick = {() => setIsOpen(true)}
+        onClick = {(: unknown setIsOpen(true)}
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
 
@@ -325,7 +328,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -362,7 +365,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   </div>
                 </div>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={( setIsOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
 
@@ -378,11 +381,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     Quick Actions
                   </h3>
                   <div className="grid grid-cols-3 gap-3">
-                    {quickActions.map(action => (
+                    {quickActions.mapaction => (
                       <Link
                         key={action.label}
                         to={action.path}
-                        onClick={() => handleNavigation(action.path)}
+                        onClick={(: unknown handleNavigation(action.path)}
                         className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
 
                         <action.icon size={20} className="mx-auto mb-2" />
@@ -450,3 +453,14 @@ export const EnhancedMobileNavigation: React.FC = () => {
   );
 };
 };
+
+
+
+
+}
+
+
+}
+
+}
+}

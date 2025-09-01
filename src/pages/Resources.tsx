@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -37,10 +37,10 @@ import {
   Pause,
   Stop
  } from 'lucide-react';
-
+;
 const Resources: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
 
   const categories = [
     { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
@@ -284,7 +284,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
 };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -356,7 +356,7 @@ const Resources: React.FC = (): JSX.Element => {;
             Featured Resources
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredResources.map((resource, index) => (
+            {featuredResources.map((resource, index (
               <motion.div
                 key={resource.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -395,7 +395,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
         {/* Resource Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-          {resourceCategories.map((category, categoryIndex) => (;
+          {resourceCategories.map(category: unknown, categoryIndex: unknown ;
             <motion.div
               initial = {
   { opacity: 0,
@@ -415,7 +415,7 @@ const Resources: React.FC = (): JSX.Element => {;
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-              {featuredResources.map((resource, index)  => {;
+              {featuredResources.map((resource, index {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -534,7 +534,7 @@ const Resources: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
+            {resourceCategories.filter(cat => cat.featured).map(category: unknown, index: unknown (
               <motion.div
                 key={category.id}
                 initial = {
@@ -582,7 +582,7 @@ const Resources: React.FC = (): JSX.Element => {;
                   </p>
                   
                   <div className="space-y-3 mb-6">
-                    {category.items.slice(0, 2).map((item, idx) => (
+                    {category.items.slice(0, 2).map(item: unknown, idx: unknown (
                       <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                         <div className="flex-1">
                           <h4 className="text-sm font-medium text-white">{item.title}</h4>
@@ -607,7 +607,7 @@ const Resources: React.FC = (): JSX.Element => {;
                       </p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {resource.tags.slice(0, 2).map((tag, idx) => (
+                        {resource.tags.slice(0, 2).map(tag: unknown, idx: unknown (
                           <span
                             key={idx}
                             className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
@@ -662,7 +662,7 @@ const Resources: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resourceCategories.map((category, index) => (
+            {resourceCategories.map(category: unknown, index: unknown (
               <motion.div
                 key={category.id}
                 id={category.id}
@@ -710,7 +710,7 @@ const Resources: React.FC = (): JSX.Element => {;
                 </p>
                 
                 <div className="space-y-2 mb-4">
-                  {category.items.slice(0, 3).map((item, idx) => (
+                  {category.items.slice(0, 3).map(item: unknown, idx: unknown (
                     <div key={idx} className="flex items-center justify-between text-sm">
                       <span className="text-gray-300">{item.title}</span>
                       <span className="text-gray-500 text-xs">
@@ -769,7 +769,7 @@ const Resources: React.FC = (): JSX.Element => {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index) => (
+            {additionalResources.map(resource: unknown, index: unknown (
               <motion.div
                 key={resource.id}
                 id={resource.id}
@@ -928,4 +928,6 @@ const Resources: React.FC = (): JSX.Element => {;
       </section>;
     </div>;
   );
+}
+
 }

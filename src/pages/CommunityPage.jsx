@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
-// Mock data for featured posts
+// Mock data for featured posts;
 const featuredPosts = [
     {
         id: "1",
@@ -66,7 +66,7 @@ const featuredPosts = [
         authorRole: "Verified Talent"
 
 ];
-// Mock data for recent posts
+// Mock data for recent posts;
 const recentPosts = [
     {
         id: "3",
@@ -156,6 +156,7 @@ const recentPosts = [
         authorRole: "Freelancer"
 
 ];
+export { function };
 export default function CommunityPage() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("categories");
@@ -199,3 +200,7 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>)}
+
+
+}
+}

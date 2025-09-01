@@ -1,11 +1,12 @@
+import React from 'react';
 "use client";
 import * as React from "react";
-
+;
 const ThemeContext = React.createContext({
   theme: "dark",
-  setTheme: () => null,
+  setTheme: () => null
 });
-
+;
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = React.useState("dark");
   
@@ -17,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
 
   const value = {
     theme,
-    setTheme,
+    setTheme
   };
 
   return (
@@ -26,7 +27,7 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
+;
 export const useTheme = () => {
   const context = React.useContext(ThemeContext);
   if (context === null) {

@@ -25,8 +25,8 @@ import {
   Cloud,
   Rocket
  } from 'lucide-react';
-
-const AllServices2027: React.FC = () => {;
+;
+const AllServices2027: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [;
@@ -42,36 +42,36 @@ const AllServices2027: React.FC = () => {;
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: string)  => {
+  const getCategoryStats = (...args: unknown[]): unknown => {
     if (categoryId === 'All') {
       return {
               count: innovativeServices2027.length,
-      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
+      avgPrice: Math.roundinnovativeServices2027.reduce((sum: unknown, s: unknown sum + parseInt(s.price.replace(/[$]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: Math.round(innovativeServices2027.reduce((sum: unknown, s: unknown sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
       }};
     const services = innovativeServices2027.filter(s => s.category === categoryId);
           return {
         count: services.length,
-        avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
-        avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
+        avgPrice: Math.roundservices.reduce((sum: unknown, s: unknown sum + parseInt(s.price.replace(/[$]/g, '').split('/')[0]), 0) / services.length),
+        avgRating: Math.round(services.reduce((sum: unknown, s: unknown sum + s.rating, 0) / services.length) * 10) / 10
       }};
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getCategoryStats = (categoryId: string) => {;
+  const getCategoryStats = (...args: unknown[]): unknown => {;
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
+        avgPrice: Math.roundINNOVATIVE_SERVICES_2027.reduce((sum: unknown, s: unknown sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
+        avgRating: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum: unknown, s: unknown sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
 
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
     return {
       count: services.length,
-      avgPrice: Math.round(services.reduce((sum, s) => sum + s.price, 0) / services.length),
-      avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
+      avgPrice: Math.roundservices.reduce((sum: unknown, s: unknown sum + s.price, 0) / services.length),
+      avgRating: Math.round(services.reduce((sum: unknown, s: unknown sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
 
@@ -198,23 +198,23 @@ const AllServices2027: React.FC = () => {;
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category)  => {;
+            {categories.map(category: unknown {;
               specific business challenges and drive innovation.;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {categories.map((category) => {;
+            {categories.map(category: unknown {;
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
 
-              return (
+              return 
                 <motion.div
                   key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
                   }`}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={( setSelectedCategory(category.id)}
 
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -259,7 +259,7 @@ const AllServices2027: React.FC = () => {;
             animate="visible"
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service)  => (
+            {filteredServices.map(service: unknown (
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>
@@ -454,9 +454,9 @@ const AllServices2027: React.FC = () => {;
     </>;
   )};
 
-// Service Card Component
-const ServiceCard: React.FC<{ service}> = ({ service }) => {
-  const getCategoryIcon = (category: string)  => {
+// Service Card Component;
+const ServiceCard: React.FC<{ service}> = { service }: unknown {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'AI Services':;
             </a>;
@@ -467,9 +467,9 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
   );
 };
 
-// Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {;
+// Service Card Component;
+const ServiceCard: React.FC<{ service: unknown }> = { service }: unknown {
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI Services':;
         return <Brain className="w-5 h-5" />;
@@ -519,7 +519,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 2).map((feature: string, index: number)  => (
+            {service.features.slice(0, 2).map(feature: string, index: number (
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
@@ -562,4 +562,21 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     </motion.div>;
   );
 };
+export { AllServices2027 };
 export default AllServices2027;
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

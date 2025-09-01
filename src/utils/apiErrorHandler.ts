@@ -1,11 +1,11 @@
 import { toast } from '@/hooks/use-toast';
-
-export const showApiError = (error: any, fallbackMessage?: string) => {
+;
+export const showApiError = (...args: unknown[]): unknown => {
   const message = error?.message || fallbackMessage || 'An unexpected error occurred';
   toast({
     variant: "destructive",
     title: "Error",
-    description: message,
+    description: message
   });
   // Log error for debugging
 
@@ -14,8 +14,8 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
 
   }
 };
-
-export const handleApiError = (error: any, fallbackMessage?: string) => {
+;
+export const handleApiError = (...args: unknown[]): unknown => {
   showApiError(error, fallbackMessage);
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
 };

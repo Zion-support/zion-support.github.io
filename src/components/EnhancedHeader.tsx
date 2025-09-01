@@ -64,25 +64,25 @@ import {
   Link as LinkIcon2
 } from 'lucide-react';
 import { innovativeServices2025 } from '../data/innovativeServices2025';
-
-export function EnhancedHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+;
+export function EnhancedHeader(...args: unknown[]): unknown {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<typeof false>(false);
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState<typeof false>(false);
+  const [scrolled, setScrolled] = useState<typeof false>(false);
+  const [isSearching, setIsSearching] = useState<typeof false>(false);
   const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {
       setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return : unknown window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async e: React.FormEvent {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -413,7 +413,7 @@ export function EnhancedHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden xl:flex items-center space-x-8">
-              {navigation.slice(0, 6).map((item) => (
+              {navigation.slice(0, 6).map(item: unknown (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -431,29 +431,29 @@ export function EnhancedHeader() {
               <div className="relative group">
                 <button
                   className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300"
-                  onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                  onMouseEnter={: unknown setServicesDropdownOpen(true)}
+                  onMouseLeave={: unknown setServicesDropdownOpen(false)}
                 >
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
                 </button>
 
                 <AnimatePresence>
-                  {servicesDropdownOpen && (
+                  {servicesDropdownOpen && 
                     <motion.div
                       className="absolute top-full left-0 mt-4 w-[1200px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20"
                       initial={{ opacity: 0, y: -20, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -20, scale: 0.95 }}
                       transition={{ duration: 0.3 }}
-                      onMouseEnter={() => setServicesDropdownOpen(true)}
-                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                      onMouseEnter={( setServicesDropdownOpen(true)}
+                      onMouseLeave={: unknown setServicesDropdownOpen(false)}
                     >
                       {/* Featured Services */}
                       <div className="mb-8">
                         <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">Featured Services</h3>
                         <div className="grid grid-cols-3 gap-6">
-                          {services.filter(s => s.featured).map((service) => (
+                          {services.filter(s => s.featured).map(service: unknown (
                             <Link
                               key={service.name}
                               to={service.href}
@@ -485,7 +485,7 @@ export function EnhancedHeader() {
 
                       {/* Service Categories Grid */}
                       <div className="grid grid-cols-2 gap-8">
-                        {serviceCategories.map((category) => (
+                        {serviceCategories.map(category: unknown (
                           <div key={category.name}>
                             <div className="flex items-center space-x-3 mb-4">
                               <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
@@ -496,7 +496,7 @@ export function EnhancedHeader() {
                               </h4>
                             </div>
                             <div className="space-y-2">
-                              {category.services.slice(0, 3).map((service) => (
+                              {category.services.slice(0, 3).map(service: unknown (
                                 <Link
                                   key={service.name}
                                   to={service.href}
@@ -556,7 +556,7 @@ export function EnhancedHeader() {
               </div>
 
               {/* Additional Navigation Items */}
-              {navigation.slice(6, 10).map((item) => (
+              {navigation.slice(6, 10).map(item: unknown (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -581,7 +581,7 @@ export function EnhancedHeader() {
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                   />
                   {isSearching && (
@@ -626,7 +626,7 @@ export function EnhancedHeader() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={: unknown setMobileMenuOpen(!mobileMenuOpen)}
               className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -636,7 +636,7 @@ export function EnhancedHeader() {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {mobileMenuOpen && (
+          {mobileMenuOpen && 
             <motion.div
               className="xl:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/30"
               initial={{ opacity: 0, height: 0 }}
@@ -646,11 +646,10 @@ export function EnhancedHeader() {
             >
               <div className="container mx-auto px-4 py-6">
                 <div className="space-y-4">
-                  {navigation.map((item) => (
-                    <Link
+                  {navigation.map((item <Link
                       key={item.name}
                       to={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={(: unknown setMobileMenuOpen(false)}
                       className={`block py-2 text-lg font-medium transition-colors ${
                         item.current
                           ? 'text-cyan-400'
@@ -665,11 +664,10 @@ export function EnhancedHeader() {
                   <div className="pt-4 border-t border-gray-700">
                     <h3 className="text-lg font-semibold text-cyan-400 mb-4">Services</h3>
                     <div className="grid grid-cols-1 gap-3">
-                      {serviceCategories.slice(0, 6).map((category) => (
-                        <Link
+                      {serviceCategories.slice(0, 6).map(category: unknown <Link
                           key={category.name}
                           to={category.href}
-                          onClick={() => setMobileMenuOpen(false)}
+                          onClick={(: unknown setMobileMenuOpen(false)}
                           className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors"
                         >
                           <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
@@ -710,5 +708,6 @@ export function EnhancedHeader() {
     </>
   );
 }
-
+;
+export { EnhancedHeader };
 export default EnhancedHeader;

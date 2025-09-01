@@ -220,20 +220,20 @@ import {
   Omega
  } from 'lucide-react';
 
-    const handleScroll = () => {;
+    const handleScroll = (...args: unknown[]): unknown => {;
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return : unknown window.removeEventListener('scroll', handleScroll)}, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
 
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
 
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (...args: unknown[]): unknown => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
@@ -345,7 +345,7 @@ import {
     };
   ];
 
-  return (
+  return 
     <>
       {/* Desktop Navigation */}
       <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -373,11 +373,10 @@ import {
 
             {/* Main Navigation */}
             <div className="flex items-center space-x-1">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+              {navigationItems.map((item <div key={item.name} className="relative group">
                   {item.dropdown ? (
                     <button
-                      onClick={() => toggleDropdown(item.name)}
+                      onClick={(: unknown toggleDropdown(item.name)}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                         location.pathname === item.href
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
@@ -405,7 +404,7 @@ import {
                   )}
 
                   {/* Dropdown Menu */}
-                  {item.dropdown && (
+                  {item.dropdown && 
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
@@ -444,7 +443,7 @@ import {
 
                           <div className="p-4">
                             <div className="grid grid-cols-1 gap-2">
-                              {item.dropdown.map((dropdownItem) => (
+                              {item.dropdown.map((dropdownItem (
                                 <Link
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
@@ -482,7 +481,7 @@ import {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   className="w-64 pl-10 pr-4 py-2 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
                 />
               </form>
@@ -525,7 +524,7 @@ import {
 
               {/* Mobile Menu Button */}
               <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                onClick={: unknown setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
 
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -536,7 +535,7 @@ import {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {mobileMenuOpen && (
+          {mobileMenuOpen && 
             <motion.div
               initial = {
   { opacity: 0,
@@ -579,19 +578,18 @@ import {
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
                   />
                 </form>
 
                 {/* Navigation Items */}
                 <div className="space-y-2">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
+                  {navigationItems.map(item: unknown <div key={item.name}>
                       {item.dropdown ? (
                         <div>
                           <button
-                            onClick={() => toggleDropdown(item.name)}
+                            onClick={(: unknown toggleDropdown(item.name)}
                             className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${
                               location.pathname === item.href
                                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
@@ -609,7 +607,7 @@ import {
 
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
-                            {activeDropdown === item.name && (
+                            {activeDropdown === item.name && 
                               <motion.div
                                 initial = {
   { opacity: 0,
@@ -644,7 +642,7 @@ import {
                                 transition={{ duration: 0.3 }}
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
 
-                                {item.dropdown.map((dropdownItem) => (;
+                                {item.dropdown.map((dropdownItem (;
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}

@@ -54,7 +54,7 @@ const teamExpertise = [
     count: "500+";
   };
 ];
-
+;
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",;
@@ -65,9 +65,9 @@ const coreExpertise = [
   "IoT & Edge Computing",;
   "Mobile & Web Development";
 ];
-
-export function TeamExpertiseSection() {
-  return (
+;
+export function TeamExpertiseSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -121,9 +121,9 @@ export function TeamExpertiseSection() {
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {stats.map((stat, index)  => {;
+          {stats.map((stat, index {;
             const IconComponent = stat.icon;
-            return (
+            return 
               <div key = {stat.label} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-full">
@@ -135,7 +135,7 @@ export function TeamExpertiseSection() {
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamExpertise.map((expertise, index) => (
+          {teamExpertise.map((expertise, index (
             <motion.div
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
@@ -220,7 +220,8 @@ export function TeamExpertiseSection() {
       </div>;
     </section>;
   )};
-
+;
+export { TeamExpertiseSection };
 export default TeamExpertiseSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -229,6 +230,6 @@ export default TeamExpertiseSection;
     </section>;
   );
 }
-
+;
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;

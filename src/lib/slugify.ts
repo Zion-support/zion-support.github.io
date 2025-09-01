@@ -2,7 +2,7 @@
  * Convert a string to a URL-friendly slug
  * @param text - The text to convert to a slug
  * @returns A URL-friendly slug
- */
+ */;
 export function slugify(text: anystring): string {
   return text
     .toLowerCase()
@@ -16,11 +16,11 @@ export function slugify(text: anystring): string {
  * Convert a slug back to a readable string
  * @param slug - The slug to convert
  * @returns A readable string
- */
+ */;
 export function deslugify(slug: string): string {
   return slug
     .replace(/-/g, ' ')
-    .replace(/\b\w/g, (char)  => char.toUpperCase());
+    .replace/\b\w/g: unknown, (char: unknown char.toUpperCase());
 }
 
 /**
@@ -28,7 +28,7 @@ export function deslugify(slug: string): string {
  * @param text - The text to convert to a slug
  * @param existingSlugs - Array of existing slugs to check against
  * @returns A unique slug
- */
+ */;
 export function generateUniqueSlug(text: string, existingSlugs: string[]): string {
   let slug = slugify(text);
   let counter = 1;

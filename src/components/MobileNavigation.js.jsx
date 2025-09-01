@@ -209,4 +209,5 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
           </motion.div>
         </>)}
     </AnimatePresence>)};
+export { MobileNavigation };
 export default MobileNavigation;

@@ -3,31 +3,30 @@ import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
-export function MainNavigation({ className }) {
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+export function MainNavigation(...args: unknown[]): unknown {
+    const [isServicesOpen, setIsServicesOpen] = useState<typeof false>(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState<typeof false>(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState<typeof false>(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState<typeof false>(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
-      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
+      <NavLink to="/" className={{ isActive }: unknown cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
       </NavLink>
       
       {/* Services Dropdown */}
       <div className="relative group">
         <button 
-          onMouseEnter={() => setIsServicesOpen(true)} 
-          onMouseLeave={() => setIsServicesOpen(false)} 
+          onMouseEnter={: unknown setIsServicesOpen(true)} 
+          onMouseLeave={: unknown setIsServicesOpen(false)} 
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
           <Zap className="w-4 h-4"/>
           <span>Services</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        {isServicesOpen && (
-          <div 
-            onMouseEnter={() => setIsServicesOpen(true)} 
-            onMouseLeave={() => setIsServicesOpen(false)} 
+        {isServicesOpen && <div 
+            onMouseEnter={(: unknown setIsServicesOpen(true)} 
+            onMouseLeave={: unknown setIsServicesOpen(false)} 
             className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-4">
@@ -92,18 +91,17 @@ export function MainNavigation({ className }) {
       {/* Solutions Dropdown */}
       <div className="relative group">
         <button 
-          onMouseEnter={() => setIsSolutionsOpen(true)} 
-          onMouseLeave={() => setIsSolutionsOpen(false)} 
+          onMouseEnter={: unknown setIsSolutionsOpen(true)} 
+          onMouseLeave={: unknown setIsSolutionsOpen(false)} 
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
           <Brain className="w-4 h-4"/>
           <span>Solutions</span>
           <ChevronDown className="w-3 h-3"/>
         </button>
-        {isSolutionsOpen && (
-          <div 
-            onMouseEnter={() => setIsSolutionsOpen(true)} 
-            onMouseLeave={() => setIsSolutionsOpen(false)} 
+        {isSolutionsOpen && <div 
+            onMouseEnter={(: unknown setIsSolutionsOpen(true)} 
+            onMouseLeave={: unknown setIsSolutionsOpen(false)} 
             className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-4">
@@ -149,13 +147,12 @@ export function MainNavigation({ className }) {
       
       {/* Company Dropdown */}
       <div className="relative group">
-        <button onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+        <button onMouseEnter={: unknown setIsCompanyOpen(true)} onMouseLeave={: unknown setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
           <Building2 className="w-4 h-4" />
           <span>Company</span>
           <ChevronDown className="w-3 h-3" />
         </button>
-        {isCompanyOpen && (
-          <div onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+        {isCompanyOpen && <div onMouseEnter={(: unknown setIsCompanyOpen(true)} onMouseLeave={: unknown setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
@@ -173,13 +170,12 @@ export function MainNavigation({ className }) {
       
       {/* Resources Dropdown */}
       <div className="relative group">
-        <button onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+        <button onMouseEnter={: unknown setIsResourcesOpen(true)} onMouseLeave={: unknown setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
           <FileText className="w-4 h-4" />
           <span>Resources</span>
           <ChevronDown className="w-3 h-3" />
         </button>
-        {isResourcesOpen && (
-          <div onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+        {isResourcesOpen && <div onMouseEnter={(: unknown setIsResourcesOpen(true)} onMouseLeave={: unknown setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
@@ -209,7 +205,7 @@ export function MainNavigation({ className }) {
       
       <NavLink 
         to="/signup" 
-        className={({ isActive }) => 
+        className={{ isActive }: unknown 
           cn(
             "text-sm font-medium transition-colors hover:text-primary", 
             isActive ? "text-zion-cyan" : "text-muted-foreground",

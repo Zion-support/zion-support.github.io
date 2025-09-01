@@ -2,14 +2,14 @@ import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
 import { Button } from "./button";
-// Context
+// Context;
 const NotificationContext = createContext(null);
-// Hook
+// Hook;
 export function useNotifications() {
     const context = useContext(NotificationContext);
     if (!context) {
         throw new Error('useNotifications must be used within a NotificationProvider')}
-    return context}
+    return context};
 export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }) {
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
@@ -45,7 +45,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     return (<NotificationContext.Provider value={value}>
       {children}
       <NotificationContainer position={position}/>
-    </NotificationContext.Provider>)}
+    </NotificationContext.Provider>)};
 function NotificationContainer({ position }) {
     const { notifications, clearAll } = useNotifications();
     const getPositionClasses = (pos) => {
@@ -87,7 +87,7 @@ function NotificationContainer({ position }) {
           {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification}/>))}
         </AnimatePresence>
       </div>
-    </div>)}
+    </div>)};
 function NotificationItem({ notification }) {
     const { removeNotification } = useNotifications();
     const getIcon = (type) => {
@@ -191,6 +191,6 @@ function NotificationItem({ notification }) {
         {notification.timestamp.toLocaleTimeString()}
       </div>
     </motion.div>)}
-// Convenience functions for quick notifications
+// Convenience functions for quick notifications;
 export function showInfo(title, message, options) {
     return { type: 'info', title, message, ...options }}

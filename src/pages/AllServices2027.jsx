@@ -12,13 +12,13 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Import all service data
+// Import all service data;
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 import { CUTTING_EDGE_2025_SERVICES } from "@/data/2025-cutting-edge-innovations.jsx";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/2025-specialized-industry-solutions.jsx";
 import { INNOVATIVE_MICRO_SAAS_2025 } from "@/data/2025-innovative-micro-saas-expansion.jsx";
 
-// Combine all services
+// Combine all services;
 const ALL_SERVICES = [
     ...MICRO_SAAS_SERVICES,
     ...CUTTING_EDGE_2025_SERVICES,
@@ -26,7 +26,7 @@ const ALL_SERVICES = [
     ...INNOVATIVE_MICRO_SAAS_2025
 ];
 
-// Service categories
+// Service categories;
 const SERVICE_CATEGORIES = [
     { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: ALL_SERVICES.filter(s => s.category.includes('AI') || s.tags.includes('AI')).length },
@@ -37,7 +37,7 @@ const SERVICE_CATEGORIES = [
     { id: 'emerging-tech', name: 'Emerging Tech', icon: Lightbulb, count: ALL_SERVICES.filter(s => ['Edge Computing', 'Digital Twin', 'Autonomous Systems', 'Neuromorphic Computing', 'Federated Learning'].includes(s.category)).length }
 ];
 
-// Contact information
+// Contact information;
 const CONTACT_INFO = {
   phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
@@ -54,7 +54,7 @@ const CONTACT_INFO = {
 
 };
 
-// Benefits section
+// Benefits section;
 const BENEFITS = [
     {
         icon: <Zap className="h-6 w-6"/>,
@@ -77,7 +77,8 @@ const BENEFITS = [
         description: "Average 300% ROI within 6 months of implementation"
     }
 ];
-
+;
+export { function };
 export default function AllServices2027() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');

@@ -40,7 +40,7 @@ import {
     technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
   }
 ];
-
+;
 const blockchainTechnologies = [
   {
     name: "Ethereum",
@@ -71,7 +71,7 @@ const blockchainTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -101,7 +101,7 @@ const successStories = [
     logo: "MN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -132,7 +132,7 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
 const blockchainBenefits = [
   {
     title: "Transparency",
@@ -159,7 +159,8 @@ const blockchainBenefits = [
     examples["Automated payments", "Conditional logic", "Business process automation"];
   }
 ];
-
+;
+export { function };
 export default function Blockchain() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -833,3 +834,7 @@ export default function Blockchain() {
       </section>
     </div>
   )}
+
+
+}
+}

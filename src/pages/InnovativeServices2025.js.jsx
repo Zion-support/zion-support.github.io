@@ -414,4 +414,5 @@ const InnovativeServices2025 = () => {
         </div>
       </section>
     </div>)};
+export { InnovativeServices2025 };
 export default InnovativeServices2025;

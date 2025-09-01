@@ -581,7 +581,7 @@ import {
     technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
   }
 ];
-
+;
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -612,7 +612,7 @@ const fiveGTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -642,7 +642,7 @@ const successStories = [
     logo: "SCS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -673,7 +673,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const fiveGBenefits = [
   {
     title: "Ultra-Fast Connectivity",
@@ -700,7 +700,8 @@ const fiveGBenefits = [
     examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];
   }
 ];
-
+;
+export { function };
 export default function FiveGEnterpriseSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1374,3 +1375,7 @@ export default function FiveGEnterpriseSolutions() {
       </section>
     </div>
   )}
+
+
+}
+}

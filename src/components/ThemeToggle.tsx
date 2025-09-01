@@ -6,14 +6,18 @@ import { Sun, Moon, Monitor  } from 'lucide-react';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
+  // Add your props here
+
+
   className?: string;
+
 }
-
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
+;
+export const ThemeToggle: React.FC<ThemeToggleProps> = { className = '' }: unknown {;
   const [theme, setTheme] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<typeof false>(false);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
@@ -21,7 +25,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!mounted) return;
 
       root.classList.toggle('dark', theme === 'dark');
@@ -42,10 +46,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     { value: 'system', label: 'System', icon: Monitor }
   ];
 
-  return (
-    <div className="relative">
+  return <div className="relative">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         aria-label="Select theme"
         aria-expanded={isOpen}
@@ -56,7 +59,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </button>
 
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -64,10 +67,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
             transition={{ duration: 0.15 }}
             className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
-            {themes.map((themeOption) => (
-              <button
+            {themes.map((themeOption <button
                 key={themeOption.value}
-                onClick={() => {
+                onClick={(: unknown {
                   setTheme(themeOption.value);
                   setIsOpen(false);
                 }}
@@ -110,7 +112,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const handleThemeChange = (newTheme: Theme) => {
+  const handleThemeChange = (...args: unknown[]): unknown => {
     setTheme(newTheme);
   };
 
@@ -126,7 +128,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     );
   }
 
-  return (
+  return 
     <div className={`relative ${className}`}>
       <motion.div
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"
@@ -134,14 +136,13 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        {themes.map((themeOption) => {
+        {themes.map((themeOption {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
           
-          return (
-            <motion.button
+          return <motion.button
               key={themeOption.value}
-              onClick={() => handleThemeChange(themeOption.value)}
+              onClick={(: unknown handleThemeChange(themeOption.value)}
               className={`relative p-2 rounded-lg transition-all duration-200 ${
                 isActive
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
@@ -167,5 +168,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     </div>
   );
 };
-
+;
+export { ThemeToggle };
 export default ThemeToggle;

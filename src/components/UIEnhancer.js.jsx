@@ -172,4 +172,5 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         </div>
       </motion.div>
     </>)};
+export { UIEnhancer };
 export default UIEnhancer;

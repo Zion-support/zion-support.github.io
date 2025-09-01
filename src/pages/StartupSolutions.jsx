@@ -18,7 +18,7 @@ import {
   Zap,
   Award
 } from 'lucide-react';
-
+;
 const startupSolutions = [
   {
     id: 1,
@@ -111,7 +111,7 @@ const startupSolutions = [
     category: "Marketing"
   }
 ];
-
+;
 const successStories = [
   {
     logo: "🚀",
@@ -138,7 +138,7 @@ const successStories = [
     results: "App launched in 8 weeks, 50% increase in mobile conversions, 4.8-star rating."
   }
 ];
-
+;
 const StartupSolutions = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -346,5 +346,6 @@ const StartupSolutions = () => {
     </div>
   );
 };
-
+;
+export { StartupSolutions };
 export default StartupSolutions;

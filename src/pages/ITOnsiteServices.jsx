@@ -25,7 +25,7 @@ import {
   Brain,
   Code,
   Truck,
-  FileText
+  FileText;
 const onsiteServices = [
   {
     id: 1,
@@ -124,7 +124,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -154,7 +154,7 @@ const successStories = [
     logo: "FS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -185,7 +185,8 @@ const processSteps = [
     duration: "1-2 days"
 
 ];
-
+;
+export { function };
 export default function ITOnsiteServices() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedService, setSelectedService] = useState(null);
@@ -766,3 +767,10 @@ export default function ITOnsiteServices() {
       </section>
     </div>
   )}
+
+
+
+}
+
+}
+}

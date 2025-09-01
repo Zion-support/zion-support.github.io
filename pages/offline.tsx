@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+;
+export { function };
+export default function OfflinePage(...args: unknown[]): unknown {
+  const [isOnline, setIsOnline] = useState<typeof false>(false);
+  const [retryCount, setRetryCount] = useState<typeof 0>(0);
 
-export default function OfflinePage() {
-  const [isOnline, setIsOnline] = useState(false);
-  const [retryCount, setRetryCount] = useState(0);
-
-  useEffect(() => {
-    const checkOnlineStatus = () => {
+  useEffect(: unknown {
+    const checkOnlineStatus = (...args: unknown[]): unknown => {
       setIsOnline(navigator.onLine);
     };
 
@@ -18,25 +19,25 @@ export default function OfflinePage() {
     window.addEventListener('online', checkOnlineStatus);
     window.addEventListener('offline', checkOnlineStatus);
 
-    return () => {
+    return : unknown {
       window.removeEventListener('online', checkOnlineStatus);
       window.removeEventListener('offline', checkOnlineStatus);
     };
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (isOnline) {
       // Redirect to home page when back online
       window.location.href = '/';
     }
   }, [isOnline]);
 
-  const handleRetry = () => {
+  const handleRetry = (...args: unknown[]): unknown => {
     setRetryCount(prev => prev + 1);
     window.location.reload();
   };
 
-  const handleGoHome = () => {
+  const handleGoHome = (...args: unknown[]): unknown => {
     // Try to navigate to home page
     window.location.href = '/';
   };

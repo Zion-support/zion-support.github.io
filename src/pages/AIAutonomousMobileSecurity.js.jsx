@@ -169,4 +169,5 @@ const AIAutonomousMobileSecurity = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousMobileSecurity };
 export default AIAutonomousMobileSecurity;

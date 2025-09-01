@@ -8,7 +8,7 @@ interface ApiResponse<T = any> {
   count?: number;
 }
 
-// Generic API error
+// Generic API error;
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
@@ -18,7 +18,7 @@ class ApiError extends Error {
 
 
 // Generic fetch wrapper with error handling
-async function apiRequest<T>(
+async function apiRequest<T = any>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
@@ -29,9 +29,9 @@ async function apiRequest<T>(
     method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
-      ...options.headers,
+      ...options.headers
     },
-    ...options,
+    ...options
   };
 
   try {
@@ -52,70 +52,71 @@ async function apiRequest<T>(
     throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
-
+;
 export const api = {
 
   // Health check
-  health: () => apiRequest('/health'),
+  health: : unknown apiRequest('/health'),
 
   // Users
-  getUsers: () => apiRequest<Array<any>>('/users'),
-  getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) =>
+  getUsers: : unknown apiRequest<any[]>('/users'),
+  getUser: id: number apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
+  createUser: userData: { name: string; email: string }
     apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
       method: 'POST',
-      body: JSON.stringify(userData),
+      body: JSON.stringify(userData)
     }),
-  updateUser: (id: number, userData: { name?: string; email?: string }) =>
+  updateUser: id: number, userData: { name?: string; email?: string }
     apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(`/users/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(userData),
+      body: JSON.stringify(userData)
     }),
-  deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }),
+  deleteUser: id: number apiRequest(`/users/${id}`, { method: 'DELETE' }),
 
   // Authentication
-  login: (credentials: { email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/login', {
+  login: credentials: { email: string; password: string }
+    apiRequest<{ token: string; user: unknown }>('/auth/login', {
       method: 'POST',
-      body: JSON.stringify(credentials),
+      body: JSON.stringify(credentials)
     }),
-  register: (userData: { name: string; email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/register', {
+  register: userData: { name: string; email: string; password: string }
+    apiRequest<{ token: string; user: unknown }>('/auth/register', {
       method: 'POST',
-      body: JSON.stringify(userData),
+      body: JSON.stringify(userData)
     }),
-  logout: () => apiRequest('/auth/logout', { method: 'POST' }),
+  logout: : unknown apiRequest('/auth/logout', { method: 'POST' }),
 
   // Products/Services
-  getProducts: () => apiRequest<Array<any>>('/products'),
-  getProduct: (id: number) => apiRequest<any>(`/products/${id}`),
-  createProduct: (productData: any) =>
+  getProducts: : unknown apiRequest<any[]>('/products'),
+  getProduct: id: number apiRequest<any>(`/products/${id}`),
+  createProduct: productData: unknown
     apiRequest<any>('/products', {
       method: 'POST',
-      body: JSON.stringify(productData),
+      body: JSON.stringify(productData)
     }),
-  updateProduct: (id: number, productData: any) =>
+  updateProduct: id: number, productData: unknown
     apiRequest<any>(`/products/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(productData),
+      body: JSON.stringify(productData)
     }),
-  deleteProduct: (id: number) => apiRequest(`/products/${id}`, { method: 'DELETE' }),
+  deleteProduct: id: number apiRequest(`/products/${id}`, { method: 'DELETE' }),
 
   // Orders
-  getOrders: () => apiRequest<Array<any>>('/orders'),
-  getOrder: (id: number) => apiRequest<any>(`/orders/${id}`),
-  createOrder: (orderData: any) =>
+  getOrders: : unknown apiRequest<any[]>('/orders'),
+  getOrder: id: number apiRequest<any>(`/orders/${id}`),
+  createOrder: orderData: unknown
     apiRequest<any>('/orders', {
       method: 'POST',
-      body: JSON.stringify(orderData),
+      body: JSON.stringify(orderData)
     }),
-  updateOrder: (id: number, orderData: any) =>
+  updateOrder: id: number, orderData: unknown
     apiRequest<any>(`/orders/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(orderData),
+      body: JSON.stringify(orderData)
     }),
-  deleteOrder: (id: number) => apiRequest(`/orders/${id}`, { method: 'DELETE' }),
+  deleteOrder: id: number apiRequest(`/orders/${id}`, { method: 'DELETE' })
 
 };
-
+;
+export { api };
 export default api;

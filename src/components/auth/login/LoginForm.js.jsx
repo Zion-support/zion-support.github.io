@@ -7,13 +7,13 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Link } from "react-router-dom";
 import { LoadingOverlay } from "@/components/LoadingOverlay";
-// Form validation schema
+// Form validation schema;
 const loginSchema = z.object({
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
+    password: z.string().min(6, "Password must be at least 6 characters")
 });
 function LoginForm() {
     const { login, isLoading } = useAuth();
@@ -24,8 +24,8 @@ function LoginForm() {
         resolver: zodResolver(loginSchema),
         defaultValues: {
             email: "",
-            password: "",
-        },
+            password: ""
+        }
     });
     const onSubmit = async (data) => {
         if (isSubmitting)
@@ -87,8 +87,9 @@ function LoginForm() {
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>)}
+    </Form>)};
+export { LoginForm };
 export default LoginForm;
-
+;
 export default LoginForm;
 export default LoginForm;

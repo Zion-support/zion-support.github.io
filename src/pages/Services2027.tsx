@@ -57,7 +57,7 @@ import { Search,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-// Mock data for 2027 services
+// Mock data for 2027 services;
 const SERVICES_2027 = [
   {
     id: 1,
@@ -156,25 +156,25 @@ const SERVICES_2027 = [
     color: "from-blue-500 to-cyan-500"
   }
 ];
-
+;
 const Services2027: React.FC = (): JSX.Element => {
-  const [query, setQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [query, setQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'innovation'>('innovation');
   
   const categories = [
-    { id: any'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },;
+    { id: unknown'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },;
     { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s  => s.category === 'AI & Automation').length },
-    { id: any'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI').length },;
-    { id: any'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity').length },;
-    { id: any'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing').length },;
-    { id: any'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin').length },;
-    { id: any'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability').length },;
-    { id: any'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse').length },;
-    { id: any'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT').length }
+    { id: unknown'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI').length },;
+    { id: unknown'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity').length },;
+    { id: unknown'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing').length },;
+    { id: unknown'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin').length },;
+    { id: unknown'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability').length },;
+    { id: unknown'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse').length },;
+    { id: unknown'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT').length }
   ];
 
-  const filteredAndSorted = useMemo(() => {
+  const filteredAndSorted = useMemo(: unknown {
     let filtered = SERVICES_2027;
     
     // Filter by search query
@@ -195,14 +195,14 @@ const Services2027: React.FC = (): JSX.Element => {
     // Sort services
     switch (sortBy) {
       case 'price':
-        return filtered.sort((a, b) => a.price - b.price);
+        return filtered.sort(a: unknown, b: unknown a.price - b.price);
       case 'innovation':
-        return filtered.sort((a, b) => {
+        return filtered.sort(a: unknown, b: unknown {
           const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
         });
       case 'roi':
-        return filtered.sort((a, b) => {
+        return filtered.sort(a: unknown, b: unknown {
           const aROI = parseInt(a.roi.split('-')[0]);
           const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI;
@@ -214,7 +214,7 @@ const Services2027: React.FC = (): JSX.Element => {
 
   const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="2027 Services - Zion Tech Group" 
@@ -274,7 +274,7 @@ const Services2027: React.FC = (): JSX.Element => {
                     type="text"
                     placeholder="Search 2027 services..."
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={(e setQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50"
                   />
                 </div>
@@ -284,10 +284,10 @@ const Services2027: React.FC = (): JSX.Element => {
               <div className="flex-shrink-0">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-400/50"
                 >
-                  {categories.map((category)  => (
+                  {categories.map(category: unknown (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -299,7 +299,7 @@ const Services2027: React.FC = (): JSX.Element => {
               <div className="flex-shrink-0">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400/50"
                 >
                   <option value="innovation">Sort by Innovation</option>
@@ -331,7 +331,7 @@ const Services2027: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index)  => (
+            {featuredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,7 +348,7 @@ const Services2027: React.FC = (): JSX.Element => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 3).map((feature, idx) => (
+                  {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                     <div key={idx} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-purple-400" />
                       <span className="text-sm text-gray-300">{feature}</span>
@@ -399,7 +399,7 @@ const Services2027: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredAndSorted.map((service, index)  => (
+            {filteredAndSorted.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -472,5 +472,6 @@ const Services2027: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { Services2027 };
 export default Services2027;

@@ -260,4 +260,5 @@ const LinkHealthMonitor = () => {
           </motion.div>
         </motion.div>)}
     </>)};
+export { LinkHealthMonitor };
 export default LinkHealthMonitor;

@@ -2,7 +2,7 @@
 
 /**
  * Password strength levels
- */
+ */;
 export const PASSWORD_STRENGTH = {
   VERY_WEAK: 'very-weak',
   WEAK: 'weak',
@@ -13,7 +13,7 @@ export const PASSWORD_STRENGTH = {
 
 /**
  * Password strength colors
- */
+ */;
 export const PASSWORD_COLORS = {
   [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
@@ -24,7 +24,7 @@ export const PASSWORD_COLORS = {
 
 /**
  * Password strength labels
- */
+ */;
 export const PASSWORD_LABELS = {
   [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
@@ -37,7 +37,7 @@ export const PASSWORD_LABELS = {
  * Check if password contains lowercase letters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains lowercase
- */
+ */;
 export const hasLowercase = (password) => {
   return /[a-z]/.test(password);
 };
@@ -46,7 +46,7 @@ export const hasLowercase = (password) => {
  * Check if password contains uppercase letters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains uppercase
- */
+ */;
 export const hasUppercase = (password) => {
   return /[A-Z]/.test(password);
 };
@@ -55,7 +55,7 @@ export const hasUppercase = (password) => {
  * Check if password contains numbers
  * @param {string} password - Password to check
  * @returns {boolean} True if contains numbers
- */
+ */;
 export const hasNumbers = (password) => {
   return /\d/.test(password);
 };
@@ -64,7 +64,7 @@ export const hasNumbers = (password) => {
  * Check if password contains special characters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains special characters
- */
+ */;
 export const hasSpecialChars = (password) => {
   return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 };
@@ -73,7 +73,7 @@ export const hasSpecialChars = (password) => {
  * Check password length
  * @param {string} password - Password to check
  * @returns {number} Length score (0-3)
- */
+ */;
 export const getLengthScore = (password) => {
   if (!password) return 0;
 
@@ -88,7 +88,7 @@ export const getLengthScore = (password) => {
  * Calculate password strength score
  * @param {string} password - Password to check
  * @returns {number} Score from 0 to 100
- */
+ */;
 export const calculatePasswordScore = (password) => {
   if (!password) return 0;
 
@@ -117,7 +117,7 @@ export const calculatePasswordScore = (password) => {
  * Get password strength level
  * @param {string} password - Password to check
  * @returns {string} Strength level
- */
+ */;
 export const getPasswordStrength = (password) => {
   const score = calculatePasswordScore(password);
 
@@ -132,7 +132,7 @@ export const getPasswordStrength = (password) => {
  * Get password strength feedback
  * @param {string} password - Password to check
  * @returns {Array} Array of feedback messages
- */
+ */;
 export const getPasswordFeedback = (password) => {
   const feedback = [];
 
@@ -174,7 +174,7 @@ export const getPasswordFeedback = (password) => {
  * Validate password requirements
  * @param {string} password - Password to validate
  * @returns {Object} Validation result
- */
+ */;
 export const validatePassword = (password) => {
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
@@ -191,7 +191,7 @@ export const validatePassword = (password) => {
   };
 };
 
-
+;
 export default {
   PASSWORD_STRENGTH,
   PASSWORD_COLORS,

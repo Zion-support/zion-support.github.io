@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords: string[];
@@ -11,13 +12,16 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps {
+  // Add your props here
+
   seoData: SEOData;
   children: React.ReactNode;
-
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
-  useEffect(() => {
+;
+const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = { seoData: unknown, children 
+}: unknown {
+  useEffect(: unknown {
     // Update meta tags dynamically
-    const updateMetaTags = () => {;
+    const updateMetaTags = (...args: unknown[]): unknown => {;
       // Update title;
       document.title = seoData.title;
 
@@ -40,7 +44,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {;
+      const updateOGTag = (...args: unknown[]): unknown => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -57,7 +61,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {;
+      const updateTwitterTag = (...args: unknown[]): unknown => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');
@@ -98,7 +102,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     updateMetaTags();
     
     // Cleanup function
-    return () => {
+    return : unknown {
       // Remove dynamically added meta tags on unmount
       const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]');
       dynamicTags.forEach(tag => tag.remove());
@@ -150,7 +154,19 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     </>;
   );
 };
-
+;
+export { EnhancedSEOManager };
 export default EnhancedSEOManager;
 export default function
     return;
+
+
+
+
+}
+
+
+}
+
+}
+}

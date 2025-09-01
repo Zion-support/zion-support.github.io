@@ -4,11 +4,13 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 
 interface NewsletterFormData {
 
+
   email: string;
   firstName: string;
   interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-
+  frequency: 'weekly' | 'monthly' | 'quarterly'
+}
+;
 const interests = [;
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
   { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
@@ -17,7 +19,7 @@ const interests = [;
   { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
-
+;
 const frequencies = [;
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
@@ -61,7 +63,7 @@ const frequencies = [;
       setStatus('success');
 
       // Reset form after successful submission
-      setTimeout(()  => {
+      setTimeout(: unknown {
         setFormData({
           email: '',
           firstName: '',
@@ -79,7 +81,7 @@ const frequencies = [;
     }
   };
 
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
+  const handleInputChange = (...args: unknown[]): unknown => {;
     setFormData(prev => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
@@ -128,7 +130,7 @@ const frequencies = [;
     );
   }
 
-  return (
+  return 
     <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
       <div className="text-center mb-8">
         <motion.div
@@ -240,7 +242,7 @@ const frequencies = [;
               id="firstName"
               value={formData.firstName}
               onChange = {
-  (e) => handleInputChange('firstName',
+  (e handleInputChange('firstName',
   e.target.value)
 
 
@@ -273,7 +275,7 @@ const frequencies = [;
               id="email"
               value={formData.email}
               onChange = {
-  (e) => handleInputChange('email',
+  e: unknown handleInputChange('email',
   e.target.value)
 
 
@@ -304,15 +306,14 @@ const frequencies = [;
             Areas of Interest * (Select all that apply);
           </label>;
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
-            {interests.map((interest) => {;
+            {interests.map(interest: unknown {;
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
 
-              return (
-                <motion.button
+              return <motion.button
                   key = {interest.id}
                   type="button"
-                  onClick={() => handleInterestToggle(interest.id)}
+                  onClick={(: unknown handleInterestToggle(interest.id)}
                   className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${
                     isSelected
                       ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
@@ -341,7 +342,7 @@ const frequencies = [;
             Update Frequency
           </label>
           <div className="grid grid-cols-1 md: grid-cols-3 gap-3">
-            {frequencies.map((freq)  => (
+            {frequencies.map(freq: unknown 
               <label
                 key={freq.value}
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${
@@ -356,7 +357,7 @@ const frequencies = [;
                   value={freq.value}
                   checked={formData.frequency === freq.value}
                   onChange = {
-  (e) => handleInputChange('frequency',
+  (e handleInputChange('frequency',
   e.target.value)
 
 
@@ -389,7 +390,7 @@ const frequencies = [;
         {/* Submit Button */}
         <motion.button
           type="submit"
-          disabled={status === 'loading'}
+          disabled={status === 'loading'};
 className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
             status === 'loading'
               ? 'bg-slate-400 cursor-not-allowed'

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+;
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -10,7 +10,7 @@ export function ScrollToTop() {
         setIsVisible(true);
       } else {
         setIsVisible(false);
-
+;
 export function ScrollToTop = () => {
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
@@ -25,7 +25,7 @@ export function ScrollToTop = () => {
         const scrollToTop = () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth',
+                behavior: 'smooth'
             })};
         return (className = "fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
         aria - label;
@@ -44,7 +44,7 @@ export function ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   };
 
@@ -121,12 +121,20 @@ export function ScrollToTop = () => {
     </>
 ;
 ;
+export { ScrollToTop };
+export default ScrollToTop;
+;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
 export default ScrollToTop;
 
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
+
+
+}
+
+}
+}

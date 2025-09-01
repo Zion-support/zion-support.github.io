@@ -8,6 +8,7 @@ import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { useCompWorkspace  } from '@/hooks/useCompWorkspace';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
+export { function };
 export default function CompWorkspace(...args[]):  {
     const { compSlug } = useParams();
     const { user } = useAuth();

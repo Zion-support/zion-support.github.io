@@ -6,6 +6,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+export { function };
 export default function IntegrationsFeature() {
     const schema = {
   "@context": "https://schema.org",

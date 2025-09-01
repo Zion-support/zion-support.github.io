@@ -235,4 +235,5 @@ const EnterpriseSolutions = () => {
       </div>
     </div>);
 };
+export { EnterpriseSolutions };
 export default EnterpriseSolutions;

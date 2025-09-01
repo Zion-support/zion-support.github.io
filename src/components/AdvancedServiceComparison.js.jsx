@@ -398,4 +398,5 @@ export const AdvancedServiceComparison = () => {
         </div>
       </motion.div>
     </div>)};
+export { AdvancedServiceComparison };
 export default AdvancedServiceComparison;

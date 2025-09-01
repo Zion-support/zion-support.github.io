@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
-const ITServicesPage = () => {
+;
+const ITServicesPage = (...args: unknown[]): unknown => {
   return (
     <>
       <SEO
@@ -45,5 +45,6 @@ const ITServicesPage = () => {
     </>;
   );
 };
-
+;
+export { ITServicesPage };
 export default ITServicesPage;

@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 
 interface ContentAnalysis {
+
   id: string;
   type: 'seo' | 'performance' | 'accessibility' | 'user-experience';
   score: number;
@@ -15,9 +16,11 @@ interface ContentAnalysis {
   priority: 'high' | 'medium' | 'low';
   impact: number;
   category: string;
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -27,36 +30,36 @@ interface OptimizationSuggestion {
   impact: number;
   implementation: string;
   estimatedTime: string;
+
 }
 
 interface AIContentOptimizerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
 
-export function AIContentOptimizer({
-  enabled = true,
-  showRealTime = true,
-  autoAnalyze = true,
-  onOptimizationComplete
-}: AIContentOptimizerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisComplete, setAnalysisComplete] = useState(false);
+}
+;
+export function AIContentOptimizer(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [isFullscreen, setIsFullscreen] = useState<typeof false>(false);
+  const [isAnalyzing, setIsAnalyzing] = useState<typeof false>(false);
+  const [analysisComplete, setAnalysisComplete] = useState<typeof false>(false);
   const [contentAnalysis, setContentAnalysis] = useState<ContentAnalysis[]>([]);
   const [optimizationSuggestions, setOptimizationSuggestions] = useState<OptimizationSuggestion[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [currentScore, setCurrentScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
+  const [showAdvanced, setShowAdvanced] = useState<typeof false>(false);
+  const [currentScore, setCurrentScore] = useState<typeof 0>(0);
+  const [targetScore, setTargetScore] = useState<typeof 95>(95);
   
   const analysisIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Generate sample content analysis
-  const generateContentAnalysis = useCallback(() => {
+  const generateContentAnalysis = useCallback(: unknown {
     const categories = ['seo', 'performance', 'accessibility', 'user-experience'];
     const analysis: ContentAnalysis[] = [];
     
@@ -82,12 +85,12 @@ export function AIContentOptimizer({
     setContentAnalysis(analysis);
     
     // Calculate overall score
-    const overallScore = Math.round(analysis.reduce((sum, item) => sum + item.score, 0) / analysis.length);
+    const overallScore = Math.roundanalysis.reduce((sum: unknown, item: unknown sum + item.score, 0) / analysis.length);
     setCurrentScore(overallScore);
   }, []);
 
   // Generate optimization suggestions
-  const generateOptimizationSuggestions = useCallback(() => {
+  const generateOptimizationSuggestions = useCallback(: unknown {
     const suggestions: OptimizationSuggestion[] = [
       {
         id: 'seo-1',
@@ -139,12 +142,12 @@ export function AIContentOptimizer({
   }, []);
 
   // Start content analysis
-  const startAnalysis = useCallback(() => {
+  const startAnalysis = useCallback(: unknown {
     setIsAnalyzing(true);
     setAnalysisComplete(false);
     
     // Simulate analysis process
-    setTimeout(() => {
+    setTimeout(: unknown {
       generateContentAnalysis();
       generateOptimizationSuggestions();
       setIsAnalyzing(false);
@@ -157,20 +160,20 @@ export function AIContentOptimizer({
   }, [generateContentAnalysis, generateOptimizationSuggestions, onOptimizationComplete]);
 
   // Auto-analyze when component opens
-  useEffect(() => {
+  useEffect(: unknown {
     if (autoAnalyze && isOpen && !analysisComplete) {
       startAnalysis();
     }
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]);
 
   // Setup real-time updates
-  useEffect(() => {
+  useEffect(: unknown {
     if (showRealTime && isOpen && analysisComplete) {
-      analysisIntervalRef.current = setInterval(() => {
+      analysisIntervalRef.current = setInterval(: unknown {
         generateContentAnalysis();
       }, 60000); // Update every minute
       
-      return () => {
+      return : unknown {
         if (analysisIntervalRef.current) {
           clearInterval(analysisIntervalRef.current);
         }
@@ -179,7 +182,7 @@ export function AIContentOptimizer({
   }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]);
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     const colors = {
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
@@ -189,7 +192,7 @@ export function AIContentOptimizer({
   };
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const icons: { [key: string]: React.ReactNode } = {
       seo: <Search className="w-5 h-5" />,
       performance: <Zap className="w-5 h-5" />,
@@ -206,11 +209,10 @@ export function AIContentOptimizer({
 
   if (!enabled) return null;
 
-  return (
-    <>
+  return <>
       {/* Floating AI Content Optimizer Button */}
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick={(: unknown setIsOpen(true)}
         className="fixed bottom-6 right-32 z-50 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -224,7 +226,7 @@ export function AIContentOptimizer({
 
       {/* AI Content Optimizer Modal */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
             initial={{ opacity: 0 }}
@@ -264,14 +266,14 @@ export function AIContentOptimizer({
                   </button>
                   
                   <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
+                    onClick={( setIsFullscreen(!isFullscreen)}
                     className="p-2 text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors"
                   >
                     {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
                   </button>
                   
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
                     <X className="w-5 h-5" />
@@ -391,7 +393,7 @@ export function AIContentOptimizer({
                           <div className="flex items-center space-x-2">
                             <select
                               value={selectedCategory}
-                              onChange={(e) => setSelectedCategory(e.target.value)}
+                              onChange={e: unknown setSelectedCategory(e.target.value)}
                               className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                             >
                               <option value="all">All Categories</option>
@@ -402,7 +404,7 @@ export function AIContentOptimizer({
                             </select>
                             
                             <button
-                              onClick={() => setShowAdvanced(!showAdvanced)}
+                              onClick={: unknown setShowAdvanced(!showAdvanced)}
                               className="px-3 py-1 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
                             >
                               {showAdvanced ? 'Hide' : 'Show'} Advanced
@@ -412,7 +414,7 @@ export function AIContentOptimizer({
                       </div>
                       
                       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-                        {filteredSuggestions.map((suggestion, index) => (
+                        {filteredSuggestions.map(suggestion: unknown, index: unknown (
                           <motion.div
                             key={suggestion.id}
                             className="p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"

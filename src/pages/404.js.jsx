@@ -90,4 +90,5 @@ const NotFoundPage = () => {
         </div>
       </div>
     </div>)};
+export { NotFoundPage };
 export default NotFoundPage;

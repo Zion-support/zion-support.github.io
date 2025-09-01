@@ -5,23 +5,25 @@ import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
 
+
   number: string;
   label: string;
   description: string;
   avatar: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string
+}>;
   color: string}
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
   stats: Stat[]}
-
-const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
+;
+const StatsSection: React.FC<StatsSectionProps> = { stats }: unknown {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [counts, setCounts] = useState<any>({});
 
-  useEffect(()  => {
+  useEffect(: unknown {
     if (isInView) {
       const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
           const suffix = stat.number.replace(/[0-9]/g, '');
@@ -29,7 +31,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           let current = 0;
           const increment = targetNumber / 50;
 
-          const countTimer = setInterval(() => {
+          const countTimer = setInterval(: unknown {
             current += increment;
             if (current >= targetNumber) {
               current = targetNumber;
@@ -44,10 +46,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         });
       }, 500);
 
-      return () => clearTimeout(timer)}
+      return : unknown clearTimeout(timer)}
   }, [isInView, stats]);
 
-  return (
+  return 
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -84,7 +86,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </motion.div>
 
         <div ref={ref} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
@@ -179,5 +181,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     </section>;
   );
 };
-
+;
+export { StatsSection };
 export default StatsSection;}}}}}

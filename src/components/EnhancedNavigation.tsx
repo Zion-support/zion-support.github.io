@@ -30,21 +30,23 @@ import { Menu,
 
 interface NavigationItem {
 
+
   label: anystring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
 
+
 }
 
 interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
 
   className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system')  => void;
+  onThemeChange?: theme: 'light' | 'dark' | 'system' void;
 
 }
-
+;
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { 
@@ -183,32 +185,32 @@ const navigationItems: NavigationItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-
-export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
+;
+export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = { ;
 className:  '',;
   onThemeChange ;
-}) => {;
-  const [isOpen, setIsOpen] = useState(false);
+} {;
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [theme, setTheme] = useState<any>('system');
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<typeof false>(false);
   const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {;
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {;
       setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return : unknown window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system')  => {;
+  const handleThemeChange = useCallback(newTheme: unknown'light' | 'dark' | 'system' {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -225,11 +227,11 @@ className:  '',;
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: anystring)  => {
+  const toggleDropdown = (...args: unknown[]): unknown => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
-  const closeDropdown = () => {
+  const closeDropdown = (...args: unknown[]): unknown => {
     setActiveDropdown(null);
   };
 
@@ -240,7 +242,7 @@ className:  '',;
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
 
-  return (
+  return 
     <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' 
@@ -262,11 +264,10 @@ className:  '',;
 
           {/* Desktop Navigation */}
           <div className="hidden lg: anyflex items-center space-x-8">
-            {navigationItems.map((item)  => (
-              <div key={item.label} className="relative group">
+            {navigationItems.map((item <div key={item.label} className="relative group">
                 {item.children ? (
                   <button
-                    onClick={() => toggleDropdown(item.label)}
+                    onClick={(: unknown toggleDropdown(item.label)}
                     className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     <span>{item.label}</span>
@@ -282,7 +283,7 @@ className:  '',;
                 )}
 
                 {/* Dropdown Menu */}
-                {item.children && (
+                {item.children && 
                   <AnimatePresence>
                     {activeDropdown === item.label && (
                       <motion.div
@@ -326,7 +327,7 @@ className:  '',;
                           </h3>
                         </div>
                         <div className="max-h-96 overflow-y-auto">
-                          {item.children.map((child) => (
+                          {item.children.map((child (
                             <Link
                               key={child.href}
                               to={child.href}
@@ -350,7 +351,7 @@ className:  '',;
             {/* Theme Toggle */}
             <div className="flex items-center space-x-2 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
               <button
-                onClick={() => handleThemeChange('light')}
+                onClick={: unknown handleThemeChange('light')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'light' 
                     ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
@@ -360,7 +361,7 @@ className:  '',;
                 <Sun className="w-4 h-4" />
               </button>
               <button
-                onClick={() => handleThemeChange('dark')}
+                onClick={: unknown handleThemeChange('dark')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'dark' 
                     ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
@@ -370,7 +371,7 @@ className:  '',;
                 <Moon className="w-4 h-4" />
               </button>
               <button
-                onClick={() => handleThemeChange('system')}
+                onClick={: unknown handleThemeChange('system')}
                 className={`p-2 rounded-md transition-colors ${
                   theme === 'system' 
                     ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' 
@@ -394,7 +395,7 @@ className:  '',;
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={: unknown setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -405,7 +406,7 @@ className:  '',;
 
                     {/* Mobile Menu */}
               <AnimatePresence>
-                {isOpen && (
+                {isOpen && 
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
@@ -414,12 +415,11 @@ className:  '',;
                     className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
                   >
                     <div className="px-4 py-6 space-y-4">
-                      {navigationItems.map((item) => (
-                        <div key={item.label}>
+                      {navigationItems.map((item <div key={item.label}>
                           {item.children ? (
                             <div>
                               <button
-                                onClick={() => toggleDropdown(item.label)}
+                                onClick={(: unknown toggleDropdown(item.label)}
                                 className="flex items-center justify-between w-full text-left text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                                 aria-expanded={activeDropdown === item.label}
                                 aria-haspopup="true"
@@ -433,7 +433,7 @@ className:  '',;
                                 }`} />
                               </button>
                               
-                              {activeDropdown === item.label && (
+                              {activeDropdown === item.label && 
                                 <motion.div
                                   initial={{ opacity: 0, y: -10 }}
                                   animate={{ opacity: 1, y: 0 }}
@@ -441,7 +441,7 @@ className:  '',;
                                   transition={{ duration: 0.2 }}
                                   className="ml-4 mt-2 space-y-2 border-l border-slate-700/50 pl-4"
                                 >
-                                  {item.children.map((child) => (
+                                  {item.children.map((child (
                                     <Link
                                       key={child.href}
                                       to={child.href}

@@ -102,7 +102,7 @@ import {
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
-
+;
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",
@@ -131,7 +131,7 @@ const cloudPlatforms = [
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -161,7 +161,7 @@ const successStories = [
     logo: "FS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -192,7 +192,8 @@ const processSteps = [
     duration: "Ongoing"
 
 ];
-
+;
+export { function };
 export default function CloudDevOps() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -773,3 +774,5 @@ export default function CloudDevOps() {
       </section>
     </div>
   )}
+
+}

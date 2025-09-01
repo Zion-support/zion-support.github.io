@@ -37,11 +37,11 @@ import { Brain,
  } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
-
-export function ComprehensiveServicesPage(...args: any[]): any {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+;
+export function ComprehensiveServicesPage(...args: unknown[]): unknown {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [priceRange, setPriceRange] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Globe },
@@ -82,18 +82,18 @@ export function ComprehensiveServicesPage(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange = (...args: unknown[]): unknown => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
-  const getPriceColor = (price: anynumber)  => {
+  const getPriceColor = (...args: unknown[]): unknown => {
     const range = getPriceRange(price);
     switch (range) {
       case 'low': return 'text-green-400';
@@ -110,7 +110,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Award }
   ];
 
-  return (
+  return 
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -130,7 +130,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -160,7 +160,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={e: unknown setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -169,10 +169,10 @@ export function ComprehensiveServicesPage(...args: any[]): any {
               <div>
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map((category)  => (
+                  {categories.map(category: unknown (
                     <option key={category.id} value={category.id}>{category.name}</option>
                   ))}
                 </select>
@@ -182,10 +182,10 @@ export function ComprehensiveServicesPage(...args: any[]): any {
               <div>
                 <select
                   value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
+                  onChange={e: unknown setPriceRange(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {priceRanges.map((range)  => (
+                  {priceRanges.map(range: unknown (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
                 </select>
@@ -204,7 +204,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
           </div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -249,7 +249,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
 
                 {/* Key Features */}
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map(feature: unknown, featureIndex: unknown (
                     <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       <span>{feature}</span>
@@ -266,7 +266,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
                   <div className="space-y-2">
-                    {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                    {service.benefits.slice(0, 2).map(benefit: unknown, benefitIndex: unknown (
                       <div key={benefitIndex} className="flex items-start space-x-2 text-sm text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{benefit}</span>
@@ -364,5 +364,6 @@ export function ComprehensiveServicesPage(...args: any[]): any {
     </div>
   );
 }
-
+;
+export { ComprehensiveServicesPage };
 export default ComprehensiveServicesPage;

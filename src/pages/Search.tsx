@@ -17,13 +17,13 @@ import {
   Share2
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const Search: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('relevance');
+;
+const Search: React.FC = props {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'relevance'>('relevance');
   const [results, setResults] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<typeof false>(false);
 
   const categories = [
     { id: 'all', name: 'All Categories', count: 0 },
@@ -100,13 +100,13 @@ const Search: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (searchQuery) {
       performSearch();
     }
   }, [searchQuery, activeCategory, sortBy]);
 
-  const performSearch = async () => {
+  const performSearch = async : unknown {
     setLoading(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
@@ -115,7 +115,7 @@ const Search: React.FC = () => {
     let filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+                          result.tags.some(tag: string tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
 
@@ -123,7 +123,7 @@ const Search: React.FC = () => {
     });
 
     // Sort results
-    filteredResults.sort((a, b) => {
+    filteredResults.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'newest':
           return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -142,14 +142,14 @@ const Search: React.FC = () => {
     setLoading(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     e.preventDefault();
     if (searchQuery.trim()) {
       performSearch();
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'services':
         return <Server className="w-5 h-5 text-blue-400" />;
@@ -162,7 +162,7 @@ const Search: React.FC = () => {
     }
   };
 
-  const getTypeLabel = (type: string) => {
+  const getTypeLabel = (...args: unknown[]): unknown => {
     switch (type) {
       case 'services':
         return 'Service';
@@ -175,7 +175,7 @@ const Search: React.FC = () => {
     }
   };
 
-  return (
+  return 
     <>
       <SEO 
         title="Search - Zion Tech Group"
@@ -208,7 +208,7 @@ const Search: React.FC = () => {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   placeholder="Search for services, talent, equipment, companies..."
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
                 />
@@ -239,10 +239,9 @@ const Search: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-white font-medium mb-3">Categories</h4>
                     <div className="space-y-2">
-                      {categories.map((category) => (
-                        <button
+                      {categories.map(category: unknown <button
                           key={category.id}
-                          onClick={() => setActiveCategory(category.id)}
+                          onClick={(: unknown setActiveCategory(category.id)}
                           className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             activeCategory === category.id
                               ? 'bg-blue-500 text-white'
@@ -260,10 +259,9 @@ const Search: React.FC = () => {
                   <div>
                     <h4 className="text-white font-medium mb-3">Sort By</h4>
                     <div className="space-y-2">
-                      {sortOptions.map((option) => (
-                        <button
+                      {sortOptions.map(option: unknown <button
                           key={option.id}
-                          onClick={() => setSortBy(option.id)}
+                          onClick={(: unknown setSortBy(option.id)}
                           className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
                             sortBy === option.id
                               ? 'bg-purple-500 text-white'
@@ -285,9 +283,8 @@ const Search: React.FC = () => {
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
                     <p className="text-gray-400">Searching...</p>
                   </div>
-                ) : results.length > 0 ? (
-                  <div className="space-y-6">
-                    {results.map((result, index) => (
+                ) : results.length > 0 ? <div className="space-y-6">
+                    {results.map((result: unknown, index: unknown (
                       <motion.div
                         key={result.id}
                         initial={{ opacity: 0, y: 20 }}
@@ -336,7 +333,7 @@ const Search: React.FC = () => {
 
                         <div className="flex items-center justify-between">
                           <div className="flex flex-wrap gap-2">
-                            {result.tags.slice(0, 3).map((tag: string, idx: number) => (
+                            {result.tags.slice(0, 3).map(tag: string, idx: number (
                               <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                 {tag}
                               </span>
@@ -378,5 +375,6 @@ const Search: React.FC = () => {
     </>
   );
 };
-
+;
+export { Search };
 export default Search;

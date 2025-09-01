@@ -24,10 +24,11 @@ import {
   Search
 } from 'lucide-react';
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
-export default function UltimateServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+;
+export { function };
+export default function UltimateServicesShowcase2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
@@ -40,7 +41,7 @@ export default function UltimateServicesShowcase2025() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
@@ -112,7 +113,7 @@ export default function UltimateServicesShowcase2025() {
                 type="text"
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e: unknown setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg"
               />
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />
@@ -124,7 +125,7 @@ export default function UltimateServicesShowcase2025() {
                 <label className="text-sm text-gray-300">Sort by:</label>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="glass border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
                 >
                   <option value="rating">Rating</option>
@@ -136,7 +137,7 @@ export default function UltimateServicesShowcase2025() {
               
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -144,7 +145,7 @@ export default function UltimateServicesShowcase2025() {
                   </svg>
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -169,7 +170,7 @@ export default function UltimateServicesShowcase2025() {
             initial="hidden"
             animate="visible"
           >
-            {sortedServices.map((service, index) => (
+            {sortedServices.map(service: unknown, index: unknown 
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -177,13 +178,13 @@ export default function UltimateServicesShowcase2025() {
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
-                onClick={() => handleServiceClick(service)}
+                onClick={( handleServiceClick(service)}
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                   <div className="flex items-center gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map(_: unknown, i: unknown (
                       <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`} />
                     ))}
                     <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
@@ -210,7 +211,7 @@ export default function UltimateServicesShowcase2025() {
                     Key Features:
                   </h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
                         <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0" />
                         {feature}
@@ -288,7 +289,7 @@ export default function UltimateServicesShowcase2025() {
 
       {/* Service Modal */}
       <AnimatePresence>
-        {selectedService && (
+        {selectedService && 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -301,7 +302,7 @@ export default function UltimateServicesShowcase2025() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               className="glass rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e e.stopPropagation()}
             >
               <div className="flex items-start justify-between mb-6">
                 <div className="text-6xl">{selectedService.icon}</div>
@@ -322,7 +323,7 @@ export default function UltimateServicesShowcase2025() {
                 <div>
                   <h3 className="text-lg font-semibold text-zion-cyan mb-3">Features</h3>
                   <ul className="space-y-2">
-                    {selectedService.features.map((feature, idx) => (
+                    {selectedService.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
                         {feature}
@@ -334,7 +335,7 @@ export default function UltimateServicesShowcase2025() {
                 <div>
                   <h3 className="text-lg font-semibold text-zion-purple mb-3">Benefits</h3>
                   <ul className="space-y-2">
-                    {selectedService.benefits.map((benefit, idx) => (
+                    {selectedService.benefits.map(benefit: unknown, idx: unknown (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
                         {benefit}
@@ -360,7 +361,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               <div className="flex flex-wrap gap-4 mb-6">
-                {selectedService.tags.map((tag, idx) => (
+                {selectedService.tags.map(tag: unknown, idx: unknown (
                   <span key={idx} className="px-3 py-1 bg-zion-blue/20 text-zion-blue text-sm rounded-full border border-zion-blue/30">
                     {tag}
                   </span>
@@ -382,5 +383,5 @@ export default function UltimateServicesShowcase2025() {
     </div>
   );
 };
-
+;
 export default UltimateServicesShowcase2025;

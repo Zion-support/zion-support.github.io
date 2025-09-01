@@ -23,7 +23,8 @@ import {
   Target,
   Award
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
   const features = [
     {
@@ -193,7 +194,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Content Generation Platform - Zion Tech Group"
@@ -353,7 +354,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
@@ -394,7 +395,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center space-x-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -446,7 +447,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -489,8 +490,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: any</h4>
-                  {useCase.metrics.map((metric, idx)  => (
+                  <h4 className="text-white font-semibold">Key Results: unknown</h4>
+                  {useCase.metrics.map((metric, idx (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                       <span className="text-slate-300">{metric}</span>
@@ -542,7 +543,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -628,7 +629,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -709,7 +710,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -766,7 +767,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>

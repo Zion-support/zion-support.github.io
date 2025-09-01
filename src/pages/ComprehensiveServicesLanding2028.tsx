@@ -56,10 +56,11 @@ import { revolutionaryMicroSaasServices2028,
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
-
+;
+export { function };
 export default function ComprehensiveServicesLanding2028(...args[]):  {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [selectedService, setSelectedService] = useState(null);
+  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
+  const [selectedService, setSelectedService] = useState<typeof null>(null);
 
     };
       company: "BioTech Innovations",;
@@ -79,7 +80,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       default: return Rocket}
   };
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -92,15 +93,15 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     ];
     return colors[Math.abs(category.length) % colors.length]};
 
-  const nextTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentTestimonial(prev: unknown (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentTestimonial(prev: unknown (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
         title="Comprehensive Services Landing 2028 - Zion Tech Group"
@@ -214,7 +215,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <Button
               size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={( document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
 
               Explore Services
             </Button>
@@ -222,7 +223,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={: unknown document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
 
               Get Started
             </Button>
@@ -234,7 +235,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       <section className="py-16 bg-white/5 backdrop-blur-sm">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+            {stats.map(stat: unknown, index: unknown (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -314,7 +315,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.slice(0, 6).map((service, index)  => (
+            {allServices.slice(0, 6).map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -393,7 +394,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                  {service.tags.slice(0, 3).map(tag: unknown, tagIndex: unknown (
                     <Badge key={tagIndex} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan">
                       {tag}
                     </Badge>
@@ -402,7 +403,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
                 <Button
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white"
-                  onClick={() => setSelectedService(service)}
+                  onClick={: unknown setSelectedService(service)}
 
                   View Details
                 </Button>;
@@ -447,7 +448,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               size="lg"
               variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => window.location.href = '/innovative-services-showcase-2028'}
+              onClick={: unknown window.location.href = '/innovative-services-showcase-2028'}
 
               View All Services
             </Button>
@@ -515,7 +516,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"
 
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                {[...Array(testimonials[currentTestimonial].rating)].map(_: unknown, i: unknown (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -549,10 +550,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               </Button>
 
               <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
+                {testimonials.map(_: unknown, index: unknown <button
                     key={index}
-                    onClick={() => setCurrentTestimonial(index)}
+                    onClick={(: unknown setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentTestimonial ? 'bg-zion-cyan' : 'bg-white/30'
                     }`}
@@ -913,7 +913,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   variant="ghost"
                   size="sm"
                   className="text-zion-slate-light hover:text-white"
-                  onClick={() => setSelectedService(null)}
+                  onClick={: unknown setSelectedService(null)}
 
                   <X className="w-5 h-5" />
                 </Button>
@@ -926,7 +926,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
                   <h3 className="text-lg font-semibold text-white mb-3">Features</h3>
                   <ul className="space-y-2 mb-6">
-                    {selectedService.features.map((feature, index) => (
+                    {selectedService.features.map(feature: unknown, index: unknown (
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -936,7 +936,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
                   <h3 className="text-lg font-semibold text-white mb-3">Benefits</h3>
                   <ul className="space-y-2 mb-6">
-                    {selectedService.benefits.map((benefit, index) => (
+                    {selectedService.benefits.map(benefit: unknown, index: unknown (
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {benefit}
@@ -985,7 +985,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
                     <h3 className="text-lg font-semibold text-white mb-3">Target Audience</h3>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.targetAudience.map((audience, index) => (
+                      {selectedService.targetAudience.map(audience: unknown, index: unknown (
                         <Badge key={index} variant="secondary" className="bg-zion-cyan/20 text-zion-cyan">
                           {audience}
                         </Badge>
@@ -993,11 +993,10 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                     </div>
                   </div>
 
-                  {selectedService.integrations && (
-                    <div className="bg-white/5 rounded-lg p-4">
+                  {selectedService.integrations && <div className="bg-white/5 rounded-lg p-4">
                       <h3 className="text-lg font-semibold text-white mb-3">Integrations</h3>
                       <div className="flex flex-wrap gap-2">
-                        {selectedService.integrations.map((integration, index) => (
+                        {selectedService.integrations.map((integration: unknown, index: unknown (
                           <Badge key={index} variant="outline" className="border-zion-cyan/30 text-zion-cyan">
                             {integration}
                           </Badge>
@@ -1228,7 +1227,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <Button
               size="lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              onClick={() => window.location.href = '/contact'}
+              onClick={: unknown window.location.href = '/contact'}
 
               Schedule a Consultation
             </Button>;

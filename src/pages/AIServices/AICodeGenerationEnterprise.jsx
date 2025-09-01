@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AICodeGenerationEnterprise() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Code Generation Enterprise - Zion Tech Group" description="AI-powered code generation enterprise solution that transforms your operations with intelligent automation and real-time insights." keywords="AI code generation enterprise, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicodegenerationenterprise/"/>
@@ -273,3 +274,5 @@ export default function AICodeGenerationEnterprise() {
         </div>
       </section>
     </div>)}
+
+}

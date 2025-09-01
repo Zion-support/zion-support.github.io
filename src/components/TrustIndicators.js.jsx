@@ -113,7 +113,7 @@ export function TrustIndicators({ className, showStats = true, showCertification
         </div>
       </div>
     </section>)}
-// Compact version for smaller spaces
+// Compact version for smaller spaces;
 export function TrustIndicatorsCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
       <div className="flex items-center gap-2 text-zion-cyan text-sm">

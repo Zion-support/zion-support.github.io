@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign export default function CloudInfrastructure() {
+import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign export { function };
+export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
     const cloudServices = [
         {
@@ -453,3 +454,5 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
         </div>
       </section>
     </div>)}
+
+}

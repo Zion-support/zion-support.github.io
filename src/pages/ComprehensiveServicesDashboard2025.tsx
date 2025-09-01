@@ -32,9 +32,9 @@ import { comprehensiveServicesIndex2025,
     getServicesBySource,
     ServiceIndex 
  } from '../data/comprehensive-services-index-2025';
-
+;
 const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState<typeof ''>('');
     const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [selectedSource, setSelectedSource] = useState<any>('all');
     const [viewMode, setViewMode] = useState<any>('grid');
@@ -42,7 +42,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
     const stats = getServiceStats();
     const categories = stats.categoryBreakdown;
 
-    const filteredServices = useMemo(() => {
+    const filteredServices = useMemo(: unknown {
         let filtered = comprehensiveServicesIndex2025;
 
         if (searchTerm) {
@@ -64,7 +64,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return filtered;
     }, [searchTerm, selectedCategory, selectedSource]);
 
-    const getCategoryColor = (category: anystring)  => {
+    const getCategoryColor = (...args: unknown[]): unknown => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600',
             'healthtech': 'from-red-500 to-pink-600',
@@ -85,7 +85,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: anystring)  => {
+    const getCategoryIcon = (...args: unknown[]): unknown => {
         const icons: { [key: string]: React.ReactNode } = {
             'fintech': <DollarSign className="w-5 h-5" />,
             'healthtech': <Heart className="w-5 h-5" />,
@@ -106,7 +106,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         return icons[category] || <Globe className="w-5 h-5" />;
     };
 
-    const getSourceBadge = (source: anystring)  => {
+    const getSourceBadge = (...args: unknown[]): unknown => {
         const badges = {
             'existing': { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
             'new': { color: 'bg-green-100 text-green-800', text: 'New' },
@@ -121,7 +121,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         );
     };
 
-    return (
+    return 
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <Helmet>
                 <title>Comprehensive Services Dashboard 2025 - Zion Tech Group</title>
@@ -274,7 +274,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                                     type="text"
                                     placeholder="Search services..."
                                     value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    onChange={(e setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
@@ -284,7 +284,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <select
                                 value={selectedCategory}
-                                onChange={(e) => setSelectedCategory(e.target.value)}
+                                onChange={e: unknown setSelectedCategory(e.target.value)}
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                                 <option value="all">All Categories</option>
@@ -300,7 +300,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <select
                                 value={selectedSource}
-                                onChange={(e) => setSelectedSource(e.target.value)}
+                                onChange={e: unknown setSelectedSource(e.target.value)}
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                                 <option value="all">All Sources</option>
@@ -314,7 +314,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                         <div className="flex-shrink-0">
                             <div className="flex border border-gray-300 rounded-lg">
                                 <button
-                                    onClick={() => setViewMode('grid')}
+                                    onClick={: unknown setViewMode('grid')}
                                     className={`px-4 py-3 rounded-l-lg ${
                                         viewMode === 'grid' 
                                             ? 'bg-blue-600 text-white' 
@@ -324,7 +324,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                                     Grid
                                 </button>
                                 <button
-                                    onClick={() => setViewMode('list')}
+                                    onClick={: unknown setViewMode('list')}
                                     className={`px-4 py-3 rounded-r-lg ${
                                         viewMode === 'list' 
                                             ? 'bg-blue-600 text-white' 
@@ -348,7 +348,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                             <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
                             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
-                    ) : (
+                    ) : 
                         <>
                             <div className="flex justify-between items-center mb-8">
                                 <h3 className="text-2xl font-bold text-gray-800">
@@ -361,7 +361,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
 
                             {viewMode === 'grid' ? (
                                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                                    {filteredServices.map((service, index)  => (
+                                    {filteredServices.map((service, index (
                                         <motion.div
                                             key={service.id}
                                             initial={{ opacity: 0, y: 20 }}
@@ -399,9 +399,8 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                                         </motion.div>
                                     ))}
                                 </div>
-                            ) : (
-                                <div className="space-y-4">
-                                    {filteredServices.map((service, index) => (
+                            ) : <div className="space-y-4">
+                                    {filteredServices.map((service: unknown, index: unknown (
                                         <motion.div
                                             key={service.id}
                                             initial={{ opacity: 0, x: -20 }}
@@ -510,5 +509,6 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
         </div>
     );
 };
-
+;
+export { ComprehensiveServicesDashboard2025 };
 export default ComprehensiveServicesDashboard2025;

@@ -30,7 +30,7 @@ import {
     integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
 ];
-
+;
 const retailTrends = [
   {
     title: "AI-Powered Personalization",
@@ -57,7 +57,7 @@ const retailTrends = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -87,7 +87,7 @@ const successStories = [
     logo: "HG"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -118,7 +118,8 @@ const processSteps = [
     duration: "1-2 weeks"
 
 ];
-
+;
+export { function };
 export default function RetailSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -701,3 +702,7 @@ export default function RetailSolutions() {
       </section>
     </div>
   )}
+
+
+}
+}

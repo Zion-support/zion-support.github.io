@@ -12,8 +12,8 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   priority?: boolean;
   placeholder?: 'blur' | 'shimmer' | 'none';
   fallbackSrc?: string;
-  onLoad?: ()  => void;
-  onError?: (error: anyError)  => void;
+  onLoad?: : unknown void;
+  onError?: error: anyError void;
   lazy?: boolean;
   quality?: number;
   sizes?: string;
@@ -23,37 +23,21 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   hover?: boolean;
 
 }
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  placeholder = 'shimmer',
-  fallbackSrc = '/images/placeholder.jpg',
-  onLoad,
-  onError,
-  lazy = true,
-  quality = 75,
-  sizes = '100vw',
-  objectFit = 'cover',
-  rounded = false,
-  shadow = false,
-  hover = false
-}) => {
+;
+export const OptimizedImage: React.FC<OptimizedImageProps> = {
+  src: unknown, alt: unknown, width: unknown, height: unknown, className = '': unknown, priority = false: unknown, placeholder = 'shimmer': unknown, fallbackSrc = '/images/placeholder.jpg': unknown, onLoad: unknown, onError: unknown, lazy = true: unknown, quality = 75: unknown, sizes = '100vw': unknown, objectFit = 'cover': unknown, rounded = false: unknown, shadow = false: unknown, hover = false
+}: unknown {
   const [imageSrc, setImageSrc] = useState<any>(src);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(priority);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState<typeof true>(true);
+  const [hasError, setHasError] = useState<typeof false>(false);
+  const [isIntersecting, setIsIntersecting] = useState<typeof priority>(priority);
+  const [isLoaded, setIsLoaded] = useState<typeof false>(false);
   
   const imgRef = useRef<HTMLImageElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
+  useEffect(: unknown {
     if (priority || !lazy) {
       setIsIntersecting(true);
       return;
@@ -61,22 +45,21 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     if (!imgRef.current) return;
 
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
+    observerRef.current = new IntersectionObserver([entry]: unknown {
         if (entry.isIntersecting) {
           setIsIntersecting(true);
           observerRef.current?.disconnect();
         }
       },
       {
-        rootMargin: any'50px',;
+        rootMargin: unknown'50px',;
         threshold: 0.1
       }
     );
 
     observerRef.current.observe(imgRef.current);
 
-    return ()  => {
+    return : unknown {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -84,14 +67,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [priority, lazy]);
 
   // Handle image load
-  const handleImageLoad = () => {
+  const handleImageLoad = (...args: unknown[]): unknown => {
     setIsLoading(false);
     setIsLoaded(true);
     onLoad?.();
   };
 
   // Handle image error
-  const handleImageError = () => {
+  const handleImageError = (...args: unknown[]): unknown => {
     if (imageSrc !== fallbackSrc) {
       setImageSrc(fallbackSrc);
       setHasError(false);
@@ -99,13 +82,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: any${src}`));
+      onError?.(new Error(`Failed to load image: unknown${src}`));
     }
   };
 
   // Cleanup on unmount
-  useEffect(()  => {
-    return () => {
+  useEffect(: unknown {
+    return : unknown {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -113,7 +96,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, []);
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: anystring)  => {
+  const getOptimizedSrc = (...args: unknown[]): unknown => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
       return src;
     }
@@ -225,11 +208,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-// Specialized image components
-export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({ 
-  size = 'md', 
-  ...props 
-}) => {
+// Specialized image components;
+export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = { 
+  size = 'md': unknown, ...props 
+}: unknown {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
@@ -246,8 +228,8 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
     />
   );
 };
-
-export const CardImage: React.FC<OptimizedImageProps> = (props) => (
+;
+export const CardImage: React.FC<OptimizedImageProps> = props: unknown (
   <OptimizedImage
     {...props}
     className={`w-full h-48 ${props.className || ''}`}
@@ -257,8 +239,8 @@ export const CardImage: React.FC<OptimizedImageProps> = (props) => (
     hover
   />
 );
-
-export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
+;
+export const HeroImage: React.FC<OptimizedImageProps> = props: unknown (
   <OptimizedImage
     {...props}
     className={`w-full h-96 ${props.className || ''}`}
@@ -267,5 +249,6 @@ export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
     lazy={false}
   />
 );
-
+;
+export { OptimizedImage };
 export default OptimizedImage;

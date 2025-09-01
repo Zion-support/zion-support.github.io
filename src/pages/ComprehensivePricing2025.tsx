@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
-const ComprehensivePricing2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
+;
+const ComprehensivePricing2025 = (...args: unknown[]): unknown => {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [selectedIndustry, setSelectedIndustry] = useState<typeof 'All'>('All');
 
   const pricingData = [
     {
@@ -126,7 +126,7 @@ const ComprehensivePricing2025 = () => {
     return categoryMatch && industryMatch;
   });
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -148,7 +148,7 @@ const ComprehensivePricing2025 = () => {
             <label className="text-sm text-gray-300 mb-2">Category</label>
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e setSelectedCategory(e.target.value)}
               className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white"
             >
               {categories.map(category => (
@@ -160,7 +160,7 @@ const ComprehensivePricing2025 = () => {
             <label className="text-sm text-gray-300 mb-2">Industry</label>
             <select
               value={selectedIndustry}
-              onChange={(e) => setSelectedIndustry(e.target.value)}
+              onChange={e: unknown setSelectedIndustry(e.target.value)}
               className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white"
             >
               {industries.map(industry => (
@@ -172,7 +172,7 @@ const ComprehensivePricing2025 = () => {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredData.map((item) => (
+          {filteredData.map(item: unknown (
             <div
               key={item.id}
               className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border ${
@@ -210,7 +210,7 @@ const ComprehensivePricing2025 = () => {
               </div>
               
               <ul className="space-y-2 mb-6">
-                {item.features.map((feature, index) => (
+                {item.features.map(feature: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <span className="text-green-400 mr-2">✓</span>
                     {feature}
@@ -228,5 +228,6 @@ const ComprehensivePricing2025 = () => {
     </div>
   );
 };
-
+;
+export { ComprehensivePricing2025 };
 export default ComprehensivePricing2025;

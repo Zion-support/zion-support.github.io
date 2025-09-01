@@ -17,7 +17,7 @@ function StepIndicator({ step }) {
       <div className="h-1 bg-zion-blue-light rounded">
         <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
       </div>
-    </div>)}
+    </div>)};
 export function QuoteWizard({ category }) {
     const [step, setStep] = useState(1);
     const [selectedItemId, setSelectedItemId] = useState(null);

@@ -42,8 +42,8 @@ import {
   Gitlab,
   Bitbucket
 } from 'lucide-react';
-
-const AIAutonomousCodeReviewer = () => {
+;
+const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Code,
@@ -183,7 +183,7 @@ const AIAutonomousCodeReviewer = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -242,7 +242,7 @@ const AIAutonomousCodeReviewer = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,7 +280,7 @@ const AIAutonomousCodeReviewer = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -322,7 +322,7 @@ const AIAutonomousCodeReviewer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -336,7 +336,7 @@ const AIAutonomousCodeReviewer = () => {
               ))}
             </div>
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
@@ -372,7 +372,7 @@ const AIAutonomousCodeReviewer = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -402,7 +402,7 @@ const AIAutonomousCodeReviewer = () => {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -442,7 +442,7 @@ const AIAutonomousCodeReviewer = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -574,5 +574,6 @@ const AIAutonomousCodeReviewer = () => {
     </div>
   );
 };
-
+;
+export { AIAutonomousCodeReviewer };
 export default AIAutonomousCodeReviewer;}}}}

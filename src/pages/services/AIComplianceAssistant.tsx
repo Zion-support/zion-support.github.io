@@ -23,15 +23,16 @@ import {
   Download,
   Share2
 } from 'lucide-react';
-
-export default function AIComplianceAssistant() {
+;
+export { function };
+export default function AIComplianceAssistant(...args: unknown[]): unknown {
   const frameworks = [
     'SOC 2',
     'ISO 27001',
     'HIPAA',
     'GDPR',
     'PCI DSS',
-    'NIST CSF',
+    'NIST CSF'
   ];
 
   const features = [
@@ -166,7 +167,7 @@ export default function AIComplianceAssistant() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Compliance Assistant - Zion Tech Group"
@@ -231,7 +232,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -285,7 +286,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,7 +340,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regulations.map((regulation, index) => (
+            {regulations.map(regulation: unknown, index: unknown (
               <motion.div
                 key={regulation.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -393,7 +394,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -454,7 +455,7 @@ export default function AIComplianceAssistant() {
               </button>
             </div>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map(f: unknown (
                 <li key={f} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-rose-400 mr-3" />
                   {f}
@@ -471,7 +472,7 @@ export default function AIComplianceAssistant() {
               <h3 className="ml-3 text-xl font-semibold text-white">Frameworks</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {frameworks.map((fw) => (
+              {frameworks.map(fw: unknown (
                 <span key={fw} className="px-3 py-1 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">{fw}</span>
               ))}
             </div>
@@ -485,10 +486,10 @@ export default function AIComplianceAssistant() {
               <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>
             <ul className="space-y-3 text-slate-300">
-              {pricing.map((p) => (<li key={p}>{p}</li>))}
+              {pricing.map(p: unknown (<li key={p}>{p}</li>))}
             </ul>
             <div className="mt-6 text-sm text-slate-400">
-              References: {links.map((l, i) => (
+              References: {links.map(l: unknown, i: unknown (
                 <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
               ))}
             </div>

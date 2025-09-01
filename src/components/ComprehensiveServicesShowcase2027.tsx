@@ -6,7 +6,7 @@ import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-ed
 import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
 import { Link } from "react-router-dom";
-
+;
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
   'Quantum Computing & AI': 'from-blue-600 to-cyan-700',
@@ -31,7 +31,7 @@ const categoryColors: { [key: string]: string } = {
   'Sports Technology & Analytics': 'from-green-600 to-blue-700',
   'Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
-
+;
 const features = [
   "AI-Powered Automation",
   "Real-time Analytics",
@@ -46,7 +46,7 @@ const features = [
   "SOC 2 Type II Compliant",;
   "30-Day Money Back Guarantee";
 ];
-
+;
 const benefits = [
   {
     icon: <Zap className="h-6 w-6"/>,
@@ -69,7 +69,7 @@ const benefits = [
     description: "30-day money-back guarantee with free migration support";
   };
 ];
-
+;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -87,7 +87,7 @@ const contactInfo = {
 
 
 };
-
+;
 export function ComprehensiveServicesShowcase2027(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
@@ -109,7 +109,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
 
-  return (
+  return 
     <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -166,12 +166,12 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               placeholder="Search services..."
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e setSearchQuery(e.target.value)}
             />
             <select
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={e: unknown setSelectedCategory(e.target.value)}
 
               <option value="all">All Categories</option>
               {categories.map(category => (
@@ -185,7 +185,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service)  => (
+            {featuredServices.map(service: unknown (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
@@ -208,7 +208,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     {service.description}
                   </p>
                   <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
@@ -243,7 +243,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
             All Services ({filteredServices.length})
           </h3>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service)  => (
+            {filteredServices.map(service: unknown (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -273,8 +273,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
-                    {service.features.slice(0, 3).map((feature, index)  => (
+                    <h4 className="font-semibold text-white text-sm">Key Features: unknown</h4>
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
@@ -335,7 +335,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <div key={index} className="text-center">
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">
                   {benefit.icon}
@@ -382,7 +382,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
     </div>;
   );
 }
-
+;
+export { ComprehensiveServicesShowcase2027 };
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

@@ -43,4 +43,5 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
           {text}
         </motion.p>)}
     </div>)};
+export { EnhancedLoading };
 export default EnhancedLoading;

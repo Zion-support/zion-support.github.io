@@ -169,4 +169,5 @@ const AIAutonomousOptimization = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousOptimization };
 export default AIAutonomousOptimization;

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 // // // // // // // console.log('🔧 Starting comprehensive Next.js import fix...\n');
 
-// Define the replacements
+// Define the replacements;
 const replacements = [
   // Link component
   {
@@ -40,7 +40,7 @@ const replacements = [
 
 ];
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -90,7 +90,7 @@ function processFile(filePath) {
   }
   return false;
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function files = [];
   
   function traverse(currentDir) {

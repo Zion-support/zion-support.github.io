@@ -179,30 +179,30 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 } from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
+export const FuturisticNavigation: React.FC = props {;
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState<typeof false>(false);
   const location = useLocation();
-  useEffect(() => {
-    const handleScroll = () => {;
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {;
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-  useEffect(() => {
+    return : unknown window.removeEventListener('scroll', handleScroll)}, []);
+  useEffect(: unknown {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {;
+  const handleSearch = (...args: unknown[]): unknown => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (...args: unknown[]): unknown => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-  const toggleDropdown = (dropdown: string)  => {;
+  const toggleDropdown = (...args: unknown[]): unknown => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [
@@ -270,7 +270,7 @@ export const FuturisticNavigation: React.FC = () => {;
       ];
     };
   ];
-  return (
+  return 
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         scrolled
@@ -404,7 +404,7 @@ export const FuturisticNavigation: React.FC = () => {;
                 </Link>
               </motion.div>
               {/* Service Categories */}
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map((category, index (
                 <div key={category.name} className="relative">
                   <motion.button
                     initial = {
@@ -437,7 +437,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 }}
-                    onClick={() => toggleDropdown(category.name)}
+                    onClick={: unknown toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                       activeDropdown === category.name
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'
@@ -452,7 +452,7 @@ export const FuturisticNavigation: React.FC = () => {;
                   </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && (;
+                    {activeDropdown === category.name && ;
                       <motion.div
                         initial = {
   { opacity: 0, y: -10,
@@ -493,7 +493,7 @@ export const FuturisticNavigation: React.FC = () => {;
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                           </div>
                           <div className="space-y-2">
-                            {category.services.map((service, subIndex) => (
+                            {category.services.map((service, subIndex (
                               <motion.div
                                 key={service.name}
                                 initial = {
@@ -559,7 +559,7 @@ export const FuturisticNavigation: React.FC = () => {;
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
@@ -598,3 +598,5 @@ export const FuturisticNavigation: React.FC = () => {;
     </>;
   );
 };
+
+}

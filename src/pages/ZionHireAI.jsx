@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components/Footer';
-
+;
 const ZionHireAI = () => {
   const successMetrics = [
     { metric: '95%', label: 'Faster Hiring' },
@@ -108,6 +108,7 @@ const ZionHireAI = () => {
       <Footer />
     </>
   )};
-
+;
+export { ZionHireAI };
 export default ZionHireAI;
 }

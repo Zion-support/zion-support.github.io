@@ -1,9 +1,11 @@
 interface MimeTypeMapping {
 
+
   [key: string]: string;
 
-}
 
+}
+;
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
     '.js': 'application/javascript',
@@ -185,15 +187,15 @@ class MimeTypeFallback {
   }
 
   injectResource(url: anystring, type: 'script' | 'stylesheet'): Promise<any> {
-    return new Promise((resolve, reject)  => {
+    return new Promise(resolve: unknown, reject: unknown {
       const element = this.createResourceElement(url, type);
       
-      element.onload = () => {
+      element.onload = : unknown {
         console.log(`✅ Resource loaded successfully: ${url}`);
         resolve();
       };
       
-      element.onerror = () => {
+      element.onerror = : unknown {
         console.error(`❌ Failed to load resource: ${url}`);
         reject(new Error(`Failed to load resource: ${url}`));
       };
@@ -207,7 +209,8 @@ class MimeTypeFallback {
   }
 }
 
-// Create singleton instance
+// Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback();
-
+;
+export { mimeTypeFallback };
 export default mimeTypeFallback;

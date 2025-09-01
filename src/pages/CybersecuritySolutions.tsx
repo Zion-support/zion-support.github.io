@@ -26,10 +26,11 @@ import {
   BarChart3,
   CreditCard
  } from 'lucide-react';
-
+;
+export { function };
 export default function CybersecuritySolutions(...args[]):  {
-  const [selectedThreat, setSelectedThreat] = useState('all');
-  const [activeService, setActiveService] = useState('overview');
+  const [selectedThreat, setSelectedThreat] = useState<typeof 'all'>('all');
+  const [activeService, setActiveService] = useState<typeof 'overview'>('overview');
 
   const securityServices = [
     {
@@ -68,7 +69,7 @@ export default function CybersecuritySolutions(...args[]):  {
       color: "from-zion-yellow to-zion-orange"
     },
     {
-      icon: Cloud,
+      icon: Cloud
     };
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
@@ -129,7 +130,7 @@ export default function CybersecuritySolutions(...args[]):  {
     },
     {
       title: "Zero-Day Exploits",
-      description: "Unknown vulnerabilities exploited before security patches are available",
+      description: "Unknown vulnerabilities exploited before security patches are available"
     };
       type: "malware",;
       impact: "Critical",;
@@ -216,7 +217,7 @@ export default function CybersecuritySolutions(...args[]):  {
     ? securityThreats
     : securityThreats.filter(threat => threat.type === selectedThreat);
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">
@@ -326,7 +327,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityServices.map((service, index) => (;
+            {securityServices.map((service, index ;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -350,7 +351,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
 
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx (
                     <li key={idx} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
@@ -404,7 +405,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {threatTypes.map((threat)  => {
+            {threatTypes.map(threat: unknown {
             initial = {
   { opacity: 0,
   y: 20 ;
@@ -428,12 +429,11 @@ export default function CybersecuritySolutions(...args[]):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
-            {threatTypes.map((threat) => {;
+            {threatTypes.map(threat: unknown {;
               const Icon = threat.icon;
-              return (
-                <button
+              return <button
                   key = {threat.id}
-                  onClick={() => setSelectedThreat(threat.id)}
+                  onClick={(: unknown setSelectedThreat(threat.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
@@ -455,7 +455,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {filteredThreats.map((threat, index) => (
+            {filteredThreats.map(threat: unknown, index: unknown 
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -492,7 +492,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Protection Solutions:</h4>
                   <ul className="space-y-1">
-                    {threat.solutions.map((solution, idx) => (
+                    {threat.solutions.map((solution, idx (
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {solution}
@@ -550,7 +550,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {complianceFrameworks.map((framework, index) => (;
+            {complianceFrameworks.map(framework: unknown, index: unknown ;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -576,7 +576,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Key Requirements:</h4>
                   <ul className="space-y-1">
-                    {framework.requirements.map((req, idx) => (
+                    {framework.requirements.map((req, idx (
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {req}
@@ -634,7 +634,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityMetrics.map((metric, index) => (;
+            {securityMetrics.map(metric: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -720,7 +720,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 className="relative"

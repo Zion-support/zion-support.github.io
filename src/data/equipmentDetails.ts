@@ -1,5 +1,6 @@
 export interface EquipmentItem {
 
+
   id: string;
   name: string;
   description: string;
@@ -7,8 +8,9 @@ export interface EquipmentItem {
   category: string;
   image: string;
   specs: string[];
-  availability: boolean}
-
+  availability: boolean
+}
+;
 export const EQUIPMENT_DETAILS: EquipmentItem[] = [
   {
     id: "1",
@@ -34,7 +36,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     id: "3",
     name: "Edge Computing Device",
     description: "IoT edge computing solution",
-    price: 800,
+    price: 800
   };
     category: "IoT",;
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",;

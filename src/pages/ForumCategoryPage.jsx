@@ -9,7 +9,7 @@ import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "@/components/icons";
-// Mock category data
+// Mock category data;
 const categoriesInfo = {
   "getting-hired": {
         id: "getting-hired",
@@ -73,9 +73,9 @@ const iconMap = {
 
 
 };
-function CategoryContent({ categoryId, category, IconComponent, user, }) {
+function CategoryContent({ categoryId, category, IconComponent, user }) {
     const [searchQuery, setSearchQuery] = useState("");
-    const { posts = [], loading, } = usePostsByCategory(categoryId);
+    const { posts = [], loading } = usePostsByCategory(categoryId);
     const errorMessage = null;
     const filteredPosts = searchQuery
         ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -121,7 +121,8 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
-    </div>)}
+    </div>)};
+export { function };
 export default function ForumCategoryPage() {
     const { categoryId } = useParams();
     const { user } = useAuth();
@@ -145,3 +146,5 @@ export default function ForumCategoryPage() {
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
     </>)}
+
+}

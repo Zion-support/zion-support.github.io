@@ -1,5 +1,6 @@
 export interface AdvancedAIService {
 
+
   id: string;
   title: string;
   description: string;
@@ -23,7 +24,8 @@ contactInfo: {
     email: string;
     website: string;
     address: string;
-  };
+  
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
@@ -32,7 +34,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
+;
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Autonomous Business Operations
   {
@@ -576,5 +578,6 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     customers: 567;
   }
 ];
-
+;
+export { ADVANCED_AI_SERVICES_2025 };
 export default ADVANCED_AI_SERVICES_2025;}}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {
 
+
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
@@ -9,18 +10,21 @@ interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
+
 }
 
 interface PerformanceOptions {
+
   enableRealUserMonitoring?: boolean;
   enableWebVitals?: boolean;
   enableResourceTiming?: boolean;
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
   sendToAnalytics?: boolean;
-}
 
-export function usePerformance(options: PerformanceOptions = {}) {
+}
+;
+export function usePerformance(...args: unknown[]): unknown {
   const {
     enableRealUserMonitoring = true,
     enableWebVitals = true,
@@ -38,16 +42,16 @@ export function usePerformance(options: PerformanceOptions = {}) {
     ttfb: null,
     domLoad: null,
     windowLoad: null,
-    navigationStart: null,
+    navigationStart: null
   });
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState<typeof false>(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
     // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver(list: unknown {
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
@@ -55,7 +59,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     });
     // Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver(list: unknown {
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
@@ -63,7 +67,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     });
     // First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver(list: unknown {
       const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
@@ -71,7 +75,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     });
     // Cumulative Layout Shift (CLS)
-    const clsObserver = new PerformanceObserver((list) => {
+    const clsObserver = new PerformanceObserver(list: unknown {
       const clsValue = 0;
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
@@ -95,7 +99,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   const clsObserverRef = useRef<PerformanceObserver | null>(null);
 
   // Get navigation timing metrics
-  const getNavigationTiming = useCallback(() => {
+  const getNavigationTiming = useCallback(: unknown {
     if (!enableNavigationTiming || !performance.getEntriesByType) return;
 
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -124,7 +128,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     } catch (error) {
       // // // // // // // console.warn('Error setting up long task observer:', error);
     }
-    return () => longTaskObserver.disconnect();
+    return : unknown longTaskObserver.disconnect();
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
@@ -132,7 +136,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [enableNavigationTiming, logToConsole]);
 
   // Get resource timing metrics
-  const getResourceTiming = useCallback(() => {
+  const getResourceTiming = useCallback(: unknown {
     if (!enableResourceTiming || !performance.getEntriesByType) return;
 
     const resources = performance.getEntriesByType('resource');
@@ -146,14 +150,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [enableResourceTiming, logToConsole]);
 
   // Monitor Web Vitals
-  const monitorWebVitals = useCallback(() => {
+  const monitorWebVitals = useCallback(: unknown {
     if (!enableWebVitals || !window.PerformanceObserver) return;
 
     // First Contentful Paint
     try {
-      observerRef.current = new PerformanceObserver((list) => {
+      observerRef.current = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry: unknown {
           if (entry.name === 'first-contentful-paint') {
             const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }));
@@ -168,7 +172,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     // Largest Contentful Paint
     try {
-      lcpObserverRef.current = new PerformanceObserver((list) => {
+      lcpObserverRef.current = new PerformanceObserver(list: unknown {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
@@ -184,7 +188,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     // Cumulative Layout Shift
     try {
-      clsObserverRef.current = new PerformanceObserver((list) => {
+      clsObserverRef.current = new PerformanceObserver(list: unknown {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
@@ -201,13 +205,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [enableWebVitals, logToConsole]);
 
   // Monitor First Input Delay
-  const monitorFirstInput = useCallback(() => {
+  const monitorFirstInput = useCallback(: unknown {
     if (!enableWebVitals) return;
 
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
 
-    const firstInputHandler = (event: Event) => {
+    const firstInputHandler = (...args: unknown[]): unknown => {
       if (firstInputTime !== null) return;
 
       firstInputTime = performance.now();
@@ -230,7 +234,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [enableWebVitals, logToConsole]);
 
   // Start monitoring
-  const startMonitoring = useCallback(() => {
+  const startMonitoring = useCallback(: unknown {
     if (isMonitoring) return;
 
     setIsMonitoring(true);
@@ -246,7 +250,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       getNavigationTiming();
       getResourceTiming();
     } else {
-      window.addEventListener('load', () => {
+      window.addEventListener'load': unknown, (: unknown {
         getNavigationTiming();
         getResourceTiming();
       });
@@ -261,7 +265,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [isMonitoring, monitorWebVitals, monitorFirstInput, getNavigationTiming, getResourceTiming]);
 
   // Stop monitoring
-  const stopMonitoring = useCallback(() => {
+  const stopMonitoring = useCallback(: unknown {
     setIsMonitoring(false);
     
     if (observerRef.current) {
@@ -281,7 +285,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, []);
 
   // Get performance score
-  const getPerformanceScore = useCallback(() => {
+  const getPerformanceScore = useCallback(: unknown {
     let score = 100;
     
     // FCP scoring (0-100)
@@ -316,7 +320,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [metrics]);
 
   // Send metrics to analytics
-  const sendMetricsToAnalytics = useCallback(() => {
+  const sendMetricsToAnalytics = useCallback(: unknown {
     if (!sendToAnalytics) return;
 
     const performanceScore = getPerformanceScore();
@@ -342,18 +346,18 @@ export function usePerformance(options: PerformanceOptions = {}) {
   }, [metrics, sendToAnalytics, getPerformanceScore]);
 
   // Auto-start monitoring on mount
-  useEffect(() => {
+  useEffect(: unknown {
     if (enableRealUserMonitoring) {
       startMonitoring();
     }
 
-    return () => {
+    return : unknown {
       stopMonitoring();
     };
   }, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
 
   // Auto-send metrics when they're complete
-  useEffect(() => {
+  useEffect(: unknown {
     if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) {
       sendMetricsToAnalytics();
     }
@@ -370,14 +374,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
   };
       // // // // // // // console.warn(`Error observing ${eventName}:`, error);
     }
-    return () => observer.disconnect();
+    return : unknown observer.disconnect();
   }, [eventName, callback]);
 
-// Hook for measuring time between renders
-export function useRenderTime() {
+// Hook for measuring time between renders;
+export function useRenderTime(...args: unknown[]): unknown {
   const renderStart = useRef(performance.now());
-  const [renderTime, setRenderTime] = useState(0);
-  useEffect(() => {
+  const [renderTime, setRenderTime] = useState<typeof 0>(0);
+  useEffect(: unknown {
     const renderEnd = performance.now();
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
@@ -387,17 +391,17 @@ export function useRenderTime() {
 
 }
 
-// Hook for monitoring specific component performance
-export function useComponentPerformance(componentName: string) {
+// Hook for monitoring specific component performance;
+export function useComponentPerformance(...args: unknown[]): unknown {
   const [renderTime, setRenderTime] = useState<number>(0);
   const [mountTime, setMountTime] = useState<number>(0);
   const startTime = useRef<number>(0);
 
-  useEffect(() => {
+  useEffect(: unknown {
     startTime.current = performance.now();
     setMountTime(startTime.current);
 
-    return () => {
+    return : unknown {
       const endTime = performance.now();
       const totalTime = endTime - startTime.current;
       setRenderTime(totalTime);
@@ -412,11 +416,11 @@ export function useComponentPerformance(componentName: string) {
   return { renderTime, mountTime };
 }
 
-// Hook for monitoring API call performance
-export function useAPIPerformance() {
+// Hook for monitoring API call performance;
+export function useAPIPerformance(...args: unknown[]): unknown {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
-  const trackAPICall = useCallback((endpoint: string, duration: number) => {
+  const trackAPICall = useCallback(endpoint: string, duration: number {
     setApiMetrics(prev => {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
@@ -425,21 +429,21 @@ export function useAPIPerformance() {
     });
   }, []);
 
-  const getAPIAverage = useCallback((endpoint: string) => {
+  const getAPIAverage = useCallback(endpoint: string {
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
-    return metrics.reduce((sum, time) => sum + time, 0) / metrics.length;
+    return metrics.reduce(sum: unknown, time: unknown sum + time, 0) / metrics.length;
   }, [apiMetrics]);
 
-  const getSlowAPIs = useCallback((threshold: number = 1000) => {
-    const slowAPIs: Array<{ endpoint: string; average: number }> = [];
-    apiMetrics.forEach((times, endpoint) => {
-      const average = times.reduce((sum, time) => sum + time, 0) / times.length;
+  const getSlowAPIs = useCallback(threshold: number = 1000 {
+    const slowAPIs: { endpoint: string; average: number }[] = [];
+    apiMetrics.forEach(times: unknown, endpoint: unknown {
+      const average = times.reduce(sum: unknown, time: unknown sum + time, 0) / times.length;
       if (average > threshold) {
         slowAPIs.push({ endpoint, average });
       }
     });
-    return slowAPIs.sort((a, b) => b.average - a.average);
+    return slowAPIs.sort(a: unknown, b: unknown b.average - a.average);
   }, [apiMetrics]);
 
   return {
@@ -448,4 +452,8 @@ export function useAPIPerformance() {
     getAPIAverage,
     getSlowAPIs
   };
+}
+
+
+}
 }

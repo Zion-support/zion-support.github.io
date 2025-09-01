@@ -29,8 +29,8 @@ import {
   Heart
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-const AISalesCopilot = () => {
+;
+const AISalesCopilot = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Users,
@@ -163,7 +163,7 @@ const AISalesCopilot = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Sales Copilot - Zion Tech Group"
@@ -232,7 +232,7 @@ const AISalesCopilot = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful AI Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -286,7 +286,7 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -340,7 +340,7 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {salesProcess.map((stage, index) => (
+            {salesProcess.map(stage: unknown, index: unknown (
               <motion.div
                 key={stage.stage}
                 initial={{ opacity: 0, y: 20 }}
@@ -394,7 +394,7 @@ const AISalesCopilot = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -460,6 +460,7 @@ const AISalesCopilot = () => {
     </div>
   );
 };
-
+;
+export { AISalesCopilot };
 export default AISalesCopilot;
 

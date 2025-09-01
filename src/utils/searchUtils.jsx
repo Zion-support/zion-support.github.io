@@ -1,6 +1,6 @@
 /**
  * Highlight search terms in text with HTML mark tags
- */
+ */;
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim())
         return text;
@@ -11,7 +11,7 @@ export const highlightSearchTerms = (text, searchTerm) => {
 
 /**
  * Check if a text contains the search term (case-insensitive)
- */
+ */;
 export const matchesSearchTerm = (text, searchTerm) => {
     if (!text || !searchTerm.trim())
         return false;
@@ -20,7 +20,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
 
 /**
  * Calculate relevance score for search results
- */
+ */;
 export const calculateRelevanceScore = (result, searchTerm) => {
     let score = 0;
 
@@ -64,7 +64,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 
 /**
  * Sort search results based on sort option
- */
+ */;
 export const sortSearchResults = (results, sortBy, searchTerm) => {
     const sortedResults = [...results];
     
@@ -95,7 +95,7 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
 
 /**
  * Filter search results based on active filters
- */
+ */;
 export const filterSearchResults = (results, filters) => {
     let filteredResults = [...results];
     
@@ -129,7 +129,7 @@ export const filterSearchResults = (results, filters) => {
 
 /**
  * Perform search with filtering and sorting
- */
+ */;
 export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {
     if (!searchTerm.trim()) {
         return sortSearchResults(data, sortBy, searchTerm);
@@ -152,7 +152,7 @@ export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevanc
 
 /**
  * Get search suggestions based on search history and popular terms
- */
+ */;
 export const getSearchSuggestions = (searchHistory = [], popularTerms = [], currentInput = '') => {
     const suggestions = [];
 
@@ -175,7 +175,7 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
 
 /**
  * Debounce search function to avoid excessive API calls
- */
+ */;
 export const debounceSearch = (func, delay) => {
     let timeoutId;
     return (...args) => {
@@ -183,7 +183,7 @@ export const debounceSearch = (func, delay) => {
         timeoutId = setTimeout(() => func.apply(null, args), delay);
     };
 };
-
+;
 export default {
     highlightSearchTerms,
     matchesSearchTerm,

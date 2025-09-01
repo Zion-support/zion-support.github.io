@@ -412,5 +412,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         </div>
       </div>
     </div>)};
+export { AIMatcher };
 export default AIMatcher;
 }}}}}}}}}}}

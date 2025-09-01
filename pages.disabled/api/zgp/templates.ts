@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { loadTemplates } from '@/utils/zgp-storage';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { function };
+export default function handler(...args: unknown[]): unknown {
   try {
     const templates = loadTemplates();
     if (req.method === 'GET') {
       const byCategory = templates.reduce
-
-export default function TemplatesPage() {
-  return (
-    <Record<string, typeof templates>>((acc, t) => {
+;
+export default function TemplatesPage(...args: unknown[]): unknown {
+  return <Record<string: unknown, typeof templates>>((acc: unknown, t: unknown {
         acc[t.category] = acc[t.category] || [];
         acc[t.category].push(t);
         return acc;
@@ -19,7 +19,7 @@ export default function TemplatesPage() {
     }
     res.setHeader('Allow', 'GET');
     res.status(405).json({ error: 'Method Not Allowed' });
-  } catch (e: any) {
+  } catch (e: unknown) {
     res.status(500).json({ error: e.message || 'Internal Server Error' });
   }
 }

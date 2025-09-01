@@ -42,7 +42,7 @@ const categories = [
         gradient: "from-zion-purple-light/20 to-zion-purple/20",
         features["Latest Tech", "AI Solutions", "Future-Ready"],;
         stats: "100+ Innovations"
-    },
+    }
 ];
 const specialServices = [
     {

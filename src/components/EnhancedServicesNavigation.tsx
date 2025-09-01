@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+;
 const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [activeCategory, setActiveCategory] = useState<any>(null);
 
   const serviceCategories = [
@@ -146,11 +146,10 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
     };
   ];
 
-  return (
-    <div className = "relative">
+  return <div className = "relative">
       {/* Main Services Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       >
         <span className="flex items-center gap-2">
@@ -167,7 +166,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
       {/* Services Dropdown */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial = {
   { opacity: 0, y: -10,
@@ -200,7 +199,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
               {/* Service Categories Grid */}
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">
-                {serviceCategories.map((category, categoryIndex)  => (
+                {serviceCategories.map((category, categoryIndex 
                   <motion.div
                     key={category.name}
                     initial = {
@@ -219,8 +218,8 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
 }}
                     className="relative group"
-                    onMouseEnter={() => setActiveCategory(category.name)}
-                    onMouseLeave={() => setActiveCategory(null)}
+                    onMouseEnter={( setActiveCategory(category.name)}
+                    onMouseLeave={: unknown setActiveCategory(null)}
                   >
                     <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>
                       <div className="flex items-center gap-3 mb-4">
@@ -232,7 +231,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                       </div>
                       
                       <div className="space-y-2">
-                        {category.services.map((service, serviceIndex) => (
+                        {category.services.map(service: unknown, serviceIndex: unknown (
                           <motion.div
                             key={service.title}
                             initial = {
@@ -273,7 +272,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                   Quick Access
                 </h4>
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
-                  {quickLinks.map((link, index)  => (
+                  {quickLinks.map(link: unknown, index: unknown 
                     <motion.div
                       key={link.title}
                       initial = {
@@ -294,7 +293,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                     >
                       <Link
                         to={link.url}
-                        onClick={() => setIsOpen(false)}
+                        onClick={( setIsOpen(false)}
                         className="block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group"
                       >
                         <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
@@ -334,16 +333,17 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
       </AnimatePresence>
 
       {/* Backdrop */}
-      {isOpen && (
+      {isOpen && 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black/20 z-40"
-          onClick={() => setIsOpen(false)}
+          onClick={( setIsOpen(false)}
         />
       )};
     </div>;
   )};
-
+;
+export { EnhancedServicesNavigation };
 export default EnhancedServicesNavigation;

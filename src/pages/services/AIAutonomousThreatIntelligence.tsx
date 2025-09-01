@@ -35,8 +35,9 @@ import { Shield,
   Activity,
   ShieldCheck
  } from 'lucide-react.ts';
-
-export default function AIAutonomousThreatIntelligence(...args: any[]): any {
+;
+export { function };
+export default function AIAutonomousThreatIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,
@@ -205,7 +206,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -225,7 +226,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 </p>
                 
                 <ul className="space-y-3">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
@@ -256,7 +257,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {threatTypes.map((threat, index)  => (
+            {threatTypes.map(threat: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,7 +281,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 </div>
 
                 <ul className="space-y-2">
-                  {threat.features.map((feature, idx) => (
+                  {threat.features.map((feature, idx (
                     <li key={idx} className="flex items-center text-gray-200 text-sm">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
@@ -311,7 +312,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -341,7 +342,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}

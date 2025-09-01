@@ -211,5 +211,6 @@ import React from 'react';
     </div>
   );
 };
-
+;
+export { Services };
 export default Services;

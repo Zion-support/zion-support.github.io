@@ -51,7 +51,7 @@ import {
     technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
   }
 ];
-
+;
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -82,7 +82,7 @@ const fiveGTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -112,7 +112,7 @@ const successStories = [
     logo: "RHN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -143,7 +143,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const fiveGBenefits = [
   {
     title: "Ultra-High Speed",
@@ -170,7 +170,8 @@ const fiveGBenefits = [
     examples["Customized services", "Service isolation", "Quality guarantees"];
   }
 ];
-
+;
+export { function };
 export default function FiveGSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -844,3 +845,7 @@ export default function FiveGSolutions() {
       </section>
     </div>
   )}
+
+
+}
+}

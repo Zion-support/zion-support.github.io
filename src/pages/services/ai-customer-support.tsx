@@ -11,8 +11,9 @@ import { MessageCircle,
   Headphones,
   Bot
  } from 'lucide-react.ts';
-
-export default function AICustomerSupport(...args: any[]): any {
+;
+export { function };
+export default function AICustomerSupport(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 

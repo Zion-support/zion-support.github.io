@@ -23,4 +23,5 @@ const ServiceInnovationHub = () => {
       </section>
     </div>);
 };
+export { ServiceInnovationHub };
 export default ServiceInnovationHub;

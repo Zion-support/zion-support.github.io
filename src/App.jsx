@@ -4,7 +4,7 @@ import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
 
-// Home and main pages
+// Home and main pages;
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
@@ -15,17 +15,17 @@ const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 
-// Services pages
+// Services pages;
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025.tsx'));
 
-// Loading component
+// Loading component;
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
   </div>
 );
 
-// Simple Services page component
+// Simple Services page component;
 const ServicesPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
     <div className="container mx-auto px-4 py-16">
@@ -66,7 +66,7 @@ const ServicesPage = () => (
     </div>
   </div>
 );
-
+;
 function App() {
   return (
     <Router>
@@ -112,5 +112,6 @@ function App() {
   );
 }
 
-
+;
+export { App };
 export default App;

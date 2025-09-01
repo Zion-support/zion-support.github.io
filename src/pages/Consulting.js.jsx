@@ -269,4 +269,5 @@ const Consulting = () => {
         </div>
       </section>
     </div>)};
+export { Consulting };
 export default Consulting;

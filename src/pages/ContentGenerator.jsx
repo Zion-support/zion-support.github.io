@@ -12,6 +12,7 @@ import { Loader2 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from 'react-router-dom';
+export { function };
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
     const router = useNavigate();
@@ -316,3 +317,14 @@ export default function ContentGenerator() {
       </div>
       
     </>)}
+
+
+
+
+}
+
+
+}
+
+}
+}

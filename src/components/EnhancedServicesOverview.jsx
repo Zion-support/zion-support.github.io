@@ -20,4 +20,15 @@ const ServiceCategory = ({ category, services }) => {
             'Education & Training': <GraduationCap className="w-6 h-6"/>,
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
             'Real Estate & Property': <Home className="w-6 h-6"/>,
-            'Legal & Compliance': <Lock className="w-6 h-6"/>,
+            'Legal & Compliance': <Lock className="w-6 h-6"/>
+
+
+
+
+}
+
+
+}
+
+}
+}

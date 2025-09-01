@@ -23,7 +23,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                     vx: (Math.random() - 0.5) * 0.5,
                     vy: (Math.random() - 0.5) * 0.5,
                     size: Math.random() * 2 + 1,
-                    opacity: Math.random() * 0.5 + 0.1,
+                    opacity: Math.random() * 0.5 + 0.1
                 })}
         };
         const drawGrid = () => {
@@ -137,7 +137,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         
 
 }}/>)}
-// Neon glow effect component
+// Neon glow effect component;
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
     return (<div className={`relative ${className}`} style={{
             textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
@@ -145,23 +145,23 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
         }}>
       {children}
     </div>)}
-// Floating particles component
+// Floating particles component;
 export function FloatingParticles({ count = 20, className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
+                animationDuration: `${2 + Math.random() * 2}s`
             }}/>))}
     </div>)}
-// Gradient border component
+// Gradient border component;
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
     return (<div className={`relative ${className}`} style = {
   {
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
             padding: borderWidth,
-            borderRadius: 'inherit',
+            borderRadius: 'inherit'
   
 
 }}>

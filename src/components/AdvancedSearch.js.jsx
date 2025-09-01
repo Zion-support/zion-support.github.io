@@ -8,7 +8,7 @@ const mockSuggestions = [
     { id: '5', text: 'Data Analytics', type: 'service', relevance: 85, category: 'Data Science' },
     { id: '6', text: 'Cybersecurity', type: 'trending', relevance: 92, category: 'Security' },
     { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },
-    { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' },
+    { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' }
 ];
 export function AdvancedSearch() {
     const [query, setQuery] = useState('');

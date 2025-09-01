@@ -62,7 +62,7 @@ const technologyCategories = [
     color: "from-orange-500 to-red-500";
   };
 ];
-
+;
 const emergingTech = [
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },
   { name: "Blockchain", icon: "🔗", status: "Production" },
@@ -71,9 +71,9 @@ const emergingTech = [
   { name: "IoT Platforms", icon: "📱", status: "Production" },
   { name: "AR/VR", icon: "🥽", status: "Research" }
 ];
-
-export function TechnologyStackSection() {
-  return (
+;
+export function TechnologyStackSection(...args: unknown[]): unknown {
+  return 
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -112,7 +112,7 @@ export function TechnologyStackSection() {
 
         {/* Technology Categories */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
+          {technologyCategories.map((category, index 
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
@@ -129,7 +129,7 @@ export function TechnologyStackSection() {
               </h3>
               
               <div className="space-y-4">
-                {category.technologies.map((tech, techIndex) => (
+                {category.technologies.map((tech, techIndex (
                   <div key={tech.name} className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <span className="text-xl">{tech.icon}</span>
@@ -206,7 +206,7 @@ export function TechnologyStackSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
+            {emergingTech.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
@@ -347,7 +347,8 @@ export function TechnologyStackSection() {
       </div>;
     </section>;
   )};
-
+;
+export { TechnologyStackSection };
 export default TechnologyStackSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -356,6 +357,6 @@ export default TechnologyStackSection;
     </section>;
   );
 }
-
+;
 export default TechnologyStackSection;
 export default TechnologyStackSection;

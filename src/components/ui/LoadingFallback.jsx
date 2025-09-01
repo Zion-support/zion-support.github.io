@@ -73,7 +73,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 }}/>))}
       </motion.div>
-    </div>)}
+    </div>)};
 export function PageLoadingFallback() {
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
       <div className="text-center">
@@ -83,3 +83,5 @@ export function PageLoadingFallback() {
         </motion.div>
       </div>
     </div>)}
+
+}

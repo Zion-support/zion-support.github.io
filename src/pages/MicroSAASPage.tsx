@@ -21,7 +21,7 @@ import {
   Target,
   Globe
  } from 'lucide-react';
-const MicroSAASPage = () => {
+const MicroSAASPage = (...args: unknown[]): unknown => {
   const saasServices = [
     {
       id: 'custom-applications',
@@ -53,7 +53,7 @@ const MicroSAASPage = () => {
     {
       id: 'user-management',
       title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
+      description: 'Comprehensive user authentication and authorization systems'
     };
       icon: <Users className="w-8 h-8" />,;
       features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
@@ -91,7 +91,7 @@ const MicroSAASPage = () => {
       };
     };
   };
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -154,7 +154,7 @@ const MicroSAASPage = () => {
           animate="visible"
           className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index)  => (
+          {saasServices.map((service, index 
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -179,7 +179,7 @@ const MicroSAASPage = () => {
               <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
@@ -191,7 +191,7 @@ const MicroSAASPage = () => {
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.useCases.map((useCase, useCaseIndex) => (
+                  {service.useCases.map(useCase: unknown, useCaseIndex: unknown (
                     <span
                       key={useCaseIndex}
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
@@ -256,7 +256,7 @@ to: {`/micro-saas/${service.id}`}
             </p>
           </div>
           <div className="grid grid-cols-2 md: grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index)  => (
+            {saasBenefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
                 initial = {
@@ -425,5 +425,6 @@ to: {`/micro-saas/${service.id}`}
     </div>;
   );
 };
+export { MicroSAASPage };
 export default MicroSAASPage;
 }}}}}}

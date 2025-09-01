@@ -64,11 +64,12 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-
-export default function ComprehensiveServices() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
+;
+export { function };
+export default function ComprehensiveServices(...args: unknown[]): unknown {
+  const [activeCategory, setActiveCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [priceRange, setPriceRange] = useState<typeof 'all'>('all');
 
   // Comprehensive service categories with real market prices
   const serviceCategories = [
@@ -349,7 +350,7 @@ export default function ComprehensiveServices() {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
         title="Comprehensive Services - Zion Tech Group"
@@ -404,7 +405,7 @@ export default function ComprehensiveServices() {
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
@@ -415,11 +416,11 @@ export default function ComprehensiveServices() {
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <select
                 value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}
+                onChange={e: unknown setActiveCategory(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none cursor-pointer"
               >
                 <option value="all">All Categories</option>
-                {serviceCategories.map((category) => (
+                {serviceCategories.map(category: unknown (
                   <option key={category.id} value={category.id}>{category.name}</option>
                 ))}
               </select>
@@ -430,7 +431,7 @@ export default function ComprehensiveServices() {
               <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <select
                 value={priceRange}
-                onChange={(e) => setPriceRange(e.target.value)}
+                onChange={e: unknown setPriceRange(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none cursor-pointer"
               >
                 <option value="all">All Prices</option>
@@ -446,7 +447,7 @@ export default function ComprehensiveServices() {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          {filteredServices.length === 0 ? (
+          {filteredServices.length === 0 ? 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -456,7 +457,7 @@ export default function ComprehensiveServices() {
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-slate-300 mb-6">Try adjusting your search criteria or filters</p>
               <button
-                onClick={() => {
+                onClick={( {
                   setSearchQuery('');
                   setActiveCategory('all');
                   setPriceRange('all');
@@ -466,7 +467,7 @@ export default function ComprehensiveServices() {
                 Clear Filters
               </button>
             </motion.div>
-          ) : (
+          ) : 
             <>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -488,7 +489,7 @@ export default function ComprehensiveServices() {
                 initial="hidden"
                 animate="visible"
               >
-                {filteredServices.map((service, index) => (
+                {filteredServices.map((service, index (
                   <motion.div
                     key={index}
                     variants={itemVariants}
@@ -541,7 +542,7 @@ export default function ComprehensiveServices() {
                       {/* Features */}
                       <div className="space-y-2 mb-6">
                         <h4 className="font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                        {service.features.map((feature, idx) => (
+                        {service.features.map(feature: unknown, idx: unknown (
                           <div key={idx} className="flex items-center text-sm text-slate-400">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                             {feature}
@@ -552,7 +553,7 @@ export default function ComprehensiveServices() {
                       {/* Benefits */}
                       <div className="space-y-2 mb-6">
                         <h4 className="font-semibold text-green-400 mb-3">Business Benefits:</h4>
-                        {service.benefits.map((benefit, idx) => (
+                        {service.benefits.map(benefit: unknown, idx: unknown (
                           <div key={idx} className="flex items-center text-sm text-slate-400">
                             <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {benefit}
@@ -728,7 +729,7 @@ export default function ComprehensiveServices() {
                 title: '24/7 Support',
                 description: 'Round-the-clock technical support and maintenance services'
               }
-            ].map((item, index) => (
+            ].map(item: unknown, index: unknown (
               <motion.div
                 key={index}
                 variants={itemVariants}

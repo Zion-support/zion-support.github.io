@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
-
-const ExpandedServicesShowcase2027: NextPage = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+;
+const ExpandedServicesShowcase2027: NextPage = : unknown {;
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<typeof 'all'>('all');
   const [viewMode, setViewMode] = useState<any>('grid');
 
   // Get unique categories and subcategories
@@ -21,7 +21,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
     return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_2027.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -32,12 +32,12 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
       
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {;
+  const resetFilters = (...args: unknown[]): unknown => {;
     setSearchTerm('');
     setSelectedCategory('all');
     setSelectedSubcategory('all')};
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Expanded Innovative Services 2027 - Zion Tech Group</title>
@@ -88,13 +88,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)};
+              onChange={(e setSearchTerm(e.target.value)};
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400";
             />;
             ;
             <select;
               value={selectedCategory};
-              onChange={(e) => {;
+              onChange={e: unknown {;
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
@@ -109,7 +109,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
 
             <select
               value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
+              onChange={e: unknown setSelectedSubcategory(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => (
@@ -135,13 +135,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
             <div className="flex items-center space-x-2">
               <span className="text-white text-sm">View:</span>
               <button
-                onClick={() => setViewMode('grid')}
+                onClick={: unknown setViewMode('grid')}
                 className={`px-3 py-1 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
 
                 Grid
               </button>
               <button
-                onClick={() => setViewMode('list')}
+                onClick={: unknown setViewMode('list')}
                 className={`px-3 py-1 rounded ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
 
                 List
@@ -152,7 +152,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
 
         {/* Services Grid/List */}
         <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <div
               key={service.id}
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${
@@ -191,7 +191,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="text-white/70 text-sm space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
+                    {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                       <li key={index} className="flex items-center">
                         <span className="text-blue-400 mr-2">•</span>
                         {feature}
@@ -212,7 +212,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map(_: unknown, i: unknown (
                         <span key={i} className={i < service.rating ? 'text-yellow-400' : 'text-gray-600'}>
                           ★
                         </span>
@@ -260,5 +260,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
     </div>;
   );
 };
-
+;
+export { ExpandedServicesShowcase2027 };
 export default ExpandedServicesShowcase2027;}

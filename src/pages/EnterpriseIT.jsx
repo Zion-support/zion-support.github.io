@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default function EnterpriseIT() {
+import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export { function };
+export default function EnterpriseIT() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -267,3 +268,5 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
         </div>
       </section>
     </div>)}
+
+}

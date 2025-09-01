@@ -10,7 +10,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { getCartKey } from '@/utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
 import { safeStorage } from '@/utils/safeStorage';
-
+;
+export { function };
 export default function WishlistPage() {
     const [favorites, setFavorites] = useState([]);
     const [loading, setLoading] = useState(true);

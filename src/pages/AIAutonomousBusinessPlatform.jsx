@@ -575,7 +575,7 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Brain
+  Brain;
 const businessPlatformSolutions = [;
   {
     id: 1,
@@ -674,7 +674,7 @@ const businessPlatformSolutions = [;
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"];
   }
 ];
-
+;
 const platformTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -705,7 +705,7 @@ const platformTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -735,7 +735,7 @@ const successStories = [
     logo: "RCN"
 
 ];
-
+;
 const platformBenefits = [
   {
     title: "Intelligent Decision Making",
@@ -762,7 +762,8 @@ const platformBenefits = [
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];
   }
 ];
-
+;
+export { function };
 export default function AIAutonomousBusinessPlatform() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -1436,3 +1437,10 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
     </div>
   )}
+
+
+
+}
+
+}
+}

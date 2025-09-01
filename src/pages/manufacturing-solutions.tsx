@@ -14,7 +14,7 @@ import { Factory,
   Star
  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
 const ManufacturingSolutions: React.FC = (): JSX.Element => {
   const solutions = [
     {
@@ -124,7 +124,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         </motion.div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index)  => (
+          {benefits.map(benefit: unknown, index: unknown (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         </motion.div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index)  => (
+          {solutions.map(solution: unknown, index: unknown 
             <motion.div
               key={solution.title}
               initial={{ opacity: 0, y: 20 }}
@@ -181,7 +181,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {solution.features.map((feature, idx) => (
+                  {solution.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400 flex items-center space-x-2">
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
@@ -227,5 +227,6 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { ManufacturingSolutions };
 export default ManufacturingSolutions;

@@ -31,5 +31,6 @@ const Training = () => {
     </div>
   );
 };
-
+;
+export { Training };
 export default Training;

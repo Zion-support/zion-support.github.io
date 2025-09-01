@@ -363,4 +363,5 @@ const EmergingTech = () => {
         </motion.div>
       </div>
     </div>)};
+export { EmergingTech };
 export default EmergingTech;

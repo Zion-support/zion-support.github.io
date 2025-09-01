@@ -14,23 +14,25 @@ import {
   Moon,
   Settings
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-
-export function Accessibility() {
-  const [isOpen, setIsOpen] = useState(false);
+;
+export function Accessibility(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 16,
     highContrast: false,
     reducedMotion: false,
     soundEnabled: true,
     theme: 'auto'
-  });
+  
+});
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -39,7 +41,7 @@ export function Accessibility() {
       applySettings(parsed);
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
@@ -60,10 +62,10 @@ export function Accessibility() {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings = (...args: unknown[]): unknown => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -93,7 +95,7 @@ export function Accessibility() {
 
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (...args: unknown[]): unknown => {
     const newSettings = {
   ...settings,;
   ;
@@ -114,19 +116,19 @@ export function Accessibility() {
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const increaseFontSize = () => {;
+  const increaseFontSize = (...args: unknown[]): unknown => {;
     if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
 
   };
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize = (...args: unknown[]): unknown => {;
     if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
 
   };
 
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
   fontSize: 16,
       highContrast: false,
@@ -150,11 +152,10 @@ export function Accessibility() {
     localStorage.removeItem('accessibility-settings');
   };
 
-  return (
-    <>
+  return <>
       {/* Accessibility Toggle Button */}
       <button
-        onClick = {() => setIsOpen(!isOpen)}
+        onClick = {(: unknown setIsOpen(!isOpen)}
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
@@ -164,7 +165,7 @@ export function Accessibility() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial = {
   { opacity: 0,
@@ -216,7 +217,7 @@ export function Accessibility() {
           Accessibility
                 </h2>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={( setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
 
@@ -264,7 +265,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange = {
-  (e) => updateSetting('highContrast',
+  e: unknown updateSetting('highContrast',
   e.target.checked)
 
 
@@ -296,7 +297,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange = {
-  (e) => updateSetting('reducedMotion',
+  e: unknown updateSetting('reducedMotion',
   e.target.checked)
 
 
@@ -324,11 +325,10 @@ export function Accessibility() {
                   Theme
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {(['auto', 'light', 'dark'] as const).map((theme) => (
-                    <button
+                  {(['auto', 'light', 'dark'] as const).map(theme: unknown <button
                       key={theme}
                       onClick = {
-  () => updateSetting('theme',
+  (: unknown updateSetting('theme',
   theme)
 
 
@@ -362,7 +362,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.soundEnabled}
                     onChange = {
-  (e) => updateSetting('soundEnabled',
+  e: unknown updateSetting('soundEnabled',
   e.target.checked)
 
 

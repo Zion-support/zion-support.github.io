@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function MicroSAASSolutions(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   title: "Multi-tenant Architecture",
                   description: "Scalable multi-tenant architecture for growing SaaS businesses."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -158,7 +159,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   icon: Database,
                   benefits: ["Content management", "SEO tools", "Digital marketing"]
                 }
-              ].map((category, index)  => (
+              ].map(category: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <category.icon className="w-6 h-6 text-white" />
@@ -166,7 +167,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
                   <p className="text-slate-300 mb-4">{category.description}</p>
                   <ul className="space-y-1">
-                    {category.benefits.map((benefit, benefitIndex) => (
+                    {category.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-violet-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -213,7 +214,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   title: "Launch & Growth",
                   description: "Product launch, marketing, and continuous improvement."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -248,7 +249,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "AWS/Azure for cloud infrastructure and deployment",
                     "Docker/Kubernetes for containerization and orchestration",
                     "CI/CD pipelines for automated testing and deployment"
-                  ].map((technology, index) => (
+                  ].map(technology: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-violet-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{technology}</span>
@@ -265,7 +266,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -302,7 +303,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "Referral programs and affiliate marketing",
                     "Free trials and freemium models",
                     "Partnerships and integrations"
-                  ].map((strategy, index) => (
+                  ].map(strategy: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{strategy}</span>
@@ -321,7 +322,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "Churn reduction and win-back campaigns",
                     "Revenue analytics and performance tracking",
                     "Subscription model optimization"
-                  ].map((strategy, index) => (
+                  ].map(strategy: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{strategy}</span>
@@ -367,7 +368,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   title: "Customer Acquisition Cost",
                   description: "Optimize marketing and sales efficiency"
                 }
-              ].map((metric, index)  => (
+              ].map(metric: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>

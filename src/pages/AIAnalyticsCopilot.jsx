@@ -143,5 +143,6 @@ import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Dat
         </section>
       </div>
     </>)};
+export { AIAnalyticsCopilot };
 export default AIAnalyticsCopilot;
 }}}

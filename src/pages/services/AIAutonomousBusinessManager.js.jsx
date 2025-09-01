@@ -240,4 +240,5 @@ const AIAutonomousBusinessManager = () => {
         </div>
       </section>
     </div>)};
+export { AIAutonomousBusinessManager };
 export default AIAutonomousBusinessManager;

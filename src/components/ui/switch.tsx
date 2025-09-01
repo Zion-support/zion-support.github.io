@@ -2,27 +2,23 @@ import React from 'react';
 import { cn } from "../../utils/cn";
 
 interface SwitchProps {
+  // Add your props here
+
+
   checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
+  onCheckedChange?: checked: boolean void;
   disabled?: boolean;
   className?: string;
   id?: string;
   'aria-label'?: string;
-
-export function Switch({
-  checked = false,
-  onCheckedChange,
-  disabled = false,
-  className,;
-  id,;
-  'aria-label': ariaLabel,;
-  ...props;
-}: SwitchProps) {;
-  const handleToggle = () => {;
+;
+export function Switch(...args: unknown[]): unknown {;
+  const handleToggle = (...args: unknown[]): unknown => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
 
-  };
+  
+};
 
   return (
     <button

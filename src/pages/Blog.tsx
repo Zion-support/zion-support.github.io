@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 
 interface BlogPost {
+
   id: string;
   title: string;
   excerpt: string;
@@ -25,16 +26,19 @@ interface BlogPost {
   views: number;
   featured: boolean;
   image?: string;
+
 }
 
 interface Category {
+
   id: string;
   name: string;
   count: number;
-}
 
-const Blog: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+}
+;
+const Blog: React.FC = props {
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories: Category[] = [
@@ -101,7 +105,7 @@ const Blog: React.FC = () => {
     }
   ];
 
-  const filteredPosts = useMemo(() => {
+  const filteredPosts = useMemo(: unknown {
     return blogPosts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -113,7 +117,7 @@ const Blog: React.FC = () => {
     });
   }, [searchTerm, selectedCategory]);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (...args: unknown[]): unknown => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -121,7 +125,7 @@ const Blog: React.FC = () => {
     });
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
       <section className="pt-32 pb-16 px-4">
@@ -156,7 +160,7 @@ const Blog: React.FC = () => {
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -180,7 +184,7 @@ const Blog: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredPosts
                 .filter(post => post.featured)
-                .map((post, index) => (
+                .map(post: unknown, index: unknown (
                   <motion.article
                     key={post.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -228,7 +232,7 @@ const Blog: React.FC = () => {
                       </div>
                       
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {post.tags.slice(0, 3).map((tag) => (
+                        {post.tags.slice(0, 3).map(tag: unknown (
                           <span
                             key={tag}
                             className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
@@ -263,10 +267,9 @@ const Blog: React.FC = () => {
                     Categories
                   </h3>
                   <div className="space-y-2">
-                    {categories.map((category) => (
-                      <button
+                    {categories.map(category: unknown <button
                         key={category.id}
-                        onClick={() => setSelectedCategory(category.id)}
+                        onClick={(: unknown setSelectedCategory(category.id)}
                         className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center justify-between ${
                           selectedCategory === category.id
                             ? 'bg-zion-cyan text-zion-blue'
@@ -287,7 +290,7 @@ const Blog: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredPosts
                   .filter(post => !post.featured)
-                  .map((post, index) => (
+                  .map(post: unknown, index: unknown (
                     <motion.article
                       key={post.id}
                       initial={{ opacity: 0, y: 20 }}
@@ -362,5 +365,6 @@ const Blog: React.FC = () => {
     </div>
   );
 };
-
+;
+export { Blog };
 export default Blog;

@@ -29,11 +29,11 @@ import { Search,
   BarChart3
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2028  } from '../data/innovativeServices2028';
-
+;
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [sortBy, setSortBy] = useState<typeof 'name'>('name');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
 
@@ -51,7 +51,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-    .sort((a, b) => {
+    .sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'price':
           return a.price - b.price;
@@ -65,7 +65,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       }
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const icons: Record<string, any> = {
       'AI & Enterprise': <Brain className="w-5 h-5" />,
       'Quantum Computing': <Zap className="w-5 h-5" />,
@@ -81,7 +81,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     return icons[category] || <Sparkles className="w-5 h-5" />;
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor = (...args: unknown[]): unknown => {
     switch (level) {
       case 'revolutionary':
         return 'from-purple-500 to-pink-500';
@@ -120,7 +120,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(20)].map(_: unknown, i: unknown (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50"
@@ -128,7 +128,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
                 duration: 6 + i * 0.2,
@@ -138,7 +138,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               }}
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -189,7 +189,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                   type="text"
                   placeholder="Search services, features, or categories..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={e: unknown setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
@@ -198,7 +198,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               <div className="relative">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 >
                   {categories.map(category  => (
@@ -214,7 +214,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 >
                   <option value="name">Sort by Name</option>
@@ -228,7 +228,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               {/* View Mode Toggle */}
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`px-3 py-2 rounded-lg transition-colors ${
                     viewMode === 'grid' 
                       ? 'bg-cyan-500/20 text-cyan-400' 
@@ -238,7 +238,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                   Grid
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`px-3 py-2 rounded-lg transition-colors ${
                     viewMode === 'list' 
                       ? 'bg-cyan-500/20 text-cyan-400' 
@@ -265,7 +265,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               : 'space-y-6'
             }
           >
-            {filteredServices.map((service)  => (
+            {filteredServices.map(service: unknown (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -314,7 +314,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
+                      {service.tags.slice(0, 3).map(tag: unknown, index: unknown (
                         <span
                           key={index}
                           className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg"
@@ -326,7 +326,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
 
                     <div className="flex items-center justify-between">
                       <button
-                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                        onClick={: unknown setExpandedService(expandedService === service.id ? null : service.id)}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1"
                       >
                         {expandedService === service.id ? 'Show Less' : 'Learn More'}
@@ -355,7 +355,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                             <div>
                               <h4 className="font-semibold text-white mb-2">Key Features</h4>
                               <ul className="space-y-1">
-                                {service.features.slice(0, 5).map((feature, index) => (
+                                {service.features.slice(0, 5).map(feature: unknown, index: unknown (
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                                     {feature}
@@ -366,7 +366,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                             <div>
                               <h4 className="font-semibold text-white mb-2">Benefits</h4>
                               <ul className="space-y-1">
-                                {service.benefits.slice(0, 3).map((benefit, index) => (
+                                {service.benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                                     {benefit}
@@ -423,7 +423,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
-                        {service.tags.slice(0, 4).map((tag, index) => (
+                        {service.tags.slice(0, 4).map(tag: unknown, index: unknown (
                           <span
                             key={index}
                             className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg"
@@ -490,5 +490,6 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { UltimateServicesShowcase2028 };
 export default UltimateServicesShowcase2028;

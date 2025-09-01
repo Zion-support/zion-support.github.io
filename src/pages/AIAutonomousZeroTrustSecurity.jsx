@@ -169,4 +169,5 @@ const AIAutonomousThreatDetection = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousThreatDetection };
 export default AIAutonomousThreatDetection;

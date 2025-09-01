@@ -76,3 +76,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         function getParticleColor() {
             const colors = {
+
+
+
+
+}
+
+
+}
+
+}
+}

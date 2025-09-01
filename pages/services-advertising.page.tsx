@@ -1,8 +1,9 @@
 import React from 'react.ts';
 import Head from 'next/head.ts';
-
+;
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
 import Link from 'next/link.ts';
+export { function };
 export default function ServicesAdvertisingPage(...args[]):  {
   const contact = {
   mobile: '+1 302 464 0950',
@@ -168,7 +169,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
       <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>;
     );
   }
-  return (
+  return 
     <div className = "min-h-screen bg-black">
       <Helmet>
         <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
@@ -194,7 +195,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-              {benefits.map((b)  => (
+              {benefits.map((b (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
@@ -251,12 +252,12 @@ export default function ServicesAdvertisingPage(...args[]):  {
                 </ul>
                 <div className="mt-3"><a href="/services/ai-data-pipeline-optimizer" className="text-cyan-400 underline">Learn more</a></div>
               </div>
-              {newHighlights.map((h) => (
+              {newHighlights.map(h: unknown 
                 <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <h3 className="text-white font-semibold mb-2">{h.title}</h3>
                   <div className="text-sm text-slate-400 mb-2">Typical: {h.price}</div>
                   <ul className="text-slate-300 space-y-1 mt-2">
-                    {h.refs.map((u) => (
+                    {h.refs.map((u (
                       <li key={u}><a className="text-cyan-400 underline" href={u} target="_blank" rel="noopener noreferrer">{new URL(u).host}/pricing</a></li>
                     ))}
                   </ul>
@@ -292,7 +293,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
                 { name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },
                 { name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },
                 { name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }
-              ].map((o) => (
+              ].map(o: unknown (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
@@ -307,7 +308,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">Privacy & DSAR</h3>
                 <ul className="text-slate-300 space-y-1">
-                  {external.privacy.map((l) => (
+                  {external.privacy.map(l: unknown (
                     <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
                   ))}
                 </ul>
@@ -316,7 +317,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">FinOps</h3>
                 <ul className="text-slate-300 space-y-1">
-                  {external.finops.map((l) => (
+                  {external.finops.map(l: unknown (
                     <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
                   ))}
                 </ul>
@@ -325,7 +326,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">Developer Productivity</h3>
                 <ul className="text-slate-300 space-y-1">
-                  {external.devex.map((l) => (
+                  {external.devex.map(l: unknown (
                     <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
                   ))}
                 </ul>
@@ -334,7 +335,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">SEO Monitoring</h3>
                 <ul className="text-slate-300 space-y-1">
-                  {external.seo.map((l) => (
+                  {external.seo.map(l: unknown (
                     <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
                   ))}
                 </ul>
@@ -377,7 +378,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              {anchors.map((a) => (
+              {anchors.map(a: unknown (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
                   {a.title}
                 </a>

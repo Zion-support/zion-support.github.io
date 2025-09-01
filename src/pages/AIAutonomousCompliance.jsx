@@ -169,4 +169,5 @@ const AIAutonomousCompliance = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousCompliance };
 export default AIAutonomousCompliance;

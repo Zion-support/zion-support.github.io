@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = () => {
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
   const features = [
     {
       icon: Brain,
@@ -57,7 +57,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     'Increase overall operational efficiency';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Predictive Maintenance Services - Zion Tech Group"
@@ -156,7 +156,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -238,7 +238,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {applications.map((application, index) => (
+            {applications.map(application: unknown, index: unknown (
               <motion.div
                 key={application.title}
                 initial = {
@@ -348,7 +348,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -440,5 +440,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     </div>;
   );
 };
-
+;
+export { AIPredictiveMaintenance };
 export default AIPredictiveMaintenance;}}}

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -22,8 +23,9 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
-}
 
+}
+;
 const testimonials: Testimonial[] = [
   {
     id: 1,
@@ -92,44 +94,44 @@ const testimonials: Testimonial[] = [
     project: "Cloud Migration & Optimization";
   };
 ];
-
+;
 const stats = [
   { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
   { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
   { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
+;
+export const TestimonialsSection: React.FC = props {
+  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
-export const TestimonialsSection: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = (...args: unknown[]): unknown => {
+    setCurrentTestimonial(prev: unknown (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = (...args: unknown[]): unknown => {
+    setCurrentTestimonial(prev: unknown (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (...args: unknown[]): unknown => {
     setCurrentTestimonial(index);
   };
 
   // Auto-play functionality
-  React.useEffect(() => {
+  React.useEffect(: unknown {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       nextTestimonial();
     }, 5000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [isAutoPlaying, currentTestimonial]);
 
   const current = testimonials[currentTestimonial];
 
-  return (
+  return 
     <section className = "py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -141,7 +143,7 @@ export const TestimonialsSection: React.FC = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial, index (
             <div
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -152,7 +154,7 @@ export const TestimonialsSection: React.FC = () => {
               </div>
               {/* Rating */}
               <div className="flex items-center mb-4">;
-                {[...Array(testimonial.rating)].map((_, i) => (;
+                {[...Array(testimonial.rating)].map(_: unknown, i: unknown (;
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -217,7 +219,7 @@ export const TestimonialsSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {stats.map((stat, index) => (
+          {stats.map(stat: unknown, index: unknown (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -244,7 +246,7 @@ export const TestimonialsSection: React.FC = () => {
                 {/* Testimonial Content */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-4">
-                    {[...Array(current.rating)].map((_, i) => (
+                    {[...Array(current.rating)].map(_: unknown, i: unknown (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -277,7 +279,7 @@ export const TestimonialsSection: React.FC = () => {
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>
                     <ul className="space-y-2">
-                      {current.results.map((result, index) => (
+                      {current.results.map(result: unknown, index: unknown (
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           {result}
@@ -307,10 +309,9 @@ export const TestimonialsSection: React.FC = () => {
 
             {/* Dots */}
             <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
+              {testimonials.map(_: unknown, index: unknown <button
                   key={index}
-                  onClick={() => goToTestimonial(index)}
+                  onClick={(: unknown goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentTestimonial
                       ? 'bg-cyan-400 scale-125'
@@ -333,7 +334,7 @@ export const TestimonialsSection: React.FC = () => {
           {/* Auto-play Toggle */}
           <div className="flex justify-center mt-4">
             <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              onClick={: unknown setIsAutoPlaying(!isAutoPlaying)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                 isAutoPlaying
                   ? 'bg-cyan-500 text-white'

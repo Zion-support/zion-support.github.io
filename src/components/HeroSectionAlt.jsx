@@ -2,7 +2,7 @@ import React from 'react';
 import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+;
 export const HeroSectionAlt = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,3 +36,32 @@ export const HeroSectionAlt = () => {
   };
 
   const floatingVariants = {
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

@@ -1,16 +1,20 @@
 import React, { useEffect, useCallback, useState } from 'react';
 
 interface ModernUIEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
+
 }
-
-export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
+;
+export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = { 
   enabled = true 
-}) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [accentColor, setAccentColor] = useState('#0ea5e9');
+}: unknown {
+  const [isDarkMode, setIsDarkMode] = useState<typeof false>(false);
+  const [accentColor, setAccentColor] = useState<typeof '#0ea5e9'>('#0ea5e9');
 
-  const enhanceTypography = useCallback(() => {
+  const enhanceTypography = useCallback(: unknown {
     if (!enabled) return;
 
     // Add modern font loading
@@ -30,7 +34,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-bold', '700');
   }, [enabled]);
 
-  const enhanceColorScheme = useCallback(() => {
+  const enhanceColorScheme = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -58,11 +62,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
     // Apply CSS custom properties
-    Object.entries(colors).forEach(([key, value]) => {
+    Object.entries(colors).forEach([key: unknown, value]: unknown {
       if (typeof value === 'string') {
         root.style.setProperty(`--color-${key}`, value);
       } else {
-        Object.entries(value).forEach(([shade, colorValue]) => {
+        Object.entries(value).forEach([shade: unknown, colorValue]: unknown {
           root.style.setProperty(`--color-${key}-${shade}`, colorValue);
         });
       }
@@ -73,7 +77,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--color-primary-dark', `${accentColor}80`);
   }, [enabled, accentColor]);
 
-  const enhanceSpacing = useCallback(() => {
+  const enhanceSpacing = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -100,12 +104,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       32: '128px'
     };
 
-    Object.entries(spacing).forEach(([key, value]) => {
+    Object.entries(spacing).forEach([key: unknown, value]: unknown {
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
 
-  const enhanceShadows = useCallback(() => {
+  const enhanceShadows = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -121,12 +125,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
 
-    Object.entries(shadows).forEach(([key, value]) => {
+    Object.entries(shadows).forEach([key: unknown, value]: unknown {
       root.style.setProperty(`--shadow-${key}`, value);
     });
   }, [enabled]);
 
-  const enhanceTransitions = useCallback(() => {
+  const enhanceTransitions = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -141,12 +145,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
     };
 
-    Object.entries(transitions).forEach(([key, value]) => {
+    Object.entries(transitions).forEach([key: unknown, value]: unknown {
       root.style.setProperty(`--transition-${key}`, value);
     });
   }, [enabled]);
 
-  const enhanceBorderRadius = useCallback(() => {
+  const enhanceBorderRadius = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -163,12 +167,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       full: '9999px'
     };
 
-    Object.entries(radius).forEach(([key, value]) => {
+    Object.entries(radius).forEach([key: unknown, value]: unknown {
       root.style.setProperty(`--radius-${key}`, value);
     });
   }, [enabled]);
 
-  const enhanceDarkMode = useCallback(() => {
+  const enhanceDarkMode = useCallback(: unknown {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -190,12 +194,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     }
   }, [enabled, isDarkMode]);
 
-  const enhanceComponents = useCallback(() => {
+  const enhanceComponents = useCallback(: unknown {
     if (!enabled) return;
 
     // Add modern button styles
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');
-    buttons.forEach((button) => {
+    buttons.forEach(button: unknown {
       if (!button.classList.contains('modern-enhanced')) {
         button.classList.add('modern-enhanced');
         button.style.cssText += `
@@ -209,7 +213,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
     // Add modern card styles
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
-    cards.forEach((card) => {
+    cards.forEach(card: unknown {
       if (!card.classList.contains('modern-enhanced')) {
         card.classList.add('modern-enhanced');
         card.style.cssText += `
@@ -222,7 +226,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     });
   }, [enabled]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     enhanceTypography();

@@ -3,8 +3,8 @@ import { SEO } from "../components/SEO";
 import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";
-
-const AdvancedServicesShowcase2025: React.FC = () => {;
+;
+const AdvancedServicesShowcase2025: React.FC = props {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
@@ -27,7 +27,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
     { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Advanced Services Showcase 2025 - Zion Tech Group"
@@ -141,15 +141,14 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
                 type="text"
                 placeholder="Search services by name, description, or tags..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="flex gap-2">
-              {categories.map((category) => (
-                <button
+              {categories.map(category: unknown <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={(: unknown setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors duration-200 ${
                     selectedCategory === category.id
                       ? 'bg-blue-600 text-white'
@@ -167,7 +166,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
               <div className="flex items-start justify-between mb-4">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -188,7 +187,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                 <ul className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
+                  {service.features.slice(0, 3).map(feature: unknown, index: unknown (
                     <li key={index} className="text-sm text-gray-300 flex items-center gap-2">
                       <span className="text-green-400">✓</span>
                       {feature}
@@ -200,7 +199,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
                 <ul className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                  {service.benefits.slice(0, 2).map(benefit: unknown, index: unknown (
                     <li key={index} className="text-sm text-gray-300 flex items-center gap-2">
                       <span className="text-blue-400">→</span>
                       {benefit}
@@ -225,7 +224,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               </div>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 4).map((tag, index) => (
+                {service.tags.slice(0, 4).map(tag: unknown, index: unknown (
                   <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                     {tag}
                   </span>
@@ -250,11 +249,11 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
           ))}
         </div>;
 ;
-        {filteredServices.length === 0 && (;
+        {filteredServices.length === 0 && ;
           <div className="text-center py-16">;
             <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
             <button;
-              onClick={() => {;
+              onClick={(: unknown {;
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
@@ -328,5 +327,6 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
     </div>;
   );
 };
-
+;
+export { AdvancedServicesShowcase2025 };
 export default AdvancedServicesShowcase2025;

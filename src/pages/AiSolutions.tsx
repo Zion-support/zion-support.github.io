@@ -1,9 +1,10 @@
 
 import React from 'react.ts';
+;
+export { function };
+export default function AiSolutions(...args: unknown[]): unknown {
 
-export default function AiSolutions(...args: any[]): any {
-
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
         title="AI Solutions - Zion Tech Group" 
@@ -65,7 +66,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index 
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -77,7 +78,7 @@ export default function AiSolutions(...args: any[]): any {
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
@@ -108,10 +109,9 @@ export default function AiSolutions(...args: any[]): any {
 
           {/* Industry Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {industries.map((industry) => (
-              <button
+            {industries.map(industry: unknown <button
                 key={industry.id}
-                onClick={() => setSelectedIndustry(industry.id)}
+                onClick={(: unknown setSelectedIndustry(industry.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedIndustry === industry.id
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
@@ -132,7 +132,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredSolutions.map((solution, index) => (
+            {filteredSolutions.map(solution: unknown, index: unknown 
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -144,7 +144,7 @@ export default function AiSolutions(...args: any[]): any {
                 <h3 className="text-xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
                 <ul className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (
+                  {solution.benefits.map((benefit, benefitIndex (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {benefit}
@@ -180,7 +180,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {successMetrics.map((metric, index) => (
+            {successMetrics.map(metric: unknown, index: unknown (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -220,7 +220,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {aiTechnologies.map((tech, index) => (
+            {aiTechnologies.map(tech: unknown, index: unknown 
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -240,7 +240,7 @@ export default function AiSolutions(...args: any[]): any {
                   </p>
                   
                   <div className="space-y-2">
-                    {tech.applications.map((app, idx) => (
+                    {tech.applications.map((app, idx (
                       <div key={idx} className="flex items-center text-sm text-slate-400">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                         {app}
@@ -302,7 +302,7 @@ export default function AiSolutions(...args: any[]): any {
                 description: "Launch AI solutions and continuously improve",
                 icon: Rocket
               }
-            ].map((phase, index) => (
+            ].map(phase: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="relative"

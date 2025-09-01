@@ -2,19 +2,23 @@ import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
 interface LoaderProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-}
-export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
+
+};
+export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>({
   size = 'md',
   color = 'primary',
   text,
   fullScreen = false,
   showLogo = false
-}: LoaderProps) => {
+}: LoaderProps {
   const sizeClasses = {
   sm: 'w-6 h-6',
     md: 'w-12 h-12',;
@@ -32,3 +36,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
 
 };
   const textSizes = {
+
+
+}
+}

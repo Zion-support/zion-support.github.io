@@ -1,5 +1,6 @@
 export interface AdvancedITService {
 
+
   id: string;
   title: string;
   description: string;
@@ -22,7 +23,8 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string};
+    address: string
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
@@ -35,7 +37,7 @@ contactInfo: {
   rating: number;
   reviews: number;
   customers: number}
-
+;
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
   {
@@ -527,5 +529,6 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     customers: 289
 
 ];
-
+;
+export { ADVANCED_IT_SERVICES_2025 };
 export default ADVANCED_IT_SERVICES_2025;}}

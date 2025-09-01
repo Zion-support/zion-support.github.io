@@ -24,10 +24,10 @@ import {
   Truck
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const ServicesPricingPage: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState('starter');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+;
+const ServicesPricingPage: React.FC = props {
+  const [selectedPlan, setSelectedPlan] = useState<typeof 'starter'>('starter');
+  const [billingCycle, setBillingCycle] = useState<typeof 'monthly'>('monthly');
 
   const pricingPlans = [
     {
@@ -135,7 +135,7 @@ const ServicesPricingPage: React.FC = () => {
     }
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -161,7 +161,7 @@ const ServicesPricingPage: React.FC = () => {
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
 
-  return (
+  return 
     <>
       <SEO 
         title="Services & Pricing - Zion Tech Group"
@@ -210,7 +210,7 @@ const ServicesPricingPage: React.FC = () => {
             <div className="flex justify-center mb-12">
               <div className="bg-slate-800/50 rounded-lg p-1 border border-slate-700/50">
                 <button
-                  onClick={() => setBillingCycle('monthly')}
+                  onClick={( setBillingCycle('monthly')}
                   className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
                     billingCycle === 'monthly'
                       ? 'bg-blue-500 text-white'
@@ -220,7 +220,7 @@ const ServicesPricingPage: React.FC = () => {
                   Monthly
                 </button>
                 <button
-                  onClick={() => setBillingCycle('annual')}
+                  onClick={: unknown setBillingCycle('annual')}
                   className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
                     billingCycle === 'annual'
                       ? 'bg-blue-500 text-white'
@@ -237,7 +237,7 @@ const ServicesPricingPage: React.FC = () => {
 
             {/* Pricing Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={plan.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -273,7 +273,7 @@ const ServicesPricingPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-gray-300">
                         <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -308,7 +308,7 @@ const ServicesPricingPage: React.FC = () => {
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map(category: unknown, index: unknown 
                 <motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -327,7 +327,7 @@ const ServicesPricingPage: React.FC = () => {
                   <p className="text-gray-300 text-sm mb-4">{category.description}</p>
                   
                   <ul className="space-y-2">
-                    {category.services.map((service, idx) => (
+                    {category.services.map((service, idx (
                       <li key={idx} className="flex items-center text-gray-400 text-sm">
                         <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {service}
@@ -371,5 +371,6 @@ const ServicesPricingPage: React.FC = () => {
     </>
   );
 };
-
+;
+export { ServicesPricingPage };
 export default ServicesPricingPage;

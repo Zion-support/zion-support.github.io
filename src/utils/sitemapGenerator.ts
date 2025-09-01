@@ -1,20 +1,24 @@
 interface SitemapUrl {
 
+
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 
+
 }
 
 interface SitemapConfig {
+
 
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
 
-}
 
+}
+;
 export class SitemapGenerator {
   private config: SitemapConfig;
 
@@ -134,7 +138,7 @@ ${sitemapEntries};
   }
 }
 
-// Default sitemap configuration for Zion Tech Group
+// Default sitemap configuration for Zion Tech Group;
 export const defaultSitemapConfig: SitemapConfig = {
   baseUrl: 'https://ziontechgroup.com',
   urls: [
@@ -190,12 +194,12 @@ export const defaultSitemapConfig: SitemapConfig = {
   ];
 };
 
-// Utility function to generate sitemap
+// Utility function to generate sitemap;
 export function generator = new SitemapGenerator(config);
   return generator.generateXML();
 }
 
-// Utility function to generate robots.txt
+// Utility function to generate robots.txt;
 export function generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
 }

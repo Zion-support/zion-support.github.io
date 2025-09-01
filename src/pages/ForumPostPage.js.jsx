@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/components/ui/use-toast";
-// Mock data for a forum post
+// Mock data for a forum post;
 const mockPost = {
   id: "1",
     title: "Best practices for AI model fine-tuning",
@@ -44,7 +44,7 @@ const mockPost = {
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent"
 };
-// Mock data for replies
+// Mock data for replies;
 const mockReplies = [
     {
         id: "reply1",
@@ -111,6 +111,7 @@ const mockReplies = [
         isAnswer: false
     }
 ];
+export { function };
 export default function ForumPostPage() {
     // Using `useParams` without type arguments avoids issues when TypeScript
     // can't determine the generic type for the helper from React Router.
@@ -136,31 +137,31 @@ export default function ForumPostPage() {
         if (!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to vote on posts",
+                description: "Please sign in to vote on posts"
             });
             return}
         setPost({ ...post, upvotes: post.upvotes + 1 });
         toast({
             title: "Vote recorded",
-            description: "You upvoted this post",
+            description: "You upvoted this post"
         })};
     const handleDownvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to vote on posts",
+                description: "Please sign in to vote on posts"
             });
             return}
         setPost({ ...post, downvotes: post.downvotes + 1 });
         toast({
             title: "Vote recorded",
-            description: "You downvoted this post",
+            description: "You downvoted this post"
         })};
     const handleSubmitReply = async (content) => {
         if (!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to reply",
+                description: "Please sign in to reply"
             });
             return}
         // Create a new reply
@@ -184,7 +185,7 @@ export default function ForumPostPage() {
         setPost({ ...post, replyCount: post.replyCount + 1 });
         toast({
             title: "Reply posted",
-            description: "Your reply has been added to the discussion",
+            description: "Your reply has been added to the discussion"
         })};
     const handleMarkAsAnswer = (replyId) => {
         // Only post author or admin can mark an answer
@@ -204,18 +205,18 @@ export default function ForumPostPage() {
         setPost({ ...post, isAnswered: true });
         toast({
             title: "Answer marked",
-            description: "The reply has been marked as the accepted answer",
+            description: "The reply has been marked as the accepted answer"
         })};
     const handleReportPost = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
-                description: "Please sign in to report content",
+                description: "Please sign in to report content"
             });
             return}
         toast({
             title: "Report submitted",
-            description: "A moderator will review this content",
+            description: "A moderator will review this content"
         })};
     const handlePinPost = () => {
         if (!isAdminOrMod)
@@ -223,7 +224,7 @@ export default function ForumPostPage() {
         setPost({ ...post, isPinned: !post.isPinned });
         toast({
             title: post.isPinned ? "Post unpinned" : "Post pinned",
-            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
+            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"
         })};
     const handleLockPost = () => {
         if (!isAdminOrMod)
@@ -231,7 +232,7 @@ export default function ForumPostPage() {
         setPost({ ...post, isLocked: !post.isLocked });
         toast({
             title: post.isLocked ? "Post unlocked" : "Post locked",
-            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
+            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"
         })};
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");

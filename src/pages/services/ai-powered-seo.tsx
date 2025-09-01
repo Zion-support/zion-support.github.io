@@ -2,8 +2,9 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
-
-export default function AIPoweredSEO(...args: any[]): any {
+;
+export { function };
+export default function AIPoweredSEO(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -69,7 +70,7 @@ export default function AIPoweredSEO(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI-Powered SEO Services - Zion Tech Group"
@@ -146,7 +147,7 @@ export default function AIPoweredSEO(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -184,7 +185,7 @@ export default function AIPoweredSEO(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -219,7 +220,7 @@ export default function AIPoweredSEO(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

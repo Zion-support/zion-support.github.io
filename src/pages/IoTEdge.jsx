@@ -28,7 +28,7 @@ import {
     technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
-
+;
 const iotTechnologies = [
   {
     name: "MQTT Protocol",
@@ -59,7 +59,7 @@ const iotTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -89,7 +89,7 @@ const successStories = [
     logo: "LN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -120,7 +120,8 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
+export { function };
 export default function IoTEdge() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -703,3 +704,7 @@ export default function IoTEdge() {
       </section>
     </div>
   )}
+
+
+}
+}

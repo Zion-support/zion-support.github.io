@@ -30,8 +30,9 @@ import { Brain,
   BrainCircuit
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
-
-export default function AIHealthcareDiagnostics(...args: any[]): any {
+;
+export { function };
+export default function AIHealthcareDiagnostics(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -141,7 +142,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
     "End-to-end Encryption"
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Healthcare Diagnostics - Zion Tech Group"
@@ -206,7 +207,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -244,7 +245,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {diagnosticCapabilities.map((capability, index)  => (
+            {diagnosticCapabilities.map(capability: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -266,7 +267,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 </div>
                 
                 <ul className="space-y-3">
-                  {capability.services.map((service, serviceIndex) => (
+                  {capability.services.map((service, serviceIndex (
                     <li key={serviceIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{service}</span>
@@ -298,7 +299,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -333,7 +334,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFeatures.map((feature, index)  => (
+            {complianceFeatures.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -368,7 +369,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -397,7 +398,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>

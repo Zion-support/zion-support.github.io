@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+// https://vitejs.dev/config/;
+export { defineConfig };
 export default defineConfig({
   plugins: [react()],
   root: '.',
@@ -49,7 +50,7 @@ export default defineConfig({
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: assetInfo: unknown {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
@@ -75,7 +76,7 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge'
-    ],
+    ]
   },
   server: {
     port: 3000,
@@ -90,7 +91,7 @@ export default defineConfig({
         target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
+        rewrite: path: unknown path.replace(/^\/api/, '/api')
       }
     }
   },

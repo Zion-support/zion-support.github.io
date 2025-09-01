@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = props {
   const features = [
     {
       icon: Brain,
@@ -57,7 +57,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     'Compliance and regulatory support';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Cybersecurity Services - Zion Tech Group"
@@ -156,7 +156,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -238,7 +238,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={service.title}
                 initial = {
@@ -348,7 +348,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -440,5 +440,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     </div>;
   );
 };
-
+;
+export { AICybersecurity };
 export default AICybersecurity;}}}

@@ -149,7 +149,8 @@ import {
   Rocket,
   Building2
  } from 'lucide-react';
-
+;
+export { function };
 export default function ITConsulting(...args: []):  {
   const services = [
     {
@@ -235,7 +236,7 @@ export default function ITConsulting(...args: []):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
@@ -300,7 +301,7 @@ export default function ITConsulting(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index 
               <motion.div
                 key={index}
                 initial = {
@@ -348,7 +349,7 @@ export default function ITConsulting(...args: []):  {
                 <div className="mb-6">
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex (
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
@@ -384,7 +385,7 @@ export default function ITConsulting(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {expertise.map((area, index) => (
+            {expertise.map(area: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -456,7 +457,7 @@ export default function ITConsulting(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -495,7 +496,7 @@ export default function ITConsulting(...args: []):  {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+            {industries.map(industry: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -560,7 +561,7 @@ export default function ITConsulting(...args: []):  {
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
               { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
-            ].map((phase, index) => (
+            ].map(phase: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="text-center"
@@ -615,5 +616,5 @@ export default function ITConsulting(...args: []):  {
     </div>
   );
 };
-
+;
 export default ITConsulting;

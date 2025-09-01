@@ -2,9 +2,10 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function AIEnterpriseOrchestrator(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>AI Enterprise Orchestrator - Zion Tech Group</title>
@@ -95,7 +96,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -143,7 +144,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -178,7 +179,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                     "Seamlessly integrate with existing enterprise systems",
                     "Provide comprehensive audit trails and compliance monitoring",
                     "Scale operations without proportional cost increases"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -195,7 +196,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>

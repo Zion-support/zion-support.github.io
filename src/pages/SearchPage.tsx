@@ -38,6 +38,7 @@ import {
 
 interface SearchResult {
 
+
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -48,18 +49,20 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
-}
 
-export default function SearchPage() {
+}
+;
+export { function };
+export default function SearchPage(...args: unknown[]): unknown {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchQuery, setSearchQuery] = useState<typeof searchParams.get('q'>(searchParams.get('q') || '');
+  const [isSearching, setIsSearching] = useState<typeof false>(false);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
   const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
 
   // Mock search results - in a real app, this would come from an API
   const mockSearchResults: SearchResult[] = [
@@ -221,13 +224,13 @@ export default function SearchPage() {
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (searchQuery) {
       performSearch();
     }
   }, [searchQuery, selectedFilters, sortBy]);
 
-  const performSearch = async () => {
+  const performSearch = async : unknown {
     setIsSearching(true);
     
     // Simulate API call delay
@@ -246,7 +249,7 @@ export default function SearchPage() {
     });
 
     // Sort results
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'date':
           return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
@@ -261,7 +264,7 @@ export default function SearchPage() {
     setIsSearching(false);
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter = (...args: unknown[]): unknown => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -270,7 +273,7 @@ export default function SearchPage() {
     }));
   };
 
-  const clearAllFilters = () => {
+  const clearAllFilters = (...args: unknown[]): unknown => {
     setActiveFilters({
       type: [],
       category: [],
@@ -281,16 +284,16 @@ export default function SearchPage() {
   };
 
   // Handle search
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
       setIsSearching(true);
-      setTimeout(() => setIsSearching(false), 1000);
+      setTimeout(: unknown setIsSearching(false), 1000);
     }
   };
 
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (...args: unknown[]): unknown => {
     const newFilters = new Set(selectedFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -301,14 +304,14 @@ export default function SearchPage() {
   };
 
   // Clear all filters
-  const clearFilters = () => {
+  const clearFilters = (...args: unknown[]): unknown => {
     setSelectedCategory('all');
     setSelectedTags([]);
     setSearchQuery('');
     setSearchParams({});
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -319,7 +322,7 @@ export default function SearchPage() {
     }
   };
 
-  const getResultColor = (type: string) => {
+  const getResultColor = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return 'from-blue-500 to-indigo-500';
       case 'blog': return 'from-green-500 to-emerald-500';
@@ -337,7 +340,7 @@ export default function SearchPage() {
     ).length;
   });
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
@@ -370,7 +373,7 @@ export default function SearchPage() {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e setSearchQuery(e.target.value)}
                 placeholder="Search for services, solutions, documentation, or insights..."
                 className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
@@ -404,7 +407,7 @@ export default function SearchPage() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={e: unknown setSortBy(e.target.value as any)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="relevance">Relevance</option>
@@ -415,10 +418,10 @@ export default function SearchPage() {
 
               {/* Filter Options */}
               <div className="space-y-3">
-                {filterOptions.map(filter => (
+                {filterOptions.mapfilter => (
                   <button
                     key={filter.id}
-                    onClick={() => toggleFilter(filter.id)}
+                    onClick={(: unknown toggleFilter(filter.id)}
                     className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                       selectedFilters.has(filter.id)
                         ? 'bg-blue-50 border border-blue-200'
@@ -454,7 +457,7 @@ export default function SearchPage() {
           {/* Results Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredResults.map((result, index) => (
+              {filteredResults.map(result: unknown, index: unknown (
                 <motion.div
                   key={result.id}
                   initial={{ opacity: 0, y: 20 }}

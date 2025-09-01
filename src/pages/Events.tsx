@@ -25,7 +25,7 @@ import { Calendar,
   BookOpen,
   CheckCircle
  } from 'lucide-react.ts';
-
+;
 const events = [
   {
     id: 1,
@@ -154,19 +154,20 @@ const events = [
     image: "/images/digital-transformation-summit.jpg"
   }
 ];
-
+;
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
+;
+export { function };
+export default function Events(...args: unknown[]): unknown {
+  const [selectedType, setSelectedType] = useState<typeof 'All'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
 
-export default function Events(...args: any[]): any {
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedType, setSelectedType] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
@@ -384,7 +385,7 @@ export default function Events(...args: any[]): any {
   const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
   const featuredEvents = events.filter(event => event.featured);
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (...args: unknown[]): unknown => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       weekday: 'long',
@@ -395,7 +396,7 @@ export default function Events(...args: any[]): any {
   };
 
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -407,7 +408,7 @@ export default function Events(...args: any[]): any {
     }
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (...args: unknown[]): unknown => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
@@ -416,7 +417,7 @@ export default function Events(...args: any[]): any {
 
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-zion-blue">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -445,7 +446,7 @@ export default function Events(...args: any[]): any {
                   type="text"
                   placeholder="Search events, topics, or speakers..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
                 />
               </div>
@@ -488,7 +489,7 @@ export default function Events(...args: any[]): any {
                     type="text"
                     placeholder="Search events..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={e: unknown setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   />
                 </div>
@@ -498,7 +499,7 @@ export default function Events(...args: any[]): any {
               <div>
                 <select
                   value={selectedType}
-                  onChange={(e) => setSelectedType(e.target.value)}
+                  onChange={e: unknown setSelectedType(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {eventTypes.map(type  => (
@@ -511,7 +512,7 @@ export default function Events(...args: any[]): any {
               <div>
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category  => (
@@ -524,7 +525,7 @@ export default function Events(...args: any[]): any {
               <div>
                 <select
                   value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  onChange={e: unknown setSelectedStatus(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
@@ -540,7 +541,7 @@ export default function Events(...args: any[]): any {
       </section>
 
       {/* Upcoming Events */}
-      {upcomingEvents.length > 0 && (
+      {upcomingEvents.length > 0 && 
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -561,7 +562,7 @@ export default function Events(...args: any[]): any {
 
 
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {
+              {upcomingEvents.map((event, index {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -663,10 +664,9 @@ export default function Events(...args: any[]): any {
                     Categories
                   </h3>
                   <div className="space-y-2">
-                    {categories.map((category) => (
-                      <button
+                    {categories.map(category: unknown <button
                         key={category.id}
-                        onClick={() => setSelectedCategory(category.id)}
+                        onClick={(: unknown setSelectedCategory(category.id)}
                         className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center justify-between ${
                           selectedCategory === category.id
                             ? 'bg-zion-cyan text-zion-blue'
@@ -687,7 +687,7 @@ export default function Events(...args: any[]): any {
 
 
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {
+              {pastEvents.map(event: unknown, index: unknown {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -747,4 +747,7 @@ export default function Events(...args: any[]): any {
       </section>
     </div>
   );
+}
+
+}
 }

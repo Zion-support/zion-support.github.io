@@ -8,6 +8,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
+export { function };
 export default function TokenManager() {
     const { user } = useAuth();
     const { toast } = useToast();
@@ -32,7 +33,7 @@ export default function TokenManager() {
         const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId, amount }),
+            body: JSON.stringify({ userId, amount })
         });
         if (res.ok) {
             toast({

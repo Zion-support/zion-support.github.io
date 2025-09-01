@@ -57,8 +57,9 @@ import {
   Laptop,
   ShoppingBag
 } from 'lucide-react';
-
-export default function AICustomerSupportAutomation() {
+;
+export { function };
+export default function AICustomerSupportAutomation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Bot,
@@ -171,7 +172,7 @@ export default function AICustomerSupportAutomation() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20">
@@ -232,7 +233,7 @@ export default function AICustomerSupportAutomation() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,7 +265,7 @@ export default function AICustomerSupportAutomation() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -294,7 +295,7 @@ export default function AICustomerSupportAutomation() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {supportChannels.map((channel, index) => (
+            {supportChannels.map(channel: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -313,7 +314,7 @@ export default function AICustomerSupportAutomation() {
                 </div>
 
                 <ul className="space-y-3">
-                  {channel.features.map((feature, featureIndex) => (
+                  {channel.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -339,7 +340,7 @@ export default function AICustomerSupportAutomation() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -355,7 +356,7 @@ export default function AICustomerSupportAutomation() {
                 </div>
 
                 <ul className="space-y-3">
-                  {useCase.applications.map((application, appIndex) => (
+                  {useCase.applications.map((application, appIndex (
                     <li key={appIndex} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{application}</span>

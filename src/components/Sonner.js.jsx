@@ -4,7 +4,7 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
                 position === 'bottom-left' ? 'bottom-4 left-4' :
                     'bottom-4 right-4'} z-50`}>
       {/* Sonner toast container */}
-    </div>)}
+    </div>)};
 export const toast = {
   success: (message) => console.log('Success:', message),
     error: (message) => console.log('Error:', message),

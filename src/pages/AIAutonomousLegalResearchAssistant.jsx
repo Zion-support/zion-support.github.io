@@ -312,5 +312,6 @@ import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText
         </div>
       </section>
     </div>)};
+export { AIAutonomousLegalResearchAssistant };
 export default AIAutonomousLegalResearchAssistant;
 }}}}

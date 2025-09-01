@@ -313,4 +313,5 @@ const ComprehensivePricing2026 = () => {
       </section>
     </div>);
 };
+export { ComprehensivePricing2026 };
 export default ComprehensivePricing2026;

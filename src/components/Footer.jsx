@@ -11,7 +11,7 @@ import {
   Send,
   Globe
 } from 'lucide-react';
-
+;
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -80,7 +80,7 @@ export function FooterNewsletter() {
       )}
     </div>
   )}
-
+;
 export function Footer() {
   const currentYear = new Date().getFullYear();
 

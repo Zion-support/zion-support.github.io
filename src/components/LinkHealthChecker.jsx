@@ -168,5 +168,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           </p>
         </div>)}
     </div>)};
+export { LinkHealthChecker };
 export default LinkHealthChecker;
 }}}}}}}}}

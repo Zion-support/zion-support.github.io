@@ -2,20 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface EnhancedLoadingSpinnerProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   showProgress?: boolean;
   progress?: number;
   variant?: 'default' | 'futuristic' | 'minimal';
-}
 
-export function EnhancedLoadingSpinner({
-  size = 'md',
-  text = 'Loading...',
-  showProgress = false,
-  progress = 0,
-  variant = 'futuristic'
-}: EnhancedLoadingSpinnerProps) {
+}
+;
+export function EnhancedLoadingSpinner(...args: unknown[]): unknown {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
@@ -59,7 +57,7 @@ export function EnhancedLoadingSpinner({
   }
 
   // Futuristic variant (default)
-  return (
+  return 
     <div className="flex flex-col items-center justify-center space-y-6">
       {/* Main spinner with gradient */}
       <div className="relative">
@@ -91,7 +89,7 @@ export function EnhancedLoadingSpinner({
         
         {/* Animated dots */}
         <div className="flex justify-center space-x-1">
-          {[0, 1, 2].map((i) => (
+          {[0, 1, 2].map((i (
             <motion.div
               key={i}
               className="w-2 h-2 bg-cyan-400 rounded-full"
@@ -123,23 +121,23 @@ export function EnhancedLoadingSpinner({
 
       {/* Floating particles */}
       <div className="relative w-full h-20">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map(_: unknown, i: unknown (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
             animate={{
               x: [0, 50, 0],
               y: [0, -30, 0],
-              opacity: [0.6, 1, 0.6],
+              opacity: [0.6, 1, 0.6]
             }}
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              delay: i * 0.3,
+              delay: i * 0.3
             }}
             style={{
               left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
+              top: `${30 + i * 10}%`
             }}
           />
         ))}
@@ -148,5 +146,6 @@ export function EnhancedLoadingSpinner({
   );
 }
 
-// Export default for backward compatibility
+// Export default for backward compatibility;
+export { EnhancedLoadingSpinner };
 export default EnhancedLoadingSpinner;

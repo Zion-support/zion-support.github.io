@@ -1,5 +1,6 @@
 export interface UltimateInnovativeService {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface UltimateInnovativeService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -32,7 +34,7 @@ contactInfo: {
   marketSize?: string;
   uniqueValue?: string;
 }
-
+;
 export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   // Quantum AI Services
   {
@@ -760,5 +762,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     uniqueValue: "First comprehensive AI platform combining sustainability optimization with environmental impact assessment"
   }
 ];
-
+;
+export { ULTIMATE_INNOVATIVE_SERVICES_2026 };
 export default ULTIMATE_INNOVATIVE_SERVICES_2026;

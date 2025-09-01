@@ -5,12 +5,13 @@ import { SEO  } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaasServices2028';
 import { COMPREHENSIVE_IT_SERVICES_2028  } from '../data/comprehensiveITServices2028';
 import { COMPREHENSIVE_PRICING_2028  } from '../data/comprehensivePricingGuide2028';
-
-export default function Services2028(...args: any[]): any {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+;
+export { function };
+export default function Services2028(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'featured'>('featured');
 
   // Combine all services
   const allServices = [
@@ -38,7 +39,7 @@ export default function Services2028(...args: any[]): any {
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price-low':
         return a.price - b.price;
@@ -64,12 +65,12 @@ export default function Services2028(...args: any[]): any {
     <div className="min-h-screen bg-cyber-black">
       {/* Futuristic Background */}
       <div className="futuristic-bg">
-        {[...Array(15)].map((_, i) => (
+        {[...Array(15)].map(_: unknown, i: unknown (
           <div
             key={i}
             className="matrix-rain"
             style={{
-              left: any`${Math.random() * 100}%`,
+              left: unknown`${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 20}s`,
               animationDuration: `${15 + Math.random() * 10}s`
             }}
@@ -77,7 +78,7 @@ export default function Services2028(...args: any[]): any {
             {String.fromCharCode(0x30A0 + Math.random() * 96)}
           </div>
         ))}
-        {[...Array(10)].map((_, i)  => (
+        {[...Array(10)].map(_: unknown, i: unknown (
           <div
             key={i}
             className="quantum-particles"
@@ -157,7 +158,7 @@ export default function Services2028(...args: any[]): any {
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={e: unknown setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white placeholder-neon-cyan/50 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all duration-300"
                   />
                 </div>
@@ -167,7 +168,7 @@ export default function Services2028(...args: any[]): any {
               <div>
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: anyborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"
                 >
                   {categories.map(category  => (
@@ -182,7 +183,7 @@ export default function Services2028(...args: any[]): any {
               <div>
                 <select
                   value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  onChange={e: unknown setSelectedPriceRange(e.target.value)}
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-purple/30 rounded-lg text-white focus:border-neon-purple focus:outline-none focus:ring-2 focus:ring-neon-purple/20 transition-all duration-300"
                 >
                   <option value="all">All Prices</option>
@@ -199,7 +200,7 @@ export default function Services2028(...args: any[]): any {
                 <span className="text-neon-cyan font-semibold">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="px-3 py-2 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white text-sm focus:border-neon-cyan focus:outline-none transition-all duration-300"
                 >
                   <option value="featured">Featured</option>
@@ -221,7 +222,7 @@ export default function Services2028(...args: any[]): any {
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index)  => (
+            {sortedServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -282,7 +283,7 @@ export default function Services2028(...args: any[]): any {
                 <div className="mb-6">
                   <h4 className="text-neon-cyan font-semibold mb-2">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <div key={idx} className="flex items-center space-x-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-neon-green flex-shrink-0" />
                         <span className="text-white/80">{feature}</span>
@@ -314,7 +315,7 @@ export default function Services2028(...args: any[]): any {
 
                 {/* Service Tags */}
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {service.tags.slice(0, 3).map((tag, idx) => (
+                  {service.tags.slice(0, 3).map(tag: unknown, idx: unknown (
                     <span
                       key={idx}
                       className="px-2 py-1 bg-neon-cyan/10 border border-neon-cyan/20 rounded text-neon-cyan text-xs"

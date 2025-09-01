@@ -50,3 +50,25 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
     };
     const floatingVariants = {
+
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

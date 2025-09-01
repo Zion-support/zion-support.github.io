@@ -169,4 +169,5 @@ const AIAutonomousSpeech = () => {
         </div>
       </div>
     </>)};
+export { AIAutonomousSpeech };
 export default AIAutonomousSpeech;

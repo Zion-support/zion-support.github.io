@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -42,20 +43,23 @@ interface AccessibilitySettings {
   lineHeight: number;
   letterSpacing: number;
   wordSpacing: number;
+
 }
 
 interface AccessibilityIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: string;
   recommendation: string;
   severity: 'low' | 'medium' | 'high';
-}
 
-export function EnhancedAccessibilityPanel() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+}
+;
+export function EnhancedAccessibilityPanel(...args: unknown[]): unknown {
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
+  const [isExpanded, setIsExpanded] = useState<typeof false>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -69,12 +73,12 @@ export function EnhancedAccessibilityPanel() {
     wordSpacing: 0
   });
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanning, setIsScanning] = useState<typeof false>(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
-  const [keyboardMode, setKeyboardMode] = useState(false);
+  const [keyboardMode, setKeyboardMode] = useState<typeof false>(false);
 
   // Apply accessibility settings
-  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+  const applySettings = useCallback(newSettings: Partial<AccessibilitySettings> {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
 
@@ -120,7 +124,7 @@ export function EnhancedAccessibilityPanel() {
   }, [settings]);
 
   // Load settings from localStorage
-  useEffect(() => {
+  useEffect(: unknown {
     const saved = localStorage.getItem('accessibility-settings');
     if (saved) {
       try {
@@ -134,8 +138,8 @@ export function EnhancedAccessibilityPanel() {
   }, [applySettings]);
 
   // Keyboard navigation support
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+  useEffect(: unknown {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       // Tab key navigation
       if (event.key === 'Tab') {
         setKeyboardMode(true);
@@ -169,7 +173,7 @@ export function EnhancedAccessibilityPanel() {
       }
     };
 
-    const handleMouseDown = () => {
+    const handleMouseDown = (...args: unknown[]): unknown => {
       setKeyboardMode(false);
       document.body.classList.remove('keyboard-navigation');
     };
@@ -177,21 +181,21 @@ export function EnhancedAccessibilityPanel() {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
-    return () => {
+    return : unknown {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, [isVisible, keyboardMode]);
 
   // Accessibility audit
-  const runAccessibilityAudit = useCallback(async () => {
+  const runAccessibilityAudit = useCallbackasync (: unknown {
     setIsScanning(true);
     const newIssues: AccessibilityIssue[] = [];
 
     try {
       // Check for missing alt text
       const images = document.querySelectorAll('img');
-      images.forEach((img, index) => {
+      images.forEach(img: unknown, index: unknown {
         if (!img.alt && !img.getAttribute('aria-label')) {
           newIssues.push({
             id: `alt-${index}`,
@@ -207,7 +211,7 @@ export function EnhancedAccessibilityPanel() {
       // Check for proper heading structure
       const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
       let previousLevel = 0;
-      headings.forEach((heading, index) => {
+      headings.forEach(heading: unknown, index: unknown {
         const level = parseInt(heading.tagName.charAt(1));
         if (level > previousLevel + 1) {
           newIssues.push({
@@ -224,7 +228,7 @@ export function EnhancedAccessibilityPanel() {
 
       // Check for proper form labels
       const formInputs = document.querySelectorAll('input, select, textarea');
-      formInputs.forEach((input, index) => {
+      formInputs.forEach(input: unknown, index: unknown {
         const id = input.getAttribute('id');
         const label = document.querySelector(`label[for="${id}"]`);
         const ariaLabel = input.getAttribute('aria-label');
@@ -243,7 +247,7 @@ export function EnhancedAccessibilityPanel() {
 
       // Check for proper ARIA attributes
       const ariaElements = document.querySelectorAll('[aria-*]');
-      ariaElements.forEach((element, index) => {
+      ariaElements.forEach(element: unknown, index: unknown {
         const ariaExpanded = element.getAttribute('aria-expanded');
         const ariaControls = element.getAttribute('aria-controls');
         const ariaOwns = element.getAttribute('aria-owns');
@@ -262,7 +266,7 @@ export function EnhancedAccessibilityPanel() {
 
       // Check for sufficient color contrast (simplified)
       const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-      textElements.forEach((element, index) => {
+      textElements.forEach(element: unknown, index: unknown {
         const style = window.getComputedStyle(element);
         const color = style.color;
         const backgroundColor = style.backgroundColor;
@@ -282,7 +286,7 @@ export function EnhancedAccessibilityPanel() {
 
       // Check for keyboard navigation
       const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-      interactiveElements.forEach((element, index) => {
+      interactiveElements.forEach(element: unknown, index: unknown {
         if (element.tagName === 'BUTTON' && !element.getAttribute('type')) {
           newIssues.push({
             id: `button-${index}`,
@@ -304,7 +308,7 @@ export function EnhancedAccessibilityPanel() {
   }, []);
 
   // Get issue icon
-  const getIssueIcon = (type: string) => {
+  const getIssueIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'error': return <XCircle className="w-4 h-4 text-red-500" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
@@ -314,7 +318,7 @@ export function EnhancedAccessibilityPanel() {
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'high': return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium': return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
@@ -323,12 +327,12 @@ export function EnhancedAccessibilityPanel() {
     }
   };
 
-  return (
+  return 
     <>
       {/* Floating Action Button */}
       <motion.button
         className="fixed bottom-6 left-6 z-50 bg-zion-blue hover:bg-zion-blue-dark text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={( setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Accessibility Panel"
@@ -339,7 +343,7 @@ export function EnhancedAccessibilityPanel() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isVisible && (
+        {isVisible && 
           <motion.div
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}
@@ -359,14 +363,14 @@ export function EnhancedAccessibilityPanel() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => setIsExpanded(!isExpanded)}
+                    onClick={( setIsExpanded(!isExpanded)}
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                   <button
-                    onClick={() => setIsVisible(false)}
+                    onClick={: unknown setIsVisible(false)}
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                     aria-label="Close accessibility panel"
                   >
@@ -382,7 +386,7 @@ export function EnhancedAccessibilityPanel() {
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   <button
-                    onClick={() => applySettings({ highContrast: !settings.highContrast })}
+                    onClick={: unknown applySettings({ highContrast: !settings.highContrast })}
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.highContrast 
                         ? 'border-zion-blue bg-zion-blue text-white' 
@@ -395,7 +399,7 @@ export function EnhancedAccessibilityPanel() {
                   </button>
                   
                   <button
-                    onClick={() => applySettings({ largeText: !settings.largeText })}
+                    onClick={: unknown applySettings({ largeText: !settings.largeText })}
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.largeText 
                         ? 'border-zion-blue bg-zion-blue text-white' 
@@ -408,7 +412,7 @@ export function EnhancedAccessibilityPanel() {
                   </button>
                   
                   <button
-                    onClick={() => applySettings({ reducedMotion: !settings.reducedMotion })}
+                    onClick={: unknown applySettings({ reducedMotion: !settings.reducedMotion })}
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.reducedMotion 
                         ? 'border-zion-blue bg-zion-blue text-white' 
@@ -421,7 +425,7 @@ export function EnhancedAccessibilityPanel() {
                   </button>
                   
                   <button
-                    onClick={() => applySettings({ focusIndicator: !settings.focusIndicator })}
+                    onClick={: unknown applySettings({ focusIndicator: !settings.focusIndicator })}
                     className={`flex items-center justify-center space-x-2 p-3 rounded-lg border transition-colors ${
                       settings.focusIndicator 
                         ? 'border-zion-blue bg-zion-blue text-white' 
@@ -450,7 +454,7 @@ export function EnhancedAccessibilityPanel() {
                       min="12"
                       max="24"
                       value={settings.fontSize}
-                      onChange={(e) => applySettings({ fontSize: parseInt(e.target.value) })}
+                      onChange={e: unknown applySettings({ fontSize: parseInt(e.target.value) })}
                       className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
@@ -465,7 +469,7 @@ export function EnhancedAccessibilityPanel() {
                       max="2.0"
                       step="0.1"
                       value={settings.lineHeight}
-                      onChange={(e) => applySettings({ lineHeight: parseFloat(e.target.value) })}
+                      onChange={e: unknown applySettings({ lineHeight: parseFloat(e.target.value) })}
                       className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
@@ -483,14 +487,13 @@ export function EnhancedAccessibilityPanel() {
                     { value: 'protanopia', label: 'Protanopia (Red-Blind)' },
                     { value: 'deuteranopia', label: 'Deuteranopia (Green-Blind)' },
                     { value: 'tritanopia', label: 'Tritanopia (Blue-Blind)' }
-                  ].map((option) => (
-                    <label key={option.value} className="flex items-center space-x-2">
+                  ].map(option: unknown <label key={option.value} className="flex items-center space-x-2">
                       <input
                         type="radio"
                         name="colorBlindness"
                         value={option.value}
                         checked={settings.colorBlindness === option.value}
-                        onChange={(e) => applySettings({ colorBlindness: e.target.value as any })}
+                        onChange={(e: unknown applySettings({ colorBlindness: e.target.value as any })}
                         className="text-zion-blue focus:ring-zion-blue"
                       />
                       <span className="text-sm text-gray-700 dark:text-gray-300">{option.label}</span>
@@ -524,9 +527,8 @@ export function EnhancedAccessibilityPanel() {
                   </button>
                 </div>
 
-                {issues.length > 0 && (
-                  <div className="space-y-2 max-h-48 overflow-y-auto">
-                    {issues.map((issue) => (
+                {issues.length > 0 && <div className="space-y-2 max-h-48 overflow-y-auto">
+                    {issues.map((issue: unknown (
                       <div
                         key={issue.id}
                         className={`p-3 rounded-lg border-l-4 ${getSeverityColor(issue.severity)}`}
@@ -568,7 +570,7 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Reset Button */}
               <button
-                onClick={() => {
+                onClick={: unknown {
                   const defaultSettings: AccessibilitySettings = {
                     highContrast: false,
                     largeText: false,

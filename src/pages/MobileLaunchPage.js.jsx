@@ -23,4 +23,5 @@ const MobileLaunchPage = () => {
                                                     <MobileEmailCapture />
                                                         ,
                                                             <AppStoreBanner />)};
+export { MobileLaunchPage };
 export default MobileLaunchPage;

@@ -29,4 +29,5 @@ const TransformationServices = () => {
       </section>
     </div>);
 };
+export { TransformationServices };
 export default TransformationServices;

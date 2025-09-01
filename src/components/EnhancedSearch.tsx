@@ -10,6 +10,7 @@ import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
 
+
   id: string;
   title: string;
   description: string;
@@ -17,29 +18,38 @@ interface SearchResult {
   type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
   category: string;
   tags: string[];
-  relevance: number}
+  relevance: number
+}
   icon?: React.ComponentType<any>;
 }
 
 interface SearchFilter {
 
+
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'trending' | 'ai';
+
 }
 
 interface EnhancedSearchProps {
+  // Add your props here
+
+
   className?: string;
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: query: string void;
   variant?: 'default' | 'futuristic' | 'minimal';
-}
 
+}
+;
 const searchData: SearchResult[] = [
   // Services
   {
@@ -105,7 +115,7 @@ const searchData: SearchResult[] = [
     relevance: 75
 
 ];
-
+;
 const categories = [
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
@@ -113,47 +123,37 @@ const categories = [
   { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
-
-export function EnhancedSearch({ 
-  className = '',;
-  placeholder = 'Search for AI services, quantum solutions...',;
-  onSearch,;
-  variant = 'default';
-}: EnhancedSearchProps) {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
+;
+export function EnhancedSearch(...args: unknown[]): unknown {;
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [query, setQuery] = useState<typeof ''>('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
+  const [selectedIndex, setSelectedIndex] = useState<typeof -1>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
     tags: []
   });
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   
-// Mock suggestions
+// Mock suggestions;
 const mockSuggestions: SearchSuggestion[] = [
   { text: 'AI compliance assistant', type: 'recent' },
   { text: 'Quantum machine learning', type: 'trending' },
   { text: 'Digital transformation consulting', type: 'ai' },
   { text: 'Cloud DevOps automation', type: 'trending' }
 ];
-
-export function EnhancedSearch({ 
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
-  variant = 'default'
-}: EnhancedSearchProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
+;
+export function EnhancedSearch(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
+  const [query, setQuery] = useState<typeof ''>('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
+  const [selectedIndex, setSelectedIndex] = useState<typeof -1>(-1);
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
     category: [],
@@ -165,8 +165,8 @@ export function EnhancedSearch({
   const navigate = useNavigate();
 
   // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+  useEffect(: unknown {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -189,11 +189,11 @@ export function EnhancedSearch({
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
     }
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex]);
 
   // Search functionality
-  useEffect(() => {
+  useEffect(: unknown {
     if (debouncedQuery.trim().length < 2) {
       setResults([]);
       return}
@@ -209,14 +209,14 @@ export function EnhancedSearch({
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
         
         return matchesQuery && matchesFilters})
-      .sort((a, b) => b.relevance - a.relevance)
+      .sort(a: unknown, b: unknown b.relevance - a.relevance)
       .slice(0, 10);
 
     setResults(searchResults)}, [debouncedQuery, filters]);
 
   // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent)  => {
+  useEffect(: unknown {
+    const handleClickOutside = (...args: unknown[]): unknown => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
       try {;
@@ -228,8 +228,8 @@ export function EnhancedSearch({
   }, []);
 
   // Handle click outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {;
+  useEffect(: unknown {
+    const handleClickOutside = (...args: unknown[]): unknown => {;
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -237,17 +237,17 @@ export function EnhancedSearch({
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    return : unknown document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
-  useEffect(() => {
+  useEffect(: unknown {
         inputRef.current?.focus()}
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
+    return : unknown document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const handleSearch = useCallback((searchQuery: string)  => {
+  const handleSearch = useCallback(searchQuery: string {
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -259,10 +259,10 @@ export function EnhancedSearch({
       setQuery('')}
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult)  => {;
+  const handleResultClick = (...args: unknown[]): unknown => {;
     handleSearch(result.title);
     router(result.url);
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       if (!isOpen) return;
 
       switch (event.key) {
@@ -292,10 +292,10 @@ export function EnhancedSearch({
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return : unknown document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, query]);
 
-  const handleSearch = useCallback(async () => {;
+  const handleSearch = useCallbackasync (: unknown {;
     if (!query.trim()) return;
 
     setIsLoading(true);
@@ -316,20 +316,20 @@ export function EnhancedSearch({
       return matchesQuery && matchesFilters;
     });
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (...args: unknown[]): unknown => {
     navigate(result.url);
     setIsOpen(false);
     setQuery('')};
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+  const handleSuggestionClick = (...args: unknown[]): unknown => {
     setQuery(suggestion.text);
     onSearch?.(suggestion.text);
   };
 
-  const clearFilters = () => {;
+  const clearFilters = (...args: unknown[]): unknown => {;
     setFilters({ type[], category[], tags[] })};
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
+  const toggleFilter = (...args: unknown[]): unknown => {;
 setFilters(prev: > ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -338,30 +338,30 @@ setFilters(prev: > ({;
     }));
   };
 
-  const clearFilters = () => {;
+  const clearFilters = (...args: unknown[]): unknown => {;
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon = (...args: unknown[]): unknown => {;
     switch (type) {;
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
-  const handleInputFocus = () => {
+  const handleInputFocus = (...args: unknown[]): unknown => {
     if (query.trim() || suggestions.length > 0) {
       setIsOpen(true);
     }
   };
 
-  const clearSearch = () => {
+  const clearSearch = (...args: unknown[]): unknown => {
     setQuery('');
     setResults([]);
     setIsOpen(false);
     setSelectedIndex(-1);
   };
 
-  const getVariantStyles = () => {
+  const getVariantStyles = (...args: unknown[]): unknown => {
     switch (variant) {
       case 'futuristic':
         return 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm';
@@ -399,7 +399,7 @@ setFilters(prev: > ({;
 
   };
 
-  const getVariantClasses = () => {;
+  const getVariantClasses = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'futuristic':;
         return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';
@@ -419,14 +419,13 @@ setFilters(prev: > ({;
           ref={inputRef}
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => setIsOpen(true)}
+          onChange={e: unknown setQuery(e.target.value)}
+          onFocus={: unknown setIsOpen(true)}
           placeholder={placeholder}
           className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500"
         />
-        {query && (
-          <button
-            onClick={() => setQuery('')}
+        {query && <button
+            onClick={(: unknown setQuery('')}
             className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors"
           >
             <X className="h-4 w-4" />
@@ -435,7 +434,7 @@ setFilters(prev: > ({;
       </div>
 
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial = {
   { opacity: 0,
@@ -472,7 +471,7 @@ setFilters(prev: > ({;
             {/* Filters Toggle */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
               <button
-                onClick={() => setShowFilters(!showFilters)}
+                onClick={( setShowFilters(!showFilters)}
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <Filter className="h-4 w-4" />
@@ -490,7 +489,7 @@ setFilters(prev: > ({;
 
             {/* Filters Panel */}
             <AnimatePresence>
-              {showFilters && (
+              {showFilters && 
                 <motion.div
                   initial = {
   { height: 0,
@@ -533,7 +532,7 @@ setFilters(prev: > ({;
                           <button
                             key={type}
                             onClick = {
-  () => toggleFilter('type',
+  ( toggleFilter('type',
   type)
 
 
@@ -558,11 +557,11 @@ setFilters(prev: > ({;
                     <div>
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>
                       <div className="flex flex-wrap gap-2">
-                        {categories.map(category => (
+                        {categories.mapcategory => (
                           <button
                             key={category.id}
                             onClick = {
-  () => toggleFilter('category',
+  (: unknown toggleFilter('category',
   category.name)
 
 
@@ -589,8 +588,7 @@ setFilters(prev: > ({;
 
             {/* Search Results */}
             <div className="max-h-96 overflow-y-auto">
-              {query.trim().length < 2 ? (
-                <div className="p-4 space-y-4">
+              {query.trim().length < 2 ? <div className="p-4 space-y-4">
                   {/* Recent Searches */}
                   {recentSearches.length > 0 && (
                     <div>
@@ -599,10 +597,10 @@ setFilters(prev: > ({;
                         Recent Searches;
                       </h4>;
                       <div className="space-y-2">;
-                        {recentSearches.map((search, index) => (;
+                        {recentSearches.map((search: unknown, index: unknown ;
                           <button;
                             key={index};
-                            onClick={() => {;
+                            onClick={(: unknown {;
                               setQuery(search);
                               handleSearch();
                             }}
@@ -622,10 +620,10 @@ setFilters(prev: > ({;
                       Popular Searches;
                     </h4>;
                     <div className="flex flex-wrap gap-2">;
-                      {popularSearches.map((search, index) => (;
+                      {popularSearches.map(search: unknown, index: unknown ;
                         <button;
                           key={index};
-                          onClick={() => {;
+                          onClick={(: unknown {;
                             setQuery(search);
                             handleSearch();
                           }}
@@ -642,12 +640,10 @@ setFilters(prev: > ({;
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
                   <p className="text-gray-600 mt-2">Searching...</p>
                 </div>
-              ) : results.length > 0 ? (
-                <div className="p-4 space-y-2">
-                  {results.map((result, index) => (
-                    <button
+              ) : results.length > 0 ? <div className="p-4 space-y-2">
+                  {results.map((result: unknown, index: unknown <button
                       key={result.id}
-                      onClick={() => handleResultClick(result)}
+                      onClick={(: unknown handleResultClick(result)}
                       className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${
                         index === selectedIndex ? 'bg-blue-50' : ''
                       }`}
@@ -693,4 +689,6 @@ setFilters(prev: > ({;
       </AnimatePresence>;
     </div>;
   );
+}
+
 }

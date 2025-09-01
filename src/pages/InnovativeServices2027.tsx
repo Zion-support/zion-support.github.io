@@ -32,10 +32,10 @@ import {
   Building,
   Phone
 } from 'lucide-react';
-
+;
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
-
+;
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,
   'Blockchain & DeFi': Lock,
@@ -48,7 +48,7 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'FinTech': Banknote,
   'IoT & Smart Cities': Building
 };
-
+;
 const categoryColors: { [key: string]: string } = {
   'AI & Customer Success': 'from-cyan-500 to-blue-600',
   'Blockchain & DeFi': 'from-purple-500 to-indigo-600',
@@ -61,10 +61,11 @@ const categoryColors: { [key: string]: string } = {
   'FinTech': 'from-yellow-500 to-amber-600',
   'IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
-
-export default function InnovativeServices2027() {
+;
+export { function };
+export default function InnovativeServices2027(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
@@ -76,7 +77,7 @@ export default function InnovativeServices2027() {
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'price':
         return a.price - b.price;
@@ -89,7 +90,7 @@ export default function InnovativeServices2027() {
     }
   });
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       <SEO
         title="2027 Innovative Services - Zion Tech Group"
@@ -143,12 +144,12 @@ export default function InnovativeServices2027() {
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {categories.map((category 
                 <motion.button
                   key={category}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={( setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
@@ -166,12 +167,12 @@ export default function InnovativeServices2027() {
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={e: unknown setSearchQuery(e.target.value)}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as string)}
+                onChange={e: unknown setSortBy(e.target.value as string)}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
               >
                 <option value="innovation">Sort by Innovation</option>
@@ -195,7 +196,7 @@ export default function InnovativeServices2027() {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sortedServices.map((service, index) => (
+              {sortedServices.map(service: unknown, index: unknown (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -248,7 +249,7 @@ export default function InnovativeServices2027() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                           <li key={idx} className="text-sm text-gray-400 flex items-center">
                             <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -261,7 +262,7 @@ export default function InnovativeServices2027() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Benefits</h4>
                       <ul className="space-y-1">
-                        {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                           <li key={idx} className="text-sm text-gray-400 flex items-center">
                             <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
@@ -273,7 +274,7 @@ export default function InnovativeServices2027() {
                     {/* Tags */}
                     <div className="mb-6">
                       <div className="flex flex-wrap gap-2">
-                        {service.tags.slice(0, 4).map((tag, idx) => (
+                        {service.tags.slice(0, 4).map(tag: unknown, idx: unknown (
                           <span
                             key={idx}
                             className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full"
@@ -289,7 +290,7 @@ export default function InnovativeServices2027() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
-                      onClick={() => window.location.href = '/contact'}
+                      onClick={: unknown window.location.href = '/contact'}
                     >
                       Get Started - Contact Us
                     </motion.button>
@@ -319,7 +320,7 @@ export default function InnovativeServices2027() {
           </AnimatePresence>
 
           {/* No Results */}
-          {sortedServices.length === 0 && (
+          {sortedServices.length === 0 && 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -327,7 +328,7 @@ export default function InnovativeServices2027() {
             >
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick={( {
                   setSelectedCategory('all');
                   setSearchQuery('');
                 }}
@@ -361,7 +362,7 @@ export default function InnovativeServices2027() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
-                onClick={() => window.location.href = '/contact'}
+                onClick={: unknown window.location.href = '/contact'}
               >
                 Schedule a Consultation
               </motion.button>
@@ -369,7 +370,7 @@ export default function InnovativeServices2027() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"
-                onClick={() => window.location.href = '/pricing'}
+                onClick={: unknown window.location.href = '/pricing'}
               >
                 View Pricing Plans
               </motion.button>

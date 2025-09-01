@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */;
 const nextConfig = {
   reactStrictMode: true,
 
@@ -6,18 +6,18 @@ const nextConfig = {
   // Image optimization
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
+    unoptimized: true
   },
 
   // Compiler optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === 'production'
   },
 
   // Performance optimizations
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
 
   // Bundle analyzer (optional)
@@ -25,13 +25,14 @@ const nextConfig = {
     webpack: (config) => {
       config.plugins.push(
         new (require('@next/bundle-analyzer'))({
-          enabled: true,
+          enabled: true
         })
       );
       return config;
-    },
-  }),
+    }
+  })
 
 };
-
+;
+export { nextConfig };
 export default nextConfig;

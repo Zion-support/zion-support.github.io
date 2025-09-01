@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+export { function };
 export default function ExpensiveComponent() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);

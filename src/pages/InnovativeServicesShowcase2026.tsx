@@ -31,11 +31,12 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { INNOVATIVE_SERVICES } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('innovation');
+export { function };
+export default function InnovativeServicesShowcase2026(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [sortBy, setSortBy] = useState<typeof 'innovation'>('innovation');
 
   const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
 
@@ -54,7 +55,7 @@ export default function InnovativeServicesShowcase2026() {
       filtered = filtered.filter(service => service.category === selectedCategory);
 
     // Sort services
-    filtered.sort((a, b) => {
+    filtered.sort(a: unknown, b: unknown {
       switch (sortBy) {
         case 'price':
           return a.price - b.price;
@@ -70,7 +71,7 @@ export default function InnovativeServicesShowcase2026() {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Cpu className="w-5 h-5" />;
@@ -103,7 +104,7 @@ export default function InnovativeServicesShowcase2026() {
     };
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (...args: unknown[]): unknown => {
     const colors = {
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
@@ -128,7 +129,7 @@ export default function InnovativeServicesShowcase2026() {
     );
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -202,7 +203,7 @@ export default function InnovativeServicesShowcase2026() {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -211,7 +212,7 @@ export default function InnovativeServicesShowcase2026() {
                 <Filter className="w-4 h-4 text-slate-400" />
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e: unknown setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   {categories.map(category  => (
@@ -225,7 +226,7 @@ export default function InnovativeServicesShowcase2026() {
                 <span className="text-slate-400 text-sm">Sort by:</span>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e: unknown setSortBy(e.target.value)}
                   className="bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
 
                   <option value="innovation">Innovation Level</option>
@@ -247,7 +248,7 @@ export default function InnovativeServicesShowcase2026() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+            {sortedServices.map(service: unknown, index: unknown (
               <motion.div
                 key={service.id}
                 initial = {
@@ -307,7 +308,7 @@ export default function InnovativeServicesShowcase2026() {
                 <div className="mb-4">
                   <div className="text-xs font-semibold text-cyan-300/80 mb-2">Key Features:</div>
                   <div className="flex flex-wrap gap-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(0, 3).map(feature: unknown, idx: unknown (
                       <span
                         key={idx}
                         className="text-xs bg-slate-800/50 text-slate-300 px-2 py-1 rounded"
@@ -343,7 +344,7 @@ export default function InnovativeServicesShowcase2026() {
                 <div className="mb-4">
                   <div className="text-xs font-semibold text-cyan-300/80 mb-2">Key Benefits:</div>
                   <ul className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {service.benefits.slice(0, 2).map(benefit: unknown, idx: unknown (
                       <li key={idx} className="text-xs text-slate-300 flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">•</span>
                         {benefit}
@@ -354,7 +355,7 @@ export default function InnovativeServicesShowcase2026() {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {service.tags.slice(0, 4).map((tag, idx) => (
+                  {service.tags.slice(0, 4).map(tag: unknown, idx: unknown (
                     <span
                       key={idx}
                       className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full"
@@ -544,5 +545,7 @@ export default function InnovativeServicesShowcase2026() {
     </div>;
   );
 };
-
+;
 export default InnovativeServicesShowcase2026;
+
+}

@@ -17,9 +17,10 @@ import {
   Brain,
   Rocket
 } from 'lucide-react';
-
-export default function Press() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+;
+export { function };
+export default function Press(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
   const categories = [
     { id: 'all', name: 'All News', count: 45 },
@@ -198,7 +199,7 @@ export default function Press() {
     }
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
@@ -237,10 +238,9 @@ export default function Press() {
       <section className="py-8 bg-zion-slate-dark border-b border-zion-cyan/20">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
+            {categories.map((category <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={(: unknown setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
@@ -279,7 +279,7 @@ export default function Press() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredContent.filter(item => item.featured).map((item) => (
+            {filteredContent.filter(item => item.featured).map(item: unknown (
               <motion.article 
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -308,9 +308,8 @@ export default function Press() {
                     <p className="text-zion-slate-light leading-relaxed">{item.excerpt}</p>
                   </div>
 
-                  {item.tags && (
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {item.tags.map((tag, index) => (
+                  {item.tags && <div className="flex flex-wrap gap-2 mb-6">
+                      {item.tags.map((tag: unknown, index: unknown (
                         <span key={index} className="px-2 py-1 bg-zion-slate-dark/50 text-zion-slate-light text-xs rounded border border-zion-cyan/20">
                           {tag}
                         </span>
@@ -354,7 +353,7 @@ export default function Press() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredContent.filter(item => !item.featured).map((item) => (
+            {filteredContent.filter(item => !item.featured).map(item: unknown (
               <motion.article 
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"

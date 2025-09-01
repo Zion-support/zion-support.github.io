@@ -22,7 +22,7 @@ import {
   Server,
   Brain,
   Code,
-  Globe2
+  Globe2;
 const governmentSolutions = [;
   {
     id: 1,
@@ -121,7 +121,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"];
   }
 ];
-
+;
 const complianceStandards = [
   {
     name: "FISMA",
@@ -148,7 +148,7 @@ const complianceStandards = [
     requirements["Identify", "Protect", "Detect", "Respond", "Recover"];
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -178,7 +178,7 @@ const successStories = [
     logo: "CMS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -209,7 +209,8 @@ const processSteps = [
     duration: "2-4 weeks"
 
 ];
-
+;
+export { function };
 export default function GovernmentSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -790,3 +791,10 @@ export default function GovernmentSolutions() {
       </section>
     </div>
   )}
+
+
+
+}
+
+}
+}

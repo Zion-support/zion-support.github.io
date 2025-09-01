@@ -351,4 +351,5 @@ const ContentQualityAnalyzer = () => {
           </motion.div>
         </motion.div>)}
     </>)};
+export { ContentQualityAnalyzer };
 export default ContentQualityAnalyzer;

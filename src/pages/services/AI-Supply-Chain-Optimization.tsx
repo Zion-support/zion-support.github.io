@@ -64,12 +64,12 @@ import {
   GanttChart,
   Kanban
 } from 'lucide-react';
+;
+const AISupplyChainOptimization: React.FC = props {
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
-const AISupplyChainOptimization: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
+  useEffect(: unknown {
     setIsVisible(true);
   }, []);
 
@@ -267,7 +267,7 @@ const AISupplyChainOptimization: React.FC = () => {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -326,7 +326,7 @@ const AISupplyChainOptimization: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {performanceStats.map((stat, index) => (
+            {performanceStats.map((stat, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -361,7 +361,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -398,7 +398,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supplyChainModules.map((module, index) => (
+            {supplyChainModules.map(module: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -411,7 +411,7 @@ const AISupplyChainOptimization: React.FC = () => {
                   {module.name}
                 </h3>
                 <div className="space-y-3">
-                  {module.features.map((feature, featureIndex) => (
+                  {module.features.map((feature, featureIndex (
                     <div key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {feature}
@@ -442,7 +442,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
+            {industries.map(industry: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -481,7 +481,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -494,7 +494,7 @@ const AISupplyChainOptimization: React.FC = () => {
                   {useCase.industry}
                 </h3>
                 <div className="space-y-3">
-                  {useCase.applications.map((app, appIndex) => (
+                  {useCase.applications.map((app, appIndex (
                     <div key={appIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {app}
@@ -525,7 +525,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -564,7 +564,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start text-gray-300">
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
@@ -606,7 +606,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -677,5 +677,6 @@ const AISupplyChainOptimization: React.FC = () => {
     </div>
   );
 };
-
+;
+export { AISupplyChainOptimization };
 export default AISupplyChainOptimization;

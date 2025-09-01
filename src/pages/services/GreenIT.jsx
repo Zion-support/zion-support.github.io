@@ -19,7 +19,8 @@ import {
   Network,
   Battery
 } from 'lucide-react';
-
+;
+export { function };
 export default function GreenIT() {
   const services = [
     {

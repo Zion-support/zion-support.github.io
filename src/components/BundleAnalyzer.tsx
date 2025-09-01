@@ -9,21 +9,22 @@ interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 
 interface BundleMetrics {
 
+
   totalSize: number;
   chunkCount: number;
 largestChunk: {;
     name: string;
     size: number;
   
+
 };
   averageChunkSize: number;
   gzipSavings: number;
 }
-
-export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({ 
-  enabled = true,
-  showUI = false
-}) => {
+;
+export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = { 
+  enabled = true: unknown, showUI = false
+}: unknown {
   const [metrics, setMetrics] = useState<any>({
     totalSize: 0,
     chunkCount: 0,
@@ -32,7 +33,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     gzipSavings: 0
   });
 
-  const analyzeBundle = useCallback(() => {
+  const analyzeBundle = useCallback(: unknown {
     if (!enabled) return;
 
     try {
@@ -43,9 +44,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: any'', size: 0 };
+      let largestChunk = { name: unknown'', size: 0 };
       
-      resourceEntries.forEach((entry: )  => {
+      resourceEntries.forEach(entry:  {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
@@ -95,7 +96,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     }
   }, [enabled]);
 
-  const optimizeBundle = useCallback(() => {
+  const optimizeBundle = useCallback(: unknown {
     if (!enabled) return;
 
     // Implement bundle optimization strategies
@@ -119,22 +120,22 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     // Apply optimizations
     optimizations.forEach(optimization => {
-      console.log(`🔧 Optimization: any${optimization}`);
+      console.log(`🔧 Optimization: unknown${optimization}`);
     });
 
     return optimizations;
   }, [enabled, metrics]);
 
-  useEffect(()  => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     // Analyze bundle after page load
     const timer = setTimeout(analyzeBundle, 2000);
     
-    return () => clearTimeout(timer);
+    return : unknown clearTimeout(timer);
   }, [enabled, analyzeBundle]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enabled) return;
 
     // Run optimization analysis

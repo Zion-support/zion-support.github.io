@@ -15,7 +15,7 @@ jest.mock('../pages/Contact', () => {
   return function MockContact() {
     return <div data-testid="contact-page">Contact Page</div>}});
 
-// Wrap App with Router for testing
+// Wrap App with Router for testing;
 const renderWithRouter = (component) => {
   return render(
     <BrowserRouter>

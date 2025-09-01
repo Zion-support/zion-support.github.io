@@ -55,3 +55,19 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

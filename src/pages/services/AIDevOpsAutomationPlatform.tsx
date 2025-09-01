@@ -29,8 +29,9 @@ import { Cpu,
   Pause,
   RefreshCw
  } from 'lucide-react.ts';
-
-export default function AIDevOpsAutomationPlatform(...args: any[]): any {
+;
+export { function };
+export default function AIDevOpsAutomationPlatform(...args: unknown[]): unknown {
   const features = [
     "AI-Powered Code Review & Analysis",
     "Intelligent CI/CD Pipeline Optimization",
@@ -141,7 +142,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEO 
         title="AI DevOps Automation Platform | Zion Tech Group"
@@ -214,7 +215,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
@@ -252,7 +253,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -290,7 +291,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {capabilities.map((category, index)  => (
+            {capabilities.map(category: unknown, index: unknown 
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -309,7 +310,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {category.items.map((item, itemIndex) => (
+                  {category.items.map((item, itemIndex (
                     <li key={itemIndex} className="flex items-start text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
                       {item}
@@ -341,7 +342,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -367,7 +368,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                   <span className="text-gray-400 ml-2">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}

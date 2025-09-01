@@ -54,11 +54,15 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onToggle: () => void;
-}
+  // Add your props here
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
+
+  isOpen: boolean;
+  onToggle: : unknown void;
+
+}
+;
+export const Sidebar: React.FC<SidebarProps> = { isOpen: unknown, onToggle }: unknown {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
 
@@ -235,7 +239,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     }
   ];
 
-  const isActive = (href: string) => {
+  const isActive = (...args: unknown[]): unknown => {
     if (href === '/') {
       return location.pathname === '/';
     }
@@ -246,7 +250,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     return (
       <div className="fixed left-0 top-16 z-40 w-16 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 lg:block hidden">
         <div className="flex flex-col items-center py-4 space-y-4">
-          {navigationSections.slice(0, 6).map((section) => {
+          {navigationSections.slice(0, 6).map(section: unknown {
             const Icon = section.icon;
             return (
               <button
@@ -264,7 +268,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     );
   }
 
-  return (
+  return 
     <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">
       <div className="p-4">
         <div className="flex items-center justify-between mb-6">
@@ -278,14 +282,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         </div>
 
         <div className="space-y-2">
-          {navigationSections.map((section) => {
+          {navigationSections.map((section {
             const Icon = section.icon;
             const isExpanded = expandedSections.includes(section.id);
 
-            return (
-              <div key={section.id} className="space-y-1">
+            return <div key={section.id} className="space-y-1">
                 <button
-                  onClick={() => toggleSection(section.id)}
+                  onClick={(: unknown toggleSection(section.id)}
                   className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 >
                   <div className="flex items-center space-x-3">
@@ -295,9 +298,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                   <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                 </button>
 
-                {isExpanded && (
-                  <div className="ml-4 space-y-1">
-                    {section.links.map((link) => {
+                {isExpanded && <div className="ml-4 space-y-1">
+                    {section.links.map((link: unknown {
                       const LinkIcon = link.icon;
                       const active = isActive(link.href);
 

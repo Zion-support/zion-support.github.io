@@ -277,4 +277,5 @@ const InnovativeServicesShowcase = () => {
         </div>
       </section>
     </div>)};
+export { InnovativeServicesShowcase };
 export default InnovativeServicesShowcase;

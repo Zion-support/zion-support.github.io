@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+export { function };
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'

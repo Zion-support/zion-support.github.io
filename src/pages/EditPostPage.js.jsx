@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-// Mock post data
+// Mock post data;
 const mockPost = {
   id: "1",
     title: "Best practices for AI model fine-tuning",
@@ -26,6 +26,7 @@ const mockPost = {
 
 
 };
+export { function };
 export default function EditPostPage() {
     const { postId } = useParams();
     const navigate = useNavigate();

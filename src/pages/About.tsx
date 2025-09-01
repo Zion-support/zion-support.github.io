@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+;
 import { 
   Users, 
   Target, 
@@ -23,8 +23,9 @@ import {
   Database
 
 } from 'lucide-react';
-
-export default function About() {
+;
+export { function };
+export default function About(...args: unknown[]): unknown {
   const stats = [
 
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
@@ -132,7 +133,7 @@ export default function About() {
     { name: 'IoT & Edge Computing', icon: Zap, color: 'from-yellow-500 to-orange-500' }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <div className="container mx-auto px-4 py-24">
         {/* Hero Section */}
@@ -159,7 +160,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat, index (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -216,7 +217,7 @@ export default function About() {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            {values.map((value, index) => (
+            {values.map(value: unknown, index: unknown (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -246,7 +247,7 @@ export default function About() {
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">Our Technology Expertise</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -272,7 +273,7 @@ export default function About() {
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">Meet Our Leadership Team</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map(member: unknown, index: unknown 
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -287,7 +288,7 @@ export default function About() {
                 <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
                 <div className="space-y-1">
-                  {member.expertise.map((skill, skillIndex) => (
+                  {member.expertise.map((skill, skillIndex (
                     <div key={skillIndex} className="text-xs text-gray-400 bg-white/5 rounded px-2 py-1">
                       {skill}
                     </div>
@@ -311,7 +312,7 @@ export default function About() {
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
             <div className="space-y-8">
-              {milestones.map((milestone, index) => (
+              {milestones.map(milestone: unknown, index: unknown (
                 <motion.div
                   key={milestone.year}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}

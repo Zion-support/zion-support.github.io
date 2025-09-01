@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIAutonomousVehiclePlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Vehicle Platform - Zion Tech Group" description="AI-powered autonomous vehicle platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous vehicle platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousvehicleplatform/"/>

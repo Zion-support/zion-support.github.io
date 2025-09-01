@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
-// Mock data for enhanced services
+// Mock data for enhanced services;
 const EnhancedServicesOverview = () => {
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
@@ -199,4 +199,5 @@ const EnhancedServicesOverview = () => {
         </div>
       </div>
     </section>)};
+export { EnhancedServicesOverview };
 export default EnhancedServicesOverview;

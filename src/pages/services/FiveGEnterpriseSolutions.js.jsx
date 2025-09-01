@@ -23,4 +23,5 @@ const FiveGEnterpriseSolutions = () => {
       </section>
     </div>);
 };
+export { FiveGEnterpriseSolutions };
 export default FiveGEnterpriseSolutions;

@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
-import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App';
+import './index.css';
+import { registerServiceWorker } from './utils/serviceWorker';
 import { ErrorBoundary } from './components/ErrorBoundary'
 
 
-// Performance monitoring
-const reportWebVitals = (metric: any) => {
+// Performance monitoring;
+const reportWebVitals = (...args: unknown[]): unknown => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric);
   }
   // In production, you could send this to analytics
 };
 
-// Main render function
-const renderApp = () => {
+// Main render function;
+const renderApp = (...args: unknown[]): unknown => {
   const root = ReactDOM.createRoot(document.getElementById('root')!);
   
   root.render(
@@ -39,14 +39,14 @@ try {
   renderApp();
   
   // Register service worker with error handling
-  registerServiceWorker().catch((error) => {
+  registerServiceWorker().catch(error: unknown {
     console.warn('Service worker registration failed:', error);
   });
   
   // Report web vitals if available
   if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list: unknown {
         for (const entry of list.getEntries()) {
           reportWebVitals(entry);
         }

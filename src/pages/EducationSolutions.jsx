@@ -29,7 +29,7 @@ import {
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
 ];
-
+;
 const edTechTrends = [
   {
     title: "Personalized Learning",
@@ -56,7 +56,7 @@ const edTechTrends = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -86,7 +86,7 @@ const successStories = [
     logo: "CT"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -117,7 +117,8 @@ const processSteps = [
     duration: "1-2 weeks"
 
 ];
-
+;
+export { function };
 export default function EducationSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -700,3 +701,7 @@ export default function EducationSolutions() {
       </section>
     </div>
   )}
+
+
+}
+}

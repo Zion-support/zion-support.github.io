@@ -49,7 +49,7 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
           {text}
         </motion.p>)}
     </div>)}
-// Skeleton loading component for content
+// Skeleton loading component for content;
 export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
     return (<div className = {
   cn('space-y-3',
@@ -62,7 +62,7 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
 
 } initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }}/>))}
     </div>)}
-// Page loading component
+// Page loading component;
 export function PageLoader({ text = 'Loading page...', className }) {
     return (<div className = {
   cn('min-h-screen flex items-center justify-center',
@@ -73,7 +73,7 @@ export function PageLoader({ text = 'Loading page...', className }) {
         <LoadingSpinner size="xl" color="primary" showText text={text}/>
       </div>
     </div>)}
-// Button loading state
+// Button loading state;
 export function ButtonLoader({ size = 'sm', className }) {
     return (<div className = {
   cn('inline-flex items-center',
