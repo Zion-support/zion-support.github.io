@@ -280,6 +280,32 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </Link>
           </nav>
 
+          {/* Contact Information */}
+          <div className="p-4 border-t border-zion-purple/20">
+            <h3 className="text-sm font-semibold text-zion-cyan mb-3">Contact Us</h3>
+            <div className="space-y-2 text-sm text-zion-slate-light">
+              <div className="flex items-center space-x-2">
+                <span>📧</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span>📞</span>
+                <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span>📍</span>
+                <span>
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+          </div>
+
           {/* Bottom CTA */}
           <div className="p-4 border-t border-zion-purple/20">
             <Link
