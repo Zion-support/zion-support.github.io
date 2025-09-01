@@ -9,7 +9,8 @@ const nextConfig = {
   },
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
+    unoptimized: false,
+    formats: ['image/webp', 'image/avif'],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -17,7 +18,19 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  trailingSlash: false,
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
     config.module.rules.push({

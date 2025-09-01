@@ -1,6 +1,42 @@
 {
-  "timestamp": "2025-08-30T07:49:50.632Z",
-  "buildSize": 2158130,
-  "largeFiles": [],
-  "summary": "Performance monitoring completed"
+  "summary": {
+    "timestamp": "2025-09-01T18:11:06.439Z",
+    "overallScore": 93,
+    "recommendations": []
+  },
+  "details": {
+    "timestamp": "2025-09-01T18:11:06.439Z",
+    "performance": {
+      "serviceWorker": true,
+      "caching": true,
+      "compression": true,
+      "lazyLoading": true,
+      "codesplitting": true
+    },
+    "build": {
+      "buildId": "RN309DBGmThZW6BVq_VEg",
+      "status": "success",
+      "jsFiles": 9,
+      "cssFiles": 0
+    },
+    "accessibility": {
+      "skipLinks": true,
+      "altTexts": true,
+      "ariaLabels": true,
+      "colorContrast": false,
+      "keyboardNavigation": true
+    },
+    "seo": {
+      "sitemap": true,
+      "robots": true,
+      "manifest": true,
+      "structuredData": true,
+      "metaTags": {
+        "title": true,
+        "description": true,
+        "openGraph": true,
+        "twitter": true
+      }
+    }
+  }
 }
