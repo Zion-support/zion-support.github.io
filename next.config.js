@@ -3,41 +3,44 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	optimizeFonts: false,
-	poweredByHeader: false,
-	compress: true,
-	generateEtags: false,
-	experimental: {
-		optimizeCss: true,
-		scrollRestoration: true,
-		legacyBrowsers: false
+	// Enhanced performance settings
+	compiler: {
+		removeConsole: process.env.NODE_ENV === 'production',
 	},
-	headers: async () => {
+	// Security headers
+	async headers() {
 		return [
 			{
 				source: '/(.*)',
 				headers: [
 					{
-						key: 'X-Content-Type-Options',
-						value: 'nosniff'
-					},
-					{
 						key: 'X-Frame-Options',
-						value: 'DENY'
+						value: 'DENY',
 					},
 					{
-						key: 'X-XSS-Protection',
-						value: '1; mode=block'
+						key: 'X-Content-Type-Options',
+						value: 'nosniff',
 					},
 					{
 						key: 'Referrer-Policy',
-						value: 'strict-origin-when-cross-origin'
-					}
-				]
-			}
+						value: 'origin-when-cross-origin',
+					},
+					{
+						key: 'Permissions-Policy',
+						value: 'camera=(), microphone=(), geolocation=()',
+					},
+				],
+			},
 		];
 	},
+	// Image optimization
+	images: {
+		domains: [],
+		formats: ['image/webp', 'image/avif'],
+	},
+	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {
-		// Optimize bundle size
+		// Production optimizations
 		if (!dev && !isServer) {
 			config.optimization.splitChunks = {
 				chunks: 'all',
@@ -45,14 +48,13 @@ const nextConfig = {
 					vendor: {
 						test: /[\\/]node_modules[\\/]/,
 						name: 'vendors',
-						chunks: 'all'
-					}
-				}
+						chunks: 'all',
+					},
+				},
 			};
 		}
-		
 		return config;
-	}
+	},
 };
 
 module.exports = nextConfig;

@@ -7,6 +7,13 @@ exports.handler = async function(event, context) {
     // Enhanced health check with ultimate redundancy
     const healthStatus = await checkUltimateRedundancyHealth();
     
+    // Log function invocation for monitoring (event and context are used for logging)
+    console.log('Ultimate Redundancy Monitor invoked:', {
+      eventType: event?.httpMethod || 'unknown',
+      requestId: context?.awsRequestId || 'unknown',
+      timestamp: new Date().toISOString()
+    });
+    
     return {
       statusCode: 200,
       headers: {
@@ -43,6 +50,14 @@ exports.handler = async function(event, context) {
       })
     };
   } catch (error) {
+    // Log error for monitoring
+    console.error('Ultimate Redundancy Monitor error:', {
+      error: error.message,
+      eventType: event?.httpMethod || 'unknown',
+      requestId: context?.awsRequestId || 'unknown',
+      timestamp: new Date().toISOString()
+    });
+    
     return {
       statusCode: 500,
       headers: {

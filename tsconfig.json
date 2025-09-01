@@ -17,6 +17,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    // Enhanced type checking
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    // Better module resolution
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
@@ -26,14 +34,13 @@
       "@/automation/*": ["./automation/*"],
       "@/scripts/*": ["./scripts/*"]
     },
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": true,
+    // Performance optimizations
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    // Additional checks
+    "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "allowUnreachableCode": false
+    "noImplicitOverride": true
   },
   "include": [
     "next-env.d.ts",
