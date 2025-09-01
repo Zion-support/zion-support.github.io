@@ -40,6 +40,31 @@ export default function Page() {
     setIsLoading(true) ;
     setError('') ;
 
+type SignupFormValues = any;
+
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(signupSchema),
+    defaultValues: {
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      termsAccepted: false,
+    },
+  });
+
+  // Form submission handler
+  const onSubmit = async (data: SignupFormValues) => {
+    if (isSubmitting) return; // Prevent multiple submissions
+    
+    setIsSubmitting(true);
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout (resolve, 2000) ) ;
