@@ -513,33 +513,3 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-  <<<<<<< HEAD
-                
-
-}} animate = {
-  {
-                    y[0, -100, 0],
-                    opacity[0.2, 0.5, 0.2],
-  
-
-}} transition={{
-  
-
-}} animate = {
-  {
-                    y: [0, -100, 0],
-                    opacity: [0.2, 0.5, 0.2],
-  
-
-}} transition = {
-  {
-                    duration: Math.random() * 10 + 10,
-                    repeat: Infinity,
-                    ease: "linear",
-  
-
-}}/>))}
-        </div>)}
-    </>)};
-export default ModernUIEnhancer;
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div>}

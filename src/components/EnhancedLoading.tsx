@@ -406,24 +406,3 @@ export function SkeletonLoader(...args[]):  {
           style = {
   {
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',
-  <<<<<<< HEAD
-            backgroundSize: '200% 100%'
-          
-
-}}
-        />
-      ))}
-    </div>
-  )}
-  backgroundSize: '200% 100%'
-          
-
-;
-;
-;
-}};
-        />;
-      ))};
-    </div>;
-  );
-}
