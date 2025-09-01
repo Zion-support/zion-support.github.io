@@ -5,13 +5,13 @@
     "failedChecks": 1,
     "criticalFailures": 0,
     "canBuild": true,
-    "timestamp": "2025-08-20T12:59:35.010Z"
+    "timestamp": "2025-08-20T12:59:35.319Z"
   },
   "results": [
     {
       "name": "Page Structure Validation",
       "status": "PASS",
-      "result": "All 26 pages are properly structured",
+      "result": "All 23 pages are properly structured",
       "critical": true
     },
     {
