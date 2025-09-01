@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";

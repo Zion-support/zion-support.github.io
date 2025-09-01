@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Facebook } from "lucide-react";
-import { signIn } from "next-auth/react";
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Facebook } from 'lucide-react'
+import { signIn } from 'next-auth/react';
 
 export function AuthButtons() {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null);

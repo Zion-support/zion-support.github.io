@@ -1,4 +1,5 @@
 import { useFavorites } from '@/hooks/useFavorites';
+import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 import { TALENT_PROFILES } from '@/data/talentData';
 import { ProductListingCard } from '@/components/ProductListingCard';

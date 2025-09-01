@@ -5,7 +5,7 @@ import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react'
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';

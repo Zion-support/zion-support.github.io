@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/table";
 import { ApplicationActions } from "./ApplicationActions";
 import { StatusBadge } from "./StatusBadge";
-import { Briefcase, User } from "lucide-react";
+import { Briefcase, User } from 'lucide-react'
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";

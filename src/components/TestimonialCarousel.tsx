@@ -8,7 +8,8 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Quote } from 'lucide-react'
 import Link from "next/link";
 import { CASE_STUDIES } from "@/data/case-studies";
 

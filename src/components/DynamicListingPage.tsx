@@ -8,7 +8,7 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 import {
   Pagination,

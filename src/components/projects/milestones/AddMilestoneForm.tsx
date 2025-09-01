@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm, ControllerRenderProps, FieldValues } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { CalendarIcon, Loader2 } from 'lucide-react';
+import { CalendarIcon, Loader2 } from 'lucide-react'
 import { format } from 'date-fns';
 
 import { Button } from '@/components/ui/button';

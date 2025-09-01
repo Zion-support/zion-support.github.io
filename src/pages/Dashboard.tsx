@@ -4,9 +4,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
 import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
-import { NotificationBell } from "@/components/NotificationBell";
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { useFavorites } from '@/hooks/useFavorites';
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 

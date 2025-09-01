@@ -1,8 +1,31 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
-import { Search, X  } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'; 
-import { SearchSuggestion } from '@/types/search';
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { Search, X } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
+
+
+interface EnhancedSearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  /**
+   * Optional callback when a suggestion is selected. This allows parent
+   * components to perform actions such as navigation.
+   */
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  placeholder?: string;
+  /**
+   * Optional list of fallback suggestions (e.g. recent searches).
+   * If provided, these will be shown when the input is empty.
+   */
+  searchSuggestions?: SearchSuggestion[];
+}
 
 export function EnhancedSearchInput({
   value,
@@ -124,10 +147,25 @@ export function EnhancedSearchInput({
           onChange={(e) => {
             onChange(e.target.value);
           }}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown} 
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          onFocus={(e) => {
+            setIsFocused(true);
+            setHighlightedIndex(-1); // Explicitly reset on focus
+            const currentVal = e.target.value;
+            setValueOnFocus(currentVal);
+            setEnterHandledPostFocus(false);
+            e.target.setSelectionRange(currentVal.length, currentVal.length);
+          }}
+          onBlur={(e) => {
+            const relatedTarget = e.relatedTarget as HTMLElement;
+            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+              setIsFocused(false);
+              setHighlightedIndex(-1);
+            }
+            setValueOnFocus(null);
+          }}
+          onKeyDown={handleKeyDown}
+          aria-label={t('general.search')}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
         />

@@ -5,12 +5,10 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from "lucide-react";
-import { loadStripe } from "@stripe/stripe-js";
-import { useNavigate } from "react-router-dom";
-import { useAnalytics } from "@/context/AnalyticsContext";
-import { event as gtagEvent } from "@/lib/gtag";
-import { captureException } from "@/lib/sentry";
+import { Loader2 } from 'lucide-react'
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
+
 
 interface PaymentButtonProps {
   amount: number;

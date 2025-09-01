@@ -1,5 +1,5 @@
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {

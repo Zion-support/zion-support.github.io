@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { toast } from '@/hooks/use-toast';
-// import { Button } from '@/components/ui/button'; // Unused
-// import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'; // Unused
+import { Button } from '@/components/ui/button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import { logError as appLogError } from '@/utils/productionLogger'; // Renamed to avoid conflict with param
 

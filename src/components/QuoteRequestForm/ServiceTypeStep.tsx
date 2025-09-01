@@ -2,9 +2,7 @@ import { useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search } from 'lucide-react'
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { captureException } from "@/utils/sentry";
 import Skeleton from "@/components/ui/skeleton";

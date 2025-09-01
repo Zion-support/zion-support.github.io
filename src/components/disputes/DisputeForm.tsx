@@ -23,7 +23,7 @@ import { Input } from "@/components/ui/input";
 import { DisputeReason, disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
-import { FileText } from "lucide-react";
+import { FileText } from 'lucide-react'
 
 // Zod 3.x does not support passing a required_error directly to z.string(),
 // so we use `.min(1)` to ensure the field is non-empty and provide a message.

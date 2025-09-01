@@ -3,8 +3,18 @@ import React, { useState } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-,
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+
+interface HowItWorksSectionProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const getSteps = (t: any) => [
   {
 "
     icon: <FileText className="w-8 h-8"  />,"

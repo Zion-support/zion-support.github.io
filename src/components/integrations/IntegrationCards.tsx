@@ -3,7 +3,7 @@ import { logDev } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from "lucide-react";
+import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
 interface IntegrationCardProps {
   title: string;

@@ -1,16 +1,18 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { useEffect, useState } from "react";
-import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-import { Button } from "@/components/ui/button";
-import { Loader2, Sparkles } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from "next/router";
-import useSWRMutation from "swr/mutation";
-import Skeleton from "@/components/ui/skeleton";
-import { useDelayedError } from '@/hooks/useDelayedError';
-import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.

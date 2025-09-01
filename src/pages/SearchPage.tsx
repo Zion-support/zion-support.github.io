@@ -1,18 +1,17 @@
-import { Link, useSearchParams  } from 'react-router-dom';
-export default function Page() {
-,
-    {
-      id: 'ai - sales',
-      title: 'AI Sales Copilot',
-      description: 'Intelligent sales optimization platform that enhances sales performance through AI - driven insights, lead scoring, and automated follow-up sequences.',
-      url: '/services / ai - sales - copilot',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],
-      relevance: 0.89,
-      lastUpdated: '2024 - 11 - 25',
-      icon: Users
-    },
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
+import { Loader2 } from 'lucide-react'
 
     // Cloud Services
     {

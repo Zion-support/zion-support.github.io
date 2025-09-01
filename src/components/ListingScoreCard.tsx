@@ -2,7 +2,9 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { RatingStars } from "./RatingStars";
+import { StarIcon } from 'lucide-react'
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
 
 interface ListingScoreCardProps {
   title: string;
@@ -34,13 +36,15 @@ export function ListingScoreCard({
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
       className
     )}>
-      {image && (
-        <div className="h-48 w-full overflow-hidden">
-          <img
-            src={image}
-            alt={title}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
+      {image && !mainImageError && (
+        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
+          <Image
+            src={image} 
+            alt={title} 
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            onError={() => setMainImageError(true)}
+            priority={false}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
         </div>
       )}
@@ -85,8 +89,16 @@ export function ListingScoreCard({
         
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
-            {authorImage ? (
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" loading="lazy" />
+            {authorImage && !authorImageError ? (
+              <div className="relative h-8 w-8 rounded-full mr-2 overflow-hidden"> {/* Added relative and overflow-hidden */}
+                <Image
+                  src={authorImage}
+                  alt={author}
+                  className="object-cover rounded-full"
+                  onError={() => setAuthorImageError(true)}
+                  priority={false}
+                />
+              </div>
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}

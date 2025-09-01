@@ -7,7 +7,8 @@ import { ProductGallery } from "@/components/gallery/ProductGallery";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
@@ -59,7 +60,44 @@ export default function ListingDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
-              <ProductGallery images={listing.images} videoUrl={listing.videoUrl} modelUrl={listing.modelUrl} />
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
+                <div className="aspect-[16/9] w-full relative">
+                  {listing.images && listing.images.length > 0 ? (
+                    <ImageWithRetry
+                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
+                      alt={listing.title}
+                      className="object-cover"
+                      fallbackSrc="/placeholder.svg"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                      <span className="text-zion-slate-light">No image available</span>
+                    </div>
+                  )}
+                </div>
+                
+                {listing.images && listing.images.length > 1 && (
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index) => (
+                      <div 
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                      >
+                        <ImageWithRetry
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className="object-cover"
+                          fallbackSrc="/placeholder.svg"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
@@ -185,15 +223,17 @@ export default function ListingDetail() {
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
-                      <img 
-                        src={listing.author.avatarUrl} 
-                        alt={listing.author.name} 
-                        className="h-12 w-12 rounded-full"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-                        }}
-                      />
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                        <ImageWithRetry
+                          src={listing.author.avatarUrl}
+                          alt={listing.author.name}
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
+                          }}
+                        />
+                      </div>
                     ) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>

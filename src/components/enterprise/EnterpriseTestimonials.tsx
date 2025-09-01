@@ -1,7 +1,6 @@
 
 import React from "react";
-import Image from "next/image"; // Import Image
-import { Quote } from "lucide-react";
+import { Quote } from 'lucide-react'
 import {
   Carousel,
   CarouselContent,

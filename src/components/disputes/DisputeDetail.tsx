@@ -15,7 +15,7 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format, formatDistanceToNow } from "date-fns";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";
+import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 

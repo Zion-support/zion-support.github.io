@@ -2,7 +2,7 @@
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react'
 import { SEO } from './SEO';
 
         { name: 'White Papers', url: '/white-papers' },;

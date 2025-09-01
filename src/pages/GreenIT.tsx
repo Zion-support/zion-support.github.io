@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
-export default React.memo(function GreenIT () {
-import { motion  } from 'framer-motion';
-export default function Page() {
-,
-    { id: 'software', name: 'Sustainable Software', count: 3 },
-    { id: 'data', name: 'Data Centers', count: 2 },
+
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from 'lucide-react'
+import Link from "next/link";
+
+export default function GreenIT() {
+  const greenITSolutions = [
+    {
+      title: "Energy-Efficient Hardware",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      icon: Server,
+    },
+    {
+      title: "Optimized Cooling Systems",
+      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
+      icon: Cloud,
+    },
+    {
+      title: "Renewable Energy Integration",
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+      icon: Leaf,
+    }
   ];
 
   const greenSolutions = [{
@@ -461,8 +478,12 @@ export default function Page() {
                 <div  className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded-2xl mb-6">
                   <impact.icon className="w-10 h-10 text-green -400" />
                 </div>
-                <div  className="text-4xl font - bold text-white mb-2">
-                  {impact.metric}
+                <div className="rounded-lg overflow-hidden relative w-full h-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Green IT sustainability"
+                    className="object-cover"
+                  />
                 </div>
                 <div  className="text-lg font - semibold text-green - 400 mb-2">
                   {impact.label}

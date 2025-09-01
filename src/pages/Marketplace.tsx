@@ -11,27 +11,23 @@ export default function Page() {
 
 import React, { useState, useEffect, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
-import { Button } from "@/components/ui/button";
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode, ViewMode } from '@/context/ViewModeContext';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AuthModal } from '@/components/auth/AuthModal';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { ErrorState } from '@/components/jobs/applications/ErrorState';
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { ProductListing } from '@/types/listings';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 interface ProductContainerProps {
   listings: ProductListing[];

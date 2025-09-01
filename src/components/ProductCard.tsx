@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import Link from 'next/link';
+import { Heart } from 'lucide-react'
+import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -75,11 +77,9 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         <Image
           src={imageUrl}
           alt={imageAltText}
-          fill
           style={{ objectFit: 'cover' }}
           onError={(e) => handleImageError(e)}
           priority={false}
-          sizes={imageSizes}
         />
       ) : (
         <div className="w-full h-full bg-gray-200 flex items-center justify-center">
@@ -103,11 +103,9 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Image
               src={imageUrl}
               alt={imageAltText}
-              fill
               style={{ objectFit: 'cover' }}
               onError={(e) => handleImageError(e)}
               priority={false}
-              sizes={imageSizes}
             />
           ) : (
             <div className="w-full h-full bg-gray-200 flex items-center justify-center">

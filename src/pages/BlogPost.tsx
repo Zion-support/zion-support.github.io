@@ -1,9 +1,15 @@
-import React from 'react';
-import { SEO } from '@/components / SEO';
-export default function Page() {
-,
-    ],
-  };
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { SEO } from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { Button } from "@/components/ui/button";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import { Separator } from "@/components/ui/separator";
+import ReactMarkdown from 'react-markdown';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {

@@ -5,7 +5,7 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { format, isPast, parseISO } from "date-fns";
 import Link from "next/link";
-import { Calendar, Clock, Video } from "lucide-react";
+import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar";
 
 export function UpcomingInterviewsCard() {

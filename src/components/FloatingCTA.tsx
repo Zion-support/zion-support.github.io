@@ -7,7 +7,7 @@ export default function Page() {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { X } from 'lucide-react'
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);

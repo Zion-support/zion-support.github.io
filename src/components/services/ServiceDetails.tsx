@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
+import { Server, Clock, MapPin } from 'lucide-react'
+import Image from "next/image";
 
 interface ServiceDetailsProps {
   country: string;
@@ -81,7 +82,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
           <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
-            className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+            className="object-cover transform transition-transform duration-500 hover:scale-110"
             loading="lazy"
           />
         </div>

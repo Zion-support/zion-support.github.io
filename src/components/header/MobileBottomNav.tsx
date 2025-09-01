@@ -3,17 +3,10 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
-import {
-  Home,
-  Search,
-  MessageCircle,
-  Heart,
-  MessageSquare,
-  ShoppingCart,
-  User
-} from "lucide-react";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 
 interface MobileBottomNavProps {
   unreadCount?: number;

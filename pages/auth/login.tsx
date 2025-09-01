@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
 import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logError } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';

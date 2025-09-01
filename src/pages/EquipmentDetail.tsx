@@ -7,8 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
@@ -263,35 +262,38 @@ export default function EquipmentDetail() {
             <div className="lg:col-span-2">
               <ProductGallery images={equipment.images} videoUrl={equipment.videoUrl} modelUrl={equipment.modelUrl} />
 
-              {/* Product Details Tabs */}
-              <div className="mt-8">
-                <Tabs defaultValue="description" className="w-full">
-                  <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">
-                    <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Description
-                    </TabsTrigger>
-                    <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Specifications
-                    </TabsTrigger>
-                    <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Features
-                    </TabsTrigger>
-                  </TabsList>
-                  
-                  <TabsContent value="description" className="mt-4">
-                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                      <p className="text-zion-slate-light whitespace-pre-line">
-                        {equipment.description}
-                      </p>
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="specifications" className="mt-4">
-                    <div className="flex items-center justify-end mb-2 gap-2">
-                      <span className="text-xs">Metric</span>
-                      <Switch
-                        checked={unit === 'imperial'}
-                        onCheckedChange={(c) => setUnit(c ? 'imperial' : 'metric')}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Images */}
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
+                <ImageWithRetry
+                  src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
+                  alt={equipment.name}
+                  className="object-cover"
+                />
+              </AspectRatio>
+              
+              {equipment.images.length > 1 && (
+                <div className="grid grid-cols-4 gap-2">
+                  {equipment.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImageIndex(index)}
+                      className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
+                        selectedImageIndex === index
+                          ? 'border-zion-cyan'
+                          : 'border-transparent hover:border-zion-slate-light'
+                      }`}
+                    >
+                      <ImageWithRetry
+                        src={image}
+                        alt={`${equipment.name} view ${index + 1}`}
+                        className="object-cover"
                       />
                       <span className="text-xs">Imperial</span>
                     </div>

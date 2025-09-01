@@ -1,4 +1,5 @@
-import { Gift } from 'lucide-react';
+import React, { useState } from 'react';
+import { Gift, RefreshCw } from 'lucide-react'
 import { usePoints } from '@/hooks/usePoints';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';

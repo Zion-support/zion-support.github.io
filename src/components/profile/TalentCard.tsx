@@ -1,8 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Link from "next/link";
 import { TalentProfile } from "@/types/talent";
 
 export interface TalentCardProps {

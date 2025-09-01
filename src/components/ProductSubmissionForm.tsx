@@ -22,9 +22,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
-
-const isBrowser = typeof window !== 'undefined';
+import { Sparkles } from 'lucide-react'
 
 // Define the form schema with zod
 const productSchema = z.object({

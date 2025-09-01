@@ -4,7 +4,10 @@ import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { getStripe } from '@/utils/getStripe';
-import { useAuth } from '@/hooks/useAuth';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
+import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
 import { useCart } from '@/context/CartContext';
 

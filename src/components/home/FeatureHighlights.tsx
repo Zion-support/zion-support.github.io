@@ -2,33 +2,10 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
 
-,
-  {
-    icon: "⚡",
-    title: "Lightning Fast Performance",
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
-  },
-  {
-    icon: "🔒",
-    title: "Enterprise Security",
-    description: "Bank-level security protocols and compliance standards to protect your valuable data"
-  },
-  {
-    icon: "🌐",
-    title: "Global Scalability",
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
-  },
-  {
-    icon: "🤖",
-    title: "AI-Powered Intelligence",
-    description: "Smart automation and predictive analytics that adapt to your business requirements";
-  },;
-  {;
-    icon: "📊",;
-    title: "Real-Time Analytics",;
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
-  };
-];
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from 'lucide-react'
+import { cn } from "@/lib/utils";
 
       };
     };

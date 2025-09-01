@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Import Image
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
+import { Bell, Users, Settings } from 'lucide-react'
 
 interface WorkspaceHeaderProps {
   company: Company;

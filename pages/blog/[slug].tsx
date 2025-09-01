@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import Head from 'next/head';
-import { NextSeo } from '@/components/NextSeo';
+import { useRouter } from 'next/router';
+import AdvancedSEO from '@/components/seo/AdvancedSEO';
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { AuthorBio } from '@/components/blog/AuthorBio';
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
+import { CommentsSection } from '@/components/blog/CommentsSection';
+import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import type { BlogPost } from '@/types/blog';
@@ -41,7 +46,43 @@ const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
       </Head>
       <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
         <h1>{post.title}</h1>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}
+        <div className="flex items-center gap-3 mb-6">
+          <img
+            src={post.author.avatarUrl}
+            alt={post.author.name}
+            className="w-10 h-10 rounded-full"
+            onError={(e) => {
+              const target = e.currentTarget as HTMLImageElement;
+              target.src = '/images/blog-placeholder.svg';
+            }}
+          />
+          <div>
+            <p className="m-0 font-medium">{post.author.name}</p>
+            {post.author.title && (
+              <p className="m-0 text-sm text-zion-slate-light">
+                {post.author.title}
+              </p>
+            )}
+          </div>
+        </div>
+        {post.featuredImage && (
+          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+            <img
+              src={post.featuredImage}
+              alt={post.title}
+              className="object-cover w-full h-full"
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.src = '/images/blog-placeholder.svg';
+              }}
+            />
+          </div>
+        )}
+        <ReactMarkdown>{body}</ReactMarkdown>
+        <AuthorBio author={post.author} />
+        <SocialShareButtons title={post.title} />
+        <CommentsSection slug={post.slug} />
       </main>
     </>
   );

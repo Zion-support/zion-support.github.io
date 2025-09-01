@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import { captureException } from '@/utils/sentry';
+import { Home, Search, ShoppingCart, Users, ArrowLeft, ExternalLink } from 'lucide-react';
+import { logInfo } from '@/utils/productionLogger';
 
 export default function Custom404() {
   const navigate = useNavigate();

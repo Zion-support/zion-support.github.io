@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Loader, Sparkles } from "lucide-react";
+import { Loader, Sparkles } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm, ControllerRenderProps } from "react-hook-form";

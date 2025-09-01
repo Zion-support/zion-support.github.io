@@ -26,12 +26,28 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="min-h-screen bg-zion-blue p-6 text-white">
-      <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
-      <p className="mb-6">{product.description}</p>
-      <Button onClick={handleAdd} disabled={adding}>
-        {adding ? 'Adding...' : 'Add to Cart'}
-      </Button>
-    </div>
+    <>
+      <SEO
+        title={product.title}
+        description={product.description}
+        ogImage={product.images?.[0]}
+      />
+      <div className="min-h-screen bg-zion-blue p-6 text-white">
+        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+        {product.images?.length ? (
+          <div className="mb-4 relative w-full h-64">
+            <Image
+              src={product.images[0] || '/placeholder.svg'}
+              alt={product.title}
+              className="object-cover rounded-md"
+            />
+          </div>
+        ) : null}
+        <p className="mb-6">{product.description}</p>
+        <Button onClick={handleAdd} disabled={adding || inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+        </Button>
+      </div>
+    </>
   );
 }

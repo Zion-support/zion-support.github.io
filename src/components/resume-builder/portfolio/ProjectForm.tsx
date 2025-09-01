@@ -14,7 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';

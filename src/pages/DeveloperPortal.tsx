@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
-export default DeveloperPortal;
-import { motion  } from 'framer-motion';
-export default function Page() {
-,;
-    {;
-      icon: Download,;
-      title: 'SDKs & Libraries',;
-      description: 'Official client libraries for all platforms',;
-      category: 'Integration';
-    };
+
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
+
+interface TabDefinition {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+export function DeveloperPortal() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+  
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api-keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List },
   ];
 
   const resources = [{

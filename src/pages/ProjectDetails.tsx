@@ -41,18 +41,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import {
-  AlertCircle,
-  Calendar,
-  CheckCircle2,
-  Clock,
-  FileText,
-  LayersIcon,
-  MessageSquare,
-  Video,
-  User,
-  XCircle,
-} from "lucide-react";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a

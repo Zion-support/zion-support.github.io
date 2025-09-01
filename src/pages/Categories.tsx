@@ -5,7 +5,10 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
-import * as Icons from 'lucide-react'; // Keep for icon mapping
+import { Folder } from 'lucide-react'
+import { CATEGORIES } from '@/data/categories';
+import { NextSeo } from '@/components/NextSeo';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 // CategoryType from useMarketplace hook should be compatible or updated in the hook
 // For now, assuming the structure is similar: { id, name, slug, icon }

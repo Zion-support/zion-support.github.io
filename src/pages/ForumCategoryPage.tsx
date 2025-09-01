@@ -11,14 +11,11 @@ import { ForumCategoryInfo } from "@/types/community";
 import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
 import { useAuth } from "@/hooks/useAuth";
-import {
-  MessageSquare,
-  Briefcase,
-  Code,
-  FileText,
-  Megaphone,
-  Search
-} from "@/components/icons";
+import { useCommunity } from "@/context";
+import { useToast } from "@/hooks/use-toast";
+import { useFollowedCategories } from "@/hooks/useFollowedCategories";
+import { logInfo } from '@/utils/productionLogger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {

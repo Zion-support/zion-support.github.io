@@ -1,7 +1,8 @@
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users, HelpCircle } from "lucide-react"; // Added HelpCircle for default icon
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 
 const categories = [{

@@ -411,8 +411,22 @@ jest.mock('@sentry/nextjs', () => ({
   // Add any other Sentry methods used in your application
 }));
 
-// Mock performance API
-if (typeof window !== 'undefined' && !window.performance) {
+// Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js
+jest.mock('@supabase/ssr/dist/main/cookies', () => ({
+  getAll: () => ({}),
+  setItem: jest.fn(),
+  getItem: jest.fn(),
+}));
+
+// When a module imports '@/context' root index (e.g., useEnqueueSnackbar)
+jest.mock('@/context', () => {
+  const useEnqueueSnackbar = () => jest.fn();
+  return { __esModule: true, useEnqueueSnackbar };
+});
+
+// Extend Vitest shim with restoreAllMocks for suites that call it
+// @ts-ignore - vi is added by the vitest mock above
+if (global.vi && !global.vi.restoreAllMocks) {
   // @ts-ignore
   window.performance = {};
 }
@@ -426,14 +440,33 @@ if (typeof window !== 'undefined' && !window.performance.measure) {
   window.performance.measure = jest.fn();
 }
 
-// Mock navigator.serviceWorker
-if (typeof navigator !== 'undefined' && !navigator.serviceWorker) {
+// Mock @supabase/ssr createBrowserClient so components don't crash in tests
+jest.mock('@supabase/ssr', () => ({
+  createBrowserClient: () => ({
+    auth: { onAuthStateChange: jest.fn(), signInWithPassword: jest.fn(), signUp: jest.fn() },
+  }),
+}));
+
+// Ensure hooks/use-toast exports usable toast fn
+jest.mock('@/hooks/use-toast', () => {
+  const toastFn = jest.fn();
+  return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) };
+});
+
+// Minimal MSW mocks to satisfy tests without parsing ESM bundles
+jest.mock('msw', () => ({ rest: { get: jest.fn(), post: jest.fn(), put: jest.fn(), delete: jest.fn() } }));
+jest.mock('msw/node', () => ({ setupServer: () => ({ listen: jest.fn(), resetHandlers: jest.fn(), close: jest.fn() }) }));
+
+// Provide mock for missing component
+jest.mock('@/components/search/FilterSidebar', () => ({ FilterSidebar: () => null }));
+
+// Extend Vitest shim with timer helpers if not present
+// @ts-ignore - vi is added by the vitest mock above
+if (global.vi) {
   // @ts-ignore
-  navigator.serviceWorker = {
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    register: jest.fn(() => Promise.resolve({})), // Mock common methods
-    ready: Promise.resolve({}),
-    // Add other properties/methods if needed by your application
-  };
+  if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest);
+  // @ts-ignore
+  if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest);
+  // @ts-ignore
+  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
 }

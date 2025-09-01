@@ -1,6 +1,4 @@
 import React, { useState, Suspense } from 'react';
-import Image from 'next/image'; // Import next/image
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
 import {
   Dialog,
   DialogContent,
@@ -32,7 +30,13 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 
       <TabsContent value="images" className="pt-4">
         <div className="aspect-video w-full relative">
-          <img src={images[selected]} alt="product" className="w-full h-full object-contain bg-zion-blue-light/10 p-4" />
+          <DialogTrigger asChild>
+            <img
+              src={images[selected] || images[0] || ''}
+              alt={`Product image ${selected + 1}`}
+              className="w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in"
+            />
+          </DialogTrigger>
         </div>
         {images.length > 1 && (
           <div className="flex p-4 gap-2 overflow-x-auto">
@@ -42,7 +46,11 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
                 onClick={() => setSelected(idx)}
                 className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}
               >
-                <img src={img} alt="thumb" className="w-full h-full object-cover" />
+                <img
+                  src={img}
+                  alt={`Thumbnail image ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
@@ -51,20 +59,15 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 
       {videoUrl && (
         <TabsContent value="video" className="pt-4">
-          <AspectRatio ratio={16 / 9} className="relative bg-black"> {/* Added relative and bg for fallback */}
-            <Suspense
-              fallback={
-                poster ? (
-                  <Image
-                    src={poster}
-                    alt="Video preview"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    priority={false}
-                  />
-                ) : <div className="w-full h-full bg-muted animate-pulse" />
-              }
-            >
+          <AspectRatio ratio={16 / 9}>
+            <Suspense fallback={
+              <img
+                src="/images/video-placeholder.svg"
+                alt="Video preview"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            }>
               <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
             </Suspense>
           </AspectRatio>
@@ -73,20 +76,15 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 
       {modelUrl && (
         <TabsContent value="model" className="pt-4">
-          <AspectRatio ratio={16 / 9} className="relative bg-black"> {/* Added relative and bg for fallback */}
-            <Suspense
-              fallback={
-                poster ? (
-                  <Image
-                    src={poster}
-                    alt="3D model preview"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    priority={false}
-                  />
-                ) : <div className="w-full h-full bg-muted animate-pulse" />
-              }
-            >
+          <AspectRatio ratio={16 / 9}>
+            <Suspense fallback={
+              <img
+                src="/images/model-placeholder.svg"
+                alt="3D model preview"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            }>
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
             </Suspense>
           </AspectRatio>

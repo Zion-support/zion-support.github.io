@@ -10,7 +10,7 @@ import { HireRequestModal } from "@/components/profile/hire-request";
 import { useAuthStatus } from "@/hooks/talent";
 import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";
 import { StickyAction } from "@/components/ui/sticky-action";
-import { Handshake, MessageSquare } from "lucide-react";
+import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { UserProfile } from "@/types/auth";

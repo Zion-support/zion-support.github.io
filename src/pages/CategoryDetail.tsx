@@ -5,8 +5,8 @@ import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect, useRef } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
+import { useState, useEffect, useRef, Suspense } from "react";
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { ProductListing } from "@/types/listings";
 // useNavigate will be replaced by useRouter

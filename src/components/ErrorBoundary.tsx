@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
-// import { Button } from './ui/button'; // Unused
-// import { AlertTriangle } from 'lucide-react'; // Unused
-import { logError } from '@/utils/productionLogger'; // Or your preferred logger
+import { Button } from './ui/button';
+import { AlertTriangle } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 interface ErrorBoundaryProps {
   fallback: ReactNode;

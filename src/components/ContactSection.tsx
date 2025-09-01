@@ -1,31 +1,13 @@
 export function ContactSection(...args[]):  {
 
-<<<<<<< HEAD
-  const contactInfo = [{
-      icon: Phone,
-      title: "Phone",
-      value: "+1 302 464 0950",
-      link: "tel:+13024640950"
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      value: "kleber@ziontechgroup.com",
-      link: "mailto:kleber@ziontechgroup.com"
-    },;
-=======
-  
->>>>>>> main
-    {;
-      icon: MapPin,;"
-      title: "Address",;"
-      value: "364 E Main St STE 1008 Middletown DE 19709",;"
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ];
-  return ("
-    <section className="py-16 px-4 sm:px-6 lg:px-8">"
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial = {
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
 
   { opacity: 0,
   y: 20

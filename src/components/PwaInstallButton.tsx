@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react'
 import { toast } from 'sonner';
 import { safeStorage } from '@/utils/safeStorage';
 import type { BeforeInstallPromptEvent } from '@/types/pwa';

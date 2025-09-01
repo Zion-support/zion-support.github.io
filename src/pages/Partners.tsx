@@ -1,21 +1,52 @@
 import React from 'react';
 export default Partners;
 
-const Partners = () => {
-  return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white pt -24">
-      <div className="container mx - auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font - bold mb-6">
-            Our{' '}
-            <span className="text-transparent bg-clip - text bg-gradient - to - r from - blue - 400 to - cyan -400">
-              {' '}
-              Partners
-            </span>
-          </h1>
-          <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
-            Strategic partnerships that drive innovation and deliver exceptional
-            value to our clients
-          </p>
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
+import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
+import { PartnerResources } from "@/components/partners/PartnerResources";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from 'next/router';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
+export default function Partners() {
+
+  logInfo('PartnersPage rendering');
+  const [activeTab, setActiveTab] = useState("overview");
+  const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const router = useRouter();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+
+  useEffect(() => {
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/auth/health');
+        setAuthServiceAvailable(res.ok);
+      } catch (err) {
+        logErrorToProduction('Partner login auth health check failed', { data: err });
+        setAuthServiceAvailable(false);
+      }
+    }
+    checkHealth();
+  }, []);
+
+  // If not authenticated, display partner program info and signup CTA
+  if (!isAuthenticated) {
+    logInfo('PartnersPage rendering Unauthenticated View');
+    return (
+      <div className="container max-w-6xl py-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold tracking-tight text-white mb-2">{t('partner.title')}</h1>
+          <p className="text-xl text-zion-slate-light">{t('partner.subtitle')}</p>
         </div>
 
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
