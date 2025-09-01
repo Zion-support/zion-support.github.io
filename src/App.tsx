@@ -1,17 +1,22 @@
-
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import ErrorBoundary from './components/ErrorBoundary';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { ErrorBoundary } from 'react-error-boundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
+
+// Enhanced Components
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { ChatAssistant } from './components/ChatAssistant';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
+    <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -26,19 +31,19 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ d
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const ComprehensiveServicesShowcase2026 = lazy(() => import('./pages/ComprehensiveServicesShowcase2026').then(module => ({ default: module.default })));
-const ComprehensiveMarketingPage2026 = lazy(() => import('./pages/ComprehensiveMarketingPage2026').then(module => ({ default: module.default })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
+const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
-// Service Pages - Updated to use backup-pages location
-const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
-const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
-const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+// Service Pages
+const AISolutions = lazy(() => import('./pages/AiSolutions').then(module => ({ default: module.default })));
+const QuantumComputing = lazy(() => import('./pages/QuantumComputing').then(module => ({ default: module.default })));
+const Cybersecurity = lazy(() => import('./pages/Cybersecurity').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -50,9 +55,28 @@ const PageLoader = () => (
   </div>
 );
 
-function App() {
+// Lazy load pages - only import existing ones
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
 
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
@@ -66,12 +90,12 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
-                <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
-                <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+                <Route path="/services/ai-solutions" element={<AISolutions />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
-                <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
+                <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
@@ -104,10 +128,15 @@ function App() {
           </main>
         </div>
         <Footer />
+        
+        {/* Enhanced Components */}
+        <PerformanceOptimizer />
+        <EnhancedAccessibilityEnhancer />
+        <MobileExperienceEnhancer />
+        <ChatAssistant />
       </div>
     </ErrorBoundary>
   );
 }
 
 export default App;
-
