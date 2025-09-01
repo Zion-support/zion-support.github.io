@@ -1,76 +1,143 @@
-# Monitoring and Alerting System
+# URL Performance Monitoring Service
 
-This directory contains modules related to application monitoring, including performance checks and alerting.
+## Overview
 
-## Hourly Notifications
+This Node.js service is designed to monitor the latency and availability of specified API endpoints or URLs. It runs checks at regular intervals (hourly by default), logs performance metrics, and can trigger alerts and custom remediation actions if performance degrades below configured thresholds.
 
-The system can send hourly notifications summarizing key operational data. This is typically triggered by a scheduled job (e.g., a GitHub Actions workflow like `.github/workflows/hourly-jest.yml`).
+## Features
 
-### Features
+*   **Scheduled Checks**: Performs health checks on configured endpoints automatically (default: hourly).
+*   **Configurable Endpoints**: Endpoints are defined in a JSON configuration file (`monitoring-config.json`).
+*   **Latency Thresholds**: Configurable latency threshold to determine if an endpoint is performing poorly.
+*   **Consecutive Check Limits**: Configurable limit for how many consecutive checks must fail before an alert is triggered.
+*   **Webhook Alerts**: Sends notifications to a configured webhook URL when an alert is triggered.
+*   **Extensible Remediation**: Executes a custom shell script (`remediate.sh`) when an alert is triggered, allowing for flexible incident response.
+*   **Structured Logging**: Maintains detailed logs of monitoring activities and errors.
 
-The hourly notification can include:
--   **Slow Endpoints**: A list of application endpoints that have exceeded latency thresholds. (Note: Data for this needs to be populated into `notification_data/slow_endpoints.json` by a separate process if desired for the hourly summary).
--   **Patched Packages**: A list of npm packages that were automatically updated by `npm audit fix`.
--   **Test Status**: A summary of the latest automated test run, including pass/fail counts and code coverage percentage.
--   **Commit Link**: A direct link to the latest commit in the repository at the time of the notification.
--   **Custom Message**: A general message can also be included.
+## Project Structure (within `monitoring/`)
 
-### Configuration
+*   `monitoring-config.json`: The main configuration file for defining endpoints, alert thresholds, and other parameters.
+*   `remediate.sh`: A shell script that is executed when an alert is triggered. This script can be customized to perform various remediation actions (e.g., restarting a service).
+*   `package.json`: NPM package file, defines dependencies and scripts.
+*   `tsconfig.json`: TypeScript compiler configuration.
+*   `src/`: Contains the TypeScript source code for the monitoring service.
+    *   `index.ts`: The main entry point of the application, sets up the cron job.
+    *   `monitor.ts`: Core logic for orchestrating endpoint checks.
+    *   `alerter.ts`: Handles alert triggering, consecutive check logic, webhook notifications, and calls the remediation script.
+    *   `latencyTester.ts`: Measures the latency of individual endpoints.
+    *   `logger.ts`: Configures the Winston logger for structured logging.
+*   `logs/perf/` (relative to the project root, i.e., `../../logs/perf/` from `monitoring/src` or `../logs/perf/` from `monitoring/`): Directory where performance and error logs are stored.
+    *   `hourly.log`: Logs results of hourly monitoring checks.
+    *   `error.log`: Logs any errors encountered by the monitoring service itself.
 
-To enable and configure the hourly notifications, the following environment variables must be set in the environment where the notification script (`scripts/gather-notification-data.sh` which then calls `monitoring/src/send-alert-cli.ts`) is executed:
+## Setup
 
--   `ALERT_WEBHOOK_URL`: **Required**. The webhook URL for the desired notification channel (e.g., Slack, Discord). The notification is sent as a JSON payload with a `text` field containing the formatted message.
--   `GITHUB_REPOSITORY`: **Recommended**. The owner and repository name (e.g., `your-org/your-repo`). Used to construct direct commit links. Automatically available in GitHub Actions.
--   `GITHUB_SERVER_URL`: **Recommended**. The base URL of the GitHub instance (e.g., `https://github.com`). Used to construct direct commit links. Automatically available in GitHub Actions.
--   `GITHUB_WORKSPACE`: **Recommended (for local testing, auto in Actions)**. The path to the root of the repository. Used by scripts to define temporary data paths (e.g., for `notification_data/`). Automatically available in GitHub Actions.
-
-
-### How it Works
-
-1.  **Data Collection Scripts** (typically run in this order by a CI job):
-    -   `scripts/hourly-npm-audit.sh`: Runs `npm audit fix --force --json`, extracts information about packages that were actually patched, and saves it to `$GITHUB_WORKSPACE/notification_data/patched_packages.json`.
-    -   `scripts/run-hourly-tests.sh`: Runs Jest tests with coverage. This script also ensures Jest outputs its full results to `logs/tests/hourly-jest-results.json` and coverage reports (including `coverage-summary.json`) are generated.
-    -   `scripts/check_coverage_and_notify.js` (called by `run-hourly-tests.sh`): Reads the Jest results from `logs/tests/hourly-jest-results.json` (for test counts) and `coverage-summary.json` (for coverage percentage). It then saves a formatted test status object to `$GITHUB_WORKSPACE/notification_data/test_status.json`.
-
-2.  **Notification Assembly**:
-    -   `scripts/gather-notification-data.sh`: This script is run after all data collection scripts. It:
-        - Reads the JSON files created by the previous scripts (`patched_packages.json`, `test_status.json`).
-        - Optionally reads `slow_endpoints.json` if populated by another process.
-        - Gets the latest commit hash and constructs a commit link using `GITHUB_REPOSITORY` and `GITHUB_SERVER_URL`.
-        - Assembles a comprehensive JSON payload (`NotificationPayload`).
-
-3.  **Notification Dispatch**:
-    -   If the assembled payload is not empty (i.e., it contains more than just a default commit link or empty data arrays) and `ALERT_WEBHOOK_URL` is set, `scripts/gather-notification-data.sh` calls the CLI: `node ./monitoring/dist/send-alert-cli.js "$PAYLOAD_JSON"` (or uses `ts-node` as a fallback).
-    -   `monitoring/src/send-alert-cli.ts` (compiled to `.js`): Parses the JSON payload argument.
-    -   It then uses the `sendWebhookNotification` function from `monitoring/src/alerter.ts` to send the assembled payload to the configured `ALERT_WEBHOOK_URL`.
-
-### `alerter.ts` Module
-
--   **`sendWebhookNotification(payload: NotificationPayload)`**: This is the core function responsible for formatting the final message string from the `NotificationPayload` and sending it via an HTTP POST request (using `axios`) to the `ALERT_WEBHOOK_URL`.
--   **`triggerAlerts(result: EndpointTestResult)`**: This function is designed for real-time high-latency alerts. If an endpoint's latency exceeds `ALERT_THRESHOLD_MS`, it calls `sendWebhookNotification` with a payload focused on that specific slow endpoint and can also attempt to restart the associated service (e.g., via `pm2 restart`). This function is not directly part of the hourly aggregated notification but uses the same underlying `sendWebhookNotification` mechanism.
--   **Interfaces**: Defines `NotificationPayload`, `PatchedPackageInfo`, `TestStatusInfo` which structure the data for notifications.
-
-### Customization
-
--   **Message Format**: The detailed message formatting logic is located in `monitoring/src/alerter.ts` within the `sendWebhookNotification` function. This can be customized (e.g., to use Slack's Block Kit UI instead of plain text) by modifying the message construction part of this function.
--   **Data Sources**: To add more information to the hourly notification:
-    1.  Create or modify a script to collect the new data and save it as a JSON file in the `${GITHUB_WORKSPACE:-/tmp}/notification_data` directory.
-    2.  Update `scripts/gather-notification-data.sh` to read this new JSON file and merge its content into the main payload.
-    3.  If necessary, update the `NotificationPayload` interface in `monitoring/src/alerter.ts` to include a type definition for the new data.
-    4.  Update `sendWebhookNotification` in `monitoring/src/alerter.ts` to include the new data in its formatted output.
--   **Alerting Thresholds**: The high-latency alert threshold (`ALERT_THRESHOLD_MS`) is defined in `monitoring/src/alerter.ts`. Coverage thresholds (`COVERAGE_THRESHOLD`) are in `scripts/check_coverage_and_notify.js`.
-
-### Local Testing of Notifications
-
-1.  Compile the TypeScript files in `monitoring/src/` to JavaScript in `monitoring/dist/` (e.g., using `tsc -p monitoring/tsconfig.json`).
-2.  Manually create JSON files in a `notification_data` directory (e.g., `/tmp/notification_data/test_status.json` with some test data).
-3.  Set the required environment variables:
+1.  **Navigate to the monitoring directory**:
     ```bash
-    export ALERT_WEBHOOK_URL="your_test_webhook_url"
-    export GITHUB_REPOSITORY="your-org/your-repo"
-    export GITHUB_SERVER_URL="https://github.com"
-    export GITHUB_WORKSPACE="/path/to/your/local/repo/root" # Or where notification_data is
+    cd monitoring
     ```
-4.  Run the gather script: `bash scripts/gather-notification-data.sh`
-    This will attempt to send a notification to your test webhook URL. Check the script's output for the payload it constructed and any errors.
-```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Configure `monitoring-config.json`**:
+    Create or modify the `monitoring-config.json` file in the `monitoring/` directory. This file defines which endpoints to monitor and how alerts are handled.
+
+    ```json
+    {
+      "alertThresholdMs": 500,
+      "consecutiveChecksLimit": 3,
+      "endpoints": [
+        {
+          "name": "Django Ping",
+          "baseURLKey": "DJANGO_API_BASE_URL",
+          "defaultBaseURL": "http://localhost:8000",
+          "path": "/api/ping/",
+          "serviceName": "django-service",
+          "method": "GET", // Optional: GET, POST, PUT, DELETE, HEAD, OPTIONS
+          "headers": { "X-Custom-Header": "value" }, // Optional
+          "body": { "key": "value" } // Optional, for POST/PUT
+        },
+        {
+          "name": "Next.js Health",
+          "baseURLKey": "NEXTJS_API_BASE_URL",
+          "defaultBaseURL": "http://localhost:3000",
+          "path": "/api/health",
+          "serviceName": "nextjs-service"
+        }
+      ]
+    }
+    ```
+    *   `alertThresholdMs` (number): Latency in milliseconds. If an endpoint's response time exceeds this, it's considered a high-latency event.
+    *   `consecutiveChecksLimit` (number): The number of consecutive high-latency events required for an endpoint before an alert is triggered and remediation is attempted.
+    *   `endpoints` (array of objects): Each object defines an endpoint to monitor:
+        *   `name` (string): A human-readable name for the endpoint (e.g., "Django Ping"). Used in logs and alerts.
+        *   `baseURLKey` (string): The key of an environment variable that holds the base URL for this endpoint (e.g., "DJANGO_API_BASE_URL").
+        *   `defaultBaseURL` (string): A fallback base URL to use if the environment variable specified by `baseURLKey` is not set.
+        *   `path` (string): The specific path for the endpoint (e.g., "/api/ping/"). The full URL will be `baseURL + path`.
+        *   `serviceName` (string): An identifier for the service associated with this endpoint (e.g., "django-service"). This is passed to `remediate.sh`.
+        *   `method` (string, optional): The HTTP method to use (e.g., "GET", "POST"). Defaults to "GET".
+        *   `headers` (object, optional): Key-value pairs for custom HTTP headers.
+        *   `body` (any, optional): Request body for methods like POST or PUT.
+
+4.  **Set Environment Variables**:
+    The service relies on several environment variables:
+    *   `DJANGO_API_BASE_URL`, `NEXTJS_API_BASE_URL`, `CUSTOM_SERVER_BASE_URL`, etc.: Base URLs for your services, corresponding to `baseURLKey` values in `monitoring-config.json`.
+    *   `ALERT_WEBHOOK_URL` (optional): The URL for sending webhook notifications if an alert is triggered.
+    *   `LOG_LEVEL` (optional): The logging level for the application (e.g., `info`, `debug`, `error`). Defaults to `info`.
+
+5.  **Customize `remediate.sh`**:
+    The `monitoring/remediate.sh` script is executed when an alert is triggered for an endpoint. You can customize this script to perform actions appropriate for your environment.
+    *   **Purpose**: To attempt automatic recovery actions or to integrate with other incident management systems.
+    *   **Arguments Received**:
+        1.  `serviceName`: The `serviceName` from `monitoring-config.json` for the affected endpoint.
+        2.  `problemURL`: The full URL that triggered the alert.
+        3.  `latencyValue`: The measured latency in milliseconds.
+    *   **Customization**: Edit the script to add logic based on the `serviceName` or `problemURL`. For example, you might restart a specific PM2 process, trigger a Kubernetes deployment rollout, or call another API.
+        ```bash
+        #!/bin/bash
+        SERVICE_NAME="$1"
+        # ... add your custom logic here
+        echo "Remediation called for $SERVICE_NAME"
+        if [ "$SERVICE_NAME" == "my-critical-service" ]; then
+          # pm2 restart my-critical-service
+        fi
+        ```
+    Ensure the script is executable: `chmod +x monitoring/remediate.sh`.
+
+## Running the Service
+
+1.  **Navigate to the monitoring directory**:
+    ```bash
+    cd monitoring
+    ```
+
+2.  **Compile TypeScript to JavaScript**:
+    The service is written in TypeScript. Compile it using the TypeScript compiler. This typically creates a `dist/` directory with the compiled JavaScript.
+    ```bash
+    npx tsc
+    ```
+    (If you have TypeScript installed globally, you can use `tsc` directly.)
+
+3.  **Run the compiled service**:
+    After successful compilation, run the main application script (likely `dist/src/index.js` or `dist/index.js` depending on your `tsconfig.json`'s `rootDir` and `outDir` settings - typically `dist/src/index.js` if `rootDir` is `src`).
+    ```bash
+    node dist/src/index.js
+    ```
+    Alternatively, if you have `ts-node` installed (either locally in the project or globally), you can run the service directly without explicit compilation for development:
+    ```bash
+    npx ts-node src/index.ts
+    ```
+
+## Logs
+
+The service generates logs that are stored in the `logs/perf/` directory at the root of the project (i.e., outside the `monitoring` directory).
+*   `hourly.log`: Contains logs of the periodic endpoint checks, including latency measurements and success/failure status.
+*   `error.log`: Records any errors encountered by the monitoring service itself during its operation.
+
+Log levels and output can be configured via the `LOG_LEVEL` environment variable and by modifying `src/logger.ts`.
+
+---
+This README provides a guide to setting up, configuring, and running the URL Performance Monitoring Service.

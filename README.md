@@ -1,120 +1,29 @@
-# Zion Tech Group - Advanced Technology Solutions Platform
+# Project Title (Example - To Be Updated)
 
-# Welcome to the project
+This is the main README for the project. Below are details about specific components and utilities.
 
-Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
+## URL Performance Monitoring
 
-**Maintained by**: Jules, Codex, and Kleber Alcatrao
+This project includes a URL/API performance monitoring service located in the `monitoring/` directory. It periodically checks configured endpoints, logs their performance, and can trigger alerts and custom remediation actions if performance degrades. For detailed information, see the [`monitoring/README.md`](./monitoring/README.md) file.
 
 ### 🎯 Core Functionality
 
-There are several ways of editing your application.
+## Set environment variables (optional):
+Copy `.env.example` to `.env` and adjust any values needed for your setup.
+Important variables include:
+* `DJANGO_API_BASE_URL`, `NEXTJS_API_BASE_URL`, `CUSTOM_SERVER_BASE_URL` –
+  base URLs for services you want to monitor (used by the `monitoring/` service).
+* `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
+  `SUPABASE_SERVICE_ROLE_KEY` – credentials required for Supabase
+  authentication (used for login).
+* `ALERT_WEBHOOK_URL` – a webhook endpoint (Slack, Discord, etc.) for alert
+  notifications (used by the `monitoring/` service).
+* `LOG_LEVEL` – logging verbosity (`error`, `warn`, `info`, `debug`).
 
-**Use your preferred IDE**
 
-- **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
-- **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
-- **Mobile Experience**: Mobile-first navigation with intuitive swipe gestures
-- **Performance Monitoring**: Real-time Core Web Vitals tracking and optimization
+## Running Tests
 
-### 🎨 User Experience
-
-- **Modern UI/UX**: Futuristic design with smooth animations
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Progressive Web App**: Offline capabilities and app-like experience
-- **Multi-language Support**: Internationalization with language detection
-
-## 🛠️ Technology Stack
-
-### Frontend
-
-- **React 18** with TypeScript
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
-- **React Router** for navigation
-- **Redux Toolkit** for state management
-- **React Query** for data fetching
-
-### Backend & Services
-
-- **Node.js** with Express
-- **Supabase** for database and authentication
-- **Stripe** for payment processing
-- **Vercel/Netlify** for deployment
-
-### Development Tools
-
-- **ESLint** and **Prettier** for code quality
-- **Husky** for git hooks
-- **Jest** and **Vitest** for testing
-- **Storybook** for component development
-
-A modern, accessible, and performant AI marketplace platform built with Next.js, TypeScript, and Tailwind CSS.
-
-## 🚀 Features
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Start development server**
-
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-## 📁 Project Structure
-
-```
-zion.app/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── ui/             # Base UI components
-│   │   ├── layout/         # Layout components
-│   │   └── [feature]/      # Feature-specific components
-│   ├── pages/              # Page components
-│   ├── services/           # API and external services
-│   ├── store/              # Redux store and slices
-│   ├── utils/              # Utility functions
-│   ├── types/              # TypeScript type definitions
-│   └── styles/             # Global styles and CSS
-├── public/                 # Static assets
-├── tests/                  # Test files
-└── docs/                   # Documentation
-```
-
-## 🧪 Testing
-
-### Background tasks
-
-The Django backend runs scheduled jobs using Celery. To process abandoned cart emails locally run:
-
-```sh
-celery -A backend.celery worker -B
-```
-
-**Edit a file directly in GitHub**
+Run the automated tests using npm:
 
 ```bash
 npm run test:all
@@ -227,10 +136,12 @@ Run unit tests with:
 npm run test
 ```
 
-To watch tests during development:
+## Generating Test Logs
 
-```sh
-npm run test:watch
+For offline debugging you can run the test suite and capture the output by using the helper script `scripts/generate-tests-log.sh`.
+
+```bash
+bash scripts/generate-tests-log.sh
 ```
 
 ### End-to-End Tests
