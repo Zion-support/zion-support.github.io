@@ -137,10 +137,6 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
-<<<<<<< HEAD
-      // Run every 30 minutes
-      cron_restart: '*/30 * * * *'
-=======
       cron_restart: '0 */2 * * *', // Run every 2 hours
       pmx: true
     },
@@ -312,7 +308,6 @@ module.exports = {
       log_file: 'logs/dev-watch-build.log',
       out_file: 'logs/dev-watch-build-out.log',
       error_file: 'logs/dev-watch-build-error.log'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
     }
   ],
 
@@ -324,13 +319,8 @@ module.exports = {
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/workspace',
       'pre-deploy-local': '',
-<<<<<<< HEAD
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': ''
-=======
       'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
       'pre-setup': 'mkdir -p /var/www/zion.app/logs'
->>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a
     }
   }
 };
