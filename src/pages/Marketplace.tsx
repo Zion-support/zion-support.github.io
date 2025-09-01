@@ -23,7 +23,7 @@ import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
 import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
+import { useViewMode, ViewMode } from '@/context/ViewModeContext';
 import {
   Pagination,
   PaginationContent,
@@ -79,6 +79,7 @@ export default function Marketplace() {
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
   const { viewMode, setViewMode } = useViewMode();
+  const createViewModeHandler = <T extends ViewMode>(mode: T) => () => setViewMode(mode);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -212,7 +213,7 @@ export default function Marketplace() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setViewMode('grid')}
+                onClick={createViewModeHandler('grid')}
                 aria-label="Grid view"
                 aria-pressed={viewMode === 'grid'}
                 className="text-zion-slate-light"
@@ -222,7 +223,7 @@ export default function Marketplace() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setViewMode('list')}
+                onClick={createViewModeHandler('list')}
                 aria-label="List view"
                 aria-pressed={viewMode === 'list'}
                 className="text-zion-slate-light"
