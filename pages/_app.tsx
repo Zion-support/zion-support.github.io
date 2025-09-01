@@ -1,10 +1,14 @@
-import type { AppProps } from 'next/app.ts';
+import type { AppProps } from 'next/app';
 import '../styles/globals.css';
-import ModernLayout from "../components/layout/ModernLayout";
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-export default function App(...args[]):  {
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ModernLayout>
+    <>
+      <EnhancedNavigation />
       <Component {...pageProps} />
-    </ModernLayout>
-  )}
+      <EnhancedFooter />
+    </>
+  );
+}

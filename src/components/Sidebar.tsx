@@ -64,12 +64,26 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       id: 'main',
       title: 'Main Navigation',
       icon: Home,
-      links: [
-        { name: 'Home', href: '/', icon: Home, description: 'Main dashboard' },
-        { name: 'About Us', href: '/about', icon: Building, description: 'Our story and mission' },
-        { name: 'Contact', href: '/contact', icon: PhoneCall, description: 'Get in touch' },
-        { name: 'Get Quote', href: '/request-quote', icon: DollarSign, description: 'Request pricing' },
-        { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, description: 'Book a demo' }
+      description: 'Main dashboard and overview'
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      description: 'Our technology services',
+      subItems: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', href: '/enhanced-new-services-2025', icon: Star }
       ]
     },
     {

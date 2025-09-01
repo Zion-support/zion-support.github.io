@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -61,9 +64,12 @@ import {
   ExternalLink,
   Cloud
 } from 'lucide-react';
+import { MainNavigation } from './header/MainNavigation';
+import { cn } from '@/lib/utils';
 
 interface HeaderProps {
-  className?: string}
+  className?: string;
+}
 
 export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,25 +79,111 @@ export function Header({ className }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
 
-  
-=======
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', href: '/enhanced-new-services-2025', icon: Star },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Helpdesk', href: '/help', icon: FileText }
+      ]
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ];
+
   useEffect(() => {
-    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
     };
->>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
-  }}};
+  };
 
-  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
     // Add search logic here
-    console.log('Searching for:', searchQuery)};
+    console.log('Searching for:', searchQuery);
+  };
 
-  
+  const quickLinks = [
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },
+    { name: 'Enterprise', href: '/enterprise', icon: Building2 },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
   return (
     <header 
       className={cn(
@@ -108,7 +200,7 @@ export function Header({ className }: HeaderProps) {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
+              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
@@ -122,7 +214,7 @@ export function Header({ className }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <MainNavigation  />
+            <MainNavigation />
           </div>
 
           {/* Right Side Actions */}
@@ -134,7 +226,7 @@ export function Header({ className }: HeaderProps) {
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
             >
-              <Search className="w-5 h-5"  />
+              <Search className="w-5 h-5" />
             </button>
 
             {/* Theme Toggle */}
@@ -143,12 +235,12 @@ export function Header({ className }: HeaderProps) {
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
 
             {/* Notifications */}
             <button className="p-2 text-gray-300 hover:text-blue-400 transition-colors relative">
-              <Bell className="w-5 h-5"  />
+              <Bell className="w-5 h-5" />
               <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
             </button>
 
@@ -159,9 +251,9 @@ export function Header({ className }: HeaderProps) {
                 className="flex items-center space-x-2 p-2 text-gray-300 hover:text-blue-400 transition-colors rounded-lg hover:bg-gray-800/50"
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                  <User className="w-4 h-4 text-white"  />
+                  <User className="w-4 h-4 text-white" />
                 </div>
-                <ChevronDown className="w-4 h-4"  />
+                <ChevronDown className="w-4 h-4" />
               </button>
 
               <AnimatePresence>
@@ -175,7 +267,7 @@ export function Header({ className }: HeaderProps) {
                     <div className="p-4 border-b border-gray-700">
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                          <User className="w-5 h-5 text-white"  />
+                          <User className="w-5 h-5 text-white" />
                         </div>
                         <div>
                           <p className="text-white font-medium">John Doe</p>
@@ -189,7 +281,7 @@ export function Header({ className }: HeaderProps) {
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
                       >
-                        <User className="w-4 h-4"  />
+                        <User className="w-4 h-4" />
                         <span>Profile</span>
                       </Link>
                       <Link
@@ -205,7 +297,7 @@ export function Header({ className }: HeaderProps) {
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
                       >
-                        <Settings className="w-4 h-4"  />
+                        <Settings className="w-4 h-4" />
                         <span>Settings</span>
                       </Link>
                       <div className="border-t border-gray-700 my-2"></div>
@@ -213,9 +305,10 @@ export function Header({ className }: HeaderProps) {
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
                         onClick={() => {
                           // Add logout logic here
-                          setIsUserMenuOpen(false)}}
+                          setIsUserMenuOpen(false);
+                        }}
                       >
-                        <LogOut className="w-4 h-4"  />
+                        <LogOut className="w-4 h-4" />
                         <span>Logout</span>
                       </button>
                     </div>
@@ -230,7 +323,7 @@ export function Header({ className }: HeaderProps) {
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -248,7 +341,7 @@ export function Header({ className }: HeaderProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
               <form onSubmit={handleSearch} className="space-y-4">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
                     value={searchQuery}
@@ -439,15 +532,15 @@ export function Header({ className }: HeaderProps) {
               {/* Contact Info */}
               <div className="pt-4 border-t border-gray-700 space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4"  />
+                  <Phone className="w-4 h-4" />
                   <span className="text-sm">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4"  />
+                  <Mail className="w-4 h-4" />
                   <span className="text-sm">contact@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4"  />
+                  <MapPin className="w-4 h-4" />
                   <span className="text-sm">San Francisco, CA</span>
                 </div>
               </div>
@@ -474,4 +567,5 @@ export function Header({ className }: HeaderProps) {
         )}
       </AnimatePresence>
     </header>
-  )}
+  );
+}
