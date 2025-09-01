@@ -457,12 +457,12 @@ export default function WhitePapers() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             />
-            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
-              Subscribe;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
