@@ -204,7 +204,7 @@ const Home: React.FC = () => {
                   className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-12 text-center"
                 >
                   <div className={`w-20 h-20 bg-gradient-to-r ${sections[currentSection].color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                    <sections[currentSection].icon className="w-10 h-10 text-white" />
+                    {React.createElement(sections[currentSection].icon, { className: "w-10 h-10 text-white" })}
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold mb-4">
                     {sections[currentSection].title}
