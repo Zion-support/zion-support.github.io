@@ -3,7 +3,7 @@
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -50,9 +50,17 @@
       "@constants/*": ["src/constants/*"]
     },
     "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true
   },
-  "include": ["src/**/*", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/components/**/*.{ts,tsx}",
+    "src/routes/**/*.{ts,tsx}",
+    "tailwind.config.js",
+    "postcss.config.js"
+  ],
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**",
@@ -60,6 +68,21 @@
     "data.temp/**",
     "src_backup/**",
     "**/*.disabled",
-    "**/*.disabled/**"
+    "**/*.disabled/**",
+    // Exclude corrupted or legacy files
+    "src/utils/**/*.js.jsx",
+    "src/utils/seoOptimizer.js",
+    "src/utils/seoOptimizer.js.jsx",
+    "src/utils/sitemapGenerator.js.jsx",
+    "src/components/**/*.js.jsx",
+    "src/pages/**/*.jsx",
+    "src/pages/**/*.js.jsx",
+    "src/context/**/*.jsx",
+    "src/context/**/*.js.jsx",
+    "src/utils/**",
+    "src/store/**",
+    "src/types/**",
+    "src/pages/**",
+    "src/services/**"
   ]
 }

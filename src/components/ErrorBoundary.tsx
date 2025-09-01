@@ -1,3 +1,36 @@
+import React from 'react';
+
+type ErrorBoundaryProps = {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+};
+
+type ErrorBoundaryState = {
+  hasError: boolean;
+};
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  state: ErrorBoundaryState = { hasError: false };
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  componentDidCatch(_error: unknown, _errorInfo: unknown) {
+    // optional: report to monitoring
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback ?? <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+export { ErrorBoundary };
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 export default ErrorBoundary;
 import {

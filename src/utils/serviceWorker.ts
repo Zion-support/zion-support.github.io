@@ -1,52 +1,27 @@
 // Service Worker Registration Utility
-export function registerServiceWorker(): void {
-
-  if ('serviceWorker' in navigator) {
-'
-    const isDev = process.env.NODE_ENV === 'development';'
-    const swUrl = isDev ? '/sw.js' : '/sw.js';
-
-    navigator.serviceWorker
-      .register(swUrl)
-      .then(registration => {
-
-        // Handle updates'
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
-          if (newWorker) {
-'
-            newWorker.addEventListener('statechange', () => {
-              if ('
-                newWorker.state === 'installed' &&
-                navigator.serviceWorker.controller
-              ) {
-
-                // New content is available'
-                // console.log('New content is available; please refresh.');
-              }
-            });
-          }
-        });
-      })
-      .catch(registrationError => {
-'
-        // console.error('SW registration failed: ', registrationError);
+export async function registerServiceWorker(): Promise<void> {
+  if (!('serviceWorker' in navigator)) return;
+  try {
+    const swUrl = '/sw.js';
+    const registration = await navigator.serviceWorker.register(swUrl);
+    registration.addEventListener('updatefound', () => {
+      const newWorker = registration.installing;
+      if (!newWorker) return;
+      newWorker.addEventListener('statechange', () => {
+        // hook for update handling if needed
       });
-  }
-
-export function unregisterServiceWorker(): void {
-'
-  if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker.ready
-      .then(registration => {
-
-        registration.unregister();
-      })
-      .catch(error => {
-
-        // console.error(error.message);
-      });
+    });
+  } catch {
+    // swallow registration errors
   }
 }
-'
+
+export async function unregisterServiceWorker(): Promise<void> {
+  if (!('serviceWorker' in navigator)) return;
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    await registration.unregister();
+  } catch {
+    // swallow errors
+  }
+}

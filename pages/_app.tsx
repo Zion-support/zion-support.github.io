@@ -1,12 +1,12 @@
-import type { AppProps } from 'next/app.ts';'
-import '../styles/globals.css';
-import ModernLayout from "../components/layout/ModernLayout";
+import React from 'react';
 
-export default function App(...args[]):  {
+const Component = () => {
+  return (
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
 
-  return()
-    <ModernLayout>
-      <Component {...pageProps} />
-    </ModernLayout>
-  )}
-'"
+export default Component;
