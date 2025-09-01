@@ -1,1 +1,1 @@
-export default function Page(){ return <div /> }
+export default function AutomationStatus() { return <main style={{padding:'2rem'}}>Automation Status</main>; }

@@ -1,1 +1,1 @@
-export default function Page(){ return <div /> }
+export default function NotFound() { return <main style={{padding:'2rem'}}>404 - Not Found</main>; }

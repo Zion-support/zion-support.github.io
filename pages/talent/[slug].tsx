@@ -1,23 +1,7 @@
-import { useRouter } from 'next/router';
-import React from 'react';
-import RequestInterviewButton from '../../components/interviews/RequestInterviewButton';
+import { GetServerSideProps } from 'next';
 
-export default function TalentProfile() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return { props: { slug: ctx.params?.slug ?? '' } };
+};
 
-  const talentId = slug || 'talent-1';
-  const clientId = typeof window !== 'undefined' ? (localStorage.getItem('demoUserId') || 'client-1') : 'client-1';
-
-  return (
-    <div className="space-y-4">
-      <div className="enhanced-card">
-        <h1 className="text-2xl font-bold">Talent Profile: {talentId}</h1>
-        <p className="text-sm text-gray-600">Expertise summary and details go here.</p>
-      </div>
-      <div>
-        <RequestInterviewButton clientId={clientId} talentId={talentId} />
-      </div>
-    </div>
-  );
-}
+export default function TalentSlug({ slug }: { slug: string }) { return <main style={{padding:'2rem'}}>Talent: {slug}</main>; }

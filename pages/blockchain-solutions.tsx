@@ -1,1 +1,1 @@
-export default function Page(){ return <div /> }
+export default function BlockchainSolutions() { return <main style={{padding:'2rem'}}>Blockchain Solutions</main>; }

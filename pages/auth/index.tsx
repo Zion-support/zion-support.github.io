@@ -1,1 +1,1 @@
-export default function Page(){ return <div /> }
+export default function Auth() { return <main style={{padding:'2rem'}}>Auth</main>; }

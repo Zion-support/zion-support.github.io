@@ -1,25 +1,13 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import FuturisticHero from '../components/ui/FuturisticHero';
-import FeatureGrid from '../components/ui/FeatureGrid';
-import ServicesGrid from '../components/ui/ServicesGrid';
-import AutomationShowcase from '../components/ui/AutomationShowcase';
+import Link from 'next/link';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Zion AI Marketplace – Hire, Collaborate, Deliver</title>
-        <meta name="description" content="Zion Tech Group – AI marketplace for talent and services. Schedule interviews, manage projects, and deliver outcomes." />
-      </Head>
-      <div className="space-y-6">
-        <FuturisticHero />
-        <FeatureGrid />
-        <ServicesGrid />
-        <AutomationShowcase />
+    <main style={{ padding: '3rem', maxWidth: 960, margin: '0 auto' }}>
+      <h1>Zion AI Marketplace</h1>
+      <p>Welcome. Explore our Enterprise licensing for teams and organizations.</p>
+      <div style={{ marginTop: '1.5rem' }}>
+        <Link href="/plans/enterprise">View Enterprise Plans</Link>
       </div>
-    </>
+    </main>
   );
-};
-
-export default Home;
+}
