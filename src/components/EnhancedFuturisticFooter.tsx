@@ -202,7 +202,46 @@ import { motion } from 'framer - motion';
       ]
     },
     {
-      title: 'Core Services',
+      title: 'AI & Analytics Services',
+      featured: true,
+      links: [
+        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      featured: true,
+      links: [
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'Cybersecurity Solutions', href: '/services/ai-cybersecurity', featured: true },
+        { name: 'Zero Trust Security', href: '/services/ai-cybersecurity', featured: true },
+        { name: 'AI Ethics & Governance', href: '/services/ai-cybersecurity', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'Green IT Solutions', href: '/services/green-it', featured: true }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
       featured: false,
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: false },

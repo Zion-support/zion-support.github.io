@@ -96,7 +96,9 @@ export function AppHeader(...args: unknown[]): unknown {
     { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, description: 'Advanced threat detection' },
     { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'AI-powered trading' },
     { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' },
-    { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Rocket, description: 'Latest AI innovations' }
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Settings, description: 'Intelligent workflow automation' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Users, description: 'Customer experience optimization' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain intelligence' }
   ];
 
   const servicesCategories = [
@@ -198,6 +200,28 @@ export function AppHeader(...args: unknown[]): unknown {
         }
       ]
     },
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', description: 'Multi-agent AI coordination & workflow automation' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
+        { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
+        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project optimization' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Advanced threat detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'AI-powered trading' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Intelligent workflow automation' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'Customer experience optimization' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Supply chain intelligence' }
+      ]
+=======
     { 
       name: 'Revolutionary Services 2030', 
       href: '/comprehensive-services-showcase-2030', 
