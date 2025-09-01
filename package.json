@@ -31,7 +31,7 @@
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_TELEMETRY_DISABLED=1 ESLINT_USE_FLAT_CONFIG=true next build",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
