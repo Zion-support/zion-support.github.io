@@ -10,12 +10,14 @@ declare module "react-resizable-panels";
 declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
 
+declare module '@tanstack/react-query';
 declare module 'react-day-picker';
 declare module 'sonner';
 declare module 'lucide-react';
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf';
+declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
 declare module '@radix-ui/react-aspect-ratio';
@@ -39,17 +41,16 @@ declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority';
-declare module 'clsx' {
-  export type ClassValue = any;
-  export default function clsx(...classes: ClassValue[]): string;
-}
+declare module 'clsx';
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
+declare module 'react-hook-form';
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+declare module 'zod';
