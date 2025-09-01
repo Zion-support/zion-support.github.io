@@ -1,432 +1,275 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Users,
-  MessageSquare,
-  TrendingUp,
+import { Link } from 'react-router-dom';
+import { 
+  Heart, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Clock, 
+  BarChart3, 
   CheckCircle,
-  ArrowRight,
   Play,
-  Settings,
-  Target,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
   Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare2,
-  UserPlus,
-  UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  Heart,
-  Star2,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  PhoneCall,
-  Video,
-  MailOpen,
-  Send,
-  Archive,
-  Trash2,
-  Edit3,
-  Copy,
-  Share2,
-  Download,
-  Upload,
-  ExternalLink,
-  Link,
-  Unlink,
-  Lock3,
-  Unlock,
-  Eye2,
-  EyeOff,
-  Bell,
-  BellOff,
-  Volume2,
-  VolumeX,
-  Wifi2,
-  WifiOff,
-  Bluetooth2,
-  BluetoothOff,
-  Radio2,
-  RadioOff,
-  Sensor2,
-  SensorOff,
-  Chip2,
-  ChipOff,
-  Circuit2,
-  CircuitOff,
-  Orbit2,
-  OrbitOff,
-  Planet2,
-  PlanetOff,
-  Star2 as StarIcon,
-  StarOff,
-  Telescope2,
-  TelescopeOff,
-  Antenna2,
-  AntennaOff,
-  Signal2,
-  SignalOff,
-  Navigation2,
-  NavigationOff,
-  Earth2,
-  EarthOff,
-  Moon2,
-  MoonOff,
-  Sun2,
-  SunOff,
-  Binary2,
-  BinaryOff,
-  Network2,
-  NetworkOff,
-  Database3,
-  DatabaseOff,
-  Lock3 as LockIcon,
-  LockOff,
-  Key3,
-  KeyOff,
-  Fingerprint3,
-  FingerprintOff,
-  Eye3,
-  EyeOff2,
-  Brain3,
-  BrainOff,
-  Cpu3,
-  CpuOff,
-  Memory2,
-  MemoryOff,
-  HardDrive2,
-  HardDriveOff,
-  Server3,
-  ServerOff,
-  Phone2,
-  PhoneOff,
-  Mail2,
-  MailOff,
-  Calendar2,
-  CalendarOff,
-  MessageSquare3,
-  MessageSquareOff,
-  UserPlus2 as UserPlusIcon,
-  UserCheck2 as UserCheckIcon,
-  UserX2 as UserXIcon,
-  UserMinus2 as UserMinusIcon,
-  UserEdit2 as UserEditIcon,
-  UserSearch2 as UserSearchIcon,
-  UserList2,
-  UserListOff,
-  UserSettings2,
-  UserSettingsOff,
-  UserCog2,
-  UserCogOff,
-  UserShield2,
-  UserShieldOff,
-  UserStar2,
-  UserStarOff,
-  UserHeart2,
-  UserHeartOff,
-  UserCheck3,
-  UserCheckOff,
-  UserX3,
-  UserXOff,
-  UserMinus3,
-  UserMinusOff,
-  UserPlus3,
-  UserPlusOff,
-  UserEdit3,
-  UserEditOff,
-  UserSearch3,
-  UserSearchOff,
+  Award,
+  MessageCircle,
+  Target,
+  Zap,
+  Brain,
+  Globe,
+  Rocket
 } from 'lucide-react';
-;
-const AICustomerSuccessPlatform = (...args: unknown[]): unknown => {
+
+export default function AICustomerSuccessPlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Customer Insights',
-      description:
-        'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks',
-    },
-    {
-      icon: MessageSquare,
-      title: 'Intelligent Communication Hub',
-      description:
-        'Automated, personalized communication workflows based on customer lifecycle stages',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description:
-        'Forecast customer health scores and identify expansion opportunities proactively',
+      title: "AI-Powered Customer Insights",
+      description: "Predict customer behavior, identify churn risks, and uncover upsell opportunities using machine learning"
     },
     {
       icon: Users,
-      title: '360° Customer View',
-      description:
-        'Comprehensive customer profiles with interaction history and preference analysis',
+      title: "360° Customer View",
+      description: "Comprehensive customer profiles with interaction history, preferences, and success metrics"
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast customer health scores and recommend proactive engagement strategies"
+    },
+    {
+      icon: MessageCircle,
+      title: "Automated Engagement",
+      description: "Intelligent workflows that trigger personalized communications at the right time"
     },
     {
       icon: Target,
-      title: 'Automated Success Playbooks',
-      description:
-        'AI-driven success strategies tailored to customer segments and use cases',
+      title: "Success Playbooks",
+      description: "AI-driven recommendations for customer onboarding, training, and expansion"
     },
     {
-      icon: Activity,
-      title: 'Real-time Health Monitoring',
-      description:
-        'Continuous monitoring of customer engagement and satisfaction metrics',
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Live monitoring of customer success metrics, health scores, and engagement activities"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$399",
+      period: "/month",
+      description: "Perfect for small teams managing up to 500 customers",
+      features: [
+        "Up to 500 customers",
+        "Basic AI insights",
+        "Email support",
+        "Standard integrations",
+        "5 team members",
+        "Basic reporting"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
+    {
+      name: "Professional",
+      price: "$899",
+      period: "/month",
+      description: "Ideal for growing businesses with 500-2000 customers",
+      features: [
+        "Up to 2,000 customers",
+        "Advanced AI analytics",
+        "Priority support",
+        "Custom integrations",
+        "Unlimited team members",
+        "Advanced reporting",
+        "Success playbooks"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$2,499",
+      period: "/month",
+      description: "For large organizations managing 2000+ customers",
+      features: [
+        "Unlimited customers",
+        "Custom AI models",
+        "24/7 dedicated support",
+        "White-label options",
+        "Advanced security features",
+        "Custom SLA guarantees",
+        "API access"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
   ];
 
   const benefits = [
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 35%',
-    'Automate 70% of routine customer success tasks',
-    'Improve customer satisfaction scores by 25%',
-    'Enable proactive issue resolution before escalation',
-    'Scale customer success operations efficiently',
+    {
+      icon: TrendingUp,
+      title: "Increase Retention",
+      description: "Reduce churn by up to 40% with proactive customer success management"
+    },
+    {
+      icon: Users,
+      title: "Improve Satisfaction",
+      description: "Boost NPS scores and customer lifetime value through personalized engagement"
+    },
+    {
+      icon: Clock,
+      title: "Save Time",
+      description: "Automate routine tasks and focus on strategic customer relationships"
+    },
+    {
+      icon: BarChart3,
+      title: "Data-Driven Decisions",
+      description: "Make informed decisions with comprehensive customer analytics and insights"
+    }
   ];
 
   const useCases = [
     {
-      industry: 'SaaS Companies',
-      description:
-        'Manage subscription renewals, feature adoption, and expansion opportunities',
+      title: "SaaS Customer Onboarding",
+      description: "Automate onboarding workflows, track progress, and ensure successful product adoption",
+      metrics: ["50% faster onboarding", "90% completion rate", "40% higher activation"]
     },
     {
-      industry: 'Enterprise Software',
-      description:
-        'Ensure successful implementation, user adoption, and ROI achievement',
+      title: "Enterprise Customer Success",
+      description: "Manage complex customer relationships with AI-powered insights and automated workflows",
+      metrics: ["60% increase in expansion revenue", "35% reduction in churn", "25% higher satisfaction"]
     },
     {
-      industry: 'E-commerce',
-      description:
-        'Personalize customer experiences and increase repeat purchase rates',
-    },
-    {
-      industry: 'Financial Services',
-      description:
-        'Monitor account health and provide proactive financial advisory',
-    },
+      title: "E-commerce Customer Retention",
+      description: "Personalize customer experiences and predict buying patterns for better retention",
+      metrics: ["45% increase in repeat purchases", "30% higher customer lifetime value", "50% reduction in cart abandonment"]
+    }
   ];
 
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$1,200/month',
-      features: [
-        'Up to 1,000 customers',
-        'Basic AI insights',
-        'Email automation',
-        'Customer health scoring',
-        'Basic reporting',
-        'Email support',
-      ],
-    },
-    {
-      plan: 'Professional',
-      price: '$2,500/month',
-      features: [
-        'Up to 10,000 customers',
-        'Advanced AI analytics',
-        'Multi-channel communication',
-        'Custom success playbooks',
-        'Advanced reporting',
-        'Priority support',
-        'API access',
-      ],
-    },
-    {
-      plan: 'Enterprise',
-      price: '$5,000/month',
-      features: [
-        'Unlimited customers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated success manager',
-        '24/7 phone support',
-        'Custom training',
-      ],
-    },
-  ];
-
-  const integrations = [
-    'Salesforce CRM',
-    'HubSpot',
-    'Zendesk',
-    'Intercom',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Slack',
-    'Zapier',
-    'Webhook APIs',
-  ];
-
-  return 
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+              <Heart className="w-4 h-4 mr-2" />
               AI-Powered Customer Success
             </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Customer Success with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}
-                AI Intelligence
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {" "}AI Intelligence
               </span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Leverage artificial intelligence to predict customer needs,
-              automate success workflows, and drive sustainable business growth
-              through proactive customer success management.
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Proactively manage customer relationships, predict churn risks, and drive expansion revenue with our AI-powered 
+              customer success platform. Increase retention by up to 40% while reducing manual work.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
-              >
-                <Settings className="w-5 h-5 mr-2" />
                 Start Free Trial
-              </motion.button>
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                <Play className="w-5 h-5 inline mr-2" />
+                Watch Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI-Driven Features
+              Powerful Features for Customer Success Teams
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with proven customer success
-              methodologies
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to proactively manage customer relationships and drive success
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Real-World Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See how AI-powered customer success transforms different industries
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center text-blue-400">
+                      <TrendingUp className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{metric}</span>
+                    </div>
+                  ))}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
@@ -439,69 +282,38 @@ const AICustomerSuccessPlatform = (...args: unknown[]): unknown => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
+              Why Choose AI Customer Success?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See real results with our AI-powered customer success platform
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Transform your customer success operations with intelligent automation
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map(benefit: unknown, index: unknown (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-zion-slate-light text-lg">{benefit}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for various industries and business models
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {useCase.industry}
-                </h3>
-                <p className="text-zion-slate-light">{useCase.description}</p>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -509,63 +321,73 @@ const AICustomerSuccessPlatform = (...args: unknown[]): unknown => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you
-              grow
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your customer success needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map(plan: unknown, index: unknown (
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-                  index === 1
-                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'
-                    : 'border-zion-slate-light/20'
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10' 
+                    : 'border-white/10'
                 }`}
               >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {plan.plan}
-                  </h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}
-                  </div>
-                  {index === 1 && (
-                    <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  )}
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-6">
+
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-center space-x-3"
-                    >
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
-                  Get Started
-                </button>
+
+                <Link
+                  to={plan.name === "Enterprise" ? "/contact" : "/signup"}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -608,99 +430,37 @@ const AICustomerSuccessPlatform = (...args: unknown[]): unknown => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Success?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Customer Success?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of companies using AI to drive customer success and
-              business growth
+            <p className="text-xl text-gray-300 mb-8">
+              Join hundreds of companies that have revolutionized their customer success with AI intelligence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
+                Get Started Today
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
                 Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Ready to discuss how AI can transform your customer success
-              strategy?
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-blue-400" />
-                <span className="text-zion-slate-light">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-blue-400" />
-                <span className="text-zion-slate-light">
-                  kleber@ziontechgroup.com
-                </span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-blue-400" />
-                <span className="text-zion-slate-light">
-                  364 E Main St STE 1008
-                  <br />
-                  Middletown DE 19709
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
-              >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
-              </a>
-              <a
-                href="https://ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
-              >
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Website
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-;
-export { AICustomerSuccessPlatform };
-export default AICustomerSuccessPlatform;
+}

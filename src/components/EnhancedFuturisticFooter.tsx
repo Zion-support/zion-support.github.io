@@ -126,12 +126,51 @@ import { motion } from 'framer - motion';
       icon: Brain,
       color: 'from-purple-600 to-indigo-600',
       links: [
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030', featured: true },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030', featured: true },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030', featured: true },
+        { name: 'Neural Interface Platform', href: '/revolutionary-services-2030#neural-interface', featured: true },
+        { name: 'Holographic Workspace Platform', href: '/revolutionary-services-2030#holographic-workspace', featured: true },
+        { name: 'BioDigital Twin Platform', href: '/revolutionary-services-2030#biodigital-twin', featured: true },
+        { name: 'Space Debris Tracking System', href: '/revolutionary-services-2030#space-debris-tracking', featured: true },
+        { name: 'AI Ethics Guardian Platform', href: '/revolutionary-services-2030#ai-ethics-guardian', featured: true },
+        { name: 'Metaverse Builder Platform', href: '/revolutionary-services-2030#metaverse-builder', featured: true }
+      ]
+    },
+    {
+      title: 'Innovative Services 2028',
+      featured: true,
+      links: [
+        { name: 'Innovative Services Showcase 2028', href: '/innovative-services-2028', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', featured: true },
+        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', featured: true },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true }
+      ]
+    },
+    {
+      title: 'AI & Analytics Services',
+      featured: true,
+      links: [
+        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Real Estate Analytics', href: '/services/ai-real-estate-analytics' },
-        { name: 'AI Logistics Optimization', href: '/services/ai-logistics-optimization' },
-        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' }
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]
     },
     {
@@ -377,36 +416,74 @@ import { motion } from 'framer - motion';
             ))}
           </div>
 
-          {/* Quick Links Section */}
-          <div className="mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-8">Quick Links</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <Link to="/comprehensive-services-showcase-2030" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Services 2030
-                </Link>
-                <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Pricing
-                </Link>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Contact
-                </Link>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  About
-                </Link>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Blog
-                </Link>
-                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  FAQ
-                </Link>
+        {/* Contact Information Footer */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
               </div>
-            </motion.div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MailIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-slate-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+                <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+                <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  ziontechgroup.com
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Explore our services online</p>
+              </div>
+            </div>
+            
+            {/* Additional Contact Methods */}
+            <div className="mt-12 pt-8 border-t border-slate-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Emergency Support</h4>
+                  <p className="text-sm text-slate-500">Critical issues: +1 302 464 0950</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Business Hours</h4>
+                  <p className="text-sm text-slate-500">Mon-Fri: 9AM-6PM EST</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Response Time</h4>
+                  <p className="text-sm text-slate-500">Urgent: 1 hour, Normal: 4 hours</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Global Support</h4>
+                  <p className="text-sm text-slate-500">24/7 availability worldwide</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Contact and social section */}
