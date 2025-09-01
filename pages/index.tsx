@@ -1668,7 +1668,7 @@ export default function HomePage() {
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
                   <li>• <a href="/README_ULTIMATE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
                   <li>• <a href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
-                  <li>• <a href="/README_COMPLETE_PM2_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
                   <li>• <a href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
                   <li>• <a href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
                 </ul>
