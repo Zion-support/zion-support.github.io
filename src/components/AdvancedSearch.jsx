@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;
+import { Search, Sparkles, Filter, TrendingUp, Clock, Star } from 'lucide-react';
+
+const mockSuggestions = [
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
@@ -20,10 +22,12 @@ export function AdvancedSearch() {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
-                setShowSuggestions(false)}
+                setShowSuggestions(false);
+            }
         };
         document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
     useEffect(() => {
         if (query.trim()) {
             const filtered = mockSuggestions
@@ -32,10 +36,11 @@ export function AdvancedSearch() {
                 .sort((a, b) => b.relevance - a.relevance)
                 .slice(0, 8);
             setSuggestions(filtered);
-            setShowSuggestions(true)}
-        else {
+            setShowSuggestions(true);
+        } else {
             setSuggestions([]);
-            setShowSuggestions(false)}
+            setShowSuggestions(false);
+        }
     }, [query]);
     const handleSuggestionClick = (suggestion) => {
         setQuery(suggestion.text);
@@ -45,16 +50,19 @@ export function AdvancedSearch() {
     const toggleFilter = (category) => {
         setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
-            [...prev, category])};
+            : [...prev, category]);
+    };
     const clearFilters = () => {
-        setSelectedFilters([])};
+        setSelectedFilters([]);
+    };
     const getSuggestionIcon = (type) => {
         switch (type) {
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;
-            default: return <Search className="w-4 h-4 text-zion-slate"/>}
+            default: return <Search className="w-4 h-4 text-zion-slate"/>;
+        }
     };
     const getSuggestionColor = (type) => {
         switch (type) {
@@ -62,7 +70,8 @@ export function AdvancedSearch() {
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
             case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
             case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
-            default: return 'bg-zion-slate/10 border-zion-slate/20'}
+            default: return 'bg-zion-slate/10 border-zion-slate/20';
+        }
     };
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
       {/* Search Input */}

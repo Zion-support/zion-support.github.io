@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react.ts';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint
@@ -115,7 +115,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
+        entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
             const fid = entry.processingStart - entry.startTime;
             setMetrics(prev => ({ ...prev, fid }));

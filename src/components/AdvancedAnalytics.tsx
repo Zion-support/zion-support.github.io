@@ -7,7 +7,6 @@ import {
   Eye, 
   MousePointer, 
   Clock, 
-  TrendingUp, 
   TrendingDown,
   Activity,
   Zap,
@@ -137,7 +136,7 @@ export function AdvancedAnalytics({
     };
 
     // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData);
+    sendAnalyticsData('pageview', pageViewData);
     
     // Update local state
     setAnalyticsData(prev => ({
@@ -177,15 +176,15 @@ export function AdvancedAnalytics({
     }
 
     // Send to analytics service
-    this.sendAnalyticsData('interaction', interactionData);
+    sendAnalyticsData('interaction', interactionData);
 
     // Update local state
     setAnalyticsData(prev => ({
       ...prev,
       interactions: {
         ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
+                [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s` as keyof typeof prev.interactions]:
+          (prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s` as keyof typeof prev.interactions] || 0) + 1
       }
     }));
   }, [enabled, userSession, currentPage]);
@@ -220,7 +219,7 @@ export function AdvancedAnalytics({
       }));
 
       // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData);
+      sendAnalyticsData('performance', performanceData);
     }
   }, [enabled, userSession]);
 
@@ -577,4 +576,4 @@ export function AdvancedAnalytics({
       </AnimatePresence>
     </>
   );
-}}}}}}}}}}}}}
+}

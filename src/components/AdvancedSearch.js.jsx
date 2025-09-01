@@ -46,9 +46,11 @@ export function AdvancedSearch() {
     const toggleFilter = (category) => {
         setSelectedFilters(prev => prev.includes(category)
             ? prev.filter(f => f !== category)
-            [...prev, category])};
+            : [...prev, category]);
+    };
     const clearFilters = () => {
-        setSelectedFilters([])};
+        setSelectedFilters([]);
+    };
     const getSuggestionIcon = (type) => {
         switch (type) {
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;

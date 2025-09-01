@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Globe,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Users, 
+  TrendingUp, 
+  Globe, 
+  Database, 
+  Shield, 
   Cpu,
-  Database,
-  ArrowRight,
+  Search,
   Star,
   CheckCircle,
   Rocket
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AIService {
@@ -29,8 +29,9 @@ interface AIService {
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
+}
 
-const AdvancedAIServicesHub: React.FC = () => {;
+const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
@@ -101,337 +102,207 @@ const AdvancedAIServicesHub: React.FC = () => {;
       icon: Shield,
       route: '/services/ai-cybersecurity',
       status: 'coming-soon'
-
+    }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Cpu },;
-    { id: 'project-management', name: 'Project Management', icon: Brain },;
-    { id: 'customer-support', name: 'Customer Support', icon: Users },;
-    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },;
-    { id: 'marketing', name: 'Marketing Automation', icon: Globe },;
-    { id: 'analytics', name: 'Data Analytics', icon: Database },;
-    { id: 'security', name: 'Cybersecurity', icon: Shield };
+    { id: 'all', name: 'All Services', icon: Cpu },
+    { id: 'project-management', name: 'Project Management', icon: Brain },
+    { id: 'customer-support', name: 'Customer Support', icon: Users },
+    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },
+    { id: 'marketing', name: 'Marketing Automation', icon: Globe },
+    { id: 'analytics', name: 'Data Analytics', icon: Database },
+    { id: 'security', name: 'Cybersecurity', icon: Shield }
   ];
 
-  const filteredServices = aiServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredServices = aiServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'name':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
         return a.name.localeCompare(b.name);
-      case 'price':;
+      case 'price':
         return a.pricing.starter - b.pricing.starter;
-      case 'popularity':;
+      case 'popularity':
         return b.status === 'active' ? 1 : -1;
       default:
         return 0;
-
+    }
   });
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'active': return 'bg-green-100 text-green-800';
+      case 'beta': return 'bg-yellow-100 text-yellow-800';
+      case 'coming-soon': return 'bg-blue-100 text-blue-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  };
+
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            AI Services Hub
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Advanced AI Services Hub
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover and integrate cutting-edge AI-powered micro SAAS solutions designed to transform your business operations
+            Discover cutting-edge AI-powered solutions designed to transform your business operations
           </p>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition={{ delay: 0.2 }}
-          className="mb-12"
-        >
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <input
-                type="text"
-                placeholder="Search AI services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search AI services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
             </div>
 
-            {/* Sort Options */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              <option value="popularity">Most Popular</option>
-              <option value="name">Name A-Z</option>
-              <option value="price">Price: Low to High</option>
-            </select>
-          </div>
-        </motion.div>
-
-        {/* Category Filters */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition={{ delay: 0.3 }}
-          className="mb-12"
-        >
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-purple-600 border-purple-500 text-white'
-                    : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20'
-                }`}
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <category.icon className="w-5 h-5" />
-                {category.name}
-              </button>
-            ))}
+                {categories.map(category => (
+                  <option key={category.id} value={category.id} className="bg-gray-800">
+                    {category.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
+                className="w-full px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="popularity" className="bg-gray-800">Popularity</option>
+                <option value="name" className="bg-gray-800">Name</option>
+                <option value="price" className="bg-gray-800">Price</option>
+              </select>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          {sortedServices.map((service) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-blue-500/20 rounded-lg">
+                    <service.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(service.status)}`}>
+                      {service.status}
+                    </span>
+                  </div>
+                </div>
+              </div>
 
+              {/* Description */}
+              <p className="text-gray-300 text-sm mb-4">{service.description}</p>
 
+              {/* Features */}
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-xs text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
+              {/* Pricing */}
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-300 mb-2">Starting Price</h4>
+                <div className="text-2xl font-bold text-green-400">
+                  {formatCurrency(service.pricing.starter)}
+                  <span className="text-sm text-gray-400 font-normal">/month</span>
+                </div>
+              </div>
 
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence>
-            {sortedServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                exit = {
-  { opacity: 0,
-  y: -20 
-
-
-
-
-
-
-}}
-                transition={{ delay: index * 0.1 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
+              {/* Action */}
+              <Link
+                to={service.route}
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center block"
               >
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    service.status === 'active' ? 'bg-green-500/20 text-green-400' :
-                    service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-gray-500/20 text-gray-400'
-                  }`}>
-                    {service.status === 'active' ? 'Active' : service.status === 'beta' ? 'Beta' : 'Coming Soon'}
-                  </span>
-                </div>
+                Learn More
+              </Link>
+            </motion.div>
+          ))}
+        </div>
 
-                {/* Service Icon */}
-                <div className="mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-
-                {/* Service Info */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-                  {service.name}
-                </h3>
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
-                  <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Pricing */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Starting at:</h4>
-                  <div className="text-2xl font-bold text-white">
-                    ${service.pricing.starter}
-                    <span className="text-sm text-gray-400 font-normal">/month</span>
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <Link
-                  to={service.route}
-                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
-                >
-                  Explore Service
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          transition={{ delay: 0.6 }}
-          className="text-center mt-20"
-        >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our AI-powered solutions are designed to streamline operations, boost productivity, and drive growth. 
-              Get started today and experience the future of business automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                <Rocket className="w-5 h-5" />
-                Get Started
-              </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
-                Schedule Demo;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
+        {/* Summary Stats */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">
+              {aiServices.length}
+            </div>
+            <div className="text-gray-300">Total Services</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">
+              {aiServices.filter(s => s.status === 'active').length}
+            </div>
+            <div className="text-gray-300">Active Services</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-yellow-400 mb-2">
+              {aiServices.filter(s => s.status === 'beta').length}
+            </div>
+            <div className="text-gray-300">Beta Services</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">
+              {aiServices.filter(s => s.status === 'coming-soon').length}
+            </div>
+            <div className="text-gray-300">Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default AdvancedAIServicesHub;}}}}}}
+export default AdvancedAIServicesHub;

@@ -6,8 +6,8 @@ const mockThreatIntelligence = [
         threatType: 'Ransomware Campaign',
         description: 'Active ransomware campaign targeting healthcare organizations in the region.',
         riskScore: 9.2,
-        affectedSystems['Windows Servers', 'File Shares', 'Backup Systems'],;
-        mitigationSteps['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],;
+        affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],
+        mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
         lastSeen: '2024-01-15T09:00:00.000Z',
         frequency: 15
     },
@@ -16,8 +16,8 @@ const mockThreatIntelligence = [
         threatType: 'Phishing Attack',
         description: 'Sophisticated phishing campaign using executive impersonation.',
         riskScore: 7.8,
-        affectedSystems['Email Systems', 'User Workstations'],;
-        mitigationSteps['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],;
+        affectedSystems: ['Email Systems', 'User Workstations'],
+        mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
     }
@@ -45,11 +45,13 @@ export function AdvancedSecurityDashboard() {
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false)};
+        setIsRefreshing(false);
+    };
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-            return () => clearInterval(interval)}
+            return () => clearInterval(interval);
+        }
     }, [autoRefresh]);
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -62,7 +64,8 @@ export function AdvancedSecurityDashboard() {
             case 'low':
                 return 'bg-blue-500 text-white';
             default:
-                return 'bg-gray-500 text-white'}
+                return 'bg-gray-500 text-white';
+        }
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -73,7 +76,8 @@ export function AdvancedSecurityDashboard() {
             case 'in_progress':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
-                return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
+                return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300';
+        }
     };
     const getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
@@ -82,7 +86,8 @@ export function AdvancedSecurityDashboard() {
             case 'medium':
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
+        }
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -91,7 +96,8 @@ export function AdvancedSecurityDashboard() {
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>}
+                return <Activity className="w-4 h-4 text-gray-500"/>;
+        }
     };
     const getEventIcon = (type) => {
         switch (type) {
