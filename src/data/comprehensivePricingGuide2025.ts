@@ -622,7 +622,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
     contactInfo
   }
 ];
-=======
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -1131,4 +1130,3 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ];
 
 export default comprehensivePricingGuide2025;
->>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2

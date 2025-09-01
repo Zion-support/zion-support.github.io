@@ -6,14 +6,11 @@ import {
   TrendingUp, Award, Clock, Heart, Lightbulb, Globe, Cpu,
   Database, Lock, Cloud, Settings, Eye, BookOpen, CheckCircle
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20f7
 
 // Import all service data
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
@@ -47,7 +44,6 @@ interface Service {
   reviews: number;
 }
 
-<<<<<<< HEAD
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const serviceCategories = [
     {
@@ -135,7 +131,6 @@ export default function Comprehensive-services-showcase-2025Page() {
         { name: "Manufacturing AI", href: "/manufacturing-ai-solutions" },
         { name: "Education Technology", href: "/education-technology-solutions" }
       ]
-=======
 const categories = [
   { id: 'all', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },
   { id: 'Micro SAAS', name: 'Micro SAAS', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
@@ -186,7 +181,6 @@ export default function ComprehensiveServicesShowcase2025() {
         return a.category.localeCompare(b.category);
       default:
         return 0;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20f7
     }
   ];
 
@@ -355,16 +349,14 @@ export default function ComprehensiveServicesShowcase2025() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<<< HEAD:pages.disabled/comprehensive-services-showcase-2025.tsx
+<:pages.disabled/comprehensive-services-showcase-2025.tsx
         <div className="flex justify-center mb-6">
         <div className="p-4 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full">
         <Star className="w-12 h-12 text-yellow-400" />
-========
-<<<<<<< HEAD
+=
               <div className="flex justify-center mb-6">
                 <div className="p-4 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full">
                   <Star className="w-12 h-12 text-yellow-400" />
-=======
               <option value="name">Sort by Name</option>
               <option value="price">Sort by Price</option>
               <option value="category">Sort by Category</option>
@@ -483,10 +475,8 @@ export default function ComprehensiveServicesShowcase2025() {
                       </span>
                     </button>
                   </Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-20f7
                 </div>
->>>>>>>> cursor/install-dependencies-with-lockfile-mismatch-a802:temp_components.disabled/comprehensive-services-showcase-2025.tsx.backup.1755992101
-              </div>
+>              </div>
               </div>
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
                 Comprehensive Services Showcase 2025

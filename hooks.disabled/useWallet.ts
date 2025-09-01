@@ -1,18 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 import { ethers, providers } from 'ethers';
 import { getChainById } from '../utils/chains';
-=======
->>>>>>> cursor/install-dependencies-with-lockfile-mismatch-a802
 
 export type WalletState = {
   account: string | null;
   chainId: number | null;
-<<<<<<< HEAD
   provider: providers.Web3Provider | null;
-=======
   provider: any | null;
->>>>>>> cursor/install-dependencies-with-lockfile-mismatch-a802
 };
 
 declare global {
@@ -33,14 +27,12 @@ export function useWallet() {
       if (!window.ethereum) {
         throw new Error('No EIP-1193 wallet found. Please install MetaMask or a compatible wallet.');
       }
-<<<<<<< HEAD
       const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
       await provider.send('eth_requestAccounts', []);
       const signer = provider.getSigner();
       const account = await signer.getAddress();
       const network = await provider.getNetwork();
       setState({ account, chainId: Number(network.chainId), provider });
-=======
       // Simplified wallet connection without ethers
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
       const chainId = await window.ethereum.request({ method: 'eth_chainId' });
@@ -50,7 +42,6 @@ export function useWallet() {
         chainId: parseInt(chainId, 16), 
         provider: window.ethereum 
       });
->>>>>>> cursor/install-dependencies-with-lockfile-mismatch-a802
 
       window.ethereum.on('accountsChanged', (accounts: string[]) => {
         setState((prev) => ({ ...prev, account: accounts[0] ?? null }));
@@ -68,7 +59,6 @@ export function useWallet() {
 
   const switchNetwork = useCallback(
     async (targetChainId: number) => {
-<<<<<<< HEAD
       if (!state.provider) return;
       const hexChainId = '0x' + targetChainId.toString(16);
       try {
@@ -95,7 +85,6 @@ export function useWallet() {
   );
 
   return { ...state, connecting, error, connect, switchNetwork };
-=======
       if (!window.ethereum) {
         setError('No wallet found');
         return;
@@ -128,5 +117,4 @@ export function useWallet() {
     disconnect,
     switchNetwork,
   };
->>>>>>> cursor/install-dependencies-with-lockfile-mismatch-a802
 }

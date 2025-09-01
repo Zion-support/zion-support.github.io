@@ -9,17 +9,11 @@ function toCamelCase(str) {
         '3': 'Three',
         '2': 'Two',
         '1': 'One',
-  <<<<<<< HEAD
-        '0': 'Zero'
-      
+          '0': 'Zero'
 
 };
       return numberWords[match] || match})
   '0': 'Zero'
-      
-
-
-
 
 };
       return numberWords[match] || match;
@@ -73,7 +67,6 @@ function fixFile(filePath) {
   } catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-
 
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);

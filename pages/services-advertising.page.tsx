@@ -15,11 +15,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   website: 'https://ziontechgroup.com';
   ;
 
-
-
-
-
-
 };
   const benefits = [
     '1000% ROI target with measurable KPIs',
@@ -135,8 +130,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     };
   ];
   const external = {
-  <<<<<<< HEAD
-    privacy[
+      privacy[
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
 
@@ -144,9 +138,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   privacy: [
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
-
-
-
 
 },
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }

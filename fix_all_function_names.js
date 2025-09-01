@@ -15,12 +15,9 @@ function fileName = path.basename(filePath, path.extname(filePath));
           2: "Two",
           1: "One",
           0: "Zero",
-  <<<<<<< HEAD
-        
 
 };
         return numberWords[digit] || `_${digit}`});
-  
 
 };
         return numberWords[digit] || `_${digit}`;
@@ -61,7 +58,6 @@ function fileName = path.basename(filePath, path.extname(filePath));
       );
     // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-
 
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {

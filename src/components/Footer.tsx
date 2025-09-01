@@ -69,7 +69,6 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {
@@ -174,8 +173,6 @@ export function Footer() {
       behavior: 'smooth'
     });
   };
-
-
 
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">

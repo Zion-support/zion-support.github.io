@@ -26,7 +26,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
     refreshToken: null
   });
 
-  useEffect(()  => {
+  useEffect(() => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {;

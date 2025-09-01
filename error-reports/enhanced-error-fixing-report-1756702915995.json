@@ -1,0 +1,112 @@
+{
+  "timestamp": "2025-09-01T05:01:55.995Z",
+  "duration": "5296ms",
+  "fixesApplied": [
+    {
+      "type": "eslint_config",
+      "file": ".eslintrc.js",
+      "description": "Backed up old ESLint config to prevent conflicts"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "components.disabled/layout/EnhancedLayout.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "data/missing-slugs.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix_all_function_names.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix-variable-names.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "hooks.disabled/useWallet.ts",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "netlify/functions/link-health-scheduler.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "out/automation/content-registry.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "out/automation/new-content-registry.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "out/reports/page-validation/latest.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages.disabled/comprehensive-services-showcase-2025.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages/services-advertising.page.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/manifest.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/reports/page-validation/latest.json",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/sw.js",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/components/Footer.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/data/comprehensivePricingGuide2025.ts",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/services/Cybersecurity.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/ServicesComparisonPage.tsx",
+      "description": "Removed merge conflict markers"
+    },
+    {
+      "type": "typescript_config",
+      "file": "tsconfig.json",
+      "description": "Updated TypeScript compiler options"
+    }
+  ],
+  "errorsFound": [],
+  "summary": {
+    "totalFixes": 20,
+    "totalErrors": 0,
+    "success": true
+  }
+}

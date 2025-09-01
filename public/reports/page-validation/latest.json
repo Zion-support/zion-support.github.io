@@ -1,7 +1,6 @@
 {
   "summary": {
 
-
     "totalFiles": 4,
     "filesWithIssues": 4,
     "totalIssues": 0,
@@ -12,7 +11,6 @@
   "results": [
     {
       "file": "pages/api/email-validator.ts",
-
 
       "issues": [],
               "warnings": [
@@ -34,16 +32,13 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
 
-
           "line": 81,
-
 
           "severity": "warning"
         }
       ]
     },
     {
-
 
       "file": "pages/api/password-strength.ts",
 
@@ -64,7 +59,6 @@
 
       "file": "pages/api/text-analyzer.ts",
 
-
       "issues": [],
               "warnings": [
         {
@@ -72,9 +66,7 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
 
-
           "line": 71,
-
 
           "severity": "warning"
         }
@@ -82,9 +74,7 @@
     },
     {
 
-
       "file": "pages/api/url-shortener.ts",
-
 
       "issues": [],
               "warnings": [
@@ -93,9 +83,7 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
 
-
           "line": 31,
-
 
           "severity": "warning"
         }
@@ -103,12 +91,9 @@
     }
   ],
 
-
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T19:21:03.555Z"
-=======
   "generatedAt": "2025-08-20T20:44:48.331Z"
-
 
 }
