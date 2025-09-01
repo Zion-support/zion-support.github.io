@@ -1,12 +1,12 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { Heart  } from 'lucide-react';
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 
-  itemId: string;'
+  itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
-'
+
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
 
@@ -38,18 +38,18 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
         isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
-      } ${className}`}'
+      } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
-'
+
           isFavorited ? 'fill-current' : ''`
         }`}
       />
     </button>
   )};`
-className: {`w-4 h-4 transition-all duration-300 ${;'
+className: {`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';`
         }`} ;
       />;

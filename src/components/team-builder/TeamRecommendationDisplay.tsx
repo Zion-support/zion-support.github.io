@@ -1,8 +1,8 @@
 import React from 'react';
 import { TeamRecommendation, ProjectBrief  } from '@/types';
-import { RoleCard  } from "./RoleCard";'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';'
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';'
+import { RoleCard  } from "./RoleCard";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
 import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react'; // Target changed to Bullseye"
 import { BudgetStatusDisplay  } from "./BudgetStatusDisplay"; // New import
 
@@ -24,7 +24,7 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
       <Alert className="border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">"
         <CheckCircle className="h-5 w-5 text-green-500" />"
         <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
-        <AlertDescription>'
+        <AlertDescription>
           Here's the AI-powered team structure based on your project brief. Review the roles and suggested talent.
         </AlertDescription>
       </Alert>
@@ -45,7 +45,7 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
             <InfoCard title="Estimated Timeline" icon={<Calendar className="h-5 w-5" />} value={projectBrief.timeline} />"
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5" />} value={projectBrief.budget} />
             <InfoCard"
-              title="Est. Total Project Cost""
+              title="Est. Total Project Cost"
               icon={<TrendingUp className="h-5 w-5" />}
               value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
             />

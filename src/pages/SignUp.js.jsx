@@ -1,15 +1,15 @@
-import { useState } from 'react';'
-import { useNavigate } from 'react-router-dom';'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export default function SignUp() {
-'
-  const [email, setEmail] = useState('');'
+
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const handleSubmit = async e => {
 
-    e.preventDefault();'
-    await axios.post('/auth/register', { email, password });'
+    e.preventDefault();
+    await axios.post('/auth/register', { email, password });
     router('/marketplace');
   };
   return()
@@ -18,14 +18,14 @@ export default function SignUp() {
         type="email"
         value={email}
         onChange={e => setEmail(e.target.value)}"
-        placeholder="Email""
+        placeholder="Email"
         className="border px-2 py-1 w-full"
       />
       <input"
         type="password"
         value={password}
         onChange={e => setPassword(e.target.value)}"
-        placeholder="Password""
+        placeholder="Password"
         className="border px-2 py-1 w-full"
       />"
       <button type="submit" className="bg-blue-500 text-white px-4 py-2">

@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { TrendingUp, 
   Brain, 
@@ -29,91 +29,91 @@ export default function AIFinancialTradingPlatform(...args: []):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Market Analysis','
+      icon: Brain,
+      title: 'AI-Powered Market Analysis',
       description: 'Advanced machine learning algorithms analyze market patterns and predict price movements with high accuracy'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Automated Trading Strategies','
+      icon: TrendingUp,
+      title: 'Automated Trading Strategies',
       description: 'Intelligent bots execute trades based on AI insights and predefined risk parameters'
     },
     {
 
-      icon: BarChart3,'
-      title: 'Real-Time Portfolio Optimization','
+      icon: BarChart3,
+      title: 'Real-Time Portfolio Optimization',
       description: 'AI continuously rebalances portfolios to maximize returns while minimizing risk'
     },
     {
 
-      icon: Shield,'
-      title: 'Risk Management','
+      icon: Shield,
+      title: 'Risk Management',
       description: 'Advanced risk assessment and automated stop-loss mechanisms protect your investments'
     },
     {
 
-      icon: Zap,'
-      title: 'High-Frequency Trading','
+      icon: Zap,
+      title: 'High-Frequency Trading',
       description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies';
     },;
     {;
-      icon: Eye,;'
-      title: 'Market Sentiment Analysis',;'
+      icon: Eye,;
+      title: 'Market Sentiment Analysis',;
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment';
     };
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$199','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
       description: 'Perfect for individual investors',
       features: ['
-        'Basic AI trading signals','
-        'Portfolio tracking','
-        'Risk management tools','
-        'Mobile app access','
-        'Email support','
-        'Basic market analysis','
+        'Basic AI trading signals',
+        'Portfolio tracking',
+        'Risk management tools',
+        'Mobile app access',
+        'Email support',
+        'Basic market analysis',
         'Up to $50K portfolio'
       ],
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for active traders',
       features: ['
-        'Advanced AI algorithms','
-        'Automated trading','
-        'Real-time optimization','
-        'Advanced analytics','
-        'Priority support','
-        'API access','
-        'Up to $500K portfolio','
+        'Advanced AI algorithms',
+        'Automated trading',
+        'Real-time optimization',
+        'Advanced analytics',
+        'Priority support',
+        'API access',
+        'Up to $500K portfolio',
         'Custom strategies'
       ],
       popular: true
     },
     {
-'
-      name: 'Institutional','
-      price: '$1,999','
-      period: '/month','
+
+      name: 'Institutional',
+      price: '$1,999',
+      period: '/month',
       description: 'For hedge funds and institutions',
       features: ['
-        'Full AI suite','
-        'Custom AI models','
-        'White-label solutions','
-        'Dedicated support','
-        'Advanced compliance',;'
-        'Unlimited portfolio size',;'
-        'On-premise options',;'
+        'Full AI suite',
+        'Custom AI models',
+        'White-label solutions',
+        'Dedicated support',
+        'Advanced compliance',;
+        'Unlimited portfolio size',;
+        'On-premise options',;
         'SLA guarantees';
       ],;
       popular: false;
@@ -123,66 +123,66 @@ export default function AIFinancialTradingPlatform(...args: []):  {
   const benefits = [
     {
 
-      icon: TrendingUp,'
-      title: '25% Higher Returns','
+      icon: TrendingUp,
+      title: '25% Higher Returns',
       description: 'AI algorithms consistently outperform traditional trading strategies'
     },
     {
 
-      icon: Clock,'
-      title: '24/7 Trading','
+      icon: Clock,
+      title: '24/7 Trading',
       description: 'Automated systems trade around the clock across global markets'
     },
     {
 
-      icon: Target,'
-      title: 'Risk-Adjusted Returns','
+      icon: Target,
+      title: 'Risk-Adjusted Returns',
       description: 'AI optimizes for the best risk-reward ratio in  market condition';
     },;
     {;
-      icon: BarChart3,;'
-      title: 'Emotion-Free Trading',;'
+      icon: BarChart3,;
+      title: 'Emotion-Free Trading',;
       description: 'Eliminate human bias and emotional decision-making from your trades';
     };
   ];
 
   const tradingMarkets = [
     {
-'
-      title: 'Stocks & ETFs','
+
+      title: 'Stocks & ETFs',
       description: 'AI-powered analysis of individual stocks, sectors, and market indices',
       icon: TrendingUp
     },
     {
-'
-      title: 'Cryptocurrency','
+
+      title: 'Cryptocurrency',
       description: 'Advanced algorithms for Bitcoin, Ethereum, and altcoin trading',
       icon: DollarSign
     },
     {
-'
-      title: 'Forex Trading','
+
+      title: 'Forex Trading',
       description: 'Real-time currency pair analysis and automated forex strategies',
       icon: Globe;
     },;
-    {;'
-      title: 'Commodities',;'
+    {;
+      title: 'Commodities',;
       description: 'AI-driven insights for gold, oil, and other commodity markets',;
       icon: BarChart3;
     };
   ];
 
-  const performanceMetrics = [;'
-    { metric: '95%', label: 'Win Rate' },;'
-    { metric: '2.5x', label: 'Sharpe Ratio' },;'
-    { metric: '15%', label: 'Max Drawdown' },;'
+  const performanceMetrics = [;
+    { metric: '95%', label: 'Win Rate' },;
+    { metric: '2.5x', label: 'Sharpe Ratio' },;
+    { metric: '15%', label: 'Max Drawdown' },;
     { metric: '24/7', label: 'Uptime' };
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Financial Trading Platform - Zion Tech Group""
+        title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
       />
 

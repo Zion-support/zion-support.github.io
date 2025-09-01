@@ -6,19 +6,19 @@ import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, Ey
 
 
     {
-'
-        id: '1','
-        title: 'React Hook for API Calls','
-        description: 'Custom hook for managing API calls with loading states and error handling','
-        language: 'typescript','
+
+        id: '1',
+        title: 'React Hook for API Calls',
+        description: 'Custom hook for managing API calls with loading states and error handling',
+        language: 'typescript',
         code: `import { useState, useEffect } from 'react';
 
 interface UseApiOptions<T> {
 
-  url: string;'
+  url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?;headers?: Record<string, string>}
-'
+
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
 
   const [data, setData] = useState<T | null>(null);
@@ -34,7 +34,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
         method,
         headers: {
-'
+
           'Content-Type': 'application/json',
           ...headers},
         body: body ? JSON.stringify(body) : null});
@@ -45,31 +45,31 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
       const result = await response.json();
       setData(result)} catch (err) {
-'
+
       setError(err instanceof Error ? err.message : 'An error occurred')} finally {
 
       setLoading(false)}
   };
 
   useEffect(() => {
-'
+
     if (method === 'GET') {
 
       execute()}
   }, [url]);
 `
-  return { data, loading, error, execute }}`,'
-        tags['react', 'hooks', 'api', 'typescript'],;'
+  return { data, loading, error, execute }}`,
+        tags['react',hooks',api',typescript'],;
         complexity: 'medium',
         rating: 4.8,
-        usageCount: 1250,'
+        usageCount: 1250,
         createdAt: '2024-01-15'
     },
     {
-'
-        id: '2','
-        title: 'Tailwind CSS Animation Utilities','
-        description: 'Custom Tailwind utilities for advanced animations and transitions','
+
+        id: '2',
+        title: 'Tailwind CSS Animation Utilities',
+        description: 'Custom Tailwind utilities for advanced animations and transitions',
         language: 'css',`
         code: `@layer utilities {
 
@@ -108,18 +108,18 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}`
-}`,'
-        tags['css', 'tailwind', 'animations', 'utilities'],;'
+}`,
+        tags['css',tailwind',animations',utilities'],;
         complexity: 'low',
         rating: 4.6,
-        usageCount: 890,'
+        usageCount: 890,
         createdAt: '2024-01-10'
     },
     {
-'
-        id: '3','
-        title: 'Advanced Form Validation','
-        description: 'Comprehensive form validation with custom rules and error handling','
+
+        id: '3',
+        title: 'Advanced Form Validation',
+        description: 'Comprehensive form validation with custom rules and error handling',
         language: 'javascript',`
         code: `class FormValidator {
   constructor(form, options = { /* empty */ }) {
@@ -166,10 +166,10 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     const errors = this.errors.get (field) || [];
 
     if (errors.length > 0) {
-'
+
       fieldElement.classList.add('error');
       this.showFieldErrors(field, errors)} else {
-'
+
       fieldElement.classList.remove('error');
       this.hideFieldErrors(field)}
   }
@@ -184,7 +184,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   init () {
     if (this.options.validateOnBlur) {
-'
+
       this.form.addEventListener('blur', (e) => {
 
         if (e.target.name) {
@@ -193,7 +193,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       }, true)}
 
     if (this.options.validateOnSubmit) {
-'
+
       this.form.addEventListener('submit', (e) => {
 
         if (!this.validateForm()) {
@@ -201,19 +201,19 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
           e.preventDefault()}
       })}
   }`
-}`,'
-        tags['javascript', 'forms', 'validation', 'class'],;'
+}`,
+        tags['javascript',forms',validation',class'],;
         complexity: 'high',
         rating: 4.9,
-        usageCount: 2100,'
+        usageCount: 2100,
         createdAt: '2024-01-08'
 
 ];
 const mockAIGenerations = [
     {
-'
-        id: '1','
-        prompt: 'Create a React hook for managing local storage with TypeScript','`
+
+        id: '1',
+        prompt: 'Create a React hook for managing local storage with TypeScript',`
         generatedCode: `import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
@@ -242,26 +242,26 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       // console.error(\`Error setting localStorage key "\${key}":\`, error)}
   };
 `
-  return [storedValue, setValue] as const}`,'
+  return [storedValue, setValue] as const}`,
         language: 'typescript',
         confidence: 0.94,
-        alternatives[;'
-            'Alternative 1: With error boundaries','
-            'Alternative 2: With event listeners','
+        alternatives[;
+            'Alternative 1: With error boundaries',
+            'Alternative 2: With event listeners',
             'Alternative 3: With custom serializer'
-        ],;'
+        ],;
         timestamp: '2024-01-15T11:45:00Z'
 
 ];
 export function AdvancedAICodeGenerator() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);'
-    const [activeTab, setActiveTab] = useState('generator');'
-    const [selectedLanguage, setSelectedLanguage] = useState('all');'
-    const [selectedComplexity, setSelectedComplexity] = useState('all');'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [aiPrompt, setAiPrompt] = useState('');'
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [activeTab, setActiveTab] = useState('generator');
+    const [selectedLanguage, setSelectedLanguage] = useState('all');
+    const [selectedComplexity, setSelectedComplexity] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [aiPrompt, setAiPrompt] = useState('');
     const [generatedCode, setGeneratedCode] = useState('');
     const [isGenerating, setIsGenerating] = useState(false);
     const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets);
@@ -272,18 +272,18 @@ export function AdvancedAICodeGenerator() {
     const getComplexityColor = (complexity) => {
 
         switch (complexity) {
-'
-            case 'low': return 'text-green-500';'
-            case 'medium': return 'text-yellow-500';'
-            case 'high': return 'text-red-500';'
+
+            case 'low': return 'text-green-500';
+            case 'medium': return 'text-yellow-500';
+            case 'high': return 'text-red-500';
             default: return 'text-gray-500'}
     };
     const getQualityColor = (score) => {
 
-        if (score >= 90)'
+        if (score >= 90)
             return 'text-green-500';
-        if (score >= 80)'
-            return 'text-yellow-500';'
+        if (score >= 80)
+            return 'text-yellow-500';
         return 'text-red-500'};
     const generateCode = async () => {
         if (!aiPrompt.trim () ) return;
@@ -302,12 +302,12 @@ export function AdvancedAICodeGenerator() {
 
 
 "`
-}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,'
+}\n\nfunction example() {\n  // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
-                alternatives[;'
-                    'Alternative 1: Functional approach','
-                    'Alternative 2: Class-based approach','
+                alternatives[;
+                    'Alternative 1: Functional approach',
+                    'Alternative 2: Class-based approach',
                     'Alternative 3: Async/await pattern'
                 ],;
                 timestamp: new Date () .toISOString () };

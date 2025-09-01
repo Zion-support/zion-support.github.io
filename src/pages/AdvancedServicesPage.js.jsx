@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import {
 
   ADVANCED_SERVICES,
-  SERVICE_CATEGORIES,'
-  PRICING_TIERS} from '@/data/advancedServices';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+  SERVICE_CATEGORIES,
+  PRICING_TIERS} from '@/data/advancedServices';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
+  CardHeader,
   CardTitle} from '@/components/ui/card';
 import {
 
@@ -27,13 +27,13 @@ import {
   CheckCircle,
   Phone,
   Mail,
-  MapPin,'
-  ExternalLink} from 'lucide-react';'
+  MapPin,
+  ExternalLink} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function AdvancedServicesPage() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   // Filter services based on search and category
   const filteredServices = ADVANCED_SERVICES.filter(service => {
@@ -46,13 +46,13 @@ export default function AdvancedServicesPage() {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'price-low':
-        return (a.price || 0) - (b.price || 0);'
+        return (a.price || 0) - (b.price || 0);
       case 'price-high':
-        return (b.price || 0) - (a.price || 0);'
+        return (b.price || 0) - (a.price || 0);
       case 'rating':
-        return (b.rating || 0) - (a.rating || 0);'
+        return (b.rating || 0) - (a.rating || 0);
       case 'ai-score':
         return (b.aiScore || 0) - (a.aiScore || 0);
       default:
@@ -65,9 +65,9 @@ export default function AdvancedServicesPage() {
   return()
     <div className="min-h-screen bg-background">
       <SEO"
-        title="Advanced AI & IT Services - Zion Tech Group""
-        description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation.""
-        keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation""
+        title="Advanced AI & IT Services - Zion Tech Group"
+        description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."
+        keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"
         canonical="https://ziontechgroup.com/advanced-services"
       />
 
@@ -101,14 +101,14 @@ export default function AdvancedServicesPage() {
 "
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold"
             >
               Get Free Consultation
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
             >
               View Pricing
@@ -188,7 +188,7 @@ export default function AdvancedServicesPage() {
                 </CardHeader>"
                 <CardContent className="text-center">
                   <Badge"
-                    variant="secondary""
+                    variant="secondary"
                     className="bg-zion-cyan text-zion-blue"
                   >
                     {category.count} Services
@@ -235,7 +235,7 @@ export default function AdvancedServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {PRICING_TIERS.map((tier, index) => (
               <Card
-                key={tier.name}'
+                key={tier.name}
                 className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}
               >"
                 <CardHeader className="text-center">"
@@ -347,15 +347,15 @@ export default function AdvancedServicesPage() {
 "
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold"
             >"
               <Phone className="w-5 h-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
             >"
               <Mail className="w-5 h-5 mr-2" />
@@ -367,9 +367,9 @@ export default function AdvancedServicesPage() {
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>"
             <p className="mt-2">
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1"
               >"
                 ziontechgroup.com <ExternalLink className="w-4 h-4" />
@@ -424,7 +424,7 @@ function ServiceCard({ service }) {
           {service.tags.slice(0, 3).map((tag, index) => (
             <Badge
               key={index}"
-              variant="secondary""
+              variant="secondary"
               className="bg-zion-blue-light text-zion-blue text-xs"
             >
               {tag}
@@ -468,7 +468,7 @@ function ServiceCard({ service }) {
             Get Quote
           </Button>
           <Button"
-            variant="outline""
+            variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
           >
             Learn More

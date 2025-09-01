@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Workflow, 
   Brain, 
@@ -602,7 +602,7 @@ const AIWorkflowOrchestrator = (...args: unknown[]): unknown => {
                       plan.popular'
                         ? 'bg-blue-600 text-white hover:bg-blue-700''
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'`
-                    }`}>'
+                    }`}>
                       {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                     </button>
                   </motion.div>

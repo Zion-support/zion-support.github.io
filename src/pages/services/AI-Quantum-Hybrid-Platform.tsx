@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -33,11 +33,11 @@ import {
   ShieldCheck,
   Bot,
   Workflow,
-  Eye,'
+  Eye,
   Sparkles} from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,37 +48,37 @@ const AIQuantumHybridPlatform: React.FC = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Quantum Neural Networks',
       description:'
         'Hybrid quantum-classical neural networks for superior pattern recognition and optimization'},
     {
 
-      icon: Atom,'
+      icon: Atom,
       title: 'Quantum Algorithm Optimization',
       description:'
         'Advanced quantum algorithms for complex computational problems and simulations'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Real-time Quantum Processing',
       description:'
         'Instant quantum computations with classical AI integration for real-world applications'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Quantum-Safe Security',
       description:'
         'Post-quantum cryptography and quantum-resistant security protocols'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Quantum Analytics',
       description:'
         'Quantum-enhanced data analysis and predictive modeling capabilities'},
     {
 
-      icon: Cpu,'
+      icon: Cpu,
       title: 'Hybrid Computing',
       description:'
         'Seamless integration between quantum and classical computing resources'},
@@ -86,118 +86,118 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
   const useCases = [
     {
-'
+
       industry: 'Financial Services',
       applications: ['
-        'Portfolio Optimization','
-        'Risk Assessment','
-        'Algorithmic Trading','
+        'Portfolio Optimization',
+        'Risk Assessment',
+        'Algorithmic Trading',
         'Fraud Detection',
       ]},
     {
-'
+
       industry: 'Healthcare',
       applications: ['
-        'Drug Discovery','
-        'Protein Folding','
-        'Medical Imaging','
+        'Drug Discovery',
+        'Protein Folding',
+        'Medical Imaging',
         'Genomic Analysis',
       ]},
     {
-'
+
       industry: 'Manufacturing',
       applications: ['
-        'Supply Chain Optimization','
-        'Quality Control','
-        'Predictive Maintenance','
+        'Supply Chain Optimization',
+        'Quality Control',
+        'Predictive Maintenance',
         'Resource Planning',
       ]},
     {
-'
+
       industry: 'Logistics',
       applications: ['
-        'Route Optimization','
-        'Fleet Management','
-        'Inventory Management','
+        'Route Optimization',
+        'Fleet Management',
+        'Inventory Management',
         'Demand Forecasting',
       ]},
   ];
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      price: '$5,000','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$5,000',
+      period: '/month',
       description: 'Perfect for research institutions and small enterprises',
       features: ['
-        'Quantum Computing Access (10 hours/month)','
-        'AI Model Training','
-        'Basic Security Protocols','
-        'Email Support','
+        'Quantum Computing Access (10 hours/month),
+        'AI Model Training',
+        'Basic Security Protocols',
+        'Email Support',
         'Standard Documentation',
-      ],'
-      marketPrice: '$6,500','
+      ],
+      marketPrice: '$6,500',
       savings: '23%',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$12,000','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$12,000',
+      period: '/month',
       description: 'Ideal for growing businesses and research teams',
       features: ['
-        'Quantum Computing Access (50 hours/month)','
-        'Advanced AI Models','
-        'Enhanced Security Features','
-        'Priority Support','
-        'Custom Integration','
+        'Quantum Computing Access (50 hours/month),
+        'Advanced AI Models',
+        'Enhanced Security Features',
+        'Priority Support',
+        'Custom Integration',
         'Performance Analytics',
-      ],'
-      marketPrice: '$15,000','
+      ],
+      marketPrice: '$15,000',
       savings: '20%',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$25,000','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$25,000',
+      period: '/month',
       description: 'For large enterprises requiring maximum performance',
       features: ['
-        'Unlimited Quantum Computing Access','
-        'Custom AI Model Development','
-        'Advanced Security & Compliance','
-        '24/7 Dedicated Support','
-        'Custom Infrastructure','
-        'White-label Solutions','
+        'Unlimited Quantum Computing Access',
+        'Custom AI Model Development',
+        'Advanced Security & Compliance',
+        '24/7 Dedicated Support',
+        'Custom Infrastructure',
+        'White-label Solutions',
         'Training & Certification',
-      ],'
-      marketPrice: '$32,000','
+      ],
+      marketPrice: '$32,000',
       savings: '22%',
       popular: false},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Unprecedented Performance',
       description:'
         'Combine quantum computing power with AI intelligence for 1000x faster computations',
       icon: Rocket},
     {
-'
+
       title: 'Future-Proof Technology',
       description:'
         'Stay ahead with quantum-safe security and next-generation computing capabilities',
       icon: Star},
     {
-'
+
       title: 'Cost Optimization',
       description:'
         'Reduce computational costs by 60% through quantum-classical hybrid optimization',
       icon: TrendingUp},
     {
-'
+
       title: 'Competitive Advantage',
       description:'
         'Gain market leadership with cutting-edge quantum-AI capabilities',
@@ -222,7 +222,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Quantum Hybrid Platform
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               The world's first integrated platform combining artificial
               intelligence with quantum computing, delivering unprecedented
               computational power and intelligence for the most complex
@@ -237,14 +237,14 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >"
               <Rocket className="w-5 h-5 mr-2" />
               Start Your Quantum Journey
             </Link>
             <Link"
-              to="#demo""
+              to="#demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
             >"
               <Eye className="w-5 h-5 mr-2" />
@@ -523,14 +523,14 @@ const AIQuantumHybridPlatform: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Rocket className="w-5 h-5 mr-2" />
                 Schedule a Demo
               </Link>
               <Link"
-                to="https://ziontechgroup.com""
+                to="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
               >"
                 <Globe className="w-5 h-5 mr-2" />

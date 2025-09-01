@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';
 
 interface Service {
@@ -180,7 +180,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               </ul>
 
               <Link'`
-                to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}"
+                to={`/services/${service.category.toLowerCase().replace(/\s+/g,-')}`}"
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"`
                 aria-label={`Learn more about ${service.category} services`}
 

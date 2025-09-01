@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -106,99 +106,99 @@ import {
   FileText,
   Video,
   Truck,;
-  Briefcase;'
-} from 'lucide-react';'
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';'
-import SEO from '@/components/SEO';'
-import { Button } from '@/components/ui/button';'
+  Briefcase;
+} from 'lucide-react';
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 // Sample data for demonstration;
 const MICRO_SAAS_SERVICES = [
   {
-'
-    id: 'micro-crm','
-    title: 'Micro CRM','
-    description: 'Lightweight customer relationship management for small businesses','
-    category: 'Business Tools','
-    subcategory: 'CRM','
+
+    id: 'micro-crm',
+    title: 'Micro CRM',
+    description: 'Lightweight customer relationship management for small businesses',
+    category: 'Business Tools',
+    subcategory: 'CRM',
     pricingModel: 'monthly',
     price: 29,
     rating: 4.8,
     reviewCount: 156,
     aiScore: 95,
-    featured: true,'
-    createdAt: '2024-01-15','
-    href: '/services/micro-crm','
-    tags: ['CRM', 'Business', 'Automation'],'
+    featured: true,
+    createdAt: '2024-01-15',
+    href: '/services/micro-crm',
+    tags: ['CRM',Business',Automation'],
     images: ['/images/micro-crm.jpg']
   },
   {
-'
-    id: 'helpdesk-platform','
-    title: 'Helpdesk Platform','
-    description: 'Streamlined customer support and ticket management system','
-    category: 'Customer Support','
-    subcategory: 'Helpdesk','
+
+    id: 'helpdesk-platform',
+    title: 'Helpdesk Platform',
+    description: 'Streamlined customer support and ticket management system',
+    category: 'Customer Support',
+    subcategory: 'Helpdesk',
     pricingModel: 'monthly',
     price: 39,
     rating: 4.7,
     reviewCount: 89,
     aiScore: 92,
-    featured: false,'
-    createdAt: '2024-02-01','
-    href: '/services/helpdesk-platform','
-    tags: ['Support', 'Helpdesk', 'Customer Service'],'
+    featured: false,
+    createdAt: '2024-02-01',
+    href: '/services/helpdesk-platform',
+    tags: ['Support',Helpdesk',Customer Service'],
     images: ['/images/helpdesk.jpg']
   },
   {
-'
-    id: 'website-analytics','
-    title: 'Website Analytics','
-    description: 'Comprehensive website performance and user behavior analytics','
-    category: 'Analytics','
-    subcategory: 'Web Analytics','
+
+    id: 'website-analytics',
+    title: 'Website Analytics',
+    description: 'Comprehensive website performance and user behavior analytics',
+    category: 'Analytics',
+    subcategory: 'Web Analytics',
     pricingModel: 'monthly',
     price: 19,
     rating: 4.9,
     reviewCount: 234,
     aiScore: 98,;
-    featured: true,;'
-    createdAt: '2024-01-10',;'
-    href: '/services/website-analytics',;'
-    tags: ['Analytics', 'Web', 'Performance'],;'
+    featured: true,;
+    createdAt: '2024-01-10',;
+    href: '/services/website-analytics',;
+    tags: ['Analytics',Web',Performance'],;
     images: ['/images/analytics.jpg'];
   };
 ];
 
-const categories = [;'
+const categories = [;
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;'"
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;'"
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;'"
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
-const pricingModels = [;'
-  { id: 'all', name: 'All Pricing' },;'
-  { id: 'monthly', name: 'Monthly' },;'
-  { id: 'yearly', name: 'Yearly' },;'
-  { id: 'one-time', name: 'One-time' },;'
+const pricingModels = [;
+  { id: 'all', name: 'All Pricing' },;
+  { id: 'monthly', name: 'Monthly' },;
+  { id: 'yearly', name: 'Yearly' },;
+  { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
 export default function ComprehensiveServicesOverview2027(...args[]):  {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPricing, setSelectedPricing] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);'
-  const [sortBy, setSortBy] = useState<any>('rating');'
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+  const [sortBy, setSortBy] = useState<any>('rating');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
   useEffect(() => {
-    let filtered = MICRO_SAAS_SERVICES;'
+    let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
 
-      filtered = filtered.filter(service => service.category === selectedCategory)}'
+      filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
 
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
@@ -214,13 +214,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);'
+          return (b.rating || 0) - (a.rating || 0);
         case 'price':
-          return (a.price || 0) - (b.price || 0);'
+          return (a.price || 0) - (b.price || 0);
         case 'aiScore':
-          return b.aiScore - a.aiScore;'
+          return b.aiScore - a.aiScore;
         case 'newest':
           return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
         default:
@@ -301,7 +301,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           <div className="flex items-center justify-between">"
             <span className="text-zion-slate-light text-sm">Key Benefits:</span>
             <Button"
-              variant="ghost""
+              variant="ghost"
               size="sm"
               onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}"
               className="text-zion-cyan hover:text-zion-cyan-light"
@@ -318,7 +318,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 }}
               animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -372,8 +372,8 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-        title="Comprehensive Services Overview 2027 - Zion Tech Group""
-        description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions.""
+        title="Comprehensive Services Overview 2027 - Zion Tech Group"
+        description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions. From AI-powered chatbots to quantum computing services, discover cutting-edge technology solutions."
         keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
       />
       {/* Hero Section */}"
@@ -428,7 +428,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -439,7 +439,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 <Button'
                   variant={viewMode === 'grid' ? 'default' : 'outline'}"
                   size="sm"'
-                  onClick={() => setViewMode('grid')}'
+                  onClick={() => setViewMode('grid')}
                   className={viewMode === 'grid' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
                   <Grid className="w-4 h-4" />
@@ -447,7 +447,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 <Button'
                   variant={viewMode === 'list' ? 'default' : 'outline'}"
                   size="sm"'
-                  onClick={() => setViewMode('list')}'
+                  onClick={() => setViewMode('list')}
                   className={viewMode === 'list' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
                   <List className="w-4 h-4" />
@@ -518,9 +518,9 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 <Button
-                  key={category.id}'
+                  key={category.id}
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
-                  onClick={() => setSelectedCategory(category.id)}'
+                  onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
 
                   {category.icon}"
@@ -534,9 +534,9 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             <div className="flex flex-wrap gap-4">
               {pricingModels.map((pricing) => (
                 <Button
-                  key={pricing.id}'
+                  key={pricing.id}
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                  onClick={() => setSelectedPricing(pricing.id)}'
+                  onClick={() => setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
 
                   {pricing.name}
@@ -545,7 +545,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
           {/* Services Grid */}`
 <div className: {`grid gap-8 ${
-'
+
             viewMode === 'grid''
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3''
               : 'grid-cols-1'`
@@ -557,9 +557,9 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           <div className="flex flex-wrap gap-4">
             {pricingModels.map((pricing) => (
               <Button;
-                onClick={() => {;'
-                  setSelectedCategory('all');'
-                  setSelectedPricing('all');'
+                onClick={() => {;
+                  setSelectedCategory('all');
+                  setSelectedPricing('all');
                   setSearchQuery('')}}"
                 className = "bg-zion-cyan hover:bg-zion-cyan-light"
               >
@@ -569,7 +569,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         </div>
         {/* Services Grid */}`
 <div className: {`grid gap-8 ${
-'
+
           viewMode === 'grid' '
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' '
             : 'grid-cols-1'`
@@ -581,9 +581,9 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           <div className="text-center py-16">;"
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
             <Button;
-              onClick={() => {;'
-                setSelectedCategory('all');'
-                setSelectedPricing('all');'
+              onClick={() => {;
+                setSelectedCategory('all');
+                setSelectedPricing('all');
                 setSearchQuery('');
               }}"
               className = "bg-zion-cyan hover:bg-zion-cyan-light"

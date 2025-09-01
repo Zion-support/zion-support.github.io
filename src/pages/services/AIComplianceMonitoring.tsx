@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {
   const features = [
-    'AI-powered compliance monitoring optimization','
-    'Intelligent regulatory compliance tracking',;'
-    'Automated compliance reporting and alerting',;'
-    'Predictive analytics for compliance risks',;'
-    'Smart governance and policy management',;'
-    'AI-driven compliance automation and orchestration',;'
-    'Real-time compliance analytics and insights',;'
+    'AI-powered compliance monitoring optimization',
+    'Intelligent regulatory compliance tracking',;
+    'Automated compliance reporting and alerting',;
+    'Predictive analytics for compliance risks',;
+    'Smart governance and policy management',;
+    'AI-driven compliance automation and orchestration',;
+    'Real-time compliance analytics and insights',;
     'Custom AI models for compliance applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$499/mo','
-      details: ['Up to 10 regulations', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 10 regulations',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,299/mo', '
-      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,299/mo',
+      details: ['Up to 50 regulations',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,999/mo', ;'
-      details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited regulations',Custom AI models',Full compliance suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Compliance monitoring optimization',;'
-    'Regulatory compliance tracking',;'
-    'Compliance reporting and analytics',;'
-    'Governance and policy management',;'
-    'Compliance automation and orchestration',;'
+  const useCases = [;
+    'Compliance monitoring optimization',;
+    'Regulatory compliance tracking',;
+    'Compliance reporting and analytics',;
+    'Governance and policy management',;
+    'Compliance automation and orchestration',;
     'Compliance scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve compliance monitoring performance by 50-80%',;'
-    'Reduce compliance reporting time by 40-70%',;'
-    'Cut compliance operational costs by 35-65%',;'
-    'Enhance compliance reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve compliance monitoring performance by 50-80%',;
+    'Reduce compliance reporting time by 40-70%',;
+    'Cut compliance operational costs by 35-65%',;
+    'Enhance compliance reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale compliance operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% reporting time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% reporting time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-emerald-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

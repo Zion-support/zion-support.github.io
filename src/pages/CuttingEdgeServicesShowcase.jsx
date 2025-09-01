@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { cuttingEdgeInnovations2025 } from "../data/2025-cutting-edge-innovations";"
 import { specializedIndustrySolutions2025 } from "../data/2025-specialized-industry-solutions";
 const CuttingEdgeServicesShowcase = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('All');'
-    const [selectedIndustry, setSelectedIndustry] = useState('All');'
+
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedIndustry, setSelectedIndustry] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
-    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];'
-    const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];'
+    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
+    const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
     const industries = ['All', ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
     const filteredServices = allServices.filter(service => {
-'
-        const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;'
+
+        const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
         const industryMatch = selectedIndustry === 'All' ||'
             ('industry' in service ? service.industry === selectedIndustry : true);
         const searchMatch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -19,25 +19,25 @@ const CuttingEdgeServicesShowcase = () => {
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && industryMatch && searchMatch});
     const formatPrice = (price, model) => {
-'
+
         if (model === 'percentage of revenue') {
 
-            return `${price}% of revenue`}'
+            return `${price}% of revenue`}
         else if (model === 'per device per day') {
 `
-            return `$${price.toFixed(2)}/device/day`}'
+            return `$${price.toFixed(2)}/device/day`}
         else if (model === 'per kWh managed') {
 `
-            return `$${price.toFixed(3)}/kWh`}'
+            return `$${price.toFixed(3)}/kWh`}
         else if (model === 'per acre') {
 `
-            return `$${price.toFixed(2)}/acre/month`}'
+            return `$${price.toFixed(2)}/acre/month`}
         else if (model === 'per inference') {
 `
-            return `$${price.toFixed(3)}/inference`}'
+            return `$${price.toFixed(3)}/inference`}
         else if (model === 'monthly per student') {
 `
-            return `$${price}/student/month`}'
+            return `$${price}/student/month`}
         else if (model === 'monthly per attorney') {
 `
             return `$${price}/attorney/month`}

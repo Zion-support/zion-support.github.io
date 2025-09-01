@@ -3,7 +3,7 @@ const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
-'
+
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 export const AccessibilityProvider = ({ children }) => {
@@ -14,54 +14,54 @@ export const AccessibilityProvider = ({ children }) => {
     // Check for user preferences on mount
     useEffect(() => {
         // Check for reduced motion preference'
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
         setIsReducedMotion(prefersReducedMotion);
         // Check for high contrast preference'
-        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)).matches;
         setIsHighContrast(prefersHighContrast);
         // Check for large text preference'
-        const prefersLargeText = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const prefersLargeText = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
         setIsLargeText(prefersLargeText);
         // Listen for preference changes'
-        const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');'
-        const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-        const handleContrastChange = (e) => setIsHighContrast(e.matches);'
-        motionQuery.addEventListener('change', handleMotionChange);'
+        const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce));
+        const contrastQuery = window.matchMedia('(prefers-contrast: high));
+        const handleContrastChange = (e) => setIsHighContrast(e.matches);
+        motionQuery.addEventListener('change', handleMotionChange);
         contrastQuery.addEventListener('change', handleContrastChange);
         return () => {
-'
-            motionQuery.removeEventListener('change', handleMotionChange);'
+
+            motionQuery.removeEventListener('change', handleMotionChange);
             contrastQuery.removeEventListener('change', handleContrastChange)}}, []);
     // Apply accessibility classes to body
     useEffect(() => {
         const body = document.body;
         if (isHighContrast) {
-'
+
             body.classList.add('high-contrast')}
         else {
-'
+
             body.classList.remove('high-contrast')}
         if (isReducedMotion) {
-'
+
             body.classList.add('reduced-motion')}
         else {
-'
+
             body.classList.remove('reduced-motion')}
         if (isLargeText) {
-'
+
             body.classList.add('large-text')}
         else {
-'
+
             body.classList.remove('large-text')}
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality'
-    const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]));
         if (focusableElements.length === 0)
             return;
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
         const handleKeyDown = (e) => {
-'
+
             if (e.key === 'Tab') {
 
                 if (e.shiftKey) {
@@ -79,16 +79,16 @@ export const AccessibilityProvider = ({ children }) => {
                         firstElement.focus()}
                 }
             }
-        };'
+        };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
         return () => {
-'
+
             element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements'
-    const announcement = document.createElement('div');'
-        announcement.setAttribute('aria-live', 'polite');'
-        announcement.setAttribute('aria-atomic', 'true');'
+    const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live',polite');
+        announcement.setAttribute('aria-atomic',true');
         announcement.className = 'sr-only';
         announcement.textContent = message;
         document.body.appendChild(announcement);
@@ -103,7 +103,7 @@ export const AccessibilityProvider = ({ children }) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
 
                 e.preventDefault();
-                toggleHighContrast();'
+                toggleHighContrast();
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
             // Ctrl/Cmd + M for reduced motion toggle'
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
@@ -117,8 +117,8 @@ export const AccessibilityProvider = ({ children }) => {
                 e.preventDefault();
                 toggleLargeText();'`
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
-        };'
-        document.addEventListener('keydown', handleKeyDown);'
+        };
+        document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {

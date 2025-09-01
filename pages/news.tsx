@@ -9,73 +9,73 @@ export default function News(...args[]):  {
 	const newsArticles = [
 		{
 
-			id: 1,'
-			title: 'Zion Tech Group Launches New AI-Powered Cybersecurity Platform','
-			excerpt: 'Our latest innovation combines machine learning with advanced threat detection to provide enterprise-grade security for businesses of all sizes.','
-			author: 'Zion Team','
-			date: '2025-01-15','
-			readTime: '5 min read','
-			category: 'Product Launch','
+			id: 1,
+			title: 'Zion Tech Group Launches New AI-Powered Cybersecurity Platform',
+			excerpt: 'Our latest innovation combines machine learning with advanced threat detection to provide enterprise-grade security for businesses of all sizes.',
+			author: 'Zion Team',
+			date: '2025-01-15',
+			readTime: '5 min read',
+			category: 'Product Launch',
 			image: '/api/placeholder/400/250'
 		},
 		{
 
-			id: 2,'
-			title: 'How AI is Transforming Cloud Infrastructure Management','
-			excerpt: 'Discover how autonomous systems are revolutionizing the way businesses manage their cloud resources and optimize costs.','
-			author: 'Dr. Sarah Chen','
-			date: '2025-01-10','
-			readTime: '7 min read','
-			category: 'Industry Insights','
+			id: 2,
+			title: 'How AI is Transforming Cloud Infrastructure Management',
+			excerpt: 'Discover how autonomous systems are revolutionizing the way businesses manage their cloud resources and optimize costs.',
+			author: 'Dr. Sarah Chen',
+			date: '2025-01-10',
+			readTime: '7 min read',
+			category: 'Industry Insights',
 			image: '/api/placeholder/400/250'
 		},
 		{
 
-			id: 3,'
-			title: 'Zion Tech Group Named Top AI Solutions Provider 2025','
-			excerpt: 'We\'re honored to be recognized for our innovative AI solutions and commitment to delivering measurable business outcomes.','
-			author: 'Zion Team','
-			date: '2025-01-05','
-			readTime: '3 min read','
-			category: 'Comp News','
+			id: 3,
+			title: 'Zion Tech Group Named Top AI Solutions Provider 2025',
+			excerpt: 'We\'re honored to be recognized for our innovative AI solutions and commitment to delivering measurable business outcomes.',
+			author: 'Zion Team',
+			date: '2025-01-05',
+			readTime: '3 min read',
+			category: 'Comp News',
 			image: '/api/placeholder/400/250'
 		},
 		{
 
-			id: 4,'
-			title: 'The Future of Micro SaaS: Trends and Opportunities','
-			excerpt: 'Explore emerging trends in the micro SaaS space and how businesses can leverage these solutions for competitive advantage.','
-			author: 'Michael Rodriguez','
-			date: '2024-12-28','
-			readTime: '6 min read','
-			category: 'Industry Insights','
+			id: 4,
+			title: 'The Future of Micro SaaS: Trends and Opportunities',
+			excerpt: 'Explore emerging trends in the micro SaaS space and how businesses can leverage these solutions for competitive advantage.',
+			author: 'Michael Rodriguez',
+			date: '2024-12-28',
+			readTime: '6 min read',
+			category: 'Industry Insights',
 			image: '/api/placeholder/400/250'
 		},
 		{
 
-			id: 5,'
-			title: 'Customer Success Story: How TechCorp Increased Efficiency by 300%','
-			excerpt: 'Learn how our AI automation solutions helped TechCorp streamline operations and achieve unprecedented efficiency gains.','
-			author: 'Zion Team','
-			date: '2024-12-20','
-			readTime: '4 min read','
-			category: 'Customer Success','
+			id: 5,
+			title: 'Customer Success Story: How TechCorp Increased Efficiency by 300%',
+			excerpt: 'Learn how our AI automation solutions helped TechCorp streamline operations and achieve unprecedented efficiency gains.',
+			author: 'Zion Team',
+			date: '2024-12-20',
+			readTime: '4 min read',
+			category: 'Customer Success',
 			image: '/api/placeholder/400/250'
 		},
 		{
 
-			id: 6,'
-			title: 'Cybersecurity in the Age of AI: New Threats and Defenses','
-			excerpt: 'As AI becomes more sophisticated, so do cyber threats. Learn about the latest security challenges and our innovative defense strategies.','
-			author: 'Alex Thompson','
-			date: '2024-12-15','
-			readTime: '8 min read','
-			category: 'Security','
+			id: 6,
+			title: 'Cybersecurity in the Age of AI: New Threats and Defenses',
+			excerpt: 'As AI becomes more sophisticated, so do cyber threats. Learn about the latest security challenges and our innovative defense strategies.',
+			author: 'Alex Thompson',
+			date: '2024-12-15',
+			readTime: '8 min read',
+			category: 'Security',
 			image: '/api/placeholder/400/250'
 
 	]
-'
-	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
+
+	const categories = ['All',Product Launch',Comp News',Industry Insights',Customer Success',Security']
 
 	return()
 		<>
@@ -226,8 +226,8 @@ export default function News(...args[]):  {
 						</p>"
 						<div className="flex gap-4 max-w-md mx-auto">
 							<input"
-								type="email""
-								placeholder="Enter your email""
+								type="email"
+								placeholder="Enter your email"
 								className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 							/>"
 							<button className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
@@ -244,18 +244,18 @@ export default function News(...args[]):  {
 					<h2 className="text-3xl font-bold tracking-tight text-white mb-6">
 						Ready to Transform Your Business?
 					</h2>"
-					<p className="text-xl text-blue-100 mb-8">'
+					<p className="text-xl text-blue-100 mb-8">
 						Let's discuss how our AI and cloud solutions can drive your success
 					</p>"
 					<div className="flex items-center justify-center gap-x-6">
 						<Link"
-							to="/contact""
+							to="/contact"
 							className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 
 							Get Started
 						</Link>
 						<Link"
-							to="/services""
+							to="/services"
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 "
 							Learn more <span aria-hidden="true">→</span>

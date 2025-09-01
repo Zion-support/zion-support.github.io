@@ -1,18 +1,18 @@
-import React, { Suspense, lazy } from 'react';'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';'
-import { AppHeader } from './layout/AppHeader.jsx';'
-import { Footer } from './components/Footer.jsx';'
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
 
 // Home and main pages'
-const Home = lazy(() => import('./pages/Home.tsx'));'
-const About = lazy(() => import('./pages/About.tsx'));'
-const Contact = lazy(() => import('./pages/Contact.tsx'));'
-const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));'
-const PartnersPage = lazy(() => import('./pages/Partners.tsx'));'
-const Login = lazy(() => import('./pages/Login.tsx'));'
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));'
-const Careers = lazy(() => import('./pages/Careers.tsx'));'
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
+const Login = lazy(() => import('./pages/Login.tsx'));
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));
+const Careers = lazy(() => import('./pages/Careers.tsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 
 // Services pages
@@ -34,7 +34,7 @@ const ServicesPage = () => ("
       <div className="text-center mb-16">"
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Our"
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
             {' '}
             Services
           </span>
@@ -106,11 +106,11 @@ function App() {
                       <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found
                       </h1>"
-                      <p className="text-zion-slate-light mb-6">'
+                      <p className="text-zion-slate-light mb-6">
                         The page you're looking for doesn't exist.
                       </p>
                       <a"
-                        href="/""
+                        href="/"
                         className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors"
                       >
                         Go Home

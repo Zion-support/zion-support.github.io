@@ -1,29 +1,29 @@
-import React from 'react';'
+import React from 'react';
 import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
 
-      icon: Lightbulb,'
+      icon: Lightbulb,
       title: 'Innovation',
       description:'
         "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex challenges."},
     {
 
-      icon: Award,'
+      icon: Award,
       title: 'Excellence',
       description:'
         'We maintain the highest standards in everything we do, from code quality to customer service and project delivery.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Collaboration',
       description:'
         'We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Integrity',
       description:'
         'We operate with honesty, transparency, and ethical practices in all our business relationships and operations.'},
@@ -31,35 +31,35 @@ const About = () => {
 
   const milestones = [
     {
-'
-      year: '2025','
+
+      year: '2025',
       title: 'Global Expansion',
       description:'
         'Expanded operations to serve clients across North America, Europe, and Asia-Pacific regions.'},
     {
-'
-      year: '2024','
+
+      year: '2024',
       title: 'AI Breakthrough',
       description:'
         'Launched revolutionary AI autonomous business platform, transforming how companies operate.'},
     {
-'
-      year: '2023','
+
+      year: '2023',
       title: 'Quantum Innovation',
       description:'
         'Developed cutting-edge quantum computing solutions for enterprise applications.'},
     {
-'
-      year: '2022','
+
+      year: '2022',
       title: 'Comp Founded',
       description:'
         'Zion Tech Group was established with a vision to revolutionize technology solutions.'},
   ];
 
   const stats = ['
-    { number: '500+', label: 'Projects Completed', icon: Target },'
-    { number: '50+', label: 'Team Members', icon: Users },'
-    { number: '25+', label: 'Countries Served', icon: Globe },'
+    { number: '500+', label: 'Projects Completed', icon: Target },
+    { number: '50+', label: 'Team Members', icon: Users },
+    { number: '25+', label: 'Countries Served', icon: Globe },
     { number: '99%', label: 'Client Satisfaction', icon: Award },
   ];
 
@@ -75,7 +75,7 @@ const About = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pioneering the Future of"
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {' '}
                 Technology
               </span>
@@ -195,19 +195,19 @@ const About = () => {
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative solutions can help you achieve your
             goals.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               📞 Call + 1 (302) 464 - 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               ✉️ Get in Touch

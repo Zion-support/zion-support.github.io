@@ -1,16 +1,16 @@
-import { useState } from 'react';'
-import { Loader2 import { toast } from 'react-toastify';'
+import { useState } from 'react';
+import { Loader2 import { toast } from 'react-toastify';
 import { Button } from '@/components/ui/button';
 export function ProductActions({ onAddToCart }) {
 
-    const [loading, setLoading] = useState(false);'
+    const [loading, setLoading] = useState(false);
     const [label, setLabel] = useState('Add to Cart');
     const addToCart = async () => {
         setLoading (true) ;
         try {
-            await onAddToCart();'
-            toast('2U Rack Mount Server added to cart');'
-            setLabel('Added!');'
+            await onAddToCart();
+            toast('2U Rack Mount Server added to cart');
+            setLabel('Added!');
             setTimeout(() => setLabel('Add to Cart'), 1500)}
         finally {
 

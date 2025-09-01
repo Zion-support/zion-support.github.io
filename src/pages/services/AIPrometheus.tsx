@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {
   const features = [
-    'AI-powered Prometheus optimization','
-    'Intelligent Prometheus management',;'
-    'Automated Prometheus monitoring and alerting',;'
-    'Predictive analytics for Prometheus scaling',;'
-    'Smart Prometheus security and compliance',;'
-    'AI-driven Prometheus automation and orchestration',;'
-    'Real-time Prometheus analytics and insights',;'
+    'AI-powered Prometheus optimization',
+    'Intelligent Prometheus management',;
+    'Automated Prometheus monitoring and alerting',;
+    'Predictive analytics for Prometheus scaling',;
+    'Smart Prometheus security and compliance',;
+    'AI-driven Prometheus automation and orchestration',;
+    'Real-time Prometheus analytics and insights',;
     'Custom AI models for Prometheus applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full Prometheus suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full Prometheus suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Prometheus optimization',;'
-    'Prometheus management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Prometheus optimization',;
+    'Prometheus management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Prometheus scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve Prometheus performance by 50-80%',;'
-    'Reduce Prometheus query time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Prometheus reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve Prometheus performance by 50-80%',;
+    'Reduce Prometheus query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Prometheus reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale Prometheus operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% query time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% query time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-yellow-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

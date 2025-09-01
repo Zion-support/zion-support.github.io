@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -30,42 +30,42 @@ import {
   Leaf,
   Satellite,
   Banknote,
-  Building,'
+  Building,
   Phone} from 'lucide-react';
-'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';'
+
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-'
-  'AI & Customer Success': Brain,'
-  'Blockchain & DeFi': Lock,'
-  'Quantum Computing': Zap,'
-  'AI & Healthcare': Heart,'
-  'Metaverse & AR/VR': Eye,'
-  'Autonomous Systems': Car,'
-  'Green Tech': Leaf,'
+
+  'AI & Customer Success': Brain,
+  'Blockchain & DeFi': Lock,
+  'Quantum Computing': Zap,
+  'AI & Healthcare': Heart,
+  'Metaverse & AR/VR': Eye,
+  'Autonomous Systems': Car,
+  'Green Tech': Leaf,
   'Space Tech': Satellite,
-  FinTech: Banknote,'
+  FinTech: Banknote,
   'IoT & Smart Cities': Building};
 
 const categoryColors: { [key: string]: string } = {
-'
-  'AI & Customer Success': 'from-cyan-500 to-blue-600','
-  'Blockchain & DeFi': 'from-purple-500 to-indigo-600','
-  'Quantum Computing': 'from-violet-500 to-purple-600','
-  'AI & Healthcare': 'from-emerald-500 to-green-600','
-  'Metaverse & AR/VR': 'from-pink-500 to-rose-600','
-  'Autonomous Systems': 'from-orange-500 to-red-600','
-  'Green Tech': 'from-green-500 to-emerald-600','
-  'Space Tech': 'from-slate-500 to-gray-600','
-  FinTech: 'from-yellow-500 to-amber-600','
+
+  'AI & Customer Success': 'from-cyan-500 to-blue-600',
+  'Blockchain & DeFi': 'from-purple-500 to-indigo-600',
+  'Quantum Computing': 'from-violet-500 to-purple-600',
+  'AI & Healthcare': 'from-emerald-500 to-green-600',
+  'Metaverse & AR/VR': 'from-pink-500 to-rose-600',
+  'Autonomous Systems': 'from-orange-500 to-red-600',
+  'Green Tech': 'from-green-500 to-emerald-600',
+  'Space Tech': 'from-slate-500 to-gray-600',
+  FinTech: 'from-yellow-500 to-amber-600',
   'IoT & Smart Cities': 'from-blue-500 to-cyan-600'};
 
 export default function InnovativeServices2027() {
-'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('
     'innovation'
   );
@@ -95,13 +95,13 @@ export default function InnovativeServices2027() {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'price':
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'roi':
         return ('
-          parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''))
-        );'
+          parseInt(b.roi.replace('%',')) - parseInt(a.roi.replace('%','))
+        );
       case 'innovation':'
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
       default:
@@ -112,7 +112,7 @@ export default function InnovativeServices2027() {
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
-        title="2027 Innovative Services - Zion Tech Group""
+        title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
       />
 
@@ -176,7 +176,7 @@ export default function InnovativeServices2027() {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg''
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`
                   }`}
-                >'
+                >
                   {category === 'all' ? 'All Services' : category}
                 </motion.button>) ) }
             </div>
@@ -184,7 +184,7 @@ export default function InnovativeServices2027() {
             {/* Search and Sort */}"
             <div className="flex flex-col sm:flex-row gap-4">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
@@ -232,7 +232,7 @@ export default function InnovativeServices2027() {
                       {React.createElement()
                         categoryIcons[service.category] || Star,
                         {
-'
+
                           className: 'w-8 h-8 text-white',
                           size: 32}
                       )}"
@@ -335,7 +335,7 @@ export default function InnovativeServices2027() {
 
                     {/* Contact Info */}"
                     <div className="mt-4 text-center">"
-                      <p className="text-xs text-gray-500">'
+                      <p className="text-xs text-gray-500">
                         Contact: {service.contactInfo.phone} |{' '}
                         {service.contactInfo.email}
                       </p>
@@ -371,8 +371,8 @@ export default function InnovativeServices2027() {
               </div>
               <button
                 onClick={() => {
-'
-                  setSelectedCategory('all');'
+
+                  setSelectedCategory('all');
                   setSearchQuery('');
                 }}"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"

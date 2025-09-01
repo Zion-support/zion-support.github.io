@@ -6,7 +6,7 @@ import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
 export { async };
 export default async function handler(...args: unknown[]): unknown {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+    res.setHeader('Allow',POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 

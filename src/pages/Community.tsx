@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -31,171 +31,171 @@ import {
 import { SEO } from "../components/SEO";
 
 export default function Community() {
-  const communityStats = [;'
-    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;'
-    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;'
-    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;'
+  const communityStats = [;
+    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
+    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
+    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;
     { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
   ];
 
   const communityCategories = [
     {
-'
-      title: 'AI & Machine Learning','
+
+      title: 'AI & Machine Learning',
       description: 'Discuss AI technologies, share projects, and get help with ML implementations',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       topics: 1250,
       posts: 8900,
-      members: 3200,'
+      members: 3200,
       href: '/community/ai-ml'
     },
     {
-'
-      title: 'Cloud & DevOps','
+
+      title: 'Cloud & DevOps',
       description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
       topics: 980,
       posts: 6700,
-      members: 2800,'
+      members: 2800,
       href: '/community/cloud-devops'
     },
     {
-'
-      title: 'Cybersecurity','
+
+      title: 'Cybersecurity',
       description: 'Security best practices, threat discussions, and compliance topics',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-600 to-orange-600',
       topics: 750,
       posts: 5200,
-      members: 2100,'
+      members: 2100,
       href: '/community/cybersecurity'
     },
     {
-'
-      title: 'Digital Transformation','
+
+      title: 'Digital Transformation',
       description: 'Business transformation strategies and technology adoption',
-      icon: Rocket,;'
+      icon: Rocket,;
       color: 'from-green-600 to-emerald-600',;
       topics: 620,;
       posts: 4100,;
-      members: 1800,;'
+      members: 1800,;
       href: '/community/digital-transformation';
     };
   ];
 
   const communityStats = [
     {
-'
-      title: 'AI Innovation Summit 2025','
-      description: 'Join industry leaders for insights on the future of AI in business','
-      date: 'March 15-17, 2025','
-      location: 'San Francisco, CA','
+
+      title: 'AI Innovation Summit 2025',
+      description: 'Join industry leaders for insights on the future of AI in business',
+      date: 'March 15-17, 2025',
+      location: 'San Francisco, CA',
       type: 'Conference',
       attendees: 500,
-      icon: Brain,'
-      color: 'from-purple-500 to-pink-500','
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
       href: '/events/ai-innovation-summit-2025'
     },
     {
-'
-      title: 'Cloud Security Workshop','
-      description: 'Hands-on workshop on securing cloud infrastructure','
-      date: 'March 22, 2025','
-      location: 'Virtual Event','
+
+      title: 'Cloud Security Workshop',
+      description: 'Hands-on workshop on securing cloud infrastructure',
+      date: 'March 22, 2025',
+      location: 'Virtual Event',
       type: 'Workshop',
       attendees: 150,
-      icon: Shield,'
-      color: 'from-red-500 to-orange-500','
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
       href: '/events/cloud-security-workshop'
     },
     {
-'
-      title: 'DevOps Best Practices Meetup','
-      description: 'Local meetup for DevOps professionals to share experiences','
-      date: 'March 28, 2025','
-      location: 'New York, NY',;'
+
+      title: 'DevOps Best Practices Meetup',
+      description: 'Local meetup for DevOps professionals to share experiences',
+      date: 'March 28, 2025',
+      location: 'New York, NY',;
       type: 'Meetup',;
       attendees: 75,;
-      icon: Cloud,;'
-      color: 'from-blue-500 to-cyan-500',;'
+      icon: Cloud,;
+      color: 'from-blue-500 to-cyan-500',;
       href: '/events/devops-meetup-nyc';
     };
   ];
 
   const featuredDiscussions = [
     {
-'
-      title: 'Implementing Zero Trust Architecture in Enterprise','
-      author: 'Sarah Chen','
+
+      title: 'Implementing Zero Trust Architecture in Enterprise',
+      author: 'Sarah Chen',
       category: 'Cybersecurity',
       replies: 45,
-      views: 1200,'
-      lastActivity: '2 hours ago','
-      tags: ['Zero Trust', 'Enterprise', 'Security'],
-      icon: Shield,'
-      color: 'from-red-500 to-orange-500','
+      views: 1200,
+      lastActivity: '2 hours ago',
+      tags: ['Zero Trust',Enterprise',Security'],
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
       href: '/community/discussions/zero-trust-enterprise'
     },
     {
-'
-      title: 'Best Practices for AI Model Deployment','
-      author: 'Mike Rodriguez','
+
+      title: 'Best Practices for AI Model Deployment',
+      author: 'Mike Rodriguez',
       category: 'AI & ML',
       replies: 32,
-      views: 890,'
-      lastActivity: '5 hours ago','
-      tags: ['AI', 'Deployment', 'Best Practices'],
-      icon: Brain,'
-      color: 'from-purple-500 to-pink-500','
+      views: 890,
+      lastActivity: '5 hours ago',
+      tags: ['AI',Deployment',Best Practices'],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
       href: '/community/discussions/ai-model-deployment'
     },
     {
-'
-      title: 'Cost Optimization Strategies for Multi-Cloud','
-      author: 'Lisa Thompson','
+
+      title: 'Cost Optimization Strategies for Multi-Cloud',
+      author: 'Lisa Thompson',
       category: 'Cloud & DevOps',
       replies: 28,
-      views: 650,;'
-      lastActivity: '1 day ago',;'
-      tags: ['Multi-Cloud', 'Cost Optimization', 'DevOps'],;
-      icon: Cloud,;'
-      color: 'from-blue-500 to-cyan-500',;'
+      views: 650,;
+      lastActivity: '1 day ago',;
+      tags: ['Multi-Cloud',Cost Optimization',DevOps'],;
+      icon: Cloud,;
+      color: 'from-blue-500 to-cyan-500',;
       href: '/community/discussions/multi-cloud-cost-optimization';
     };
   ];
 
   const communityResources = [
     {
-'
-      title: 'Community Guidelines','
+
+      title: 'Community Guidelines',
       description: 'Learn about our community standards and participation rules',
-      icon: BookOpen,'
-      href: '/community/guidelines','
+      icon: BookOpen,
+      href: '/community/guidelines',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-'
-      title: 'Event Calendar','
+
+      title: 'Event Calendar',
       description: 'Browse upcoming community events and webinars',
-      icon: Calendar,'
-      href: '/events','
+      icon: Calendar,
+      href: '/events',
       color: 'from-green-500 to-emerald-500'
     },
     {
-'
-      title: 'Member Directory','
+
+      title: 'Member Directory',
       description: 'Connect with other community members and experts',
-      icon: Users,'
-      href: '/community/members','
+      icon: Users,
+      href: '/community/members',
       color: 'from-purple-500 to-pink-500'
     },
-    {;'
-      title: 'Resource Library',;'
+    {;
+      title: 'Resource Library',;
       description: 'Access shared resources, templates, and tools',;
-      icon: Download,;'
-      href: '/community/resources',;'
+      icon: Download,;
+      href: '/community/resources',;
       color: 'from-orange-500 to-red-500';
     };
   ];
@@ -205,7 +205,7 @@ export default function Community(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO "
-        title="Community - Zion Tech Group""
+        title="Community - Zion Tech Group"
         description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
       />
       
@@ -236,9 +236,9 @@ export default function Community(...args[]):  {
             </h1>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Connect with technology professionals, share knowledge, and stay ahead of industry trends.'
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface CommunityPost {
@@ -275,176 +275,176 @@ interface CommunityCategory {
   topics: string[];
 
 const Community: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('latest');
 
   const communityCategories: CommunityCategory[] = [
     {
-'
-      id: 'general',;'
-      name: 'General Discussion','
+
+      id: 'general',;
+      name: 'General Discussion',
       description: 'General topics about Zion Tech Group and technology',
-      icon: Users,'
+      icon: Users,
       color: 'from-blue-500 to-cyan-500',
-      postCount: 1247,'
-      topics: ['Company News', 'Technology Trends', 'Industry Updates']
+      postCount: 1247,
+      topics: ['Company News',Technology Trends',Industry Updates']
     },
     {
-'
-      id: 'ai-services',;'
-      name: 'AI Services','
+
+      id: 'ai-services',;
+      name: 'AI Services',
       description: 'Discussions about our AI and machine learning services',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-purple-500 to-pink-500',
-      postCount: 892,'
-      topics: ['AI Integration', 'Machine Learning', 'AI Best Practices']
+      postCount: 892,
+      topics: ['AI Integration',Machine Learning',AI Best Practices']
     },
     {
-'
-      id: 'cloud-infrastructure',;'
-      name: 'Cloud & Infrastructure','
+
+      id: 'cloud-infrastructure',;
+      name: 'Cloud & Infrastructure',
       description: 'Cloud computing, DevOps, and infrastructure topics',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-green-500 to-blue-500',
-      postCount: 654,'
-      topics: ['Cloud Migration', 'DevOps', 'Infrastructure Management']
+      postCount: 654,
+      topics: ['Cloud Migration',DevOps',Infrastructure Management']
     },
     {
-'
-      id: 'security-compliance',;'
-      name: 'Security & Compliance','
+
+      id: 'security-compliance',;
+      name: 'Security & Compliance',
       description: 'Cybersecurity, compliance, and data protection',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-red-500 to-orange-500',
-      postCount: 456,'
-      topics: ['Cybersecurity', 'Compliance', 'Data Protection']
+      postCount: 456,
+      topics: ['Cybersecurity',Compliance',Data Protection']
     },
     {
-'
-      id: 'micro-saas',;'
-      name: 'Micro SaaS Solutions','
+
+      id: 'micro-saas',;
+      name: 'Micro SaaS Solutions',
       description: 'Our micro SaaS products and integrations',
-      icon: TrendingUp,'
+      icon: TrendingUp,
       color: 'from-yellow-500 to-orange-500',
-      postCount: 789,'
-      topics: ['Product Updates', 'Integration Guides', 'Best Practices']
+      postCount: 789,
+      topics: ['Product Updates',Integration Guides',Best Practices']
     },
     {
-'
-      id: 'support',;'
-      name: 'Support & Help','
+
+      id: 'support',;
+      name: 'Support & Help',
       description: 'Get help and support from the community',
-      icon: MessageCircle,'
+      icon: MessageCircle,
       color: 'from-indigo-500 to-purple-500',
-      postCount: 1234,'
-      topics: ['Technical Support', 'Troubleshooting', 'Feature Requests']
+      postCount: 1234,
+      topics: ['Technical Support',Troubleshooting',Feature Requests']
     }
   ];
 
   const topContributors = [
     {
-'
-      id: '1',;'
-      title: 'Getting Started with AI Business Intelligence - Best Practices','
+
+      id: '1',;
+      title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
       author: {
-'
-        name: 'Sarah Chen',;'
-        avatar: '/avatars/sarah.jpg','
+
+        name: 'Sarah Chen',;
+        avatar: '/avatars/sarah.jpg',
         role: 'Senior Data Scientist',
         verified: true
-      },'
-      category: 'ai-services','
-      tags: ['AI', 'Business Intelligence', 'Best Practices', 'Getting Started'],
+      },
+      category: 'ai-services',
+      tags: ['AI',Business Intelligence',Best Practices',Getting Started'],
       likes: 45,
       replies: 23,
-      views: 1234,'
+      views: 1234,
       createdAt: '2 hours ago',
       isPinned: true,
       isFeatured: true
     },
     {
-'
-      id: '2',;'
-      title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud','
+
+      id: '2',;
+      title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud',
       content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\'s our journey and lessons learned...',
       author: {
-'
-        name: 'Michael Rodriguez',;'
-        avatar: '/avatars/michael.jpg','
+
+        name: 'Michael Rodriguez',;
+        avatar: '/avatars/michael.jpg',
         role: 'DevOps Engineer',
         verified: true
-      },'
-      category: 'cloud-infrastructure','
-      tags: ['Cloud Migration', 'DevOps', 'Success Story', 'Multi-Cloud'],
+      },
+      category: 'cloud-infrastructure',
+      tags: ['Cloud Migration',DevOps',Success Story',Multi-Cloud'],
       likes: 67,
       replies: 34,
-      views: 2156,'
+      views: 2156,
       createdAt: '5 hours ago',
       isPinned: false,
       isFeatured: true
     },
     {
-'
-      id: '3',;'
-      title: 'Zero Trust Security Implementation Guide','
+
+      id: '3',;
+      title: 'Zero Trust Security Implementation Guide',
       content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
       author: {
-'
-        name: 'Alex Thompson',;'
-        avatar: '/avatars/alex.jpg','
+
+        name: 'Alex Thompson',;
+        avatar: '/avatars/alex.jpg',
         role: 'Security Architect',
         verified: true
-      },'
-      category: 'security-compliance','
-      tags: ['Zero Trust', 'Security', 'Implementation', 'Guide'],
+      },
+      category: 'security-compliance',
+      tags: ['Zero Trust',Security',Implementation',Guide'],
       likes: 89,
       replies: 56,
-      views: 3421,'
+      views: 3421,
       createdAt: '1 day ago',
       isPinned: false,
       isFeatured: false
     },
     {
-'
-      id: '4',;'
-      title: 'Micro CRM Integration with Salesforce - Step by Step','
+
+      id: '4',;
+      title: 'Micro CRM Integration with Salesforce - Step by Step',
       content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...',
       author: {
-'
-        name: 'Jennifer Lee',;'
-        avatar: '/avatars/jennifer.jpg','
+
+        name: 'Jennifer Lee',;
+        avatar: '/avatars/jennifer.jpg',
         role: 'Integration Specialist',
         verified: false
-      },'
-      category: 'micro-saas','
-      tags: ['Micro CRM', 'Salesforce', 'Integration', 'Tutorial'],
+      },
+      category: 'micro-saas',
+      tags: ['Micro CRM',Salesforce',Integration',Tutorial'],
       likes: 34,
       replies: 18,
-      views: 987,'
+      views: 987,
       createdAt: '2 days ago',
       isPinned: false,
       isFeatured: false
     },
     {
-'
-      id: '5',;'
-      title: 'AI Content Creation API Performance Optimization','
+
+      id: '5',;
+      title: 'AI Content Creation API Performance Optimization',
       content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
       author: {
-'
-        name: 'David Kim',;'
-        avatar: '/avatars/david.jpg','
+
+        name: 'David Kim',;
+        avatar: '/avatars/david.jpg',
         role: 'Software Engineer',
         verified: true
-      },'
-      category: 'ai-services','
-      tags: ['AI Content Creation', 'API', 'Performance', 'Optimization'],
+      },
+      category: 'ai-services',
+      tags: ['AI Content Creation',API',Performance',Optimization'],
       likes: 56,
       replies: 29,
-      views: 1567,'
+      views: 1567,
       createdAt: '3 days ago',
       isPinned: false,
       isFeatured: false
@@ -455,7 +455,7 @@ const Community: React.FC = () => {
 
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));'
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   }) ;
@@ -463,13 +463,13 @@ const Community: React.FC = () => {
   const sortedPosts = [...filteredPosts].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'latest':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       case 'popular':
-        return b.likes - a.likes;'
+        return b.likes - a.likes;
       case 'most-replied':
-        return b.replies - a.replies;'
+        return b.replies - a.replies;
       case 'most-viewed':
         return b.views - a.views;
       default:
@@ -479,13 +479,13 @@ const Community: React.FC = () => {
 
   const getCategoryColor = (categoryId: string) => {
 
-    const category = communityCategories.find(cat => cat.id === categoryId);'
+    const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.color : 'from-gray-500 to-gray-600';
   };
 
   const getCategoryName = (categoryId: string) => {
 
-    const category = communityCategories.find(cat => cat.id === categoryId);'
+    const category = communityCategories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Unknown';
   };
 
@@ -597,7 +597,7 @@ const Community: React.FC = () => {
                 <div className="p-6">"
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                       event.type === 'Conference' ? 'bg-purple-500/20 text-purple-400' :'
                       event.type === 'Workshop' ? 'bg-blue-500/20 text-blue-400' :'
                       'bg-green-500/20 text-green-400'`
@@ -746,7 +746,7 @@ const Community: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search community posts..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -954,7 +954,7 @@ const Community: React.FC = () => {
               Create New Post
             </button>
             <Link"
-              to="/community-guidelines""
+              to="/community-guidelines"
               className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
             >"
               <MessageCircle className="w-5 h-5 mr-2" />

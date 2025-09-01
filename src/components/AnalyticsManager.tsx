@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';'
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -12,7 +12,7 @@ import {
   Zap,
   Target,
   Globe,
-  Smartphone,'
+  Smartphone,
   Monitor} from 'lucide-react';
 
 interface AnalyticsData {
@@ -68,7 +68,7 @@ export function AnalyticsManager() {
 
     // Create or retrieve session
     const sessionId ='
-      localStorage.getItem('zion_session_id') || generateSessionId();'
+      localStorage.getItem('zion_session_id') || generateSessionId();
     localStorage.setItem('zion_session_id', sessionId);
 
     const session: UserSession = {
@@ -103,14 +103,14 @@ export function AnalyticsManager() {
 
     // Set up session tracking
     setupSessionTracking();
-'
+
     // console.log('Analytics initialized for session:', sessionId);
   }, []);
 
   const cleanupAnalytics = useCallback(() => {
     // Clean up event listeners'
-    document.removeEventListener('click', handleClick);'
-    document.removeEventListener('scroll', handleScroll);'
+    document.removeEventListener('click', handleClick);
+    document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
 
     // Save session data
@@ -141,7 +141,7 @@ export function AnalyticsManager() {
 
     // Track button clicks'
     if (target.tagName === 'BUTTON' || target.closest('button')) {
-'
+
       trackEvent('button_click', {
 
         text: target.textContent || target.innerText,
@@ -155,7 +155,7 @@ export function AnalyticsManager() {
       const link ='
         target.tagName === 'A'
           ? target'
-          : (target.closest('a') as HTMLAnchorElement);'
+          : (target.closest('a') as HTMLAnchorElement);
       trackEvent('link_click', {
 
         href: link.href,
@@ -168,7 +168,7 @@ export function AnalyticsManager() {
       target.tagName === 'SELECT' ||'
       target.tagName === 'TEXTAREA'
     ) {
-'
+
       trackEvent('form_interaction', {
 
         type: target.tagName.toLowerCase(),
@@ -195,7 +195,7 @@ export function AnalyticsManager() {
   const handleBeforeUnload = useCallback ( () => {
     // Track session end
     if (currentSession) {
-'
+
       trackEvent('session_end', {
 
         duration: Date.now() - currentSession.startTime,
@@ -204,7 +204,7 @@ export function AnalyticsManager() {
   }, [currentSession]) ;
 
   const setupPerformanceMonitoring = useCallback(() => {
-'
+
     if ('PerformanceObserver' in window) {
 
       // First Contentful Paint
@@ -213,10 +213,10 @@ export function AnalyticsManager() {
         const entries = list.getEntries();
         const fcp = entries[entries.length - 1];
         if (fcp) {
-'
+
           trackPerformance('fcp', fcp.startTime);
         }
-      });'
+      });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
@@ -225,10 +225,10 @@ export function AnalyticsManager() {
         const entries = list.getEntries();
         const lcp = entries[entries.length - 1];
         if (lcp) {
-'
+
           trackPerformance('lcp', lcp.startTime);
         }
-      });'
+      });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
@@ -237,10 +237,10 @@ export function AnalyticsManager() {
         const entries = list.getEntries();
         const fid = entries[entries.length - 1];
         if (fid) {
-'
+
           trackPerformance('fid', fid.processingStart - fid.startTime);
         }
-      });'
+      });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
@@ -253,9 +253,9 @@ export function AnalyticsManager() {
 
             clsValue += (entry as any).value;
           }
-        }'
+        }
         trackPerformance('cls', clsValue);
-      });'
+      });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
   }, []) ;
@@ -288,7 +288,7 @@ export function AnalyticsManager() {
                 lastActivity: Date.now()}
             : null
         );
-'
+
         trackEvent('page_view', { path });
 
         // Send to analytics endpoint'
@@ -323,17 +323,17 @@ export function AnalyticsManager() {
   );
 
   const trackUserAgent = useCallback((userAgent: string) => {
-'
+
     trackEvent('user_agent', { userAgent });
   }, []);
 
   const trackReferrer = useCallback((referrer: string) => {
-'
+
     trackEvent('referrer', { referrer });
   }, []);
 
   const trackPerformance = useCallback((metric: string, value: number) => {
-'
+
     trackEvent('performance_metric', { metric, value });
   }, []);
 
@@ -343,15 +343,15 @@ export function AnalyticsManager() {
       try {
         // In production, send to your analytics endpoint'
         // await fetch('/api/analytics', {
-'
-        //   method: 'POST','
+
+        //   method: 'POST',
         //   headers: { 'Content-Type': 'application/json' },
         //   body: JSON.stringify({ type, data, sessionId: currentSession?.id })
         // });
         // For now, just log to console'
         // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id });
       } catch (error) {
-'
+
         // console.error('Failed to send analytics data:', error);
       }
     },
@@ -368,7 +368,7 @@ export function AnalyticsManager() {
         // Send to analytics endpoint'
         await sendAnalyticsData('session_end', session);
       } catch (error) {
-'
+
         // console.error('Failed to save session data:', error);
       }
     },
@@ -386,8 +386,8 @@ export function AnalyticsManager() {
     const bounceRate = pageViews === 1 ? 100 : 0;
 
     // Calculate conversion rate (sessions with specific events)
-    const conversionEvents = currentSession.events.filter(e =>'
-      ['form_submit', 'button_click', 'link_click'].includes(e.name)
+    const conversionEvents = currentSession.events.filter(e =>
+      ['form_submit',button_click',link_click'].includes(e.name)
     );
     const conversionRate = (conversionEvents.length / events) * 100;
 
@@ -420,13 +420,13 @@ export function AnalyticsManager() {
   const getDeviceType = (userAgent: string) => {
 
     if (/Mobile|Android|iPhone|iPad/.test(userAgent)) {
-'
+
       return 'Mobile';
     } else if (/Tablet|iPad/.test(userAgent)) {
-'
+
       return 'Tablet';
     } else {
-'
+
       return 'Desktop';
     }
   };
@@ -447,7 +447,7 @@ export function AnalyticsManager() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         onClick={() => setShowAnalytics(true)}
-        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50""
+        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
         title="Show Analytics"
       >"
         <BarChart3 className="w-6 h-6" />
@@ -507,7 +507,7 @@ export function AnalyticsManager() {
           </div>
 
           {/* Device Type */}"
-          <div className="flex items-center space-x-2">'
+          <div className="flex items-center space-x-2">
             {analyticsData.userAgents[0]?.device === 'Mobile' ? ("
               <Smartphone className="w-4 h-4 text-purple-400" />
             ) : ("
@@ -518,7 +518,7 @@ export function AnalyticsManager() {
 
           {/* Tracking Status */}"
           <div className="flex items-center space-x-2">"
-            <Zap className="w-4 h-4 text-orange-400" />'
+            <Zap className="w-4 h-4 text-orange-400" />
             <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -14,136 +14,136 @@ import {
   Target,
   CheckCircle,
   Activity,
-  Network,'
+  Network,
   Monitor} from 'lucide-react';
 
 export default function AIFinancialTrading() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI Trading Algorithms',
       description:'
         'Advanced machine learning algorithms that analyze market patterns and execute trades automatically'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Real-time Market Analysis',
       description:'
         'Live market data processing with instant insights and trend identification'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Risk Management',
       description:'
         'Sophisticated risk assessment and portfolio protection mechanisms'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Portfolio Optimization',
       description:'
         'AI-powered portfolio rebalancing and asset allocation optimization'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'High-Frequency Trading',
       description:'
         'Ultra-fast execution with microsecond precision for optimal trade timing'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Social Trading',
       description:'
         'Copy successful traders and share strategies with the community'},
   ];
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$99','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
       description: 'Perfect for individual traders and beginners',
       features: ['
-        'Basic AI trading signals','
-        'Up to 10 trades/day','
-        'Standard market data','
-        'Email support','
-        'Basic risk management','
+        'Basic AI trading signals',
+        'Up to 10 trades/day',
+        'Standard market data',
+        'Email support',
+        'Basic risk management',
         'Mobile app access',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$299','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Ideal for active traders and small funds',
       features: ['
-        'Advanced AI algorithms','
-        'Up to 100 trades/day','
-        'Real-time market data','
-        'Priority support','
-        'Advanced risk management','
-        'Portfolio analytics','
-        'API access','
+        'Advanced AI algorithms',
+        'Up to 100 trades/day',
+        'Real-time market data',
+        'Priority support',
+        'Advanced risk management',
+        'Portfolio analytics',
+        'API access',
         'Custom strategies',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Institutional','
-      price: '$1,999','
-      period: '/month','
+
+      name: 'Institutional',
+      price: '$1,999',
+      period: '/month',
       description: 'For hedge funds and large institutions',
       features: ['
-        'Custom AI models','
-        'Unlimited trades','
-        'Institutional data feeds','
-        'Dedicated account manager','
-        'White-label solution','
-        'Custom integrations','
-        'On-premise deployment','
+        'Custom AI models',
+        'Unlimited trades',
+        'Institutional data feeds',
+        'Dedicated account manager',
+        'White-label solution',
+        'Custom integrations',
+        'On-premise deployment',
         'Advanced compliance',
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
   const benefits = [
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Increased Returns',
       description:'
         'AI algorithms consistently outperform traditional trading strategies by 15-25% annually'},
     {
 
-      icon: Clock,'
+      icon: Clock,
       title: '24/7 Trading',
       description:'
         'Automated trading operates around the clock, capturing opportunities in all time zones'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Risk Reduction',
       description:'
         'Advanced risk management reduces portfolio volatility and protects capital'},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Emotion-Free Trading',
       description:'
         'AI eliminates human emotions and biases from trading decisions'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Speed Advantage',
       description:'
         'Microsecond execution speed provides competitive edge in fast-moving markets'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Data-Driven Insights',
       description:'
         'Comprehensive analytics and reporting for informed decision making'},
@@ -151,37 +151,37 @@ export default function AIFinancialTrading() {
   const tradingInstruments = [
     {
 
-      icon: LineChart,'
+      icon: LineChart,
       title: 'Stocks & ETFs',
       description:'
         'AI-powered analysis of individual stocks, sectors, and market indices'},
     {
 
-      icon: PieChart,'
+      icon: PieChart,
       title: 'Forex Trading',
       description:'
         'Currency pair analysis with real-time exchange rate monitoring'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Cryptocurrency',
       description:'
         'Digital asset trading with blockchain-based security and transparency'},
     {
 
-      icon: Activity,'
+      icon: Activity,
       title: 'Commodities',
       description:'
         'Oil, gold, silver, and agricultural commodity trading strategies'},
     {
 
-      icon: Network,'
+      icon: Network,
       title: 'Options & Futures',
       description:'
         'Derivatives trading with advanced hedging and speculation strategies'},
     {
 
-      icon: Monitor,'
+      icon: Monitor,
       title: 'Bonds & Fixed Income',
       description:'
         'Fixed income securities with yield optimization and risk management'},
@@ -196,7 +196,7 @@ export default function AIFinancialTrading() {
             AI-Powered Financial Technology
           </div>
 "
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">'
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Financial{' '}"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
               Trading
@@ -211,13 +211,13 @@ export default function AIFinancialTrading() {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
             <Link"
-              to="/request-demo""
+              to="/request-demo"
               className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
             >
               Request Demo
@@ -393,13 +393,13 @@ export default function AIFinancialTrading() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial Today
               </Link>
               <Link"
-                to="/request-demo""
+                to="/request-demo"
                 className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
                 Schedule Demo

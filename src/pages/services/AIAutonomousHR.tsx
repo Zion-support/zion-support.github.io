@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -22,7 +22,7 @@ import {
   Share2,
   TrendingUp,
   Zap,
-  Shield,'
+  Shield,
   Briefcase} from 'lucide-react.ts';
 
 const AIAutonomousHR: React.FC = (): JSX.Element => {
@@ -30,47 +30,47 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered HR Management',
       description:'
         'Advanced machine learning for autonomous HR operations and optimization'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Recruitment Automation',
       description:'
         'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Performance Management',
       description:'
         'AI-powered performance tracking and employee development strategies'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'HR Analytics',
       description:'
         'Real-time analytics and insights into HR performance and trends'},
     {
 
-      icon: Briefcase,'
-      title: 'Employee Engagement','
+      icon: Briefcase,
+      title: 'Employee Engagement',
       description: 'AI-driven employee engagement and retention strategies'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Workforce Optimization',
       description:'
         'Continuous optimization of HR processes and workforce management'},
   ];
 
   const benefits = ['
-    'Improve recruitment efficiency by 80%','
-    'Reduce hiring time by 70%','
-    'Enhance employee retention by 60%','
-    'Automate HR processes','
-    '24/7 autonomous operation','
+    'Improve recruitment efficiency by 80%',
+    'Reduce hiring time by 70%',
+    'Enhance employee retention by 60%',
+    'Automate HR processes',
+    '24/7 autonomous operation',
     'Real-time HR insights',
   ];
 
@@ -91,7 +91,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your HR with"
-              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>

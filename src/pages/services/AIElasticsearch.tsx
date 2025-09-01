@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch() {
   const features = [
-    'AI-powered Elasticsearch optimization','
-    'Intelligent Elasticsearch management',;'
-    'Automated Elasticsearch monitoring and alerting',;'
-    'Predictive analytics for Elasticsearch scaling',;'
-    'Smart Elasticsearch security and compliance',;'
-    'AI-driven Elasticsearch automation and orchestration',;'
-    'Real-time Elasticsearch analytics and insights',;'
+    'AI-powered Elasticsearch optimization',
+    'Intelligent Elasticsearch management',;
+    'Automated Elasticsearch monitoring and alerting',;
+    'Predictive analytics for Elasticsearch scaling',;
+    'Smart Elasticsearch security and compliance',;
+    'AI-driven Elasticsearch automation and orchestration',;
+    'Real-time Elasticsearch analytics and insights',;
     'Custom AI models for Elasticsearch applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full Elasticsearch suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full Elasticsearch suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Elasticsearch optimization',;'
-    'Elasticsearch management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Elasticsearch optimization',;
+    'Elasticsearch management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Elasticsearch scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve Elasticsearch performance by 50-80%',;'
-    'Reduce Elasticsearch query time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Elasticsearch reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve Elasticsearch performance by 50-80%',;
+    'Reduce Elasticsearch query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Elasticsearch reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale Elasticsearch operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% query time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% query time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-indigo-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

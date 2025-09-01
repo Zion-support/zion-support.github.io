@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -22,8 +22,8 @@ import {
   Mic,
   Type,
   Sparkles,
-  Lightbulb,'
-  BarChart3} from 'lucide-react.ts';'
+  Lightbulb,
+  BarChart3} from 'lucide-react.ts';
 import { SEO } from '@/components/SEO';
 
 export default function AIContentCreation(...args: any[]): any {
@@ -31,75 +31,75 @@ export default function AIContentCreation(...args: any[]): any {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Writing',
       description:'
         'Generate high-quality content with advanced language models'},
     {
 
-      icon: Image,'
-      title: 'Visual Content','
+      icon: Image,
+      title: 'Visual Content',
       description: 'Create stunning images, graphics, and visual assets'},
     {
 
-      icon: Video,'
-      title: 'Video Production','
+      icon: Video,
+      title: 'Video Production',
       description: 'Generate and edit videos with AI-driven tools'},
     {
 
-      icon: Globe,'
-      title: 'Multi-Language','
+      icon: Globe,
+      title: 'Multi-Language',
       description: 'Create content in multiple languages automatically'},
   ];
 
   const services = [
     {
-'
+
       title: 'Content Writing',
       description:'
         'AI-powered writing assistance for blogs, articles, and marketing copy',
       icon: PenTool,
       features: ['
-        'Blog post generation','
-        'SEO-optimized content','
+        'Blog post generation',
+        'SEO-optimized content',
         'Brand voice consistency',
       ]},
     {
-'
+
       title: 'Visual Design',
       description:'
         'Create compelling graphics, logos, and visual content with AI',
-      icon: Palette,'
-      features: ['Logo design', 'Social media graphics', 'Brand assets']},
+      icon: Palette,
+      features: ['Logo design',Social media graphics',Brand assets']},
     {
-'
-      title: 'Video Creation','
+
+      title: 'Video Creation',
       description: 'Generate and edit videos for marketing and social media',
-      icon: Video,'
-      features: ['Video generation', 'Auto-editing', 'Caption generation']},
+      icon: Video,
+      features: ['Video generation',Auto-editing',Caption generation']},
     {
-'
-      title: 'Audio Content','
+
+      title: 'Audio Content',
       description: 'Create podcasts, voice-overs, and audio content with AI',
-      icon: Mic,'
-      features: ['Voice synthesis', 'Audio editing', 'Podcast generation']},
+      icon: Mic,
+      features: ['Voice synthesis',Audio editing',Podcast generation']},
   ];
 
   const technologies = ['
-    'Natural Language Processing (NLP)','
-    'Generative Adversarial Networks (GANs)','
-    'Computer Vision','
-    'Speech Synthesis','
-    'Content Optimization','
-    'Brand Voice Training','
-    'Multi-Modal AI','
+    'Natural Language Processing (NLP),
+    'Generative Adversarial Networks (GANs),
+    'Computer Vision',
+    'Speech Synthesis',
+    'Content Optimization',
+    'Brand Voice Training',
+    'Multi-Modal AI',
     'Content Analytics',
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
-        title="AI Content Creation Services - Zion Tech Group""
+        title="AI Content Creation Services - Zion Tech Group"
         description="Revolutionary AI-powered content creation for writing, visual design, video production, and multimedia content generation."
       />
 
@@ -138,14 +138,14 @@ export default function AIContentCreation(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
               >
                 Schedule Demo
@@ -302,14 +302,14 @@ export default function AIContentCreation(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
               >
                 Start Creating Today"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
               >
                 Contact Our Team

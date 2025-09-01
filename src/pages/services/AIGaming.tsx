@@ -1,60 +1,60 @@
 import React from 'react';
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
   const features = [
-    'AI-powered player behavior analysis and personalization','
-    'Intelligent game difficulty adjustment and balancing',;'
-    'Automated content generation and procedural creation',;'
-    'Predictive analytics for player engagement and retention',;'
-    'Real-time matchmaking and player pairing optimization',;'
-    'Smart anti-cheat and security systems',;'
-    'Integration with major gaming engines and platforms',;'
+    'AI-powered player behavior analysis and personalization',
+    'Intelligent game difficulty adjustment and balancing',;
+    'Automated content generation and procedural creation',;
+    'Predictive analytics for player engagement and retention',;
+    'Real-time matchmaking and player pairing optimization',;
+    'Smart anti-cheat and security systems',;
+    'Integration with major gaming engines and platforms',;
     'Custom AI models for gaming-specific insights';
   ];
 
   const tiers = [
     {
-'
-      name: 'Indie Developer','
-      price: '$299/mo','
-      details: ['Up to 10,000 players', 'Basic AI features', 'Standard reports', 'Email support']
+
+      name: 'Indie Developer',
+      price: '$299/mo',
+      details: ['Up to 10,000 players',Basic AI features',Standard reports',Email support']
     },
     {
-'
-      name: 'Mid-size Studio', '
-      price: '$799/mo', '
-      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Mid-size Studio',
+      price: '$799/mo',
+      details: ['Up to 100,000 players',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Large Studio', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Large Studio', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Player engagement and retention optimization',;'
-    'Game difficulty and balance adjustment',;'
-    'Content generation and procedural creation',;'
-    'Matchmaking and player pairing',;'
-    'Anti-cheat and security systems',;'
+  const useCases = [;
+    'Player engagement and retention optimization',;
+    'Game difficulty and balance adjustment',;
+    'Content generation and procedural creation',;
+    'Matchmaking and player pairing',;
+    'Anti-cheat and security systems',;
     'Monetization and in-game economy optimization';
   ];
 
-  const benefits = [;'
-    'Increase player engagement by 35-55%',;'
-    'Improve player retention by 40-60%',;'
-    'Cut development costs by 25-40%',;'
-    'Optimize game balance and difficulty',;'
-    'Enhance player experience and satisfaction',;'
+  const benefits = [;
+    'Increase player engagement by 35-55%',;
+    'Improve player retention by 40-60%',;
+    'Cut development costs by 25-40%',;
+    'Optimize game balance and difficulty',;
+    'Enhance player experience and satisfaction',;
     'Scale gaming operations efficiently';
   ];
 
-  const industries = [;'
-    'Mobile Gaming',;'
-    'PC Gaming',;'
-    'Console Gaming',;'
-    'VR/AR Gaming',;'
-    'Esports & Competitive Gaming',;'
+  const industries = [;
+    'Mobile Gaming',;
+    'PC Gaming',;
+    'Console Gaming',;
+    'VR/AR Gaming',;
+    'Esports & Competitive Gaming',;
     'Educational & Serious Games';
   ];
 
@@ -110,8 +110,8 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['35-55% engagement increase', '40-60% retention improvement', '25-40% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['35-55% engagement increase',40-60% retention improvement',25-40% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-purple-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

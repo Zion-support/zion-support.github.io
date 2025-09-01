@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -62,11 +62,11 @@ import {
   ScatterChart,
   AreaChart,
   CandlestickChart,
-  GanttChart,'
+  GanttChart,
   Kanban} from 'lucide-react';
 
 const AISupplyChainOptimization: React.FC = () => {
-'
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -77,37 +77,37 @@ const AISupplyChainOptimization: React.FC = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI Demand Forecasting',
       description:'
         'Predict demand patterns with 95% accuracy using advanced machine learning algorithms'},
     {
 
-      icon: Truck,'
+      icon: Truck,
       title: 'Route Optimization',
       description:'
         'Optimize delivery routes to reduce costs and improve delivery times by 30%'},
     {
 
-      icon: Warehouse,'
+      icon: Warehouse,
       title: 'Inventory Management',
       description:'
         'Smart inventory control with automated reordering and stock level optimization'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Global Supply Chain',
       description:'
         'End-to-end visibility across international supply chains and logistics networks'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Analytics',
       description:'
         'Live monitoring and analytics for supply chain performance and optimization'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Operations',
       description:'
         'Intelligent automation of supply chain processes and decision-making'},
@@ -115,144 +115,144 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const supplyChainModules = [
     {
-'
+
       name: 'Demand Planning',
       features: ['
-        'AI forecasting models','
-        'Seasonal analysis','
-        'Trend prediction','
+        'AI forecasting models',
+        'Seasonal analysis',
+        'Trend prediction',
         'Demand variability',
       ]},
     {
-'
+
       name: 'Inventory Optimization',
       features: ['
-        'Stock level management','
-        'Reorder automation','
-        'Safety stock calculation','
+        'Stock level management',
+        'Reorder automation',
+        'Safety stock calculation',
         'ABC analysis',
       ]},
     {
-'
+
       name: 'Logistics Management',
       features: ['
-        'Route optimization','
-        'Carrier selection','
-        'Freight optimization','
+        'Route optimization',
+        'Carrier selection',
+        'Freight optimization',
         'Last-mile delivery',
       ]},
     {
-'
+
       name: 'Supplier Management',
       features: ['
-        'Supplier performance','
-        'Risk assessment','
-        'Contract management','
+        'Supplier performance',
+        'Risk assessment',
+        'Contract management',
         'Quality control',
       ]},
     {
-'
+
       name: 'Warehouse Operations',
       features: ['
-        'Space utilization','
-        'Picking optimization','
-        'Storage strategies','
+        'Space utilization',
+        'Picking optimization',
+        'Storage strategies',
         'Automation integration',
       ]},
     {
-'
+
       name: 'Risk Management',
       features: ['
-        'Supply disruption','
-        'Geopolitical risks','
-        'Weather impact','
+        'Supply disruption',
+        'Geopolitical risks',
+        'Weather impact',
         'Contingency planning',
       ]},
   ];
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      price: '$2,800','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$2,800',
+      period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'AI Demand Forecasting (up to 100 SKUs)','
-        'Basic Inventory Management','
-        'Route Optimization (up to 50 routes)','
-        'Standard Analytics Dashboard','
-        'Email Support','
-        'Basic Reporting','
+        'AI Demand Forecasting (up to 100 SKUs),
+        'Basic Inventory Management',
+        'Route Optimization (up to 50 routes),
+        'Standard Analytics Dashboard',
+        'Email Support',
+        'Basic Reporting',
         'Mobile App Access',
-      ],'
-      marketPrice: '$3,600','
+      ],
+      marketPrice: '$3,600',
       savings: '22%',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$6,500','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$6,500',
+      period: '/month',
       description: 'Ideal for growing businesses and mid-size companies',
       features: ['
-        'Advanced AI Forecasting','
-        'Comprehensive Inventory Management','
-        'Advanced Route Optimization','
-        'Supplier Management','
-        'Risk Assessment','
-        'Priority Support','
-        'Custom Integration','
-        'Advanced Analytics','
+        'Advanced AI Forecasting',
+        'Comprehensive Inventory Management',
+        'Advanced Route Optimization',
+        'Supplier Management',
+        'Risk Assessment',
+        'Priority Support',
+        'Custom Integration',
+        'Advanced Analytics',
         'Training & Certification',
-      ],'
-      marketPrice: '$8,200','
+      ],
+      marketPrice: '$8,200',
       savings: '21%',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$15,000','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$15,000',
+      period: '/month',
       description: 'For large enterprises and global supply chains',
       features: ['
-        'Enterprise AI Platform','
-        'Unlimited SKU Management','
-        'Global Supply Chain Visibility','
-        'Custom AI Models','
-        'Advanced Risk Management','
-        '24/7 Dedicated Support','
-        'White-label Solutions','
-        'Custom Development','
-        'Consulting Services','
+        'Enterprise AI Platform',
+        'Unlimited SKU Management',
+        'Global Supply Chain Visibility',
+        'Custom AI Models',
+        'Advanced Risk Management',
+        '24/7 Dedicated Support',
+        'White-label Solutions',
+        'Custom Development',
+        'Consulting Services',
         'Staff Training',
-      ],'
-      marketPrice: '$19,500','
+      ],
+      marketPrice: '$19,500',
       savings: '23%',
       popular: false},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Cost Reduction',
       description:'
         'Reduce supply chain costs by 25-35% through AI optimization and automation',
       icon: TrendingUp},
     {
-'
+
       title: 'Improved Efficiency',
       description:'
         'Increase supply chain efficiency by 40% with intelligent automation',
       icon: Zap},
     {
-'
+
       title: 'Better Visibility',
       description:'
         'Real-time visibility across the entire supply chain for better decision-making',
       icon: Eye},
     {
-'
+
       title: 'Risk Mitigation',
       description:'
         'Proactive risk identification and mitigation to prevent supply chain disruptions',
@@ -261,87 +261,87 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const performanceStats = [
     {
-'
-      metric: 'Cost Reduction','
-      value: '30%','
+
+      metric: 'Cost Reduction',
+      value: '30%',
       description: 'Average reduction in supply chain costs'},
     {
-'
-      metric: 'Delivery Time','
-      value: '25% faster','
+
+      metric: 'Delivery Time',
+      value: '25% faster',
       description: 'Improved delivery performance'},
     {
-'
-      metric: 'Inventory Turnover','
-      value: '40% increase','
+
+      metric: 'Inventory Turnover',
+      value: '40% increase',
       description: 'Better inventory management'},
     {
-'
-      metric: 'Forecast Accuracy','
-      value: '95%','
+
+      metric: 'Forecast Accuracy',
+      value: '95%',
       description: 'AI-powered demand forecasting accuracy'},
   ];
 
   const useCases = [
     {
-'
+
       industry: 'Manufacturing',
       applications: ['
-        'Raw Material Planning','
-        'Production Scheduling','
-        'Quality Control','
+        'Raw Material Planning',
+        'Production Scheduling',
+        'Quality Control',
         'Supplier Management',
       ]},
     {
-'
+
       industry: 'Retail & E-commerce',
       applications: ['
-        'Inventory Management','
-        'Demand Forecasting','
-        'Last-mile Delivery','
+        'Inventory Management',
+        'Demand Forecasting',
+        'Last-mile Delivery',
         'Returns Processing',
       ]},
     {
-'
+
       industry: 'Logistics & Transportation',
       applications: ['
-        'Route Optimization','
-        'Fleet Management','
-        'Freight Optimization','
+        'Route Optimization',
+        'Fleet Management',
+        'Freight Optimization',
         'Warehouse Operations',
       ]},
     {
-'
+
       industry: 'Healthcare & Pharmaceuticals',
       applications: ['
-        'Medical Supply Chain','
-        'Cold Chain Management','
-        'Regulatory Compliance','
+        'Medical Supply Chain',
+        'Cold Chain Management',
+        'Regulatory Compliance',
         'Emergency Response',
       ]},
   ];
 
   const industries = [
     {
-'
+
       name: 'Manufacturing',
       icon: Factory,
       description:'
         'Optimize production planning, inventory management, and supplier relationships'},
     {
-'
+
       name: 'Retail',
       icon: Package,
       description:'
         'Streamline inventory, improve demand forecasting, and enhance customer delivery'},
     {
-'
+
       name: 'Healthcare',
       icon: Shield,
       description:'
         'Ensure medical supply availability, compliance, and emergency response readiness'},
     {
-'
+
       name: 'Logistics',
       icon: Truck,
       description:'
@@ -380,14 +380,14 @@ const AISupplyChainOptimization: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >"
               <Truck className="w-5 h-5 mr-2" />
               Optimize Your Supply Chain
             </Link>
             <Link"
-              to="#demo""
+              to="#demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
             >"
               <Eye className="w-5 h-5 mr-2" />
@@ -786,14 +786,14 @@ const AISupplyChainOptimization: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Truck className="w-5 h-5 mr-2" />
                 Schedule Supply Chain Demo
               </Link>
               <Link"
-                to="https://ziontechgroup.com""
+                to="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >"
                 <Globe className="w-5 h-5 mr-2" />

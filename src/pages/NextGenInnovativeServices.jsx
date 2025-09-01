@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
 export default function NextGenInnovativeServices() {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedService, setSelectedService] = useState(null);'
+    const [selectedService, setSelectedService] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     // Get unique categories'
     const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
@@ -24,10 +24,10 @@ export default function NextGenInnovativeServices() {
     const getSupportLevelColor = (level) => {
 
         switch (level.toLowerCase()) {
-'
-            case 'enterprise': return 'bg-purple-600';'
-            case 'premium': return 'bg-blue-600';'
-            case 'standard': return 'bg-green-600';'
+
+            case 'enterprise': return 'bg-purple-600';
+            case 'premium': return 'bg-blue-600';
+            case 'standard': return 'bg-green-600';
             default: return 'bg-gray-600'}
     };
     const containerVariants = {
@@ -150,7 +150,7 @@ export default function NextGenInnovativeServices() {
             <div className="flex items-center gap-4">"
               <Filter className="text-blue-400 w-5 h-5"/>"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="bg-white/10 border border-blue-400/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">"
-                {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">'
+                {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -234,7 +234,7 @@ export default function NextGenInnovativeServices() {
         {filteredServices.length === 0 && (<div className="text-center py-12">"
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
             <button onClick={() => {
-'
+
                 setSearchTerm('');'"
                 setSelectedCategory('all')}} className="text-blue-400 hover:text-blue-300 transition-colors">
               Clear filters

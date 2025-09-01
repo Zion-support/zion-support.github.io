@@ -1,50 +1,50 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const ComprehensivePricingShowcase2025 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = ['
-        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),'
-        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),'
+        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
+        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
     const categories = ['
-        'all','
-        'Legal Tech & Compliance','
-        'Quantum Computing & Security','
-        'Healthcare & Biotech','
-        'Energy & Sustainability','
-        'Cybersecurity','
-        'Fintech & Trading','
-        'Quantum Computing & AI','
-        'Supply Chain & Logistics','
-        'Edge Computing & IoT','
-        'Marketing & Automation','
-        'Quantum Technology','
-        'AI & Machine Learning','
-        'AI & Analytics','
+        'all',
+        'Legal Tech & Compliance',
+        'Quantum Computing & Security',
+        'Healthcare & Biotech',
+        'Energy & Sustainability',
+        'Cybersecurity',
+        'Fintech & Trading',
+        'Quantum Computing & AI',
+        'Supply Chain & Logistics',
+        'Edge Computing & IoT',
+        'Marketing & Automation',
+        'Quantum Technology',
+        'AI & Machine Learning',
+        'AI & Analytics',
         'AI & Customer Experience'
     ];
     const priceRanges = ['
-        { value: 'all', label: 'All Prices' },'
-        { value: 'low', label: 'Under $500/month', max: 500 },'
-        { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },'
+        { value: 'all', label: 'All Prices' },
+        { value: 'low', label: 'Under $500/month', max: 500 },
+        { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000/month', min: 2000 }
     ];
-    const filteredServices = allServices;'
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {
-'
+
         if (priceRange === 'all')
             return true;
         const range = priceRanges.find(r => r.value === priceRange);
         if (!range)
             return true;
         if (service.price) {
-'
-            const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+
+            const price = parseFloat(service.price.replace(/[^0-9.]/g,'));
             if (range.min && range.max) {
 
                 return price >= range.min && price <= range.max}
@@ -59,11 +59,11 @@ const ComprehensivePricingShowcase2025 = () => {
     const getServiceTypeColor = (type) => {
 
         switch (type) {
-'
+
             case 'Micro SAAS':'
-                return 'bg-blue-100 text-blue-800 border-blue-200';'
+                return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'IT Service':'
-                return 'bg-green-100 text-green-800 border-green-200';'
+                return 'bg-green-100 text-green-800 border-green-200';
             case 'AI Service':'
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:'
@@ -72,24 +72,24 @@ const ComprehensivePricingShowcase2025 = () => {
     const getCategoryIcon = (category) => {
 
         const icons = {
-'
-  'Legal Tech & Compliance': '⚖️','
-            'Quantum Computing & Security': '🔐','
-            'Healthcare & Biotech': '🏥','
-            'Energy & Sustainability': '🌱','
-            'Cybersecurity': '🛡️','
-            'Fintech & Trading': '📈','
-            'Quantum Computing & AI': '🔮','
-            'Supply Chain & Logistics': '🚚','
-            'Edge Computing & IoT': '🌐','
-            'Marketing & Automation': '📢','
-            'Quantum Technology': '🔮','
-            'AI & Machine Learning': '🧠','
-            'AI & Analytics': '📊','
+
+  'Legal Tech & Compliance': '⚖️',
+            'Quantum Computing & Security': '🔐',
+            'Healthcare & Biotech': '🏥',
+            'Energy & Sustainability': '🌱',
+            'Cybersecurity': '🛡️',
+            'Fintech & Trading': '📈',
+            'Quantum Computing & AI': '🔮',
+            'Supply Chain & Logistics': '🚚',
+            'Edge Computing & IoT': '🌐',
+            'Marketing & Automation': '📢',
+            'Quantum Technology': '🔮',
+            'AI & Machine Learning': '🧠',
+            'AI & Analytics': '📊',
   'AI & Customer Experience': '💬'
         
 
-};'
+};
         return icons[category] || '🚀'};
     const getPriceDisplay = (service) => {
 
@@ -174,7 +174,7 @@ const ComprehensivePricingShowcase2025 = () => {
               <div>"
                 <label className="block text-sm font-medium text-gray-300 mb-2">Service Category</label>"
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
+                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -268,8 +268,8 @@ const ComprehensivePricingShowcase2025 = () => {
                     </div>)}
                   {service.benefits && (<div>"
                       <span className="text-xs font-semibold text-blue-400">Benefits: </span>"
-                      <span className="text-xs text-gray-300">'
-                        {service.benefits.slice(0, 2).join(', ')}'
+                      <span className="text-xs text-gray-300">
+                        {service.benefits.slice(0, 2).join(',)}
                         {service.benefits.length > 2 && '...'}
                       </span>
                     </div>) }
@@ -292,8 +292,8 @@ const ComprehensivePricingShowcase2025 = () => {
                 {/* Contact and Action */}"
                 <div className="border-t border-white/20 pt-4">"
                   <div className="flex justify-between items-center">"
-                    <div className="text-xs text-gray-400">'
-                      <p>📧 {service.contactInfo?.email || 'kleber@ziontechgroup.com'}</p>'
+                    <div className="text-xs text-gray-400">
+                      <p>📧 {service.contactInfo?.email || 'kleber@ziontechgroup.com'}</p>
                       <p>📱 {service.contactInfo?.mobile || '+1 302 464 0950'}</p>
                     </div>'"
                     <a href={service.link || 'https://ziontechgroup.com'} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105">
@@ -339,7 +339,7 @@ const ComprehensivePricingShowcase2025 = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to Get Started?
             </h2>"
-            <p className="text-xl text-blue-100 mb-8">'
+            <p className="text-xl text-blue-100 mb-8">
               Our transparent pricing ensures you know exactly what you're getting. 
               Contact us today to discuss your specific needs and get a customized quote.
             </p>"

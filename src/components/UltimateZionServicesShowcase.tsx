@@ -1,19 +1,19 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
 
-const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = ['
-    { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },'
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },;'
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;'
-    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;'
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;'
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },;'
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },;'
+    { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },;
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
+    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
+    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },;
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },;
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
   ];
 
@@ -146,7 +146,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
               <div className="text-center">"
                 <div className="text-purple-400 font-semibold text-lg mb-2">🌐 Website</div>"
                 <div className="text-gray-300">"
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" "
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
                      className="text-blue-400 hover:text-blue-300 transition-colors">
                     ziontechgroup.com
                   </a>
@@ -184,7 +184,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
 }}
           >
             <input "
-              type="text" "
+              type="text"
               placeholder="Search revolutionary services..." 
               value={searchTerm} 
               onChange={(e) => setSearchTerm(e.target.value)} "
@@ -216,7 +216,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
           <motion.div "
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
             variants={containerVariants} "
-            initial="hidden" "
+            initial="hidden"
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
@@ -231,8 +231,8 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
-                  <p className="text-sm text-purple-400 font-medium mb-2">'
-                    {service.category.replace('-', ' ').toUpperCase()}
+                  <p className="text-sm text-purple-400 font-medium mb-2">
+                    {service.category.replace('-', ').toUpperCase()}
                   </p>"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
                     {service.innovationLevel}

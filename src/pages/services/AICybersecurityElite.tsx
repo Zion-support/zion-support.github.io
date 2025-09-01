@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -22,7 +22,7 @@ import {
   MapPin,
   ExternalLink,
   AlertTriangle,
-  Activity,'
+  Activity,
   Key} from 'lucide-react.ts';
 
 const AICybersecurityElite: React.FC = (): JSX.Element => {
@@ -30,37 +30,37 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Threat Detection',
       description:'
         'Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Zero-Day Vulnerability Protection',
       description:'
         'Proactive defense against unknown threats using behavioral analysis and AI pattern recognition'},
     {
 
-      icon: Lock,'
+      icon: Lock,
       title: 'End-to-End Encryption',
       description:'
         'Military-grade encryption for data at rest and in transit with quantum-resistant algorithms'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Automated Incident Response',
       description:'
         'Instant threat containment and automated remediation workflows to minimize damage'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Identity & Access Management',
       description:'
         'Multi-factor authentication, biometric verification, and role-based access control'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Global Threat Intelligence',
       description:'
         'Real-time threat feeds from 200+ global sources and dark web monitoring'},
@@ -68,83 +68,83 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
 
   const pricing = [
     {
-'
-      name: 'Essential','
-      price: '$3,500','
-      period: '/month','
+
+      name: 'Essential',
+      price: '$3,500',
+      period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Basic AI threat detection','
-        'Firewall & intrusion prevention','
-        'Email security & spam filtering','
-        'Vulnerability scanning','
-        '24/7 monitoring','
+        'Basic AI threat detection',
+        'Firewall & intrusion prevention',
+        'Email security & spam filtering',
+        'Vulnerability scanning',
+        '24/7 monitoring',
         'Basic incident response',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$7,500','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$7,500',
+      period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Advanced AI threat detection','
-        'Behavioral analytics','
-        'Advanced endpoint protection','
-        'Threat intelligence feeds','
-        'Automated incident response','
-        'Compliance reporting','
+        'Advanced AI threat detection',
+        'Behavioral analytics',
+        'Advanced endpoint protection',
+        'Threat intelligence feeds',
+        'Automated incident response',
+        'Compliance reporting',
         'API access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$18,000','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$18,000',
+      period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Full AI cybersecurity suite','
-        'Custom threat modeling','
-        'Advanced forensics','
-        'Dedicated security team','
-        'Custom integrations','
-        'White-label options','
+        'Full AI cybersecurity suite',
+        'Custom threat modeling',
+        'Advanced forensics',
+        'Dedicated security team',
+        'Custom integrations',
+        'White-label options',
         'On-premise deployment',
       ]},
   ];
 
   const securityFeatures = [
     {
-'
+
       title: 'Advanced Threat Hunting',
       description:'
         'AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage'},
     {
-'
+
       title: 'Behavioral Analytics',
       description:'
         'Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks'},
     {
-'
+
       title: 'Cloud Security',
       description:'
         'Comprehensive cloud security including container security, serverless protection, and multi-cloud management'},
     {
-'
+
       title: 'Compliance & Governance',
       description:'
         'Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks'},
   ];
 
   const complianceStandards = ['
-    'SOC 2 Type II','
-    'ISO 27001','
-    'GDPR','
-    'HIPAA','
-    'PCI DSS','
-    'NIST Cybersecurity Framework','
-    'CIS Controls','
+    'SOC 2 Type II',
+    'ISO 27001',
+    'GDPR',
+    'HIPAA',
+    'PCI DSS',
+    'NIST Cybersecurity Framework',
+    'CIS Controls',
     'FedRAMP',
   ];
 
@@ -173,14 +173,14 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Secure Your Business"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
                 <Phone className="mr-2 h-5 w-5" />
@@ -384,7 +384,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 </ul>
 
                 <a"
-                  href="https://ziontechgroup.com/contact""
+                  href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Protected
@@ -424,7 +424,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 Call Security Team
               </h3>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-zion-slate-light hover:text-white transition-colors duration-300"
               >
                 +1 (302) 464-0950
@@ -439,7 +439,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 Email Security Team
               </h3>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-zion-slate-light hover:text-white transition-colors duration-300"
               >
                 kleber@ziontechgroup.com
@@ -463,7 +463,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
 "
           <div className="text-center">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Security Assessment"
@@ -481,20 +481,20 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
           </p>"
           <div className="flex justify-center space-x-6">
             <a"
-              href="https://ziontechgroup.com""
+              href="https://ziontechgroup.com"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
               <ExternalLink className="inline ml-1 h-4 w-4" />
             </a>
             <a"
-              href="https://ziontechgroup.com/privacy""
+              href="https://ziontechgroup.com/privacy"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Privacy Policy
             </a>
             <a"
-              href="https://ziontechgroup.com/terms""
+              href="https://ziontechgroup.com/terms"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Terms of Service

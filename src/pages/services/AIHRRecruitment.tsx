@@ -1,60 +1,60 @@
 import React from 'react';
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
-    'AI-powered candidate sourcing and matching','
-    'Intelligent resume parsing and skill extraction',;'
-    'Automated interview scheduling and coordination',;'
-    'Predictive analytics for candidate success',;'
-    'Bias-free screening and diversity optimization',;'
-    'Automated reference checking and verification',;'
-    'Integration with major ATS and HR platforms',;'
+    'AI-powered candidate sourcing and matching',
+    'Intelligent resume parsing and skill extraction',;
+    'Automated interview scheduling and coordination',;
+    'Predictive analytics for candidate success',;
+    'Bias-free screening and diversity optimization',;
+    'Automated reference checking and verification',;
+    'Integration with major ATS and HR platforms',;
     'Custom AI models for industry-specific hiring';
   ];
 
   const tiers = [
     {
-'
-      name: 'Starter','
-      price: '$199/mo','
-      details: ['Up to 50 job postings', 'Basic AI matching', 'Standard integrations', 'Email support']
+
+      name: 'Starter',
+      price: '$199/mo',
+      details: ['Up to 50 job postings',Basic AI matching',Standard integrations',Email support']
     },
     {
-'
-      name: 'Professional', '
-      price: '$499/mo', '
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] ;
+
+      name: 'Professional',
+      price: '$499/mo',
+      details: ['Up to 200 job postings',Advanced AI features',Custom integrations',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,299/mo', ;'
-      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,299/mo', ;
+      details: ['Unlimited job postings',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'High-volume recruitment and hiring',;'
-    'Technical talent acquisition',;'
-    'Executive search and placement',;'
-    'Seasonal hiring optimization',;'
-    'Diversity and inclusion hiring',;'
+  const useCases = [;
+    'High-volume recruitment and hiring',;
+    'Technical talent acquisition',;
+    'Executive search and placement',;
+    'Seasonal hiring optimization',;
+    'Diversity and inclusion hiring',;
     'Remote workforce recruitment';
   ];
 
-  const benefits = [;'
-    'Reduce time-to-hire by 40-60%',;'
-    'Improve candidate quality by 30-50%',;'
-    'Cut recruitment costs by 25-40%',;'
-    'Increase diversity in hiring by 35-55%',;'
-    'Enhance candidate experience',;'
+  const benefits = [;
+    'Reduce time-to-hire by 40-60%',;
+    'Improve candidate quality by 30-50%',;
+    'Cut recruitment costs by 25-40%',;
+    'Increase diversity in hiring by 35-55%',;
+    'Enhance candidate experience',;
     'Scale recruitment without additional staff';
   ];
 
-  const industries = [;'
-    'Technology & Software',;'
-    'Healthcare & Life Sciences',;'
-    'Financial Services',;'
-    'Manufacturing & Industrial',;'
-    'Retail & E-commerce',;'
+  const industries = [;
+    'Technology & Software',;
+    'Healthcare & Life Sciences',;
+    'Financial Services',;
+    'Manufacturing & Industrial',;
+    'Retail & E-commerce',;
     'Professional Services';
   ];
 
@@ -110,8 +110,8 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['40-60% faster hiring', '30-50% better candidates', '25-40% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['40-60% faster hiring',30-50% better candidates',25-40% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-violet-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

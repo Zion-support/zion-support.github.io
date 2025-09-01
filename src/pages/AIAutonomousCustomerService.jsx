@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousCustomerService = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousCustomerService = () => {
       <Helmet>
         <title>AI Autonomous Customer Service Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous customer service platform that provides 24/7 intelligent support, automated issue resolution, and personalized customer experiences with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI customer service, autonomous support, automated support, AI chatbot, customer experience, intelligent support"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-customer-service"
         />
       </Helmet>
@@ -181,13 +181,13 @@ const AIAutonomousCustomerService = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Ticket Management','
-                'Live Chat','
-                'Voice Support','
-                'Email Automation','
-                'Social Media','
-                'Self-Service Portal','
-                'Mobile Support','
+                'Ticket Management',
+                'Live Chat',
+                'Voice Support',
+                'Email Automation',
+                'Social Media',
+                'Self-Service Portal',
+                'Mobile Support',
                 'Feedback Collection',
               ].map(feature => (
                 <div

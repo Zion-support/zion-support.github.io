@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -15,11 +15,11 @@ import {
   Shield,
   Globe,
   ArrowRight,
-  ChevronDown,'
+  ChevronDown,
   ChevronUp} from 'lucide-react';
 
 export default function Help() {
-'
+
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);
   const toggleCategory = category => {
@@ -32,158 +32,158 @@ export default function Help() {
   };
   const helpCategories = [
     {
-'
-      id: 'getting-started','
+
+      id: 'getting-started',
       title: 'Getting Started',
       icon: BookOpen,
       articles: [
         {
-'
+
           title: 'How to create your first account',
           description:'
-            'Step-by-step guide to setting up your Zion Tech Group account','
+            'Step-by-step guide to setting up your Zion Tech Group account',
           url: '/help/account-creation'},
         {
-'
-          title: 'Understanding the marketplace','
-          description: 'Learn how our AI and tech marketplace works','
+
+          title: 'Understanding the marketplace',
+          description: 'Learn how our AI and tech marketplace works',
           url: '/help/marketplace-guide'},
         {
-'
-          title: 'First steps for new users','
-          description: 'Essential information to get you started quickly','
+
+          title: 'First steps for new users',
+          description: 'Essential information to get you started quickly',
           url: '/help/first-steps'},
       ]},
     {
-'
-      id: 'account-management','
+
+      id: 'account-management',
       title: 'Account Management',
       icon: Users,
       articles: [
         {
-'
-          title: 'Updating your profile information','
-          description: 'How to keep your profile current and accurate','
+
+          title: 'Updating your profile information',
+          description: 'How to keep your profile current and accurate',
           url: '/help/profile-updates'},
         {
-'
-          title: 'Security settings and two-factor authentication','
-          description: 'Protect your account with enhanced security features','
+
+          title: 'Security settings and two-factor authentication',
+          description: 'Protect your account with enhanced security features',
           url: '/help/security-settings'},
         {
-'
-          title: 'Managing notifications and preferences','
-          description: 'Customize how and when you receive updates','
+
+          title: 'Managing notifications and preferences',
+          description: 'Customize how and when you receive updates',
           url: '/help/notifications'},
       ]},
     {
-'
-      id: 'marketplace','
+
+      id: 'marketplace',
       title: 'Marketplace Features',
       icon: Globe,
       articles: [
         {
-'
+
           title: 'How to list your services',
           description:'
-            'Create compelling service listings that attract clients','
+            'Create compelling service listings that attract clients',
           url: '/help/service-listings'},
         {
-'
-          title: 'Finding and hiring talent','
-          description: 'Discover and connect with skilled professionals','
+
+          title: 'Finding and hiring talent',
+          description: 'Discover and connect with skilled professionals',
           url: '/help/hiring-talent'},
         {
-'
-          title: 'Payment and billing explained','
-          description: 'Understanding our payment system and fees','
+
+          title: 'Payment and billing explained',
+          description: 'Understanding our payment system and fees',
           url: '/help/payments'},
       ]},
     {
-'
-      id: 'ai-services','
+
+      id: 'ai-services',
       title: 'AI & Technology Services',
       icon: Settings,
       articles: [
         {
-'
-          title: 'Available AI solutions','
-          description: 'Overview of our artificial intelligence services','
+
+          title: 'Available AI solutions',
+          description: 'Overview of our artificial intelligence services',
           url: '/help/ai-solutions'},
         {
-'
-          title: 'Cybersecurity services guide','
-          description: 'Protect your business with our security solutions','
+
+          title: 'Cybersecurity services guide',
+          description: 'Protect your business with our security solutions',
           url: '/help/cybersecurity'},
         {
-'
-          title: 'Cloud and infrastructure services','
-          description: 'Scalable cloud solutions for your business needs','
+
+          title: 'Cloud and infrastructure services',
+          description: 'Scalable cloud solutions for your business needs',
           url: '/help/cloud-services'},
       ]},
     {
-'
-      id: 'billing-support','
+
+      id: 'billing-support',
       title: 'Billing & Support',
       icon: CreditCard,
       articles: [
         {
-'
-          title: 'Understanding your invoice','
-          description: 'Break down of charges and payment terms','
+
+          title: 'Understanding your invoice',
+          description: 'Break down of charges and payment terms',
           url: '/help/invoice-explanation'},
         {
-'
-          title: 'Payment methods and options','
-          description: 'Accepted payment methods and processing times','
+
+          title: 'Payment methods and options',
+          description: 'Accepted payment methods and processing times',
           url: '/help/payment-methods'},
         {
-'
-          title: 'Refund and cancellation policies','
-          description: 'Our policies for refunds and service cancellations','
+
+          title: 'Refund and cancellation policies',
+          description: 'Our policies for refunds and service cancellations',
           url: '/help/refund-policy'},
       ]},
     {
-'
-      id: 'security-privacy','
+
+      id: 'security-privacy',
       title: 'Security & Privacy',
       icon: Shield,
       articles: [
         {
-'
-          title: 'Data protection measures','
-          description: 'How we protect your information and privacy','
+
+          title: 'Data protection measures',
+          description: 'How we protect your information and privacy',
           url: '/help/data-protection'},
         {
-'
-          title: 'Privacy settings and controls','
-          description: 'Manage your privacy preferences and data sharing','
+
+          title: 'Privacy settings and controls',
+          description: 'Manage your privacy preferences and data sharing',
           url: '/help/privacy-controls'},
         {
-'
-          title: 'Reporting security issues','
-          description: 'How to report security concerns or vulnerabilities','
+
+          title: 'Reporting security issues',
+          description: 'How to report security concerns or vulnerabilities',
           url: '/help/security-reporting'},
       ]},
   ];
   const popularArticles = [
     {
-'
-      title: 'How to get started with AI services','
-      description: 'Quick guide to implementing AI solutions for your business','
-      category: 'AI & Technology Services','
+
+      title: 'How to get started with AI services',
+      description: 'Quick guide to implementing AI solutions for your business',
+      category: 'AI & Technology Services',
       readTime: '5 min read'},
     {
-'
-      title: 'Marketplace best practices','
-      description: 'Tips for success in our technology marketplace','
-      category: 'Marketplace Features','
+
+      title: 'Marketplace best practices',
+      description: 'Tips for success in our technology marketplace',
+      category: 'Marketplace Features',
       readTime: '8 min read'},
     {
-'
-      title: 'Account security essentials','
-      description: 'Protect your account with these security best practices','
-      category: 'Security & Privacy','
+
+      title: 'Account security essentials',
+      description: 'Protect your account with these security best practices',
+      category: 'Security & Privacy',
       readTime: '6 min read'},
   ];
   const filteredCategories = helpCategories;
@@ -212,7 +212,7 @@ export default function Help() {
           <div className="max-w-2xl mx-auto relative">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
             <input"
-              type="text""
+              type="text"
               placeholder="Search for help articles, guides, or topics..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
@@ -414,7 +414,7 @@ export default function Help() {
                 Call us directly for immediate assistance
               </p>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >
                 Call Now
@@ -429,7 +429,7 @@ export default function Help() {
                 Send us a detailed message
               </p>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >
                 Send Email

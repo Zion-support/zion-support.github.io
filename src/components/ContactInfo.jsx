@@ -68,7 +68,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <Clock className="h-5 w-5 text-zion-cyan"/>
                   Business Hours
                 </CardTitle>"
-                <CardDescription className="text-zion-slate-light">'
+                <CardDescription className="text-zion-slate-light">
                   We're available when you need us
                 </CardDescription>
               </CardHeader>

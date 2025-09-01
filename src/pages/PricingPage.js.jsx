@@ -7,14 +7,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";"
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {
-'
-  'AI Business Solutions': Brain,'
-    'IT Infrastructure': Cloud,'
-    'Data Analytics': BarChart3,'
-    'AI Development': Code,'
-    'FinTech': DollarSign,'
-    'HealthTech': Heart,'
-    'E-commerce': ShoppingCart,'
+
+  'AI Business Solutions': Brain,
+    'IT Infrastructure': Cloud,
+    'Data Analytics': BarChart3,
+    'AI Development': Code,
+    'FinTech': DollarSign,
+    'HealthTech': Heart,
+    'E-commerce': ShoppingCart,
   'EdTech': GraduationCap
 
 };
@@ -63,14 +63,14 @@ const comparisonFeatures = ["
     "Free Migration Support"
 ];
 export default function PricingPage() {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [billingCycle, setBillingCycle] = useState('monthly');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [billingCycle, setBillingCycle] = useState('monthly');
     const filteredServices = selectedCategory === 'all'
         ? MICRO_SAAS_SERVICES'
-        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
+        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g,-') === selectedCategory);
     const getDiscountedPrice = (price) => {
-'
+
         return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price};"
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}"
@@ -85,7 +85,7 @@ export default function PricingPage() {
           </p>
 
           {/* Billing Toggle */}"
-          <div className="flex items-center justify-center gap-4 mb-8">'
+          <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
               Monthly
             </span>'"`
@@ -93,7 +93,7 @@ export default function PricingPage() {
               <div className="flex items-center gap-2">'"
                 {billingCycle === 'yearly' && (<Badge className="absolute -top-2 -right-2 bg-green-500 text-white text-xs">
                     Save 20%
-                  </Badge>)}'
+                  </Badge>)}
                 {billingCycle === 'yearly' ? 'Yearly' : 'Monthly'}
               </div>
             </Button>
@@ -120,7 +120,7 @@ export default function PricingPage() {
                   </div>)}"
                 <CardHeader className="text-center">"
                   <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>
-                  <CardDescription>'
+                  <CardDescription>
                     Perfect for {key === 'basic' ? 'startups' : key === 'professional' ? 'growing businesses' : 'enterprises'}
                   </CardDescription>
                 </CardHeader>"
@@ -163,7 +163,7 @@ export default function PricingPage() {
 
             const IconComponent = categoryIcons[category.label];"
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">"
-                    {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}'
+                    {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
                     {category.label.split(' ')[0]}
                   </TabsTrigger>)})}
             </TabsList>
@@ -198,7 +198,7 @@ export default function PricingPage() {
                         <div>"
                           <div className="text-2xl font-bold text-zion-blue">
                             ${getDiscountedPrice(service.price)}"
-                            <span className="text-sm text-gray-500">'
+                            <span className="text-sm text-gray-500">
                               /{billingCycle === 'yearly' ? 'year' : 'month'}
                             </span>
                           </div>'"

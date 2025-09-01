@@ -1,6 +1,6 @@
-import React from 'react.ts';'
-import { Helmet  } from 'react-helmet-async.ts';'
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';'
+import React from 'react.ts';
+import { Helmet  } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 ;
 export { function };
@@ -37,7 +37,7 @@ export default function DigitalTransformation(...args: []):  {
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started"
@@ -384,14 +384,14 @@ export default function DigitalTransformation(...args: []):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
 
                 Schedule a Consultation"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
                 Explore All Services;

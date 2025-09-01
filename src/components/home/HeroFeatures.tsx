@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 
 interface HeroFeature {
@@ -23,7 +23,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       {features.map((feature, index (;
         <motion.div
           key={feature.title}"
-          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20""
+          className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
           role="article"
           aria-labelledby={`feature-${index}-title`}
           whileHover={{

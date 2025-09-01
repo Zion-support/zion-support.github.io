@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { LinkValidator } from '../utils/linkValidator';
 export const LinkMonitor = ({
 
@@ -14,19 +14,19 @@ export const LinkMonitor = ({
   // Scan all links on the current page
   const scanPageLinks = async () => {
     setIsScanning(true);
-    setScanProgress(0);'
+    setScanProgress(0);
     const links = Array.from(document.querySelectorAll('a[href]'));
     const results = [];
     for (let i = 0; i < links.length; i++) {
 
-      const link = links[i];'
+      const link = links[i];
       const href = link.getAttribute('href');
       if (href) {
 
         const result = LinkValidator.validateLink()
           href,
           window.location.pathname
-        );'
+        );
         if (result.status === 'broken') {
 
           results.push(result);
@@ -60,22 +60,22 @@ export const LinkMonitor = ({
       validationResult.suggestedFix &&'
       validationResult.suggestedFix.startsWith('Redirect to:')
     ) {
-'
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ', '');
+
+      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',');
       // Find and update the link
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
       links.forEach(link => {
 
-        link.href = newUrl;'
-        link.setAttribute('data-fixed', 'true');'`
+        link.href = newUrl;
+        link.setAttribute('data-fixed',true');'`
         link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
       });
       // Add to fixed links list
       const fix = {
 
         originalUrl,
-        newUrl,'
-        type: 'redirect','
+        newUrl,
+        type: 'redirect',
         reason: 'Automatically fixed broken internal link'};
       setFixedLinks(prev => [...prev, fix]);
     }
@@ -90,11 +90,11 @@ export const LinkMonitor = ({
   };
   // Generate redirect rules for server configuration
   const generateRedirectRules = () => {
-    const rules = LinkValidator.generateRedirectRules();'
+    const rules = LinkValidator.generateRedirectRules();
     const blob = new Blob([rules], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);'
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;'
+    a.href = url;
     a.download = 'redirect-rules.txt';
     a.click();
     URL.revokeObjectURL(url);
@@ -108,11 +108,11 @@ export const LinkMonitor = ({
       brokenLinks: brokenLinks,
       fixedLinks: fixedLinks};
     const blob = new Blob([JSON.stringify(report, null, 2)], {
-'
+
       type: 'application/json'});
-    const url = URL.createObjectURL(blob);'
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;'
+    a.href = url;
     a.download = 'broken-links-report.json';
     a.click();
     URL.revokeObjectURL(url);
@@ -135,7 +135,7 @@ export const LinkMonitor = ({
             onClick={scanPageLinks}
             disabled={isScanning}"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-          >'
+          >
             {isScanning ? 'Scanning...' : 'Scan Links'}
           </button>
           {brokenLinks.length > 0 && (
@@ -189,7 +189,7 @@ export const LinkMonitor = ({
             </div>
           </div>"
           <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">"
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">'
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
               {lastScanTime ? lastScanTime.toLocaleTimeString() : 'Never'}
             </div>"
             <div className="text-sm text-blue-600 dark:text-blue-400">

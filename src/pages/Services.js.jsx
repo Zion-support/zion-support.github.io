@@ -1,21 +1,21 @@
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
-import { Link } from 'react-router-dom';'
-import { servicesCatalog } from '@/data/servicesCatalog';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 export default function Services() {
   const contact = {
-'
-    mobile: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709','
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'};
   return()
     <>
       <SEO
-        title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group""
-        description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started.""
-        canonical="/services""
+        title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group"
+        description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started."
+        canonical="/services"
         url="https://ziontechgroup.com/services"
       />
 "
@@ -56,7 +56,7 @@ export default function Services() {
                           <div className="text-zion-cyan font-semibold">
                             {item.price}
                           </div>"
-                          <div className="text-zion-slate-light text-sm">'
+                          <div className="text-zion-slate-light text-sm">
                             {item.billing === 'month''
                               ? 'Monthly''
                               : item.billing === 'hour''
@@ -74,8 +74,8 @@ export default function Services() {
 "
                       <div className="mt-6 flex items-center justify-between">
                         <Link
-                          to={item.href}'
-                          target={item.external ? '_blank' : null}'
+                          to={item.href}
+                          target={item.external ? '_blank' : null}
                           rel={item.external ? 'noopener noreferrer' : null}"
                           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20"
                         >
@@ -121,7 +121,7 @@ export default function Services() {
             </div>"
             <div className="mt-6">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center gap-2 text-white underline"
               >
                 Go to contact page

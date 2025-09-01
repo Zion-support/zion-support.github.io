@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const UltimatePricing2025 = () => {
     const pricingTiers = [
@@ -320,7 +320,7 @@ const UltimatePricing2025 = () => {
         </div>
       </section>
 
-      {/* Pricing Tiers */}'
+      {/* Pricing Tiers */}
       {pricingTiers.map((tier, tierIndex) => (<section key={tierIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${tierIndex % 2 === 0 ? 'bg-white/5' : ''}`}>"
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"

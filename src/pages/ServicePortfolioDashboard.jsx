@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
 import AdvancedServicePortfolioDashboard from "../components/AdvancedServicePortfolioDashboard";"
 import { Button } from "../components/ui/button";"
@@ -8,63 +8,63 @@ const ServicePortfolioDashboard = () => {
     const features = [
         {
 "
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,'
-            title: 'Comprehensive Analytics','
+            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
+            title: 'Comprehensive Analytics',
             description: 'Real-time insights into service performance, revenue, and growth metrics'
         },
         {
 "
-            icon: <PieChart className="w-6 h-6 text-zion-purple"/>,'
-            title: 'Portfolio Visualization','
+            icon: <PieChart className="w-6 h-6 text-zion-purple"/>,
+            title: 'Portfolio Visualization',
             description: 'Interactive charts and graphs showing service distribution and trends'
         },
         {
 "
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,'
-            title: 'Performance Tracking','
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            title: 'Performance Tracking',
             description: 'Monitor service performance, client satisfaction, and market demand'
         },
         {
 "
-            icon: <Target className="w-6 h-6 text-zion-orange"/>,'
-            title: 'Strategic Insights','
+            icon: <Target className="w-6 h-6 text-zion-orange"/>,
+            title: 'Strategic Insights',
             description: 'Data-driven recommendations for portfolio optimization and growth'
 
     ];
     const benefits = ['
-        'Comprehensive view of all service offerings and their performance','
-        'Real-time analytics and performance metrics for informed decision making','
-        'Portfolio optimization insights and strategic recommendations','
-        'Client engagement tracking and revenue analysis','
-        'Market demand analysis and competitive positioning','
+        'Comprehensive view of all service offerings and their performance',
+        'Real-time analytics and performance metrics for informed decision making',
+        'Portfolio optimization insights and strategic recommendations',
+        'Client engagement tracking and revenue analysis',
+        'Market demand analysis and competitive positioning',
         'Technology maturity assessment and innovation tracking'
     ];
     const portfolioStats = [
         {
-'
-            label: 'Total Services','
-            value: '52+','
+
+            label: 'Total Services',
+            value: '52+',
             description: 'Cutting-edge technology solutions',"
             icon: <Rocket className="w-8 h-8 text-zion-cyan"/>
         },
         {
-'
-            label: 'Technology Categories','
-            value: '12+','
+
+            label: 'Technology Categories',
+            value: '12+',
             description: 'Major technology sectors covered',"
             icon: <Brain className="w-8 h-8 text-zion-purple"/>
         },
         {
-'
-            label: 'Price Range','
-            value: '$5K-$2M','
+
+            label: 'Price Range',
+            value: '$5K-$2M',
             description: 'Monthly service pricing',"
             icon: <DollarSign className="w-8 h-8 text-zion-green"/>
         },
         {
-'
-            label: 'Market Coverage','
-            value: '95%+','
+
+            label: 'Market Coverage',
+            value: '95%+',
             description: 'Technology market segments',"
             icon: <Globe className="w-8 h-8 text-zion-orange"/>
 
@@ -108,8 +108,8 @@ const ServicePortfolioDashboard = () => {
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation','
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',
   '_blank')
 
 
@@ -385,8 +385,8 @@ const ServicePortfolioDashboard = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation','
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',
   '_blank')
 
 
@@ -399,8 +399,8 @@ const ServicePortfolioDashboard = () => {
                 Get Portfolio Strategy
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('tel:+13024640950','
+
+  () => window.open('tel:+13024640950',
   '_blank')
 
 

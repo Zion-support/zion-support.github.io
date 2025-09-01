@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 export function Avatar({ children, className = '' }) {
 
   return()
@@ -8,7 +8,7 @@ export function Avatar({ children, className = '' }) {
       {children}
     </div>
   );
-}'
+}
 export function AvatarImage({ src, alt = '', className = '' }) {
 
   return()
@@ -18,7 +18,7 @@ export function AvatarImage({ src, alt = '', className = '' }) {
       className={`aspect-square h-full w-full ${className}`}
     />
   );
-}'
+}
 export function AvatarFallback({ children, className = '' }) {
 
   return()
@@ -28,8 +28,8 @@ export function AvatarFallback({ children, className = '' }) {
       {children}
     </div>
   );
-}'
-import React from 'react';'
+}
+import React from 'react';
 import { cn } from '@/lib/utils';
 const Avatar = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -40,19 +40,19 @@ const Avatar = React.forwardRef(({ className, ...props }, ref) => (
     )}
     {...props}
   />
-));'
+));
 Avatar.displayName = 'Avatar';
 const AvatarImage = React.forwardRef('
   ({ className, src, alt = '', ...props }, ref) => (
     <img
-      ref={ref}'
+      ref={ref}
       className={cn('aspect-square h-full w-full', className)}
       src={src}
       alt={alt}
       {...props}
     />
   )
-);'
+);
 AvatarImage.displayName = 'AvatarImage';
 const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -63,7 +63,7 @@ const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
     )}
     {...props}
   />
-));'
+));
 AvatarFallback.displayName = 'AvatarFallback';
 export { Avatar, AvatarImage, AvatarFallback };
 '`

@@ -1,112 +1,112 @@
-import React, { useState, useRef, useEffect } from 'react';'
+import React, { useState, useRef, useEffect } from 'react';
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
 const portfolioProjects = [
     {
-'
-        id: '1','
-        title: 'AI-Powered E-commerce Platform','
-        description: 'A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.','
-        category: 'AI & ML','
-        technologies['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],;'
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '1',
+        title: 'AI-Powered E-commerce Platform',
+        description: 'A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.',
+        category: 'AI & ML',
+        technologies['React',Node.js',TensorFlow',MongoDB',AWS'],;
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.9,
-        users: 2500,'
+        users: 2500,
         completionDate: '2024-01',
-        featured: true,'
-        tags['Machine Learning', 'E-commerce', 'Real-time', 'Scalable'];
+        featured: true,
+        tags['Machine Learning',E-commerce',Real-time',Scalable'];
     },;
     {
-'
-        id: '2','
-        title: 'Blockchain Supply Chain Tracker','
-        description: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.','
-        category: 'Web3','
-        technologies['Solidity', 'React', 'Web3.js', 'IPFS', 'Ethereum'],;'
-        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '2',
+        title: 'Blockchain Supply Chain Tracker',
+        description: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.',
+        category: 'Web3',
+        technologies['Solidity',React',Web3.js',IPFS',Ethereum'],;
+        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.8,
-        users: 1800,'
+        users: 1800,
         completionDate: '2024-02',
-        featured: true,'
-        tags['Blockchain', 'Supply Chain', 'Decentralized', 'Security'];
+        featured: true,
+        tags['Blockchain',Supply Chain',Decentralized',Security'];
     },;
     {
-'
-        id: '3','
-        title: 'Real-time Data Analytics Dashboard','
-        description: 'Comprehensive analytics platform providing real-time insights with interactive charts, predictive analytics, and automated reporting.','
-        category: 'Data Science','
-        technologies['Python', 'Django', 'D3.js', 'PostgreSQL', 'Redis'],;'
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '3',
+        title: 'Real-time Data Analytics Dashboard',
+        description: 'Comprehensive analytics platform providing real-time insights with interactive charts, predictive analytics, and automated reporting.',
+        category: 'Data Science',
+        technologies['Python',Django',D3.js',PostgreSQL',Redis'],;
+        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.7,
-        users: 3200,'
+        users: 3200,
         completionDate: '2024-03',
-        featured: false,'
-        tags['Analytics', 'Real-time', 'Predictive', 'Dashboard'];
+        featured: false,
+        tags['Analytics',Real-time',Predictive',Dashboard'];
     },;
     {
-'
-        id: '4','
-        title: 'Mobile-First Banking App','
-        description: 'Secure and intuitive mobile banking application with biometric authentication, real-time notifications, and advanced security features.','
-        category: 'Mobile','
-        technologies['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],;'
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '4',
+        title: 'Mobile-First Banking App',
+        description: 'Secure and intuitive mobile banking application with biometric authentication, real-time notifications, and advanced security features.',
+        category: 'Mobile',
+        technologies['React Native',Node.js',PostgreSQL',Redis',AWS'],;
+        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.9,
-        users: 4500,'
+        users: 4500,
         completionDate: '2024-04',
-        featured: true,'
-        tags['Mobile', 'Banking', 'Security', 'Biometric'];
+        featured: true,
+        tags['Mobile',Banking',Security',Biometric'];
     },;
     {
-'
-        id: '5','
-        title: 'IoT Smart Home Controller','
-        description: 'Centralized smart home management system with AI-powered automation, energy optimization, and seamless device integration.','
-        category: 'IoT','
-        technologies['Python', 'React', 'MQTT', 'TensorFlow', 'Docker'],;'
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '5',
+        title: 'IoT Smart Home Controller',
+        description: 'Centralized smart home management system with AI-powered automation, energy optimization, and seamless device integration.',
+        category: 'IoT',
+        technologies['Python',React',MQTT',TensorFlow',Docker'],;
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.6,
-        users: 1200,'
+        users: 1200,
         completionDate: '2024-05',
-        featured: false,'
-        tags['IoT', 'Smart Home', 'Automation', 'Energy'];
+        featured: false,
+        tags['IoT',Smart Home',Automation',Energy'];
     },;
     {
-'
-        id: '6','
-        title: 'Cybersecurity Threat Detection','
-        description: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.','
-        category: 'Security','
-        technologies['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker'],;'
-        image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop','
-        liveUrl: 'https://example.com','
+
+        id: '6',
+        title: 'Cybersecurity Threat Detection',
+        description: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.',
+        category: 'Security',
+        technologies['Python',TensorFlow',Elasticsearch',Kafka',Docker'],;
+        image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+        liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
         rating: 4.8,
-        users: 2800,'
+        users: 2800,
         completionDate: '2024-06',
-        featured: true,'
-        tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time'];
+        featured: true,
+        tags['Cybersecurity',Threat Detection',Machine Learning',Real-time'];
     }
-];'
-const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
+];
+const categories = ['All',AI & ML',Web3',Data Science',Mobile',IoT',Security'];
 export function InteractivePortfolio() {
-'
+
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
     const [hoveredProject, setHoveredProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const containerRef = useRef(null);'
+    const containerRef = useRef(null);
     const filteredProjects = portfolioProjects.filter(project => selectedCategory === 'All' || project.category === selectedCategory);
     const handleProjectClick = (project) => {
 
@@ -128,20 +128,20 @@ export function InteractivePortfolio() {
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
     };
     const handleKeyPress = (e) => {
-'
+
         if (e.key === 'Escape') {
 
             closeModal()}
     };
     useEffect ( () => {
         if (isModalOpen) {
-'
+
             document.body.style.overflow = 'hidden'}
         else {
-'
+
             document.body.style.overflow = 'unset'}
         return () => {
-'
+
             document.body.style.overflow = 'unset'}}, [isModalOpen]);
     return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">"
       <div className="container mx-auto px-4">
@@ -174,7 +174,7 @@ export function InteractivePortfolio() {
 
                 transform: hoveredProject === project.id'
                     ? 'perspective(1000px) rotateY(2deg) rotateX(1deg)''
-                    : 'perspective(1000px) rotateY(0deg) rotateX(0deg)'
+                    : 'perspective(1000px) rotateY(0deg) rotateX(0deg)
             }}>
                 {/* Featured Badge */}"
                 {project.featured && (<div className="absolute top-4 left-4 z-10">"
@@ -257,7 +257,7 @@ export function InteractivePortfolio() {
             <h3 className="text-2xl font-bold text-zion-slate mb-4">
               Ready to Start Your Project?
             </h3>"
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">'
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions
             </p>"
             <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-zion-cyan/30 hover:-translate-y-1">

@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { DollarSign, 
   TrendingUp, 
@@ -305,7 +305,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Financial Planning & Budgeting - Zion Tech Group""
+        title="AI Financial Planning & Budgeting - Zion Tech Group"
         description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
       />
       
@@ -345,7 +345,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Financial Planning"
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                 {' '}& Budgeting
               </span>
             </h1>"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -27,10 +27,10 @@ import {
 import { servicesCatalog } from "../data/servicesCatalog";"
 import { innovativeServices2027 } from "../data/innovativeServices2027";
 
-export const ComprehensivePricingGuide2027: React.FC = () => {;'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');'
-  const [priceRange, setPriceRange] = useState<any>('All');'
+export const ComprehensivePricingGuide2027: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [priceRange, setPriceRange] = useState<any>('All');
   const [sortBy, setSortBy] = useState<any>('name');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,7 +39,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       },;
       { threshold: 0.1 }
     );
-'
+
     const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
 
@@ -52,18 +52,18 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
 
-        ...item,'
+        ...item,
         source: 'catalog',
         category: category.name
       }))
     ),
     ...innovativeServices2027.map(service  => ({
 
-      ...service,;'
+      ...service,;
       source: 'innovative',;
       category: service.category,;
-      features: service.features || [],;'
-      ctaLabel: service.ctaLabel || 'Get Started',;'
+      features: service.features || [],;
+      ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact';
     }) ) ;
   ];
@@ -73,40 +73,40 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-'
+
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-'
+
     const matchesPrice = priceRange === 'All' ||'
-      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||'
-      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||'
-      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
+      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g,')) < 100) ||'
+      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g,')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g,')) < 1000) ||'
+      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g,')) >= 1000);
 
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {;
       case 'name':;
-        return a.title.localeCompare(b.title);'
-      case 'price':;'
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
+        return a.title.localeCompare(b.title);
+      case 'price':;
+        return parseFloat(a.price.replace(/[^0-9.]/g,')) - parseFloat(b.price.replace(/[^0-9.]/g,'));
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
         return 0}
   });
-'
-  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];'
-  const priceRanges = ['All', 'Low (<$100)', 'Medium ($100-$999)', 'High ($1000+)'];
+
+  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const priceRanges = ['All',Low (<$100),Medium ($100-$999),High ($1000+)];
 
   const contactInfo = {
-'
-  phone: '+1 302 464 0950','
+
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
   ;
   ;
   ;
-  ;'
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
@@ -115,38 +115,38 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
 };
 
-  const getPriceRange = (price: string) => {;'
-    const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
-    if (numPrice < 100) return 'Low';'
-    if (numPrice < 1000) return 'Medium';'
+  const getPriceRange = (price: string) => {;
+    const numPrice = parseFloat(price.replace(/[^0-9.]/g,'));
+    if (numPrice < 100) return 'Low';
+    if (numPrice < 1000) return 'Medium';
     return 'High'};
-'
+
       default: return 'text-white'}
   };
 
   const getCategoryIcon = (category: string)  => {
 
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-'
-      'AI Solutions': Brain,'
-      'Micro SaaS': Zap,'
-      'IT Services': Shield,'
-      'Cybersecurity': Shield,'
-      'Data & Analytics': BarChart3,'
-      'Cloud & DevOps': Cloud,'
-      'Quantum Computing': Atom,'
-      'Blockchain Solutions': Lock,'
-      'IoT & Edge Computing': Network,'
-      'FinTech Solutions': DollarSign,'
-      'HealthTech Solutions': Heart,'
-      'EdTech Solutions': BookOpen,'
-      'GreenTech Solutions': Leaf,'
-      'SpaceTech Solutions': Rocket,;'
-      'Robotics & Automation': Cpu,;'
-      'AR/VR Solutions': Eye,;'
-      'Biotech Solutions': Dna,;'
-      'LegalTech Solutions': Scale,;'
-      'Real Estate Tech': Home,;'
+
+      'AI Solutions': Brain,
+      'Micro SaaS': Zap,
+      'IT Services': Shield,
+      'Cybersecurity': Shield,
+      'Data & Analytics': BarChart3,
+      'Cloud & DevOps': Cloud,
+      'Quantum Computing': Atom,
+      'Blockchain Solutions': Lock,
+      'IoT & Edge Computing': Network,
+      'FinTech Solutions': DollarSign,
+      'HealthTech Solutions': Heart,
+      'EdTech Solutions': BookOpen,
+      'GreenTech Solutions': Leaf,
+      'SpaceTech Solutions': Rocket,;
+      'Robotics & Automation': Cpu,;
+      'AR/VR Solutions': Eye,;
+      'Biotech Solutions': Dna,;
+      'LegalTech Solutions': Scale,;
+      'Real Estate Tech': Home,;
       'Supply Chain Solutions': Truck;
     };
     return iconMap[category] || Target};
@@ -229,7 +229,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -383,16 +383,16 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                     <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
                       {service.price}
                     </div>"
-                    <div className="text-gray-400 text-sm">'
-                      {service.billing === 'month' && 'per month'}'
-                      {service.billing === 'project' && 'per project'}'
-                      {service.billing === 'hour' && 'per hour'}'
+                    <div className="text-gray-400 text-sm">
+                      {service.billing === 'month' && 'per month'}
+                      {service.billing === 'project' && 'per project'}
+                      {service.billing === 'hour' && 'per hour'}
                       {service.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
 
-                {/* Additional Info for Innovative Services */}'
+                {/* Additional Info for Innovative Services */}
                 {service.source === 'innovative' && 'marketSize' in service && ("
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-center">"
@@ -473,16 +473,16 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Get Custom Quote"
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website"

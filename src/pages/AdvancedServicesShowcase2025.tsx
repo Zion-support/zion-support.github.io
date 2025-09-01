@@ -4,13 +4,13 @@ import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServ
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";"
 import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";
 
-const AdvancedServicesShowcase2025: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
+const AdvancedServicesShowcase2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const allServices = [;'
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;'
-    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;'
+  const allServices = [;
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;
+    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;
     ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
   ];
 
@@ -20,17 +20,17 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  const categories = [;'
-    { id: 'all', name: 'All Services', count: allServices.length },;'
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;'
-    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;'
+  const categories = [;
+    { id: 'all', name: 'All Services', count: allServices.length },;
+    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
+    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
     { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Advanced Services Showcase 2025 - Zion Tech Group""
+        title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
       />
 
@@ -46,13 +46,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
 
                 Get Started Today
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-gray-300 text-lg font-medium rounded-lg text-gray-300 hover:text-white hover:border-white transition-colors duration-200"
 
                 Call + 1 302 464 0950
@@ -138,7 +138,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
           <div className="flex flex-col md:flex-row gap-4">"
             <div className="flex-1">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services by name, description, or tags..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -171,7 +171,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
             <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">"
               <div className="flex items-start justify-between mb-4">`
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                   service.source === 'Micro SaaS' ? 'bg-blue-100 text-blue-800' :'
                   service.source === 'IT Services' ? 'bg-green-100 text-green-800' :'
                   'bg-purple-100 text-purple-800'`
@@ -232,7 +232,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
 "
               <div className="space-y-3">
                 <a"
-                  href="https://ziontechgroup.com/contact""
+                  href="https://ziontechgroup.com/contact"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 text-center block"
 
                   Get Quote
@@ -251,8 +251,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
           <div className="text-center py-16">;"
             <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
             <button;
-              onClick={() => {;'
-                setSearchTerm('');'
+              onClick={() => {;
+                setSearchTerm('');
                 setSelectedCategory('all');
               }}"
               className = "text-blue-400 hover:text-blue-300 underline"
@@ -272,13 +272,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors duration-200"
 
               Request Free Consultation
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
 
               Call + 1 302 464 0950

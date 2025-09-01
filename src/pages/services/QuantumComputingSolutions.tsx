@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -46,7 +46,7 @@ import {
   Wifi,
   Bluetooth,
   Radio'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 ;
 export { function };
@@ -54,142 +54,142 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   const features = [
     {
 
-      icon: Atom,'
-      title: 'Quantum Processing','
+      icon: Atom,
+      title: 'Quantum Processing',
       description: 'Harness quantum superposition and entanglement for exponential computational power.'
     },
     {
 
-      icon: Brain,'
-      title: 'AI Integration','
+      icon: Brain,
+      title: 'AI Integration',
       description: 'Seamlessly integrate quantum computing with AI and machine learning workflows.'
     },
     {
 
-      icon: Zap,'
-      title: 'Real-time Optimization','
+      icon: Zap,
+      title: 'Real-time Optimization',
       description: 'Solve complex optimization problems in seconds instead of years.'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Scalable Solutions','
+      icon: TrendingUp,
+      title: 'Scalable Solutions',
       description: 'From small quantum circuits to enterprise-scale quantum applications.'
     }
   ];
 
   const capabilities = [
     {
-'
-      title: 'Quantum Algorithms','
+
+      title: 'Quantum Algorithms',
       description: 'Custom quantum algorithms for specific business problems and use cases',
-      icon: Code,'
-      benefits: ['Grover\'s algorithm', 'Shor\'s algorithm', 'Quantum annealing']
+      icon: Code,
+      benefits: ['Grover\'s algorithm',Shor\'s algorithm',Quantum annealing']
     },
     {
-'
-      title: 'Hybrid Computing','
+
+      title: 'Hybrid Computing',
       description: 'Combine classical and quantum computing for optimal performance',
-      icon: Cpu,'
-      benefits: ['Quantum-classical integration', 'Hybrid algorithms', 'Performance optimization']
+      icon: Cpu,
+      benefits: ['Quantum-classical integration',Hybrid algorithms',Performance optimization']
     },
     {
-'
-      title: 'Quantum Simulation','
+
+      title: 'Quantum Simulation',
       description: 'Simulate quantum systems for research and development',
-      icon: Monitor,'
-      benefits: ['Molecular modeling', 'Material science', 'Drug discovery']
+      icon: Monitor,
+      benefits: ['Molecular modeling',Material science',Drug discovery']
     },
     {
-'
-      title: 'Quantum Security','
+
+      title: 'Quantum Security',
       description: 'Quantum-resistant cryptography and secure communications',
-      icon: Shield,'
-      benefits: ['Post-quantum crypto', 'Quantum key distribution', 'Secure networks']
+      icon: Shield,
+      benefits: ['Post-quantum crypto',Quantum key distribution',Secure networks']
     }
   ];
 
   const useCases = [
     {
-'
-      industry: 'Financial Services','
+
+      industry: 'Financial Services',
       description: 'Portfolio optimization, risk assessment, and algorithmic trading',
-      icon: BarChart3,'
-      metrics: ['Portfolio Performance', 'Risk Reduction', 'Trading Speed']
+      icon: BarChart3,
+      metrics: ['Portfolio Performance',Risk Reduction',Trading Speed']
     },
     {
-'
-      industry: 'Pharmaceuticals','
+
+      industry: 'Pharmaceuticals',
       description: 'Drug discovery, molecular modeling, and protein folding',
-      icon: Activity,'
-      metrics: ['Discovery Speed', 'Accuracy Rate', 'Cost Reduction']
+      icon: Activity,
+      metrics: ['Discovery Speed',Accuracy Rate',Cost Reduction']
     },
     {
-'
-      industry: 'Logistics','
+
+      industry: 'Logistics',
       description: 'Route optimization, supply chain management, and scheduling',
-      icon: Network,'
-      metrics: ['Route Efficiency', 'Cost Savings', 'Delivery Time']
+      icon: Network,
+      metrics: ['Route Efficiency',Cost Savings',Delivery Time']
     },
     {
-'
-      industry: 'Energy','
+
+      industry: 'Energy',
       description: 'Grid optimization, renewable energy forecasting, and storage',
-      icon: Zap,'
-      metrics: ['Grid Efficiency', 'Energy Savings', 'Forecast Accuracy']
+      icon: Zap,
+      metrics: ['Grid Efficiency',Energy Savings',Forecast Accuracy']
     }
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for research and development teams',
       features: ['
-        'Up to 100 qubits','
-        'Basic quantum algorithms','
-        'Standard support','
-        'Documentation access','
+        'Up to 100 qubits',
+        'Basic quantum algorithms',
+        'Standard support',
+        'Documentation access',
         'Community forum'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for production quantum applications',
       features: ['
-        'Up to 1000 qubits','
-        'Advanced algorithms','
-        'Priority support','
-        'Custom development','
-        'API access','
-        'Performance monitoring','
+        'Up to 1000 qubits',
+        'Advanced algorithms',
+        'Priority support',
+        'Custom development',
+        'API access',
+        'Performance monitoring',
         'SLA guarantees'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
+
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
       description: 'For large-scale quantum computing needs',
       features: ['
-        'Unlimited qubits','
-        'Custom algorithms','
-        'Dedicated team','
-        'On-premise options','
-        'White-label solutions','
-        'Training programs','
+        'Unlimited qubits',
+        'Custom algorithms',
+        'Dedicated team',
+        'On-premise options',
+        'White-label solutions',
+        'Training programs',
         '24/7 support'
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false
     }
@@ -198,26 +198,26 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   const benefits = [
     {
 
-      icon: Zap,'
-      title: '1000x Faster Processing','
+      icon: Zap,
+      title: '1000x Faster Processing',
       description: 'Solve complex problems in seconds that would take classical computers years.'
     },
     {
 
-      icon: Brain,'
-      title: 'AI Enhancement','
+      icon: Brain,
+      title: 'AI Enhancement',
       description: 'Supercharge machine learning with quantum computing capabilities.'
     },
     {
 
-      icon: Shield,'
-      title: 'Future-Proof Security','
+      icon: Shield,
+      title: 'Future-Proof Security',
       description: 'Implement quantum-resistant cryptography before it becomes critical.'
     },
     {
 
-      icon: Users,'
-      title: 'Competitive Advantage','
+      icon: Users,
+      title: 'Competitive Advantage',
       description: 'Stay ahead of the curve with cutting-edge quantum technology.'
     }
   ];
@@ -225,8 +225,8 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO "
-        title="Quantum Computing Solutions - Zion Tech Group""
-        description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions.""
+        title="Quantum Computing Solutions - Zion Tech Group"
+        description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
       />
 

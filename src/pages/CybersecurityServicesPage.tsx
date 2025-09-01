@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { SEOHead  } from '../components/seo/SEOHead';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';'
-import { Button  } from '@/components/ui/button';'
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEOHead  } from '../components/seo/SEOHead';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Shield,
 
@@ -27,12 +27,12 @@ import { Shield,
   Key,
   Monitor,
   TrendingUp
-'
- } from 'lucide-react.ts';'
+
+ } from 'lucide-react.ts';
 import { ENHANCED_SERVICES  } from '@/data/enhancedServices';
 
 // Filter cybersecurity services
-const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>'
+const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Cybersecurity') ||'
   service.category.includes('Security') ||'
   service.category.includes('Zero Trust')
@@ -55,34 +55,34 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>'
   Server,
   Key'
 } from 'lucide-react';
-'
-import { COMPREHENSIVE_SERVICES  } from '@/data/comprehensiveServices';'
+
+import { COMPREHENSIVE_SERVICES  } from '@/data/comprehensiveServices';
 import { TrustedBySection  } from '@/components/TrustedBySection';
 
-const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>'
+const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-'
-    id: any'threat-detection',;'
-    name: 'Threat Detection & Response','
+
+    id: any'threat-detection',;
+    name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
-    icon: Eye,'
+    icon: Eye,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-'
-    id: any'zero-trust',;'
-    name: 'Zero Trust Security','
+
+    id: any'zero-trust',;
+    name: 'Zero Trust Security',
     description: 'Identity verification and access management',
-    icon: Lock,'
+    icon: Lock,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Zero Trust'))
   }
 ];
 
 export default function CybersecurityServicesPage(...args: any[]): any {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getCategoryIcon = (category: anystring)  => {
 
@@ -92,10 +92,10 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   const getPricingModelLabel = (model: anystring) => {
 
     switch (model) {
-'
-      case 'one-time': return 'One-time';'
-      case 'monthly': return 'Monthly';'
-      case 'hourly': return 'Hourly';'
+
+      case 'one-time': return 'One-time';
+      case 'monthly': return 'Monthly';
+      case 'hourly': return 'Hourly';
       case 'project-based': return 'Project-based';
       default: return model;
     }
@@ -103,9 +103,9 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   return()
     <>
       <SEOHead
-        title="Cybersecurity Services - Zion Tech Group""
+        title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."'
-        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        keywords={['cybersecurity',security services',threat detection',compliance',zero trust']}
         structuredData={{
 "
           "@context": "https://schema.org","
@@ -143,14 +143,14 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Security Assessment"
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 View Case Studies
@@ -341,11 +341,11 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <div className="grid gap-6 md: anygrid-cols-3 lg:grid-cols-6">
 
               {['
-                { name: 'SOC2', icon: '🔒', description: 'Security Controls' },'
-                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },'
-                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' },'
-                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },'
-                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },'
+                { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
+                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
+                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' },
+                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
+                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
 
               ].map((standard)  => (
@@ -388,19 +388,19 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Security Assessment"
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 View Security Case Studies
@@ -416,8 +416,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 // Security Service Card Component
 
 function SecurityServiceCard(...args: any[]): any {
-'
-import { Input  } from '@/components/ui/input';'
+
+import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Search,
 
@@ -443,26 +443,26 @@ import { Search,
   Network,
   Key,
   ShieldCheck
-'
- } from 'lucide-react.ts';'
-import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');'
+
+ } from 'lucide-react.ts';
+import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [priceRange, setPriceRange] = useState<any>('all');
 
   // Filter only security services
-  const securityServices = EXPANDED_SERVICES.filter(service =>'
+  const securityServices = EXPANDED_SERVICES.filter(service =>
     service.category === 'Security Services'
   );
   const filteredServices = securityServices.filter(service => {
 
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));'
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    let matchesPrice = true;'
-    if (priceRange === 'low') matchesPrice = service.price < 500;'
-    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;'
+    let matchesPrice = true;
+    if (priceRange === 'low') matchesPrice = service.price < 500;
+    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
     else if (priceRange === 'high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice;
   }) ;
@@ -483,10 +483,10 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
   const getPricingModelLabel = (model: anystring)  => {
 
     switch (model) {
-'
-      case 'one-time': return 'One-time';'
-      case 'monthly': return 'Monthly';'
-      case 'hourly': return 'Hourly';'
+
+      case 'one-time': return 'One-time';
+      case 'monthly': return 'Monthly';
+      case 'hourly': return 'Hourly';
       case 'project-based': return 'Project-based';
       default: return model;
     }
@@ -604,7 +604,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
   Database,
   Monitor"
 } from "lucide-react";
-'
+
 import { CYBERSECURITY_SERVICES  } from '@/data/expandedServices';
 
 const CybersecurityServicesPage = () => {
@@ -660,9 +660,9 @@ const CybersecurityServicesPage = () => {
             <div className="flex items-center gap-2">"
               <Globe className="h-4 w-4 text-red-600" />
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-red-600 hover:underline font-medium"
               >
                 ziontechgroup.com
@@ -793,9 +793,9 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>"
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
-'
-                setSearchQuery('');'
-                setSelectedSubcategory('all');'
+
+                setSearchQuery('');
+                setSelectedSubcategory('all');
                 setPriceRange('all');
               }}>
                 Clear Filters
@@ -1401,7 +1401,7 @@ const CybersecurityServicesPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Secure Your Business Today
           </h2>"
-          <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">
             Don't wait until it's too late. Our cybersecurity experts are ready to help you build
             a robust security posture and protect your valuable assets.
           </p>"

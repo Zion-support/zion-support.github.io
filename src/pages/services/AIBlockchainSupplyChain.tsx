@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion   } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Link as LinkIcon, 
@@ -15,7 +15,7 @@ import { Brain,
   Activity,
   BarChart3,
   Network'
-  } from 'lucide-react.ts';'
+  } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
 ;
 const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
@@ -146,8 +146,8 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
-        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""
+        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
+        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
         keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
       />
 
@@ -179,7 +179,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Transform Your Supply Chain"
@@ -522,7 +522,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Transformation"

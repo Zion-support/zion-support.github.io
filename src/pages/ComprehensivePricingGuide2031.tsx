@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -41,15 +41,15 @@ import {
   Smartphone,
   Database,
   Code,
-  BookOpen,'
-  Truck} from 'lucide-react';'
+  BookOpen,
+  Truck} from 'lucide-react';
 import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
 
 const ComprehensivePricingGuide2031: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);'
+  const [expandedService, setExpandedService] = useState<string | null>(null);
   const [selectedTier, setSelectedTier] = useState<string>('Professional');
 
   const categories = useMemo(() => {
@@ -78,7 +78,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
           service.category.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-'
+
     if (selectedCategory !== 'All') {
 
       filtered = filtered.filter()
@@ -92,16 +92,16 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   const getCategoryIcon = (category: string) => {
 
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-'
-      'FinTech & Trading': Coins,'
-      'Healthcare & AI': Heart,'
-      'Blockchain & Security': Lock,'
-      'Supply Chain & Logistics': Truck,'
-      'Content Creation & AI': BookOpen,'
-      'Cybersecurity & AI': Shield,'
-      'IoT & Predictive Analytics': Network,'
-      'Customer Experience & AI': Users,'
-      'Research & AI': Code,'
+
+      'FinTech & Trading': Coins,
+      'Healthcare & AI': Heart,
+      'Blockchain & Security': Lock,
+      'Supply Chain & Logistics': Truck,
+      'Content Creation & AI': BookOpen,
+      'Cybersecurity & AI': Shield,
+      'IoT & Predictive Analytics': Network,
+      'Customer Experience & AI': Users,
+      'Research & AI': Code,
       'Business Intelligence & AI': BarChart3};
     return iconMap[category] || Globe;
   };
@@ -109,11 +109,11 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   const getInnovationColor = (level: string) => {
 
     const colorMap: { [key: string]: string } = {
-'
-      Revolutionary: 'from-purple-500 to-pink-500','
-      'Cutting-edge': 'from-blue-500 to-indigo-500','
-      Advanced: 'from-green-500 to-teal-500','
-      Breakthrough: 'from-red-500 to-orange-500'};'
+
+      Revolutionary: 'from-purple-500 to-pink-500',
+      'Cutting-edge': 'from-blue-500 to-indigo-500',
+      Advanced: 'from-green-500 to-teal-500',
+      Breakthrough: 'from-red-500 to-orange-500'};
     return colorMap[level] || 'from-gray-500 to-slate-500';
   };
 
@@ -125,13 +125,13 @@ const ComprehensivePricingGuide2031: React.FC = () => {
   const getTierColor = (tierName: string) => {
 
     const colorMap: { [key: string]: string } = {
-'
-      Starter: 'from-gray-500 to-slate-500','
-      Basic: 'from-blue-500 to-cyan-500','
-      Creator: 'from-green-500 to-emerald-500','
-      Student: 'from-purple-500 to-pink-500','
-      Professional: 'from-cyan-500 to-blue-500','
-      Enterprise: 'from-orange-500 to-red-500'};'
+
+      Starter: 'from-gray-500 to-slate-500',
+      Basic: 'from-blue-500 to-cyan-500',
+      Creator: 'from-green-500 to-emerald-500',
+      Student: 'from-purple-500 to-pink-500',
+      Professional: 'from-cyan-500 to-blue-500',
+      Enterprise: 'from-orange-500 to-red-500'};
     return colorMap[tierName] || 'from-gray-500 to-slate-500';
   };
 
@@ -151,7 +151,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 2031
               </span>
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Complete pricing information for Zion Tech Group's revolutionary
               AI-powered micro SAAS solutions, quantum computing platforms, and
               autonomous business systems.
@@ -193,9 +193,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
               </div>
             </div>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <span>Visit Website</span>"
@@ -213,7 +213,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
@@ -371,7 +371,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                   {/* Expanded Content */}
                   {expandedService === service.id && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}'
+                      initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}"
@@ -444,7 +444,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             <div className="text-gray-400">Free Tier</div>
                             <div'`
                               className={`font-medium ${service.freeTier ? 'text-green-400' : 'text-red-400'}`}
-                            >'
+                            >
                               {service.freeTier ? 'Yes' : 'No'}
                             </div>
                           </div>
@@ -517,7 +517,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services - Pricing Guide 2031""
+                href="mailto:kleber@ziontechgroup.com?subject=Inquiry about Zion Tech Group Services - Pricing Guide 2031"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"
               >"
                 <Mail className="w-5 h-5" />
@@ -525,7 +525,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-white/10 border border-cyan-400/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >"
                 <Phone className="w-5 h-5" />

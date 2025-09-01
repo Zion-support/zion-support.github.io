@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';'
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 interface VirtualScrollProps<T> {
@@ -18,7 +18,7 @@ export function VirtualScroll<T>({
   height,
   itemHeight,
   renderItem,
-  overscan = 5,;'
+  overscan = 5,;
   className = '',;
   onScroll;
 }: VirtualScrollProps < T>) {;
@@ -91,7 +91,7 @@ export function VirtualScroll<T>({
 
 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors""
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
           aria-label="Scroll to top"
         >"
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
@@ -108,7 +108,7 @@ export function VirtualScroll<T>({
       >
         <div style = {
 
-  { height: totalHeight,'
+  { height: totalHeight,
   position: 'relative' 
 
 }}>

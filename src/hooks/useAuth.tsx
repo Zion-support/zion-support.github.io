@@ -4,7 +4,7 @@ interface User {
 
   id: string;
   email: string;
-  name: string;'
+  name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
@@ -30,8 +30,8 @@ export function useAuth(...args: unknown[]): unknown {
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
-'
-      const storedUser = localStorage.getItem('zion_user');'
+
+      const storedUser = localStorage.getItem('zion_user');
       const token = localStorage.getItem('authToken');
 
       if (storedUser && token) {
@@ -44,7 +44,7 @@ export function useAuth(...args: unknown[]): unknown {
             isAuthenticated: true,
             isLoading: false});
         } catch (error) {
-'
+
           // console.error('Error parsing stored user:', error);
           setAuthState({
 
@@ -69,11 +69,11 @@ export function useAuth(...args: unknown[]): unknown {
 
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
-'
+
       id: '1',
-      email,'
-      name: 'John Doe','
-      role: 'user','
+      email,
+      name: 'John Doe',
+      role: 'user',
       userType: 'creator'};
 
     setAuthState({
@@ -83,8 +83,8 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser };
   };
@@ -97,7 +97,7 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Clear localStorage'
-    localStorage.removeItem('zion_user');'
+    localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken');
   };
 
@@ -108,8 +108,8 @@ export function useAuth(...args: unknown[]): unknown {
 
       id: Date.now().toString(),
       email,
-      name,'
-      role: 'user','
+      name,
+      role: 'user',
       userType: 'creator'};
 
     setAuthState({
@@ -119,8 +119,8 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser };
   };
@@ -148,4 +148,3 @@ export function useAuth(...args: unknown[]): unknown {
     register,
     updateProfile};
 }
-'

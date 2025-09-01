@@ -16,7 +16,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">"
         <div className="text-red-500 text-6xl mb-4">⚠️</div>"
         <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>"
-        <p className="text-gray-600 mb-6">'
+        <p className="text-gray-600 mb-6">
           We're sorry, but something unexpected happened. Please try refreshing the page.
         </p>"
         <div className="space-y-3">
@@ -32,7 +32,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
           >
             Go Home
           </button>
-        </div>'
+        </div>
         {process.env.NODE_ENV === 'development' && ("
           <details className="mt-6 text-left">"
             <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { FuturisticServicesShowcase } from '../components/FuturisticServicesShowcase';
 const AdvancedServices = () => {
   return()
@@ -44,20 +44,20 @@ const AdvancedServices = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
               {[
                 {
-'
-                  icon: '🚀','
+
+                  icon: '🚀',
                   title: 'Future-Ready Technology',
                   description:'
                     'Built with quantum-safe encryption, AI-powered automation, and edge computing capabilities'},
                 {
-'
-                  icon: '⚡','
+
+                  icon: '⚡',
                   title: 'Lightning Fast Performance',
                   description:'
                     'Optimized for speed with real-time processing and sub-millisecond response times'},
                 {
-'
-                  icon: '🔒','
+
+                  icon: '🔒',
                   title: 'Enterprise Security',
                   description:'
                     'SOC 2, ISO 27001, and GDPR compliant with advanced threat protection'},
@@ -119,25 +119,25 @@ const AdvancedServices = () => {
             {['
               { name: 'AI/ML', icon: '🤖', color: 'from-cyan-400 to-blue-500' },
               {
-'
-                name: 'Quantum','
-                icon: '⚛️','
-                color: 'from-purple-400 to-pink-500'},'
+
+                name: 'Quantum',
+                icon: '⚛️',
+                color: 'from-purple-400 to-pink-500'},
               { name: 'Edge', icon: '🌐', color: 'from-green-400 to-teal-500' },
               {
-'
-                name: 'Blockchain','
-                icon: '⛓️','
+
+                name: 'Blockchain',
+                icon: '⛓️',
                 color: 'from-orange-400 to-red-500'},
               {
-'
-                name: 'Cloud','
-                icon: '☁️','
+
+                name: 'Cloud',
+                icon: '☁️',
                 color: 'from-blue-400 to-indigo-500'},
               {
-'
-                name: 'Security','
-                icon: '🔒','
+
+                name: 'Security',
+                icon: '🔒',
                 color: 'from-red-400 to-pink-500'},
             ].map((tech, index) => (
               <motion.div
@@ -183,46 +183,46 @@ const AdvancedServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-'
-                icon: '🎯','
+
+                icon: '🎯',
                 title: 'Proven Results',
                 description:'
-                  'Over 500+ successful implementations with measurable ROI improvements','
+                  'Over 500+ successful implementations with measurable ROI improvements',
                 stats: '95% client satisfaction rate'},
               {
-'
-                icon: '⚡','
+
+                icon: '⚡',
                 title: 'Rapid Deployment',
                 description:'
-                  'Get up and running in weeks, not months with our agile approach','
+                  'Get up and running in weeks, not months with our agile approach',
                 stats: '3x faster than traditional solutions'},
               {
-'
-                icon: '🔧','
+
+                icon: '🔧',
                 title: '24/7 Support',
                 description:'
-                  'Round-the-clock technical support and maintenance services','
+                  'Round-the-clock technical support and maintenance services',
                 stats: '99.9% uptime guarantee'},
               {
-'
-                icon: '🚀','
+
+                icon: '🚀',
                 title: 'Future-Proof',
                 description:'
-                  'Built with scalability and emerging technologies in mind','
+                  'Built with scalability and emerging technologies in mind',
                 stats: '100% cloud-native architecture'},
               {
-'
-                icon: '💡','
+
+                icon: '💡',
                 title: 'Innovation First',
                 description:'
-                  'Constantly evolving solutions with the latest tech breakthroughs','
+                  'Constantly evolving solutions with the latest tech breakthroughs',
                 stats: 'Monthly feature updates'},
               {
-'
-                icon: '🤝','
+
+                icon: '🤝',
                 title: 'Partnership Approach',
                 description:'
-                  'We work as an extension of your team, not just a vendor','
+                  'We work as an extension of your team, not just a vendor',
                 stats: 'Long-term strategic partnerships'},
             ].map((feature, index) => (
               <motion.div
@@ -261,7 +261,7 @@ const AdvancedServices = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our advanced micro SAAS solutions can
               revolutionize your operations and drive unprecedented growth.
             </p>"

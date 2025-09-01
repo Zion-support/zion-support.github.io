@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const ServiceInnovationHub = () => {
   return()
@@ -19,7 +19,7 @@ const ServiceInnovationHub = () => {
             under development.
           </p>
           <Link"
-            to="/contact""
+            to="/contact"
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
           >
             Contact Us for More Information

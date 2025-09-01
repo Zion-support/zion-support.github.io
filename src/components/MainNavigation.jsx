@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from "./ThemeToggle";
 
@@ -10,74 +10,74 @@ import ThemeToggle from "./ThemeToggle";
     const location = useLocation () ;
     useEffect ( () => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20)};'
-        window.addEventListener('scroll', handleScroll);'
+            setIsScrolled(window.scrollY > 20)};
+        window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, []);
     const navigation = [
         {
-'
-            name: 'Services','
+
+            name: 'Services',
             href: '/services',
-            dropdown[;'
-                { name: 'AI Solutions', href: '/services/ai' },'
-                { name: 'Cybersecurity', href: '/services/cybersecurity' },'
-                { name: 'Cloud Computing', href: '/services/cloud' },'
-                { name: 'IT Consulting', href: '/services/consulting' },'
+            dropdown[;
+                { name: 'AI Solutions', href: '/services/ai' },
+                { name: 'Cybersecurity', href: '/services/cybersecurity' },
+                { name: 'Cloud Computing', href: '/services/cloud' },
+                { name: 'IT Consulting', href: '/services/consulting' },
                 { name: 'Digital Transformation', href: '/services/digital-transformation' }
             ]
         },;
         {
-'
-            name: 'Solutions','
+
+            name: 'Solutions',
             href: '/solutions',
-            dropdown[;'
-                { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },'
-                { name: 'Quantum Computing', href: '/solutions/quantum' },'
-                { name: 'Autonomous Systems', href: '/solutions/autonomous' },'
-                { name: 'Blockchain', href: '/solutions/blockchain' },'
+            dropdown[;
+                { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
+                { name: 'Quantum Computing', href: '/solutions/quantum' },
+                { name: 'Autonomous Systems', href: '/solutions/autonomous' },
+                { name: 'Blockchain', href: '/solutions/blockchain' },
                 { name: 'IoT Platform', href: '/solutions/iot' }
             ]
         },;
         {
-'
-            name: 'Industries','
+
+            name: 'Industries',
             href: '/industries',
-            dropdown[;'
-                { name: 'Healthcare', href: '/industries/healthcare' },'
-                { name: 'Finance', href: '/industries/finance' },'
-                { name: 'Manufacturing', href: '/industries/manufacturing' },'
-                { name: 'Retail', href: '/industries/retail' },'
+            dropdown[;
+                { name: 'Healthcare', href: '/industries/healthcare' },
+                { name: 'Finance', href: '/industries/finance' },
+                { name: 'Manufacturing', href: '/industries/manufacturing' },
+                { name: 'Retail', href: '/industries/retail' },
                 { name: 'Education', href: '/industries/education' }
             ]
         },;
         {
-'
-            name: 'Resources','
+
+            name: 'Resources',
             href: '/resources',
-            dropdown[;'
-                { name: 'Blog', href: '/blog' },'
-                { name: 'Case Studies', href: '/case-studies' },'
-                { name: 'White Papers', href: '/white-papers' },'
-                { name: 'Webinars', href: '/webinars' },'
+            dropdown[;
+                { name: 'Blog', href: '/blog' },
+                { name: 'Case Studies', href: '/case-studies' },
+                { name: 'White Papers', href: '/white-papers' },
+                { name: 'Webinars', href: '/webinars' },
                 { name: 'Documentation', href: '/docs' }
             ]
         },;
         {
-'
-            name: 'Comp','
+
+            name: 'Comp',
             href: '/about',
-            dropdown[;'
-                { name: 'About Us', href: '/about' },'
-                { name: 'Leadership', href: '/leadership' },'
-                { name: 'Careers', href: '/careers' },'
-                { name: 'News', href: '/news' },'
+            dropdown[;
+                { name: 'About Us', href: '/about' },
+                { name: 'Leadership', href: '/leadership' },
+                { name: 'Careers', href: '/careers' },
+                { name: 'News', href: '/news' },
                 { name: 'Contact', href: '/contact' }
             ]
 
     ];
     const isActive = (path) => {
-'
-        if (path === '/')'
+
+        if (path === '/')
             return location.pathname === '/';
         return location.pathname.startsWith(path)};
     return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled'
@@ -98,7 +98,7 @@ import ThemeToggle from "./ThemeToggle";
           {/* Desktop Navigation */}"
           <div className="hidden lg:flex items-center space-x-8">"
             {navigation.map((item) => (<div key={item.name} className="relative group">`
-                <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${isActive(item.href)'
+                <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${isActive(item.href)
                 ? 'text-zion-cyan bg-zion-cyan/10'
                 : isScrolled'
                     ? 'text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/10''`
@@ -175,7 +175,7 @@ import ThemeToggle from "./ThemeToggle";
         {isOpen && (<div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">"
             <div className="py-4 space-y-2">
               {navigation.map((item) => (<div key={item.name}>`
-                  <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${isActive(item.href)'
+                  <button onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)} className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${isActive(item.href)
                     ? 'text-zion-cyan bg-zion-cyan/10''`
                     : 'text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/10'}`}>"
                     <div className="flex items-center justify-between">

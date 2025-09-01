@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -48,154 +48,154 @@ const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
   const features = [
     {
 
-      icon: Code,'
-      title: 'AI-Powered Code Analysis','
+      icon: Code,
+      title: 'AI-Powered Code Analysis',
       description: 'Advanced machine learning algorithms that understand code patterns, detect bugs, and suggest improvements'
     },
     {
 
-      icon: Shield,'
-      title: 'Security Vulnerability Detection','
+      icon: Shield,
+      title: 'Security Vulnerability Detection',
       description: 'Automated scanning for security flaws, SQL injection, XSS, and other critical vulnerabilities'
     },
     {
 
-      icon: Zap,'
-      title: 'Performance Optimization','
+      icon: Zap,
+      title: 'Performance Optimization',
       description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase'
     },
     {
 
-      icon: GitBranch,'
-      title: 'Git Integration','
+      icon: GitBranch,
+      title: 'Git Integration',
       description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems'
     },
     {
 
-      icon: Monitor,'
-      title: 'Real-time Monitoring','
+      icon: Monitor,
+      title: 'Real-time Monitoring',
       description: 'Continuous code quality monitoring with instant notifications and detailed reports'
     },
     {
 
-      icon: Users,'
-      title: 'Team Collaboration','
+      icon: Users,
+      title: 'Team Collaboration',
       description: 'Built-in code review workflows, comments, and approval systems for development teams'
     }
   ];
 
   const benefits = ['
-    'Reduce code review time by 70%','
-    'Catch 90% of bugs before production','
-    'Improve code quality by 40%','
-    'Accelerate development cycles','
-    'Reduce technical debt','
+    'Reduce code review time by 70%',
+    'Catch 90% of bugs before production',
+    'Improve code quality by 40%',
+    'Accelerate development cycles',
+    'Reduce technical debt',
     'Ensure consistent coding standards'
   ];
 
   const services = [
     {
 
-      icon: Server,'
-      title: 'Static Code Analysis','
+      icon: Server,
+      title: 'Static Code Analysis',
       description: 'Comprehensive static analysis for multiple programming languages including Python, JavaScript, Java, C++, Go, and Rust'
     },
     {
 
-      icon: Workflow,'
-      title: 'Automated Review Workflows','
+      icon: Workflow,
+      title: 'Automated Review Workflows',
       description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines'
     },
     {
 
-      icon: Box,'
-      title: 'Container Security Scanning','
+      icon: Box,
+      title: 'Container Security Scanning',
       description: 'Docker and container security analysis, vulnerability scanning, and compliance checking'
     },
     {
 
-      icon: Database,'
-      title: 'Database Code Review','
+      icon: Database,
+      title: 'Database Code Review',
       description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'
     }
   ];
 
   const useCases = [
     {
-'
-      industry: 'Software Development','
+
+      industry: 'Software Development',
       description: 'Automated code reviews for development teams, ensuring quality and consistency across projects'
     },
     {
-'
-      industry: 'DevOps & CI/CD','
+
+      industry: 'DevOps & CI/CD',
       description: 'Integration with automated pipelines for continuous code quality monitoring and deployment gates'
     },
     {
-'
-      industry: 'Security Teams','
+
+      industry: 'Security Teams',
       description: 'Proactive security scanning and vulnerability detection in application code'
     },
     {
-'
-      industry: 'Code Quality Management','
+
+      industry: 'Code Quality Management',
       description: 'Maintaining high coding standards and reducing technical debt in large codebases'
     }
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for small development teams',
       features: ['
-        'Up to 5 developers','
-        'Basic code analysis','
-        'Security vulnerability scanning','
-        'GitHub integration','
-        'Email support','
+        'Up to 5 developers',
+        'Basic code analysis',
+        'Security vulnerability scanning',
+        'GitHub integration',
+        'Email support',
         'Basic reporting'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for growing development teams',
       features: ['
-        'Up to 25 developers','
-        'Advanced AI analysis','
-        'Multi-language support','
-        'CI/CD integration','
-        'Priority support','
-        'Advanced analytics','
-        'Custom rules engine','
+        'Up to 25 developers',
+        'Advanced AI analysis',
+        'Multi-language support',
+        'CI/CD integration',
+        'Priority support',
+        'Advanced analytics',
+        'Custom rules engine',
         'Team collaboration tools'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
       description: 'For large organizations and enterprises',
       features: ['
-        'Unlimited developers','
-        'Custom AI models','
-        'On-premise deployment','
-        'Dedicated support','
-        'Custom integrations','
-        'Advanced security features','
-        'Compliance reporting','
+        'Unlimited developers',
+        'Custom AI models',
+        'On-premise deployment',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security features',
+        'Compliance reporting',
         'SLA guarantees'
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false
     }

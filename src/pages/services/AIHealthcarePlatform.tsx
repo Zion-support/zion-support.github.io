@@ -61,7 +61,7 @@ export default function AIHealthcarePlatform() {
       price: '$2,500',
       period: 'monthly',
       description: 'Perfect for small clinics and practices',
-      features: ['Up to 1,000 patients', 'Basic AI diagnostics', 'Standard support', 'HIPAA compliance'],
+      features: ['Up to 1,000 patients',Basic AI diagnostics',Standard support',HIPAA compliance'],
       cta: 'Get Started',
       popular: false
     },
@@ -70,7 +70,7 @@ export default function AIHealthcarePlatform() {
       price: '$5,000',
       period: 'monthly',
       description: 'Ideal for medium-sized healthcare organizations',
-      features: ['Up to 10,000 patients', 'Advanced AI diagnostics', 'Priority support', 'Custom integrations', 'Analytics dashboard'],
+      features: ['Up to 10,000 patients',Advanced AI diagnostics',Priority support',Custom integrations',Analytics dashboard'],
       cta: 'Get Started',
       popular: true
     },
@@ -79,7 +79,7 @@ export default function AIHealthcarePlatform() {
       price: 'Custom',
       period: 'monthly',
       description: 'For large healthcare systems and hospitals',
-      features: ['Unlimited patients', 'Full AI suite', '24/7 dedicated support', 'Custom development', 'White-label options'],
+      features: ['Unlimited patients',Full AI suite',24/7 dedicated support',Custom development',White-label options'],
       cta: 'Contact Sales',
       popular: false
     }

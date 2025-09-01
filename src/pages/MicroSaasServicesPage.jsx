@@ -683,13 +683,13 @@ export default function MicroSAASServicesPage() {
         filtered.sort((a, b) => {
 
             switch (sortBy) {
-'
+
                 case 'rating':
-                    return (b.rating || 0) - (a.rating || 0);'
+                    return (b.rating || 0) - (a.rating || 0);
                 case 'price':
-                    return a.price - b.price;'
+                    return a.price - b.price;
                 case 'aiScore':
-                    return b.aiScore - a.aiScore;'
+                    return b.aiScore - a.aiScore;
                 case 'newest':
                     return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
                 default:
@@ -721,14 +721,14 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-'
-import React, {useState} from 'react';'
-import {Header} from '@/components/Header';'
-import {Footer} from '@/components/Footer';'
-import {SEO} from '@/components/SEO';'
-import {Button} from '@/components/ui/button';'
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';'
-import {Badge} from '@/components/ui/badge';'
+
+import React, {useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
@@ -746,12 +746,12 @@ import {Star,
             Play,
             FileText,
             MessageCircle,
-            ArrowRight,'
-            Sparkles} from 'lucide-react';'
+            ArrowRight,
+            Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
-export default function MicroSaasServicesPage() { /* empty */ }'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
+export default function MicroSaasServicesPage() { /* empty */ }
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const filteredServices = MICRO_SAAS_SERVICES.filter (service => {}
@@ -761,7 +761,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
     return matchesCategory && matchesSearch;
   }) ;
 
-  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }'
+  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if (model === 'monthly') return `${currency}${price}/month`;'`
     if (model === 'yearly') return `${currency}${price}/year`;'`
     if (model === 'one-time') return `${currency}${price}`;`
@@ -1020,7 +1020,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                     <span className="text-3xl font-bold text-zion-cyan">'`
                       {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                     </span>"
-                    <span className="text-zion-slate-light">'
+                    <span className="text-zion-slate-light">
                       {service.price === 0 ? '' : '/month'}
                     </span>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';'
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -25,7 +25,7 @@ interface DataPoint {
   value: number;
   category: string;
   timestamp: string;
-  change?: number;'
+  change?: number;
   changeType?: 'increase' | 'decrease';
 
 }
@@ -34,7 +34,7 @@ interface ChartData {
 
   id: string;
   name: string;
-  data: DataPoint[];'
+  data: DataPoint[];
   type: 'line' | 'bar' | 'pie' | 'area';
   color: string;
   description: string;
@@ -61,18 +61,18 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
   refreshInterval = 5000,
   maxDataPoints = 50;
 }) => {
-'
+
   const [activeChart, setActiveChart] = useState<string>('performance');
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [showLegend, setShowLegend] = useState(true);
-  const [chartData, setChartData] = useState<ChartData[]>([]);'
+  const [chartData, setChartData] = useState<ChartData[]>([]);
   const [selectedTimeRange, setSelectedTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   // Generate mock data
   const generateMockData = useMemo(() => {
-'
-    const categories = ['Performance', 'Security', 'User Activity', 'System Health'];'
-    const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+
+    const categories = ['Performance',Security',User Activity',System Health'];
+    const colors = ['#3B82F6',#10B981',#F59E0B',#EF4444',#8B5CF6'];
     
     return categories.map((category, index) => {
 
@@ -92,16 +92,16 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
           value: Math.max(0, baseValue + change),
           category,
           timestamp: timestamp.toISOString(),
-          change: Math.abs(change),'
+          change: Math.abs(change),
           changeType: change > 0 ? 'increase' : 'decrease'
         });
       }
       
       return {
-'
-        id: category.toLowerCase().replace(/\s+/g, '-'),
+
+        id: category.toLowerCase().replace(/\s+/g,-'),
         name: category,
-        data,'
+        data,
         type: (index % 2 === 0 ? 'line' : 'bar') as 'line' | 'bar' | 'pie' | 'area',
         color: colors[index % colors.length],`
         description: `Real-time ${category.toLowerCase()} metrics and analytics`
@@ -134,7 +134,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
 
           ...point,
           value: Math.max(0, point.value + (Math.random() * 20 - 10)),
-          change: Math.random() * 20,'
+          change: Math.random() * 20,
           changeType: Math.random() > 0.5 ? 'increase' : 'decrease'
         }))
       })));
@@ -146,11 +146,11 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
     const csvContent = chartData.map(chart => 
       chart.data.map(point => `
         `${point.timestamp},${point.label},${point.value},${point.category}`'
-      ).join('\n')'
+      ).join('\n')
     ).join('\n\n');
     '
     const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);'
+    const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;'`
     a.download = `data-export-${new Date().toISOString().split('T')[0]}.csv`;
@@ -164,7 +164,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
     const minValue = Math.min(...chart.data.map(d => d.value));
     
     switch (chart.type) {
-'
+
       case 'line':
         return ("
           <div className="relative h-64">"`
@@ -184,8 +184,8 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
                   y1={200 - (y / 100) * 200}"
                   x2="400"
                   y2={200 - (y / 100) * 200}"
-                  stroke="#374151""
-                  strokeWidth="0.5""
+                  stroke="#374151"
+                  strokeWidth="0.5"
                   opacity="0.3"
                 />
               ))}
@@ -196,12 +196,12 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
 
                   const x = (index / (chart.data.length - 1)) * 400;
                   const y = 200 - ((point.value - minValue) / (maxValue - minValue)) * 200;'`
-                  return `${index === 0 ? 'M' : 'L'} ${x} ${y}`;'
+                  return `${index === 0 ? 'M' : 'L'} ${x} ${y}`;
                 }).join(' ')}
                 stroke={chart.color}"
-                strokeWidth="2""
-                fill="none""
-                strokeLinecap="round""
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               />
               
@@ -239,14 +239,14 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
                       width={width}
                       height={height}
                       fill={chart.color}"
-                      opacity="0.8""
+                      opacity="0.8"
                       rx="2"
                     />
                     <text
                       x={x + width / 2}
                       y={y - 5}"
-                      textAnchor="middle""
-                      fontSize="10""
+                      textAnchor="middle"
+                      fontSize="10"
                       fill="#9CA3AF"
                     >
                       {Math.round(point.value)}
@@ -281,7 +281,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
                 const pathData = [`
                   `M 100 100`,`
                   `L ${x1} ${y1}`,`
-                  `A 80 80 0 ${largeArcFlag} 1 ${x2} ${y2}`,'
+                  `A 80 80 0 ${largeArcFlag} 1 ${x2} ${y2}`,
                   'Z''
                 ].join(' ');
                 
@@ -343,7 +343,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
                 onClick={() => setShowLegend(!showLegend)}"
                 className="flex items-center gap-2 bg-gray-700 text-white px-3 py-2 rounded-md hover:bg-gray-600 transition-colors"
               >"
-                {showLegend ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}'
+                {showLegend ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 {showLegend ? 'Hide' : 'Show'} Legend
               </button>
             </div>

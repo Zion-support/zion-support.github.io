@@ -22,9 +22,9 @@ function isLocalStorageAvailable() {
       localStorageAvailable = false;
       return false;
     }
-'
-    const testKey = '__localStorage_test__';'
-    localStorage.setItem(testKey, 'test');
+
+    const testKey = '__localStorage_test__';
+    localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
     return true;
@@ -36,7 +36,7 @@ function isLocalStorageAvailable() {
 }
 
 function safeConsoleError(message, error) {
-'
+
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging'
   if (env === 'production') return;
@@ -56,7 +56,7 @@ export const safeStorage = {
     try {
       return localStorage.getItem(key);
     } catch (error) {
-'
+
       // console.warn('Failed to get item from localStorage:', error);
 
       return null;
@@ -69,7 +69,7 @@ export const safeStorage = {
       localStorage.setItem(key, value);
       return true;
     } catch (error) {
-'
+
       // console.warn('Failed to set item in localStorage:', error);
 
       return false;
@@ -82,7 +82,7 @@ export const safeStorage = {
       localStorage.removeItem(key);
       return true;
     } catch (error) {
-'
+
       // console.warn('Failed to remove item from localStorage:', error);
 
       return false;
@@ -94,7 +94,7 @@ export const safeStorage = {
       localStorage.clear();
       return true;
     } catch (error) {
-'
+
       // console.warn('Failed to clear localStorage:', error);
 
       return false;
@@ -106,7 +106,7 @@ export const safeStorage = {
     try {
       return localStorage.key(index);
     } catch (error) {
-'
+
       // console.warn('Failed to get key from localStorage:', error);
       return null;
     }
@@ -116,11 +116,10 @@ export const safeStorage = {
     try {
       return localStorage.length;
     } catch (error) {
-'
+
       // console.warn('Failed to get localStorage length:', error);
       return 0;
     }
   }};
 
 export default safeStorage;
-'

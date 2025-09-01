@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { AlertTriangle, RefreshCw  } from 'lucide-react';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
@@ -18,7 +18,7 @@ export default function LoginErrorFallback(...args[]):  {
         </h2>"
         <p className="text-zion-slate-light mb-6">
           We encountered an error while processing your login. Please try again.
-        </p>'
+        </p>
         {process.env.NODE_ENV === 'development' && ("
           <details className="text-left mb-6">"
             <summary className="text-zion-cyan cursor-pointer text-sm">

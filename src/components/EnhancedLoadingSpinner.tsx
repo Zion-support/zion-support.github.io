@@ -1,11 +1,11 @@
 
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react.ts';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-'
-  size?: 'sm' | 'md' | 'lg';'
+
+  size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
   text?: string;
   showProgress?: boolean;
@@ -19,8 +19,8 @@ interface EnhancedLoadingSpinnerProps {
 
   enabled?: boolean;
   showProgress?: boolean;
-  showEstimatedTime?: boolean;'
-  size?: 'small' | 'medium' | 'large';'
+  showEstimatedTime?: boolean;
+  size?: 'small' | 'medium' | 'large';
   variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
   onComplete?: : unknown void;
   autoComplete?: boolean;
@@ -30,8 +30,8 @@ export function EnhancedLoadingSpinner({
 
   enabled = true,
   showProgress = true,
-  showEstimatedTime = true,'
-  size = 'medium','
+  showEstimatedTime = true,
+  size = 'medium',
   variant = 'futuristic',
   onComplete,
   autoComplete = false,
@@ -39,8 +39,8 @@ export function EnhancedLoadingSpinner({
 }: EnhancedLoadingSpinnerProps) {
 
   const [loadingState, setLoadingState] = useState<LoadingState>({
-'
-    type: 'loading','
+
+    type: 'loading',
     message: 'Loading...',
     progress: 0,
     estimatedTime: 3
@@ -51,9 +51,9 @@ export function EnhancedLoadingSpinner({
 
   // Size configurations
   const sizeConfig = {
-'
-    small: { spinner: 20, container: 60, text: 'text-sm' },'
-    medium: { spinner: 32, container: 80, text: 'text-base' },'
+
+    small: { spinner: 20, container: 60, text: 'text-sm' },
+    medium: { spinner: 32, container: 80, text: 'text-base' },
     large: { spinner: 48, container: 120, text: 'text-lg' }
   };
 
@@ -61,9 +61,9 @@ export function EnhancedLoadingSpinner({
 
   // Loading steps for themed variant
   const loadingSteps = ['
-    { icon: Brain, message: 'Initializing AI systems...', color: 'text-zion-cyan' },'
-    { icon: Shield, message: 'Securing connections...', color: 'text-zion-purple' },'
-    { icon: Zap, message: 'Optimizing performance...', color: 'text-zion-yellow' },'
+    { icon: Brain, message: 'Initializing AI systems...', color: 'text-zion-cyan' },
+    { icon: Shield, message: 'Securing connections...', color: 'text-zion-purple' },
+    { icon: Zap, message: 'Optimizing performance...', color: 'text-zion-yellow' },
     { icon: Rocket, message: 'Launching application...', color: 'text-zion-green' }
   ];
 
@@ -81,8 +81,8 @@ export function EnhancedLoadingSpinner({
 
             setTimeout(() => {
               setLoadingState({
-'
-                type: 'success','
+
+                type: 'success',
                 message: 'Ready!',
                 progress: 100,
                 estimatedTime: 0
@@ -113,7 +113,7 @@ export function EnhancedLoadingSpinner({
 
   // Step progression for themed variant
   useEffect(() => {
-'
+
     if (variant !== 'themed') return;
 
     const stepInterval = setInterval(() => {
@@ -137,8 +137,8 @@ export function EnhancedLoadingSpinner({
 
       const timer = setTimeout(() => {
         setLoadingState({
-'
-          type: 'success','
+
+          type: 'success',
           message: 'Loading complete!',
           progress: 100,
           estimatedTime: 0
@@ -158,7 +158,7 @@ export function EnhancedLoadingSpinner({
 
   const renderSpinner = (...args: unknown[]): unknown => {
     switch (variant) {
-'
+
       case 'futuristic':
         return()
           <div className="relative">
@@ -189,8 +189,8 @@ export function EnhancedLoadingSpinner({
                 key={i}"
                 className="absolute w-2 h-2 bg-zion-yellow rounded-full"
                 style={{
-'
-                  top: '50%','
+
+                  top: '50%',
                   left: '50%',
                   marginTop: -4,
                   marginLeft: -4
@@ -212,7 +212,7 @@ export function EnhancedLoadingSpinner({
             ))}
           </div>
         );
-'
+
       case 'minimal':
         return()
           <motion.div"
@@ -221,7 +221,7 @@ export function EnhancedLoadingSpinner({
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           />
         );
-'
+
       case 'themed':
         return ("
           <div className="relative">
@@ -254,7 +254,7 @@ export function EnhancedLoadingSpinner({
   };
 
   const renderMessage = () => {
-'
+
     if (variant === 'themed') {
 
       return()
@@ -317,13 +317,13 @@ export function EnhancedLoadingSpinner({
   };
 
   const renderStatusIcon = () => {
-'
+
     if (loadingState.type === 'loading') return null;
 
     const iconConfig = {
-'
-      success: { icon: CheckCircle, color: 'text-zion-green' },'
-      error: { icon: AlertCircle, color: 'text-zion-red' },'
+
+      success: { icon: CheckCircle, color: 'text-zion-green' },
+      error: { icon: AlertCircle, color: 'text-zion-red' },
       warning: { icon: AlertCircle, color: 'text-zion-yellow' }
     };
 
@@ -337,37 +337,37 @@ export function EnhancedLoadingSpinner({
 export function EnhancedLoadingSpinner(...args: any[]): any {
 
   const sizeClasses = {
-'
-  sm: 'w-8 h-8','
+
+  sm: 'w-8 h-8',
     md: 'w-12 h-12',;
   ;
   ;
   ;
-  ;'
+  ;
   lg: 'w-16 h-16';
   ;
 
 };
 
   const textSizes = {
-'
-  sm: 'text-sm','
+
+  sm: 'text-sm',
     md: 'text-base',;
   ;
   ;
   ;
-  ;'
+  ;
   lg: 'text-lg';
   ;
 
 };
 
   const getIcon = () => {;
-    switch (variant) {;'
+    switch (variant) {;
       case 'ai':;"
-        return <Brain className="w-full h-full text-cyan-400" />;'
+        return <Brain className="w-full h-full text-cyan-400" />;
       case 'quantum':;"
-        return <Atom className="w-full h-full text-purple-400" />;'
+        return <Atom className="w-full h-full text-purple-400" />;
       case 'futuristic':;"
         return <Zap className="w-full h-full text-blue-400" />;
       default:;"
@@ -376,14 +376,14 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   };
 
   const getBackground = () => {;
-    switch (variant) {;'
-      case 'ai':;'
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';'
-      case 'quantum':;'
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';'
-      case 'futuristic':;'
+    switch (variant) {;
+      case 'ai':;
+        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
+      case 'quantum':;
+        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
+      case 'futuristic':;
         return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default:;'
+      default:;
         return 'bg-gray-100 border-gray-200';
     }
 
@@ -407,8 +407,8 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
               width: config.container,
               height: config.container
             }}"
-            role="status""
-            aria-label="Loading content""
+            role="status"
+            aria-label="Loading content"
             aria-live="polite"
           >
             {renderSpinner () }
@@ -427,14 +427,14 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
         {/* Estimated time */}
         {renderEstimatedTime () }
 
-        {/* Loading steps for themed variant */}'
+        {/* Loading steps for themed variant */}
         {variant === 'themed' && ("
           <div className="flex space-x-2 mt-4">
             {loadingSteps.map((step, index) => (
               <div
                 key={index}`
                 className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-'
+
                   index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'`
                 }`}
               />) ) }
@@ -442,9 +442,9 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
         {/* Accessibility announcement */}"
         <div className="sr-only" aria-live="polite">'`
-          {loadingState.type === 'loading' && `Loading: ${loadingState.message}`}'
-          {loadingState.type === 'success' && 'Loading complete'}'
-          {loadingState.type === 'error' && 'Loading failed'}'
+          {loadingState.type === 'loading' && `Loading: ${loadingState.message}`}
+          {loadingState.type === 'success' && 'Loading complete'}
+          {loadingState.type === 'error' && 'Loading failed'}
           {loadingState.type === 'warning' && 'Loading warning'}`
           {showProgress && loadingState.progress !== undefined && `Progress: ${Math.round(loadingState.progress)}%`}
         </div>

@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
 import { Button } from "./button";"
 import { Badge } from "./badge";"
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
 
-    const [isOpen, setIsOpen] = useState(false);'
+    const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');
     const [isSearching, setIsSearching] = useState(false);
     const [showFilters, setShowFilters] = useState(false);
@@ -33,13 +33,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         if (!searchQuery.trim())
             return [];
         const baseSuggestions = ['
-            'AI services','
-            'Machine learning','
-            'Cloud solutions','
-            'Cybersecurity','
-            'Data analytics','
-            'Quantum computing','
-            'Remote developers','
+            'AI services',
+            'Machine learning',
+            'Cloud solutions',
+            'Cybersecurity',
+            'Data analytics',
+            'Quantum computing',
+            'Remote developers',
             'IT consulting'
         ];
         return baseSuggestions
@@ -66,57 +66,57 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         // Mock search results
         const mockResults = [
             {
-'
-                id: '1','
-                title: 'AI-Powered Business Intelligence Platform','
-                description: 'Advanced analytics and insights powered by machine learning algorithms','
-                category: 'AI & Analytics','
-                tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],;
+
+                id: '1',
+                title: 'AI-Powered Business Intelligence Platform',
+                description: 'Advanced analytics and insights powered by machine learning algorithms',
+                category: 'AI & Analytics',
+                tags['Business Intelligence',Machine Learning',Analytics',Dashboard'],;
                 relevance: 0.95,
                 rating: 4.8,
-                reviews: 1247,'
-                price: '$2,500/month','
+                reviews: 1247,
+                price: '$2,500/month',
                 type: 'service',
                 metadata: {
-'
+
                     lastUpdated: '2024-01-15',
                     verified: true,
                     featured: true
 
             },
             {
-'
-                id: '2','
-                title: 'Senior AI Engineer - Remote','
-                description: 'Experienced AI engineer specializing in deep learning and NLP','
-                category: 'Talent','
-                tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],;
+
+                id: '2',
+                title: 'Senior AI Engineer - Remote',
+                description: 'Experienced AI engineer specializing in deep learning and NLP',
+                category: 'Talent',
+                tags['AI Engineer',Deep Learning',NLP',Remote'],;
                 relevance: 0.92,
                 rating: 4.9,
-                reviews: 89,'
-                price: '$150/hour','
+                reviews: 89,
+                price: '$150/hour',
                 type: 'talent',
                 metadata: {
-'
+
                     lastUpdated: '2024-01-20',
                     verified: true,
                     featured: false
 
             },
             {
-'
-                id: '3','
-                title: 'Quantum Computing Solutions Inc.','
-                description: 'Leading provider of quantum computing services and consulting','
-                category: 'Quantum Technology','
-                tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],;
+
+                id: '3',
+                title: 'Quantum Computing Solutions Inc.',
+                description: 'Leading provider of quantum computing services and consulting',
+                category: 'Quantum Technology',
+                tags['Quantum Computing',Consulting',Research',Enterprise'],;
                 relevance: 0.88,
                 rating: 4.7,
-                reviews: 456,'
-                location: 'San Francisco, CA','
+                reviews: 456,
+                location: 'San Francisco, CA',
                 type: 'comp',
                 metadata: {
-'
+
                     lastUpdated: '2024-01-18',
                     verified: true,
                     featured: true
@@ -153,7 +153,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
             // Simulate voice input
             setTimeout(() => {
-'
+
                 const voiceQuery = 'AI machine learning services';
                 setQuery(voiceQuery);
                 handleSearchInput(voiceQuery);
@@ -171,7 +171,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         if (navigator.share) {
 
             navigator.share({
-'
+
                 title: 'Search Results from Zion Tech Group',"
                 text: `Check out these results for "${query}"`,
                 url: window.location.href
@@ -183,13 +183,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     }, [query]);
     // Handle keyboard navigation
     const handleKeyDown = useCallback((e) => {
-'
+
         if (e.key === 'Enter') {
 
-            handleSearch()}'
+            handleSearch()}
         else if (e.key === 'Escape') {
 
-            setIsOpen(false);'
+            setIsOpen(false);
             setQuery('')}
     }, [handleSearch]);
     // Handle result selection
@@ -205,8 +205,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             if (searchRef.current && !searchRef.current.contains(event.target)) {
 
                 setIsOpen(false)}
-        };'
-        document.addEventListener('mousedown', handleClickOutside);'
+        };
+        document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     // Focus input when opened
     useEffect(() => {
@@ -268,7 +268,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 }} onClick={() => {
-'
+
                 setQuery('');
                 setResults([]);
                 setSuggestions([]);"
@@ -355,7 +355,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 }} animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 

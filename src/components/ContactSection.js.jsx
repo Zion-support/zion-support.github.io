@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -9,75 +9,75 @@ import {
   MessageSquare,
   ArrowRight,
   Globe,
-  Shield,'
+  Shield,
   Users} from 'lucide-react';
 export function ContactSection() {
   const contactMethods = [
     {
 
-      icon: <Mail className="w-6 h-6" />,'
-      title: 'Email Us','
-      description: 'Get in touch via email for general inquiries','
-      contact: 'hello@ziontechgroup.com','
-      link: 'mailto:hello@ziontechgroup.com','
+      icon: <Mail className="w-6 h-6" />,
+      title: 'Email Us',
+      description: 'Get in touch via email for general inquiries',
+      contact: 'hello@ziontechgroup.com',
+      link: 'mailto:hello@ziontechgroup.com',
       color: 'from-zion-cyan to-zion-blue'},
     {
 "
-      icon: <Phone className="w-6 h-6" />,'
-      title: 'Call Us','
-      description: 'Speak directly with our team','
-      contact: '+1 (302) 464-0950','
-      link: 'tel:+13024640950','
+      icon: <Phone className="w-6 h-6" />,
+      title: 'Call Us',
+      description: 'Speak directly with our team',
+      contact: '+1 (302) 464-0950',
+      link: 'tel:+13024640950',
       color: 'from-zion-purple to-zion-cyan'},
     {
 "
-      icon: <MessageSquare className="w-6 h-6" />,'
-      title: 'Live Chat','
-      description: 'Chat with our support team in real-time','
-      contact: 'Available 24/7','
-      link: '/chat','
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
+      contact: 'Available 24/7',
+      link: '/chat',
       color: 'from-zion-blue to-zion-purple'},
   ];
   const officeLocations = [
     {
-'
-      city: 'Wilmington, DE','
-      country: 'United States','
+
+      city: 'Wilmington, DE',
+      country: 'United States',
       address: '1000 N Market St, Wilmington, DE 19801',"
       icon: <MapPin className="w-5 h-5" />},
     {
-'
-      city: 'New York, NY','
-      country: 'United States','
+
+      city: 'New York, NY',
+      country: 'United States',
       address: '350 5th Ave, New York, NY 10118',"
       icon: <MapPin className="w-5 h-5" />},
     {
-'
-      city: 'London, UK','
-      country: 'United Kingdom','
+
+      city: 'London, UK',
+      country: 'United Kingdom',
       address: '1 Canary Wharf, London E14 5AB',"
       icon: <MapPin className="w-5 h-5" />},
   ];
   const supportFeatures = [
     {
 "
-      icon: <Clock className="w-6 h-6" />,'
-      title: '24/7 Support','
+      icon: <Clock className="w-6 h-6" />,
+      title: '24/7 Support',
       description: 'Round-the-clock technical support and monitoring'},
     {
 "
-      icon: <Shield className="w-6 h-6" />,'
-      title: 'Enterprise Security','
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Enterprise Security',
       description: 'Bank-level security for all communications'},
     {
 "
-      icon: <Users className="w-6 h-6" />,'
-      title: 'Expert Team','
+      icon: <Users className="w-6 h-6" />,
+      title: 'Expert Team',
       description: 'Certified professionals ready to help'},
     {
 "
-      icon: <Globe className="w-6 h-6" />,'
-      title: 'Global Reach','
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Global Reach',
       description: 'Support available in multiple time zones'},
   ];
   return ("
@@ -85,13 +85,13 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}"
         <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">'
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
             Get in{' '}"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
               Touch
             </span>
           </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">'
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business with cutting-edge technology? Let's
             discuss how Zion Tech Group can help you achieve your goals.
           </p>
@@ -237,14 +237,14 @@ export function ContactSection() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Contact Us Now"
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link"
-              to="/request-quote""
+              to="/request-quote"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Request Quote

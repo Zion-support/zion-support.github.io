@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Shield, 
   Brain, 
@@ -104,9 +104,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
-        title="AI Financial Fraud Detection Platform - Zion Tech Group""
-        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
-        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""
+        title="AI Financial Fraud Detection Platform - Zion Tech Group"
+        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
+        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
         canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
       />
 
@@ -688,14 +688,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
 
                 Schedule Demo

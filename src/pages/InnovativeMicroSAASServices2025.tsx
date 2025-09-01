@@ -54,7 +54,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Advanced analytics and ML-powered insights',
           price: '$2,500',
           roi: '400%',
-          features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration']
+          features: ['Real-time analytics',Predictive modeling',Custom dashboards',API integration']
         },
         { 
           name: 'AI Content Marketing Automation', 
@@ -62,7 +62,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Automated content creation and optimization',
           price: '$1,800',
           roi: '350%',
-          features: ['Content generation', 'SEO optimization', 'Social media automation', 'Performance tracking']
+          features: ['Content generation',SEO optimization',Social media automation',Performance tracking']
         },
         { 
           name: 'AI Project Management Platform', 
@@ -70,7 +70,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Intelligent project planning and execution',
           price: '$2,200',
           roi: '380%',
-          features: ['AI task prioritization', 'Resource optimization', 'Risk assessment', 'Progress tracking']
+          features: ['AI task prioritization',Resource optimization',Risk assessment',Progress tracking']
         }
       ]
     },
@@ -85,7 +85,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Medical AI and predictive diagnostics',
           price: '$3,500',
           roi: '450%',
-          features: ['Patient data analysis', 'Disease prediction', 'Treatment optimization', 'HIPAA compliance']
+          features: ['Patient data analysis',Disease prediction',Treatment optimization',HIPAA compliance']
         },
         { 
           name: 'AI Healthcare Predictive Analytics', 
@@ -93,7 +93,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Advanced healthcare forecasting and insights',
           price: '$4,200',
           roi: '500%',
-          features: ['Population health analytics', 'Risk stratification', 'Clinical decision support', 'Real-time monitoring']
+          features: ['Population health analytics',Risk stratification',Clinical decision support',Real-time monitoring']
         }
       ]
     },
@@ -108,7 +108,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Algorithmic trading and risk management',
           price: '$5,000',
           roi: '600%',
-          features: ['Algorithmic trading', 'Risk assessment', 'Portfolio optimization', 'Market analysis']
+          features: ['Algorithmic trading',Risk assessment',Portfolio optimization',Market analysis']
         },
         { 
           name: 'AI Financial Trading Risk Management', 
@@ -116,7 +116,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Advanced financial risk assessment and mitigation',
           price: '$4,800',
           roi: '550%',
-          features: ['Real-time risk monitoring', 'Stress testing', 'Compliance reporting', 'Alert systems']
+          features: ['Real-time risk monitoring',Stress testing',Compliance reporting',Alert systems']
         }
       ]
     },
@@ -131,7 +131,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Legal document analysis and research',
           price: '$2,800',
           roi: '420%',
-          features: ['Document analysis', 'Case law research', 'Legal insights', 'Compliance tracking']
+          features: ['Document analysis',Case law research',Legal insights',Compliance tracking']
         },
         { 
           name: 'AI Legal Document Automation', 
@@ -139,7 +139,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Automated legal document generation and review',
           price: '$3,200',
           roi: '480%',
-          features: ['Document generation', 'Contract review', 'Legal templates', 'Version control']
+          features: ['Document generation',Contract review',Legal templates',Version control']
         }
       ]
     },
@@ -154,7 +154,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Intelligent human resources management',
           price: '$2,600',
           roi: '400%',
-          features: ['Recruitment automation', 'Performance analytics', 'Employee engagement', 'Talent development']
+          features: ['Recruitment automation',Performance analytics',Employee engagement',Talent development']
         },
         { 
           name: 'AI Customer Success Platform', 
@@ -162,7 +162,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'AI-powered customer experience optimization',
           price: '$2,400',
           roi: '380%',
-          features: ['Customer insights', 'Success tracking', 'Automated outreach', 'Churn prevention']
+          features: ['Customer insights',Success tracking',Automated outreach',Churn prevention']
         }
       ]
     },
@@ -177,7 +177,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Intelligent supply chain management',
           price: '$3,800',
           roi: '520%',
-          features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management']
+          features: ['Demand forecasting',Inventory optimization',Route planning',Supplier management']
         },
         { 
           name: 'AI Workflow Orchestrator', 
@@ -185,7 +185,7 @@ export default function InnovativeMicroSAASServices2025() {
           description: 'Intelligent process automation and optimization',
           price: '$3,000',
           roi: '450%',
-          features: ['Process automation', 'Workflow optimization', 'Integration management', 'Performance analytics']
+          features: ['Process automation',Workflow optimization',Integration management',Performance analytics']
         }
       ]
     }

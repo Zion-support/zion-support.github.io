@@ -29,10 +29,7 @@ export const Partners: React.FC = () => {
       color: 'from-blue-600 to-cyan-600',
       description: 'Leading technology companies providing cutting-edge solutions',
       benefits: [
-        'Access to latest technologies',
-        'Joint product development',
-        'Technical expertise sharing',
-        'Market expansion support'
+        'Access to latest technologies',Joint product development',Technical expertise sharing',Market expansion support'
       ]
     },
     {
@@ -41,10 +38,7 @@ export const Partners: React.FC = () => {
       color: 'from-green-600 to-emerald-600',
       description: 'Resellers and distributors expanding our market reach',
       benefits: [
-        'Revenue sharing opportunities',
-        'Marketing support',
-        'Training and certification',
-        'Dedicated partner portal'
+        'Revenue sharing opportunities',Marketing support',Training and certification',Dedicated partner portal'
       ]
     },
     {
@@ -53,10 +47,7 @@ export const Partners: React.FC = () => {
       color: 'from-purple-600 to-pink-600',
       description: 'Long-term strategic relationships driving mutual growth',
       benefits: [
-        'Joint go-to-market strategies',
-        'Shared innovation initiatives',
-        'Cross-selling opportunities',
-        'Strategic planning collaboration'
+        'Joint go-to-market strategies',Shared innovation initiatives',Cross-selling opportunities',Strategic planning collaboration'
       ]
     },
     {
@@ -65,10 +56,7 @@ export const Partners: React.FC = () => {
       color: 'from-orange-600 to-red-600',
       description: 'International partners expanding our global presence',
       benefits: [
-        'Local market expertise',
-        'Cultural understanding',
-        'Regulatory compliance',
-        'Regional support networks'
+        'Local market expertise',Cultural understanding',Regulatory compliance',Regional support networks'
       ]
     }
   ];
@@ -150,10 +138,7 @@ export const Partners: React.FC = () => {
       name: 'Silver Partner',
       requirements: 'Basic partnership agreement',
       benefits: [
-        'Access to partner portal',
-        'Basic marketing materials',
-        'Email support',
-        'Training resources'
+        'Access to partner portal',Basic marketing materials',Email support',Training resources'
       ],
       revenue: 'Up to $100K annually'
     },
@@ -161,11 +146,7 @@ export const Partners: React.FC = () => {
       name: 'Gold Partner',
       requirements: 'Demonstrated success and commitment',
       benefits: [
-        'All Silver benefits',
-        'Dedicated partner manager',
-        'Advanced training programs',
-        'Marketing development funds',
-        'Joint marketing campaigns'
+        'All Silver benefits',Dedicated partner manager',Advanced training programs',Marketing development funds',Joint marketing campaigns'
       ],
       revenue: '$100K - $500K annually'
     },
@@ -173,11 +154,7 @@ export const Partners: React.FC = () => {
       name: 'Platinum Partner',
       requirements: 'Strategic partnership with proven results',
       benefits: [
-        'All Gold benefits',
-        'Executive relationship management',
-        'Custom development support',
-        'Exclusive market access',
-        'Strategic planning sessions'
+        'All Gold benefits',Executive relationship management',Custom development support',Exclusive market access',Strategic planning sessions'
       ],
       revenue: '$500K+ annually'
     }
@@ -231,7 +208,7 @@ const Partners = () => {
         <div className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Our"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Partners
             </span>

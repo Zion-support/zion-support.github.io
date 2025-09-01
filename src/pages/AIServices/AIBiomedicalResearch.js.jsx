@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -8,45 +8,45 @@ import {
   Zap,
   BarChart3,
   CheckCircle,
-  ArrowRight,'
-  Play} from 'lucide-react';'
+  ArrowRight,
+  Play} from 'lucide-react';
 import SEO from '../SEO';
 const features = [
   {
-'
+
     title: 'AI-Powered Biomedical Research',
     description:'
       'Intelligent biomedical research system that learns and adapts to your specific needs and requirements.',
-    icon: Brain,'
+    icon: Brain,
     color: 'from-purple-500 to-pink-500'},
   {
-'
+
     title: 'Automated Operations',
     description:'
       'Streamline biomedical research processes with intelligent automation and optimization.',
-    icon: Zap,'
+    icon: Zap,
     color: 'from-blue-500 to-cyan-500'},
   {
-'
+
     title: 'Real-time Insights',
     description:'
       'Get instant insights and analytics for better decision-making and performance optimization.',
-    icon: BarChart3,'
+    icon: BarChart3,
     color: 'from-green-500 to-emerald-500'},
   {
-'
+
     title: 'Scalable Solution',
     description:'
       'Built to grow with your business needs, from startup to enterprise scale.',
-    icon: TrendingUp,'
+    icon: TrendingUp,
     color: 'from-orange-500 to-red-500'},
 ];
 const benefits = ['
-  'Increase efficiency and productivity','
-  'Reduce operational costs','
-  'Improve accuracy and quality','
-  'Enable 24/7 automated operations','
-  'Scale operations seamlessly','
+  'Increase efficiency and productivity',
+  'Reduce operational costs',
+  'Improve accuracy and quality',
+  'Enable 24/7 automated operations',
+  'Scale operations seamlessly',
   'Gain competitive advantage',
 ];
 export { function };
@@ -54,9 +54,9 @@ export default function AIBiomedicalResearch() {
   return()
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO"
-        title="Biomedical Research - Zion Tech Group""
-        description="AI-powered biomedical research solution that transforms your operations with intelligent automation and real-time insights.""
-        keywords="AI biomedical research, automation, intelligent systems, business optimization""
+        title="Biomedical Research - Zion Tech Group"
+        description="AI-powered biomedical research solution that transforms your operations with intelligent automation and real-time insights."
+        keywords="AI biomedical research, automation, intelligent systems, business optimization"
         canonical="https://ziontechgroup.com/aibiomedicalresearch/"
       />
 
@@ -97,7 +97,7 @@ export default function AIBiomedicalResearch() {
                 Watch Demo
               </motion.button>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started"
@@ -208,14 +208,14 @@ export default function AIBiomedicalResearch() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started Today"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 View Pricing"

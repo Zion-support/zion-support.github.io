@@ -16,14 +16,14 @@ import { ScrollArea } from "@/components/ui/scroll-area";"
 import { useRouter } from "next/router";
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useRouter();'
-    const [contentType, setContentType] = useState('blog');'
-    const [customPrompt, setCustomPrompt] = useState('');'
+    const router = useRouter();
+    const [contentType, setContentType] = useState('blog');
+    const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
     const [autoPublish, setAutoPublish] = useState(false);
     const [includeImage, setIncludeImage] = useState(true);
     const [isGenerating, setIsGenerating] = useState(false);
-    const [previewContent, setPreviewContent] = useState(null);'
+    const [previewContent, setPreviewContent] = useState(null);
     const [testEmail, setTestEmail] = useState('');
     // Redirect if not logged in
     React.useEffect ( () => {
@@ -36,7 +36,7 @@ export default function ContentGenerator() {
         setIsGenerating (true) ;
         setPreviewContent (null) ;
         try {
-'
+
             const { data, error } = await supabase.functions.invoke('generate-content', {
 
                 body: {
@@ -44,13 +44,13 @@ export default function ContentGenerator() {
                     contentType,
                     prompt: customPrompt || null,
                     topic: topic || null,
-                    autoPublish,'
+                    autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
                 }
             });
             if (error)
                 throw error;
-            setPreviewContent(data);'
+            setPreviewContent(data);
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
 "
@@ -70,7 +70,7 @@ export default function ContentGenerator() {
             toast.error("Generate newsletter content first");
             return}
         try {
-'
+
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
 
                 body: {

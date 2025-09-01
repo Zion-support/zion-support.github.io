@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
 const EnhancedScrollToTop = () => {
     const [isVisible, setIsVisible] = useState (false) ;
@@ -11,13 +11,13 @@ const EnhancedScrollToTop = () => {
             else {
 
                 setIsVisible(false)}
-        };'
-        window.addEventListener('scroll', toggleVisibility);'
+        };
+        window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
     const scrollToTop = () => {
         window.scrollTo({
 
-            top: 0,'
+            top: 0,
             behavior: 'smooth'
         }) };
     return (<AnimatePresence>

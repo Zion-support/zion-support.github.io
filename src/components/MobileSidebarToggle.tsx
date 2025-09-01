@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';'
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
 import { Link, useLocation  } from 'react-router-dom.ts';
 
       newExpanded.delete(section)} else {
@@ -96,11 +96,11 @@ import { Link, useLocation  } from 'react-router-dom.ts';
             {/* Mobile Sidebar */}
             <motion.div'
               initial={{ x: '-100%' }}
-              animate={{ x: 0 }}'
+              animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeOut' 
 
 
@@ -163,7 +163,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                           to={action.href}
                           onClick={() => setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-'
+
                             action.variant === 'primary''
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
@@ -225,7 +225,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
 }}
                             animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -265,7 +265,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                                   onClick={() => setIsOpen(false)}`
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
 
-                                    isActive(item.href)'
+                                    isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30''
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`
                                   }`}

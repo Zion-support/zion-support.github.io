@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle } from 'lucide-react';
 const notificationStyles = {
 
   success: {
 
-    icon: CheckCircle,'
-    bgColor: 'bg-zion-emerald/10','
-    borderColor: 'border-zion-emerald/20','
-    textColor: 'text-zion-emerald','
+    icon: CheckCircle,
+    bgColor: 'bg-zion-emerald/10',
+    borderColor: 'border-zion-emerald/20',
+    textColor: 'text-zion-emerald',
     iconColor: 'text-zion-emerald'},
   error: {
 
-    icon: XCircle,'
-    bgColor: 'bg-red-500/10','
-    borderColor: 'border-red-500/20','
-    textColor: 'text-red-500','
+    icon: XCircle,
+    bgColor: 'bg-red-500/10',
+    borderColor: 'border-red-500/20',
+    textColor: 'text-red-500',
     iconColor: 'text-red-500'},
   info: {
 
-    icon: Info,'
-    bgColor: 'bg-zion-blue/10','
-    borderColor: 'border-zion-blue/20','
-    textColor: 'text-zion-blue','
+    icon: Info,
+    bgColor: 'bg-zion-blue/10',
+    borderColor: 'border-zion-blue/20',
+    textColor: 'text-zion-blue',
     iconColor: 'text-zion-blue'},
   warning: {
 
-    icon: AlertTriangle,'
-    bgColor: 'bg-zion-gold/10','
-    borderColor: 'border-zion-gold/20','
-    textColor: 'text-zion-gold','
+    icon: AlertTriangle,
+    bgColor: 'bg-zion-gold/10',
+    borderColor: 'border-zion-gold/20',
+    textColor: 'text-zion-gold',
     iconColor: 'text-zion-gold'}};
 export function Notification({
 
@@ -59,7 +59,7 @@ export function Notification({
   return()
     <div
       className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`}
-      role="alert""
+      role="alert"
       aria-live="assertive"
     >"
       <div className="flex items-start space-x-3">`
@@ -70,7 +70,7 @@ export function Notification({
         </div>
         <button
           onClick={handleClose}"
-          className="text-muted-foreground hover:text-foreground transition-colors""
+          className="text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Close notification"
         >"
           <X className="w-4 h-4" />

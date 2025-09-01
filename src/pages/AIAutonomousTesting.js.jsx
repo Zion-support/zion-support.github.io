@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousTesting = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousTesting = () => {
       <Helmet>
         <title>AI Autonomous Testing Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous testing platform that conducts comprehensive testing, ensures quality, and maintains testing excellence with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-testing"
         />
       </Helmet>
@@ -178,13 +178,13 @@ const AIAutonomousTesting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Unit Testing','
-                'Integration Testing','
-                'System Testing','
-                'Performance Testing','
-                'Security Testing','
-                'User Acceptance Testing','
-                'Regression Testing','
+                'Unit Testing',
+                'Integration Testing',
+                'System Testing',
+                'Performance Testing',
+                'Security Testing',
+                'User Acceptance Testing',
+                'Regression Testing',
                 'Automated Testing',
               ].map(type => (
                 <div

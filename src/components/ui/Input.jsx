@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 export function Input({ className = '', ...props }) {
 
   const baseClasses ='
@@ -12,7 +12,7 @@ var __rest =
     var t = {};
     for (var p in s)
       if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];'
+        t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === 'function')
       for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
 
@@ -23,14 +23,14 @@ var __rest =
           t[p[i]] = s[p[i]];
       }
     return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+  };
+import { jsx as _jsx } from 'react/jsx-runtime';
+import React from 'react';
 import { cn } from '@/lib/utils';
 const Input = React.forwardRef((_a, ref) => {
 
-  var { className, type } = _a,'
-    props = __rest(_a, ['className', 'type']);
+  var { className, type } = _a,
+    props = __rest(_a, ['className',type']);
   return _jsx('
     'input',
     Object.assign() {
@@ -43,7 +43,7 @@ const Input = React.forwardRef((_a, ref) => {
       props
     )
   );
-});'
+});
 Input.displayName = 'Input';
 export { Input };
 '`

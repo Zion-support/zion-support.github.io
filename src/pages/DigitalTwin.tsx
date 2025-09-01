@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -49,7 +49,7 @@ import {
   Warehouse,
   Home,
   Car,
-  Plane,'
+  Plane,
   Ship} from 'lucide-react.ts';
 
 export default function DigitalTwin(...args: any[]): any {
@@ -57,94 +57,94 @@ export default function DigitalTwin(...args: any[]): any {
   const features = [
     {
 
-      icon: Eye,'
+      icon: Eye,
       title: 'Real-time Monitoring',
       description:'
-        'Live visualization and monitoring of physical assets and processes','
+        'Live visualization and monitoring of physical assets and processes',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Cpu,'
+      icon: Cpu,
       title: 'AI-Powered Analytics',
       description:'
-        'Intelligent insights and predictive maintenance capabilities','
+        'Intelligent insights and predictive maintenance capabilities',
       color: 'from-purple-500 to-pink-500'},
     {
 
-      icon: Network,'
-      title: 'IoT Integration','
-      description: 'Seamless connectivity with sensors and IoT devices','
+      icon: Network,
+      title: 'IoT Integration',
+      description: 'Seamless connectivity with sensors and IoT devices',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: Database,'
-      title: 'Data Synchronization','
-      description: 'Real-time data flow between physical and digital worlds','
+      icon: Database,
+      title: 'Data Synchronization',
+      description: 'Real-time data flow between physical and digital worlds',
       color: 'from-orange-500 to-red-500'},
     {
 
-      icon: Cloud,'
-      title: 'Cloud Platform','
-      description: 'Scalable cloud infrastructure for digital twin operations','
+      icon: Cloud,
+      title: 'Cloud Platform',
+      description: 'Scalable cloud infrastructure for digital twin operations',
       color: 'from-indigo-500 to-blue-500'},
     {
 
-      icon: Shield,'
-      title: 'Security & Compliance','
-      description: 'Enterprise-grade security for sensitive operational data','
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security for sensitive operational data',
       color: 'from-red-500 to-pink-500'},
   ];
 
   const applications = [
     {
-'
+
       title: 'Manufacturing',
       description:'
         'Optimize production processes and predict equipment failures',
       icon: Factory,
       benefits: ['
-        'Production optimization','
-        'Predictive maintenance','
+        'Production optimization',
+        'Predictive maintenance',
         'Quality control',
       ]},
     {
-'
-      title: 'Smart Cities','
+
+      title: 'Smart Cities',
       description: 'Monitor and manage urban infrastructure and services',
-      icon: Building,'
-      benefits: ['Traffic management', 'Energy optimization', 'Public safety']},
+      icon: Building,
+      benefits: ['Traffic management',Energy optimization',Public safety']},
     {
-'
-      title: 'Healthcare','
+
+      title: 'Healthcare',
       description: 'Patient monitoring and medical device management',
       icon: Activity,
       benefits: ['
-        'Patient care','
-        'Equipment monitoring','
+        'Patient care',
+        'Equipment monitoring',
         'Treatment optimization',
       ]},
     {
-'
-      title: 'Transportation','
+
+      title: 'Transportation',
       description: 'Fleet management and infrastructure monitoring',
       icon: Truck,
       benefits: ['
-        'Fleet optimization','
-        'Route planning','
+        'Fleet optimization',
+        'Route planning',
         'Maintenance scheduling',
       ]},
   ];
 
   const technologies = ['
-    'IoT Sensors','
-    '3D Modeling','
-    'Machine Learning','
-    'Cloud Computing','
-    'Edge Computing','
-    '5G Networks','
-    'Blockchain','
-    'AR/VR','
-    'Computer Vision','
+    'IoT Sensors',
+    '3D Modeling',
+    'Machine Learning',
+    'Cloud Computing',
+    'Edge Computing',
+    '5G Networks',
+    'Blockchain',
+    'AR/VR',
+    'Computer Vision',
     'Robotics',
   ];
 
@@ -169,14 +169,14 @@ export default function DigitalTwin(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
@@ -341,14 +341,14 @@ export default function DigitalTwin(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"

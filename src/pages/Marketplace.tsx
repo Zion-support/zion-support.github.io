@@ -16,40 +16,40 @@ import {
   TrendingUp,
   Award,
   Users,
-  ArrowRight} from 'lucide-react';'
-import { SEO } from '@/components/SEO';'
+  ArrowRight} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
+  CardHeader,
   CardTitle} from '@/components/ui/card';
 
 const Marketplace: React.FC = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedType, setSelectedType] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
   const categories = ['
-    { id: 'all', name: 'All Solutions', count: 45, icon: Globe },'
-    { id: 'ai', name: 'AI & Machine Learning', count: 18, icon: Brain },'
-    { id: 'quantum', name: 'Quantum Computing', count: 8, icon: Zap },'
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 12, icon: Shield },'
-    { id: 'cloud', name: 'Cloud & DevOps', count: 15, icon: Cloud },'
-    { id: 'iot', name: 'IoT & Edge Computing', count: 10, icon: Zap },'
-    { id: 'blockchain', name: 'Blockchain', count: 6, icon: Globe },'
+    { id: 'all', name: 'All Solutions', count: 45, icon: Globe },
+    { id: 'ai', name: 'AI & Machine Learning', count: 18, icon: Brain },
+    { id: 'quantum', name: 'Quantum Computing', count: 8, icon: Zap },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 12, icon: Shield },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 15, icon: Cloud },
+    { id: 'iot', name: 'IoT & Edge Computing', count: 10, icon: Zap },
+    { id: 'blockchain', name: 'Blockchain', count: 6, icon: Globe },
     { id: 'healthcare', name: 'Healthcare Tech', count: 9, icon: Brain },
   ];
 
   const types = ['
-    { id: 'all', name: 'All Types', count: 48 },'
-    { id: 'software', name: 'Software', count: 25 },'
-    { id: 'service', name: 'Services', count: 15 },'
+    { id: 'all', name: 'All Types', count: 48 },
+    { id: 'software', name: 'Software', count: 25 },
+    { id: 'service', name: 'Services', count: 15 },
     { id: 'hardware', name: 'Hardware', count: 8 },
   ];
 
@@ -57,279 +57,279 @@ const Marketplace: React.FC = () => {
     // AI & Machine Learning
     {
 
-      id: 1,'
-      name: 'Quantum AI Optimization Platform','
+      id: 1,
+      name: 'Quantum AI Optimization Platform',
       category: 'quantum',
       description:'
-        'Revolutionary quantum-classical hybrid algorithms for real-time optimization solving. 1000x faster than classical computers.','
+        'Revolutionary quantum-classical hybrid algorithms for real-time optimization solving. 1000x faster than classical computers.',
       price: '$15,000/month',
       rating: 4.9,
       reviews: 127,
       users: 45,
       features: ['
-        'Quantum algorithms','
-        'Real-time optimization','
-        'Hybrid computing','
+        'Quantum algorithms',
+        'Real-time optimization',
+        'Hybrid computing',
         'Enterprise scaling',
-      ],'
-      image: '🔮','
-      badge: 'Most Popular','
-      vendor: 'QuantumTech Solutions','
-      deployment: 'Cloud & On-Premise','
+      ],
+      image: '🔮',
+      badge: 'Most Popular',
+      vendor: 'QuantumTech Solutions',
+      deployment: 'Cloud & On-Premise',
       support: '24/7 Enterprise Support'},
     {
 
-      id: 2,'
-      name: 'AI Cybersecurity Suite','
+      id: 2,
+      name: 'AI Cybersecurity Suite',
       category: 'cybersecurity',
       description:'
-        'Advanced AI-powered threat detection and response system with 99.9% accuracy and real-time protection.','
+        'Advanced AI-powered threat detection and response system with 99.9% accuracy and real-time protection.',
       price: '$8,500/month',
       rating: 4.8,
       reviews: 89,
       users: 67,
       features: ['
-        'AI threat detection','
-        'Real-time response','
-        'Zero-day protection','
+        'AI threat detection',
+        'Real-time response',
+        'Zero-day protection',
         'Compliance ready',
-      ],'
-      image: '🛡️','
-      badge: 'Best Seller','
-      vendor: 'SecureAI Systems','
-      deployment: 'Cloud & Hybrid','
+      ],
+      image: '🛡️',
+      badge: 'Best Seller',
+      vendor: 'SecureAI Systems',
+      deployment: 'Cloud & Hybrid',
       support: '24/7 Security Support'},
     {
 
-      id: 3,'
-      name: 'Edge Computing Platform','
+      id: 3,
+      name: 'Edge Computing Platform',
       category: 'iot',
       description:'
-        'Ultra-low latency edge computing solution with 90% latency reduction and real-time data processing.','
+        'Ultra-low latency edge computing solution with 90% latency reduction and real-time data processing.',
       price: '$9,500/month',
       rating: 4.7,
       reviews: 156,
       users: 89,
       features: ['
-        'Edge processing','
-        'Low latency','
-        'Real-time analytics','
+        'Edge processing',
+        'Low latency',
+        'Real-time analytics',
         'Scalable infrastructure',
-      ],'
-      image: '⚡','
-      badge: 'Trending','
-      vendor: 'EdgeFlow Technologies','
-      deployment: 'Edge & Cloud','
+      ],
+      image: '⚡',
+      badge: 'Trending',
+      vendor: 'EdgeFlow Technologies',
+      deployment: 'Edge & Cloud',
       support: 'Business Hours Support'},
     {
-'
-      id: 'ml-pipeline','
-      name: 'ML Pipeline Automation','
-      category: 'ai-ml','
+
+      id: 'ml-pipeline',
+      name: 'ML Pipeline Automation',
+      category: 'ai-ml',
       type: 'software',
-      icon: BarChart3,'
+      icon: BarChart3,
       description: 'Automated machine learning pipeline for data scientists',
       features: ['
-        'AutoML capabilities','
-        'Model versioning','
-        'A/B testing','
-        'Performance monitoring','
-        'Scalable infrastructure','
+        'AutoML capabilities',
+        'Model versioning',
+        'A/B testing',
+        'Performance monitoring',
+        'Scalable infrastructure',
         'Cloud deployment',
-      ],'
+      ],
       pricing: '$499/month',
       rating: 4.9,
       reviews: 89,
-      downloads: 567,'
-      status: 'popular','
-      tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps'],'
-      image: '/api/placeholder/400/300','
-      demo: 'https://demo.ziontechgroup.com/ml-pipeline','
+      downloads: 567,
+      status: 'popular',
+      tags: ['Machine Learning',Automation',Data Science',MLOps'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/ml-pipeline',
       documentation: 'https://docs.ziontechgroup.com/ml-pipeline'},
     {
-'
-      id: 'computer-vision','
-      name: 'Computer Vision API','
-      category: 'ai-ml','
+
+      id: 'computer-vision',
+      name: 'Computer Vision API',
+      category: 'ai-ml',
       type: 'service',
       icon: Eye,
       description:'
         'Advanced computer vision services for image and video analysis',
       features: ['
-        'Object detection','
-        'Face recognition','
-        'Image classification','
-        'Video analysis','
-        'Real-time processing','
+        'Object detection',
+        'Face recognition',
+        'Image classification',
+        'Video analysis',
+        'Real-time processing',
         'Custom model training',
-      ],'
+      ],
       pricing: '$0.01 per image',
       rating: 4.7,
       reviews: 203,
-      users: 34,'
-      image: '🏥','
-      badge: 'New','
-      vendor: 'HealthAI Innovations','
-      deployment: 'Cloud & On-Premise','
+      users: 34,
+      image: '🏥',
+      badge: 'New',
+      vendor: 'HealthAI Innovations',
+      deployment: 'Cloud & On-Premise',
       support: '24/7 Healthcare Support'},
     {
-'
-      id: 'kubernetes-manager','
-      name: 'Kubernetes Management Platform','
-      category: 'cloud','
+
+      id: 'kubernetes-manager',
+      name: 'Kubernetes Management Platform',
+      category: 'cloud',
       type: 'software',
-      icon: Server,'
+      icon: Server,
       description: 'Enterprise-grade Kubernetes cluster management solution',
       features: ['
-        'Multi-cluster management','
-        'Auto-scaling','
-        'Monitoring & alerting','
-        'Security policies','
-        'Backup & recovery','
+        'Multi-cluster management',
+        'Auto-scaling',
+        'Monitoring & alerting',
+        'Security policies',
+        'Backup & recovery',
         'Cost optimization',
-      ],'
+      ],
       pricing: '$199/month',
       rating: 4.8,
       reviews: 134,
-      downloads: 456,'
-      status: 'popular','
-      tags: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Cloud Native'],'
-      image: '/api/placeholder/400/300','
-      demo: 'https://demo.ziontechgroup.com/kubernetes-manager','
+      downloads: 456,
+      status: 'popular',
+      tags: ['Kubernetes',Container Orchestration',DevOps',Cloud Native'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/kubernetes-manager',
       documentation: 'https://docs.ziontechgroup.com/kubernetes-manager'},
     // Security & Compliance
     {
-'
-      id: 'threat-detection','
-      name: 'Advanced Threat Detection','
-      category: 'security','
+
+      id: 'threat-detection',
+      name: 'Advanced Threat Detection',
+      category: 'security',
       type: 'software',
-      icon: Shield,'
+      icon: Shield,
       description: 'AI-powered threat detection and response system',
       features: ['
-        'Real-time monitoring','
-        'Behavioral analysis','
-        'Threat intelligence','
-        'Automated response','
-        'Compliance reporting','
+        'Real-time monitoring',
+        'Behavioral analysis',
+        'Threat intelligence',
+        'Automated response',
+        'Compliance reporting',
         '24/7 SOC support',
-      ],'
+      ],
       pricing: '$399/month',
       rating: 4.9,
       reviews: 178,
-      downloads: 678,'
-      status: 'featured','
-      tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC'],'
-      image: '/api/placeholder/400/300','
-      demo: 'https://demo.ziontechgroup.com/threat-detection','
+      downloads: 678,
+      status: 'featured',
+      tags: ['Cybersecurity',Threat Detection',AI Security',SOC'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/threat-detection',
       documentation: 'https://docs.ziontechgroup.com/threat-detection'},
     {
-'
-      id: 'compliance-audit','
-      name: 'Compliance Audit Service','
-      category: 'security','
+
+      id: 'compliance-audit',
+      name: 'Compliance Audit Service',
+      category: 'security',
       type: 'service',
       icon: CheckCircle,
       description:'
         'Comprehensive compliance auditing and certification services',
       features: ['
-        'SOC 2 Type II','
-        'ISO 27001','
-        'GDPR compliance','
-        'HIPAA assessment','
-        'PCI DSS validation','
+        'SOC 2 Type II',
+        'ISO 27001',
+        'GDPR compliance',
+        'HIPAA assessment',
+        'PCI DSS validation',
         'Ongoing monitoring',
-      ],'
+      ],
       pricing: 'Starting from $25,000',
       rating: 4.8,
       reviews: 45,
-      downloads: 123,'
-      status: 'popular','
-      tags: ['Compliance', 'Security', 'Audit', 'Certification'],'
-      image: '/api/placeholder/400/300','
-      demo: 'https://demo.ziontechgroup.com/compliance-audit','
+      downloads: 123,
+      status: 'popular',
+      tags: ['Compliance',Security',Audit',Certification'],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/compliance-audit',
       documentation: 'https://docs.ziontechgroup.com/compliance-audit'},
     // Data & Analytics
     {
-'
-      id: 'data-warehouse','
-      name: 'Data Warehouse Solution','
-      category: 'data','
+
+      id: 'data-warehouse',
+      name: 'Data Warehouse Solution',
+      category: 'data',
       type: 'software',
-      icon: Database,'
+      icon: Database,
       description: 'Scalable data warehouse with advanced analytics',
       features: ['
-        'Multi-cloud support','
-        'Real-time processing','
-        'Advanced analytics','
-        'Data governance','
-        'Security & encryption','
+        'Multi-cloud support',
+        'Real-time processing',
+        'Advanced analytics',
+        'Data governance',
+        'Security & encryption',
         'Auto-scaling',
-      ],'
+      ],
       pricing: '$599/month',
       rating: 4.7,
       reviews: 92,
-      downloads: 345,'
+      downloads: 345,
       status: 'trending',
       tags: ['
-        'Data Warehouse','
-        'Big Data','
-        'Analytics','
+        'Data Warehouse',
+        'Big Data',
+        'Analytics',
         'Business Intelligence',
-      ],'
-      image: '/api/placeholder/400/300','
-      demo: 'https://demo.ziontechgroup.com/data-warehouse','
+      ],
+      image: '/api/placeholder/400/300',
+      demo: 'https://demo.ziontechgroup.com/data-warehouse',
       documentation: 'https://docs.ziontechgroup.com/data-warehouse'},
     {
-'
-      id: 'bi-dashboard','
-      name: 'Business Intelligence Dashboard','
-      category: 'data','
+
+      id: 'bi-dashboard',
+      name: 'Business Intelligence Dashboard',
+      category: 'data',
       type: 'software',
-      icon: BarChart3,'
+      icon: BarChart3,
       description: 'Interactive BI dashboard for data visualization',
       features: ['
-        'Drag & drop interface','
-        'Real-time data','
-        'Custom widgets','
-        'Mobile responsive','
-        'Export capabilities','
+        'Drag & drop interface',
+        'Real-time data',
+        'Custom widgets',
+        'Mobile responsive',
+        'Export capabilities',
         'Collaboration tools',
-      ],'
+      ],
       pricing: '$149/month',
       rating: 4.6,
       reviews: 78,
-      users: 23,'
-      image: '🔗','
-      badge: 'Innovative','
-      vendor: 'ChainAI Solutions','
-      deployment: 'Cloud & Hybrid','
+      users: 23,
+      image: '🔗',
+      badge: 'Innovative',
+      vendor: 'ChainAI Solutions',
+      deployment: 'Cloud & Hybrid',
       support: 'Business Hours Support'},
     // Development Tools
     {
-'
-      id: 'code-generator','
-      name: 'AI Code Generator','
-      category: 'development','
+
+      id: 'code-generator',
+      name: 'AI Code Generator',
+      category: 'development',
       type: 'software',
-      icon: Code,'
+      icon: Code,
       description: 'AI-powered code generation and assistance tool',
       features: ['
-        'Multi-language support','
-        'Code completion','
-        'Bug detection','
-        'Documentation generation','
-        'Code review','
+        'Multi-language support',
+        'Code completion',
+        'Bug detection',
+        'Documentation generation',
+        'Code review',
         'Integration with IDEs',
-      ],'
+      ],
       pricing: '$99/month',
       rating: 4.8,
       reviews: 234,
-      users: 156,'
-      image: '☁️','
-      badge: 'Cost Effective','
-      vendor: 'CloudOpt Solutions','
-      deployment: 'Multi-Cloud','
+      users: 156,
+      image: '☁️',
+      badge: 'Cost Effective',
+      vendor: 'CloudOpt Solutions',
+      deployment: 'Multi-Cloud',
       support: '24/7 Cloud Support'},
   ];
 
@@ -347,16 +347,16 @@ const Marketplace: React.FC = () => {
   const sortedSolutions = [...filteredSolutions].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'price':
         return ('
-          parseFloat(a.price.replace(/[^0-9.]/g, '')) -'
-          parseFloat(b.price.replace(/[^0-9.]/g, ''))
-        );'
+          parseFloat(a.price.replace(/[^0-9.]/g,')) -'
+          parseFloat(b.price.replace(/[^0-9.]/g,'))
+        );
       case 'reviews':
-        return b.reviews - a.reviews;'
+        return b.reviews - a.reviews;
       case 'users':
         return b.users - a.users;
       default:
@@ -367,11 +367,11 @@ const Marketplace: React.FC = () => {
   const getTypeColor = (type: string) => {
 
     switch (type) {
-'
+
       case 'software':'
-        return 'bg-blue-500/20 text-blue-400';'
+        return 'bg-blue-500/20 text-blue-400';
       case 'service':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'hardware':'
         return 'bg-orange-500/20 text-orange-400';
       default:'
@@ -382,11 +382,11 @@ const Marketplace: React.FC = () => {
   const getStatusColor = (status: string) => {
 
     switch (status) {
-'
+
       case 'featured':'
-        return 'bg-yellow-500/20 text-yellow-400';'
+        return 'bg-yellow-500/20 text-yellow-400';
       case 'popular':'
-        return 'bg-blue-500/20 text-blue-400';'
+        return 'bg-blue-500/20 text-blue-400';
       case 'trending':'
         return 'bg-green-500/20 text-green-400';
       default:'
@@ -431,24 +431,24 @@ const Marketplace: React.FC = () => {
 
   const getCategoryName = (categoryId: string) => {
 
-    const category = categories.find(cat => cat.id === categoryId);'
+    const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
   const getBadgeColor = (badge: string) => {
 
     switch (badge) {
-'
+
       case 'Most Popular':'
-        return 'bg-gradient-to-r from-yellow-500 to-orange-500';'
+        return 'bg-gradient-to-r from-yellow-500 to-orange-500';
       case 'Best Seller':'
-        return 'bg-gradient-to-r from-green-500 to-emerald-500';'
+        return 'bg-gradient-to-r from-green-500 to-emerald-500';
       case 'Trending':'
-        return 'bg-gradient-to-r from-purple-500 to-pink-500';'
+        return 'bg-gradient-to-r from-purple-500 to-pink-500';
       case 'New':'
-        return 'bg-gradient-to-r from-blue-500 to-cyan-500';'
+        return 'bg-gradient-to-r from-blue-500 to-cyan-500';
       case 'Innovative':'
-        return 'bg-gradient-to-r from-indigo-500 to-purple-500';'
+        return 'bg-gradient-to-r from-indigo-500 to-purple-500';
       case 'Cost Effective':'
         return 'bg-gradient-to-r from-teal-500 to-green-500';
       default:'
@@ -459,8 +459,8 @@ const Marketplace: React.FC = () => {
   return()
     <>
       <SEO"
-        title="Technology Marketplace - Zion Tech Group""
-        description="Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.""
+        title="Technology Marketplace - Zion Tech Group"
+        description="Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace."
         keywords="technology marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group"
       />
 "
@@ -496,7 +496,7 @@ const Marketplace: React.FC = () => {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search solutions, vendors, or technologies..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
@@ -689,8 +689,8 @@ const Marketplace: React.FC = () => {
                             <ArrowRight className="w-4 h-4 ml-2" />
                           </Button>
                           <Button"
-                            variant="outline""
-                            size="sm""
+                            variant="outline"
+                            size="sm"
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
                           >"
                             <Heart className="w-4 h-4" />
@@ -712,7 +712,7 @@ const Marketplace: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >"
-              <h2 className="text-4xl font-bold text-white mb-6">'
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Can't Find What You're Looking For?
               </h2>"
               <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
@@ -727,7 +727,7 @@ const Marketplace: React.FC = () => {
                 </Button>
 
                 <Button"
-                  variant="outline""
+                  variant="outline"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
                 >"
                   <Users className="w-5 h-5 mr-2" />

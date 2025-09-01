@@ -1,11 +1,11 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 const EnhancedServices = () => {
   return()
     <>
       <SEO
-        title="Enhanced Services - Zion Tech Group""
-        description="Advanced technology services with enhanced features and capabilities for modern businesses.""
+        title="Enhanced Services - Zion Tech Group"
+        description="Advanced technology services with enhanced features and capabilities for modern businesses."
         keywords="enhanced services, advanced technology, modern solutions, business technology"
       />"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">"

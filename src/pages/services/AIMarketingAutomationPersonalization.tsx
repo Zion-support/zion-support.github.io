@@ -1,76 +1,76 @@
-import React from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe  } from 'lucide-react.ts';
 
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {
 
   const features = ['
-    'AI-powered customer segmentation with behavioral analysis','
-    'Dynamic content personalization across all marketing channels',;'
-    'Predictive lead scoring and conversion optimization',;'
-    'Multi-channel campaign orchestration (email, SMS, social, web)',;'
-    'Real-time A/B testing with AI-driven optimization',;'
-    'Customer journey mapping and automated nurturing sequences',;'
-    'Advanced analytics and ROI tracking with attribution modeling',;'
+    'AI-powered customer segmentation with behavioral analysis',
+    'Dynamic content personalization across all marketing channels',;
+    'Predictive lead scoring and conversion optimization',;
+    'Multi-channel campaign orchestration (email, SMS, social, web),;
+    'Real-time A/B testing with AI-driven optimization',;
+    'Customer journey mapping and automated nurturing sequences',;
+    'Advanced analytics and ROI tracking with attribution modeling',;
     'Integration with major CRM, e-commerce, and advertising platforms',;
   ];
 
-  const benefits = [;'
-    'Increase conversion rates by 40-60% with personalization',;'
-    'Reduce customer acquisition costs by 30-50%',;'
-    'Improve email open rates by 25-40% with AI optimization',;'
-    'Generate 35-50% more qualified leads through automation',;'
-    'Boost customer lifetime value by 20-35%',;'
+  const benefits = [;
+    'Increase conversion rates by 40-60% with personalization',;
+    'Reduce customer acquisition costs by 30-50%',;
+    'Improve email open rates by 25-40% with AI optimization',;
+    'Generate 35-50% more qualified leads through automation',;
+    'Boost customer lifetime value by 20-35%',;
     'Achieve 99.9% campaign delivery and tracking accuracy',;
   ];
 
   const marketingChannels = ['
-    'Email Marketing Automation','
-    'SMS & Push Notifications','
-    'Social Media Advertising','
-    'Display & Retargeting Ads',;'
-    'Content Marketing',;'
-    'Search Engine Marketing',;'
-    'Influencer Marketing',;'
-    'Video Marketing',;'
-    'Voice & Chatbot Marketing',;'
+    'Email Marketing Automation',
+    'SMS & Push Notifications',
+    'Social Media Advertising',
+    'Display & Retargeting Ads',;
+    'Content Marketing',;
+    'Search Engine Marketing',;
+    'Influencer Marketing',;
+    'Video Marketing',;
+    'Voice & Chatbot Marketing',;
     'Location-Based Marketing',;
   ];
 
   const aiCapabilities = ['
-    'Customer Behavior Analysis','
-    'Predictive Analytics','
-    'Dynamic Content Generation','
-    'Smart Segmentation',;'
-    'Lead Scoring & Qualification',;'
-    'Campaign Optimization',;'
-    'Personalization Engine',;'
-    'A/B Testing Automation',;'
-    'Performance Prediction',;'
+    'Customer Behavior Analysis',
+    'Predictive Analytics',
+    'Dynamic Content Generation',
+    'Smart Segmentation',;
+    'Lead Scoring & Qualification',;
+    'Campaign Optimization',;
+    'Personalization Engine',;
+    'A/B Testing Automation',;
+    'Performance Prediction',;
     'ROI Optimization',;
   ];
 
   const integrations = ['
-    'Salesforce Marketing Cloud','
-    'HubSpot Marketing Hub','
-    'Mailchimp','
-    'Klaviyo',;'
-    'Shopify',;'
-    'WooCommerce',;'
-    'Facebook Ads',;'
-    'Google Ads',;'
-    'LinkedIn Ads',;'
+    'Salesforce Marketing Cloud',
+    'HubSpot Marketing Hub',
+    'Mailchimp',
+    'Klaviyo',;
+    'Shopify',;
+    'WooCommerce',;
+    'Facebook Ads',;
+    'Google Ads',;
+    'LinkedIn Ads',;
     'TikTok Ads',;
   ];
 
   const stack = ['
-    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },'
-    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;'
-    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;'
-    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;'
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;'
-    { name: 'Redis', url: 'https://redis.io/' },;'
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'
+    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;
+    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;
+    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;
+    { name: 'Redis', url: 'https://redis.io/' },;
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;
     { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
   ];
 

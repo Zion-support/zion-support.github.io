@@ -211,7 +211,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
               <div className="text-center">"
                 <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>"
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>"
-                <p className="text-gray-300 mb-6">'
+                <p className="text-gray-300 mb-6">
                   We've helped numerous entrepreneurs build successful SAAS businesses
                   that generate millions in recurring revenue.
                 </p>"
@@ -326,7 +326,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Build Your SAAS?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our MicroSAAS services can help you build a profitable,
             scalable software business that generates recurring revenue.
           </p>"

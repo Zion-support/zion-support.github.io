@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousCodeReview = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousCodeReview = () => {
       <Helmet>
         <title>AI Autonomous Code Review | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI code review, autonomous code review, code quality, software development, AI development tools"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-code-review"
         />
       </Helmet>
@@ -186,17 +186,17 @@ const AIAutonomousCodeReview = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'JavaScript','
-                'TypeScript','
-                'Python','
-                'Java','
-                'C#','
-                'Go','
-                'Rust','
-                'PHP','
-                'Ruby','
-                'Swift','
-                'Kotlin','
+                'JavaScript',
+                'TypeScript',
+                'Python',
+                'Java',
+                'C#',
+                'Go',
+                'Rust',
+                'PHP',
+                'Ruby',
+                'Swift',
+                'Kotlin',
                 'Scala',
               ].map(lang => (
                 <div

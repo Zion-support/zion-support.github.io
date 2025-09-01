@@ -5,7 +5,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
-        title="AI Solutions - Zion Tech Group""
+        title="AI Solutions - Zion Tech Group"
         description="Explore our AI solutions including analytics, automation, and intelligent platforms."
       />
 
@@ -20,7 +20,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           >"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Solutions for the"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 {' '}
                 Future
               </span>
@@ -32,7 +32,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Explore Solutions
@@ -67,7 +67,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -140,7 +140,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -192,7 +192,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -236,7 +236,7 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -293,34 +293,34 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {[
               {
-'
-                step: '01','
+
+                step: '01',
                 title: 'Discovery & Analysis',
                 description:'
                   'Understand your business needs and data landscape',
                 icon: Lightbulb},
               {
-'
-                step: '02','
-                title: 'Strategy & Planning','
+
+                step: '02',
+                title: 'Strategy & Planning',
                 description: 'Design AI roadmap and implementation strategy',
                 icon: Target},
               {
-'
-                step: '03','
-                title: 'Development & Testing','
+
+                step: '03',
+                title: 'Development & Testing',
                 description: 'Build and validate AI models with your data',
                 icon: Code},
               {
-'
-                step: '04','
-                title: 'Deployment & Optimization','
+
+                step: '04',
+                title: 'Deployment & Optimization',
                 description: 'Launch AI solutions and continuously improve',
                 icon: Rocket},
             ].map((phase, index) => (
@@ -367,14 +367,14 @@ export default React.memo (function AiSolutions (...args: any[]) : any {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Harness the Power of AI?
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how artificial intelligence can transform your
               business operations, improve efficiency, and drive growth.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Start AI Journey

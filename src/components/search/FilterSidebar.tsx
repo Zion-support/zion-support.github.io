@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { Filter, X  } from 'lucide-react';
 
 interface FilterOption {
@@ -10,7 +10,7 @@ interface FilterOption {
 interface FilterGroup {
   title: string;
   key: string;
-  options: FilterOption[];'
+  options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {

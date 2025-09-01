@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';'
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -18,8 +18,8 @@ interface PerformanceMetric {
 
   name: string;
   value: number;
-  unit: string;'
-  trend: 'up' | 'down' | 'stable';'
+  unit: string;
+  trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
   icon: React.ComponentType < any>;
 
@@ -31,7 +31,7 @@ interface PerformanceData {
 
 const PerformanceAnalytics: React.FC = () => {;
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);'
+  const [isMonitoring, setIsMonitoring] = useState(false);
   const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
 
   // Mock performance data - in real implementation, this would come from actual monitoring
@@ -39,71 +39,71 @@ const PerformanceAnalytics: React.FC = () => {;
     const now = Date.now () ;
     const metrics: PerformanceMetric[] = [
       {
-'
+
         name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,'
-        unit: 'ms','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 2000 + 500,
+        unit: 'ms',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
         icon: Clock
       
 },
       {
-'
+
         name: 'Memory Usage',
-        value: Math.random() * 40 + 60,'
-        unit: '%','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 40 + 60,
+        unit: '%',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.6 ? 'good' : 'warning',
         icon: HardDrive
       },
       {
-'
+
         name: 'CPU Usage',
-        value: Math.random() * 30 + 20,'
-        unit: '%','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 30 + 20,
+        unit: '%',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Cpu
       },
       {
-'
+
         name: 'Network Latency',
-        value: Math.random() * 100 + 20,'
-        unit: 'ms','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 100 + 20,
+        unit: 'ms',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.6 ? 'good' : 'warning',
         icon: Network
       },
       {
-'
+
         name: 'Error Rate',
-        value: Math.random() * 2,'
-        unit: '%','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 2,
+        unit: '%',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
         icon: AlertTriangle
       },
       {
-'
+
         name: 'Response Time',
-        value: Math.random() * 500 + 100,'
-        unit: 'ms','
-        trend: Math.random() > 0.5 ? 'up' : 'down','
+        value: Math.random() * 500 + 100,
+        unit: 'ms',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap
 
     ];
 
-    const alerts = [;'
-      'High memory usage detected on server-01',;'
-      'Network latency increased by 15%',;'
+    const alerts = [;
+      'High memory usage detected on server-01',;
+      'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
     ];
 
-    const recommendations = [;'
-      'Consider implementing lazy loading for images',;'
-      'Optimize database queries for better performance',;'
+    const recommendations = [;
+      'Consider implementing lazy loading for images',;
+      'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
     ];
 
@@ -128,25 +128,25 @@ const PerformanceAnalytics: React.FC = () => {;
   }, [isMonitoring, generateMockData]) ;
 
   const getStatusColor = (status: string) => {;
-    switch (status) {;'
-      case 'good': return 'text-green-400';'
-      case 'warning': return 'text-yellow-400';'
-      case 'critical': return 'text-red-400';'
+    switch (status) {;
+      case 'good': return 'text-green-400';
+      case 'warning': return 'text-yellow-400';
+      case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
 
   };
 
   const getStatusBgColor = (status: string) => {;
-    switch (status) {;'
-      case 'good': return 'bg-green-500/20';'
-      case 'warning': return 'bg-yellow-500/20';'
-      case 'critical': return 'bg-red-500/20';'
+    switch (status) {;
+      case 'good': return 'bg-green-500/20';
+      case 'warning': return 'bg-yellow-500/20';
+      case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20';
 
   };
 
   const getTrendIcon = (trend: string) => {;
-    switch (trend) {;'
+    switch (trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;'"
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;"
       default: return <Activity className="w-4 h-4 text-blue-400" />;
@@ -241,7 +241,7 @@ const PerformanceAnalytics: React.FC = () => {;
           </div>
 
           <select
-            value={selectedTimeframe}'
+            value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}"
             className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >"
@@ -297,7 +297,7 @@ const PerformanceAnalytics: React.FC = () => {;
                 </div>
 "
                 <div className="text-center">"
-                  <div className="text-3xl font-bold text-white mb-2">'
+                  <div className="text-3xl font-bold text-white mb-2">
                     {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}"
                     <span className="text-lg text-gray-400 ml-1">{metric.unit}</span>
                   </div>`

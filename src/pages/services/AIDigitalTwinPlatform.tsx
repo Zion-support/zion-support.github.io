@@ -19,83 +19,83 @@ import {
 
 export default function AIDigitalTwinPlatform() {
   const features = ['
-    'AI-powered digital twin creation and management','
-    'Real-time IoT sensor data integration','
-    'Predictive maintenance and failure prediction','
-    '3D visualization and augmented reality support','
-    'Multi-physics simulation and modeling','
-    'Automated anomaly detection and alerts','
-    'Historical data analysis and trend prediction','
-    'Cross-platform integration and API access','
-    'Custom dashboard and reporting tools','
+    'AI-powered digital twin creation and management',
+    'Real-time IoT sensor data integration',
+    'Predictive maintenance and failure prediction',
+    '3D visualization and augmented reality support',
+    'Multi-physics simulation and modeling',
+    'Automated anomaly detection and alerts',
+    'Historical data analysis and trend prediction',
+    'Cross-platform integration and API access',
+    'Custom dashboard and reporting tools',
     'Scalable cloud-based infrastructure',
   ];
 
   const benefits = ['
-    'Reduce operational costs by 25-40%','
-    'Improve equipment uptime by 30-50%','
-    'Cut maintenance costs by 20-35%','
-    'Real-time performance monitoring','
-    'Predictive maintenance optimization','
+    'Reduce operational costs by 25-40%',
+    'Improve equipment uptime by 30-50%',
+    'Cut maintenance costs by 20-35%',
+    'Real-time performance monitoring',
+    'Predictive maintenance optimization',
     'Enhanced decision-making with data insights',
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
+
+      name: 'Starter',
       price: '$599/mo',
       features: ['
-        'Up to 10 digital twins','
-        'Basic monitoring','
-        'Standard dashboards','
-        'Email support','
+        'Up to 10 digital twins',
+        'Basic monitoring',
+        'Standard dashboards',
+        'Email support',
         'Monthly reports',
       ],
       popular: false},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$1,299/mo',
       features: ['
-        'Up to 50 digital twins','
-        'Advanced AI analytics','
-        'Real-time monitoring','
-        'Priority support','
-        'Custom dashboards','
+        'Up to 50 digital twins',
+        'Advanced AI analytics',
+        'Real-time monitoring',
+        'Priority support',
+        'Custom dashboards',
         'API access',
       ],
       popular: true},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$3,999/mo',
       features: ['
-        'Unlimited digital twins','
-        'Full AI suite','
-        'Custom models','
-        'Dedicated support','
-        'White-label solutions','
+        'Unlimited digital twins',
+        'Full AI suite',
+        'Custom models',
+        'Dedicated support',
+        'White-label solutions',
         'Advanced integrations',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Manufacturing process optimization','
-    'Smart city infrastructure monitoring','
-    'Healthcare facility management','
-    'Energy grid optimization','
-    'Transportation system monitoring','
+    'Manufacturing process optimization',
+    'Smart city infrastructure monitoring',
+    'Healthcare facility management',
+    'Energy grid optimization',
+    'Transportation system monitoring',
     'Building automation and management',
   ];
 
   const industries = ['
-    'Manufacturing & Industry 4.0','
-    'Smart Cities & Infrastructure','
-    'Healthcare & Medical Devices','
-    'Energy & Utilities','
-    'Transportation & Logistics','
+    'Manufacturing & Industry 4.0',
+    'Smart Cities & Infrastructure',
+    'Healthcare & Medical Devices',
+    'Energy & Utilities',
+    'Transportation & Logistics',
     'Construction & Real Estate',
   ];
 
@@ -117,15 +117,15 @@ export default function AIDigitalTwinPlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="#pricing""
+              href="#pricing"
               className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               View Pricing
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Learn More
@@ -250,7 +250,7 @@ export default function AIDigitalTwinPlatform() {
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-'
+
                   plan.popular ? 'border-blue-500' : 'border-gray-200'`
                 } p-8`}
               >
@@ -300,7 +300,7 @@ export default function AIDigitalTwinPlatform() {
               Need a custom plan? Contact us for enterprise pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               Contact Sales Team
@@ -350,13 +350,13 @@ export default function AIDigitalTwinPlatform() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Start Free Trial
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
             >
               Call Us
@@ -367,7 +367,7 @@ export default function AIDigitalTwinPlatform() {
 
       {/* Contact Section */}"
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">"
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">'
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Questions? We're Here to Help
         </h2>"
         <div className="grid md:grid-cols-2 gap-8">"
@@ -380,7 +380,7 @@ export default function AIDigitalTwinPlatform() {
               Speak with our digital twin experts
             </p>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               +1 302 464 0950
@@ -396,7 +396,7 @@ export default function AIDigitalTwinPlatform() {
               Get detailed information and pricing
             </p>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               kleber@ziontechgroup.com
@@ -412,9 +412,9 @@ export default function AIDigitalTwinPlatform() {
             Learn more about our complete suite of AI-powered business solutions
           </p>
           <a"
-            href="https://ziontechgroup.com""
-            target="_blank""
-            rel="noreferrer""
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
           >"
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />

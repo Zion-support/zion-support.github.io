@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 export function MicroSaasServicesSection() {
     const featuredServices = getFeaturedMicroSaasServices().slice(0, 3);

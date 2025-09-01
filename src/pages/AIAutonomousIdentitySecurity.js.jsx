@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousIdentitySecurity = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousIdentitySecurity = () => {
           AI Autonomous Identity Security Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous identity security platform that continuously secures identities, detects threats, and protects identity infrastructure with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI identity security, autonomous identity security, identity protection, threat detection, autonomous operations, AI identity security platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-identity-security"
         />
       </Helmet>
@@ -189,13 +189,13 @@ const AIAutonomousIdentitySecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Authentication Security','
-                'Authorization Security','
-                'Access Control Security','
-                'Identity Verification Security','
-                'Single Sign-On Security','
-                'Multi-Factor Security','
-                'Identity Management Security','
+                'Authentication Security',
+                'Authorization Security',
+                'Access Control Security',
+                'Identity Verification Security',
+                'Single Sign-On Security',
+                'Multi-Factor Security',
+                'Identity Management Security',
                 'Identity Governance Security',
               ].map(type => (
                 <div

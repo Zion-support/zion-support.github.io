@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -39,31 +39,31 @@ import {
   MapPin,
   Globe as GlobeIcon,
   ExternalLink'
-} from 'lucide-react';'
-import SEO from '../components/SEO';'
+} from 'lucide-react';
+import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 
 const ComprehensiveServicesLanding2025: React.FC = () => {;
   const getCategoryIcon = (category: string) => {;
-    switch (category) {;'
+    switch (category) {;
       case 'AI & Automation':;
-        return <Brain className="w-8 h-8" />;'
+        return <Brain className="w-8 h-8" />;
       case 'AI & Security':;"
-        return <Shield className="w-8 h-8" />;'
+        return <Shield className="w-8 h-8" />;
       case 'AI & Marketing':;"
-        return <BarChart3 className="w-8 h-8" />;'
+        return <BarChart3 className="w-8 h-8" />;
       case 'AI & Sales':;"
-        return <TrendingUp className="w-8 h-8" />;'
+        return <TrendingUp className="w-8 h-8" />;
       case 'AI & Customer Experience':;"
-        return <MessageSquare className="w-8 h-8" />;'
+        return <MessageSquare className="w-8 h-8" />;
       case 'AI & Analytics':;"
-        return <Database className="w-8 h-8" />;'
+        return <Database className="w-8 h-8" />;
       case 'Quantum Computing':;"
-        return <Box className="w-8 h-8" />;'
+        return <Box className="w-8 h-8" />;
       case 'IoT & Edge Computing':;"
-        return <Network className="w-8 h-8" />;'
+        return <Network className="w-8 h-8" />;
       case 'Blockchain & Web3':;"
-        return <Wallet className="w-8 h-8" />;'
+        return <Wallet className="w-8 h-8" />;
       case 'Sustainability & Technology':;"
         return <Leaf className="w-8 h-8" />;
       default:;"
@@ -72,28 +72,28 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   };
 
   const getCategoryColor = (category: string) => {;
-    switch (category) {;'
-      case 'AI & Automation':;'
-        return 'from-purple-500 to-pink-500';'
-      case 'AI & Security':;'
-        return 'from-red-500 to-orange-500';'
-      case 'AI & Marketing':;'
-        return 'from-blue-500 to-cyan-500';'
-      case 'AI & Sales':;'
-        return 'from-green-500 to-emerald-500';'
-      case 'AI & Customer Experience':;'
-        return 'from-indigo-500 to-purple-500';'
-      case 'AI & Analytics':;'
-        return 'from-cyan-500 to-blue-500';'
-      case 'Quantum Computing':;'
-        return 'from-violet-500 to-purple-500';'
-      case 'IoT & Edge Computing':;'
-        return 'from-orange-500 to-red-500';'
-      case 'Blockchain & Web3':;'
-        return 'from-yellow-500 to-orange-500';'
-      case 'Sustainability & Technology':;'
+    switch (category) {;
+      case 'AI & Automation':;
+        return 'from-purple-500 to-pink-500';
+      case 'AI & Security':;
+        return 'from-red-500 to-orange-500';
+      case 'AI & Marketing':;
+        return 'from-blue-500 to-cyan-500';
+      case 'AI & Sales':;
+        return 'from-green-500 to-emerald-500';
+      case 'AI & Customer Experience':;
+        return 'from-indigo-500 to-purple-500';
+      case 'AI & Analytics':;
+        return 'from-cyan-500 to-blue-500';
+      case 'Quantum Computing':;
+        return 'from-violet-500 to-purple-500';
+      case 'IoT & Edge Computing':;
+        return 'from-orange-500 to-red-500';
+      case 'Blockchain & Web3':;
+        return 'from-yellow-500 to-orange-500';
+      case 'Sustainability & Technology':;
         return 'from-green-500 to-teal-500';
-      default:;'
+      default:;
         return 'from-gray-500 to-slate-500';
 
   };
@@ -107,15 +107,15 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   }));
 
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;'
-    const roi = parseInt(service.roi.replace('%', ''));
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
+    const roi = parseInt(service.roi.replace('%','));
     return sum + roi;
   }, 0) / totalServices;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Comprehensive Services Landing 2025 - Zion Tech Group""
+        title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
       />
 
@@ -173,13 +173,13 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/innovative-services-showcase-2025""
+                to="/innovative-services-showcase-2025"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
 
                 Explore All Services
               </Link>
               <Link"
-                to="/comprehensive-pricing-guide-2027""
+                to="/comprehensive-pricing-guide-2027"
                 className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
 
                 View Pricing Guide
@@ -231,10 +231,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 className="group"
 
                 <Link"
-                  to="/innovative-services-showcase-2025""
+                  to="/innovative-services-showcase-2025"
                   className="block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full"
 "
-                  <div className="text-center">'
+                  <div className="text-center">
                     <div className={`inline-flex p-4 bg-gradient-to-r ${categoryData.color}/20 rounded-2xl border border-${categoryData.color.split('-')[1]}-400/30 mb-6 group-hover:scale-110 transition-transform duration-300`}>'`
                       <div className={`text-${categoryData.color.split('-')[1]}-400`}>
                         {categoryData.icon}
@@ -417,7 +417,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 </div>
 
                 <Link"
-                  to="/innovative-services-showcase-2025""
+                  to="/innovative-services-showcase-2025"
                   className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 text-center block"
 "
                   <span className="flex items-center justify-center">
@@ -430,7 +430,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 "
           <div className="text-center mt-12">
             <Link"
-              to="/innovative-services-showcase-2025""
+              to="/innovative-services-showcase-2025"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
 
               View All Services"
@@ -457,26 +457,26 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             {[
               {
 "
-                icon: <Sparkles className="w-8 h-8" />,'
-                title: 'Innovation First','
+                icon: <Sparkles className="w-8 h-8" />,
+                title: 'Innovation First',
                 description: 'Leading-edge technology solutions that keep you ahead of the competition'
               },
               {
 "
-                icon: <Target className="w-8 h-8" />,'
-                title: 'Proven ROI','
+                icon: <Target className="w-8 h-8" />,
+                title: 'Proven ROI',
                 description: 'Measurable business outcomes with transparent ROI projections'
               },
               {
 "
-                icon: <Users className="w-8 h-8" />,'
-                title: 'Expert Support','
+                icon: <Users className="w-8 h-8" />,
+                title: 'Expert Support',
                 description: '24/7 technical support and dedicated account management'
               },
               {
 "
-                icon: <Shield className="w-8 h-8" />,'
-                title: 'Enterprise Security','
+                icon: <Shield className="w-8 h-8" />,
+                title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
 
             ].map ( (feature, index) => (;
@@ -562,13 +562,13 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
 
                 Call Sales Team
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
 
                 Email Sales

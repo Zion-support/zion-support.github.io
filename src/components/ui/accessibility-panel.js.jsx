@@ -1,7 +1,7 @@
-'use client';'
-import React, { useState, useCallback, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';'
+'use client';
+import React, { useState, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
 const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
         highContrast: false,
         largeText: false,
-        fontSize: 16,'
+        fontSize: 16,
         colorBlindMode: 'none',
         reducedMotion: false,
         screenReader: false,
@@ -25,21 +25,21 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         const root = document.documentElement;
         // High contrast mode
         if (settings.highContrast) {
-'
-            root.style.setProperty('--high-contrast', 'true');'
+
+            root.style.setProperty('--high-contrast',true');
             root.classList.add('high-contrast')}
         else {
-'
-            root.style.removeProperty('--high-contrast');'
+
+            root.style.removeProperty('--high-contrast');
             root.classList.remove('high-contrast')}
         // Large text mode
         if (settings.largeText) {
-'
-            root.style.setProperty('--large-text', 'true');'
+
+            root.style.setProperty('--large-text',true');
             root.classList.add('large-text')}
         else {
-'
-            root.style.removeProperty('--large-text');'
+
+            root.style.removeProperty('--large-text');
             root.classList.remove('large-text')}
         // Font size'
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
@@ -47,40 +47,40 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         root.style.setProperty('--color-blind-mode', settings.colorBlindMode);
         // Reduced motion
         if (settings.reducedMotion) {
-'
-            root.style.setProperty('--reduced-motion', 'true');'
+
+            root.style.setProperty('--reduced-motion',true');
             root.classList.add('reduced-motion')}
         else {
-'
-            root.style.removeProperty('--reduced-motion');'
+
+            root.style.removeProperty('--reduced-motion');
             root.classList.remove('reduced-motion')}
         // Focus indicator
         if (settings.focusIndicator) {
-'
-            root.style.setProperty('--focus-indicator', 'true');'
+
+            root.style.setProperty('--focus-indicator',true');
             root.classList.add('focus-indicator')}
         else {
-'
-            root.style.removeProperty('--focus-indicator');'
+
+            root.style.removeProperty('--focus-indicator');
             root.classList.remove('focus-indicator')}
         // Keyboard navigation
         if (settings.keyboardNavigation) {
-'
-            root.style.setProperty('--keyboard-navigation', 'true');'
+
+            root.style.setProperty('--keyboard-navigation',true');
             root.classList.add('keyboard-navigation')}
         else {
-'
-            root.style.removeProperty('--keyboard-navigation');'
+
+            root.style.removeProperty('--keyboard-navigation');
             root.classList.remove('keyboard-navigation')}
         // Notify parent component
         onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
     // Screen reader announcements
     useEffect(() => {
         if (!enabled || !settings.screenReader)
-            return;'
-        const announcement = document.createElement('div');'
-            announcement.setAttribute('aria-live', 'polite');'
-            announcement.setAttribute('aria-atomic', 'true');'
+            return;
+        const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live',polite');
+            announcement.setAttribute('aria-atomic',true');
             announcement.className = 'sr-only';
             announcement.textContent = message;
             document.body.appendChild(announcement);
@@ -88,13 +88,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 document.body.removeChild(announcement)}, 1000)};
         // Announce important changes
         if (settings.highContrast) {
-'
+
             announce('High contrast mode enabled')}
         if (settings.largeText) {
-'
+
             announce('Large text mode enabled')}
         if (settings.reducedMotion) {
-'
+
             announce('Reduced motion enabled')}
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
     const updateSetting = useCallback((key, value) => {
@@ -111,10 +111,10 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             const notification = {
 
   id: Date.now().toString(),`
-                message: `${key.replace(/([A-Z])/g,'
+                message: `${key.replace(/([A-Z])/g,
   ' $1').toLowerCase()
 '`
-} ${value ? 'enabled' : 'disabled'}`,'
+} ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
                 timestamp: Date.now()
             };
@@ -125,7 +125,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
   highContrast: false,
             largeText: false,
-            fontSize: 16,'
+            fontSize: 16,
             colorBlindMode: 'none',
             reducedMotion: false,
             screenReader: false,
@@ -137,8 +137,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         setSettings(defaultSettings);
         const notification = {
 
-  id: Date.now().toString(),'
-            message: 'Accessibility settings reset to defaults','
+  id: Date.now().toString(),
+            message: 'Accessibility settings reset to defaults',
             type: 'info',
   timestamp: Date.now()
         
@@ -146,10 +146,10 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 };
         setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []);
     const increaseFontSize = useCallback(() => {
-'
+
         updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, updateSetting]);
     const decreaseFontSize = useCallback(() => {
-'
+
         updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, updateSetting]);
     // Keyboard shortcuts
     useEffect(() => {
@@ -160,26 +160,26 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             if (e.ctrlKey || e.metaKey) {
 
                 switch (e.key) {
-'
+
                     case 'h':
-                        e.preventDefault();'
+                        e.preventDefault();
                         updateSetting('highContrast', !settings.highContrast);
-                        break;'
+                        break;
                     case 'l':
-                        e.preventDefault();'
+                        e.preventDefault();
                         updateSetting('largeText', !settings.largeText);
-                        break;'
+                        break;
                     case 'r':
-                        e.preventDefault();'
+                        e.preventDefault();
                         updateSetting('reducedMotion', !settings.reducedMotion);
-                        break;'
+                        break;
                     case 'a':
                         e.preventDefault();
                         setIsOpen(!isOpen);
                         break}
             }
-        };'
-        document.addEventListener('keydown', handleKeyDown);'
+        };
+        document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [enabled, settings.highContrast, settings.largeText, settings.reducedMotion, isOpen, updateSetting]);
     if (!enabled)
         return null;
@@ -207,7 +207,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   x: 300 
 
 }} transition = {
-'
+
   { type: 'spring', damping: 25,
   stiffness: 200 
 "
@@ -241,7 +241,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.highContrast} onChange = {
-'
+
   (e) => updateSetting('highContrast',
   e.target.checked)
 "
@@ -255,7 +255,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.largeText} onChange = {
-'
+
   (e) => updateSetting('largeText',
   e.target.checked)
 "
@@ -285,7 +285,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="space-y-2">"
                   <label className="text-white text-sm">Color Blind Mode</label>
                   <select value={settings.colorBlindMode} onChange = {
-'
+
   (e) => updateSetting('colorBlindMode',
   e.target.value)
 "
@@ -309,7 +309,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.reducedMotion} onChange = {
-'
+
   (e) => updateSetting('reducedMotion',
   e.target.checked)
 "
@@ -323,7 +323,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.screenReader} onChange = {
-'
+
   (e) => updateSetting('screenReader',
   e.target.checked)
 "
@@ -344,7 +344,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.focusIndicator} onChange = {
-'
+
   (e) => updateSetting('focusIndicator',
   e.target.checked)
 "
@@ -357,7 +357,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 <div className="flex items-center justify-between">"
                   <label className="text-white cursor-pointer flex items-center gap-2">"
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
-'
+
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
 "
@@ -396,7 +396,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   scale: 0.8 
 
 }} transition = {
-'
+
   { type: 'spring', damping: 25,
   stiffness: 200 
 '`

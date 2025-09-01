@@ -79,12 +79,7 @@ const AIRealEstateAnalytics: React.FC = () => {
       period: 'month',
       description: 'Perfect for individual investors and small portfolios',
       features: [
-        'Up to 100 property analyses per month',
-        'Basic market trend reports',
-        'Property value estimates',
-        'Email support',
-        'Mobile app access',
-        'Basic portfolio tracking'
+        'Up to 100 property analyses per month',Basic market trend reports',Property value estimates',Email support',Mobile app access',Basic portfolio tracking'
       ],
       color: 'from-blue-500 to-cyan-500',
       popular: false
@@ -95,14 +90,7 @@ const AIRealEstateAnalytics: React.FC = () => {
       period: 'month',
       description: 'Ideal for real estate professionals and active investors',
       features: [
-        'Up to 1,000 property analyses per month',
-        'Advanced predictive analytics',
-        'Custom market reports',
-        'Priority support',
-        'API access',
-        'Advanced portfolio management',
-        'Risk assessment tools',
-        'Investment recommendations'
+        'Up to 1,000 property analyses per month',Advanced predictive analytics',Custom market reports',Priority support',API access',Advanced portfolio management',Risk assessment tools',Investment recommendations'
       ],
       color: 'from-purple-500 to-pink-500',
       popular: true
@@ -113,14 +101,7 @@ const AIRealEstateAnalytics: React.FC = () => {
       period: 'month',
       description: 'Comprehensive solution for large investment firms and corporations',
       features: [
-        'Unlimited property analyses',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated account manager',
-        'Custom integrations',
-        'Advanced reporting suite',
-        'Multi-user access',
-        'Onsite training'
+        'Unlimited property analyses',Custom AI model training',White-label solutions',Dedicated account manager',Custom integrations',Advanced reporting suite',Multi-user access',Onsite training'
       ],
       color: 'from-amber-500 to-orange-500',
       popular: false

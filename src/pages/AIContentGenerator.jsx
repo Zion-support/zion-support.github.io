@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
         },
         {
 "
-            title: "Brand Voice Consistency",'"
+            title: "Brand Voice Consistency","
             description: "Maintain your brand's unique voice across all content pieces","
             icon: <Type className="h-6 w-6 text-zion-blue"/>
         },
@@ -146,7 +146,7 @@ import { Link } from "react-router-dom";
     return ("
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             <SEO"
-                title="AI Content Generator - Zion Tech Group""
+                title="AI Content Generator - Zion Tech Group"
                 description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more."
             />
 
@@ -248,7 +248,7 @@ import { Link } from "react-router-dom";
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {pricingPlans.map((plan, index) => (
                             <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${
-'
+
                                 plan.popular ? 'border-cyan-500 shadow-cyan-500/25' : ''`
                             }`}>
                                 {plan.popular && ("

@@ -163,9 +163,9 @@ export default function ProfileDetail() {
             <HireNowCTA talentProfile = {
 
   {
-'
-            id: profileData?.id || '','
-            full_name: profileData?.full_name || '','
+
+            id: profileData?.id || '',
+            full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
 

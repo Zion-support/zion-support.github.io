@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -14,107 +14,107 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Shield,
-  Brain,'
-  Rocket} from 'lucide-react';'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';'
-import { Button } from './ui/button';'
+  Brain,
+  Rocket} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {
-'
-  const [timeRange, setTimeRange] = useState('30d');'
+
+  const [timeRange, setTimeRange] = useState('30d');
   const [selectedMetric, setSelectedMetric] = useState('overview');
   // Mock data - in real app this would come from API
   const metrics = [
     {
-'
-      title: 'Total Revenue','
+
+      title: 'Total Revenue',
       value: '$2.4M',
-      change: 12.5,'
+      change: 12.5,
       changeType: 'increase',
-      icon: <DollarSign className="w-6 h-6" />,'
+      icon: <DollarSign className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600'},
     {
-'
-      title: 'Active Clients','
+
+      title: 'Active Clients',
       value: '1,247',
-      change: 8.2,'
+      change: 8.2,
       changeType: 'increase',"
-      icon: <Users className="w-6 h-6" />,'
+      icon: <Users className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600'},
     {
-'
-      title: 'Service Performance','
+
+      title: 'Service Performance',
       value: '94.2%',
-      change: 2.1,'
+      change: 2.1,
       changeType: 'increase',"
-      icon: <Target className="w-6 h-6" />,'
+      icon: <Target className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-600'},
     {
-'
-      title: 'Client Satisfaction','
+
+      title: 'Client Satisfaction',
       value: '4.8/5',
-      change: 0.3,'
+      change: 0.3,
       changeType: 'increase',"
-      icon: <Star className="w-6 h-6" />,'
+      icon: <Star className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-600'},
   ];
   const servicePerformance = [
     {
-'
+
       name: 'AI CRM Platform',
       performance: 96,
       growth: 15.2,
       clients: 89,
-      revenue: 450000,'
+      revenue: 450000,
       status: 'trending'},
     {
-'
+
       name: 'Quantum Computing',
       performance: 92,
       growth: 28.7,
       clients: 23,
-      revenue: 1200000,'
+      revenue: 1200000,
       status: 'trending'},
     {
-'
+
       name: 'Blockchain Solutions',
       performance: 88,
       growth: 12.4,
       clients: 156,
-      revenue: 780000,'
+      revenue: 780000,
       status: 'stable'},
     {
-'
+
       name: 'Cybersecurity Suite',
       performance: 94,
       growth: 18.9,
       clients: 203,
-      revenue: 920000,'
+      revenue: 920000,
       status: 'trending'},
     {
-'
+
       name: 'IoT Platform',
       performance: 85,
       growth: 8.7,
       clients: 67,
-      revenue: 340000,'
+      revenue: 340000,
       status: 'stable'},
   ];
   const categoryDistribution = ['
-    { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },'
-    { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'
-    { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },'
-    { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },'
+    { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
+    { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },
+    { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },
+    { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },
     { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' },
   ];
   const getStatusIcon = status => {
 
     switch (status) {
-'
+
       case 'trending':"
-        return <TrendingUp className="w-4 h-4 text-green-500" />;'
+        return <TrendingUp className="w-4 h-4 text-green-500" />;
       case 'stable':"
-        return <Activity className="w-4 h-4 text-blue-500" />;'
+        return <Activity className="w-4 h-4 text-blue-500" />;
       case 'declining':"
         return <TrendingDown className="w-4 h-4 text-red-500" />;
       default:"
@@ -124,11 +124,11 @@ const AdvancedAnalyticsDashboard = () => {
   const getStatusColor = status => {
 
     switch (status) {
-'
+
       case 'trending':'
-        return 'bg-green-100 text-green-800';'
+        return 'bg-green-100 text-green-800';
       case 'stable':'
-        return 'bg-blue-100 text-blue-800';'
+        return 'bg-blue-100 text-blue-800';
       case 'declining':'
         return 'bg-red-100 text-red-800';
       default:'
@@ -154,10 +154,10 @@ const AdvancedAnalyticsDashboard = () => {
             </p>
           </div>
 "
-          <div className="flex gap-2">'
-            {['7d', '30d', '90d', '1y'].map(range => (
+          <div className="flex gap-2">
+            {['7d',30d',90d',1y'].map(range => (
               <Button
-                key={range}'
+                key={range}
                 variant={timeRange === range ? 'default' : 'outline'}"
                 size="sm"
                 onClick={() => setTimeRange(range)}
@@ -191,7 +191,7 @@ const AdvancedAnalyticsDashboard = () => {
                   >
                     {metric.icon}
                   </div>"
-                  <div className="flex items-center gap-1">'
+                  <div className="flex items-center gap-1">
                     {metric.changeType === 'increase' ? ("
                       <ArrowUpRight className="w-4 h-4 text-green-500" />
                     ) : ("
@@ -435,7 +435,7 @@ const AdvancedAnalyticsDashboard = () => {
               className="bg-white text-zion-purple hover:bg-zion-slate-light"
               onClick={() =>
                 window.open('
-                  'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access','
+                  'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',
                   '_blank'
                 )
               }
@@ -444,9 +444,9 @@ const AdvancedAnalyticsDashboard = () => {
               Request Access
             </Button>
             <Button"
-              variant="outline""
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"'
-              onClick={() => window.open('tel:+13024640950', '_blank')}
+              onClick={() => window.open('tel:+13024640950',_blank')}
             >"
               <Shield className="w-5 h-5 mr-2" />
               Schedule Demo

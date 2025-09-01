@@ -1,26 +1,26 @@
-import React from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import { SEO } from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 export { function };
 export default function AdminDashboard() {
   const schema = {
-'
-    '@context': 'https://schema.org','
-    '@type': 'WebPage','
+
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
     name: 'Admin Dashboard',
     description:'
-      'Monitor marketplace activity, manage listings and view analytics in one place.','
+      'Monitor marketplace activity, manage listings and view analytics in one place.',
     url: 'https://app.ziontechgroup.com/features/admin-dashboard'};
   return()
     <>
       <SEO
-        title="Admin Dashboard""
-        description="Gain insight into your marketplace with powerful administration tools.""
-        keywords="admin dashboard, analytics, manage listings""
+        title="Admin Dashboard"
+        description="Gain insight into your marketplace with powerful administration tools."
+        keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -39,9 +39,9 @@ export default function AdminDashboard() {
             running smoothly.
           </p>
           <img"
-            loading="lazy""
-            src="https://placehold.co/800x400""
-            alt="Screenshot of admin dashboard""
+            loading="lazy"
+            src="https://placehold.co/800x400"
+            alt="Screenshot of admin dashboard"
             className="rounded-lg shadow-xl mx-auto mb-12"
           />"
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"

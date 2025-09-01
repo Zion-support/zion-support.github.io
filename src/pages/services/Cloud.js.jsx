@@ -1,41 +1,41 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const CloudServices = () => {
   const cloudServices = [
     {
-'
+
       title: 'Cloud Migration & Strategy',
       description:'
-        'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.','
+        'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',
       price: 'From $8,500/project',
       features: ['
-        'Cloud readiness assessment','
-        'Multi-cloud strategy planning','
-        'Migration roadmap development','
+        'Cloud readiness assessment',
+        'Multi-cloud strategy planning',
+        'Migration roadmap development',
         'Cost optimization analysis',
       ]},
     {
-'
+
       title: 'Cloud-Native Development',
       description:'
-        'Build scalable applications using cloud-native technologies and microservices architecture.','
+        'Build scalable applications using cloud-native technologies and microservices architecture.',
       price: 'From $12,000/project',
       features: ['
-        'Microservices architecture','
-        'Serverless development','
-        'API-first design','
+        'Microservices architecture',
+        'Serverless development',
+        'API-first design',
         'Cloud-native databases',
       ]},
     {
-'
+
       title: 'Cloud Security & Compliance',
       description:'
-        'Enterprise-grade security solutions with compliance frameworks and threat protection.','
+        'Enterprise-grade security solutions with compliance frameworks and threat protection.',
       price: 'From $6,500/month',
       features: ['
-        'Identity and access management','
-        'Data encryption','
-        'Compliance monitoring','
+        'Identity and access management',
+        'Data encryption',
+        'Compliance monitoring',
         'Security auditing',
       ]},
   ];
@@ -105,13 +105,13 @@ const CloudServices = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Get Started
             </Link>
             <Link"
-              to="/services/devops-cloud""
+              to="/services/devops-cloud"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
             >
               Learn More

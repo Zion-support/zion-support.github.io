@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -264,7 +264,7 @@ import {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -331,7 +331,7 @@ import {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -375,7 +375,7 @@ import {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -11,7 +11,7 @@ import {
   Star,
   CheckCircle'
 } from 'lucide-react';
-'
+
       color: 'from-purple-500 to-pink-500';
     };
   ];
@@ -90,7 +90,7 @@ export function CaseStudiesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Success Stories
           </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.
           </p>
@@ -195,14 +195,14 @@ export function CaseStudiesSection() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
 
                 Start Your Project"
                 <TrendingUp className="ml-2 h-5 w-5" />
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
 
                 View All Case Studies"

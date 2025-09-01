@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance() {
   const features = [
-    'AI-powered security compliance optimization','
-    'Intelligent compliance monitoring and reporting',;'
-    'Automated compliance verification and validation',;'
-    'Predictive analytics for compliance needs',;'
-    'Smart compliance framework management',;'
-    'AI-driven compliance automation and orchestration',;'
-    'Real-time compliance performance tracking',;'
+    'AI-powered security compliance optimization',
+    'Intelligent compliance monitoring and reporting',;
+    'Automated compliance verification and validation',;
+    'Predictive analytics for compliance needs',;
+    'Smart compliance framework management',;
+    'AI-driven compliance automation and orchestration',;
+    'Real-time compliance performance tracking',;
     'Custom AI models for compliance applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 5 compliance frameworks', 'Basic AI features', 'Standard compliance', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 5 compliance frameworks',Basic AI features',Standard compliance',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 20 compliance frameworks',Advanced AI features',Enhanced compliance',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited compliance frameworks',Custom AI models',Full compliance suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security compliance optimization',;'
-    'Compliance monitoring and reporting',;'
-    'Compliance verification and validation',;'
-    'Compliance framework management and automation',;'
-    'Compliance automation and orchestration',;'
+  const useCases = [;
+    'Security compliance optimization',;
+    'Compliance monitoring and reporting',;
+    'Compliance verification and validation',;
+    'Compliance framework management and automation',;
+    'Compliance automation and orchestration',;
     'Compliance scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security compliance performance by 50-80%',;'
-    'Reduce compliance verification time by 40-70%',;'
-    'Cut security compliance costs by 35-65%',;'
-    'Enhance security compliance reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security compliance performance by 50-80%',;
+    'Reduce compliance verification time by 40-70%',;
+    'Cut security compliance costs by 35-65%',;
+    'Enhance security compliance reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security compliance operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% verification time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% verification time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-blue-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

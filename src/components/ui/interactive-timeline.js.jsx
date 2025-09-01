@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence, useScroll } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
 import { Button } from "./button";"
 import { Badge } from "./badge";"
@@ -16,7 +16,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         category[],;
         priority[],;
         progress: 0
-    });'
+    });
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
@@ -57,13 +57,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getStatusIcon = (status) => {
 
         switch (status) {
-'
+
             case 'completed':'
-                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };'
+                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
             case 'in-progress':'
-                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };'
+                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };
             case 'upcoming':'
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };'
+                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
             case 'milestone':'
                 return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
             default:'
@@ -73,13 +73,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getPriorityColor = (priority) => {
 
         switch (priority) {
-'
+
             case 'critical':'
-                return 'border-red-500/50 bg-red-500/10';'
+                return 'border-red-500/50 bg-red-500/10';
             case 'high':'
-                return 'border-orange-500/50 bg-orange-500/10';'
+                return 'border-orange-500/50 bg-orange-500/10';
             case 'medium':'
-                return 'border-yellow-500/50 bg-yellow-500/10';'
+                return 'border-yellow-500/50 bg-yellow-500/10';
             case 'low':'
                 return 'border-green-500/50 bg-green-500/10';
             default:'
@@ -89,13 +89,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getCategoryIcon = (category) => {
 
         const iconMap = {
-'
-  'AI & ML': Zap,'
-            'Cybersecurity': Shield,'
-            'Cloud': Globe,'
-            'Development': Rocket,'
-            'Research': TrendingUp,'
-            'Team': Users,'
+
+  'AI & ML': Zap,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Research': TrendingUp,
+            'Team': Users,
   'Launch': Award
         
 
@@ -110,11 +110,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         setIsPlaying(false)}, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
-'
+
         const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(dataBlob);'
+        const url = URL.createObjectURL(dataBlob);
         const link = document.createElement('a');
-        link.href = url;'
+        link.href = url;
         link.download = `timeline-${new Date().toISOString().split('T')[0]}.json`;
         link.click();
         URL.revokeObjectURL(url)}, [filteredEvents]);
@@ -123,8 +123,8 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         if (navigator.share) {
 
             navigator.share({
-'
-                title: 'Project Timeline','
+
+                title: 'Project Timeline',
                 text: 'Check out our project timeline',
                 url: window.location.href
             })}
@@ -145,7 +145,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}"
           <div className="flex bg-zion-blue/20 rounded-lg p-1">'`
-            {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode'
+            {['timeline',list',kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode'
                 ? 'bg-zion-cyan text-zion-blue-dark''`
                 : 'text-zinc-400 hover:text-white'}`}>
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -207,7 +207,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Filters */}"
       <div className="mb-6">"
         <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">"
-          <Filter className="w-4 h-4 mr-2"/>'
+          <Filter className="w-4 h-4 mr-2"/>
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
@@ -218,7 +218,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   opacity: 0 
 
 }} animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -306,7 +306,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Progress Bar */}"
       {showProgress && (<div className="mb-6">"
           <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">
-            <span>Overall Progress</span>'
+            <span>Overall Progress</span>
             <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100)}%</span>
           </div>"
           <div className="w-full bg-zinc-700 rounded-full h-2">'"`
@@ -500,9 +500,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* Kanban View */}'"
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">'"
-          {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">"
-              <h4 className="text-zinc-300 font-medium text-center capitalize">'
-                {status.replace('-', ' ')} ({filteredEvents.filter(e => e.status === status).length})
+          {['upcoming',in-progress',completed',milestone'].map((status) => (<div key={status} className="space-y-3">"
+              <h4 className="text-zinc-300 font-medium text-center capitalize">
+                {status.replace('-', ')} ({filteredEvents.filter(e => e.status === status).length})
               </h4>"
               <div className="space-y-2">
                 {filteredEvents

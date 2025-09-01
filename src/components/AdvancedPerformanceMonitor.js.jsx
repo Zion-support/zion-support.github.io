@@ -14,49 +14,49 @@ import {
   Minimize2,
   RefreshCw,
   AlertTriangle,
-  CheckCircle,'
+  CheckCircle,
   Download} from 'lucide-react';
 const mockScalabilityMetrics = [
   {
-'
-    id: '1','
+
+    id: '1',
     name: 'User Sessions',
     current: 15420,
     capacity: 20000,
     utilization: 77.1,
     growth: 12.3,
-    prediction: 25000,'
-    category: 'User Load','
+    prediction: 25000,
+    category: 'User Load',
     unit: 'sessions'},
   {
-'
-    id: '2','
+
+    id: '2',
     name: 'API Requests',
     current: 1250000,
     capacity: 2000000,
     utilization: 62.5,
     growth: 18.7,
-    prediction: 3200000,'
-    category: 'API Load','
+    prediction: 3200000,
+    category: 'API Load',
     unit: 'requests/hour'},
   {
-'
-    id: '3','
+
+    id: '3',
     name: 'Data Storage',
     current: 2.8,
     capacity: 5.0,
     utilization: 56.0,
     growth: 8.5,
-    prediction: 4.2,'
-    category: 'Storage','
+    prediction: 4.2,
+    category: 'Storage',
     unit: 'TB'},
 ];
 export function AdvancedPerformanceMonitor() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);'
-  const [activeTab, setActiveTab] = useState('overview');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [timeRange, setTimeRange] = useState('1h');
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [showPredictions, setShowPredictions] = useState(true);
@@ -69,18 +69,18 @@ export function AdvancedPerformanceMonitor() {
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
   const categories = ['
-    'all','
-    'Processor','
-    'Memory','
-    'Storage','
-    'Network','
-    'Database','
+    'all',
+    'Processor',
+    'Memory',
+    'Storage',
+    'Network',
+    'Database',
     'Performance',
   ];
   const timeRanges = ['
-    { value: '15m', label: '15 Minutes' },'
-    { value: '1h', label: '1 Hour' },'
-    { value: '6h', label: '6 Hours' },'
+    { value: '15m', label: '15 Minutes' },
+    { value: '1h', label: '1 Hour' },
+    { value: '6h', label: '6 Hours' },
     { value: '24h', label: '24 Hours' },
   ];
   const filteredMetrics ='
@@ -103,9 +103,9 @@ export function AdvancedPerformanceMonitor() {
   const getStatusColor = status => {
 
     switch (status) {
-'
+
       case 'critical':'
-        return 'bg-red-500 text-white';'
+        return 'bg-red-500 text-white';
       case 'warning':'
         return 'bg-yellow-500 text-white';
       default:'
@@ -115,11 +115,11 @@ export function AdvancedPerformanceMonitor() {
   const getSeverityColor = severity => {
 
     switch (severity) {
-'
+
       case 'critical':'
-        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';'
+        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
       case 'high':'
-        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';'
+        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';
       case 'medium':'
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
       default:'
@@ -129,9 +129,9 @@ export function AdvancedPerformanceMonitor() {
   const getTrendIcon = trend => {
 
     switch (trend) {
-'
+
       case 'up':
-        return <TrendingUp className="w-4 h-4 text-red-500" />;'
+        return <TrendingUp className="w-4 h-4 text-red-500" />;
       case 'down':"
         return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
       default:"
@@ -141,15 +141,15 @@ export function AdvancedPerformanceMonitor() {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'Processor':"
-        return <Cpu className="w-5 h-5 text-blue-500" />;'
+        return <Cpu className="w-5 h-5 text-blue-500" />;
       case 'Memory':"
-        return <HardDrive className="w-5 h-5 text-green-500" />;'
+        return <HardDrive className="w-5 h-5 text-green-500" />;
       case 'Storage':"
-        return <HardDrive className="w-5 h-5 text-purple-500" />;'
+        return <HardDrive className="w-5 h-5 text-purple-500" />;
       case 'Network':"
-        return <Network className="w-5 h-5 text-orange-500" />;'
+        return <Network className="w-5 h-5 text-orange-500" />;
       case 'Database':"
         return <Database className="w-5 h-5 text-cyan-500" />;
       default:"
@@ -157,9 +157,9 @@ export function AdvancedPerformanceMonitor() {
     }
   };
   const getUtilizationColor = utilization => {
-'
-    if (utilization >= 80) return 'text-red-600';'
-    if (utilization >= 60) return 'text-yellow-600';'
+
+    if (utilization >= 80) return 'text-red-600';
+    if (utilization >= 60) return 'text-yellow-600';
     return 'text-green-600';
   };
   if (!isOpen) {
@@ -167,7 +167,7 @@ export function AdvancedPerformanceMonitor() {
     return()
       <button
         onClick={() => setIsOpen(true)}"
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40""
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
         title="Open Performance Monitor"
       >"
         <Activity className="w-6 h-6" />
@@ -216,7 +216,7 @@ export function AdvancedPerformanceMonitor() {
             onClick={() => setAutoRefresh(!autoRefresh)}'`
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
             title={
-'
+
               autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'
             }
           >
@@ -259,7 +259,7 @@ export function AdvancedPerformanceMonitor() {
               className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
             >
               {categories.map(category => (
-                <option key={category} value={category}>'
+                <option key={category} value={category}>
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -307,10 +307,10 @@ export function AdvancedPerformanceMonitor() {
       {/* Tabs */}"
       <div className="flex border-b border-zion-slate-light">
         {['
-          { id: 'overview', label: 'Overview', icon: Activity },'
-          { id: 'metrics', label: 'System Metrics', icon: BarChart3 },'
-          { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },'
-          { id: 'scalability', label: 'Scalability', icon: TrendingUp },'
+          { id: 'overview', label: 'Overview', icon: Activity },
+          { id: 'metrics', label: 'System Metrics', icon: BarChart3 },
+          { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },
+          { id: 'scalability', label: 'Scalability', icon: TrendingUp },
           { id: 'analytics', label: 'Analytics', icon: Zap },
         ].map(tab => {
 
@@ -334,7 +334,7 @@ export function AdvancedPerformanceMonitor() {
       </div>
 
       {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && ("
           <div className="space-y-6">
             {/* System Health Overview */}"
@@ -364,14 +364,14 @@ export function AdvancedPerformanceMonitor() {
                   <div className="flex items-center justify-between text-sm">
                     <span`
                       className={`font-medium ${
-'
+
                         metric.trend === 'up''
                           ? 'text-red-600''
                           : metric.trend === 'down''
                             ? 'text-green-600''
                             : 'text-gray-600'`
                       }`}
-                    >'
+                    >
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%
                     </span>"
@@ -414,7 +414,7 @@ export function AdvancedPerformanceMonitor() {
                     </span>"
                     <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">
                       {
-'
+
                         performanceAlerts.filter(a => a.status === 'active')
                           .length
                       }
@@ -457,7 +457,7 @@ export function AdvancedPerformanceMonitor() {
             </div>
           </div>
         )}
-'
+
         {activeTab === 'metrics' && ("
           <div className="space-y-4">
             {filteredMetrics.map(metric => (
@@ -502,7 +502,7 @@ export function AdvancedPerformanceMonitor() {
                         <span className="text-zion-slate-light">Change:</span>
                         <div'`
                           className={`font-semibold ${metric.change > 0 ? 'text-red-600' : 'text-green-600'}`}
-                        >'
+                        >
                           {metric.change > 0 ? '+' : ''}
                           {metric.change}%
                         </div>
@@ -522,7 +522,7 @@ export function AdvancedPerformanceMonitor() {
             ))}
           </div>
         )}
-'
+
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
             {performanceAlerts.map(alert => (
@@ -546,7 +546,7 @@ export function AdvancedPerformanceMonitor() {
                       </span>
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                           alert.status === 'active''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
                             : alert.status === 'acknowledged''
@@ -600,7 +600,7 @@ export function AdvancedPerformanceMonitor() {
             ))}
           </div>
         )}
-'
+
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
             {scalabilityMetrics.map(metric => (
@@ -658,7 +658,7 @@ export function AdvancedPerformanceMonitor() {
                           in approximately{' '}
                           {Math.ceil()
                             (metric.capacity - metric.current) /
-                              ((metric.current * metric.growth) / 100)'
+                              ((metric.current * metric.growth) / 100)
                           )}{' '}
                           days
                         </div>
@@ -670,7 +670,7 @@ export function AdvancedPerformanceMonitor() {
             ))}
           </div>
         )}
-'
+
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"

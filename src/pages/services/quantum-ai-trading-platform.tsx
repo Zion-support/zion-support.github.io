@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -89,167 +89,167 @@ import {
   Minus,
   X,
   Check,
-  AlertTriangle,'
+  AlertTriangle,
   Info} from 'lucide-react';
 
 export function QuantumAITradingPlatform() {
   const features = [
     {
 
-      icon: Atom,'
+      icon: Atom,
       title: 'Quantum Computing Power',
       description:'
         'Leverage quantum algorithms for superior market analysis and prediction',
       benefits: ['
-        'Quantum speed advantage','
-        'Complex pattern recognition','
+        'Quantum speed advantage',
+        'Complex pattern recognition',
         'Quantum machine learning',
       ]},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Advanced AI Algorithms',
       description:'
-        'State-of-the-art machine learning models for market prediction','
-      benefits: ['Neural networks', 'Deep learning', 'Predictive analytics']},
+        'State-of-the-art machine learning models for market prediction',
+      benefits: ['Neural networks',Deep learning',Predictive analytics']},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Bank-Grade Security',
       description:'
         'Military-grade encryption and zero-trust security architecture',
       benefits: ['
-        'End-to-end encryption','
-        'Multi-factor authentication','
+        'End-to-end encryption',
+        'Multi-factor authentication',
         'Regular security audits',
       ]},
     {
 
-      icon: BarChart3,'
-      title: 'Real-Time Analytics','
+      icon: BarChart3,
+      title: 'Real-Time Analytics',
       description: 'Live market data and instant trading signals',
       benefits: ['
-        'Live market feeds','
-        'Instant notifications','
+        'Live market feeds',
+        'Instant notifications',
         'Performance tracking',
       ]},
     {
 
-      icon: Rocket,'
-      title: 'High-Frequency Trading','
+      icon: Rocket,
+      title: 'High-Frequency Trading',
       description: 'Ultra-low latency execution for maximum profit potential',
       benefits: ['
-        'Microsecond execution','
-        'Co-location services','
+        'Microsecond execution',
+        'Co-location services',
         'Direct market access',
       ]},
     {
 
-      icon: Cloud,'
-      title: 'Global Infrastructure','
-      description: 'Worldwide data centers for optimal performance','
-      benefits: ['99.99% uptime', 'Global CDN', 'Auto-scaling']},
+      icon: Cloud,
+      title: 'Global Infrastructure',
+      description: 'Worldwide data centers for optimal performance',
+      benefits: ['99.99% uptime',Global CDN',Auto-scaling']},
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$199','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
       description: 'Perfect for individual traders and small portfolios',
       features: ['
-        'Basic quantum algorithms','
-        'Real-time market data','
-        'Standard security','
-        'Email support','
-        'Basic analytics','
+        'Basic quantum algorithms',
+        'Real-time market data',
+        'Standard security',
+        'Email support',
+        'Basic analytics',
         'Up to 100 trades/month',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$499','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$499',
+      period: '/month',
       description: 'Ideal for active traders and growing portfolios',
       features: ['
-        'Advanced quantum algorithms','
-        'Premium market data','
-        'Enhanced security','
-        'Priority support','
-        'Advanced analytics','
-        'Unlimited trades','
-        'Custom strategies','
+        'Advanced quantum algorithms',
+        'Premium market data',
+        'Enhanced security',
+        'Priority support',
+        'Advanced analytics',
+        'Unlimited trades',
+        'Custom strategies',
         'API access',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
+
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
       description: 'For institutional traders and hedge funds',
       features: ['
-        'Full quantum capabilities','
-        'Institutional data feeds','
-        'Enterprise security','
-        '24/7 dedicated support','
-        'Custom algorithms','
-        'White-label solutions','
-        'On-premise options','
+        'Full quantum capabilities',
+        'Institutional data feeds',
+        'Enterprise security',
+        '24/7 dedicated support',
+        'Custom algorithms',
+        'White-label solutions',
+        'On-premise options',
         'SLA guarantees',
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
 
   const tradingFeatures = [
     {
-'
+
       title: 'Quantum Portfolio Optimization',
       description:'
         'Use quantum algorithms to find optimal portfolio allocations',
       icon: Target,
       benefits: ['
-        'Risk minimization','
-        'Return maximization','
+        'Risk minimization',
+        'Return maximization',
         'Portfolio rebalancing',
       ]},
     {
-'
-      title: 'AI Market Prediction','
+
+      title: 'AI Market Prediction',
       description: 'Advanced machine learning for market trend forecasting',
       icon: TrendingUp,
       benefits: ['
-        'Pattern recognition','
-        'Sentiment analysis','
+        'Pattern recognition',
+        'Sentiment analysis',
         'Risk assessment',
       ]},
     {
-'
-      title: 'High-Frequency Trading','
+
+      title: 'High-Frequency Trading',
       description: 'Ultra-fast execution for arbitrage and market making',
       icon: Zap,
       benefits: ['
-        'Microsecond latency','
-        'Direct market access','
+        'Microsecond latency',
+        'Direct market access',
         'Co-location services',
       ]},
     {
-'
-      title: 'Risk Management','
+
+      title: 'Risk Management',
       description: 'Comprehensive risk controls and monitoring',
-      icon: Shield,'
-      benefits: ['Stop-loss automation', 'Position sizing', 'Risk alerts']},
+      icon: Shield,
+      benefits: ['Stop-loss automation',Position sizing',Risk alerts']},
   ];
 
   const performanceMetrics = ['
-    { metric: '99.99%', label: 'Uptime' },'
-    { metric: '<1ms', label: 'Latency' },'
-    { metric: '1000x', label: 'Speed Improvement' },'
+    { metric: '99.99%', label: 'Uptime' },
+    { metric: '<1ms', label: 'Latency' },
+    { metric: '1000x', label: 'Speed Improvement' },
     { metric: '24/7', label: 'Monitoring' },
   ];
 
@@ -278,14 +278,14 @@ export function QuantumAITradingPlatform() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Trading Today"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Pricing
@@ -514,14 +514,14 @@ export function QuantumAITradingPlatform() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing

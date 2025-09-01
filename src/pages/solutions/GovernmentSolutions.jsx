@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export { function };
 export default function GovernmentSolutions() {
@@ -208,7 +208,7 @@ export default function GovernmentSolutions() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Modernize Government?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our government solutions can improve citizen services, enhance security, and drive efficiency
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

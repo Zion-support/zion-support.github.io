@@ -22,62 +22,62 @@ export const ALL_COMPREHENSIVE_SERVICES = [;
 
 // Service Categories;
 export const SERVICE_CATEGORIES = [
-  'AI & Analytics','
-  'AI & Customer Experience','
-  'AI & Supply Chain','
-  'AI & Legal Tech','
-  'AI & Healthcare','
-  'AI & Financial Services','
-  'AI & Content Marketing','
-  'Cybersecurity & AI','
-  'Cybersecurity & Quantum','
-  'Blockchain & Supply Chain','
-  'IoT & Edge Computing','
-  'Quantum Computing','
-  'AR/VR & Immersive Tech','
-  '5G & Telecommunications','
-  'Space Technology',;'
-  'Neuromorphic Computing',;'
-  'Digital Twin & Simulation',;'
-  'Synthetic Biology',;'
-  'Brain-Computer Interface',;'
-  'Sustainability & Energy',;'
+  'AI & Analytics',
+  'AI & Customer Experience',
+  'AI & Supply Chain',
+  'AI & Legal Tech',
+  'AI & Healthcare',
+  'AI & Financial Services',
+  'AI & Content Marketing',
+  'Cybersecurity & AI',
+  'Cybersecurity & Quantum',
+  'Blockchain & Supply Chain',
+  'IoT & Edge Computing',
+  'Quantum Computing',
+  'AR/VR & Immersive Tech',
+  '5G & Telecommunications',
+  'Space Technology',;
+  'Neuromorphic Computing',;
+  'Digital Twin & Simulation',;
+  'Synthetic Biology',;
+  'Brain-Computer Interface',;
+  'Sustainability & Energy',;
   'Autonomous Vehicles & Fleet Management';
 ];
 
 // Innovation Levels
-export const INNOVATION_LEVELS = [;'
-  'Cutting-edge',;'
-  'Advanced',;'
+export const INNOVATION_LEVELS = [;
+  'Cutting-edge',;
+  'Advanced',;
   'Professional';
 ];
 
 // Support Levels
-export const SUPPORT_LEVELS = [;'
-  'enterprise',;'
-  'professional',;'
+export const SUPPORT_LEVELS = [;
+  'enterprise',;
+  'professional',;
   'basic';
 ];
 
 // Pricing Models
-export const PRICING_MODELS = [;'
-  'monthly',;'
-  'annual',;'
-  'one-time',;'
+export const PRICING_MODELS = [;
+  'monthly',;
+  'annual',;
+  'one-time',;
   'usage-based';
 ];
 
 // Contact Information;
 export const CONTACT_INFO = {
-'
-  phone: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  website: 'https://ziontechgroup.com','
+
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  website: 'https://ziontechgroup.com',
   address: '364 E Main St STE 1008,;
   ;
   ;
   ;
-  ;'
+  ;
   Middletown DE 19709';
 ;
 

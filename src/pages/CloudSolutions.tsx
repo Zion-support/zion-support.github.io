@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -138,7 +138,7 @@ export default function CloudSolutions(...args[]):  {
 }}
             transition={{ duration: 0.8 }}
 "
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud Solutions for the{' '}"
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Digital Age
@@ -223,7 +223,7 @@ export default function CloudSolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -290,7 +290,7 @@ export default function CloudSolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -343,7 +343,7 @@ export default function CloudSolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 

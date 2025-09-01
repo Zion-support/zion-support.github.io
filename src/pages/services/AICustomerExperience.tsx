@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
-import { Button } from '../../components/ui/Button';'
-import { Card } from '../../components/ui/Card';'
+import React from 'react.ts';
+import { SEO } from '../../components/SEO';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import {
 
@@ -20,7 +20,7 @@ import {
   Star,
   Target,
   BarChart3,
-  Headphones,'
+  Headphones,
   ShoppingBag} from 'lucide-react.ts';
 
 const AICustomerExperience: React.FC = (): JSX.Element => {
@@ -28,7 +28,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Customer Experience Platform - Zion Tech Group""
+        title="AI Customer Experience Platform - Zion Tech Group"
         description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates."
       />
 
@@ -53,14 +53,14 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
@@ -519,21 +519,21 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Download CX Guide

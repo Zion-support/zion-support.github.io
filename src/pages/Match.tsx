@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -39,19 +39,19 @@ import {
   Server,
   Network,
   Settings as SettingsIcon'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../components/SEO';
 
-const Match: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+const Match: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = [;'
-    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;'
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;'
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;'
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;'
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;'
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
   ];
 
@@ -151,8 +151,8 @@ const Match: React.FC = () => {;'
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Service Matcher - Zion Tech Group""
-        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""
+        title="AI Service Matcher - Zion Tech Group"
+        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
       />
 
@@ -197,14 +197,14 @@ const Match: React.FC = () => {;'
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Get Matched"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Browse All Services
@@ -222,7 +222,7 @@ const Match: React.FC = () => {;'
             <div className="relative mb-8">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search for services, features, or use cases..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}"
@@ -310,7 +310,7 @@ const Match: React.FC = () => {;'
 
 }}`
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
-'
+
                   service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'`
                 }`}
 
@@ -368,7 +368,7 @@ const Match: React.FC = () => {;'
                   <Link
                     to = {
 `
-  `/services/${service.name.toLowerCase().replace(/\s+/g,'
+  `/services/${service.name.toLowerCase().replace(/\s+/g,
   '-')
 
 
@@ -382,7 +382,7 @@ const Match: React.FC = () => {;'
                     Learn More
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                     Contact
@@ -405,7 +405,7 @@ const Match: React.FC = () => {;'
                 Try adjusting your search criteria or browse all our services.
               </p>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200"
 
                 Browse All Services"
@@ -534,14 +534,14 @@ const Match: React.FC = () => {;'
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Start Matching"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
                 Browse All Services;

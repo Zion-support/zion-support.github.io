@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -21,11 +21,11 @@ import {
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
 } from "../data/comprehensiveServices2026";
-const ComprehensiveServicesShowcase2026: React.FC = () => {;'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');'
-  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];'
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
   const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
@@ -36,11 +36,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
       );
-'
+
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter(service => service.category === selectedCategory);
-'
+
     if (selectedInnovationLevel !== 'all') {
 
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
@@ -61,10 +61,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
     return services;
   };
   const getInnovationLevelColor = (level: string) => {;
-    switch (level) {;'
-      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';'
-      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';'
-      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';'
+    switch (level) {;
+      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
     }
 
@@ -76,7 +76,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
     <>
       <SEO"
         title="Revolutionary Services 2026 - Zion Tech Group"'"
-        description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more.""
+        description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
         keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
       />"
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
@@ -100,7 +100,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}"
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
-            >'
+            >
               Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.'
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
@@ -134,7 +134,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -148,7 +148,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                   {categories.map(category => (;"
-                    <option key={category} value={category} className="bg-zinc-800 text-white">'
+                    <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -159,7 +159,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                   {innovationLevels.map(level => (;"
-                    <option key={level} value={level} className="bg-zinc-800 text-white">'
+                    <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
                     </option>) ) }
                 </select>
@@ -210,9 +210,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
               <div className="text-center py-12">;"
                 <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
                 <button;
-                  onClick={() => {;'
-                    setSearchTerm('');'
-                    setSelectedCategory('all');'
+                  onClick={() => {;
+                    setSearchTerm('');
+                    setSelectedCategory('all');
                     setSelectedInnovationLevel('all');
                   }}"
                   className = "mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
@@ -234,20 +234,20 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>"
-              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">'
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
                 Join the future with Zion Tech Group's revolutionary 2026 services.
                 Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
 "
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
 "
                   <Mail className="w-5 h-5" />

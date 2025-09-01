@@ -1,6 +1,6 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 ;
 export { function };
@@ -130,7 +130,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
   const integrations = [
     {
 "
-      name: "Slack",'"
+      name: "Slack","
       description: "Integrate support directly into your team's communication platform",
       icon: MessageCircle,"
       color: "from-purple-500 to-pink-500"
@@ -161,8 +161,8 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group""
-        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.""
+        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group"
+        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
         keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
       />
 
@@ -181,7 +181,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Customer Support
             </h1>"
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">'
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
               Revolutionize your customer service with AI-powered support that's available 24/7, speaks 50+ languages, and never gets tired.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -338,7 +338,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`
                 }`}
                 initial={{ opacity: 0, y: 30 }}

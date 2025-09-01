@@ -99,21 +99,21 @@ export default function CybersecurityServices() {
         {
 "
             name: "Michael Chen","
-            role: "CISO, FinTech Solutions",'"
+            role: "CISO, FinTech Solutions","
             content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
             rating: 5
         },
         {
 "
             name: "Dr. Sarah Williams","
-            role: "IT Director, HealthCare Plus",'"
+            role: "IT Director, HealthCare Plus","
             content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
             rating: 5
         },
         {
 "
             name: "Robert Johnson","
-            role: "CEO, E-commerce Pro",'"
+            role: "CEO, E-commerce Pro","
             content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
         }
@@ -226,7 +226,7 @@ export default function CybersecurityServices() {
             </p>
           </div>
           "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>"
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular
@@ -294,7 +294,7 @@ export default function CybersecurityServices() {
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Secure Your Business?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Don't wait until it's too late. Get expert cybersecurity protection today and sleep soundly knowing your business is secure.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

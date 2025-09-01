@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -29,8 +29,8 @@ import {
  } from 'lucide-react';
 
 export default function CybersecuritySolutions(...args[]):  {
-'
-  const [selectedThreat, setSelectedThreat] = useState('all');'
+
+  const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
   const securityServices = [
@@ -84,12 +84,12 @@ export default function CybersecuritySolutions(...args[]):  {
     };
   ];
 
-  const threatTypes = [;'
-    { id: 'all', name: 'All Threats', icon: Shield },;'
-    { id: 'malware', name: 'Malware', icon: Bug },;'
-    { id: 'phishing', name: 'Phishing', icon: Target },;'
-    { id: 'ransomware', name: 'Ransomware', icon: Lock },;'
-    { id: 'ddos', name: 'DDoS Attacks', icon: Network },;'
+  const threatTypes = [;
+    { id: 'all', name: 'All Threats', icon: Shield },;
+    { id: 'malware', name: 'Malware', icon: Bug },;
+    { id: 'phishing', name: 'Phishing', icon: Target },;
+    { id: 'ransomware', name: 'Ransomware', icon: Lock },;
+    { id: 'ddos', name: 'DDoS Attacks', icon: Network },;
     { id: 'insider', name: 'Insider Threats', icon: Users };
   ];
 
@@ -227,7 +227,7 @@ export default function CybersecuritySolutions(...args[]):  {
       transition: { duration: 0.6 };
     };
   };
-'
+
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
     : securityThreats.filter (threat => threat.type === selectedThreat) ;
@@ -263,7 +263,7 @@ export default function CybersecuritySolutions(...args[]):  {
               </div>
             </div>
 "
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cybersecurity{' '}"
               <span className="bg-gradient-to-r from-zion-red to-zion-orange bg-clip-text text-transparent">
                 Solutions
@@ -322,7 +322,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -433,7 +433,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -457,7 +457,7 @@ export default function CybersecuritySolutions(...args[]):  {
                     <h3 className="text-xl font-bold text-white">{threat.title}</h3>
                   </div>`
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                     threat.impact === 'Critical' ? 'bg-red-500/20 text-red-400' :'
                     threat.impact === 'High' ? 'bg-orange-500/20 text-orange-400' :'
                     'bg-yellow-500/20 text-yellow-400'`
@@ -515,7 +515,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -585,7 +585,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -638,7 +638,7 @@ export default function CybersecuritySolutions(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -719,7 +719,7 @@ export default function CybersecuritySolutions(...args[]):  {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Don't wait for a security breach. Let's discuss how our cybersecurity solutions
               can protect your organization from evolving threats.
             </p>

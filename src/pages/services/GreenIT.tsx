@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -25,7 +25,7 @@ import {
   Target,
   Award,
   BarChart3'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../../components/SEO';
 ;
 export { function };
@@ -33,111 +33,111 @@ export default function GreenIT(...args: unknown[]): unknown {
   const features = [
     {
 
-      icon: Leaf,'
-      title: 'Sustainable Infrastructure','
+      icon: Leaf,
+      title: 'Sustainable Infrastructure',
       description: 'Design and implement eco-friendly IT infrastructure with reduced carbon footprint.'
     },
     {
 
-      icon: Zap,'
-      title: 'Energy Optimization','
+      icon: Zap,
+      title: 'Energy Optimization',
       description: 'Optimize energy consumption through smart power management and efficient systems.'
     },
     {
 
-      icon: Cloud,'
-      title: 'Green Cloud Solutions','
+      icon: Cloud,
+      title: 'Green Cloud Solutions',
       description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.';
     },;
     {;
-      icon: Recycle,;'
-      title: 'Circular IT Economy',;'
+      icon: Recycle,;
+      title: 'Circular IT Economy',;
       description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.';
     };
   ];
 
   const solutions = [
     {
-'
-      title: 'Energy-Efficient Data Centers','
+
+      title: 'Energy-Efficient Data Centers',
       description: 'Design and optimize data centers for maximum energy efficiency and minimal environmental impact',
-      icon: Database,'
-      benefits: ['Reduced power consumption', 'Lower cooling costs', 'Improved PUE ratings']
+      icon: Database,
+      benefits: ['Reduced power consumption',Lower cooling costs',Improved PUE ratings']
     },
     {
-'
-      title: 'Renewable Energy Integration','
+
+      title: 'Renewable Energy Integration',
       description: 'Integrate solar, wind, and other renewable energy sources into IT infrastructure',
-      icon: Sun,'
-      benefits: ['Carbon-neutral operations', 'Energy cost savings', 'Sustainable power supply']
+      icon: Sun,
+      benefits: ['Carbon-neutral operations',Energy cost savings',Sustainable power supply']
     },
     {
-'
-      title: 'Smart Power Management','
+
+      title: 'Smart Power Management',
       description: 'Implement intelligent power management systems for optimal energy usage',
-      icon: Gauge,'
-      benefits: ['Automated power optimization', 'Real-time monitoring', 'Predictive maintenance']
+      icon: Gauge,
+      benefits: ['Automated power optimization',Real-time monitoring',Predictive maintenance']
     },;
-    {;'
-      title: 'Green Software Development',;'
+    {;
+      title: 'Green Software Development',;
       description: 'Develop energy-efficient software applications and optimize existing systems',;
-      icon: Code,;'
-      benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance'];
+      icon: Code,;
+      benefits: ['Reduced computational overhead',Lower energy consumption',Improved performance'];
     };
   ];
 
   const useCases = [
     {
-'
-      industry: 'Enterprise','
+
+      industry: 'Enterprise',
       description: 'Large-scale IT infrastructure optimization and sustainability initiatives',
-      icon: Building,'
-      metrics: ['Energy Savings', 'Carbon Reduction', 'Cost Optimization']
+      icon: Building,
+      metrics: ['Energy Savings',Carbon Reduction',Cost Optimization']
     },
     {
-'
-      industry: 'Healthcare','
+
+      industry: 'Healthcare',
       description: 'Sustainable medical technology and energy-efficient healthcare IT systems',
-      icon: Heart,'
-      metrics: ['Equipment Efficiency', 'Energy Costs', 'Environmental Impact']
+      icon: Heart,
+      metrics: ['Equipment Efficiency',Energy Costs',Environmental Impact']
     },
     {
-'
-      industry: 'Education','
+
+      industry: 'Education',
       description: 'Green campus technology and sustainable educational IT infrastructure',
-      icon: GraduationCap,'
-      metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
+      icon: GraduationCap,
+      metrics: ['Student Experience',Operational Costs',Sustainability Goals']
     },;
-    {;'
-      industry: 'Manufacturing',;'
+    {;
+      industry: 'Manufacturing',;
       description: 'Smart manufacturing with energy-efficient automation and monitoring',;
-      icon: Factory,;'
-      metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance'];
+      icon: Factory,;
+      metrics: ['Production Efficiency',Energy Consumption',Environmental Compliance'];
     };
   ];
 
   const benefits = [
     {
 
-      icon: TrendingUp,'
-      title: 'Cost Savings','
+      icon: TrendingUp,
+      title: 'Cost Savings',
       description: 'Reduce energy costs and operational expenses through efficient technology'
     },
     {
 
-      icon: Shield,'
-      title: 'Compliance','
+      icon: Shield,
+      title: 'Compliance',
       description: 'Meet environmental regulations and sustainability standards'
     },
     {
 
-      icon: Globe,'
-      title: 'Environmental Impact','
+      icon: Globe,
+      title: 'Environmental Impact',
       description: 'Reduce carbon footprint and contribute to environmental conservation';
     },;
     {;
-      icon: Award,;'
-      title: 'Brand Reputation',;'
+      icon: Award,;
+      title: 'Brand Reputation',;
       description: 'Enhance brand image through commitment to sustainability';
     };
   ];
@@ -145,7 +145,7 @@ export default function GreenIT(...args: unknown[]): unknown {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Green IT Services - Zion Tech Group""
+        title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
 
@@ -808,27 +808,27 @@ export default function GreenIT(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-'
-                step: '01','
-                title: 'Assessment','
+
+                step: '01',
+                title: 'Assessment',
                 description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
               },
               {
-'
-                step: '02','
-                title: 'Strategy','
+
+                step: '02',
+                title: 'Strategy',
                 description: 'Develop comprehensive Green IT strategy and implementation roadmap'
               },
               {
-'
-                step: '03','
-                title: 'Implementation','
+
+                step: '03',
+                title: 'Implementation',
                 description: 'Deploy sustainable solutions and optimize existing systems'
               },
               {
-'
-                step: '04','
-                title: 'Optimization','
+
+                step: '04',
+                title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
             ].map(phase: unknown, index: unknown (;

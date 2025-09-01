@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
-import { SEO } from '@/components/SEO';'
+import React, { useState } from 'react.ts';
+import { motion } from 'framer-motion.ts';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -30,279 +30,279 @@ import {
   Eye,
   Search,
   Filter,
-  ExternalLink,'
+  ExternalLink,
   Server} from 'lucide-react.ts';
 import {
 
   innovativeServices2029,
   serviceCategories,
-  pricingTiers,'
+  pricingTiers,
   Service} from '../data/innovativeServices2029';
 
 export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = {
 
     all: {
-'
+
       name: 'All Services',
-      icon: <Rocket className="w-6 h-6" />,'
-      color: 'from-cyan-500 to-blue-500'},'
+      icon: <Rocket className="w-6 h-6" />,
+      color: 'from-cyan-500 to-blue-500'},
     'ai-ml': {
-'
+
       name: 'AI & Machine Learning',"
-      icon: <Brain className="w-6 h-6" />,'
+      icon: <Brain className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-500'},
     quantum: {
-'
+
       name: 'Quantum Computing',"
-      icon: <Atom className="w-6 h-6" />,'
+      icon: <Atom className="w-6 h-6" />,
       color: 'from-indigo-500 to-purple-500'},
     devops: {
-'
+
       name: 'DevOps & Automation',"
-      icon: <Workflow className="w-6 h-6" />,'
+      icon: <Workflow className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500'},
     cybersecurity: {
-'
+
       name: 'Cybersecurity',"
-      icon: <Shield className="w-6 h-6" />,'
+      icon: <Shield className="w-6 h-6" />,
       color: 'from-red-500 to-orange-500'},
     analytics: {
-'
+
       name: 'Analytics & BI',"
-      icon: <BarChart3 className="w-6 h-6" />,'
+      icon: <BarChart3 className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'},
     cloud: {
-'
+
       name: 'Cloud & Infrastructure',"
-      icon: <Cloud className="w-6 h-6" />,'
-      color: 'from-sky-500 to-blue-500'},'
+      icon: <Cloud className="w-6 h-6" />,
+      color: 'from-sky-500 to-blue-500'},
     'micro-saas': {
-'
+
       name: 'Micro SAAS',"
-      icon: <Code className="w-6 h-6" />,'
+      icon: <Code className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-500'}};
 
   const services = [
     // AI & Machine Learning
     {
-'
-      id: 'ai-quantum-hybrid','
+
+      id: 'ai-quantum-hybrid',
       title: 'AI Quantum Hybrid Platform',
       description:'
-        'Revolutionary AI-Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.','
-      category: 'quantum','
+        'Revolutionary AI-Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.',
+      category: 'quantum',
       price: '$49,999 - $199,999',
       features: ['
-        'Quantum-AI Integration','
-        'Hybrid Processing','
-        'Advanced ML','
+        'Quantum-AI Integration',
+        'Hybrid Processing',
+        'Advanced ML',
         'Real-time Optimization',
       ],"
-      icon: <Atom className="w-8 h-8" />,'
-      color: 'from-purple-500 to-pink-500','
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500',
       link: '/services/ai-quantum-hybrid-platform',
       featured: true},
     {
-'
-      id: 'ai-devops-automation','
+
+      id: 'ai-devops-automation',
       title: 'AI DevOps Automation Platform',
       description:'
-        'AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.','
-      category: 'devops','
+        'AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.',
+      category: 'devops',
       price: '$29,999 - $119,999',
       features: ['
-        'AI Code Review','
-        'Smart CI/CD','
-        'Predictive Monitoring','
+        'AI Code Review',
+        'Smart CI/CD',
+        'Predictive Monitoring',
         'Auto-scaling',
       ],"
-      icon: <Workflow className="w-8 h-8" />,'
-      color: 'from-blue-500 to-cyan-500','
+      icon: <Workflow className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500',
       link: '/services/ai-devops-automation-platform',
       featured: true},
     {
-'
-      id: 'ai-business-intelligence','
+
+      id: 'ai-business-intelligence',
       title: 'AI Business Intelligence Analytics',
       description:'
-        'Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights.','
-      category: 'analytics','
+        'Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights.',
+      category: 'analytics',
       price: '$19,999 - $79,999',
       features: ['
-        'Predictive Analytics','
-        'Real-time Insights','
-        'AI-powered Reports','
+        'Predictive Analytics',
+        'Real-time Insights',
+        'AI-powered Reports',
         'Custom Dashboards',
       ],"
-      icon: <BarChart3 className="w-8 h-8" />,'
-      color: 'from-green-500 to-emerald-500','
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
       link: '/services/ai-business-intelligence-analytics',
       featured: true},
     {
-'
-      id: 'ai-workflow-orchestrator','
+
+      id: 'ai-workflow-orchestrator',
       title: 'AI Workflow Orchestrator',
       description:'
-        'Intelligent workflow automation platform that orchestrates complex business processes with AI-driven decision making.','
-      category: 'ai-ml','
+        'Intelligent workflow automation platform that orchestrates complex business processes with AI-driven decision making.',
+      category: 'ai-ml',
       price: '$24,999 - $99,999',
       features: ['
-        'Process Automation','
-        'AI Decision Making','
-        'Workflow Optimization','
+        'Process Automation',
+        'AI Decision Making',
+        'Workflow Optimization',
         'Real-time Monitoring',
       ],"
-      icon: <Brain className="w-8 h-8" />,'
-      color: 'from-purple-500 to-indigo-500','
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-purple-500 to-indigo-500',
       link: '/services/ai-workflow-orchestrator',
       featured: false},
     {
-'
-      id: 'ai-data-governance','
+
+      id: 'ai-data-governance',
       title: 'AI Data Governance Platform',
       description:'
-        'Comprehensive AI-powered data governance platform ensuring data quality, compliance, and security.','
-      category: 'ai-ml','
+        'Comprehensive AI-powered data governance platform ensuring data quality, compliance, and security.',
+      category: 'ai-ml',
       price: '$34,999 - $129,999',
       features: ['
-        'Data Quality','
-        'Compliance Management','
-        'AI Monitoring','
+        'Data Quality',
+        'Compliance Management',
+        'AI Monitoring',
         'Security Controls',
       ],"
-      icon: <Shield className="w-8 h-8" />,'
-      color: 'from-indigo-500 to-purple-500','
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from-indigo-500 to-purple-500',
       link: '/services/ai-data-governance-platform',
       featured: false},
     {
-'
-      id: 'ai-customer-experience','
+
+      id: 'ai-customer-experience',
       title: 'AI Customer Experience Analytics',
       description:'
-        'Advanced AI-powered customer experience analytics platform for deep customer insights and optimization.','
-      category: 'analytics','
+        'Advanced AI-powered customer experience analytics platform for deep customer insights and optimization.',
+      category: 'analytics',
       price: '$22,999 - $89,999',
       features: ['
-        'Customer Insights','
-        'Behavior Analysis','
-        'Predictive Modeling','
+        'Customer Insights',
+        'Behavior Analysis',
+        'Predictive Modeling',
         'Experience Optimization',
       ],"
-      icon: <Users className="w-8 h-8" />,'
-      color: 'from-pink-500 to-rose-500','
+      icon: <Users className="w-8 h-8" />,
+      color: 'from-pink-500 to-rose-500',
       link: '/services/ai-customer-experience-analytics',
       featured: false},
     {
-'
-      id: 'ai-financial-risk','
+
+      id: 'ai-financial-risk',
       title: 'AI Financial Risk Management',
       description:'
-        'Intelligent financial risk management platform using AI to predict and mitigate financial risks.','
-      category: 'ai-ml','
+        'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',
+      category: 'ai-ml',
       price: '$39,999 - $149,999',
       features: ['
-        'Risk Assessment','
-        'Predictive Modeling','
-        'Real-time Monitoring','
+        'Risk Assessment',
+        'Predictive Modeling',
+        'Real-time Monitoring',
         'Compliance Reporting',
       ],"
-      icon: <TrendingUp className="w-8 h-8" />,'
-      color: 'from-emerald-500 to-teal-500','
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from-emerald-500 to-teal-500',
       link: '/services/ai-financial-risk-management',
       featured: false},
     {
-'
-      id: 'ai-code-review-security','
+
+      id: 'ai-code-review-security',
       title: 'AI Code Review Security Scanner',
       description:'
-        'Advanced AI-powered code review and security scanning platform for automated vulnerability detection.','
-      category: 'cybersecurity','
+        'Advanced AI-powered code review and security scanning platform for automated vulnerability detection.',
+      category: 'cybersecurity',
       price: '$27,999 - $109,999',
       features: ['
-        'Code Analysis','
-        'Security Scanning','
-        'Vulnerability Detection','
+        'Code Analysis',
+        'Security Scanning',
+        'Vulnerability Detection',
         'Automated Reviews',
       ],"
-      icon: <Code className="w-8 h-8" />,'
-      color: 'from-red-500 to-pink-500','
+      icon: <Code className="w-8 h-8" />,
+      color: 'from-red-500 to-pink-500',
       link: '/services/ai-code-review-security-scanner',
       featured: false},
     {
-'
-      id: 'zero-trust-network','
+
+      id: 'zero-trust-network',
       title: 'Zero Trust Network Access',
       description:'
-        'Modern zero-trust security architecture providing secure access to network resources.','
-      category: 'cybersecurity','
+        'Modern zero-trust security architecture providing secure access to network resources.',
+      category: 'cybersecurity',
       price: '$32,999 - $119,999',
       features: ['
-        'Zero Trust','
-        'Identity Management','
-        'Secure Access','
+        'Zero Trust',
+        'Identity Management',
+        'Secure Access',
         'Network Security',
       ],"
-      icon: <Lock className="w-8 h-8" />,'
-      color: 'from-orange-500 to-red-500','
+      icon: <Lock className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-500',
       link: '/services/zero-trust-network-access',
       featured: false},
     {
-'
-      id: 'cloud-devops','
+
+      id: 'cloud-devops',
       title: 'Cloud DevOps Solutions',
       description:'
-        'Comprehensive cloud DevOps solutions for modern application development and deployment.','
-      category: 'cloud','
+        'Comprehensive cloud DevOps solutions for modern application development and deployment.',
+      category: 'cloud',
       price: '$18,999 - $79,999',
       features: ['
-        'Cloud Migration','
-        'CI/CD Pipelines','
-        'Infrastructure as Code','
+        'Cloud Migration',
+        'CI/CD Pipelines',
+        'Infrastructure as Code',
         'Monitoring',
       ],"
-      icon: <Cloud className="w-8 h-8" />,'
-      color: 'from-sky-500 to-blue-500','
+      icon: <Cloud className="w-8 h-8" />,
+      color: 'from-sky-500 to-blue-500',
       link: '/services/cloud-devops',
       featured: false},
     {
-'
-      id: 'it-infrastructure','
+
+      id: 'it-infrastructure',
       title: 'IT Infrastructure Solutions',
       description:'
-        'Enterprise-grade IT infrastructure solutions for modern business operations.','
-      category: 'cloud','
+        'Enterprise-grade IT infrastructure solutions for modern business operations.',
+      category: 'cloud',
       price: '$25,999 - $99,999',
       features: ['
-        'Infrastructure Design','
-        'Network Solutions','
-        'Security Implementation','
+        'Infrastructure Design',
+        'Network Solutions',
+        'Security Implementation',
         '24/7 Support',
       ],"
-      icon: <Server className="w-8 h-8" />,'
-      color: 'from-slate-500 to-gray-500','
+      icon: <Server className="w-8 h-8" />,
+      color: 'from-slate-500 to-gray-500',
       link: '/services/it-infrastructure',
       featured: false},
     {
-'
-      id: 'micro-crm','
+
+      id: 'micro-crm',
       title: 'Micro CRM Platform',
       description:'
-        'Lightweight, scalable CRM solution designed for growing businesses and startups.','
-      category: 'micro-saas','
+        'Lightweight, scalable CRM solution designed for growing businesses and startups.',
+      category: 'micro-saas',
       price: '$9,999 - $39,999',
       features: ['
-        'Customer Management','
-        'Sales Tracking','
-        'Automation','
+        'Customer Management',
+        'Sales Tracking',
+        'Automation',
         'Analytics',
       ],"
-      icon: <Users className="w-8 h-8" />,'
-      color: 'from-blue-500 to-indigo-500','
+      icon: <Users className="w-8 h-8" />,
+      color: 'from-blue-500 to-indigo-500',
       link: '/services/micro-crm',
       featured: false},
   ];
@@ -321,17 +321,17 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
   }) ;
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008, Middletown DE 19709','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
     website: 'https://ziontechgroup.com'};
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <SEO"
-        title="Comprehensive Services Showcase 2029 | Zion Tech Group""
-        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology.""
+        title="Comprehensive Services Showcase 2029 | Zion Tech Group"
+        description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, 2029 services"
       />
 
@@ -365,14 +365,14 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Phone className="w-5 h-5 mr-2" />
                 Get Started Today
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >"
                 <Mail className="w-5 h-5 mr-2" />
@@ -391,7 +391,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
@@ -449,7 +449,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}`
                 className={`group cursor-pointer ${
-'
+
                   service.featured ? 'ring-2 ring-cyan-400/50' : ''`
                 }`}
               >
@@ -522,8 +522,8 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               </p>
               <button
                 onClick={() => {
-'
-                  setSearchTerm('');'
+
+                  setSearchTerm('');
                   setSelectedCategory('all');
                 }}"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -567,7 +567,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"
               <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
                 Call Now
@@ -587,7 +587,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>"
               <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
                 Send Email
@@ -609,9 +609,9 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
               >
                 View on Map

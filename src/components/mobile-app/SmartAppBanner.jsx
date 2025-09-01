@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';'
-import { safeStorage } from '@/utils/safeStorage';'
-import { X, ArrowRight } from 'lucide-react';'
-import { Link } from 'react-router-dom';'
+import React, { useState, useEffect } from 'react';
+import { safeStorage } from '@/utils/safeStorage';
+import { X, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 export const SmartAppBanner = ({
-'
+
   appName = 'Zion Marketplace',
-  appIconSrc,'
-  appStoreUrl = '/download','
+  appIconSrc,
+  appStoreUrl = '/download',
   googlePlayUrl = '/download',
   delay = 1500}) => {
 
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
   useEffect(() => {
-'
+
     // Only show banner on mobile devices and if it hasn't been dismissed'
     if (isMobile && !safeStorage.getItem('smartBannerDismissed')) {
 
@@ -25,19 +25,19 @@ export const SmartAppBanner = ({
     }
   }, [isMobile, delay]);
   const dismissBanner = () => {
-    setIsVisible(false);'
-    safeStorage.setItem('smartBannerDismissed', 'true');
+    setIsVisible(false);
+    safeStorage.setItem('smartBannerDismissed',true');
   };
   const resetBanner = () => {
-'
+
     safeStorage.removeItem('smartBannerDismissed');
     setIsVisible(true);
   };
   // Only render on mobile devices
   if (!isMobile || !isVisible) {
-'
+
     return process.env.NODE_ENV === 'development' ? (
-      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">'
+      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden.{' '}"
         <button onClick={resetBanner} className="text-zion-cyan underline">
           Show banner'
@@ -74,7 +74,7 @@ export const SmartAppBanner = ({
 "
         <div className="flex items-center gap-3">
           <Link"
-            href="/open-app""
+            href="/open-app"
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View"
@@ -83,7 +83,7 @@ export const SmartAppBanner = ({
 
           <button
             onClick={dismissBanner}"
-            className="text-gray-300""
+            className="text-gray-300"
             aria-label="Dismiss"
           >"
             <X className="h-5 w-5" />

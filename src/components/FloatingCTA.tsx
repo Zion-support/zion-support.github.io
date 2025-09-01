@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';
 
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -47,7 +47,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
   ];
 
-  if (!isVisible) return null;'
+  if (!isVisible) return null;
 import { Link } from 'react-router-dom';
 
   const [isExpanded, setIsExpanded] = useState (false) ;
@@ -73,7 +73,7 @@ import { Link } from 'react-router-dom';
             className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-          >'
+          >
             {isExpanded ? '✕' : '💬'}
           </motion.button>
 
@@ -104,7 +104,7 @@ import { Link } from 'react-router-dom';
               >"
                 <div className="space-y-3">
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
                   >"
@@ -116,7 +116,7 @@ import { Link } from 'react-router-dom';
                   </Link>
                   
                   <Link"
-                    to="/services""
+                    to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
                   >"
@@ -128,7 +128,7 @@ import { Link } from 'react-router-dom';
                   </Link>
                   
                   <Link"
-                    to="/quote""
+                    to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
                   >"

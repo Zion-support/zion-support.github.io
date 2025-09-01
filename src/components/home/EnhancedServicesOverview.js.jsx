@@ -1,13 +1,13 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '../ui/card';'
+  CardHeader,
+  CardTitle} from '../ui/card';
 import { Badge } from '../ui/badge';
 import {
 
@@ -21,7 +21,7 @@ import {
   DollarSign,
   ArrowRight,
   Star,
-  Clock,'
+  Clock,
   Globe} from 'lucide-react';
 // Mock data for enhanced services
 const EnhancedServicesOverview = () => {
@@ -30,25 +30,25 @@ const EnhancedServicesOverview = () => {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI & Machine Learning':
-        return <Brain className="w-6 h-6" />;'
+        return <Brain className="w-6 h-6" />;
       case 'Cybersecurity':"
-        return <Shield className="w-6 h-6" />;'
+        return <Shield className="w-6 h-6" />;
       case 'Cloud & DevOps':"
-        return <Cloud className="w-6 h-6" />;'
+        return <Cloud className="w-6 h-6" />;
       case 'Data & Analytics':"
-        return <Database className="w-6 h-6" />;'
+        return <Database className="w-6 h-6" />;
       case 'Blockchain & Web3':"
-        return <Zap className="w-6 h-6" />;'
+        return <Zap className="w-6 h-6" />;
       case 'IoT & Edge Computing':"
-        return <Eye className="w-6 h-6" />;'
+        return <Eye className="w-6 h-6" />;
       case 'Quantum Computing':"
-        return <Brain className="w-6 h-6" />;'
+        return <Brain className="w-6 h-6" />;
       case 'AR/VR & Metaverse':"
-        return <Eye className="w-6 h-6" />;'
+        return <Eye className="w-6 h-6" />;
       case 'Green Tech & Sustainability':"
-        return <Leaf className="w-6 h-6" />;'
+        return <Leaf className="w-6 h-6" />;
       case 'FinTech & Digital Banking':"
         return <DollarSign className="w-6 h-6" />;
       default:"
@@ -58,11 +58,11 @@ const EnhancedServicesOverview = () => {
   const getAvailabilityColor = availability => {
 
     switch (availability) {
-'
+
       case 'immediate':'
-        return 'text-green-400';'
+        return 'text-green-400';
       case 'within-week':'
-        return 'text-yellow-400';'
+        return 'text-yellow-400';
       case 'within-month':'
         return 'text-orange-400';
       default:'
@@ -89,7 +89,7 @@ const EnhancedServicesOverview = () => {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/enhanced-services">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 Explore All Services"
@@ -97,8 +97,8 @@ const EnhancedServicesOverview = () => {
               </Button>
             </Link>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
               Schedule Consultation
@@ -122,7 +122,7 @@ const EnhancedServicesOverview = () => {
                     </span>
                   </div>
                   <Badge"
-                    variant="secondary""
+                    variant="secondary"
                     className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30"
                   >
                     {service.pricingModel}
@@ -176,7 +176,7 @@ const EnhancedServicesOverview = () => {
                   {service.tags.slice(0, 3).map((tag, index) => (
                     <Badge
                       key={index}"
-                      variant="outline""
+                      variant="outline"
                       className="text-xs border-zion-purple/30 text-zion-cyan"
                     >
                       {tag}
@@ -190,7 +190,7 @@ const EnhancedServicesOverview = () => {
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}
                   >"
                     <Clock className="w-4 h-4" />"
-                    <span className="font-medium">'
+                    <span className="font-medium">
                       {service.availability === 'immediate''
                         ? 'Available Now''
                         : service.availability === 'within-week''
@@ -272,14 +272,14 @@ const EnhancedServicesOverview = () => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-white text-zion-purple hover:bg-zion-slate-light"
               >
                 Schedule Free Consultation
               </Button>
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
               >
                 Download Service Catalog

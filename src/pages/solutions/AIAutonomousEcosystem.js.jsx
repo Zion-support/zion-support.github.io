@@ -9,115 +9,115 @@ import {
   Database,
   Lightbulb,
   BarChart3,
-  Network,'
+  Network,
   Link} from 'lucide-react';
 const AIAutonomousEcosystem = () => {
   const ecosystemComponents = [
     {
-'
-      title: 'AI Core Engine','
+
+      title: 'AI Core Engine',
       description: 'Central AI processing and decision-making engine',
       icon: Brain,
       capabilities: ['
-        'Machine learning models','
-        'Neural networks','
-        'Decision algorithms','
+        'Machine learning models',
+        'Neural networks',
+        'Decision algorithms',
         'Learning optimization',
       ]},
     {
-'
-      title: 'Data Management','
+
+      title: 'Data Management',
       description: 'Comprehensive data handling and processing systems',
       icon: Database,
       capabilities: ['
-        'Data ingestion','
-        'Storage optimization','
-        'Processing pipelines','
+        'Data ingestion',
+        'Storage optimization',
+        'Processing pipelines',
         'Quality management',
       ]},
     {
-'
-      title: 'Integration Layer','
+
+      title: 'Integration Layer',
       description: 'Connectivity and communication between systems',
       icon: Network,
       capabilities: ['
-        'API management','
-        'Message queuing','
-        'Event streaming','
+        'API management',
+        'Message queuing',
+        'Event streaming',
         'Service mesh',
       ]},
     {
-'
-      title: 'User Interface','
+
+      title: 'User Interface',
       description: 'Intuitive interfaces for all user types',
       icon: Users,
       capabilities: ['
-        'Dashboard views','
-        'Mobile apps','
-        'Web interfaces','
+        'Dashboard views',
+        'Mobile apps',
+        'Web interfaces',
         'Voice interfaces',
       ]},
     {
-'
-      title: 'Analytics & Insights','
+
+      title: 'Analytics & Insights',
       description: 'Comprehensive reporting and analytics capabilities',
       icon: BarChart3,
       capabilities: ['
-        'Real-time analytics','
-        'Predictive insights','
-        'Performance metrics','
+        'Real-time analytics',
+        'Predictive insights',
+        'Performance metrics',
         'Business intelligence',
       ]},
     {
-'
-      title: 'Management Console','
+
+      title: 'Management Console',
       description: 'Centralized control and monitoring system',
       icon: Cpu,
       capabilities: ['
-        'System monitoring','
-        'Configuration management','
-        'User administration','
+        'System monitoring',
+        'Configuration management',
+        'User administration',
         'Deployment control',
       ]},
   ];
   const benefits = ['
-    'Unified AI strategy across all business units','
-    'Reduced integration complexity and costs','
-    'Improved data consistency and quality','
-    'Faster time to market for new AI features','
-    'Better resource utilization and efficiency','
+    'Unified AI strategy across all business units',
+    'Reduced integration complexity and costs',
+    'Improved data consistency and quality',
+    'Faster time to market for new AI features',
+    'Better resource utilization and efficiency',
     'Enhanced security and compliance posture',
   ];
   const implementation = [
     {
-'
-      phase: 'Assessment','
-      description: 'Evaluate current systems and identify integration points','
+
+      phase: 'Assessment',
+      description: 'Evaluate current systems and identify integration points',
       duration: '2-4 weeks'},
     {
-'
-      phase: 'Architecture','
-      description: 'Design ecosystem architecture and integration strategy','
+
+      phase: 'Architecture',
+      description: 'Design ecosystem architecture and integration strategy',
       duration: '4-6 weeks'},
     {
-'
-      phase: 'Development','
-      description: 'Build and configure ecosystem components','
+
+      phase: 'Development',
+      description: 'Build and configure ecosystem components',
       duration: '8-16 weeks'},
     {
-'
-      phase: 'Integration','
-      description: 'Connect existing systems and validate functionality','
+
+      phase: 'Integration',
+      description: 'Connect existing systems and validate functionality',
       duration: '4-8 weeks'},
     {
-'
-      phase: 'Testing','
-      description: 'Comprehensive testing and performance validation','
+
+      phase: 'Testing',
+      description: 'Comprehensive testing and performance validation',
       duration: '2-4 weeks'},
     {
-'
-      phase: 'Deployment','
-      description: 'Production deployment and user training','
+
+      phase: 'Deployment',
+      description: 'Production deployment and user training',
       duration: '2-4 weeks'},
   ];
   return()
@@ -132,7 +132,7 @@ const AIAutonomousEcosystem = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous"
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 {' '}
                 Ecosystem
               </span>
@@ -143,13 +143,13 @@ const AIAutonomousEcosystem = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#features""
+                href="#features"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Features
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
@@ -328,13 +328,13 @@ const AIAutonomousEcosystem = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Building
             </a>
             <a"
-              href="/solutions""
+              href="/solutions"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               View All Solutions

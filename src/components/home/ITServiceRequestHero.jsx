@@ -1,12 +1,12 @@
-import React, { useState } from 'react';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
-import { useNavigate } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from 'lucide-react';
 export function ITServiceRequestHero() {
-'
+
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -46,13 +46,13 @@ export function ITServiceRequestHero() {
       transition: { duration: 0.5 }}};
 
   const features = ['
-    { icon: Clock, text: '24/7 Availability', color: 'text-zion-cyan' },'
+    { icon: Clock, text: '24/7 Availability', color: 'text-zion-cyan' },
     { icon: Globe, text: 'Global Coverage', color: 'text-zion-purple' },
     {
 
-      icon: Shield,'
-      text: 'Certified Technicians','
-      color: 'text-zion-cyan-light'},'
+      icon: Shield,
+      text: 'Certified Technicians',
+      color: 'text-zion-cyan-light'},
     { icon: Zap, text: 'Fast Response', color: 'text-zion-purple-light' },
   ];
 
@@ -67,7 +67,7 @@ export function ITServiceRequestHero() {
       <motion.div"
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >"
@@ -152,7 +152,7 @@ export function ITServiceRequestHero() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label"
-                    htmlFor="location""
+                    htmlFor="location"
                     className="block text-sm font-medium text-zion-slate-light mb-2"
                   >
                     Service Location
@@ -160,11 +160,11 @@ export function ITServiceRequestHero() {
                   <div className="relative">"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                     <input"
-                      type="text""
+                      type="text"
                       id="location"
                       value={location}
                       onChange={e => setLocation(e.target.value)}"
-                      placeholder="Enter city, address, or coordinates""
+                      placeholder="Enter city, address, or coordinates"
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       required
                     />

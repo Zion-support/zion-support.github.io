@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import Link from 'next/link';
 const SpaceTech = () => {
     const spaceTechnologies = [
@@ -37,7 +37,7 @@ const SpaceTech = () => {
                 {" "}Technology
               </span>
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advancing humanity's reach into space with cutting-edge technology solutions 
               for exploration, communication, and scientific discovery
             </p>
@@ -63,7 +63,7 @@ const SpaceTech = () => {
           <div className="text-center">"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
               <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>"
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">
                 Ready to explore the final frontier? Let's discuss how space technology 
                 can advance your mission and expand human capabilities.
               </p>"

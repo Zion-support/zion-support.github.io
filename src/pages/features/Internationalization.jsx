@@ -1,26 +1,26 @@
-import React from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import SEO from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import SEO from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 export { function };
 export default function Internationalization() {
   const schema = {
-'
-    '@context': 'https://schema.org','
-    '@type': 'WebPage','
+
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
     name: 'Internationalization',
     description:'
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.','
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
     url: 'https://app.ziontechgroup.com/features/internationalization'};
   return()
     <>
       <SEO
-        title="Internationalization""
-        description="Reach a global audience with multi-language support across the Zion platform.""
-        keywords="i18n, multi-language marketplace, localized listings""
+        title="Internationalization"
+        description="Reach a global audience with multi-language support across the Zion platform."
+        keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -39,9 +39,9 @@ export default function Internationalization() {
             collaborate without barriers.
           </p>
           <img"
-            loading="lazy""
-            src="https://placehold.co/800x400""
-            alt="Screenshot of language options""
+            loading="lazy"
+            src="https://placehold.co/800x400"
+            alt="Screenshot of language options"
             className="rounded-lg shadow-xl mx-auto mb-12"
           />"
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"

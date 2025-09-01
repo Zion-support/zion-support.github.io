@@ -1,8 +1,8 @@
-import React from 'react';'
-import { Toaster as Sonner } from 'sonner';'
+import React from 'react';
+import { Toaster as Sonner } from 'sonner';
 import { useTheme } from '../ThemeProvider';
 const Toaster = ({ ...props }) => {
-'
+
   const { theme = 'system' } = useTheme();
   return()
     <Sonner
@@ -13,7 +13,7 @@ const Toaster = ({ ...props }) => {
         classNames: {
 
           toast:'
-            'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg','
+            'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',
           description: 'group-[.toast]:text-muted-foreground',
           actionButton:'
             'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',

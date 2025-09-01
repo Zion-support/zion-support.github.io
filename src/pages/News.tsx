@@ -1,96 +1,96 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
 
 const News: React.FC = () => {
   const newsArticles = [
     {
 
-      id: 1,'
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Healthcare Analytics Platform','
-      excerpt: 'Our latest healthcare analytics solution leverages advanced AI to provide real-time insights for improved patient care and operational efficiency.','
-      category: 'Product Launch','
-      author: 'Zion Tech Team','
-      date: '2024-12-15','
-      readTime: '3 min read','
-      image: '/images/news/healthcare-analytics.jpg','
+      id: 1,
+      title: 'Zion Tech Group Launches Revolutionary AI-Powered Healthcare Analytics Platform',
+      excerpt: 'Our latest healthcare analytics solution leverages advanced AI to provide real-time insights for improved patient care and operational efficiency.',
+      category: 'Product Launch',
+      author: 'Zion Tech Team',
+      date: '2024-12-15',
+      readTime: '3 min read',
+      image: '/images/news/healthcare-analytics.jpg',
       href: '/news/ai-healthcare-analytics-launch'
     },
     {
 
-      id: 2,'
-      title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Processing','
-      excerpt: 'Our quantum computing research team has achieved a major milestone in quantum processing power, opening new possibilities for complex computations.','
-      category: 'Research','
-      author: 'Dr. Sarah Chen','
-      date: '2024-12-10','
-      readTime: '5 min read','
-      image: '/images/news/quantum-breakthrough.jpg','
+      id: 2,
+      title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Processing',
+      excerpt: 'Our quantum computing research team has achieved a major milestone in quantum processing power, opening new possibilities for complex computations.',
+      category: 'Research',
+      author: 'Dr. Sarah Chen',
+      date: '2024-12-10',
+      readTime: '5 min read',
+      image: '/images/news/quantum-breakthrough.jpg',
       href: '/news/quantum-computing-breakthrough'
     },
     {
 
-      id: 3,'
-      title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards 2024','
-      excerpt: 'We are honored to be recognized as a leading AI company for our innovative solutions and contributions to the technology industry.','
-      category: 'Awards','
-      author: 'Zion Tech Team','
-      date: '2024-12-05','
-      readTime: '2 min read','
-      image: '/images/news/award-recognition.jpg','
+      id: 3,
+      title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards 2024',
+      excerpt: 'We are honored to be recognized as a leading AI company for our innovative solutions and contributions to the technology industry.',
+      category: 'Awards',
+      author: 'Zion Tech Team',
+      date: '2024-12-05',
+      readTime: '2 min read',
+      image: '/images/news/award-recognition.jpg',
       href: '/news/top-ai-company-award'
     },
     {
 
-      id: 4,'
-      title: 'New Partnership with Global Healthcare Consortium Announced','
-      excerpt: 'Zion Tech Group joins forces with leading healthcare organizations to advance AI-powered medical technology solutions worldwide.','
-      category: 'Partnerships','
-      author: 'Michael Rodriguez','
-      date: '2024-11-30','
-      readTime: '4 min read','
-      image: '/images/news/healthcare-partnership.jpg','
+      id: 4,
+      title: 'New Partnership with Global Healthcare Consortium Announced',
+      excerpt: 'Zion Tech Group joins forces with leading healthcare organizations to advance AI-powered medical technology solutions worldwide.',
+      category: 'Partnerships',
+      author: 'Michael Rodriguez',
+      date: '2024-11-30',
+      readTime: '4 min read',
+      image: '/images/news/healthcare-partnership.jpg',
       href: '/news/healthcare-consortium-partnership'
     },
     {
 
-      id: 5,'
-      title: 'Edge Computing Platform Achieves 99.9% Uptime in Production','
-      excerpt: 'Our edge computing solution demonstrates exceptional reliability and performance in real-world enterprise environments.','
-      category: 'Technology','
-      author: 'Dr. Emily Watson','
-      date: '2024-11-25','
-      readTime: '3 min read','
-      image: '/images/news/edge-computing.jpg','
+      id: 5,
+      title: 'Edge Computing Platform Achieves 99.9% Uptime in Production',
+      excerpt: 'Our edge computing solution demonstrates exceptional reliability and performance in real-world enterprise environments.',
+      category: 'Technology',
+      author: 'Dr. Emily Watson',
+      date: '2024-11-25',
+      readTime: '3 min read',
+      image: '/images/news/edge-computing.jpg',
       href: '/news/edge-computing-uptime-milestone'
     },
     {
 
-      id: 6,'
-      title: 'Zion Tech Group Expands to European Markets','
-      excerpt: 'Strategic expansion into European markets brings our AI solutions to new customers and strengthens our global presence.','
-      category: 'Business','
-      author: 'Zion Tech Team','
-      date: '2024-11-20','
-      readTime: '3 min read','
-      image: '/images/news/european-expansion.jpg','
+      id: 6,
+      title: 'Zion Tech Group Expands to European Markets',
+      excerpt: 'Strategic expansion into European markets brings our AI solutions to new customers and strengthens our global presence.',
+      category: 'Business',
+      author: 'Zion Tech Team',
+      date: '2024-11-20',
+      readTime: '3 min read',
+      image: '/images/news/european-expansion.jpg',
       href: '/news/european-market-expansion'
     }
   ];
   const categories = ['
-    'All News','
-    'Product Launch','
-    'Research','
-    'Awards','
-    'Partnerships','
-    'Technology','
+    'All News',
+    'Product Launch',
+    'Research',
+    'Awards',
+    'Partnerships',
+    'Technology',
     'Business'
   ];
   const featuredArticle = newsArticles[0];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="News - Zion Tech Group""
+        title="News - Zion Tech Group"
         description="Stay updated with the latest news, product launches, research breakthroughs, and company updates from Zion Tech Group."
       />
       {/* Hero Section */}"
@@ -103,7 +103,7 @@ const News: React.FC = () => {
           >"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Latest News &"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 {' '}Updates
               </span>
             </h1>"
@@ -269,8 +269,8 @@ const News: React.FC = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input"
-                type="email""
-                placeholder="Enter your email""
+                type="email"
+                placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
               />"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">

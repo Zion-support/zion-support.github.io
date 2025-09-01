@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -64,8 +64,8 @@ import {
   MapPin,
   ExternalLink,
   Cloud'
-} from 'lucide-react';'
-import { MainNavigation } from './header/MainNavigation';'
+} from 'lucide-react';
+import { MainNavigation } from './header/MainNavigation';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
@@ -79,14 +79,14 @@ export function Header({ className }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);'
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');'
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
 
   const navigation = [
     {
-'
-      name: 'Services','
+
+      name: 'Services',
       href: '/services',
       icon: Zap,
       dropdown: [
@@ -107,51 +107,51 @@ export function Header({ className }: HeaderProps) {
       ]
     },
     {
-'
-      name: 'Solutions','
+
+      name: 'Solutions',
       href: '/solutions',
       icon: Target,
       dropdown: ['
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },'
-        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },'
-        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },'
-        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },'
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin Solutions', href: '/solutions/digital-twin', icon: Eye },
         { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
       ]
     },
     {
-'
-      name: 'About','
+
+      name: 'About',
       href: '/about',
       icon: Users,
       dropdown: ['
-        { name: 'Our Story', href: '/about/story', icon: FileText },'
-        { name: 'Team', href: '/about/team', icon: Users },'
-        { name: 'Careers', href: '/careers', icon: Briefcase },'
-        { name: 'Partners', href: '/partners', icon: Network },'
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
         { name: 'Press', href: '/press', icon: Newspaper }
       ]
     },
     {
-'
-      name: 'Resources','
+
+      name: 'Resources',
       href: '/resources',
       icon: FileText,
       dropdown: ['
-        { name: 'Blog', href: '/blog', icon: Newspaper },'
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },'
-        { name: 'Research & Development', href: '/research-development', icon: Activity },'
-        { name: 'Documentation', href: '/docs', icon: FileText },'
-        { name: 'API Reference', href: '/api', icon: Cpu },'
-        { name: 'Sitemap', href: '/sitemap', icon: FileText },'
-        { name: 'Support', href: '/support', icon: FileText },'
-        { name: 'Training', href: '/training', icon: FileText },'
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
         { name: 'Helpdesk', href: '/help', icon: FileText }
       ]
     },
     {
-'
-      name: 'Contact','
+
+      name: 'Contact',
       href: '/contact',
       icon: Phone,
     },
@@ -162,13 +162,13 @@ export function Header({ className }: HeaderProps) {
       setIsScrolled (window.scrollY > 10) ;
     };
 
-'
-    window.addEventListener('scroll', handleScroll);'
+
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleTheme = () => {
-'
+
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
@@ -189,11 +189,11 @@ export function Header({ className }: HeaderProps) {
   };
 
   const quickLinks = ['
-    { name: 'AI Services', href: '/ai-services', icon: Brain },'
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },'
-    { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud },'
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },'
-    { name: 'Enterprise', href: '/enterprise', icon: Building2 },'
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },
+    { name: 'Enterprise', href: '/enterprise', icon: Building2 },
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
 
@@ -202,7 +202,7 @@ export function Header({ className }: HeaderProps) {
       className={cn()
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled "
-          ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg" "
+          ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg"
           : "bg-transparent",
         className
       )}
@@ -236,7 +236,7 @@ export function Header({ className }: HeaderProps) {
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}"
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors""
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Search"
             >"
               <Search className="w-5 h-5" />
@@ -245,7 +245,7 @@ export function Header({ className }: HeaderProps) {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}"
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors""
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle theme"
             >'"
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -289,7 +289,7 @@ export function Header({ className }: HeaderProps) {
                     </div>"
                     <div className="py-2">
                       <Link"
-                        to="/profile""
+                        to="/profile"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
                       >"
@@ -297,7 +297,7 @@ export function Header({ className }: HeaderProps) {
                         <span>Profile</span>
                       </Link>
                       <Link"
-                        to="/dashboard""
+                        to="/dashboard"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
                       >"
@@ -305,7 +305,7 @@ export function Header({ className }: HeaderProps) {
                         <span>Dashboard</span>
                       </Link>
                       <Link"
-                        to="/settings""
+                        to="/settings"
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
                         onClick={() => setIsUserMenuOpen(false)}
                       >"
@@ -331,7 +331,7 @@ export function Header({ className }: HeaderProps) {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}"
-              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors""
+              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               aria-label="Toggle mobile menu"
             >"
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -344,7 +344,7 @@ export function Header({ className }: HeaderProps) {
       <AnimatePresence>
         {isSearchOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}'
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}"
             className="bg-gray-900 border-t border-gray-700"
@@ -357,7 +357,7 @@ export function Header({ className }: HeaderProps) {
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
-                    placeholder="Search services, solutions, or resources...""
+                    placeholder="Search services, solutions, or resources..."
                     className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
@@ -385,7 +385,7 @@ export function Header({ className }: HeaderProps) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}'
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}"
             className="lg:hidden bg-gray-900 border-t border-gray-700"
@@ -395,7 +395,7 @@ export function Header({ className }: HeaderProps) {
               {/* Mobile Navigation Links */}"
               <div className="space-y-4">
                 <Link"
-                  to="/""
+                  to="/"
                   className="block text-white hover:text-blue-400 transition-colors text-lg font-medium"
                   onClick={closeMobileMenu}
                 >
@@ -406,35 +406,35 @@ export function Header({ className }: HeaderProps) {
                   <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Services</h3>"
                   <div className="pl-4 space-y-2">
                     <Link"
-                      to="/ai-services""
+                      to="/ai-services"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       AI Services
                     </Link>
                     <Link"
-                      to="/it-services""
+                      to="/it-services"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       IT Services
                     </Link>
                     <Link"
-                      to="/micro-saas""
+                      to="/micro-saas"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Micro SAAS
                     </Link>
                     <Link"
-                      to="/cloud-devops""
+                      to="/cloud-devops"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Cloud & DevOps
                     </Link>
                     <Link"
-                      to="/cybersecurity""
+                      to="/cybersecurity"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
@@ -447,28 +447,28 @@ export function Header({ className }: HeaderProps) {
                   <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Solutions</h3>"
                   <div className="pl-4 space-y-2">
                     <Link"
-                      to="/enterprise""
+                      to="/enterprise"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Enterprise
                     </Link>
                     <Link"
-                      to="/healthcare""
+                      to="/healthcare"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Healthcare
                     </Link>
                     <Link"
-                      to="/financial""
+                      to="/financial"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Financial
                     </Link>
                     <Link"
-                      to="/government""
+                      to="/government"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
@@ -481,28 +481,28 @@ export function Header({ className }: HeaderProps) {
                   <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Company</h3>"
                   <div className="pl-4 space-y-2">
                     <Link"
-                      to="/about""
+                      to="/about"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       About Us
                     </Link>
                     <Link"
-                      to="/contact""
+                      to="/contact"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Contact
                     </Link>
                     <Link"
-                      to="/careers""
+                      to="/careers"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Careers
                     </Link>
                     <Link"
-                      to="/blog""
+                      to="/blog"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
@@ -515,21 +515,21 @@ export function Header({ className }: HeaderProps) {
                   <h3 className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Support</h3>"
                   <div className="pl-4 space-y-2">
                     <Link"
-                      to="/help""
+                      to="/help"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Help Center
                     </Link>
                     <Link"
-                      to="/documentation""
+                      to="/documentation"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Documentation
                     </Link>
                     <Link"
-                      to="/api""
+                      to="/api"
                       className="block text-gray-300 hover:text-blue-400 transition-colors"
                       onClick={closeMobileMenu}
                     >
@@ -558,14 +558,14 @@ export function Header({ className }: HeaderProps) {
               {/* Mobile CTA */}"
               <div className="pt-4 border-t border-gray-700 space-y-3">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   onClick={closeMobileMenu}
                 >
                   Get Started
                 </Link>
                 <Link"
-                  to="/demo""
+                  to="/demo"
                   className="block w-full border border-gray-600 text-white text-center py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300"
                   onClick={closeMobileMenu}
                 >

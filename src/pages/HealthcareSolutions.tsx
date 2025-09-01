@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 
 const HealthcareSolutions: React.FC = (): JSX.Element => {
@@ -6,7 +6,7 @@ const HealthcareSolutions: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
-        title="Healthcare Solutions - Zion Tech Group""
+        title="Healthcare Solutions - Zion Tech Group"
         description="Healthcare technology solutions for improved outcomes and operational efficiency."
       />"
       <div className="container-responsive py-16">"

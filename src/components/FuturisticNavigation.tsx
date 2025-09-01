@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MobileSidebarToggle } from './MobileSidebarToggle';
 import {
 
@@ -180,7 +180,7 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon'
 } from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;'
+export const FuturisticNavigation: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -188,8 +188,8 @@ export const FuturisticNavigation: React.FC = () => {;'
   useEffect(() => {
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
-    };'
-    window.addEventListener('scroll', handleScroll);'
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
     setActiveDropdown(null);
@@ -211,16 +211,16 @@ export const FuturisticNavigation: React.FC = () => {;'
     {
 
       name: "AI & Machine Learning",
-      icon: Brain,'
+      icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
-      dropdown[;'
-        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
-        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },'
-        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },'
-        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
-        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'
+      dropdown[;
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
     },;
@@ -264,15 +264,15 @@ export const FuturisticNavigation: React.FC = () => {;'
       ]
     },;
     {
-'
-      name: '2028 Services','
+
+      name: '2028 Services',
       href: '/innovative-services-2028',
-      icon: Crown,'
+      icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;'
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;'
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;'
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;'
+      dropdown[;
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
       ];
     };
@@ -344,7 +344,7 @@ export const FuturisticNavigation: React.FC = () => {;'
 }}
               >
                 <Link"
-                  to="/about""
+                  to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
@@ -372,7 +372,7 @@ export const FuturisticNavigation: React.FC = () => {;'
 }}
               >
                 <Link"
-                  to="/partners""
+                  to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
 "
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
@@ -412,7 +412,7 @@ export const FuturisticNavigation: React.FC = () => {;'
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                     <span className="font-medium">{category.name}</span>`
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
-'
+
                       activeDropdown === category.name ? 'rotate-180' : ''`
                     }`} />
                   </motion.button>
@@ -495,7 +495,7 @@ export const FuturisticNavigation: React.FC = () => {;'
               <form onSubmit={handleSearch} className="hidden md:block">;"
                 <div className="relative">
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"

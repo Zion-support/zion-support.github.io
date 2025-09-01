@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -22,7 +22,7 @@ import {
   Cpu,
   Heart,
   Eye'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 ;
 const AIMarketingAutomation = (...args: unknown[]): unknown => {
@@ -68,12 +68,12 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
       title: "Multi-Channel Orchestration","
       description: "Seamlessly coordinate campaigns across email, social, and web","
       price: "$119/month"
-    }'
-      name: 'Enterprise',;'
-      price: '$799',;'
-      period: '/mo',;'
-      contacts: 'Unlimited contacts',;'
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
+    }
+      name: 'Enterprise',;
+      price: '$799',;
+      period: '/mo',;
+      contacts: 'Unlimited contacts',;
+      features: ['Full AI suite',White-label options',Dedicated support',SAML/SSO',Custom integrations',Advanced reporting'];
     };
   ];
 
@@ -154,7 +154,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
   return()
     <>
       <SEO "
-        title="AI Marketing Automation - Zion Tech Group""
+        title="AI Marketing Automation - Zion Tech Group"
         description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
       "
@@ -254,7 +254,7 @@ const AIMarketingAutomation = (...args: unknown[]): unknown => {
               <h2 className="text-4xl font-bold text-white mb-4">
                 AI-Powered Features That Revolutionize Marketing
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
             </motion.div>

@@ -1,19 +1,19 @@
 import React, { useState } from 'react''
 import { Link } from 'react-router-dom''
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
-'
+
 import { additionalEnhancedServices } from '../data/additional-real-services''
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
 ;
 export { function };
 export default function Services(...args[]):  {
-'
-	const [searchTerm, setSearchTerm] = useState('')'
-	const [selectedCategory, setSelectedCategory] = useState('all')'
+
+	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')
 	const [currentPage, setCurrentPage] = useState(1)
 	const [itemsPerPage] = useState(12) // Show 12 services per page
-'
+
 	const title = 'Services — Zion Tech Group''
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
 
@@ -25,7 +25,7 @@ export default function Services(...args[]):  {
 
 	// Filter and sort services
 	const filteredServices = allServices;
-		.filter(service => '
+		.filter(service =>
 			(selectedCategory === 'all' || service.category === selectedCategory) &&
 			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,13 +34,13 @@ export default function Services(...args[]):  {
 		.sort((a, b) => {
 
 			switch (sortBy) {
-'
+
 				case 'popularity':
-					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)'
+					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
 				case 'price':'
-					return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))'
+					return parseInt(a.price.replace('$',')) - parseInt(b.price.replace('$','))
 				case 'rating':
-					return (b.rating || 0) - (a.rating || 0)'
+					return (b.rating || 0) - (a.rating || 0)
 				case 'newest':'
 					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
 				default:
@@ -62,7 +62,7 @@ export default function Services(...args[]):  {
 	// Pagination controls
 	const goToPage = (page: number) => {
 
-		setCurrentPage(page)'
+		setCurrentPage(page)
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
@@ -118,7 +118,7 @@ export default function Services(...args[]):  {
 						<div className="relative flex-1 max-w-md w-full">"
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
 							<input"
-								type="text""
+								type="text"
 								placeholder="Search services..."
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}"
@@ -135,7 +135,7 @@ export default function Services(...args[]):  {
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								{categories.map(category  => (
-									<option key={category} value={category}>'
+									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category}
 									</option>
 								))}
@@ -324,7 +324,7 @@ export default function Services(...args[]):  {
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 									<Link"
-										to="/contact""
+										to="/contact"
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
 
 										Contact
@@ -382,7 +382,7 @@ export default function Services(...args[]):  {
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 							Ready to get started?
 						</h2>"
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">'
+						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
 							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
 
@@ -422,14 +422,14 @@ export default function Services(...args[]):  {
 "
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link"
-								to="/contact""
+								to="/contact"
 								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200"
 							>
 								Get in touch"
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<a"
-								href="tel:+13024640950""
+								href="tel:+13024640950"
 								className="w-full sm:w-auto rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-all duration-200"
 							>
 								Call Now

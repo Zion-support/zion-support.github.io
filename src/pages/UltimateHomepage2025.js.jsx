@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { SEO } from '@/components/SEO';'
+import React, { useState, useEffect } from 'react';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import {
 
@@ -19,8 +19,8 @@ import {
   Clock,
   BarChart3,
   Cpu,
-  ShieldCheck,'
-  Building2} from 'lucide-react';'
+  ShieldCheck,
+  Building2} from 'lucide-react';
 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
 export default function UltimateHomepage2025() {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -39,66 +39,66 @@ export default function UltimateHomepage2025() {
     .slice(0, 6);
   const allServices = ultimateInnovativeServices2025.slice(0, 9);
   const stats = ['
-    { number: '10+', label: 'Revolutionary Services', icon: Rocket },'
-    { number: '500+', label: 'Happy Customers', icon: Users },'
-    { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },'
+    { number: '10+', label: 'Revolutionary Services', icon: Rocket },
+    { number: '500+', label: 'Happy Customers', icon: Users },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
     { number: '24/7', label: 'Expert Support', icon: Clock },
   ];
   const benefits = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Intelligence',
       description:'
-        'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.','
+        'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Quantum-Secure Protection',
       description:'
-        'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.','
+        'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Autonomous Operations',
       description:'
-        'Self-managing systems that run your business operations with minimal human intervention.','
+        'Self-managing systems that run your business operations with minimal human intervention.',
       color: 'from-purple-500 to-indigo-500'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Predictive Analytics',
       description:'
-        'Forecast trends, identify opportunities, and make data-driven decisions with confidence.','
+        'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
       color: 'from-orange-500 to-red-500'},
   ];
   const industries = [
     {
-'
+
       name: 'Financial Services',
-      icon: TrendingUp,'
-      color: 'from-emerald-500 to-teal-500'},'
+      icon: TrendingUp,
+      color: 'from-emerald-500 to-teal-500'},
     { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
     {
-'
+
       name: 'Manufacturing',
-      icon: Building2,'
+      icon: Building2,
       color: 'from-blue-500 to-cyan-500'},
     {
-'
+
       name: 'Retail & E-commerce',
-      icon: Globe,'
-      color: 'from-yellow-500 to-orange-500'},'
-    { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },'
+      icon: Globe,
+      color: 'from-yellow-500 to-orange-500'},
+    { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
     { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' },
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO"
-        title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025""
-        description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology.""
+        title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025"
+        description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"
       />
 
@@ -128,14 +128,14 @@ export default function UltimateHomepage2025() {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link"
-                  to="/ultimate-services-showcase-2025""
+                  to="/ultimate-services-showcase-2025"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >"
                   <Rocket className="w-5 h-5 mr-2" />
                   Explore Services
                 </Link>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >"
                   <Phone className="w-5 h-5 mr-2" />
@@ -231,7 +231,7 @@ export default function UltimateHomepage2025() {
               <div>"
                 <p className="text-sm text-gray-300">Phone</p>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="text-blue-400 font-semibold hover:text-blue-300"
                 >
                   +1 302 464 0950
@@ -243,7 +243,7 @@ export default function UltimateHomepage2025() {
               <div>"
                 <p className="text-sm text-gray-300">Email</p>
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-purple-400 font-semibold hover:text-purple-300"
                 >
                   kleber@ziontechgroup.com
@@ -375,7 +375,7 @@ export default function UltimateHomepage2025() {
         </div>"
         <div className="text-center mt-12">
           <Link"
-            to="/ultimate-services-showcase-2025""
+            to="/ultimate-services-showcase-2025"
             className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
           >
             View All Services"
@@ -460,7 +460,7 @@ export default function UltimateHomepage2025() {
         </div>"
         <div className="text-center mt-12">
           <Link"
-            to="/ultimate-services-showcase-2025""
+            to="/ultimate-services-showcase-2025"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >"
             <Rocket className="w-5 h-5 mr-2" />
@@ -484,14 +484,14 @@ export default function UltimateHomepage2025() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >"
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <Phone className="w-5 h-5 mr-2" />

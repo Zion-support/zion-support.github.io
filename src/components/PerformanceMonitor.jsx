@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export const PerformanceMonitor = () => {
@@ -81,14 +81,14 @@ export const PerformanceMonitor = () => {
 
       // First Contentful Paint
       try {
-'
+
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
           if (fcpEntry) {
 
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
-        });'
+        });
         fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
-'
+
         // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
@@ -97,9 +97,9 @@ export const PerformanceMonitor = () => {
           if (lastEntry) {
 
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
-        });'
+        });
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
-'
+
         // console.warn('LCP observer failed:', e)}
 
       // First Input Delay
@@ -113,9 +113,9 @@ export const PerformanceMonitor = () => {
 
               const fid = entry.processingStart - entry.startTime;
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
-          })});'
+          })});
         fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
-'
+
         // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift
@@ -127,13 +127,13 @@ export const PerformanceMonitor = () => {
 
               clsValue += entry.value}
           });
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});'
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
         clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
-'
+
         // console.warn('CLS observer failed:', e)}
     }
 
-    // Time to First Byte (from navigation timing)'
+    // Time to First Byte (from navigation timing)
     const navigationEntry = performance.getEntriesByType('navigation')[0];
     if (navigationEntry) {
 
@@ -144,15 +144,15 @@ export const PerformanceMonitor = () => {
   if (!isVisible) return null;
 
   const getScoreColor = (score) => {
-'
-    if (score >= 90) return 'text-green-400';'
-    if (score >= 50) return 'text-yellow-400';'
+
+    if (score >= 90) return 'text-green-400';
+    if (score >= 50) return 'text-yellow-400';
     return 'text-red-400'};
 
   const getScoreLabel = (score) => {
-'
-    if (score >= 90) return 'Excellent';'
-    if (score >= 50) return 'Good';'
+
+    if (score >= 90) return 'Excellent';
+    if (score >= 50) return 'Good';
     return 'Poor'};
 
   return()
@@ -185,7 +185,7 @@ export const PerformanceMonitor = () => {
       <div className="space-y-1 text-xs">
         {metrics.fcp && ("
           <div className="flex justify-between">
-            <span>FCP:</span>'
+            <span>FCP:</span>
             <span className={metrics.fcp <= 1800 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.fcp}ms
             </span>
@@ -193,7 +193,7 @@ export const PerformanceMonitor = () => {
         )}
         {metrics.lcp && ("
           <div className="flex justify-between">
-            <span>LCP:</span>'
+            <span>LCP:</span>
             <span className={metrics.lcp <= 2500 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.lcp}ms
             </span>
@@ -201,7 +201,7 @@ export const PerformanceMonitor = () => {
         )}
         {metrics.fid && ("
           <div className="flex justify-between">
-            <span>FID:</span>'
+            <span>FID:</span>
             <span className={metrics.fid <= 100 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.fid}ms
             </span>
@@ -209,7 +209,7 @@ export const PerformanceMonitor = () => {
         )}
         {metrics.cls && ("
           <div className="flex justify-between">
-            <span>CLS:</span>'
+            <span>CLS:</span>
             <span className={metrics.cls <= 0.1 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.cls}
             </span>
@@ -217,7 +217,7 @@ export const PerformanceMonitor = () => {
         )}
         {metrics.ttfb && ("
           <div className="flex justify-between">
-            <span>TTFB:</span>'
+            <span>TTFB:</span>
             <span className={metrics.ttfb <= 800 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.ttfb}ms
             </span>

@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
 
 const categories = [
@@ -97,7 +97,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,'
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -122,7 +122,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <motion.div "
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
@@ -168,7 +168,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
         >
           <Link"
-            to="/services""
+            to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
             View All Services"
@@ -182,7 +182,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Link "
-            to="/categories" "
+            to="/categories"
             className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
           >
             View All Categories"

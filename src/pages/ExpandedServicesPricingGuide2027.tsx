@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -81,7 +81,7 @@ import {
   const getCategoryIcon = (category: string)  => {
 
     switch (category) {
-'
+
       case 'Cybersecurity':;
       pricing = pricing.filter (p => ;
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
@@ -92,26 +92,26 @@ import {
   }, [selectedCategory, searchQuery]) ;
 
   const getCategoryIcon = (category: string) => {;
-    switch (category) {;'
+    switch (category) {;
       case 'Cybersecurity':;
-        return Shield;'
+        return Shield;
       case 'Data Analytics':;
-        return BarChart3;'
+        return BarChart3;
       case 'Cloud & DevOps':;
-        return Cloud;'
+        return Cloud;
       case 'IoT & Edge Computing':;
-        return IoT;'
+        return IoT;
       case 'Financial Technology':;
-        return FinTech;'
+        return FinTech;
       case 'Healthcare Technology':;
         return Healthcare;
       default:;
         return Rocket}
   };
-'
+
         return 'from-gray-500 to-slate-600'}
   };
-'
+
         return 'bg-gray-100 text-gray-800'}
   };
 
@@ -125,8 +125,8 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
-        title="Expanded Services Pricing Guide 2027 - Zion Tech Group""
-        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories.""
+        title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
+        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
       />
 
@@ -251,7 +251,7 @@ import {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search pricing..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -311,14 +311,14 @@ import {
           </p>"
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
               <Mail className="w-5 h-5" />
               <span>Get Custom Quote</span>
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
               <Phone className="w-5 h-5" />

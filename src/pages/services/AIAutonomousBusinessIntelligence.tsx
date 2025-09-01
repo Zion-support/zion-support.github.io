@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { Brain,
   TrendingUp,
@@ -194,7 +194,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Autonomous Business Intelligence | Zion Tech Group""
+        title="AI Autonomous Business Intelligence | Zion Tech Group"
         description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
       />
       

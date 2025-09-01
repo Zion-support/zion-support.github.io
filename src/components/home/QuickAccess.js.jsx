@@ -6,51 +6,51 @@ import {
   Shield,
   Cloud,
   Database,
-  Users,'
+  Users,
   ArrowRight} from 'lucide-react';
 export const QuickAccess = () => {
   const quickLinks = [
     {
-'
-      title: 'AI Solutions','
+
+      title: 'AI Solutions',
       description: 'Transform your business with AI',
-      icon: Brain,'
-      href: '/services/ai-solutions','
+      icon: Brain,
+      href: '/services/ai-solutions',
       color: 'from-purple-500 to-pink-500'},
     {
-'
-      title: 'Cybersecurity','
+
+      title: 'Cybersecurity',
       description: 'Protect your digital assets',
-      icon: Shield,'
-      href: '/services/cybersecurity','
+      icon: Shield,
+      href: '/services/cybersecurity',
       color: 'from-red-500 to-orange-500'},
     {
-'
-      title: 'Cloud & DevOps','
+
+      title: 'Cloud & DevOps',
       description: 'Scale your infrastructure',
-      icon: Cloud,'
-      href: '/services/cloud-devops','
+      icon: Cloud,
+      href: '/services/cloud-devops',
       color: 'from-blue-500 to-cyan-500'},
     {
-'
-      title: 'Data Analytics','
+
+      title: 'Data Analytics',
       description: 'Unlock insights from data',
-      icon: Database,'
-      href: '/solutions/ai-business-intelligence','
+      icon: Database,
+      href: '/solutions/ai-business-intelligence',
       color: 'from-green-500 to-teal-500'},
     {
-'
-      title: 'Team & Talent','
+
+      title: 'Team & Talent',
       description: 'Find expert professionals',
-      icon: Users,'
-      href: '/team','
+      icon: Users,
+      href: '/team',
       color: 'from-indigo-500 to-purple-500'},
     {
-'
-      title: 'Get Started','
+
+      title: 'Get Started',
       description: 'Start your project today',
-      icon: Zap,'
-      href: '/contact','
+      icon: Zap,
+      href: '/contact',
       color: 'from-yellow-500 to-orange-500'},
   ];
   return()
@@ -94,7 +94,7 @@ export const QuickAccess = () => {
 "
         <div className="text-center mt-12">
           <a"
-            href="/services""
+            href="/services"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             View All Services"

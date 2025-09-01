@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -49,11 +49,11 @@ import {
   PieChart,
   Activity,
   Gauge,
-  ShieldCheck,'
+  ShieldCheck,
   X} from 'lucide-react';
 
 // Import our existing service data'
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';'
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices } from '../data/comprehensiveServices';
 
 interface Service {
@@ -89,9 +89,9 @@ interface Service {
 }
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('
     'name'
   );
@@ -182,16 +182,16 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
     // Sort services
     switch (sortBy) {
-'
+
       case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;'
+        break;
       case 'price':
         filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
-        break;'
+        break;
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
-        break;'
+        break;
       case 'newest':
         filtered.sort()
           (a, b) =>
@@ -206,25 +206,25 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   const getCategoryIcon = (category: string) => {
 
     switch (category) {
-'
+
       case 'Artificial Intelligence':
-        return <Brain className="w-6 h-6" />;'
+        return <Brain className="w-6 h-6" />;
       case 'Quantum Computing':"
-        return <Atom className="w-6 h-6" />;'
+        return <Atom className="w-6 h-6" />;
       case 'Neuromorphic Computing':"
-        return <Cpu className="w-6 h-6" />;'
+        return <Cpu className="w-6 h-6" />;
       case 'Synthetic Biology':"
-        return <Heart className="w-6 h-6" />;'
+        return <Heart className="w-6 h-6" />;
       case 'Blockchain':"
-        return <Blockchain className="w-6 h-6" />;'
+        return <Blockchain className="w-6 h-6" />;
       case 'Cybersecurity':"
-        return <Shield className="w-6 h-6" />;'
+        return <Shield className="w-6 h-6" />;
       case 'Internet of Things':"
-        return <Network className="w-6 h-6" />;'
+        return <Network className="w-6 h-6" />;
       case 'Metaverse':"
-        return <Globe className="w-6 h-6" />;'
+        return <Globe className="w-6 h-6" />;
       case 'Robotics':"
-        return <Factory className="w-6 h-6" />;'
+        return <Factory className="w-6 h-6" />;
       case 'Space Technology':"
         return <Satellite className="w-6 h-6" />;
       default:"
@@ -235,13 +235,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   const getStatusColor = (status: string) => {
 
     switch (status.toLowerCase()) {
-'
+
       case 'live':'
-        return 'bg-green-100 text-green-800';'
+        return 'bg-green-100 text-green-800';
       case 'beta':'
-        return 'bg-blue-100 text-blue-800';'
+        return 'bg-blue-100 text-blue-800';
       case 'coming soon':'
-        return 'bg-yellow-100 text-yellow-800';'
+        return 'bg-yellow-100 text-yellow-800';
       case 'preview':'
         return 'bg-purple-100 text-purple-800';
       default:'
@@ -300,7 +300,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
@@ -677,10 +677,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>"
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
+            <p>
               Visit us at:{' '}
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="text-purple-400 hover:underline"
               >
                 https://ziontechgroup.com

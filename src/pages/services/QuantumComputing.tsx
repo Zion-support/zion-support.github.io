@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -23,7 +23,7 @@ import {
   Server,
   CircuitBoard,
   Microchip'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function QuantumComputing(...args: []):  {
@@ -94,7 +94,7 @@ export default function QuantumComputing(...args: []):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO "
-        title="Quantum Computing Services - Zion Tech Group""
+        title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for complex computational problems. AI integration, quantum security, and cloud quantum services."
       />
       
@@ -152,14 +152,14 @@ export default function QuantumComputing(...args: []):  {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
               >
                 Get Started"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
                 View All Services
@@ -294,14 +294,14 @@ export default function QuantumComputing(...args: []):  {
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
               >
                 Start Your Quantum Journey"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
                 Explore All Services

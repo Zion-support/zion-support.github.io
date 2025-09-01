@@ -16,23 +16,23 @@ var __rest =
           t[p[i]] = s[p[i]];
       }
     return t;
-  };'
-import { jsx as _jsx } from 'react/jsx-runtime';'
-import React from 'react';'
+  };
+import { jsx as _jsx } from 'react/jsx-runtime';
+import React from 'react';
 import { cn } from '@/lib/utils';
 const Tabs = React.forwardRef((_a, ref) => {
 
-  var { className } = _a,'
+  var { className } = _a,
     props = __rest(_a, ['className']);
   return _jsx('
-    'div','
+    'div',
     Object.assign({ ref: ref, className: cn('', className) }, props)
   );
-});'
+});
 Tabs.displayName = 'Tabs';
 const TabsList = React.forwardRef((_a, ref) => {
 
-  var { className } = _a,'
+  var { className } = _a,
     props = __rest(_a, ['className']);
   return _jsx('
     'div',
@@ -45,11 +45,11 @@ const TabsList = React.forwardRef((_a, ref) => {
       props
     )
   );
-});'
+});
 TabsList.displayName = 'TabsList';
 const TabsTrigger = React.forwardRef((_a, ref) => {
 
-  var { className } = _a,'
+  var { className } = _a,
     props = __rest(_a, ['className']);
   return _jsx('
     'button',
@@ -62,11 +62,11 @@ const TabsTrigger = React.forwardRef((_a, ref) => {
       props
     )
   );
-});'
+});
 TabsTrigger.displayName = 'TabsTrigger';
 const TabsContent = React.forwardRef((_a, ref) => {
 
-  var { className } = _a,'
+  var { className } = _a,
     props = __rest(_a, ['className']);
   return _jsx('
     'div',
@@ -79,7 +79,6 @@ const TabsContent = React.forwardRef((_a, ref) => {
       props
     )
   );
-});'
+});
 TabsContent.displayName = 'TabsContent';
 export { Tabs, TabsList, TabsTrigger, TabsContent };
-'

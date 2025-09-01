@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';'
-import { useTranslation } from 'react-i18next';'
-import { useForm } from 'react-hook-form';'
-import { useNavigate } from 'react-router-dom';'
-import { safeStorage } from '@/utils/safeStorage';'
-import { getCartKey } from '@/utils/cartUtils';'
-import { getStripe } from '@/utils/getStripe';'
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { safeStorage } from '@/utils/safeStorage';
+import { getCartKey } from '@/utils/cartUtils';
+import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 export default function CheckoutPage() {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
     const form = useForm({
-'
+
         defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
     useEffect(() => {
         if (sku) {
@@ -33,7 +33,7 @@ export default function CheckoutPage() {
 
         try {
             const result = await res.json();
-            if (!res.ok)'
+            if (!res.ok)
                 throw new Error(result.error || 'Failed');
             const stripe = await getStripe();
             if (stripe && result.clientSecret) {
@@ -41,7 +41,7 @@ export default function CheckoutPage() {
                 const payment = await stripe.confirmCardPayment(result.clientSecret, {
 
                     payment_method: {
-'
+
                         card: { token: 'tok_visa' },
                         billing_details: { name: data.name, email: data.email }}});
                 if (payment.error)
@@ -49,27 +49,27 @@ export default function CheckoutPage() {
                 if (user?.id) {
 
                     try {
-'
+
                         await fetch('/api/points/add', {
-'
-                            method: 'POST','
+
+                            method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),'
+                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
                         // // // // // // // // console.error('Failed to add points', e);
                     }
                         }) }
                     catch (e) {
-'
+
                         // console.error('Failed to add points', e)}
                 }
-                safeStorage.removeItem(getCartKey(user?.id));'
+                safeStorage.removeItem(getCartKey(user?.id));
             // // // // // // // // console.error('Payment failed', err);
         }
                 router (`/orders/${result.id}`) ;
             }
         }
         catch (err) {
-'
+
             // console.error('Payment failed', err)}
     };
     return (<div className="max-w-2xl mx-auto p-6">"

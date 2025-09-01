@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousLogistics = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousLogistics = () => {
       <Helmet>
         <title>AI Autonomous Logistics Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous logistics platform that optimizes supply chains, automates warehouse operations, and provides intelligent logistics management with 24/7 efficiency."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI logistics, autonomous logistics, supply chain optimization, warehouse automation, AI logistics management"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-logistics"
         />
       </Helmet>
@@ -205,13 +205,13 @@ const AIAutonomousLogistics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Warehouse Management','
-                'Transportation','
-                'Inventory Control','
-                'Order Fulfillment','
-                'Supply Chain Planning','
-                'Last Mile Delivery','
-                'Returns Management','
+                'Warehouse Management',
+                'Transportation',
+                'Inventory Control',
+                'Order Fulfillment',
+                'Supply Chain Planning',
+                'Last Mile Delivery',
+                'Returns Management',
                 'Supplier Management',
               ].map(area => (
                 <div

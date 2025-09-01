@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain const AIBusinessIntelligence = () => { return (<> <Helmet> <title>AI Business Intelligence | Zion Tech Group</title> <meta name="description" content="Transform your business with AI-powered business intelligence. Get real-time insights, predictive analytics, and intelligent decision-making capabilities."/> <meta name="keywords" content="AI business intelligence, business analytics, predictive analytics, data insights, Zion Tech Group"/> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"> {/* Hero Section */ }"
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -120,13 +120,13 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
                 <h3 className="text-2xl font-bold text-white mb-6">Data Analytics</h3>"
                 <div className="space-y-4">
                   {['
-            'Advanced Statistical Analysis','
-            'Machine Learning Models','
-            'Natural Language Processing','
-            'Pattern Recognition','
-            'Anomaly Detection','
-            'Trend Forecasting','
-            'Correlation Analysis','
+            'Advanced Statistical Analysis',
+            'Machine Learning Models',
+            'Natural Language Processing',
+            'Pattern Recognition',
+            'Anomaly Detection',
+            'Trend Forecasting',
+            'Correlation Analysis',
             'Predictive Modeling'"
         ].map((capability, index) => (<div key={index} className="flex items-center space-x-3">"
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0"/>"
@@ -139,13 +139,13 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
                 <h3 className="text-2xl font-bold text-white mb-6">Business Intelligence</h3>"
                 <div className="space-y-4">
                   {['
-            'Interactive Dashboards','
-            'Custom Report Builder','
-            'Real-time Data Streaming','
-            'Multi-source Data Integration','
-            'Automated Insights Generation','
-            'Collaborative Analytics','
-            'Mobile BI Access','
+            'Interactive Dashboards',
+            'Custom Report Builder',
+            'Real-time Data Streaming',
+            'Multi-source Data Integration',
+            'Automated Insights Generation',
+            'Collaborative Analytics',
+            'Mobile BI Access',
             'Advanced Visualization'"
         ].map((capability, index) => (<div key={index} className="flex items-center space-x-3">"
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0"/>"

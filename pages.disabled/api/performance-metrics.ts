@@ -78,8 +78,7 @@ export default function Performance-metricsPage() {
         await fetch(process.env['ANALYTICS_ENDPOINT'], {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
+            'Content-Type': 'application/json',Authorization': `Bearer ${process.env['ANALYTICS_API_KEY']}`
           },
           body: JSON.stringify({
             type: 'performance',
@@ -155,7 +154,7 @@ export default function Performance-metricsPage() {
       });
     }
   } else {
-    res.setHeader('Allow', ['POST', 'GET']);
+    res.setHeader('Allow', ['POST',GET']);
     res.status(405).json({ 
       success: false, 
       message: `Method ${req.method} Not Allowed` 

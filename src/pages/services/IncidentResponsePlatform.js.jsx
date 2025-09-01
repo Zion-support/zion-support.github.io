@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
 
@@ -12,30 +12,30 @@ import {
   Clock,
   Eye,
   Target,
-  ArrowRight,'
+  ArrowRight,
   Activity} from 'lucide-react';
 const IncidentResponsePlatform = () => {
   const features = [
     {
-'
+
       title: 'AI-Powered Threat Detection',
       description:'
         'Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives',
       icon: <Eye className="w-6 h-6" />},
     {
-'
+
       title: 'Automated Response Workflows',
       description:'
         'Intelligent automation handles routine incidents while escalating critical threats to human analysts',"
       icon: <Zap className="w-6 h-6" />},
     {
-'
+
       title: 'Real-time Alerting & Notifications',
       description:'
         'Instant notifications across multiple channels with customizable escalation paths and response teams',"
       icon: <AlertTriangle className="w-6 h-6" />},
     {
-'
+
       title: 'Incident Timeline Tracking',
       description:'
         'Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance',"
@@ -43,90 +43,90 @@ const IncidentResponsePlatform = () => {
   ];
   const benefits = [
     {
-'
-      metric: '70%','
+
+      metric: '70%',
       description: 'Reduction in response time',"
       icon: <Clock className="w-5 h-5" />},
     {
-'
-      metric: '45%','
+
+      metric: '45%',
       description: 'Improvement in resolution quality',"
       icon: <TrendingUp className="w-5 h-5" />},
     {
-'
-      metric: '24/7','
+
+      metric: '24/7',
       description: 'Automated monitoring',"
       icon: <Activity className="w-5 h-5" />},
     {
-'
-      metric: '90%','
+
+      metric: '90%',
       description: 'Compliance assurance',"
       icon: <Shield className="w-5 h-5" />},
   ];
   const pricingPlans = [
     {
-'
-      name: 'Professional','
-      price: '$299','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for growing security teams',
       features: ['
-        'Up to 50 users','
-        'Basic threat detection','
-        'Standard response workflows','
-        'Email & Slack notifications','
-        'Basic reporting','
+        'Up to 50 users',
+        'Basic threat detection',
+        'Standard response workflows',
+        'Email & Slack notifications',
+        'Basic reporting',
         'Email support',
       ],
       popular: false},
     {
-'
-      name: 'Enterprise','
-      price: '$599','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for large organizations',
       features: ['
-        'Unlimited users','
-        'Advanced AI detection','
-        'Custom response workflows','
-        'Multi-channel notifications','
-        'Advanced analytics','
-        'Priority support','
+        'Unlimited users',
+        'Advanced AI detection',
+        'Custom response workflows',
+        'Multi-channel notifications',
+        'Advanced analytics',
+        'Priority support',
         'Compliance reporting',
       ],
       popular: true},
     {
-'
-      name: 'Custom','
-      price: 'Custom','
-      period: '','
+
+      name: 'Custom',
+      price: 'Custom',
+      period: '',
       description: 'For complex enterprise needs',
       features: ['
-        'Custom integrations','
-        'Dedicated support team','
-        'Custom training','
-        'SLA guarantees','
-        'On-premise options','
+        'Custom integrations',
+        'Dedicated support team',
+        'Custom training',
+        'SLA guarantees',
+        'On-premise options',
         'Custom development',
       ],
       popular: false},
   ];
   const integrations = ['
-    'SIEM Systems','
-    'EDR Solutions','
-    'Firewall','
-    'IDS/IPS','
-    'Slack','
-    'Teams','
-    'Jira','
+    'SIEM Systems',
+    'EDR Solutions',
+    'Firewall',
+    'IDS/IPS',
+    'Slack',
+    'Teams',
+    'Jira',
     'ServiceNow',
   ];
   const useCases = ['
-    'Security incident management','
-    'IT operations','
-    'Compliance management','
-    'Team collaboration','
-    'Audit preparation','
+    'Security incident management',
+    'IT operations',
+    'Compliance management',
+    'Team collaboration',
+    'Audit preparation',
     'Risk mitigation',
   ];
   return()
@@ -137,23 +137,23 @@ const IncidentResponsePlatform = () => {
           Security
         </title>
         <meta"
-          name="description""
+          name="description"
           content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."
         />
         <meta"
-          property="og:title""
+          property="og:title"
           content="Intelligent Incident Response Platform — Zion Tech Group"
         />
         <meta"
-          property="og:description""
+          property="og:description"
           content="AI-powered incident response platform with automated workflows and real-time threat detection."
         />
         <meta"
-          property="og:url""
+          property="og:url"
           content="https://ziontechgroup.com/services/incident-response-platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/services/incident-response-platform"
         />
       </Helmet>
@@ -177,7 +177,7 @@ const IncidentResponsePlatform = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               Intelligent"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
                 {' '}
                 Incident Response Platform
               </span>
@@ -219,13 +219,13 @@ const IncidentResponsePlatform = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
               >
                 Start Free Trial
               </Link>
               <Link"
-                to="/enhanced-services""
+                to="/enhanced-services"
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
                 View All Services
@@ -284,7 +284,7 @@ const IncidentResponsePlatform = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Flexible Security Solutions
               </h2>"
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Choose the security level that matches your organization's needs
               </p>
             </motion.div>
@@ -429,14 +429,14 @@ const IncidentResponsePlatform = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
               >
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
                 Call: +1 302 464 0950
@@ -480,10 +480,10 @@ const IncidentResponsePlatform = () => {
             >
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>'
+              <p>
                 Website:{' '}
                 <a"
-                  href="https://ziontechgroup.com""
+                  href="https://ziontechgroup.com"
                   className="text-red-400 hover:text-red-300"
                 >
                   https://ziontechgroup.com

@@ -1,72 +1,72 @@
-import React from 'react';'
-import SEO from '../../components/SEO';'
+import React from 'react';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI Recruitment','
+      icon: Brain,
+      title: 'AI Recruitment',
       description: 'Intelligent candidate screening and matching'
     },
     {
 
-      icon: Users,'
-      title: 'Talent Management','
+      icon: Users,
+      title: 'Talent Management',
       description: 'Comprehensive employee lifecycle management'
     },
     {
 
-      icon: Target,'
-      title: 'Performance Analytics','
+      icon: Target,
+      title: 'Performance Analytics',
       description: 'Data-driven insights for better decisions';
     },;
     {;
-      icon: Shield,;'
-      title: 'Compliance Automation',;'
+      icon: Shield,;
+      title: 'Compliance Automation',;
       description: 'Automated HR compliance and reporting';
     };
   ];
 
   const modules = [
     {
-'
-      title: 'Recruitment & Onboarding','
-      description: 'Streamlined hiring process with AI assistance','
+
+      title: 'Recruitment & Onboarding',
+      description: 'Streamlined hiring process with AI assistance',
       icon: '🎯'
     },
     {
-'
-      title: 'Performance Management','
-      description: '360-degree feedback and goal tracking','
+
+      title: 'Performance Management',
+      description: '360-degree feedback and goal tracking',
       icon: '📊'
     },
     {
-'
-      title: 'Learning & Development','
-      description: 'Personalized training and skill development','
+
+      title: 'Learning & Development',
+      description: 'Personalized training and skill development',
       icon: '🎓';
     },;
-    {;'
-      title: 'Employee Engagement',;'
-      description: 'Monitor and improve workplace satisfaction',;'
+    {;
+      title: 'Employee Engagement',;
+      description: 'Monitor and improve workplace satisfaction',;
       icon: '❤️';
     };
   ];
 
-  const benefits = [;'
-    'Reduce time-to-hire by 50% with AI screening',;'
-    'Improve candidate quality and retention rates',;'
-    'Automate routine HR tasks and workflows',;'
-    'Data-driven insights for better decisions',;'
-    'Enhanced employee experience and engagement',;'
+  const benefits = [;
+    'Reduce time-to-hire by 50% with AI screening',;
+    'Improve candidate quality and retention rates',;
+    'Automate routine HR tasks and workflows',;
+    'Data-driven insights for better decisions',;
+    'Enhanced employee experience and engagement',;
     'Compliance automation and risk reduction';
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI HR Platform Services - Zion Tech Group""
+        title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
       />
 

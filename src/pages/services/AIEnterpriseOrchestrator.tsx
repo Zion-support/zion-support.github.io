@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   Zap, 
@@ -181,7 +181,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Enterprise Orchestrator - Zion Tech Group""
+        title="AI Enterprise Orchestrator - Zion Tech Group"
         description="Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation."
       />
 

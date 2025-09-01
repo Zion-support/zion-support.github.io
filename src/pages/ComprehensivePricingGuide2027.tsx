@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -59,10 +59,10 @@ import {
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3'
-} from 'lucide-react';'
-import { SEO } from '../components/SEO';'
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';'
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';'
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
 import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
 
   const serviceCategories = [
@@ -383,7 +383,7 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
                       transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}`
                       className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
-'
+
                         service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'`
                       }`}
                     >

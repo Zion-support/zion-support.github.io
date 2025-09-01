@@ -16,84 +16,84 @@ import {
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
   const features = ['
-    'AI-powered financial forecasting and modeling','
-    'Real-time market data analysis and insights','
-    'Predictive risk assessment and management','
-    'Portfolio optimization and rebalancing','
-    'Automated financial reporting and compliance','
-    'Cash flow prediction and optimization','
-    'Investment opportunity identification','
-    'Regulatory compliance monitoring','
-    'Multi-currency and multi-asset support','
+    'AI-powered financial forecasting and modeling',
+    'Real-time market data analysis and insights',
+    'Predictive risk assessment and management',
+    'Portfolio optimization and rebalancing',
+    'Automated financial reporting and compliance',
+    'Cash flow prediction and optimization',
+    'Investment opportunity identification',
+    'Regulatory compliance monitoring',
+    'Multi-currency and multi-asset support',
     'Executive dashboard with KPI tracking',
   ];
 
   const benefits = ['
-    'Improve investment returns by 15-35%','
-    'Reduce financial risk by 40-60%','
-    'Automate 80% of financial analysis tasks','
-    'Real-time market insights and alerts','
-    'Data-driven investment decisions','
+    'Improve investment returns by 15-35%',
+    'Reduce financial risk by 40-60%',
+    'Automate 80% of financial analysis tasks',
+    'Real-time market insights and alerts',
+    'Data-driven investment decisions',
     'Comprehensive compliance coverage',
   ];
 
   const useCases = ['
-    'Investment portfolio management','
-    'Corporate financial planning','
-    'Risk management and compliance','
-    'Trading strategy optimization','
-    'Mergers and acquisitions analysis','
+    'Investment portfolio management',
+    'Corporate financial planning',
+    'Risk management and compliance',
+    'Trading strategy optimization',
+    'Mergers and acquisitions analysis',
     'Financial market research',
   ];
 
   const tiers = [
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$2,999/mo',
       details: ['
-        'Up to 10 portfolios','
-        'Basic AI insights','
-        'Email support','
+        'Up to 10 portfolios',
+        'Basic AI insights',
+        'Email support',
         'Standard market data',
       ]},
     {
-'
-      name: 'Institutional','
+
+      name: 'Institutional',
       price: '$7,999/mo',
       details: ['
-        'Up to 100 portfolios','
-        'Advanced AI analytics','
-        'Priority support','
+        'Up to 100 portfolios',
+        'Advanced AI analytics',
+        'Priority support',
         'Premium market data',
       ]},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$19,999/mo',
       details: ['
-        'Unlimited portfolios','
-        'Custom AI models','
-        'Dedicated support','
+        'Unlimited portfolios',
+        'Custom AI models',
+        'Dedicated support',
         'White-label solution',
       ]},
   ];
 
   const financialTools = ['
-    'Portfolio Analytics','
-    'Risk Management','
-    'Performance Attribution','
-    'Asset Allocation','
-    'Scenario Analysis','
+    'Portfolio Analytics',
+    'Risk Management',
+    'Performance Attribution',
+    'Asset Allocation',
+    'Scenario Analysis',
     'Compliance Reporting',
   ];
 
   const aiCapabilities = ['
-    'Predictive modeling','
-    'Risk assessment','
-    'Market analysis','
-    'Portfolio optimization','
-    'Anomaly detection','
+    'Predictive modeling',
+    'Risk assessment',
+    'Market analysis',
+    'Portfolio optimization',
+    'Anomaly detection',
     'Trend forecasting',
   ];
 
@@ -158,15 +158,15 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">
               <a"
-                href="/pricing""
+                href="/pricing"
                 className="px-5 py-3 bg-green-600/10 text-green-600 rounded-lg hover:bg-green-600/20 transition-colors inline-flex items-center"
               >"
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noreferrer"
                 className="px-5 py-3 border border-green-600 text-green-600 rounded-lg inline-flex items-center"
               >"
                 Learn More <ExternalLink className="w-4 h-4 ml-2" />
@@ -322,24 +322,24 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg"
             >"
               <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg"
             >"
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>"
-          <div className="mt-4 text-sm text-zion-slate-light">'
+          <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="text-green-600 hover:underline"
             >
               https://ziontechgroup.com

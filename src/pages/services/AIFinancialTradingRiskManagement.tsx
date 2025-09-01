@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { TrendingUp, 
   Shield, 
@@ -149,9 +149,9 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
   return()
     <>
       <SEO "
-        title = "AI Financial Trading & Risk Management - Zion Tech Group""
-        description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks.""
-        canonical="/services/ai-financial-trading-risk-management""
+        title = "AI Financial Trading & Risk Management - Zion Tech Group"
+        description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
+        canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
       />
 "

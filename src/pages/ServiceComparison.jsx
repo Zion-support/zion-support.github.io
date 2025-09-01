@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison";"
 import { Button } from "../components/ui/button";"
@@ -8,33 +8,33 @@ const ServiceComparison = () => {
     const features = [
         {
 "
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,'
-            title: 'Advanced Filtering','
+            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
+            title: 'Advanced Filtering',
             description: 'Filter services by category, complexity, price range, and technology stack'
         },
         {
 "
-            icon: <Target className="w-6 h-6 text-zion-purple"/>,'
-            title: 'Smart Comparison','
+            icon: <Target className="w-6 h-6 text-zion-purple"/>,
+            title: 'Smart Comparison',
             description: 'Compare multiple services side-by-side with detailed feature analysis'
         },
         {
 "
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,'
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
             description: 'Real-time ratings and popularity indicators to guide your decision'
         },
         {
 "
-            icon: <Award className="w-6 h-6 text-zion-orange"/>,'
-            title: 'Expert Insights','
+            icon: <Award className="w-6 h-6 text-zion-orange"/>,
+            title: 'Expert Insights',
             description: 'Get detailed insights into each service\'s capabilities and target audience'
 
     ];
     const benefits = ['
-        'Make informed decisions with comprehensive service comparisons','
-        'Find the perfect service tier for your business needs and budget','
-        'Understand complexity levels and implementation requirements','
-        'Compare pricing, features, and benefits across different solutions','
+        'Make informed decisions with comprehensive service comparisons',
+        'Find the perfect service tier for your business needs and budget',
+        'Understand complexity levels and implementation requirements',
+        'Compare pricing, features, and benefits across different solutions',
         'Get personalized recommendations based on your requirements'
     ];"
     return (<div className="min-h-screen bg-zion-blue-dark">
@@ -76,8 +76,8 @@ const ServiceComparison = () => {
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help','
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',
   '_blank')
 
 
@@ -279,8 +279,8 @@ const ServiceComparison = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help','
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help',
   '_blank')
 
 
@@ -293,8 +293,8 @@ const ServiceComparison = () => {
                 Get Expert Consultation
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('tel:+13024640950','
+
+  () => window.open('tel:+13024640950',
   '_blank')
 
 

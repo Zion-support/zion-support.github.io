@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousDiscovery = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousDiscovery = () => {
       <Helmet>
         <title>AI Autonomous Discovery Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous discovery platform that continuously explores data, uncovers patterns, and reveals insights with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI discovery, autonomous discovery, pattern discovery, insight revelation, autonomous operations, AI discovery platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-discovery"
         />
       </Helmet>
@@ -181,13 +181,13 @@ const AIAutonomousDiscovery = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Pattern Discovery','
-                'Anomaly Detection','
-                'Trend Discovery','
-                'Relationship Discovery','
-                'Insight Discovery','
-                'Knowledge Discovery','
-                'Data Discovery','
+                'Pattern Discovery',
+                'Anomaly Detection',
+                'Trend Discovery',
+                'Relationship Discovery',
+                'Insight Discovery',
+                'Knowledge Discovery',
+                'Data Discovery',
                 'Information Discovery',
               ].map(type => (
                 <div

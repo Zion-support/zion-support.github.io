@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -51,7 +51,7 @@ import {
   Ship,
   Network,
   Database,
-  Cloud,'
+  Cloud,
   Eye} from 'lucide-react.ts';
 
 export default function QuantumComputing(...args: any[]): any {
@@ -59,96 +59,96 @@ export default function QuantumComputing(...args: any[]): any {
   const features = [
     {
 
-      icon: Atom,'
+      icon: Atom,
       title: 'Quantum Supremacy',
       description:'
-        'Achieve computational power beyond classical computing limits','
+        'Achieve computational power beyond classical computing limits',
       color: 'from-purple-500 to-pink-500'},
     {
 
-      icon: Cpu,'
-      title: 'Quantum Algorithms','
-      description: 'Optimized algorithms for complex problem-solving','
+      icon: Cpu,
+      title: 'Quantum Algorithms',
+      description: 'Optimized algorithms for complex problem-solving',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Zap,'
-      title: 'Quantum Speedup','
-      description: 'Exponential performance improvements for specific tasks','
+      icon: Zap,
+      title: 'Quantum Speedup',
+      description: 'Exponential performance improvements for specific tasks',
       color: 'from-yellow-500 to-orange-500'},
     {
 
-      icon: Brain,'
-      title: 'AI Enhancement','
-      description: 'Quantum machine learning and neural networks','
+      icon: Brain,
+      title: 'AI Enhancement',
+      description: 'Quantum machine learning and neural networks',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: Shield,'
-      title: 'Quantum Security','
-      description: 'Unbreakable encryption and secure communications','
+      icon: Shield,
+      title: 'Quantum Security',
+      description: 'Unbreakable encryption and secure communications',
       color: 'from-red-500 to-pink-500'},
     {
 
-      icon: Target,'
-      title: 'Precision Computing','
-      description: 'Ultra-accurate simulations and calculations','
+      icon: Target,
+      title: 'Precision Computing',
+      description: 'Ultra-accurate simulations and calculations',
       color: 'from-indigo-500 to-blue-500'},
   ];
 
   const applications = [
     {
-'
-      title: 'Cryptography','
+
+      title: 'Cryptography',
       description: 'Quantum-resistant encryption and secure communications',
       icon: Lock,
       benefits: ['
-        'Post-quantum cryptography','
-        'Quantum key distribution','
+        'Post-quantum cryptography',
+        'Quantum key distribution',
         'Secure protocols',
       ]},
     {
-'
-      title: 'Drug Discovery','
+
+      title: 'Drug Discovery',
       description: 'Molecular modeling and pharmaceutical research',
       icon: Activity,
       benefits: ['
-        'Molecular simulation','
-        'Drug optimization','
+        'Molecular simulation',
+        'Drug optimization',
         'Protein folding',
       ]},
     {
-'
-      title: 'Financial Modeling','
+
+      title: 'Financial Modeling',
       description: 'Portfolio optimization and risk assessment',
       icon: TrendingUp,
       benefits: ['
-        'Risk analysis','
-        'Portfolio optimization','
+        'Risk analysis',
+        'Portfolio optimization',
         'Market simulation',
       ]},
     {
-'
-      title: 'Climate Science','
+
+      title: 'Climate Science',
       description: 'Climate modeling and environmental prediction',
       icon: Globe,
       benefits: ['
-        'Weather forecasting','
-        'Climate modeling','
+        'Weather forecasting',
+        'Climate modeling',
         'Environmental analysis',
       ]},
   ];
 
   const technologies = ['
-    'Superconducting Qubits','
-    'Trapped Ions','
-    'Topological Qubits','
-    'Quantum Error Correction','
-    'Quantum Gates','
-    'Quantum Circuits','
-    'Quantum Memory','
-    'Quantum Networks','
-    'Quantum Sensors','
+    'Superconducting Qubits',
+    'Trapped Ions',
+    'Topological Qubits',
+    'Quantum Error Correction',
+    'Quantum Gates',
+    'Quantum Circuits',
+    'Quantum Memory',
+    'Quantum Networks',
+    'Quantum Sensors',
     'Quantum Metrology',
   ];
 
@@ -166,21 +166,21 @@ export default function QuantumComputing(...args: any[]): any {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Harness the power of quantum mechanics to solve the world's most
               complex problems. Experience computational capabilities that were
               once thought impossible.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
@@ -344,14 +344,14 @@ export default function QuantumComputing(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"

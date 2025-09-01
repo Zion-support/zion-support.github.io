@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousTrading = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousTrading = () => {
       <Helmet>
         <title>AI Autonomous Trading Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced AI capabilities and 24/7 market monitoring."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI trading, autonomous trading, algorithmic trading, AI trading bot, automated trading, AI investment"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-trading"
         />
       </Helmet>
@@ -196,13 +196,13 @@ const AIAutonomousTrading = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Stocks','
-                'Forex','
-                'Cryptocurrency','
-                'Commodities','
-                'Options','
-                'Futures','
-                'ETFs','
+                'Stocks',
+                'Forex',
+                'Cryptocurrency',
+                'Commodities',
+                'Options',
+                'Futures',
+                'ETFs',
                 'Bonds',
               ].map(asset => (
                 <div

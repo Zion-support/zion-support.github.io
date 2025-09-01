@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -17,89 +17,89 @@ import {
   Share'
  } from 'lucide-react';
 
-const PrivacyPolicy = () => {;'
+const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
     {
-'
-      id: 'overview','
+
+      id: 'overview',
       title: 'Overview',
       icon: Eye,
       content: `Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.`
     },
     {
-'
-      id: 'information-collection','
+
+      id: 'information-collection',
       title: 'Information We Collect',
       icon: Database,`
       content: `We collect information you provide directly to us, such as when you create an account, use our services, or contact us. This may include your name, email address, phone number, company information, and any other information you choose to provide.`
     },
     {
-'
-      id: 'usage-information','
+
+      id: 'usage-information',
       title: 'How We Use Your Information',
       icon: Users,`
       content: `We use the information we collect to provide, maintain, and improve our services, communicate with you, process transactions, and ensure the security of our platform.`
     },
     {
-'
-      id: 'information-sharing','
+
+      id: 'information-sharing',
       title: 'Information Sharing and Disclosure',
       icon: Globe,`
       content: `We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or as required by law.`
     },
     {
-'
-      id: 'data-security','
+
+      id: 'data-security',
       title: 'Data Security',
       icon: Lock,`
       content: `We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.`
     },
     {
-'
-      id: 'your-rights','
+
+      id: 'your-rights',
       title: 'Your Rights and Choices',
       icon: CheckCircle,`
       content: `You have the right to access, correct, or delete your personal information. You can also opt out of certain communications and control how your information is used.`
     },
     {
-'
-      id: 'cookies','
+
+      id: 'cookies',
       title: 'Cookies and Tracking Technologies',
       icon: Eye,`
       content: `We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and provide personalized content and advertisements.`
     },
     {
-'
-      id: 'third-party','
+
+      id: 'third-party',
       title: 'Third-Party Services',
       icon: ExternalLink,`
       content: `Our services may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these third parties.`
     },
     {
-'
-      id: 'international','
+
+      id: 'international',
       title: 'International Data Transfers',
       icon: Globe,`
       content: `Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.`
     },
     {
-'
-      id: 'children','
+
+      id: 'children',
       title: 'Children\'s Privacy',
       icon: Users,`
       content: `Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.`
     },
     {
-'
-      id: 'changes','
+
+      id: 'changes',
       title: 'Changes to This Policy',
       icon: AlertTriangle,"`
       content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
     },;
-    {;'
-      id: 'contact',;'
+    {;
+      id: 'contact',;
       title: 'Contact Us',;
       icon: Mail,;`
       content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`;
@@ -108,67 +108,67 @@ const PrivacyPolicy = () => {;'
 
   const dataCategories = [
     {
-'
-      category: 'Personal Information','
-      examples: ['Name, email address, phone number', 'Company and job title', 'Billing and payment information'],'
-      purpose: 'Account management, service delivery, billing','
+
+      category: 'Personal Information',
+      examples: ['Name, email address, phone number',Company and job title',Billing and payment information'],
+      purpose: 'Account management, service delivery, billing',
       retention: 'As long as your account is active plus 7 years'
     },
     {
-'
-      category: 'Usage Data','
-      examples: ['Service usage patterns', 'Feature interactions', 'Performance metrics'],'
-      purpose: 'Service improvement, analytics, troubleshooting','
+
+      category: 'Usage Data',
+      examples: ['Service usage patterns',Feature interactions',Performance metrics'],
+      purpose: 'Service improvement, analytics, troubleshooting',
       retention: '2 years from collection'
     },
     {
-'
-      category: 'Technical Data','
-      examples: ['IP address, device information', 'Browser type and version', 'Operating system'],'
-      purpose: 'Security, fraud prevention, service optimization','
+
+      category: 'Technical Data',
+      examples: ['IP address, device information',Browser type and version',Operating system'],
+      purpose: 'Security, fraud prevention, service optimization',
       retention: '1 year from collection'
     },;
-    {;'
-      category: 'Communication Data',;'
-      examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],;'
-      purpose: 'Customer support, service improvement',;'
+    {;
+      category: 'Communication Data',;
+      examples: ['Support tickets, chat logs',Email communications',Feedback and surveys'],;
+      purpose: 'Customer support, service improvement',;
       retention: '3 years from last interaction';
     };
   ];
 
   const securityMeasures = [
     {
-'
-      measure: 'Encryption','
+
+      measure: 'Encryption',
       description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',
       icon: Lock
     },
     {
-'
-      measure: 'Access Controls','
+
+      measure: 'Access Controls',
       description: 'Strict access controls and authentication mechanisms to prevent unauthorized access',
       icon: Shield
     },
     {
-'
-      measure: 'Regular Audits','
+
+      measure: 'Regular Audits',
       description: 'Regular security audits and penetration testing to identify and address vulnerabilities',
       icon: CheckCircle
     },
     {
-'
-      measure: 'Data Backup','
+
+      measure: 'Data Backup',
       description: 'Regular data backups with disaster recovery procedures in place',
       icon: Database
     },
     {
-'
-      measure: 'Employee Training','
+
+      measure: 'Employee Training',
       description: 'Regular security training for all employees to ensure data protection awareness',
       icon: Users;
     },;
-    {;'
-      measure: 'Incident Response',;'
+    {;
+      measure: 'Incident Response',;
       description: 'Comprehensive incident response plan for handling security breaches',;
       icon: AlertTriangle;
     };
@@ -508,7 +508,7 @@ const PrivacyPolicy = () => {;'
                 </p>
               </div>
             </motion.div>
-'
+
             {/* Children's Privacy */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -518,7 +518,7 @@ const PrivacyPolicy = () => {;'
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <AlertTriangle className="w-8 h-8 text-zion-cyan" />'
+                <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
               </h2>
 "
@@ -1148,7 +1148,7 @@ const PrivacyPolicy = () => {;'
                 </p>
               </div>
             </motion.div>
-'
+
             {/* Children's Privacy */}
             <motion.div
               initial = {
@@ -1173,7 +1173,7 @@ const PrivacyPolicy = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <AlertTriangle className="w-8 h-8 text-zion-cyan" />'
+                <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
               </h2>
 "

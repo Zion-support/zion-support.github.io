@@ -1,16 +1,16 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const categories = ['
-    { id: 'all', name: 'All Services', icon: '🌟' },'
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'
-    { id: 'it-services', name: 'IT Services', icon: '🖥️' },'
-    { id: 'ai-services', name: 'AI Services', icon: '🤖' },'
+    { id: 'all', name: 'All Services', icon: '🌟' },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
+    { id: 'it-services', name: 'IT Services', icon: '🖥️' },
+    { id: 'ai-services', name: 'AI Services', icon: '🤖' },
     { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' },
   ];
   const filteredServices = enhancedServices2025.filter(service => {
@@ -51,7 +51,7 @@ const EnhancedServicesShowcase = () => {
             transition={{ duration: 0.6 }}
           >
             Comprehensive"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Technology Solutions
             </span>
@@ -98,7 +98,7 @@ const EnhancedServicesShowcase = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}"
@@ -131,7 +131,7 @@ const EnhancedServicesShowcase = () => {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -151,8 +151,8 @@ const EnhancedServicesShowcase = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {service.name}
                   </h3>"
-                  <p className="text-sm text-blue-400 font-medium">'
-                    {service.category.replace('-', ' ').toUpperCase()}
+                  <p className="text-sm text-blue-400 font-medium">
+                    {service.category.replace('-', ').toUpperCase()}
                   </p>
                 </div>
 
@@ -231,13 +231,13 @@ const EnhancedServicesShowcase = () => {
                   >
                     Learn More
                     <svg"
-                      className="ml-2 h-4 w-4""
-                      fill="none""
-                      stroke="currentColor""
+                      className="ml-2 h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M9 5l7 7-7 7"
@@ -261,8 +261,8 @@ const EnhancedServicesShowcase = () => {
               </p>
               <button
                 onClick={() => {
-'
-                  setSelectedCategory('all');'
+
+                  setSelectedCategory('all');
                   setSearchTerm('');
                 }}"
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
@@ -290,7 +290,7 @@ const EnhancedServicesShowcase = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-          >'
+          >
             Let's discuss how our innovative services can help drive your
             success and competitive advantage
           </motion.p>
@@ -302,13 +302,13 @@ const EnhancedServicesShowcase = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Contact Us Today
             </Link>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               Call: +1 302 464 0950
@@ -352,10 +352,10 @@ const EnhancedServicesShowcase = () => {
           >
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
+            <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="text-blue-400 hover:text-blue-300"
               >
                 https://ziontechgroup.com

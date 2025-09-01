@@ -28,7 +28,7 @@ function fixUtilsFile(...args: unknown[]): unknown {
     );
     // Fix string literals
     content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
-    content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
+    content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"');
     // Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");

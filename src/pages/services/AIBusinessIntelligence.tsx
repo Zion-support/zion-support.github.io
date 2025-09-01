@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -23,7 +23,7 @@ import {
   Database,
   Cpu,
   Lock'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
 
@@ -66,68 +66,68 @@ const AIBusinessIntelligence: React.FC = props {
       title: "Intelligent Forecasting","
       description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
     },
-      icon: Target,;'
-      title: 'Performance Optimization',;'
-      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;'
-      benefits: ['Process optimization', 'Pricing strategies', 'Resource allocation', 'Efficiency improvements'];
+      icon: Target,;
+      title: 'Performance Optimization',;
+      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;
+      benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements'];
     }
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$2,500','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$2,500',
+      period: '/month',
       description: 'Perfect for small businesses starting their BI journey',
       features: ['
-        'Basic predictive analytics','
-        '5 custom dashboards','
-        'Standard reporting','
-        'Email support','
-        'Data integration (3 sources)','
+        'Basic predictive analytics',
+        '5 custom dashboards',
+        'Standard reporting',
+        'Email support',
+        'Data integration (3 sources),
         'Monthly insights report'
-      ],'
+      ],
       cta: 'Get Started',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$5,000','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$5,000',
+      period: '/month',
       description: 'Ideal for growing companies with complex data needs',
       features: ['
-        'Advanced predictive analytics','
-        'Unlimited dashboards','
-        'Real-time reporting','
-        'Priority support','
-        'Data integration (10 sources)','
-        'Weekly insights report','
-        'Custom AI models','
+        'Advanced predictive analytics',
+        'Unlimited dashboards',
+        'Real-time reporting',
+        'Priority support',
+        'Data integration (10 sources),
+        'Weekly insights report',
+        'Custom AI models',
         'API access'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$12,000','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$12,000',
+      period: '/month',
       description: 'For large organizations requiring enterprise-grade BI solutions',
       features: ['
-        'Enterprise predictive analytics','
-        'Unlimited everything','
-        'Custom AI development','
-        '24/7 dedicated support','
-        'Unlimited data sources','
-        'Real-time insights','
-        'White-label solutions','
-        'On-premise deployment','
-        'Custom integrations','
+        'Enterprise predictive analytics',
+        'Unlimited everything',
+        'Custom AI development',
+        '24/7 dedicated support',
+        'Unlimited data sources',
+        'Real-time insights',
+        'White-label solutions',
+        'On-premise deployment',
+        'Custom integrations',
         'Dedicated success manager'
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false
 ;
@@ -205,16 +205,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
       description: "Customer segmentation, inventory optimization, and sales forecasting"
     },
     {
-'
-      title: 'Financial Services','
-      description: 'Risk assessment, fraud detection, and portfolio optimization','
-      metrics: ['90% fraud detection accuracy', '35% reduction in risk exposure', '50% faster decision making']
+
+      title: 'Financial Services',
+      description: 'Risk assessment, fraud detection, and portfolio optimization',
+      metrics: ['90% fraud detection accuracy',35% reduction in risk exposure',50% faster decision making']
     },
     {
-'
-      title: 'Manufacturing','
-      description: 'Predictive maintenance, quality control, and supply chain optimization','
-      metrics: ['70% reduction in downtime', '45% improvement in quality', '35% cost savings']
+
+      title: 'Manufacturing',
+      description: 'Predictive maintenance, quality control, and supply chain optimization',
+      metrics: ['70% reduction in downtime',45% improvement in quality',35% cost savings']
     }
   ];
 
@@ -266,7 +266,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Business Intelligence - Zion Tech Group""
+        title="AI Business Intelligence - Zion Tech Group"
         description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
       />
       
@@ -357,14 +357,14 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Start Free Trial"
               <ArrowRight className="w-5 h-5" />
             </a>
             <a"
-              href="#demo""
+              href="#demo"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Watch Demo
@@ -823,7 +823,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
-'
+
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'`
               }`}>
                 {plan.popular && ("
@@ -871,7 +871,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           <div className="text-center mt-12">"
             <p className="text-gray-600 mb-4">Need a custom solution?</p>
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
             >
               Contact our sales team"
@@ -944,14 +944,14 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial"
               <ArrowRight className="w-5 h-5" />
             </a>
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Contact Our Team

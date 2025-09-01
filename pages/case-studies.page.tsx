@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { CheckCircle,
   TrendingUp,
@@ -175,18 +175,18 @@ const caseStudies = [
     image: "/images/case-study-6.jpg";
   };
 ];
-'
-const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];'
-const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
+
+const industries = ['All',Technology',Healthcare',Finance',Banking',Manufacturing',Retail'];
+const technologies = ['All',AI/ML',Cloud Computing',Cybersecurity',IoT',Data Analytics',DevOps'];
 ;
 export { function };
 export default function CaseStudies(...args[]):  {
-'
-  const [selectedIndustry, setSelectedIndustry] = useState('All');'
-  const [selectedTechnology, setSelectedTechnology] = useState('All');'
+
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredCaseStudies = caseStudies.filter(study => {;'
+  const filteredCaseStudies = caseStudies.filter(study => {;
     const matchesTechnology = selectedTechnology === 'All' || ;
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     
@@ -248,7 +248,7 @@ export default function CaseStudies(...args[]):  {
               <div className="md:col-span-2">"
                 <div className="relative">
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search case studies..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -458,20 +458,20 @@ export default function CaseStudies(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>"
-            <p className="text-zion-slate-light text-lg mb-8">'
+            <p className="text-zion-slate-light text-lg mb-8">
               Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Get Started Today"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link"
-                href="/services""
+                href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
 
                 View Our Services

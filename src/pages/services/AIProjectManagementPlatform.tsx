@@ -2,72 +2,72 @@ import React from 'react';
 
 export default function AIProjectManagementPlatform() {
   const features = ['
-    'AI-powered project planning and scheduling optimization','
-    'Intelligent resource allocation and workload balancing','
-    'Predictive risk assessment and mitigation strategies','
-    'Automated task prioritization and dependency management','
-    'Real-time project progress tracking and analytics','
-    'Smart team collaboration and communication tools','
-    'Automated reporting and stakeholder updates','
-    'Integration with popular project management tools','
-    'Mobile app for on-the-go project management','
+    'AI-powered project planning and scheduling optimization',
+    'Intelligent resource allocation and workload balancing',
+    'Predictive risk assessment and mitigation strategies',
+    'Automated task prioritization and dependency management',
+    'Real-time project progress tracking and analytics',
+    'Smart team collaboration and communication tools',
+    'Automated reporting and stakeholder updates',
+    'Integration with popular project management tools',
+    'Mobile app for on-the-go project management',
     'Advanced project portfolio management'
   ];
 
   const benefits = ['
-    'Complete projects 20-40% faster','
-    'Reduce project costs by 15-30%','
-    'Improve team productivity by 25-50%','
-    'Minimize project risks and delays','
-    'Better resource utilization','
+    'Complete projects 20-40% faster',
+    'Reduce project costs by 15-30%',
+    'Improve team productivity by 25-50%',
+    'Minimize project risks and delays',
+    'Better resource utilization',
     'Enhanced stakeholder communication'
   ];
 
   const useCases = ['
-    'Software development projects','
-    'Construction and engineering projects','
-    'Marketing campaign management','
-    'Event planning and execution','
-    'Product development and launch','
+    'Software development projects',
+    'Construction and engineering projects',
+    'Marketing campaign management',
+    'Event planning and execution',
+    'Product development and launch',
     'Research and development projects'
   ];
 
   const tiers = [
     {
-'
-      name: 'Team', '
-      price: '$1,299/mo', '
-      details: ['Up to 25 team members', 'Basic AI insights', 'Email support', 'Standard integrations'] 
+
+      name: 'Team',
+      price: '$1,299/mo',
+      details: ['Up to 25 team members',Basic AI insights',Email support',Standard integrations'] 
     },
     {
-'
-      name: 'Professional', '
-      price: '$3,499/mo', '
-      details: ['Up to 100 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
+
+      name: 'Professional',
+      price: '$3,499/mo',
+      details: ['Up to 100 team members',Advanced AI analytics',Priority support',Custom integrations'] 
     },
     {
-'
-      name: 'Enterprise', '
-      price: '$8,999/mo', '
-      details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
+
+      name: 'Enterprise',
+      price: '$8,999/mo',
+      details: ['Unlimited team members',Custom AI models',Dedicated support',White-label solution'] 
     }
   ];
 
   const projectTools = ['
-    'Task Management','
-    'Resource Planning','
-    'Risk Management','
-    'Time Tracking','
-    'Budget Management','
+    'Task Management',
+    'Resource Planning',
+    'Risk Management',
+    'Time Tracking',
+    'Budget Management',
     'Reporting & Analytics'
   ];
 
   const aiCapabilities = ['
-    'Predictive scheduling','
-    'Resource optimization','
-    'Risk prediction','
-    'Performance analytics','
-    'Automated reporting','
+    'Predictive scheduling',
+    'Resource optimization',
+    'Risk prediction',
+    'Performance analytics',
+    'Automated reporting',
     'Smart notifications'
   ];
 

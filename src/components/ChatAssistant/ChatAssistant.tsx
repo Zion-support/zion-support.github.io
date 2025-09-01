@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react.ts';'
+import React, { useState, useRef } from 'react.ts';
 import { X, Send  } from 'lucide-react';
 export interface Message {
-  id: string;'
+  id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
@@ -14,7 +14,7 @@ export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 }
 export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);'
+  const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
       timestamp: new Date(),;
@@ -27,14 +27,14 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
 
 
 };
-    setMessages(prev => [...prev, userMessage]);'
+    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response
     setTimeout(: unknown {
       const aiMessage: Message = {
 
-  id: (Date.now() + 1).toString(),'
-        role: 'assistant','
+  id: (Date.now() + 1).toString(),
+        role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),;
   ;
@@ -64,7 +64,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
     return()
       <button
         onClick = {toggleChat}
-        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50""
+        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
         aria-label="Open chat"
       >;"
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;"
@@ -93,12 +93,12 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           </div>
         ) : messages.map((message: unknown (
             <div
-              key={message.id}'
+              key={message.id}
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
 
               <div`
                 className={`max-w-xs px-4 py-2 rounded-lg ${
-'
+
                   message.role === 'user''
                     ? 'bg-zion-cyan text-zion-blue-dark''
                     : 'bg-gray-100 text-gray-800'`
@@ -121,11 +121,11 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}"
-            placeholder="Type your message...""
+            placeholder="Type your message..."
             className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           />
           <button"
-            type="submit""
+            type="submit"
             className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
           >
             <Send size={20} />;

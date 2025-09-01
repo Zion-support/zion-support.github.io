@@ -17,7 +17,7 @@ export default function TemplatesPage(...args: unknown[]): unknown {
       res.status(200).json({ templates, byCategory });
       return;
     }
-    res.setHeader('Allow', 'GET');
+    res.setHeader('Allow',GET');
     res.status(405).json({ error: 'Method Not Allowed' });
   } catch (e: unknown) {
     res.status(500).json({ error: e.message || 'Internal Server Error' });

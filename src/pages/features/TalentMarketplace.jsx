@@ -1,26 +1,26 @@
-import React from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import SEO from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import SEO from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 export { function };
 export default function TalentMarketplace() {
   const schema = {
-'
-    '@context': 'https://schema.org','
-    '@type': 'WebPage','
+
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
     name: 'Talent Marketplace',
     description:'
-      'Hire vetted AI and tech professionals from around the world on Zion.','
+      'Hire vetted AI and tech professionals from around the world on Zion.',
     url: 'https://app.ziontechgroup.com/features/talent-marketplace'};
   return()
     <>
       <SEO
-        title="Talent Marketplace""
-        description="Discover and hire top AI specialists through the Zion talent marketplace.""
-        keywords="AI talent marketplace, hire developers, tech freelancers""
+        title="Talent Marketplace"
+        description="Discover and hire top AI specialists through the Zion talent marketplace."
+        keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -39,9 +39,9 @@ export default function TalentMarketplace() {
             tech professionals.
           </p>
           <img"
-            loading="lazy""
-            src="https://placehold.co/800x400""
-            alt="Screenshot of talent directory""
+            loading="lazy"
+            src="https://placehold.co/800x400"
+            alt="Screenshot of talent directory"
             className="rounded-lg shadow-xl mx-auto mb-12"
           />"
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"

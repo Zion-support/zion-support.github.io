@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -22,45 +22,45 @@ import {
   Heart,
   MessageCircle,
   PieChart,
-  Activity,'
-  Monitor} from 'lucide-react';'
+  Activity,
+  Monitor} from 'lucide-react';
 import { Link } from 'react-router-dom';
 ;
 const AICustomerExperienceAnalytics: React.FC = props {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
       description:'
         'Advanced natural language processing to understand customer emotions, intent, and satisfaction levels across all touchpoints.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Experience Monitoring',
       description:'
         'Live tracking of customer interactions, pain points, and satisfaction metrics with instant alerts and notifications.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Customer Journey Mapping',
       description:'
         'Visualize complete customer journeys with AI-identified optimization opportunities and conversion bottlenecks.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Predictive Analytics',
       description:'
         'Forecast customer behavior, churn risk, and lifetime value using machine learning algorithms.'},
     {
 
-      icon: MessageCircle,'
+      icon: MessageCircle,
       title: 'Omnichannel Insights',
       description:'
         'Unified view of customer experiences across web, mobile, social media, and customer service channels.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Actionable Recommendations',
       description:'
         'AI-generated insights and specific recommendations to improve customer satisfaction and retention.'},
@@ -68,57 +68,57 @@ const AICustomerExperienceAnalytics: React.FC = props {
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$199','
+
+      name: 'Starter',
+      price: '$199',
       period: '/month',
       description:'
         'Perfect for small businesses starting their CX analytics journey',
       features: ['
-        'Up to 10,000 interactions/month','
-        'Basic sentiment analysis','
-        'Standard reporting','
-        'Email support','
-        'Basic journey mapping','
+        'Up to 10,000 interactions/month',
+        'Basic sentiment analysis',
+        'Standard reporting',
+        'Email support',
+        'Basic journey mapping',
         'Up to 3 team members',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for growing businesses with comprehensive CX needs',
       features: ['
-        'Up to 100,000 interactions/month','
-        'Advanced AI analytics','
-        'Custom dashboards','
-        'Priority support','
-        'Advanced journey mapping','
-        'Up to 15 team members','
-        'API access','
+        'Up to 100,000 interactions/month',
+        'Advanced AI analytics',
+        'Custom dashboards',
+        'Priority support',
+        'Advanced journey mapping',
+        'Up to 15 team members',
+        'API access',
         'Custom integrations',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$1,499','
+
+      name: 'Enterprise',
+      price: '$1,499',
       period: '/month',
       description:'
         'For large organizations with enterprise-scale CX requirements',
       features: ['
-        'Unlimited interactions','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support','
-        'Advanced predictive analytics','
-        'Unlimited team members','
-        'On-premise deployment','
+        'Unlimited interactions',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Advanced predictive analytics',
+        'Unlimited team members',
+        'On-premise deployment',
         'Custom SLA',
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
@@ -126,40 +126,40 @@ const AICustomerExperienceAnalytics: React.FC = props {
   const benefits = [
     {
 
-      icon: TrendingUp,'
-      title: 'Increase Customer Satisfaction','
+      icon: TrendingUp,
+      title: 'Increase Customer Satisfaction',
       description: 'Improve NPS scores by up to 40% with data-driven insights'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Reduce Customer Churn',
       description:'
         'Identify at-risk customers and prevent churn with predictive analytics'},
     {
 
-      icon: Target,'
-      title: 'Optimize Customer Journeys','
+      icon: Target,
+      title: 'Optimize Customer Journeys',
       description: 'Streamline touchpoints and improve conversion rates'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Data-Driven Decisions',
       description:'
         'Make informed decisions based on real customer behavior data'},
   ];
 
   const analyticsCapabilities = ['
-    'Customer Satisfaction (CSAT)','
-    'Net Promoter Score (NPS)','
-    'Customer Effort Score (CES)','
-    'Sentiment Analysis','
-    'Emotion Detection','
-    'Intent Classification','
-    'Churn Prediction','
-    'Lifetime Value Forecasting','
-    'Customer Segmentation','
-    'Journey Optimization','
-    'Touchpoint Analysis','
+    'Customer Satisfaction (CSAT),
+    'Net Promoter Score (NPS),
+    'Customer Effort Score (CES),
+    'Sentiment Analysis',
+    'Emotion Detection',
+    'Intent Classification',
+    'Churn Prediction',
+    'Lifetime Value Forecasting',
+    'Customer Segmentation',
+    'Journey Optimization',
+    'Touchpoint Analysis',
     'Conversion Funnel Tracking',
   ];
 
@@ -189,14 +189,14 @@ const AICustomerExperienceAnalytics: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -421,14 +421,14 @@ const AICustomerExperienceAnalytics: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >"
                 <Play className="w-5 h-5 mr-2" />

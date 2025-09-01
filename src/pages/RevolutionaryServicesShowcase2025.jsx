@@ -1,30 +1,30 @@
-import React, { useState } from 'react';'
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';'
+import React, { useState } from 'react';
+import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';
 import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
 const RevolutionaryServicesShowcase2025 = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [
     ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({
 
-      ...service,'
+      ...service,
       source: 'revolutionary'})),
     ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({
 
-      ...service,'
+      ...service,
       source: 'emerging'})),
   ];
   const categories = ['
-    'all','
-    'Micro SAAS','
-    'IT Services','
-    'AI Solutions','
-    'Blockchain & Web3','
-    'IoT & Edge Computing','
-    'Sustainable Technology','
-    'Space Technology','
-    'Biotechnology','
+    'all',
+    'Micro SAAS',
+    'IT Services',
+    'AI Solutions',
+    'Blockchain & Web3',
+    'IoT & Edge Computing',
+    'Sustainable Technology',
+    'Space Technology',
+    'Biotechnology',
     'Quantum Technology',
   ];
   const filteredServices = allServices.filter(service => {
@@ -108,7 +108,7 @@ const RevolutionaryServicesShowcase2025 = () => {
         <div className="flex flex-col md:flex-row gap-4 mb-8">"
           <div className="flex-1">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}"
@@ -126,7 +126,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                   key={category}
                   value={category}"
                   className="bg-slate-800 text-white"
-                >'
+                >
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -146,7 +146,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                       service.category === 'Micro SAAS''
                         ? 'bg-blue-500/20 text-blue-400''
                         : service.category === 'IT Services''
@@ -260,8 +260,8 @@ const RevolutionaryServicesShowcase2025 = () => {
               <div className="space-y-3">
                 <a
                   href={service.websiteUrl}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Learn More & Get Started
@@ -269,8 +269,8 @@ const RevolutionaryServicesShowcase2025 = () => {
                 {service.demoUrl && (
                   <a
                     href={service.demoUrl}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full border border-white/20 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
                   >
                     Request Demo
@@ -318,13 +318,13 @@ const RevolutionaryServicesShowcase2025 = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-all duration-300"
               >
                 📞 Call Now: +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 ✉️ Email Us

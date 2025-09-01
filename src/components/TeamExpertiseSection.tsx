@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -13,7 +13,7 @@ import {
   Globe,
   Rocket'
 } from 'lucide-react';
-'
+
       projects: '50+';
     };
   ];

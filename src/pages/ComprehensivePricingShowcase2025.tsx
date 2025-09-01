@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState, useMemo } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Search, 
 
@@ -26,23 +26,23 @@ import { Search,
     ExternalLink,
     Crown,
     Sparkles'
- } from 'lucide-react.ts';'
+ } from 'lucide-react.ts';
 import { comprehensivePricingGuide2025, ServicePricing  } from '../data/comprehensive-pricing-guide-2025';
 
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [selectedService, setSelectedService] = useState<any>(null);
 
     const categories = ['
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;'
-        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },'
-        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;'
-        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;'
-        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;'
-        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;'
-        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;'
+        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
+        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },
+        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
+        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
+        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
+        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
+        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
         { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 
@@ -57,7 +57,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                 service.category.toLowerCase().includes(searchTerm.toLowerCase())
             );
         }
-'
+
         if (selectedCategory !== 'all') {
 
             filtered = filtered.filter(service => service.category === selectedCategory);
@@ -69,28 +69,28 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
     const getCategoryColor = (category: anystring)  => {
 
         const colors: { [key: string]: string } = {
-'
-            'Fintech': 'from-green-500 to-emerald-600','
-            'Healthtech': 'from-red-500 to-pink-600','
-            'Edutech': 'from-purple-500 to-violet-600','
-            'Martech': 'from-pink-500 to-rose-600','
-            'Micro SaaS': 'from-blue-500 to-indigo-600','
-            'AI Services': 'from-cyan-500 to-blue-600','
+
+            'Fintech': 'from-green-500 to-emerald-600',
+            'Healthtech': 'from-red-500 to-pink-600',
+            'Edutech': 'from-purple-500 to-violet-600',
+            'Martech': 'from-pink-500 to-rose-600',
+            'Micro SaaS': 'from-blue-500 to-indigo-600',
+            'AI Services': 'from-cyan-500 to-blue-600',
             'IT Services': 'from-slate-500 to-gray-600'
-        };'
+        };
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
     const getCategoryIcon = (category: anystring)  => {
 
         const icons: { [key: string]: React.ReactNode } = {
-'
-            'Fintech': <DollarSign className="w-5 h-5" />,'"
-            'Healthtech': <Heart className="w-5 h-5" />,'"
-            'Edutech': <GraduationCap className="w-5 h-5" />,'"
-            'Martech': <Target className="w-5 h-5" />,'"
-            'Micro SaaS': <Settings className="w-5 h-5" />,'"
-            'AI Services': <Zap className="w-5 h-5" />,'"
+
+            'Fintech': <DollarSign className="w-5 h-5" />,"
+            'Healthtech': <Heart className="w-5 h-5" />,"
+            'Edutech': <GraduationCap className="w-5 h-5" />,"
+            'Martech': <Target className="w-5 h-5" />,"
+            'Micro SaaS': <Settings className="w-5 h-5" />,"
+            'AI Services': <Zap className="w-5 h-5" />,"
             'IT Services': <Shield className="w-5 h-5" />
         };"
         return icons[category] || <Globe className="w-5 h-5" />;
@@ -157,9 +157,9 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             </div>
                         </div>
                         <a"
-                            href="https://ziontechgroup.com""
-                            target="_blank""
-                            rel="noopener noreferrer""
+                            href="https://ziontechgroup.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
                         >
                             <span>Visit Our Website</span>"
@@ -178,7 +178,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <div className="relative">"
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                                 <input"
-                                    type="text""
+                                    type="text"
                                     placeholder="Search services..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -276,7 +276,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         <h5 className="text-xl font-bold text-gray-800 mb-2">{tier.name}</h5>"
                                                         <div className="mb-2">"
                                                             <span className="text-3xl font-bold text-gray-800">{tier.price}</span>"
-                                                            <span className="text-gray-600 ml-2">'
+                                                            <span className="text-gray-600 ml-2">
                                                                 /{tier.billing === 'monthly' ? 'month' : tier.billing === 'yearly' ? 'year' : 'setup'}
                                                             </span>
                                                         </div>
@@ -361,14 +361,14 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     </p>"
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a"
-                            href="tel:+13024640950""
+                            href="tel:+13024640950"
                             className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                         >"
                             <Phone className="w-5 h-5" />
                             <span>Call +1 302 464 0950</span>
                         </a>
                         <a"
-                            href="mailto:kleber@ziontechgroup.com""
+                            href="mailto:kleber@ziontechgroup.com"
                             className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
                         >"
                             <Mail className="w-5 h-5" />

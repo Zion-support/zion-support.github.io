@@ -87,14 +87,14 @@ export default function AIAnalyticsDashboard() {
         {
 "
             name: "Sarah Chen","
-            role: "CTO, TechFlow Inc.",'"
+            role: "CTO, TechFlow Inc.","
             content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",
             rating: 5
         },
         {
 "
             name: "Marcus Rodriguez","
-            role: "Data Scientist, DataCorp",'"
+            role: "Data Scientist, DataCorp","
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",
             rating: 5
         },
@@ -181,7 +181,7 @@ export default function AIAnalyticsDashboard() {
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>"
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular

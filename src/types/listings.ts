@@ -28,7 +28,7 @@ seller: {
 export interface ProductListing extends Listing {
 
   brand?: string;
-  model?: string;'
+  model?: string;
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string;
   shipping: {
@@ -40,7 +40,7 @@ export interface ProductListing extends Listing {
 }
 ;
 export interface ServiceListing extends Listing {
-'
+
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
@@ -66,7 +66,7 @@ export interface CartItem {
   id: string;
   title: string;
   price: number;
-  quantity: number;'
+  quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string;
 
@@ -76,10 +76,9 @@ export interface CartItem {
 export interface WishlistItem {
   id: string;
   userId: string;
-  listingId: string;'
+  listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
 
 
 }
-'

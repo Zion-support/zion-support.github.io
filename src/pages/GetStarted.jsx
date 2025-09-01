@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock const GetStarted = () => {
 
@@ -144,7 +144,7 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
               Why Choose Zion Tech Group?
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We're committed to your success with comprehensive support and proven results
             </p>
           </div>"

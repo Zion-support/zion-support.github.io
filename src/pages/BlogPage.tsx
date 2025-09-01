@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -10,7 +10,7 @@ import {
   Search,
   Filter,
   Tag,
-  Clock,'
+  Clock,
   Eye} from 'lucide-react';
 
 export function BlogPage(...args: any[]): any {
@@ -18,85 +18,85 @@ export function BlogPage(...args: any[]): any {
   const blogPosts = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'The Future of AI in Business: 2025 Trends and Predictions',
       excerpt:'
-        'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.','
-      author: 'Dr. Sarah Chen','
-      date: '2025-01-15','
-      readTime: '8 min read','
-      category: 'AI & Technology','
-      tags: ['AI', 'Business', 'Trends', '2025'],'
+        'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      category: 'AI & Technology',
+      tags: ['AI',Business',Trends',2025'],
       image: '🤖'},
     {
 
-      id: 2,'
+      id: 2,
       title: 'Quantum Computing: Breaking Down the Barriers',
       excerpt:'
-        'An in-depth look at how quantum computing is solving previously impossible problems.','
-      author: 'Michael Rodriguez','
-      date: '2025-01-10','
-      readTime: '12 min read','
-      category: 'Quantum Computing','
-      tags: ['Quantum', 'Computing', 'Innovation'],'
+        'An in-depth look at how quantum computing is solving previously impossible problems.',
+      author: 'Michael Rodriguez',
+      date: '2025-01-10',
+      readTime: '12 min read',
+      category: 'Quantum Computing',
+      tags: ['Quantum',Computing',Innovation'],
       image: '⚛️'},
     {
 
-      id: 3,'
+      id: 3,
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt:'
-        'How AI is both creating new security challenges and providing innovative solutions.','
-      author: 'Dr. Emily Watson','
-      date: '2025-01-05','
-      readTime: '10 min read','
-      category: 'Cybersecurity','
-      tags: ['Security', 'AI', 'Threats', 'Solutions'],'
+        'How AI is both creating new security challenges and providing innovative solutions.',
+      author: 'Dr. Emily Watson',
+      date: '2025-01-05',
+      readTime: '10 min read',
+      category: 'Cybersecurity',
+      tags: ['Security',AI',Threats',Solutions'],
       image: '🔒'},
     {
 
-      id: 4,'
+      id: 4,
       title: 'Digital Transformation: A Complete Guide for Enterprises',
       excerpt:'
-        'Step-by-step strategies for successful digital transformation in large organizations.','
-      author: 'David Kim','
-      date: '2024-12-28','
-      readTime: '15 min read','
-      category: 'Digital Transformation','
-      tags: ['Digital', 'Transformation', 'Enterprise', 'Strategy'],'
+        'Step-by-step strategies for successful digital transformation in large organizations.',
+      author: 'David Kim',
+      date: '2024-12-28',
+      readTime: '15 min read',
+      category: 'Digital Transformation',
+      tags: ['Digital',Transformation',Enterprise',Strategy'],
       image: '🚀'},
     {
 
-      id: 5,'
+      id: 5,
       title: 'The Rise of Edge Computing: Processing Data Where It Matters',
       excerpt:'
-        'Understanding edge computing and its impact on IoT and real-time applications.','
-      author: 'Dr. Sarah Chen','
-      date: '2024-12-20','
-      readTime: '9 min read','
-      category: 'Edge Computing','
-      tags: ['Edge Computing', 'IoT', 'Real-time', 'Data'],'
+        'Understanding edge computing and its impact on IoT and real-time applications.',
+      author: 'Dr. Sarah Chen',
+      date: '2024-12-20',
+      readTime: '9 min read',
+      category: 'Edge Computing',
+      tags: ['Edge Computing',IoT',Real-time',Data'],
       image: '🌐'},
     {
 
-      id: 6,'
+      id: 6,
       title: 'Machine Learning in Healthcare: Saving Lives with Data',
       excerpt:'
-        'Real-world applications of ML in healthcare and the future of medical AI.','
-      author: 'Dr. Emily Watson','
-      date: '2024-12-15','
-      readTime: '11 min read','
-      category: 'Healthcare AI','
-      tags: ['Healthcare', 'Machine Learning', 'Medical AI', 'Data'],'
+        'Real-world applications of ML in healthcare and the future of medical AI.',
+      author: 'Dr. Emily Watson',
+      date: '2024-12-15',
+      readTime: '11 min read',
+      category: 'Healthcare AI',
+      tags: ['Healthcare',Machine Learning',Medical AI',Data'],
       image: '🏥'},
   ];
 
   const categories = ['
-    'All Posts','
-    'AI & Technology','
-    'Quantum Computing','
-    'Cybersecurity','
-    'Digital Transformation','
-    'Edge Computing','
+    'All Posts',
+    'AI & Technology',
+    'Quantum Computing',
+    'Cybersecurity',
+    'Digital Transformation',
+    'Edge Computing',
     'Healthcare AI',
   ];
 
@@ -127,8 +127,8 @@ export function BlogPage(...args: any[]): any {
             <div className="relative w-full md:w-96">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input"
-                type="text""
-                placeholder="Search articles...""
+                type="text"
+                placeholder="Search articles..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
@@ -246,8 +246,8 @@ export function BlogPage(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input"
-                type="email""
-                placeholder="Enter your email""
+                type="email"
+                placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />"
               <button className="px-6 py-3 bg-cyan-800 text-white rounded-lg hover:bg-cyan-900 transition-colors font-medium">

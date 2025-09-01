@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';'
-import { SEO } from '@/components/SEO';'
-import { Card, CardContent } from '@/components/ui/card';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { Button } from '@/components/ui/button';'
-import { toast } from '@/hooks/use-toast';'
+import React, { useState, useEffect } from 'react';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Import refactored components
 import {
 
   FraudStatsCards,
   FraudFilters,
-  FraudFlagsTable,'
+  FraudFlagsTable,
   FraudTabContent} from '@/components/admin/fraud-detection';
 export default function FraudDetection() {
   const [flags, setFlags] = useState([]);
   const [filteredFlags, setFilteredFlags] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);'
+  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState(null);
   const [severityFilter, setSeverityFilter] = useState(null);
@@ -33,8 +33,8 @@ export default function FraudDetection() {
     setIsLoading(true);
     try {
       const { data, error } = await supabase'
-        .from('fraud_flags')'
-        .select('*')'
+        .from('fraud_flags')
+        .select('*')
         .order('timestamp', { ascending: false });
       if (error) throw error;
       setFlags(data || []);
@@ -59,9 +59,9 @@ export default function FraudDetection() {
     } catch (error) {
       // console.error("Error fetching fraud flags:", error);
       toast({
-'
-        title: 'Error','
-        description: 'Failed to load fraud detection data','
+
+        title: 'Error',
+        description: 'Failed to load fraud detection data',
         variant: 'destructive'});
     } finally {
 
@@ -105,8 +105,8 @@ export default function FraudDetection() {
   const handleAction = async (flagId, action) => {
 
     try {
-'
-      const status = action === 'ignore' ? 'ignored' : 'actioned';'
+
+      const status = action === 'ignore' ? 'ignored' : 'actioned';
       const actionTaken = action === 'ignore' ? 'none' : action;
       const { error } = await supabase'
         .from('fraud_flags')
@@ -114,14 +114,14 @@ export default function FraudDetection() {
 
           status,
           action_taken: actionTaken,
-          reviewed_at: new Date().toISOString(),'
+          reviewed_at: new Date().toISOString(),
           // In a real app, you'd get the current user's ID'
-          reviewed_by: 'admin'})'
+          reviewed_by: 'admin'})
         .eq('id', flagId);
       if (error) throw error;
       toast({
-'
-        title: 'Flag updated','
+
+        title: 'Flag updated',
         description: `Action '${action}' was applied successfully.`});
       // Refresh the data
       fetchFraudFlags();
@@ -129,14 +129,14 @@ export default function FraudDetection() {
 "
       // console.error("Error updating fraud flag:", error);
       toast({
-'
-        title: 'Error','
-        description: 'Failed to update flag','
+
+        title: 'Error',
+        description: 'Failed to update flag',
         variant: 'destructive'});
     }
   };
   const resetFilters = () => {
-'
+
     setSearchQuery('');
     setStatusFilter(null);
     setSeverityFilter(null);
@@ -151,7 +151,7 @@ export default function FraudDetection() {
   return()
     (
       <SEO"
-        title="Fraud Detection | Admin Dashboard""
+        title="Fraud Detection | Admin Dashboard"
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"
       />
     ),

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import Link from 'next/link';
 const MicroSAAS = () => {
     const microSaasServices = [
@@ -72,7 +72,7 @@ const MicroSAAS = () => {
           <div className="text-center">"
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>"
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">
                 Can't find exactly what you need? We can develop custom micro-SAAS solutions 
                 tailored to your specific business requirements.
               </p>"

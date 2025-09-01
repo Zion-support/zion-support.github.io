@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { ReactNode } from 'react';
 import React, { useState } from 'react';
 export default React.memo (function Layout (...args[]) :  {
@@ -8,27 +8,27 @@ interface LayoutProps {
   // Add your props here
 
 
-const navigation: NavItem[] = [;'
+const navigation: NavItem[] = [;
   { label: 'Home', href: '/' },
   {
-'
-    label: 'Services','
+
+    label: 'Services',
     href: '/services',
-    children[;'
-      { label: 'AI & Machine Learning', href: '/services#ai' },'
-      { label: 'Quantum Technology', href: '/services#quantum' },'
-      { label: 'Cybersecurity', href: '/services#cybersecurity' },'
-      { label: 'Cloud & Infrastructure', href: '/services#cloud' },'
-      { label: 'Blockchain & Web3', href: '/services#blockchain' },'
-      { label: 'IoT & Edge Computing', href: '/services#iot' },'
-      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },'
-      { label: 'Space Technology', href: '/services#space' },'
-      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },'
-      { label: 'FinTech & Wealth Management', href: '/services#fintech' },'
-      { label: 'Consulting & Strategy', href: '/services#consulting' },'
+    children[;
+      { label: 'AI & Machine Learning', href: '/services#ai' },
+      { label: 'Quantum Technology', href: '/services#quantum' },
+      { label: 'Cybersecurity', href: '/services#cybersecurity' },
+      { label: 'Cloud & Infrastructure', href: '/services#cloud' },
+      { label: 'Blockchain & Web3', href: '/services#blockchain' },
+      { label: 'IoT & Edge Computing', href: '/services#iot' },
+      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },
+      { label: 'Space Technology', href: '/services#space' },
+      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },
+      { label: 'FinTech & Wealth Management', href: '/services#fintech' },
+      { label: 'Consulting & Strategy', href: '/services#consulting' },
       { label: 'All Services', href: '/services' }
     ]
-  },;'
+  },;
   { label: 'Contact', href: '/contact' }
 ];
 export default function Layout(...args[]):  {
@@ -71,7 +71,7 @@ export default function Layout(...args[]):  {
             </nav>"
             <div className="flex items-center space-x-4">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
 
                 📞 Call Us
@@ -84,7 +84,7 @@ export default function Layout(...args[]):  {
       <div className="flex">;
         {/* Sidebar */}
 <aside className: {`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
-'
+
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'`
         } md:translate-x-0`}>"
           <div className="p-4">"
@@ -102,7 +102,7 @@ export default function Layout(...args[]):  {
                           <span>{item.label}</span>
                         </span>`
                         <ChevronRight className={`w-4 h-4 transition-transform ${
-'
+
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''`
                         }`} />
                       </button>

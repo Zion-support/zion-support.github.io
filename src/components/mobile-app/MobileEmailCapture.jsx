@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => {
-'
-  const [email, setEmail] = useState('');'
+
+  const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
   const handleSubmit = async (e) => {
 
     e.preventDefault();
     if (!email) return;
-'
+
     setStatus('loading');
 
     // Simulate API call
     setTimeout(() => {
-'
+
       if (email.includes('@')) {
-'
-        setStatus('success');'
-        setEmail('');'
+
+        setStatus('success');
+        setEmail('');
         setTimeout(() => setStatus('idle'), 3000)} else {
-'
-        setStatus('error');'
+
+        setStatus('error');
         setTimeout(() => setStatus('idle'), 3000)}
     }, 1000)};
 
   const getStatusIcon = () => {
     switch (status) {
-'
+
       case 'success':
-        return <CheckCircle className="h-5 w-5 text-green-400" />;'
+        return <CheckCircle className="h-5 w-5 text-green-400" />;
       case 'error':"
         return <AlertCircle className="h-5 w-5 text-red-400" />;
       default:"
@@ -37,9 +37,9 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
 
   const getStatusText = () => {
     switch (status) {
-'
+
       case 'success':'
-        return 'Thank you! We\'ll notify you when the app launches.';'
+        return 'Thank you! We\'ll notify you when the app launches.';
       case 'error':'
         return 'Please enter a valid email address.';
       default:'
@@ -68,7 +68,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
           <h3 className="text-2xl font-bold text-white mb-4">
             {getStatusText()}
           </h3>
-'
+
           {status === 'idle' && ("
             <form onSubmit={handleSubmit} className="space-y-4">"
               <div className="flex flex-col sm:flex-row gap-3">
@@ -76,12 +76,12 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}"
-                  placeholder="Enter your email address""
+                  placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 rounded-lg border border-white/30 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                 />
                 <button"
-                  type="submit""
+                  type="submit"
                   className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 whitespace-nowrap"
 
                   Notify Me
@@ -92,14 +92,14 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
               </p>
             </form>;
           )}
-'
+
           {status === 'loading' && ("
             <div className="text-center">"
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto mb-4"></div>"
               <p className="text-gray-300">Processing your request...</p>
             </div>
           )}
-'
+
           {status === 'success' && ("
             <div className="text-center">"
               <p className="text-green-400 mb-4">Successfully subscribed!</p>
@@ -111,7 +111,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
               </button>
             </div>;
           )}
-'
+
           {status === 'error' && ("
             <div className="text-center">"
               <p className="text-red-400 mb-4">Invalid email address. Please try again.</p>

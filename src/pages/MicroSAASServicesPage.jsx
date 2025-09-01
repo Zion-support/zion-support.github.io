@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';'
-import { Link } from 'react-router-dom';'
-import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';'
-import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';'
-import SEO from '@/components/SEO';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 const categories = ['
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },'"
-    { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },'"
-    { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('IT Services').length },'"
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },"
+    { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },"
+    { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('IT Services').length },"
     { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('Business Solutions').length }
 ];
 const pricingModels = ['
-    { id: 'all', name: 'All Pricing' },'
-    { id: 'monthly', name: 'Monthly' },'
-    { id: 'yearly', name: 'Yearly' },'
-    { id: 'one-time', name: 'One-time' },'
+    { id: 'all', name: 'All Pricing' },
+    { id: 'monthly', name: 'Monthly' },
+    { id: 'yearly', name: 'Yearly' },
+    { id: 'one-time', name: 'One-time' },
     { id: 'usage-based', name: 'Usage-based' }
 ];
 export default function MicroSaasServicesPage() {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [selectedPricing, setSelectedPricing] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPricing, setSelectedPricing] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
-    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);'
+    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
         let filtered = MICRO_SAAS_SERVICES;
@@ -51,13 +51,13 @@ export default function MicroSaasServicesPage() {
         filtered.sort((a, b) => {
 
             switch (sortBy) {
-'
+
                 case 'rating':
-                    return (b.rating || 0) - (a.rating || 0);'
+                    return (b.rating || 0) - (a.rating || 0);
                 case 'price':
-                    return a.price - b.price;'
+                    return a.price - b.price;
                 case 'aiScore':
-                    return b.aiScore - a.aiScore;'
+                    return b.aiScore - a.aiScore;
                 case 'newest':
                     return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
                 default:
@@ -89,19 +89,19 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-'
-import React, {useState} from 'react';'
-import {Header} from '@/components/Header';'
-import {Footer} from '@/components/Footer';'
-import {Button} from '@/components/ui/button';'
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';'
-import {Badge} from '@/components/ui/badge';'
+
+import React, {useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
 
             type} MicroSaasService
-'
+
 } from '@/data/microSaasServices';
 import {Star,
             Clock,
@@ -115,19 +115,19 @@ import {Star,
             Play,
             FileText,
             MessageCircle,
-            ArrowRight,'
-            Sparkles} from 'lucide-react';'
+            ArrowRight,
+            Sparkles} from 'lucide-react';
 import {Link} from 'react-router-dom';
 
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState < string> ('') ;
 
-export default function MicroSaasServicesPage() { /* empty */ }'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
+export default function MicroSaasServicesPage() { /* empty */ }
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
-'
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -136,7 +136,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
   }) ;
 
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
-'
+
     if (model === 'monthly') return `${currency}${price}/month`;'`
     if (model === 'yearly') return `${currency}${price}/year`;'`
     if (model === 'one-time') return `${currency}${price}`;`
@@ -354,7 +354,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
             {/* Category Filters */}"
             <div className="flex flex-wrap gap-2">"
               {categories.map((category) => (<Button key={category.id} variant={selectedCategory === category.id ? "default" : "outline"} size="sm" onClick={() => setSelectedCategory(category.id)} className={selectedCategory === category.id"
-                ? "bg-zion-purple text-white""
+                ? "bg-zion-purple text-white"
                 : "border-zion-blue-light/30 text-zion-slate-light hover:border-zion-purple hover:text-zion-purple"}>
                   {category.icon}"
                   <span className="ml-2">{category.name}</span>"
@@ -367,7 +367,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
             {/* Pricing Filter */}"
             <div className="flex gap-2">"
               {pricingModels.map((model) => (<Button key={model.id} variant={selectedPricing === model.id ? "default" : "outline"} size="sm" onClick={() => setSelectedPricing(model.id)} className={selectedPricing === model.id"
-                ? "bg-zion-cyan text-white""
+                ? "bg-zion-cyan text-white"
                 : "border-zion-blue-light/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan"}>
                   {model.name}
                 </Button>) ) }
@@ -391,9 +391,9 @@ export default function MicroSaasServicesPage() { /* empty */ }'
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
             <p className="text-zion-slate-light mb-6">Try adjusting your search criteria or filters</p>
             <Button onClick={() => {
-'
-                setSearchQuery('');'
-                setSelectedCategory('all');'
+
+                setSearchQuery('');
+                setSelectedCategory('all');
                 setSelectedPricing('all');"
             }} className="bg-zion-purple text-white hover:bg-zion-purple-light">
               Clear Filters

@@ -8,8 +8,8 @@ const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.zion.com';
 ;
 class AuthService {
   constructor() {
-'
-    this.token = localStorage.getItem('token');'
+
+    this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null');
   }
 
@@ -22,7 +22,7 @@ class AuthService {
 
       // Mock validation
       if (!credentials.email || !credentials.password) {
-'
+
         throw new Error('Email and password are required');
       }
 
@@ -30,18 +30,18 @@ class AuthService {
       const mockUser = {
 
         id: 1,
-        email: credentials.email,'
-        name: 'John Doe','
+        email: credentials.email,
+        name: 'John Doe',
         role: 'user',
         avatar: null,
         createdAt: new Date().toISOString()};
-'
+
       const mockToken = 'mock-jwt-token-' + Date.now();
 
       // Store in localStorage
       this.token = mockToken;
-      this.user = mockUser;'
-      localStorage.setItem('token', mockToken);'
+      this.user = mockUser;
+      localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
 
       return {
@@ -49,7 +49,7 @@ class AuthService {
         user: mockUser,
         token: mockToken};
     } catch (error) {
-'
+
       throw new Error(error.message || 'Login failed');
     }
   }
@@ -63,7 +63,7 @@ class AuthService {
 
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
-'
+
         throw new Error('Name, email, and password are required');
       }
 
@@ -72,17 +72,17 @@ class AuthService {
 
         id: Date.now(),
         email: userData.email,
-        name: userData.name,'
+        name: userData.name,
         role: 'user',
         avatar: null,
         createdAt: new Date().toISOString()};
-'
+
       const mockToken = 'mock-jwt-token-' + Date.now();
 
       // Store in localStorage
       this.token = mockToken;
-      this.user = mockUser;'
-      localStorage.setItem('token', mockToken);'
+      this.user = mockUser;
+      localStorage.setItem('token', mockToken);
       localStorage.setItem('user', JSON.stringify(mockUser));
 
       return {
@@ -90,7 +90,7 @@ class AuthService {
         user: mockUser,
         token: mockToken};
     } catch (error) {
-'
+
       throw new Error(error.message || 'Registration failed');
     }
   }
@@ -103,13 +103,13 @@ class AuthService {
 
       // Clear localStorage
       this.token = null;
-      this.user = null;'
-      localStorage.removeItem('token');'
+      this.user = null;
+      localStorage.removeItem('token');
       localStorage.removeItem('user');
 
       return { success: true };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Logout failed');
     }
   }
@@ -136,18 +136,18 @@ class AuthService {
       await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
       if (!this.token) {
-'
+
         throw new Error('No token to refresh');
       }
 
       // Mock token refresh'
       const newToken = 'mock-jwt-token-refreshed-' + Date.now();
-      this.token = newToken;'
+      this.token = newToken;
       localStorage.setItem('token', newToken);
 
       return { token: newToken };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Token refresh failed');
     }
   }
@@ -160,17 +160,17 @@ class AuthService {
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!this.user) {
-'
+
         throw new Error('User not authenticated');
       }
 
       // Update user data
-      this.user = { ...this.user, ...profileData };'
+      this.user = { ...this.user, ...profileData };
       localStorage.setItem('user', JSON.stringify(this.user));
 
       return { user: this.user };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Profile update failed');
     }
   }
@@ -183,19 +183,19 @@ class AuthService {
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!this.user) {
-'
+
         throw new Error('User not authenticated');
       }
 
       if (!passwordData.currentPassword || !passwordData.newPassword) {
-'
+
         throw new Error('Current password and new password are required');
       }
 
       // Mock password change'
       return { success: true, message: 'Password changed successfully' };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Password change failed');
     }
   }
@@ -208,14 +208,14 @@ class AuthService {
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!email) {
-'
+
         throw new Error('Email is required');
       }
 
       // Mock password reset email'
       return { success: true, message: 'Password reset email sent' };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Password reset failed');
     }
   }
@@ -228,14 +228,14 @@ class AuthService {
       await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!token || !newPassword) {
-'
+
         throw new Error('Token and new password are required');
       }
 
       // Mock password reset'
       return { success: true, message: 'Password reset successfully' };
     } catch (error) {
-'
+
       throw new Error(error.message || 'Password reset failed');
     }
   }
@@ -245,4 +245,3 @@ class AuthService {
 
 const authService = new AuthService();
 export default authService;
-'

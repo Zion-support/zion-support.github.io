@@ -1,24 +1,24 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 export function LoadingSpinner({
-'
-  size = 'md','
-  variant = 'default','
+
+  size = 'md',
+  variant = 'default',
   className = '',
   text}) {
 
   const sizeClasses = {
-'
-    sm: 'w-4 h-4','
-    md: 'w-6 h-6','
-    lg: 'w-8 h-8','
+
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
     xl: 'w-12 h-12'};
   const variantClasses = {
-'
-    default: 'text-zion-cyan','
-    primary: 'text-zion-blue','
-    secondary: 'text-zion-purple','
+
+    default: 'text-zion-cyan',
+    primary: 'text-zion-blue',
+    secondary: 'text-zion-purple',
     white: 'text-white'};
   return ('
     <div className={cn('flex flex-col items-center gap-3', className)}>
@@ -28,7 +28,7 @@ export function LoadingSpinner({
           sizeClasses[size],
           variantClasses[variant]
         )}
-        role="status""
+        role="status"
         aria-label="Loading"
       >"
         <span className="sr-only">Loading...</span>

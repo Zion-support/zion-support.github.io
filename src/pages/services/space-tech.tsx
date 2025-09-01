@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO } from '@/components/SEO';'
+import React from 'react.ts';
+import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -24,7 +24,7 @@ import {
   Building,
   Activity,
   Phone,
-  Mail,'
+  Mail,
   MapPin} from 'lucide-react.ts';
 
 export default function SpaceTechnology(...args: any[]): any {
@@ -32,115 +32,115 @@ export default function SpaceTechnology(...args: any[]): any {
   const features = [
     {
 
-      icon: Satellite,'
+      icon: Satellite,
       title: 'Satellite Technology',
       description:'
         'Advanced satellite systems for communication, navigation, and Earth observation.',
       benefits: ['
-        'Global connectivity','
-        'Real-time data collection','
-        'Navigation systems','
+        'Global connectivity',
+        'Real-time data collection',
+        'Navigation systems',
         'Environmental monitoring',
       ]},
     {
 
-      icon: Rocket,'
+      icon: Rocket,
       title: 'Launch Systems',
       description:'
         'Innovative launch vehicle technology and space transportation solutions.',
       benefits: ['
-        'Cost-effective launches','
-        'Reusable systems','
-        'Payload optimization','
+        'Cost-effective launches',
+        'Reusable systems',
+        'Payload optimization',
         'Mission planning',
       ]},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI Space Operations',
       description:'
         'Artificial intelligence for autonomous space missions and operations.',
       benefits: ['
-        'Autonomous navigation','
-        'Predictive maintenance','
-        'Mission optimization','
+        'Autonomous navigation',
+        'Predictive maintenance',
+        'Mission optimization',
         'Risk assessment',
       ]},
     {
 
-      icon: Network,'
+      icon: Network,
       title: 'Space Communications',
       description:'
         'Advanced communication networks for space missions and ground control.',
       benefits: ['
-        'High-bandwidth links','
-        'Low-latency communication','
-        'Global coverage','
+        'High-bandwidth links',
+        'Low-latency communication',
+        'Global coverage',
         'Secure transmission',
       ]},
   ];
 
   const applications = [
     {
-'
+
       category: 'Commercial Space',
       services: ['
-        'Satellite internet and communications','
-        'Earth observation and imaging','
-        'Space tourism infrastructure','
+        'Satellite internet and communications',
+        'Earth observation and imaging',
+        'Space tourism infrastructure',
         'Commercial launch services',
       ]},
     {
-'
+
       category: 'Scientific Research',
       services: ['
-        'Space exploration missions','
-        'Astronomical observations','
-        'Climate and environmental research','
+        'Space exploration missions',
+        'Astronomical observations',
+        'Climate and environmental research',
         'Planetary science missions',
       ]},
     {
-'
+
       category: 'Defense & Security',
       services: ['
-        'Space situational awareness','
-        'Satellite defense systems','
-        'Intelligence gathering','
+        'Space situational awareness',
+        'Satellite defense systems',
+        'Intelligence gathering',
         'Strategic communications',
       ]},
     {
-'
+
       category: 'Infrastructure',
       services: ['
-        'Space station development','
-        'Lunar and Mars bases','
-        'Space manufacturing','
+        'Space station development',
+        'Lunar and Mars bases',
+        'Space manufacturing',
         'Resource utilization',
       ]},
   ];
 
   const technologies = [
     {
-'
+
       name: 'Quantum Computing in Space',
       description:'
         'Leveraging quantum computing for complex space calculations and simulations.',
       icon: Atom},
     {
-'
+
       name: 'AI-Powered Mission Control',
       description:'
         'Intelligent systems for autonomous space mission management.',
       icon: Brain},
     {
-'
+
       name: 'Advanced Propulsion',
       description:'
         'Next-generation propulsion systems for efficient space travel.',
       icon: Rocket},
     {
-'
-      name: 'Space Cybersecurity','
+
+      name: 'Space Cybersecurity',
       description: 'Protecting space assets from cyber threats and attacks.',
       icon: Shield},
   ];
@@ -148,7 +148,7 @@ export default function SpaceTechnology(...args: any[]): any {
   return()
     <div className="min-h-screen bg-slate-950 text-white">
       <SEO"
-        title="Space Technology Services | Zion Tech Group""
+        title="Space Technology Services | Zion Tech Group"
         description="Revolutionary space technology solutions including satellite systems, launch vehicles, AI-powered operations, and advanced space communications."
       />
 

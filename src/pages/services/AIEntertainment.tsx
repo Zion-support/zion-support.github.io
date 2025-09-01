@@ -1,60 +1,60 @@
 import React from 'react';
 import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
   const features = [
-    'AI-powered content recommendation and personalization','
-    'Intelligent content creation and generation',;'
-    'Automated content moderation and filtering',;'
-    'Predictive analytics for audience engagement',;'
-    'Real-time content performance optimization',;'
-    'Smart content scheduling and distribution',;'
-    'Integration with major entertainment platforms',;'
+    'AI-powered content recommendation and personalization',
+    'Intelligent content creation and generation',;
+    'Automated content moderation and filtering',;
+    'Predictive analytics for audience engagement',;
+    'Real-time content performance optimization',;
+    'Smart content scheduling and distribution',;
+    'Integration with major entertainment platforms',;
     'Custom AI models for entertainment-specific insights';
   ];
 
   const tiers = [
     {
-'
-      name: 'Small Creator','
-      price: '$199/mo','
-      details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support']
+
+      name: 'Small Creator',
+      price: '$199/mo',
+      details: ['Up to 100,000 views/month',Basic AI features',Standard reports',Email support']
     },
     {
-'
-      name: 'Medium Creator', '
-      price: '$599/mo', '
-      details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Medium Creator',
+      price: '$599/mo',
+      details: ['Up to 1M views/month',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Large Creator', ;'
-      price: '$1,499/mo', ;'
-      details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Large Creator', ;
+      price: '$1,499/mo', ;
+      details: ['Unlimited views',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Video content optimization and recommendation',;'
-    'Music and audio content personalization',;'
-    'Gaming content and player engagement',;'
-    'Social media content optimization',;'
-    'Streaming platform content curation',;'
+  const useCases = [;
+    'Video content optimization and recommendation',;
+    'Music and audio content personalization',;
+    'Gaming content and player engagement',;
+    'Social media content optimization',;
+    'Streaming platform content curation',;
     'Content monetization and advertising';
   ];
 
-  const benefits = [;'
-    'Increase audience engagement by 30-50%',;'
-    'Improve content discovery by 40-60%',;'
-    'Cut content creation costs by 25-40%',;'
-    'Optimize content for maximum reach',;'
-    'Enhance user experience and satisfaction',;'
+  const benefits = [;
+    'Increase audience engagement by 30-50%',;
+    'Improve content discovery by 40-60%',;
+    'Cut content creation costs by 25-40%',;
+    'Optimize content for maximum reach',;
+    'Enhance user experience and satisfaction',;
     'Scale entertainment operations efficiently';
   ];
 
-  const industries = [;'
-    'Video Streaming & YouTube',;'
-    'Music & Audio Platforms',;'
-    'Gaming & Esports',;'
-    'Social Media & Influencers',;'
-    'Podcasting & Audio Content',;'
+  const industries = [;
+    'Video Streaming & YouTube',;
+    'Music & Audio Platforms',;
+    'Gaming & Esports',;
+    'Social Media & Influencers',;
+    'Podcasting & Audio Content',;
     'Live Streaming & Events';
   ];
 
@@ -110,8 +110,8 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['30-50% engagement increase', '40-60% discovery improvement', '25-40% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['30-50% engagement increase',40-60% discovery improvement',25-40% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-pink-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

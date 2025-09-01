@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -41,7 +41,7 @@ import {
   Wifi,
   HeartPulse,
   DollarSign,
-  Leaf,'
+  Leaf,
   Building} from 'lucide-react';
   User,
   Factory,
@@ -107,7 +107,7 @@ import {
   MailIcon as MailIcon2'
 } from 'lucide-react';
 
-export const EnhancedSidebar: React.FC = () => {;'
+export const EnhancedSidebar: React.FC = () => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
@@ -278,7 +278,7 @@ export const EnhancedSidebar: React.FC = () => {;'
                 <Link
                   to={action.href}
                   className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-'
+
                     action.variant === 'primary''
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
@@ -327,7 +327,7 @@ export const EnhancedSidebar: React.FC = () => {;'
                 </div>
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-'
+
                     expandedSections.has(section.title) ? 'rotate-180' : ''`
                   }`} 
                 />
@@ -343,7 +343,7 @@ export const EnhancedSidebar: React.FC = () => {;'
 }}
                     animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}

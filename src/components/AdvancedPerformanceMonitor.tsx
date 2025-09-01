@@ -4,7 +4,7 @@ import {
   Activity,
   Zap,
   Clock,
-  TrendingUp,'
+  TrendingUp,
   AlertTriangle} from 'lucide-react.ts';
 
 interface PerformanceMetrics {
@@ -19,7 +19,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceScore {
-  score: number;'
+  score: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   color: string;
 }
@@ -37,8 +37,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [overallScore, setOverallScore] = useState<PerformanceScore>({
 
-    score: 0,'
-    rating: 'good','
+    score: 0,
+    rating: 'good',
     color: 'text-green-500'});
 
   // Calculate performance score based on Core Web Vitals
@@ -86,21 +86,21 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
       const averageScore =
         validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0;
-'
+
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
 
       if (averageScore >= 90) {
-'
-        rating = 'good';'
+
+        rating = 'good';
         color = 'text-green-500';
       } else if (averageScore >= 50) {
-'
-        rating = 'needs-improvement';'
+
+        rating = 'needs-improvement';
         color = 'text-yellow-500';
       } else {
-'
-        rating = 'poor';'
+
+        rating = 'poor';
         color = 'text-red-500';
       }
     });
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Measure Core Web Vitals
   useEffect(() => {
-'
+
     if ('PerformanceObserver' in window) {
 
       // First Contentful Paint
@@ -149,7 +149,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
-      });'
+      });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
@@ -161,7 +161,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }
-      });'
+      });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
@@ -176,7 +176,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             setMetrics (prev => ({ ...prev, fid }) ) ;
           }
         });
-      });'
+      });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Layout Shift
@@ -191,7 +191,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           }
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });'
+      });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       return () => {
@@ -218,43 +218,43 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Format time values
   const formatTime = (time: number | null): string => {
-'
+
     if (time === null) return 'N/A';
     return `${Math.round(time)}ms`;
   };
 
   // Format CLS value
   const formatCLS = (cls: number | null): string => {
-'
+
     if (cls === null) return 'N/A';
     return cls.toFixed(3);
   };
 
   // Get metric rating
   const getMetricRating = (metric: string, value: number | null): string => {
-'
+
     if (value === null) return 'N/A';
 
     switch (metric) {
-'
+
       case 'fcp':
         return value < 1800'
           ? '🟢 Good'
           : value < 3000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'lcp':
         return value < 2500'
           ? '🟢 Good'
           : value < 4000'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'fid':
         return value < 100'
           ? '🟢 Good'
           : value < 300'
             ? '🟡 Needs Improvement''
-            : '🔴 Poor';'
+            : '🔴 Poor';
       case 'cls':
         return value < 0.1'
           ? '🟢 Good'
@@ -271,7 +271,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     return()
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50""
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
         aria-label="Open Performance Monitor"
       >"
         <Activity className="w-6 h-6" />
@@ -300,8 +300,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           <div className={`text-3xl font-bold ${overallScore.color}`}>
             {overallScore.score}
           </div>"
-          <div className="text-sm text-zion-slate-light">'
-            Overall Score ({overallScore.rating.replace('-', ' ')})
+          <div className="text-sm text-zion-slate-light">
+            Overall Score ({overallScore.rating.replace('-', ')})
           </div>
         </div>
       </div>
@@ -314,7 +314,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             <div className="text-white font-mono">
               {formatTime(metrics.fcp)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('fcp', metrics.fcp)}
             </div>
             <button
@@ -332,7 +332,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             <div className="text-white font-mono">
               {formatTime(metrics.lcp)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('lcp', metrics.lcp)}
             </div>
           </div>
@@ -344,7 +344,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             <div className="text-white font-mono">
               {formatTime(metrics.fid)}
             </div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('fid', metrics.fid)}
             </div>
           </div>
@@ -354,7 +354,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           <span className="text-sm text-zion-slate-light">CLS</span>"
           <div className="text-right">"
             <div className="text-white font-mono">{formatCLS(metrics.cls)}</div>"
-            <div className="text-xs text-zion-slate-light">'
+            <div className="text-xs text-zion-slate-light">
               {getMetricRating('cls', metrics.cls)}
             </div>
           </div>
@@ -370,7 +370,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         </div>
       </div>
 
-      {/* Recommendations */}'
+      {/* Recommendations */}
       {overallScore.rating !== 'good' && ("
         <div className="mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">"
           <div className="flex items-center text-yellow-400 mb-2">"

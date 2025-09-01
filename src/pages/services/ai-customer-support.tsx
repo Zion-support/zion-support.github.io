@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -10,7 +10,7 @@ import {
   Shield,
   Clock,
   BarChart3,
-  Headphones,'
+  Headphones,
   Bot} from 'lucide-react.ts';
 
 export default function AICustomerSupport(...args: any[]): any {
@@ -18,7 +18,7 @@ export default function AICustomerSupport(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO"
-        title="AI Customer Support - Zion Tech Group""
+        title="AI Customer Support - Zion Tech Group"
         description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
       />
 
@@ -39,7 +39,7 @@ export default function AICustomerSupport(...args: any[]): any {
             </div>"
             <div className="mb-16">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
               >
                 Get Started with AI Customer Support
@@ -152,7 +152,7 @@ export default function AICustomerSupport(...args: any[]): any {
             Start providing intelligent, 24/7 customer assistance today
           </p>
           <a"
-            href="/contact""
+            href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
           >
             Get Started with AI Customer Support

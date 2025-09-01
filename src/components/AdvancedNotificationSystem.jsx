@@ -4,74 +4,74 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
 
 
     {
-'
-        id: '1','
-        title: 'Project Milestone Achieved','
-        message: 'AI E-commerce Platform has reached 75% completion milestone','
-        type: 'success','
-        priority: 'medium','
+
+        id: '1',
+        title: 'Project Milestone Achieved',
+        message: 'AI E-commerce Platform has reached 75% completion milestone',
+        type: 'success',
+        priority: 'medium',
         category: 'project',
         timestamp: new Date (Date.now () - 1000 * 60 * 30) , // 30 minutes ago
         isRead: false,
-        isArchived: false,'
-            { label: 'View Details', action: () => // // // // // // // // console.log('View project'), variant: 'primary' },'
+        isArchived: false,
+            { label: 'View Details', action: () => // // // // // // // // console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => // // // // // // // // console.log('Archive'), variant: 'secondary' }
         actions = ['
-            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' },'
+            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
-'
-        id: '2','
-        title: 'Security Alert','
-        message: 'Unusual login attempt detected from new IP address','
-        type: 'warning','
-        priority: 'high','
+
+        id: '2',
+        title: 'Security Alert',
+        message: 'Unusual login attempt detected from new IP address',
+        type: 'warning',
+        priority: 'high',
         category: 'security',
         timestamp: new Date (Date.now () - 1000 * 60 * 5) , // 5 minutes ago
         isRead: false,
-        isArchived: false,'
-            { label: 'Review Activity', action: () => // // // // // // // // console.log('Review security'), variant: 'primary' },'
+        isArchived: false,
+            { label: 'Review Activity', action: () => // // // // // // // // console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => // // // // // // // // console.log('Dismiss'), variant: 'secondary' }
         actions = ['
-            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },'
+            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
-'
-        id: '3','
-        title: 'Performance Issue Detected','
-        message: 'API response time increased by 200% in the last hour','
-        type: 'error','
-        priority: 'critical','
+
+        id: '3',
+        title: 'Performance Issue Detected',
+        message: 'API response time increased by 200% in the last hour',
+        type: 'error',
+        priority: 'critical',
         category: 'performance',
         timestamp: new Date (Date.now () - 1000 * 60 * 2) , // 2 minutes ago
         isRead: false,
-        isArchived: false,'
-            { label: 'Investigate', action: () => // // // // // // // // console.log('Investigate'), variant: 'primary' },'
+        isArchived: false,
+            { label: 'Investigate', action: () => // // // // // // // // console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => // // // // // // // // console.log('Acknowledge'), variant: 'secondary' }
         actions = ['
-            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },'
+            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
-'
-        id: '4','
-        title: 'System Update Available','
-        message: 'New version v2.1.0 is ready for deployment','
-        type: 'info','
-        priority: 'low','
+
+        id: '4',
+        title: 'System Update Available',
+        message: 'New version v2.1.0 is ready for deployment',
+        type: 'info',
+        priority: 'low',
         category: 'system',
         timestamp: new Date (Date.now () - 1000 * 60 * 60 * 2) , // 2 hours ago
         isRead: true,
-        isArchived: false,'
-            { label: 'Deploy Now', action: () => // // // // // // // // console.log('Deploy'), variant: 'primary' },'
+        isArchived: false,
+            { label: 'Deploy Now', action: () => // // // // // // // // console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => // // // // // // // // console.log('Schedule'), variant: 'secondary' }
         actions = ['
-            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },'
+            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
         ]
 
@@ -79,10 +79,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
 export function AdvancedNotificationSystem() {
     const [notifications, setNotifications] = useState(mockNotifications);
     const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);'
-    const [filterType, setFilterType] = useState('all');'
-    const [filterPriority, setFilterPriority] = useState('all');'
-    const [filterCategory, setFilterCategory] = useState('all');'
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [filterType, setFilterType] = useState('all');
+    const [filterPriority, setFilterPriority] = useState('all');
+    const [filterCategory, setFilterCategory] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [showRead, setShowRead] = useState(true);
     const [groupByCategory, setGroupByCategory] = useState(false);
@@ -91,9 +91,9 @@ export function AdvancedNotificationSystem() {
     useEffect(() => {
         setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
     const filteredNotifications = notifications.filter(notification => {
-'
-        const typeMatch = filterType === 'all' || notification.type === filterType;'
-        const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;'
+
+        const typeMatch = filterType === 'all' || notification.type === filterType;
+        const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
         const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
         const searchMatch = notification.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
             notification.message.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -110,7 +110,7 @@ export function AdvancedNotificationSystem() {
     const getTypeIcon = (type) => {
 
         switch (type) {
-'
+
             case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;'"
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;'"
             case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;'"
@@ -120,11 +120,11 @@ export function AdvancedNotificationSystem() {
     const getPriorityColor = (priority) => {
 
         switch (priority) {
-'
-            case 'low': return 'border-l-zion-emerald';'
-            case 'medium': return 'border-l-zion-cyan';'
-            case 'high': return 'border-l-zion-gold';'
-            case 'critical': return 'border-l-red-500';'
+
+            case 'low': return 'border-l-zion-emerald';
+            case 'medium': return 'border-l-zion-cyan';
+            case 'high': return 'border-l-zion-gold';
+            case 'critical': return 'border-l-red-500';
             default: return 'border-l-zion-slate'}
     };
     const getTimeAgo = (timestamp) => {
@@ -134,7 +134,7 @@ export function AdvancedNotificationSystem() {
         const minutes = Math.floor(diff / (1000 * 60));
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        if (minutes < 1)'
+        if (minutes < 1)
             return 'Just now';
         if (minutes < 60)
             return `${minutes}m ago`;
@@ -148,13 +148,13 @@ export function AdvancedNotificationSystem() {
             if (!groups[category])
                 groups[category] = [];
             groups[category].push(notification);
-            return groups}, {})'
+            return groups}, {})
         : { 'All': filteredNotifications };
     if (!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">"
         <Bell className="w-5 h-5"/>"
-        {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">'
+        {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>) }
       </button>) }
@@ -223,13 +223,13 @@ export function AdvancedNotificationSystem() {
 `
             <button onClick={() => setShowRead(!showRead)} className={`px-2 py-1 rounded text-xs transition-colors ${showRead'
             ? 'bg-zion-emerald text-white''`
-            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>'
+            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>
               {showRead ? 'Hide Read' : 'Show Read'}
             </button>
 `
             <button onClick={() => setGroupByCategory(!groupByCategory)} className={`px-2 py-1 rounded text-xs transition-colors ${groupByCategory'
             ? 'bg-zion-cyan text-white''`
-            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>'
+            : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`}>
               {groupByCategory ? 'Ungroup' : 'Group'}
             </button>
           </div>

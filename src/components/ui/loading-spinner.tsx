@@ -1,23 +1,23 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-'
-  size?: 'sm' | 'md' | 'lg' | 'xl';'
+
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
   showText?: boolean;
   className?: string;
 ;
 const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-  md: 'w-12 h-12','
+
+  sm: 'w-8 h-8',
+  md: 'w-12 h-12',
   lg: 'w-16 h-16',;
   ;
   ;
   ;
-  ;'
+  ;
   xl: 'w-32 h-32';
 ;
 
@@ -30,14 +30,14 @@ const sizeClasses = {
 };
 ;
 const colorClasses = {
-'
-  primary: 'border-cyan-400','
-  secondary: 'border-blue-400','
+
+  primary: 'border-cyan-400',
+  secondary: 'border-blue-400',
   white: 'border-white',;
   ;
   ;
   ;
-  ;'
+  ;
   cyan: 'border-cyan-400';
 ;
 
@@ -49,11 +49,11 @@ const colorClasses = {
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-'
-  size = 'md','
-  color = 'primary','
+
+  size = 'md',
+  color = 'primary',
   text = 'Loading...',
-  showText = true,'
+  showText = true,
   className = ''
 }) => {
 
@@ -84,7 +84,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }}
         />
 
-        {/* Center dot for larger sizes */}'
+        {/* Center dot for larger sizes */}
         {size === 'xl' && ("
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">"
             <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
@@ -114,8 +114,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Optimized spinner for inline use'
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-'
-  size = 'sm','
+
+  size = 'sm',
   className = ''
 }) => ("`
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
@@ -149,9 +149,9 @@ export const FullScreenLoader: React.FC<{
   showLogo?: boolean;
   className?: string;
 }> = ({
-'
+
   text = 'Loading amazing experiences...',
-  showLogo = true,'
+  showLogo = true,
   className = ''
 }) => (`
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>"
@@ -177,7 +177,7 @@ export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
 }> = ({
-'
+
   className = '',
   lines = 3;
 }) => (`
@@ -185,7 +185,7 @@ export const SkeletonLoader: React.FC<{
     {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
         key={index};`
-        className={`h-4 bg-gray-300 rounded mb-2 ${;'
+        className={`h-4 bg-gray-300 rounded mb-2 ${;
           index === lines - 1 ? 'w-3/4' : 'w-full';`
         }`};
       />;

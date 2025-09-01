@@ -1,60 +1,60 @@
 import React from 'react';
 import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
   const features = [
-    'AI-powered contract analysis and risk assessment','
-    'Intelligent legal document generation and review',;'
-    'Automated compliance monitoring and reporting',;'
-    'Predictive analytics for case outcomes',;'
-    'Legal research automation and citation checking',;'
-    'Bias-free legal document screening',;'
-    'Integration with major legal management platforms',;'
+    'AI-powered contract analysis and risk assessment',
+    'Intelligent legal document generation and review',;
+    'Automated compliance monitoring and reporting',;
+    'Predictive analytics for case outcomes',;
+    'Legal research automation and citation checking',;
+    'Bias-free legal document screening',;
+    'Integration with major legal management platforms',;
     'Custom AI models for specialized legal domains';
   ];
 
   const tiers = [
     {
-'
-      name: 'Solo Practice','
-      price: '$299/mo','
-      details: ['Up to 100 documents/month', 'Basic AI analysis', 'Standard templates', 'Email support']
+
+      name: 'Solo Practice',
+      price: '$299/mo',
+      details: ['Up to 100 documents/month',Basic AI analysis',Standard templates',Email support']
     },
     {
-'
-      name: 'Small Firm', '
-      price: '$799/mo', '
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'] ;
+
+      name: 'Small Firm',
+      price: '$799/mo',
+      details: ['Up to 500 documents/month',Advanced AI features',Custom templates',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited documents',Custom AI models',Full platform integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Contract review and risk assessment',;'
-    'Legal document automation',;'
-    'Compliance monitoring and reporting',;'
-    'Legal research and case preparation',;'
-    'Due diligence and discovery',;'
+  const useCases = [;
+    'Contract review and risk assessment',;
+    'Legal document automation',;
+    'Compliance monitoring and reporting',;
+    'Legal research and case preparation',;
+    'Due diligence and discovery',;
     'Regulatory compliance management';
   ];
 
-  const benefits = [;'
-    'Reduce document review time by 70-85%',;'
-    'Improve accuracy and consistency by 90%',;'
-    'Cut legal costs by 30-50%',;'
-    'Accelerate contract negotiations by 3-5x',;'
-    'Enhance compliance and risk management',;'
+  const benefits = [;
+    'Reduce document review time by 70-85%',;
+    'Improve accuracy and consistency by 90%',;
+    'Cut legal costs by 30-50%',;
+    'Accelerate contract negotiations by 3-5x',;
+    'Enhance compliance and risk management',;
     'Scale legal operations without additional staff';
   ];
 
-  const industries = [;'
-    'Corporate Law',;'
-    'Real Estate Law',;'
-    'Healthcare Law',;'
-    'Financial Services',;'
-    'Technology & IP',;'
+  const industries = [;
+    'Corporate Law',;
+    'Real Estate Law',;
+    'Healthcare Law',;
+    'Financial Services',;
+    'Technology & IP',;
     'Government & Public Sector';
   ];
 
@@ -110,8 +110,8 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['70-85% time savings', '90% accuracy improvement', '30-50% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['70-85% time savings',90% accuracy improvement',30-50% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-slate-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

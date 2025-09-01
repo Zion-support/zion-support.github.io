@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
@@ -13,11 +13,11 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({
-'
+
   className = '', 
-  count = 1, '
-  height = 'h-4', '
-  width = 'w-full', '
+  count = 1,
+  height = 'h-4',
+  width = 'w-full',
   rounded = 'rounded',
   animated = true;
 }) => {

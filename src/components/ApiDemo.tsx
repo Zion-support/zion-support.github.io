@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { api, ApiResponse  } from '@/services/api';
 
 interface User {
@@ -10,9 +10,9 @@ interface User {
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);'
+  const [error, setError] = useState<any>(null);
 const [newUser, setNewUser] = useState({ name: '', email: '';
-});'
+});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
@@ -26,7 +26,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
       const response = await api.health () ;
       setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) ;
     } catch (err) {
-'
+
       setHealthStatus('❌ API Unhealthy');
 
   };
@@ -42,7 +42,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
         setUsers(response.data);
 
     } catch (err) {
-'
+
       setError(err instanceof Error ? err.message : 'Failed to fetch users');
     } finally {
 
@@ -54,7 +54,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
     e.preventDefault () ;
 
     if (!newUser.name.trim() || !newUser.email.trim()) {
-'
+
       setError('Name and email are required');
       return;
 
@@ -65,11 +65,11 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
       const response = await api.createUser (newUser) ;
       if (response.success && response.data) {
 
-        setUsers(prev => [...prev, response.data!]);'
+        setUsers(prev => [...prev, response.data!]);
         setNewUser({ name: '', email: '' });
 
     } catch (err) {
-'
+
       setError(err instanceof Error ? err.message : 'Failed to create user');
     } finally {
 
@@ -96,7 +96,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
           <form onSubmit={handleCreateUser} className="space-y-4">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input"
-                type="text""
+                type="text"
                 placeholder="Name"
                 value={newUser.name}
                 onChange = {
@@ -114,7 +114,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
                 required
               />
               <input"
-                type="email""
+                type="email"
                 placeholder="Email"
                 value={newUser.email}
                 onChange = {
@@ -136,7 +136,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
               type="submit"
               disabled={loading}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-'
+
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -157,7 +157,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
               onClick={fetchUsers}
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-'
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>

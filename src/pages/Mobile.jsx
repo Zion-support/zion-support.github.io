@@ -163,7 +163,7 @@ const Mobile = () => {
                 <h2 className="text-3xl font-semibold text-white mb-4">
                   Ready to Go Mobile?
                 </h2>"
-                <p className="text-blue-100 mb-6 text-lg">'
+                <p className="text-blue-100 mb-6 text-lg">
                   Let's discuss your mobile strategy and create solutions that deliver
                   exceptional experiences across all devices.
                 </p>"

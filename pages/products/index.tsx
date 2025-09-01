@@ -1,4 +1,4 @@
-import Head from 'next/head.ts';'
+import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 ;
 export { function };
@@ -47,11 +47,11 @@ export default function ProductsIndex(...args[]):  {
         <section className="mx-auto max-w-7xl px-6 pb-16">"
           <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             {['
-              { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },'
-              { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },'
-              { title: 'Link Sentinel', desc: 'Prevents broken links in prod' },'
-              { title: 'Content Curator', desc: 'Keeps the homepage fresh' },'
-              { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },'
+              { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },
+              { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },
+              { title: 'Link Sentinel', desc: 'Prevents broken links in prod' },
+              { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
+              { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
               { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
             ].map((p)  => ("
               <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">"

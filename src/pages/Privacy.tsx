@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import {
 
@@ -14,35 +14,35 @@ import {
   Mail,
   Users,
   Settings,
-  Trash2,'
+  Trash2,
   Download} from 'lucide-react';
 
 const Privacy: React.FC = () => {
-'
+
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Data Protection',
       description:'
         'We implement industry-standard security measures to protect your personal information.'},
     {
 
-      icon: Lock,'
+      icon: Lock,
       title: 'Privacy by Design',
       description:'
         'Privacy considerations are built into every aspect of our services and systems.'},
     {
 
-      icon: Eye,'
+      icon: Eye,
       title: 'Transparency',
       description:'
         'We are clear about what data we collect, how we use it, and your rights.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'User Control',
       description:'
         'You have full control over your personal data and can request changes or deletion.'},
@@ -50,55 +50,55 @@ const Privacy: React.FC = () => {
 
   const dataCategories = [
     {
-'
-      title: 'Personal Information','
-      description: 'Name, email address, phone number, and company information','
-      examples: ['Contact details', 'Account information', 'Business details']},
+
+      title: 'Personal Information',
+      description: 'Name, email address, phone number, and company information',
+      examples: ['Contact details',Account information',Business details']},
     {
-'
-      title: 'Usage Data','
-      description: 'Information about how you use our services and website','
-      examples: ['Login times', 'Feature usage', 'Performance metrics']},
+
+      title: 'Usage Data',
+      description: 'Information about how you use our services and website',
+      examples: ['Login times',Feature usage',Performance metrics']},
     {
-'
-      title: 'Technical Data','
-      description: 'Device information and technical specifications','
-      examples: ['IP address', 'Browser type', 'Device information']},
+
+      title: 'Technical Data',
+      description: 'Device information and technical specifications',
+      examples: ['IP address',Browser type',Device information']},
     {
-'
-      title: 'Communication Data','
-      description: 'Records of our interactions and communications','
-      examples: ['Support tickets', 'Email correspondence', 'Chat logs']},
+
+      title: 'Communication Data',
+      description: 'Records of our interactions and communications',
+      examples: ['Support tickets',Email correspondence',Chat logs']},
     {
-'
-      title: 'Business Information','
+
+      title: 'Business Information',
       description: 'Business-related data and project information',
       examples: ['
-        'Project requirements and specifications','
-        'Service usage and performance data','
-        'Payment and billing information','
+        'Project requirements and specifications',
+        'Service usage and performance data',
+        'Payment and billing information',
         'Support and communication records',
       ]},
   ];
 
   const dataUses = [
     {
-'
+
       purpose: 'Service Delivery',
       description:'
         'To provide and maintain our services, process transactions, and deliver support.'},
     {
-'
+
       purpose: 'Communication',
       description:'
         'To communicate with you about our services, updates, and support.'},
     {
-'
+
       purpose: 'Security',
       description:'
         'To ensure the security and integrity of our systems and services.'},
     {
-'
+
       purpose: 'Analytics',
       description:'
         'To analyze usage patterns and improve our services and user experience.'},
@@ -106,60 +106,60 @@ const Privacy: React.FC = () => {
 
   const userRights = [
     {
-'
-      right: 'Access','
+
+      right: 'Access',
       description: 'Request a copy of your personal data that we hold.'},
     {
-'
+
       right: 'Rectification',
       description:'
         'Request correction of inaccurate or incomplete personal data.'},
     {
-'
+
       right: 'Erasure',
       description:'
         'Request deletion of your personal data under certain circumstances.'},
     {
-'
-      right: 'Portability','
+
+      right: 'Portability',
       description: 'Request transfer of your data to another service provider.'},
     {
-'
+
       right: 'Objection',
       description:'
         'Object to processing of your personal data in certain situations.'},
     {
-'
-      right: 'Restriction','
+
+      right: 'Restriction',
       description: 'Request limitation of processing of your personal data.'},
   ];
 
   const contactInfo = [
     {
 
-      icon: Mail,'
-      label: 'Email','
-      value: 'privacy@ziontechgroup.com','
+      icon: Mail,
+      label: 'Email',
+      value: 'privacy@ziontechgroup.com',
       href: 'mailto:privacy@ziontechgroup.com'},
     {
 
-      icon: FileText,'
-      label: 'Data Protection Officer','
-      value: 'dpo@ziontechgroup.com','
+      icon: FileText,
+      label: 'Data Protection Officer',
+      value: 'dpo@ziontechgroup.com',
       href: 'mailto:dpo@ziontechgroup.com'},
     {
 
-      icon: Globe,'
-      label: 'Address','
-      value: '364 E Main St STE 1008, Middletown DE 19709','
+      icon: Globe,
+      label: 'Address',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
   ];
 
   return()
     <>
       <SEO
-        title="Privacy Policy - Zion Tech Group""
-        description="Learn how Zion Tech Group protects your privacy and handles your personal data in accordance with GDPR and other privacy regulations.""
+        title="Privacy Policy - Zion Tech Group"
+        description="Learn how Zion Tech Group protects your privacy and handles your personal data in accordance with GDPR and other privacy regulations."
         keywords="privacy policy, data protection, GDPR, data rights, personal information, Zion Tech Group, privacy"
       />"
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">

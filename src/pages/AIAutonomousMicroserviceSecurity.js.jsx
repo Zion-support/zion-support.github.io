@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousMicroserviceSecurity = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousMicroserviceSecurity = () => {
           AI Autonomous Microservice Security Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous microservice security platform that continuously secures microservices, detects threats, and protects microservice infrastructure with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI microservice security, autonomous microservice security, microservice protection, threat detection, autonomous operations, AI microservice security platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-microservice-security"
         />
       </Helmet>
@@ -193,13 +193,13 @@ const AIAutonomousMicroserviceSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Service Security','
-                'API Security','
-                'Communication Security','
-                'Authentication Security','
-                'Authorization Security','
-                'Data Security','
-                'Network Security','
+                'Service Security',
+                'API Security',
+                'Communication Security',
+                'Authentication Security',
+                'Authorization Security',
+                'Data Security',
+                'Network Security',
                 'Orchestration Security',
               ].map(type => (
                 <div

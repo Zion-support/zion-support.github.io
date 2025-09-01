@@ -9,28 +9,28 @@ import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart,
 import { Link } from "react-router-dom";
 
 const categoryColors: { [key: string]: string } = {
-'
-  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700','
-  'Quantum Computing & AI': 'from-blue-600 to-cyan-700','
-  'Blockchain & Web3': 'from-green-600 to-emerald-700','
-  'Cybersecurity & Privacy': 'from-red-600 to-pink-700','
-  'Healthcare & Biotech': 'from-purple-600 to-pink-700','
-  'Financial Technology': 'from-yellow-600 to-orange-700','
-  'IoT & Automation': 'from-blue-600 to-teal-700','
-  'Cloud & Infrastructure': 'from-gray-600 to-blue-700','
-  'Data Analytics & BI': 'from-green-600 to-blue-700','
-  'Digital Marketing & Automation': 'from-pink-600 to-purple-700','
-  'E-commerce & Retail': 'from-orange-600 to-red-700','
-  'Education & Learning Technology': 'from-teal-600 to-green-700','
-  'Space Technology & Earth Observation': 'from-indigo-600 to-purple-700','
-  'AR/VR & Immersive Technology': 'from-pink-600 to-rose-700','
-  'Robotics & Automation': 'from-gray-600 to-slate-700','
-  'Green Technology & Sustainability': 'from-green-600 to-emerald-700','
-  'Supply Chain & Logistics': 'from-blue-600 to-indigo-700','
-  'Human Resources & Talent Management': 'from-purple-600 to-violet-700','
-  'Legal Technology & Compliance': 'from-slate-600 to-gray-700','
-  'Real Estate & Property Technology': 'from-amber-600 to-orange-700','
-  'Sports Technology & Analytics': 'from-green-600 to-blue-700','
+
+  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
+  'Quantum Computing & AI': 'from-blue-600 to-cyan-700',
+  'Blockchain & Web3': 'from-green-600 to-emerald-700',
+  'Cybersecurity & Privacy': 'from-red-600 to-pink-700',
+  'Healthcare & Biotech': 'from-purple-600 to-pink-700',
+  'Financial Technology': 'from-yellow-600 to-orange-700',
+  'IoT & Automation': 'from-blue-600 to-teal-700',
+  'Cloud & Infrastructure': 'from-gray-600 to-blue-700',
+  'Data Analytics & BI': 'from-green-600 to-blue-700',
+  'Digital Marketing & Automation': 'from-pink-600 to-purple-700',
+  'E-commerce & Retail': 'from-orange-600 to-red-700',
+  'Education & Learning Technology': 'from-teal-600 to-green-700',
+  'Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',
+  'AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',
+  'Robotics & Automation': 'from-gray-600 to-slate-700',
+  'Green Technology & Sustainability': 'from-green-600 to-emerald-700',
+  'Supply Chain & Logistics': 'from-blue-600 to-indigo-700',
+  'Human Resources & Talent Management': 'from-purple-600 to-violet-700',
+  'Legal Technology & Compliance': 'from-slate-600 to-gray-700',
+  'Real Estate & Property Technology': 'from-amber-600 to-orange-700',
+  'Sports Technology & Analytics': 'from-green-600 to-blue-700',
   'Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
 
@@ -76,22 +76,22 @@ const benefits = [
 ];
 ;
 const contactInfo = {
-'
-  mobile: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
   ;
   ;
-  ;'
+  ;
   website: 'https://ziontechgroup.com';
 ;
 
 };
 
 export function ComprehensiveServicesShowcase2027(...args[]):  {
-'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
 
   // Combine all services
@@ -102,8 +102,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
-'
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;'
+
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -165,8 +165,8 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         <div className="mb-16">"
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <input"
-              type="text""
-              placeholder="Search services...""
+              type="text"
+              placeholder="Search services..."
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={searchQuery}
               onChange={ (e) => setSearchQuery (e.target.value) }
@@ -188,7 +188,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">"
-                <CardHeader className="text-center">'
+                <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
                     {service.icon}
                   </div>"

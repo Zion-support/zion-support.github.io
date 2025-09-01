@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 const Card = ({ children, className = '' }) => {
 
   return()
@@ -8,7 +8,7 @@ const Card = ({ children, className = '' }) => {
       {children}
     </div>
   );
-};'
+};
 const CardHeader = ({ children, className = '' }) => {
 
   return()`
@@ -16,7 +16,7 @@ const CardHeader = ({ children, className = '' }) => {
       {children}
     </div>
   );
-};'
+};
 const CardTitle = ({ children, className = '' }) => {
 
   return()
@@ -26,17 +26,17 @@ const CardTitle = ({ children, className = '' }) => {
       {children}
     </h3>
   );
-};'
+};
 const CardDescription = ({ children, className = '' }) => {
 
   return()`
     <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
   );
-};'
+};
 const CardContent = ({ children, className = '' }) => {
 `
   return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
-};'
+};
 const CardFooter = ({ children, className = '' }) => {
 
   return()`

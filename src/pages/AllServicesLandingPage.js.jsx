@@ -1,13 +1,13 @@
-import React from 'react';'
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 
@@ -29,22 +29,22 @@ import {
   BarChart3,
   MessageSquare,
   FileText,
-  ShoppingCart,'
-  Settings} from 'lucide-react';'
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'
-import { TrustedBySection } from '@/components/TrustedBySection';'
+  ShoppingCart,
+  Settings} from 'lucide-react';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { TrustedBySection } from '@/components/TrustedBySection';
 import { SEO } from '@/components/SEO';
 export default function AllServicesLandingPage() {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI Services':'
-        return '🤖';'
+        return '🤖';
       case 'Micro SAAS':'
-        return '☁️';'
+        return '☁️';
       case 'IT Services':'
-        return '💻';'
+        return '💻';
       case 'Digital Services':'
         return '🚀';
       default:'
@@ -54,13 +54,13 @@ export default function AllServicesLandingPage() {
   const getCategoryIconComponent = category => {
 
     switch (category) {
-'
+
       case 'AI Services':
-        return <Brain className="h-6 w-6" />;'
+        return <Brain className="h-6 w-6" />;
       case 'Micro SAAS':"
-        return <Cloud className="h-6 w-6" />;'
+        return <Cloud className="h-6 w-6" />;
       case 'IT Services':"
-        return <Code className="h-6 w-6" />;'
+        return <Code className="h-6 w-6" />;
       case 'Digital Services':"
         return <ArrowUpRight className="h-6 w-6" />;
       default:"
@@ -70,13 +70,13 @@ export default function AllServicesLandingPage() {
   const getPricingModelColor = model => {
 
     switch (model) {
-'
+
       case 'subscription':'
-        return 'bg-blue-100 text-blue-800';'
+        return 'bg-blue-100 text-blue-800';
       case 'project-based':'
-        return 'bg-purple-100 text-purple-800';'
+        return 'bg-purple-100 text-purple-800';
       case 'one-time':'
-        return 'bg-green-100 text-green-800';'
+        return 'bg-green-100 text-green-800';
       case 'usage-based':'
         return 'bg-orange-100 text-orange-800';
       default:'
@@ -86,27 +86,27 @@ export default function AllServicesLandingPage() {
   const getServiceIcon = subcategory => {
 
     switch (subcategory) {
-'
+
       case 'Customer Service':"
-        return <MessageSquare className="h-5 w-5" />;'
+        return <MessageSquare className="h-5 w-5" />;
       case 'Analytics':"
-        return <BarChart3 className="h-5 w-5" />;'
+        return <BarChart3 className="h-5 w-5" />;
       case 'Content Creation':"
-        return <FileText className="h-5 w-5" />;'
+        return <FileText className="h-5 w-5" />;
       case 'Inventory Management':"
-        return <Database className="h-5 w-5" />;'
+        return <Database className="h-5 w-5" />;
       case 'HR Analytics':"
-        return <Users className="h-5 w-5" />;'
+        return <Users className="h-5 w-5" />;
       case 'Financial Management':"
-        return <BarChart3 className="h-5 w-5" />;'
+        return <BarChart3 className="h-5 w-5" />;
       case 'Cloud Solutions':"
-        return <Cloud className="h-5 w-5" />;'
+        return <Cloud className="h-5 w-5" />;
       case 'Cybersecurity':"
-        return <Lock className="h-5 w-5" />;'
+        return <Lock className="h-5 w-5" />;
       case 'DevOps':"
-        return <Code className="h-5 w-5" />;'
+        return <Code className="h-5 w-5" />;
       case 'Transformation':"
-        return <ArrowUpRight className="h-5 w-5" />;'
+        return <ArrowUpRight className="h-5 w-5" />;
       case 'E-commerce':"
         return <ShoppingCart className="h-5 w-5" />;
       default:"
@@ -116,9 +116,9 @@ export default function AllServicesLandingPage() {
   return ("
     <div className="min-h-screen bg-background">
       <SEO"
-        title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group""
-        description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses.""
-        keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group""
+        title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group"
+        description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses."
+        keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group"
         canonical="https://ziontechgroup.com/services"
       />
 
@@ -137,15 +137,15 @@ export default function AllServicesLandingPage() {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-gray-100"
             >"
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="h-5 w-5 mr-2" />
@@ -239,8 +239,8 @@ export default function AllServicesLandingPage() {
                             className={getPricingModelColor()
                               service.pricingModel
                             )}
-                          >'
-                            {service.pricingModel.replace('-', ' ')}
+                          >
+                            {service.pricingModel.replace('-', ')}
                           </Badge>
                         </div>"
                         <div className="flex items-center space-x-2 mb-2">
@@ -302,7 +302,7 @@ export default function AllServicesLandingPage() {
                               .map((feature, index) => (
                                 <Badge
                                   key={index}"
-                                  variant="secondary""
+                                  variant="secondary"
                                   className="text-xs"
                                 >
                                   {feature}
@@ -377,8 +377,8 @@ export default function AllServicesLandingPage() {
                               <Globe className="h-4 w-4" />
                               <a
                                 href={service.contactInfo.website}"
-                                target="_blank""
-                                rel="noopener noreferrer""
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-zion-cyan hover:underline"
                               >
                                 Visit Website
@@ -469,15 +469,15 @@ export default function AllServicesLandingPage() {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-gray-100"
             >"
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="h-5 w-5 mr-2" />
@@ -489,12 +489,12 @@ export default function AllServicesLandingPage() {
             <p className="mb-2">
               Address: 364 E Main St STE 1008, Middletown DE 19709
             </p>
-            <p>'
+            <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:underline"
               >
                 https://ziontechgroup.com

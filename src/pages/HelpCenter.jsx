@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
 
@@ -9,11 +9,11 @@ import {
   Phone,
   Mail,
   ArrowRight,
-  ChevronDown,'
+  ChevronDown,
   ChevronRight} from 'lucide-react';
 
 export default function HelpCenter() {
-'
+
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState(['
     'getting-started',
@@ -28,109 +28,109 @@ export default function HelpCenter() {
   };
 
   const helpCategories = {
-'
+
     'getting-started': {
-'
+
       title: 'Getting Started',
       icon: BookOpen,
       articles: [
         {
-'
-          title: 'How to create your first account','
-          href: '/help/create-account'},'
+
+          title: 'How to create your first account',
+          href: '/help/create-account'},
         { title: 'Complete profile setup guide', href: '/help/profile-setup' },
         {
-'
-          title: 'Understanding the marketplace','
-          href: '/help/marketplace-guide'},'
+
+          title: 'Understanding the marketplace',
+          href: '/help/marketplace-guide'},
         { title: 'First steps for new users', href: '/help/first-steps' },
       ]},
     marketplace: {
-'
+
       title: 'Marketplace',
       icon: BookOpen,
       articles: [
         {
-'
-          title: 'How to list products and services','
-          href: '/help/list-products'},'
-        { title: 'Managing your listings', href: '/help/manage-listings' },'
+
+          title: 'How to list products and services',
+          href: '/help/list-products'},
+        { title: 'Managing your listings', href: '/help/manage-listings' },
         { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
         {
-'
-          title: 'Marketplace policies and guidelines','
+
+          title: 'Marketplace policies and guidelines',
           href: '/help/marketplace-policies'},
       ]},
     talent: {
-'
+
       title: 'Talent & Hiring',
       icon: BookOpen,
       articles: ['
-        { title: 'Creating a talent profile', href: '/help/talent-profile' },'
+        { title: 'Creating a talent profile', href: '/help/talent-profile' },
         { title: 'Finding and hiring talent', href: '/help/hire-talent' },
         {
-'
-          title: 'Managing projects and contracts','
-          href: '/help/manage-projects'},'
+
+          title: 'Managing projects and contracts',
+          href: '/help/manage-projects'},
         { title: 'Payment and escrow system', href: '/help/payment-system' },
       ]},
     technical: {
-'
+
       title: 'Technical Support',
       icon: BookOpen,
       articles: ['
-        { title: 'Common technical issues', href: '/help/technical-issues' },'
+        { title: 'Common technical issues', href: '/help/technical-issues' },
         { title: 'Browser compatibility', href: '/help/browser-compatibility' },
         {
-'
-          title: 'Mobile app troubleshooting','
-          href: '/help/mobile-troubleshooting'},'
+
+          title: 'Mobile app troubleshooting',
+          href: '/help/mobile-troubleshooting'},
         { title: 'API and integration support', href: '/help/api-support' },
       ]},
     billing: {
-'
+
       title: 'Billing & Payments',
       icon: BookOpen,
       articles: ['
         { title: 'Understanding your invoice', href: '/help/invoice-guide' },
         {
-'
-          title: 'Payment methods and security','
+
+          title: 'Payment methods and security',
           href: '/help/payment-methods'},
         {
-'
-          title: 'Refund and cancellation policy','
+
+          title: 'Refund and cancellation policy',
           href: '/help/refund-policy'},
         {
-'
-          title: 'Tax information and reporting','
+
+          title: 'Tax information and reporting',
           href: '/help/tax-information'},
       ]},
     account: {
-'
+
       title: 'Account & Security',
       icon: BookOpen,
       articles: [
         {
-'
-          title: 'Account security best practices','
-          href: '/help/account-security'},'
+
+          title: 'Account security best practices',
+          href: '/help/account-security'},
         { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
         {
-'
-          title: 'Password reset and recovery','
+
+          title: 'Password reset and recovery',
           href: '/help/password-recovery'},
         {
-'
-          title: 'Privacy settings and data control','
+
+          title: 'Privacy settings and data control',
           href: '/help/privacy-settings'},
       ]}};
   const popularArticles = ['
-    'How to create your first account','
-    'Understanding the marketplace','
-    'Creating a talent profile','
-    'Finding and hiring talent','
-    'Payment and escrow system','
+    'How to create your first account',
+    'Understanding the marketplace',
+    'Creating a talent profile',
+    'Finding and hiring talent',
+    'Payment and escrow system',
     'Account security best practices',
   ];
   return()
@@ -142,7 +142,7 @@ export default function HelpCenter() {
           content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="help center, support, FAQ, tutorials, Zion Tech Group"
         />"
         <link rel="canonical" href="https://ziontechgroup.com/help-center" />
@@ -152,7 +152,7 @@ export default function HelpCenter() {
         {/* Hero Section */}"
         <section className="pt-24 pb-16 px-4">"
           <div className="container mx-auto text-center">"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">'
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               How can we{' '}"
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 help you?
@@ -167,7 +167,7 @@ export default function HelpCenter() {
             <div className="max-w-2xl mx-auto relative">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search for help articles, tutorials, or topics..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
@@ -245,7 +245,7 @@ export default function HelpCenter() {
                     {article}
                   </h3>
                   <Link'
-                    to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}"
+                    to={`/help/${article.toLowerCase().replace(/\s+/g,-')}`}"
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
                   >
                     Read Article"
@@ -295,7 +295,7 @@ export default function HelpCenter() {
                   Send us a detailed message
                 </p>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
                 >
                   Send Email
@@ -313,7 +313,7 @@ export default function HelpCenter() {
                   Call us directly for urgent issues
                 </p>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
                 >
                   Call Now

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -13,14 +13,14 @@ import {
   Clock,
   Users,
   CheckCircle,
-  TrendingUp,'
-  Award} from 'lucide-react';'
+  TrendingUp,
+  Award} from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
 export default function NextGenInnovativeServices() {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
+
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState(null);'
+  const [selectedService, setSelectedService] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
   // Get unique categories
   const categories = useMemo()
@@ -50,11 +50,11 @@ export default function NextGenInnovativeServices() {
   const getSupportLevelColor = level => {
 
     switch (level.toLowerCase()) {
-'
+
       case 'enterprise':'
-        return 'bg-purple-600';'
+        return 'bg-purple-600';
       case 'premium':'
-        return 'bg-blue-600';'
+        return 'bg-blue-600';
       case 'standard':'
         return 'bg-green-600';
       default:'
@@ -171,7 +171,7 @@ export default function NextGenInnovativeServices() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
@@ -193,7 +193,7 @@ export default function NextGenInnovativeServices() {
                     key={category}
                     value={category}"
                     className="bg-gray-800 text-white"
-                  >'
+                  >
                     {category === 'all' ? 'All Categories' : category}
                   </option>
                 ))}
@@ -223,10 +223,10 @@ export default function NextGenInnovativeServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           animate="visible"
           className={
-'
+
             viewMode === 'grid''
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
               : 'space-y-6'
@@ -315,8 +315,8 @@ export default function NextGenInnovativeServices() {
             </div>
             <button
               onClick={() => {
-'
-                setSearchTerm('');'
+
+                setSearchTerm('');
                 setSelectedCategory('all');
               }}"
               className="text-blue-400 hover:text-blue-300 transition-colors"
@@ -533,8 +533,8 @@ export default function NextGenInnovativeServices() {
                 {selectedService.demoUrl && (
                   <a
                     href={selectedService.demoUrl}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
                   >"
                     <ExternalLink size={20} className="mr-2" />
@@ -566,23 +566,23 @@ export default function NextGenInnovativeServices() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
               >"
                 <Phone size={24} className="mr-2" />
                 Call +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
               >"
                 <Mail size={24} className="mr-2" />
                 Email Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >"
                 <Globe size={24} className="mr-2" />
@@ -591,10 +591,10 @@ export default function NextGenInnovativeServices() {
             </div>"
             <div className="mt-8 text-gray-400">
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>'
+              <p>
                 Website:{' '}
                 <a"
-                  href="https://ziontechgroup.com""
+                  href="https://ziontechgroup.com"
                   className="text-blue-400 hover:text-blue-300"
                 >
                   https://ziontechgroup.com

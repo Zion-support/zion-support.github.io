@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Link } from 'react-router-dom.ts';
 import {
 
@@ -34,7 +34,7 @@ import {
   Bell,
   AlertCircle,
   CheckCircle2,
-  XCircle,'
+  XCircle,
   Info} from 'lucide-react.ts';
 
 export default function DataAnalytics(...args: any[]): any {
@@ -42,96 +42,96 @@ export default function DataAnalytics(...args: any[]): any {
   const features = [
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Advanced Analytics',
       description:'
-        'Comprehensive business intelligence and data visualization tools','
+        'Comprehensive business intelligence and data visualization tools',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Insights',
       description:'
-        'Machine learning algorithms for predictive analytics and pattern recognition','
+        'Machine learning algorithms for predictive analytics and pattern recognition',
       color: 'from-purple-500 to-pink-500'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Real-time Monitoring',
       description:'
-        'Live dashboards and instant alerts for critical business metrics','
+        'Live dashboards and instant alerts for critical business metrics',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Data Security',
       description:'
-        'Enterprise-grade security and compliance for sensitive data','
+        'Enterprise-grade security and compliance for sensitive data',
       color: 'from-red-500 to-orange-500'},
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Cloud Integration',
       description:'
-        'Seamless integration with major cloud platforms and data warehouses','
+        'Seamless integration with major cloud platforms and data warehouses',
       color: 'from-indigo-500 to-blue-500'},
     {
 
-      icon: Users,'
-      title: 'Collaborative Analytics','
-      description: 'Team-based data exploration and shared insights','
+      icon: Users,
+      title: 'Collaborative Analytics',
+      description: 'Team-based data exploration and shared insights',
       color: 'from-yellow-500 to-orange-500'},
   ];
 
   const useCases = [
     {
-'
+
       title: 'Business Intelligence',
       description:'
         'Transform raw data into actionable insights for strategic decision-making',
-      icon: Target,'
-      benefits: ['Performance tracking', 'KPI monitoring', 'Trend analysis']},
+      icon: Target,
+      benefits: ['Performance tracking',KPI monitoring',Trend analysis']},
     {
-'
+
       title: 'Customer Analytics',
       description:'
         'Understand customer behavior and preferences for improved engagement',
       icon: Users,
       benefits: ['
-        'Customer segmentation','
-        'Behavioral analysis','
+        'Customer segmentation',
+        'Behavioral analysis',
         'Churn prediction',
       ]},
     {
-'
+
       title: 'Financial Analytics',
       description:'
         'Monitor financial performance and identify optimization opportunities',
-      icon: TrendingUp,'
-      benefits: ['Revenue analysis', 'Cost optimization', 'Risk assessment']},
+      icon: TrendingUp,
+      benefits: ['Revenue analysis',Cost optimization',Risk assessment']},
     {
-'
+
       title: 'Operational Analytics',
       description:'
         'Optimize business processes and improve operational efficiency',
       icon: Activity,
       benefits: ['
-        'Process optimization','
-        'Resource allocation','
+        'Process optimization',
+        'Resource allocation',
         'Performance monitoring',
       ]},
   ];
 
   const technologies = ['
-    'Python & R','
-    'Apache Spark','
-    'TensorFlow','
-    'Power BI','
-    'Tableau','
-    'AWS Redshift','
-    'Google BigQuery','
-    'Snowflake','
-    'Apache Kafka','
+    'Python & R',
+    'Apache Spark',
+    'TensorFlow',
+    'Power BI',
+    'Tableau',
+    'AWS Redshift',
+    'Google BigQuery',
+    'Snowflake',
+    'Apache Kafka',
     'Elasticsearch',
   ];
 
@@ -156,14 +156,14 @@ export default function DataAnalytics(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
@@ -326,14 +326,14 @@ export default function DataAnalytics(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>"
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"

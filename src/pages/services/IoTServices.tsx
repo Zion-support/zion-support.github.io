@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
 
 const IoTServices = () => {
@@ -206,7 +206,7 @@ const IoTServices = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Connect Your World?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how IoT solutions can transform your business
             operations and unlock new opportunities.
           </p>"

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -27,99 +27,99 @@ import {
   Ticket,
   Headphones,
   MessageSquare,
-  VideoCall,'
+  VideoCall,
   Mailbox} from 'lucide-react';
 
 const Support = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('general');'
+
+  const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
   const supportCategories = [
     {
-'
-      id: 'help','
+
+      id: 'help',
       name: 'Help Center',
-      icon: HelpCircle,'
-      description: 'Find answers to common questions','
+      icon: HelpCircle,
+      description: 'Find answers to common questions',
       color: 'from-blue-500 to-cyan-500'},
     {
-'
-      id: 'contact','
+
+      id: 'contact',
       name: 'Contact Support',
-      icon: MessageCircle,'
-      description: 'Get in touch with our team','
+      icon: MessageCircle,
+      description: 'Get in touch with our team',
       color: 'from-purple-500 to-pink-500'},
     {
-'
-      id: 'resources','
+
+      id: 'resources',
       name: 'Resources',
-      icon: BookOpen,'
-      description: 'Documentation and guides','
+      icon: BookOpen,
+      description: 'Documentation and guides',
       color: 'from-green-500 to-emerald-500'},
     {
-'
-      id: 'status','
+
+      id: 'status',
       name: 'System Status',
-      icon: Zap,'
-      description: 'Check service status','
+      icon: Zap,
+      description: 'Check service status',
       color: 'from-orange-500 to-red-500'},
   ];
 
   const supportResources = [
     {
-'
-      title: 'Knowledge Base','
+
+      title: 'Knowledge Base',
       description: 'Browse our comprehensive documentation and guides',
-      icon: BookOpen,'
-      action: 'Browse Docs','
+      icon: BookOpen,
+      action: 'Browse Docs',
       color: 'from-indigo-500 to-purple-500'},
     {
-'
-      title: 'Video Tutorials','
+
+      title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
-      icon: Video,'
-      action: 'Watch Videos','
+      icon: Video,
+      action: 'Watch Videos',
       color: 'from-pink-500 to-rose-500'},
     {
-'
-      title: 'Community Forum','
+
+      title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
-      icon: Users,'
-      action: 'Join Forum','
+      icon: Users,
+      action: 'Join Forum',
       color: 'from-teal-500 to-cyan-500'},
     {
-'
-      title: 'Training Programs','
+
+      title: 'Training Programs',
       description: 'Professional training and certification courses',
-      icon: Star,'
-      href: '/training','
+      icon: Star,
+      href: '/training',
       color: 'from-yellow-500 to-orange-500'},
   ];
 
   const faqItems = [
     {
-'
+
       question: 'How do I get started with Zion Tech Group services?',
       answer:'
         "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and provide a customized solution."},
     {
-'
+
       question: 'What is your typical response time for support requests?',
       answer:'
         'We prioritize support based on urgency. Emergency issues get immediate attention, while general inquiries are typically resolved within 2-4 hours during business hours.'},
     {
-'
+
       question: 'Do you provide 24/7 support?',
       answer:'
         'Yes, we provide 24/7 emergency support for critical issues. Our team is always available to handle urgent system problems and outages.'},
     {
-'
+
       question: 'What types of training do you offer?',
       answer:'
         'We offer comprehensive training programs including technical training, user adoption programs, and ongoing support to ensure your team gets the most out of our solutions.'},
     {
-'
+
       question: 'How do you handle data security and compliance?',
       answer:'
         'Security is our top priority. We implement enterprise-grade security measures and maintain compliance with industry standards including SOC 2, GDPR, and HIPAA where applicable.'},
@@ -185,14 +185,14 @@ const Support = () => {
           <form onSubmit={handleSearch} className="relative">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
-              type="text""
+              type="text"
               placeholder="Search for help articles, documentation, or support topics..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
             />
             <button"
-              type="submit""
+              type="submit"
               className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
             >
               Search
@@ -234,7 +234,7 @@ const Support = () => {
 
       {/* Tab Content */}"
       <div className="container-responsive pb-16">
-        {/* Help Center Tab */}'
+        {/* Help Center Tab */}
         {activeTab === 'help' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -310,7 +310,7 @@ const Support = () => {
             </div>
           </motion.div>) }
 
-        {/* Contact Support Tab */}'
+        {/* Contact Support Tab */}
         {activeTab === 'contact' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -356,7 +356,7 @@ const Support = () => {
 "
             <div className="text-center mt-12">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Team"
@@ -365,7 +365,7 @@ const Support = () => {
             </div>
           </motion.div>) }
 
-        {/* Resources Tab */}'
+        {/* Resources Tab */}
         {activeTab === 'resources' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -410,7 +410,7 @@ const Support = () => {
                 </div>
               </motion.div>
 
-        {/* System Status Tab */}'
+        {/* System Status Tab */}
         {activeTab === 'status' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -430,24 +430,24 @@ const Support = () => {
               {['
                 { name: 'AI Services', status: 'operational', icon: Brain },
                 {
-'
-                  name: 'Cloud Infrastructure','
+
+                  name: 'Cloud Infrastructure',
                   status: 'operational',
                   icon: Cloud},
                 {
-'
-                  name: 'Security Systems','
+
+                  name: 'Security Systems',
                   status: 'operational',
                   icon: Shield},
                 {
-'
-                  name: 'Data Analytics','
+
+                  name: 'Data Analytics',
                   status: 'operational',
-                  icon: TrendingUp},'
+                  icon: TrendingUp},
                 { name: 'API Services', status: 'operational', icon: Globe },
                 {
-'
-                  name: 'Support Portal','
+
+                  name: 'Support Portal',
                   status: 'operational',
                   icon: HelpCircle},
               ].map((service, index) => (
@@ -461,7 +461,7 @@ const Support = () => {
                   <div className="flex items-center justify-between mb-4">"
                     <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                       {React.createElement(service.icon, {
-'
+
                         className: 'w-5 h-5 text-white'})}
                     </div>"
                     <div className="flex items-center gap-2">"
@@ -483,7 +483,7 @@ const Support = () => {
 "
             <div className="text-center mt-12">
               <Link"
-                to="/status""
+                to="/status"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Detailed Status"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -21,7 +21,7 @@ const testimonials = [
     position: "CTO, TechCorp Solutions","
     company: "TechCorp Solutions","
     avatar: "👩‍💼",
-    rating: 5,'"
+    rating: 5,"
     content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.","
     category: "AI & Infrastructure","
     results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
@@ -33,7 +33,7 @@ const testimonials = [
     position: "VP Engineering, FinTech Pro","
     company: "FinTech Pro","
     avatar: "👨‍💻",
-    rating: 5,'"
+    rating: 5,"
     content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.","
     category: "Quantum Computing","
     results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
@@ -45,7 +45,7 @@ const testimonials = [
     position: "Research Director, BioTech Innovations","
     company: "BioTech Innovations","
     avatar: "👩‍🔬",
-    rating: 5,'"
+    rating: 5,"
     content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.","
     category: "AI Research","
     results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
@@ -57,7 +57,7 @@ const testimonials = [
     position: "Operations Manager, Manufacturing Plus","
     company: "Manufacturing Plus","
     avatar: "👨‍🏭",
-    rating: 5,'"
+    rating: 5,"
     content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.","
     category: "Manufacturing IoT","
     results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
@@ -122,7 +122,7 @@ export function InteractiveTestimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real stories from real clients. Discover how we've transformed businesses
             across industries with our innovative technology solutions.
           </p>
@@ -191,8 +191,8 @@ export function InteractiveTestimonials() {
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
                     </div>"
-                    <div className="text-sm text-gray-600 capitalize">'
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    <div className="text-sm text-gray-600 capitalize">
+                      {key.replace(/([A-Z])/g, $1').trim()}
                     </div>
                   </div>) ) }
               </div>
@@ -222,7 +222,7 @@ export function InteractiveTestimonials() {
                 key={index}
                 onClick={() => goToTestimonial(index)}`
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-'
+
                   index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
                 }`}
               />) ) }
@@ -284,7 +284,7 @@ export function InteractiveTestimonials() {
             <h3 className="text-2xl font-bold mb-4">
               Ready to Join Our Success Stories?
             </h3>"
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">'
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Let's discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.
             </p>"

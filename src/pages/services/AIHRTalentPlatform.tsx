@@ -1,65 +1,65 @@
 import React from 'react';
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
   const features = [
-    'AI-powered candidate screening and matching','
-    'Automated resume parsing and skill assessment',;'
-    'Intelligent interview scheduling and feedback',;'
-    'Employee performance analytics and insights',;'
-    'Predictive turnover analysis and retention strategies',;'
-    'Automated onboarding and training workflows',;'
-    'Diversity and inclusion analytics',;'
+    'AI-powered candidate screening and matching',
+    'Automated resume parsing and skill assessment',;
+    'Intelligent interview scheduling and feedback',;
+    'Employee performance analytics and insights',;
+    'Predictive turnover analysis and retention strategies',;
+    'Automated onboarding and training workflows',;
+    'Diversity and inclusion analytics',;
     'Compliance monitoring and reporting';
   ];
 
-  const benefits = [;'
-    'Reduce time-to-hire by 60%',;'
-    'Improve candidate quality by 40%',;'
-    'Reduce hiring costs by 30%',;'
-    'Increase employee retention by 25%',;'
-    'Automate routine HR tasks',;'
+  const benefits = [;
+    'Reduce time-to-hire by 60%',;
+    'Improve candidate quality by 40%',;
+    'Reduce hiring costs by 30%',;
+    'Increase employee retention by 25%',;
+    'Automate routine HR tasks',;
     'Data-driven decision making';
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$149/mo','
-      features: ['Up to 50 employees', 'Basic AI screening', 'Standard reporting', 'Email support'],
+
+      name: 'Starter',
+      price: '$149/mo',
+      features: ['Up to 50 employees',Basic AI screening',Standard reporting',Email support'],
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$399/mo','
-      features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
+
+      name: 'Professional',
+      price: '$399/mo',
+      features: ['Up to 200 employees',Advanced AI analytics',Custom workflows',Priority support',Integration APIs'],
       popular: true
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$999/mo', ;'
-      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+    { ;
+      name: 'Enterprise', ;
+      price: '$999/mo', ;
+      features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
       popular: false;
     };
   ];
 
-  const useCases = [;'
-    'Recruitment and talent acquisition',;'
-    'Employee performance management',;'
-    'Learning and development',;'
-    'Workforce planning and analytics',;'
-    'Compliance and HR operations',;'
+  const useCases = [;
+    'Recruitment and talent acquisition',;
+    'Employee performance management',;
+    'Learning and development',;
+    'Workforce planning and analytics',;
+    'Compliance and HR operations',;
     'Employee engagement and retention';
   ];
 
   const platformModules = ['
-    'Talent Acquisition','
-    'Performance Management',;'
-    'Learning & Development',;'
-    'Workforce Analytics',;'
-    'Employee Engagement',;'
-    'Compliance & Reporting',;'
-    'Onboarding & Offboarding',;'
+    'Talent Acquisition',
+    'Performance Management',;
+    'Learning & Development',;
+    'Workforce Analytics',;
+    'Employee Engagement',;
+    'Compliance & Reporting',;
+    'Onboarding & Offboarding',;
     'Succession Planning';
   ];
 
@@ -196,7 +196,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
-'
+
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`
               }`}>
                 {plan.popular && ("
@@ -311,9 +311,9 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             Learn more about our complete suite of AI-powered business solutions
           </p>
           <a "
-            href="https://ziontechgroup.com" "
-            target="_blank" "
-            rel="noreferrer" "
+            href="https://ziontechgroup.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
           >;"
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;

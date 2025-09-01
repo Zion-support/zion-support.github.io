@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { motion, useInView  } from 'framer-motion.ts';'
-import { useRef  } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
+import { motion, useInView  } from 'framer-motion.ts';
+import { useRef  } from 'react.ts';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
@@ -24,9 +24,9 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
   useEffect(() => {
     if (isInView) {
-'
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));'
-          const suffix = stat.number.replace(/[0-9]/g, '');
+
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g,'));
+          const suffix = stat.number.replace(/[0-9]/g,');
 
           let current = 0;
           const increment = targetNumber / 50;
@@ -169,7 +169,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 }}
                 viewport={{ once: true }}
 
-                {counts[stat.label] || 0}'
+                {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
 "

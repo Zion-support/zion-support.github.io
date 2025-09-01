@@ -20,8 +20,8 @@ import {
   Network,
   Server,
   Cloud,
-  Smartphone,'
-  Building} from 'lucide-react.ts';'
+  Smartphone,
+  Building} from 'lucide-react.ts';
 import { SEO } from '../../components/SEO';
 
 export default function MicroCRM(...args: any[]): any {
@@ -29,60 +29,60 @@ export default function MicroCRM(...args: any[]): any {
   const features = [
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Contact Management',
       description:'
         'Centralized database for all customer contacts with detailed profiles and interaction history.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Lead Tracking',
       description:'
         'Track leads through the sales funnel with automated scoring and qualification processes.'},
     {
 
-      icon: Calendar,'
+      icon: Calendar,
       title: 'Task Management',
       description:'
         'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Sales Analytics',
       description:'
         'Comprehensive reporting and analytics to track performance and identify opportunities.'},
   ];
 
   const benefits = ['
-    'Streamline customer relationship management','
-    'Improve sales team productivity','
-    'Enhance customer communication','
-    'Track sales performance metrics','
-    'Automate repetitive tasks','
+    'Streamline customer relationship management',
+    'Improve sales team productivity',
+    'Enhance customer communication',
+    'Track sales performance metrics',
+    'Automate repetitive tasks',
     'Centralize customer data',
   ];
 
   const useCases = [
     {
-'
+
       title: 'Small Business CRM',
       description:'
         'Perfect for small businesses looking to manage customer relationships efficiently.',
       icon: Building},
     {
-'
+
       title: 'Sales Team Management',
       description:'
         'Empower sales teams with tools to track leads and manage customer interactions.',
       icon: Users},
     {
-'
+
       title: 'Customer Support',
       description:'
         'Track customer issues and provide timely support with integrated ticketing.',
       icon: Phone},
     {
-'
+
       title: 'Marketing Campaigns',
       description:'
         'Manage marketing campaigns and track customer engagement and responses.',
@@ -92,7 +92,7 @@ export default function MicroCRM(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Micro CRM - Zion Tech Group""
+        title="Micro CRM - Zion Tech Group"
         description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
 
@@ -194,7 +194,7 @@ export default function MicroCRM(...args: any[]): any {
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect For Your Business
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Whether you're a small business owner or managing a growing sales
               team, our Micro CRM adapts to your needs.
             </p>

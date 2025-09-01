@@ -10,7 +10,7 @@ import { mapProfileToUser } from "./profileMapper";"
 import { loginUser, registerUser } from "@/services/authService";"
 import { safeStorage } from "@/utils/safeStorage";"
 import { toast } from "@/hooks/use-toast"; // Import toast'
-import { useDispatch } from 'react-redux';'
+import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
 export const AuthProvider = ({ children }) => {
 
@@ -35,15 +35,15 @@ export const AuthProvider = ({ children }) => {
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }}
         // Handle other errors from the API call
         if (res.status === 400) { // Bad request (e.g. missing fields)'"
-            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });'
+            toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
             return { error: data?.error || 'Missing email or password' }}
         if (res.status === 401) { // Unauthorized (invalid credentials)'"
-            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });'
+            toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
             return { error: 'Incorrect email or password' }}
         // Catch-all for other non-200 statuses from loginUser
         if (res.status !== 200) {
 '"
-            toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });'
+            toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
             return { error: data?.error || 'Login failed' }}
         // At this point, loginUser call was successful (200 OK)
         setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
@@ -54,12 +54,12 @@ export const AuthProvider = ({ children }) => {
 
             // useEmailAuth.login already shows a toast on error.
             // We just need to return the error to the caller of AuthProvider.login"
-            // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);'
+            // // // // // // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
             // It's possible the server token is valid but client Supabase has an issue.
             // For now, treat as a login failure and let user retry.
             // Potentially clear tokens if this state is problematic: await logout();"
             return { error: clientLoginResult.error?.message || "Client-side login failed." }}
-        const params = new URLSearchParams(location.search);'
+        const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
         router(next, { replace: true });
         return { error: null }; // Successful login
@@ -70,14 +70,14 @@ export const AuthProvider = ({ children }) => {
         try {
             const { res, data } = await registerUser(name, email, password);
             if (!res.ok || !data?.token || !data?.user) {
-'
-                return { error: data?.message || 'Registration failed' }}'
+
+                return { error: data?.message || 'Registration failed' }}
             safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
             setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
             setUser(data.user);
             return { error: null }}
         catch (err) {
-'
+
             return { error: err?.message || 'Registration failed' }}
     };
     // Wrapper for signup to match the AuthContextType interface
@@ -88,10 +88,10 @@ export const AuthProvider = ({ children }) => {
 
             const loginResult = await login(email, password);
             if (!loginResult.error) {
-'
+
                 const firstName = (userData?.name || userData || '').split(' ')[0];
                 toast({ title: `Welcome, ${firstName}!` });
-                const params = new URLSearchParams(location.search);'
+                const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
                 router(next, { replace: true });
             }
@@ -105,8 +105,8 @@ export const AuthProvider = ({ children }) => {
             if (session?.user) {
 
                 try {
-                    const { data: profile, error } = await getFromProfiles()'
-                        .select('*')'
+                    const { data: profile, error } = await getFromProfiles()
+                        .select('*')
                         .eq('id', session.user.id)
                         .single();
                     if (profile) {
@@ -117,7 +117,7 @@ export const AuthProvider = ({ children }) => {
                         if (event === 'SIGNED_IN') {
 
                             handleSignedIn(mappedUser);
-                            const params = new URLSearchParams(location.search);'
+                            const params = new URLSearchParams(location.search);
                             const next = params.get('redirectTo') || params.get('next');
                             // --- BEGIN MODIFICATION ---'
                             if (location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices";
 const ServiceCard = ({ service, index, isVisible }) => {
@@ -153,10 +153,10 @@ const ServiceCard = ({ service, index, isVisible }) => {
       </div>
     </motion.div>)};
 export const FuturisticServicesShowcase = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
-    const [visibleServices, setVisibleServices] = useState(new Set());'
+    const [visibleServices, setVisibleServices] = useState(new Set());
     const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
 
@@ -216,7 +216,7 @@ export const FuturisticServicesShowcase = () => {
             <div className="flex flex-wrap justify-center gap-2">`
               {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${selectedCategory === category'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`
-                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'
+                : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>
                   {category === 'all' ? 'All Services' : category}
                 </button>) ) }
             </div>

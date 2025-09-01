@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
 import { motion  } from 'framer - motion.ts';
@@ -56,9 +56,9 @@ import { revolutionaryMicroSaasServices2028,
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 '
- } from '@/data/innovativeMicroSaasServices2028';'
-import { SEO  } from '@/components/SEO';'
-import { Button  } from '@/components/ui/button';'
+ } from '@/data/innovativeMicroSaasServices2028';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
 export default function ComprehensiveServicesLanding2028(...args[]):  {
@@ -87,13 +87,13 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const getCategoryColor = (category: string)  => {
 
     const colors = ['
-      'from-blue-600 to-cyan-600','
-      'from-purple-600 to-pink-600',;'
-      'from-green-600 to-emerald-600',;'
-      'from-red-600 to-orange-600',;'
-      'from-indigo-600 to-purple-600',;'
-      'from-yellow-600 to-orange-600',;'
-      'from-teal-600 to-blue-600',;'
+      'from-blue-600 to-cyan-600',
+      'from-purple-600 to-pink-600',;
+      'from-green-600 to-emerald-600',;
+      'from-red-600 to-orange-600',;
+      'from-indigo-600 to-purple-600',;
+      'from-yellow-600 to-orange-600',;
+      'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
     ];
     return colors[Math.abs (category.length) % colors.length]};
@@ -109,9 +109,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO "
-        title="Comprehensive Services Landing 2028 - Zion Tech Group""
-        description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions.""
-        keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation""
+        title="Comprehensive Services Landing 2028 - Zion Tech Group"
+        description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions."
+        keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation"
         canonical="https://ziontechgroup.com/comprehensive-services-landing-2028"
       />
 
@@ -196,15 +196,15 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             className="flex flex-wrap justify-center gap-4"
 
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
               onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
 
               Explore Services
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
               onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
 
@@ -397,8 +397,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             className="text-center mt-12"
 
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
               onClick={() => window.location.href = '/innovative-services-showcase-2028'}
 
@@ -477,7 +477,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
             <div className="flex items-center justify-center gap-4 mt-8">
               <Button"
-                variant="ghost""
+                variant="ghost"
                 size="sm"
                 onClick={prevTestimonial}"
                 className="text-zion-slate-light hover:text-white"
@@ -491,14 +491,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}`
                     className={`w-3 h-3 rounded-full transition-colors ${
-'
+
                       index === currentTestimonial ? 'bg-zion-cyan' : 'bg-white/30'`
                     }`}
                   />) ) }
               </div>
 
               <Button"
-                variant="ghost""
+                variant="ghost"
                 size="sm"
                 onClick={nextTestimonial}"
                 className="text-zion-slate-light hover:text-white"
@@ -790,8 +790,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   </div>
                 </div>
                 <Button"
-                  variant="ghost""
-                  size="sm""
+                  variant="ghost"
+                  size="sm"
                   className="text-zion-slate-light hover:text-white"
                   onClick={() => setSelectedService(null)}
 "
@@ -952,7 +952,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
                 <p className="text-zion-slate-light mb-3">Speak directly with our experts</p>
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
 
                   +1 302 464 0950
@@ -991,7 +991,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>"
                 <p className="text-zion-slate-light mb-3">Send us a detailed message</p>
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg"
 
                   kleber@ziontechgroup.com
@@ -1064,7 +1064,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             className="text-center mt-12"
 
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"'
               onClick={() => window.location.href = '/contact'}
 

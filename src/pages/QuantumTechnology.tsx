@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -28,8 +28,8 @@ import {
  } from 'lucide-react';
 
 export default function QuantumTechnology(...args[]):  {
-'
-  const [selectedApplication, setSelectedApplication] = useState('all');'
+
+  const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 
   const quantumServices = [
@@ -83,12 +83,12 @@ export default function QuantumTechnology(...args[]):  {
     };
   ];
 
-  const applications = [;'
-    { id: 'all', name: 'All Applications', icon: Globe },;'
-    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;'
-    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;'
-    { id: 'logistics', name: 'Logistics', icon: Network },;'
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;'
+  const applications = [;
+    { id: 'all', name: 'All Applications', icon: Globe },;
+    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
+    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
+    { id: 'logistics', name: 'Logistics', icon: Network },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
     { id: 'research', name: 'Research', icon: Lightbulb };
   ];
 
@@ -220,7 +220,7 @@ export default function QuantumTechnology(...args[]):  {
       transition: { duration: 0.6 };
     };
   };
-'
+
   const filteredApplications = selectedApplication === 'all'
     ? quantumApplications
     : quantumApplications.filter (app => app.category === selectedApplication) ;
@@ -256,7 +256,7 @@ export default function QuantumTechnology(...args[]):  {
               </div>
             </div>
 "
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Quantum{' '}"
               <span className="bg-gradient-to-r from-zion-purple to-zion-pink bg-clip-text text-transparent">
                 Technology
@@ -315,7 +315,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -426,7 +426,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -498,7 +498,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -568,7 +568,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -621,7 +621,7 @@ export default function QuantumTechnology(...args[]):  {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -702,7 +702,7 @@ export default function QuantumTechnology(...args[]):  {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore Quantum Technology?
             </h2>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let's discuss how quantum computing and quantum technologies can
               transform your business and solve previously impossible challenges.
             </p>

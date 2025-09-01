@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousDatabaseSecurity = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousDatabaseSecurity = () => {
           AI Autonomous Database Security Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous database security platform that continuously secures databases, detects threats, and protects database infrastructure with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI database security, autonomous database security, database protection, threat detection, autonomous operations, AI database security platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-database-security"
         />
       </Helmet>
@@ -189,13 +189,13 @@ const AIAutonomousDatabaseSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'SQL Database Security','
-                'NoSQL Database Security','
-                'Cloud Database Security','
-                'Authentication Security','
-                'Authorization Security','
-                'Data Encryption Security','
-                'Backup Security','
+                'SQL Database Security',
+                'NoSQL Database Security',
+                'Cloud Database Security',
+                'Authentication Security',
+                'Authorization Security',
+                'Data Encryption Security',
+                'Backup Security',
                 'Audit Security',
               ].map(type => (
                 <div

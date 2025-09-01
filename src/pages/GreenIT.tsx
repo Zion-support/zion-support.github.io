@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import {
 
@@ -171,424 +171,424 @@ import {
   BatteryCharging as BatteryCharging10,
   BatteryFull as BatteryFull10,
   BatteryLow as BatteryLow10,
-  BatteryMedium as BatteryMedium10,'
+  BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10} from 'lucide-react';
 
 export default function GreenIT() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);'
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = ['
-    { id: 'all', name: 'All Solutions', count: 12 },'
-    { id: 'energy', name: 'Energy Efficiency', count: 4 },'
-    { id: 'hardware', name: 'Green Hardware', count: 3 },'
-    { id: 'software', name: 'Sustainable Software', count: 3 },'
+    { id: 'all', name: 'All Solutions', count: 12 },
+    { id: 'energy', name: 'Energy Efficiency', count: 4 },
+    { id: 'hardware', name: 'Green Hardware', count: 3 },
+    { id: 'software', name: 'Sustainable Software', count: 3 },
     { id: 'data', name: 'Data Centers', count: 2 },
   ];
 
   const greenSolutions = [
     {
-'
-      id: 'energy-monitoring','
-      name: 'Smart Energy Monitoring','
+
+      id: 'energy-monitoring',
+      name: 'Smart Energy Monitoring',
       category: 'energy',
-      icon: Activity,'
+      icon: Activity,
       description: 'Real-time energy consumption tracking and optimization',
       features: ['
-        'Real-time energy consumption monitoring','
-        'AI-powered optimization recommendations','
-        'Automated power management','
-        'Energy usage analytics and reporting','
-        'Integration with smart building systems','
+        'Real-time energy consumption monitoring',
+        'AI-powered optimization recommendations',
+        'Automated power management',
+        'Energy usage analytics and reporting',
+        'Integration with smart building systems',
         'Mobile app for remote monitoring',
       ],
       benefits: ['
-        'Reduce energy costs by 15-25%','
-        'Identify energy waste patterns','
-        'Optimize equipment performance','
-        'Meet sustainability goals','
+        'Reduce energy costs by 15-25%',
+        'Identify energy waste patterns',
+        'Optimize equipment performance',
+        'Meet sustainability goals',
         'Comply with energy regulations',
-      ],'
-      savings: '15-25% energy reduction','
-      implementation: '2-4 weeks','
+      ],
+      savings: '15-25% energy reduction',
+      implementation: '2-4 weeks',
       pricing: 'Starting from $5,000'},
     {
-'
-      id: 'virtualization','
-      name: 'Server Virtualization','
+
+      id: 'virtualization',
+      name: 'Server Virtualization',
       category: 'hardware',
-      icon: Server,'
+      icon: Server,
       description: 'Consolidate physical servers to reduce power consumption',
       features: ['
-        'Server consolidation and virtualization','
-        'Dynamic resource allocation','
-        'Automated power management','
-        'High availability and disaster recovery','
-        'Performance monitoring and optimization','
+        'Server consolidation and virtualization',
+        'Dynamic resource allocation',
+        'Automated power management',
+        'High availability and disaster recovery',
+        'Performance monitoring and optimization',
         'Green computing best practices',
       ],
       benefits: ['
-        'Reduce server power consumption by 60-80%','
-        'Lower cooling requirements','
-        'Decrease hardware maintenance costs','
-        'Improve resource utilization','
+        'Reduce server power consumption by 60-80%',
+        'Lower cooling requirements',
+        'Decrease hardware maintenance costs',
+        'Improve resource utilization',
         'Reduce carbon footprint',
-      ],'
-      savings: '60-80% power reduction','
-      implementation: '4-8 weeks','
+      ],
+      savings: '60-80% power reduction',
+      implementation: '4-8 weeks',
       pricing: 'Starting from $15,000'},
     {
-'
-      id: 'cloud-optimization','
-      name: 'Cloud Infrastructure Optimization','
+
+      id: 'cloud-optimization',
+      name: 'Cloud Infrastructure Optimization',
       category: 'software',
-      icon: Cloud,'
+      icon: Cloud,
       description: 'Optimize cloud resources for maximum efficiency',
       features: ['
-        'Cloud resource optimization','
-        'Auto-scaling and load balancing','
-        'Cost optimization algorithms','
-        'Green cloud provider selection','
-        'Carbon footprint tracking','
+        'Cloud resource optimization',
+        'Auto-scaling and load balancing',
+        'Cost optimization algorithms',
+        'Green cloud provider selection',
+        'Carbon footprint tracking',
         'Sustainable cloud practices',
       ],
       benefits: ['
-        'Reduce cloud costs by 20-40%','
-        'Lower carbon emissions','
-        'Improve application performance','
-        'Better resource utilization','
+        'Reduce cloud costs by 20-40%',
+        'Lower carbon emissions',
+        'Improve application performance',
+        'Better resource utilization',
         'Scalable and flexible infrastructure',
-      ],'
-      savings: '20-40% cost reduction','
-      implementation: '3-6 weeks','
+      ],
+      savings: '20-40% cost reduction',
+      implementation: '3-6 weeks',
       pricing: 'Starting from $8,000'},
     {
-'
-      id: 'data-center-efficiency','
-      name: 'Data Center Efficiency','
+
+      id: 'data-center-efficiency',
+      name: 'Data Center Efficiency',
       category: 'data',
-      icon: Database,'
+      icon: Database,
       description: 'Optimize data center operations for sustainability',
       features: ['
-        'Cooling system optimization','
-        'Power distribution efficiency','
-        'Heat recovery systems','
-        'Renewable energy integration','
-        'Energy-efficient equipment','
+        'Cooling system optimization',
+        'Power distribution efficiency',
+        'Heat recovery systems',
+        'Renewable energy integration',
+        'Energy-efficient equipment',
         'Environmental monitoring',
       ],
       benefits: ['
-        'Reduce data center energy by 30-50%','
-        'Lower operational costs','
-        'Improve equipment lifespan','
-        'Meet sustainability certifications','
+        'Reduce data center energy by 30-50%',
+        'Lower operational costs',
+        'Improve equipment lifespan',
+        'Meet sustainability certifications',
         'Reduce carbon footprint',
-      ],'
-      savings: '30-50% energy reduction','
-      implementation: '8-16 weeks','
+      ],
+      savings: '30-50% energy reduction',
+      implementation: '8-16 weeks',
       pricing: 'Starting from $25,000'},
     {
-'
-      id: 'smart-lighting','
-      name: 'Smart Lighting Systems','
+
+      id: 'smart-lighting',
+      name: 'Smart Lighting Systems',
       category: 'energy',
-      icon: Lightbulb,'
+      icon: Lightbulb,
       description: 'Intelligent lighting control for energy savings',
       features: ['
-        'Motion-sensing controls','
-        'Daylight harvesting','
-        'Scheduling and automation','
-        'Energy usage analytics','
-        'Mobile app control','
+        'Motion-sensing controls',
+        'Daylight harvesting',
+        'Scheduling and automation',
+        'Energy usage analytics',
+        'Mobile app control',
         'Integration with building systems',
       ],
       benefits: ['
-        'Reduce lighting energy by 40-60%','
-        'Improve occupant comfort','
-        'Extend bulb lifespan','
-        'Reduce maintenance costs','
+        'Reduce lighting energy by 40-60%',
+        'Improve occupant comfort',
+        'Extend bulb lifespan',
+        'Reduce maintenance costs',
         'Smart building integration',
-      ],'
-      savings: '40-60% energy reduction','
-      implementation: '2-3 weeks','
+      ],
+      savings: '40-60% energy reduction',
+      implementation: '2-3 weeks',
       pricing: 'Starting from $3,000'},
     {
-'
-      id: 'green-software','
-      name: 'Sustainable Software Development','
+
+      id: 'green-software',
+      name: 'Sustainable Software Development',
       category: 'software',
-      icon: Code,'
+      icon: Code,
       description: 'Eco-friendly software development practices',
       features: ['
-        'Energy-efficient algorithms','
-        'Code optimization techniques','
-        'Green coding standards','
-        'Performance monitoring','
-        'Resource usage optimization','
+        'Energy-efficient algorithms',
+        'Code optimization techniques',
+        'Green coding standards',
+        'Performance monitoring',
+        'Resource usage optimization',
         'Sustainable development practices',
       ],
       benefits: ['
-        'Reduce software energy consumption','
-        'Improve application performance','
-        'Lower operational costs','
-        'Better user experience','
+        'Reduce software energy consumption',
+        'Improve application performance',
+        'Lower operational costs',
+        'Better user experience',
         'Environmental responsibility',
-      ],'
-      savings: '20-35% energy reduction','
-      implementation: 'Ongoing','
+      ],
+      savings: '20-35% energy reduction',
+      implementation: 'Ongoing',
       pricing: 'Starting from $10,000'},
     {
-'
-      id: 'renewable-energy','
-      name: 'Renewable Energy Integration','
+
+      id: 'renewable-energy',
+      name: 'Renewable Energy Integration',
       category: 'energy',
-      icon: Sun,'
+      icon: Sun,
       description: 'Integrate solar, wind, and other renewable sources',
       features: ['
-        'Solar panel installation','
-        'Wind turbine integration','
-        'Energy storage systems','
-        'Grid connection management','
-        'Energy production monitoring','
+        'Solar panel installation',
+        'Wind turbine integration',
+        'Energy storage systems',
+        'Grid connection management',
+        'Energy production monitoring',
         'Maintenance and optimization',
       ],
       benefits: ['
-        'Generate clean, renewable energy','
-        'Reduce electricity costs','
-        'Lower carbon footprint','
-        'Energy independence','
+        'Generate clean, renewable energy',
+        'Reduce electricity costs',
+        'Lower carbon footprint',
+        'Energy independence',
         'Government incentives and tax credits',
-      ],'
-      savings: '40-80% energy costs','
-      implementation: '12-24 weeks','
+      ],
+      savings: '40-80% energy costs',
+      implementation: '12-24 weeks',
       pricing: 'Starting from $50,000'},
     {
-'
-      id: 'green-hardware','
-      name: 'Energy-Efficient Hardware','
+
+      id: 'green-hardware',
+      name: 'Energy-Efficient Hardware',
       category: 'hardware',
-      icon: Cpu,'
+      icon: Cpu,
       description: 'Select and deploy energy-efficient computing equipment',
       features: ['
-        'Energy Star certified equipment','
-        'Low-power processors','
-        'Efficient cooling systems','
-        'Power management features','
-        'Energy monitoring capabilities','
+        'Energy Star certified equipment',
+        'Low-power processors',
+        'Efficient cooling systems',
+        'Power management features',
+        'Energy monitoring capabilities',
         'Sustainable disposal programs',
       ],
       benefits: ['
-        'Reduce hardware energy consumption','
-        'Lower operational costs','
-        'Extend equipment lifespan','
-        'Meet environmental standards','
+        'Reduce hardware energy consumption',
+        'Lower operational costs',
+        'Extend equipment lifespan',
+        'Meet environmental standards',
         'Improve corporate sustainability',
-      ],'
-      savings: '25-40% power reduction','
-      implementation: '1-2 weeks','
+      ],
+      savings: '25-40% power reduction',
+      implementation: '1-2 weeks',
       pricing: 'Starting from $2,000'},
     {
-'
-      id: 'waste-reduction','
-      name: 'Electronic Waste Reduction','
+
+      id: 'waste-reduction',
+      name: 'Electronic Waste Reduction',
       category: 'hardware',
-      icon: Recycle,'
+      icon: Recycle,
       description: 'Comprehensive e-waste management and recycling',
       features: ['
-        'E-waste assessment and audit','
-        'Secure data destruction','
-        'Equipment refurbishment','
-        'Recycling partnerships','
-        'Donation programs','
+        'E-waste assessment and audit',
+        'Secure data destruction',
+        'Equipment refurbishment',
+        'Recycling partnerships',
+        'Donation programs',
         'Sustainability reporting',
       ],
       benefits: ['
-        'Reduce environmental impact','
-        'Comply with regulations','
-        'Improve corporate image','
-        'Potential tax benefits','
+        'Reduce environmental impact',
+        'Comply with regulations',
+        'Improve corporate image',
+        'Potential tax benefits',
         'Support circular economy',
-      ],'
-      savings: 'Varies by program','
-      implementation: '2-4 weeks','
+      ],
+      savings: 'Varies by program',
+      implementation: '2-4 weeks',
       pricing: 'Starting from $1,000'},
     {
-'
-      id: 'carbon-tracking','
-      name: 'Carbon Footprint Tracking','
+
+      id: 'carbon-tracking',
+      name: 'Carbon Footprint Tracking',
       category: 'software',
-      icon: BarChart3,'
+      icon: BarChart3,
       description: 'Monitor and reduce carbon emissions',
       features: ['
-        'Carbon emission calculation','
-        'Real-time monitoring','
-        'Reduction tracking','
-        'Sustainability reporting','
-        'Goal setting and tracking','
+        'Carbon emission calculation',
+        'Real-time monitoring',
+        'Reduction tracking',
+        'Sustainability reporting',
+        'Goal setting and tracking',
         'Stakeholder communication',
       ],
       benefits: ['
-        'Track environmental impact','
-        'Set and achieve sustainability goals','
-        'Improve corporate reporting','
-        'Meet compliance requirements','
+        'Track environmental impact',
+        'Set and achieve sustainability goals',
+        'Improve corporate reporting',
+        'Meet compliance requirements',
         'Enhance brand reputation',
-      ],'
-      savings: 'Measurable impact','
-      implementation: '4-6 weeks','
+      ],
+      savings: 'Measurable impact',
+      implementation: '4-6 weeks',
       pricing: 'Starting from $6,000'},
     {
-'
-      id: 'green-networking','
-      name: 'Energy-Efficient Networking','
+
+      id: 'green-networking',
+      name: 'Energy-Efficient Networking',
       category: 'data',
-      icon: Network,'
+      icon: Network,
       description: 'Optimize network infrastructure for energy efficiency',
       features: ['
-        'Network equipment optimization','
-        'Traffic management','
-        'Power over Ethernet','
-        'Energy-efficient protocols','
-        'Network monitoring','
+        'Network equipment optimization',
+        'Traffic management',
+        'Power over Ethernet',
+        'Energy-efficient protocols',
+        'Network monitoring',
         'Performance optimization',
       ],
       benefits: ['
-        'Reduce network energy consumption','
-        'Improve network performance','
-        'Lower operational costs','
-        'Better reliability','
+        'Reduce network energy consumption',
+        'Improve network performance',
+        'Lower operational costs',
+        'Better reliability',
         'Environmental responsibility',
-      ],'
-      savings: '20-35% energy reduction','
-      implementation: '3-5 weeks','
+      ],
+      savings: '20-35% energy reduction',
+      implementation: '3-5 weeks',
       pricing: 'Starting from $12,000'},
     {
-'
-      id: 'sustainability-reporting','
-      name: 'Sustainability Reporting Platform','
+
+      id: 'sustainability-reporting',
+      name: 'Sustainability Reporting Platform',
       category: 'software',
-      icon: FileText,'
+      icon: FileText,
       description: 'Comprehensive sustainability reporting and analytics',
       features: ['
-        'Environmental data collection','
-        'Sustainability metrics tracking','
-        'Automated reporting','
-        'Stakeholder dashboards','
-        'Compliance monitoring','
+        'Environmental data collection',
+        'Sustainability metrics tracking',
+        'Automated reporting',
+        'Stakeholder dashboards',
+        'Compliance monitoring',
         'Goal tracking and alerts',
       ],
       benefits: ['
-        'Streamline sustainability reporting','
-        'Improve data accuracy','
-        'Meet compliance requirements','
-        'Enhance stakeholder communication','
+        'Streamline sustainability reporting',
+        'Improve data accuracy',
+        'Meet compliance requirements',
+        'Enhance stakeholder communication',
         'Track progress toward goals',
-      ],'
-      savings: 'Time and resource savings','
-      implementation: '6-8 weeks','
+      ],
+      savings: 'Time and resource savings',
+      implementation: '6-8 weeks',
       pricing: 'Starting from $8,000'},
   ];
 
   const environmentalImpact = [
     {
 
-      icon: TreePine,'
-      metric: '2,500+','
-      label: 'Trees Planted','
+      icon: TreePine,
+      metric: '2,500+',
+      label: 'Trees Planted',
       description: 'Equivalent carbon offset through our green initiatives'},
     {
 
-      icon: Zap,'
-      metric: '45%','
-      label: 'Energy Reduction','
+      icon: Zap,
+      metric: '45%',
+      label: 'Energy Reduction',
       description: 'Average energy savings for our clients'},
     {
 
-      icon: Recycle,'
-      metric: '15,000+','
-      label: 'Devices Recycled','
+      icon: Recycle,
+      metric: '15,000+',
+      label: 'Devices Recycled',
       description: 'Electronic waste diverted from landfills'},
     {
 
-      icon: Globe,'
-      metric: '2,800','
-      label: 'Tons CO2 Saved','
+      icon: Globe,
+      metric: '2,800',
+      label: 'Tons CO2 Saved',
       description: 'Carbon emissions reduced through our solutions'},
   ];
 
   const certifications = [
     {
-'
-      name: 'ISO 14001','
+
+      name: 'ISO 14001',
       description: 'Environmental Management Systems',
-      icon: Award,'
+      icon: Award,
       color: 'from-green-500 to-emerald-500'},
     {
-'
-      name: 'Energy Star','
+
+      name: 'Energy Star',
       description: 'Energy Efficiency Certification',
-      icon: Star,'
+      icon: Star,
       color: 'from-yellow-500 to-orange-500'},
     {
-'
-      name: 'LEED','
+
+      name: 'LEED',
       description: 'Leadership in Energy and Environmental Design',
-      icon: Leaf,'
+      icon: Leaf,
       color: 'from-blue-500 to-cyan-500'},
     {
-'
-      name: 'Green Seal','
+
+      name: 'Green Seal',
       description: 'Environmental Standard Certification',
-      icon: CheckCircle,'
+      icon: CheckCircle,
       color: 'from-purple-500 to-pink-500'},
   ];
 
   const caseStudies = [
     {
-'
-      title: 'Fortune 500 Manufacturing Company','
+
+      title: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing',
       challenge:'
         'High energy costs and carbon footprint from outdated IT infrastructure',
       solution:'
         'Implemented server virtualization, cloud optimization, and smart energy monitoring',
       results: ['
-        'Reduced energy consumption by 65%','
-        'Lowered IT costs by $2.3M annually','
-        'Achieved carbon neutrality goals 2 years early','
+        'Reduced energy consumption by 65%',
+        'Lowered IT costs by $2.3M annually',
+        'Achieved carbon neutrality goals 2 years early',
         'Improved system performance by 40%',
-      ],'
-      savings: '$2.3M annually','
+      ],
+      savings: '$2.3M annually',
       timeline: '6 months'},
     {
-'
-      title: 'Healthcare Network','
-      industry: 'Healthcare','
+
+      title: 'Healthcare Network',
+      industry: 'Healthcare',
       challenge: 'Inefficient data centers consuming excessive energy',
       solution:'
         'Data center consolidation, renewable energy integration, and cooling optimization',
       results: ['
-        'Reduced energy consumption by 55%','
-        'Lowered operational costs by $1.8M annually','
-        'Improved system reliability by 99.9%','
+        'Reduced energy consumption by 55%',
+        'Lowered operational costs by $1.8M annually',
+        'Improved system reliability by 99.9%',
         'Enhanced patient data security',
-      ],'
-      savings: '$1.8M annually','
+      ],
+      savings: '$1.8M annually',
       timeline: '8 months'},
     {
-'
-      title: 'Educational Institution','
-      industry: 'Education','
+
+      title: 'Educational Institution',
+      industry: 'Education',
       challenge: 'High electricity bills from inefficient campus technology',
       solution:'
         'Smart lighting systems, energy monitoring, and green hardware deployment',
       results: ['
-        'Reduced energy consumption by 45%','
-        'Lowered utility costs by $850K annually','
-        'Improved learning environment','
+        'Reduced energy consumption by 45%',
+        'Lowered utility costs by $850K annually',
+        'Improved learning environment',
         'Enhanced sustainability curriculum',
-      ],'
-      savings: '$850K annually','
+      ],
+      savings: '$850K annually',
       timeline: '4 months'},
   ];
 
@@ -607,7 +607,7 @@ export default function GreenIT() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Green IT Solutions - Zion Tech Group""
+        title="Green IT Solutions - Zion Tech Group"
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
       />
 
@@ -737,7 +737,7 @@ export default function GreenIT() {
                     <div className="flex items-center gap-3 mb-4">
                       <span`
                         className={`px-3 py-1 rounded-full text-xs font-medium ${
-'
+
                           solution.category === 'energy''
                             ? 'bg-green-500/20 text-green-400''
                             : solution.category === 'hardware''
@@ -796,7 +796,7 @@ export default function GreenIT() {
 
                     {expandedSection === solution.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}'
+                        initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}"
@@ -992,7 +992,7 @@ export default function GreenIT() {
                 Schedule Green IT Assessment
               </button>
               <a"
-                href="mailto:greenit@ziontechgroup.com""
+                href="mailto:greenit@ziontechgroup.com"
                 className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
               >
                 Contact Green IT Team

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousSynthesis = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousSynthesis = () => {
       <Helmet>
         <title>AI Autonomous Synthesis Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous synthesis platform that continuously synthesizes information, creates content, and generates insights with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI synthesis, autonomous synthesis, content creation, information synthesis, autonomous operations, AI synthesis platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-synthesis"
         />
       </Helmet>
@@ -181,13 +181,13 @@ const AIAutonomousSynthesis = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Content Synthesis','
-                'Data Synthesis','
-                'Knowledge Synthesis','
-                'Research Synthesis','
-                'Report Synthesis','
-                'Analysis Synthesis','
-                'Insight Synthesis','
+                'Content Synthesis',
+                'Data Synthesis',
+                'Knowledge Synthesis',
+                'Research Synthesis',
+                'Report Synthesis',
+                'Analysis Synthesis',
+                'Insight Synthesis',
                 'Summary Synthesis',
               ].map(type => (
                 <div

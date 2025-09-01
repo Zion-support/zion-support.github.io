@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -61,40 +61,40 @@ import SEO from "@/components/SEO";"
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
 export default function UltimateInnovativeServices2026(...args[]):  {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<any>(null);
 
   const categories = ['
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },'
-    { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },'
-    { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },'
-    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },'
-    { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },'
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },;'
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;'
-    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;'
-    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;'
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;'
-    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;'
+    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },
+    { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },;
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;
+    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
 
-  const priceRanges = [;'
-    { id: 'all', name: 'All Prices', range: 'All' },;'
-    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;'
-    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;'
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 
-  const sortOptions = [;'
-    { id: 'featured', name: 'Featured' },;'
-    { id: 'price-low', name: 'Price: Low to High' },;'
-    { id: 'price-high', name: 'Price: High to Low' },;'
-    { id: 'innovation', name: 'Innovation Level' },;'
+  const sortOptions = [;
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
+    { id: 'price-high', name: 'Price: High to Low' },;
+    { id: 'innovation', name: 'Innovation Level' },;
     { id: 'roi', name: 'ROI Potential' };
   ];
 
@@ -108,8 +108,8 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-        title="Ultimate Innovative Services 2026 | Zion Tech Group""
-        description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions.""
+        title="Ultimate Innovative Services 2026 | Zion Tech Group"
+        description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
         keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
 
@@ -181,7 +181,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search innovative services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -316,7 +316,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                     {/* Innovation Level Badge */}"
                     <div className="flex items-center gap-2 mb-4">`
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-'
+
                         service.innovationLevel === 'Revolutionary''
                           ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                           : service.innovationLevel === 'Cutting-edge''
@@ -374,7 +374,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 }}
                           animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -426,7 +426,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                           {/* Contact Button */}"
                           <div className="mt-4">
                             <Link"
-                              to="/contact""
+                              to="/contact"
                               className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold"
 "
                               <MessageCircle className="w-4 h-4" />
@@ -449,9 +449,9 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 Try adjusting your search criteria or browse all our innovative services.;
               </p>;
               <button;
-                onClick={() => {;'
-                  setSearchQuery('');'
-                  setSelectedCategory('all');'
+                onClick={() => {;
+                  setSearchQuery('');
+                  setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}"
                 className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
@@ -490,14 +490,14 @@ export default function UltimateInnovativeServices2026(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
 "
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
 "
                 <Phone className="w-5 h-5" />

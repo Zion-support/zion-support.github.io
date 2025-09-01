@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation() {
   const features = [
-    'AI-powered security automation optimization','
-    'Intelligent workflow automation and orchestration',;'
-    'Automated security response and remediation',;'
-    'Predictive analytics for automation opportunities',;'
-    'Smart security process optimization',;'
-    'AI-driven security task automation',;'
-    'Real-time automation performance monitoring',;'
+    'AI-powered security automation optimization',
+    'Intelligent workflow automation and orchestration',;
+    'Automated security response and remediation',;
+    'Predictive analytics for automation opportunities',;
+    'Smart security process optimization',;
+    'AI-driven security task automation',;
+    'Real-time automation performance monitoring',;
     'Custom AI models for automation applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$599/mo','
-      details: ['Up to 50 workflows', 'Basic AI features', 'Standard automation', 'Email support']
+
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 50 workflows',Basic AI features',Standard automation',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,499/mo', '
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,499/mo',
+      details: ['Up to 200 workflows',Advanced AI features',Enhanced automation',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
-      details: ['Unlimited workflows', 'Custom AI models', 'Full automation suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited workflows',Custom AI models',Full automation suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security automation optimization',;'
-    'Workflow automation and orchestration',;'
-    'Security response and remediation',;'
-    'Process optimization and automation',;'
-    'Task automation and management',;'
+  const useCases = [;
+    'Security automation optimization',;
+    'Workflow automation and orchestration',;
+    'Security response and remediation',;
+    'Process optimization and automation',;
+    'Task automation and management',;
     'Automation scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security automation performance by 50-80%',;'
-    'Reduce manual task time by 40-70%',;'
-    'Cut security operational costs by 35-65%',;'
-    'Enhance security automation reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security automation performance by 50-80%',;
+    'Reduce manual task time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
+    'Enhance security automation reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security automation operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% task time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% task time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-rose-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';'
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -19,7 +19,7 @@ interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
-  soundEnabled: boolean;'
+  soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
 
 export function Accessibility() {
@@ -29,7 +29,7 @@ export function Accessibility() {
     fontSize: 16,
     highContrast: false,
     reducedMotion: false,
-    soundEnabled: true,'
+    soundEnabled: true,
     theme: 'auto'
   }) ;
 
@@ -45,24 +45,24 @@ export function Accessibility() {
     // Add keyboard shortcuts
     const handleKeyDown = useCallback ( (e: KeyboardEvent) => {;
       if (e.ctrlKey) {;
-        switch (e.key) {;'
-          case '=':;'
+        switch (e.key) {;
+          case '=':;
           case '+':;
             e.preventDefault();
             increaseFontSize();
-            break;'
+            break;
           case '-':;
             e.preventDefault();
             decreaseFontSize();
-            break;'
+            break;
           case '0':;
             e.preventDefault () ;
             resetSettings () ;
             break;
 
     };
-'
-    document.addEventListener('keydown', handleKeyDown);'
+
+    document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
@@ -74,30 +74,30 @@ export function Accessibility() {
 
     // Apply high contrast
     if (newSettings.highContrast) {
-'
+
       root.classList.add('high-contrast');
     } else {
-'
+
       root.classList.remove('high-contrast');
 
     // Apply reduced motion
     if (newSettings.reducedMotion) {
-'
+
       root.classList.add('reduced-motion');
     } else {
-'
+
       root.classList.remove('reduced-motion');
 
     // Apply theme'
-    if (newSettings.theme = == 'light') {;'
-      root.classList.add('light-theme');'
-      root.classList.remove('dark-theme');'
-    } else if (newSettings.theme = == 'dark') {;'
-      root.classList.add('dark-theme');'
+    if (newSettings.theme = == 'light') {;
+      root.classList.add('light-theme');
+      root.classList.remove('dark-theme');
+    } else if (newSettings.theme = == 'dark') {;
+      root.classList.add('dark-theme');
       root.classList.remove('light-theme');
     } else {
-'
-      root.classList.remove('light-theme', 'dark-theme');
+
+      root.classList.remove('light-theme',dark-theme');
 
   };
 
@@ -115,18 +115,18 @@ export function Accessibility() {
 
 };
     setSettings(newSettings);
-    applySettings(newSettings);'
+    applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
   const increaseFontSize = () => {;
-    if (settings.fontSize < 24) {;'
+    if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
 
   };
 
   const decreaseFontSize = () => {;
-    if (settings.fontSize > 12) {;'
+    if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
 
   };
@@ -141,13 +141,13 @@ export function Accessibility() {
   ;
   ;
   ;
-  ;'
+  ;
   theme: 'auto';
     ;
 
 };
     setSettings(defaultSettings);
-    applySettings(defaultSettings);'
+    applySettings(defaultSettings);
     localStorage.removeItem('accessibility-settings');
   };
 
@@ -156,8 +156,8 @@ export function Accessibility() {
       {/* Accessibility Toggle Button */}
       <button
         onClick = {() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2""
-        aria-label="Accessibility Settings""
+        className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+        aria-label="Accessibility Settings"
         title="Accessibility Settings"
       >"
         <AccessibilityIcon className="w-6 h-6" />
@@ -206,7 +206,7 @@ export function Accessibility() {
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}"
-                  className="text-gray-400 hover:text-white transition-colors""
+                  className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
 "
                   <X className="w-5 h-5" />
@@ -223,7 +223,7 @@ export function Accessibility() {
                   <button
                     onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}"
-                    className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors""
+                    className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Decrease font size"
 "
                     <Minus className="w-4 h-4 text-white" />
@@ -234,7 +234,7 @@ export function Accessibility() {
                   <button
                     onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}"
-                    className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors""
+                    className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     aria-label="Increase font size"
 "
                     <Plus className="w-4 h-4 text-white" />
@@ -253,7 +253,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange = {
-'
+
   (e) => updateSetting('highContrast',
   e.target.checked)
 
@@ -266,11 +266,11 @@ export function Accessibility() {
                     className="sr-only"
                   />`
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-'
+
                     settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700'`
                   }`}>`
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-'
+
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1'`
                     }`} />
                   </div>
@@ -288,7 +288,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange = {
-'
+
   (e) => updateSetting('reducedMotion',
   e.target.checked)
 
@@ -301,11 +301,11 @@ export function Accessibility() {
                     className="sr-only"
                   />`
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-'
+
                     settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700'`
                   }`}>`
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-'
+
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'`
                     }`} />
                   </div>
@@ -318,12 +318,12 @@ export function Accessibility() {
                   <Settings className="w-4 h-4" />
                   Theme
                 </label>"
-                <div className="grid grid-cols-3 gap-2">'
-                  {(['auto', 'light', 'dark'] as const).map((theme) => (
+                <div className="grid grid-cols-3 gap-2">
+                  {(['auto',light',dark'] as const).map((theme) => (
                     <button
                       key={theme}
                       onClick = {
-'
+
   () => updateSetting('theme',
   theme)
 
@@ -339,7 +339,7 @@ export function Accessibility() {
                           ? 'bg-cyan-500 text-white''
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'`
                       }`}
-'
+
                       {theme === 'auto' && 'Auto'}'"
                       {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />}'"
                       {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
@@ -359,7 +359,7 @@ export function Accessibility() {
                     type="checkbox"
                     checked={settings.soundEnabled}
                     onChange = {
-'
+
   (e) => updateSetting('soundEnabled',
   e.target.checked)
 
@@ -372,11 +372,11 @@ export function Accessibility() {
                     className="sr-only"
                   />`
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-'
+
                     settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700'`
                   }`}>`
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-'
+
                       settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'`
                     }`} />
                   </div>

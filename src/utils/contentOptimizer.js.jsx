@@ -33,7 +33,7 @@ export class ContentOptimizer {
   static countWords(content) {
 
     // Remove HTML tags and count words
-    const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+    const textContent = content.replace(/<[^>]*>/g, ').trim();
     return textContent.split(/\s+/).filter(word => word.length > 0).length;
   }
   static countHeadings(content) {
@@ -52,8 +52,8 @@ export class ContentOptimizer {
     return linkMatches ? linkMatches.length : 0;
   }
   static calculateReadabilityScore(content) {
-'
-    const textContent = content.replace(/<[^>]*>/g, ' ').trim();
+
+    const textContent = content.replace(/<[^>]*>/g, ').trim();
     const sentences = textContent;
       .split(/[.!?]+/)
       .filter(s => s.trim().length > 0);
@@ -90,12 +90,12 @@ export class ContentOptimizer {
 
     let score = 100;
     // Check for title'
-    if (!content.includes('<title>')) score -= 20;
+    if (!content.includes('<title>)) score -= 20;
     // Check for meta description'
     if (!content.includes('name="description"')) score -= 15;
     // Check for headings'
-    if (!content.includes('<h1>')) score -= 10;'
-    if (!content.includes('<h2>')) score -= 5;
+    if (!content.includes('<h1>)) score -= 10;
+    if (!content.includes('<h2>)) score -= 5;
     // Check for images with alt text'
     const imagesWithAlt = images.filter(img => img.includes('alt='));
     if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
@@ -111,40 +111,40 @@ export class ContentOptimizer {
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
 
       issues.push({
-'
-        type: 'missing-headings','
+
+        type: 'missing-headings',
         severity: 'high',
-        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,'
+        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
         location: 'Page structure'});
     }
     // Check for minimal content
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
 
       issues.push({
-'
-        type: 'minimal-content','
+
+        type: 'minimal-content',
         severity: 'medium',`
-        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,'
+        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
         location: 'Content body'});
     }
     // Check for no images
     if (metrics.imageCount === 0) {
 
       issues.push({
-'
-        type: 'no-images','
-        severity: 'medium','
-        description: 'No images found. Images improve user engagement and SEO','
+
+        type: 'no-images',
+        severity: 'medium',
+        description: 'No images found. Images improve user engagement and SEO',
         location: 'Content body'});
     }
     // Check for poor structure
     if (metrics.headingCount === 0 && metrics.wordCount > 100) {
 
       issues.push({
-'
-        type: 'poor-structure','
-        severity: 'high','
-        description: 'Content lacks proper heading structure for organization','
+
+        type: 'poor-structure',
+        severity: 'high',
+        description: 'Content lacks proper heading structure for organization',
         location: 'Page structure'});
     }
     // Check for missing keywords
@@ -156,10 +156,10 @@ export class ContentOptimizer {
     if (missingKeywords.length > 0) {
 
       issues.push({
-'
-        type: 'missing-keywords','
-        severity: 'medium','`
-        description: `Missing important keywords: ${missingKeywords.join(', ')}`,'
+
+        type: 'missing-keywords',
+        severity: 'medium',`
+        description: `Missing important keywords: ${missingKeywords.join(',)}`,
         location: 'Content optimization'});
     }
     return issues;
@@ -170,50 +170,50 @@ export class ContentOptimizer {
     issues.forEach(issue => {
 
       switch (issue.type) {
-'
+
         case 'missing-headings':
           suggestions.push({
-'
-            type: 'add-headings','
+
+            type: 'add-headings',
             priority: 'high',
             description:'
               'Add proper heading structure (H1, H2, H3) to organize content',
             example:'
-              '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>'});
-          break;'
+              '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>});
+          break;
         case 'minimal-content':
           suggestions.push({
-'
-            type: 'expand-content','
-            priority: 'medium','
+
+            type: 'expand-content',
+            priority: 'medium',
             description: 'Expand content to provide more value and improve SEO',
             example:'
               'Add detailed explanations, examples, case studies, or related information'});
-          break;'
+          break;
         case 'no-images':
           suggestions.push({
-'
-            type: 'add-images','
+
+            type: 'add-images',
             priority: 'medium',
             description:'
               'Add relevant images, diagrams, or infographics to improve engagement',
             example:'
               'Include screenshots, process diagrams, or relevant stock photos'});
-          break;'
+          break;
         case 'poor-structure':
           suggestions.push({
-'
-            type: 'improve-structure','
+
+            type: 'improve-structure',
             priority: 'high',
             description:'
               'Reorganize content with proper headings and logical flow',
             example:'
               'Use H1 for main title, H2 for major sections, H3 for subsections'});
-          break;'
+          break;
         case 'missing-keywords':
           suggestions.push({
-'
-            type: 'add-keywords','
+
+            type: 'add-keywords',
             priority: 'medium',
             description:'
               'Naturally incorporate missing keywords into the content',
@@ -230,7 +230,7 @@ export class ContentOptimizer {
     const segments = page.split('/').filter(Boolean);
     const keywords = [];
     segments.forEach(segment => {
-'
+
       const words = segment.split('-').filter(w => w.length > 2);
       keywords.push(...words);
     });
@@ -238,8 +238,8 @@ export class ContentOptimizer {
   }
   static extractContentKeywords(content) {
 
-    // Extract potential keywords from content (simplified)'
-    const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
+    // Extract potential keywords from content (simplified)
+    const textContent = content.replace(/<[^>]*>/g, ').toLowerCase();
     const words = textContent.split(/\s+/).filter(w => w.length > 3);
     // Count word frequency and return most common
     const wordCount = {};
@@ -351,7 +351,7 @@ export class ContentOptimizer {
   }
   static generateMetaDescription(page, contentType) {
 
-    const baseDescription = baseDescriptions[contentType];'
+    const baseDescription = baseDescriptions[contentType];
     const pageKeywords = this.extractPageKeywords(page).join(' ');`
     return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
   }

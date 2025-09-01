@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint
@@ -44,14 +44,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
     navigationStart: null});
 
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const observerRef = useRef<PerformanceObserver | null>(null);'
+  const observerRef = useRef<PerformanceObserver | null>(null);
       // // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
     // First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
 
-      const entries = list.getEntries();'
+      const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
 
@@ -72,7 +72,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     const fidObserver = new PerformanceObserver((list) => {
 
       const entries = list.getEntries();
-      const fidEntry = entries[entries.length - 1] as FirstInputEntry;'
+      const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
 
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
@@ -94,13 +94,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
     });
     // Start observing
     try {
-'
-      fcpObserver.observe({ entryTypes: ['paint'] });'
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });'
-      fidObserver.observe({ entryTypes: ['first-input'] });'
+
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-'
+
       // // // // // // // // console.warn('Error setting up performance observers:', error);
     }
     // Navigation timing metrics
@@ -110,7 +110,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Get navigation timing metrics
   const getNavigationTiming = useCallback(: unknown {
     if (!enableNavigationTiming || !performance.getEntriesByType) return;
-'
+
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
 
@@ -125,7 +125,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         domLoad,
         windowLoad
       }));
-'
+
           // // // // // // // // console.warn('Long task detected:', {
 
             duration: entry.duration,
@@ -136,15 +136,15 @@ export function usePerformance(options: PerformanceOptions = {}) {
       });
     });
     try {
-'
+
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-'
+
       // // // // // // // // console.warn('Error setting up long task observer:', error);
     }
     return : unknown longTaskObserver.disconnect();
       if (logToConsole) {
-'
+
         // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
     }
@@ -153,12 +153,12 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Get resource timing metrics
   const getResourceTiming = useCallback(: unknown {
     if (!enableResourceTiming || !performance.getEntriesByType) return;
-'
+
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources.filter(resource => resource.duration > 1000);
 
     if (slowResources.length > 0 && logToConsole) {
-'
+
       // console.warn('Slow resources detected:', slowResources);
     }
 
@@ -175,18 +175,18 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
         const entries = list.getEntries();
         entries.forEach((entry) => {
-'
+
           if (entry.name === 'first-contentful-paint') {
 
             const fcp = entry.startTime;
-            setMetrics(prev => ({ ...prev, fcp }));'
+            setMetrics(prev => ({ ...prev, fcp }));
             if (logToConsole) // console.log('FCP:', fcp);
           }
         });
-      });'
+      });
       observerRef.current.observe({ entryTypes: ['paint'] });
     } catch (e) {
-'
+
       // console.warn('FCP monitoring not supported');
     }
 
@@ -199,13 +199,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
         if (lastEntry) {
 
           const lcp = lastEntry.startTime;
-          setMetrics(prev => ({ ...prev, lcp }));'
+          setMetrics(prev => ({ ...prev, lcp }));
           if (logToConsole) // console.log('LCP:', lcp);
         }
-      });'
+      });
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
     } catch (e) {
-'
+
       // console.warn('LCP monitoring not supported');
     }
 
@@ -221,12 +221,12 @@ export function usePerformance(options: PerformanceOptions = {}) {
             clsValue += (entry as any).value;
           }
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));'
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
         if (logToConsole) // console.log('CLS:', clsValue);
-      });'
+      });
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] });
     } catch (e) {
-'
+
       // console.warn('CLS monitoring not supported');
     }
   }, [enableWebVitals, logToConsole]);
@@ -245,19 +245,19 @@ export function usePerformance(options: PerformanceOptions = {}) {
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
-      setMetrics(prev => ({ ...prev, fid: firstInputDelay }));'
+      setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
       if (logToConsole) // console.log('FID:', firstInputDelay);
 
       // Remove listeners after first input'
-      document.removeEventListener('pointerdown', firstInputHandler);'
-      document.removeEventListener('keydown', firstInputHandler);'
-      document.removeEventListener('mousedown', firstInputHandler);'
+      document.removeEventListener('pointerdown', firstInputHandler);
+      document.removeEventListener('keydown', firstInputHandler);
+      document.removeEventListener('mousedown', firstInputHandler);
       document.removeEventListener('touchstart', firstInputHandler);
     };
-'
-    document.addEventListener('pointerdown', firstInputHandler);'
-    document.addEventListener('keydown', firstInputHandler);'
-    document.addEventListener('mousedown', firstInputHandler);'
+
+    document.addEventListener('pointerdown', firstInputHandler);
+    document.addEventListener('keydown', firstInputHandler);
+    document.addEventListener('mousedown', firstInputHandler);
     document.addEventListener('touchstart', firstInputHandler);
   }, [enableWebVitals, logToConsole]);
 
@@ -279,7 +279,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       getNavigationTiming();
       getResourceTiming();
     } else {
-'
+
       window.addEventListener('load', () => {
         getNavigationTiming();
         getResourceTiming();
@@ -288,7 +288,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     // Monitor DOM content loaded'
     if (document.readyState === 'loading') {
-'
+
       document.addEventListener('DOMContentLoaded', getNavigationTiming);
     } else {
 
@@ -374,14 +374,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
     // Example: Send to Google Analytics
     if (window.gtag) {
-'
-      window.gtag('event', 'performance_metrics', analyticsData);
+
+      window.gtag('event',performance_metrics', analyticsData);
     }
 
     // Example: Send to custom endpoint'
     fetch('/api/analytics/performance', {
-'
-      method: 'POST','
+
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(analyticsData)
     }).catch(console.error);
@@ -398,7 +398,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       stopMonitoring();
     };
   }, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
-'
+
   // Auto-send metrics when they're complete
   useEffect(: unknown {
     if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) {

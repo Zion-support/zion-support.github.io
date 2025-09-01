@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useCallback } from 'react';'
+import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 export const PerformanceOptimizer = ({ children }) => {
 
@@ -7,35 +7,35 @@ export const PerformanceOptimizer = ({ children }) => {
     useEffect(() => {
         const preloadCriticalResources = () => {
             // Preload critical CSS'
-            const criticalCSS = document.createElement('link');'
-            criticalCSS.rel = 'preload';'
-            criticalCSS.as = 'style';'
+            const criticalCSS = document.createElement('link');
+            criticalCSS.rel = 'preload';
+            criticalCSS.as = 'style';
             criticalCSS.href = '/src/index.css';
             document.head.appendChild(criticalCSS);
             // Preload critical fonts'
-            const criticalFonts = document.createElement('link');'
-            criticalFonts.rel = 'preload';'
-            criticalFonts.as = 'font';'
-            criticalFonts.href = '/fonts/inter-var.woff2';'
+            const criticalFonts = document.createElement('link');
+            criticalFonts.rel = 'preload';
+            criticalFonts.as = 'font';
+            criticalFonts.href = '/fonts/inter-var.woff2';
             criticalFonts.crossOrigin = 'anonymous';
             document.head.appendChild(criticalFonts)};
         preloadCriticalResources()}, []);
     // Optimize images on route change
     useEffect(() => {
         const optimizeImages = () => {
-'
+
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
 
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
-'
+
                     img.loading = 'lazy'}"
                 // Add decoding="async" for better performance'
                 img.decoding = 'async';
                 // Add error handling
                 img.onerror = () => {
-'
+
                     img.style.display = 'none'}})};
         // Use requestIdleCallback for non-critical optimization'
         if ('requestIdleCallback' in window) {
@@ -58,26 +58,26 @@ export const PerformanceOptimizer = ({ children }) => {
         }
     }, []);
     useEffect(() => {
-'
-        window.addEventListener('scroll', handleScroll, { passive: true });'
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
     // Service Worker registration for caching
     useEffect(() => {
-'
+
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 
             navigator.serviceWorker'
                 .register('/sw.js')
                 .then((registration) => {
-'
+
                 // console.log('SW registered: ', registration)})
                 .catch((registrationError) => {
-'
+
                 // console.log('SW registration failed: ', registrationError)})}
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
-'
+
         if ('IntersectionObserver' in window) {
 
             const observer = new IntersectionObserver((entries) => {
@@ -89,12 +89,12 @@ export const PerformanceOptimizer = ({ children }) => {
                         const target = entry.target;
                         if (target.dataset.src) {
 
-                            target.src = target.dataset.src;'
+                            target.src = target.dataset.src;
                             target.removeAttribute('data-src');
                             observer.unobserve(target)}
                     }
                 })}, {
-'
+
                 rootMargin: '50px',
                 threshold: 0.1});
             // Observe all images with data-src'

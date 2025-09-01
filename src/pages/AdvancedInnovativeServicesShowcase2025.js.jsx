@@ -1,34 +1,34 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
 const AdvancedInnovativeServicesShowcase2025 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     const categories = ['
-        'all','
-        'Legal Tech & Compliance','
-        'Quantum Computing & Security','
-        'Healthcare & Biotech','
-        'Energy & Sustainability','
-        'Cybersecurity','
-        'Fintech & Trading','
-        'Quantum Computing & AI','
-        'Supply Chain & Logistics','
-        'Edge Computing & IoT','
-        'Marketing & Automation','
-        'Quantum Technology','
-        'AI & Machine Learning','
-        'AI & Analytics','
+        'all',
+        'Legal Tech & Compliance',
+        'Quantum Computing & Security',
+        'Healthcare & Biotech',
+        'Energy & Sustainability',
+        'Cybersecurity',
+        'Fintech & Trading',
+        'Quantum Computing & AI',
+        'Supply Chain & Logistics',
+        'Edge Computing & IoT',
+        'Marketing & Automation',
+        'Quantum Technology',
+        'AI & Machine Learning',
+        'AI & Analytics',
         'AI & Customer Experience'
     ];
     const allServices = ['
-        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),'
-        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),'
+        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
+        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-    const filteredServices = allServices;'
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -36,11 +36,11 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
         .sort((a, b) => {
 
         switch (sortBy) {
-'
+
             case 'price':'
-                return parseFloat(a.price?.replace(/[^0-9.]/g, '') || '0') - parseFloat(b.price?.replace(/[^0-9.]/g, '') || '0');'
+                return parseFloat(a.price?.replace(/[^0-9.]/g,') || '0') - parseFloat(b.price?.replace(/[^0-9.]/g,') || '0');
             case 'category':
-                return a.category.localeCompare(b.category);'
+                return a.category.localeCompare(b.category);
             case 'name':
             default:
                 return a.name.localeCompare(b.name)}
@@ -48,33 +48,33 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
     const getCategoryIcon = (category) => {
 
         const icons = {
-'
-  'Legal Tech & Compliance': '⚖️','
-            'Quantum Computing & Security': '🔐','
-            'Healthcare & Biotech': '🏥','
-            'Energy & Sustainability': '🌱','
-            'Cybersecurity': '🛡️','
-            'Fintech & Trading': '📈','
-            'Quantum Computing & AI': '🔮','
-            'Supply Chain & Logistics': '🚚','
-            'Edge Computing & IoT': '🌐','
-            'Marketing & Automation': '📢','
-            'Quantum Technology': '🔮','
-            'AI & Machine Learning': '🧠','
-            'AI & Analytics': '📊','
+
+  'Legal Tech & Compliance': '⚖️',
+            'Quantum Computing & Security': '🔐',
+            'Healthcare & Biotech': '🏥',
+            'Energy & Sustainability': '🌱',
+            'Cybersecurity': '🛡️',
+            'Fintech & Trading': '📈',
+            'Quantum Computing & AI': '🔮',
+            'Supply Chain & Logistics': '🚚',
+            'Edge Computing & IoT': '🌐',
+            'Marketing & Automation': '📢',
+            'Quantum Technology': '🔮',
+            'AI & Machine Learning': '🧠',
+            'AI & Analytics': '📊',
   'AI & Customer Experience': '💬'
         
 
-};'
+};
         return icons[category] || '🚀'};
     const getServiceTypeColor = (type) => {
 
         switch (type) {
-'
+
             case 'Micro SAAS':'
-                return 'bg-blue-100 text-blue-800 border-blue-200';'
+                return 'bg-blue-100 text-blue-800 border-blue-200';
             case 'IT Service':'
-                return 'bg-green-100 text-green-800 border-green-200';'
+                return 'bg-green-100 text-green-800 border-green-200';
             case 'AI Service':'
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:'
@@ -149,7 +149,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
               <div>"
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>"
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
+                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -248,8 +248,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                     </div>)}
                   {service.benefits && (<div>"
                       <span className="text-xs font-semibold text-blue-400">Benefits: </span>"
-                      <span className="text-xs text-gray-300">'
-                        {service.benefits.slice(0, 2).join(', ')}'
+                      <span className="text-xs text-gray-300">
+                        {service.benefits.slice(0, 2).join(',)}
                         {service.benefits.length > 2 && '...'}
                       </span>
                     </div>) }
@@ -258,8 +258,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 {/* Contact and Action */}"
                 <div className="border-t border-white/20 pt-4">"
                   <div className="flex justify-between items-center">"
-                    <div className="text-xs text-gray-400">'
-                      <p>📧 {service.contactInfo?.email || 'kleber@ziontechgroup.com'}</p>'
+                    <div className="text-xs text-gray-400">
+                      <p>📧 {service.contactInfo?.email || 'kleber@ziontechgroup.com'}</p>
                       <p>📱 {service.contactInfo?.mobile || '+1 302 464 0950'}</p>
                     </div>'"
                     <a href={service.link || 'https://ziontechgroup.com'} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105">

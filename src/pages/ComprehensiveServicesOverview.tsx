@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain,
 import { motion  } from 'framer - motion.ts';
@@ -34,11 +34,10 @@ import { motion  } from 'framer - motion.ts';
  } from 'lucide-react.ts';
   };
   const getServicePrice = (service: any)  => {
-'
+
     if (typeof service.price === 'number') {
 
       return service.price;
     }
     return service.pricing?.basic || 0;
   };
-'

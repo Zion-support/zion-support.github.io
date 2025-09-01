@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -13,7 +13,7 @@ import {
   Microscope,
   Target'
 } from 'lucide-react';
-'
+
       patents: '11';
     };
   ];

@@ -1,7 +1,7 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
 import SEO from '../components/SEO';
 const transformationServices = [
     {
@@ -441,7 +441,7 @@ export default function DigitalTransformation() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Success Stories
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               See how we've helped organizations transform their business through digital innovation.
             </p>
           </motion.div>"

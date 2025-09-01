@@ -1,5 +1,5 @@
-import Head from 'next/head';'
-import Link from 'next/link';'
+import Head from 'next/head';
+import Link from 'next/link';
 import { servicesCatalog } from '../../src/data/servicesCatalog';
 ;
 export { function };
@@ -55,8 +55,8 @@ export default function ServicesIndex(...args[]):  {
               .map(item: unknown (
                 <a
                   key={item.id}
-                  href={item.href}'
-                  target={item.external ? '_blank' : undefined}'
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
                   rel={item.external ? 'noreferrer' : undefined}"
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30"
                 >"
@@ -82,13 +82,13 @@ export default function ServicesIndex(...args[]):  {
         <section className="mx-auto max-w-7xl px-6 pb-16">"
           <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             {['
-              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },'
-              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },'
-              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },'
-              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },'
-              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },'
-              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },'
-              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },'
+              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },
+              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },
+              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },
+              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },
+              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
+              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
+              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
               { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
             ].map((s)  => (
               <Link key={s.href} href={s.href}>"

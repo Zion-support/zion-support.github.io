@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const Training = () => {
   return()
@@ -9,7 +9,7 @@ const Training = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Training Programs
           </h1>"
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">'
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
             Enhance your team's skills with our comprehensive training programs.
           </p>
         </div>
@@ -20,11 +20,11 @@ const Training = () => {
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
             Coming Soon
           </h2>"
-          <p className="text-xl text-slate-600 mb-8">'
+          <p className="text-xl text-slate-600 mb-8">
             We're developing comprehensive training programs. Check back soon!
           </p>
           <Link"
-            to="/contact""
+            to="/contact"
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
           >
             Contact Us

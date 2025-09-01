@@ -1,42 +1,42 @@
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI Strategy','
+      icon: Brain,
+      title: 'AI Strategy',
       description: 'Comprehensive AI strategy development and implementation'},
     {
 
-      icon: Cpu,'
-      title: 'Machine Learning','
+      icon: Cpu,
+      title: 'Machine Learning',
       description: 'Custom ML models and algorithms for your business'},
     {
 
-      icon: Database,'
-      title: 'Data Analytics','
+      icon: Database,
+      title: 'Data Analytics',
       description: 'Advanced analytics powered by artificial intelligence'},
     {
 
-      icon: Shield,'
-      title: 'AI Ethics','
+      icon: Shield,
+      title: 'AI Ethics',
       description: 'Responsible AI development and governance'},
   ];
   const benefits = ['
-    'Increased operational efficiency by 60%','
-    'Enhanced customer insights and personalization','
-    'Automated decision-making processes','
-    'Competitive advantage through AI innovation','
+    'Increased operational efficiency by 60%',
+    'Enhanced customer insights and personalization',
+    'Automated decision-making processes',
+    'Competitive advantage through AI innovation',
     'Scalable AI solutions that grow with your business',
   ];
   return()
     <div className="min-h-screen bg-background">
       <SEO"
-        title="AI Services - Zion Tech Group""
-        description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.""
-        keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics""
+        title="AI Services - Zion Tech Group"
+        description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
+        keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
         canonical="https://ziontechgroup.com/services/ai-services"
       />
 
@@ -51,7 +51,7 @@ const AIServices = () => {
             transition={{ duration: 0.8 }}
           >
             AI Services for"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
               {' '}
               Innovation
             </span>
@@ -153,7 +153,7 @@ const AIServices = () => {
       <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Embrace AI?</h2>"
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our AI services can revolutionize your business
             operations and create new opportunities.
           </p>"

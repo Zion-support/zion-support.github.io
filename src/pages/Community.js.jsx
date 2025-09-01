@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Community = () => {
   return()
@@ -6,7 +6,7 @@ const Community = () => {
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."
         />
       </Helmet>
@@ -22,7 +22,7 @@ const Community = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Community page coming soon. We're building a vibrant community
               platform.
             </p>

@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence() {
   const features = [
-    'AI-powered security intelligence optimization','
-    'Intelligent threat intelligence gathering and analysis',;'
-    'Automated security risk assessment and prediction',;'
-    'Predictive analytics for security threats',;'
-    'Smart intelligence framework management',;'
-    'AI-driven intelligence automation and orchestration',;'
-    'Real-time intelligence performance tracking',;'
+    'AI-powered security intelligence optimization',
+    'Intelligent threat intelligence gathering and analysis',;
+    'Automated security risk assessment and prediction',;
+    'Predictive analytics for security threats',;
+    'Smart intelligence framework management',;
+    'AI-driven intelligence automation and orchestration',;
+    'Real-time intelligence performance tracking',;
     'Custom AI models for intelligence applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$599/mo','
-      details: ['Up to 100 threat feeds', 'Basic AI features', 'Standard intelligence', 'Email support']
+
+      name: 'Developer',
+      price: '$599/mo',
+      details: ['Up to 100 threat feeds',Basic AI features',Standard intelligence',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,499/mo', '
-      details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,499/mo',
+      details: ['Up to 500 threat feeds',Advanced AI features',Enhanced intelligence',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
-      details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited threat feeds',Custom AI models',Full intelligence suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security intelligence optimization',;'
-    'Threat intelligence gathering and analysis',;'
-    'Security risk assessment and prediction',;'
-    'Intelligence framework management and automation',;'
-    'Intelligence automation and orchestration',;'
+  const useCases = [;
+    'Security intelligence optimization',;
+    'Threat intelligence gathering and analysis',;
+    'Security risk assessment and prediction',;
+    'Intelligence framework management and automation',;
+    'Intelligence automation and orchestration',;
     'Intelligence scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security intelligence performance by 50-80%',;'
-    'Reduce threat detection time by 40-70%',;'
-    'Cut security intelligence costs by 35-65%',;'
-    'Enhance security intelligence reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security intelligence performance by 50-80%',;
+    'Reduce threat detection time by 40-70%',;
+    'Cut security intelligence costs by 35-65%',;
+    'Enhance security intelligence reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security intelligence operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% detection time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% detection time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-teal-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

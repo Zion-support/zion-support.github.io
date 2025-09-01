@@ -1,72 +1,72 @@
-import React from 'react';'
-import SEO from '../../components/SEO';'
+import React from 'react';
+import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Threat Detection','
+      icon: Brain,
+      title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms detect threats in real-time'
     },
     {
 
-      icon: Shield,'
-      title: 'Zero-Day Attack Prevention','
+      icon: Shield,
+      title: 'Zero-Day Attack Prevention',
       description: 'Identify and block unknown threats before they can cause damage'
     },
     {
 
-      icon: Lock,'
-      title: 'Intelligent Access Control','
+      icon: Lock,
+      title: 'Intelligent Access Control',
       description: 'AI-driven authentication and authorization systems';
     },;
     {;
-      icon: Eye,;'
-      title: 'Behavioral Analytics',;'
+      icon: Eye,;
+      title: 'Behavioral Analytics',;
       description: 'Monitor and analyze user behavior for suspicious activity';
     };
   ];
 
   const useCases = [
     {
-'
-      title: 'Threat Intelligence','
-      description: 'Real-time threat intelligence and analysis','
+
+      title: 'Threat Intelligence',
+      description: 'Real-time threat intelligence and analysis',
       icon: '🔍'
     },
     {
-'
-      title: 'Incident Response','
-      description: 'Automated incident detection and response','
+
+      title: 'Incident Response',
+      description: 'Automated incident detection and response',
       icon: '🚨'
     },
     {
-'
-      title: 'Vulnerability Assessment','
-      description: 'AI-powered vulnerability scanning and assessment','
+
+      title: 'Vulnerability Assessment',
+      description: 'AI-powered vulnerability scanning and assessment',
       icon: '🛡️';
     },;
-    {;'
-      title: 'Security Automation',;'
-      description: 'Automate security operations and responses',;'
+    {;
+      title: 'Security Automation',;
+      description: 'Automate security operations and responses',;
       icon: '⚡';
     };
   ];
 
-  const benefits = [;'
-    'Real-time threat detection and response',;'
-    'Reduced false positives with AI accuracy',;'
-    '24/7 automated security monitoring',;'
-    'Predictive threat intelligence',;'
-    'Cost-effective security operations',;'
+  const benefits = [;
+    'Real-time threat detection and response',;
+    'Reduced false positives with AI accuracy',;
+    '24/7 automated security monitoring',;
+    'Predictive threat intelligence',;
+    'Cost-effective security operations',;
     'Compliance and regulatory support';
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Cybersecurity Services - Zion Tech Group""
+        title="AI Cybersecurity Services - Zion Tech Group"
         description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
       />
 
@@ -415,7 +415,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
 "
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>"
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">
                 Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>"

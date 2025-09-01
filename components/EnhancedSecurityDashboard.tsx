@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -29,12 +29,12 @@ import {
 } from 'lucide-react';
 
 interface SecurityThreat {
-  id: string;'
-  type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';'
+  id: string;
+  type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';
   severity: 'low' | 'medium' | 'high' | 'critical';
   source: string;
   target: string;
-  timestamp: string;'
+  timestamp: string;
   status: 'active' | 'blocked' | 'investigating' | 'resolved';
   description: string;
   impact: string;
@@ -47,8 +47,8 @@ interface SecurityMetric {
   name: string;
   value: number;
   unit: string;
-  change: number;'
-  changeType: 'increase' | 'decrease';'
+  change: number;
+  changeType: 'increase' | 'decrease';
   status: 'secure' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
 
@@ -73,91 +73,91 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
   const [threats, setThreats] = useState<SecurityThreat[]>([
     {
-'
-      id: '1','
-      type: 'ddos','
-      severity: 'high','
-      source: '192.168.1.100','
-      target: 'Web Server','
-      timestamp: '2024-01-15 14:30:00','
-      status: 'blocked','
-      description: 'Distributed Denial of Service attack detected','
+
+      id: '1',
+      type: 'ddos',
+      severity: 'high',
+      source: '192.168.1.100',
+      target: 'Web Server',
+      timestamp: '2024-01-15 14:30:00',
+      status: 'blocked',
+      description: 'Distributed Denial of Service attack detected',
       impact: 'High traffic volume from multiple sources'
     },
     {
-'
-      id: '2','
-      type: 'phishing','
-      severity: 'medium','
-      source: 'suspicious-email@domain.com','
-      target: 'User Accounts','
-      timestamp: '2024-01-15 13:45:00','
-      status: 'investigating','
-      description: 'Phishing attempt targeting user credentials','
+
+      id: '2',
+      type: 'phishing',
+      severity: 'medium',
+      source: 'suspicious-email@domain.com',
+      target: 'User Accounts',
+      timestamp: '2024-01-15 13:45:00',
+      status: 'investigating',
+      description: 'Phishing attempt targeting user credentials',
       impact: 'Potential credential compromise'
     },
     {
-'
-      id: '3','
-      type: 'brute-force','
-      severity: 'low','
-      source: '203.45.67.89','
-      target: 'SSH Service','
-      timestamp: '2024-01-15 12:20:00','
-      status: 'blocked','
-      description: 'Multiple failed login attempts detected','
+
+      id: '3',
+      type: 'brute-force',
+      severity: 'low',
+      source: '203.45.67.89',
+      target: 'SSH Service',
+      timestamp: '2024-01-15 12:20:00',
+      status: 'blocked',
+      description: 'Multiple failed login attempts detected',
       impact: 'Account lockout protection activated'
     }
   ]);
 
   const [metrics, setMetrics] = useState<SecurityMetric[]>([
     {
-'
-      id: 'threats-blocked','
+
+      id: 'threats-blocked',
       name: 'Threats Blocked',
-      value: 127,'
+      value: 127,
       unit: '',
-      change: -15.2,'
-      changeType: 'decrease','
+      change: -15.2,
+      changeType: 'decrease',
       status: 'secure',
       icon: Shield
     },
     {
-'
-      id: 'response-time','
+
+      id: 'response-time',
       name: 'Response Time',
-      value: 45,'
+      value: 45,
       unit: 'ms',
-      change: -8.5,'
-      changeType: 'decrease','
+      change: -8.5,
+      changeType: 'decrease',
       status: 'secure',
       icon: Zap
     },
     {
-'
-      id: 'vulnerabilities','
+
+      id: 'vulnerabilities',
       name: 'Vulnerabilities',
-      value: 3,'
+      value: 3,
       unit: '',
-      change: -25.0,'
-      changeType: 'decrease','
+      change: -25.0,
+      changeType: 'decrease',
       status: 'warning',
       icon: AlertTriangle
     },
     {
-'
-      id: 'security-score','
+
+      id: 'security-score',
       name: 'Security Score',
-      value: 94,'
+      value: 94,
       unit: '/100',
-      change: 2.1,'
-      changeType: 'increase','
+      change: 2.1,
+      changeType: 'increase',
       status: 'secure',
       icon: CheckCircle
     }
   ]);
 
-  const [selectedThreat, setSelectedThreat] = useState<string | null>(null);'
+  const [selectedThreat, setSelectedThreat] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
 
   useEffect(: unknown {
@@ -166,21 +166,21 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     const interval = setInterval(: unknown {
       // Simulate new threats
       if (Math.random() > 0.7) {
-'
-        const threatTypes = ['malware', 'phishing', 'ddos', 'brute-force'] as const;'
-        const severityLevels = ['low', 'medium', 'high'] as const;'
-        const targetSystems = ['Web Server', 'Database', 'API Gateway'];
+
+        const threatTypes = ['malware',phishing',ddos',brute-force'] as const;
+        const severityLevels = ['low',medium',high'] as const;
+        const targetSystems = ['Web Server',Database',API Gateway'];
         
         const newThreat: SecurityThreat = {
 
-          id: Date.now().toString(),'
-          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware','
+          id: Date.now().toString(),
+          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware',
           severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',
-          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,'
-          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server','
-          timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),'
-          status: 'active','
-          description: 'New security threat detected','
+          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
+          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',
+          timestamp: new Date().toISOString().replace('T', ').substring(0, 19),
+          status: 'active',
+          description: 'New security threat detected',
           impact: 'Under investigation'
         };
         setThreats(prev => [newThreat, ...prev.slice(0, 9)]);
@@ -207,11 +207,11 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const getSeverityColor = (severity: string) => {
 
     switch (severity) {
-'
-      case 'critical': return 'text-red-600 bg-red-100 border-red-200';'
-      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';'
-      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';'
-      case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';'
+
+      case 'critical': return 'text-red-600 bg-red-100 border-red-200';
+      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
+      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
+      case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
       default: return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
@@ -219,11 +219,11 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const getStatusColor = (status: string) => {
 
     switch (status) {
-'
-      case 'active': return 'text-red-600 bg-red-100';'
-      case 'blocked': return 'text-green-600 bg-green-100';'
-      case 'investigating': return 'text-yellow-600 bg-yellow-100';'
-      case 'resolved': return 'text-blue-600 bg-blue-100';'
+
+      case 'active': return 'text-red-600 bg-red-100';
+      case 'blocked': return 'text-green-600 bg-green-100';
+      case 'investigating': return 'text-yellow-600 bg-yellow-100';
+      case 'resolved': return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
@@ -231,10 +231,10 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const getMetricStatusColor = (status: string) => {
 
     switch (status) {
-'
-      case 'secure': return 'text-green-600 bg-green-100';'
-      case 'warning': return 'text-yellow-600 bg-yellow-100';'
-      case 'critical': return 'text-red-600 bg-red-100';'
+
+      case 'secure': return 'text-green-600 bg-green-100';
+      case 'warning': return 'text-yellow-600 bg-yellow-100';
+      case 'critical': return 'text-red-600 bg-red-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
@@ -283,7 +283,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         {/* Security Metrics Overview */}
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -321,14 +321,14 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                   </span>
                 </div>
 "
-                <div className="flex items-center gap-2">'
+                <div className="flex items-center gap-2">
                   {metric.changeType === 'increase' ? ("
                     <TrendingUp className="w-4 h-4 text-green-400" />
                   ) : ("
                     <TrendingDown className="w-4 h-4 text-red-400" />
                   )}`
                   <span className={`text-sm font-medium ${
-'
+
                     metric.changeType === 'increase' ? 'text-green-400' : 'text-red-400'`
                   }`}>
                     {Math.abs(metric.change).toFixed(1)}%
@@ -348,8 +348,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           viewport={{ once: true }}"
           className="flex justify-center mb-12"
         >"
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">'
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
+            {(['1h',6h',24h',7d'] as const).map((range) => (
               <button
                 key={range}
                 onClick={() => setTimeRange(range)}`
@@ -403,8 +403,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                       "
                       <div className="flex-1">"
                         <div className="flex items-center gap-3 mb-2">"
-                          <h4 className="text-lg font-semibold text-white capitalize">'
-                            {threat.type.replace('-', ' ')} Attack
+                          <h4 className="text-lg font-semibold text-white capitalize">
+                            {threat.type.replace('-', ')} Attack
                           </h4>`
                           <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
                             {threat.severity}
@@ -442,7 +442,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                   <AnimatePresence>
                     {selectedThreat === threat.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}'
+                        initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}"
@@ -506,19 +506,19 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>"
-              <div className="text-3xl font-bold mb-2 text-green-400">'
+              <div className="text-3xl font-bold mb-2 text-green-400">
                 {threats.filter(t => t.status === 'blocked').length}
               </div>"
               <div className="text-blue-200">Threats Blocked</div>
             </div>
             <div>"
-              <div className="text-3xl font-bold mb-2 text-yellow-400">'
+              <div className="text-3xl font-bold mb-2 text-yellow-400">
                 {threats.filter(t => t.status === 'investigating').length}
               </div>"
               <div className="text-blue-200">Under Investigation</div>
             </div>
             <div>"
-              <div className="text-3xl font-bold mb-2 text-blue-400">'
+              <div className="text-3xl font-bold mb-2 text-blue-400">
                 {metrics.find(m => m.id === 'security-score')?.value}%
               </div>"
               <div className="text-blue-200">Security Score</div>

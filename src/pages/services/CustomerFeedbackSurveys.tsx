@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 ;
 export { function };
@@ -7,7 +7,7 @@ export default function CustomerFeedbackSurveys(...args[]):  {
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO"
-        title="Mobile-First Customer Feedback Surveys | Zion Tech Group""
+        title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
         description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."
       />"
       <section className="container-responsive py-16">"

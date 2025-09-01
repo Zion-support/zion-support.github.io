@@ -1,78 +1,78 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
 const HealthcareSolutions = () => {
   const solutions = [
     {
-'
+
       title: 'AI-Powered Patient Care',
       description:'
         'Intelligent patient monitoring and care management systems.',
       features: ['
-        'Real-time patient monitoring','
-        'Predictive health analytics','
-        'Automated care protocols','
-        'Patient engagement tools','
+        'Real-time patient monitoring',
+        'Predictive health analytics',
+        'Automated care protocols',
+        'Patient engagement tools',
         'Care coordination platform',
       ],
-      icon: Heart,'
+      icon: Heart,
       href: '/services/ai-autonomous-systems'},
     {
-'
-      title: 'Medical Imaging AI','
+
+      title: 'Medical Imaging AI',
       description: 'Advanced AI for diagnostic imaging and analysis.',
       features: ['
-        'Radiology image analysis','
-        'Pathology detection','
-        '3D imaging reconstruction','
-        'Automated reporting','
+        'Radiology image analysis',
+        'Pathology detection',
+        '3D imaging reconstruction',
+        'Automated reporting',
         'Quality assurance tools',
       ],
-      icon: Microscope,'
+      icon: Microscope,
       href: '/services/ai-autonomous-systems'},
     {
-'
-      title: 'Drug Discovery Platform','
+
+      title: 'Drug Discovery Platform',
       description: 'AI-driven pharmaceutical research and development.',
       features: ['
-        'Molecular modeling','
-        'Target identification','
-        'Clinical trial optimization','
-        'Drug repurposing','
+        'Molecular modeling',
+        'Target identification',
+        'Clinical trial optimization',
+        'Drug repurposing',
         'Safety prediction',
       ],
-      icon: Pill,'
+      icon: Pill,
       href: '/services/quantum-technology'},
     {
-'
+
       title: 'Healthcare Compliance',
       description:'
         'Automated compliance management for healthcare regulations.',
       features: ['
-        'HIPAA compliance','
-        'FDA regulations','
-        'Audit automation','
-        'Risk assessment','
+        'HIPAA compliance',
+        'FDA regulations',
+        'Audit automation',
+        'Risk assessment',
         'Document management',
       ],
-      icon: Shield,'
+      icon: Shield,
       href: '/services/cybersecurity'},
   ];
   const benefits = [
     {
-'
-      title: 'Improved Patient Outcomes','
+
+      title: 'Improved Patient Outcomes',
       description: 'AI-driven insights lead to better diagnosis and treatment.',
       icon: Activity},
     {
-'
+
       title: 'Operational Efficiency',
       description:'
         'Streamlined workflows reduce costs and improve care delivery.',
       icon: Users},
     {
-'
-      title: 'Enhanced Security','
+
+      title: 'Enhanced Security',
       description: 'HIPAA-compliant solutions protect patient data.',
       icon: Shield},
   ];
@@ -91,13 +91,13 @@ const HealthcareSolutions = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Schedule Healthcare Demo
             </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
             >
               Get Healthcare Quote
@@ -149,13 +149,13 @@ const HealthcareSolutions = () => {
                   >
                     Learn More
                     <svg"
-                      className="w-4 h-4 ml-2""
-                      fill="none""
-                      stroke="currentColor""
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M9 5l7 7-7 7"
@@ -207,13 +207,13 @@ const HealthcareSolutions = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Healthcare Demo
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
               >
                 Contact Healthcare Team

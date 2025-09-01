@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -18,103 +18,103 @@ import {
   Database'
  } from 'lucide-react';
 
-const TermsOfService = () => {;'
+const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
     {
-'
-      id: 'acceptance','
+
+      id: 'acceptance',
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`
     },
     {
-'
-      id: 'services','
+
+      id: 'services',
       title: 'Description of Services',
       icon: BookOpen,`
       content: `Zion Tech Group provides AI-powered business intelligence, cloud infrastructure, cybersecurity, and digital transformation services. Our services include software solutions, consulting, implementation, and ongoing support.`
     },
     {
-'
-      id: 'user-accounts','
+
+      id: 'user-accounts',
       title: 'User Accounts and Registration',
       icon: Users,`
       content: `To access certain services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.`
     },
     {
-'
-      id: 'acceptable-use','
+
+      id: 'acceptable-use',
       title: 'Acceptable Use Policy',
       icon: Shield,`
       content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in any illegal activities.`
     },
     {
-'
-      id: 'intellectual-property','
+
+      id: 'intellectual-property',
       title: 'Intellectual Property Rights',
       icon: Lock,`
       content: `All content, features, and functionality on our website and services are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.`
     },
     {
-'
-      id: 'privacy','
+
+      id: 'privacy',
       title: 'Privacy and Data Protection',
       icon: Shield,`
       content: `Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services, to understand our practices regarding the collection and use of your information.`
     },
     {
-'
-      id: 'payment-terms','
+
+      id: 'payment-terms',
       title: 'Payment Terms and Billing',
       icon: CheckCircle,`
       content: `Payment terms vary by service. Some services require upfront payment, while others may be billed on a subscription basis. All fees are non-refundable unless otherwise specified in your service agreement.`
     },
     {
-'
-      id: 'service-levels','
+
+      id: 'service-levels',
       title: 'Service Levels and Availability',
       icon: Globe,`
       content: `We strive to maintain high service availability but do not guarantee uninterrupted access. Service levels are defined in individual service agreements and may include uptime guarantees and support response times.`
     },
     {
-'
-      id: 'limitation-liability','
+
+      id: 'limitation-liability',
       title: 'Limitation of Liability',
       icon: AlertTriangle,`
       content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`
     },
     {
-'
-      id: 'indemnification','
+
+      id: 'indemnification',
       title: 'Indemnification',
       icon: Shield,`
       content: `You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use of our services or violation of these Terms.`
     },
     {
-'
-      id: 'termination','
+
+      id: 'termination',
       title: 'Termination and Suspension',
       icon: AlertTriangle,`
       content: `We may terminate or suspend your access to our services at any time for violation of these Terms or for any other reason. You may terminate your account at any time by contacting us.`
     },
     {
-'
-      id: 'governing-law','
+
+      id: 'governing-law',
       title: 'Governing Law and Disputes',
       icon: Gavel,`
       content: `These Terms are governed by the laws of the jurisdiction where Zion Tech Group is incorporated. Any disputes shall be resolved through binding arbitration in accordance with our dispute resolution procedures.`
     },
     {
-'
-      id: 'changes','
+
+      id: 'changes',
       title: 'Changes to Terms',
       icon: AlertTriangle,`
       content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
     },;
-    {;'
-      id: 'contact',;'
+    {;
+      id: 'contact',;
       title: 'Contact Information',;
       icon: Mail,;`
       content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
@@ -123,37 +123,37 @@ const TermsOfService = () => {;'
 
   const keyProvisions = [
     {
-'
-      title: 'Service Usage','
+
+      title: 'Service Usage',
       description: 'Services are provided "as is" without warranties of any kind',
       icon: CheckCircle
     },
     {
-'
-      title: 'Data Security','
+
+      title: 'Data Security',
       description: 'We implement industry-standard security measures to protect your data',
       icon: Shield
     },
     {
-'
-      title: 'Payment Terms','
+
+      title: 'Payment Terms',
       description: 'Fees are billed according to your service agreement and are non-refundable',
       icon: CheckCircle
     },
     {
-'
-      title: 'Intellectual Property','
+
+      title: 'Intellectual Property',
       description: 'All content and services remain the property of Zion Tech Group',
       icon: Lock
     },
     {
-'
-      title: 'Liability Limits','
+
+      title: 'Liability Limits',
       description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
       icon: AlertTriangle;
     },;
-    {;'
-      title: 'Termination Rights',;'
+    {;
+      title: 'Termination Rights',;
       description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
       icon: AlertTriangle;
     };
@@ -161,26 +161,26 @@ const TermsOfService = () => {;'
 
   const disputeResolution = [
     {
-'
-      step: '1','
-      title: 'Direct Communication','
+
+      step: '1',
+      title: 'Direct Communication',
       description: 'Attempt to resolve disputes through direct communication with our support team'
     },
     {
-'
-      step: '2','
-      title: 'Escalation','
+
+      step: '2',
+      title: 'Escalation',
       description: 'If direct communication fails, escalate to management for resolution'
     },
     {
-'
-      step: '3','
-      title: 'Mediation','
+
+      step: '3',
+      title: 'Mediation',
       description: 'For complex disputes, engage in mediation with a neutral third party';
     },;
-    {;'
-      step: '4',;'
-      title: 'Arbitration',;'
+    {;
+      step: '4',;
+      title: 'Arbitration',;
       description: 'As a last resort, resolve disputes through binding arbitration';
     };
   ];
@@ -307,7 +307,7 @@ const TermsOfService = () => {;'
                     Ensuring your account information is up to date
                   </li>
                 </ul>
-                <p>'
+                <p>
                   You may not use another person's account or provide false information. We reserve the right to terminate accounts that violate these terms.
                 </p>
               </div>
@@ -524,7 +524,7 @@ const TermsOfService = () => {;'
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
-                <p>'
+                <p>
                   You agree to indemnify, defend, and hold harmless {companyName} and its officers, directors, employees, agents, and affiliates from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
                 </p>"
                 <ul className="space-y-2 text-zion-slate-light ml-6">"

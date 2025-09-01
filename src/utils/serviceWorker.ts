@@ -2,8 +2,8 @@
 export function registerServiceWorker(): void {
 
   if ('serviceWorker' in navigator) {
-'
-    const isDev = process.env.NODE_ENV === 'development';'
+
+    const isDev = process.env.NODE_ENV === 'development';
     const swUrl = isDev ? '/sw.js' : '/sw.js';
 
     navigator.serviceWorker
@@ -14,7 +14,7 @@ export function registerServiceWorker(): void {
         registration.addEventListener('updatefound', () => {
           const newWorker = registration.installing;
           if (newWorker) {
-'
+
             newWorker.addEventListener('statechange', () => {
               if ('
                 newWorker.state === 'installed' &&
@@ -29,13 +29,13 @@ export function registerServiceWorker(): void {
         });
       })
       .catch(registrationError => {
-'
+
         // console.error('SW registration failed: ', registrationError);
       });
   }
 
 export function unregisterServiceWorker(): void {
-'
+
   if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker.ready
@@ -49,4 +49,3 @@ export function unregisterServiceWorker(): void {
       });
   }
 }
-'

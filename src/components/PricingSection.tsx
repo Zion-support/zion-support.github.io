@@ -1,11 +1,11 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
-'
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
+
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
 
       icon: Shield;
@@ -100,7 +100,7 @@ export function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <motion.div
-              key={tier.name}'
+              key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial = {
 
@@ -178,7 +178,7 @@ export function PricingSection() {
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <Link"
-            to="/contact""
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team"

@@ -1,13 +1,13 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '../SEO';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '../ui/card';'
-import { Button } from '../ui/button';'
+  CardHeader,
+  CardTitle} from '../ui/card';
+import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import {
 
@@ -21,116 +21,116 @@ import {
   ExternalLink,
   Terminal,
   Webhook,
-  Key,'
-  Mail} from 'lucide-react';'
+  Key,
+  Mail} from 'lucide-react';
 import { Link } from 'react-router-dom';
 export default function DeveloperPortal() {
   const apiFeatures = [
     {
-'
-      title: 'RESTful APIs','
+
+      title: 'RESTful APIs',
       description: 'Clean, intuitive REST APIs for all major platform features',
-      icon: Code,'
-      status: 'Stable','
+      icon: Code,
+      status: 'Stable',
       docs: '/api-docs'},
     {
-'
-      title: 'Webhooks','
+
+      title: 'Webhooks',
       description: 'Real-time notifications for platform events and updates',
-      icon: Webhook,'
-      status: 'Beta','
+      icon: Webhook,
+      status: 'Beta',
       docs: '/api-docs/webhooks'},
     {
-'
-      title: 'Authentication','
+
+      title: 'Authentication',
       description: 'Secure OAuth 2.0 and API key authentication',
-      icon: Key,'
-      status: 'Stable','
+      icon: Key,
+      status: 'Stable',
       docs: '/api-docs/auth'},
     {
-'
-      title: 'SDKs & Libraries','
+
+      title: 'SDKs & Libraries',
       description: 'Official SDKs for JavaScript, Python, and more',
-      icon: Terminal,'
-      status: 'Stable','
+      icon: Terminal,
+      status: 'Stable',
       docs: '/api-docs/sdks'},
   ];
   const quickStartSteps = [
     {
 
-      step: 1,'
-      title: 'Get API Keys','
-      description: 'Sign up and generate your API keys from the dashboard','
+      step: 1,
+      title: 'Get API Keys',
+      description: 'Sign up and generate your API keys from the dashboard',
       action: 'Get Started'},
     {
 
-      step: 2,'
-      title: 'Read Documentation','
-      description: 'Explore our comprehensive API documentation and guides','
+      step: 2,
+      title: 'Read Documentation',
+      description: 'Explore our comprehensive API documentation and guides',
       action: 'View Docs'},
     {
 
-      step: 3,'
-      title: 'Test Endpoints','
-      description: 'Use our interactive API playground to test endpoints','
+      step: 3,
+      title: 'Test Endpoints',
+      description: 'Use our interactive API playground to test endpoints',
       action: 'Try API'},
     {
 
-      step: 4,'
-      title: 'Build & Deploy','
-      description: 'Integrate our APIs into your applications','
+      step: 4,
+      title: 'Build & Deploy',
+      description: 'Integrate our APIs into your applications',
       action: 'View Examples'},
   ];
   const resources = [
     {
-'
-      title: 'API Reference','
+
+      title: 'API Reference',
       description: 'Complete API endpoint documentation with examples',
-      icon: BookOpen,'
-      href: '/api-docs','
+      icon: BookOpen,
+      href: '/api-docs',
       badge: 'Complete'},
     {
-'
-      title: 'Getting Started Guide','
+
+      title: 'Getting Started Guide',
       description: 'Step-by-step tutorial for new developers',
-      icon: Zap,'
-      href: '/api-docs/getting-started','
+      icon: Zap,
+      href: '/api-docs/getting-started',
       badge: 'Beginner'},
     {
-'
-      title: 'Code Samples','
+
+      title: 'Code Samples',
       description: 'Ready-to-use code examples in multiple languages',
-      icon: Code,'
-      href: '/api-docs/samples','
+      icon: Code,
+      href: '/api-docs/samples',
       badge: 'Examples'},
     {
-'
-      title: 'SDK Downloads','
+
+      title: 'SDK Downloads',
       description: 'Official SDKs and client libraries',
-      icon: Terminal,'
-      href: '/api-docs/sdks','
+      icon: Terminal,
+      href: '/api-docs/sdks',
       badge: 'Download'},
     {
-'
-      title: 'Community Forum','
+
+      title: 'Community Forum',
       description: 'Connect with other developers and get help',
-      icon: Users,'
-      href: '/community','
+      icon: Users,
+      href: '/community',
       badge: 'Community'},
     {
-'
-      title: 'Support & Help','
+
+      title: 'Support & Help',
       description: 'Technical support and troubleshooting guides',
-      icon: MessageSquare,'
-      href: '/help','
+      icon: MessageSquare,
+      href: '/help',
       badge: 'Support'},
   ];
   return()
     <div className="min-h-screen bg-background">
       <SEO"
         title="Developer Portal | Zion Tech Group"'"
-        description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools.""
-        keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers""
+        description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools."
+        keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers"
         canonical="https://ziontechgroup.com/developers"
       />
 "
@@ -150,7 +150,7 @@ export default function DeveloperPortal() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild"
-              size="lg""
+              size="lg"
               className="bg-zion-purple hover:bg-zion-purple/90"
             >"
               <Link to="/api-docs">"
@@ -160,8 +160,8 @@ export default function DeveloperPortal() {
             </Button>"
             <Button asChild variant="outline" size="lg">
               <a"
-                href="https://github.com/ziontechgroup""
-                target="_blank""
+                href="https://github.com/ziontechgroup"
+                target="_blank"
                 rel="noopener noreferrer"
               >"
                 <Github className="h-5 w-5 mr-2" />
@@ -190,7 +190,7 @@ export default function DeveloperPortal() {
                       <IconComponent className="h-8 w-8 text-zion-cyan" />
                       <Badge
                         variant={
-'
+
                           feature.status === 'Stable' ? 'default' : 'secondary'
                         }
                       >
@@ -207,8 +207,8 @@ export default function DeveloperPortal() {
                     </CardDescription>
                     <Button
                       asChild"
-                      variant="outline""
-                      size="sm""
+                      variant="outline"
+                      size="sm"
                       className="w-full"
                     >
                       <Link to={feature.docs}>
@@ -288,11 +288,11 @@ export default function DeveloperPortal() {
                     </CardDescription>
                     <Button
                       asChild"
-                      variant="outline""
-                      size="sm""
+                      variant="outline"
+                      size="sm"
                       className="w-full"
                     >
-                      <Link to={resource.href}>'
+                      <Link to={resource.href}>
                         {resource.badge === 'Download''
                           ? 'Download''
                           : 'Learn More'}"

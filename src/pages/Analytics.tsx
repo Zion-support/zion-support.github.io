@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -40,7 +40,7 @@ import {
   LineChart,
   AreaChart,
   ScatterPlot'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Analytics: React.FC = () => {
@@ -127,8 +127,8 @@ const Analytics: React.FC = () => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Analytics - Zion Tech Group""
-        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards.""
+        title="Analytics - Zion Tech Group"
+        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards."
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
       />
 
@@ -173,14 +173,14 @@ const Analytics: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Get Started"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Explore Services
@@ -481,14 +481,14 @@ const Analytics: React.FC = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Start Your Analytics Journey"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
                 Get Custom Quote;

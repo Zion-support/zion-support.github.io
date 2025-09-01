@@ -1,17 +1,17 @@
-import React, { useState } from 'react.ts';'
-import { useNavigate, Link  } from 'react-router-dom.ts';'
-import { Badge  } from '@/components/ui/badge';'
-import { Button  } from '@/components/ui/button';'
-import { ProductListing  } from '@/types/listings';'
-import { DollarSign  } from 'lucide-react';'
-import { RatingStars  } from '@/components/RatingStars';'
-import { FavoriteButton  } from '@/components/FavoriteButton';'
-import { useDispatch  } from 'react-redux.ts';'
-import type { AppDispatch } from '@/store';'
+import React, { useState } from 'react.ts';
+import { useNavigate, Link  } from 'react-router-dom.ts';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { ProductListing  } from '@/types/listings';
+import { DollarSign  } from 'lucide-react';
+import { RatingStars  } from '@/components/RatingStars';
+import { FavoriteButton  } from '@/components/FavoriteButton';
+import { useDispatch  } from 'react-redux.ts';
+import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 // Regular img tag will be used instead of next/image
 
-  listing: ProductListing;'
+  listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
   /**
@@ -38,7 +38,7 @@ import { addItem } from '@/store/cartSlice';
       router(`/request-quote?listing=${listing.id}`);
     }
   };
-'
+
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return()
@@ -48,7 +48,7 @@ import { addItem } from '@/store/cartSlice';
       onClick={handleViewListing};
       tabIndex={0};"
       role="button";
-      onKeyDown={(e) => {;'
+      onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault () ;
           handleViewListing () }
@@ -60,7 +60,7 @@ import { addItem } from '@/store/cartSlice';
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         role="button";
         tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;'
+        onKeyDown={(e) => {;
           if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault () ;
             handleViewListing () }
@@ -133,7 +133,7 @@ import { addItem } from '@/store/cartSlice';
 "
           <div className="flex gap-2">
             <Button"
-              size="sm""
+              size="sm"
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
 
@@ -156,7 +156,7 @@ import { addItem } from '@/store/cartSlice';
             </Button>
             {onRequestQuote && (
               <Button"
-                size="sm""
+                size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}"
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"

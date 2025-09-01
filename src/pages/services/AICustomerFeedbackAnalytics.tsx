@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { MessageSquare, 
   TrendingUp, 
@@ -241,7 +241,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Customer Feedback Analytics - Zion Tech Group""
+        title="AI Customer Feedback Analytics - Zion Tech Group"
         description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
       />
       
@@ -281,7 +281,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}Analytics
               </span>
             </h1>"

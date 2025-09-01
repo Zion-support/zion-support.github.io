@@ -16,48 +16,48 @@ import {
 
 const AIHealthcareAnalytics = () => {
   const features = ['
-    'AI-powered patient outcome prediction','
-    'Real-time health monitoring and alerts','
-    'Predictive analytics for disease prevention','
-    'Automated medical image analysis','
-    'Clinical decision support systems','
-    'Population health management','
-    'Drug interaction and safety monitoring','
-    'Healthcare fraud detection','
-    'Patient engagement optimization','
+    'AI-powered patient outcome prediction',
+    'Real-time health monitoring and alerts',
+    'Predictive analytics for disease prevention',
+    'Automated medical image analysis',
+    'Clinical decision support systems',
+    'Population health management',
+    'Drug interaction and safety monitoring',
+    'Healthcare fraud detection',
+    'Patient engagement optimization',
     'Regulatory compliance automation',
   ];
 
   const benefits = ['
-    'Improve patient outcomes by 35%','
-    'Reduce healthcare costs by 25%','
-    'Increase diagnostic accuracy by 40%','
-    'Reduce readmission rates by 30%','
-    'Optimize resource allocation by 45%','
+    'Improve patient outcomes by 35%',
+    'Reduce healthcare costs by 25%',
+    'Increase diagnostic accuracy by 40%',
+    'Reduce readmission rates by 30%',
+    'Optimize resource allocation by 45%',
     'Enhance patient satisfaction by 50%',
   ];
 
   const testimonials = [
     {
-'
-      name: 'Dr. Emily Rodriguez','
-      role: 'Chief Medical Officer','
+
+      name: 'Dr. Emily Rodriguez',
+      role: 'Chief Medical Officer',
       company: 'Metro General Hospital',
       content:'
         "AI Healthcare Analytics has transformed our diagnostic accuracy. We've improved early detection rates by 30% and reduced misdiagnoses significantly.",
       rating: 5},
     {
-'
-      name: 'Dr. Michael Chen','
-      role: 'Research Director','
+
+      name: 'Dr. Michael Chen',
+      role: 'Research Director',
       company: 'National Medical Research Institute',
       content:'
         'The population health analytics have revealed patterns we never would have discovered manually. Our research has accelerated dramatically.',
       rating: 5},
     {
-'
-      name: 'Sarah Johnson','
-      role: 'Healthcare Administrator','
+
+      name: 'Sarah Johnson',
+      role: 'Healthcare Administrator',
       company: 'Community Health Network',
       content:'"
         "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
@@ -65,59 +65,59 @@ const AIHealthcareAnalytics = () => {
   ];
 
   const complianceFeatures = ['
-    'HIPAA Compliance','
-    'HITECH Act Support','
-    'SOC 2 Type II','
-    'ISO 27001','
-    'GDPR Compliance','
-    'FDA Guidelines','
-    'Clinical Validation','
+    'HIPAA Compliance',
+    'HITECH Act Support',
+    'SOC 2 Type II',
+    'ISO 27001',
+    'GDPR Compliance',
+    'FDA Guidelines',
+    'Clinical Validation',
     'Data Encryption',
   ];
 
   const useCases = ['
-    'Hospital management and operations','
-    'Clinical research and trials','
-    'Telemedicine and remote care','
-    'Pharmaceutical development','
-    'Insurance and claims processing','
+    'Hospital management and operations',
+    'Clinical research and trials',
+    'Telemedicine and remote care',
+    'Pharmaceutical development',
+    'Insurance and claims processing',
     'Public health monitoring',
   ];
 
   const tiers = [
     {
-'
-      name: 'Clinical','
+
+      name: 'Clinical',
       price: '$599/mo',
       details: ['
-        'Up to 100 patients','
-        'Basic health analytics','
-        'Standard reporting','
-        'Email support','
+        'Up to 100 patients',
+        'Basic health analytics',
+        'Standard reporting',
+        'Email support',
         'HIPAA compliance',
       ]},
     {
-'
-      name: 'Professional','
+
+      name: 'Professional',
       price: '$1,499/mo',
       details: ['
-        'Up to 1,000 patients','
-        'Advanced AI analytics','
-        'Custom dashboards','
-        'Priority support','
-        'API integrations','
+        'Up to 1,000 patients',
+        'Advanced AI analytics',
+        'Custom dashboards',
+        'Priority support',
+        'API integrations',
         'Advanced compliance',
       ]},
     {
-'
-      name: 'Enterprise','
+
+      name: 'Enterprise',
       price: '$3,999/mo',
       details: ['
-        'Unlimited patients','
-        'Full AI healthcare suite','
-        'Custom algorithms','
-        'Dedicated support','
-        'White-label solutions','
+        'Unlimited patients',
+        'Full AI healthcare suite',
+        'Custom algorithms',
+        'Dedicated support',
+        'White-label solutions',
         'Multi-facility support',
       ]},
   ];
@@ -125,58 +125,58 @@ const AIHealthcareAnalytics = () => {
   const technicalSpecs = {
 
     technology: ['
-      'Deep Learning','
-      'Natural Language Processing','
-      'Python','
-      'React','
-      'Node.js','
-      'PostgreSQL','
+      'Deep Learning',
+      'Natural Language Processing',
+      'Python',
+      'React',
+      'Node.js',
+      'PostgreSQL',
       'TensorFlow',
     ],
     integrations: ['
-      'Epic','
-      'Cerner','
-      'Allscripts','
-      'Meditech','
-      'Practice Fusion','
+      'Epic',
+      'Cerner',
+      'Allscripts',
+      'Meditech',
+      'Practice Fusion',
       'Athenahealth',
     ],
     security: ['
-      'HIPAA','
-      'SOC 2 Type II','
-      'HITECH','
-      'End-to-end encryption','
+      'HIPAA',
+      'SOC 2 Type II',
+      'HITECH',
+      'End-to-end encryption',
       'Multi-factor authentication',
-    ],'
-    uptime: '99.99%','
-    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR', 'CCPA']};
+    ],
+    uptime: '99.99%',
+    compliance: ['HIPAA',HITECH',SOC 2',ISO 27001',GDPR',CCPA']};
 
   const healthcareSolutions = [
     {
-'
+
       specialty: 'Cardiology',
       solutions: ['
-        'Heart disease prediction','
-        'ECG analysis','
-        'Risk assessment','
+        'Heart disease prediction',
+        'ECG analysis',
+        'Risk assessment',
         'Treatment optimization',
       ]},
     {
-'
+
       specialty: 'Oncology',
       solutions: ['
-        'Cancer detection','
-        'Treatment planning','
-        'Outcome prediction','
+        'Cancer detection',
+        'Treatment planning',
+        'Outcome prediction',
         'Clinical trial matching',
       ]},
     {
-'
+
       specialty: 'Neurology',
       solutions: ['
-        'Brain imaging analysis','
-        'Cognitive assessment','
-        'Disease progression tracking','
+        'Brain imaging analysis',
+        'Cognitive assessment',
+        'Disease progression tracking',
         'Treatment response monitoring',
       ]},
   ];
@@ -388,13 +388,13 @@ const AIHealthcareAnalytics = () => {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"
             >"
               <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"
             >"
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
@@ -402,9 +402,9 @@ const AIHealthcareAnalytics = () => {
           </div>"
           <div className="mt-4">
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark"
             >"
               Learn More <ExternalLink className="w-4 h-4 ml-2" />

@@ -66,67 +66,67 @@ function generateInnovationListing(index) {
   icon: <Briefcase className="w-6 h-6"/>
         
 
-},'
+},
         'talents': {
 "
             title: "Talents","
             description: "Connect with AI experts, developers, and tech specialists","
             icon: <Brain className="w-6 h-6"/>
-        },'
+        },
         'equipment': {
 "
             title: "Equipment","
             description: "Rent or buy specialized hardware, servers, and devices","
             icon: <Code className="w-6 h-6"/>
-        },'
+        },
         'innovation': {
 "
             title: "Innovation","
             description: "Discover cutting-edge solutions and tech breakthroughs","
             icon: <Bot className="w-6 h-6"/>
-        },'
+        },
         'ai-models-apis': {
 "
             title: "AI Models & APIs","
             description: "Access cutting-edge AI models with easy integration","
             icon: <Brain className="w-6 h-6"/>
-        },'
+        },
         'content-creation': {
 "
             title: "Content Creation","
             description: "Generate high-quality content for your projects","
             icon: <PenLine className="w-6 h-6"/>
-        },'
+        },
         'data-analysis': {
 "
             title: "Data Analysis","
             description: "Extract insights from complex datasets","
             icon: <BarChart className="w-6 h-6"/>
-        },'
+        },
         'computer-vision': {
 "
             title: "Computer Vision","
             description: "Image and video processing solutions","
             icon: <Eye className="w-6 h-6"/>
-        },'
+        },
         'virtual-assistants': {
 "
             title: "Virtual Assistants","
             description: "Intelligent automation for your workflow","
             icon: <Bot className="w-6 h-6"/>
-        },'
+        },
         'voice-speech': {
 "
             title: "Voice & Speech","
             description: "Speech recognition and synthesis tools","
             icon: <Mic className="w-6 h-6"/>
-        },'
+        },
         'developer-tools': {
 "
             title: "Developer Tools","
             description: "AI-powered coding assistance and automation","
             icon: <Code className="w-6 h-6"/>
-        },'
+        },
         'business-solutions': {
 "
             title: "Business Solutions","
@@ -147,7 +147,7 @@ function generateInnovationListing(index) {
         innovationCounterRef.current = 0;
         // Filter listings by category
         const categoryTitle = currentCategory.title;
-        const filteredListings = MARKETPLACE_LISTINGS.filter(listing => listing.category.toLowerCase() === categoryTitle.toLowerCase());'
+        const filteredListings = MARKETPLACE_LISTINGS.filter(listing => listing.category.toLowerCase() === categoryTitle.toLowerCase());
         // If we don't have real listings for this category, generate placeholder listings
         const listingsToShow = filteredListings.length > 0 ? filteredListings :
             Array(4).fill(null).map((_, index) => ({
@@ -173,7 +173,7 @@ function generateInnovationListing(index) {
         setListings(listingsToShow);
         setIsLoading(false)}, [slug]);
     useEffect(() => {
-'
+
         if (slug !== 'innovation')
             return;
         const interval = setInterval(() => {

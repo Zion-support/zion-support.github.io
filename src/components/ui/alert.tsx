@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { cn } from '../../lib/utils';
 
 interface AlertProps {
@@ -26,7 +26,7 @@ interface AlertDescriptionProps {
   children: React.ReactNode;
   className?: string;
 }
-'
+
 export function Alert({ children, className = '' }: AlertProps) {
 
   return ('
@@ -35,7 +35,7 @@ export function Alert({ children, className = '' }: AlertProps) {
     </div>
   );
 }
-'
+
 export function AlertTitle({ children, className = '' }: AlertTitleProps) {
 
   return()
@@ -49,9 +49,8 @@ export function AlertTitle({ children, className = '' }: AlertTitleProps) {
 
 export function AlertDescription({
 
-  children,'
+  children,
   className = ''}: AlertDescriptionProps) {
-'
+
   return <div className={cn('text-sm', className)}>{children}</div>;
 }
-'

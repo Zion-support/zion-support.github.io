@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = () => {
-  const [copied, setCopied] = useState(false);'
+  const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('ios');
 
   const downloadLinks = {
 
   ios: {
-'
-      name: 'iOS App Store','
-      url: 'https://apps.apple.com/app/zion-it-asset-management','
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K','
-      icon: '🍎','
+
+      name: 'iOS App Store',
+      url: 'https://apps.apple.com/app/zion-it-asset-management',
+      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      icon: '🍎',
   description: 'Download for iPhone and iPad'
     
 
@@ -21,11 +21,11 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
 },
     android: {
-'
-      name: 'Google Play Store','
-      url: 'https://play.google.com/store/apps/details?id=com.zion.mobile','
-      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K','
-      icon: '🤖','
+
+      name: 'Google Play Store',
+      url: 'https://play.google.com/store/apps/details?id=com.zion.mobile',
+      qrCode: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNDAgNDBIMTYwVjE2MEg0MFY0MFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik02MCA2MEgxNDBWMTQwSDYwVjYwWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K',
+      icon: '🤖',
       description: 'Download for Android devices'
 
   };
@@ -34,11 +34,11 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(true);'
+      setCopied(true);
       // // // // // // // // console.error('Failed to copy: ', err);
     }
       setTimeout(() => setCopied(false), 2000)} catch (err) {
-'
+
       // console.error('Failed to copy: ', err)}
   };
 
@@ -51,22 +51,22 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
       try {
         await navigator.share({
-'
+
           title: 'Zion Mobile App',
           text: text,
           url: url'
         // // // // // // // // console.error('Error sharing:', err);
       }
     } else {
-'
+
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url);
 
         })} catch (err) {
-'
+
         // console.error('Error sharing:', err)}
     } else {
-'
+
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}
   };
@@ -153,8 +153,8 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
               <div className="space-y-4">
                 <a
                   href={currentPlatform.url}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center space-x-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 "
                   <Download className="w-5 h-5" />
@@ -238,18 +238,18 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
             <h3 className="text-xl font-semibold text-white mb-3">
               Having Trouble?
             </h3>"
-            <p className="text-gray-300 mb-4">'
+            <p className="text-gray-300 mb-4">
               If you're experiencing issues with the download or QR code, our support team is here to help.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#support""
+                href="#support"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Get Help
               </a>
               <a"
-                href="#manual-download""
+                href="#manual-download"
                 className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Manual Download

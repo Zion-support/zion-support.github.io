@@ -168,7 +168,7 @@ class NetlifyBuildMonitor {
       this.log('Git repository status: OK');
 
       // Check package.json integrity
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
       this.log('Package.json integrity: OK');
 
       // Check build scripts
@@ -251,7 +251,7 @@ class NetlifyBuildMonitor {
         return;
       }
 
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath,utf8');
 
       // Check for common issues
       const issues = this.detectIssues(content, filePath);
@@ -617,20 +617,18 @@ class NetlifyBuildMonitor {
     try {
       // Update Next.js configuration for better performance
       if (fs.existsSync('next.config.js')) {
-        let config = fs.readFileSync('next.config.js', 'utf8');
+        let config = fs.readFileSync('next.config.js',utf8');
 
         // Add performance optimizations
         if (!config.includes('swcMinify')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  swcMinify: true,'
+            'module.exports = {',module.exports = {\n  swcMinify: true,
           );
         }
 
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
+            'module.exports = {',module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },
           );
         }
 
@@ -647,7 +645,7 @@ class NetlifyBuildMonitor {
     this.log('Updating build scripts...');
 
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
 
       // Add optimized build scripts
       if (packageJson.scripts) {
@@ -672,7 +670,7 @@ class NetlifyBuildMonitor {
     try {
       // Create or update tsconfig.json for better compatibility
       if (fs.existsSync('tsconfig.json')) {
-        let config = JSON.parse(fs.readFileSync('tsconfig.json', 'utf8'));
+        let config = JSON.parse(fs.readFileSync('tsconfig.json',utf8'));
 
         // Add strict mode and better error handling
         config.compilerOptions = {
@@ -700,7 +698,7 @@ class NetlifyBuildMonitor {
     this.log('Updating memory limits...');
 
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
 
       // Update build scripts with memory limits
       if (packageJson.scripts && packageJson.scripts.build) {
@@ -721,12 +719,11 @@ class NetlifyBuildMonitor {
     try {
       // Enable build caching
       if (fs.existsSync('next.config.js')) {
-        let config = fs.readFileSync('next.config.js', 'utf8');
+        let config = fs.readFileSync('next.config.js',utf8');
 
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true,\n    turbo: {\n      rules: {\n        "*.svg": {\n          loaders: ["@svgr/webpack"],\n          as: "*.js"\n        }\n      }\n    }\n  },'
+            'module.exports = {',module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true,\n    turbo: {\n      rules: {\n        "*.svg": {\n          loaders: ["@svgr/webpack"],\n          as: "*.js"\n        }\n      }\n    }\n  },
           );
         }
 

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';'
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
 
-    const [isOpen, setIsOpen] = useState(showOnLoad);'
+    const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({
 
@@ -31,7 +31,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     const [accessibilityReport, setAccessibilityReport] = useState({
 
         score: 0,
-        issues[],;'
+        issues[],;
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0
@@ -41,7 +41,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     const analyzePerformance = useCallback(async () => {
         setIsAnalyzing(true);
         // Simulate performance analysis
-        await new Promise(resolve => setTimeout(resolve, 2000));'
+        await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {
 
@@ -61,4 +61,3 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis
         const mockSEO = {
-'

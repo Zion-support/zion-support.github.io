@@ -650,11 +650,11 @@ export const getComprehensivePricingGuide2027ByCategory = category: string
   comprehensivePricingGuide2027.filter(item => item.category === category);
 export const getComprehensivePricingGuide2027ById = id: string
   comprehensivePricingGuide2027.find(item => item.id === id);
-export const pricingCategories2027 = [;'
-  'Metaverse Solutions',;'
-  'Web3 Solutions',;'
-  'Sustainable Tech',;'
-  'NeuroTech Solutions',;'
+export const pricingCategories2027 = [;
+  'Metaverse Solutions',;
+  'Web3 Solutions',;
+  'Sustainable Tech',;
+  'NeuroTech Solutions',;
   'Fusion Energy Solutions';
 ];
 export const pricingSubcategories2027 = {

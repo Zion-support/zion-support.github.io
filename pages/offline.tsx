@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import Head from 'next/head';'
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 ;
 export { function };
@@ -16,12 +16,12 @@ export default function OfflinePage(...args: unknown[]): unknown {
     checkOnlineStatus();
 
     // Listen for online/offline events'
-    window.addEventListener('online', checkOnlineStatus);'
+    window.addEventListener('online', checkOnlineStatus);
     window.addEventListener('offline', checkOnlineStatus);
 
     return () => {
-'
-      window.removeEventListener('online', checkOnlineStatus);'
+
+      window.removeEventListener('online', checkOnlineStatus);
       window.removeEventListener('offline', checkOnlineStatus);
     };
   }, []);
@@ -49,7 +49,7 @@ export default function OfflinePage(...args: unknown[]): unknown {
       <Head>
         <title>Offline - Zion Tech Group</title>
         <meta"
-          name="description""
+          name="description"
           content="You are currently offline. Please check your internet connection."
         />"
         <meta name="robots" content="noindex, nofollow" />
@@ -64,7 +64,7 @@ export default function OfflinePage(...args: unknown[]): unknown {
         {/* Offline Icon */}
         <motion.div
           initial={{ y: -20 }}
-          animate={{ y: 0 }}'
+          animate={{ y: 0 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}"
           className="text-8xl mb-6"
         >
@@ -103,7 +103,7 @@ export default function OfflinePage(...args: unknown[]): unknown {
             <div'
               className={`w-3 h-3 rounded-full ${isOnline ? 'bg-green-400' : 'bg-red-400'}`}
             ></div>"
-            <span className="text-sm text-gray-300">'
+            <span className="text-sm text-gray-300">
               {isOnline ? 'Connection restored!' : 'No internet connection'}
             </span>
           </div>

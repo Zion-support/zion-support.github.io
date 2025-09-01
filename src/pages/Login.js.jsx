@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { SEO } from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
+import React, { useState } from 'react';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
@@ -12,10 +12,10 @@ export default function Login() {
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
-    const params = new URLSearchParams(location.search);'
+    const params = new URLSearchParams(location.search);
     const token = params.get('token');
     if (token) {
-'
+
       safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing
       router(location.pathname, { replace: true });

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';'
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -13,16 +13,16 @@ import {
   FileText,
   BarChart3,
   Clock,
-  Play,'
-  Square} from 'lucide-react';'
-import { useSecurityCompliance } from '../hooks/useSecurityCompliance';'
-import { useAnalytics } from '../hooks/useAnalytics';'
+  Play,
+  Square} from 'lucide-react';
+import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
+import { useAnalytics } from '../hooks/useAnalytics';
 export const SecurityComplianceDashboard = ({ className = '' }) => {
 
   const { trackEvent } = useAnalytics({
 
     enableTracking: true,
-    enableUserBehaviorTracking: true});'
+    enableUserBehaviorTracking: true});
   const [activeTab, setActiveTab] = useState('overview');
   const [showSettings, setShowSettings] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -43,57 +43,57 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     exportAuditLog,
     configureSecurity} = useSecurityCompliance();
   const handleStartMonitoring = useCallback(() => {
-    startMonitoring();'
-    trackEvent('security', 'dashboard', 'monitoring_started');
+    startMonitoring();
+    trackEvent('security',dashboard',monitoring_started');
   }, [startMonitoring, trackEvent]);
   const handleStopMonitoring = useCallback(() => {
-    stopMonitoring();'
-    trackEvent('security', 'dashboard', 'monitoring_stopped');
+    stopMonitoring();
+    trackEvent('security',dashboard',monitoring_stopped');
   }, [stopMonitoring, trackEvent]);
   const handleCheckCompliance = useCallback(async () => {
-    await checkCompliance();'
-    trackEvent('security', 'dashboard', 'compliance_checked');
+    await checkCompliance();
+    trackEvent('security',dashboard',compliance_checked');
   }, [checkCompliance, trackEvent]);
   const handleGenerateReport = useCallback(() => {
     const report = generateSecurityReport();
     navigator.clipboard.writeText(report);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);'
-    trackEvent('security', 'dashboard', 'report_generated');
+    setTimeout(() => setCopied(false), 2000);
+    trackEvent('security',dashboard',report_generated');
   }, [generateSecurityReport, trackEvent]);
   const handleExportAuditLog = useCallback(() => {
-    const auditLog = exportAuditLog();'
+    const auditLog = exportAuditLog();
     const blob = new Blob([auditLog], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);'
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;'
+    a.href = url;
     a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
-    URL.revokeObjectURL(url);'
-    trackEvent('security', 'dashboard', 'audit_log_exported');
+    URL.revokeObjectURL(url);
+    trackEvent('security',dashboard',audit_log_exported');
   }, [exportAuditLog, trackEvent]);
   const handleAddComplianceRule = useCallback(() => {
     const newRule = {
-'
-      name: 'Custom Compliance Rule','
-      category: 'custom','
-      description: 'Custom compliance requirement','
-      status: 'pending_review','
-      requirements: ['Requirement 1', 'Requirement 2'],
+
+      name: 'Custom Compliance Rule',
+      category: 'custom',
+      description: 'Custom compliance requirement',
+      status: 'pending_review',
+      requirements: ['Requirement 1',Requirement 2'],
       violations: []};
-    addComplianceRule(newRule);'
-    trackEvent('security', 'dashboard', 'compliance_rule_added');
+    addComplianceRule(newRule);
+    trackEvent('security',dashboard',compliance_rule_added');
   }, [addComplianceRule, trackEvent]);
   const getSeverityColor = severity => {
 
     switch (severity) {
-'
+
       case 'critical':'
-        return 'text-red-600 bg-red-100';'
+        return 'text-red-600 bg-red-100';
       case 'high':'
-        return 'text-orange-600 bg-orange-100';'
+        return 'text-orange-600 bg-orange-100';
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-100';'
+        return 'text-yellow-600 bg-yellow-100';
       case 'low':'
         return 'text-green-600 bg-green-100';
       default:'
@@ -103,11 +103,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   const getStatusColor = status => {
 
     switch (status) {
-'
+
       case 'compliant':'
-        return 'text-green-600 bg-green-100';'
+        return 'text-green-600 bg-green-100';
       case 'non_compliant':'
-        return 'text-red-600 bg-red-100';'
+        return 'text-red-600 bg-red-100';
       case 'pending_review':'
         return 'text-yellow-600 bg-yellow-100';
       default:'
@@ -117,13 +117,13 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   const getThreatLevelColor = level => {
 
     switch (level) {
-'
+
       case 'critical':'
-        return 'text-red-600 bg-red-100 border-red-200';'
+        return 'text-red-600 bg-red-100 border-red-200';
       case 'high':'
-        return 'text-orange-600 bg-orange-100 border-orange-200';'
+        return 'text-orange-600 bg-orange-100 border-orange-200';
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-100 border-yellow-200';'
+        return 'text-yellow-600 bg-yellow-100 border-yellow-200';
       case 'low':'
         return 'text-green-600 bg-green-100 border-green-200';
       default:'
@@ -181,7 +181,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               <div'`
                 className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}
               />"
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">'
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
@@ -219,10 +219,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}"
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {['
-          { id: 'overview', label: 'Overview', icon: BarChart3 },'
-          { id: 'events', label: 'Security Events', icon: AlertTriangle },'
-          { id: 'compliance', label: 'Compliance', icon: CheckCircle },'
-          { id: 'threats', label: 'Threats', icon: Shield },'
+          { id: 'overview', label: 'Overview', icon: BarChart3 },
+          { id: 'events', label: 'Security Events', icon: AlertTriangle },
+          { id: 'compliance', label: 'Compliance', icon: CheckCircle },
+          { id: 'threats', label: 'Threats', icon: Shield },
           { id: 'reports', label: 'Reports', icon: FileText },
         ].map(({ id, label, icon: Icon }) => (
           <button
@@ -243,7 +243,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
       {/* Content */}"
       <div className="p-4">"
-        <AnimatePresence mode="wait">'
+        <AnimatePresence mode="wait">
           {activeTab === 'overview' && (
             <motion.div"
               key="overview"
@@ -331,8 +331,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4" />
                         </div>
                         <div>"
-                          <p className="font-medium text-gray-900 dark:text-white">'
-                            {event.type.replace('_', ' ')}
+                          <p className="font-medium text-gray-900 dark:text-white">
+                            {event.type.replace('_', ')}
                           </p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             {event.details}
@@ -355,7 +355,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               </div>
             </motion.div>
           )}
-'
+
           {activeTab === 'events' && (
             <motion.div"
               key="events"
@@ -371,10 +371,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 <button
                   onClick={() =>
                     addSecurityEvent({
-'
-                      type: 'authentication','
-                      severity: 'low','
-                      details: 'Test security event','
+
+                      type: 'authentication',
+                      severity: 'low',
+                      details: 'Test security event',
                       status: 'new'})
                   }"
                   className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"
@@ -397,8 +397,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4" />
                         </div>
                         <div>"
-                          <p className="font-medium text-gray-900 dark:text-white">'
-                            {event.type.replace('_', ' ').toUpperCase()}
+                          <p className="font-medium text-gray-900 dark:text-white">
+                            {event.type.replace('_', ').toUpperCase()}
                           </p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             {event.timestamp.toLocaleString()}
@@ -442,7 +442,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               </div>
             </motion.div>
           )}
-'
+
           {activeTab === 'compliance' && (
             <motion.div"
               key="compliance"
@@ -475,8 +475,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       </h4>
                       <span`
                         className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}
-                      >'
-                        {rule.status.replace('_', ' ')}
+                      >
+                        {rule.status.replace('_', ')}
                       </span>
                     </div>"
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
@@ -531,7 +531,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               </div>
             </motion.div>
           )}
-'
+
           {activeTab === 'threats' && (
             <motion.div"
               key="threats"
@@ -555,13 +555,13 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <p className="text-2xl font-bold text-center">
                       {securityMetrics.threatLevel.toUpperCase()}
                     </p>"
-                    <p className="text-center text-sm mt-2">'
+                    <p className="text-center text-sm mt-2">
                       {securityMetrics.threatLevel === 'low' &&'
-                        'Normal operations'}'
+                        'Normal operations'}
                       {securityMetrics.threatLevel === 'medium' &&'
-                        'Increased vigilance required'}'
+                        'Increased vigilance required'}
                       {securityMetrics.threatLevel === 'high' &&'
-                        'Immediate attention needed'}'
+                        'Immediate attention needed'}
                       {securityMetrics.threatLevel === 'critical' &&'
                         'Emergency response required'}
                     </p>
@@ -595,7 +595,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       </span>"
                       <span className="font-medium text-gray-900 dark:text-white">
                         {securityMetrics.lastIncident
-                          ? securityMetrics.lastIncident.toLocaleDateString()'
+                          ? securityMetrics.lastIncident.toLocaleDateString()
                           : 'None'}
                       </span>
                     </div>
@@ -604,7 +604,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               </div>
             </motion.div>
           )}
-'
+
           {activeTab === 'reports' && (
             <motion.div"
               key="reports"
@@ -672,7 +672,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       <AnimatePresence>
         {showSettings && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}'
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}"
             className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800"

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -14,17 +14,17 @@ import {
   Rocket,
   Brain,
   TrendingUp,
-  Phone,'
-  CheckCircle} from 'lucide-react';'
-import { Link } from 'react-router-dom';'
-import { Badge } from '@/components/ui/badge';'
+  Phone,
+  CheckCircle} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
 const featuredListings = [
   {
 
-    id: 1,'
-    title: 'AI-Powered E-commerce Platform','
+    id: 1,
+    title: 'AI-Powered E-commerce Platform',
     category: 'Web Development',
     description:'
       'Modern e-commerce platform with AI-powered product recommendations and real-time analytics',
@@ -33,25 +33,25 @@ const featuredListings = [
     views: 4567,
     likes: 156,
     image:'
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80','
-    price: '$15,000','
-    tags: ['React', 'Node.js', 'AI/ML', 'E-commerce'],'
-    duration: '3-4 months','
-    team: '5 experts','
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    price: '$15,000',
+    tags: ['React',Node.js',AI/ML',E-commerce'],
+    duration: '3-4 months',
+    team: '5 experts',
     location: 'Remote',
-    featured: true,'
-    technologies: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'AWS'],
+    featured: true,
+    technologies: ['React',Node.js',MongoDB',AI/ML',AWS'],
     highlights: ['
-      'AI Recommendations','
-      'Real-time Analytics','
-      'Mobile Responsive','
+      'AI Recommendations',
+      'Real-time Analytics',
+      'Mobile Responsive',
       'SEO Optimized',
-    ],'
+    ],
     link: '/services/ai-ecommerce'},
   {
 
-    id: 2,'
-    title: 'Mobile Banking Application','
+    id: 2,
+    title: 'Mobile Banking Application',
     category: 'Mobile Development',
     description:'
       'Secure and user-friendly mobile banking app with biometric authentication and real-time transactions',
@@ -60,31 +60,31 @@ const featuredListings = [
     views: 1956,
     likes: 134,
     image:'
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80','
-    price: '$22,000','
-    tags: ['React Native', 'Security', 'FinTech', 'Biometrics'],'
-    duration: '4-5 months','
-    team: '6 experts','
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    price: '$22,000',
+    tags: ['React Native',Security',FinTech',Biometrics'],
+    duration: '4-5 months',
+    team: '6 experts',
     location: 'Hybrid',
     featured: true,
     technologies: ['
-      'React Native','
-      'Node.js','
-      'PostgreSQL','
-      'Biometrics','
+      'React Native',
+      'Node.js',
+      'PostgreSQL',
+      'Biometrics',
       'Security',
     ],
     highlights: ['
-      'Biometric Auth','
-      'Real-time Transactions','
-      'Security Compliance','
+      'Biometric Auth',
+      'Real-time Transactions',
+      'Security Compliance',
       'Cross-platform',
-    ],'
+    ],
     link: '/services/mobile-banking'},
   {
 
-    id: 3,'
-    title: 'Cloud Infrastructure Migration','
+    id: 3,
+    title: 'Cloud Infrastructure Migration',
     category: 'Cloud & DevOps',
     description:'
       'Complete migration from on-premise to cloud with automated CI/CD pipelines and monitoring',
@@ -93,20 +93,20 @@ const featuredListings = [
     views: 3241,
     likes: 189,
     image:'
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80','
-    price: '$18,500','
-    tags: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],'
-    duration: '2-3 months','
-    team: '4 experts','
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80',
+    price: '$18,500',
+    tags: ['AWS',Docker',Kubernetes',CI/CD'],
+    duration: '2-3 months',
+    team: '4 experts',
     location: 'On-site',
-    featured: true,'
-    technologies: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Prometheus'],'
-    highlights: ['Zero Downtime', 'Auto-scaling', 'Monitoring', 'Security'],'
+    featured: true,
+    technologies: ['AWS',Docker',Kubernetes',Jenkins',Prometheus'],
+    highlights: ['Zero Downtime',Auto-scaling',Monitoring',Security'],
     link: '/services/cloud-migration'},
   {
 
-    id: 4,'
-    title: 'Healthcare AI Diagnostic System','
+    id: 4,
+    title: 'Healthcare AI Diagnostic System',
     category: 'AI & Machine Learning',
     description:'
       'Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection',
@@ -115,25 +115,25 @@ const featuredListings = [
     views: 4567,
     likes: 278,
     image:'
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80','
-    price: '$35,000','
-    tags: ['Python', 'TensorFlow', 'Computer Vision', 'Healthcare'],'
-    duration: '6-8 months','
-    team: '8 experts','
+      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    price: '$35,000',
+    tags: ['Python',TensorFlow',Computer Vision',Healthcare'],
+    duration: '6-8 months',
+    team: '8 experts',
     location: 'Remote',
-    featured: true,'
-    technologies: ['Python', 'TensorFlow', 'OpenCV', 'Docker', 'AWS'],
+    featured: true,
+    technologies: ['Python',TensorFlow',OpenCV',Docker',AWS'],
     highlights: ['
-      'AI Diagnostics','
-      'Medical Imaging','
-      'HIPAA Compliant','
+      'AI Diagnostics',
+      'Medical Imaging',
+      'HIPAA Compliant',
       'Real-time Analysis',
-    ],'
+    ],
     link: '/services/healthcare-ai'},
   {
 
-    id: 5,'
-    title: 'IoT Smart City Platform','
+    id: 5,
+    title: 'IoT Smart City Platform',
     category: 'IoT & Smart Cities',
     description:'
       'Comprehensive IoT platform for smart city management including traffic, utilities, and public services',
@@ -142,26 +142,26 @@ const featuredListings = [
     views: 1890,
     likes: 112,
     image:'
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80','
-    price: '$28,000','
-    tags: ['IoT', 'Smart Cities', 'Real-time Data', 'Analytics'],'
-    duration: '5-7 months','
-    team: '7 experts','
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    price: '$28,000',
+    tags: ['IoT',Smart Cities',Real-time Data',Analytics'],
+    duration: '5-7 months',
+    team: '7 experts',
     location: 'Hybrid',
     featured: false,
     technologies: ['
-      'IoT Sensors','
-      'Apache Kafka','
-      'Elasticsearch','
-      'React','
+      'IoT Sensors',
+      'Apache Kafka',
+      'Elasticsearch',
+      'React',
       'Node.js',
     ],
     highlights: ['
-      'Real-time Monitoring','
-      'Predictive Analytics','
-      'Scalable Architecture','
+      'Real-time Monitoring',
+      'Predictive Analytics',
+      'Scalable Architecture',
       'Dashboard',
-    ],'
+    ],
     link: '/services/iot-smart-city'},
 ];
 
@@ -213,7 +213,7 @@ const featuredListings = [
 
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -301,7 +301,7 @@ const featuredListings = [
                     {listing.technologies.slice(0, 3).map((tech, techIndex) => (
                       <Badge
                         key={techIndex}"
-                        variant="outline""
+                        variant="outline"
                         className="text-xs"
                       >
                         {tech}
@@ -343,8 +343,8 @@ const featuredListings = [
                     </Link>
                   </Button>
                   <Button"
-                    variant="outline""
-                    size="icon""
+                    variant="outline"
+                    size="icon"
                     className="group-hover:bg-blue-50"
                   >"
                     <Heart className="w-4 h-4 group-hover:text-red-500 transition-colors" />
@@ -396,7 +396,7 @@ const featuredListings = [
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >"
                 <Link to="/contact" className="flex items-center gap-2">"
@@ -405,8 +405,8 @@ const featuredListings = [
                 </Link>
               </Button>
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >"
                 <Link to="/services" className="flex items-center gap-2">"

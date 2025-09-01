@@ -11,18 +11,18 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { toast } from "sonner";"
 import { Loader2 import { supabase } from "@/integrations/supabase/client";"
 import { useAuth } from "@/hooks/useAuth";"
-import { ScrollArea } from "@/components/ui/scroll-area";'
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from 'react-router-dom';
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useNavigate();'
-    const [contentType, setContentType] = useState('blog');'
-    const [customPrompt, setCustomPrompt] = useState('');'
+    const router = useNavigate();
+    const [contentType, setContentType] = useState('blog');
+    const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
     const [autoPublish, setAutoPublish] = useState(false);
     const [includeImage, setIncludeImage] = useState(true);
     const [isGenerating, setIsGenerating] = useState(false);
-    const [previewContent, setPreviewContent] = useState(null);'
+    const [previewContent, setPreviewContent] = useState(null);
     const [testEmail, setTestEmail] = useState('');
     // Redirect if not logged in
     React.useEffect ( () => {
@@ -37,7 +37,7 @@ export default function ContentGenerator() {
         setIsGenerating (true) ;
         setPreviewContent (null) ;
         try {
-'
+
             const { data, error } = await supabase.functions.invoke('generate-content', {
 
                 body: {
@@ -45,7 +45,7 @@ export default function ContentGenerator() {
                     contentType,
                     prompt: customPrompt || null,
                     topic: topic || null,
-                    autoPublish,'
+                    autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
 
             });
@@ -58,7 +58,7 @@ export default function ContentGenerator() {
         finally {
 
             setIsGenerating(false);
-'
+
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
 "
@@ -78,7 +78,7 @@ export default function ContentGenerator() {
             toast.error("Generate newsletter content first");
             return}
         try {
-'
+
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
 
                 body: {
@@ -159,7 +159,7 @@ export default function ContentGenerator() {
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>"
                     <Textarea id="customPrompt" placeholder="Enter a custom prompt for the AI..." className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]" value={customPrompt} onChange={(e) => setCustomPrompt(e.target.value)}/>
                   </div>
-'
+
                   {contentType === 'blog' && (<>"
                       <div className="flex items-center justify-between">"
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>"

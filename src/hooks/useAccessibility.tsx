@@ -33,7 +33,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Detect accessibility preferences
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
-'
+
     if (typeof window === 'null') {;
       return {;
         isHighContrast: false,;
@@ -44,10 +44,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     }
 
     const mediaQueries = {
-'
-  highContrast: window.matchMedia('(prefers-contrast: high)'),'
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),'
-      largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
+
+  highContrast: window.matchMedia('(prefers-contrast: high)),
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)),
+      largeText: window.matchMedia('(prefers-reduced-motion: reduce)),;
   ;
   ;
   ;
@@ -73,27 +73,27 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   // Keyboard navigation'
           navigateFocus('forward', currentElement)}
         break;
-'
+
       case 'Escape':;
         // Close modals, dropdowns, etc.
         closeActiveElements();
         break;
-'
-      case 'Enter':;'
+
+      case 'Enter':;
       case ' ':;
         // Activate buttons, links, etc.'
         if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
         break;
-'
-      case 'ArrowUp':;'
+
+      case 'ArrowUp':;
       case 'ArrowDown':;
         // Navigate through lists, dropdowns, etc.'
         navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
         break;
-'
-      case 'ArrowLeft':;'
+
+      case 'ArrowLeft':;
       case 'ArrowRight':;
         // Navigate through horizontal lists, tabs, etc.'
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
@@ -111,7 +111,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
     // Remove focus indicator after animation
     setTimeout(() => {
-'
+
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -132,14 +132,14 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
 
     const selector = ['
-      'button:not([disabled])',;'
-      'input:not([disabled])',;'
-      'select:not([disabled])',;'
-      'textarea:not([disabled])',;'
-      'a[href]',;'
-      '[tabindex]:not([tabindex="-1"])',;'"
-      '[contenteditable="true"]';'
-    ].join(', ');
+      'button:not([disabled]),;
+      'input:not([disabled]),;
+      'select:not([disabled]),;
+      'textarea:not([disabled]),;
+      'a[href]',;
+      '[tabindex]:not([tabindex="-1"]),;'"
+      '[contenteditable="true"]';
+    ].join(',);
 
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 
@@ -183,9 +183,9 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 
   // Close active elements
   const closeActiveElements = useCallback(() => {;
-    // Close modals, dropdowns, etc.;'
+    // Close modals, dropdowns, etc.;
     const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-activeElements.forEach(element:  > {;'
+activeElements.forEach(element:  > {;
       element.classList.remove('active');
     });
 
@@ -195,10 +195,10 @@ activeElements.forEach(element:  > {;'
   // Screen reader announcements'
   const announceToScreenReader = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {;
     if (!enableScreenReaderSupport) return;
-'
-    const announcement = document.createElement('div');'
-    announcement.setAttribute('aria-live', priority);'
-    announcement.setAttribute('aria-atomic', 'true');'
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', priority);
+    announcement.setAttribute('aria-atomic',true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
@@ -211,8 +211,8 @@ activeElements.forEach(element:  > {;'
   // High contrast mode
   const toggleHighContrast = useCallback(: unknown {;
     if (!enableHighContrast) return;
-'
-    document.documentElement.classList.toggle('high-contrast');'
+
+    document.documentElement.classList.toggle('high-contrast');
     const isEnabled = document.documentElement.classList.contains('high-contrast');
 
     // Announce change to screen reader'
@@ -224,8 +224,8 @@ activeElements.forEach(element:  > {;'
   // Reduced motion mode
   const toggleReducedMotion = useCallback(: unknown {;
     if (!enableReducedMotion) return;
-'
-    document.documentElement.classList.toggle('reduced-motion');'
+
+    document.documentElement.classList.toggle('reduced-motion');
     const isEnabled = document.documentElement.classList.contains('reduced-motion');
 
     // Announce change to screen reader'`
@@ -237,8 +237,8 @@ activeElements.forEach(element:  > {;'
   // Large text mode
   const toggleLargeText = useCallback(: unknown {;
     if (!enableLargeText) return;
-'
-    document.documentElement.classList.toggle('large-text');'
+
+    document.documentElement.classList.toggle('large-text');
     const isEnabled = document.documentElement.classList.contains('large-text');
 
     // Announce change to screen reader'`
@@ -250,22 +250,22 @@ activeElements.forEach(element:  > {;'
   // Initialize accessibility features
   useEffect(() => {
     // Load saved preferences'
-    const highContrast = localStorage.getItem('highContrast') === 'true';'
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';'
+    const highContrast = localStorage.getItem('highContrast') === 'true';
+    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
     const largeText = localStorage.getItem('largeText') === 'true';
-'
-    if (highContrast) document.documentElement.classList.add('high-contrast');'
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
+
+    if (highContrast) document.documentElement.classList.add('high-contrast');
+    if (reducedMotion) document.documentElement.classList.add('reduced-motion');
     if (largeText) document.documentElement.classList.add('large-text');
 
     // Add keyboard event listener
     if (enableKeyboardNavigation) {
-'
+
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup
     return () => {
-'
+
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {

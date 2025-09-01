@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import { GradientHeading } from '@/components/GradientHeading';
 export function EnterpriseHero() {
   return()
@@ -7,7 +7,7 @@ export function EnterpriseHero() {
       <div className="container mx-auto max-w-6xl">"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>"
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">'
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
               Enterprise{' '}"
               <GradientHeading className="inline">
                 Talent Solutions
@@ -31,21 +31,21 @@ export function EnterpriseHero() {
               </p>"
               <div className="flex gap-6 opacity-70">
                 <img"
-                  loading="lazy""
-                  src="/logos/placeholder-logo.svg""
-                  alt="Enterprise 1""
+                  loading="lazy"
+                  src="/logos/placeholder-logo.svg"
+                  alt="Enterprise 1"
                   className="h-8"
                 />
                 <img"
-                  loading="lazy""
-                  src="/logos/placeholder-logo.svg""
-                  alt="Enterprise 2""
+                  loading="lazy"
+                  src="/logos/placeholder-logo.svg"
+                  alt="Enterprise 2"
                   className="h-8"
                 />
                 <img"
-                  loading="lazy""
-                  src="/logos/placeholder-logo.svg""
-                  alt="Enterprise 3""
+                  loading="lazy"
+                  src="/logos/placeholder-logo.svg"
+                  alt="Enterprise 3"
                   className="h-8"
                 />
               </div>
@@ -55,9 +55,9 @@ export function EnterpriseHero() {
             <div className="aspect-video rounded-lg bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 p-1">"
               <div className="w-full h-full bg-card rounded-md flex items-center justify-center">
                 <img"
-                  loading="lazy""
-                  src="/placeholder.svg""
-                  alt="Enterprise Dashboard""
+                  loading="lazy"
+                  src="/placeholder.svg"
+                  alt="Enterprise Dashboard"
                   className="rounded max-w-full max-h-full object-cover"
                 />
               </div>

@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Truck, 
   Brain, 
@@ -228,14 +228,14 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Optimize Supply Chain"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Watch Demo
@@ -674,14 +674,14 @@ const AIAutonomousSupplyChain = (...args: unknown[]): unknown => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <Phone className="mr-2 w-5 h-5" />

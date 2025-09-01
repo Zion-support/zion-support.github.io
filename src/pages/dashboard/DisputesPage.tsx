@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SEO from '@/components/SEO';'
-import { DisputeDashboard } from '@/components/disputes';'
+import SEO from '@/components/SEO';
+import { DisputeDashboard } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 ;
 function DisputesPage(...args[]):  {
@@ -10,7 +10,7 @@ function DisputesPage(...args[]):  {
     <ProtectedRoute>;
       <>
         <SEO
-          title="Dispute Resolution Center | Zion AI Marketplace""
+          title="Dispute Resolution Center | Zion AI Marketplace"
           description="View and manage disputes between clients and talents"
         />
 

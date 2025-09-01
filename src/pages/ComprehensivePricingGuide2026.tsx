@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';'
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -27,27 +27,27 @@ import {
   Rocket,
   Cpu,
   Brain'
-} from 'lucide-react';'
-import SEO from '../components/SEO';'
+} from 'lucide-react';
+import SEO from '../components/SEO';
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
 
-const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;'
-  const [selectedService, setSelectedService] = useState<any>('all');'
-  const [selectedTier, setSelectedTier] = useState<any>('all');'
+const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
+  const [selectedService, setSelectedService] = useState<any>('all');
+  const [selectedTier, setSelectedTier] = useState<any>('all');
 } from 'lucide-react';
 import { SEO } from "../components/SEO";"
 import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
 
-const ComprehensivePricingGuide2026: React.FC = () => {;'
-  const [selectedService, setSelectedService] = useState<string>('all');'
+const ComprehensivePricingGuide2026: React.FC = () => {;
+  const [selectedService, setSelectedService] = useState<string>('all');
   const [selectedTier, setSelectedTier] = useState<string>('all');
-'
-  const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];'
-  const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
+
+  const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];
+  const tiers = ['all',Starter',Professional',Enterprise'];
 
   const filteredPricing = useMemo ( () => {
     let filtered = ALL_PRICING_GUIDES_2026;
-'
+
     if (selectedService !== 'all') {
 
       filtered = filtered.filter(service => service.serviceName === selectedService);
@@ -59,7 +59,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
 "
       default: return <Zap className = "w-6 h-6" />};
   };
-'
+
       default: return 'from-gray-500 to-gray-600'}
   };
 
@@ -67,7 +67,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
     <>
       <SEO"
         title="Comprehensive Pricing Guide 2026 - Zion Tech Group"'"
-        description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons.""
+        description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, 2026 services, Zion Tech Group"
       />
 "
@@ -136,7 +136,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {services.map(service  => ("
-                      <option key={service} value={service} className="bg-zinc-800 text-white">'
+                      <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
                       </option>) ) }
                   </select>
@@ -152,7 +152,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {tiers.map(tier  => ("
-                      <option key={tier} value={tier} className="bg-zinc-800 text-white">'
+                      <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
                       </option>) ) }
                   </select>
@@ -510,14 +510,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
 "
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
 "
                   <Mail className="w-5 h-5" />

@@ -4,22 +4,22 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle} from './ui/card';'
-import { Badge } from './ui/badge';'
-import { Button } from './ui/button';'
+  CardTitle} from './ui/card';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 export function ServiceShowcase({ services }) {
 
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI Services':
-        return <Zap className="h-5 w-5" />;'
+        return <Zap className="h-5 w-5" />;
       case 'Security':"
-        return <Shield className="h-5 w-5" />;'
+        return <Shield className="h-5 w-5" />;
       case 'Analytics':"
-        return <TrendingUp className="h-5 w-5" />;'
+        return <TrendingUp className="h-5 w-5" />;
       case 'Development':"
         return <Users className="h-5 w-5" />;
       default:"
@@ -29,13 +29,13 @@ export function ServiceShowcase({ services }) {
   const getCategoryColor = category => {
 
     switch (category) {
-'
+
       case 'AI Services':'
-        return 'from-purple-500 to-pink-500';'
+        return 'from-purple-500 to-pink-500';
       case 'Security':'
-        return 'from-red-500 to-orange-500';'
+        return 'from-red-500 to-orange-500';
       case 'Analytics':'
-        return 'from-blue-500 to-cyan-500';'
+        return 'from-blue-500 to-cyan-500';
       case 'Development':'
         return 'from-green-500 to-emerald-500';
       default:'
@@ -77,7 +77,7 @@ export function ServiceShowcase({ services }) {
                     {getCategoryIcon(service.category)}
                   </div>
                   <Badge"
-                    variant="outline""
+                    variant="outline"
                     className="border-zinc-500 text-zinc-300"
                   >
                     {service.category}
@@ -113,7 +113,7 @@ export function ServiceShowcase({ services }) {
                     {service.features.slice(0, 3).map((feature, index) => (
                       <Badge
                         key={index}"
-                        variant="secondary""
+                        variant="secondary"
                         className="text-xs bg-zinc-700/50 text-zinc-300"
                       >
                         {feature}
@@ -144,7 +144,7 @@ export function ServiceShowcase({ services }) {
 "
         <div className="text-center mt-12">
           <Button"
-            size="lg""
+            size="lg"
             className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
           >
             View All Services

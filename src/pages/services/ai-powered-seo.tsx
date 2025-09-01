@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -22,8 +22,8 @@ import {
   Analytics,
   Monitor,
   Smartphone,
-  Laptop,'
-  Phone} from 'lucide-react.ts';'
+  Laptop,
+  Phone} from 'lucide-react.ts';
 import { SEO } from '@/components/SEO';
 
 export default function AIPoweredSEO(...args: any[]): any {
@@ -31,76 +31,76 @@ export default function AIPoweredSEO(...args: any[]): any {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Keyword Research',
       description:'
         'Advanced machine learning algorithms identify high-impact keywords and search opportunities'},
     {
 
-      icon: Analytics,'
+      icon: Analytics,
       title: 'Predictive Analytics',
       description:'
         'Forecast search trends and optimize content before competitors'},
     {
 
-      icon: Target,'
-      title: 'Intent-Based Optimization','
+      icon: Target,
+      title: 'Intent-Based Optimization',
       description: 'Understand and target user search intent with precision'},
     {
 
-      icon: TrendingUp,'
-      title: 'Real-Time Performance Tracking','
+      icon: TrendingUp,
+      title: 'Real-Time Performance Tracking',
       description: 'Monitor rankings and performance with live dashboards'},
     {
 
-      icon: Code,'
+      icon: Code,
       title: 'Technical SEO Automation',
       description:'
         'Automated technical audits and optimization recommendations'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'User Experience Optimization',
       description:'
         'AI-driven insights to improve user engagement and conversion'},
   ];
 
   const benefits = ['
-    'Increase organic traffic by 200-400%','
-    'Improve search rankings in 30-60 days','
-    'Reduce bounce rate by 25-40%','
-    'Boost conversion rates by 15-30%','
-    'Save 20+ hours per week on SEO tasks','
+    'Increase organic traffic by 200-400%',
+    'Improve search rankings in 30-60 days',
+    'Reduce bounce rate by 25-40%',
+    'Boost conversion rates by 15-30%',
+    'Save 20+ hours per week on SEO tasks',
     'Stay ahead of algorithm updates',
   ];
 
   const services = [
     {
-'
-      title: 'AI Keyword Research & Strategy','
-      description: 'Comprehensive keyword analysis using machine learning','
+
+      title: 'AI Keyword Research & Strategy',
+      description: 'Comprehensive keyword analysis using machine learning',
       price: 'From $2,500/month'},
     {
-'
-      title: 'Content Optimization & Creation','
-      description: 'AI-powered content strategy and optimization','
+
+      title: 'Content Optimization & Creation',
+      description: 'AI-powered content strategy and optimization',
       price: 'From $3,500/month'},
     {
-'
-      title: 'Technical SEO & Performance','
-      description: 'Automated technical audits and optimization','
+
+      title: 'Technical SEO & Performance',
+      description: 'Automated technical audits and optimization',
       price: 'From $4,000/month'},
     {
-'
-      title: 'Full-Service SEO Management','
-      description: 'Complete end-to-end SEO solution','
+
+      title: 'Full-Service SEO Management',
+      description: 'Complete end-to-end SEO solution',
       price: 'From $6,500/month'},
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI-Powered SEO Services - Zion Tech Group""
+        title="AI-Powered SEO Services - Zion Tech Group"
         description="Revolutionary AI-powered SEO services that use machine learning to boost rankings, increase traffic, and drive conversions. Get ahead of the competition with predictive analytics and automated optimization."
       />
 

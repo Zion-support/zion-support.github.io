@@ -1,17 +1,17 @@
-import React, { useState } from 'react.ts';'
+import React, { useState } from 'react.ts';
 import { ChevronDown  } from 'lucide-react';
 
 interface AccordionProps extends React.PropsWithChildren<{}> {
 
   children: React.ReactNode;
-  className?: string;'
+  className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[]}
 
 export function Accordion({
 
-  children,'
-  className = '','
+  children,
+  className = '',
   type = 'single',
   defaultValue
 }: AccordionProps) {
@@ -21,7 +21,7 @@ export function Accordion({
   );
 
   const handleToggle = (value: string)  => {
-'
+
     if (type === 'single') {
 
       setOpenItems(openItems.includes(value) ? [] : [value]);
@@ -48,8 +48,8 @@ export function Accordion({
         return child})}
 export function Accordion({
 
-  children, ;'
-  className = '', ;'
+  children, ;
+  className = '', ;
   type = 'single',;
   defaultValue ;
 }: AccordionProps) {;
@@ -57,7 +57,7 @@ export function Accordion({
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
 
-  const handleToggle = (value: string) => {;'
+  const handleToggle = (value: string) => {;
     if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -97,7 +97,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
 export function AccordionItem({
 
-  children,'
+  children,
   className = '',
   isOpen = false,;
   onToggle;
@@ -122,7 +122,7 @@ interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
 export function AccordionTrigger({
 
-  children,'
+  children,
   className = '',
   isOpen = false,
   onToggle
@@ -136,7 +136,7 @@ export function AccordionTrigger({
       {children}
       <ChevronDown`
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-'
+
           isOpen ? 'rotate-180' : ''`
         }`}
       />
@@ -144,7 +144,7 @@ export function AccordionTrigger({
   )}
 
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;'
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';`
         }`} ;
       />;
@@ -158,7 +158,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
 
 export function AccordionContent({
 
-  children,'
+  children,
   className = '',
   isOpen = false;
 }: AccordionContentProps) {
@@ -171,7 +171,7 @@ export function AccordionContent({
     </div>
   )}
 export function AccordionContent({ ;
-  children, ;'
+  children, ;
   className = '',;
   isOpen = false;
 }: AccordionContentProps) {;

@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion   } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Shield, 
@@ -15,7 +15,7 @@ import { Brain,
   Activity,
   BarChart3,
   Lock'
-  } from 'lucide-react.ts';'
+  } from 'lucide-react.ts';
 import { SEO   } from '../../components/SEO';
 ;
 const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
@@ -146,8 +146,8 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group""
-        description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.""
+        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
+        description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets."
         keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
       />
 
@@ -179,7 +179,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Secure Your Digital Assets"
@@ -522,7 +522,7 @@ const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Security Transformation"

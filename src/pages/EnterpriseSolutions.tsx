@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 
 const EnterpriseSolutions: React.FC = (): JSX.Element => {
@@ -6,7 +6,7 @@ const EnterpriseSolutions: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
-        title="Enterprise Solutions - Zion Tech Group""
+        title="Enterprise Solutions - Zion Tech Group"
         description="Industry-focused enterprise solutions for scale, security, and performance."
       />"
       <div className="container-responsive py-16">"

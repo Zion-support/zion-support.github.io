@@ -12,42 +12,42 @@ import {
   Factory,
   Store,
   Home,
-  GraduationCap,'
+  GraduationCap,
   Stethoscope} from 'lucide-react';
 const IndustrySolutions = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedIndustry, setSelectedIndustry] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedSolutionType, setSelectedSolutionType] = useState('all');
   // Industry-specific solutions data
   const industries = ['
-    'all','
-    'Healthcare','
-    'Finance','
-    'Manufacturing','
-    'Retail','
-    'Education','
-    'Logistics','
-    'Real Estate','
-    'Energy','
-    'Cybersecurity','
-    'Legal','
-    'Media','
+    'all',
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Logistics',
+    'Real Estate',
+    'Energy',
+    'Cybersecurity',
+    'Legal',
+    'Media',
     'Transportation',
   ];
   const solutionTypes = ['
-    'all','
-    'Digital Health','
-    'FinTech','
-    'Industry 4.0','
-    'Digital Commerce','
-    'EdTech','
-    'Supply Chain','
-    'PropTech','
-    'Energy Tech','
-    'Security','
-    'LegalTech','
-    'MediaTech','
+    'all',
+    'Digital Health',
+    'FinTech',
+    'Industry 4.0',
+    'Digital Commerce',
+    'EdTech',
+    'Supply Chain',
+    'PropTech',
+    'Energy Tech',
+    'Security',
+    'LegalTech',
+    'MediaTech',
     'Mobility',
   ];
   const filteredSolutions = industrySolutions.filter(solution => {
@@ -60,11 +60,11 @@ const IndustrySolutions = () => {
   const formatPrice = (price, model) => {
 
     switch (model) {
-'
+
       case 'monthly':
-        return `$${price.toLocaleString()}/month`;'
+        return `$${price.toLocaleString()}/month`;
       case 'hourly':`
-        return `$${price}/hour`;'
+        return `$${price}/hour`;
       case 'project-based':`
         return `$${price.toLocaleString()}`;
       default:`
@@ -72,30 +72,30 @@ const IndustrySolutions = () => {
     }
   };
   const getIndustryColor = score => {
-'
-    if (score >= 95) return 'text-green-500';'
-    if (score >= 90) return 'text-blue-500';'
-    if (score >= 85) return 'text-yellow-500';'
+
+    if (score >= 95) return 'text-green-500';
+    if (score >= 90) return 'text-blue-500';
+    if (score >= 85) return 'text-yellow-500';
     return 'text-orange-500';
   };
   const getIndustryIcon = industry => {
 
     switch (industry) {
-'
+
       case 'Healthcare':
-        return <Stethoscope className="w-6 h-6" />;'
+        return <Stethoscope className="w-6 h-6" />;
       case 'Finance':"
-        return <CreditCard className="w-6 h-6" />;'
+        return <CreditCard className="w-6 h-6" />;
       case 'Manufacturing':"
-        return <Factory className="w-6 h-6" />;'
+        return <Factory className="w-6 h-6" />;
       case 'Retail':"
-        return <Store className="w-6 h-6" />;'
+        return <Store className="w-6 h-6" />;
       case 'Education':"
-        return <GraduationCap className="w-6 h-6" />;'
+        return <GraduationCap className="w-6 h-6" />;
       case 'Logistics':"
-        return <Truck className="w-6 h-6" />;'
+        return <Truck className="w-6 h-6" />;
       case 'Real Estate':"
-        return <Home className="w-6 h-6" />;'
+        return <Home className="w-6 h-6" />;
       case 'Energy':"
         return <Zap className="w-6 h-6" />;
       default:"
@@ -110,7 +110,7 @@ const IndustrySolutions = () => {
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-600 bg-clip-text text-transparent mb-4">
             Industry Solutions
           </h1>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Specialized technology solutions designed for your industry's unique
             challenges and compliance requirements
           </p>
@@ -121,7 +121,7 @@ const IndustrySolutions = () => {
           <div className="relative">"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
-              type="text""
+              type="text"
               placeholder="Search industry solutions..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}"
@@ -140,7 +140,7 @@ const IndustrySolutions = () => {
                   key={industry}
                   value={industry}"
                   className="bg-gray-800 text-white"
-                >'
+                >
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>
               ))}
@@ -156,7 +156,7 @@ const IndustrySolutions = () => {
                   key={type}
                   value={type}"
                   className="bg-gray-800 text-white"
-                >'
+                >
                   {type === 'all' ? 'All Solution Types' : type}
                 </option>
               ))}
@@ -200,8 +200,8 @@ const IndustrySolutions = () => {
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}
                 </div>"
-                <div className="text-sm text-gray-400">'
-                  {solution.pricingModel.replace('-', ' ')}
+                <div className="text-sm text-gray-400">
+                  {solution.pricingModel.replace('-', ')}
                 </div>
               </div>
 "
@@ -242,8 +242,8 @@ const IndustrySolutions = () => {
                   <span>Contact us for industry expertise</span>
                   <a
                     href={solution.contactInfo.website}"
-                    className="text-blue-400 hover:text-blue-300 transition-colors""
-                    target="_blank""
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Learn More →
@@ -260,7 +260,7 @@ const IndustrySolutions = () => {
             <h2 className="text-2xl font-bold text-white mb-4">
               Need Industry-Specific Solutions?
             </h2>"
-            <p className="text-gray-300 mb-6">'
+            <p className="text-gray-300 mb-6">
               Our team has deep expertise in your industry's unique challenges
               and compliance requirements
             </p>"

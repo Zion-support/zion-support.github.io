@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes() {
   const features = [
-    'AI-powered Kubernetes optimization','
-    'Intelligent Kubernetes management',;'
-    'Automated Kubernetes monitoring and alerting',;'
-    'Predictive analytics for Kubernetes scaling',;'
-    'Smart Kubernetes security and compliance',;'
-    'AI-driven Kubernetes automation and orchestration',;'
-    'Real-time Kubernetes analytics and insights',;'
+    'AI-powered Kubernetes optimization',
+    'Intelligent Kubernetes management',;
+    'Automated Kubernetes monitoring and alerting',;
+    'Predictive analytics for Kubernetes scaling',;
+    'Smart Kubernetes security and compliance',;
+    'AI-driven Kubernetes automation and orchestration',;
+    'Real-time Kubernetes analytics and insights',;
     'Custom AI models for Kubernetes applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full Kubernetes suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full Kubernetes suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Kubernetes optimization',;'
-    'Kubernetes management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Kubernetes optimization',;
+    'Kubernetes management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Kubernetes scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve Kubernetes performance by 50-80%',;'
-    'Reduce Kubernetes deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Kubernetes reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve Kubernetes performance by 50-80%',;
+    'Reduce Kubernetes deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Kubernetes reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale Kubernetes operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% deployment time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% deployment time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-blue-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

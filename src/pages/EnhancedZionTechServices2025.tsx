@@ -3,11 +3,11 @@ export default EnhancedZionTechServices2025;}
 import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
 
 
-const EnhancedZionTechServices2025: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');'
-  const [searchTerm, setSearchTerm] = useState<string>('');'
+const EnhancedZionTechServices2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
-'
+
   const categories = ['All', ...getEnhancedServiceCategories()];
   
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
@@ -18,11 +18,11 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
   }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {;
       case 'price':;
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'rating':;
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
@@ -101,7 +101,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
         <div className="flex flex-col lg:flex-row gap-6 mb-12">"
           <div className="flex-1">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}"
@@ -214,8 +214,8 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
               <div className="space-y-3">
                 <a
                   href={service.link}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
 
                   Learn More

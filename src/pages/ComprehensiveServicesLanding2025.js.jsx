@@ -1,31 +1,31 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { allEnhancedServices } from "../data/enhanced-2025-comprehensive-services";
 const ComprehensiveServicesLanding2025 = () => {
-'
+
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = ['
-        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },'
-        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },'
-        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },'
-        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },'
-        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },'
-        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },'
-        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },'
+        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
+        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
+        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
+        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
+        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
+        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
+        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },
         { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
     ];
     const getServicesByIndustry = (industry) => {
-'
+
         if (industry === 'all')
             return allEnhancedServices;
         const industryMap = {
-'
-  'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],;'
-            'healthcare'['Healthcare & AI'],;'
-            'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],;'
-            'energy'['Energy & Sustainability'],;'
-            'logistics'['Logistics & Transportation'],;'
-            'legal'['Legal Tech & AI'],;'
+
+  'finance'['FinTech & AI',Cybersecurity & Quantum Computing'],;
+            'healthcare'['Healthcare & AI'],;
+            'manufacturing'['IoT & Edge Computing',Blockchain & Supply Chain'],;
+            'energy'['Energy & Sustainability'],;
+            'logistics'['Logistics & Transportation'],;
+            'legal'['Legal Tech & AI'],;
   'marketing'['Marketing & AI'];
 
 };
@@ -112,7 +112,7 @@ const ComprehensiveServicesLanding2025 = () => {
                       {service.price}"
                       <span className="text-sm text-white/70">{service.period}</span>
                     </span>"
-                    <div className="flex items-center text-yellow-400">'
+                    <div className="flex items-center text-yellow-400">
                       {'★'.repeat(Math.floor(service.rating))}"
                       <span className="text-white/70 ml-1">({service.reviews})</span>
                     </div>

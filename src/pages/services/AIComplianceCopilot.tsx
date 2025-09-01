@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 ;
 export { function };
@@ -7,7 +7,7 @@ export default function AIComplianceCopilot(...args[]):  {
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO"
-        title="AI Compliance Copilot | Zion Tech Group""
+        title="AI Compliance Copilot | Zion Tech Group"
         description="Continuously map controls, flag risks, and auto-generate audit evidence for SOC 2, ISO 27001, HIPAA, GDPR."
       />"
       <section className="container-responsive py-16">"

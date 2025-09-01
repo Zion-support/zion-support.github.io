@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -19,7 +19,7 @@ import {
     const values = [
         {
 "
-            title: "Innovation First",'"
+            title: "Innovation First","
             description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.","
             icon: <TrendingUp className="w-8 h-8"/>
         },
@@ -75,7 +75,7 @@ import {
             </p>
 
             <Link"
-              to="/about""
+              to="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
 
               Learn Our Story"

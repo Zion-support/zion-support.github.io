@@ -1,6 +1,6 @@
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
-import Link from 'next/link';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
 
@@ -14,13 +14,13 @@ import {
   Server,
   Users,
   Target,
-  Check,'
+  Check,
   ArrowRight} from 'lucide-react';
 export default function ServicesOverview() {
   const stats = ['
-    { label: 'Services Offered', value: '50+', icon: Target },'
-    { label: 'Industries Served', value: '15+', icon: Users },'
-    { label: 'Technologies', value: '100+', icon: Server },'
+    { label: 'Services Offered', value: '50+', icon: Target },
+    { label: 'Industries Served', value: '15+', icon: Users },
+    { label: 'Technologies', value: '100+', icon: Server },
     { label: 'Client Satisfaction', value: '98%', icon: Check },
   ];
   const containerVariants = {
@@ -41,14 +41,14 @@ export default function ServicesOverview() {
       opacity: 1,
       transition: {
 
-        duration: 0.5,'
+        duration: 0.5,
         ease: 'easeOut'}}};
   return()
     <div className="min-h-screen bg-background">
       <SEO"
-        title="All Services - Zion Tech Group Comprehensive Technology Solutions""
-        description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions.""
-        keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services""
+        title="All Services - Zion Tech Group Comprehensive Technology Solutions"
+        description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions."
+        keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services"
         canonical="https://ziontechgroup.com/services"
       />
 
@@ -73,7 +73,7 @@ export default function ServicesOverview() {
           <motion.div"
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -102,7 +102,7 @@ export default function ServicesOverview() {
           <motion.div"
             className="text-center mb-16"
             variants={itemVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
@@ -118,7 +118,7 @@ export default function ServicesOverview() {
           <motion.div"
             className="space-y-12"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -197,7 +197,7 @@ export default function ServicesOverview() {
           <motion.div"
             className="text-center mb-16"
             variants={itemVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
@@ -213,7 +213,7 @@ export default function ServicesOverview() {
           <motion.div"
             className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >"
@@ -265,7 +265,7 @@ export default function ServicesOverview() {
           <motion.h2"
             className="text-4xl font-bold mb-6"
             variants={itemVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -274,7 +274,7 @@ export default function ServicesOverview() {
           <motion.p"
             className="text-xl mb-8 max-w-3xl mx-auto"
             variants={itemVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -284,18 +284,18 @@ export default function ServicesOverview() {
           <motion.div"
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started Today
             </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Schedule Consultation

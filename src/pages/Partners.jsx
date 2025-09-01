@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -19,120 +19,120 @@ import {
   Sparkles,
   Flame,
   Sun,
-  Moon,'
+  Moon,
   Infinity} from 'lucide-react';
 export default function Partners() {
   const partnershipTypes = [
     {
-'
+
       title: 'Technology Partners',
       description:'
-        'Collaborate with leading tech companies to deliver cutting-edge solutions','
+        'Collaborate with leading tech companies to deliver cutting-edge solutions',
       icon: '🔧',
       benefits: ['
-        'Access to latest technologies','
-        'Joint product development','
+        'Access to latest technologies',
+        'Joint product development',
         'Shared marketing opportunities',
       ]},
     {
-'
+
       title: 'Channel Partners',
       description:'
-        'Expand your reach through our global network of resellers and distributors','
+        'Expand your reach through our global network of resellers and distributors',
       icon: '🌐',
       benefits: ['
-        'Increased market presence','
-        'Revenue sharing programs','
+        'Increased market presence',
+        'Revenue sharing programs',
         'Training and certification',
       ]},
     {
-'
+
       title: 'Strategic Partners',
       description:'
-        'Form long-term alliances for mutual growth and market expansion','
+        'Form long-term alliances for mutual growth and market expansion',
       icon: '🤝',
       benefits: ['
-        'Joint ventures','
-        'Market expansion support','
+        'Joint ventures',
+        'Market expansion support',
         'Shared R&D initiatives',
       ]},
     {
-'
+
       title: 'Academic Partners',
       description:'
-        'Partner with universities and research institutions for innovation','
+        'Partner with universities and research institutions for innovation',
       icon: '🎓',
       benefits: ['
-        'Research collaboration','
-        'Talent pipeline','
+        'Research collaboration',
+        'Talent pipeline',
         'Innovation programs',
       ]},
   ];
   const existingPartners = [
     {
-'
-      name: 'Microsoft','
-      logo: 'https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop','
-      category: 'Technology Partner','
-      description: 'Leading cloud and AI solutions provider','
+
+      name: 'Microsoft',
+      logo: 'https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop',
+      category: 'Technology Partner',
+      description: 'Leading cloud and AI solutions provider',
       year: '2020'},
     {
-'
-      name: 'Amazon Web Services','
-      logo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop','
-      category: 'Cloud Partner','
-      description: "World's most comprehensive cloud platform",'
+
+      name: 'Amazon Web Services',
+      logo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop',
+      category: 'Cloud Partner',
+      description: "World's most comprehensive cloud platform",
       year: '2021'},
     {
-'
-      name: 'Google Cloud','
-      logo: 'https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop','
-      category: 'AI Partner','
-      description: 'Advanced AI and machine learning solutions','
+
+      name: 'Google Cloud',
+      logo: 'https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop',
+      category: 'AI Partner',
+      description: 'Advanced AI and machine learning solutions',
       year: '2022'},
     {
-'
-      name: 'IBM','
-      logo: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop','
-      category: 'Enterprise Partner','
-      description: 'Enterprise AI and quantum computing','
+
+      name: 'IBM',
+      logo: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop',
+      category: 'Enterprise Partner',
+      description: 'Enterprise AI and quantum computing',
       year: '2021'},
     {
-'
-      name: 'Stanford University','
-      logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop','
-      category: 'Academic Partner','
-      description: 'Research collaboration in AI and technology','
+
+      name: 'Stanford University',
+      logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop',
+      category: 'Academic Partner',
+      description: 'Research collaboration in AI and technology',
       year: '2023'},
     {
-'
-      name: 'MIT','
-      logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop','
-      category: 'Research Partner','
-      description: 'Innovation in emerging technologies','
+
+      name: 'MIT',
+      logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop',
+      category: 'Research Partner',
+      description: 'Innovation in emerging technologies',
       year: '2022'},
   ];
   const benefits = [
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Revenue Growth',
       description:'
         'Access new markets and customer segments through our global network'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Network Expansion',
       description:'
         'Connect with industry leaders and potential customers worldwide'},
     {
 
-      icon: Award,'
-      title: 'Brand Recognition','
+      icon: Award,
+      title: 'Brand Recognition',
       description: 'Leverage our established reputation in the tech industry'},
     {
 
-      icon: Globe,'
+      icon: Globe,
       title: 'Global Reach',
       description:'
         'Expand your business presence across multiple countries and regions'},
@@ -145,7 +145,7 @@ export default function Partners() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Partner with Zion Tech Group
           </h1>"
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Join our ecosystem of innovative partners and together we'll shape
             the future of technology
           </p>"
@@ -319,7 +319,7 @@ export default function Partners() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Join Our Partner Network?
           </h2>"
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">'
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Let's explore how we can work together to create innovative
             solutions and drive mutual success in the technology industry.
           </p>"

@@ -2,38 +2,38 @@ import React from 'react';
 export function TestimonialsSection() {
   const testimonials = [
     {
-'
-      name: 'Sarah Johnson','
-      role: 'CTO','
+
+      name: 'Sarah Johnson',
+      role: 'CTO',
       comp: 'TechCorp Inc.',
       content:'
         'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
-      rating: 5,'
+      rating: 5,
       avatar: '👩‍💼'},
     {
-'
-      name: 'Michael Chen','
-      role: 'VP of Engineering','
+
+      name: 'Michael Chen',
+      role: 'VP of Engineering',
       comp: 'InnovateLabs',
       content:'
         'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
-      rating: 5,'
+      rating: 5,
       avatar: '👨‍💻'},
     {
-'
-      name: 'Emily Rodriguez','
-      role: 'Operations Director','
+
+      name: 'Emily Rodriguez',
+      role: 'Operations Director',
       comp: 'Global Solutions',
       content:'
         'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
-      rating: 5,'
+      rating: 5,
       avatar: '👩‍🔬'},
   ];
   const renderStars = rating => {
 
     return Array.from({ length: 5 }, (_, i) => (
       <span
-        key={i}'
+        key={i}
         className={i < rating ? 'text-yellow-400' : 'text-gray-300'}
       >
         ★
@@ -47,7 +47,7 @@ export function TestimonialsSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Our Clients Say
           </h2>"
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">'
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it - hear from the businesses we've
             helped transform
           </p>

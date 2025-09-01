@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Search, 
   Filter, 
@@ -27,14 +27,14 @@ import { Search,
   Clock,
   DollarSign,
   BarChart3'
- } from 'lucide-react.ts';'
+ } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2028  } from '../data/innovativeServices2028';
 
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [sortBy, setSortBy] = useState('name');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
 
@@ -43,7 +43,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
 
   // Filter and sort services
   const filteredServices = INNOVATIVE_SERVICES_2028;
-    .filter(service => '
+    .filter(service =>
       selectedCategory === 'all' || service.category === selectedCategory
     )
     .filter(service => 
@@ -55,13 +55,13 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
     .sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'price':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'category':
-          return a.category.localeCompare(b.category);'
+          return a.category.localeCompare(b.category);
         case 'innovation':'
-          return a.innovationLevel === 'revolutionary' ? 1 : -1;'
+          return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
         default:
           return a.title.localeCompare (b.title) ;
@@ -71,16 +71,16 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
   const getCategoryIcon = (category: anystring)  => {
 
     const icons: Record<string, any> = {
-'
-      'AI & Enterprise': <Brain className="w-5 h-5" />,'"
-      'Quantum Computing': <Zap className="w-5 h-5" />,'"
-      'Cybersecurity': <Shield className="w-5 h-5" />,'"
-      'Healthcare Technology': <Heart className="w-5 h-5" />,'"
-      'Financial Technology': <DollarSign className="w-5 h-5" />,'"
-      'Supply Chain': <Globe className="w-5 h-5" />,'"
-      'Content Marketing': <Target className="w-5 h-5" />,'"
-      'Project Management': <Rocket className="w-5 h-5" />,'"
-      'Customer Support': <Users className="w-5 h-5" />,'"
+
+      'AI & Enterprise': <Brain className="w-5 h-5" />,"
+      'Quantum Computing': <Zap className="w-5 h-5" />,"
+      'Cybersecurity': <Shield className="w-5 h-5" />,"
+      'Healthcare Technology': <Heart className="w-5 h-5" />,"
+      'Financial Technology': <DollarSign className="w-5 h-5" />,"
+      'Supply Chain': <Globe className="w-5 h-5" />,"
+      'Content Marketing': <Target className="w-5 h-5" />,"
+      'Project Management': <Rocket className="w-5 h-5" />,"
+      'Customer Support': <Users className="w-5 h-5" />,"
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
     };"
     return icons[category] || <Sparkles className="w-5 h-5" />;
@@ -89,9 +89,9 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
   const getInnovationLevelColor = (level: anystring)  => {
 
     switch (level) {
-'
+
       case 'revolutionary':'
-        return 'from-purple-500 to-pink-500';'
+        return 'from-purple-500 to-pink-500';
       case 'cutting-edge':'
         return 'from-blue-500 to-cyan-500';
       default:'
@@ -200,7 +200,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               <div className="flex-1 relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services, features, or categories..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
@@ -216,7 +216,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                   className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 >
                   {categories.map(category  => (
-                    <option key={category} value={category}>'
+                    <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>
                   ))}
@@ -244,7 +244,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`px-3 py-2 rounded-lg transition-colors ${
-'
+
                     viewMode === 'grid' '
                       ? 'bg-cyan-500/20 text-cyan-400' '
                       : 'text-gray-400 hover:text-white'`
@@ -255,7 +255,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`px-3 py-2 rounded-lg transition-colors ${
-'
+
                     viewMode === 'list' '
                       ? 'bg-cyan-500/20 text-cyan-400' '
                       : 'text-gray-400 hover:text-white'`
@@ -274,7 +274,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"'
             className={viewMode === 'grid' '
               ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6' '
@@ -285,10 +285,10 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                 key={service.id}
                 variants={itemVariants}`
                 className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
-'
+
                   viewMode === 'list' ? 'flex' : ''`
                 }`}
-              >'
+              >
                 {viewMode === 'grid' ? (
                   // Grid View"
                   <div className="p-6">"
@@ -343,7 +343,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                       <button
                         onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}"
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1"
-                      >'
+                      >
                         {expandedService === service.id ? 'Show Less' : 'Learn More'}'`
                         <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
@@ -360,7 +360,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                     <AnimatePresence>
                       {expandedService === service.id && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}'
+                          initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}"
@@ -472,19 +472,19 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
         <div className="max-w-4xl mx-auto">"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our cutting-edge 2028 services can revolutionize your operations
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >"
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
               </a>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
               >"
                 <Mail className="w-5 h-5" />

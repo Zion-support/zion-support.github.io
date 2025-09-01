@@ -1,60 +1,60 @@
 import React from 'react';
 import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing() {
   const features = [
-    'AI-powered predictive maintenance and equipment monitoring','
-    'Intelligent quality control and defect detection',;'
-    'Automated production planning and optimization',;'
-    'Real-time supply chain and inventory management',;'
-    'Predictive analytics for production efficiency',;'
-    'Smart factory automation and IoT integration',;'
-    'Integration with major ERP and MES systems',;'
+    'AI-powered predictive maintenance and equipment monitoring',
+    'Intelligent quality control and defect detection',;
+    'Automated production planning and optimization',;
+    'Real-time supply chain and inventory management',;
+    'Predictive analytics for production efficiency',;
+    'Smart factory automation and IoT integration',;
+    'Integration with major ERP and MES systems',;
     'Custom AI models for industry-specific processes';
   ];
 
   const tiers = [
     {
-'
-      name: 'Small Manufacturer','
-      price: '$599/mo','
-      details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support']
+
+      name: 'Small Manufacturer',
+      price: '$599/mo',
+      details: ['Up to 10 production lines',Basic AI features',Standard reports',Email support']
     },
     {
-'
-      name: 'Medium Manufacturer', '
-      price: '$1,299/mo', '
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Medium Manufacturer',
+      price: '$1,299/mo',
+      details: ['Up to 50 production lines',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Large Manufacturer', ;'
-      price: '$2,999/mo', ;'
-      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Large Manufacturer', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited production lines',Custom AI models',Full system integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Production line optimization and monitoring',;'
-    'Quality control and defect prevention',;'
-    'Predictive maintenance and equipment management',;'
-    'Supply chain optimization and inventory management',;'
-    'Energy efficiency and sustainability',;'
+  const useCases = [;
+    'Production line optimization and monitoring',;
+    'Quality control and defect prevention',;
+    'Predictive maintenance and equipment management',;
+    'Supply chain optimization and inventory management',;
+    'Energy efficiency and sustainability',;
     'Workforce safety and compliance';
   ];
 
-  const benefits = [;'
-    'Improve production efficiency by 25-40%',;'
-    'Reduce equipment downtime by 30-50%',;'
-    'Cut quality defects by 40-60%',;'
-    'Optimize inventory levels by 20-35%',;'
-    'Enhance worker safety and compliance',;'
+  const benefits = [;
+    'Improve production efficiency by 25-40%',;
+    'Reduce equipment downtime by 30-50%',;
+    'Cut quality defects by 40-60%',;
+    'Optimize inventory levels by 20-35%',;
+    'Enhance worker safety and compliance',;
     'Scale manufacturing operations efficiently';
   ];
 
-  const industries = [;'
-    'Automotive Manufacturing',;'
-    'Electronics & Semiconductors',;'
-    'Food & Beverage Processing',;'
-    'Pharmaceutical Manufacturing',;'
-    'Textiles & Apparel',;'
+  const industries = [;
+    'Automotive Manufacturing',;
+    'Electronics & Semiconductors',;
+    'Food & Beverage Processing',;
+    'Pharmaceutical Manufacturing',;
+    'Textiles & Apparel',;
     'Aerospace & Defense';
   ];
 
@@ -110,8 +110,8 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['25-40% efficiency improvement', '30-50% downtime reduction', '40-60% defect reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['25-40% efficiency improvement',30-50% downtime reduction',40-60% defect reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-gray-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

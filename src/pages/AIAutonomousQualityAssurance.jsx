@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousQualityAssurance = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousQualityAssurance = () => {
           AI Autonomous Quality Assurance Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous quality assurance platform that continuously monitors quality, ensures standards, and maintains excellence with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI quality assurance, autonomous quality assurance, quality monitoring, standard assurance, autonomous operations, AI quality assurance platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-quality-assurance"
         />
       </Helmet>
@@ -185,13 +185,13 @@ const AIAutonomousQualityAssurance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Software Quality Assurance','
-                'Product Quality Assurance','
-                'Service Quality Assurance','
-                'Process Quality Assurance','
-                'Data Quality Assurance','
-                'Performance Quality Assurance','
-                'Security Quality Assurance','
+                'Software Quality Assurance',
+                'Product Quality Assurance',
+                'Service Quality Assurance',
+                'Process Quality Assurance',
+                'Data Quality Assurance',
+                'Performance Quality Assurance',
+                'Security Quality Assurance',
                 'Compliance Quality Assurance',
               ].map(type => (
                 <div

@@ -1,60 +1,60 @@
 import React from 'react';
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
   const features = [
-    'AI-powered route optimization and fleet management','
-    'Intelligent traffic prediction and congestion avoidance',;'
-    'Automated vehicle maintenance and predictive diagnostics',;'
-    'Real-time logistics optimization and delivery tracking',;'
-    'Predictive analytics for demand forecasting',;'
-    'Smart traffic signal optimization and control',;'
-    'Integration with major transportation management systems',;'
+    'AI-powered route optimization and fleet management',
+    'Intelligent traffic prediction and congestion avoidance',;
+    'Automated vehicle maintenance and predictive diagnostics',;
+    'Real-time logistics optimization and delivery tracking',;
+    'Predictive analytics for demand forecasting',;
+    'Smart traffic signal optimization and control',;
+    'Integration with major transportation management systems',;
     'Custom AI models for transportation-specific insights';
   ];
 
   const tiers = [
     {
-'
-      name: 'Small Fleet','
-      price: '$399/mo','
-      details: ['Up to 25 vehicles', 'Basic AI features', 'Standard reports', 'Email support']
+
+      name: 'Small Fleet',
+      price: '$399/mo',
+      details: ['Up to 25 vehicles',Basic AI features',Standard reports',Email support']
     },
     {
-'
-      name: 'Medium Fleet', '
-      price: '$999/mo', '
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Medium Fleet',
+      price: '$999/mo',
+      details: ['Up to 100 vehicles',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Large Fleet', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Large Fleet', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited vehicles',Custom AI models',Full system integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Fleet management and route optimization',;'
-    'Public transportation optimization',;'
-    'Logistics and supply chain management',;'
-    'Traffic management and smart cities',;'
-    'Ride-sharing and mobility services',;'
+  const useCases = [;
+    'Fleet management and route optimization',;
+    'Public transportation optimization',;
+    'Logistics and supply chain management',;
+    'Traffic management and smart cities',;
+    'Ride-sharing and mobility services',;
     'Freight and cargo transportation';
   ];
 
-  const benefits = [;'
-    'Reduce fuel costs by 15-30%',;'
-    'Improve delivery efficiency by 25-40%',;'
-    'Cut maintenance costs by 20-35%',;'
-    'Optimize routes for maximum productivity',;'
-    'Enhance driver safety and compliance',;'
+  const benefits = [;
+    'Reduce fuel costs by 15-30%',;
+    'Improve delivery efficiency by 25-40%',;
+    'Cut maintenance costs by 20-35%',;
+    'Optimize routes for maximum productivity',;
+    'Enhance driver safety and compliance',;
     'Scale transportation operations efficiently';
   ];
 
-  const industries = [;'
-    'Logistics & Freight',;'
-    'Public Transportation',;'
-    'Ride-sharing & Mobility',;'
-    'E-commerce Delivery',;'
-    'Construction & Heavy Equipment',;'
+  const industries = [;
+    'Logistics & Freight',;
+    'Public Transportation',;
+    'Ride-sharing & Mobility',;
+    'E-commerce Delivery',;
+    'Construction & Heavy Equipment',;
     'Emergency Services';
   ];
 
@@ -110,8 +110,8 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['15-30% fuel cost reduction', '25-40% efficiency improvement', '20-35% maintenance savings'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['15-30% fuel cost reduction',25-40% efficiency improvement',20-35% maintenance savings'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-orange-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

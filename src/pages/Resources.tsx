@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -39,205 +39,205 @@ import {
   Stop'
  } from 'lucide-react';
 
-const Resources: React.FC = (): JSX.Element => {;'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+const Resources: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = ['
-    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },'
-    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },'
-    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },'
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;'
+    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
+    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
+    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
+    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;
     { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
   ];
 
   const featuredResources = [
     {
 
-      id: 1,'
-      title: 'AI Autonomous Research: The Future of Knowledge Discovery','
-      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Emily Watson','
-      date: '2025-01-20','
+      id: 1,
+      title: 'AI Autonomous Research: The Future of Knowledge Discovery',
+      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.',
+      category: 'white-papers',
+      type: 'White Paper',
+      author: 'Dr. Emily Watson',
+      date: '2025-01-20',
       readTime: '18 min read',
       downloads: 3120,
-      rating: 4.9,'
-      image: '/resources/ai-autonomous-research.jpg','
-      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
-      featured: true,'
-      fileSize: '3.1 MB','
-      fileType: 'PDF','
+      rating: 4.9,
+      image: '/resources/ai-autonomous-research.jpg',
+      tags: ['AI Research',Autonomous AI',Knowledge Discovery',Research Automation'],
+      featured: true,
+      fileSize: '3.1 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/ai-autonomous-research.pdf'
     },
     {
 
-      id: 2,'
-      title: 'AI Supply Chain Optimization: Implementation Guide','
-      description: 'Step-by-step guide to implementing AI-powered supply chain optimization for maximum efficiency and cost savings.','
-      category: 'white-papers','
-      type: 'Implementation Guide','
-      author: 'Supply Chain Team','
-      date: '2025-01-18','
+      id: 2,
+      title: 'AI Supply Chain Optimization: Implementation Guide',
+      description: 'Step-by-step guide to implementing AI-powered supply chain optimization for maximum efficiency and cost savings.',
+      category: 'white-papers',
+      type: 'Implementation Guide',
+      author: 'Supply Chain Team',
+      date: '2025-01-18',
       readTime: '22 min read',
       downloads: 2890,
-      rating: 4.8,'
-      image: '/resources/ai-supply-chain-optimization.jpg','
-      tags: ['AI Supply Chain', 'Optimization', 'Implementation', 'Cost Savings'],
-      featured: true,'
-      fileSize: '2.8 MB','
-      fileType: 'PDF','
+      rating: 4.8,
+      image: '/resources/ai-supply-chain-optimization.jpg',
+      tags: ['AI Supply Chain',Optimization',Implementation',Cost Savings'],
+      featured: true,
+      fileSize: '2.8 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/ai-supply-chain-optimization.pdf'
     },
     {
 
-      id: 3,'
-      title: 'AI Content Marketing Suite: Complete User Guide','
-      description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.','
-      category: 'support','
-      type: 'User Guide','
-      author: 'Marketing Team','
-      date: '2025-01-16','
+      id: 3,
+      title: 'AI Content Marketing Suite: Complete User Guide',
+      description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.',
+      category: 'support',
+      type: 'User Guide',
+      author: 'Marketing Team',
+      date: '2025-01-16',
       readTime: '25 min read',
       downloads: 2650,
-      rating: 4.9,'
-      image: '/resources/ai-content-marketing-guide.jpg','
-      tags: ['AI Content', 'Content Marketing', 'User Guide', 'Best Practices'],
-      featured: true,'
-      fileSize: '3.5 MB','
-      fileType: 'PDF','
+      rating: 4.9,
+      image: '/resources/ai-content-marketing-guide.jpg',
+      tags: ['AI Content',Content Marketing',User Guide',Best Practices'],
+      featured: true,
+      fileSize: '3.5 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/ai-content-marketing-guide.pdf'
     },
     {
 
-      id: 4,'
-      title: 'AI-Powered Business Transformation: A Complete Guide','
-      description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Sarah Chen','
-      date: '2025-01-15','
+      id: 4,
+      title: 'AI-Powered Business Transformation: A Complete Guide',
+      description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.',
+      category: 'white-papers',
+      type: 'White Paper',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
       readTime: '15 min read',
       downloads: 2540,
-      rating: 4.9,'
-      image: '/resources/ai-business-transformation.jpg','
-      tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
-      featured: false,'
-      fileSize: '2.4 MB','
-      fileType: 'PDF','
+      rating: 4.9,
+      image: '/resources/ai-business-transformation.jpg',
+      tags: ['AI',Business Transformation',Guide',Strategy'],
+      featured: false,
+      fileSize: '2.4 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/ai-business-transformation.pdf'
     },
     {
 
-      id: 5,'
-      title: 'Quantum Computing Success Story: Financial Services','
-      description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.','
-      category: 'case-studies','
-      type: 'Case Study','
-      author: 'Research Team','
-      date: '2025-01-10','
+      id: 5,
+      title: 'Quantum Computing Success Story: Financial Services',
+      description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.',
+      category: 'case-studies',
+      type: 'Case Study',
+      author: 'Research Team',
+      date: '2025-01-10',
       readTime: '8 min read',
       downloads: 1890,
-      rating: 4.8,'
-      image: '/resources/quantum-financial-case.jpg','
-      tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
-      featured: false,'
-      fileSize: '1.8 MB','
-      fileType: 'PDF','
+      rating: 4.8,
+      image: '/resources/quantum-financial-case.jpg',
+      tags: ['Quantum Computing',Financial Services',Performance',Success Story'],
+      featured: false,
+      fileSize: '1.8 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/quantum-financial-case.pdf'
     },
     {
 
-      id: 3,'
-      title: 'Cybersecurity in the AI Era: Threats & Solutions','
-      description: 'Expert analysis of emerging cybersecurity challenges and AI-powered security solutions.','
-      category: 'webinars','
-      type: 'Webinar Recording','
-      author: 'Marcus Rodriguez','
-      date: '2025-01-08','
+      id: 3,
+      title: 'Cybersecurity in the AI Era: Threats & Solutions',
+      description: 'Expert analysis of emerging cybersecurity challenges and AI-powered security solutions.',
+      category: 'webinars',
+      type: 'Webinar Recording',
+      author: 'Marcus Rodriguez',
+      date: '2025-01-08',
       duration: '60 minutes',
       views: 3200,
-      rating: 4.7,'
-      image: '/resources/cybersecurity-ai-webinar.jpg','
-      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],;
-      featured: false,'
-      fileSize: '450 MB','
-      fileType: 'MP4','
+      rating: 4.7,
+      image: '/resources/cybersecurity-ai-webinar.jpg',
+      tags['Cybersecurity',AI',Webinar',Security'],;
+      featured: false,
+      fileSize: '450 MB',
+      fileType: 'MP4',
       downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
     },
     {
 
-      id: 4,'
-      title: 'Blockchain Implementation: Enterprise Case Study','
-      description: 'Real-world implementation of blockchain technology in supply chain management.','
-      category: 'case-studies','
-      type: 'Case Study','
-      author: 'Blockchain Team','
-      date: '2025-01-05','
+      id: 4,
+      title: 'Blockchain Implementation: Enterprise Case Study',
+      description: 'Real-world implementation of blockchain technology in supply chain management.',
+      category: 'case-studies',
+      type: 'Case Study',
+      author: 'Blockchain Team',
+      date: '2025-01-05',
       readTime: '10 min read',
       downloads: 1560,
-      rating: 4.6,'
-      image: '/resources/blockchain-supply-chain.jpg','
-      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],;
-      featured: false,'
-      fileSize: '2.1 MB','
-      fileType: 'PDF','
+      rating: 4.6,
+      image: '/resources/blockchain-supply-chain.jpg',
+      tags['Blockchain',Supply Chain',Enterprise',Implementation'],;
+      featured: false,
+      fileSize: '2.1 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/blockchain-supply-chain.pdf'
     },
     {
 
-      id: 5,'
-      title: 'IoT Edge Computing: Architecture & Best Practices','
-      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Emily Watson','
-      date: '2024-12-28','
+      id: 5,
+      title: 'IoT Edge Computing: Architecture & Best Practices',
+      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.',
+      category: 'white-papers',
+      type: 'White Paper',
+      author: 'Dr. Emily Watson',
+      date: '2024-12-28',
       readTime: '20 min read',
       downloads: 2100,
-      rating: 4.8,'
-      image: '/resources/iot-edge-computing.jpg','
-      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],;
-      featured: false,'
-      fileSize: '3.2 MB','
-      fileType: 'PDF','
+      rating: 4.8,
+      image: '/resources/iot-edge-computing.jpg',
+      tags['IoT',Edge Computing',Architecture',Best Practices'],;
+      featured: false,
+      fileSize: '3.2 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/iot-edge-computing.pdf'
     },
     {
 
-      id: 6,'
-      title: 'AI Consciousness Research: Breakthrough Findings','
-      description: 'Latest research findings on AI consciousness simulation and its implications.','
-      category: 'white-papers','
-      type: 'Research Paper','
-      author: 'Dr. James Kim','
-      date: '2024-12-25','
+      id: 6,
+      title: 'AI Consciousness Research: Breakthrough Findings',
+      description: 'Latest research findings on AI consciousness simulation and its implications.',
+      category: 'white-papers',
+      type: 'Research Paper',
+      author: 'Dr. James Kim',
+      date: '2024-12-25',
       readTime: '25 min read',
       downloads: 3200,
-      rating: 4.9,'
-      image: '/resources/ai-consciousness-research.jpg','
-      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],;
+      rating: 4.9,
+      image: '/resources/ai-consciousness-research.jpg',
+      tags['AI Consciousness',Research',Breakthrough',Simulation'],;
       featured: false,
       items: ['
-        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },'
-        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },'
-        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },'
+        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
+        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },
+        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },
         { title: 'Training Resources', type: 'Training', readTime: '10 min', featured: false }
       ]
     },
     {
-'
-      id: 'pricing-guide-2025','
+
+      id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
-      icon: DollarSign,'
-      description: 'Complete pricing information','
+      icon: DollarSign,
+      description: 'Complete pricing information',
       color: 'from-emerald-500 to-green-500',
       featured: true,
       items: ['
-        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },'
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;'
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;'
+        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
+        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
+        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
         { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
       ];
     };
@@ -245,51 +245,51 @@ const Resources: React.FC = (): JSX.Element => {;'
 
   const featuredResources = [
     {
-'
-      id: 'api-docs','
+
+      id: 'api-docs',
       title: 'API Reference',
-      icon: GitBranch,'
-      description: 'Comprehensive API documentation','
-      color: 'from-purple-500 to-indigo-500','
+      icon: GitBranch,
+      description: 'Comprehensive API documentation',
+      color: 'from-purple-500 to-indigo-500',
       href: '/api-docs'
     },
     {
-'
-      id: 'developers','
+
+      id: 'developers',
       title: 'Developer Portal',
-      icon: GitCommit,'
-      description: 'Developer tools and resources','
-      color: 'from-blue-500 to-cyan-500','
+      icon: GitCommit,
+      description: 'Developer tools and resources',
+      color: 'from-blue-500 to-cyan-500',
       href: '/developers'
     },
     {
-'
-      id: 'training','
+
+      id: 'training',
       title: 'Training & Certification',
-      icon: Award,'
-      description: 'Professional development programs','
-      color: 'from-green-500 to-emerald-500','
+      icon: Award,
+      description: 'Professional development programs',
+      color: 'from-green-500 to-emerald-500',
       href: '/training'
     },
     {
-'
-      id: 'community',;'
+
+      id: 'community',;
       title: 'Community Forum',;
-      icon: Users,;'
-      description: 'Connect with peers and experts',;'
-      color: 'from-orange-500 to-red-500',;'
+      icon: Users,;
+      description: 'Connect with peers and experts',;
+      color: 'from-orange-500 to-red-500',;
       href: '/community';
     };
   ];
 
   const contactInfo = {
-'
-  phone: '+1 302 464 0950','
+
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
   ;
   ;
   ;
-  ;'
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
@@ -325,14 +325,14 @@ const Resources: React.FC = (): JSX.Element => {;'
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/blog""
+                to="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 <HelpCircle size={20} />
                 Get Help
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
               >
                 <FileText size={20} />
@@ -383,7 +383,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   </p>"
                   <div className="flex items-center justify-between">`
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-'
+
                       resource.badge === 'Essential' ? 'bg-blue-500/20 text-blue-400' :'
                       resource.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :'
                       resource.badge === 'Featured' ? 'bg-purple-500/20 text-purple-400' :'
@@ -801,7 +801,7 @@ const Resources: React.FC = (): JSX.Element => {;'
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need More Resources?
               </h2>"
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Can't find what you're looking for? Our team is here to help you access 
                 the right resources and support for your needs.
               </p>
@@ -841,19 +841,19 @@ const Resources: React.FC = (): JSX.Element => {;'
               "
               <div className="flex flex-wrap justify-center gap-4">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Get Support
                 </Link>
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
                 >
                   Request Custom Resources
                 </Link>
                 <Link"
-                  to="/demo""
+                  to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
                   <Play className="w-5 h-5 inline mr-2" />

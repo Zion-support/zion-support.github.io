@@ -1,223 +1,223 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import {
 
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
   const services = [
     {
-'
-      id: 'ai-workflow-orchestrator','
-      title: 'AI Workflow Orchestrator','
+
+      id: 'ai-workflow-orchestrator',
+      title: 'AI Workflow Orchestrator',
       description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.',
-      icon: Brain,'
+      icon: Brain,
       price: 'From $299/month',
       features: ['
-        'AI-powered workflow automation and orchestration','
-        'Intelligent process optimization and decision making','
-        'Real-time workflow monitoring and analytics','
+        'AI-powered workflow automation and orchestration',
+        'Intelligent process optimization and decision making',
+        'Real-time workflow monitoring and analytics',
         'Multi-platform integration and API management'
       ],
       benefits: ['
-        'Reduce manual workflow processing by 85%','
-        'Improve process efficiency by 60%','
+        'Reduce manual workflow processing by 85%',
+        'Improve process efficiency by 60%',
         'Cut operational costs by 40%'
-      ],'
-      path: '/services/ai-workflow-orchestrator','
+      ],
+      path: '/services/ai-workflow-orchestrator',
       category: 'AI & Automation'
     },
     {
-'
-      id: 'ai-data-governance-platform','
-      title: 'AI Data Governance Platform','
+
+      id: 'ai-data-governance-platform',
+      title: 'AI Data Governance Platform',
       description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',
-      icon: Database,'
+      icon: Database,
       price: 'From $499/month',
       features: ['
-        'AI-powered data discovery and classification','
-        'Automated data quality assessment and monitoring','
-        'Intelligent data lineage tracking and visualization','
+        'AI-powered data discovery and classification',
+        'Automated data quality assessment and monitoring',
+        'Intelligent data lineage tracking and visualization',
         'Advanced data privacy and compliance automation'
       ],
       benefits: ['
-        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)','
-        'Reduce data governance costs by 50%','
+        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA),
+        'Reduce data governance costs by 50%',
         'Improve data quality by 80%'
-      ],'
-      path: '/services/ai-data-governance-platform','
+      ],
+      path: '/services/ai-data-governance-platform',
       category: 'AI & Data'
     },
     {
-'
-      id: 'ai-customer-experience-analytics','
-      title: 'AI Customer Experience Analytics','
+
+      id: 'ai-customer-experience-analytics',
+      title: 'AI Customer Experience Analytics',
       description: 'Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.',
-      icon: Users,'
+      icon: Users,
       price: 'From $399/month',
       features: ['
-        'AI-powered customer journey mapping and analysis','
-        'Real-time sentiment analysis and emotion detection','
-        'Predictive customer behavior modeling','
+        'AI-powered customer journey mapping and analysis',
+        'Real-time sentiment analysis and emotion detection',
+        'Predictive customer behavior modeling',
         'Automated customer feedback collection and analysis'
       ],
       benefits: ['
-        'Increase customer satisfaction scores by 45%','
-        'Reduce customer churn by 60%','
+        'Increase customer satisfaction scores by 45%',
+        'Reduce customer churn by 60%',
         'Improve customer lifetime value by 35%'
-      ],'
-      path: '/services/ai-customer-experience-analytics','
+      ],
+      path: '/services/ai-customer-experience-analytics',
       category: 'AI & Analytics'
     },
     {
-'
-      id: 'ai-supply-chain-optimization','
-      title: 'AI Supply Chain Optimization','
+
+      id: 'ai-supply-chain-optimization',
+      title: 'AI Supply Chain Optimization',
       description: 'Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
-      icon: Truck,'
+      icon: Truck,
       price: 'From $599/month',
       features: ['
-        'AI-powered demand forecasting and inventory optimization','
-        'Real-time supply chain monitoring and risk assessment','
-        'Intelligent route optimization and logistics planning','
+        'AI-powered demand forecasting and inventory optimization',
+        'Real-time supply chain monitoring and risk assessment',
+        'Intelligent route optimization and logistics planning',
         'Automated supplier performance analysis and scoring'
       ],
       benefits: ['
-        'Reduce supply chain costs by 25-40%','
-        'Improve inventory accuracy by 90%','
+        'Reduce supply chain costs by 25-40%',
+        'Improve inventory accuracy by 90%',
         'Reduce lead times by 30-50%'
-      ],'
-      path: '/services/ai-supply-chain-optimization','
+      ],
+      path: '/services/ai-supply-chain-optimization',
       category: 'AI & Logistics'
     },
     {
-'
-      id: 'ai-financial-risk-management','
-      title: 'AI Financial Risk Management','
+
+      id: 'ai-financial-risk-management',
+      title: 'AI Financial Risk Management',
       description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
-      icon: Shield,'
+      icon: Shield,
       price: 'From $799/month',
       features: ['
-        'AI-powered credit risk assessment and scoring','
-        'Real-time market risk monitoring and alerts','
-        'Intelligent fraud detection and prevention','
+        'AI-powered credit risk assessment and scoring',
+        'Real-time market risk monitoring and alerts',
+        'Intelligent fraud detection and prevention',
         'Advanced portfolio risk analysis and optimization'
       ],
       benefits: ['
-        'Reduce credit losses by 40-60%','
-        'Improve risk-adjusted returns by 25%','
+        'Reduce credit losses by 40-60%',
+        'Improve risk-adjusted returns by 25%',
         'Detect fraud with 99.5% accuracy'
-      ],'
-      path: '/services/ai-financial-risk-management','
+      ],
+      path: '/services/ai-financial-risk-management',
       category: 'AI & Finance'
     },
     {
-'
-      id: 'ai-hr-talent-acquisition','
-      title: 'AI HR Talent Acquisition','
+
+      id: 'ai-hr-talent-acquisition',
+      title: 'AI HR Talent Acquisition',
       description: 'Revolutionize your hiring process with AI-powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
-      icon: Briefcase,'
+      icon: Briefcase,
       price: 'From $299/month',
       features: ['
-        'AI-powered candidate sourcing and matching','
-        'Intelligent resume parsing and skill extraction','
-        'Automated candidate screening and assessment','
+        'AI-powered candidate sourcing and matching',
+        'Intelligent resume parsing and skill extraction',
+        'Automated candidate screening and assessment',
         'Predictive candidate success modeling'
       ],
       benefits: ['
-        'Reduce time-to-hire by 60%','
-        'Improve candidate quality by 45%','
+        'Reduce time-to-hire by 60%',
+        'Improve candidate quality by 45%',
         'Reduce recruitment costs by 40%'
-      ],'
-      path: '/services/ai-hr-talent-acquisition','
+      ],
+      path: '/services/ai-hr-talent-acquisition',
       category: 'AI & HR'
     },
     {
-'
-      id: 'ai-iot-edge-computing','
-      title: 'AI IoT Edge Computing','
+
+      id: 'ai-iot-edge-computing',
+      title: 'AI IoT Edge Computing',
       description: 'Transform your IoT infrastructure with AI-powered edge computing that processes data locally, reduces latency, and enables real-time intelligent decision making.',
-      icon: Cpu,'
+      icon: Cpu,
       price: 'From $499/month',
       features: ['
-        'AI-powered edge computing and processing','
-        'Real-time IoT device management and monitoring','
-        'Intelligent edge analytics and decision making','
+        'AI-powered edge computing and processing',
+        'Real-time IoT device management and monitoring',
+        'Intelligent edge analytics and decision making',
         'Advanced device connectivity and protocol support'
       ],
       benefits: ['
-        'Reduce latency by 80-90%','
-        'Lower bandwidth costs by 60%','
+        'Reduce latency by 80-90%',
+        'Lower bandwidth costs by 60%',
         'Improve device reliability by 75%'
-      ],'
-      path: '/services/ai-iot-edge-computing','
+      ],
+      path: '/services/ai-iot-edge-computing',
       category: 'AI & IoT'
     },
     {
-'
-      id: 'ai-predictive-maintenance','
-      title: 'AI Predictive Maintenance','
+
+      id: 'ai-predictive-maintenance',
+      title: 'AI Predictive Maintenance',
       description: 'Transform your maintenance operations with AI-powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
-      icon: Wrench,'
+      icon: Wrench,
       price: 'From $399/month',
       features: ['
-        'AI-powered equipment health monitoring and analysis','
-        'Real-time predictive maintenance scheduling','
-        'Intelligent failure prediction and prevention','
+        'AI-powered equipment health monitoring and analysis',
+        'Real-time predictive maintenance scheduling',
+        'Intelligent failure prediction and prevention',
         'Advanced sensor data analysis and processing'
       ],
       benefits: ['
-        'Reduce unplanned downtime by 70-90%','
-        'Lower maintenance costs by 25-40%','
+        'Reduce unplanned downtime by 70-90%',
+        'Lower maintenance costs by 25-40%',
         'Extend equipment lifespan by 20-30%'
-      ],'
-      path: '/services/ai-predictive-maintenance','
+      ],
+      path: '/services/ai-predictive-maintenance',
       category: 'AI & Maintenance'
     },
     {
-'
-      id: 'ai-sustainable-technology','
-      title: 'AI Sustainable Technology','
+
+      id: 'ai-sustainable-technology',
+      title: 'AI Sustainable Technology',
       description: 'Transform your organization into a sustainability leader with AI-powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
-      icon: Leaf,'
+      icon: Leaf,
       price: 'From $299/month',
       features: ['
-        'AI-powered energy consumption optimization','
-        'Real-time sustainability monitoring and reporting','
-        'Intelligent carbon footprint tracking and reduction','
+        'AI-powered energy consumption optimization',
+        'Real-time sustainability monitoring and reporting',
+        'Intelligent carbon footprint tracking and reduction',
         'Advanced waste management and recycling optimization'
       ],
       benefits: ['
-        'Reduce energy consumption by 25-40%','
-        'Lower carbon footprint by 30-50%','
+        'Reduce energy consumption by 25-40%',
+        'Lower carbon footprint by 30-50%',
         'Improve resource efficiency by 35%'
-      ],'
-      path: '/services/ai-sustainable-technology','
+      ],
+      path: '/services/ai-sustainable-technology',
       category: 'AI & Sustainability'
     },
     {
-'
-      id: 'ai-quantum-machine-learning','
-      title: 'AI Quantum Machine Learning','
+
+      id: 'ai-quantum-machine-learning',
+      title: 'AI Quantum Machine Learning',
       description: 'Revolutionize your computational capabilities with AI-powered quantum machine learning that solves previously impossible problems and accelerates innovation.',
-      icon: Atom,'
+      icon: Atom,
       price: 'From $1,999/month',
       features: ['
-        'Quantum-enhanced machine learning algorithms','
-        'Hybrid quantum-classical computing solutions','
-        'Advanced quantum neural network optimization','
+        'Quantum-enhanced machine learning algorithms',
+        'Hybrid quantum-classical computing solutions',
+        'Advanced quantum neural network optimization',
         'Real-time quantum algorithm execution'
       ],
       benefits: ['
-        'Solve complex problems 100x faster than classical computing','
-        'Improve machine learning accuracy by 40-60%','
+        'Solve complex problems 100x faster than classical computing',
+        'Improve machine learning accuracy by 40-60%',
         'Enable previously impossible computational tasks'
-      ],'
-      path: '/services/ai-quantum-machine-learning','
+      ],
+      path: '/services/ai-quantum-machine-learning',
       category: 'AI & Quantum Computing'
     }
     setExpandedServices(newExpanded);
@@ -252,7 +252,7 @@ import { SEO } from '@/components/SEO';
   return()
     <div className="min-h-screen bg-white">
       <SEO "
-        title="Innovative AI Services Showcase 2025 - Zion Tech Group""
+        title="Innovative AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
       />
       "
@@ -380,8 +380,8 @@ import { SEO } from '@/components/SEO';
               <Globe className="w-5 h-5" />
               <div>"
                 <p className="text-sm text-blue-100">Website</p>"
-                <a href={contactInfo.website} className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">'
-                  {contactInfo.website.replace('https://', '')}
+                <a href={contactInfo.website} className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+                  {contactInfo.website.replace('https://',')}
                 </a>
               </div>
             </div>"
@@ -404,7 +404,7 @@ import { SEO } from '@/components/SEO';
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
@@ -475,7 +475,7 @@ import { SEO } from '@/components/SEO';
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 h-full">
                   {/* Service Header */}"
                   <div className="mb-4">"
-                    <div className="flex items-center justify-between mb-3">'
+                    <div className="flex items-center justify-between mb-3">
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>"
                         {categoryIcons[service.category] || <Star className="w-5 h-5 text-white" />}
                       </div>"

@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -6,7 +6,7 @@ import {
   RefreshCw,
   Home,
   ArrowLeft,
-  Bug,'
+  Bug,
   Send} from 'lucide-react';
 
 interface Props {
@@ -89,12 +89,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
-'
-        method: 'POST','
+
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)});
     } catch (reportError) {
-'
+
       // console.error('Failed to report error:', reportError);
     }
   }
@@ -110,7 +110,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
-'
+
     window.location.href = '/';
   };
 
@@ -130,7 +130,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         this.setState ({ reportSent: false }) ;
       }, 3000) ;
     } catch (error) {
-'
+
       // console.error('Failed to report error:', error);
     } finally {
 
@@ -153,7 +153,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
-'
+
     window.location.href = '/';
   };
 
@@ -174,7 +174,7 @@ Timestamp: ${new Date().toISOString()}`
         await navigator.clipboard.writeText (errorText) ;
         // You could show a toast notification here
       } catch (err) {
-'
+
         // console.error('Failed to copy error details:', err);
       }
     }
@@ -203,7 +203,7 @@ Timestamp: ${new Date().toISOString()}`
             {/* Error Icon */}
             <motion.div
               initial={{ scale: 0 }}
-              animate={{ scale: 1 }}'
+              animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: 'spring' }}"
               className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6"
             >"
@@ -225,7 +225,7 @@ Timestamp: ${new Date().toISOString()}`
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}"
               className="text-gray-300 mb-6 text-lg"
-            >'
+            >
               We're sorry, but something unexpected happened. Our team has been
               notified and is working to fix this issue.
             </motion.p>
@@ -241,7 +241,7 @@ Timestamp: ${new Date().toISOString()}`
                 Error Details
               </summary>"
               <div className="bg-black/20 rounded-lg p-4 text-sm text-gray-300 font-mono">"
-                <div className="mb-2">'
+                <div className="mb-2">
                   <strong>Error:</strong> {this.state.error?.name}:{' '}
                   {this.state.error?.message}
                 </div>
@@ -336,10 +336,10 @@ Timestamp: ${new Date().toISOString()}`
               transition={{ delay: 0.8 }}"
               className="mt-6 pt-6 border-t border-gray-600"
             >"
-              <p className="text-gray-400 text-sm">'
+              <p className="text-gray-400 text-sm">
                 If this problem persists, please contact our support team at{' '}
                 <a"
-                  href="mailto:support@ziontechgroup.com""
+                  href="mailto:support@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 underline"
                 >
                   support@ziontechgroup.com

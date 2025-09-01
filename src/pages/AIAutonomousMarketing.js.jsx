@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousMarketing = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousMarketing = () => {
       <Helmet>
         <title>AI Autonomous Marketing Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-marketing"
         />
       </Helmet>
@@ -171,13 +171,13 @@ const AIAutonomousMarketing = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Email Marketing','
-                'Social Media','
-                'Content Marketing','
-                'PPC Advertising','
-                'SEO/SEM','
-                'Influencer Marketing','
-                'Video Marketing','
+                'Email Marketing',
+                'Social Media',
+                'Content Marketing',
+                'PPC Advertising',
+                'SEO/SEM',
+                'Influencer Marketing',
+                'Video Marketing',
                 'Mobile Marketing',
               ].map(channel => (
                 <div

@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {
   const features = [
-    'AI-powered Redis optimization','
-    'Intelligent Redis management',;'
-    'Automated Redis monitoring and alerting',;'
-    'Predictive analytics for Redis scaling',;'
-    'Smart Redis security and compliance',;'
-    'AI-driven Redis automation and orchestration',;'
-    'Real-time Redis analytics and insights',;'
+    'AI-powered Redis optimization',
+    'Intelligent Redis management',;
+    'Automated Redis monitoring and alerting',;
+    'Predictive analytics for Redis scaling',;
+    'Smart Redis security and compliance',;
+    'AI-driven Redis automation and orchestration',;
+    'Real-time Redis analytics and insights',;
     'Custom AI models for Redis applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$299/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$299/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$799/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$799/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full Redis suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full Redis suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Redis optimization',;'
-    'Redis management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'Redis optimization',;
+    'Redis management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'Redis scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve Redis performance by 50-80%',;'
-    'Reduce Redis latency by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Redis reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve Redis performance by 50-80%',;
+    'Reduce Redis latency by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance Redis reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale Redis operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% latency reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% latency reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-red-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

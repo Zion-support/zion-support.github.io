@@ -67,7 +67,7 @@ export default function Terms(...args[]):  {
 "
 						<div className="mb-12">"
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">3. Use License</h2>"
-							<p className="text-gray-600 mb-4">'
+							<p className="text-gray-600 mb-4">
 								Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
 							</p>"
 							<ul className="space-y-2 text-gray-600 mb-6">"
@@ -171,7 +171,7 @@ export default function Terms(...args[]):  {
 "
 						<div className="mb-12">"
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">7. Limitation of Liability</h2>"
-							<p className="text-gray-600 mb-4">'
+							<p className="text-gray-600 mb-4">
 								In no event shall Zion Tech Group or its suppliers be liable for  damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
 							</p>"
 							<p className="text-gray-600">
@@ -255,11 +255,11 @@ export default function Terms(...args[]):  {
 					<h2 className="text-2xl font-bold text-gray-900 mb-4">
 						Questions About Our Terms?
 					</h2>"
-					<p className="text-gray-600 mb-6">'
+					<p className="text-gray-600 mb-6">
 						We're here to clarify  questions about our terms of service.
 					</p>
 					<Link"
-						to="/contact""
+						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
 
 						Contact Us"

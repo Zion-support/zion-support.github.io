@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -11,14 +11,14 @@ import {
   TrendingUp,
   Play,
   Download,
-  ExternalLink,'
-  Search} from 'lucide-react';'
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';'
+  ExternalLink,
+  Search} from 'lucide-react';
+import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
 const ComprehensiveServicesShowcase2025 = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const allServices = [
     ...CUTTING_EDGE_SERVICES_2025,
@@ -141,7 +141,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="md:col-span-2">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
@@ -160,7 +160,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   key={category}
                   value={category}"
                   className="bg-slate-800 text-white"
-                >'
+                >
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -175,7 +175,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   key={industry}
                   value={industry}"
                   className="bg-slate-800 text-white"
-                >'
+                >
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>
               ))}
@@ -186,8 +186,8 @@ const ComprehensiveServicesShowcase2025 = () => {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
-          animate="visible""
+          initial="hidden"
+          animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
@@ -219,7 +219,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Industry Badge */}'
+                {/* Industry Badge */}
                 {'industry' in service && ("
                   <div className="inline-block px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full mb-3">
                     {service.industry}
@@ -384,9 +384,9 @@ const ComprehensiveServicesShowcase2025 = () => {
             </p>
             <button
               onClick={() => {
-'
-                setSearchTerm('');'
-                setSelectedCategory('all');'
+
+                setSearchTerm('');
+                setSelectedCategory('all');
                 setSelectedIndustry('all');
               }}"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"

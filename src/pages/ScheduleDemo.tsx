@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
 import { SEO } from "../components/SEO";
 
@@ -18,45 +18,45 @@ interface DemoFormData {
 const ScheduleDemo: React.FC = (): JSX.Element => {
 
   const [formData, setFormData] = useState<any>({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    comp: '','
-    phone: '','
-    preferredDate: '',;'
-    preferredTime: '',;'
+
+    firstName: '',
+    lastName: '',
+    email: '',
+    comp: '',
+    phone: '',
+    preferredDate: '',;
+    preferredTime: '',;
     attendees: '1-5',;
-    services: [],;'
+    services: [],;
     message: '';
   }) ;
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
-  const timeSlots = [;'
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',;'
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM';
+  const timeSlots = [;
+    '9:00 AM',10:00 AM',11:00 AM',12:00 PM',;
+    '1:00 PM',2:00 PM',3:00 PM',4:00 PM',5:00 PM';
   ];
 
   const availableServices = ['
-    { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },'
-    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },;'
-    { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },;'
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;'
-    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },;'
-    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;'
-    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;'
+    { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },;
+    { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },;
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;
+    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },;
+    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;
+    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
-'
+
       // // // // // // // // console.error('Error submitting form:', error);
     } finally {
 
       setIsSubmitting(false);
 
       setIsSubmitted(true)} catch (error) {
-'
+
       // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
@@ -94,7 +94,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             <CheckCircle className="w-10 h-10 text-white" />
           </div>"
           <h1 className="text-4xl font-bold text-white mb-4">Demo Scheduled Successfully!</h1>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
           </p>"
           <div className="bg-slate-800/50 rounded-xl p-6 mb-8">"
@@ -122,13 +122,13 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/""
+              href="/"
               className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
 
               Return to Home
             </a>
             <a"
-              href="/contact""
+              href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
             >
               Contact Us;
@@ -141,8 +141,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Schedule a Demo - Zion Tech Group""
-        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business.""
+        title="Schedule a Demo - Zion Tech Group"
+        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
         keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
       />
 
@@ -166,7 +166,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Schedule Your"
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 {' '}Demo
               </span>
             </h1>"
@@ -247,7 +247,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}"
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your first name"
                       />
                     </div>
@@ -270,7 +270,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}"
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your last name"
                       />
                     </div>
@@ -296,7 +296,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}"
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -319,7 +319,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}"
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter comp name"
                       />
                     </div>
@@ -344,7 +344,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter phone number"
                     />
                   </div>
@@ -469,7 +469,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 }))}
                       rows={4}"
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your specific needs, challenges, or questions..."
                     />
                   </div>
@@ -559,14 +559,14 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                   </h3>"
                   <div className="space-y-3 text-sm">
                     <a"
-                      href="tel:+13024640950""
+                      href="tel:+13024640950"
                       className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
 "
                       <Phone className="w-4 h-4" />
                       +1 302 464 0950
                     </a>
                     <a"
-                      href="mailto:kleber@ziontechgroup.com""
+                      href="mailto:kleber@ziontechgroup.com"
                       className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
 "
                       <Mail className="w-4 h-4" />

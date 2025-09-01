@@ -1,21 +1,21 @@
-import React, { useState, useMemo } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import {
 
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,'
+  SelectTrigger,
   SelectValue} from '@/components/ui/select';
 import {
 
@@ -29,17 +29,17 @@ import {
   DollarSign,
   Clock,
   Users,
-  Search,'
+  Search,
   Building} from 'lucide-react';
 import {
 
   COMPREHENSIVE_SERVICES,
-  SERVICE_CATEGORIES,'
+  SERVICE_CATEGORIES,
   PRICING_TIERS} from '@/data/comprehensiveServices';
 export default function ComprehensiveServicesPage() {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingTier, setSelectedPricingTier] = useState('all');
   const filteredServices = useMemo(() => {
     return COMPREHENSIVE_SERVICES.filter(service => {
@@ -66,7 +66,7 @@ export default function ComprehensiveServicesPage() {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               >"
                 <Phone className="w-5 h-5 mr-2" />
@@ -75,8 +75,8 @@ export default function ComprehensiveServicesPage() {
             </Link>"
             <Link to="/services-pricing">
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
               >"
                 <DollarSign className="w-5 h-5 mr-2" />
@@ -106,7 +106,7 @@ export default function ComprehensiveServicesPage() {
             <div className="flex items-center gap-2">"
               <Globe className="w-5 h-5 text-zion-cyan" />
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="hover:text-zion-cyan transition-colors"
               >
                 ziontechgroup.com
@@ -180,7 +180,7 @@ export default function ComprehensiveServicesPage() {
                       <Building className="w-6 h-6" />
                     </div>
                     <Badge"
-                      variant="outline""
+                      variant="outline"
                       className="border-zion-cyan text-zion-cyan"
                     >
                       {service.category}
@@ -199,7 +199,7 @@ export default function ComprehensiveServicesPage() {
                     {service.tags.slice(0, 3).map(tag => (
                       <Badge
                         key={tag}"
-                        variant="secondary""
+                        variant="secondary"
                         className="bg-zion-blue-light text-zion-cyan"
                       >
                         {tag}
@@ -226,7 +226,7 @@ export default function ComprehensiveServicesPage() {
                       Get Quote
                     </Button>
                     <Button"
-                      variant="outline""
+                      variant="outline"
                       className="border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10"
                     >"
                       <Eye className="w-4 h-4" />
@@ -244,10 +244,10 @@ export default function ComprehensiveServicesPage() {
               </div>
               <Button
                 onClick={() => {
-'
-                  setSearchTerm('');'
-                  setSelectedCategory('all');'
-                  setSelectedSubcategory('all');'
+
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                  setSelectedSubcategory('all');
                   setPriceRange('all');
                 }}
               >
@@ -274,25 +274,25 @@ export default function ComprehensiveServicesPage() {
             {[
               {
 "
-                icon: <Zap className="w-8 h-8" />,'
+                icon: <Zap className="w-8 h-8" />,
                 title: 'Innovation First',
                 description:'
                   'Cutting-edge AI and technology solutions that keep you ahead of the competition'},
               {
 "
-                icon: <Shield className="w-8 h-8" />,'
+                icon: <Shield className="w-8 h-8" />,
                 title: 'Enterprise Security',
                 description:'
                   'Bank-level security and compliance for all our solutions and services'},
               {
 "
-                icon: <Building className="w-8 h-8" />,'
+                icon: <Building className="w-8 h-8" />,
                 title: 'Proven Results',
                 description:'
                   'Track record of successful implementations and measurable business outcomes'},
               {
 "
-                icon: <Users className="w-8 h-8" />,'
+                icon: <Users className="w-8 h-8" />,
                 title: 'Expert Support',
                 description:'
                   '24/7 technical support and dedicated account management for enterprise clients'},
@@ -328,15 +328,15 @@ export default function ComprehensiveServicesPage() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white"
             >"
               <Phone className="w-5 h-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="w-5 h-5 mr-2" />
@@ -345,10 +345,10 @@ export default function ComprehensiveServicesPage() {
           </div>"
           <div className="mt-8 text-zion-cyan">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
+            <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="underline hover:text-white"
               >
                 https://ziontechgroup.com

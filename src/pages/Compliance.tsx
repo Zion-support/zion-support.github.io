@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -24,154 +24,154 @@ import {
   Laptop,
   ShieldCheck,
   Gauge,
-  TrendingUp,'
+  TrendingUp,
   BarChart3} from 'lucide-react';
 
   const complianceFrameworks = [
     {
-'
-      name: 'ISO 27001','
-      description: 'Information Security Management System','
+
+      name: 'ISO 27001',
+      description: 'Information Security Management System',
       status: 'Certified',
-      icon: FileText,'
-      color: 'from-green-500 to-emerald-600','
-      details: 'International standard for information security management','
-      scope: 'Information security management system','
-      lastAudit: 'December 2024','
+      icon: FileText,
+      color: 'from-green-500 to-emerald-600',
+      details: 'International standard for information security management',
+      scope: 'Information security management system',
+      lastAudit: 'December 2024',
       nextAudit: 'December 2025',
       benefits: ['
-        'Systematic approach to information security','
-        'Risk assessment and management','
-        'Continuous improvement process','
+        'Systematic approach to information security',
+        'Risk assessment and management',
+        'Continuous improvement process',
         'International recognition',
       ]},
     {
-'
-      name: 'SOC 2 Type II','
-      description: 'Service Organization Control 2','
+
+      name: 'SOC 2 Type II',
+      description: 'Service Organization Control 2',
       status: 'Compliant',
-      icon: Award,'
-      color: 'from-blue-500 to-cyan-600','
+      icon: Award,
+      color: 'from-blue-500 to-cyan-600',
       details: 'AICPA trust services criteria compliance',
       scope:'
-        'Security, availability, processing integrity, confidentiality, privacy','
-      lastAudit: 'November 2024','
+        'Security, availability, processing integrity, confidentiality, privacy',
+      lastAudit: 'November 2024',
       nextAudit: 'November 2025',
       benefits: ['
-        'Independent third-party validation','
-        'Trust services criteria compliance','
-        'Customer confidence and trust','
+        'Independent third-party validation',
+        'Trust services criteria compliance',
+        'Customer confidence and trust',
         'Operational effectiveness',
       ]},
     {
-'
-      name: 'GDPR','
-      description: 'General Data Protection Regulation','
+
+      name: 'GDPR',
+      description: 'General Data Protection Regulation',
       status: 'Compliant',
-      icon: Shield,'
-      color: 'from-purple-500 to-indigo-600','
-      details: 'EU data protection and privacy regulation','
-      scope: 'Personal data processing and protection','
-      lastAudit: 'October 2024','
+      icon: Shield,
+      color: 'from-purple-500 to-indigo-600',
+      details: 'EU data protection and privacy regulation',
+      scope: 'Personal data processing and protection',
+      lastAudit: 'October 2024',
       nextAudit: 'October 2025',
       benefits: ['
-        'Enhanced data protection','
-        'Individual privacy rights','
-        'Transparent data processing','
+        'Enhanced data protection',
+        'Individual privacy rights',
+        'Transparent data processing',
         'Cross-border data transfer compliance',
       ]},
     {
-'
-      name: 'HIPAA','
-      description: 'Health Insurance Portability and Accountability Act','
+
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
-      icon: Heart,'
-      color: 'from-red-500 to-pink-600','
-      details: 'Healthcare data protection and privacy','
-      scope: 'Protected health information (PHI)','
-      lastAudit: 'September 2024','
+      icon: Heart,
+      color: 'from-red-500 to-pink-600',
+      details: 'Healthcare data protection and privacy',
+      scope: 'Protected health information (PHI),
+      lastAudit: 'September 2024',
       nextAudit: 'September 2025',
       benefits: ['
-        'Healthcare data security','
-        'Patient privacy protection','
-        'Administrative safeguards','
+        'Healthcare data security',
+        'Patient privacy protection',
+        'Administrative safeguards',
         'Technical safeguards',
       ]},
   ];
 
   const complianceMetrics = [
     {
-'
-      metric: '99.9%','
-      label: 'Uptime','
+
+      metric: '99.9%',
+      label: 'Uptime',
       description: 'System availability',
-      icon: Server,'
+      icon: Server,
       trend: 'up'},
     {
-'
-      metric: '100%','
-      label: 'Data Encryption','
+
+      metric: '100%',
+      label: 'Data Encryption',
       description: 'At rest and in transit',
-      icon: Lock,'
+      icon: Lock,
       trend: 'stable'},
     {
-'
-      metric: '< 1 hour','
-      label: 'Incident Response','
+
+      metric: '< 1 hour',
+      label: 'Incident Response',
       description: 'Average response time',
-      icon: AlertTriangle,'
+      icon: AlertTriangle,
       trend: 'down'},
     {
-'
-      metric: '24/7','
-      label: 'Monitoring','
+
+      metric: '24/7',
+      label: 'Monitoring',
       description: 'Security operations center',
-      icon: Monitor,'
+      icon: Monitor,
       trend: 'stable'},
   ];
 
   const securityFeatures = [
     {
-'
+
       category: 'Access Control',
       measures: ['
-        'Multi-factor authentication (MFA)','
-        'Role-based access control (RBAC)','
-        'Single sign-on (SSO) integration','
-        'Privileged access management (PAM)','
+        'Multi-factor authentication (MFA),
+        'Role-based access control (RBAC),
+        'Single sign-on (SSO) integration',
+        'Privileged access management (PAM),
         'Session management and timeout',
       ],
       icon: Key},
     {
-'
+
       category: 'Data Protection',
       measures: ['
-        'End-to-end encryption (AES-256)','
-        'Data loss prevention (DLP)','
-        'Backup and disaster recovery','
-        'Data classification and labeling','
+        'End-to-end encryption (AES-256),
+        'Data loss prevention (DLP),
+        'Backup and disaster recovery',
+        'Data classification and labeling',
         'Secure data disposal',
       ],
       icon: Database},
     {
-'
+
       category: 'Network Security',
       measures: ['
-        'Firewall and intrusion detection','
-        'Virtual private networks (VPN)','
-        'DDoS protection and mitigation','
-        'Network segmentation','
+        'Firewall and intrusion detection',
+        'Virtual private networks (VPN),
+        'DDoS protection and mitigation',
+        'Network segmentation',
         'Regular security assessments',
       ],
       icon: Network},
     {
-'
+
       category: 'Application Security',
       measures: ['
-        'Secure software development lifecycle','
-        'Regular vulnerability assessments','
-        'Penetration testing','
-        'Code security reviews','
+        'Secure software development lifecycle',
+        'Regular vulnerability assessments',
+        'Penetration testing',
+        'Code security reviews',
         'API security and monitoring',
       ],
       icon: Shield},
@@ -179,16 +179,16 @@ import {
 
   const complianceTools = [
     {
-'
-      title: 'Compliance Team','
-      email: 'compliance@ziontechgroup.com','
-      phone: '+1 302 464 0950','
+
+      title: 'Compliance Team',
+      email: 'compliance@ziontechgroup.com',
+      phone: '+1 302 464 0950',
       responseTime: '24-48 hours'},
     {
-'
-      title: 'Security Team','
-      email: 'security@ziontechgroup.com','
-      phone: '+1 302 464 0950','
+
+      title: 'Security Team',
+      email: 'security@ziontechgroup.com',
+      phone: '+1 302 464 0950',
       responseTime: '2-4 hours'},
   ];
 

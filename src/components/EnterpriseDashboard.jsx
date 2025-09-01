@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
 export const EnterpriseDashboard = () => {
@@ -7,91 +7,91 @@ export const EnterpriseDashboard = () => {
 
         enableTracking: true,
         enableUserBehaviorTracking: true
-    });'
+    });
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds
-    const [isRefreshing, setIsRefreshing] = useState(false);'
-    const [dateRange, setDateRange] = useState('24h');'
-    const [searchQuery, setSearchQuery] = useState('');'
+    const [isRefreshing, setIsRefreshing] = useState(false);
+    const [dateRange, setDateRange] = useState('24h');
+    const [searchQuery, setSearchQuery] = useState('');
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs
     const [systemMetrics] = useState([
         {
-'
-            id: 'cpu','
+
+            id: 'cpu',
             name: 'CPU Usage',
-            value: 45,'
-            unit: '%','
-            status: 'healthy','
+            value: 45,
+            unit: '%',
+            status: 'healthy',
             trend: 'stable',
             change: 2,
             threshold: { warning: 70, critical: 90 },
             lastUpdated: new Date () },
         {
-'
-            id: 'memory','
+
+            id: 'memory',
             name: 'Memory Usage',
-            value: 78,'
-            unit: '%','
-            status: 'warning','
+            value: 78,
+            unit: '%',
+            status: 'warning',
             trend: 'up',
             change: 8,
             threshold: { warning: 75, critical: 90 },
             lastUpdated: new Date () },
         {
-'
-            id: 'disk','
+
+            id: 'disk',
             name: 'Disk Usage',
-            value: 65,'
-            unit: '%','
-            status: 'healthy','
+            value: 65,
+            unit: '%',
+            status: 'healthy',
             trend: 'stable',
             change: 1,
             threshold: { warning: 80, critical: 95 },
             lastUpdated: new Date () },
         {
-'
-            id: 'network','
+
+            id: 'network',
             name: 'Network Load',
-            value: 32,'
-            unit: 'Mbps','
-            status: 'healthy','
+            value: 32,
+            unit: 'Mbps',
+            status: 'healthy',
             trend: 'down',
             change: -5,
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date () ]) ;
     const [serviceStatuses] = useState ([
         {
-'
-            id: 'web-server','
-            name: 'Web Server','
+
+            id: 'web-server',
+            name: 'Web Server',
             status: 'online',
             uptime: 99.98,
             responseTime: 45,
             errorRate: 0.02
         },
         {
-'
-            id: 'database','
-            name: 'Database','
+
+            id: 'database',
+            name: 'Database',
             status: 'online',
             uptime: 99.95,
             responseTime: 12,
             errorRate: 0.01
         },
         {
-'
-            id: 'api-gateway','
-            name: 'API Gateway','
+
+            id: 'api-gateway',
+            name: 'API Gateway',
             status: 'degraded',
             uptime: 99.87,
             responseTime: 89,
             errorRate: 0.15
         },
         {
-'
-            id: 'cache-server','
-            name: 'Cache Server','
+
+            id: 'cache-server',
+            name: 'Cache Server',
             status: 'online',
             uptime: 99.99,
             responseTime: 2,
@@ -100,53 +100,53 @@ export const EnterpriseDashboard = () => {
     ]) ;
     const [securityAlerts] = useState ([
         {
-'
-            id: 'alert-1','
-            severity: 'medium','
-            type: 'anomaly','
-            title: 'Unusual Login Pattern Detected','
+
+            id: 'alert-1',
+            severity: 'medium',
+            type: 'anomaly',
+            title: 'Unusual Login Pattern Detected',
             description: 'Multiple login attempts from different locations within short time frame',
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago'
-            status: 'investigating','
-            affected['user-123', 'user-456'],;'
+            status: 'investigating',
+            affected['user-123',user-456'],;
             source: 'Security Monitoring System'
         },
         {
-'
-            id: 'alert-2','
-            severity: 'low','
-            type: 'access_violation','
-            title: 'Failed Authentication Attempt','
+
+            id: 'alert-2',
+            severity: 'low',
+            type: 'access_violation',
+            title: 'Failed Authentication Attempt',
             description: 'User attempted to access restricted resource without proper permissions',
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago'
-            status: 'resolved','
-            affected['user-789'],;'
+            status: 'resolved',
+            affected['user-789'],;
             source: 'Access Control System'
 
     ]) ;
     const [userActivities] = useState ([
         {
-'
-            id: 'activity-1','
-            userId: 'user-123','
-            userName: 'John Doe','
-            action: 'login','
+
+            id: 'activity-1',
+            userId: 'user-123',
+            userName: 'John Doe',
+            action: 'login',
             resource: 'dashboard',
-            timestamp: new Date(Date.now() - 1000 * 60 * 2),'
-            ipAddress: '192.168.1.100','
-            userAgent: 'Chrome/91.0.4472.124','
+            timestamp: new Date(Date.now() - 1000 * 60 * 2),
+            ipAddress: '192.168.1.100',
+            userAgent: 'Chrome/91.0.4472.124',
             status: 'success'
         },
         {
-'
-            id: 'activity-2','
-            userId: 'user-456','
-            userName: 'Jane Smith','
-            action: 'data_export','
+
+            id: 'activity-2',
+            userId: 'user-456',
+            userName: 'Jane Smith',
+            action: 'data_export',
             resource: 'reports',
-            timestamp: new Date(Date.now() - 1000 * 60 * 5),'
-            ipAddress: '192.168.1.101','
-            userAgent: 'Firefox/89.0.2','
+            timestamp: new Date(Date.now() - 1000 * 60 * 5),
+            ipAddress: '192.168.1.101',
+            userAgent: 'Firefox/89.0.2',
             status: 'success'
 
     ]) ;
@@ -157,37 +157,37 @@ export const EnterpriseDashboard = () => {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
-            const now = new Date();'
-            // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());'
-            trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
+            const now = new Date();
+            // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+            trackEvent('enterprise_dashboard',data_refreshed',manual', undefined, {
 
                 tab: activeTab,
                 dateRange
             }) ;
 
         catch (error) {
-'
-            // // // // // // // // console.error('Failed to refresh data:', error);'
-            trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
-'
+
+            // // // // // // // // console.error('Failed to refresh data:', error);
+            trackEvent('enterprise_dashboard',refresh_failed',error', undefined, {
+
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) ;
 
         finally {
 
             setIsRefreshing(false);
-'
-            // console.log('Data refreshed at:', now.toLocaleTimeString());'
-            trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', null, {
+
+            // console.log('Data refreshed at:', now.toLocaleTimeString());
+            trackEvent('enterprise_dashboard',data_refreshed',manual', null, {
 
                 tab: activeTab,
                 dateRange
             }) }
         catch (error) {
-'
-            // console.error('Failed to refresh data:', error);'
-            trackEvent('enterprise_dashboard', 'refresh_failed', 'error', null, {
-'
+
+            // console.error('Failed to refresh data:', error);
+            trackEvent('enterprise_dashboard',refresh_failed',error', null, {
+
                 error: error instanceof Error ? error.message : 'Unknown error'
             }) }
         finally {
@@ -199,7 +199,7 @@ export const EnterpriseDashboard = () => {
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data
-    const filtered = securityAlerts;'
+    const filtered = securityAlerts;
         if (filterStatus !== 'all') {
 
             filtered = filtered.filter(alert => alert.status === filterStatus)}
@@ -222,19 +222,19 @@ export const EnterpriseDashboard = () => {
     const getStatusColor = (status) => {
 
         switch (status) {
-'
+
             case 'healthy':'
             case 'online':'
             case 'success':'
-                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30';'
+                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30';
             case 'warning':'
             case 'degraded':'
             case 'pending':'
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';'
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';
             case 'critical':'
             case 'offline':'
             case 'failure':'
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';'
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';
             case 'maintenance':'
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:'
@@ -244,13 +244,13 @@ export const EnterpriseDashboard = () => {
     const getSeverityColor = (severity) => {
 
         switch (severity) {
-'
+
             case 'critical':'
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';'
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';
             case 'high':'
-                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';'
+                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';
             case 'medium':'
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';'
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';
             case 'low':'
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:'
@@ -289,11 +289,11 @@ export const EnterpriseDashboard = () => {
       <div className="border-b border-gray-200 dark:border-gray-700">"
         <nav className="flex space-x-8 px-6">
           {['
-            { id: 'overview', label: 'Overview', icon: BarChart3 },'
-            { id: 'performance', label: 'Performance', icon: TrendingUp },'
-            { id: 'security', label: 'Security', icon: Shield },'
-            { id: 'users', label: 'Users', icon: Users },'
-            { id: 'services', label: 'Services', icon: Server },'
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'performance', label: 'Performance', icon: TrendingUp },
+            { id: 'security', label: 'Security', icon: Shield },
+            { id: 'users', label: 'Users', icon: Users },
+            { id: 'services', label: 'Services', icon: Server },
             { id: 'analytics', label: 'Analytics', icon: PieChart }
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id'
                 ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400''`
@@ -364,7 +364,7 @@ export const EnterpriseDashboard = () => {
                     metric.trend === 'down' ? 'text-green-600' : 'text-gray-600'}`}>'"
                         {metric.trend === 'up' ? <TrendingUp className="w-4 h-4"/> :'"
                     metric.trend === 'down' ? <TrendingDown className="w-4 h-4"/> :"
-                        <Clock3 className="w-4 h-4"/>}'
+                        <Clock3 className="w-4 h-4"/>}
                         {metric.change > 0 ? '+' : ''}{metric.change}%
                       </span>"
                       <span className="text-gray-500">
@@ -411,7 +411,7 @@ export const EnterpriseDashboard = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Recent Security Alerts
                   </h3>"
-                  <span className="text-sm text-gray-600 dark:text-gray-400">'
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
                     {securityAlerts.filter(a => a.status === 'new').length} new
                   </span>
                 </div>"
@@ -562,8 +562,8 @@ export const EnterpriseDashboard = () => {
                         <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(alert.status)}`}>
                           {alert.status}
                         </span>"
-                        <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300">'
-                          {alert.type.replace('_', ' ')}
+                        <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300">
+                          {alert.type.replace('_', ')}
                         </span>
                       </div>"
                       <span className="text-sm text-gray-500">

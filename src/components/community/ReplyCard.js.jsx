@@ -1,7 +1,7 @@
 import React from 'react';
 export default function ReplyCard({
 
-  reply,'
+  reply,
   className = '',
   onMarkAnswer,
   canMarkAnswer}) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
 import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
@@ -27,8 +27,8 @@ import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";"
 import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";"
 import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
 
-const InnovativeServicesShowcase2030: React.FC = () => {;'
-  const [activeCategory, setActiveCategory] = useState('all');'
+const InnovativeServicesShowcase2030: React.FC = () => {;
+  const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const allServices = [;
@@ -43,10 +43,10 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  const categories = [;'
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
-    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;'
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;'
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
+    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
@@ -73,7 +73,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionary Services 2030
             </h1>"
-            <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">'
+            <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
               Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services that are transforming businesses worldwide
             </p>"
             <div className="flex flex-wrap justify-center gap-4 mb-12">"
@@ -121,7 +121,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
             <div className="flex-1">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
@@ -282,8 +282,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                 <div className="flex gap-3">
                   <a
                     href={service.website}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
 "
                     <ExternalLink className="w-4 h-4" />
@@ -303,8 +303,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
             <div className="text-center py-12">;"
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;'
-                  setSearchTerm('');'
+                onClick={() => {;
+                  setSearchTerm('');
                   setActiveCategory('all');
                 }}"
                 className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
@@ -430,14 +430,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry""
+                href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
 "
                 <Mail className="w-5 h-5" />
                 Get Started Today
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
 "
                 <Phone className="w-5 h-5" />

@@ -1,7 +1,7 @@
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
 export default function Enterprise() {
     const features = [
@@ -95,7 +95,7 @@ export default function Enterprise() {
           <h1 className="text-5xl font-bold text-white mb-6">
             Enterprise Solutions
           </h1>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">'
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Scale your tech operations with Zion Tech Group's comprehensive enterprise platform. 
             Access global talent, advanced tools, and dedicated support for your organization.
           </p>"
@@ -145,7 +145,7 @@ export default function Enterprise() {
             <h2 className="text-3xl font-bold text-white mb-4">
               Enterprise Plans
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Choose the plan that fits your organization's needs and scale
             </p>
           </div>
@@ -169,7 +169,7 @@ export default function Enterprise() {
                         {feature}
                       </li>))}
                   </ul>"`
-                  <Button className={`w-full ${plan.name === "Professional""
+                  <Button className={`w-full ${plan.name === "Professional"
                 ? "bg-zion-purple hover:bg-zion-purple-light""`
                 : "bg-zion-blue hover:bg-zion-blue-light"}`}>"
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}

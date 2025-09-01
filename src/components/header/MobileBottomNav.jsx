@@ -68,7 +68,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
 "
   cn("flex flex-col items-center justify-center w-full h-full px-1 py-1",
   item.matches(location.pathname)"
-                ? "text-zion-cyan""
+                ? "text-zion-cyan"
                 : "text-white/70 hover:text-white")
 
 

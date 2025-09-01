@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO   } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
 ;
 const AICodeReviewSecurity: React.FC = (): JSX.Element => {
@@ -7,9 +7,9 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
   return()
     <>
       <SEO
-        title="AI-Powered Code Review & Security Analysis | Zion Tech Group""
-        description="Advanced AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages.""
-        keywords="AI code review, security analysis, vulnerability detection, SAST, DAST, SCA, IAST, code quality, security testing""
+        title="AI-Powered Code Review & Security Analysis | Zion Tech Group"
+        description="Advanced AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages."
+        keywords="AI code review, security analysis, vulnerability detection, SAST, DAST, SCA, IAST, code quality, security testing"
         canonical="https://ziontechgroup.com/services/ai-code-review-security"
       />
       "
@@ -187,7 +187,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                 },
                 {
 "
-                  title: "Dynamic Application Security Testing (DAST)",'"
+                  title: "Dynamic Application Security Testing (DAST)","
                   description: "Tests running applications to identify security vulnerabilities from an external attacker's perspective.","
                   benefits: ["Real-world attack simulation", "Runtime vulnerability detection", "External threat perspective"]
                 },

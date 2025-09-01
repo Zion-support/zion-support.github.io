@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { ReactNode } from 'react';
 import { FuturisticNavigation } from "./FuturisticNavigation";"
 import { FuturisticFooter } from "./FuturisticFooter";"
@@ -30,7 +30,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         {/* Sidebar */}
         {showSidebar && <EnhancedSidebar />}
 
-        {/* Main Content */}'
+        {/* Main Content */}
         <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
           {children}
         </main>

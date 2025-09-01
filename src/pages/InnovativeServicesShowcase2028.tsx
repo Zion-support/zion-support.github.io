@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '@/components/SEO';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import {
 
@@ -46,431 +46,431 @@ import {
   Zap as ZapIcon,
   Brain as BrainIcon,
   Atom as AtomIcon,
-  Rocket as RocketIcon,'
+  Rocket as RocketIcon,
   Leaf as LeafIcon} from 'lucide-react';
 
 export default function InnovativeServicesShowcase2028() {
-'
-  const [activeCategory, setActiveCategory] = useState('all');'
+
+  const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const serviceCategories = [
     {
-'
-      id: 'ai-services','
+
+      id: 'ai-services',
       name: 'AI & Machine Learning Services',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-blue-600 to-cyan-600',
       description:'
         'Cutting-edge artificial intelligence solutions for business transformation',
       services: [
         {
-'
+
           name: 'AI-Powered Business Intelligence Platform',
           description:'
-            'Advanced analytics with machine learning insights and predictive modeling','
-          price: '$2,500/month','
+            'Advanced analytics with machine learning insights and predictive modeling',
+          price: '$2,500/month',
           marketPrice: '$3,000-5,000/month',
           features: ['
-            'Real-time Data Processing','
-            'Predictive Analytics','
-            'Custom Dashboards','
-            'API Integration','
+            'Real-time Data Processing',
+            'Predictive Analytics',
+            'Custom Dashboards',
+            'API Integration',
             'Multi-source Data Connectors',
           ],
           benefits: ['
-            '40% faster decision making','
-            '25% cost reduction','
-            'Real-time insights','
+            '40% faster decision making',
+            '25% cost reduction',
+            'Real-time insights',
             'Scalable architecture',
           ],
-          icon: BarChart3,'
-          category: 'ai-services','
+          icon: BarChart3,
+          category: 'ai-services',
           badge: 'Popular'},
         {
-'
+
           name: 'AI Customer Experience Platform',
           description:'
-            'Intelligent customer engagement with personalized recommendations and sentiment analysis','
-          price: '$1,800/month','
+            'Intelligent customer engagement with personalized recommendations and sentiment analysis',
+          price: '$1,800/month',
           marketPrice: '$2,200-4,000/month',
           features: ['
-            'Customer Journey Mapping','
-            'Sentiment Analysis','
-            'Omnichannel Support','
-            'Personalization Engine','
+            'Customer Journey Mapping',
+            'Sentiment Analysis',
+            'Omnichannel Support',
+            'Personalization Engine',
             'A/B Testing',
           ],
           benefits: ['
-            '35% increase in customer satisfaction','
-            '28% higher conversion rates','
-            '24/7 customer support','
+            '35% increase in customer satisfaction',
+            '28% higher conversion rates',
+            '24/7 customer support',
             'Reduced support costs',
           ],
-          icon: Users,'
-          category: 'ai-services','
+          icon: Users,
+          category: 'ai-services',
           badge: 'New'},
         {
-'
+
           name: 'AI Cybersecurity Threat Detection',
           description:'
-            'Advanced threat detection using machine learning and behavioral analysis','
-          price: '$3,200/month','
+            'Advanced threat detection using machine learning and behavioral analysis',
+          price: '$3,200/month',
           marketPrice: '$4,000-7,000/month',
           features: ['
-            'Real-time Threat Detection','
-            'Behavioral Analysis','
-            'Automated Response','
-            'Compliance Reporting','
+            'Real-time Threat Detection',
+            'Behavioral Analysis',
+            'Automated Response',
+            'Compliance Reporting',
             '24/7 Monitoring',
           ],
           benefits: ['
-            '99.9% threat detection rate','
-            '60% faster incident response','
-            'Reduced false positives','
+            '99.9% threat detection rate',
+            '60% faster incident response',
+            'Reduced false positives',
             'Compliance automation',
           ],
-          icon: Shield,'
-          category: 'ai-services','
+          icon: Shield,
+          category: 'ai-services',
           badge: 'Featured'},
       ]},
     {
-'
-      id: 'micro-saas','
+
+      id: 'micro-saas',
       name: 'Micro SAAS Solutions',
-      icon: Zap,'
+      icon: Zap,
       color: 'from-purple-600 to-pink-600',
       description:'
         'Scalable software-as-a-service solutions for specific business needs',
       services: [
         {
-'
+
           name: 'AI-Powered Project Management Suite',
           description:'
-            'Intelligent project planning, resource allocation, and progress tracking','
-          price: '$150/month','
+            'Intelligent project planning, resource allocation, and progress tracking',
+          price: '$150/month',
           marketPrice: '$200-400/month',
           features: ['
-            'AI Resource Optimization','
-            'Risk Prediction','
-            'Automated Scheduling','
-            'Team Collaboration','
+            'AI Resource Optimization',
+            'Risk Prediction',
+            'Automated Scheduling',
+            'Team Collaboration',
             'Progress Analytics',
           ],
           benefits: ['
-            '30% faster project completion','
-            '20% resource optimization','
-            'Improved team productivity','
+            '30% faster project completion',
+            '20% resource optimization',
+            'Improved team productivity',
             'Real-time insights',
           ],
-          icon: Workflow,'
-          category: 'micro-saas','
+          icon: Workflow,
+          category: 'micro-saas',
           badge: 'Best Value'},
         {
-'
+
           name: 'Smart Inventory Management System',
           description:'
-            'AI-driven inventory optimization with demand forecasting and automated reordering','
-          price: '$200/month','
+            'AI-driven inventory optimization with demand forecasting and automated reordering',
+          price: '$200/month',
           marketPrice: '$250-500/month',
           features: ['
-            'Demand Forecasting','
-            'Automated Reordering','
-            'Multi-location Support','
-            'Supplier Management','
+            'Demand Forecasting',
+            'Automated Reordering',
+            'Multi-location Support',
+            'Supplier Management',
             'Cost Analytics',
           ],
           benefits: ['
-            '25% inventory cost reduction','
-            '99% stock availability','
-            'Automated procurement','
+            '25% inventory cost reduction',
+            '99% stock availability',
+            'Automated procurement',
             'Real-time tracking',
           ],
-          icon: Truck,'
-          category: 'micro-saas','
+          icon: Truck,
+          category: 'micro-saas',
           badge: 'Popular'},
         {
-'
+
           name: 'AI Content Creation Platform',
           description:'
-            'Automated content generation with SEO optimization and brand consistency','
-          price: '$120/month','
+            'Automated content generation with SEO optimization and brand consistency',
+          price: '$120/month',
           marketPrice: '$150-300/month',
           features: ['
-            'Multi-format Content','
-            'SEO Optimization','
-            'Brand Consistency','
-            'Plagiarism Detection','
+            'Multi-format Content',
+            'SEO Optimization',
+            'Brand Consistency',
+            'Plagiarism Detection',
             'Performance Analytics',
           ],
           benefits: ['
-            '10x faster content creation','
-            'Improved SEO rankings','
-            'Consistent brand voice','
+            '10x faster content creation',
+            'Improved SEO rankings',
+            'Consistent brand voice',
             'Cost-effective marketing',
           ],
           icon: Brain, // Changed from PenTool to Brain for consistency with AI services'
-          category: 'micro-saas','
+          category: 'micro-saas',
           badge: 'New'},
       ]},
     {
-'
-      id: 'it-services','
+
+      id: 'it-services',
       name: 'IT Infrastructure & Services',
-      icon: Server,'
+      icon: Server,
       color: 'from-green-600 to-emerald-600',
       description:'
         'Comprehensive IT solutions for modern business infrastructure',
       services: [
         {
-'
+
           name: 'Cloud Migration & Optimization',
           description:'
-            'Seamless cloud migration with cost optimization and performance tuning','
-          price: '$5,000/project','
+            'Seamless cloud migration with cost optimization and performance tuning',
+          price: '$5,000/project',
           marketPrice: '$8,000-15,000/project',
           features: ['
-            'Multi-cloud Strategy','
-            'Cost Optimization','
-            'Performance Tuning','
-            'Security Implementation','
+            'Multi-cloud Strategy',
+            'Cost Optimization',
+            'Performance Tuning',
+            'Security Implementation',
             '24/7 Support',
           ],
           benefits: ['
-            '40% cost reduction','
-            '99.9% uptime','
-            'Scalable infrastructure','
+            '40% cost reduction',
+            '99.9% uptime',
+            'Scalable infrastructure',
             'Enhanced security',
           ],
-          icon: Cloud,'
-          category: 'it-services','
+          icon: Cloud,
+          category: 'it-services',
           badge: 'Featured'},
         {
-'
+
           name: 'DevOps Automation Platform',
           description:'
-            'End-to-end DevOps automation with CI/CD pipelines and infrastructure as code','
-          price: '$2,800/month','
+            'End-to-end DevOps automation with CI/CD pipelines and infrastructure as code',
+          price: '$2,800/month',
           marketPrice: '$3,500-6,000/month',
           features: ['
-            'CI/CD Pipelines','
-            'Infrastructure as Code','
-            'Automated Testing','
-            'Monitoring & Alerting','
+            'CI/CD Pipelines',
+            'Infrastructure as Code',
+            'Automated Testing',
+            'Monitoring & Alerting',
             'Security Scanning',
           ],
           benefits: ['
-            '80% faster deployments','
-            'Reduced human errors','
-            'Improved code quality','
+            '80% faster deployments',
+            'Reduced human errors',
+            'Improved code quality',
             'Faster time to market',
           ],
-          icon: Code,'
-          category: 'it-services','
+          icon: Code,
+          category: 'it-services',
           badge: 'Popular'},
         {
-'
+
           name: 'Cybersecurity Compliance Suite',
           description:'
-            'Comprehensive security compliance for GDPR, HIPAA, SOC2, and industry standards','
-          price: '$4,500/month','
+            'Comprehensive security compliance for GDPR, HIPAA, SOC2, and industry standards',
+          price: '$4,500/month',
           marketPrice: '$6,000-12,000/month',
           features: ['
-            'Compliance Automation','
-            'Risk Assessment','
-            'Audit Preparation','
-            'Security Training','
+            'Compliance Automation',
+            'Risk Assessment',
+            'Audit Preparation',
+            'Security Training',
             'Incident Response',
           ],
           benefits: ['
-            '100% compliance assurance','
-            'Reduced audit time','
-            'Risk mitigation','
+            '100% compliance assurance',
+            'Reduced audit time',
+            'Risk mitigation',
             'Legal protection',
           ],
-          icon: Lock,'
-          category: 'it-services','
+          icon: Lock,
+          category: 'it-services',
           badge: 'Essential'},
       ]},
     {
-'
-      id: 'quantum-tech','
+
+      id: 'quantum-tech',
       name: 'Quantum & Emerging Technologies',
-      icon: Atom,'
-      color: 'from-indigo-600 to-purple-600','
+      icon: Atom,
+      color: 'from-indigo-600 to-purple-600',
       description: 'Next-generation technologies for future-ready businesses',
       services: [
         {
-'
+
           name: 'Quantum Computing Solutions',
           description:'
-            'Quantum algorithms for optimization, cryptography, and complex problem solving','
-          price: '$15,000/month','
+            'Quantum algorithms for optimization, cryptography, and complex problem solving',
+          price: '$15,000/month',
           marketPrice: '$20,000-50,000/month',
           features: ['
-            'Quantum Algorithms','
-            'Optimization Problems','
-            'Cryptography','
-            'Simulation','
+            'Quantum Algorithms',
+            'Optimization Problems',
+            'Cryptography',
+            'Simulation',
             'Research Support',
           ],
           benefits: ['
-            'Exponential speed improvements','
-            'Unbreakable encryption','
-            'Complex problem solving','
+            'Exponential speed improvements',
+            'Unbreakable encryption',
+            'Complex problem solving',
             'Competitive advantage',
           ],
-          icon: Atom,'
-          category: 'quantum-tech','
+          icon: Atom,
+          category: 'quantum-tech',
           badge: 'Future Tech'},
         {
-'
+
           name: 'Blockchain Enterprise Platform',
           description:'
-            'Secure blockchain solutions for supply chain, finance, and digital identity','
-          price: '$3,500/month','
+            'Secure blockchain solutions for supply chain, finance, and digital identity',
+          price: '$3,500/month',
           marketPrice: '$5,000-15,000/month',
           features: ['
-            'Smart Contracts','
-            'Supply Chain Tracking','
-            'Digital Identity','
-            'Tokenization','
+            'Smart Contracts',
+            'Supply Chain Tracking',
+            'Digital Identity',
+            'Tokenization',
             'Interoperability',
           ],
           benefits: ['
-            'Enhanced transparency','
-            'Reduced fraud','
-            'Automated processes','
+            'Enhanced transparency',
+            'Reduced fraud',
+            'Automated processes',
             'Cost savings',
           ],
-          icon: LinkIcon,'
-          category: 'quantum-tech','
+          icon: LinkIcon,
+          category: 'quantum-tech',
           badge: 'Innovative'},
         {
-'
+
           name: 'IoT Edge Computing Platform',
           description:'
-            'Real-time data processing at the edge for industrial IoT applications','
-          price: '$2,200/month','
+            'Real-time data processing at the edge for industrial IoT applications',
+          price: '$2,200/month',
           marketPrice: '$3,000-8,000/month',
           features: ['
-            'Edge Analytics','
-            'Real-time Processing','
-            'Device Management','
-            'Data Streaming','
+            'Edge Analytics',
+            'Real-time Processing',
+            'Device Management',
+            'Data Streaming',
             'Security',
           ],
           benefits: ['
-            'Ultra-low latency','
-            'Reduced bandwidth costs','
-            'Real-time insights','
+            'Ultra-low latency',
+            'Reduced bandwidth costs',
+            'Real-time insights',
             'Offline operation',
           ],
-          icon: Cpu,'
-          category: 'quantum-tech','
+          icon: Cpu,
+          category: 'quantum-tech',
           badge: 'Industrial'},
       ]},
     {
-'
-      id: 'green-tech','
+
+      id: 'green-tech',
       name: 'Green Technology Solutions',
-      icon: Leaf,'
+      icon: Leaf,
       color: 'from-green-500 to-teal-600',
       description:'
         'Sustainable technology solutions for environmental responsibility',
       services: [
         {
-'
+
           name: 'Carbon Footprint Analytics Platform',
           description:'
-            'AI-powered carbon tracking and sustainability reporting for businesses','
-          price: '$800/month','
+            'AI-powered carbon tracking and sustainability reporting for businesses',
+          price: '$800/month',
           marketPrice: '$1,000-2,500/month',
           features: ['
-            'Carbon Tracking','
-            'Sustainability Reporting','
-            'Goal Setting','
-            'Benchmarking','
+            'Carbon Tracking',
+            'Sustainability Reporting',
+            'Goal Setting',
+            'Benchmarking',
             'Compliance',
           ],
           benefits: ['
-            'Reduced carbon footprint','
-            'Cost savings','
-            'Regulatory compliance','
+            'Reduced carbon footprint',
+            'Cost savings',
+            'Regulatory compliance',
             'Brand enhancement',
           ],
-          icon: Leaf,'
-          category: 'green-tech','
+          icon: Leaf,
+          category: 'green-tech',
           badge: 'Eco-Friendly'},
         {
-'
+
           name: 'Smart Energy Management System',
           description:'
-            'Intelligent energy optimization using IoT sensors and AI analytics','
-          price: '$1,500/month','
+            'Intelligent energy optimization using IoT sensors and AI analytics',
+          price: '$1,500/month',
           marketPrice: '$2,000-4,000/month',
           features: ['
-            'Energy Monitoring','
-            'AI Optimization','
-            'Predictive Maintenance','
-            'Cost Analysis','
+            'Energy Monitoring',
+            'AI Optimization',
+            'Predictive Maintenance',
+            'Cost Analysis',
             'Integration',
           ],
           benefits: ['
-            '30% energy cost reduction','
-            'Predictive maintenance','
-            'Real-time monitoring','
+            '30% energy cost reduction',
+            'Predictive maintenance',
+            'Real-time monitoring',
             'ROI optimization',
           ],
-          icon: Zap,'
-          category: 'green-tech','
+          icon: Zap,
+          category: 'green-tech',
           badge: 'Cost-Effective'},
       ]},
     {
-'
-      id: 'space-tech','
+
+      id: 'space-tech',
       name: 'Space Technology Solutions',
-      icon: Satellite,'
+      icon: Satellite,
       color: 'from-blue-500 to-indigo-600',
       description:'
         'Satellite and space-based technology for global connectivity and insights',
       services: [
         {
-'
+
           name: 'Satellite Data Analytics Platform',
           description:'
-            'Earth observation data analysis for agriculture, climate, and urban planning','
-          price: '$2,800/month','
+            'Earth observation data analysis for agriculture, climate, and urban planning',
+          price: '$2,800/month',
           marketPrice: '$4,000-10,000/month',
           features: ['
-            'Satellite Imagery','
-            'AI Analysis','
-            'Real-time Monitoring','
-            'Custom Algorithms','
+            'Satellite Imagery',
+            'AI Analysis',
+            'Real-time Monitoring',
+            'Custom Algorithms',
             'API Access',
           ],
           benefits: ['
-            'Global coverage','
-            'Real-time insights','
-            'Cost-effective monitoring','
+            'Global coverage',
+            'Real-time insights',
+            'Cost-effective monitoring',
             'Scalable solutions',
           ],
-          icon: Satellite,'
-          category: 'space-tech','
+          icon: Satellite,
+          category: 'space-tech',
           badge: 'Global'},
       ]},
   ];
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008, Middletown DE 19709','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
     website: 'https://ziontechgroup.com'};
 
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter()
-      service =>'
+      service =>
         (activeCategory === 'all' || service.category === activeCategory) &&'
         (searchQuery === '' ||
           service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -500,9 +500,9 @@ export default function InnovativeServicesShowcase2028() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
-        title="2028 Innovative Services Showcase - Zion Tech Group""
-        description="Explore our cutting-edge AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI.""
-        keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group""
+        title="2028 Innovative Services Showcase - Zion Tech Group"
+        description="Explore our cutting-edge AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI."
+        keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group"
         canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
       />
 
@@ -518,7 +518,7 @@ export default function InnovativeServicesShowcase2028() {
           >"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               2028 Innovative Services"
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 Showcase
               </span>
@@ -530,13 +530,13 @@ export default function InnovativeServicesShowcase2028() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Play className="w-5 h-5 inline mr-2" />
@@ -554,7 +554,7 @@ export default function InnovativeServicesShowcase2028() {
             {/* Search */}"
             <div className="relative flex-1 max-w-md">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
@@ -568,7 +568,7 @@ export default function InnovativeServicesShowcase2028() {
               <button'
                 onClick={() => setActiveCategory('all')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-'
+
                   activeCategory === 'all''
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25''
                     : 'bg-slate-700 text-slate-300 hover:bg-slate-600'`
@@ -600,7 +600,7 @@ export default function InnovativeServicesShowcase2028() {
           <motion.div"
             className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -618,7 +618,7 @@ export default function InnovativeServicesShowcase2028() {
                     {service.badge && (
                       <span`
                         className={`px-3 py-1 text-xs font-semibold rounded-full ${
-'
+
                           service.badge === 'Popular''
                             ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30''
                             : service.badge === 'New''
@@ -693,7 +693,7 @@ export default function InnovativeServicesShowcase2028() {
 
                   {/* CTA */}
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                   >
                     Get Started"
@@ -825,13 +825,13 @@ export default function InnovativeServicesShowcase2028() {
           >"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Get Free Consultation
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing
@@ -893,32 +893,32 @@ export default function InnovativeServicesShowcase2028() {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {[
               {
 
-                icon: Award,'
+                icon: Award,
                 title: 'Proven Expertise',
                 description:'
                   '500+ successful projects across industries with measurable results'},
               {
 
-                icon: Zap,'
+                icon: Zap,
                 title: 'Innovation First',
                 description:'
                   'Cutting-edge technologies and methodologies for competitive advantage'},
               {
 
-                icon: Shield,'
+                icon: Shield,
                 title: 'Enterprise Security',
                 description:'
                   'Bank-level security and compliance for enterprise-grade solutions'},
               {
 
-                icon: Heart,'
+                icon: Heart,
                 title: '24/7 Support',
                 description:'
                   'Round-the-clock technical support and maintenance services'},

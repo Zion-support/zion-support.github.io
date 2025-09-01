@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
   TrendingUp, 
@@ -20,9 +20,9 @@ import { Brain,
   PieChart,
   LineChart,
   Activity'
- } from 'lucide-react';'
-import { SEO  } from '@/components/SEO';'
-import { Button  } from '@/components/ui/button';'
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 ;
 export { function };
@@ -160,7 +160,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Business Intelligence Platform - Zion Tech Group""
+        title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
 

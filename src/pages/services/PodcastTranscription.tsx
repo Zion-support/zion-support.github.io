@@ -1,11 +1,11 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 
 function PodcastTranscription() {
   return()
     <div className="min-h-screen bg-futuristic text-white">
       <SEO"
-        title="Podcast Transcription & Repurposing""
+        title="Podcast Transcription & Repurposing"
         description="Accurate AI transcriptions, speaker diarization, show notes, and blog/social repurposing."
       />"
       <section className="container-responsive section-padding">"

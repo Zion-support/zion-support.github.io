@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';'
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -27,7 +27,7 @@ interface SearchResult {
   tags: string[];
   location?: string;
   date?: string;
-  rating?: number;'
+  rating?: number;
   type: 'service' | 'article' | 'team' | 'technology'}
 
 interface FilterOption {
@@ -51,12 +51,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   placeholder = "Search services, articles, team members...",
   showFilters = true;
 }) => {
-'
+
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+  const [showFilterPanel, setShowFilterPanel] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [sortBy, setSortBy] = useState<any>('relevance');
 
   // Filter options
@@ -116,21 +116,21 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
     // Sort results
     switch (sortBy) {
-'
+
       case 'date':
         results = results.sort((a, b) => {
 
           if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         });
-        break;'
+        break;
       case 'rating':
         results = results.sort((a, b) => {
 
           if (!a.rating || !b.rating) return 0;
           return b.rating - a.rating;
         });
-        break;'
+        break;
       case 'name':
         results = results.sort ( (a, b) => a.title.localeCompare (b.title) ) ;
         break;
@@ -162,8 +162,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
   // Clear all filters
   const clearAllFilters = () => {
-    setActiveFilters(new Set());'
-    setSelectedCategory('all');'
+    setActiveFilters(new Set());
+    setSelectedCategory('all');
     setSortBy('relevance');
   };
 
@@ -184,14 +184,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const getCategoryColor = (category: string) => {
 
     const colors = {
-'
-      'ai': 'text-purple-400','
-      'cloud': 'text-blue-400','
-      'security': 'text-red-400','
-      'development': 'text-green-400','
-      'consulting': 'text-yellow-400','
+
+      'ai': 'text-purple-400',
+      'cloud': 'text-blue-400',
+      'security': 'text-red-400',
+      'development': 'text-green-400',
+      'consulting': 'text-yellow-400',
       'digital-transformation': 'text-cyan-400'
-    };'
+    };
     return colors[category as keyof typeof colors] || 'text-zinc-400';
   };
 
@@ -323,7 +323,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
 }}
             animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -336,7 +336,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 }}
             transition = {
 
-  { duration: 0.3,'
+  { duration: 0.3,
   ease: 'easeOut' 
 
 
@@ -373,14 +373,14 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 {/* Tag Filters */}
                 <div>"
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>"
-                  <div className="flex flex-wrap gap-2">'
-                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map((tag) => (
+                  <div className="flex flex-wrap gap-2">
+                    {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (
                       <button
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}`
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
 
-                          activeFilters.has(tag.toLowerCase())'
+                          activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white''
                             : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'`
                         }`}
@@ -393,8 +393,8 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 {/* Location Filters */}
                 <div>"
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>"
-                  <div className="space-y-2">'
-                    {['Global', 'North America', 'Europe', 'Asia Pacific'].map((location) => ("
+                  <div className="space-y-2">
+                    {['Global',North America',Europe',Asia Pacific'].map((location) => ("
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
                         <input"
                           type="checkbox"
@@ -481,8 +481,8 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                     </div>
                   )}"
                   <div className="flex items-center gap-1">"
-                    <Tag className="w-4 h-4" />'
-                    {result.tags.slice(0, 3).join(', ')}`
+                    <Tag className="w-4 h-4" />
+                    {result.tags.slice(0, 3).join(',)}`
                     {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
                   </div>
                 </div>

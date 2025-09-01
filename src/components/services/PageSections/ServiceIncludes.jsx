@@ -2,103 +2,103 @@ import React from 'react';
 import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe export const ServiceIncludes = () => {
   const servicePackages = [
     {
-'
-      name: 'Basic Package','
-      description: 'Essential IT services for small businesses','
+
+      name: 'Basic Package',
+      description: 'Essential IT services for small businesses',
       price: 'Starting at $299/month',
       popular: false,
-      includes[;'
-        '24/7 Help Desk Support','
-        'Remote Troubleshooting','
-        'Basic Network Monitoring','
-        'Monthly Health Reports','
-        'Email Support','
-        'Up to 25 Users','
-        'Basic Security Monitoring','
+      includes[;
+        '24/7 Help Desk Support',
+        'Remote Troubleshooting',
+        'Basic Network Monitoring',
+        'Monthly Health Reports',
+        'Email Support',
+        'Up to 25 Users',
+        'Basic Security Monitoring',
         'Backup Verification'
       ],;
-      notIncluded[;'
-        'On-site Visits','
-        'Hardware Installation','
-        'Advanced Security Features','
-        'Priority Support','
-        'Custom Reporting','
+      notIncluded[;
+        'On-site Visits',
+        'Hardware Installation',
+        'Advanced Security Features',
+        'Priority Support',
+        'Custom Reporting',
         'Strategic IT Planning'
       ],;
-      features[;'
-        { name: 'Response Time', value: '4-8 hours', icon: Clock },'
-        { name: 'Support Hours', value: '24/7', icon: Users },'
-        { name: 'Security Level', value: 'Basic', icon: Shield },'
+      features[;
+        { name: 'Response Time', value: '4-8 hours', icon: Clock },
+        { name: 'Support Hours', value: '24/7', icon: Users },
+        { name: 'Security Level', value: 'Basic', icon: Shield },
         { name: 'Reporting', value: 'Monthly', icon: FileText }
       ]
     },;
     {
-'
-      name: 'Professional Package','
-      description: 'Comprehensive IT services for growing businesses','
+
+      name: 'Professional Package',
+      description: 'Comprehensive IT services for growing businesses',
       price: 'Starting at $599/month',
       popular: true,
-      includes[;'
-        'Everything in Basic Package','
-        'On-site Support (2 visits/month)','
-        'Hardware Installation & Setup','
-        'Advanced Network Security','
-        'Weekly Performance Reports','
-        'Phone & Email Support','
-        'Up to 100 Users','
-        'Emergency Response (4hr)','
-        'Network Optimization','
-        'Security Audits (Quarterly)','
-        'User Training Sessions','
+      includes[;
+        'Everything in Basic Package',
+        'On-site Support (2 visits/month),
+        'Hardware Installation & Setup',
+        'Advanced Network Security',
+        'Weekly Performance Reports',
+        'Phone & Email Support',
+        'Up to 100 Users',
+        'Emergency Response (4hr),
+        'Network Optimization',
+        'Security Audits (Quarterly),
+        'User Training Sessions',
         'Strategic IT Consulting'
       ],;
-      notIncluded[;'
-        'Unlimited On-site Visits','
-        'Dedicated IT Manager','
-        'Custom Software Development','
-        'Hardware Procurement','
+      notIncluded[;
+        'Unlimited On-site Visits',
+        'Dedicated IT Manager',
+        'Custom Software Development',
+        'Hardware Procurement',
         'Advanced Analytics'
       ],;
-      features[;'
-        { name: 'Response Time', value: '2-4 hours', icon: Clock },'
-        { name: 'Support Hours', value: '24/7', icon: Users },'
-        { name: 'Security Level', value: 'Advanced', icon: Shield },'
+      features[;
+        { name: 'Response Time', value: '2-4 hours', icon: Clock },
+        { name: 'Support Hours', value: '24/7', icon: Users },
+        { name: 'Security Level', value: 'Advanced', icon: Shield },
         { name: 'Reporting', value: 'Weekly', icon: FileText }
       ]
     },;
     {
-'
-      name: 'Enterprise Package','
-      description: 'Full-service IT management for large organizations','
+
+      name: 'Enterprise Package',
+      description: 'Full-service IT management for large organizations',
       price: 'Starting at $1,299/month',
       popular: false,
-      includes[;'
-        'Everything in Professional Package','
-        'Unlimited On-site Support','
-        'Dedicated IT Manager','
-        'Advanced Security Suite','
-        'Real-time Monitoring & Alerting','
-        'Daily Performance Reports','
-        'Unlimited Users','
-        'Emergency Response (2hr)','
-        'Strategic IT Planning','
-        'Compliance Management','
-        'Custom Solutions Development','
-        'Advanced Analytics & Insights','
-        'Executive Reporting','
-        'Vendor Management','
+      includes[;
+        'Everything in Professional Package',
+        'Unlimited On-site Support',
+        'Dedicated IT Manager',
+        'Advanced Security Suite',
+        'Real-time Monitoring & Alerting',
+        'Daily Performance Reports',
+        'Unlimited Users',
+        'Emergency Response (2hr),
+        'Strategic IT Planning',
+        'Compliance Management',
+        'Custom Solutions Development',
+        'Advanced Analytics & Insights',
+        'Executive Reporting',
+        'Vendor Management',
         'Technology Roadmap Planning'
       ],;
-      notIncluded[;'
-        'Custom Hardware Development','
-        'Third-party Software Licensing','
-        'Legal Compliance Services','
+      notIncluded[;
+        'Custom Hardware Development',
+        'Third-party Software Licensing',
+        'Legal Compliance Services',
         'Insurance Requirements'
       ],;
-      features[;'
-        { name: 'Response Time', value: '1-2 hours', icon: Clock },'
-        { name: 'Support Hours', value: '24/7', icon: Users },'
-        { name: 'Security Level', value: 'Enterprise', icon: Shield },'
+      features[;
+        { name: 'Response Time', value: '1-2 hours', icon: Clock },
+        { name: 'Support Hours', value: '24/7', icon: Users },
+        { name: 'Security Level', value: 'Enterprise', icon: Shield },
         { name: 'Reporting', value: 'Daily', icon: FileText }
       ]
 
@@ -106,44 +106,44 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
   const additionalServices = [
     {
-'
-      name: 'Hardware Installation','
-      price: '$150/device','
+
+      name: 'Hardware Installation',
+      price: '$150/device',
       description: 'Professional installation and setup of IT equipment',
       icon: Zap
     },
     {
-'
-      name: 'Network Assessment','
-      price: '$500','
+
+      name: 'Network Assessment',
+      price: '$500',
       description: 'Comprehensive network security and performance review',
       icon: Shield
     },
     {
-'
-      name: 'Data Recovery','
-      price: '$300','
+
+      name: 'Data Recovery',
+      price: '$300',
       description: 'Emergency data recovery and restoration services',
       icon: FileText
     },
     {
-'
-      name: 'Staff Training','
-      price: '$200/session','
+
+      name: 'Staff Training',
+      price: '$200/session',
       description: 'Customized IT training for your team',
       icon: Users
     },
     {
-'
-      name: 'Compliance Audit','
-      price: '$1,000','
+
+      name: 'Compliance Audit',
+      price: '$1,000',
       description: 'Industry-specific compliance assessment and reporting',
       icon: Award
     },
     {
-'
-      name: 'Cloud Migration','
-      price: 'Custom Quote','
+
+      name: 'Cloud Migration',
+      price: 'Custom Quote',
       description: 'Complete cloud infrastructure migration services',
       icon: Globe
 
@@ -154,7 +154,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}"
         <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">'
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             What's Included in Your Service
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -203,11 +203,11 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                     </div>
                   ))}
                 </div>
-'
+
                 {/* What's Included */}"
                 <div className="mb-8">"
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">"
-                    <Check className="w-5 h-5 text-green-500 mr-2" />'
+                    <Check className="w-5 h-5 text-green-500 mr-2" />
                     What's Included
                   </h4>"
                   <ul className="space-y-2">
@@ -219,11 +219,11 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                     ))}
                   </ul>
                 </div>
-'
+
                 {/* What's Not Included */}"
                 <div className="mb-8">"
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">"
-                    <X className="w-5 h-5 text-red-500 mr-2" />'
+                    <X className="w-5 h-5 text-red-500 mr-2" />
                     What's Not Included
                   </h4>"
                   <ul className="space-y-2">
@@ -289,7 +289,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                 <Star className="w-8 h-8" />
               </div>"
               <h4 className="text-xl font-semibold mb-2">Quality Guarantee</h4>"
-              <p className="text-blue-100">'
+              <p className="text-blue-100">
                 We guarantee the quality of our work. If you're not satisfied, we'll fix it at no additional cost.
               </p>
             </div>"
@@ -325,13 +325,13 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#contact""
+                href="#contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                 Get Custom Quote
               </a>
               <a"
-                href="#consultation""
+                href="#consultation"
                 className="px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
 
                 Schedule Consultation

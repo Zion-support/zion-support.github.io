@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -157,94 +157,94 @@ export default function ITConsulting(...args: []):  {
   const services = [
     {
 
-      icon: Briefcase,'
-      title: 'Strategic IT Planning','
+      icon: Briefcase,
+      title: 'Strategic IT Planning',
       description: 'Comprehensive IT strategy development and roadmap planning'
     },
     {
 
-      icon: Cpu,'
-      title: 'Technology Assessment','
+      icon: Cpu,
+      title: 'Technology Assessment',
       description: 'Evaluate current technology stack and identify optimization opportunities'
     },
     {
 
-      icon: Server,'
-      title: 'Infrastructure Planning','
+      icon: Server,
+      title: 'Infrastructure Planning',
       description: 'Design scalable and secure IT infrastructure solutions'
     },
     {
 
-      icon: Network2,'
-      title: 'Network Design','
+      icon: Network2,
+      title: 'Network Design',
       description: 'Plan and implement robust network architectures'
     },
     {
 
-      icon: Shield,'
-      title: 'Security Consulting','
+      icon: Shield,
+      title: 'Security Consulting',
       description: 'Develop comprehensive cybersecurity strategies and policies';
     },;
     {;
-      icon: Cloud,;'
-      title: 'Cloud Strategy',;'
+      icon: Cloud,;
+      title: 'Cloud Strategy',;
       description: 'Plan cloud migration and hybrid cloud solutions';
     };
   ];
 
-  const benefits = [;'
-    'Optimize IT infrastructure and reduce costs by 25%',;'
-    'Improve system performance and reliability',;'
-    'Enhance cybersecurity posture and compliance',;'
-    'Enable digital transformation initiatives',;'
-    'Streamline IT operations and processes',;'
+  const benefits = [;
+    'Optimize IT infrastructure and reduce costs by 25%',;
+    'Improve system performance and reliability',;
+    'Enhance cybersecurity posture and compliance',;
+    'Enable digital transformation initiatives',;
+    'Streamline IT operations and processes',;
     'Align technology with business objectives';
   ];
 
   const services = [
     {
 
-      icon: Strategy,'
-      title: 'IT Strategy','
+      icon: Strategy,
+      title: 'IT Strategy',
       description: 'Develop comprehensive IT strategies aligned with business goals'
     },
     {
 
-      icon: Workflow,'
-      title: 'Process Optimization','
+      icon: Workflow,
+      title: 'Process Optimization',
       description: 'Optimize IT processes and workflows for efficiency'
     },
     {
 
-      icon: Brain,'
-      title: 'Technology Advisory','
+      icon: Brain,
+      title: 'Technology Advisory',
       description: 'Expert guidance on technology selection and implementation';
     },;
     {;
-      icon: Scale,;'
-      title: 'Scalability Planning',;'
+      icon: Scale,;
+      title: 'Scalability Planning',;
       description: 'Plan for future growth and technology scaling';
     };
   ];
 
   const useCases = [
     {
-'
-      industry: 'Enterprise','
+
+      industry: 'Enterprise',
       description: 'Large-scale IT transformation and optimization'
     },
     {
-'
-      industry: 'Healthcare','
+
+      industry: 'Healthcare',
       description: 'HIPAA-compliant IT infrastructure and systems'
     },
     {
-'
-      industry: 'Financial Services',;'
+
+      industry: 'Financial Services',;
       description: 'Secure, compliant financial technology solutions';
     },;
-    {;'
-      industry: 'Manufacturing',;'
+    {;
+      industry: 'Manufacturing',;
       description: 'Industry 4.0 and smart manufacturing IT';
     };
   ];
@@ -278,13 +278,13 @@ export default function ITConsulting(...args: []):  {
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
 
                 Get Expert Advice
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
 
                 View All Services
@@ -579,9 +579,9 @@ export default function ITConsulting(...args: []):  {
 "
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {['
-              { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },'
-              { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },'
-              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },'
+              { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
+              { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
+              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
               { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map(phase: unknown, index: unknown (
               <motion.div
@@ -620,13 +620,13 @@ export default function ITConsulting(...args: []):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
 
                 Schedule Consultation
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
 
                 Explore Services

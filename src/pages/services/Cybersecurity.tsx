@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { SEO } from '../../components/SEO';
 import {
 
@@ -10,7 +10,7 @@ import {
   Lock,
   Clock,
   BarChart3,
-  AlertTriangle,'
+  AlertTriangle,
   Eye} from 'lucide-react.ts';
 
 export default function Cybersecurity(...args: any[]): any {
@@ -18,7 +18,7 @@ export default function Cybersecurity(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO"
-        title="Cybersecurity Services - Zion Tech Group""
+        title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive security solutions that protect your digital assets and ensure business continuity. Advanced AI-powered threat detection and zero trust security."
       />
 
@@ -40,7 +40,7 @@ export default function Cybersecurity(...args: any[]): any {
             </div>"
             <div className="mb-16">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg rounded-xl hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-red-500/25"
               >
                 Get Started with Cybersecurity
@@ -155,7 +155,7 @@ export default function Cybersecurity(...args: any[]): any {
             cybersecurity services
           </p>
           <a"
-            href="/contact""
+            href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg rounded-xl hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-red-500/25"
           >
             Get Started with Cybersecurity

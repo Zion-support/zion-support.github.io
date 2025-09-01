@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -10,174 +10,174 @@ import {
   MapPin,
   CheckCircle,
   ArrowRight,
-  Filter,'
+  Filter,
   Search} from 'lucide-react';
 
 const testimonials = [
   {
 
-    id: 1,'
-    name: 'Sarah Johnson','
-    role: 'Chief Technology Officer','
-    comp: 'TechCorp Inc.','
+    id: 1,
+    name: 'Sarah Johnson',
+    role: 'Chief Technology Officer',
+    comp: 'TechCorp Inc.',
     industry: 'Technology',
     rating: 5,
     content:'
-      'Zion Tech Group transformed our AI capabilities. Their machine learning solutions increased our operational efficiency by 40% and provided insights that were previously impossible to obtain. The team is incredibly professional and delivered beyond our expectations.','
+      'Zion Tech Group transformed our AI capabilities. Their machine learning solutions increased our operational efficiency by 40% and provided insights that were previously impossible to obtain. The team is incredibly professional and delivered beyond our expectations.',
     project: 'AI-Powered Business Intelligence Platform',
     results: ['
-      '40% increase in operational efficiency','
-      'Real-time data insights','
+      '40% increase in operational efficiency',
+      'Real-time data insights',
       'Improved decision-making processes',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: true},
   {
 
-    id: 2,'
-    name: 'Michael Chen','
-    role: 'VP of Engineering','
-    comp: 'InnovateTech Solutions','
+    id: 2,
+    name: 'Michael Chen',
+    role: 'VP of Engineering',
+    comp: 'InnovateTech Solutions',
     industry: 'Software Development',
     rating: 5,
     content:'
-      'The cloud migration was seamless and exceeded our expectations. Their DevOps automation reduced our deployment time from hours to minutes, and the infrastructure is now more scalable and cost-effective than ever.','
+      'The cloud migration was seamless and exceeded our expectations. Their DevOps automation reduced our deployment time from hours to minutes, and the infrastructure is now more scalable and cost-effective than ever.',
     project: 'Cloud Migration & DevOps Automation',
     results: ['
-      '90% reduction in deployment time','
-      '30% cost savings on infrastructure','
+      '90% reduction in deployment time',
+      '30% cost savings on infrastructure',
       'Improved system reliability',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: true},
   {
 
-    id: 3,'
-    name: 'Emily Rodriguez','
-    role: 'Security Director','
-    comp: 'SecureBank Financial','
+    id: 3,
+    name: 'Emily Rodriguez',
+    role: 'Security Director',
+    comp: 'SecureBank Financial',
     industry: 'Financial Services',
     rating: 5,
     content:'
-      "Their cybersecurity solutions provide peace of mind. We've had zero security incidents since implementation, and their compliance automation has streamlined our audit processes significantly.",'
+      "Their cybersecurity solutions provide peace of mind. We've had zero security incidents since implementation, and their compliance automation has streamlined our audit processes significantly.",
     project: 'Cybersecurity & Compliance Platform',
     results: ['
-      'Zero security incidents','
-      'Streamlined compliance processes','
+      'Zero security incidents',
+      'Streamlined compliance processes',
       'Enhanced threat detection',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: true},
   {
 
-    id: 4,'
-    name: 'David Kim','
-    role: 'Operations Manager','
-    comp: 'Global Manufacturing Co.','
+    id: 4,
+    name: 'David Kim',
+    role: 'Operations Manager',
+    comp: 'Global Manufacturing Co.',
     industry: 'Manufacturing',
     rating: 5,
     content:'
-      'The IoT solution they implemented has revolutionized our production monitoring. We can now track every aspect of our manufacturing process in real-time, leading to better quality control and reduced waste.','
+      'The IoT solution they implemented has revolutionized our production monitoring. We can now track every aspect of our manufacturing process in real-time, leading to better quality control and reduced waste.',
     project: 'IoT Manufacturing Platform',
     results: ['
-      'Real-time production monitoring','
-      'Improved quality control','
+      'Real-time production monitoring',
+      'Improved quality control',
       'Reduced waste by 25%',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: false},
   {
 
-    id: 5,'
-    name: 'Lisa Thompson','
-    role: 'Digital Transformation Lead','
-    comp: 'Retail Innovations','
+    id: 5,
+    name: 'Lisa Thompson',
+    role: 'Digital Transformation Lead',
+    comp: 'Retail Innovations',
     industry: 'Retail',
     rating: 5,
     content:'
-      'Zion Tech Group helped us navigate our digital transformation journey with expertise and patience. Their solutions have improved our customer experience and increased our online sales by 35%.','
+      'Zion Tech Group helped us navigate our digital transformation journey with expertise and patience. Their solutions have improved our customer experience and increased our online sales by 35%.',
     project: 'Digital Transformation & E-commerce',
     results: ['
-      '35% increase in online sales','
-      'Improved customer experience','
+      '35% increase in online sales',
+      'Improved customer experience',
       'Streamlined operations',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: false},
   {
 
-    id: 6,'
-    name: 'Robert Wilson','
-    role: 'IT Director','
-    comp: 'Healthcare Systems Ltd.','
+    id: 6,
+    name: 'Robert Wilson',
+    role: 'IT Director',
+    comp: 'Healthcare Systems Ltd.',
     industry: 'Healthcare',
     rating: 5,
     content:'
-      'Their healthcare technology solutions are cutting-edge and compliant with all regulations. The AI-powered diagnostic tools have improved our diagnostic accuracy and patient outcomes significantly.','
+      'Their healthcare technology solutions are cutting-edge and compliant with all regulations. The AI-powered diagnostic tools have improved our diagnostic accuracy and patient outcomes significantly.',
     project: 'AI Healthcare Diagnostics Platform',
     results: ['
-      'Improved diagnostic accuracy','
-      'Enhanced patient outcomes','
+      'Improved diagnostic accuracy',
+      'Enhanced patient outcomes',
       'Full regulatory compliance',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: false},
   {
 
-    id: 7,'
-    name: 'Jennifer Lee','
-    role: 'Product Manager','
-    comp: 'Startup Ventures','
+    id: 7,
+    name: 'Jennifer Lee',
+    role: 'Product Manager',
+    comp: 'Startup Ventures',
     industry: 'Startup',
     rating: 5,
     content:'
-      'As a startup, we needed a partner who could scale with us. Zion Tech Group delivered a robust platform that has grown with our business, and their ongoing support has been invaluable.','
+      'As a startup, we needed a partner who could scale with us. Zion Tech Group delivered a robust platform that has grown with our business, and their ongoing support has been invaluable.',
     project: 'Scalable SaaS Platform',
     results: ['
-      'Scalable platform architecture','
-      'Rapid development and deployment','
+      'Scalable platform architecture',
+      'Rapid development and deployment',
       'Ongoing technical support',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: false},
   {
 
-    id: 8,'
-    name: 'Alex Martinez','
-    role: 'Chief Innovation Officer','
-    comp: 'FutureTech Labs','
+    id: 8,
+    name: 'Alex Martinez',
+    role: 'Chief Innovation Officer',
+    comp: 'FutureTech Labs',
     industry: 'Research & Development',
     rating: 5,
     content:'"
-      "Their quantum computing solutions are revolutionary. We've been able to solve complex problems that were previously intractable, opening up new possibilities for our research.",'
+      "Their quantum computing solutions are revolutionary. We've been able to solve complex problems that were previously intractable, opening up new possibilities for our research.",
     project: 'Quantum Computing Platform',
     results: ['
-      'Solved previously intractable problems','
-      'Advanced research capabilities','
+      'Solved previously intractable problems',
+      'Advanced research capabilities',
       'Cutting-edge technology implementation',
-    ],'
+    ],
     image: '/api/placeholder/100/100',
     featured: false},
 ];
 
 const industries = ['
-  'All Industries','
-  'Technology','
-  'Software Development','
-  'Financial Services','
-  'Manufacturing','
-  'Retail','
-  'Healthcare','
-  'Startup','
+  'All Industries',
+  'Technology',
+  'Software Development',
+  'Financial Services',
+  'Manufacturing',
+  'Retail',
+  'Healthcare',
+  'Startup',
   'Research & Development',
 ];
-'
-const ratings = ['All Ratings', '5 Stars', '4+ Stars', '3+ Stars'];
+
+const ratings = ['All Ratings',5 Stars',4+ Stars',3+ Stars'];
 
 export default function Testimonials() {
-'
-  const [selectedIndustry, setSelectedIndustry] = useState('All Industries');'
-  const [selectedRating, setSelectedRating] = useState('All Ratings');'
+
+  const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
+  const [selectedRating, setSelectedRating] = useState('All Ratings');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredTestimonials = testimonials.filter(testimonial => {
@@ -223,7 +223,7 @@ export default function Testimonials() {
               <span className="text-gradient block">Success Stories</span>
             </h1>
 "
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">'
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Discover how we've helped organizations across industries
               transform their business with cutting-edge technology solutions.
               Real results from real clients.
@@ -255,7 +255,7 @@ export default function Testimonials() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search testimonials..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
@@ -288,7 +288,7 @@ export default function Testimonials() {
               </select>
             </div>
 "
-            <div className="text-zion-slate-light text-sm">'
+            <div className="text-zion-slate-light text-sm">
               Showing {filteredTestimonials.length} of {testimonials.length}{' '}
               testimonials
             </div>
@@ -378,20 +378,20 @@ export default function Testimonials() {
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Join Our Success Stories?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Let's discuss how Zion Tech Group can transform your business with
             cutting-edge technology solutions.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300"
             >
               Get Started Today"
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a"
-              href="/services""
+              href="/services"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Explore Our Services

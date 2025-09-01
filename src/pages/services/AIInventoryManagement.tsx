@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { Package, 
   TrendingUp, 
@@ -277,7 +277,7 @@ export default function AIInventoryManagement(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Inventory Management - Zion Tech Group""
+        title="AI Inventory Management - Zion Tech Group"
         description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
       />
       
@@ -317,7 +317,7 @@ export default function AIInventoryManagement(...args: any[]): any {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Inventory"
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                 {' '}Management
               </span>
             </h1>"

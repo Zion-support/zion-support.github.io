@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration() {
   const features = [
-    'AI-powered security orchestration optimization','
-    'Intelligent security workflow management and execution',;'
-    'Automated security process coordination and automation',;'
-    'Predictive analytics for orchestration needs',;'
-    'Smart orchestration framework management',;'
-    'AI-driven orchestration automation and coordination',;'
-    'Real-time orchestration performance tracking',;'
+    'AI-powered security orchestration optimization',
+    'Intelligent security workflow management and execution',;
+    'Automated security process coordination and automation',;
+    'Predictive analytics for orchestration needs',;
+    'Smart orchestration framework management',;
+    'AI-driven orchestration automation and coordination',;
+    'Real-time orchestration performance tracking',;
     'Custom AI models for orchestration applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$499/mo','
-      details: ['Up to 25 workflows', 'Basic AI features', 'Standard orchestration', 'Email support']
+
+      name: 'Developer',
+      price: '$499/mo',
+      details: ['Up to 25 workflows',Basic AI features',Standard orchestration',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,299/mo', '
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,299/mo',
+      details: ['Up to 100 workflows',Advanced AI features',Enhanced orchestration',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,299/mo', ;'
-      details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$3,299/mo', ;
+      details: ['Unlimited workflows',Custom AI models',Full orchestration suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security orchestration optimization',;'
-    'Security workflow management and execution',;'
-    'Security process coordination and automation',;'
-    'Orchestration framework management and automation',;'
-    'Orchestration automation and coordination',;'
+  const useCases = [;
+    'Security orchestration optimization',;
+    'Security workflow management and execution',;
+    'Security process coordination and automation',;
+    'Orchestration framework management and automation',;
+    'Orchestration automation and coordination',;
     'Orchestration scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security orchestration performance by 50-80%',;'
-    'Reduce orchestration completion time by 40-70%',;'
-    'Cut security orchestration costs by 35-65%',;'
-    'Enhance security orchestration reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security orchestration performance by 50-80%',;
+    'Reduce orchestration completion time by 40-70%',;
+    'Cut security orchestration costs by 35-65%',;
+    'Enhance security orchestration reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security orchestration operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% completion time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% completion time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-purple-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

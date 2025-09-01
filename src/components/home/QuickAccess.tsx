@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -191,7 +191,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 }}
             transition={{ duration: 0.6 }}"
-            className="text-3xl md:text-4xl font-bold text-white mb-4""
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
       title: "Micro SaaS","
       description: "Ready-to-Deploy Solutions",;
       icon: Code,;"
@@ -542,13 +542,13 @@ const QuickAccess: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Contact Our Team
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 Browse All Services
@@ -602,13 +602,13 @@ const QuickAccess: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
 
                 Contact Our Team
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 Browse All Services

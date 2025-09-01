@@ -1,31 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;'
-    { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },'
-    { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },'
-    { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },'
-    { id: '4', text: 'Blockchain Solutions', type: 'trending', relevance: 90, category: 'Web3' },'
-    { id: '5', text: 'Data Analytics', type: 'service', relevance: 85, category: 'Data Science' },'
-    { id: '6', text: 'Cybersecurity', type: 'trending', relevance: 92, category: 'Security' },'
-    { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },'
+import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;
+    { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
+    { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
+    { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },
+    { id: '4', text: 'Blockchain Solutions', type: 'trending', relevance: 90, category: 'Web3' },
+    { id: '5', text: 'Data Analytics', type: 'service', relevance: 85, category: 'Data Science' },
+    { id: '6', text: 'Cybersecurity', type: 'trending', relevance: 92, category: 'Security' },
+    { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },
     { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' },
 ];
 export function AdvancedSearch() {
-'
+
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const searchRef = useRef(null);'
-    const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
+    const searchRef = useRef(null);
+    const categories = ['AI & ML',DevOps',Mobile',Web3',Data Science',Security',Frontend',Backend'];
     useEffect ( () => {
         const handleClickOutside = (event) => {
 
             if (searchRef.current && !searchRef.current.contains(event.target)) {
 
                 setShowSuggestions(false)}
-        };'
-        document.addEventListener('mousedown', handleClickOutside);'
+        };
+        document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     useEffect(() => {
         if (query.trim()) {
@@ -58,7 +58,7 @@ export function AdvancedSearch() {
     const getSuggestionIcon = (type) => {
 
         switch (type) {
-'
+
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;'"
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;'"
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;'"
@@ -68,11 +68,11 @@ export function AdvancedSearch() {
     const getSuggestionColor = (type) => {
 
         switch (type) {
-'
-            case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';'
-            case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';'
-            case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';'
-            case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';'
+
+            case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
+            case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
+            case 'trending': return 'bg-zion-emerald/10 border-zion-emerald/20';
+            case 'recent': return 'bg-zion-gold/10 border-zion-gold/20';
             default: return 'bg-zion-slate/10 border-zion-slate/20'}
     };"
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
@@ -101,7 +101,7 @@ export function AdvancedSearch() {
           </div>
 "
           <div className="flex flex-wrap gap-2">
-            {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)'
+            {categories.map(category => (<button key={category} onClick={() => toggleFilter(category)} className={`px-3 py-1 text-xs rounded-full border transition-all duration-200 ${selectedFilters.includes(category)
                     ? 'bg-zion-cyan text-white border-zion-cyan''`
                     : 'bg-transparent text-zion-slate border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
                 {category}

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -8,27 +8,27 @@ import {
   Award,
   Users,
   ArrowRight,
-  CheckCircle,'
-  Zap} from 'lucide-react';'
-import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';'
+  CheckCircle,
+  Zap} from 'lucide-react';
+import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';
 import { Button } from '../components/ui/button';
 import {
 
   Card,
   CardContent,
-  CardHeader,'
+  CardHeader,
   CardTitle} from '../components/ui/card';
 const ServiceComparison = () => {
   const features = [
     {
 
-      icon: <BarChart3 className="w-6 h-6 text-zion-cyan" />,'
+      icon: <BarChart3 className="w-6 h-6 text-zion-cyan" />,
       title: 'Advanced Filtering',
       description:'
         'Filter services by category, complexity, price range, and technology stack'},
     {
 "
-      icon: <Target className="w-6 h-6 text-zion-purple" />,'
+      icon: <Target className="w-6 h-6 text-zion-purple" />,
       title: 'Smart Comparison',
       description:'
         'Compare multiple services side-by-side with detailed feature analysis'},
@@ -39,16 +39,16 @@ const ServiceComparison = () => {
         'Real-time ratings and popularity indicators to guide your decision'},
     {
 "
-      icon: <Award className="w-6 h-6 text-zion-orange" />,'
+      icon: <Award className="w-6 h-6 text-zion-orange" />,
       title: 'Expert Insights',
       description:'"
         "Get detailed insights into each service's capabilities and target audience"},
   ];
   const benefits = ['
-    'Make informed decisions with comprehensive service comparisons','
-    'Find the perfect service tier for your business needs and budget','
-    'Understand complexity levels and implementation requirements','
-    'Compare pricing, features, and benefits across different solutions','
+    'Make informed decisions with comprehensive service comparisons',
+    'Find the perfect service tier for your business needs and budget',
+    'Understand complexity levels and implementation requirements',
+    'Compare pricing, features, and benefits across different solutions',
     'Get personalized recommendations based on your requirements',
   ];
   return ("
@@ -80,7 +80,7 @@ const ServiceComparison = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   document'
-                    .getElementById('comparison-tool')'
+                    .getElementById('comparison-tool')
                     ?.scrollIntoView({ behavior: 'smooth' })
                 }
               >
@@ -91,7 +91,7 @@ const ServiceComparison = () => {
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help','
+                    'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',
                     '_blank'
                   )
                 }
@@ -233,7 +233,7 @@ const ServiceComparison = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Selection Help','
+                    'mailto:kleber@ziontechgroup.com?subject=Service Selection Help',
                     '_blank'
                   )
                 }
@@ -243,7 +243,7 @@ const ServiceComparison = () => {
               </Button>
               <Button"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"'
-                onClick={() => window.open('tel:+13024640950', '_blank')}
+                onClick={() => window.open('tel:+13024640950',_blank')}
               >"
                 <Zap className="w-5 h-5 mr-2" />
                 Call Now

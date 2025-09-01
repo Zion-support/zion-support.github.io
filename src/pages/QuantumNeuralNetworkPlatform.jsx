@@ -6,61 +6,61 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
     const features = [
         {
 
-            icon: Brain,'
-            title: 'Quantum Neural Networks','
+            icon: Brain,
+            title: 'Quantum Neural Networks',
             description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'
         },
         {
 
-            icon: Zap,'
-            title: 'Real-time Processing','
+            icon: Zap,
+            title: 'Real-time Processing',
             description: 'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.'
         },
         {
 
-            icon: Target,'
-            title: 'Precision Optimization','
+            icon: Target,
+            title: 'Precision Optimization',
             description: 'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.'
         },
         {
 
-            icon: Shield,'
-            title: 'Quantum Security','
+            icon: Shield,
+            title: 'Quantum Security',
             description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
 
     ];
     const useCases = [
         {
-'
-            title: 'Financial Modeling','
+
+            title: 'Financial Modeling',
             description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
             icon: TrendingUp
         },
         {
-'
-            title: 'Drug Discovery','
+
+            title: 'Drug Discovery',
             description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
             icon: Globe
         },
         {
-'
-            title: 'Climate Modeling','
+
+            title: 'Climate Modeling',
             description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',
             icon: Globe
         },
         {
-'
-            title: 'AI Training','
+
+            title: 'AI Training',
             description: 'Faster and more efficient training of large language models and neural networks.',
             icon: Brain
 
     ];
     const benefits = ['
-        'Exponential speedup in complex computations','
-        'Enhanced accuracy in pattern recognition','
-        'Scalable architecture for growing datasets','
-        'Energy-efficient quantum-inspired algorithms','
-        'Seamless integration with existing AI systems','
+        'Exponential speedup in complex computations',
+        'Enhanced accuracy in pattern recognition',
+        'Scalable architecture for growing datasets',
+        'Energy-efficient quantum-inspired algorithms',
+        'Seamless integration with existing AI systems',
         'Real-time decision making capabilities'
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -74,7 +74,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum Neural Network"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}Platform
               </span>
             </h1>"

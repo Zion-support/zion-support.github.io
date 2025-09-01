@@ -50,7 +50,7 @@ const mockReplies = [
     {
 "
         id: "reply1","
-        postId: "1",'"
+        postId: "1","
         content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
         author: {
 "
@@ -68,7 +68,7 @@ const mockReplies = [
     {
 "
         id: "reply2","
-        postId: "1",'"
+        postId: "1","
         content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",
         author: {
 "
@@ -86,7 +86,7 @@ const mockReplies = [
     {
 "
         id: "reply3","
-        postId: "1",'"
+        postId: "1","
         content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
         author: {
 "
@@ -128,11 +128,11 @@ export default function ForumPostPage() {
     const { user } = useAuth();
     const { toast } = useToast();
     const [post, setPost] = useState(mockPost);
-    const [replies, setReplies] = useState(mockReplies);'
+    const [replies, setReplies] = useState(mockReplies);
     // Check if this is the user's own post
     const isAuthor = user?.id === post?.authorId;
     // Check if user is admin/mod'
-    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';'
+    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
     // For this demo, we'll assume the post is found
     if (!post) {
 "
@@ -184,10 +184,10 @@ export default function ForumPostPage() {
             postId: post.id,
             content,
             author: {
-'
-                id: user.id || 'unknown','
-                name: user.displayName || 'Anonymous','
-                avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1','
+
+                id: user.id || 'unknown',
+                name: user.displayName || 'Anonymous',
+                avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1',
                 role: user.role || 'user'
             },
             createdAt: new Date () .toISOString () ,
@@ -264,7 +264,7 @@ export default function ForumPostPage() {
 
 } keywords = {
 '`
-  `community, forum, discussion, ${post.tags.join(','
+  `community, forum, discussion, ${post.tags.join(',
   ');
 `
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;
@@ -275,7 +275,7 @@ export default function ForumPostPage() {
             Forum
           </Link>"
           <span className="text-muted-foreground">/</span>"`
-          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">'
+          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
             {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
           </Link>"
           <span className="text-muted-foreground">/</span>"
@@ -314,7 +314,7 @@ export default function ForumPostPage() {
                 </Badge>) ) }
             </div>
             "
-            <div className="prose dark:prose-invert max-w-none mb-6">'
+            <div className="prose dark:prose-invert max-w-none mb-6">
               {post.content.split('\n\n').map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             </div>
             "

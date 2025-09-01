@@ -1,10 +1,10 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { cn  } from '@/lib/utils';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
 
-  className?: string;'
+  className?: string;
   variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
   width?: string | number;
   height?: string | number;
@@ -13,26 +13,26 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 const Skeleton: React.FC<SkeletonProps> = ({
 
-  className,'
+  className,
 variant:  'default',;
   width,;
   height,;
   lines = 1,;
   animated = true,;
-}) => {;'
+}) => {;
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
 
   const variants = {
-'
-  default: 'h-4 w-full','
-    circular: 'rounded-full','
-    rectangular: 'w-full','
-    text: 'h-4 w-full','
+
+  default: 'h-4 w-full',
+    circular: 'rounded-full',
+    rectangular: 'w-full',
+    text: 'h-4 w-full',
     avatar: 'rounded-full w-12 h-12',;
   ;
   ;
   ;
-  ;'
+  ;
   card: 'w-full h-32 rounded-lg';
   ;
 
@@ -48,7 +48,7 @@ variant:  'default',;
     variants[variant],;
     className;
   );
-'
+
   if (variant = == 'text' && lines > 1) {
 
     return()
@@ -59,8 +59,8 @@ variant:  'default',;
             className = {
 
   cn()
-              baseClasses,'
-              'h-4','
+              baseClasses,
+              'h-4',
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 
@@ -87,7 +87,7 @@ variant:  'default',;
   {
 
               duration: 1.5,
-              repeat: Infinity,'
+              repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
             
@@ -104,7 +104,7 @@ variant:  'default',;
     );
   }
 
-  const style: React.CSSProperties = { /* empty */ };'
+  const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
 
@@ -129,7 +129,7 @@ variant:  'default',;
   {
 
         duration: 1.5,
-        repeat: Infinity,;'
+        repeat: Infinity,;
   ease: 'easeInOut';
       ;
 ;
@@ -146,7 +146,7 @@ variant:  'default',;
 // Specialized skeleton components;
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
-'
+
   cn('p-6 space-y-4',
   className)
 
@@ -173,7 +173,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   className
 }) => (
   <div className = {
-'
+
   cn('space-y-3',
   className)
 
@@ -206,7 +206,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   className
 }) => (
   <div className = {
-'
+
   cn('space-y-4',
   className)
 
@@ -241,7 +241,7 @@ export const GridSkeleton: React.FC<{
   itemHeight = 120;
 }) => (
   <div className = {
-'
+
   cn('grid gap-4',
   className)
 

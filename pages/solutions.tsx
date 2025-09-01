@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -17,178 +17,178 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Target,'
+  Target,
   Award} from 'lucide-react';
 
 export default function Solutions() {
   const industrySolutions = [
     {
 
-      icon: Building,'
-      title: 'Enterprise Solutions','
+      icon: Building,
+      title: 'Enterprise Solutions',
       description: 'Comprehensive technology solutions for large enterprises',
       features: ['
-        'Digital Transformation','
-        'Legacy Modernization','
-        'Enterprise Integration','
+        'Digital Transformation',
+        'Legacy Modernization',
+        'Enterprise Integration',
         'Scalable Architecture',
-      ],'
-      href: '/solutions/enterprise','
+      ],
+      href: '/solutions/enterprise',
       color: 'from-blue-600 to-indigo-700'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'SMB Solutions',
       description:'
         'Cost-effective technology solutions for small and medium businesses',
       features: ['
-        'Cloud Migration','
-        'Security Hardening','
-        'Process Automation','
+        'Cloud Migration',
+        'Security Hardening',
+        'Process Automation',
         'Growth Enablement',
-      ],'
-      href: '/solutions/smb','
+      ],
+      href: '/solutions/smb',
       color: 'from-green-600 to-emerald-700'},
     {
 
-      icon: Globe,'
-      title: 'Startup Solutions','
+      icon: Globe,
+      title: 'Startup Solutions',
       description: 'Rapid development and scaling solutions for startups',
       features: ['
-        'MVP Development','
-        'Cloud Infrastructure','
-        'AI Integration','
+        'MVP Development',
+        'Cloud Infrastructure',
+        'AI Integration',
         'Growth Analytics',
-      ],'
-      href: '/solutions/startup','
+      ],
+      href: '/solutions/startup',
       color: 'from-purple-600 to-pink-700'},
   ];
 
   const technologySolutions = [
     {
 
-      icon: Brain,'
-      title: 'AI & Machine Learning','
+      icon: Brain,
+      title: 'AI & Machine Learning',
       description: 'Intelligent automation and decision-making systems',
       features: ['
-        'Predictive Analytics','
-        'Natural Language Processing','
-        'Computer Vision','
+        'Predictive Analytics',
+        'Natural Language Processing',
+        'Computer Vision',
         'Automated Workflows',
-      ],'
-      href: '/solutions/ai-ml','
+      ],
+      href: '/solutions/ai-ml',
       color: 'from-purple-600 to-indigo-700'},
     {
 
-      icon: Cloud,'
-      title: 'Cloud & DevOps','
+      icon: Cloud,
+      title: 'Cloud & DevOps',
       description: 'Scalable cloud infrastructure and automation',
       features: ['
-        'Multi-cloud Strategy','
-        'Kubernetes Orchestration','
-        'CI/CD Pipelines','
+        'Multi-cloud Strategy',
+        'Kubernetes Orchestration',
+        'CI/CD Pipelines',
         'Infrastructure as Code',
-      ],'
-      href: '/solutions/cloud-devops','
+      ],
+      href: '/solutions/cloud-devops',
       color: 'from-cyan-600 to-blue-700'},
     {
 
-      icon: Shield,'
-      title: 'Cybersecurity','
+      icon: Shield,
+      title: 'Cybersecurity',
       description: 'Comprehensive security and compliance solutions',
       features: ['
-        'Zero Trust Architecture','
-        'SOC 2 Compliance','
-        'Threat Detection','
+        'Zero Trust Architecture',
+        'SOC 2 Compliance',
+        'Threat Detection',
         'Security Hardening',
-      ],'
-      href: '/solutions/cybersecurity','
+      ],
+      href: '/solutions/cybersecurity',
       color: 'from-red-600 to-orange-700'},
     {
 
-      icon: BarChart3,'
-      title: 'Data & Analytics','
+      icon: BarChart3,
+      title: 'Data & Analytics',
       description: 'Real-time insights and business intelligence',
       features: ['
-        'Data Warehousing','
-        'Real-time Analytics','
-        'Business Intelligence','
+        'Data Warehousing',
+        'Real-time Analytics',
+        'Business Intelligence',
         'Data Quality',
-      ],'
-      href: '/solutions/data-analytics','
+      ],
+      href: '/solutions/data-analytics',
       color: 'from-emerald-600 to-teal-700'},
     {
 
-      icon: Database,'
-      title: 'Enterprise Systems','
+      icon: Database,
+      title: 'Enterprise Systems',
       description: 'Modern ERP, CRM, and workflow solutions',
       features: ['
-        'ERP Modernization','
-        'CRM Integration','
-        'Workflow Automation','
+        'ERP Modernization',
+        'CRM Integration',
+        'Workflow Automation',
         'API Management',
-      ],'
-      href: '/solutions/enterprise-systems','
+      ],
+      href: '/solutions/enterprise-systems',
       color: 'from-blue-600 to-indigo-700'},
     {
 
-      icon: Rocket,'
-      title: 'Emerging Technologies','
+      icon: Rocket,
+      title: 'Emerging Technologies',
       description: 'Cutting-edge quantum and blockchain solutions',
       features: ['
-        'Quantum Computing','
-        'Blockchain Platforms','
-        'IoT Infrastructure','
+        'Quantum Computing',
+        'Blockchain Platforms',
+        'IoT Infrastructure',
         'Edge Computing',
-      ],'
-      href: '/solutions/emerging-tech','
+      ],
+      href: '/solutions/emerging-tech',
       color: 'from-pink-600 to-rose-700'},
   ];
 
   const useCaseSolutions = [
     {
-'
-      title: 'Digital Transformation','
+
+      title: 'Digital Transformation',
       description: 'Modernize legacy systems and processes for the digital age',
-      icon: Zap,'
+      icon: Zap,
       href: '/solutions/digital-transformation'},
     {
-'
+
       title: 'Cloud Migration',
       description:'
         'Seamlessly migrate to cloud infrastructure with minimal downtime',
-      icon: Cloud,'
+      icon: Cloud,
       href: '/solutions/cloud-migration'},
     {
-'
-      title: 'Security Compliance','
+
+      title: 'Security Compliance',
       description: 'Achieve and maintain industry compliance standards',
-      icon: Shield,'
+      icon: Shield,
       href: '/solutions/security-compliance'},
     {
-'
-      title: 'Data Modernization','
+
+      title: 'Data Modernization',
       description: 'Transform data infrastructure for real-time insights',
-      icon: BarChart3,'
+      icon: BarChart3,
       href: '/solutions/data-modernization'},
     {
-'
-      title: 'AI Integration','
+
+      title: 'AI Integration',
       description: 'Integrate AI capabilities into existing business processes',
-      icon: Brain,'
+      icon: Brain,
       href: '/solutions/ai-integration'},
     {
-'
-      title: 'Process Automation','
+
+      title: 'Process Automation',
       description: 'Automate repetitive tasks and workflows',
-      icon: Target,'
+      icon: Target,
       href: '/solutions/process-automation'},
   ];
 
   const successMetrics = ['
-    { number: '95%', label: 'Client Satisfaction', icon: Star },'
-    { number: '40%', label: 'Cost Reduction', icon: TrendingUp },'
-    { number: '60%', label: 'Efficiency Gain', icon: Zap },'
+    { number: '95%', label: 'Client Satisfaction', icon: Star },
+    { number: '40%', label: 'Cost Reduction', icon: TrendingUp },
+    { number: '60%', label: 'Efficiency Gain', icon: Zap },
     { number: '99.9%', label: 'Uptime SLA', icon: Clock },
   ];
 
@@ -207,13 +207,13 @@ export default function Solutions() {
             </p>"
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="w-full sm:w-auto rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
               >
                 Get Custom Solution
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="w-full sm:w-auto text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
               >"
                 View Case Studies <span aria-hidden="true">→</span>
@@ -257,7 +257,7 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Industry-Specific Solutions
             </h2>"
-            <p className="mt-6 text-lg text-gray-600">'
+            <p className="mt-6 text-lg text-gray-600">
               Tailored solutions designed for your industry's unique challenges
               and requirements.
             </p>
@@ -395,19 +395,19 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready for Your Custom Solution?
             </h2>"
-            <p className="mt-6 text-lg text-blue-100">'
+            <p className="mt-6 text-lg text-blue-100">
               Let's discuss your specific needs and create a tailored solution
               that drives real business results.
             </p>"
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
               >
                 Get Started
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="w-full sm:w-auto text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
               >"
                 View Success Stories <span aria-hidden="true">→</span>

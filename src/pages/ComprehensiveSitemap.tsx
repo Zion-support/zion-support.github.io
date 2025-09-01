@@ -1053,7 +1053,7 @@ import { motion } from 'framer - motion';
                 className="bg - gray - 800 / 50 rounded - lg p - 6 border border - gray - 700"
               >
                 <h3 className="text - lg font - semibold text - white mb - 2 capitalize">
-                  {key.replace (/ ([A - Z]) /g, ' $1') .trim () }
+                  {key.replace (/ ([A - Z]) /g, $1') .trim () }
                 </h3>
                 <div className="space - y-2">
                   <div className="flex justify - between">

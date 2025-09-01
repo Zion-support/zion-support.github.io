@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, useAnimation } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
 
@@ -25,63 +25,63 @@ interface Stat {
 ;
 const stats: Stat[] = [
   {
-'
+
     id: 'clients',
-    icon: Users,'
-    value: '500+','
-    label: 'Global Clients','
-    description: 'Serving businesses across 50+ countries','
-    color: 'zion-cyan','
+    icon: Users,
+    value: '500+',
+    label: 'Global Clients',
+    description: 'Serving businesses across 50+ countries',
+    color: 'zion-cyan',
     gradient: 'from-zion-cyan to-zion-blue'
   },
   {
-'
+
     id: 'uptime',
-    icon: Shield,'
-    value: '99.99%','
-    label: 'Uptime Guarantee','
-    description: 'Enterprise-grade reliability and performance','
-    color: 'zion-purple','
+    icon: Shield,
+    value: '99.99%',
+    label: 'Uptime Guarantee',
+    description: 'Enterprise-grade reliability and performance',
+    color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-cyan'
   },
   {
-'
+
     id: 'roi',
-    icon: TrendingUp,'
-    value: '600%','
-    label: 'Average ROI','
-    description: 'Proven business impact and cost savings','
-    color: 'zion-blue','
+    icon: TrendingUp,
+    value: '600%',
+    label: 'Average ROI',
+    description: 'Proven business impact and cost savings',
+    color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-purple'
   },
   {
-'
+
     id: 'satisfaction',
-    icon: Star,'
-    value: '4.9/5','
-    label: 'Client Satisfaction','
-    description: 'Consistently exceeding expectations','
-    color: 'zion-cyan','
+    icon: Star,
+    value: '4.9/5',
+    label: 'Client Satisfaction',
+    description: 'Consistently exceeding expectations',
+    color: 'zion-cyan',
     gradient: 'from-zion-cyan to-zion-purple'
   },
   {
-'
+
     id: 'innovation',
-    icon: Zap,'
-    value: '50+','
-    label: 'Patents & Innovations','
-    description: 'Leading edge technology development','
-    color: 'zion-purple','
+    icon: Zap,
+    value: '50+',
+    label: 'Patents & Innovations',
+    description: 'Leading edge technology development',
+    color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-blue'
   },
   {
-'
+
     id: 'growth',
-    icon: Rocket,'
-    value: '300%','
-    label: 'Annual Growth','
-    description: 'Rapidly expanding global presence','
-    color: 'zion-blue','
+    icon: Rocket,
+    value: '300%',
+    label: 'Annual Growth',
+    description: 'Rapidly expanding global presence',
+    color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-cyan'
 
 ];
@@ -98,12 +98,12 @@ export default function EnhancedStatsSection(...args[]):  {
 
   useEffect(() => {
     if (inView) {
-'
+
       controls.start('visible')}
   }, [controls, inView]);
 
-  const animateCount = (target: string, duration: number = 2000) => {;'
-    const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+  const animateCount = (target: string, duration: number = 2000) => {;
+    const numericValue = parseInt(target.replace(/[^0-9]/g,'));
     const start = 0;
     const increment = numericValue / (duration / 16) ; // 60fps
 
@@ -259,8 +259,8 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 }}
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                    {countedValues[stat.value] || 0}'
-                    {stat.value.includes('%') && '%'}'
+                    {countedValues[stat.value] || 0}
+                    {stat.value.includes('%') && '%'}
                     {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
                 </motion.div>

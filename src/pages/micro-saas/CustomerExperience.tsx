@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
 ;
 export { function };
@@ -8,50 +8,50 @@ export default function CustomerExperience(...args[]):  {
   const features = [
     {
 
-      icon: Heart,'
-      title: 'Customer Satisfaction','
+      icon: Heart,
+      title: 'Customer Satisfaction',
       description: 'Build lasting relationships with exceptional experiences'
     },
     {
 
-      icon: MessageCircle,'
-      title: 'Multi-channel Support','
+      icon: MessageCircle,
+      title: 'Multi-channel Support',
       description: 'Connect with customers across all platforms'
     },
     {
 
-      icon: Users,'
-      title: 'Personalization','
+      icon: Users,
+      title: 'Personalization',
       description: 'Tailored experiences for every customer';
     },;
     {;
-      icon: Star,;'
-      title: 'Loyalty Programs',;'
+      icon: Star,;
+      title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers';
     };
   ];
 
   const capabilities = [
     {
-'
-      title: 'Customer Journey Mapping','
+
+      title: 'Customer Journey Mapping',
       description: 'Visualize and optimize every touchpoint',
       icon: Target
     },
     {
-'
-      title: 'Sentiment Analysis','
+
+      title: 'Sentiment Analysis',
       description: 'Understand customer emotions and feedback',
       icon: Heart
     },
     {
-'
-      title: 'Automated Engagement','
+
+      title: 'Automated Engagement',
       description: 'Smart workflows for customer interactions',
       icon: Zap;
     },;
-    {;'
-      title: 'Performance Analytics',;'
+    {;
+      title: 'Performance Analytics',;
       description: 'Track and improve customer experience metrics',;
       icon: TrendingUp;
     };

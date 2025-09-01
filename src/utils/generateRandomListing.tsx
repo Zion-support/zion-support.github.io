@@ -4,10 +4,7 @@ export function generateRandomListings (count: number) : MarketplaceItem[] {
 
 
 const sampleTitles = [
-  'AI - Powered Analytics Platform',
-  'Cybersecurity Assessment Tool',
-  'Cloud Migration Service',
-  'IoT Edge Computing Solution',;
+  'AI - Powered Analytics Platform',Cybersecurity Assessment Tool',Cloud Migration Service',IoT Edge Computing Solution',;
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -17,10 +14,7 @@ const sampleTitles = [
 ];
 
 const sampleDescriptions = [
-  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
-  'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
-  'Professional cloud migration service including planning, execution, and optimization.',
-  'IoT platform with edge computing capabilities for real - time data processing.',;
+  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',Professional cloud migration service including planning, execution, and optimization.',IoT platform with edge computing capabilities for real - time data processing.',;
   'State - of - the - art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -30,16 +24,16 @@ const sampleDescriptions = [
 ];
 
 const sampleTags = [
-  ['AI', 'Analytics', 'Business Intelligence'],
-  ['Security', 'Cybersecurity', 'Monitoring'],
-  ['Cloud', 'Migration', 'Enterprise'],
-  ['IoT', 'Edge Computing', 'Real - time'],;
-  ['Quantum', 'Research', 'Hardware'],;
-  ['Data Science', 'Machine Learning', 'Consulting'],;
-  ['Blockchain', 'Development', 'DApps'],;
-  ['Machine Learning', 'AI', 'Platform'],;
-  ['DevOps', 'Automation', 'CI / CD'],;
-  ['Network', 'Security', 'Threat Detection'];
+  ['AI',Analytics',Business Intelligence'],
+  ['Security',Cybersecurity',Monitoring'],
+  ['Cloud',Migration',Enterprise'],
+  ['IoT',Edge Computing',Real - time'],;
+  ['Quantum',Research',Hardware'],;
+  ['Data Science',Machine Learning',Consulting'],;
+  ['Blockchain',Development',DApps'],;
+  ['Machine Learning',AI',Platform'],;
+  ['DevOps',Automation',CI / CD'],;
+  ['Network',Security',Threat Detection'];
 ];
 
 const sampleImages = [;
@@ -52,20 +46,19 @@ const sampleImages = [;
 ];
 
 const categories: Array < any> = [
-  'products', 'talent', 'equipment', 'services'
+  'products',talent',equipment',services'
 ];
 
 const priceRanges = [;
-  '$500', '$1,200', '$2,500', '$5,000', '$8,500', '$15,000', '$25,000', '$50,000';
+  '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
 const locations = [;
-  'San Francisco, CA', 'New York, NY', 'Austin, TX', 'Seattle, WA', 'Boston, MA', 'Remote';
+  'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
 
 const sellerNames = [
-  'TechCorp Solutions',
-  'SecureNet Professionals',;
+  'TechCorp Solutions',SecureNet Professionals',;
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;
@@ -91,7 +84,7 @@ const sellerNames = [
     views: Math.floor (Math.random () * 5000) + 100,
     likes: Math.floor (Math.random () * 300) + 20,
     image: image || 'https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2072 & q=80',
-    tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
+    tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random () > 0.7,
     seller: {
       name: sellerName || 'Default Seller',

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousEducationProfessor = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousEducationProfessor = () => {
       <Helmet>
         <title>AI Autonomous Education Professor | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous education professor that provides personalized learning experiences, intelligent tutoring, and adaptive curriculum design with 24/7 availability."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI education, autonomous professor, AI tutoring, personalized learning, adaptive curriculum, AI teaching"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-education-professor"
         />
       </Helmet>
@@ -190,13 +190,13 @@ const AIAutonomousEducationProfessor = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Mathematics','
-                'Science','
-                'History','
-                'Literature','
-                'Computer Science','
-                'Languages','
-                'Arts','
+                'Mathematics',
+                'Science',
+                'History',
+                'Literature',
+                'Computer Science',
+                'Languages',
+                'Arts',
                 'Business',
               ].map(subject => (
                 <div

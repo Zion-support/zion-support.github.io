@@ -1,10 +1,10 @@
-import React, { useState } from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 export default function HelpCenter() {
-'
-    const [searchQuery, setSearchQuery] = useState('');'
+
+    const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
     const toggleCategory = (category) => {
 
@@ -12,88 +12,88 @@ export default function HelpCenter() {
             ? prev.filter(c => c !== category)
             [...prev, category])};
     const helpCategories = {
-'
+
   'getting-started': {
-'
+
             title: 'Getting Started',
             icon: BookOpen,
-            articles[;'
-                { title: 'How to create your first account','
+            articles[;
+                { title: 'How to create your first account',
   href: '/help/create-account' 
 
-},'
-                { title: 'Complete profile setup guide', href: '/help/profile-setup' },'
-                { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },'
+},
+                { title: 'Complete profile setup guide', href: '/help/profile-setup' },
+                { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
             ]
-        },;'
+        },;
         'marketplace': {
-'
+
             title: 'Marketplace',
             icon: BookOpen,
-            articles[;'
-                { title: 'How to list products and services', href: '/help/list-products' },'
-                { title: 'Managing your listings', href: '/help/manage-listings' },'
-                { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },'
+            articles[;
+                { title: 'How to list products and services', href: '/help/list-products' },
+                { title: 'Managing your listings', href: '/help/manage-listings' },
+                { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
                 { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
             ]
-        },;'
+        },;
         'talent': {
-'
+
             title: 'Talent & Hiring',
             icon: BookOpen,
-            articles[;'
-                { title: 'Creating a talent profile', href: '/help/talent-profile' },'
-                { title: 'Finding and hiring talent', href: '/help/hire-talent' },'
-                { title: 'Managing projects and contracts', href: '/help/manage-projects' },'
+            articles[;
+                { title: 'Creating a talent profile', href: '/help/talent-profile' },
+                { title: 'Finding and hiring talent', href: '/help/hire-talent' },
+                { title: 'Managing projects and contracts', href: '/help/manage-projects' },
                 { title: 'Payment and escrow system', href: '/help/payment-system' }
             ]
-        },;'
+        },;
         'technical': {
-'
+
             title: 'Technical Support',
             icon: BookOpen,
-            articles[;'
-                { title: 'Common technical issues', href: '/help/technical-issues' },'
-                { title: 'Browser compatibility', href: '/help/browser-compatibility' },'
-                { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },'
+            articles[;
+                { title: 'Common technical issues', href: '/help/technical-issues' },
+                { title: 'Browser compatibility', href: '/help/browser-compatibility' },
+                { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
                 { title: 'API and integration support', href: '/help/api-support' }
             ]
-        },;'
+        },;
         'billing': {
-'
+
             title: 'Billing & Payments',
             icon: BookOpen,
-            articles[;'
-                { title: 'Understanding your invoice', href: '/help/invoice-guide' },'
-                { title: 'Payment methods and security', href: '/help/payment-methods' },'
-                { title: 'Refund and cancellation policy', href: '/help/refund-policy' },'
+            articles[;
+                { title: 'Understanding your invoice', href: '/help/invoice-guide' },
+                { title: 'Payment methods and security', href: '/help/payment-methods' },
+                { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
                 { title: 'Tax information and reporting', href: '/help/tax-information' }
             ]
-        },;'
+        },;
         'account': {
-'
+
             title: 'Account & Security',
             icon: BookOpen,
-            articles[;'
-                { title: 'Account security best practices', href: '/help/account-security' },'
-                { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },'
-                { title: 'Password reset and recovery', href: '/help/password-recovery' },'
+            articles[;
+                { title: 'Account security best practices', href: '/help/account-security' },
+                { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
+                { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
             ]
         }
     };
     const popularArticles = ['
-        'How to create your first account','
-        'Understanding the marketplace','
-        'Creating a talent profile','
-        'Finding and hiring talent','
-        'Payment and escrow system','
+        'How to create your first account',
+        'Understanding the marketplace',
+        'Creating a talent profile',
+        'Finding and hiring talent',
+        'Payment and escrow system',
         'Account security best practices'
     ];
     return (<>
       <Helmet>
-        <title>Help Center - Zion Tech Group</title>'
+        <title>Help Center - Zion Tech Group</title>
         <meta name="description" content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information."/>"
         <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group"/>"
         <link rel="canonical" href="https://ziontechgroup.com/help-center"/>
@@ -155,7 +155,7 @@ export default function HelpCenter() {
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
                   <Link to = {
 
-  `/help/${article.toLowerCase().replace(/\s+/g,'
+  `/help/${article.toLowerCase().replace(/\s+/g,
   '-')
 "`
 }`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">

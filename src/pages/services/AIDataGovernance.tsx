@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Shield, 
   Database, 
@@ -260,7 +260,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Data Governance - Zion Tech Group""
+        title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
       />
 
@@ -520,7 +520,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry-Specific Solutions
             </h2>"
-            <p className="text-xl text-gray-300">'
+            <p className="text-xl text-gray-300">
               Tailored data governance for your industry's unique requirements
             </p>
           </div>

@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
 import SEOHead from "../components/SEOHead";
 
@@ -74,8 +74,8 @@ const AIPoweredITAssetManagement = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEOHead"
-        title="AI-Powered IT Asset Management | Zion Tech Group""
-        description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure.""
+        title="AI-Powered IT Asset Management | Zion Tech Group"
+        description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure."
         keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"
       />
 
@@ -189,13 +189,13 @@ const AIPoweredITAssetManagement = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
 
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
 
               Get Started
             </Link>;
             <Link"
-              to="/request-quote""
+              to="/request-quote"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 text-lg"
 
               Request Quote
@@ -353,13 +353,13 @@ const AIPoweredITAssetManagement = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
                 Contact Us
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="border border-blue-400 text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300"
 
                 Get Quote

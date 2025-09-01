@@ -1,16 +1,16 @@
-import { useState } from 'react';'
-import SEO from '@/components/SEO';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';'
+import { useState } from 'react';
+import SEO from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {
-'
+
   const [activeTab, setActiveTab] = useState('resume');
   return()
     <>
       <SEO
-        title="Portfolio Builder | Zion AI Marketplace""
+        title="Portfolio Builder | Zion AI Marketplace"
         description="Create and customize your resume and portfolio to showcase your skills and experience."
       />
 "
@@ -24,13 +24,13 @@ function PortfolioBuilderContent() {
         >"
           <TabsList className="bg-muted/60 p-0">
             <TabsTrigger"
-              value="resume""
+              value="resume"
               className="data-[state=active]:bg-background"
             >
               Resume
             </TabsTrigger>
             <TabsTrigger"
-              value="portfolio""
+              value="portfolio"
               className="data-[state=active]:bg-background"
             >
               Portfolio

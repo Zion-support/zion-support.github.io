@@ -1,5 +1,5 @@
-import { useEffect } from 'react';'
-import { useNavigate } from 'react-router-dom';'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 function withAuth(Component) {
 
@@ -9,7 +9,7 @@ function withAuth(Component) {
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
         useEffect(() => {
             if (!isLoggedIn) {
-'
+
                 navigate('/login?next=/community/new');
             }
         }, [isLoggedIn, router]);
@@ -23,7 +23,7 @@ function withAuth(Component) {
 ;
 export { withAuth };
 export default withAuth;
-}}}'
+}}}
                 router('/login?next=/community/new');
             }
         }, [isLoggedIn, router]);
@@ -41,4 +41,3 @@ export default withAuth;
 export default withAuth;
 export default withAuth;
 export default withAuth;
-'

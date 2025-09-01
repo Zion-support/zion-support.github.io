@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -13,8 +13,8 @@ import {
   Server,
   Eye'
 } from 'lucide-react';
-'
-      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
+
+      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions'];
     };
   ];
 const securityFeatures = [
@@ -192,7 +192,7 @@ export function SecurityComplianceSection() {
                   <p className="text-gray-400 text-sm mb-3">{feature.description}</p>"
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`
                     <div className={`w-2 h-2 rounded-full ${
-'
+
                       feature.status === 'Certified' ? 'bg-green-400' :'
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`
                     }`}></div>"

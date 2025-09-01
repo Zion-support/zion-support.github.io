@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousPrediction = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousPrediction = () => {
       <Helmet>
         <title>AI Autonomous Prediction Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous prediction platform that continuously predicts outcomes, trends, and future events with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI prediction, autonomous prediction, predictive analytics, future forecasting, autonomous operations, AI prediction platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-prediction"
         />
       </Helmet>
@@ -178,13 +178,13 @@ const AIAutonomousPrediction = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Trend Prediction','
-                'Outcome Prediction','
-                'Risk Prediction','
-                'Demand Prediction','
-                'Performance Prediction','
-                'Failure Prediction','
-                'Market Prediction','
+                'Trend Prediction',
+                'Outcome Prediction',
+                'Risk Prediction',
+                'Demand Prediction',
+                'Performance Prediction',
+                'Failure Prediction',
+                'Market Prediction',
                 'Behavior Prediction',
               ].map(type => (
                 <div

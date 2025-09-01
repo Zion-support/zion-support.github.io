@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
 import { motion  } from 'framer - motion.ts';
@@ -22,7 +22,7 @@ import { motion  } from 'framer - motion.ts';
   DollarSign,
   Truck,
   Target'
- } from 'lucide-react';'
+ } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
@@ -142,9 +142,9 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   return()
     <>
       <SEO "
-        title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group""
-        description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions.""
-        canonical="/comprehensive-ai-services-showcase-2025""
+        title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
+        description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
+        canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
       />
 "

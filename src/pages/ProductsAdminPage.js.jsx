@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
 import {
 
@@ -6,17 +6,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-  TableBody,'
-  TableCell} from '@/components/ui/table';'
-import { Input } from '@/components/ui/input';'
+  TableBody,
+  TableCell} from '@/components/ui/table';
+import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 const initialProducts = ['
-  { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },'
-  { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },'
+  { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
+  { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
   { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
 ];
 export default function ProductsAdminPage() {
-'
+
   const [search, setSearch] = useState('');
   const [products, setProducts] = useState(initialProducts);
   const filtered = products.filter(p =>
@@ -29,7 +29,7 @@ export default function ProductsAdminPage() {
         p.id === id
           ? {
 
-              ...p,'
+              ...p,
               status: p.status === 'approved' ? 'rejected' : 'approved'}
           : p
       )

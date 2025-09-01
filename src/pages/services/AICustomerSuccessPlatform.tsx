@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -192,76 +192,76 @@ import {
   UserPlusOff,
   UserEdit3,
   UserEditOff,
-  UserSearch3,'
+  UserSearch3,
   UserSearchOff} from 'lucide-react';
 
 const AICustomerSuccessPlatform = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Customer Insights',
       description:'
         'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks'},
     {
 
-      icon: MessageSquare,'
+      icon: MessageSquare,
       title: 'Intelligent Communication Hub',
       description:'
         'Automated, personalized communication workflows based on customer lifecycle stages'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description:'
         'Forecast customer health scores and identify expansion opportunities proactively'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: '360° Customer View',
       description:'
         'Comprehensive customer profiles with interaction history and preference analysis'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Automated Success Playbooks',
       description:'
         'AI-driven success strategies tailored to customer segments and use cases'},
     {
 
-      icon: Activity,'
+      icon: Activity,
       title: 'Real-time Health Monitoring',
       description:'
         'Continuous monitoring of customer engagement and satisfaction metrics'},
   ];
 
   const benefits = ['
-    'Reduce customer churn by up to 40%','
-    'Increase customer lifetime value by 35%','
-    'Automate 70% of routine customer success tasks','
-    'Improve customer satisfaction scores by 25%','
-    'Enable proactive issue resolution before escalation','
+    'Reduce customer churn by up to 40%',
+    'Increase customer lifetime value by 35%',
+    'Automate 70% of routine customer success tasks',
+    'Improve customer satisfaction scores by 25%',
+    'Enable proactive issue resolution before escalation',
     'Scale customer success operations efficiently',
   ];
 
   const benefits = [
     {
-'
+
       industry: 'SaaS Companies',
       description:'
         'Manage subscription renewals, feature adoption, and expansion opportunities'},
     {
-'
+
       industry: 'Enterprise Software',
       description:'
         'Ensure successful implementation, user adoption, and ROI achievement'},
     {
-'
+
       industry: 'E-commerce',
       description:'
         'Personalize customer experiences and increase repeat purchase rates'},
     {
-'
+
       industry: 'Financial Services',
       description:'
         'Monitor account health and provide proactive financial advisory'},
@@ -269,55 +269,55 @@ const AICustomerSuccessPlatform = () => {
 
   const useCases = [
     {
-'
-      plan: 'Starter','
+
+      plan: 'Starter',
       price: '$1,200/month',
       features: ['
-        'Up to 1,000 customers','
-        'Basic AI insights','
-        'Email automation','
-        'Customer health scoring','
-        'Basic reporting','
+        'Up to 1,000 customers',
+        'Basic AI insights',
+        'Email automation',
+        'Customer health scoring',
+        'Basic reporting',
         'Email support',
       ]},
     {
-'
-      plan: 'Professional','
+
+      plan: 'Professional',
       price: '$2,500/month',
       features: ['
-        'Up to 10,000 customers','
-        'Advanced AI analytics','
-        'Multi-channel communication','
-        'Custom success playbooks','
-        'Advanced reporting','
-        'Priority support','
+        'Up to 10,000 customers',
+        'Advanced AI analytics',
+        'Multi-channel communication',
+        'Custom success playbooks',
+        'Advanced reporting',
+        'Priority support',
         'API access',
       ]},
     {
-'
-      plan: 'Enterprise','
+
+      plan: 'Enterprise',
       price: '$5,000/month',
       features: ['
-        'Unlimited customers','
-        'Full AI capabilities','
-        'Custom integrations','
-        'White-label options','
-        'Dedicated success manager','
-        '24/7 phone support','
+        'Unlimited customers',
+        'Full AI capabilities',
+        'Custom integrations',
+        'White-label options',
+        'Dedicated success manager',
+        '24/7 phone support',
         'Custom training',
       ]},
   ];
 
   const integrations = ['
-    'Salesforce CRM','
-    'HubSpot','
-    'Zendesk','
-    'Intercom','
-    'Slack','
-    'Microsoft Teams','
-    'Google Workspace','
-    'Slack','
-    'Zapier','
+    'Salesforce CRM',
+    'HubSpot',
+    'Zendesk',
+    'Intercom',
+    'Slack',
+    'Microsoft Teams',
+    'Google Workspace',
+    'Slack',
+    'Zapier',
     'Webhook APIs',
   ];
 
@@ -338,7 +338,7 @@ const AICustomerSuccessPlatform = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Customer Success with"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -661,14 +661,14 @@ const AICustomerSuccessPlatform = () => {
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Contact Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
                 <Globe className="w-5 h-5 mr-2" />

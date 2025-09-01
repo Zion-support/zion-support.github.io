@@ -17,8 +17,8 @@ interface TabsProps extends React.PropsWithChildren<{}> {
   value?: string;
   onValueChange?: value: string void;
   className?: string}
-'
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;'
+
+export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
   const handleTabChange = (tab: string) => {;

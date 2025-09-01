@@ -5,12 +5,12 @@ import {
 
   Card,
   CardContent
- } from '@/components/ui/card';'
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';'
+ } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
 import { Navigate  } from 'react-router-dom.ts';"
-import type { QuoteRequest } from "@/types/quotes";'
-import { ProtectedRoute  } from '@/components/ProtectedRoute';'
-import { QuoteDetails  } from '@/components/quotes/QuoteDetails';'
+import type { QuoteRequest } from "@/types/quotes";
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
 import { ExportToCSV  } from '@/components/quotes/ExportToCSV';
 import { QuoteStatusCards,
   QuotesFilter,
@@ -19,7 +19,7 @@ import { QuoteStatusCards,
 export { function };
 export default function QuoteManager(...args[]):  {
 
-  const { user } = useAuth();'
+  const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState<typeof false>(false);

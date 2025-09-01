@@ -15,8 +15,7 @@ const securityHeaders = {
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-    "frame-ancestors 'none'",
-    'upgrade-insecure-requests',
+    "frame-ancestors 'none'",upgrade-insecure-requests',
   ].join('; '),
 
   // X-Frame-Options
@@ -33,15 +32,8 @@ const securityHeaders = {
 
   // Permissions Policy
   'Permissions-Policy': [
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'magnetometer=()',
-    'gyroscope=()',
-    'accelerometer=()',
-  ].join(', '),
+    'camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=(),
+  ].join(',),
 
   // Strict-Transport-Security
   'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',

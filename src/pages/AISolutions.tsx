@@ -1,11 +1,11 @@
-import React from 'react';'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export default function AiSolutions() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO"
-        title="AI Solutions - Zion Tech Group""
+        title="AI Solutions - Zion Tech Group"
         description="Enterprise AI solutions including machine learning, computer vision, NLP, and intelligent automation."
       />"
       <section className="container mx-auto px-4 py-16">"

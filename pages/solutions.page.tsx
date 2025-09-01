@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { Brain,
   Shield,
@@ -36,98 +36,98 @@ import { Brain,
 ;
 const solutionCategories = [
   {
-'
-    id: 'ai-ml','
+
+    id: 'ai-ml',
     name: 'AI & Machine Learning',
-    icon: Brain,'
-    description: 'Transform your business with intelligent automation and predictive insights','
+    icon: Brain,
+    description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
     solutions = ['
-      'Predictive Analytics','
-      'Natural Language Processing','
-      'Computer Vision','
-      'Recommendation Systems','
-      'Chatbots & Virtual Assistants','
+      'Predictive Analytics',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Recommendation Systems',
+      'Chatbots & Virtual Assistants',
       'Machine Learning Models'
     ]
   },
   {
-'
-    id: 'cybersecurity','
+
+    id: 'cybersecurity',
     name: 'Cybersecurity',
-    icon: Shield,'
-    description: 'Protect your digital assets with enterprise-grade security solutions','
+    icon: Shield,
+    description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
     solutions = ['
-      'Threat Detection & Response','
-      'Identity & Access Management','
-      'Security Compliance','
-      'Penetration Testing','
-      'Security Training','
+      'Threat Detection & Response',
+      'Identity & Access Management',
+      'Security Compliance',
+      'Penetration Testing',
+      'Security Training',
       'Incident Response'
     ]
   },
   {
-'
-    id: 'cloud-computing','
+
+    id: 'cloud-computing',
     name: 'Cloud Computing',
-    icon: Cloud,'
-    description: 'Scale your infrastructure with flexible and cost-effective cloud solutions','
+    icon: Cloud,
+    description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
     solutions = ['
-      'Cloud Migration','
-      'Infrastructure as Code','
-      'Container Orchestration','
-      'Serverless Computing','
-      'Multi-cloud Strategy','
+      'Cloud Migration',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Serverless Computing',
+      'Multi-cloud Strategy',
       'Cloud Security'
     ]
   },
   {
-'
-    id: 'data-analytics','
+
+    id: 'data-analytics',
     name: 'Data Analytics',
-    icon: TrendingUp,'
-    description: 'Turn your data into actionable insights for better decision making','
+    icon: TrendingUp,
+    description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
     solutions = ['
-      'Business Intelligence','
-      'Data Warehousing','
-      'Real-time Analytics','
-      'Predictive Modeling','
-      'Data Visualization','
+      'Business Intelligence',
+      'Data Warehousing',
+      'Real-time Analytics',
+      'Predictive Modeling',
+      'Data Visualization',
       'Big Data Processing'
     ]
   },
   {
-'
-    id: 'iot-edge','
+
+    id: 'iot-edge',
     name: 'IoT & Edge Computing',
-    icon: Zap,'
-    description: 'Connect devices and process data closer to the source for real-time insights','
+    icon: Zap,
+    description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
     solutions = ['
-      'IoT Device Management','
-      'Edge Computing Platforms','
-      'Sensor Networks','
-      'Real-time Monitoring','
-      'Predictive Maintenance','
+      'IoT Device Management',
+      'Edge Computing Platforms',
+      'Sensor Networks',
+      'Real-time Monitoring',
+      'Predictive Maintenance',
       'Smart City Solutions'
     ]
   },
   {
-'
-    id: 'digital-transformation','
+
+    id: 'digital-transformation',
     name: 'Digital Transformation',
-    icon: Globe,'
-    description: 'Modernize your business processes and customer experience','
+    icon: Globe,
+    description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
     solutions = ['
-      'Process Automation','
-      'Customer Experience',;'
-      'Legacy Modernization',;'
-      'Digital Strategy',;'
-      'Change Management',;'
+      'Process Automation',
+      'Customer Experience',;
+      'Legacy Modernization',;
+      'Digital Strategy',;
+      'Change Management',;
       'Technology Consulting';
     ];
   };
@@ -135,87 +135,87 @@ const solutionCategories = [
 ;
 const industrySolutions = [
   {
-'
+
     industry: 'Healthcare',
     icon: Heart,
     solutions = ['
-      'Electronic Health Records','
-      'Telemedicine Platforms','
-      'Medical Imaging AI','
-      'Patient Data Analytics','
-      'Healthcare Security','
+      'Electronic Health Records',
+      'Telemedicine Platforms',
+      'Medical Imaging AI',
+      'Patient Data Analytics',
+      'Healthcare Security',
       'Regulatory Compliance'
-    ],'
+    ],
     color: 'from-pink-500 to-rose-600'
   },
   {
-'
+
     industry: 'Finance',
     icon: DollarSign,
     solutions = ['
-      'Fintech Applications','
-      'Risk Management','
-      'Fraud Detection','
-      'Regulatory Compliance','
-      'Digital Banking','
+      'Fintech Applications',
+      'Risk Management',
+      'Fraud Detection',
+      'Regulatory Compliance',
+      'Digital Banking',
       'Blockchain Solutions'
-    ],'
+    ],
     color: 'from-green-500 to-emerald-600'
   },
   {
-'
+
     industry: 'Manufacturing',
     icon: Cpu,
     solutions = ['
-      'Smart Manufacturing','
-      'Predictive Maintenance','
-      'Quality Control','
-      'Supply Chain Optimization','
-      'Industrial IoT','
+      'Smart Manufacturing',
+      'Predictive Maintenance',
+      'Quality Control',
+      'Supply Chain Optimization',
+      'Industrial IoT',
       'Automation Systems'
-    ],'
+    ],
     color: 'from-blue-500 to-cyan-600'
   },
   {
-'
+
     industry: 'Retail',
     icon: ShoppingCart,
     solutions = ['
-      'E-commerce Platforms','
-      'Customer Analytics','
-      'Inventory Management','
-      'Omnichannel Solutions','
-      'Personalization','
+      'E-commerce Platforms',
+      'Customer Analytics',
+      'Inventory Management',
+      'Omnichannel Solutions',
+      'Personalization',
       'Supply Chain Management'
-    ],'
+    ],
     color: 'from-purple-500 to-indigo-600'
   },
   {
-'
+
     industry: 'Education',
     icon: FileText,
     solutions = ['
-      'Learning Management Systems','
-      'Virtual Classrooms','
-      'Student Analytics','
-      'Content Management','
-      'Assessment Tools','
+      'Learning Management Systems',
+      'Virtual Classrooms',
+      'Student Analytics',
+      'Content Management',
+      'Assessment Tools',
       'Collaboration Platforms'
-    ],'
+    ],
     color: 'from-yellow-500 to-orange-600'
   },
   {
-'
+
     industry: 'Government',
     icon: Shield,
     solutions = ['
-      'Digital Services','
-      'Data Security','
-      'Process Automation',;'
-      'Citizen Engagement',;'
-      'Regulatory Compliance',;'
+      'Digital Services',
+      'Data Security',
+      'Process Automation',;
+      'Citizen Engagement',;
+      'Regulatory Compliance',;
       'Infrastructure Management';
-    ],;'
+    ],;
     color: 'from-gray-500 to-slate-600';
   };
 ];
@@ -223,89 +223,89 @@ const industrySolutions = [
 const featuredSolutions = [
   {
 
-    id: 1,'
-    name: 'AI-Powered Business Intelligence','
-    category: 'AI & ML','
+    id: 1,
+    name: 'AI-Powered Business Intelligence',
+    category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
     features = ['
-      'Real-time data processing','
-      'Predictive analytics models','
-      'Custom dashboard creation','
-      'Automated reporting','
-      'Natural language queries','
+      'Real-time data processing',
+      'Predictive analytics models',
+      'Custom dashboard creation',
+      'Automated reporting',
+      'Natural language queries',
       'Mobile-responsive design'
     ],
     benefits = ['
-      '30% faster decision making','
-      'Reduced manual reporting','
-      'Improved data accuracy','
+      '30% faster decision making',
+      'Reduced manual reporting',
+      'Improved data accuracy',
       'Enhanced user experience'
-    ],'
-    price: 'Starting at $2,500/month','
+    ],
+    price: 'Starting at $2,500/month',
     implementation: '4-8 weeks',
-    icon: Brain,'
+    icon: Brain,
     color: 'from-purple-500 to-indigo-600'
   },
   {
 
-    id: 2,'
-    name: 'Zero-Trust Security Framework','
-    category: 'Cybersecurity','
+    id: 2,
+    name: 'Zero-Trust Security Framework',
+    category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
     features = ['
-      'Identity verification','
-      'Device authentication','
-      'Network segmentation','
-      'Threat detection','
-      'Compliance monitoring','
+      'Identity verification',
+      'Device authentication',
+      'Network segmentation',
+      'Threat detection',
+      'Compliance monitoring',
       'Incident response'
     ],
     benefits = ['
-      '99.9% threat detection rate','
-      'Reduced security incidents','
-      'Compliance achievement','
+      '99.9% threat detection rate',
+      'Reduced security incidents',
+      'Compliance achievement',
       'Lower insurance costs'
-    ],'
-    price: 'Starting at $3,200/month','
+    ],
+    price: 'Starting at $3,200/month',
     implementation: '6-12 weeks',
-    icon: Shield,'
+    icon: Shield,
     color: 'from-red-500 to-pink-600'
   },
   {
 
-    id: 3,'
-    name: 'Cloud-Native Infrastructure','
-    category: 'Cloud Computing','
+    id: 3,
+    name: 'Cloud-Native Infrastructure',
+    category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
     features = ['
-      'Auto-scaling infrastructure','
-      'Container orchestration','
-      'CI/CD pipelines','
-      'Monitoring & alerting','
-      'Disaster recovery','
+      'Auto-scaling infrastructure',
+      'Container orchestration',
+      'CI/CD pipelines',
+      'Monitoring & alerting',
+      'Disaster recovery',
       'Cost optimization'
     ],
     benefits = ['
-      '50% infrastructure cost reduction','
-      '99.9% uptime guarantee','
-      'Faster deployment cycles','
+      '50% infrastructure cost reduction',
+      '99.9% uptime guarantee',
+      'Faster deployment cycles',
       'Improved scalability';
-    ],;'
-    price: 'Starting at $1,800/month',;'
+    ],;
+    price: 'Starting at $1,800/month',;
     implementation: '8-16 weeks',;
-    icon: Cloud,;'
+    icon: Cloud,;
     color: 'from-blue-500 to-cyan-600';
   };
 ];
 ;
 export { function };
 export default function Solutions(...args[]):  {
-'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedIndustry, setSelectedIndustry] = useState('All');'
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-'
-  const categories = ['All', ...solutionCategories.map(cat => cat.name)];'
+
+  const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
 
   const filteredSolutions = featuredSolutions.filter(solution => {;
@@ -370,7 +370,7 @@ export default function Solutions(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search solutions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -795,20 +795,20 @@ export default function Solutions(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-zion-slate-light text-lg mb-8">'
+            <p className="text-zion-slate-light text-lg mb-8">
               Let's discuss how our technology solutions can address your specific challenges
               and drive measurable results for your organization.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Get Started Today"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link"
-                href="/case-studies""
+                href="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
 
                 View Case Studies

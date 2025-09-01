@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-'
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -27,8 +27,8 @@ import {
 } from 'lucide-react';
 
 interface TouchGesture {
-'
-  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';'
+
+  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
   duration?: number;
@@ -48,7 +48,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 }) => {
 
   const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);'
+  const [isTablet, setIsTablet] = useState(false);
   const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
   const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
@@ -70,10 +70,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
       // Set orientation
       if (window.innerHeight > window.innerWidth) {
-'
+
         setDeviceOrientation('portrait');
       } else {
-'
+
         setDeviceOrientation('landscape');
       }
     };
@@ -89,22 +89,22 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleOrientationChange = () => {
       setTimeout ( () => {
         if (window.innerHeight > window.innerWidth) {
-'
+
           setDeviceOrientation('portrait');
         } else {
-'
+
           setDeviceOrientation('landscape');
         }
       }, 100) ;
     };
 
-    checkDevice();'
-    window.addEventListener('resize', handleResize);'
+    checkDevice();
+    window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {
-'
-      window.removeEventListener('resize', handleResize);'
+
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange);
 
     };
@@ -153,7 +153,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       if (distance > 50 && deltaTime < 500) {
 
         let gesture: TouchGesture = {
-'
+
           type: 'swipe',
           distance,
           duration: deltaTime,
@@ -171,7 +171,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             if (window.history.length > 1) {
 
               window.history.forward();
-            }'
+            }
           } else if (gesture.direction === 'right') {
 
             // Swipe right - go back
@@ -189,7 +189,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           if (gesture.direction === 'up' && distance > 100) {
 
             // Swipe up - scroll to top'
-            window.scrollTo({ top: 0, behavior: 'smooth' });'
+            window.scrollTo({ top: 0, behavior: 'smooth' });
           } else if (gesture.direction === 'down' && distance > 100) {
 
             // Swipe down - scroll to bottom'
@@ -204,15 +204,15 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         // console.log('Touch Gesture:', gesture);
       }
     };
-'
-    document.addEventListener('touchstart', handleTouchStart, { passive: false });'
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });'
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: false });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
     document.addEventListener('touchend', handleTouchEnd, { passive: false });
 
     return () => {
-'
-      document.removeEventListener('touchstart', handleTouchStart);'
-      document.removeEventListener('touchmove', handleTouchMove);'
+
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [enabled, enableSwipeNavigation, touchStart]) ;
@@ -221,10 +221,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const handleMobileNavigation = useCallback((action: string) => {
 
     switch (action) {
-'
+
       case 'home':'
         window.location.href = '/';
-        break;'
+        break;
       case 'search':
         // Trigger search functionality'
         const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
@@ -232,16 +232,16 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
           searchInput.focus();
         }
-        break;'
+        break;
       case 'menu':
         setShowMobileMenu(!showMobileMenu);
-        break;'
+        break;
       case 'back':
         if (window.history.length > 1) {
 
           window.history.back();
         }
-        break;'
+        break;
       case 'forward':
         if (window.history.length > 1) {
 
@@ -261,8 +261,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Optimize viewport for mobile'"
     const viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
-'
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+
+      viewport.setAttribute('content',width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
     }
 
     // Add touch-action CSS for better touch handling'
@@ -291,7 +291,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     document.head.appendChild (style) ;
 
     return () => {
-'
+
       document.documentElement.classList.remove('mobile-device');
       if (style.parentNode) {
 
@@ -315,14 +315,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             <div className="flex items-center space-x-3">
               <button'
                 onClick={() => handleMobileNavigation('back')}"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
+                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go back"
               >"
                 <ArrowLeft className="w-5 h-5" />
               </button>
               <button'
                 onClick={() => handleMobileNavigation('home')}"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
+                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Go home"
               >"
                 <Home className="w-5 h-5" />
@@ -332,14 +332,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             <div className="flex items-center space-x-3">
               <button'
                 onClick={() => handleMobileNavigation('search')}"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
+                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Search"
               >"
                 <Search className="w-5 h-5" />
               </button>
               <button'
                 onClick={() => handleMobileNavigation('menu')}"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
+                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Menu"
               >"
                 <Menu className="w-5 h-5" />
@@ -353,7 +353,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         {showMobileMenu && isMobile && (
           <motion.div'
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}'
+            animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}"
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"
           >"
@@ -361,7 +361,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>
               <button
                 onClick={() => setShowMobileMenu(false)}"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
+                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                 aria-label="Close menu"
               >"
                 <X className="w-5 h-5" />
@@ -405,8 +405,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowGestureGuide(!showGestureGuide)}"
-          className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2""
-          aria-label="Show gesture guide""
+          className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          aria-label="Show gesture guide"
           title="Gesture Guide"
         >"
           <Touch className="w-6 h-6" />
@@ -487,7 +487,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       </AnimatePresence>
 
 
-      {/* Device Info Indicator (Development Only) */}'
+      {/* Device Info Indicator (Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -495,14 +495,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
           <div className="flex items-center space-x-2">"
-            {isMobile ? <Smartphone className="w-4 h-4" /> : <Tablet className="w-4 h-4" />}'
+            {isMobile ? <Smartphone className="w-4 h-4" /> : <Tablet className="w-4 h-4" />}
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
           </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>
       )}
 
-      {/* Gesture History (Development Only) */}'
+      {/* Gesture History (Development Only) */}
       {process.env.NODE_ENV === 'development' && showGestures && gestureHistory.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 100 }}

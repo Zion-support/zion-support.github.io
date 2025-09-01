@@ -34,17 +34,16 @@ contactInfo: {
   caseStudies?: string[]}
 ;
 export const SERVICE_CATEGORIES = [
-  'AI & Automation','
-  'Quantum Computing','
-  'Blockchain & Web3','
-  'Cybersecurity',;'
-  'IoT & Edge Computing',;'
-  'Metaverse & AR/VR',;'
-  'Robotics & Automation',;'
-  'Biotechnology',;'
-  'Space Technology',;'
+  'AI & Automation',
+  'Quantum Computing',
+  'Blockchain & Web3',
+  'Cybersecurity',;
+  'IoT & Edge Computing',;
+  'Metaverse & AR/VR',;
+  'Robotics & Automation',;
+  'Biotechnology',;
+  'Space Technology',;
   'Green Technology';
 ];
 ;
 export const SERVICE_SUBCATEGORIES = {
-'

@@ -1,6 +1,6 @@
 export function Separator({
 
-  className = '','
+  className = '',
   orientation = 'horizontal',
   decorative = true,
   ...props

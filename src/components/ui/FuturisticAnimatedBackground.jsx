@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
 
     const canvasRef = useRef(null);
@@ -8,7 +8,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)
-            return;'
+            return;
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -16,7 +16,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
-        resizeCanvas();'
+        resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Particle system
         class Particle {
@@ -64,7 +64,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
                 ctx.fillStyle = this.color;
                 ctx.shadowColor = this.color;
-                ctx.shadowBlur = this.size * 2;'
+                ctx.shadowBlur = this.size * 2;
                 if (variant === 'matrix') {
 
                     // Matrix-style particles
@@ -79,4 +79,3 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         function getParticleColor() {
             const colors = {
-'

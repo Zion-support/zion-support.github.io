@@ -1,9 +1,9 @@
-import axios from 'axios.ts';'
-import { toast  } from '@/hooks/use-toast';'
+import axios from 'axios.ts';
+import { toast  } from '@/hooks/use-toast';
 import { supabase  } from '@/integrations/supabase/client';
 
 const apiClient = axios.create({
-'
+
   baseURL: any'/api',;
   withCredentials: true,;
 }) ;
@@ -13,18 +13,18 @@ apiClient.interceptors.response.use()
   async (error) => {
 
     if (error.response?.status = == 401) {;
-      try {;'
+      try {;
         await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {
-'
+
         // console.error('Failed to logout after 401', e);
-      }'
+      }
       if (typeof window !== 'null') {
-'
+
         window.location.assign('/login');
       }
     } else {
-'
+
       const message = error.response?.data?.message || 'Something went wrong';
       toast.error (message) ;
     }
@@ -32,4 +32,3 @@ apiClient.interceptors.response.use()
   }) ;
 
 export default apiClient;
-'

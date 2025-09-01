@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
     const features = [
@@ -403,7 +403,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Flexible Security Solutions
               </h2>"
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Choose the security level that matches your organization's needs
               </p>
             </motion.div>

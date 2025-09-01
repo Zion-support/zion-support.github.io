@@ -1,34 +1,34 @@
-import { useState, useEffect } from 'react';'
-import SEO from '@/components/SEO';'
-import { useAuth } from '@/hooks/useAuth';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
-import { Wallet, Database, Save import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Separator } from '@/components/ui/separator';'
-import { Switch } from '@/components/ui/switch';'
-import { Label } from '@/components/ui/label';'
+import { useState, useEffect } from 'react';
+import SEO from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
     const { user } = useAuth();
-    const [displayWeb3, setDisplayWeb3] = useState(false);'
+    const [displayWeb3, setDisplayWeb3] = useState(false);
     const [didHandle, setDidHandle] = useState('');
     const [enableBackup, setEnableBackup] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     useEffect(() => {
         try {
-'
+
             const saved = localStorage.getItem('account_settings');
             if (saved) {
 
                 const parsed = JSON.parse(saved);
-                setDisplayWeb3(!!parsed.displayWeb3);'
-                setDidHandle(parsed.didHandle || '');'
+                setDisplayWeb3(!!parsed.displayWeb3);
+                setDidHandle(parsed.didHandle || '');
             // // // // // // // // console.error('Error loading account settings', e);
         }
                 setEnableBackup (!!parsed.enableBackup) }
         }
         catch (e) {
-'
+
             // console.error('Error loading account settings', e)}
     }, []);
     const handleSave = () => {
@@ -36,14 +36,14 @@ export default function AccountSettings() {
         // Simulate API call
         setTimeout ( () => {
             try {
-'
-                localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));'
-                // // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });'
+
+                localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
+                // // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully');
 
             catch (e) {
-'
-                // // // // // // // // console.error('Failed to save settings', e);'
+
+                // // // // // // // // console.error('Failed to save settings', e);
                 toast.error('Failed to save settings');
 
             finally {
@@ -51,12 +51,12 @@ export default function AccountSettings() {
                 setIsSubmitting(false);
 
         }, 1000);
-    };'
-                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });'
+    };
+                // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
                 toast.success('Account settings updated successfully')}
             catch (e) {
-'
-                // console.error('Failed to save settings', e);'
+
+                // console.error('Failed to save settings', e);
                 toast.error('Failed to save settings')}
             finally {
 
@@ -67,7 +67,7 @@ export default function AccountSettings() {
             // Check if wallet is available
             const ethereum = window.ethereum;
             if (!ethereum) {
-'
+
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
                 return}
             // Request accounts
@@ -75,7 +75,7 @@ export default function AccountSettings() {
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
-'
+
                 method: 'personal_sign',
                 params[address, message];
             }) ;
@@ -84,23 +84,23 @@ export default function AccountSettings() {
                 const provider = new window.ethers.providers.Web3Provider (ethereum) ;
                 const ensName = await provider.lookupAddress (address) ;
                 if (ensName) {
-'
+
                 // // // // // // // // console.error('ENS lookup error:', error);
             }`
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
 
         catch (error) {
-'
+
             toast.error(error.message || 'Failed to connect wallet');
 
                     setDidHandle (ensName) }
             }
             catch (error) {
-'
+
                 // console.error('ENS lookup error:', error)}`
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)}
         catch (error) {
-'
+
             toast.error(error.message || 'Failed to connect wallet')}
     };
     return (<>
@@ -135,25 +135,25 @@ export default function AccountSettings() {
                 <div className="grid grid-cols-2 gap-2">"
                   <div className="bg-gray-100 p-3 rounded-md">"
                     <p className="text-sm font-medium">Profile Data</p>"
-                    <p className="text-xs text-gray-500">'
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>"
                   <div className="bg-gray-100 p-3 rounded-md">"
                     <p className="text-sm font-medium">Resume Data</p>"
-                    <p className="text-xs text-gray-500">'
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>"
                   <div className="bg-gray-100 p-3 rounded-md">"
                     <p className="text-sm font-medium">Project History</p>"
-                    <p className="text-xs text-gray-500">'
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>"
                   <div className="bg-gray-100 p-3 rounded-md">"
                     <p className="text-sm font-medium">Reviews</p>"
-                    <p className="text-xs text-gray-500">'
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 

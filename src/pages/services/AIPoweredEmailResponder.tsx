@@ -71,9 +71,9 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://workspace.google.com/marketplace""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://workspace.google.com/marketplace"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Google Workspace Marketplace
@@ -81,9 +81,9 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://learn.microsoft.com/exchange/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://learn.microsoft.com/exchange/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Microsoft Exchange/Outlook documentation
@@ -91,9 +91,9 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://platform.openai.com/docs""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://platform.openai.com/docs"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     OpenAI Platform docs
@@ -101,9 +101,9 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://developers.google.com/gmail/api""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://developers.google.com/gmail/api"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Gmail API
@@ -120,7 +120,7 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 Call +1 302 464 0950 or email kleber@ziontechgroup.com
               </p>
               <a"
-                href="/contact""
+                href="/contact"
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600"
               >
                 Contact Us

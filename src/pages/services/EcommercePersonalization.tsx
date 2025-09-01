@@ -1,7 +1,7 @@
 // removed duplicate old section
 
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 import { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
 ;
 const EcommercePersonalization: React.FC = (): JSX.Element => {
@@ -9,8 +9,8 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-        title="E‑commerce Personalization - Zion Tech Group""
-        description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.""
+        title="E‑commerce Personalization - Zion Tech Group"
+        description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV."
         keywords="ecommerce personalization, recommendations, AOV, LTV"
       />"
       <section className="mx-auto max-w-6xl px-6 py-16">"

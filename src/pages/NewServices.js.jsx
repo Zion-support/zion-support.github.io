@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices";"
 import { ADVANCED_INNOVATIVE_SERVICES } from "../data/advancedInnovativeServices";"
 import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices";
 export function NewServices() {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
     // Combine all services
@@ -62,7 +62,7 @@ export function NewServices() {
                 left: `${Math.random() * 100}%`,`
                 animationDelay: `${Math.random() * 20}s`,`
                 animationDuration: `${20 + Math.random() * 10}s`
-            }}>'
+            }}>
             {Math.random() > 0.5 ? '1' : '0'}
           </div>))}
       </div>
@@ -163,7 +163,7 @@ export function NewServices() {
           <div className="flex flex-wrap gap-4 justify-center">`
             {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category'
                 ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/30''`
-                : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 border border-zion-cyan/30'}`}>'
+                : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 border border-zion-cyan/30'}`}>
                 {category === 'all' ? 'All Services' : category}
               </button>) ) }
           </div>
@@ -240,10 +240,10 @@ export function NewServices() {
                 {/* Service Footer */}"
                 <div className="border-t border-zion-cyan/20 pt-4">"
                   <div className="flex items-center justify-between text-sm">"
-                    <span className="text-zion-slate-light">'
+                    <span className="text-zion-slate-light">
                       Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : '2-4 weeks'}
                     </span>"
-                    <span className="text-zion-cyan font-medium">'
+                    <span className="text-zion-cyan font-medium">
                       {'supportLevel' in service ? service.supportLevel : 'Standard'} support
                     </span>
                   </div>"
@@ -319,10 +319,10 @@ export function NewServices() {
                 {/* Service Footer */}"
                 <div className="border-t border-zion-cyan/20 pt-4">"
                   <div className="flex items-center justify-between text-sm">"
-                    <span className="text-zion-slate-light">'
+                    <span className="text-zion-slate-light">
                       Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : '2-4 weeks'}
                     </span>"
-                    <span className="text-zion-cyan font-medium">'
+                    <span className="text-zion-cyan font-medium">
                       {'supportLevel' in service ? service.supportLevel : 'Standard'} support
                     </span>
                   </div>"
@@ -349,7 +349,7 @@ export function NewServices() {
               No services found matching your criteria
             </div>
             <button onClick={() => {
-'
+
                 setSearchTerm('');'"
                 setSelectedCategory('all')}} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
               Clear Filters
@@ -387,7 +387,7 @@ export function NewServices() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let's discuss how our revolutionary technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>"

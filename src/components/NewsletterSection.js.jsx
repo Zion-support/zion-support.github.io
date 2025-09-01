@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award } from 'lucide-react';
 const benefits = [
     {
@@ -34,7 +34,7 @@ const stats = ["
     { value: "100%", label: "Free" }
 ];
 export function NewsletterSection() {
-'
+
     const [email, setEmail] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -44,10 +44,10 @@ export function NewsletterSection() {
         e.preventDefault();
         // Here you would typically send the email to your newsletter service'
         // console.log('Newsletter subscription:', email);
-        setIsSubscribed(true);'
+        setIsSubscribed(true);
         setEmail('')};
     const handleUnsubscribe = () => {
-        setIsSubscribed(false);'
+        setIsSubscribed(false);
         setEmail('')};"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
@@ -56,7 +56,7 @@ export function NewsletterSection() {
 
   {
 
-            backgroundImage: `radial-gradient(circle at 25% 75%, currentColor 1px, transparent 1px)`,'
+            backgroundImage: `radial-gradient(circle at 25% 75%, currentColor 1px, transparent 1px)`,
   backgroundSize: '50px 50px'
 
 }}/>
@@ -170,7 +170,7 @@ export function NewsletterSection() {
 
 }}>"
             <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-              <span className="text-sm font-medium">'
+              <span className="text-sm font-medium">
                 {showBenefits ? 'Hide' : 'Show'} subscriber benefits
               </span>
               <motion.div animate={{ rotate: showBenefits ? 180 : 0 }} transition={{ duration: 0.3 }}>"

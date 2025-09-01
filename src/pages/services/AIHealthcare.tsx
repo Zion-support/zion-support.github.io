@@ -1,60 +1,60 @@
 import React from 'react';
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
   const features = [
-    'AI-powered medical image analysis and diagnosis','
-    'Intelligent patient data analysis and risk assessment',;'
-    'Automated medical record processing and coding',;'
-    'Predictive analytics for patient outcomes',;'
-    'Drug interaction and adverse event monitoring',;'
-    'Telemedicine and remote patient monitoring',;'
-    'Integration with major EHR and healthcare systems',;'
+    'AI-powered medical image analysis and diagnosis',
+    'Intelligent patient data analysis and risk assessment',;
+    'Automated medical record processing and coding',;
+    'Predictive analytics for patient outcomes',;
+    'Drug interaction and adverse event monitoring',;
+    'Telemedicine and remote patient monitoring',;
+    'Integration with major EHR and healthcare systems',;
     'Custom AI models for specialized medical domains';
   ];
 
   const tiers = [
     {
-'
-      name: 'Small Practice','
-      price: '$399/mo','
-      details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support']
+
+      name: 'Small Practice',
+      price: '$399/mo',
+      details: ['Up to 1,000 patients',Basic AI features',Standard reports',Email support']
     },
     {
-'
-      name: 'Medium Practice', '
-      price: '$999/mo', '
-      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
+
+      name: 'Medium Practice',
+      price: '$999/mo',
+      details: ['Up to 10,000 patients',Advanced AI features',Custom reports',Priority support'] ;
     },;
-    { ;'
-      name: 'Large Health System', ;'
-      price: '$2,999/mo', ;'
-      details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    { ;
+      name: 'Large Health System', ;
+      price: '$2,999/mo', ;
+      details: ['Unlimited patients',Custom AI models',Full system integration',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Medical imaging and radiology analysis',;'
-    'Patient diagnosis and treatment planning',;'
-    'Electronic health record optimization',;'
-    'Drug discovery and clinical trials',;'
-    'Population health management',;'
+  const useCases = [;
+    'Medical imaging and radiology analysis',;
+    'Patient diagnosis and treatment planning',;
+    'Electronic health record optimization',;
+    'Drug discovery and clinical trials',;
+    'Population health management',;
     'Medical research and data analysis';
   ];
 
-  const benefits = [;'
-    'Improve diagnostic accuracy by 20-35%',;'
-    'Reduce medical errors by 30-50%',;'
-    'Cut administrative costs by 25-40%',;'
-    'Accelerate treatment decisions by 40-60%',;'
-    'Enhance patient outcomes and satisfaction',;'
+  const benefits = [;
+    'Improve diagnostic accuracy by 20-35%',;
+    'Reduce medical errors by 30-50%',;
+    'Cut administrative costs by 25-40%',;
+    'Accelerate treatment decisions by 40-60%',;
+    'Enhance patient outcomes and satisfaction',;
     'Scale healthcare operations efficiently';
   ];
 
-  const industries = [;'
-    'Hospitals & Health Systems',;'
-    'Medical Practices & Clinics',;'
-    'Radiology & Imaging Centers',;'
-    'Pharmaceutical Companies',;'
-    'Research Institutions',;'
+  const industries = [;
+    'Hospitals & Health Systems',;
+    'Medical Practices & Clinics',;
+    'Radiology & Imaging Centers',;
+    'Pharmaceutical Companies',;
+    'Research Institutions',;
     'Health Insurance Providers';
   ];
 
@@ -110,8 +110,8 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['20-35% accuracy improvement', '30-50% error reduction', '40-60% faster decisions'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['20-35% accuracy improvement',30-50% error reduction',40-60% faster decisions'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-red-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

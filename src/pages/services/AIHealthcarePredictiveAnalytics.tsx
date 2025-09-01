@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Heart, 
   Brain, 
@@ -48,14 +48,14 @@ export { function };
 export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
   const contactInfo = {
-'
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
+
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
   ;
   ;
-  ;'
+  ;
   website: 'https://ziontechgroup.com';
   ;
 
@@ -69,110 +69,110 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Disease Prediction','
+      icon: Brain,
+      title: 'AI-Powered Disease Prediction',
       description: 'Predict disease onset with 94% accuracy using advanced machine learning on patient data'
     },
     {
 
-      icon: Heart,'
-      title: 'Early Risk Detection','
+      icon: Heart,
+      title: 'Early Risk Detection',
       description: 'Identify high-risk patients before symptoms appear with predictive risk scoring'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Treatment Outcome Prediction','
+      icon: TrendingUp,
+      title: 'Treatment Outcome Prediction',
       description: 'Forecast treatment effectiveness and patient response with 89% accuracy'
     },
     {
 
-      icon: Users,'
-      title: 'Population Health Analytics','
+      icon: Users,
+      title: 'Population Health Analytics',
       description: 'Analyze population health trends and identify at-risk demographics'
     },
     {
 
-      icon: Database,'
-      title: 'Real-time Patient Monitoring','
+      icon: Database,
+      title: 'Real-time Patient Monitoring',
       description: 'Continuous monitoring and alerting for critical health indicators';
     },;
     {;
-      icon: BarChart3,;'
-      title: 'Advanced Clinical Insights',;'
+      icon: BarChart3,;
+      title: 'Advanced Clinical Insights',;
       description: 'Generate actionable insights from complex medical data and research';
     };
   ];
 
-  const benefits = [;'
-    'Reduce readmission rates by 35%',;'
-    'Improve early detection by 60%',;'
-    'Cut healthcare costs by 25%',;'
-    'Enhance patient outcomes by 45%',;'
-    'Streamline clinical workflows',;'
+  const benefits = [;
+    'Reduce readmission rates by 35%',;
+    'Improve early detection by 60%',;
+    'Cut healthcare costs by 25%',;
+    'Enhance patient outcomes by 45%',;
+    'Streamline clinical workflows',;
     'Enable proactive care delivery';
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$899','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$899',
+      period: '/month',
       description: 'Perfect for small clinics and practices',
-      features[;'
-        'Up to 1,000 patients','
-        'Basic predictive analytics','
-        'Standard risk scoring','
-        'Email support','
-        'Basic reporting','
-        'Up to 10 user licenses','
+      features[;
+        'Up to 1,000 patients',
+        'Basic predictive analytics',
+        'Standard risk scoring',
+        'Email support',
+        'Basic reporting',
+        'Up to 10 user licenses',
         'Core integrations'
-      ],;'
+      ],;
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$1,799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$1,799',
+      period: '/month',
       description: 'Ideal for growing healthcare organizations',
-      features[;'
-        'Up to 10,000 patients','
-        'Advanced AI analytics','
-        'Real-time monitoring','
-        'Priority support','
-        'Custom reporting','
-        'Up to 50 user licenses','
-        'Advanced integrations','
-        'API access','
-        'Custom workflows','
+      features[;
+        'Up to 10,000 patients',
+        'Advanced AI analytics',
+        'Real-time monitoring',
+        'Priority support',
+        'Custom reporting',
+        'Up to 50 user licenses',
+        'Advanced integrations',
+        'API access',
+        'Custom workflows',
         'Advanced AI models'
-      ],;'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$4,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$4,999',
+      period: '/month',
       description: 'For large healthcare systems with complex needs',
-      features[;'
-        'Unlimited patients','
-        'Premium AI analytics','
-        '24/7 dedicated support','
-        'Custom dashboards','
-        'Unlimited user licenses','
-        'Enterprise integrations','
-        'Advanced AI models','
-        'On-premise deployment option','
-        'Dedicated healthcare consultant','
-        'Custom training programs',;'
-        'White-label solutions',;'
+      features[;
+        'Unlimited patients',
+        'Premium AI analytics',
+        '24/7 dedicated support',
+        'Custom dashboards',
+        'Unlimited user licenses',
+        'Enterprise integrations',
+        'Advanced AI models',
+        'On-premise deployment option',
+        'Dedicated healthcare consultant',
+        'Custom training programs',;
+        'White-label solutions',;
         'Multi-tenant architecture';
-      ],;'
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -180,37 +180,37 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
   const clinicalApplications = [
     {
-'
-      title: 'Cardiology','
+
+      title: 'Cardiology',
       description: 'Predict heart disease risk and optimize cardiac care pathways',
       icon: Heart
     },
     {
-'
-      title: 'Oncology','
+
+      title: 'Oncology',
       description: 'Early cancer detection and treatment response prediction',
       icon: Microscope
     },
     {
-'
-      title: 'Neurology','
+
+      title: 'Neurology',
       description: 'Predict neurological disorders and cognitive decline',
       icon: Brain
     },
     {
-'
-      title: 'Emergency Medicine','
+
+      title: 'Emergency Medicine',
       description: 'Triage optimization and critical care outcome prediction',
       icon: AlertTriangle
     },
     {
-'
-      title: 'Pediatrics','
+
+      title: 'Pediatrics',
       description: 'Childhood disease prediction and growth monitoring',
       icon: Users;
     },;
-    {;'
-      title: 'Geriatrics',;'
+    {;
+      title: 'Geriatrics',;
       description: 'Aging-related health decline prediction and prevention',;
       icon: UserCheck;
     };
@@ -218,44 +218,44 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
   const useCases = [
     {
-'
-      title: 'Hospitals & Health Systems','
+
+      title: 'Hospitals & Health Systems',
       description: 'Comprehensive predictive analytics for large healthcare networks',
       icon: Building
     },
     {
-'
-      title: 'Specialty Clinics','
+
+      title: 'Specialty Clinics',
       description: 'Focused predictive insights for specialized medical practices',
       icon: Stethoscope
     },
     {
-'
-      title: 'Research Institutions','
+
+      title: 'Research Institutions',
       description: 'Advanced analytics for clinical research and drug development',
       icon: TestTube;
     },;
-    {;'
-      title: 'Insurance Companies',;'
+    {;
+      title: 'Insurance Companies',;
       description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield;
     };
   ];
 
-  const complianceFeatures = [;'
-    'HIPAA Compliance',;'
-    'HITECH Act Support',;'
-    'SOC 2 Type II Certified',;'
-    'GDPR Compliance',;'
-    'FDA Guidelines Adherence',;'
+  const complianceFeatures = [;
+    'HIPAA Compliance',;
+    'HITECH Act Support',;
+    'SOC 2 Type II Certified',;
+    'GDPR Compliance',;
+    'FDA Guidelines Adherence',;
     'Clinical Trial Compliance';
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group""
-        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.""
+        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
+        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
         keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
       />
 

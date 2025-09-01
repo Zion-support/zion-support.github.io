@@ -1,19 +1,19 @@
-import { SEO } from '@/components/SEO';'
-import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
-import { useState, useEffect } from 'react';'
+import { SEO } from '@/components/SEO';
+import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { useState, useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Star, AlertTriangle } from 'lucide-react';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Star, AlertTriangle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 function ReviewsModerationContent() {
-'
+
   const [activeTab, setActiveTab] = useState('pending');
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,9 +28,9 @@ function ReviewsModerationContent() {
     } catch (error) {
       // console.error("Error fetching reviews:", error);
       toast({
-'
-        title: 'Error','
-        description: 'Failed to load reviews. Please try again later.','
+
+        title: 'Error',
+        description: 'Failed to load reviews. Please try again later.',
         variant: 'destructive'});
       setIsLoading(false);
     }
@@ -44,7 +44,7 @@ function ReviewsModerationContent() {
   return()
     <>
       <SEO"
-        title="Review Moderation | Zion AI Marketplace""
+        title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
       />
 "

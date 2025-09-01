@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -20,8 +20,8 @@ import {
   Atom,
   Workflow,
   Eye,
-  Target,'
-  Rocket} from 'lucide-react.ts';'
+  Target,
+  Rocket} from 'lucide-react.ts';
 import { SEO } from '../../components/SEO';
 
 export default function AIBlockchainIntegration(...args: any[]): any {
@@ -29,73 +29,73 @@ export default function AIBlockchainIntegration(...args: any[]): any {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Smart Contracts',
       description:'
         'Intelligent contracts that automatically execute based on AI analysis and market conditions'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Enhanced Security',
       description:'
         'Multi-layered security with AI threat detection and blockchain immutability'},
     {
 
-      icon: Zap,'
-      title: 'Real-time Processing','
+      icon: Zap,
+      title: 'Real-time Processing',
       description: 'Lightning-fast transaction processing with AI optimization'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Predictive Analytics',
       description:'
         'AI-driven insights for blockchain performance and market trends'},
   ];
 
   const benefits = ['
-    'Reduce transaction costs by up to 60%','
-    'Improve security with AI threat detection','
-    'Automate complex blockchain operations','
-    'Real-time fraud prevention and detection','
-    'Scalable infrastructure for enterprise needs','
+    'Reduce transaction costs by up to 60%',
+    'Improve security with AI threat detection',
+    'Automate complex blockchain operations',
+    'Real-time fraud prevention and detection',
+    'Scalable infrastructure for enterprise needs',
     'Compliance automation for regulatory requirements',
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$2,500','
+
+      name: 'Starter',
+      price: '$2,500',
       period: '/month',
       features: ['
-        'AI Smart Contract Templates','
-        'Basic Security Monitoring','
-        'Standard Support','
+        'AI Smart Contract Templates',
+        'Basic Security Monitoring',
+        'Standard Support',
         'Up to 10,000 transactions/month',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$5,000','
+
+      name: 'Professional',
+      price: '$5,000',
       period: '/month',
       features: ['
-        'Custom AI Smart Contracts','
-        'Advanced Security Suite','
-        'Priority Support','
-        'Up to 100,000 transactions/month','
+        'Custom AI Smart Contracts',
+        'Advanced Security Suite',
+        'Priority Support',
+        'Up to 100,000 transactions/month',
         'Custom Integrations',
       ]},
     {
-'
-      name: 'Enterprise','
-      price: '$12,000','
+
+      name: 'Enterprise',
+      price: '$12,000',
       period: '/month',
       features: ['
-        'Full AI Blockchain Platform','
-        'Enterprise Security','
-        '24/7 Dedicated Support','
-        'Unlimited transactions','
-        'Custom Development','
+        'Full AI Blockchain Platform',
+        'Enterprise Security',
+        '24/7 Dedicated Support',
+        'Unlimited transactions',
+        'Custom Development',
         'On-premise Deployment',
       ]},
   ];
@@ -103,7 +103,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Blockchain Integration - Zion Tech Group""
+        title="AI Blockchain Integration - Zion Tech Group"
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations."
       />
 

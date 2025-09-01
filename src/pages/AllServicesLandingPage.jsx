@@ -1,26 +1,26 @@
-import React from 'react';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'
-import { TrustedBySection } from '@/components/TrustedBySection';'
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { TrustedBySection } from '@/components/TrustedBySection';
 import SEO from '@/components/SEO';
 export default function AllServicesLandingPage() {
     const getCategoryIcon = (category) => {
 
         switch (category) {
-'
-            case 'AI Services': return '🤖';'
-            case 'Micro SAAS': return '☁️';'
-            case 'IT Services': return '💻';'
-            case 'Digital Services': return '🚀';'
+
+            case 'AI Services': return '🤖';
+            case 'Micro SAAS': return '☁️';
+            case 'IT Services': return '💻';
+            case 'Digital Services': return '🚀';
             default: return '⚡'}
     };
     const getCategoryIconComponent = (category) => {
 
         switch (category) {
-'
+
             case 'AI Services': return <Brain className="h-6 w-6"/>;'"
             case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;'"
             case 'IT Services': return <Code className="h-6 w-6"/>;'"
@@ -30,11 +30,11 @@ export default function AllServicesLandingPage() {
     const getPricingModelColor = (model) => {
 
         switch (model) {
-'
-            case 'subscription': return 'bg-blue-100 text-blue-800';'
-            case 'project-based': return 'bg-purple-100 text-purple-800';'
-            case 'one-time': return 'bg-green-100 text-green-800';'
-            case 'usage-based': return 'bg-orange-100 text-orange-800';'
+
+            case 'subscription': return 'bg-blue-100 text-blue-800';
+            case 'project-based': return 'bg-purple-100 text-purple-800';
+            case 'one-time': return 'bg-green-100 text-green-800';
+            case 'usage-based': return 'bg-orange-100 text-orange-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getServiceIcon = (subcategory) => {
@@ -135,8 +135,8 @@ export default function AllServicesLandingPage() {
                       <CardHeader className="pb-4">"
                         <div className="flex items-start justify-between mb-2">"
                           <div className="text-2xl">{getCategoryIcon(service.category)}</div>
-                          <Badge className={getPricingModelColor(service.pricingModel)}>'
-                            {service.pricingModel.replace('-', ' ')}
+                          <Badge className={getPricingModelColor(service.pricingModel)}>
+                            {service.pricingModel.replace('-', ')}
                           </Badge>
                         </div>"
                         <div className="flex items-center space-x-2 mb-2">

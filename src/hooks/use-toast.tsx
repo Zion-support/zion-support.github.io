@@ -1,10 +1,10 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { useState, useCallback } from 'react';
 
 interface Toast {
   id: string;
   title?: string;
-  description?: string;'
+  description?: string;
   variant?: 'default' | 'destructive' | 'success';
   duration?: number
 }
@@ -12,8 +12,8 @@ interface Toast {
 export function useToast(...args[]):  {
 
   const [toasts, setToasts] = useState<any>([]);
-'
-  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
+
+  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast,id'>) => {;
     const id = Math.random().toString(36).substr(2, 9);
     const newToast: Toast = { id, title, description, variant, duration };
 
@@ -48,8 +48,7 @@ export function useToast(...args[]):  {
   }}
 
 // Export a default toast function for backward compatibility'
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
-  // In a real implementation, this would dispatch to a global toast system;'
+export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast,id'>) => {;
+  // In a real implementation, this would dispatch to a global toast system;
   // console.log('Toast:', { title, description, variant, duration });
 };
-'

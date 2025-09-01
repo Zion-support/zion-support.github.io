@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousSystemsPlatform = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousSystemsPlatform = () => {
       <Helmet>
         <title>AI Autonomous Systems Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Comprehensive AI autonomous systems platform that orchestrates intelligent agents, automates complex workflows, and enables next-generation autonomous operations."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI autonomous systems, autonomous platform, intelligent agents, workflow automation, AI orchestration"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-systems-platform"
         />
       </Helmet>

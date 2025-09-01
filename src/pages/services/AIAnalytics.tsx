@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react';
 
 export default function AIAnalytics(...args[]):  {
@@ -7,50 +7,50 @@ export default function AIAnalytics(...args[]):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'Machine Learning','
+      icon: Brain,
+      title: 'Machine Learning',
       description: 'Advanced AI algorithms for intelligent decision making'
     },
     {
 
-      icon: BarChart3,'
-      title: 'Predictive Analytics','
+      icon: BarChart3,
+      title: 'Predictive Analytics',
       description: 'Forecast trends and identify opportunities'
     },
     {
 
-      icon: Zap,'
-      title: 'Real-time Insights','
+      icon: Zap,
+      title: 'Real-time Insights',
       description: 'Instant data analysis and actionable intelligence';
     },;
     {;
-      icon: Eye,;'
-      title: 'Data Visualization',;'
+      icon: Eye,;
+      title: 'Data Visualization',;
       description: 'Clear and intuitive data presentation';
     };
   ];
 
   const services = [
     {
-'
-      title: 'AI Strategy Consulting','
+
+      title: 'AI Strategy Consulting',
       description: 'Strategic planning and implementation of AI solutions',
       icon: Brain
     },
     {
-'
-      title: 'Predictive Modeling','
+
+      title: 'Predictive Modeling',
       description: 'Build models to forecast business outcomes',
       icon: BarChart3
     },
     {
-'
-      title: 'Natural Language Processing','
+
+      title: 'Natural Language Processing',
       description: 'Text analysis and language understanding systems',
       icon: Database;
     },;
-    {;'
-      title: 'Computer Vision',;'
+    {;
+      title: 'Computer Vision',;
       description: 'Image and video analysis with AI',;
       icon: Eye;
     };

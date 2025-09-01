@@ -63,7 +63,7 @@ export default function AICybersecurity() {
       price: '$1,500',
       period: 'monthly',
       description: 'Perfect for small businesses and startups',
-      features: ['Basic threat detection', 'Network monitoring', 'Email security', 'Standard support', 'Monthly reports'],
+      features: ['Basic threat detection',Network monitoring',Email security',Standard support',Monthly reports'],
       cta: 'Get Started',
       popular: false
     },
@@ -72,7 +72,7 @@ export default function AICybersecurity() {
       price: '$3,500',
       period: 'monthly',
       description: 'Ideal for growing businesses and enterprises',
-      features: ['Advanced AI threat detection', 'Zero trust architecture', 'Priority support', 'Real-time monitoring', 'Compliance reporting', 'Custom integrations'],
+      features: ['Advanced AI threat detection',Zero trust architecture',Priority support',Real-time monitoring',Compliance reporting',Custom integrations'],
       cta: 'Get Started',
       popular: true
     },
@@ -81,7 +81,7 @@ export default function AICybersecurity() {
       price: 'Custom',
       period: 'monthly',
       description: 'For large organizations with complex security needs',
-      features: ['Full AI security suite', 'Custom AI models', '24/7 dedicated support', 'White-label options', 'API access', 'Custom development'],
+      features: ['Full AI security suite',Custom AI models',24/7 dedicated support',White-label options',API access',Custom development'],
       cta: 'Contact Sales',
       popular: false
     }

@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { Navigate, useLocation  } from 'react-router-dom.ts';'
+import React from 'react.ts';
+import { Navigate, useLocation  } from 'react-router-dom.ts';
 import { useAuth  } from '@/hooks/useAuth';
 
 interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
@@ -26,7 +26,7 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 "
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-'
+
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
 "
     return <Navigate to="/unauthorized" replace />;

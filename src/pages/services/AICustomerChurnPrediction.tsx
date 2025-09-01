@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
+import React from 'react.ts';
+import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { TrendingDown, 
   Brain, 
@@ -89,9 +89,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
-        title="AI Customer Churn Prediction Platform - Zion Tech Group""
-        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
-        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success""
+        title="AI Customer Churn Prediction Platform - Zion Tech Group"
+        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
+        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
         canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
       />
 
@@ -574,14 +574,14 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
 
                 Schedule Demo

@@ -1,25 +1,25 @@
 import React from 'react';
 
 export default function EmailSequencer() {
-	const features = [;'
-		'Multi-step sequences with A/B testing',;'
-		'AI subject line and body suggestions',;'
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',;'
-		'Smart send windows and reply-detection',;'
-		'Per-recipient throttling and warmup controls',;'
+	const features = [;
+		'Multi-step sequences with A/B testing',;
+		'AI subject line and body suggestions',;
+		'CRM/webhook integrations (HubSpot, Salesforce, Slack),;
+		'Smart send windows and reply-detection',;
+		'Per-recipient throttling and warmup controls',;
 		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
 	];
 
-	const plans = [;'
-		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends', '1 domain', 'Basic templates'] },;'
-		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends', '3 domains', 'A/B testing, webhooks'] },;'
-		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends', 'SAML/SSO', 'Priority support'] };
+	const plans = [;
+		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends',1 domain',Basic templates'] },;
+		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends',3 domains',A/B testing, webhooks'] },;
+		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends',SAML/SSO',Priority support'] };
 	];
 
-	const references = [;'
-		{ label: 'HubSpot Email Marketing Pricing', href: 'https://www.hubspot.com/pricing/marketing/email' },;'
-		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },;'
-		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },;'
+	const references = [;
+		{ label: 'HubSpot Email Marketing Pricing', href: 'https://www.hubspot.com/pricing/marketing/email' },;
+		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },;
+		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },;
 		{ label: 'Salesloft Pricing', href: 'https://salesloft.com/pricing/' };
 	];
 

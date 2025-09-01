@@ -30,7 +30,7 @@ const Dialog({ children, open, onOpenChange }) {
 export function DialogTrigger({ children, asChild = false }) {
 
     const context = useContext(DialogContext);
-    if (!context)'
+    if (!context)
         throw new Error('DialogTrigger must be used within Dialog');
     if (asChild) {
 
@@ -39,11 +39,11 @@ export function DialogTrigger({ children, asChild = false }) {
       </div>)}
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
-    </div>)}'
+    </div>)}
 export function DialogContent({ children, className = '' }) {
 
     const context = useContext(DialogContext);
-    if (!context)'
+    if (!context)
         throw new Error('DialogContent must be used within Dialog');
     if (!context.isOpen)
         return null;"
@@ -52,7 +52,7 @@ export function DialogContent({ children, className = '' }) {
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}
       </div>
-    </div>)}'
+    </div>)}
 export function DialogFooter({ children, className = '' }) {
 `
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}

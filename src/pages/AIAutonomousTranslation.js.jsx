@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousTranslation = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousTranslation = () => {
       <Helmet>
         <title>AI Autonomous Translation Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous translation platform that continuously translates content, languages, and communications with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI translation, autonomous translation, language translation, multilingual support, autonomous operations, AI translation platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-translation"
         />
       </Helmet>
@@ -185,13 +185,13 @@ const AIAutonomousTranslation = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Text Translation','
-                'Document Translation','
-                'Website Translation','
-                'App Translation','
-                'Video Translation','
-                'Audio Translation','
-                'Real-time Translation','
+                'Text Translation',
+                'Document Translation',
+                'Website Translation',
+                'App Translation',
+                'Video Translation',
+                'Audio Translation',
+                'Real-time Translation',
                 'Batch Translation',
               ].map(type => (
                 <div

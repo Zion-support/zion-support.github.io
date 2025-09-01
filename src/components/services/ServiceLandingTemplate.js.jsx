@@ -1,6 +1,6 @@
-import React from 'react';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
+import React from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 export const ServiceLandingTemplate = ({
 
@@ -106,7 +106,7 @@ export const ServiceLandingTemplate = ({
 "
       <section className="py-12 bg-zion-blue-dark text-center">
         <Button"
-          size="lg""
+          size="lg"
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >

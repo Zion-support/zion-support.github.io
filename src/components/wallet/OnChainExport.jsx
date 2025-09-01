@@ -28,7 +28,7 @@ export function OnChainExport() {
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
-'
+
                 method: 'personal_sign',
                 params[address, message];
             });
@@ -46,18 +46,18 @@ export function OnChainExport() {
             })}
     };
     const handleExportTokens = async () => {
-        setIsExporting(true);'
+        setIsExporting(true);
         setExportStatus('processing');
         try {
             // Simulate token export
-            await new Promise(resolve => setTimeout(resolve, 2000));'
+            await new Promise(resolve => setTimeout(resolve, 2000));
             setExportStatus('success');
             toast({
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
         catch (error) {
-'
+
             setExportStatus('error');
             toast({
 "

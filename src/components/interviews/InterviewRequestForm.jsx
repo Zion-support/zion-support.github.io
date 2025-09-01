@@ -54,7 +54,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         setIsSubmitting(true);
         try {
             // Combine date and time`
-            const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
             const durationMinutes = parseInt(values.duration);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -229,12 +229,12 @@ const processSteps = [
 ];
 
 export default function GovernmentSolutions() {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-'
-  const categories = ['All', 'Citizen Services', 'Security', 'Analytics', 'System Modernization', 'Emergency Management', 'Compliance'];
-'
+
+  const categories = ['All',Citizen Services',Security',Analytics',System Modernization',Emergency Management',Compliance'];
+
   const filteredSolutions = selectedCategory === 'All'
     ? governmentSolutions
     : governmentSolutions.filter (solution => solution.category === selectedCategory) ;
@@ -696,20 +696,20 @@ export default function GovernmentSolutions() {
             className="text-center max-w-4xl mx-auto"
 "
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Government Services?</h2>"
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our government technology solutions can improve public services,
               enhance security, and ensure compliance for your agency.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                 Start Your Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 Schedule Consultation

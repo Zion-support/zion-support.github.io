@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousPlanning = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousPlanning = () => {
       <Helmet>
         <title>AI Autonomous Planning Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous planning platform that continuously creates strategies, plans actions, and optimizes decision-making with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI planning, autonomous planning, strategic planning, decision optimization, autonomous operations, AI planning platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-planning"
         />
       </Helmet>
@@ -179,13 +179,13 @@ const AIAutonomousPlanning = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Strategic Planning','
-                'Tactical Planning','
-                'Operational Planning','
-                'Project Planning','
-                'Resource Planning','
-                'Risk Planning','
-                'Contingency Planning','
+                'Strategic Planning',
+                'Tactical Planning',
+                'Operational Planning',
+                'Project Planning',
+                'Resource Planning',
+                'Risk Planning',
+                'Contingency Planning',
                 'Execution Planning',
               ].map(type => (
                 <div

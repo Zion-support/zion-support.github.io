@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -82,7 +82,7 @@ import {
   Fingerprint,
   Key,
   Server'
-} from 'lucide-react';'
+} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 ;
 export { function };
@@ -90,14 +90,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
   const features = [
     {
-'
-      title: 'Threat Database & Analytics','
+
+      title: 'Threat Database & Analytics',
       description: 'Extensive database of known threats, attack patterns, and security intelligence'
     },
     {
 
-      icon: Network,'
-      title: 'Network Security Monitoring','
+      icon: Network,
+      title: 'Network Security Monitoring',
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
       icon: Brain,;"
       title: "AI-Powered Threat Detection","
@@ -258,65 +258,65 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Globe
     },
     {
-'
-      industry: 'Enterprise IT','
+
+      industry: 'Enterprise IT',
       description: 'Corporate network security, data protection, and employee security awareness'
     }
   ];
 
   const pricing = [
     {
-'
-      name: 'Starter','
-      price: '$399','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$399',
+      period: '/month',
       description: 'Perfect for small businesses',
       features: ['
-        'Up to 100 endpoints','
-        'Basic threat detection','
-        'Email alerts','
-        'Basic reporting','
-        'Email support','
+        'Up to 100 endpoints',
+        'Basic threat detection',
+        'Email alerts',
+        'Basic reporting',
+        'Email support',
         'Mobile app access'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$999','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$999',
+      period: '/month',
       description: 'Ideal for growing companies',
       features: ['
-        'Up to 1,000 endpoints','
-        'Advanced AI detection','
-        'Real-time monitoring','
-        'Priority support','
-        'Advanced analytics','
-        'API access','
-        'Custom integrations','
+        'Up to 1,000 endpoints',
+        'Advanced AI detection',
+        'Real-time monitoring',
+        'Priority support',
+        'Advanced analytics',
+        'API access',
+        'Custom integrations',
         'Threat hunting tools'
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$2,499','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$2,499',
+      period: '/month',
       description: 'For large organizations',
       features: ['
-        'Unlimited endpoints','
-        'Custom AI models','
-        'On-premise deployment','
-        'Dedicated support','
-        'Custom integrations','
-        'Advanced security','
-        'Compliance reporting','
+        'Unlimited endpoints',
+        'Custom AI models',
+        'On-premise deployment',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security',
+        'Compliance reporting',
         'SLA guarantees'
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false
     }
@@ -384,8 +384,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
-        title="AI Cybersecurity Threat Intelligence - Zion Tech Group""
-        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""
+        title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
+        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time."
         keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
       />
 
@@ -495,14 +495,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
             >
               Secure Your Organization"
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a"
-              href="#demo""
+              href="#demo"
               className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
             >
               Request Demo
@@ -776,7 +776,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                 viewport={{ once: true }}`
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`
                 } hover:border-red-500/50 transition-all`}
               >
@@ -929,14 +929,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Secure Your Organization"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
               >"
                 <Phone className="mr-2 w-5 h-5" />

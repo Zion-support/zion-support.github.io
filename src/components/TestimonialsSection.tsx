@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     position: "CTO","
     company: "TechFlow Solutions","
     avatar: "/images/testimonials/sarah-chen.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Zion Tech Group's AI autonomous operations platform transformed our business. We've seen a 300% increase in efficiency and 40% reduction in operational costs. Their quantum computing solutions are truly revolutionary.","
     industry: "Technology","
     results: ["300% efficiency increase", "40% cost reduction", "24/7 autonomous operations"],
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     position: "VP of Operations","
     company: "Global Manufacturing Corp","
     avatar: "/images/testimonials/marcus-rodriguez.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "The AI-powered cybersecurity suite has been a game-changer for our manufacturing operations. We've prevented 99.9% of cyber threats and achieved full compliance with industry standards.","
     industry: "Manufacturing","
     results: ["99.9% threat prevention", "Full compliance achieved", "Zero downtime incidents"],
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
     position: "Research Director","
     company: "Quantum Research Institute","
     avatar: "/images/testimonials/emily-watson.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Working with Zion's quantum neural network platform has accelerated our research by orders of magnitude. We're solving problems that were previously impossible with classical computing.","
     industry: "Research","
     results: ["1000x speed improvement", "Breakthrough discoveries", "Patent applications filed"],
@@ -74,7 +74,7 @@ const testimonials: Testimonial[] = [
     position: "CEO","
     company: "FinTech Innovations","
     avatar: "/images/testimonials/james-thompson.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "The AI financial analytics platform has given us unprecedented insights into market trends. Our investment decisions are now data-driven and we've outperformed the market by 25%.","
     industry: "Finance","
     results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
@@ -87,7 +87,7 @@ const testimonials: Testimonial[] = [
     position: "Head of Marketing","
     company: "E-commerce Dynamics","
     avatar: "/images/testimonials/lisa-park.jpg",
-    rating: 5,'"
+    rating: 5,"
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition. We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
     industry: "E-commerce","
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
@@ -309,7 +309,7 @@ export const TestimonialsSection: React.FC = props {
           <div className="flex items-center justify-center mt-8 gap-4">
             <button
               onClick={prevTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
+              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Previous testimonial"
             >"
               <ChevronLeft className="w-5 h-5" />
@@ -334,7 +334,7 @@ export const TestimonialsSection: React.FC = props {
 
             <button
               onClick={nextTestimonial}"
-              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
+              className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               aria-label="Next testimonial"
             >"
               <ChevronRight className="w-5 h-5" />
@@ -351,7 +351,7 @@ export const TestimonialsSection: React.FC = props {
                   ? 'bg-cyan-500 text-white''
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'`
               }`}
-            >'
+            >
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
             </button>
           </div>

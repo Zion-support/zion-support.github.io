@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import SEO from '@/components/SEO';
 ;
 export { function };
@@ -7,7 +7,7 @@ export default function LLMContentStudio(...args: []):  {
   return()
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO"
-        title="LLM Content Studio | Zion Tech Group""
+        title="LLM Content Studio | Zion Tech Group"
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."
       />"
       <section className="container-responsive py-16">"

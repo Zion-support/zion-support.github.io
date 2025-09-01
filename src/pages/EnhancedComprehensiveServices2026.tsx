@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react.ts';'
+import React, { useState, useMemo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain,
 import { motion, AnimatePresence  } from 'framer - motion.ts';
@@ -137,7 +137,7 @@ pricing: {
     }) ;
 
     return services}, []);
-'
+
   const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
@@ -145,25 +145,25 @@ pricing: {
   const filtered = allServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                          service.category.toLowerCase().includes(searchTerm.toLowerCase());'
+                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory}) ;
 
     // Sort services
     switch (sortBy) {
-'
+
       case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;'
+        break;
       case 'price':
         filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);
-        break;'
+        break;
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
-        break;'
+        break;
       case 'newest':
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;'
+        break;
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
         filtered.sort ( (a, b) => (b.innovationLevel || b.rating.toString () ) .localeCompare (a.innovationLevel || a.rating.toString () ) ) ;
@@ -173,13 +173,13 @@ pricing: {
 "
         return <Lightbulb className = "w-6 h-6" />};
   };
-'
+
         return 'bg-gray-100 text-gray-800'}
   };
 
-  const getInnovationBadge = (service: Service) => {;'
+  const getInnovationBadge = (service: Service) => {;
     if (service.innovationLevel === 'Revolutionary') {;"
-      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;'
+      return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting-Edge') {;"
       return <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><ZapIcon className="w-3 h-3" /> Cutting-Edge</span>;
 
@@ -246,7 +246,7 @@ pricing: {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search revolutionary services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
@@ -287,7 +287,7 @@ pricing: {
                 <button'
                   onClick={() => setViewMode('grid')}
                   className={`px-3 py-2 rounded-md transition-colors ${
-'
+
                     viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'`
                   }`}
 "
@@ -296,7 +296,7 @@ pricing: {
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`px-3 py-2 rounded-md transition-colors ${
-'
+
                     viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-300 hover:text-white'`
                   }`}
 "
@@ -309,7 +309,7 @@ pricing: {
       </div>
 
       {/* Services Grid/List */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;'
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
         {viewMode === 'grid' ? (;"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>

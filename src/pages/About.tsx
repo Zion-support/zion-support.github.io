@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import {
@@ -20,126 +20,126 @@ import {
   Cpu,
   Brain,
   Cloud,
-  Lock,'
+  Lock,
   Database} from 'lucide-react';
 
   const stats = [
     {
-'
-      number: '500+','
-      label: 'Projects Completed','
+
+      number: '500+',
+      label: 'Projects Completed',
       description: 'Successfully delivered across industries'},
     {
-'
-      number: '50+','
-      label: 'Team Members','
+
+      number: '50+',
+      label: 'Team Members',
       description: 'Expert professionals and specialists'},
     {
-'
-      number: '25+','
-      label: 'Countries Served','
+
+      number: '25+',
+      label: 'Countries Served',
       description: 'Global presence and reach'},
     {
-'
-      number: '99%','
-      label: 'Client Satisfaction','
+
+      number: '99%',
+      label: 'Client Satisfaction',
       description: 'Consistent high-quality delivery'},
   ];
 
   const values = [
     {
 
-      icon: Lightbulb,'
+      icon: Lightbulb,
       title: 'Innovation First',
       description:'
-        "We push the boundaries of what's possible, constantly exploring emerging technologies and creative solutions.",'
+        "We push the boundaries of what's possible, constantly exploring emerging technologies and creative solutions.",
       color: 'from-purple-500 to-pink-500'},
     {
 
-      icon: Award,'
+      icon: Award,
       title: 'Excellence in Execution',
       description:'
-        'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.','
+        'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
       color: 'from-blue-500 to-cyan-500'},
     {
 
-      icon: Heart,'
+      icon: Heart,
       title: 'Partnership Approach',
       description:'
-        'We work as an extension of your team, building long-term relationships based on trust and mutual success.','
+        'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
       color: 'from-green-500 to-emerald-500'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Security & Trust',
       description:'
-        'Your data and systems are protected with enterprise-grade security and compliance standards.','
+        'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'},
   ];
 
   const teamMembers = [
     {
-'
-      name: 'Kleber Santos','
-      role: 'CEO & Founder','
+
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
       expertise: ['
-        'AI Strategy','
-        'Digital Transformation','
+        'AI Strategy',
+        'Digital Transformation',
         'Business Innovation',
-      ],'
+      ],
       image: '/images/team/kleber-santos.jpg'},
     {
-'
-      name: 'Dr. Sarah Chen','
-      role: 'CTO & AI Research Lead','
-      bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.','
-      expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],'
+
+      name: 'Dr. Sarah Chen',
+      role: 'CTO & AI Research Lead',
+      bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
+      expertise: ['Machine Learning',AI Research',Technical Architecture'],
       image: '/images/team/sarah-chen.jpg'},
     {
-'
-      name: 'Marcus Rodriguez','
-      role: 'Head of Cloud & DevOps','
-      bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.','
-      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],'
+
+      name: 'Marcus Rodriguez',
+      role: 'Head of Cloud & DevOps',
+      bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
+      expertise: ['Cloud Architecture',DevOps',Infrastructure'],
       image: '/images/team/marcus-rodriguez.jpg'},
     {
-'
-      name: 'Dr. Emily Watson','
-      role: 'Cybersecurity Director','
-      bio: 'Former government cybersecurity specialist with expertise in threat intelligence.','
-      expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],'
+
+      name: 'Dr. Emily Watson',
+      role: 'Cybersecurity Director',
+      bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
+      expertise: ['Cybersecurity',Compliance',Risk Management'],
       image: '/images/team/emily-watson.jpg'},
   ];
 
   const milestones = [
     {
-'
-      year: '2018','
+
+      year: '2018',
       title: 'Company Founded',
       description:'
         'Zion Tech Group established with a vision to democratize AI technology.'},
     {
-'
-      year: '2020','
+
+      year: '2020',
       title: 'AI Breakthrough',
       description:'
         'Developed first autonomous AI research assistant for enterprise clients.'},
     {
-'
-      year: '2022','
+
+      year: '2022',
       title: 'Global Expansion',
       description:'
         'Expanded services to 25+ countries with localized solutions.'},
     {
-'
-      year: '2024','
+
+      year: '2024',
       title: 'Quantum Leap',
       description:'
         'Launched quantum computing services and AI-powered solutions.'},
     {
-'
-      year: '2025','
+
+      year: '2025',
       title: 'Future Forward',
       description:'
         'Leading the next generation of AI and technology innovation.'},
@@ -147,34 +147,34 @@ import {
 
   const technologies = [
     {
-'
+
       name: 'Artificial Intelligence',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-pink-500'},
     {
-'
+
       name: 'Quantum Computing',
-      icon: Cpu,'
+      icon: Cpu,
       color: 'from-blue-500 to-cyan-500'},
     {
-'
+
       name: 'Cloud Infrastructure',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-green-500 to-emerald-500'},
     {
-'
+
       name: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500'},
     {
-'
+
       name: 'Blockchain & Web3',
-      icon: Lock,'
+      icon: Lock,
       color: 'from-indigo-500 to-purple-500'},
     {
-'
+
       name: 'IoT & Edge Computing',
-      icon: Zap,'
+      icon: Zap,
       color: 'from-yellow-500 to-orange-500'},
   ];
 
@@ -424,13 +424,13 @@ import {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
                 Explore Our Services

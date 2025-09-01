@@ -31,7 +31,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   const [metrics, setMetrics] = useState<any>({
 
     totalSize: 0,
-    chunkCount: 0,'
+    chunkCount: 0,
     largestChunk: { name: '', size: 0 },
     averageChunkSize: 0,
     gzipSavings: 0
@@ -42,16 +42,16 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     try {
       // Get performance entries'
-      const navigationEntries = performance.getEntriesByType('navigation');'
+      const navigationEntries = performance.getEntriesByType('navigation');
       const resourceEntries = performance.getEntriesByType('resource');
       
       // Calculate bundle metrics
       let totalSize = 0;
-      let chunkCount = 0;'
+      let chunkCount = 0;
       let largestChunk = { name: any'', size: 0 };
       
       resourceEntries.forEach((entry: )  => {
-'
+
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
 
           const size = entry.transferSize || entry.encodedBodySize || 0;
@@ -91,7 +91,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       }
       
       if (chunkCount > 20) {
-'
+
         // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.');
       }
       
@@ -101,7 +101,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       
       console.groupEnd () ;
     } catch (error) {
-'
+
       // console.error('Bundle analysis failed:', error);
     }
   }, [enabled]) ;
@@ -113,21 +113,21 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     const optimizations: string[] = [];
 
     if (metrics.totalSize > 5 * 1024 * 1024) {
-'
-      optimizations.push('Implement code splitting for routes');'
-      optimizations.push('Use dynamic imports for heavy components');'
+
+      optimizations.push('Implement code splitting for routes');
+      optimizations.push('Use dynamic imports for heavy components');
       optimizations.push('Optimize third-party library imports');
     }
 
     if (metrics.chunkCount > 20) {
-'
-      optimizations.push('Consolidate small chunks');'
+
+      optimizations.push('Consolidate small chunks');
       optimizations.push('Use webpack chunk optimization');
     }
 
     if (metrics.largestChunk.size > 2 * 1024 * 1024) {
-'
-      optimizations.push('Split large components');'
+
+      optimizations.push('Split large components');
       optimizations.push('Implement tree shaking');
     }
 
@@ -156,11 +156,11 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     const optimizations = optimizeBundle () ;
     
     if (optimizations && optimizations.length > 0) {
-'
+
       // console.log('📊 Bundle optimization recommendations:', optimizations);
     }
   }, [enabled, optimizeBundle]);
-'
+
   // Don't render UI unless explicitly requested
   if (!showUI) {
 

@@ -12,7 +12,7 @@ import {
   RequestsHeader,
   QuoteRequestsList"
 } from "@/components/quotes";"
-import type { QuoteRequest } from "@/types/quotes";'
+import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 ;
 export { function };
@@ -36,7 +36,7 @@ export default function RequestsPanel(...args[]):  {
     markAsResponded,
     toggleArchive
   } = useTalentQuotes();
-'
+
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
 

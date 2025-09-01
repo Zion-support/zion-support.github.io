@@ -15,7 +15,7 @@ export async function updateJob(...args: any[]): any {
 
   const { data, error } = await supabase'
     .from('jobs')
-    .update(jobData)'
+    .update(jobData)
     .eq('id', jobId)
     .select()
     .single();
@@ -27,12 +27,11 @@ export async function updateJob(...args: any[]): any {
 export async function getJobById(...args: any[]): any {
 
   const { data, error } = await supabase'
-    .from('jobs')'
-    .select('*')'
+    .from('jobs')
+    .select('*')
     .eq('id', jobId)
     .single();
 
   if (error) throw error;
   return data;
 }
-'

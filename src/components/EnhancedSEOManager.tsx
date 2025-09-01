@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';'
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -28,56 +28,56 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       // Update meta description'
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
-'
-        metaDesc = document.createElement('meta');'
-        metaDesc.setAttribute('name', 'description');
+
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name',description');
         document.head.appendChild(metaDesc);
-'
+
       metaDesc.setAttribute('content', seoData.description);
 
       // Update keywords'"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
-'
-        metaKeywords = document.createElement('meta');'
-        metaKeywords.setAttribute('name', 'keywords');
+
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name',keywords');
         document.head.appendChild(metaKeywords);
-'
-      metaKeywords.setAttribute('content', seoData.keywords.join(', '));
+
+      metaKeywords.setAttribute('content', seoData.keywords.join(',));
       
       // Update Open Graph tags
       const updateOGTag = (property: string, content: string) => {;"
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
-'
-          ogTag = document.createElement('meta');'
+
+          ogTag = document.createElement('meta');
           ogTag.setAttribute('property', property);
           document.head.appendChild(ogTag);
-        }'
+        }
         ogTag.setAttribute('content', content);
       };
       '
-      if (seoData.ogImage) updateOGTag('og:image', seoData.ogImage);'
-      if (seoData.ogType) updateOGTag('og:type', seoData.ogType);'
-      updateOGTag('og:title', seoData.title);'
-      updateOGTag('og:description', seoData.description);'
+      if (seoData.ogImage) updateOGTag('og:image', seoData.ogImage);
+      if (seoData.ogType) updateOGTag('og:type', seoData.ogType);
+      updateOGTag('og:title', seoData.title);
+      updateOGTag('og:description', seoData.description);
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
       const updateTwitterTag = (name: string, content: string) => {;"`
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
-'
-          twitterTag = document.createElement('meta');'
+
+          twitterTag = document.createElement('meta');
           twitterTag.setAttribute('name', name);
           document.head.appendChild(twitterTag);
-        }'
+        }
         twitterTag.setAttribute('content', content);
       };
       '
-      updateTwitterTag('twitter:card', 'summary_large_image');'
-      updateTwitterTag('twitter:title', seoData.title);'
-      updateTwitterTag('twitter:description', seoData.description);'
+      updateTwitterTag('twitter:card',summary_large_image');
+      updateTwitterTag('twitter:title', seoData.title);
+      updateTwitterTag('twitter:description', seoData.description);
       if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
       
       // Add canonical URL
@@ -85,11 +85,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 '"
         let canonical = document.querySelector('link[rel="canonical"]');
         if (!canonical) {
-'
-          canonical = document.createElement('link');'
-          canonical.setAttribute('rel', 'canonical');
+
+          canonical = document.createElement('link');
+          canonical.setAttribute('rel',canonical');
           document.head.appendChild(canonical);
-        }'
+        }
         canonical.setAttribute('href', seoData.canonicalUrl);
       }
       
@@ -98,9 +98,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 '"
         let script = document.querySelector('script[type="application/ld+json"]');
         if (!script) {
-'
-          script = document.createElement('script');'
-          script.setAttribute('type', 'application/ld+json');
+
+          script = document.createElement('script');
+          script.setAttribute('type',application/ld+json');
           document.head.appendChild(script);
         }
         script.textContent = JSON.stringify (seoData.structuredData) ;
@@ -123,8 +123,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <title>{seoData.title}</title>"
         <meta name = "description" content={seoData.description} />"
         <meta name="keywords" content = {
-'
-  seoData.keywords.join(','
+
+  seoData.keywords.join(',
   ');
 
 

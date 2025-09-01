@@ -1,6 +1,6 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 ;
 export { function };
@@ -130,8 +130,8 @@ export default function AIProjectManager(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group""
-        description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.""
+        title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
+        description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today."
         keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
       />
 
@@ -178,7 +178,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by Advanced AI
             </h2>"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our AI engine learns from your team's patterns and continuously optimizes your project workflows
             </p>
           </motion.div>
@@ -268,7 +268,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`
                 }`}
                 initial={{ opacity: 0, y: 30 }}

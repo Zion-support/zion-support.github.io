@@ -9,7 +9,7 @@ import {
   Home,
   Mail,
   Bug,
-  Shield,'
+  Shield,
   ArrowLeft} from 'lucide-react';
 
 interface Props {
@@ -39,7 +39,7 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-'
+
       errorId: '',
       showDetails: false};
   }
@@ -62,7 +62,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development'
     if (process.env.NODE_ENV === 'development') {
-'
+
       // console.error('Error caught by boundary:', error, errorInfo);
     }
 
@@ -98,13 +98,13 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-'
+
       errorId: '',
       showDetails: false});
   };
 
   handleGoHome = () => {
-'
+
     window.location.href = '/';
   };
 
@@ -124,7 +124,7 @@ class ErrorBoundary extends Component<Props, State> {
     // console.log('Error Report:', errorReport);
 
     // For now, just copy to clipboard
-    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));'
+    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
     alert('Error report copied to clipboard. Please send this to support.');
   };
 
@@ -169,7 +169,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
                 <h1 className="text-2xl font-bold text-white mb-2">
                   Oops! Something went wrong
                 </h1>"
-                <p className="text-gray-300">'
+                <p className="text-gray-300">
                   We've encountered an unexpected error. Our team has been
                   notified.
                 </p>
@@ -186,8 +186,8 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   </code>
                 </div>"
                 <div className="text-sm text-gray-400">
-                  <p>'
-                    <strong>Message:</strong>{' '}'
+                  <p>
+                    <strong>Message:</strong>{' '}
                     {error?.message || 'Unknown error'}
                   </p>
                   <p>
@@ -230,7 +230,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   onClick={this.toggleDetails}"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >"
-                  <Bug className="w-4 h-4" />'
+                  <Bug className="w-4 h-4" />
                   {showDetails ? 'Hide' : 'Show'} Technical Details
                 </button>
               </div>

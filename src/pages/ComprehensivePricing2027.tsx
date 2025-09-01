@@ -1,29 +1,29 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign'
- } from 'lucide-react';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';'
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 
 export default function ComprehensivePricing2027(...args[]):  {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [sortBy, setSortBy] = useState<any>('price');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState<any>('price');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [expandedService, setExpandedService] = useState<any>(null);
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
-'
+
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
 
   const filteredServices = allServices;
-    .filter(service =>'
+    .filter(service =>
       (selectedCategory === 'All' || service.category === service.category) &&'
       (searchQuery === '' ||
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -31,8 +31,8 @@ export default function ComprehensivePricing2027(...args[]):  {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
     .sort((a, b) => {
-'
-      if (sortBy === 'price') return a.price - b.price;'
+
+      if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating}) ;
 
@@ -160,9 +160,9 @@ export default function ComprehensivePricing2027(...args[]):  {
 }}
           >
             {['
-              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },'
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },'`
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },'`
+              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },`
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },`
               { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
             ].map((stat, index)  => ("
               <div key={index} className="text-center group">`
@@ -207,7 +207,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search services, features, or technologies..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
@@ -233,7 +233,7 @@ export default function ComprehensivePricing2027(...args[]):  {
               {/* Sort By */}"
               <div className="relative">
                 <select
-                  value={sortBy}'
+                  value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}"
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
 "
@@ -268,7 +268,7 @@ export default function ComprehensivePricing2027(...args[]):  {
       <motion.section"
         className="relative z-10 px-6 pb-20"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate="visible"
 "
         <div className="max-w-7xl mx-auto">;"
@@ -299,10 +299,10 @@ export default function ComprehensivePricing2027(...args[]):  {
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div
-                    key={service.id}'
-                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}'
+                    key={service.id}
+                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
-'
+
                     {viewMode === 'grid' ? (;
                       <motion.div"
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
@@ -387,7 +387,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 }}
                               animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -430,7 +430,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                               {/* CTA Button */}
                               <button'
-                                onClick={() => window.open(service.website, '_blank')}"
+                                onClick={() => window.open(service.website,_blank')}"
                                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
 
                                 Get Started
@@ -493,7 +493,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                             </div>
 
                             <button'
-                              onClick={() => window.open(service.website, '_blank')}"
+                              onClick={() => window.open(service.website,_blank')}"
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
 
                               Get Started
@@ -553,13 +553,13 @@ export default function ComprehensivePricing2027(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
 
                 Contact Our Team
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
 
                 Call + 1 302 464 0950

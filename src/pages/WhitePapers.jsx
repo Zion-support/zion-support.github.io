@@ -1,19 +1,19 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { FileText, Download, Calendar, User } from 'lucide-react';
 
 const WhitePapers = () => {
   const whitePapers = [
     {
-'
-      title: 'AI-Powered Digital Transformation: A Comprehensive Guide','
-      category: 'Digital Transformation','
-      date: '2025-01-10','
+
+      title: 'AI-Powered Digital Transformation: A Comprehensive Guide',
+      category: 'Digital Transformation',
+      date: '2025-01-10',
       author: 'Dr. Sarah Chen',
       description:'
-        'This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.','
+        'This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.',
       pdfUrl: '#',
-      pages: 28,'
+      pages: 28,
       downloadCount: '2,500+'},
   ];
 
@@ -65,7 +65,7 @@ const WhitePapers = () => {
                   </div>
                 </div>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                 >"
                   <Download className="w-4 h-4 mr-2" />

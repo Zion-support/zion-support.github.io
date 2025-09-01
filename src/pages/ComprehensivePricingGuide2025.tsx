@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -54,214 +54,214 @@ import {
   Car as CarIcon,
   Factory as FactoryIcon2,
   City as CityIcon2,
-  Home as HomeIcon2,'
+  Home as HomeIcon2,
   Car as CarIcon2} from 'lucide-react';
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      price: '$99','
-      period: 'month','
-      description: 'Perfect for small businesses and startups','
+
+      name: 'Starter',
+      price: '$99',
+      period: 'month',
+      description: 'Perfect for small businesses and startups',
       color: 'from-blue-500 to-cyan-500',
       features: ['
-        'AI Content Creation (5 articles/month)','
-        'Basic Analytics Dashboard','
-        'Email Support','
-        'Standard Security','
-        '5GB Storage','
+        'AI Content Creation (5 articles/month),
+        'Basic Analytics Dashboard',
+        'Email Support',
+        'Standard Security',
+        '5GB Storage',
         'Basic API Access',
       ],
-      popular: false,'
-      cta: 'Get Started','
+      popular: false,
+      cta: 'Get Started',
       href: '/request-quote'},
     {
-'
-      name: 'Professional','
-      price: '$299','
-      period: 'month','
-      description: 'Ideal for growing businesses','
+
+      name: 'Professional',
+      price: '$299',
+      period: 'month',
+      description: 'Ideal for growing businesses',
       color: 'from-purple-500 to-pink-500',
       features: ['
-        'AI Content Creation (25 articles/month)','
-        'Advanced Analytics & Reporting','
-        'Priority Support','
-        'Enhanced Security','
-        '25GB Storage','
-        'Full API Access','
-        'Custom Integrations','
+        'AI Content Creation (25 articles/month),
+        'Advanced Analytics & Reporting',
+        'Priority Support',
+        'Enhanced Security',
+        '25GB Storage',
+        'Full API Access',
+        'Custom Integrations',
         'Training Sessions',
       ],
-      popular: true,'
-      cta: 'Get Professional','
+      popular: true,
+      cta: 'Get Professional',
       href: '/request-quote'},
     {
-'
-      name: 'Enterprise','
-      price: '$999','
-      period: 'month','
-      description: 'For large organizations','
+
+      name: 'Enterprise',
+      price: '$999',
+      period: 'month',
+      description: 'For large organizations',
       color: 'from-emerald-500 to-green-500',
       features: ['
-        'Unlimited AI Content Creation','
-        'Custom Analytics Platform','
-        '24/7 Dedicated Support','
-        'Enterprise Security','
-        'Unlimited Storage','
-        'Custom API Development','
-        'White-label Solutions','
-        'Dedicated Account Manager','
-        'Custom Training Programs','
+        'Unlimited AI Content Creation',
+        'Custom Analytics Platform',
+        '24/7 Dedicated Support',
+        'Enterprise Security',
+        'Unlimited Storage',
+        'Custom API Development',
+        'White-label Solutions',
+        'Dedicated Account Manager',
+        'Custom Training Programs',
         'SLA Guarantees',
       ],
-      popular: false,'
-      cta: 'Contact Sales','
+      popular: false,
+      cta: 'Contact Sales',
       href: '/contact'},
   ];
 
   const serviceCategories = [
     {
-'
+
       title: 'AI & Machine Learning',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-pink-500',
       services: [
         {
-'
-          name: 'AI Content Creation','
-          price: '$50-500','
+
+          name: 'AI Content Creation',
+          price: '$50-500',
           description: 'Per article or monthly package'},
         {
-'
-          name: 'AI Business Intelligence','
-          price: '$200-2000','
+
+          name: 'AI Business Intelligence',
+          price: '$200-2000',
           description: 'Monthly subscription'},
         {
-'
-          name: 'Machine Learning Models','
-          price: '$500-5000','
+
+          name: 'Machine Learning Models',
+          price: '$500-5000',
           description: 'Custom development'},
         {
-'
-          name: 'AI Automation','
-          price: '$100-1000','
+
+          name: 'AI Automation',
+          price: '$100-1000',
           description: 'Per workflow/month'},
       ]},
     {
-'
+
       title: 'Cloud & Infrastructure',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       services: [
         {
-'
-          name: 'Cloud Migration','
-          price: '$1000-10000','
+
+          name: 'Cloud Migration',
+          price: '$1000-10000',
           description: 'One-time project'},
         {
-'
-          name: 'DevOps Automation','
-          price: '$200-2000','
+
+          name: 'DevOps Automation',
+          price: '$200-2000',
           description: 'Monthly service'},
         {
-'
-          name: 'Infrastructure Management','
-          price: '$500-5000','
+
+          name: 'Infrastructure Management',
+          price: '$500-5000',
           description: 'Monthly service'},
         {
-'
-          name: 'Security Audits','
-          price: '$500-3000','
+
+          name: 'Security Audits',
+          price: '$500-3000',
           description: 'Per audit'},
       ]},
     {
-'
+
       title: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
         {
-'
-          name: 'Security Assessment','
-          price: '$1000-5000','
+
+          name: 'Security Assessment',
+          price: '$1000-5000',
           description: 'Per assessment'},
         {
-'
-          name: 'Penetration Testing','
-          price: '$2000-10000','
+
+          name: 'Penetration Testing',
+          price: '$2000-10000',
           description: 'Per test'},
         {
-'
-          name: 'Security Monitoring','
-          price: '$200-2000','
+
+          name: 'Security Monitoring',
+          price: '$200-2000',
           description: 'Monthly service'},
         {
-'
-          name: 'Incident Response','
-          price: '$500-5000','
+
+          name: 'Incident Response',
+          price: '$500-5000',
           description: 'Per incident'},
       ]},
     {
-'
+
       title: 'Data & Analytics',
-      icon: BarChart3,'
+      icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       services: [
         {
-'
-          name: 'Data Analytics Platform','
-          price: '$300-3000','
+
+          name: 'Data Analytics Platform',
+          price: '$300-3000',
           description: 'Monthly subscription'},
         {
-'
-          name: 'Business Intelligence','
-          price: '$500-5000','
+
+          name: 'Business Intelligence',
+          price: '$500-5000',
           description: 'Monthly service'},
         {
-'
-          name: 'Data Migration','
-          price: '$1000-10000','
+
+          name: 'Data Migration',
+          price: '$1000-10000',
           description: 'One-time project'},
         {
-'
-          name: 'Custom Dashboards','
-          price: '$200-2000','
+
+          name: 'Custom Dashboards',
+          price: '$200-2000',
           description: 'Per dashboard'},
       ]},
   ];
 
   const industrySolutions = [
     {
-'
+
       title: 'Healthcare',
-      icon: Heart,'
-      color: 'from-red-500 to-pink-500','
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
       pricing: 'Custom pricing based on patient volume and requirements'},
     {
-'
+
       title: 'Financial Services',
-      icon: TrendingUp,'
-      color: 'from-green-500 to-blue-500','
+      icon: TrendingUp,
+      color: 'from-green-500 to-blue-500',
       pricing: 'Enterprise pricing with compliance requirements'},
     {
-'
+
       title: 'Manufacturing',
-      icon: Factory,'
-      color: 'from-orange-500 to-red-500','
+      icon: Factory,
+      color: 'from-orange-500 to-red-500',
       pricing: 'Volume-based pricing for production scale'},
     {
-'
+
       title: 'Retail & E-commerce',
-      icon: ShoppingCart,'
-      color: 'from-purple-500 to-indigo-500','
+      icon: ShoppingCart,
+      color: 'from-purple-500 to-indigo-500',
       pricing: 'Revenue-based pricing model'},
   ];
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return()
@@ -284,13 +284,13 @@ import {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Custom Quote
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
               >
                 Schedule Demo
@@ -333,7 +333,7 @@ import {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative group ${
-'
+
                   tier.popular ? 'lg:scale-105' : ''`
                 }`}
               >
@@ -495,7 +495,7 @@ import {
                 </p>
 
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4"
                 >
                   Get Custom Quote"
@@ -531,19 +531,19 @@ import {
 "
               <div className="flex flex-wrap justify-center gap-4">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Get Custom Quote
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
                 >
                   Contact Sales Team
                 </Link>
                 <Link"
-                  to="/demo""
+                  to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
                   <Play className="w-5 h-5 inline mr-2" />

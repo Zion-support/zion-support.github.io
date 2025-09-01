@@ -1,24 +1,24 @@
-import React from 'react';'
-import EnhancedSEO from '@/components/EnhancedSEO';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
+import React from 'react';
+import EnhancedSEO from '@/components/EnhancedSEO';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { QuoteRequestForm } from '@/components/QuoteRequestForm';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { CheckCircle, Clock, Users, Zap } from 'lucide-react';
 
 export default function RequestQuote() {
   return()
     <div className="min-h-screen bg-zion-blue">
       <EnhancedSEO"
-        title="Request a Quote | Zion Tech Group""
-        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs.""
-        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes""
+        title="Request a Quote | Zion Tech Group"
+        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
+        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
         canonical="https://ziontechgroup.com/request-quote"
       />
       <Header />
@@ -178,7 +178,7 @@ export default function RequestQuote() {
               <h2 className="text-3xl font-bold text-white mb-4">
                 Request Your Quote
               </h2>"
-              <p className="text-zion-slate-light text-lg">'
+              <p className="text-zion-slate-light text-lg">
                 Fill out the form below and we'll get back to you with a
                 detailed quote within 24 hours.
               </p>
@@ -198,13 +198,13 @@ export default function RequestQuote() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:commercial@ziontechgroup.com""
+                href="mailto:commercial@ziontechgroup.com"
                 className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
               >
                 Email Us
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors"
               >
                 Contact Page

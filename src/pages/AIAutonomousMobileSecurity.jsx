@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousMobileSecurity = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousMobileSecurity = () => {
       <Helmet>
         <title>AI Autonomous Mobile Security Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous mobile security platform that continuously secures mobile devices, detects threats, and protects mobile infrastructure with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI mobile security, autonomous mobile security, mobile protection, threat detection, autonomous operations, AI mobile security platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-mobile-security"
         />
       </Helmet>
@@ -187,13 +187,13 @@ const AIAutonomousMobileSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Device Security','
-                'App Security','
-                'Network Security','
-                'Data Security','
-                'Access Control','
-                'Authentication Security','
-                'Communication Security','
+                'Device Security',
+                'App Security',
+                'Network Security',
+                'Data Security',
+                'Access Control',
+                'Authentication Security',
+                'Communication Security',
                 'Update Security',
               ].map(type => (
                 <div

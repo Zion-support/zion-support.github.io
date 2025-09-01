@@ -1,7 +1,7 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';'
-import SEO from '@/components/SEO';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
+import SEO from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 ;
 export { function };
@@ -294,14 +294,14 @@ export default function Blockchain(...args[]):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <RouterLink"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Get Started"
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
 
                   Request Quote
@@ -746,19 +746,19 @@ export default function Blockchain(...args[]):  {
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?
               </h2>"
-              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">'
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
                 Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <RouterLink"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Start Your Journey"
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
 
                   Get Custom Quote

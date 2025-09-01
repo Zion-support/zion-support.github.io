@@ -9,4 +9,3 @@ export function logErrorToProduction(message: string, error?: Error): void {
   }
   // TODO: Implement production error logging service
 }
-'

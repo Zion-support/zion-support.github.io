@@ -7,7 +7,7 @@ import {
   AlertTriangle,
   CheckCircle,
   Clock,
-  BarChart3,'
+  BarChart3,
   Settings} from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -33,8 +33,8 @@ interface ResourceMetrics {
 interface OptimizationSuggestion {
   id: string;
   title: string;
-  description: string;'
-  impact: 'high' | 'medium' | 'low';'
+  description: string;
+  impact: 'high' | 'medium' | 'low';
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
 
@@ -50,51 +50,51 @@ const PerformanceOptimizer: React.FC = () => {
 
   const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([
     {
-'
-      id: 'image-optimization','
-      title: 'Optimize Images','
-      description: 'Convert images to WebP format and implement lazy loading','
-      impact: 'high','
+
+      id: 'image-optimization',
+      title: 'Optimize Images',
+      description: 'Convert images to WebP format and implement lazy loading',
+      impact: 'high',
       category: 'images',
       implemented: false},
     {
-'
-      id: 'code-splitting','
-      title: 'Implement Code Splitting','
-      description: 'Split JavaScript bundles to reduce initial load time','
-      impact: 'high','
+
+      id: 'code-splitting',
+      title: 'Implement Code Splitting',
+      description: 'Split JavaScript bundles to reduce initial load time',
+      impact: 'high',
       category: 'javascript',
       implemented: false},
     {
-'
-      id: 'css-optimization','
-      title: 'Optimize CSS Delivery','
-      description: 'Inline critical CSS and defer non-critical styles','
-      impact: 'medium','
+
+      id: 'css-optimization',
+      title: 'Optimize CSS Delivery',
+      description: 'Inline critical CSS and defer non-critical styles',
+      impact: 'medium',
       category: 'css',
       implemented: false},
     {
-'
-      id: 'font-optimization','
-      title: 'Optimize Font Loading','
-      description: 'Use font-display: swap and preload critical fonts','
-      impact: 'medium','
+
+      id: 'font-optimization',
+      title: 'Optimize Font Loading',
+      description: 'Use font-display: swap and preload critical fonts',
+      impact: 'medium',
       category: 'fonts',
       implemented: false},
     {
-'
-      id: 'caching','
-      title: 'Implement Caching Strategy','
-      description: 'Set up proper cache headers for static assets','
-      impact: 'high','
+
+      id: 'caching',
+      title: 'Implement Caching Strategy',
+      description: 'Set up proper cache headers for static assets',
+      impact: 'high',
       category: 'caching',
       implemented: false},
     {
-'
-      id: 'server-optimization','
-      title: 'Server Response Optimization','
-      description: 'Optimize server response time and enable compression','
-      impact: 'medium','
+
+      id: 'server-optimization',
+      title: 'Server Response Optimization',
+      description: 'Optimize server response time and enable compression',
+      impact: 'medium',
       category: 'server',
       implemented: false},
   ]);
@@ -160,9 +160,9 @@ const PerformanceOptimizer: React.FC = () => {
     }
 
   const getScoreColor = (score: number) => {
-'
-    if (score >= 90) return 'text-green-500';'
-    if (score >= 70) return 'text-yellow-500';'
+
+    if (score >= 90) return 'text-green-500';
+    if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
@@ -180,7 +180,7 @@ const PerformanceOptimizer: React.FC = () => {
     lowerIsBetter = true;
   ) => {
 
-    const isGood = lowerIsBetter ? value <= threshold : value >= threshold;'
+    const isGood = lowerIsBetter ? value <= threshold : value >= threshold;
     return isGood ? 'text-green-500' : 'text-red-500';
   };
 
@@ -210,7 +210,7 @@ const PerformanceOptimizer: React.FC = () => {
               ? 'bg-red-500 hover:bg-red-600 text-white''
               : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
           }`}
-        >'
+        >
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
       </div>
@@ -297,7 +297,7 @@ const PerformanceOptimizer: React.FC = () => {
                     </h4>
                     <span`
                       className={`px-2 py-1 rounded text-xs font-medium ${
-'
+
                         suggestion.impact === 'high''
                           ? 'bg-red-500/20 text-red-300''
                           : suggestion.impact === 'medium''
@@ -325,7 +325,7 @@ const PerformanceOptimizer: React.FC = () => {
                       ? 'bg-green-500 hover:bg-green-600 text-white''
                       : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
                   }`}
-                >'
+                >
                   {suggestion.implemented ? 'Implemented' : 'Implement'}
                 </button>
               </div>

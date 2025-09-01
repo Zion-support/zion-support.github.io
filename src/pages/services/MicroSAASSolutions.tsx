@@ -1,86 +1,86 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Zap, Users, TrendingUp, Shield, Globe, Rocket } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const solutions = [
     {
-'
+
       name: 'AI Content Marketing Automation',
       description:'
         'Automate content creation, optimization, and distribution with AI-powered insights',
       features: ['
-        'Content Generation','
-        'SEO Optimization','
-        'Social Media Automation','
+        'Content Generation',
+        'SEO Optimization',
+        'Social Media Automation',
         'Performance Analytics',
       ],
-      icon: Zap,'
+      icon: Zap,
       category: 'Marketing'},
     {
-'
+
       name: 'AI Supply Chain Optimization',
       description:'
         'Optimize supply chain operations with predictive analytics and real-time monitoring',
       features: ['
-        'Demand Forecasting','
-        'Inventory Management','
-        'Route Optimization','
+        'Demand Forecasting',
+        'Inventory Management',
+        'Route Optimization',
         'Risk Assessment',
       ],
-      icon: TrendingUp,'
+      icon: TrendingUp,
       category: 'Operations'},
     {
-'
+
       name: 'AI HR Platform',
       description:'
         'Streamline HR processes with intelligent automation and data-driven insights',
       features: ['
-        'Recruitment Automation','
-        'Performance Management','
-        'Employee Engagement','
+        'Recruitment Automation',
+        'Performance Management',
+        'Employee Engagement',
         'Compliance Tracking',
       ],
-      icon: Users,'
+      icon: Users,
       category: 'Human Resources'},
     {
-'
+
       name: 'AI Legal Research Platform',
       description:'
         'Accelerate legal research with AI-powered document analysis and case law insights',
       features: ['
-        'Document Analysis','
-        'Case Law Research','
-        'Legal Precedents','
+        'Document Analysis',
+        'Case Law Research',
+        'Legal Precedents',
         'Compliance Checking',
       ],
-      icon: Shield,'
+      icon: Shield,
       category: 'Legal'},
     {
-'
+
       name: 'AI Education Platform',
       description:'
         'Personalize learning experiences with adaptive AI and intelligent tutoring',
       features: ['
-        'Adaptive Learning','
-        'Progress Tracking','
-        'Content Personalization','
+        'Adaptive Learning',
+        'Progress Tracking',
+        'Content Personalization',
         'Assessment Automation',
       ],
-      icon: Globe,'
+      icon: Globe,
       category: 'Education'},
     {
-'
+
       name: 'AI Project Management Platform',
       description:'
         'Enhance project delivery with intelligent planning, monitoring, and optimization',
       features: ['
-        'Smart Planning','
-        'Resource Optimization','
-        'Risk Management','
+        'Smart Planning',
+        'Resource Optimization',
+        'Risk Management',
         'Performance Analytics',
       ],
-      icon: Rocket,'
+      icon: Rocket,
       category: 'Project Management'},
   ];
 

@@ -1,25 +1,25 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';
 
 interface NewsletterFormData {
   email: string;
   firstName: string;
-  interests: string[];'
+  interests: string[];
   frequency: 'weekly' | 'monthly' | 'quarterly'}
 
-const interests = [;'
-  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;'
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;'
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;'
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;'
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;'
+const interests = [;
+  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
+  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
+  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
 
-const frequencies = [;'
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;'
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;'
+const frequencies = [;
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
 
@@ -31,16 +31,16 @@ const frequencies = [;'
     const newErrors: Partial < NewsletterFormData> = {};
 
     if (!formData.email) {
-'
+
       newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-'
+
       newErrors.email = 'Please enter a valid email address'}
 
     if (!formData.firstName) {
-'
+
       newErrors.firstName = 'First name is required'}
 
-    if (formData.interests.length = == 0) {;'
+    if (formData.interests.length = == 0) {;
       newErrors.interests = 'Please select at least one interest';
     }
 
@@ -48,7 +48,7 @@ const frequencies = [;'
     return Object.keys (newErrors) .length === 0};
 
       return}
-'
+
     setStatus('loading');
 
     try {
@@ -57,7 +57,7 @@ const frequencies = [;'
 
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
-'
+
       // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
@@ -65,17 +65,17 @@ const frequencies = [;'
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
-'
-          email: '','
+
+          email: '',
           firstName: '',
-          interests[],;'
+          interests[],;
           frequency: 'monthly'
-        });'
+        });
       // // // // // // // // console.error('Newsletter subscription error:', error);
-    }'
+    }
         setStatus('idle')}, 3000)} catch (error) {
-'
-      setStatus('error');'
+
+      setStatus('error');
       // console.error('Newsletter subscription error:', error)}
   };
 
@@ -92,7 +92,7 @@ const frequencies = [;'
       setErrors(prev => ({ ...prev, [field]: null }));
     }
   };
-'
+
   if (status = == 'success') {
 
     return()
@@ -115,7 +115,7 @@ const frequencies = [;'
         <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
         </h3>"
-        <p className="text-green-700 dark:text-green-300 mb-4">'
+        <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>"
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
@@ -210,11 +210,11 @@ const frequencies = [;'
               First Name *
             </label>
             <input"
-              type="text""
+              type="text"
               id="firstName"
               value={formData.firstName}
               onChange = {
-'
+
   (e) => handleInputChange('firstName',
   e.target.value)
 
@@ -244,11 +244,11 @@ const frequencies = [;'
               Email Address *
             </label>
             <input"
-              type="email""
+              type="email"
               id="email"
               value={formData.email}
               onChange = {
-'
+
   (e) => handleInputChange('email',
   e.target.value)
 
@@ -328,12 +328,12 @@ const frequencies = [;'
                 }`}
 
                 <input"
-                  type="radio""
+                  type="radio"
                   name="frequency"
                   value={freq.value}
                   checked={formData.frequency === freq.value}
                   onChange = {
-'
+
   (e) => handleInputChange('frequency',
   e.target.value)
 
@@ -370,14 +370,14 @@ const frequencies = [;'
           type="submit"'
           disabled={status === 'loading'}`
 className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
-'
+
             status === 'loading''
               ? 'bg-slate-400 cursor-not-allowed''
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`
-          }`}'
-          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}'
+          }`}
+          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
           whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
-'
+
           {status === 'loading' ? (
             <>"
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -390,7 +390,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             </>) }
         </motion.button>
 
-        {/* Error Message */}'
+        {/* Error Message */}
         {status === 'error' && (
           <motion.div
             initial = {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -413,36 +413,36 @@ interface ServiceContact {
   address: string;
   website: string;
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {;'
-  const [activeCategory, setActiveCategory] = useState('all');'
+const ComprehensiveServicesShowcase2025: React.FC = () => {;
+  const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<any>(null);'
-  const [sortBy, setSortBy] = useState('rating');'
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);'
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [innovationLevel, setInnovationLevel] = useState('all');
 
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = ['
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },'
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },'
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },'
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },'
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },'
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;'
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;'
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;'
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;'
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;'
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;'
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-  const innovationLevels = [;'
-    { id: 'all', name: 'All Levels', icon: '🌟' },;'
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;'
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;'
+  const innovationLevels = [;
+    { id: 'all', name: 'All Levels', icon: '🌟' },;
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
@@ -450,32 +450,32 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
 
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {;
       case 'price':;
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'name':;
-        return a.title.localeCompare(b.title);'
+        return a.title.localeCompare(b.title);
       case 'innovation':;
         const innovationOrder = {
-'
-  'Advanced': 1, 'Cutting-edge': 2,;
+
+  'Advanced': 1,Cutting-edge': 2,;
   ;
   ;
   ;
   ;
-  ;'
+  ;
   'Revolutionary': 3 ;
 
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
@@ -616,7 +616,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
             <div className="relative mb-6">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services, categories, or features..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -678,7 +678,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                 <button'
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
@@ -689,7 +689,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-'
+
                     viewMode === 'list''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
@@ -707,8 +707,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
               </label>"
               <div className="flex gap-4 items-center">
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[0]}
                   onChange = {
@@ -725,8 +725,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[1]}
                   onChange = {
@@ -761,7 +761,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
           {/* Services Grid / List */}
           <motion.div
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"'
             className={viewMode === 'grid''
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
@@ -772,11 +772,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                 key={service.id}
                 variants={itemVariants}`
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${
-'
+
                   viewMode === 'list' ? 'flex items-center gap-6' : ''`
                 }`}
                 onClick={() => handleServiceClick(service)}
-'
+
                 {viewMode === 'grid' ? (;
                   // Grid View
                   <>
@@ -897,11 +897,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
   ;
   ;
   ;
-  () => {;'
-                  setSearchTerm('');'
+  () => {;
+                  setSearchTerm('');
                   setActiveCategory('all');
                   setPriceRange([0,
-  10000]);'
+  10000]);
                   setInnovationLevel('all');
                 
 

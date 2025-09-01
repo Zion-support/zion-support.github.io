@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -21,52 +21,52 @@ import {
   Mail,
   Phone,
   MapPin'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../components/SEO';
 
   const leadershipTeam = [
     {
-'
-      name: 'Kleber Santos','
-      title: 'Founder & CEO','
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop','
-      bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.','
-      expertise: ['AI & Machine Learning', 'Business Strategy', 'Technology Innovation', 'Team Leadership'],'
-      linkedin: 'https://linkedin.com/in/klebersantos','
-      email: 'kleber@ziontechgroup.com','
+
+      name: 'Kleber Santos',
+      title: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+      bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',
+      expertise: ['AI & Machine Learning',Business Strategy',Technology Innovation',Team Leadership'],
+      linkedin: 'https://linkedin.com/in/klebersantos',
+      email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
     {
-'
-      name: 'Dr. Sarah Chen','
-      title: 'Chief Technology Officer','
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop','
-      bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.','
-      expertise: ['Quantum Computing', 'AI Research', 'Technology Architecture', 'Innovation Strategy'],'
-      linkedin: 'https://linkedin.com/in/sarahchen','
-      email: 'sarah@ziontechgroup.com','
+
+      name: 'Dr. Sarah Chen',
+      title: 'Chief Technology Officer',
+      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+      bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.',
+      expertise: ['Quantum Computing',AI Research',Technology Architecture',Innovation Strategy'],
+      linkedin: 'https://linkedin.com/in/sarahchen',
+      email: 'sarah@ziontechgroup.com',
       phone: '+1 302 464 0951'
     },
     {
-'
-      name: 'Michael Rodriguez','
-      title: 'Chief Operations Officer','
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop','
-      bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.','
-      expertise: ['Operations Management', 'Process Optimization', 'Client Success', 'Team Development'],'
-      linkedin: 'https://linkedin.com/in/michaelrodriguez','
-      email: 'michael@ziontechgroup.com','
+
+      name: 'Michael Rodriguez',
+      title: 'Chief Operations Officer',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
+      bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.',
+      expertise: ['Operations Management',Process Optimization',Client Success',Team Development'],
+      linkedin: 'https://linkedin.com/in/michaelrodriguez',
+      email: 'michael@ziontechgroup.com',
       phone: '+1 302 464 0952'
     },
     {
-'
-      name: 'Dr. Emily Watson','
-      title: 'Head of AI Research','
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;'
-      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;'
-      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;'
-      linkedin: 'https://linkedin.com/in/emilywatson',;'
-      email: 'emily@ziontechgroup.com',;'
+
+      name: 'Dr. Emily Watson',
+      title: 'Head of AI Research',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;
+      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
+      expertise: ['Machine Learning',Deep Learning',AI Ethics',Research & Development'],;
+      linkedin: 'https://linkedin.com/in/emilywatson',;
+      email: 'emily@ziontechgroup.com',;
       phone: '+1 302 464 0953';
     };
   ];
@@ -74,51 +74,51 @@ import SEO from '../components/SEO';
   const values = [
     {
 
-      icon: Brain,'
-      title: 'Innovation First','
+      icon: Brain,
+      title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative problem-solving.'
     },
     {
 
-      icon: Heart,'
-      title: 'Client Success','
+      icon: Heart,
+      title: 'Client Success',
       description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.'
     },
     {
 
-      icon: Shield,'
-      title: 'Trust & Security','
+      icon: Shield,
+      title: 'Trust & Security',
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
     },;
     {;
-      icon: Globe,;'
-      title: 'Global Impact',;'
+      icon: Globe,;
+      title: 'Global Impact',;
       description: 'We believe technology should make the world better for everyone, everywhere.';
     };
   ];
 
   const achievements = [
     {
-'
-      metric: '500+','
-      label: 'AI Solutions Deployed','
+
+      metric: '500+',
+      label: 'AI Solutions Deployed',
       description: 'Successfully implemented AI solutions across diverse industries'
     },
     {
-'
-      metric: '50+','
-      label: 'Enterprise Clients','
+
+      metric: '50+',
+      label: 'Enterprise Clients',
       description: 'Trusted by leading companies worldwide'
     },
     {
-'
-      metric: '95%','
-      label: 'Client Satisfaction','
+
+      metric: '95%',
+      label: 'Client Satisfaction',
       description: 'Consistently high satisfaction ratings from our clients';
     },;
-    {;'
-      metric: '25+',;'
-      label: 'Industry Awards',;'
+    {;
+      metric: '25+',;
+      label: 'Industry Awards',;
       description: 'Recognition for innovation and excellence in technology';
     };
   ];
@@ -126,7 +126,7 @@ import SEO from '../components/SEO';
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Leadership - Zion Tech Group""
+        title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
       />
 
@@ -191,8 +191,8 @@ import SEO from '../components/SEO';
                     <div className="flex items-center space-x-4">
                       <a
                         href={leader.linkedin}"
-                        target="_blank""
-                        rel="noopener noreferrer""
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
 "
                         <Linkedin className="w-5 h-5" />
@@ -277,20 +277,20 @@ import SEO from '../components/SEO';
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Join Our Mission
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               We're building a team of passionate innovators who believe in the power of technology'
               to transform businesses and improve lives. If you share our vision, we'd love to hear from you.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/careers""
+                to="/careers"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
 
                 View Open Positions"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Get in Touch
@@ -340,7 +340,7 @@ import SEO from '../components/SEO';
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
                 <p className="text-slate-300 text-sm">
-                  kleber@ziontechgroup.com<br />'
+                  kleber@ziontechgroup.com<br />
                   We'll respond within 24 hours
                 </p>;
               </div>;

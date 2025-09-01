@@ -1,8 +1,8 @@
-import React, { useState } from 'react';'
-import { ServiceDescriptionForm } from '@/components/services/ServiceDescriptionForm';'
-import { GeneratedDescriptionDisplay } from '@/components/services/GeneratedDescriptionDisplay';'
-import { SEO } from '@/components/SEO';'
-import { useAuth } from '@/hooks/useAuth';'
+import React, { useState } from 'react';
+import { ServiceDescriptionForm } from '@/components/services/ServiceDescriptionForm';
+import { GeneratedDescriptionDisplay } from '@/components/services/GeneratedDescriptionDisplay';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
 import { Navigate } from 'react-router-dom';
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -35,8 +35,8 @@ export default function ServiceDescriptionGenerator() {
   return ("
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO"
-        title="Service Description Generator""
-        description="Generate professional service descriptions using AI""
+        title="Service Description Generator"
+        description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"
       />
 "

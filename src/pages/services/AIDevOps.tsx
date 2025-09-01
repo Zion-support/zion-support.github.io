@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {
   const features = [
-    'AI-powered DevOps optimization','
-    'Intelligent DevOps pipeline management',;'
-    'Automated DevOps monitoring and alerting',;'
-    'Predictive analytics for DevOps scaling',;'
-    'Smart DevOps security and compliance',;'
-    'AI-driven DevOps automation and orchestration',;'
-    'Real-time DevOps analytics and insights',;'
+    'AI-powered DevOps optimization',
+    'Intelligent DevOps pipeline management',;
+    'Automated DevOps monitoring and alerting',;
+    'Predictive analytics for DevOps scaling',;
+    'Smart DevOps security and compliance',;
+    'AI-driven DevOps automation and orchestration',;
+    'Real-time DevOps analytics and insights',;
     'Custom AI models for DevOps applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$399/mo','
-      details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support']
+
+      name: 'Developer',
+      price: '$399/mo',
+      details: ['Up to 100GB storage',Basic AI features',Standard monitoring',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$999/mo', '
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$999/mo',
+      details: ['Up to 1TB storage',Advanced AI features',Enhanced monitoring',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
-      details: ['Unlimited storage', 'Custom AI models', 'Full DevOps suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage',Custom AI models',Full DevOps suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'DevOps optimization',;'
-    'DevOps pipeline management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
+  const useCases = [;
+    'DevOps optimization',;
+    'DevOps pipeline management',;
+    'Performance monitoring and analytics',;
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
     'DevOps scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve DevOps performance by 50-80%',;'
-    'Reduce DevOps deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance DevOps reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve DevOps performance by 50-80%',;
+    'Reduce DevOps deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
+    'Enhance DevOps reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale DevOps operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% deployment time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% deployment time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-amber-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

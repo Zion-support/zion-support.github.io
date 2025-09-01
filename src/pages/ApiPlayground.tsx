@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -22,181 +22,181 @@ import {
   Zap,
   Globe,
   Key,
-  FileText,'
-  ExternalLink} from 'lucide-react';'
+  FileText,
+  ExternalLink} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const ApiPlayground: React.FC = () => {
-  const [selectedApi, setSelectedApi] = useState<any>(null);'
-  const [requestBody, setRequestBody] = useState('');'
+  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [requestBody, setRequestBody] = useState('');
   const [responseData, setResponseData] = useState('');
-  const [isLoading, setIsLoading] = useState(false);'
+  const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
 
   const categories = ['
-    { id: 'all', name: 'All Categories', icon: Code, count: 0 },'
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },'
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },'
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },'
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },'
+    { id: 'all', name: 'All Categories', icon: Code, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 6 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 7 },
     { id: 'iot', name: 'IoT & Edge', icon: Network, count: 4 },
   ];
 
   const methods = ['
-    { id: 'all', name: 'All Methods', count: 0 },'
-    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },'
-    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },'
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },'
+    { id: 'all', name: 'All Methods', count: 0 },
+    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
+    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
     { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' },
   ];
 
   const apis = [
     {
 
-      id: 1,'
+      id: 1,
       name: 'AI Text Analysis',
       description:'
-        'Analyze text sentiment, extract entities, and perform language processing tasks.','
-      category: 'ai-ml','
-      method: 'POST','
-      endpoint: '/api/v1/ai/text-analysis','
-      baseUrl: 'https://api.ziontechgroup.com','
-      version: '1.0.0','
-      status: 'stable','
-      rateLimit: '1000 requests/hour','
+        'Analyze text sentiment, extract entities, and perform language processing tasks.',
+      category: 'ai-ml',
+      method: 'POST',
+      endpoint: '/api/v1/ai/text-analysis',
+      baseUrl: 'https://api.ziontechgroup.com',
+      version: '1.0.0',
+      status: 'stable',
+      rateLimit: '1000 requests/hour',
       authentication: 'Bearer Token',
       parameters: [
         {
-'
-          name: 'text','
+
+          name: 'text',
           type: 'string',
-          required: true,'
+          required: true,
           description: 'Text to analyze'},
         {
-'
-          name: 'language','
+
+          name: 'language',
           type: 'string',
-          required: false,'
-          description: 'Language code (default: auto-detect)'},
+          required: false,
+          description: 'Language code (default: auto-detect)},
         {
-'
-          name: 'features','
+
+          name: 'features',
           type: 'array',
-          required: false,'
+          required: false,
           description: 'Analysis features to enable'},
       ],
       requestExample: {
-'
-        text: "I love this new AI technology! It's amazing how it can understand context.",'
-        language: 'en','
-        features: ['sentiment', 'entities', 'keywords']},
+
+        text: "I love this new AI technology! It's amazing how it can understand context.",
+        language: 'en',
+        features: ['sentiment',entities',keywords']},
       responseExample: {
-'
+
         sentiment: { score: 0.9, label: 'positive' },
         entities: ['
           { text: 'AI technology', type: 'technology', confidence: 0.95 },
-        ],'
-        keywords: ['AI', 'technology', 'amazing', 'context'],'
-        language: 'en'},'
-      documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis','
+        ],
+        keywords: ['AI',technology',amazing',context'],
+        language: 'en'},
+      documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',
       sdk: 'https://github.com/ziontechgroup/ai-sdk',
       featured: true},
     {
 
-      id: 2,'
+      id: 2,
       name: 'Cloud Resource Management',
       description:'
-        'Manage cloud infrastructure, deploy resources, and monitor performance.','
-      category: 'cloud','
-      method: 'GET','
-      endpoint: '/api/v1/cloud/resources','
-      baseUrl: 'https://api.ziontechgroup.com','
-      version: '1.0.0','
-      status: 'stable','
-      rateLimit: '500 requests/hour','
+        'Manage cloud infrastructure, deploy resources, and monitor performance.',
+      category: 'cloud',
+      method: 'GET',
+      endpoint: '/api/v1/cloud/resources',
+      baseUrl: 'https://api.ziontechgroup.com',
+      version: '1.0.0',
+      status: 'stable',
+      rateLimit: '500 requests/hour',
       authentication: 'API Key',
       parameters: [
         {
-'
-          name: 'region','
+
+          name: 'region',
           type: 'string',
-          required: false,'
+          required: false,
           description: 'Cloud region'},
         {
-'
-          name: 'type','
+
+          name: 'type',
           type: 'string',
-          required: false,'
+          required: false,
           description: 'Resource type'},
         {
-'
-          name: 'status','
+
+          name: 'status',
           type: 'string',
-          required: false,'
+          required: false,
           description: 'Resource status'},
       ],
       requestExample: {
-'
-        region: 'us-east-1','
-        type: 'compute','
+
+        region: 'us-east-1',
+        type: 'compute',
         status: 'running'},
       responseExample: {
 
         resources: [
           {
-'
-            id: 'i-1234567890abcdef0','
-            name: 'web-server-01','
-            type: 'compute','
-            status: 'running','
+
+            id: 'i-1234567890abcdef0',
+            name: 'web-server-01',
+            type: 'compute',
+            status: 'running',
             region: 'us-east-1'},
         ],
-        total: 1},'
-      documentation: 'https://docs.ziontechgroup.com/api/cloud-resources','
+        total: 1},
+      documentation: 'https://docs.ziontechgroup.com/api/cloud-resources',
       sdk: 'https://github.com/ziontechgroup/cloud-sdk',
       featured: false},
     {
 
-      id: 3,'
-      name: 'Security Threat Detection','
-      description: 'Detect and analyze security threats in real-time.','
-      category: 'security','
-      method: 'POST','
-      endpoint: '/api/v1/security/threats','
-      baseUrl: 'https://api.ziontechgroup.com','
-      version: '1.0.0','
-      status: 'stable','
-      rateLimit: '200 requests/hour','
+      id: 3,
+      name: 'Security Threat Detection',
+      description: 'Detect and analyze security threats in real-time.',
+      category: 'security',
+      method: 'POST',
+      endpoint: '/api/v1/security/threats',
+      baseUrl: 'https://api.ziontechgroup.com',
+      version: '1.0.0',
+      status: 'stable',
+      rateLimit: '200 requests/hour',
       authentication: 'Bearer Token',
       parameters: [
         {
-'
-          name: 'data','
+
+          name: 'data',
           type: 'object',
-          required: true,'
+          required: true,
           description: 'Security event data'},
         {
-'
-          name: 'severity','
+
+          name: 'severity',
           type: 'string',
-          required: false,'
+          required: false,
           description: 'Threat severity level'},
       ],
       requestExample: {
 
         data: {
-'
-          source_ip: '192.168.1.100','
-          event_type: 'login_attempt','
-          timestamp: '2024-01-15T10:30:00Z'},'
+
+          source_ip: '192.168.1.100',
+          event_type: 'login_attempt',
+          timestamp: '2024-01-15T10:30:00Z'},
         severity: 'high'},
       responseExample: {
 
         threat_detected: true,
-        confidence: 0.95,'
-        threat_type: 'brute_force_attack','
-        recommendations: ['Enable 2FA', 'Block IP temporarily']},'
-      documentation: 'https://docs.ziontechgroup.com/api/security-threats','
+        confidence: 0.95,
+        threat_type: 'brute_force_attack',
+        recommendations: ['Enable 2FA',Block IP temporarily']},
+      documentation: 'https://docs.ziontechgroup.com/api/security-threats',
       sdk: 'https://github.com/ziontechgroup/security-sdk',
       featured: true},
   ];
@@ -204,13 +204,13 @@ const ApiPlayground: React.FC = () => {
   const getMethodColor = (method: string) => {
 
     switch (method) {
-'
+
       case 'GET':'
-        return 'text-green-400';'
+        return 'text-green-400';
       case 'POST':'
-        return 'text-blue-400';'
+        return 'text-blue-400';
       case 'PUT':'
-        return 'text-yellow-400';'
+        return 'text-yellow-400';
       case 'DELETE':'
         return 'text-red-400';
       default:'
@@ -221,11 +221,11 @@ const ApiPlayground: React.FC = () => {
   const getStatusColor = (status: string) => {
 
     switch (status) {
-'
+
       case 'stable':'
-        return 'bg-green-500/20 text-green-400';'
+        return 'bg-green-500/20 text-green-400';
       case 'beta':'
-        return 'bg-yellow-500/20 text-yellow-400';'
+        return 'bg-yellow-500/20 text-yellow-400';
       case 'deprecated':'
         return 'bg-red-500/20 text-red-400';
       default:'
@@ -236,14 +236,14 @@ const ApiPlayground: React.FC = () => {
   const handleApiSelect = (api: any) => {
 
     setSelectedApi(api);
-    setRequestBody(JSON.stringify(api.requestExample, null, 2));'
+    setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
   };
 
   const handleTestApi = async : unknown {
     if (!selectedApi) return;
 
-    setIsLoading(true);'
+    setIsLoading(true);
     setResponseData('');
 
     // Simulate API call
@@ -262,7 +262,7 @@ const ApiPlayground: React.FC = () => {
     <>
       <SEO"
         title="API Playground - Zion Tech Group"'"
-        description="Interactive API playground for testing and exploring Zion Tech Group's APIs. Try our AI, cloud, security, and data analytics APIs.""
+        description="Interactive API playground for testing and exploring Zion Tech Group's APIs. Try our AI, cloud, security, and data analytics APIs."
         keywords="API playground, API testing, REST API, AI API, cloud API, security API, Zion Tech Group"
       />
 "
@@ -360,7 +360,7 @@ const ApiPlayground: React.FC = () => {
                     <button'
                       onClick={() => setActiveTab('playground')}`
                       className={`px-6 py-3 text-sm font-medium transition-colors ${
-'
+
                         activeTab === 'playground''
                           ? 'text-blue-400 border-b-2 border-blue-400''
                           : 'text-gray-400 hover:text-gray-300'`
@@ -371,7 +371,7 @@ const ApiPlayground: React.FC = () => {
                     <button'
                       onClick={() => setActiveTab('documentation')}`
                       className={`px-6 py-3 text-sm font-medium transition-colors ${
-'
+
                         activeTab === 'documentation''
                           ? 'text-blue-400 border-b-2 border-blue-400''
                           : 'text-gray-400 hover:text-gray-300'`
@@ -382,7 +382,7 @@ const ApiPlayground: React.FC = () => {
                   </div>
 
                   {/* Tab Content */}"
-                  <div className="p-6">'
+                  <div className="p-6">
                     {activeTab === 'playground' ? (
                       <div>
                         {selectedApi ? ("
@@ -431,7 +431,7 @@ const ApiPlayground: React.FC = () => {
                               <textarea
                                 value={requestBody}
                                 onChange={e => setRequestBody(e.target.value)}"
-                                className="w-full h-32 bg-slate-900 border border-slate-600 rounded-lg p-3 text-gray-300 font-mono text-sm resize-none""
+                                className="w-full h-32 bg-slate-900 border border-slate-600 rounded-lg p-3 text-gray-300 font-mono text-sm resize-none"
                                 placeholder="Enter request body..."
                               />
                             </div>
@@ -543,8 +543,8 @@ const ApiPlayground: React.FC = () => {
                               <div className="flex gap-2">
                                 <a
                                   href={selectedApi.documentation}"
-                                  target="_blank""
-                                  rel="noopener noreferrer""
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
                                 >"
                                   <BookOpen className="w-4 h-4" />
@@ -552,8 +552,8 @@ const ApiPlayground: React.FC = () => {
                                 </a>
                                 <a
                                   href={selectedApi.sdk}"
-                                  target="_blank""
-                                  rel="noopener noreferrer""
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   className="flex items-center gap-2 bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-600 transition-colors"
                                 >"
                                   <Download className="w-4 h-4" />

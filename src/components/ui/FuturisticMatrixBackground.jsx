@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';'
+import React, { useEffect, useRef } from 'react';
 export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00ff88', speed = 2, className = '' }) => {
 
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)
-            return;'
+            return;
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -13,11 +13,11 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
-        resizeCanvas();'
+        resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Matrix characters
         const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{ /* empty */ }|;:,.<>?";"
-        const matrixArray = matrix.split("");'
+        const matrixArray = matrix.split("");
         const fontSize = intensity === 'high' ? 14 : intensity === 'medium' ? 12 : 10;
         const columns = canvas.width / fontSize;
         const drops = [];
@@ -30,7 +30,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         const frameCount = 0;
         const draw = () => {
             // Create semi-transparent black background for fade effect'
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05);
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Set text properties
             ctx.fillStyle = color;
@@ -42,7 +42,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
                 const x = i * fontSize;
                 const y = drops[i] * fontSize;
                 // Add glow effect
-                ctx.shadowColor = color;'
+                ctx.shadowColor = color;
                 ctx.shadowBlur = intensity === 'high' ? 15 : intensity === 'medium' ? 10 : 5;
                 // Draw main character
                 ctx.fillText(text, x, y);
@@ -77,7 +77,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
         draw();
         // Cleanup
         return () => {
-'
+
             window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationId);
         };
@@ -85,9 +85,9 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
 
   {
-'
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,'
-  #16213e 100%)';
+
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%);
         
 
 

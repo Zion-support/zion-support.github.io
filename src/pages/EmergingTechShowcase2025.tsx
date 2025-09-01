@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
 import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
@@ -33,28 +33,28 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 } from 'lucide-react';
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 
-const EmergingTechShowcase2025: React.FC = () => {;'
+const EmergingTechShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const categories = ['
-    { id: 'all', name: 'All Technologies', icon: Globe, color: 'from-blue-500 to-purple-600' },'
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Atom, color: 'from-purple-500 to-pink-600' },'
-    { id: 'Neuromorphic Computing', name: 'Neuromorphic', icon: Brain, color: 'from-green-500 to-blue-600' },'
-    { id: 'Brain-Computer Interfaces', name: 'BCI', icon: Eye, color: 'from-red-500 to-orange-600' },'
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from-emerald-500 to-teal-600' },'
-    { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from-yellow-500 to-orange-600' },'
-    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },;'
-    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },;'
-    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;'
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;'
-    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from-lime-500 to-green-600' },;'
-    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;'
+    { id: 'all', name: 'All Technologies', icon: Globe, color: 'from-blue-500 to-purple-600' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Atom, color: 'from-purple-500 to-pink-600' },
+    { id: 'Neuromorphic Computing', name: 'Neuromorphic', icon: Brain, color: 'from-green-500 to-blue-600' },
+    { id: 'Brain-Computer Interfaces', name: 'BCI', icon: Eye, color: 'from-red-500 to-orange-600' },
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from-emerald-500 to-teal-600' },
+    { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from-yellow-500 to-orange-600' },
+    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },;
+    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },;
+    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;
+    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from-lime-500 to-green-600' },;
+    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
   ];
-'
+
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter (service => service.category === selectedCategory) ;

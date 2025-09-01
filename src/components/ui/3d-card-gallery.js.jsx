@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
 import { Button } from "./button";"
 import { Badge } from "./badge";"
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
 
-    const [selectedItem, setSelectedItem] = useState(null);'
+    const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
 
@@ -14,9 +14,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         complexity[],;
         verified: false,
         featured: false
-    });'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [sortBy, setSortBy] = useState('rating');'
+    });
+    const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState('rating');
     const [sortOrder, setSortOrder] = useState('desc');
     const [isPlaying, setIsPlaying] = useState(autoPlay);
     const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
@@ -32,25 +32,25 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
         let aValue, bValue;
         switch (sortBy) {
-'
+
             case 'rating':
                 aValue = a.rating;
                 bValue = b.rating;
-                break;'
+                break;
             case 'downloads':
                 aValue = a.metadata.downloads;
                 bValue = b.metadata.downloads;
-                break;'
+                break;
             case 'lastUpdated':
                 aValue = new Date(a.metadata.lastUpdated);
                 bValue = new Date(b.metadata.lastUpdated);
-                break;'
+                break;
             case 'title':
                 aValue = a.title.toLowerCase();
                 bValue = b.title.toLowerCase();
                 break;
             default:
-                return 0}'
+                return 0}
         if (sortOrder === 'asc') {
 
             return aValue > bValue ? 1 : -1}
@@ -60,7 +60,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     });
     // Auto-play carousel
     useEffect(() => {
-'
+
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0)
             return;
         const interval = setInterval(() => {
@@ -79,13 +79,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getStatusColor = (status) => {
 
         switch (status) {
-'
+
             case 'active':'
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
             case 'beta':'
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'coming-soon':'
-                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';'
+                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
             case 'deprecated':'
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:'
@@ -95,13 +95,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getComplexityColor = (complexity) => {
 
         switch (complexity) {
-'
+
             case 'beginner':'
-                return 'border-green-500/50 bg-green-500/10 text-green-400';'
+                return 'border-green-500/50 bg-green-500/10 text-green-400';
             case 'intermediate':'
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';'
+                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'advanced':'
-                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';'
+                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
             case 'expert':'
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:'
@@ -111,13 +111,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getCategoryIcon = (category) => {
 
         const iconMap = {
-'
-  'AI & ML': Brain,'
-            'Cybersecurity': Shield,'
-            'Cloud': Globe,'
-            'Development': Rocket,'
-            'Analytics': Zap,'
-            'Infrastructure': Settings,'
+
+  'AI & ML': Brain,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Analytics': Zap,
+            'Infrastructure': Settings,
   'Research': TrendingUp
         
 
@@ -138,7 +138,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}"
           <div className="flex bg-zion-blue/20 rounded-lg p-1">'`
-            {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode'
+            {['grid',list',carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode'
                 ? 'bg-zion-cyan text-zion-blue-dark''`
                 : 'text-zinc-400 hover:text-white'}`}>'"
                 {mode === 'grid' ? <Grid className="w-4 h-4"/> :'"
@@ -166,7 +166,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <option value="title">Sort by Title</option>
           </select>
           '"
-          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">'
+          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
             {sortOrder === 'asc' ? '↑' : '↓'}
           </Button>
         </div>
@@ -186,7 +186,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
   () => setFilters(prev => ({ ...prev,
   verified: !prev.verified 
-'
+
 }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>"
               <Shield className="w-4 h-4 mr-1"/>
               Verified Only
@@ -196,14 +196,14 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
   () => setFilters(prev => ({ ...prev,
   featured: !prev.featured 
-'
+
 }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>"
               <Star className="w-4 h-4 mr-1"/>
               Featured Only
             </Button>
             
             {/* Category Filters */}'"
-            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick = {
+            {['AI & ML',Cybersecurity',Cloud',Development',Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick = {
 
   () => setFilters(prev => ({
 
@@ -213,7 +213,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                         [...prev.category,
   category];
                 
-'
+
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
                 {category}
               </Button>))}
@@ -450,11 +450,11 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style = {
 
   {
-'
+
             transformStyle: 'preserve-3d',
             rotateX,
-            rotateY,'
-  transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
+            rotateY,
+  transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)
         
 
 }} transition={{ duration: 0.3 }}>

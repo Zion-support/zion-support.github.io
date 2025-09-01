@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousPenetrationTesting = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousPenetrationTesting = () => {
           AI Autonomous Penetration Testing Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous penetration testing platform that continuously tests security, identifies weaknesses, and validates defenses with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI penetration testing, autonomous penetration testing, security testing, weakness identification, autonomous operations, AI penetration testing platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-penetration-testing"
         />
       </Helmet>
@@ -189,13 +189,13 @@ const AIAutonomousPenetrationTesting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Network Penetration Testing','
-                'Web Application Penetration Testing','
-                'Mobile Application Penetration Testing','
-                'API Penetration Testing','
-                'Cloud Penetration Testing','
-                'Social Engineering Testing','
-                'Physical Security Testing','
+                'Network Penetration Testing',
+                'Web Application Penetration Testing',
+                'Mobile Application Penetration Testing',
+                'API Penetration Testing',
+                'Cloud Penetration Testing',
+                'Social Engineering Testing',
+                'Physical Security Testing',
                 'Wireless Security Testing',
               ].map(type => (
                 <div

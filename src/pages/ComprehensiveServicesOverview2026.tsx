@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -87,142 +87,142 @@ import SEO from "@/components/SEO";"
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
 export default function ComprehensiveServicesOverview2026(...args[]):  {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
 
   const serviceCategories = [
     {
-'
-      id: 'quantum-ai','
-      name: 'Quantum AI & Computing','
+
+      id: 'quantum-ai',
+      name: 'Quantum AI & Computing',
       description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
-      icon: AtomIcon,'
-      color: 'from-purple-500 to-cyan-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Quantum AI'),'
-      marketSize: '$1.7 billion by 2027','
-      avgROI: '500-2000%','
+      icon: AtomIcon,
+      color: 'from-purple-500 to-cyan-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Quantum AI'),
+      marketSize: '$1.7 billion by 2027',
+      avgROI: '500-2000%',
       innovationLevel: 'Revolutionary'
     },
     {
-'
-      id: 'neuromorphic-ai','
-      name: 'Neuromorphic AI','
+
+      id: 'neuromorphic-ai',
+      name: 'Neuromorphic AI',
       description: 'Brain-inspired computing systems that mimic human neural networks',
-      icon: BrainIcon2,'
-      color: 'from-pink-500 to-purple-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Neuromorphic AI'),'
-      marketSize: '$8.3 billion by 2027','
-      avgROI: '300-800%','
+      icon: BrainIcon2,
+      color: 'from-pink-500 to-purple-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Neuromorphic AI'),
+      marketSize: '$8.3 billion by 2027',
+      avgROI: '300-800%',
       innovationLevel: 'Cutting-edge'
     },
     {
-'
-      id: 'synthetic-biology','
-      name: 'Synthetic Biology AI','
+
+      id: 'synthetic-biology',
+      name: 'Synthetic Biology AI',
       description: 'AI-powered design and engineering of biological systems',
-      icon: DnaIcon,'
-      color: 'from-green-500 to-blue-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Synthetic Biology'),'
-      marketSize: '$13.4 billion by 2027','
-      avgROI: '400-1200%','
+      icon: DnaIcon,
+      color: 'from-green-500 to-blue-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Synthetic Biology'),
+      marketSize: '$13.4 billion by 2027',
+      avgROI: '400-1200%',
       innovationLevel: 'Revolutionary'
     },
     {
-'
-      id: 'space-technology','
-      name: 'Space Technology AI','
+
+      id: 'space-technology',
+      name: 'Space Technology AI',
       description: 'Autonomous space operations and satellite management systems',
-      icon: SatelliteIcon,'
-      color: 'from-blue-500 to-purple-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Space Technology'),'
-      marketSize: '$469.8 billion by 2027','
-      avgROI: '600-2000%','
+      icon: SatelliteIcon,
+      color: 'from-blue-500 to-purple-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Space Technology'),
+      marketSize: '$469.8 billion by 2027',
+      avgROI: '600-2000%',
       innovationLevel: 'Revolutionary'
     },
     {
-'
-      id: 'advanced-materials','
-      name: 'Advanced Materials AI','
+
+      id: 'advanced-materials',
+      name: 'Advanced Materials AI',
       description: 'AI-powered discovery and design of next-generation materials',
-      icon: LayersIcon,'
-      color: 'from-orange-500 to-red-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Advanced Materials'),'
-      marketSize: '$1.2 trillion by 2027','
-      avgROI: '500-1500%','
+      icon: LayersIcon,
+      color: 'from-orange-500 to-red-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Advanced Materials'),
+      marketSize: '$1.2 trillion by 2027',
+      avgROI: '500-1500%',
       innovationLevel: 'Cutting-edge'
     },
     {
-'
-      id: 'brain-computer-interface','
-      name: 'Brain-Computer Interface','
+
+      id: 'brain-computer-interface',
+      name: 'Brain-Computer Interface',
       description: 'Direct neural communication between human brain and computers',
-      icon: MonitorIcon2,'
-      color: 'from-purple-500 to-pink-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Brain-Computer Interface'),'
-      marketSize: '$3.7 billion by 2027','
-      avgROI: '800-3000%','
+      icon: MonitorIcon2,
+      color: 'from-purple-500 to-pink-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Brain-Computer Interface'),
+      marketSize: '$3.7 billion by 2027',
+      avgROI: '800-3000%',
       innovationLevel: 'Revolutionary'
     },
     {
-'
-      id: 'digital-twin','
-      name: 'Digital Twin AI','
+
+      id: 'digital-twin',
+      name: 'Digital Twin AI',
       description: 'Virtual replicas of physical systems with real-time monitoring',
-      icon: GlobeIcon3,'
-      color: 'from-cyan-500 to-green-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Digital Twin'),'
-      marketSize: '$86.1 billion by 2028','
-      avgROI: '400-1200%','
+      icon: GlobeIcon3,
+      color: 'from-cyan-500 to-green-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Digital Twin'),
+      marketSize: '$86.1 billion by 2028',
+      avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
     {
-'
-      id: 'extended-reality','
-      name: 'Extended Reality AI','
+
+      id: 'extended-reality',
+      name: 'Extended Reality AI',
       description: 'Immersive VR, AR, and MR experiences powered by AI',
-      icon: SmartphoneIcon2,'
-      color: 'from-orange-500 to-purple-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Extended Reality'),'
-      marketSize: '$125.2 billion by 2027','
-      avgROI: '500-1500%','
+      icon: SmartphoneIcon2,
+      color: 'from-orange-500 to-purple-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Extended Reality'),
+      marketSize: '$125.2 billion by 2027',
+      avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
     {
-'
-      id: 'edge-ai','
-      name: 'Edge AI Intelligence','
+
+      id: 'edge-ai',
+      name: 'Edge AI Intelligence',
       description: 'AI processing at the edge of networks for real-time decision making',
-      icon: CpuIcon2,'
-      color: 'from-green-500 to-cyan-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Edge AI'),'
-      marketSize: '$15.7 billion by 2027','
-      avgROI: '400-1200%','
+      icon: CpuIcon2,
+      color: 'from-green-500 to-cyan-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Edge AI'),
+      marketSize: '$15.7 billion by 2027',
+      avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
     {
-'
-      id: 'federated-learning','
-      name: 'Federated Learning AI','
+
+      id: 'federated-learning',
+      name: 'Federated Learning AI',
       description: 'Collaborative AI training across distributed data sources',
-      icon: NetworkIcon,'
-      color: 'from-purple-500 to-blue-500','
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Federated Learning'),'
-      marketSize: '$2.3 billion by 2027','
-      avgROI: '500-1500%','
+      icon: NetworkIcon,
+      color: 'from-purple-500 to-blue-500',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Federated Learning'),
+      marketSize: '$2.3 billion by 2027',
+      avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
     {
-'
-      id: 'sustainable-technology','
-      name: 'Sustainable Technology AI','
+
+      id: 'sustainable-technology',
+      name: 'Sustainable Technology AI',
       description: 'AI solutions for environmental sustainability and green innovation',
-      icon: LeafIcon,'
-      color: 'from-green-500 to-blue-500','
+      icon: LeafIcon,
+      color: 'from-green-500 to-blue-500',
       innovationLevel: 'Advanced';
     };
   ];
-'
+
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories
     : serviceCategories.filter (cat => cat.id === selectedCategory) ;
@@ -230,15 +230,15 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   const toggleCategoryExpansion = (categoryId: string) => {;
     setExpandedCategory (expandedCategory === categoryId ? null : categoryId) ;
   };
-'
-  const totalMarketSize = '$3.2+ trillion';'
+
+  const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-        title="Comprehensive Services Overview 2026 | Zion Tech Group""
-        description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology.""
+        title="Comprehensive Services Overview 2026 | Zion Tech Group"
+        description="Explore our complete portfolio of revolutionary micro SAAS services across 11 cutting-edge technology categories. From Quantum AI to Sustainable Technology."
         keywords="comprehensive services, quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
 
@@ -312,7 +312,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
             <button'
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg transition-all duration-200 ${
-'
+
                 selectedCategory === 'all''
                   ? 'bg-zion-cyan text-white''
                   : 'bg-white/10 text-zion-slate-300 hover: bg-white/20'`
@@ -405,7 +405,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                   {/* Innovation Level Badge */}"
                   <div className="flex items-center gap-4 mb-6">;`
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
-'
+
                       category.innovationLevel === 'Revolutionary''
                         ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                         : category.innovationLevel === 'Cutting-edge''
@@ -414,7 +414,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                     }`}>
                       {category.innovationLevel}
                     </div>"
-                    <div className="text-zion-slate-400">'
+                    <div className="text-zion-slate-400">
                       {category.services.length} service{category.services.length !== 1 ? 's' : ''}
                     </div>
                   </div>;
@@ -471,7 +471,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 }}
                         animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -503,7 +503,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 "
                               <div className="flex items-center gap-2 mb-4">`
                                 <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                                   service.innovationLevel === 'Revolutionary''
                                     ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                                     : service.innovationLevel === 'Cutting-edge''
@@ -528,7 +528,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                               </div>
 
                               <Link"
-                                to="/contact""
+                                to="/contact"
                                 className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
 "
                                 <MessageCircle className="w-4 h-4" />
@@ -572,14 +572,14 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
 "
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
 "
                 <Phone className="w-5 h-5" />

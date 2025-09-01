@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -28,28 +28,28 @@ import {
   Award,
   Phone,
   Mail,
-  MapPin,'
+  MapPin,
   ExternalLink} from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
 const categoryColors: { [key: string]: string } = {
-'
-  'Web3 Solutions': 'from-purple-500 to-pink-500','
-  'Metaverse Solutions': 'from-blue-500 to-cyan-500','
-  'Sustainable Tech': 'from-green-500 to-emerald-500','
-  'NeuroTech Solutions': 'from-indigo-500 to-purple-500','
-  'Fusion Energy Solutions': 'from-orange-500 to-red-500','
-  'OceanTech Solutions': 'from-blue-500 to-teal-500','
-  'AgriTech Solutions': 'from-green-500 to-lime-500','
-  'Smart City Solutions': 'from-gray-500 to-blue-500','
-  'Digital Twin Solutions': 'from-purple-500 to-indigo-500','
-  'Edge AI Solutions': 'from-red-500 to-pink-500','
+
+  'Web3 Solutions': 'from-purple-500 to-pink-500',
+  'Metaverse Solutions': 'from-blue-500 to-cyan-500',
+  'Sustainable Tech': 'from-green-500 to-emerald-500',
+  'NeuroTech Solutions': 'from-indigo-500 to-purple-500',
+  'Fusion Energy Solutions': 'from-orange-500 to-red-500',
+  'OceanTech Solutions': 'from-blue-500 to-teal-500',
+  'AgriTech Solutions': 'from-green-500 to-lime-500',
+  'Smart City Solutions': 'from-gray-500 to-blue-500',
+  'Digital Twin Solutions': 'from-purple-500 to-indigo-500',
+  'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
 export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
-'
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [viewMode, setViewMode] = useState<any>('grid');'
+
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('name');
   const filteredServices = enhancedInnovativeServices2027.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -59,7 +59,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'price':
   CheckCircle,
   Clock,
@@ -85,41 +85,41 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   Play,
   Eye,
   X,;
-  Beaker;'
+  Beaker;
 } from 'lucide-react';"
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');'
+  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const [sortBy, setSortBy] = useState('title');
   const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-'
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];'
+
+  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];
 
   const filteredServices = services.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
     
     return matchesSearch && matchesCategory && matchesInnovation;
   }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {;
       case 'price':;
-        return a.price - b.price;'
-      case 'innovation':;'
-        const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
+        return a.price - b.price;
+      case 'innovation':;
+        const innovationOrder = { 'Breakthrough': 3,Cutting-edge': 2,Advanced': 1,Innovative': 0 };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);'
-      case 'roi':;'
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
+               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
+      case 'roi':;
+        return parseInt(b.roi.replace('%',')) - parseInt(a.roi.replace('%','));
       default:;
         return 0}
   }) ;
@@ -141,10 +141,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   };
 
   const getInnovationLevelColor = (level: string) => {;
-    switch (level) {;'
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';'
-      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';'
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';'
+    switch (level) {;
+      case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
     }
   };
@@ -227,7 +227,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -240,7 +240,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               <button'
                 onClick={() => setSelectedCategory('All')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-'
+
                   selectedCategory === 'All''
                     ? 'bg-zion-cyan text-white''
                     : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark/70'`
@@ -268,7 +268,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-md transition-all ${
-'
+
                     viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'`
                   }`}
 "
@@ -277,7 +277,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-all ${
-'
+
                     viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'`
                   }`}
 "
@@ -506,8 +506,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               </div>
 
               {/* Navigation Tabs */}"
-              <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">'
-                {['Overview', 'Features', 'Technical Specs', 'Contact'].map((tab, index) => (
+              <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
+                {['Overview',Features',Technical Specs',Contact'].map((tab, index) => (
                   <button
                     key={tab}
                     onClick={() => setCurrentSlide(index)}`
@@ -802,8 +802,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               <ExternalLink className="w-5 h-5 text-zion-cyan" />
                               <a
                                 href={selectedService.contactInfo.website}"
-                                target="_blank""
-                                rel="noopener noreferrer""
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-zion-cyan hover:text-white transition-colors"
                               >
                                 Visit Website
@@ -853,7 +853,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       key={index}
                       onClick={() => setCurrentSlide(index)}`
                       className={`w-2 h-2 rounded-full transition-colors ${
-'
+
                         currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'`
                       }`}
                     />) ) }
@@ -904,8 +904,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             whileTap={{ scale: 0.95 }}"
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
             onClick = {
-'
-  () => window.open('https://ziontechgroup.com','
+
+  () => window.open('https://ziontechgroup.com',
   '_blank')
 
 

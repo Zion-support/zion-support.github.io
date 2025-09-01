@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Shield, 
   Eye, 
@@ -29,91 +29,91 @@ export default function AICybersecurityThreatDetection(...args: []):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Threat Detection','
+      icon: Brain,
+      title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy'
     },
     {
 
-      icon: Eye,'
-      title: '24/7 Network Monitoring','
+      icon: Eye,
+      title: '24/7 Network Monitoring',
       description: 'Continuous surveillance of your entire network infrastructure with instant alert systems'
     },
     {
 
-      icon: Shield,'
-      title: 'Zero-Day Attack Prevention','
+      icon: Shield,
+      title: 'Zero-Day Attack Prevention',
       description: 'Predictive AI models identify and block unknown threats before they can cause damage'
     },
     {
 
-      icon: Activity,'
-      title: 'Behavioral Analysis','
+      icon: Activity,
+      title: 'Behavioral Analysis',
       description: 'AI learns normal user patterns and flags suspicious activities automatically'
     },
     {
 
-      icon: Lock,'
-      title: 'Automated Response','
+      icon: Lock,
+      title: 'Automated Response',
       description: 'Instant threat containment and remediation without human intervention';
     },;
     {;
-      icon: Zap,;'
-      title: 'Real-Time Intelligence',;'
+      icon: Zap,;
+      title: 'Real-Time Intelligence',;
       description: 'Live threat intelligence feeds and global attack pattern recognition';
     };
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Essential','
-      price: '$499','
-      period: '/month','
+
+      name: 'Essential',
+      price: '$499',
+      period: '/month',
       description: 'Perfect for small businesses',
       features: ['
-        'Up to 100 endpoints','
-        'Basic AI threat detection','
-        '24/7 monitoring','
-        'Email alerts','
-        'Basic reporting','
-        'Phone support','
+        'Up to 100 endpoints',
+        'Basic AI threat detection',
+        '24/7 monitoring',
+        'Email alerts',
+        'Basic reporting',
+        'Phone support',
         'Standard integrations'
       ],
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$1,299','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$1,299',
+      period: '/month',
       description: 'Ideal for growing organizations',
       features: ['
-        'Up to 500 endpoints','
-        'Advanced AI algorithms','
-        'Behavioral analysis','
-        'Automated response','
-        'Custom dashboards','
-        'Priority support','
-        'Advanced integrations','
+        'Up to 500 endpoints',
+        'Advanced AI algorithms',
+        'Behavioral analysis',
+        'Automated response',
+        'Custom dashboards',
+        'Priority support',
+        'Advanced integrations',
         'Compliance reporting'
       ],
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$2,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$2,999',
+      period: '/month',
       description: 'For large enterprises',
       features: ['
-        'Unlimited endpoints','
-        'Full AI suite','
-        'Custom AI models','
-        'Dedicated security team','
-        'Advanced compliance',;'
-        'On-premise options',;'
-        'SLA guarantees',;'
+        'Unlimited endpoints',
+        'Full AI suite',
+        'Custom AI models',
+        'Dedicated security team',
+        'Advanced compliance',;
+        'On-premise options',;
+        'SLA guarantees',;
         'Custom integrations';
       ],;
       popular: false;
@@ -123,68 +123,68 @@ export default function AICybersecurityThreatDetection(...args: []):  {
   const benefits = [
     {
 
-      icon: Shield,'
-      title: '99.9% Threat Detection Rate','
+      icon: Shield,
+      title: '99.9% Threat Detection Rate',
       description: 'AI algorithms catch threats that traditional security tools miss'
     },
     {
 
-      icon: Clock,'
-      title: 'Real-Time Response','
+      icon: Clock,
+      title: 'Real-Time Response',
       description: 'Threats are neutralized within seconds, not hours or days'
     },
     {
 
-      icon: Target,'
-      title: 'Zero False Positives','
+      icon: Target,
+      title: 'Zero False Positives',
       description: 'Advanced AI reduces alert fatigue with intelligent filtering';
     },;
     {;
-      icon: BarChart3,;'
-      title: '60% Cost Reduction',;'
+      icon: BarChart3,;
+      title: '60% Cost Reduction',;
       description: 'Automated security reduces manual intervention and operational costs';
     };
   ];
 
   const threatTypes = [
     {
-'
-      title: 'Ransomware Attacks','
+
+      title: 'Ransomware Attacks',
       description: 'AI detects encryption patterns and blocks ransomware before it can encrypt files',
       icon: Lock
     },
     {
-'
-      title: 'Phishing Attempts','
+
+      title: 'Phishing Attempts',
       description: 'Machine learning identifies suspicious emails and URLs in real-time',
       icon: Eye
     },
     {
-'
-      title: 'DDoS Attacks','
+
+      title: 'DDoS Attacks',
       description: 'Predictive AI blocks distributed attacks before they impact services',
       icon: Network;
     },;
-    {;'
-      title: 'Insider Threats',;'
+    {;
+      title: 'Insider Threats',;
       description: 'Behavioral analysis detects unusual user activities and data access patterns',;
       icon: Users;
     };
   ];
 
-  const complianceFrameworks = [;'
-    'SOC 2 Type II',;'
-    'ISO 27001',;'
-    'GDPR',;'
-    'HIPAA',;'
-    'PCI DSS',;'
+  const complianceFrameworks = [;
+    'SOC 2 Type II',;
+    'ISO 27001',;
+    'GDPR',;
+    'HIPAA',;
+    'PCI DSS',;
     'NIST Cybersecurity Framework';
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Cybersecurity Threat Detection - Zion Tech Group""
+        title="AI Cybersecurity Threat Detection - Zion Tech Group"
         description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
       />
 

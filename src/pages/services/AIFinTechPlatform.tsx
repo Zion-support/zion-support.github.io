@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
-import { Button } from '../../components/ui/Button';'
-import { Card } from '../../components/ui/Card';'
+import React from 'react.ts';
+import { SEO } from '../../components/SEO';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import {
 
@@ -20,7 +20,7 @@ import {
   Target,
   Users,
   Database,
-  Lock,'
+  Lock,
   PieChart} from 'lucide-react.ts';
 
 const AIFinTechPlatform: React.FC = (): JSX.Element => {
@@ -28,7 +28,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI FinTech Platform - Zion Tech Group""
+        title="AI FinTech Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
       />
 
@@ -52,14 +52,14 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
@@ -380,7 +380,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
             <Card className="bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center relative transform scale-105">"
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge"
-                  variant="secondary""
+                  variant="secondary"
                   className="bg-white text-emerald-600"
                 >
                   Most Popular
@@ -517,21 +517,21 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Download FinTech Report

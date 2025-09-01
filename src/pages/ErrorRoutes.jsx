@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Home, ArrowLeft, AlertTriangle const NotFound = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 flex items-center justify-center">"
@@ -12,7 +12,7 @@ import { Home, ArrowLeft, AlertTriangle const NotFound = () => {
           <h2 className="text-2xl font-semibold text-zion-blue-dark mb-4">
             Page Not Found
           </h2>"
-          <p className="text-zion-slate mb-8">'
+          <p className="text-zion-slate mb-8">
             The page you're looking for doesn't exist or has been moved.'
             Let's get you back on track.
           </p>
@@ -65,7 +65,7 @@ const ServerError = () => {
           <h2 className="text-2xl font-semibold text-zion-blue-dark mb-4">
             Server Error
           </h2>"
-          <p className="text-zion-slate mb-8">'
+          <p className="text-zion-slate mb-8">
             Something went wrong on our end. We're working to fix it.
             Please try again later.
           </p>
@@ -86,8 +86,8 @@ const ServerError = () => {
       </div>
     </div>) };
 const ErrorRoutes = () => {
-    const location = useLocation();'
-    // Check if it's a 500 error (you can implement your own logic here)'
+    const location = useLocation();
+    // Check if it's a 500 error (you can implement your own logic here)
     const isServerError = location.pathname === '/500' || location.state?.error === 'server';
     return (<Routes>"
       <Route path="/404" element={<NotFound />}/>"

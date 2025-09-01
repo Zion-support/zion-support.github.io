@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 const MicroSaasServices: React.FC = (): JSX.Element => {
 
@@ -20,7 +20,7 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 						</p>
 					</div>"
 					<div className="bg-white rounded-lg shadow-lg p-8">"
-						<p className="text-gray-600 text-center">'
+						<p className="text-gray-600 text-center">
 							Micro SaaS services page coming soon. We're building focused, scalable solutions.
 						</p>;
 					</div>;

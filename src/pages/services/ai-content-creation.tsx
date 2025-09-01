@@ -38,12 +38,7 @@ export default function AIContentCreation() {
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Improve SEO rankings and organic traffic',
-    'Reduce content creation costs by 60%',
-    'Maintain consistent brand voice and quality',
-    'Scale content marketing operations efficiently',
-    'Generate personalized content for different audiences'
+    'Increase content production by 10x',Improve SEO rankings and organic traffic',Reduce content creation costs by 60%',Maintain consistent brand voice and quality',Scale content marketing operations efficiently',Generate personalized content for different audiences'
   ];
 
   const useCases = [
@@ -69,22 +64,22 @@ export default function AIContentCreation() {
     {
       icon: FileText,
       title: 'Written Content',
-      items: ['Blog posts', 'Articles', 'Whitepapers', 'Case studies', 'Product descriptions']
+      items: ['Blog posts',Articles',Whitepapers',Case studies',Product descriptions']
     },
     {
       icon: Image,
       title: 'Visual Content',
-      items: ['Infographics', 'Social media graphics', 'Banner ads', 'Product images', 'Illustrations']
+      items: ['Infographics',Social media graphics',Banner ads',Product images',Illustrations']
     },
     {
       icon: Video,
       title: 'Video Content',
-      items: ['Video scripts', 'Storyboards', 'Tutorial videos', 'Product demos', 'Social media videos']
+      items: ['Video scripts',Storyboards',Tutorial videos',Product demos',Social media videos']
     },
     {
       icon: Code,
       title: 'Technical Content',
-      items: ['Documentation', 'API guides', 'Tutorials', 'Code examples', 'Technical blogs']
+      items: ['Documentation',API guides',Tutorials',Code examples',Technical blogs']
     }
   ];
 

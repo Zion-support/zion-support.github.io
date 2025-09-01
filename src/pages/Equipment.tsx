@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -14,44 +14,44 @@ import {
   Briefcase,
   Cpu,
   HardDrive,
-  Network,'
+  Network,
   Zap} from 'lucide-react';
 
 const Equipment: React.FC = () => {
-'
-  const [view, setView] = useState<'grid' | 'list'>('grid');'
+
+  const [view, setView] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
 
   const equipmentItems = [
     {
 
-      id: 1,'
-      name: 'High-Performance Server','
-      category: 'Servers','
-      location: 'Data Center A','
+      id: 1,
+      name: 'High-Performance Server',
+      category: 'Servers',
+      location: 'Data Center A',
       status: 'Available',
-      rating: 4.8,'
-      price: '$2,500/month','
+      rating: 4.8,
+      price: '$2,500/month',
       description: 'Enterprise-grade server with latest Intel processors'},
     {
 
-      id: 2,'
-      name: 'Network Switch','
-      category: 'Networking','
-      location: 'Data Center B','
+      id: 2,
+      name: 'Network Switch',
+      category: 'Networking',
+      location: 'Data Center B',
       status: 'In Use',
-      rating: 4.6,'
-      price: '$800/month','
+      rating: 4.6,
+      price: '$800/month',
       description: '48-port gigabit network switch with PoE support'},
     {
 
-      id: 3,'
-      name: 'Storage Array','
-      category: 'Storage','
-      location: 'Data Center A','
+      id: 3,
+      name: 'Storage Array',
+      category: 'Storage',
+      location: 'Data Center A',
       status: 'Available',
-      rating: 4.9,'
-      price: '$1,200/month','
+      rating: 4.9,
+      price: '$1,200/month',
       description: 'High-capacity storage array with RAID protection'},
   ];
 
@@ -93,7 +93,7 @@ const Equipment: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
-                placeholder="Search equipment...""
+                placeholder="Search equipment..."
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -102,7 +102,7 @@ const Equipment: React.FC = () => {
               <button'
                 onClick={() => setView('grid')}
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   view === 'grid''
                     ? 'bg-blue-600 text-white''
                     : 'bg-white/10 text-gray-400 hover:text-white'`
@@ -113,7 +113,7 @@ const Equipment: React.FC = () => {
               <button'
                 onClick={() => setView('list')}`
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   view === 'list''
                     ? 'bg-blue-600 text-white''
                     : 'bg-white/10 text-gray-400 hover:text-white'`
@@ -134,7 +134,7 @@ const Equipment: React.FC = () => {
           {filteredItems.length > 0 ? (
             <div
               className={
-'
+
                 view === 'grid''
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
                   : 'space-y-4'
@@ -150,13 +150,13 @@ const Equipment: React.FC = () => {
                 >"
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">"
-                      <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">'
+                      <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
                         {item.category === 'Servers' && ("
                           <Server className="w-6 h-6 text-blue-400" />
-                        )}'
+                        )}
                         {item.category === 'Networking' && ("
                           <Network className="w-6 h-6 text-green-400" />
-                        )}'
+                        )}
                         {item.category === 'Storage' && ("
                           <HardDrive className="w-6 h-6 text-purple-400" />
                         )}

@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { Helmet } from 'react-helmet-async.ts';
 import {
 
@@ -34,7 +34,7 @@ import {
   Palette,
   Settings,
   Play,
-  Pause,'
+  Pause,
   RefreshCw} from 'lucide-react.ts';
 
 export default function MicroSAASPlatform(...args: any[]): any {
@@ -42,50 +42,50 @@ export default function MicroSAASPlatform(...args: any[]): any {
   const features = [
     {
 
-      icon: Rocket,'
+      icon: Rocket,
       title: 'Rapid Development',
       description:'
         'Build and deploy production-ready micro SAAS applications in weeks, not months, with our pre-built components and templates.',
       benefits: ['
-        'Pre-built templates','
-        'Component library','
-        'Auto-scaling','
+        'Pre-built templates',
+        'Component library',
+        'Auto-scaling',
         'Instant deployment',
       ]},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Features',
       description:'
         'Integrate advanced AI capabilities like chatbots, analytics, and automation into your micro SAAS with simple APIs.',
       benefits: ['
-        'AI chatbots','
-        'Predictive analytics','
-        'Process automation','
+        'AI chatbots',
+        'Predictive analytics',
+        'Process automation',
         'Smart insights',
       ]},
     {
 
-      icon: Cloud,'
+      icon: Cloud,
       title: 'Cloud-Native Architecture',
       description:'
         'Built on modern cloud infrastructure with automatic scaling, high availability, and global distribution.',
       benefits: ['
-        'Auto-scaling','
-        '99.9% uptime','
-        'Global CDN','
+        'Auto-scaling',
+        '99.9% uptime',
+        'Global CDN',
         'Multi-region deployment',
       ]},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Enterprise Security',
       description:'
         'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection built-in.',
       benefits: ['
-        'SOC 2 certified','
-        'End-to-end encryption','
-        'Threat protection','
+        'SOC 2 certified',
+        'End-to-end encryption',
+        'Threat protection',
         'Compliance ready',
       ]},
   ];
@@ -93,179 +93,179 @@ export default function MicroSAASPlatform(...args: any[]): any {
   const platformCapabilities = [
     {
 
-      icon: Code,'
+      icon: Code,
       title: 'Development Tools',
       description:'
         'Full-stack development environment with modern frameworks and tools',
       features: ['
-        'React/Next.js frontend','
-        'Node.js/Python backend','
-        'Database management','
+        'React/Next.js frontend',
+        'Node.js/Python backend',
+        'Database management',
         'API development',
       ]},
     {
 
-      icon: Database,'
-      title: 'Data Management','
+      icon: Database,
+      title: 'Data Management',
       description: 'Scalable database solutions with real-time synchronization',
       features: ['
-        'PostgreSQL/MySQL','
-        'Real-time sync','
-        'Data backup','
+        'PostgreSQL/MySQL',
+        'Real-time sync',
+        'Data backup',
         'Analytics dashboard',
       ]},
     {
 
-      icon: Users,'
-      title: 'User Management','
+      icon: Users,
+      title: 'User Management',
       description: 'Complete user authentication and authorization system',
       features: ['
-        'OAuth integration','
-        'Role-based access','
-        'User profiles','
+        'OAuth integration',
+        'Role-based access',
+        'User profiles',
         'Team management',
       ]},
     {
 
-      icon: BarChart3,'
-      title: 'Analytics & Insights','
+      icon: BarChart3,
+      title: 'Analytics & Insights',
       description: 'Built-in analytics and reporting for business intelligence',
       features: ['
-        'User analytics','
-        'Business metrics','
-        'Custom reports','
+        'User analytics',
+        'Business metrics',
+        'Custom reports',
         'Data export',
       ]},
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$1,500','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$1,500',
+      period: '/month',
       description: 'Perfect for solo entrepreneurs and small teams',
       features: ['
-        'Up to 1,000 users','
-        'Basic templates','
-        'Standard support','
-        'Cloud hosting','
-        'Basic analytics','
-        'Email support','
+        'Up to 1,000 users',
+        'Basic templates',
+        'Standard support',
+        'Cloud hosting',
+        'Basic analytics',
+        'Email support',
         'SSL certificate',
-      ],'
+      ],
       cta: 'Get Started',
       popular: false},
     {
-'
-      name: 'Growth','
-      price: '$3,500','
-      period: '/month','
+
+      name: 'Growth',
+      price: '$3,500',
+      period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: ['
-        'Up to 10,000 users','
-        'Premium templates','
-        'Priority support','
-        'Advanced analytics','
-        'Custom branding','
-        'API access','
-        'White-label options','
+        'Up to 10,000 users',
+        'Premium templates',
+        'Priority support',
+        'Advanced analytics',
+        'Custom branding',
+        'API access',
+        'White-label options',
         'Phone support',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Enterprise','
-      price: '$8,500','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$8,500',
+      period: '/month',
       description: 'For large organizations requiring custom solutions',
       features: ['
-        'Unlimited users','
-        'Custom development','
-        '24/7 dedicated support','
-        'Advanced AI features','
-        'Custom integrations','
-        'On-premise option','
-        'Dedicated success manager','
+        'Unlimited users',
+        'Custom development',
+        '24/7 dedicated support',
+        'Advanced AI features',
+        'Custom integrations',
+        'On-premise option',
+        'Dedicated success manager',
         'SLA guarantees',
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
 
   const useCases = [
     {
-'
+
       title: 'E-commerce Platforms',
       description:'
         'Build online stores with inventory management, payment processing, and customer analytics',
       metrics: ['
-        '50% faster development','
-        'Built-in payment processing','
-        'Inventory automation','
+        '50% faster development',
+        'Built-in payment processing',
+        'Inventory automation',
         'Customer insights',
       ]},
     {
-'
+
       title: 'SaaS Applications',
       description:'
         'Create subscription-based software with user management and billing',
       metrics: ['
-        'Subscription management','
-        'User analytics','
-        'Payment processing','
+        'Subscription management',
+        'User analytics',
+        'Payment processing',
         'Customer support',
       ]},
     {
-'
+
       title: 'Business Tools',
       description:'
         'Develop internal tools for project management, CRM, and operations',
       metrics: ['
-        'Process automation','
-        'Team collaboration','
-        'Data visualization','
+        'Process automation',
+        'Team collaboration',
+        'Data visualization',
         'Integration ready',
       ]},
     {
-'
-      title: 'Marketplace Platforms','
+
+      title: 'Marketplace Platforms',
       description: 'Build multi-vendor marketplaces with advanced features',
       metrics: ['
-        'Vendor management','
-        'Commission tracking','
-        'Payment distribution','
+        'Vendor management',
+        'Commission tracking',
+        'Payment distribution',
         'Analytics dashboard',
       ]},
   ];
 
   const developmentProcess = [
     {
-'
-      step: '01','
+
+      step: '01',
       title: 'Ideation & Planning',
       description:'
-        'Define your product vision, target market, and core features','
+        'Define your product vision, target market, and core features',
       duration: '1-2 weeks'},
     {
-'
-      step: '02','
-      title: 'Design & Prototyping','
-      description: 'Create user experience designs and interactive prototypes','
+
+      step: '02',
+      title: 'Design & Prototyping',
+      description: 'Create user experience designs and interactive prototypes',
       duration: '2-3 weeks'},
     {
-'
-      step: '03','
+
+      step: '03',
       title: 'Development & Testing',
       description:'
-        'Build your application using our platform and test thoroughly','
+        'Build your application using our platform and test thoroughly',
       duration: '4-6 weeks'},
     {
-'
-      step: '04','
-      title: 'Launch & Scale','
-      description: 'Deploy to production and scale based on user growth','
+
+      step: '04',
+      title: 'Launch & Scale',
+      description: 'Deploy to production and scale based on user growth',
       duration: '1-2 weeks'},
   ];
 
@@ -274,15 +274,15 @@ export default function MicroSAASPlatform(...args: any[]): any {
       <Helmet>
         <title>Micro SAAS Platform - Zion Tech Group</title>
         <meta"
-          name="description""
+          name="description"
           content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/services/micro-saas-platform"
         />
       </Helmet>
@@ -320,14 +320,14 @@ export default function MicroSAASPlatform(...args: any[]): any {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Start Building"
               <ArrowRight className="w-5 h-5" />
             </a>
             <a"
-              href="#demo""
+              href="#demo"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Watch Demo
@@ -599,7 +599,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
               Need a custom development solution?
             </p>
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
             >
               Contact our development team"
@@ -623,14 +623,14 @@ export default function MicroSAASPlatform(...args: any[]): any {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Building"
               <ArrowRight className="w-5 h-5" />
             </a>
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Schedule Consultation

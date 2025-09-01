@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "../../components/SEO";'
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import {
 
@@ -28,14 +28,14 @@ import {
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
   const contactInfo = {
-'
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
+
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
   ;
   ;
-  ;'
+  ;
   website: 'https://ziontechgroup.com';
   ;
 
@@ -49,153 +49,153 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered SEO Optimization','
-      description: 'Advanced machine learning algorithms that analyze search patterns and optimize content for maximum visibility.','
-      benefits: ['Improve search rankings', 'Increase organic traffic', 'Optimize for featured snippets']
+      icon: Brain,
+      title: 'AI-Powered SEO Optimization',
+      description: 'Advanced machine learning algorithms that analyze search patterns and optimize content for maximum visibility.',
+      benefits: ['Improve search rankings',Increase organic traffic',Optimize for featured snippets']
     },
     {
 
-      icon: Search,'
-      title: 'Content Readability Scoring','
-      description: 'Intelligent analysis of content structure, complexity, and readability to ensure maximum engagement.','
-      benefits: ['Enhance user experience', 'Improve engagement rates', 'Reduce bounce rates']
+      icon: Search,
+      title: 'Content Readability Scoring',
+      description: 'Intelligent analysis of content structure, complexity, and readability to ensure maximum engagement.',
+      benefits: ['Enhance user experience',Improve engagement rates',Reduce bounce rates']
     },
     {
 
-      icon: Globe,'
-      title: 'Multi-Language Support','
-      description: 'Support for 50+ languages with cultural context and localization optimization.','
-      benefits: ['Global reach', 'Cultural relevance', 'Local SEO optimization']
+      icon: Globe,
+      title: 'Multi-Language Support',
+      description: 'Support for 50+ languages with cultural context and localization optimization.',
+      benefits: ['Global reach',Cultural relevance',Local SEO optimization']
     },
     {
 
-      icon: BarChart3,'
-      title: 'Performance Analytics','
-      description: 'Comprehensive analytics dashboard with real-time performance metrics and actionable insights.','
-      benefits: ['Data-driven decisions', 'Performance tracking', 'ROI measurement']
+      icon: BarChart3,
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics dashboard with real-time performance metrics and actionable insights.',
+      benefits: ['Data-driven decisions',Performance tracking',ROI measurement']
     },
     {
 
-      icon: PenTool,'
-      title: 'Automated A/B Testing','
-      description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.','
-      benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
+      icon: PenTool,
+      title: 'Automated A/B Testing',
+      description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
+      benefits: ['Increase conversion rates',Optimize content performance',Reduce testing time']
     },;
     {;
-      icon: Shield,;'
-      title: 'Content Plagiarism Detection',;'
-      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;'
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
+      icon: Shield,;
+      title: 'Content Plagiarism Detection',;
+      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
+      benefits: ['Ensure content originality',Protect brand reputation',Avoid legal issues'];
     };
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$199','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
       description: 'Perfect for small businesses and content creators',
       features: ['
-        'Up to 10,000 words per month','
-        'Basic SEO optimization','
-        'Readability scoring','
-        'Plagiarism detection','
-        'Email support','
+        'Up to 10,000 words per month',
+        'Basic SEO optimization',
+        'Readability scoring',
+        'Plagiarism detection',
+        'Email support',
         'Basic analytics dashboard'
       ],
-      popular: false,'
+      popular: false,
       cta: 'Start Free Trial'
     },
     {
-'
-      name: 'Professional','
-      price: '$399','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$399',
+      period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
       features: ['
-        'Up to 50,000 words per month','
-        'Advanced SEO optimization','
-        'Multi-language support','
-        'A/B testing automation','
-        'Priority support','
-        'Advanced analytics','
-        'API access','
+        'Up to 50,000 words per month',
+        'Advanced SEO optimization',
+        'Multi-language support',
+        'A/B testing automation',
+        'Priority support',
+        'Advanced analytics',
+        'API access',
         'Team collaboration tools'
       ],
-      popular: true,'
+      popular: true,
       cta: 'Get Started'
     },
     {
-'
-      name: 'Enterprise','
-      price: '$799','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$799',
+      period: '/month',
       description: 'Comprehensive solution for large organizations',
       features: ['
-        'Unlimited words per month','
-        'Full feature suite','
-        'Custom AI models','
-        'White-label options','
-        'Dedicated support','
-        'Custom integrations',;'
-        'Advanced reporting',;'
+        'Unlimited words per month',
+        'Full feature suite',
+        'Custom AI models',
+        'White-label options',
+        'Dedicated support',
+        'Custom integrations',;
+        'Advanced reporting',;
         'SLA guarantees';
       ],;
-      popular: false,;'
+      popular: false,;
       cta: 'Contact Sales';
     };
   ];
 
   const useCases = [
     {
-'
-      title: 'E-commerce Content','
-      description: 'Optimize product descriptions, category pages, and blog content for better search visibility and conversion rates.','
-      metrics: ['40% increase in organic traffic', '25% improvement in conversion rates']
+
+      title: 'E-commerce Content',
+      description: 'Optimize product descriptions, category pages, and blog content for better search visibility and conversion rates.',
+      metrics: ['40% increase in organic traffic',25% improvement in conversion rates']
     },
     {
-'
-      title: 'Blog & Content Marketing','
-      description: 'Enhance blog posts, articles, and long-form content for better engagement and SEO performance.','
-      metrics: ['60% increase in time on page', '35% improvement in social shares']
+
+      title: 'Blog & Content Marketing',
+      description: 'Enhance blog posts, articles, and long-form content for better engagement and SEO performance.',
+      metrics: ['60% increase in time on page',35% improvement in social shares']
     },
     {
-'
-      title: 'Local Business SEO','
-      description: 'Optimize local business content, service pages, and location-specific content for local search.','
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
+
+      title: 'Local Business SEO',
+      description: 'Optimize local business content, service pages, and location-specific content for local search.',
+      metrics: ['50% increase in local search visibility',30% improvement in local leads'];
     },;
-    {;'
-      title: 'Technical Content',;'
-      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;'
-      metrics: ['45% improvement in readability scores', '40% increase in engagement'];
+    {;
+      title: 'Technical Content',;
+      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
+      metrics: ['45% improvement in readability scores',40% increase in engagement'];
     };
   ];
 
   const testimonials = [
     {
-'
-      name: 'Jennifer Martinez','
-      role: 'Content Marketing Director','
-      comp: 'TechFlow Solutions','
+
+      name: 'Jennifer Martinez',
+      role: 'Content Marketing Director',
+      comp: 'TechFlow Solutions',
       content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
       rating: 5
     },
     {
-'
-      name: 'David Kim','
-      role: 'SEO Manager','
-      comp: 'Digital Growth Agency','
+
+      name: 'David Kim',
+      role: 'SEO Manager',
+      comp: 'Digital Growth Agency',
       content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
       rating: 5
     },
     {
-'
-      name: 'Sarah Williams'};'
-      role: 'Content Creator',;'
-      company: 'Creative Content Studio',;'
+
+      name: 'Sarah Williams'};
+      role: 'Content Creator',;
+      company: 'Creative Content Studio',;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
@@ -204,9 +204,9 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   return()
     <>
       <SEO"
-        title = "AI Content Optimizer Pro | Zion Tech Group""
-        description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today.""
-        keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics""
+        title = "AI Content Optimizer Pro | Zion Tech Group"
+        description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today."
+        keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
       />
 "
@@ -670,7 +670,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Don't just take our word for it. Here's what content creators and marketers are saying about our platform.
               </p>
             </motion.div>
@@ -803,8 +803,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 </a>
                 <a
                   href={contactInfo.website}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
 "
                   <ExternalLink className="w-4 h-4" />

@@ -1,42 +1,42 @@
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
   const features = [
     {
 
-      icon: Settings,'
-      title: 'System Integration','
+      icon: Settings,
+      title: 'System Integration',
       description: 'Seamless integration of existing and new IT systems'},
     {
 
-      icon: Monitor,'
-      title: 'IT Support','
+      icon: Monitor,
+      title: 'IT Support',
       description: '24/7 IT support and maintenance services'},
     {
 
-      icon: Database,'
-      title: 'Data Management','
+      icon: Database,
+      title: 'Data Management',
       description: 'Comprehensive data management and backup solutions'},
     {
 
-      icon: Shield,'
-      title: 'IT Security','
+      icon: Shield,
+      title: 'IT Security',
       description: 'Multi-layered security for your IT infrastructure'},
   ];
   const benefits = ['
-    'Improved system reliability and performance','
-    'Reduced IT operational costs','
-    'Enhanced data security and compliance','
-    'Streamlined business processes','
+    'Improved system reliability and performance',
+    'Reduced IT operational costs',
+    'Enhanced data security and compliance',
+    'Streamlined business processes',
     'Expert technical support and maintenance',
   ];
   return()
     <div className="min-h-screen bg-background">
       <SEO"
-        title="IT Solutions - Zion Tech Group""
-        description="Comprehensive IT solutions to optimize your business operations and technology infrastructure.""
-        keywords="IT solutions, system integration, IT support, data management, IT security""
+        title="IT Solutions - Zion Tech Group"
+        description="Comprehensive IT solutions to optimize your business operations and technology infrastructure."
+        keywords="IT solutions, system integration, IT support, data management, IT security"
         canonical="https://ziontechgroup.com/services/it-solutions"
       />
 
@@ -51,7 +51,7 @@ const ITSolutions = () => {
             transition={{ duration: 0.8 }}
           >
             IT Solutions for"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
               {' '}
               Modern Business
             </span>
@@ -153,7 +153,7 @@ const ITSolutions = () => {
           <h2 className="text-4xl font-bold mb-6">
             Ready to Optimize Your IT?
           </h2>"
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our IT solutions can improve your business
             operations and performance.
           </p>"

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -7,113 +7,113 @@ import {
   Globe,
   Zap,
   Users,
-  BarChart3,'
+  BarChart3,
   Lock} from 'lucide-react';
 const EnterpriseSolutions = () => {
   const solutions = [
     {
-'
+
       title: 'AI-Powered Business Intelligence',
       description:'
         'Transform your data into actionable insights with our advanced AI analytics platform.',
       features: ['
-        'Real-time data processing','
-        'Predictive analytics','
-        'Custom dashboards','
-        'Automated reporting','
+        'Real-time data processing',
+        'Predictive analytics',
+        'Custom dashboards',
+        'Automated reporting',
         'Multi-source integration',
       ],
-      icon: BarChart3,'
+      icon: BarChart3,
       href: '/services/ai-autonomous-systems'},
     {
-'
+
       title: 'Enterprise Cybersecurity Suite',
       description:'
         'Comprehensive security solutions designed for large organizations.',
       features: ['
-        'Threat detection & response','
-        'Compliance management','
-        'Identity & access control','
-        'Security monitoring','
+        'Threat detection & response',
+        'Compliance management',
+        'Identity & access control',
+        'Security monitoring',
         'Incident response',
       ],
-      icon: Shield,'
+      icon: Shield,
       href: '/services/cybersecurity'},
     {
-'
+
       title: 'Cloud Infrastructure Management',
       description:'
         'Scalable cloud solutions optimized for enterprise workloads.',
       features: ['
-        'Multi-cloud strategy','
-        'Cost optimization','
-        'Performance monitoring','
-        'Disaster recovery','
+        'Multi-cloud strategy',
+        'Cost optimization',
+        'Performance monitoring',
+        'Disaster recovery',
         'Security compliance',
       ],
-      icon: Globe,'
+      icon: Globe,
       href: '/services/it-infrastructure'},
     {
-'
+
       title: 'AI Process Automation',
       description:'
         'Streamline operations with intelligent automation across all departments.',
       features: ['
-        'Workflow automation','
-        'Document processing','
-        'Customer service bots','
-        'Supply chain optimization','
+        'Workflow automation',
+        'Document processing',
+        'Customer service bots',
+        'Supply chain optimization',
         'Quality control',
       ],
-      icon: Zap,'
+      icon: Zap,
       href: '/services/ai-autonomous-systems'},
   ];
   const industries = [
     {
-'
+
       name: 'Healthcare',
       description:'
         'AI-powered healthcare solutions for hospitals and medical facilities.',
       icon: Users,
       solutions: ['
-        'Patient care automation','
-        'Medical imaging AI','
-        'Drug discovery','
+        'Patient care automation',
+        'Medical imaging AI',
+        'Drug discovery',
         'Compliance management',
       ]},
     {
-'
+
       name: 'Financial Services',
       description:'
         'Secure, compliant solutions for banks and financial institutions.',
       icon: Lock,
       solutions: ['
-        'Fraud detection','
-        'Risk assessment','
-        'Compliance automation','
+        'Fraud detection',
+        'Risk assessment',
+        'Compliance automation',
         'Customer analytics',
       ]},
     {
-'
+
       name: 'Manufacturing',
       description:'
         'Smart manufacturing solutions for Industry 4.0 transformation.',
       icon: Building2,
       solutions: ['
-        'Predictive maintenance','
-        'Quality control','
-        'Supply chain optimization','
+        'Predictive maintenance',
+        'Quality control',
+        'Supply chain optimization',
         'Energy management',
       ]},
     {
-'
-      name: 'Retail','
+
+      name: 'Retail',
       description: 'Omnichannel retail solutions for modern commerce.',
       icon: Globe,
       solutions: ['
-        'Customer personalization','
-        'Inventory management','
-        'Demand forecasting','
+        'Customer personalization',
+        'Inventory management',
+        'Demand forecasting',
         'E-commerce optimization',
       ]},
   ];
@@ -132,13 +132,13 @@ const EnterpriseSolutions = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
             >
               Get Enterprise Quote
@@ -190,13 +190,13 @@ const EnterpriseSolutions = () => {
                   >
                     Learn More
                     <svg"
-                      className="w-4 h-4 ml-2""
-                      fill="none""
-                      stroke="currentColor""
+                      className="w-4 h-4 ml-2"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M9 5l7 7-7 7"
@@ -262,19 +262,19 @@ const EnterpriseSolutions = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-'
+
                 title: 'Scalable Architecture',
                 description:'
                   'Our solutions grow with your business, from startup to enterprise.',
                 icon: Building2},
               {
-'
+
                 title: 'Security First',
                 description:'
                   'Enterprise-grade security with compliance certifications.',
                 icon: Shield},
               {
-'
+
                 title: '24/7 Support',
                 description:'
                   'Round-the-clock support with dedicated account managers.',
@@ -303,19 +303,19 @@ const EnterpriseSolutions = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Enterprise?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our AI solutions can drive innovation and growth
               in your organization.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Enterprise Demo
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
               >
                 Contact Sales Team

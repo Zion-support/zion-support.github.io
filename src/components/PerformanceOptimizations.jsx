@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';'
+import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { LoadingSpinner } from './ui/loading-spinner';
 // Lazy load heavy components'
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
@@ -38,7 +38,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
       ))}
     </div>
   );
-});'
+});
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
@@ -55,10 +55,10 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
       ...item,
       index: startIndex + index,
       style: {
-'
+
         position: 'absolute',
         top: (startIndex + index) * itemHeight,
-        height: itemHeight,'
+        height: itemHeight,
         width: '100%'}}));
   }, [items, scrollTop, itemHeight, containerHeight]);
   const handleScroll = useCallback(e => {
@@ -70,7 +70,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
       style={{ height: containerHeight, overflow: 'auto' }}
       onScroll={handleScroll}"
       className="border border-zion-slate/20 rounded-lg"
-    >'
+    >
       <div style={{ height: items.length * itemHeight, position: 'relative' }}>
         {visibleItems.map(item => (
           <div
@@ -92,16 +92,16 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 export function PerformanceOptimizations() {
   const [showExpensive, setShowExpensive] = React.useState(false);
   const [data, setData] = React.useState(['
-    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },'
-    { id: 2, title: 'Service 2', description: 'Description 2', value: 200 },'
-    { id: 3, title: 'Service 3', description: 'Description 3', value: 300 },'
-    { id: 4, title: 'Service 4', description: 'Description 4', value: 400 },'
+    { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
+    { id: 2, title: 'Service 2', description: 'Description 2', value: 200 },
+    { id: 3, title: 'Service 3', description: 'Description 3', value: 300 },
+    { id: 4, title: 'Service 4', description: 'Description 4', value: 400 },
     { id: 5, title: 'Service 5', description: 'Description 5', value: 500 },
   ]);
   const handleItemClick = useCallback(item => {
-'
+
     // // // // // // // // console.log('Item clicked:', item);
-  }, []);'
+  }, []);
   // console.log('Item clicked:', item)}, []);
   const addItem = useCallback(() => {
     setData(prev => [
@@ -165,7 +165,7 @@ export function PerformanceOptimizations() {
         <button
           onClick={() => setShowExpensive(!showExpensive)}"
           className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors"
-        >'
+        >
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
 

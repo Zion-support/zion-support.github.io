@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -39,7 +39,7 @@ import {
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {
@@ -140,8 +140,8 @@ const MobileLaunch: React.FC = () => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Mobile App - Zion Tech Group""
-        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere.""
+        title="Mobile App - Zion Tech Group"
+        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
       />
 
@@ -186,14 +186,14 @@ const MobileLaunch: React.FC = () => {
 "
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link"
-                  to="#download""
+                  to="#download"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
                   <Download className="mr-2 w-5 h-5" />
                   Download Now
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                   Learn More"
@@ -307,7 +307,7 @@ const MobileLaunch: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">"
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Experience the full power of Zion Tech Group's services in the palm of your hand
               with our feature - rich mobile application.
             </p>
@@ -451,7 +451,7 @@ const MobileLaunch: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">"
               Download <span className="text-cyan-400">Now</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Get started with Zion Tech Group's mobile app today. Available on all major platforms.
             </p>
           </motion.div>
@@ -484,7 +484,7 @@ const MobileLaunch: React.FC = () => {
 
 }}`
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
-'
+
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'`
                 }`}
 
@@ -596,21 +596,21 @@ const MobileLaunch: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Mobile?
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Download our mobile app today and take Zion Tech Group's powerful solutions
               with you wherever you go.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="#download""
+                to="#download"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
                 <Download className="mr-2 w-5 h-5" />
                 Download App
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Get Support"

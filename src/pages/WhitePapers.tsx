@@ -22,179 +22,179 @@ import {
   Zap,
   Globe,
   Target,
-  TrendingUp,'
-  Award} from 'lucide-react';'
+  TrendingUp,
+  Award} from 'lucide-react';
 import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [activeCategory, setActiveCategory] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
 
   const categories = [
     {
-'
-      id: 'all','
+
+      id: 'all',
       name: 'All Categories',
       icon: <FileText className="w-5 h-5" />,
       count: 0},
     {
-'
-      id: 'ai-ml','
+
+      id: 'ai-ml',
       name: 'AI & Machine Learning',"
       icon: <Brain className="w-5 h-5" />,
       count: 8},
     {
-'
-      id: 'cloud','
+
+      id: 'cloud',
       name: 'Cloud & Infrastructure',"
       icon: <Cloud className="w-5 h-5" />,
       count: 6},
     {
-'
-      id: 'security','
+
+      id: 'security',
       name: 'Cybersecurity',"
       icon: <Shield className="w-5 h-5" />,
       count: 5},
     {
-'
-      id: 'data','
+
+      id: 'data',
       name: 'Data & Analytics',"
       icon: <Database className="w-5 h-5" />,
       count: 7},
     {
-'
-      id: 'emerging','
+
+      id: 'emerging',
       name: 'Emerging Technologies',"
       icon: <Zap className="w-5 h-5" />,
       count: 4},
     {
-'
-      id: 'strategy','
+
+      id: 'strategy',
       name: 'Digital Strategy',"
       icon: <Target className="w-5 h-5" />,
       count: 6},
   ];
 
   const sortOptions = ['
-    { value: 'newest', label: 'Newest First' },'
-    { value: 'popular', label: 'Most Popular' },'
-    { value: 'alphabetical', label: 'Alphabetical' },'
+    { value: 'newest', label: 'Newest First' },
+    { value: 'popular', label: 'Most Popular' },
+    { value: 'alphabetical', label: 'Alphabetical' },
     { value: 'downloads', label: 'Most Downloaded' },
   ];
 
   const whitePapers = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'The Future of AI in Enterprise: 2025 and Beyond',
       description:'
-        'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.','
-      category: 'ai-ml','
-      author: 'Dr. Sarah Chen, AI Research Director','
-      publishDate: '2025-01-25','
+        'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
+      category: 'ai-ml',
+      author: 'Dr. Sarah Chen, AI Research Director',
+      publishDate: '2025-01-25',
       readTime: '35 min',
       downloads: 18750,
       rating: 4.9,
       featured: true,
       tags: ['
-        'AI Research','
-        'Autonomous Systems','
-        'Business Intelligence','
+        'AI Research',
+        'Autonomous Systems',
+        'Business Intelligence',
         'Innovation',
-      ],'
-      coverImage: '/images/whitepapers/ai-autonomous-research.jpg','
-      fileSize: '3.2 MB','
+      ],
+      coverImage: '/images/whitepapers/ai-autonomous-research.jpg',
+      fileSize: '3.2 MB',
       language: 'English'},
     {
 
-      id: 2,'
+      id: 2,
       title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
       description:'
-        'Strategic guide on implementing AI-powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.','
-      category: 'ai-ml','
-      author: 'Michael Rodriguez, Supply Chain AI Specialist','
-      publishDate: '2025-01-23','
+        'Strategic guide on implementing AI-powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.',
+      category: 'ai-ml',
+      author: 'Michael Rodriguez, Supply Chain AI Specialist',
+      publishDate: '2025-01-23',
       readTime: '28 min',
       downloads: 16230,
       rating: 4.8,
       featured: true,
       tags: ['
-        'Supply Chain','
-        'AI Optimization','
-        'Cost Reduction','
+        'Supply Chain',
+        'AI Optimization',
+        'Cost Reduction',
         'Predictive Analytics',
-      ],'
-      coverImage: '/images/whitepapers/ai-supply-chain-optimization.jpg','
-      fileSize: '2.8 MB','
+      ],
+      coverImage: '/images/whitepapers/ai-supply-chain-optimization.jpg',
+      fileSize: '2.8 MB',
       language: 'English'},
     {
 
-      id: 4,'
+      id: 4,
       title: 'Data-Driven Decision Making: Analytics for the Modern Enterprise',
       description:'
-        'Explore how organizations can leverage data analytics to drive strategic decisions and improve business outcomes.','
-      category: 'data','
-      author: 'Dr. Robert Kim, Data Science Director','
-      publishDate: '2025-01-12','
+        'Explore how organizations can leverage data analytics to drive strategic decisions and improve business outcomes.',
+      category: 'data',
+      author: 'Dr. Robert Kim, Data Science Director',
+      publishDate: '2025-01-12',
       readTime: '28 min',
       downloads: 11230,
       rating: 4.6,
       featured: false,
       tags: ['
-        'Data Analytics','
-        'Business Intelligence','
-        'Decision Making','
+        'Data Analytics',
+        'Business Intelligence',
+        'Decision Making',
         'Strategy',
-      ],'
-      coverImage: '/images/whitepapers/data-driven-decisions.jpg','
-      fileSize: '2.6 MB','
+      ],
+      coverImage: '/images/whitepapers/data-driven-decisions.jpg',
+      fileSize: '2.6 MB',
       language: 'English'},
     {
 
-      id: 5,'
+      id: 5,
       title: 'Quantum Computing: Preparing for the Next Computing Revolution',
       description:'
-        'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.','
-      category: 'emerging','
-      author: 'Dr. Elena Vasquez, Quantum Research Lead','
-      publishDate: '2025-01-10','
+        'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
+      category: 'emerging',
+      author: 'Dr. Elena Vasquez, Quantum Research Lead',
+      publishDate: '2025-01-10',
       readTime: '40 min',
       downloads: 7560,
       rating: 4.9,
       featured: true,
       tags: ['
-        'Quantum Computing','
-        'Emerging Tech','
-        'Future Computing','
+        'Quantum Computing',
+        'Emerging Tech',
+        'Future Computing',
         'Innovation',
-      ],'
-      coverImage: '/images/whitepapers/quantum-computing.jpg','
-      fileSize: '3.5 MB','
+      ],
+      coverImage: '/images/whitepapers/quantum-computing.jpg',
+      fileSize: '3.5 MB',
       language: 'English'},
     {
 
-      id: 6,'
+      id: 6,
       title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
       description:'
-        'Framework for measuring and maximizing return on investment in digital transformation initiatives.','
-      category: 'strategy','
-      author: 'David Thompson, Digital Strategy Director','
-      publishDate: '2025-01-08','
+        'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
+      category: 'strategy',
+      author: 'David Thompson, Digital Strategy Director',
+      publishDate: '2025-01-08',
       readTime: '22 min',
       downloads: 8930,
       rating: 4.5,
-      featured: false,'
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],'
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg','
-      fileSize: '2.2 MB','
+      featured: false,
+      tags: ['Digital Transformation',ROI',Strategy',Measurement'],
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
+      fileSize: '2.2 MB',
       language: 'English',
       rating: 4.5,
-      featured: false,'
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],'
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg','
-      fileSize: '2.2 MB','
+      featured: false,
+      tags: ['Digital Transformation',ROI',Strategy',Measurement'],
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
+      fileSize: '2.2 MB',
       language: 'English'},
   ];
 
@@ -209,28 +209,28 @@ export default function WhitePapers() {
 
   const stats = [
     {
-'
+
       title: 'AI Adoption Trends 2025',
       description:'
         'Key insights from our latest research on enterprise AI adoption',"
-      icon: <TrendingUp className="w-6 h-6" />,'
+      icon: <TrendingUp className="w-6 h-6" />,
       link: '/insights/ai-adoption-2025'},
     {
-'
-      title: 'Cybersecurity Landscape Report','
+
+      title: 'Cybersecurity Landscape Report',
       description: 'Current threats and emerging security challenges',"
-      icon: <Shield className="w-6 h-6" />,'
+      icon: <Shield className="w-6 h-6" />,
       link: '/insights/cybersecurity-2025'},
     {
-'
-      title: 'Cloud Migration Success Stories','
+
+      title: 'Cloud Migration Success Stories',
       description: 'Real-world examples of successful cloud transformations',"
-      icon: <Cloud className="w-6 h-6" />,'
+      icon: <Cloud className="w-6 h-6" />,
       link: '/insights/cloud-success-stories'},
   ];
 
   const getCategoryCount = (categoryId: string) => {
-'
+
     if (categoryId === 'all') {
 
       return whitePapers.length;
@@ -260,21 +260,21 @@ export default function WhitePapers() {
   }) ;
 
   const formatDate = (dateString: string) => {
-'
+
     return new Date(dateString).toLocaleDateString('en-US', {
-'
-      year: 'numeric','
-      month: 'long','
+
+      year: 'numeric',
+      month: 'long',
       day: 'numeric'});
   };
 
   const formatDownloads = (downloads: number) => {
 
     if (downloads >= 1000000) {
-'
+
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
-'
+
       return (downloads / 1000).toFixed(1) + 'K';
     }
     return downloads.toString () ;
@@ -312,7 +312,7 @@ export default function WhitePapers() {
                 type="text"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
-                placeholder="Search white papers...""
+                placeholder="Search white papers..."
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
@@ -367,7 +367,7 @@ export default function WhitePapers() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search white papers..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
@@ -445,7 +445,7 @@ export default function WhitePapers() {
                 <div
                   key={paper.id}`
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
-'
+
                     paper.featured ? 'ring-2 ring-zion-cyan' : ''`
                   }`}
                 >"
@@ -543,8 +543,8 @@ export default function WhitePapers() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input"
-              type="email""
-              placeholder="Enter your email""
+              type="email"
+              placeholder="Enter your email"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             />"
             <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">

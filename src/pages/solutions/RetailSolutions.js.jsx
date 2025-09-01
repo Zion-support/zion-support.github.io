@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -10,79 +10,79 @@ import {
   Zap,
   Shield,
   ArrowRight,
-  CheckCircle,'
+  CheckCircle,
   Store} from 'lucide-react';
 export default function RetailSolutions() {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Customer Insights',
       description:'
         'Machine learning models to understand customer behavior and preferences'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Real-time Analytics',
       description:'
         'Live monitoring of sales, inventory, and customer engagement metrics'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Personalized Marketing',
       description:'
         'AI-driven targeted marketing campaigns and product recommendations'},
     {
 
-      icon: Zap,'
-      title: 'Inventory Optimization','
+      icon: Zap,
+      title: 'Inventory Optimization',
       description: 'Intelligent inventory management and demand forecasting'},
     {
 
-      icon: Shield,'
-      title: 'E-commerce Security','
+      icon: Shield,
+      title: 'E-commerce Security',
       description: 'Advanced security for online retail and payment processing'},
     {
 
-      icon: Smartphone,'
+      icon: Smartphone,
       title: 'Omnichannel Experience',
       description:'
         'Seamless integration across online and offline retail channels'},
   ];
   const benefits = ['
-    'Increase sales by 25-40%','
-    'Improve customer retention by 30%','
-    'Reduce inventory costs by 20-35%','
-    'Enhance customer experience','
-    'Better marketing ROI','
+    'Increase sales by 25-40%',
+    'Improve customer retention by 30%',
+    'Reduce inventory costs by 20-35%',
+    'Enhance customer experience',
+    'Better marketing ROI',
     'Streamlined operations',
   ];
   const solutions = [
     {
-'
-      title: 'E-commerce Platform','
+
+      title: 'E-commerce Platform',
       description: 'Modern online retail platform with AI-powered features'},
     {
-'
-      title: 'Customer Analytics','
+
+      title: 'Customer Analytics',
       description: 'Comprehensive customer behavior analysis and insights'},
     {
-'
-      title: 'Inventory Management','
+
+      title: 'Inventory Management',
       description: 'Smart inventory optimization and demand forecasting'},
     {
-'
-      title: 'Marketing Automation','
+
+      title: 'Marketing Automation',
       description: 'AI-driven marketing campaigns and personalization'},
   ];
   const retailTypes = ['
-    'Fashion & Apparel','
-    'Electronics','
-    'Home & Garden','
-    'Beauty & Health','
-    'Sports & Outdoor','
-    'Books & Media','
-    'Food & Beverage','
+    'Fashion & Apparel',
+    'Electronics',
+    'Home & Garden',
+    'Beauty & Health',
+    'Sports & Outdoor',
+    'Books & Media',
+    'Food & Beverage',
     'Automotive',
   ];
   return()

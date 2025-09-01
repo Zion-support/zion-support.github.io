@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
@@ -15,7 +15,7 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
         setCurrentSrc(src);
     };
     return (<div className = {
-'
+
   cn('relative inline-block',
   className)
 
@@ -28,7 +28,7 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img loading="lazy" {...props} src={currentSrc} onError={handleError}/>"
       {failed && (<button type="button" onClick={handleRetry} className = {
-'
+
   cn('absolute bottom-1 right-1 text-xs underline',
   retryClassName)
 

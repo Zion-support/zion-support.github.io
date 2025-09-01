@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -27,7 +27,7 @@ import {
   Zap as ZapIcon'
 } from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {;
-  const scrollToTop = () => {;'
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const currentYear = new Date () .getFullYear () ;
@@ -236,7 +236,7 @@ export const FuturisticFooter: React.FC = () => {;
                 <ul className="space-y-2">
                   <li>
                     <Link"
-                      to="/request-quote""
+                      to="/request-quote"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Request Quote
@@ -244,7 +244,7 @@ export const FuturisticFooter: React.FC = () => {;
                   </li>
                   <li>
                     <Link"
-                      to="/demo""
+                      to="/demo"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Book Demo
@@ -252,7 +252,7 @@ export const FuturisticFooter: React.FC = () => {;
                   </li>
                   <li>
                     <Link"
-                      to="/support""
+                      to="/support"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       Get Support
@@ -260,7 +260,7 @@ export const FuturisticFooter: React.FC = () => {;
                   </li>
                   <li>
                     <Link"
-                      to="/status""
+                      to="/status"
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
 
                       System Status
@@ -312,8 +312,8 @@ export const FuturisticFooter: React.FC = () => {;
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
 "
                     <social.icon className="w-5 h-5" />

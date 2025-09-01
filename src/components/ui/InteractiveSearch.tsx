@@ -13,7 +13,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
   placeholder = "Search...", ;
   onSearch, ;"
   className = "" ;
-}) => {;'
+}) => {;
   const [query, setQuery] = useState('');
 
 }: unknown {;

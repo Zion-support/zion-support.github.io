@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -24,7 +24,7 @@ import {
   Clock,
   Star,
   Heart'
-} from 'lucide-react';'
+} from 'lucide-react';
 import SEO from '../components/SEO';
 
 const AIServices = [
@@ -40,91 +40,91 @@ const AIServices = [
         link: "/request-quote?service=ai-strategy"
     },
     {
-'
-} from 'lucide-react';'
+
+} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
   const aiServices = [
     {
-'
-      id: 'ai-consciousness-simulator','
-      name: 'AI Consciousness Simulator','
-      tagline: 'Simulate and test AI consciousness emergence patterns','
-      price: '$15,999','
-      period: '/month','
+
+      id: 'ai-consciousness-simulator',
+      name: 'AI Consciousness Simulator',
+      tagline: 'Simulate and test AI consciousness emergence patterns',
+      price: '$15,999',
+      period: '/month',
       description: 'Advanced AI consciousness simulation platform for researchers, ethicists, and AI safety organizations. Test consciousness emergence, ethical boundaries, and safety protocols in controlled environments.',
       features: ['
-        'Multi-dimensional consciousness mapping','
-        'Ethical boundary testing framework','
-        'Consciousness emergence prediction','
-        'Safety protocol validation','
-        'Real-time consciousness monitoring','
-        'Ethical decision tree analysis','
-        'Consciousness transfer protocols','
-        'Safety breach prevention','
-        'Regulatory compliance tools','
+        'Multi-dimensional consciousness mapping',
+        'Ethical boundary testing framework',
+        'Consciousness emergence prediction',
+        'Safety protocol validation',
+        'Real-time consciousness monitoring',
+        'Ethical decision tree analysis',
+        'Consciousness transfer protocols',
+        'Safety breach prevention',
+        'Regulatory compliance tools',
         'Research collaboration platform'
       ],
       popular: true,
-      icon: Brain,'
-      color: 'from-indigo-600 to-purple-700','
-      textColor: 'text-indigo-400','
-      link: '/ai-services/consciousness-simulator','
-      marketPosition: 'First-to-market AI consciousness simulation platform. No direct competitors in this specialized field. Positioned for research institutions and AI safety organizations.','
+      icon: Brain,
+      color: 'from-indigo-600 to-purple-700',
+      textColor: 'text-indigo-400',
+      link: '/ai-services/consciousness-simulator',
+      marketPosition: 'First-to-market AI consciousness simulation platform. No direct competitors in this specialized field. Positioned for research institutions and AI safety organizations.',
       targetAudience: 'AI research institutions, Ethics committees, AI safety organizations, Government agencies, University research departments, AI ethics think tanks',
-      trialDays: 30,'
-      setupTime: '2-4 weeks','
+      trialDays: 30,
+      setupTime: '2-4 weeks',
       category: 'AI & Consciousness Research',
-      realService: true,'
-      technology: ['Quantum computing', 'Advanced neural networks', 'Consciousness mapping algorithms', 'Ethical AI frameworks', 'Real-time monitoring systems'],'
-      integrations: ['Research databases', 'Academic platforms', 'Government systems', 'AI safety protocols', 'Ethics frameworks'],'
-      useCases: ['AI consciousness research', 'Ethical AI development', 'Safety protocol testing', 'Regulatory compliance', 'Academic research'],'
-      roi: 'Research institutions report 500% ROI through accelerated AI safety research and regulatory compliance.','
-      competitors: ['No direct competitors', 'Academic research tools', 'AI safety platforms'],'
-      marketSize: '$500M emerging market','
+      realService: true,
+      technology: ['Quantum computing',Advanced neural networks',Consciousness mapping algorithms',Ethical AI frameworks',Real-time monitoring systems'],
+      integrations: ['Research databases',Academic platforms',Government systems',AI safety protocols',Ethics frameworks'],
+      useCases: ['AI consciousness research',Ethical AI development',Safety protocol testing',Regulatory compliance',Academic research'],
+      roi: 'Research institutions report 500% ROI through accelerated AI safety research and regulatory compliance.',
+      competitors: ['No direct competitors',Academic research tools',AI safety platforms'],
+      marketSize: '$500M emerging market',
       growthRate: '300% annual growth',
       rating: 4.9,
       reviews: 18,
       customers: 25
     },
     {
-'
-      id: 'quantum-emotion-processor','
-      name: 'Quantum Emotion Processor','
-      tagline: 'Process and analyze emotions using quantum computing','
-      price: '$12,999','
-      period: '/month','
+
+      id: 'quantum-emotion-processor',
+      name: 'Quantum Emotion Processor',
+      tagline: 'Process and analyze emotions using quantum computing',
+      price: '$12,999',
+      period: '/month',
       description: 'Revolutionary quantum-powered emotional intelligence platform that processes human emotions with unprecedented accuracy and speed.',
       features: ['
-        'Quantum emotion recognition','
-        'Real-time emotional analysis','
-        'Multi-modal emotion processing','
-        'Emotional pattern prediction','
-        'Cross-cultural emotion mapping','
-        'Emotional health monitoring','
-        'Therapeutic intervention suggestions','
-        'Emotional intelligence training','
-        'Sentiment analysis at scale','
+        'Quantum emotion recognition',
+        'Real-time emotional analysis',
+        'Multi-modal emotion processing',
+        'Emotional pattern prediction',
+        'Cross-cultural emotion mapping',
+        'Emotional health monitoring',
+        'Therapeutic intervention suggestions',
+        'Emotional intelligence training',
+        'Sentiment analysis at scale',
         'Emotional data visualization'
       ],
       popular: false,
-      icon: Heart,'
-      color: 'from-pink-600 to-red-700','
-      textColor: 'text-pink-400','
-      link: '/ai-services/quantum-emotion','
-      marketPosition: 'Leading quantum emotion processing platform with advanced AI algorithms and quantum computing capabilities.','
+      icon: Heart,
+      color: 'from-pink-600 to-red-700',
+      textColor: 'text-pink-400',
+      link: '/ai-services/quantum-emotion',
+      marketPosition: 'Leading quantum emotion processing platform with advanced AI algorithms and quantum computing capabilities.',
       targetAudience: 'Healthcare providers, Mental health professionals, HR departments, Customer service teams, Educational institutions, Research organizations',
-      trialDays: 21,'
-      setupTime: '1-2 weeks','
+      trialDays: 21,
+      setupTime: '1-2 weeks',
       category: 'Quantum AI & Emotional Intelligence',
-      realService: true,'
-      technology: ['Quantum computing', 'Advanced AI algorithms', 'Emotion recognition', 'Natural language processing', 'Machine learning'],'
-      integrations: ['Healthcare systems', 'CRM platforms', 'HR software', 'Educational platforms', 'Research tools'],'
-      useCases: ['Mental health assessment', 'Customer sentiment analysis', 'HR decision support', 'Educational personalization', 'Research studies'],'
-      roi: 'Healthcare providers achieve 400% ROI through improved patient outcomes and operational efficiency.','
-      competitors: ['Traditional emotion analysis tools', 'AI sentiment platforms', 'Healthcare AI solutions'],'
-      marketSize: '$2.1B emotional AI market','
+      realService: true,
+      technology: ['Quantum computing',Advanced AI algorithms',Emotion recognition',Natural language processing',Machine learning'],
+      integrations: ['Healthcare systems',CRM platforms',HR software',Educational platforms',Research tools'],
+      useCases: ['Mental health assessment',Customer sentiment analysis',HR decision support',Educational personalization',Research studies'],
+      roi: 'Healthcare providers achieve 400% ROI through improved patient outcomes and operational efficiency.',
+      competitors: ['Traditional emotion analysis tools',AI sentiment platforms',Healthcare AI solutions'],
+      marketSize: '$2.1B emotional AI market',
       growthRate: '180% annual growth',;
       rating: 4.8,;
       reviews: 32,;
@@ -134,53 +134,53 @@ const AIServicesPage = () => {
 
   const aiSolutions = [
     {
-'
-      title: 'AI-Powered Chatbots','
-      description: 'Intelligent customer service automation','
-      benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
+
+      title: 'AI-Powered Chatbots',
+      description: 'Intelligent customer service automation',
+      benefits: ['24/7 Availability',Multi-language Support',Seamless Integration']
     },
     {
-'
-      title: 'Intelligent Document Processing','
-      description: 'Automated data extraction and analysis','
-      benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
+
+      title: 'Intelligent Document Processing',
+      description: 'Automated data extraction and analysis',
+      benefits: ['Faster Processing',Reduced Errors',Cost Savings']
     },
     {
-'
-      title: 'Predictive Maintenance','
-      description: 'Prevent equipment failures with AI insights','
-      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety'];
+
+      title: 'Predictive Maintenance',
+      description: 'Prevent equipment failures with AI insights',
+      benefits: ['Reduced Downtime',Lower Costs',Improved Safety'];
     },;
-    {;'
-      title: 'AI-Driven Marketing',;'
-      description: 'Personalized campaigns and customer insights',;'
-      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization'];
+    {;
+      title: 'AI-Driven Marketing',;
+      description: 'Personalized campaigns and customer insights',;
+      benefits: ['Higher Conversion',Better Targeting',ROI Optimization'];
     };
   ];
 
   const caseStudies = [
     {
-'
-      company: 'TechCorp Industries','
-      industry: 'Manufacturing','
-      challenge: 'Quality control inefficiencies','
-      solution: 'Computer vision system for defect detection','
-      results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
+
+      company: 'TechCorp Industries',
+      industry: 'Manufacturing',
+      challenge: 'Quality control inefficiencies',
+      solution: 'Computer vision system for defect detection',
+      results: ['99.2% accuracy',40% faster inspection',30% cost reduction']
     },
     {
-'
-      company: 'Global Finance Ltd','
-      industry: 'Financial Services','
-      challenge: 'Fraud detection complexity','
-      solution: 'ML-powered risk assessment','
-      results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
+
+      company: 'Global Finance Ltd',
+      industry: 'Financial Services',
+      challenge: 'Fraud detection complexity',
+      solution: 'ML-powered risk assessment',
+      results: ['95% fraud detection rate',60% faster processing',25% false positive reduction']
     },
-    {;'
-      company: 'HealthTech Solutions',;'
-      industry: 'Healthcare',;'
-      challenge: 'Patient data analysis',;'
-      solution: 'NLP for medical records',;'
-      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
+    {;
+      company: 'HealthTech Solutions',;
+      industry: 'Healthcare',;
+      challenge: 'Patient data analysis',;
+      solution: 'NLP for medical records',;
+      results: ['80% faster diagnosis',Improved accuracy',Better patient outcomes'];
     };
   ];
 
@@ -188,8 +188,8 @@ const AIServicesPage: React.FC = () => {
   return()
     <>
       <SEO"
-        title="AI Services - Zion Tech Group""
-        description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions.""
+        title="AI Services - Zion Tech Group"
+        description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
       />
 "
@@ -336,13 +336,13 @@ const AIServicesPage: React.FC = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Started Today
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 View All Services;

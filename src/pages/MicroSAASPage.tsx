@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -25,48 +25,48 @@ import {
 const MicroSAASPage = () => {
   const saasServices = [
     {
-'
-      id: 'custom-applications','
-      title: 'Custom Applications','
+
+      id: 'custom-applications',
+      title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
-      icon: <Code className="w-8 h-8" />,'
-      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],;'
-      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],;'
+      icon: <Code className="w-8 h-8" />,
+      features['Custom Development',Scalable Architecture',User Management',API Integration'],;
+      useCases['Business Tools',Industry Solutions',Process Automation',Customer Portals'],;
       pricing: 'Starting from $2,500/month'
     },
     {
-'
-      id: 'api-development','
-      title: 'API Development','
+
+      id: 'api-development',
+      title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',"
-      icon: <Database className="w-8 h-8" />,'
-      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],;'
-      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],;'
+      icon: <Database className="w-8 h-8" />,
+      features['RESTful APIs',GraphQL Services',Authentication',Rate Limiting'],;
+      useCases['System Integration',Mobile Apps',Third-party Services',Data Exchange'],;
       pricing: 'Starting from $1,800/month'
     },
     {
-'
-      id: 'scalable-architecture','
-      title: 'Scalable Architecture','
+
+      id: 'scalable-architecture',
+      title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',"
-      icon: <Globe className="w-8 h-8" />,'
-      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],;'
-      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],;'
+      icon: <Globe className="w-8 h-8" />,
+      features['Microservices',Containerization',Auto-scaling',Load Balancing'],;
+      useCases['High-traffic Applications',Growing Businesses',Enterprise Solutions',Global Deployments'],;
       pricing: 'Starting from $3,200/month'
     },
     {
-'
-      id: 'user-management','
-      title: 'User Management','
+
+      id: 'user-management',
+      title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems'};"
-      icon: <Users className="w-8 h-8" />,;'
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;'
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;'
+      icon: <Users className="w-8 h-8" />,;
+      features: ['Single Sign-On',Role-based Access',Multi-tenancy',User Analytics'],;
+      useCases: ['B2B Applications',Enterprise Software',Multi-user Platforms',SaaS Products'],;
       pricing: 'Starting from $1,500/month';
     };
   ];
-  const saasBenefits = [;'
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
+  const saasBenefits = [;
+    'Scalability',Cost Efficiency',Rapid Deployment',Easy Updates',Accessibility',Integration';
   ];
   const containerVariants = {
 
@@ -143,8 +143,8 @@ const MicroSAASPage = () => {
         {/* SAAS Services Grid */}
         <motion.div
           variants={containerVariants}"
-          initial="hidden""
-          animate="visible""
+          initial="hidden"
+          animate="visible"
           className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
         >
           {saasServices.map ( (service, index) => (<motion.div
@@ -369,13 +369,13 @@ to: {`/micro-saas/${service.id}`}"
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
 
               Start SAAS Project
             </Link>
             <Link"
-              to="/services/pricing""
+              to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
               View SAAS Pricing

@@ -1,91 +1,91 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react';
 const mockProjects = [
     {
-'
-        id: '1','
-        name: 'AI-Powered E-commerce Platform','
-        description: 'Next-generation e-commerce solution with AI recommendations','
-        status: 'in-progress','
+
+        id: '1',
+        name: 'AI-Powered E-commerce Platform',
+        description: 'Next-generation e-commerce solution with AI recommendations',
+        status: 'in-progress',
         priority: 'high',
-        progress: 65,'
-        startDate: '2024-01-15','
-        endDate: '2024-06-30','
-        team['John Smith', 'Sarah Johnson', 'Mike Chen'],;
+        progress: 65,
+        startDate: '2024-01-15',
+        endDate: '2024-06-30',
+        team['John Smith',Sarah Johnson',Mike Chen'],;
         budget: 150000,
         spent: 97500,
-        tasks[;'
-            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },'
-            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },'
+        tasks[;
+            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
+            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
             { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '2024-05-15', priority: 'medium', estimatedHours: 100, actualHours: 0 }
         ]
     },;
     {
-'
-        id: '2','
-        name: 'Blockchain Supply Chain Tracker','
-        description: 'Transparent supply chain tracking using blockchain','
-        status: 'planning','
+
+        id: '2',
+        name: 'Blockchain Supply Chain Tracker',
+        description: 'Transparent supply chain tracking using blockchain',
+        status: 'planning',
         priority: 'critical',
-        progress: 25,'
-        startDate: '2024-03-01','
-        endDate: '2024-08-31','
-        team['Emily Davis', 'Alex Rodriguez'],;
+        progress: 25,
+        startDate: '2024-03-01',
+        endDate: '2024-08-31',
+        team['Emily Davis',Alex Rodriguez'],;
         budget: 200000,
         spent: 50000,
-        tasks[;'
-            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },'
+        tasks[;
+            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
             { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '2024-05-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
         ]
     },;
     {
-'
-        id: '3','
-        name: 'Mobile Banking App','
-        description: 'Secure mobile banking with biometric authentication','
-        status: 'review','
+
+        id: '3',
+        name: 'Mobile Banking App',
+        description: 'Secure mobile banking with biometric authentication',
+        status: 'review',
         priority: 'high',
-        progress: 90,'
-        startDate: '2024-02-01','
-        endDate: '2024-04-30','
-        team['Lisa Wang', 'David Kim'],;
+        progress: 90,
+        startDate: '2024-02-01',
+        endDate: '2024-04-30',
+        team['Lisa Wang',David Kim'],;
         budget: 120000,
         spent: 108000,
-        tasks[;'
-            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },'
+        tasks[;
+            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
     }
 ];
 const statusColors = {
-'
-  'planning': 'bg-zion-blue text-white','
-    'in-progress': 'bg-zion-cyan text-white','
-    'review': 'bg-zion-gold text-white','
-    'completed': 'bg-zion-emerald text-white','
+
+  'planning': 'bg-zion-blue text-white',
+    'in-progress': 'bg-zion-cyan text-white',
+    'review': 'bg-zion-gold text-white',
+    'completed': 'bg-zion-emerald text-white',
   'on-hold': 'bg-zion-slate text-white'
 
 
 };
 const priorityColors = {
-'
-  'low': 'bg-zion-emerald text-white','
-    'medium': 'bg-zion-gold text-white','
-    'high': 'bg-zion-orange text-white','
+
+  'low': 'bg-zion-emerald text-white',
+    'medium': 'bg-zion-gold text-white',
+    'high': 'bg-zion-orange text-white',
   'critical': 'bg-red-500 text-white'
 
 
 };
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(null);'
-    const [filterStatus, setFilterStatus] = useState('all');'
-    const [filterPriority, setFilterPriority] = useState('all');'
-    const [searchQuery, setSearchQuery] = useState('');'
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [filterStatus, setFilterStatus] = useState('all');
+    const [filterPriority, setFilterPriority] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
     const [viewMode, setViewMode] = useState('grid');
     const filteredProjects = mockProjects.filter(project => {
-'
-        const statusMatch = filterStatus === 'all' || project.status === filterStatus;'
+
+        const statusMatch = filterStatus === 'all' || project.status === filterStatus;
         const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
         const searchMatch = project.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
             project.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -93,7 +93,7 @@ export function ProjectManagementDashboard() {
     const getStatusIcon = (status) => {
 
         switch (status) {
-'
+
             case 'planning': return <Calendar className="w-4 h-4"/>;'"
             case 'in-progress': return <TrendingUp className="w-4 h-4"/>;'"
             case 'review': return <Eye className="w-4 h-4"/>;'"
@@ -103,24 +103,24 @@ export function ProjectManagementDashboard() {
     };
     const getProgressColor = (progress) => {
 
-        if (progress >= 80)'
+        if (progress >= 80)
             return 'bg-zion-emerald';
-        if (progress >= 60)'
+        if (progress >= 60)
             return 'bg-zion-cyan';
-        if (progress >= 40)'
+        if (progress >= 40)
             return 'bg-zion-gold';
-        if (progress >= 20)'
-            return 'bg-zion-orange';'
+        if (progress >= 20)
+            return 'bg-zion-orange';
         return 'bg-red-500'};
     const calculateProjectHealth = (project) => {
-'
+
         const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
         const totalTasks = project.tasks.length;
         const budgetUtilization = (project.spent / project.budget) * 100;
-        if (overdueTasks > 0 || budgetUtilization > 90)'
+        if (overdueTasks > 0 || budgetUtilization > 90)
             return 'critical';
-        if (overdueTasks > 0 || budgetUtilization > 75)'
-            return 'warning';'
+        if (overdueTasks > 0 || budgetUtilization > 75)
+            return 'warning';
         return 'healthy'};
     if (!isVisible) {
 "
@@ -168,7 +168,7 @@ export function ProjectManagementDashboard() {
             </select>
           </div>
           "
-          <div className="flex items-center gap-2">'
+          <div className="flex items-center gap-2">
             <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>"
               <BarChart3 className="w-4 h-4"/>
             </button>'`
@@ -191,8 +191,8 @@ export function ProjectManagementDashboard() {
                     <p className="text-sm text-zion-slate-light line-clamp-2">{project.description}</p>
                   </div>"
                   <div className="flex items-center gap-2">`
-                    <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>'
-                      {project.status.replace('-', ' ')}
+                    <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
+                      {project.status.replace('-', ')}
                     </span>`
                     <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[project.priority]}`}>
                       {project.priority}
@@ -274,8 +274,8 @@ export function ProjectManagementDashboard() {
                         </div>
                       </td>"
                       <td className="px-6 py-4">`
-                        <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>'
-                          {project.status.replace('-', ' ')}
+                        <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
+                          {project.status.replace('-', ')}
                         </span>
                       </td>"
                       <td className="px-6 py-4">"
@@ -335,7 +335,7 @@ export function ProjectManagementDashboard() {
                         project.status === 'review' ? 'bg-zion-gold' :'`
                             project.status === 'planning' ? 'bg-zion-blue' : 'bg-zion-slate'}`} style={{
 `
-                    width: `${project.progress}%`,'`
+                    width: `${project.progress}%`,`
                     left: `${((new Date(project.startDate).getTime() - new Date('2024-01-01').getTime()) / (new Date('2024-12-31').getTime() - new Date('2024-01-01').getTime())) * 100}%`
                 }}></div>
                       </div>
@@ -368,8 +368,8 @@ export function ProjectManagementDashboard() {
                   <div className="space-y-3">"
                     <div className="flex items-center justify-between">"
                       <span className="text-zion-slate-light">Status:</span>`
-                      <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProject.status]}`}>'
-                        {selectedProject.status.replace('-', ' ')}
+                      <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProject.status]}`}>
+                        {selectedProject.status.replace('-', ')}
                       </span>
                     </div>"
                     <div className="flex items-center justify-between">"
@@ -393,8 +393,8 @@ export function ProjectManagementDashboard() {
                           <span className="font-medium text-zion-slate">{task.name}</span>'`
                           <span className={`px-2 py-1 text-xs rounded-full ${task.status === 'completed' ? 'bg-zion-emerald text-white' :'
                     task.status === 'in-progress' ? 'bg-zion-cyan text-white' :'`
-                        task.status === 'review' ? 'bg-zion-gold text-white' : 'bg-zion-slate text-white'}`}>'
-                            {task.status.replace('-', ' ')}
+                        task.status === 'review' ? 'bg-zion-gold text-white' : 'bg-zion-slate text-white'}`}>
+                            {task.status.replace('-', ')}
                           </span>
                         </div>"
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">

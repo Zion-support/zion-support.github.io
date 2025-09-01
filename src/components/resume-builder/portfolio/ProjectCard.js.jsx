@@ -1,6 +1,6 @@
-import { useState } from 'react';'
-import { Card, CardContent, CardFooter } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -10,8 +10,8 @@ import {
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
-  AlertDialogHeader,'
-  AlertDialogTitle} from '@/components/ui/alert-dialog';'
+  AlertDialogHeader,
+  AlertDialogTitle} from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
 export function ProjectCard({ project, onEdit, onDelete }) {
 
@@ -67,9 +67,9 @@ export function ProjectCard({ project, onEdit, onDelete }) {
           {project.github_url && (
             <a
               href={project.github_url}"
-              target="_blank""
-              rel="noopener noreferrer""
-              aria-label="GitHub""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
               title="GitHub"
             >"
               <Button variant="ghost" size="icon" aria-label="GitHub link">"
@@ -81,9 +81,9 @@ export function ProjectCard({ project, onEdit, onDelete }) {
           {project.demo_url && (
             <a
               href={project.demo_url}"
-              target="_blank""
-              rel="noopener noreferrer""
-              aria-label="Live demo""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live demo"
               title="Live demo"
             >"
               <Button variant="ghost" size="icon" aria-label="Live demo link">"
@@ -95,7 +95,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
 "
         <div className="flex gap-2">
           <Button"
-            variant="ghost""
+            variant="ghost"
             size="icon"
             onClick={() => onEdit(project)}"
             aria-label="Edit project"
@@ -103,7 +103,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             <Edit className="h-4 w-4" />
           </Button>
           <Button"
-            variant="ghost""
+            variant="ghost"
             size="icon"
             onClick={() => setDeleteDialogOpen(true)}"
             aria-label="Delete project"

@@ -11,41 +11,41 @@ import {
   Eye,
   ExternalLink,
   TrendingUp,
-  Award,'
+  Award,
   Globe} from 'lucide-react';
 
 const News = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
+
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = ['
-    'All','
-    'Comp News','
-    'Product Updates','
-    'Industry Insights','
-    'Awards & Recognition','
-    'Partnerships','
-    'Research & Development','
+    'All',
+    'Comp News',
+    'Product Updates',
+    'Industry Insights',
+    'Awards & Recognition',
+    'Partnerships',
+    'Research & Development',
     'Market Trends',
   ];
 
   const sources = ['
-    'All Sources','
-    'Comp Press Releases','
-    'Industry Reports','
-    'Technology News','
-    'Research Papers','
-    'Partner Updates','
+    'All Sources',
+    'Comp Press Releases',
+    'Industry Reports',
+    'Technology News',
+    'Research Papers',
+    'Partner Updates',
     'Customer Success Stories',
   ];
 
   const timeframes = ['
-    'All Time','
-    'Last 24 Hours','
-    'Last Week','
-    'Last Month','
-    'Last 3 Months','
+    'All Time',
+    'Last 24 Hours',
+    'Last Week',
+    'Last Month',
+    'Last 3 Months',
     'Last Year',
   ];
 
@@ -54,64 +54,64 @@ const News = () => {
 
       id: 1,
       title:'
-        'Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform','
-      category: 'Product Updates','
-      source: 'Comp Press Releases','
-      date: '2025-01-15','
+        'Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform',
+      category: 'Product Updates',
+      source: 'Comp Press Releases',
+      date: '2025-01-15',
       readTime: '5 min read',
       excerpt:'
-        'Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.','
+        'Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.',
       image: '/images/news/quantum-ai-platform.jpg',
       featured: true},
     {
 
       id: 2,
       title:'
-        'Zion Tech Group Recognized as Top AI Solutions Provider in 2024 Tech Awards','
-      category: 'Awards & Recognition','
-      source: 'Industry Reports','
-      date: '2024-12-20','
+        'Zion Tech Group Recognized as Top AI Solutions Provider in 2024 Tech Awards',
+      category: 'Awards & Recognition',
+      source: 'Industry Reports',
+      date: '2024-12-20',
       readTime: '3 min read',
       excerpt:'
-        'Industry recognition for our innovative AI solutions and commitment to driving digital transformation across enterprises.','
+        'Industry recognition for our innovative AI solutions and commitment to driving digital transformation across enterprises.',
       image: '/images/news/award-recognition.jpg',
       featured: false},
     {
 
       id: 3,
       title:'
-        'Strategic Partnership Announced with Leading Cloud Infrastructure Provider','
-      category: 'Partnerships','
-      source: 'Comp Press Releases','
-      date: '2024-12-10','
+        'Strategic Partnership Announced with Leading Cloud Infrastructure Provider',
+      category: 'Partnerships',
+      source: 'Comp Press Releases',
+      date: '2024-12-10',
       readTime: '4 min read',
       excerpt:'
-        'New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.','
+        'New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.',
       image: '/images/news/partnership-announcement.jpg',
       featured: false},
     {
 
       id: 4,
       title:'
-        'Breakthrough in Autonomous Business Operations: New Research Findings','
-      category: 'Research & Development','
-      source: 'Research Papers','
-      date: '2024-11-28','
+        'Breakthrough in Autonomous Business Operations: New Research Findings',
+      category: 'Research & Development',
+      source: 'Research Papers',
+      date: '2024-11-28',
       readTime: '8 min read',
       excerpt:'
-        'Latest research reveals significant advancements in autonomous business process automation and decision-making systems.','
+        'Latest research reveals significant advancements in autonomous business process automation and decision-making systems.',
       image: '/images/news/research-breakthrough.jpg',
       featured: false},
     {
 
-      id: 5,'
-      title: 'Market Trends: AI Adoption Accelerates Across Enterprise Sectors','
-      category: 'Market Trends','
-      source: 'Industry Reports','
-      date: '2024-11-15','
+      id: 5,
+      title: 'Market Trends: AI Adoption Accelerates Across Enterprise Sectors',
+      category: 'Market Trends',
+      source: 'Industry Reports',
+      date: '2024-11-15',
       readTime: '6 min read',
       excerpt:'
-        'Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.','
+        'Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.',
       image: '/images/news/market-trends.jpg',
       featured: false},
   ];
@@ -151,7 +151,7 @@ const News = () => {
               <div className="relative flex-1 max-w-md">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search news..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"

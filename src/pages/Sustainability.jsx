@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -44,140 +44,140 @@ import {
   Droplets,
   Recycle,
   Cloud,
-  Battery,'
+  Battery,
   Thermometer} from 'lucide-react';
 
 const Sustainability = () => {
   const sustainabilitySolutions = [
     {
 
-      id: 1,'
+      id: 1,
       title: 'Renewable Energy Systems',
       description:'
         'Solar, wind, and hydroelectric power solutions for sustainable energy generation.',
       icon: Sun,
       features: ['
-        'Solar panel installation','
-        'Wind turbine systems','
-        'Energy storage solutions','
+        'Solar panel installation',
+        'Wind turbine systems',
+        'Energy storage solutions',
         'Grid integration',
-      ],'
-      price: 'From $200,000','
-      timeline: '32-48 weeks','
-      category: 'Energy','
-      technologies: ['Solar PV', 'Wind Power', 'Battery Storage', 'Smart Grid']},
+      ],
+      price: 'From $200,000',
+      timeline: '32-48 weeks',
+      category: 'Energy',
+      technologies: ['Solar PV',Wind Power',Battery Storage',Smart Grid']},
     {
 
-      id: 2,'
+      id: 2,
       title: 'Green Building Solutions',
       description:'
         'Sustainable building design and construction for energy efficiency and environmental impact reduction.',
       icon: Building,
       features: ['
-        'LEED certification','
-        'Energy-efficient design','
-        'Green materials','
+        'LEED certification',
+        'Energy-efficient design',
+        'Green materials',
         'Smart building systems',
-      ],'
-      price: 'From $150,000','
-      timeline: '24-40 weeks','
+      ],
+      price: 'From $150,000',
+      timeline: '24-40 weeks',
       category: 'Buildings',
       technologies: ['
-        'LEED Standards','
-        'BIM Modeling','
-        'IoT Sensors','
+        'LEED Standards',
+        'BIM Modeling',
+        'IoT Sensors',
         'Energy Management',
       ]},
     {
 
-      id: 3,'
+      id: 3,
       title: 'Waste Management Systems',
       description:'
         'Advanced waste reduction, recycling, and circular economy solutions.',
       icon: Recycle,
       features: ['
-        'Waste sorting automation','
-        'Recycling optimization','
-        'Circular economy design','
+        'Waste sorting automation',
+        'Recycling optimization',
+        'Circular economy design',
         'Waste-to-energy',
-      ],'
-      price: 'From $100,000','
-      timeline: '20-32 weeks','
-      category: 'Waste Management','
-      technologies: ['AI Sorting', 'IoT Monitoring', 'Biogas', 'Composting']},
+      ],
+      price: 'From $100,000',
+      timeline: '20-32 weeks',
+      category: 'Waste Management',
+      technologies: ['AI Sorting',IoT Monitoring',Biogas',Composting']},
     {
 
-      id: 4,'
+      id: 4,
       title: 'Sustainable Transportation',
       description:'
         'Electric vehicles, public transit optimization, and green logistics solutions.',
       icon: Car,
       features: ['
-        'EV infrastructure','
-        'Public transit optimization','
-        'Green logistics','
+        'EV infrastructure',
+        'Public transit optimization',
+        'Green logistics',
         'Carbon footprint tracking',
-      ],'
-      price: 'From $120,000','
-      timeline: '24-36 weeks','
+      ],
+      price: 'From $120,000',
+      timeline: '24-36 weeks',
       category: 'Transportation',
       technologies: ['
-        'EV Charging','
-        'Smart Routing','
-        'Fleet Management','
+        'EV Charging',
+        'Smart Routing',
+        'Fleet Management',
         'Carbon Analytics',
       ]},
     {
 
-      id: 5,'
+      id: 5,
       title: 'Water Conservation',
       description:'
         'Smart water management and conservation systems for sustainable resource use.',
       icon: Droplets,
       features: ['
-        'Smart irrigation','
-        'Water quality monitoring','
-        'Leak detection','
+        'Smart irrigation',
+        'Water quality monitoring',
+        'Leak detection',
         'Conservation analytics',
-      ],'
-      price: 'From $80,000','
-      timeline: '16-24 weeks','
+      ],
+      price: 'From $80,000',
+      timeline: '16-24 weeks',
       category: 'Water Management',
       technologies: ['
-        'IoT Sensors','
-        'AI Analytics','
-        'Smart Valves','
+        'IoT Sensors',
+        'AI Analytics',
+        'Smart Valves',
         'Water Quality',
       ]},
     {
 
-      id: 6,'
+      id: 6,
       title: 'Carbon Management',
       description:'
         'Comprehensive carbon footprint tracking and reduction strategies.',
       icon: Globe,
       features: ['
-        'Carbon footprint analysis','
-        'Emissions tracking','
-        'Offset strategies','
+        'Carbon footprint analysis',
+        'Emissions tracking',
+        'Offset strategies',
         'Sustainability reporting',
-      ],'
-      price: 'From $60,000','
-      timeline: '12-20 weeks','
+      ],
+      price: 'From $60,000',
+      timeline: '12-20 weeks',
       category: 'Environmental',
       technologies: ['
-        'Carbon Analytics','
-        'IoT Monitoring','
-        'AI Reporting','
+        'Carbon Analytics',
+        'IoT Monitoring',
+        'AI Reporting',
         'Blockchain',
       ]},
   ];
 
   const successStories = [
     {
-'
-      logo: '🏭','
-      comp: 'EcoManufacturing Inc.','
+
+      logo: '🏭',
+      comp: 'EcoManufacturing Inc.',
       industry: 'Manufacturing',
       challenge:'
         'High energy costs and carbon emissions from traditional manufacturing processes.',
@@ -186,9 +186,9 @@ const Sustainability = () => {
       results:'
         '40% reduction in energy costs, 60% decrease in carbon footprint, LEED Gold certification.'},
     {
-'
-      logo: '🏢','
-      comp: 'GreenTech Office Complex','
+
+      logo: '🏢',
+      comp: 'GreenTech Office Complex',
       industry: 'Commercial Real Estate',
       challenge:'
         'Outdated building systems causing excessive energy waste and poor tenant satisfaction.',
@@ -197,9 +197,9 @@ const Sustainability = () => {
       results:'
         '35% energy savings, 25% increase in tenant satisfaction, 50% reduction in maintenance costs.'},
     {
-'
-      logo: '🚛','
-      comp: 'Sustainable Logistics Co.','
+
+      logo: '🚛',
+      comp: 'Sustainable Logistics Co.',
       industry: 'Transportation & Logistics',
       challenge:'
         'High fuel costs and carbon emissions from traditional fleet operations.',
@@ -221,7 +221,7 @@ const Sustainability = () => {
           >"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Sustainable"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
                 {' '}
                 Technology
               </span>
@@ -233,13 +233,13 @@ const Sustainability = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Sustainability Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-green-500 text-green-400 font-semibold rounded-xl hover:bg-green-500 hover:text-white transition-all duration-300"
               >
                 Sustainability Consultation
@@ -395,7 +395,7 @@ const Sustainability = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for Sustainable Transformation?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Let's discuss how sustainable technology can transform your
               business, reduce environmental impact, and create new
               opportunities for growth.
@@ -403,13 +403,13 @@ const Sustainability = () => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Sustainability Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-green-500 text-green-400 font-semibold rounded-xl hover:bg-green-500 hover:text-white transition-all duration-300"
               >
                 Sustainability Consultation

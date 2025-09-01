@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';
 import { Search,
   Filter,
@@ -30,21 +30,21 @@ import { Search,
  } from 'lucide-react.ts';
 
 export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
   const categories = ['
-    { id: 'all', name: 'All Services', icon: Globe },'
-    { id: 'ai-services', name: 'AI Services', icon: Brain },'
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom },'
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: Lock },'
-    { id: 'biotech-ai', name: 'HealthTech & BioTech', icon: Heart },'
-    { id: 'fintech', name: 'FinTech', icon: DollarSign },'
-    { id: 'edutech', name: 'EduTech', icon: GraduationCap },'
-    { id: 'martech', name: 'MarTech', icon: BarChart3 },'
-    { id: 'space-tech', name: 'Space Tech', icon: Satellite },'
+    { id: 'all', name: 'All Services', icon: Globe },
+    { id: 'ai-services', name: 'AI Services', icon: Brain },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom },
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: Lock },
+    { id: 'biotech-ai', name: 'HealthTech & BioTech', icon: Heart },
+    { id: 'fintech', name: 'FinTech', icon: DollarSign },
+    { id: 'edutech', name: 'EduTech', icon: GraduationCap },
+    { id: 'martech', name: 'MarTech', icon: BarChart3 },
+    { id: 'space-tech', name: 'Space Tech', icon: Satellite },
     { id: 'emerging-tech', name: 'Emerging Tech', icon: Cpu }
   ];
 
@@ -53,15 +53,15 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
 
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());'
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
-'
-      if (sortBy === 'featured') return b.featured ? 1 : -1;'
-      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
-      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
+
+      if (sortBy === 'featured') return b.featured ? 1 : -1;
+      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,'));
+      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,'));
       return 0;
     }) ;
 
@@ -74,17 +74,17 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
   const getCategoryColor = (category: anystring)  => {
 
     const colors: { [key: string]: string } = {
-'
-      'ai-services': 'from-purple-500 to-pink-600','
-      'quantum-computing': 'from-indigo-500 to-purple-600','
-      'blockchain-web3': 'from-green-500 to-teal-600','
-      'biotech-ai': 'from-red-500 to-pink-600','
-      'fintech': 'from-orange-500 to-red-600','
-      'edutech': 'from-blue-500 to-indigo-600','
-      'martech': 'from-green-500 to-emerald-600','
-      'space-tech': 'from-purple-500 to-indigo-600','
+
+      'ai-services': 'from-purple-500 to-pink-600',
+      'quantum-computing': 'from-indigo-500 to-purple-600',
+      'blockchain-web3': 'from-green-500 to-teal-600',
+      'biotech-ai': 'from-red-500 to-pink-600',
+      'fintech': 'from-orange-500 to-red-600',
+      'edutech': 'from-blue-500 to-indigo-600',
+      'martech': 'from-green-500 to-emerald-600',
+      'space-tech': 'from-purple-500 to-indigo-600',
       'emerging-tech': 'from-teal-500 to-cyan-600'
-    };'
+    };
     return colors[category] || 'from-gray-500 to-gray-600';
   };
 
@@ -115,7 +115,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -270,8 +270,8 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
               <div className="space-y-2">
                 <a
                   href={service.link}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
                 >
                   Learn More"
@@ -335,9 +335,9 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
 "
           <div className="text-center mt-8">
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
             >"
               <Globe className="w-5 h-5" />

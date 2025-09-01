@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';'
-import { GradientHeading  } from '@/components/GradientHeading';'
-import { Button  } from '@/components/ui/button';'
-import { Input  } from '@/components/ui/input';'
-import { useNavigate  } from 'react-router-dom.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useNavigate  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
 ;
 export function ITServiceRequestHero(...args[]):  {
@@ -61,9 +61,9 @@ export function ITServiceRequestHero(...args[]):  {
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-'
-import React from 'react';'
-import { motion } from 'framer-motion';'
+
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export function ITServiceRequestHero() {
@@ -78,7 +78,7 @@ export function ITServiceRequestHero() {
       <motion.div"
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
 "
@@ -133,7 +133,7 @@ export function ITServiceRequestHero() {
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
               <Button"
-                variant="outline""
+                variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
 
                 Learn More

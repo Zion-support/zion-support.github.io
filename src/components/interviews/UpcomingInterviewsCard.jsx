@@ -17,7 +17,7 @@ export function UpcomingInterviewsCard() {
             try {
                 const interviews = await fetchInterviews();
                 // Filter for confirmed interviews in the future
-                const upcoming = interviews;'
+                const upcoming = interviews;
                     .filter(interview => interview.status === 'confirmed' &&
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
@@ -88,8 +88,8 @@ export function UpcomingInterviewsCard() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 
-            const interviewDate = parseISO(interview.scheduled_date);'
-            const formattedTime = format(interviewDate, 'h:mm a');
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedTime = format(interviewDate,h:mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, 
 import { motion  } from 'framer - motion.ts';
@@ -20,16 +20,16 @@ import { motion  } from 'framer - motion.ts';
 
       return}
 
-    setIsLoading(true);'
+    setIsLoading(true);
     setError('');
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-'
-      setSuccess('Verification code sent to your email!');'
+
+      setSuccess('Verification code sent to your email!');
       setStep('verification')} catch (err) {
-'
+
       setError('Failed to send verification code. Please try again.')} finally {
 
       setIsLoading(false)}
@@ -37,16 +37,16 @@ import { motion  } from 'framer - motion.ts';
 
       return}
 
-    setIsLoading(true);'
+    setIsLoading(true);
     setError('');
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-'
-      setSuccess('Code verified! Please set your new password.');'
+
+      setSuccess('Code verified! Please set your new password.');
       setStep('reset')} catch (err) {
-'
+
       setError('Invalid verification code. Please try again.')} finally {
 
       setIsLoading(false)}
@@ -54,31 +54,31 @@ import { motion  } from 'framer - motion.ts';
 
       return}
     if (newPassword !== confirmPassword) {
-'
+
       setError('Passwords do not match');
       return}
 
-    setIsLoading(true);'
+    setIsLoading(true);
     setError('');
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-'
+
       setSuccess('Password reset successfully! Redirecting to login...');
       setTimeout(() => {
-'
+
         window.location.href = '/login'}, 2000)} catch (err) {
-'
+
       setError('Failed to reset password. Please try again.')} finally {;
       setIsLoading(false)};
   };
-'
+
       description: 'Enhanced security with verification codes';
     },;
     {;
-      icon: <RefreshCw className="w-6 h-6" />,;'
-      title: 'Secure Reset Process',;'
+      icon: <RefreshCw className="w-6 h-6" />,;
+      title: 'Secure Reset Process',;
       description: 'Time-limited verification codes for safety';
     };
   ];
@@ -86,19 +86,19 @@ import { motion  } from 'framer - motion.ts';
   const benefits = [
     {
 "
-      icon: <Brain className="w-6 h-6" />,'
-      title: 'AI-Powered Solutions','
+      icon: <Brain className="w-6 h-6" />,
+      title: 'AI-Powered Solutions',
       description: 'Access cutting-edge AI and machine learning technologies'
     },
     {
 "
-      icon: <Cloud className="w-6 h-6" />,'
-      title: 'Cloud Infrastructure','
+      icon: <Cloud className="w-6 h-6" />,
+      title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for your business needs';
     },;
     {;"
-      icon: <Rocket className="w-6 h-6" />,;'
-      title: 'Digital Transformation',;'
+      icon: <Rocket className="w-6 h-6" />,;
+      title: 'Digital Transformation',;
       description: 'Transform your business with modern technology';
     };
   ];
@@ -125,7 +125,7 @@ import { motion  } from 'framer - motion.ts';
         <h1 className="text-3xl font-bold text-white mb-4">
           Forgot Your Password?
         </h1>"
-        <p className="text-slate-300 text-lg">'
+        <p className="text-slate-300 text-lg">
           No worries! Enter your email address and we'll send you a verification code to reset your password.
         </p>
       </div>
@@ -141,7 +141,7 @@ import { motion  } from 'framer - motion.ts';
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}"
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Enter your email address"
               required
             />
@@ -204,8 +204,8 @@ import { motion  } from 'framer - motion.ts';
             type="text"
             value={verificationCode}
             onChange = {
-'
-  (e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
+
+  (e) => setVerificationCode(e.target.value.replace(/\D/g,').slice(0,
   6))
 
 
@@ -214,7 +214,7 @@ import { motion  } from 'framer - motion.ts';
 
 
 }"
-            className="w-full text-center text-2xl font-mono py-4 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent tracking-widest""
+            className="w-full text-center text-2xl font-mono py-4 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent tracking-widest"
             placeholder="000000"
             maxLength={6}
             required
@@ -257,7 +257,7 @@ import { motion  } from 'framer - motion.ts';
             type="button"
             onClick={handleEmailSubmit}"
             className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200";
-          >;'
+          >;
             Didn't receive the code? Resend;
           </button>;
         </div>;
@@ -302,7 +302,7 @@ import { motion  } from 'framer - motion.ts';
               type={showPassword ? 'text' : 'password'}
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Enter new password"
               required
             />
@@ -310,7 +310,7 @@ import { motion  } from 'framer - motion.ts';
               type="button"
               onClick={() => setShowPassword(!showPassword)}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
+
               {showPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -325,8 +325,8 @@ import { motion  } from 'framer - motion.ts';
   `h-1 flex-1 rounded-full transition-all duration-300 ${
 
                       level <= passwordStrength.score'
-                        ? passwordStrength.color.replace('text-','
-  'bg-')'
+                        ? passwordStrength.color.replace('text-',
+  'bg-')
                         : 'bg-slate-600/30'
                     
 
@@ -355,7 +355,7 @@ import { motion  } from 'framer - motion.ts';
               type={showConfirmPassword ? 'text' : 'password'}
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="Confirm new password"
               required
             />
@@ -363,7 +363,7 @@ import { motion  } from 'framer - motion.ts';
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
+
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
@@ -467,9 +467,9 @@ import { motion  } from 'framer - motion.ts';
             </motion.div>) }
 
           {/* Form Container */}"
-          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">'
-            {step === 'email' && renderEmailStep()}'
-            {step === 'verification' && renderVerificationStep()}'
+          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+            {step === 'email' && renderEmailStep()}
+            {step === 'verification' && renderVerificationStep()}
             {step === 'reset' && renderResetStep()}
           </div>
 

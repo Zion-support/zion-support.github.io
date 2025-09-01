@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -8,10 +8,10 @@ import {
   CheckCircle,
   TrendingUp,
   Shield,
-  Code,'
-  Users} from 'lucide-react';'
-import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';'
-import { Button } from '@/components/ui/button';'
+  Code,
+  Users} from 'lucide-react';
+import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 export function MicroSaasServicesSection() {
   const featuredServices = getFeaturedMicroSaasServices().slice(0, 3);
@@ -59,7 +59,7 @@ export function MicroSaasServicesSection() {
             <span className="text-zion-slate-light text-sm ml-1">/mo</span>
           </div>
           <Badge"
-            variant="outline""
+            variant="outline"
             className="border-zion-purple/30 text-zion-purple"
           >
             {service.subcategory}
@@ -166,7 +166,7 @@ export function MicroSaasServicesSection() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 asChild"
-                size="lg""
+                size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover:from-zion-purple-light hover:to-zion-cyan-light shadow-lg shadow-zion-purple/20"
               >"
                 <Link to="/micro-saas-services">
@@ -176,8 +176,8 @@ export function MicroSaasServicesSection() {
               </Button>
               <Button
                 asChild"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
               >"
                 <Link to="/contact">Get Consultation</Link>

@@ -1,4 +1,4 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 
 
@@ -11,14 +11,14 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({
-'
-  className = '', '
-  height = 'h-4', '
+
+  className = '',
+  height = 'h-4',
   width = 'w-full', 
   rounded = true,
   animated = true;
 }) => {
-'
+
   const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`;`
   const classes = `${baseClasses} ${className}`;
 
@@ -43,22 +43,22 @@ const Skeleton: React.FC<SkeletonProps> = ({
 };
 
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
-'
+
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
   count?: number;
   className?: string;
 }
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-'
+
   type = 'card', 
-  count = 3,'
+  count = 3,
   className = '' 
 }) => {
 
   const renderSkeleton = () => {
     switch (type) {
-'
+
       case 'hero':
         return ("
           <div className="space-y-6">"

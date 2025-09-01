@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Button } from '../ui/button';'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';'
-import { Badge } from '../ui/badge';'
+import React from 'react';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
 import { MessageCircle, Calendar, Star } from 'lucide-react';
 export const HireNowCTA = ({
 
@@ -38,7 +38,7 @@ export const HireNowCTA = ({
             <Badge'
               variant={availability === 'available' ? 'default' : 'secondary'}
               className={
-'
+
                 availability === 'available''
                   ? 'bg-green-100 text-green-800''
                   : ''

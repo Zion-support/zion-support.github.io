@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -79,232 +79,232 @@ import {
   FileText as FileTextIcon2,
   Users as UsersIcon4,
   Code as CodeIcon2,
-  HelpCircle as HelpCircleIcon2,'
-  DollarSign as DollarSignIcon2} from 'lucide-react';'
+  HelpCircle as HelpCircleIcon2,
+  DollarSign as DollarSignIcon2} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
   const featuredServices = [
     {
-'
-      id: 'ai-quantum-hybrid-platform','
+
+      id: 'ai-quantum-hybrid-platform',
       name: 'AI Quantum Hybrid Platform',
       description:'
         'Revolutionary AI-Quantum hybrid computing platform combining quantum computing with artificial intelligence',
-      icon: Atom,'
-      color: 'from-purple-500 to-cyan-500','
+      icon: Atom,
+      color: 'from-purple-500 to-cyan-500',
       price: '$2,999/month',
       features: ['
-        'Quantum-Classical Hybrid Processing','
-        'AI-Quantum Algorithm Optimization','
+        'Quantum-Classical Hybrid Processing',
+        'AI-Quantum Algorithm Optimization',
         'Real-time Quantum Error Correction',
-      ],'
-      href: '/services/ai-quantum-hybrid-platform','
+      ],
+      href: '/services/ai-quantum-hybrid-platform',
       category: 'AI & Quantum Computing',
       featured: true},
     {
-'
-      id: 'ai-autonomous-research-assistant','
+
+      id: 'ai-autonomous-research-assistant',
       name: 'AI Autonomous Research Assistant',
       description:'
         'AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously',
-      icon: Search,'
-      color: 'from-blue-500 to-cyan-500','
+      icon: Search,
+      color: 'from-blue-500 to-cyan-500',
       price: '$299/month',
       features: ['
-        'Autonomous Research Discovery','
-        'Intelligent Literature Review','
+        'Autonomous Research Discovery',
+        'Intelligent Literature Review',
         'Research Paper Generation',
-      ],'
-      href: '/services/ai-autonomous-research-assistant','
+      ],
+      href: '/services/ai-autonomous-research-assistant',
       category: 'AI & Research',
       featured: true},
     {
-'
-      id: 'ai-cybersecurity-threat-intelligence','
+
+      id: 'ai-cybersecurity-threat-intelligence',
       name: 'AI Cybersecurity Threat Intelligence',
       description:'
         'Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time',
-      icon: Shield,'
-      color: 'from-red-500 to-orange-500','
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
       price: '$599/month',
       features: ['
-        'AI-Powered Threat Detection','
-        '24/7 Threat Monitoring','
+        'AI-Powered Threat Detection',
+        '24/7 Threat Monitoring',
         'Predictive Threat Intelligence',
-      ],'
-      href: '/services/ai-cybersecurity-threat-intelligence','
+      ],
+      href: '/services/ai-cybersecurity-threat-intelligence',
       category: 'AI & Cybersecurity',
       featured: true},
     {
-'
-      id: 'ai-business-intelligence','
+
+      id: 'ai-business-intelligence',
       name: 'AI Business Intelligence',
       description:'
         'Advanced AI-powered business intelligence and analytics platform for data-driven decision making',
-      icon: Brain,'
-      color: 'from-green-500 to-emerald-500','
+      icon: Brain,
+      color: 'from-green-500 to-emerald-500',
       price: '$799/month',
       features: ['
-        'Predictive Analytics','
-        'Real-time Dashboards','
+        'Predictive Analytics',
+        'Real-time Dashboards',
         'Automated Reporting',
-      ],'
-      href: '/services/ai-business-intelligence','
+      ],
+      href: '/services/ai-business-intelligence',
       category: 'AI & Analytics',
       featured: true},
     {
-'
-      id: 'ai-financial-analytics','
+
+      id: 'ai-financial-analytics',
       name: 'AI Financial Analytics',
       description:'
         'Intelligent financial analysis and forecasting platform powered by advanced AI algorithms',
-      icon: TrendingUp,'
-      color: 'from-yellow-500 to-orange-500','
+      icon: TrendingUp,
+      color: 'from-yellow-500 to-orange-500',
       price: '$999/month',
       features: ['
-        'Financial Forecasting','
-        'Risk Assessment','
+        'Financial Forecasting',
+        'Risk Assessment',
         'Portfolio Optimization',
-      ],'
-      href: '/services/ai-financial-analytics','
+      ],
+      href: '/services/ai-financial-analytics',
       category: 'AI & Finance',
       featured: true},
     {
-'
-      id: 'ai-marketing-automation','
+
+      id: 'ai-marketing-automation',
       name: 'AI Marketing Automation',
       description:'
         'Intelligent marketing automation platform that personalizes campaigns and optimizes ROI',
-      icon: Target,'
-      color: 'from-pink-500 to-purple-500','
+      icon: Target,
+      color: 'from-pink-500 to-purple-500',
       price: '$699/month',
       features: ['
-        'Personalized Campaigns','
-        'ROI Optimization','
+        'Personalized Campaigns',
+        'ROI Optimization',
         'Customer Segmentation',
-      ],'
-      href: '/services/ai-marketing-automation','
+      ],
+      href: '/services/ai-marketing-automation',
       category: 'AI & Marketing',
       featured: true},
   ];
 
   const serviceCategories = [
     {
-'
+
       title: 'AI & Machine Learning',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-cyan-500',
       services: ['
-        'AI Business Intelligence','
-        'AI Financial Analytics','
-        'AI Marketing Automation','
-        'AI Customer Support','
-        'AI Content Creation','
+        'AI Business Intelligence',
+        'AI Financial Analytics',
+        'AI Marketing Automation',
+        'AI Customer Support',
+        'AI Content Creation',
         'AI HR Platform',
       ]},
     {
-'
+
       title: 'Quantum Computing',
-      icon: Atom,'
+      icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       services: ['
-        'AI Quantum Hybrid Platform','
-        'Quantum Computing Solutions','
-        'Quantum Machine Learning','
+        'AI Quantum Hybrid Platform',
+        'Quantum Computing Solutions',
+        'Quantum Machine Learning',
         'Quantum Cryptography',
       ]},
     {
-'
+
       title: 'Cybersecurity',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: ['
-        'AI Cybersecurity Threat Intelligence','
-        'Zero Trust Network Access','
-        'Security Headers & CSP','
+        'AI Cybersecurity Threat Intelligence',
+        'Zero Trust Network Access',
+        'Security Headers & CSP',
         'DSR Privacy Portal',
       ]},
     {
-'
+
       title: 'Research & Analytics',
-      icon: Search,'
+      icon: Search,
       color: 'from-blue-500 to-cyan-500',
       services: ['
-        'AI Autonomous Research Assistant','
-        'Data Analytics Platform','
-        'Business Intelligence','
+        'AI Autonomous Research Assistant',
+        'Data Analytics Platform',
+        'Business Intelligence',
         'Predictive Analytics',
       ]},
     {
-'
+
       title: 'Cloud & Infrastructure',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-cyan-500 to-blue-500',
       services: ['
-        'Cloud DevOps','
-        'IT Infrastructure','
-        'Digital Twin Platform','
+        'Cloud DevOps',
+        'IT Infrastructure',
+        'Digital Twin Platform',
         'IoT Edge Computing',
       ]},
     {
-'
+
       title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,'
+      icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       services: ['
-        'Micro CRM','
-        'Helpdesk Platform','
-        'Website Analytics','
+        'Micro CRM',
+        'Helpdesk Platform',
+        'Website Analytics',
         'Affiliate Tracking',
       ]},
   ];
 
   const benefits = ['
-    'Cutting-edge AI technology with proven results','
-    'Transparent pricing with no hidden fees','
-    '24/7 support and dedicated account management','
-    'Custom integrations and white-label solutions','
-    'Comprehensive compliance and security standards','
+    'Cutting-edge AI technology with proven results',
+    'Transparent pricing with no hidden fees',
+    '24/7 support and dedicated account management',
+    'Custom integrations and white-label solutions',
+    'Comprehensive compliance and security standards',
     'Scalable solutions that grow with your business',
   ];
 
   const pricingTiers = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: 'monthly','
+
+      name: 'Starter',
+      price: '$299',
+      period: 'monthly',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Basic AI features','
-        'Standard support','
-        'Core integrations','
+        'Basic AI features',
+        'Standard support',
+        'Core integrations',
         'Basic analytics',
       ]},
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: 'monthly','
+
+      name: 'Professional',
+      price: '$799',
+      period: 'monthly',
       description: 'Advanced features for growing organizations',
       features: ['
-        'Advanced AI capabilities','
-        'Priority support','
-        'Custom integrations','
-        'Advanced analytics','
+        'Advanced AI capabilities',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics',
         'API access',
       ]},
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
-      period: 'monthly','
+
+      name: 'Enterprise',
+      price: '$1,999',
+      period: 'monthly',
       description: 'Full-scale solutions for large enterprises',
       features: ['
-        'Custom AI development','
-        '24/7 dedicated support','
-        'White-label solutions','
-        'On-premise deployment','
+        'Custom AI development',
+        '24/7 dedicated support',
+        'White-label solutions',
+        'On-premise deployment',
         'Custom consulting',
       ]},
   ];
@@ -312,8 +312,8 @@ import { SEO } from '../components/SEO';
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Comprehensive Services Showcase 2031 - Zion Tech Group""
-        description="Discover our revolutionary AI-powered micro SAAS services and cutting-edge technology solutions for 2031 and beyond.""
+        title="Comprehensive Services Showcase 2031 - Zion Tech Group"
+        description="Discover our revolutionary AI-powered micro SAAS services and cutting-edge technology solutions for 2031 and beyond."
         keywords="AI services, micro SAAS, quantum computing, cybersecurity, research automation, Zion Tech Group 2031"
       />
 
@@ -348,14 +348,14 @@ import { SEO } from '../components/SEO';
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a"
-              href="/contact""
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
             >
               Get Started Today"
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a"
-              href="#pricing""
+              href="#pricing"
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
             >
               View Pricing
@@ -636,14 +636,14 @@ import { SEO } from '../components/SEO';
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
               >
                 Start Your Transformation"
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
               >"
                 <Phone className="mr-2 w-5 h-5" />
@@ -651,21 +651,21 @@ import { SEO } from '../components/SEO';
               </a>
             </div>"
             <div className="mt-6 text-sm text-gray-400">
-              <p>'
+              <p>
                 Email us at{' '}
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-purple-400 hover:text-purple-300"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
-              <p>'
+              <p>
                 Visit us at{' '}
                 <a"
-                  href="https://ziontechgroup.com""
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  href="https://ziontechgroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-purple-400 hover:text-purple-300"
                 >
                   ziontechgroup.com

@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 ;
 export { function };
@@ -124,8 +124,8 @@ export default function AffiliateMarketingTracker(...args[]):  {
   return()
     <>
       <SEO "
-        title = "Affiliate Marketing Tracker - Zion Tech Group""
-        description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.""
+        title = "Affiliate Marketing Tracker - Zion Tech Group"
+        description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
       />
 "
@@ -171,13 +171,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                     Get Started
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -449,13 +449,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
 
                   Contact Sales

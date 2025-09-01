@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users const AdvancedCybersecuritySuite = () => { return (<> <Helmet> <title>Advanced Cybersecurity Suite - Zion Tech Group</title> <meta name="description" content="Comprehensive cybersecurity solutions with advanced threat detection, prevention, and response capabilities."/> <meta name="keywords" content="cybersecurity, threat detection, security suite, enterprise security, cyber defense"/> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> {/* Hero Section */ }"
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">"
@@ -11,7 +11,7 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
               </div>"
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Defend Against"
-                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent block">'
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent block">
                   Tomorrow's Threats
                 </span>
               </h1>"
@@ -139,13 +139,13 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {['
-            'SOC 2 Type II','
-            'ISO 27001','
-            'GDPR Compliant','
-            'HIPAA Ready','
-            'PCI DSS','
-            'NIST Framework','
-            'FISMA Compliant','
+            'SOC 2 Type II',
+            'ISO 27001',
+            'GDPR Compliant',
+            'HIPAA Ready',
+            'PCI DSS',
+            'NIST Framework',
+            'FISMA Compliant',
             'FedRAMP Ready'"
         ].map((cert, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">"
                   <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"/>"

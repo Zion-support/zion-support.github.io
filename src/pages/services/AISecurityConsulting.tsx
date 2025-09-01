@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {
   const features = [
-    'AI-powered security consulting optimization','
-    'Intelligent consulting strategy management and execution',;'
-    'Automated security analysis and recommendations',;'
-    'Predictive analytics for consulting needs',;'
-    'Smart consulting framework management',;'
-    'AI-driven consulting automation and orchestration',;'
-    'Real-time consulting performance tracking',;'
+    'AI-powered security consulting optimization',
+    'Intelligent consulting strategy management and execution',;
+    'Automated security analysis and recommendations',;
+    'Predictive analytics for consulting needs',;
+    'Smart consulting framework management',;
+    'AI-driven consulting automation and orchestration',;
+    'Real-time consulting performance tracking',;
     'Custom AI models for consulting applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$799/mo','
-      details: ['Up to 20 hours/month', 'Basic AI features', 'Standard consulting', 'Email support']
+
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 20 hours/month',Basic AI features',Standard consulting',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,999/mo', '
-      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 50 hours/month',Advanced AI features',Enhanced consulting',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
-      details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited hours',Custom AI models',Full consulting suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security consulting optimization',;'
-    'Consulting strategy management and execution',;'
-    'Security analysis and recommendations',;'
-    'Consulting framework management and automation',;'
-    'Consulting automation and orchestration',;'
+  const useCases = [;
+    'Security consulting optimization',;
+    'Consulting strategy management and execution',;
+    'Security analysis and recommendations',;
+    'Consulting framework management and automation',;
+    'Consulting automation and orchestration',;
     'Consulting scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security consulting performance by 50-80%',;'
-    'Reduce consulting delivery time by 40-70%',;'
-    'Cut security consulting costs by 35-65%',;'
-    'Enhance security consulting reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security consulting performance by 50-80%',;
+    'Reduce consulting delivery time by 40-70%',;
+    'Cut security consulting costs by 35-65%',;
+    'Enhance security consulting reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security consulting operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% delivery time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% delivery time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-cyan-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

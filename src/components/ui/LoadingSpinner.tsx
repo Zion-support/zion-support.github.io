@@ -1,36 +1,36 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
-'
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
 
 export default function LoadingSpinner({
-'
-  size = 'md','
-  color = 'primary','
+
+  size = 'md',
+  color = 'primary',
   className = '',
-  showText = false,'
+  showText = false,
   text = 'Loading...'
   className?: string;
 }
 
 export function LoadingSpinner({
-'
-  size = 'md', '
+
+  size = 'md',
   color = 'text-cyan-400',
-  text,'
+  text,
   className = '' 
 }: LoadingSpinnerProps) {
 
   const sizeClasses = {
-'
-    sm: 'w-8 h-8','
-    md: 'w-12 h-12','
-    lg: 'w-16 h-16','
+
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
     xl: 'w-20 h-20'
   };
 
@@ -41,10 +41,10 @@ export function LoadingSpinner({
   };
 
   const textSizes = {
-'
-    sm: 'text-sm','
-    md: 'text-base','
-    lg: 'text-lg','
+
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
     xl: 'text-xl'
   };
 
@@ -59,7 +59,7 @@ export function LoadingSpinner({
           repeat: Infinity,
           ease: "linear"
         }}"
-        role="status""
+        role="status"
         aria-label="Loading"
       />
       
@@ -80,26 +80,26 @@ export function LoadingSpinner({
 
 // Enhanced loading spinner with dots
 export function LoadingDots({
-'
-  size = 'md','
+
+  size = 'md',
   color = 'text-cyan-400',
-  text,'
+  text,
   className = ''
 }: LoadingSpinnerProps) {
 
   const dotSizes = {
-'
-    sm: 'w-2 h-2','
-    md: 'w-3 h-3','
-    lg: 'w-4 h-4','
+
+    sm: 'w-2 h-2',
+    md: 'w-3 h-3',
+    lg: 'w-4 h-4',
     xl: 'w-5 h-5'
   };
 
   const textSizes = {
-'
-    sm: 'text-sm','
-    md: 'text-base','
-    lg: 'text-lg','
+
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
     xl: 'text-xl'
   };
 
@@ -145,7 +145,7 @@ export function LoadingDots({
 // Skeleton loading component
 export function LoadingSkeleton({
 
-  lines = 3,'
+  lines = 3,
   className = ''
 }: {
 
@@ -173,11 +173,11 @@ export function LoadingSkeleton({
 
 // Button loading state
 export function ButtonLoader({
-'
-  size = 'md','
+
+  size = 'md',
   className = '' 
 }: {
-'
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }) {
@@ -192,7 +192,7 @@ export function ButtonLoader({
 // Page loading overlay
 export function PageLoaderOverlay({
 "
-  text = "Loading...",'
+  text = "Loading...",
   className = '' 
 }: {
 
@@ -212,7 +212,7 @@ export function PageLoaderOverlay({
 // Full page loading component
 export function FullPageLoader({
 "
-  text = "Loading Zion Tech Group...",'
+  text = "Loading Zion Tech Group...",
   className = ''
 }: {
 
@@ -256,25 +256,25 @@ export function FullPageLoader({
 
 // Content loading placeholder
 export function ContentPlaceholder({
-'
-  className = '','
+
+  className = '',
   variant = 'default'
 }: {
 
-  className?: string;'
+  className?: string;
   variant?: 'default' | 'card' | 'list' | 'grid';
 }) {
 
   const variants = {
-'
-    default: 'space-y-4','
-    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6','
-    list: 'space-y-3','
+
+    default: 'space-y-4',
+    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
+    list: 'space-y-3',
     grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
   };
 
   return()`
-    <div className={`${variants[variant]} ${className}`}>'
+    <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
         Array.from({ length: 6 }).map(_: unknown, index: unknown (
@@ -289,7 +289,7 @@ export function ContentPlaceholder({
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />"
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
           </motion.div>;
-        ));'
+        ));
       ) : variant === 'list' ? (
         // List placeholders
         Array.from({ length: 5 }).map(_: unknown, index: unknown (
@@ -303,7 +303,7 @@ export function ContentPlaceholder({
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />"
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>;
-        ))'
+        ))
       ) : variant === 'grid' ? (;
         // Grid placeholders
         Array.from({ length: 8 }).map(_: unknown, index: unknown (
@@ -335,8 +335,8 @@ export function ContentPlaceholder({
 
 // Enhanced app loading spinner for main app loading
 export function AppLoadingSpinner() {
-'
-  const icons = ['🤖', '☁️', '🔒', '💡'];
+
+  const icons = ['🤖',☁️',🔒',💡'];
 
   return ("
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -354,10 +354,10 @@ export function AppLoadingSpinner() {
             key={index}"
             className="absolute text-2xl"
             style={{
-'
-              top: '50%','
-              left: '50%','
-              transform: 'translate(-50%, -50%)'
+
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)
             }}
             animate={{
 
@@ -374,7 +374,7 @@ export function AppLoadingSpinner() {
 
             <span
               style={{
-'
+
                 position: 'absolute',`
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,`
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`

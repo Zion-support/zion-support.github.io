@@ -84,7 +84,7 @@ export function ChatBotPanel() {
             toast({
 "
                 variant: "destructive","
-                title: "Communication Error",'"
+                title: "Communication Error","
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
@@ -114,7 +114,7 @@ export function ChatBotPanel() {
 
                 return {
 
-                    success: false,'"
+                    success: false,"
                     message: "I'm having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
@@ -128,14 +128,14 @@ export function ChatBotPanel() {
             // // // // // // // // console.error("Error in AI chat:", error);
             return {
 
-                success: false,'"
+                success: false,"
                 message: "I'm experiencing technical difficulties. Please try again later."
             }}
     };
     const suggestEscalation = () => {
         const escalationMessage = {
 `
-            id: `bot-escalation-${Date.now()}`,'"
+            id: `bot-escalation-${Date.now()}`,"
             content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?","
             sender: "bot",
             timestamp: new Date()};
@@ -170,14 +170,14 @@ export function ChatBotPanel() {
             ...prev,
             {
 `
-                id: `user-${Date.now()}`,'"
+                id: `user-${Date.now()}`,"
                 content: "I'd like to speak with a human agent","
                 sender: "user",
                 timestamp: new Date()
             },
             {
 `
-                id: `bot-${Date.now()}`,'"
+                id: `bot-${Date.now()}`,"
                 content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
                 sender: "bot",
                 timestamp: new Date()
@@ -193,7 +193,7 @@ export function ChatBotPanel() {
             ...prev,
             {
 `
-                id: `user-${Date.now()}`,'"
+                id: `user-${Date.now()}`,"
                 content: "I'd like to email support","
                 sender: "user",
                 timestamp: new Date()
@@ -281,8 +281,8 @@ export function ChatBotPanel() {
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
 "
   cn("flex-1","
-  theme === "dark""
-            ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple""
+  theme === "dark"
+            ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
 
 

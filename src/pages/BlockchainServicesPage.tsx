@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -84,7 +84,7 @@ import {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build the Future?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Let's discuss how blockchain technology can transform your business.
             Our experts are ready to help you navigate the blockchain landscape.
           </p>

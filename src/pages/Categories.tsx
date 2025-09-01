@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -22,97 +22,97 @@ import {
   Search,
   Filter,
   Users,
-  Settings,'
-  TrendingUp} from 'lucide-react';'
+  Settings,
+  TrendingUp} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Categories: React.FC = () => {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
     {
-'
-      id: 'ai-ml','
+
+      id: 'ai-ml',
       name: 'AI & Machine Learning',
       description:'
         'Advanced artificial intelligence and machine learning solutions',
-      icon: Brain,'
+      icon: Brain,
       color: 'from-purple-500 to-pink-500',
       count: 44},
     {
-'
-      id: 'cloud','
-      name: 'Cloud & Infrastructure','
+
+      id: 'cloud',
+      name: 'Cloud & Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management',
-      icon: Cloud,'
+      icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       count: 32},
     {
-'
-      id: 'cybersecurity','
-      name: 'Cybersecurity','
+
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
       description: 'Comprehensive security and threat protection',
-      icon: Shield,'
+      icon: Shield,
       color: 'from-red-500 to-orange-500',
       count: 28},
     {
-'
-      id: 'data','
-      name: 'Data & Analytics','
+
+      id: 'data',
+      name: 'Data & Analytics',
       description: 'Data processing, analytics, and business intelligence',
-      icon: Database,'
+      icon: Database,
       color: 'from-green-500 to-emerald-500',
       count: 41},
     {
-'
-      id: 'development','
-      name: 'Software Development','
+
+      id: 'development',
+      name: 'Software Development',
       description: 'Custom software development and programming services',
-      icon: Code,'
+      icon: Code,
       color: 'from-indigo-500 to-purple-500',
       count: 41},
     {
-'
-      id: 'iot','
-      name: 'IoT & Edge Computing','
+
+      id: 'iot',
+      name: 'IoT & Edge Computing',
       description: 'Internet of Things and edge computing solutions',
-      icon: Network,'
+      icon: Network,
       color: 'from-yellow-500 to-orange-500',
       count: 23},
   ];
 
   const subCategories = {
-'
+
     'ai-ml': [
       {
-'
-        name: 'Natural Language Processing','
+
+        name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: Brain,
         services: 12,
         talent: 8,
         equipment: 3},
       {
-'
-        name: 'Computer Vision','
+
+        name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
         icon: Eye,
         services: 9,
         talent: 6,
         equipment: 4},
       {
-'
-        name: 'Machine Learning Platforms','
+
+        name: 'Machine Learning Platforms',
         description: 'ML model training, deployment, and management',
         icon: Cpu,
         services: 15,
         talent: 12,
         equipment: 7},
       {
-'
-        name: 'AI Consulting','
+
+        name: 'AI Consulting',
         description: 'Strategic AI implementation and optimization',
         icon: Target,
         services: 8,
@@ -121,24 +121,24 @@ const Categories: React.FC = () => {
     ],
     cloud: [
       {
-'
-        name: 'Cloud Migration','
+
+        name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
         icon: Rocket,
         services: 11,
         talent: 7,
         equipment: 2},
       {
-'
-        name: 'DevOps & CI/CD','
+
+        name: 'DevOps & CI/CD',
         description: 'Automated deployment and infrastructure management',
         icon: Zap,
         services: 14,
         talent: 9,
         equipment: 3},
       {
-'
-        name: 'Serverless Computing','
+
+        name: 'Serverless Computing',
         description: 'Event-driven and serverless architecture',
         icon: Cloud,
         services: 7,
@@ -147,24 +147,24 @@ const Categories: React.FC = () => {
     ],
     cybersecurity: [
       {
-'
-        name: 'Threat Detection','
+
+        name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
         icon: Shield,
         services: 13,
         talent: 8,
         equipment: 5},
       {
-'
-        name: 'Compliance & Governance','
+
+        name: 'Compliance & Governance',
         description: 'Security compliance and policy management',
         icon: Lock,
         services: 9,
         talent: 6,
         equipment: 2},
       {
-'
-        name: 'Penetration Testing','
+
+        name: 'Penetration Testing',
         description: 'Security assessment and vulnerability testing',
         icon: Target,
         services: 6,
@@ -173,24 +173,24 @@ const Categories: React.FC = () => {
     ],
     data: [
       {
-'
-        name: 'Business Intelligence','
+
+        name: 'Business Intelligence',
         description: 'Data visualization and business analytics',
         icon: BarChart3,
         services: 18,
         talent: 11,
         equipment: 4},
       {
-'
-        name: 'Big Data Processing','
+
+        name: 'Big Data Processing',
         description: 'Large-scale data processing and analytics',
         icon: Database,
         services: 12,
         talent: 8,
         equipment: 6},
       {
-'
-        name: 'Data Engineering','
+
+        name: 'Data Engineering',
         description: 'Data pipeline and ETL process development',
         icon: Settings,
         services: 11,
@@ -199,24 +199,24 @@ const Categories: React.FC = () => {
     ],
     development: [
       {
-'
-        name: 'Web Development','
+
+        name: 'Web Development',
         description: 'Modern web applications and frontend development',
         icon: Globe,
         services: 16,
         talent: 12,
         equipment: 2},
       {
-'
-        name: 'Mobile Development','
+
+        name: 'Mobile Development',
         description: 'iOS and Android mobile applications',
         icon: Smartphone,
         services: 13,
         talent: 9,
         equipment: 3},
       {
-'
-        name: 'Backend Development','
+
+        name: 'Backend Development',
         description: 'Server-side development and API design',
         icon: Code,
         services: 12,
@@ -225,24 +225,24 @@ const Categories: React.FC = () => {
     ],
     iot: [
       {
-'
-        name: 'IoT Device Management','
+
+        name: 'IoT Device Management',
         description: 'IoT device connectivity and management',
         icon: Network,
         services: 8,
         talent: 5,
         equipment: 7},
       {
-'
-        name: 'Edge Computing','
+
+        name: 'Edge Computing',
         description: 'Edge processing and real-time analytics',
         icon: Cpu,
         services: 9,
         talent: 6,
         equipment: 4},
       {
-'
-        name: 'Smart Cities','
+
+        name: 'Smart Cities',
         description: 'Urban IoT solutions and smart infrastructure',
         icon: Globe,
         services: 6,
@@ -263,8 +263,8 @@ const Categories: React.FC = () => {
   return()
     <>
       <SEO
-        title="Technology Categories - Zion Tech Group""
-        description="Explore our comprehensive technology categories including AI, cloud computing, cybersecurity, data analytics, software development, and IoT solutions.""
+        title="Technology Categories - Zion Tech Group"
+        description="Explore our comprehensive technology categories including AI, cloud computing, cybersecurity, data analytics, software development, and IoT solutions."
         keywords="technology categories, AI, cloud computing, cybersecurity, data analytics, software development, IoT, Zion Tech Group"
       />
 "
@@ -301,7 +301,7 @@ const Categories: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search categories..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
@@ -316,7 +316,7 @@ const Categories: React.FC = () => {
                   <button'
                     onClick={() => setActiveCategory('all')}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-'
+
                       activeCategory === 'all''
                         ? 'bg-blue-500 text-white''
                         : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'`

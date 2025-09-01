@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';'
-import { useNavigate } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
 
 export default function Marketplace() {
-  const navigate = useNavigate();'
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProductTypes, setSelectedProductTypes] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedAvailability, setSelectedAvailability] = useState([]);
   const [selectedRating, setSelectedRating] = useState(null);
   const [listings, setListings] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);'
+  const [isLoading, setIsLoading] = useState(false);
   const [view, setView] = useState('grid');
 
   // Sample data for demonstration
@@ -19,27 +19,27 @@ export default function Marketplace() {
     setListings ([
       {
 
-        id: 1,'
-        title: 'AI Development Services','
-        category: 'AI Services','
-        location: 'Remote','
+        id: 1,
+        title: 'AI Development Services',
+        category: 'AI Services',
+        location: 'Remote',
         availability: 'Available',
-        rating: 4.8,'
+        rating: 4.8,
         description: 'Professional AI development and consulting services'},
       {
 
-        id: 2,'
-        title: 'Cloud Infrastructure Solutions','
-        category: 'IT Services','
-        location: 'On-site','
+        id: 2,
+        title: 'Cloud Infrastructure Solutions',
+        category: 'IT Services',
+        location: 'On-site',
         availability: 'Available',
-        rating: 4.9,'
+        rating: 4.9,
         description: 'Enterprise cloud infrastructure and DevOps solutions'},
     ]);
   }, []);
 
   const clearAllFilters = () => {
-'
+
     setSearchQuery('');
     setSelectedProductTypes([]);
     setSelectedLocations([]);
@@ -51,7 +51,7 @@ export default function Marketplace() {
 
     const listing = listings.find(item => item.id === listingId);
     if (listing) {
-'
+
       navigate('/request-quote', {
 
         state: {
@@ -112,23 +112,23 @@ export default function Marketplace() {
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
-              placeholder="Search services...""
+              placeholder="Search services..."
               className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>"
           <div className="flex gap-2">
             <Button"
-              variant="ghost""
+              variant="ghost"
               size="icon"'
-              onClick={() => setView('grid')}'
+              onClick={() => setView('grid')}
               className={view === 'grid' ? 'text-blue-400' : 'text-gray-400'}
             >"
               <Grid3X3 className="h-4 w-4" />
             </Button>
             <Button"
-              variant="ghost""
+              variant="ghost"
               size="icon"'
-              onClick={() => setView('list')}'
+              onClick={() => setView('list')}
               className={view === 'list' ? 'text-blue-400' : 'text-gray-400'}
             >"
               <ListFilter className="h-4 w-4" />
@@ -155,7 +155,7 @@ export default function Marketplace() {
         ) : (
           <div
             className={
-'
+
               view === 'grid''
                 ? 'grid grid-cols-1 md:grid-cols-2 gap-6''
                 : 'flex flex-col gap-6'
@@ -198,7 +198,7 @@ export default function Marketplace() {
                 <h2 className="text-2xl font-bold text-white mb-4">
                   No Results Found
                 </h2>"
-                <p className="text-gray-300 max-w-md mx-auto mb-8">'
+                <p className="text-gray-300 max-w-md mx-auto mb-8">
                   We couldn't find listings matching your filters. Try adjusting
                   your search criteria.
                 </p>

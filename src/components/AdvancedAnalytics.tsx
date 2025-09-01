@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';'
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -102,8 +102,8 @@ export function AdvancedAnalytics({
 
   const [isTracking, setIsTracking] = useState(false);
   const [sessionStart, setSessionStart] = useState<number>(Date.now());
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);'
-  const [userSession, setUserSession] = useState<string>('');'
+  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
+  const [userSession, setUserSession] = useState<string>('');
   const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
   
   const trackingRef = useRef<{
@@ -126,7 +126,7 @@ export function AdvancedAnalytics({
   // Generate unique session ID
   useEffect(() => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    setUserSession(sessionId);'
+    setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId);
   }, []);
 
@@ -173,23 +173,23 @@ export function AdvancedAnalytics({
       type,
       timestamp: new Date () .toISOString () ,
       page: currentPage,
-      data,'
+      data,
       element: data?.target?.tagName || 'unknown',
       position: data?.position || null
     };
 
     // Update tracking ref
     switch (type) {
-'
+
       case 'click':
         trackingRef.current.clicks++;
-        break;'
+        break;
       case 'scroll':
         trackingRef.current.scrolls++;
-        break;'
+        break;
       case 'form':
         trackingRef.current.formSubmissions++;
-        break;'
+        break;
       case 'error':
         trackingRef.current.errors++;
         break;
@@ -204,7 +204,7 @@ export function AdvancedAnalytics({
       ...prev,
       interactions: {
 
-        ...prev.interactions,'`
+        ...prev.interactions,`
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: '`
           prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
@@ -217,15 +217,15 @@ export function AdvancedAnalytics({
 
     // Use Performance API to get metrics'
     if ('performance' in window) {
-'
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
+
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
       const performanceData = {
 
         sessionId: userSession,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,'
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,'
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
         largestContentfulPaint: 0, // Will be updated by observer
         timestamp: new Date () .toISOString () };
@@ -270,7 +270,7 @@ export function AdvancedAnalytics({
       
       // Add to heatmap data
       if (enableHeatmap) {
-'
+
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }]);
       }
     };
@@ -280,7 +280,7 @@ export function AdvancedAnalytics({
     const handleScroll = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-'
+
         trackInteraction('scroll', {
 
           scrollY: window.scrollY, 
@@ -292,7 +292,7 @@ export function AdvancedAnalytics({
     // Setup form submission tracking
     const handleFormSubmit = (e: Event) => {
 
-      const form = e.target as HTMLFormElement;'
+      const form = e.target as HTMLFormElement;
       trackInteraction('form', {
 
         formId: form.id || form.className,
@@ -303,7 +303,7 @@ export function AdvancedAnalytics({
 
     // Setup error tracking
     const handleError = (e: ErrorEvent) => {
-'
+
       trackInteraction('error', {
 
         message: e.message,
@@ -316,19 +316,19 @@ export function AdvancedAnalytics({
 
     // Setup unhandled promise rejection tracking
     const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
-'
+
       trackInteraction('error', {
-'
+
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
       }) ;
     };
 
     // Add event listeners'
-    document.addEventListener('click', handleClick);'
-    document.addEventListener('scroll', handleScroll);'
-    document.addEventListener('submit', handleFormSubmit);'
-    window.addEventListener('error', handleError);'
+    document.addEventListener('click', handleClick);
+    document.addEventListener('scroll', handleScroll);
+    document.addEventListener('submit', handleFormSubmit);
+    window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     // Track page visibility changes
@@ -348,17 +348,17 @@ export function AdvancedAnalytics({
         setSessionStart (Date.now () ) ;
       }
     };
-'
+
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
     return () => {
-'
-      document.removeEventListener('click', handleClick);'
-      document.removeEventListener('scroll', handleScroll);'
-      document.removeEventListener('submit', handleFormSubmit);'
-      window.removeEventListener('error', handleError);'
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);'
+
+      document.removeEventListener('click', handleClick);
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('submit', handleFormSubmit);
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       clearTimeout(scrollTimeout);
     };
@@ -366,7 +366,7 @@ export function AdvancedAnalytics({
 
   // Setup performance observer for LCP
   useEffect(() => {
-'
+
     if (!enabled || !('PerformanceObserver' in window)) return;
 
     try {
@@ -387,12 +387,12 @@ export function AdvancedAnalytics({
           }) ) ;
         }
       });
-'
+
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => lcpObserver.disconnect () ;
     } catch (error) {
-'
+
       // console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]) ;
@@ -414,14 +414,14 @@ export function AdvancedAnalytics({
 
       // Send to analytics endpoint'
       await fetch('/api/analytics', {
-'
+
         method: 'POST',
         headers: {
-'
+
           'Content-Type': 'application/json'},
         body: JSON.stringify(analyticsPayload)});
     } catch (error) {
-'
+
       // console.warn('Failed to send analytics data:', error);
     }
   }, [trackingId, userSession]) ;
@@ -439,20 +439,20 @@ export function AdvancedAnalytics({
       bounceRate: Math.random() * 40 + 20,
       conversionRate: Math.random() * 5 + 1,
       topPages: ['
-        { path: '/', views: Math.floor(Math.random() * 500) + 200 },'
-        { path: '/services', views: Math.floor(Math.random() * 300) + 150 },'
-        { path: '/about', views: Math.floor(Math.random() * 200) + 100 },'
+        { path: '/', views: Math.floor(Math.random() * 500) + 200 },
+        { path: '/services', views: Math.floor(Math.random() * 300) + 150 },
+        { path: '/about', views: Math.floor(Math.random() * 200) + 100 },
         { path: '/contact', views: Math.floor(Math.random() * 150) + 80 }
       ],
       userAgents: ['
-        { device: 'Desktop', count: Math.floor(Math.random() * 400) + 200 },'
-        { device: 'Mobile', count: Math.floor(Math.random() * 300) + 150 },'
+        { device: 'Desktop', count: Math.floor(Math.random() * 400) + 200 },
+        { device: 'Mobile', count: Math.floor(Math.random() * 300) + 150 },
         { device: 'Tablet', count: Math.floor(Math.random() * 100) + 50 }
       ],
       locations: ['
-        { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },'
-        { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },'
-        { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },'
+        { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },
+        { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },
+        { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },
         { country: 'Germany', count: Math.floor(Math.random() * 80) + 40 }
       ],
       performance: {
@@ -497,9 +497,9 @@ export function AdvancedAnalytics({
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}"
-            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80vh] overflow-y-auto""
-            id="analytics-panel""
-            role="dialog""
+            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80vh] overflow-y-auto"
+            id="analytics-panel"
+            role="dialog"
             aria-labelledby="analytics-title"
           >"
             <div className="flex items-center justify-between mb-4">"
@@ -509,7 +509,7 @@ export function AdvancedAnalytics({
               </h2>
               <button
                 onClick={() => setIsOpen(false)}"
-                className="text-gray-400 hover:text-gray-600 transition-colors""
+                className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="Close analytics dashboard"
               >"
                 <X className="w-5 h-5" />
@@ -610,7 +610,7 @@ export function AdvancedAnalytics({
             <div className="pt-4 border-t border-gray-200">"
               <div className="flex items-center justify-between text-xs text-gray-500">"
                 <div className="flex items-center gap-2">'`
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />'
+                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`} />
                   <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
                 </div>
                 <button

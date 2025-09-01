@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
+import React, { useState, useMemo } from 'react.ts';
+import { motion } from 'framer-motion.ts';
 import { Helmet } from 'react-helmet-async.ts';
 import {
 
@@ -25,21 +25,21 @@ import {
   MapPin,
   ExternalLink,
   Plus,
-  Database,'
+  Database,
   Layers} from 'lucide-react.ts';
 import {
 
   comprehensiveServicesIndex2025,
   getServiceStats,
   getServicesByCategory,
-  getServicesBySource,'
+  getServicesBySource,
   ServiceIndex} from '../data/comprehensive-services-index-2025';
 
 const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
-  const [selectedSource, setSelectedSource] = useState<any>('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedSource, setSelectedSource] = useState<any>('all');
   const [viewMode, setViewMode] = useState<any>('grid');
 
   const stats = getServiceStats();
@@ -59,14 +59,14 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-'
+
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter()
         service => service.category === selectedCategory
       );
     }
-'
+
     if (selectedSource !== 'all') {
 
       filtered = filtered.filter(service => service.source === selectedSource);
@@ -78,22 +78,22 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
   const getCategoryColor = (category: anystring) => {
 
     const colors: { [key: string]: string } = {
-'
-      fintech: 'from-green-500 to-emerald-600','
-      healthtech: 'from-red-500 to-pink-600','
-      edutech: 'from-purple-500 to-violet-600','
-      martech: 'from-pink-500 to-rose-600','
-      'micro-saas': 'from-blue-500 to-indigo-600','
-      'ai-services': 'from-cyan-500 to-blue-600','
-      'it-services': 'from-slate-500 to-gray-600','
-      'emerging-tech': 'from-orange-500 to-yellow-600','
-      Fintech: 'from-green-500 to-emerald-600','
-      Healthtech: 'from-red-500 to-pink-600','
-      Edutech: 'from-purple-500 to-violet-600','
-      Martech: 'from-pink-500 to-rose-600','
-      'Micro SaaS': 'from-blue-500 to-indigo-600','
-      'AI Services': 'from-cyan-500 to-blue-600','
-      'IT Services': 'from-slate-500 to-gray-600'};'
+
+      fintech: 'from-green-500 to-emerald-600',
+      healthtech: 'from-red-500 to-pink-600',
+      edutech: 'from-purple-500 to-violet-600',
+      martech: 'from-pink-500 to-rose-600',
+      'micro-saas': 'from-blue-500 to-indigo-600',
+      'ai-services': 'from-cyan-500 to-blue-600',
+      'it-services': 'from-slate-500 to-gray-600',
+      'emerging-tech': 'from-orange-500 to-yellow-600',
+      Fintech: 'from-green-500 to-emerald-600',
+      Healthtech: 'from-red-500 to-pink-600',
+      Edutech: 'from-purple-500 to-violet-600',
+      Martech: 'from-pink-500 to-rose-600',
+      'Micro SaaS': 'from-blue-500 to-indigo-600',
+      'AI Services': 'from-cyan-500 to-blue-600',
+      'IT Services': 'from-slate-500 to-gray-600'};
     return colors[category] || 'from-gray-500 to-gray-600';
   };
 
@@ -104,17 +104,17 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
       fintech: <DollarSign className="w-5 h-5" />,"
       healthtech: <Heart className="w-5 h-5" />,"
       edutech: <GraduationCap className="w-5 h-5" />,"
-      martech: <Target className="w-5 h-5" />,'"
-      'micro-saas': <Settings className="w-5 h-5" />,'"
-      'ai-services': <Zap className="w-5 h-5" />,'"
-      'it-services': <Shield className="w-5 h-5" />,'"
+      martech: <Target className="w-5 h-5" />,"
+      'micro-saas': <Settings className="w-5 h-5" />,"
+      'ai-services': <Zap className="w-5 h-5" />,"
+      'it-services': <Shield className="w-5 h-5" />,"
       'emerging-tech': <TrendingUp className="w-5 h-5" />,"
       Fintech: <DollarSign className="w-5 h-5" />,"
       Healthtech: <Heart className="w-5 h-5" />,"
       Edutech: <GraduationCap className="w-5 h-5" />,"
-      Martech: <Target className="w-5 h-5" />,'"
-      'Micro SaaS': <Settings className="w-5 h-5" />,'"
-      'AI Services': <Zap className="w-5 h-5" />,'"
+      Martech: <Target className="w-5 h-5" />,"
+      'Micro SaaS': <Settings className="w-5 h-5" />,"
+      'AI Services': <Zap className="w-5 h-5" />,"
       'IT Services': <Shield className="w-5 h-5" />};"
     return icons[category] || <Globe className="w-5 h-5" />;
   };
@@ -122,15 +122,15 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
   const getSourceBadge = (source: anystring) => {
 
     const badges = {
-'
-      existing: { color: 'bg-blue-100 text-blue-800', text: 'Existing' },'
-      new: { color: 'bg-green-100 text-green-800', text: 'New' },'
+
+      existing: { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
+      new: { color: 'bg-green-100 text-green-800', text: 'New' },
       'pricing-guide': {
-'
-        color: 'bg-purple-100 text-purple-800','
+
+        color: 'bg-purple-100 text-purple-800',
         text: 'Pricing Guide'}};
     const badge = badges[source as keyof typeof badges] || {
-'
+
       color: 'bg-gray-100 text-gray-800',
       text: source};
 
@@ -148,15 +148,15 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
       <Helmet>
         <title>Comprehensive Services Dashboard 2025 - Zion Tech Group</title>
         <meta"
-          name="description""
+          name="description"
           content="Complete overview of all our innovative technology services, micro SAAS solutions, and AI-powered platforms. Comprehensive dashboard with statistics and search capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="services dashboard, micro SAAS, IT services, AI services, fintech, healthtech, edutech, martech, business solutions overview"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/comprehensive-services-dashboard-2025"
         />
       </Helmet>
@@ -215,9 +215,9 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               </div>
             </div>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
             >
               <span>Visit Our Website</span>"
@@ -314,7 +314,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
@@ -359,7 +359,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`px-4 py-3 rounded-l-lg ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-blue-600 text-white''
                       : 'bg-white text-gray-600 hover:bg-gray-50'`
@@ -370,7 +370,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`px-4 py-3 rounded-r-lg ${
-'
+
                     viewMode === 'list''
                       ? 'bg-blue-600 text-white''
                       : 'bg-white text-gray-600 hover:bg-gray-50'`
@@ -408,7 +408,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
                   services
                 </p>
               </div>
-'
+
               {viewMode === 'grid' ? ("
                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
                   {filteredServices.map((service, index) => (
@@ -524,14 +524,14 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >"
               <Phone className="w-5 h-5" />
               <span>Call +1 302 464 0950</span>
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >"
               <Mail className="w-5 h-5" />

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -15,7 +15,7 @@ interface SEOProps {
     category: string;
   }>;
   image?: string;
-  url?: string;'
+  url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
@@ -29,55 +29,55 @@ interface SEOProps {
 }
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
-'
-  title = 'Zion Tech Group - Leading AI Solutions & Technology Services','
-  description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.','
-  keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services','
-  image = '/images/zion-tech-group-og.jpg','
-  url = 'https://ziontechgroup.com','
+
+  title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
+  description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
+  keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://ziontechgroup.com',
   type = 'website',
   image,
-  url,'
+  url,
   author = 'Zion Tech Group',
   publishedTime,
-  modifiedTime,'
+  modifiedTime,
   author = 'Zion Tech Group',
   section,
   tags = [],
-  const defaultKeywords = [;'
-    'AI solutions','
-    'cloud computing','
-    'cybersecurity','
-    'digital transformation','
-    'machine learning','
-    'quantum computing','
-    'IoT','
-    'blockchain','
-    'micro-SaaS','
-    'enterprise software','
+  const defaultKeywords = [;
+    'AI solutions',
+    'cloud computing',
+    'cybersecurity',
+    'digital transformation',
+    'machine learning',
+    'quantum computing',
+    'IoT',
+    'blockchain',
+    'micro-SaaS',
+    'enterprise software',
     'Zion Tech Group'
   ];
 
   const generateStructuredData = useCallback ( () => {
     const baseData = {
-'
-      '@context': 'https://schema.org','
-      '@type': type === 'article' ? 'Article' : 'Organization','
+
+      '@context': 'https://schema.org',
+      '@type': type === 'article' ? 'Article' : 'Organization',
       name: 'Zion Tech Group',
       description: description,
-      url: currentUrl,'
+      url: currentUrl,
       logo: '/images/zion-tech-group-logo.png',
       sameAs: ['
-        'https://twitter.com/ziontechgroup','
-        'https://linkedin.com/company/zion-tech-group','
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/zion-tech-group',
         'https://facebook.com/ziontechgroup'
       ],
       contactPoint: {
-'
-        '@type': 'ContactPoint','
-        telephone: '+1-555-0123','
-        contactType: 'customer service','
-        areaServed: 'US','
+
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service',
+        areaServed: 'US',
         availableLanguage: 'English'
       }
     } : undefined,
@@ -115,16 +115,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
   // Generate meta keywords
   const metaKeywords = [
-    'Zion Tech Group',
-    'AI Solutions',
-    'Technology Services',
-    'Digital Transformation',
-    'IT Consulting',
-    'Cloud Services',
-    'Cybersecurity',
+    'Zion Tech Group',AI Solutions',Technology Services',Digital Transformation',IT Consulting',Cloud Services',Cybersecurity',
     ...tags,
     ...keywords
-  ].join(', ');
+  ].join(',);
 
   const defaultStructuredData = {
 
@@ -136,14 +130,14 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
   noindex = false,
   canonical}) => {
-'
+
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
   const fullUrl = canonical || `${url}${window.location.pathname}`;
   
   // Structured data for better SEO
   const structuredData = {
 "
-    "@context": "https://schema.org",'"
+    "@context": "https://schema.org","
     "@type": type === 'website' ? "Organization" : "Article","
     "name": "Zion Tech Group","
     "url": url,"`
@@ -227,9 +221,9 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // Preload critical images
     if (ogImage) {
-'
-      const imageLink = document.createElement('link');'
-      imageLink.rel = 'preload';'
+
+      const imageLink = document.createElement('link');
+      imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
       document.head.appendChild (imageLink) ;
@@ -237,19 +231,19 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // DNS prefetch for external domains
     const dnsPrefetchDomains = ['
-      'https://fonts.googleapis.com','
-      'https://fonts.gstatic.com','
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
       'https://www.google-analytics.com'
     ];
 
     dnsPrefetchDomains.forEach(domain => {
-'
-      const link = document.createElement('link');'
+
+      const link = document.createElement('link');
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link);
     });
-  }, [ogImage]);'
+  }, [ogImage]);
   if (type === 'article') {
 
     Object.assign(structuredData, {

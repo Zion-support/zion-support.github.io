@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -25,45 +25,45 @@ import {
   Key,
   Scale,
   Building,
-  Cpu,'
-  Network} from 'lucide-react';'
+  Cpu,
+  Network} from 'lucide-react';
 import { Link } from 'react-router-dom';
 ;
 const AIDataGovernancePlatform: React.FC = props {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'AI-Powered Data Discovery',
       description:'
         'Automatically discover, classify, and catalog sensitive data across your entire data ecosystem using machine learning.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Intelligent Compliance Monitoring',
       description:'
         'Real-time monitoring and automated compliance reporting for GDPR, CCPA, HIPAA, SOX, and other regulations.'},
     {
 
-      icon: Lock,'
+      icon: Lock,
       title: 'Advanced Access Control',
       description:'
         'Role-based access control with AI-driven risk assessment and dynamic permission management.'},
     {
 
-      icon: Database,'
+      icon: Database,
       title: 'Data Lineage & Tracking',
       description:'
         'Complete data lineage tracking from source to consumption with impact analysis and change management.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Collaborative Governance',
       description:'
         'Multi-stakeholder collaboration tools for data stewards, compliance officers, and business users.'},
     {
 
-      icon: BarChart3,'
+      icon: BarChart3,
       title: 'Governance Analytics',
       description:'
         'Comprehensive dashboards and reporting on data quality, compliance status, and governance metrics.'},
@@ -71,59 +71,59 @@ const AIDataGovernancePlatform: React.FC = props {
 
   const pricingTiers = [
     {
-'
-      name: 'Foundation','
-      price: '$399','
+
+      name: 'Foundation',
+      price: '$399',
       period: '/month',
       description:'
         'Essential data governance for small to medium organizations',
       features: ['
-        'Up to 10 data sources','
-        'Basic AI discovery','
-        'GDPR & CCPA compliance','
-        'Standard access control','
-        'Email support','
-        'Basic reporting','
+        'Up to 10 data sources',
+        'Basic AI discovery',
+        'GDPR & CCPA compliance',
+        'Standard access control',
+        'Email support',
+        'Basic reporting',
         'Up to 10 users',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: false},
     {
-'
-      name: 'Enterprise','
-      price: '$1,199','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,199',
+      period: '/month',
       description: 'Comprehensive governance for growing enterprises',
       features: ['
-        'Up to 100 data sources','
-        'Advanced AI discovery','
-        'Full regulatory compliance','
-        'Advanced access control','
-        'Priority support','
-        'Custom reporting','
-        'Up to 100 users','
-        'API access','
+        'Up to 100 data sources',
+        'Advanced AI discovery',
+        'Full regulatory compliance',
+        'Advanced access control',
+        'Priority support',
+        'Custom reporting',
+        'Up to 100 users',
+        'API access',
         'Custom integrations',
-      ],'
+      ],
       cta: 'Start Free Trial',
       popular: true},
     {
-'
-      name: 'Global','
-      price: '$2,999','
-      period: '/month','
+
+      name: 'Global',
+      price: '$2,999',
+      period: '/month',
       description: 'Enterprise-scale governance for global organizations',
       features: ['
-        'Unlimited data sources','
-        'Custom AI models','
-        'Global compliance framework','
-        'Advanced security features','
-        'Dedicated support','
-        'White-label solution','
-        'Unlimited users','
-        'On-premise deployment','
+        'Unlimited data sources',
+        'Custom AI models',
+        'Global compliance framework',
+        'Advanced security features',
+        'Dedicated support',
+        'White-label solution',
+        'Unlimited users',
+        'On-premise deployment',
         'Custom SLA',
-      ],'
+      ],
       cta: 'Contact Sales',
       popular: false},
   ];
@@ -131,36 +131,36 @@ const AIDataGovernancePlatform: React.FC = props {
   const benefits = [
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Ensure Compliance',
       description:'
         'Automatically maintain compliance with global data protection regulations'},
     {
 
-      icon: Lock,'
+      icon: Lock,
       title: 'Protect Sensitive Data',
       description:'
         'Identify and protect PII, PHI, and other sensitive information'},
     {
 
-      icon: Users,'
-      title: 'Build Trust','
+      icon: Users,
+      title: 'Build Trust',
       description: 'Demonstrate data stewardship and build customer confidence'},
     {
 
-      icon: Target,'
-      title: 'Reduce Risk','
+      icon: Target,
+      title: 'Reduce Risk',
       description: 'Minimize data breaches and regulatory penalties'},
   ];
 
   const complianceFrameworks = ['
-    'GDPR (General Data Protection Regulation)','
-    'CCPA (California Consumer Privacy Act)','
-    'HIPAA (Health Insurance Portability and Accountability Act)','
-    'SOX (Sarbanes-Oxley Act)','
-    'PCI DSS (Payment Card Industry Data Security Standard)','
-    'ISO 27001 (Information Security Management)','
-    'SOC 2 Type II (Service Organization Control)','
+    'GDPR (General Data Protection Regulation),
+    'CCPA (California Consumer Privacy Act),
+    'HIPAA (Health Insurance Portability and Accountability Act),
+    'SOX (Sarbanes-Oxley Act),
+    'PCI DSS (Payment Card Industry Data Security Standard),
+    'ISO 27001 (Information Security Management),
+    'SOC 2 Type II (Service Organization Control),
     'NIST Cybersecurity Framework',
   ];
 
@@ -191,14 +191,14 @@ const AIDataGovernancePlatform: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -426,14 +426,14 @@ const AIDataGovernancePlatform: React.FC = props {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105"
               >"
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Free Trial
               </Link>
               <Link"
-                to="/demo""
+                to="/demo"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
                 <Play className="w-5 h-5 mr-2" />

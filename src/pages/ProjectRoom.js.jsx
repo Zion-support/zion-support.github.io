@@ -1,14 +1,14 @@
-import React, { useState } from 'react';'
-import { useParams } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 
@@ -17,38 +17,38 @@ import {
   Video,
   Calendar,
   Users,
-  Settings,'
-  X} from 'lucide-react';'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';'
+  Settings,
+  X} from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
-  const { projectId } = useParams();'
+  const { projectId } = useParams();
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState([
     {
-'
-      id: 'user-1','
+
+      id: 'user-1',
       name: 'You',
       isHost: true,
       isVideoEnabled: true,
       isMuted: false},
   ]);
   const startVideoCall = () => {
-    setIsInCall(true);'
+    setIsInCall(true);
     toast.success('Video call started', {
-'
+
       description: 'Others can join with the project room link'});
     // Switch to video tab if not already there'
     if (activeTab !== 'video') {
-'
+
       setActiveTab('video');
     }
   };
   const endVideoCall = () => {
-    setIsInCall(false);'
+    setIsInCall(false);
     toast.info('Video call ended', {
-'
+
       description: 'Call duration and participants will be logged'});
   };
   const simulateUserJoining = () => {
@@ -56,14 +56,14 @@ export default function ProjectRoom() {
     const mockUsers = ['
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       {
-'
-        id: 'user-3','
+
+        id: 'user-3',
         name: 'Taylor Kim',
         isVideoEnabled: false,
         isMuted: true},
       {
-'
-        id: 'user-4','
+
+        id: 'user-4',
         name: 'Jordan Smith',
         isVideoEnabled: true,
         isMuted: false,

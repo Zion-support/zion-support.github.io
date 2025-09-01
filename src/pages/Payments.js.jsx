@@ -1,6 +1,6 @@
-import React from 'react';'
-import { TransactionHistory } from '@/components/transactions/TransactionHistory';'
-import { GradientHeading } from '@/components/GradientHeading';'
+import React from 'react';
+import { TransactionHistory } from '@/components/transactions/TransactionHistory';
+import { GradientHeading } from '@/components/GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 export default function Payments() {
   return()
@@ -9,7 +9,7 @@ export default function Payments() {
         <div className="container mx-auto">"
           <div className="mb-12 text-center">
             <GradientHeading"
-              level="h1""
+              level="h1"
               className="text-4xl lg:text-5xl font-bold mb-4"
             >
               Payments & Transactions
@@ -46,8 +46,8 @@ export default function Payments() {
                       preference.
                     </p>
                     <Button
-                      onClick={() =>'
-                        window.open('https://stripe.com', '_blank')
+                      onClick={() =>
+                        window.open('https://stripe.com',_blank')
                       }"
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
@@ -84,7 +84,7 @@ export default function Payments() {
                       <div className="flex items-center space-x-2">"
                         <Checkbox id="notify-email" defaultChecked />
                         <label"
-                          htmlFor="notify-email""
+                          htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
                         >
                           Email notifications
@@ -93,7 +93,7 @@ export default function Payments() {
                       <div className="flex items-center space-x-2">"
                         <Checkbox id="notify-push" defaultChecked />
                         <label"
-                          htmlFor="notify-push""
+                          htmlFor="notify-push"
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
                         >
                           Push notifications
@@ -111,8 +111,8 @@ export default function Payments() {
   );
 }
 // Import UI components for Payment Settings tab'
-import { Button } from '@/components/ui/button';'
-import { Switch } from '@/components/ui/switch';'
-import { Label } from '@/components/ui/label';'
+import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 '"

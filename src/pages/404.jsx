@@ -1,16 +1,16 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage = () => {
     const popularServices = ['
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Transform your business with AI' },'
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },'
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Zap, description: 'Scale your infrastructure' },'
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Transform your business with AI' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Zap, description: 'Scale your infrastructure' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Users, description: 'Enterprise-grade technology' }
     ];
     const quickLinks = ['
-        { name: 'Home', path: '/', icon: Home },'
-        { name: 'Services', path: '/services', icon: Search },'
-        { name: 'About Us', path: '/about', icon: Users },'
+        { name: 'Home', path: '/', icon: Home },
+        { name: 'Services', path: '/services', icon: Search },
+        { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Users }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">"
@@ -23,7 +23,7 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Page Not Found
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             The page you're looking for doesn't exist or has been moved.
             Let us help you find what you need.
           </p>
@@ -65,7 +65,7 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
         {/* Help Section */}"
         <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">"
           <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>"
-          <p className="text-gray-300 mb-4">'
+          <p className="text-gray-300 mb-4">
             Can't find what you're looking for? Our team is here to help.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -80,7 +80,7 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
 
         {/* Search Suggestion */}"
         <div className="mt-8 text-gray-400">"
-          <p className="text-sm">'
+          <p className="text-sm">
             Try searching for what you need or browse our{' '}"
             <Link to="/services" className="text-cyan-400 hover:text-cyan-300 underline">
               services directory

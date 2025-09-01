@@ -1,7 +1,7 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 ;
 export { function };
@@ -203,8 +203,8 @@ export default function SOC2ComplianceTracker(...args: []):  {
   return()
     <>
       <SEO "
-        title = "SOC2 Compliance Tracker - Zion Tech Group""
-        description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.""
+        title = "SOC2 Compliance Tracker - Zion Tech Group"
+        description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
         canonical="/services/soc2-compliance-tracker"
       />
 "
@@ -250,13 +250,13 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Compliance Journey
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -524,7 +524,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Transparent Pricing Plans
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the compliance plan that fits your organization's needs
               </p>
             </div>
@@ -652,13 +652,13 @@ export default function SOC2ComplianceTracker(...args: []):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
 
                   Contact Sales

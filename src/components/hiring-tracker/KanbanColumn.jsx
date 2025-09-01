@@ -1,6 +1,6 @@
-import { Droppable } from '@hello-pangea/dnd';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+import { Droppable } from '@hello-pangea/dnd';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { CandidateCard } from './CandidateCard';
 export function KanbanColumn({ id, title, description, applications, count }) {
 
@@ -8,15 +8,15 @@ export function KanbanColumn({ id, title, description, applications, count }) {
   const getBadgeVariant = columnId => {
 
     switch (columnId) {
-'
+
       case 'new':'
-        return 'secondary';'
+        return 'secondary';
       case 'shortlisted':'
-        return 'outline';'
+        return 'outline';
       case 'interview':'
-        return 'default';'
+        return 'default';
       case 'hired':'
-        return 'success';'
+        return 'success';
       case 'rejected':'
         return 'destructive';
       default:'
@@ -26,9 +26,9 @@ export function KanbanColumn({ id, title, description, applications, count }) {
   const getColumnBgColor = columnId => {
 
     switch (columnId) {
-'
+
       case 'hired':'
-        return 'bg-green-50';'
+        return 'bg-green-50';
       case 'rejected':'
         return 'bg-red-50';
       default:'

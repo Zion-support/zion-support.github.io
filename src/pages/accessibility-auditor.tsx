@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -25,51 +25,51 @@ import {
 
   const accessibilityFeatures = [
     {
-'
+
       category: 'Visual Accessibility',
       icon: Eye,
       features: ['
-        'High contrast mode support','
-        'Adjustable font sizes','
-        'Color-blind friendly design','
-        'Clear typography and spacing','
-        'Alternative text for images','
+        'High contrast mode support',
+        'Adjustable font sizes',
+        'Color-blind friendly design',
+        'Clear typography and spacing',
+        'Alternative text for images',
         'Focus indicators for navigation'
       ]
     },
     {
-'
+
       category: 'Auditory Accessibility',
       icon: Ear,
       features: ['
-        'Closed captions for videos','
-        'Audio descriptions','
-        'Volume controls','
-        'Visual alerts and notifications','
+        'Closed captions for videos',
+        'Audio descriptions',
+        'Volume controls',
+        'Visual alerts and notifications',
         'Transcripts for audio content'
       ]
     },
     {
-'
+
       category: 'Motor Accessibility',
       icon: Hand,
       features: ['
-        'Keyboard navigation support','
-        'Voice control compatibility','
-        'Large click targets','
-        'Customizable timing','
+        'Keyboard navigation support',
+        'Voice control compatibility',
+        'Large click targets',
+        'Customizable timing',
         'Alternative input methods'
       ]
     },
     {
-'
+
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: ['
-        'Clear and simple language','
-        'Consistent navigation structure','
-        'Logical content organization','
-        'Reduced distractions','
+        'Clear and simple language',
+        'Consistent navigation structure',
+        'Logical content organization',
+        'Reduced distractions',
         'Step-by-step instructions'
       ]
     }
@@ -77,35 +77,35 @@ import {
 
   const complianceStandards = [
     {
-'
-      standard: 'WCAG 2.1 AA','
+
+      standard: 'WCAG 2.1 AA',
       status: 'Compliant',
-      icon: CheckCircle,'
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance','
+      icon: CheckCircle,
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       color: 'text-green-500'
     },
     {
-'
-      standard: 'Section 508','
+
+      standard: 'Section 508',
       status: 'Compliant',
-      icon: CheckCircle,'
-      description: 'Federal accessibility requirements for electronic and information technology','
+      icon: CheckCircle,
+      description: 'Federal accessibility requirements for electronic and information technology',
       color: 'text-green-500'
     },
     {
-'
-      standard: 'ADA Title III','
+
+      standard: 'ADA Title III',
       status: 'Compliant',
-      icon: CheckCircle,'
-      description: 'Americans with Disabilities Act requirements for public accommodations','
+      icon: CheckCircle,
+      description: 'Americans with Disabilities Act requirements for public accommodations',
       color: 'text-green-500'
     },
     {
-'
-      standard: 'EN 301 549','
+
+      standard: 'EN 301 549',
       status: 'Compliant',
-      icon: CheckCircle,'
-      description: 'European accessibility requirements for ICT products and services','
+      icon: CheckCircle,
+      description: 'European accessibility requirements for ICT products and services',
       color: 'text-green-500'
     }
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
@@ -118,26 +118,26 @@ import {
 
   const accessibilityTools = [
     {
-'
-      name: 'Screen Reader Support','
+
+      name: 'Screen Reader Support',
       description: 'Full compatibility with popular screen readers including JAWS, NVDA, and VoiceOver',
       icon: Monitor
     },
     {
-'
-      name: 'Mobile Accessibility','
+
+      name: 'Mobile Accessibility',
       description: 'Optimized for mobile devices with touch-friendly interfaces and responsive design',
       icon: Smartphone
     },
     {
-'
-      name: 'Voice Navigation','
+
+      name: 'Voice Navigation',
       description: 'Voice control support for hands-free navigation and interaction',
       icon: Globe
     },
     {
-'
-      name: 'Customizable Interface','
+
+      name: 'Customizable Interface',
       description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
@@ -332,13 +332,13 @@ import {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
                   Get Accessibility Audit
                 </Link>
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
 
                   View All Services

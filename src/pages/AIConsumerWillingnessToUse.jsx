@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIConsumerWillingnessToUse = () => {
   return()
@@ -6,15 +6,15 @@ const AIConsumerWillingnessToUse = () => {
       <Helmet>
         <title>AI Consumer Willingness to Use Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI consumer willingness to use platform that analyzes customer usage readiness, adoption likelihood, and product utilization with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI willingness to use, usage readiness, product adoption, AI analysis, customer usage, product utilization"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-consumer-willingness-to-use"
         />
       </Helmet>
@@ -171,13 +171,13 @@ const AIConsumerWillingnessToUse = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Ease of Use','
-                'Feature Relevance','
-                'Learning Curve','
-                'Time Investment','
-                'Value Perception','
-                'Social Proof','
-                'Support Availability','
+                'Ease of Use',
+                'Feature Relevance',
+                'Learning Curve',
+                'Time Investment',
+                'Value Perception',
+                'Social Proof',
+                'Support Availability',
                 'Integration Needs',
               ].map(factor => (
                 <div

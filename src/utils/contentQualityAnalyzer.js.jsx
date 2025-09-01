@@ -73,10 +73,10 @@ export class ContentQualityAnalyzer {
 
     if (!content) return 0;
     // Remove HTML tags and count words
-    const cleanContent = content;'
-      .replace(/<[^>]*>/g, ' ')'
-      .replace(/\s+/g, ' ')
-      .trim();'
+    const cleanContent = content;
+      .replace(/<[^>]*>/g, ')
+      .replace(/\s+/g, ')
+      .trim();
     return cleanContent.split(' ').filter(word => word.length > 0).length;
   }
   countHeadings(content) {
@@ -114,8 +114,8 @@ export class ContentQualityAnalyzer {
     if (!content) return 0;
     // Simple syllable estimation
     const words = content;
-      .toLowerCase()'
-      .replace(/[^a-z\s]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z\s]/g,')
       .split(/\s+/);
     let syllableCount = 0;
     for (const word of words) {
@@ -208,54 +208,54 @@ export class ContentQualityAnalyzer {
 
     const issues = [];
     if (!metrics.title || metrics.title.length < 30) {
-'
-      issues.push('Title is too short (should be 30-60 characters)');
+
+      issues.push('Title is too short (should be 30-60 characters));
     } else if (metrics.title.length > 60) {
-'
-      issues.push('Title is too long (should be 30-60 characters)');
+
+      issues.push('Title is too long (should be 30-60 characters));
     }
     if (metrics.wordCount < 300) {
-'
-      issues.push('Content is too short (should be at least 300 words)');
+
+      issues.push('Content is too short (should be at least 300 words));
     }
     if (metrics.headingCount < 2) {
 
       issues.push('
-        'Insufficient heading structure (should have at least 2 headings)'
+        'Insufficient heading structure (should have at least 2 headings)
       );
     }
     if (metrics.metaDescriptionLength < 120) {
 
       issues.push('
-        'Meta description is too short (should be 120-160 characters)'
+        'Meta description is too short (should be 120-160 characters)
       );
     } else if (metrics.metaDescriptionLength > 160) {
 
       issues.push('
-        'Meta description is too long (should be 120-160 characters)'
+        'Meta description is too long (should be 120-160 characters)
       );
     }
     if (metrics.imageCount === 0) {
-'
-      issues.push('No images found (consider adding relevant images)');
+
+      issues.push('No images found (consider adding relevant images));
     }
     if (metrics.linkCount < 2) {
 
       issues.push('
-        'Insufficient internal linking (should have at least 2 internal links)'
+        'Insufficient internal linking (should have at least 2 internal links)
       );
     }
     if (!metrics.hasStructuredData) {
 
       issues.push('
-        'No structured data found (consider adding JSON-LD or microdata)'
+        'No structured data found (consider adding JSON-LD or microdata)
       );
     }
     return issues;
   }
   generateRecommendations(issues) {
 
-    const recommendations = [];'
+    const recommendations = [];
     if (issues.some(issue => issue.includes('Content is too short'))) {
 
       recommendations.push('
@@ -269,31 +269,31 @@ export class ContentQualityAnalyzer {
       recommendations.push('
         'Add H1, H2, and H3 headings to improve content structure and SEO'
       );
-    }'
+    }
     if (issues.some(issue => issue.includes('Meta description'))) {
 
       recommendations.push('
         'Write compelling meta descriptions that accurately describe the page content'
       );
-    }'
+    }
     if (issues.some(issue => issue.includes('No images'))) {
 
       recommendations.push('
         'Add relevant images, diagrams, or infographics to enhance user engagement'
       );
-    }'
+    }
     if (issues.some(issue => issue.includes('Insufficient internal linking'))) {
 
       recommendations.push('
         'Add internal links to related pages to improve navigation and SEO'
       );
-    }'
+    }
     if (issues.some(issue => issue.includes('No structured data'))) {
 
       recommendations.push('
         'Implement structured data markup for better search engine understanding'
       );
-    }'
+    }
     if (issues.some(issue => issue.includes('Title'))) {
 
       recommendations.push('
@@ -323,7 +323,7 @@ export class ContentQualityAnalyzer {
         averageSeoScore: 0,
         pagesWithIssues: 0,
         topIssues: [],
-        pageMetrics: [],'
+        pageMetrics: [],
         summary: 'No pages analyzed yet'};
     }
     const averageSeoScore = Math.round()
@@ -381,7 +381,7 @@ export class ContentQualityAnalyzer {
     }
     if (topIssues.length > 0) {
 '`
-      summary += `Top issues to address: ${topIssues.slice(0, 3).join(', ')}.`;
+      summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
     }
     return summary;
   }

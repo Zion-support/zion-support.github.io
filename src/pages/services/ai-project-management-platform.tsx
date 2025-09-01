@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   Users, 
@@ -29,90 +29,90 @@ export default function AIProjectManagementPlatform(...args: []):  {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Task Prioritization','
+      icon: Brain,
+      title: 'AI-Powered Task Prioritization',
       description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity'
     },
     {
 
-      icon: Users,'
-      title: 'Smart Team Collaboration','
+      icon: Users,
+      title: 'Smart Team Collaboration',
       description: 'AI-driven team matching and workload balancing for optimal project execution'
     },
     {
 
-      icon: Calendar,'
-      title: 'Predictive Timeline Management','
+      icon: Calendar,
+      title: 'Predictive Timeline Management',
       description: 'Machine learning models predict project delays and suggest mitigation strategies'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Performance Analytics','
+      icon: TrendingUp,
+      title: 'Performance Analytics',
       description: 'Real-time insights into team productivity, project health, and resource utilization'
     },
     {
 
-      icon: Shield,'
-      title: 'Risk Assessment & Mitigation','
+      icon: Shield,
+      title: 'Risk Assessment & Mitigation',
       description: 'AI continuously monitors project risks and provides proactive recommendations';
     },;
     {;
-      icon: Zap,;'
-      title: 'Automated Reporting',;'
+      icon: Zap,;
+      title: 'Automated Reporting',;
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
     };
   ];
 
   const pricingPlans = [
     {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
+
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
       description: 'Perfect for small teams and startups',
       features: ['
-        'Up to 10 team members','
-        'Basic AI task prioritization','
-        'Standard project templates','
-        'Email support','
-        'Basic analytics dashboard','
+        'Up to 10 team members',
+        'Basic AI task prioritization',
+        'Standard project templates',
+        'Email support',
+        'Basic analytics dashboard',
         'Mobile app access'
       ],
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for growing businesses',
       features: ['
-        'Up to 50 team members','
-        'Advanced AI features','
-        'Custom project templates','
-        'Priority support','
-        'Advanced analytics','
-        'API access','
-        'Integrations (Slack, Jira, etc.)','
+        'Up to 50 team members',
+        'Advanced AI features',
+        'Custom project templates',
+        'Priority support',
+        'Advanced analytics',
+        'API access',
+        'Integrations (Slack, Jira, etc.),
         'White-label options'
       ],
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$1,299','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
       description: 'For large organizations',
       features: ['
-        'Unlimited team members','
-        'Full AI suite','
-        'Custom integrations','
-        'Dedicated support manager','
-        'Advanced security features',;'
-        'Custom AI model training',;'
-        'On-premise deployment options',;'
+        'Unlimited team members',
+        'Full AI suite',
+        'Custom integrations',
+        'Dedicated support manager',
+        'Advanced security features',;
+        'Custom AI model training',;
+        'On-premise deployment options',;
         'SLA guarantees';
       ],;
       popular: false;
@@ -122,50 +122,50 @@ export default function AIProjectManagementPlatform(...args: []):  {
   const benefits = [
     {
 
-      icon: Clock,'
-      title: '30% Faster Project Delivery','
+      icon: Clock,
+      title: '30% Faster Project Delivery',
       description: 'AI optimization reduces project timelines through intelligent resource allocation'
     },
     {
 
-      icon: Target,'
-      title: '95% On-Time Completion','
+      icon: Target,
+      title: '95% On-Time Completion',
       description: 'Predictive analytics help teams meet deadlines consistently'
     },
     {
 
-      icon: BarChart3,'
-      title: '40% Cost Reduction','
+      icon: BarChart3,
+      title: '40% Cost Reduction',
       description: 'Eliminate waste through AI-driven efficiency improvements';
     },;
     {;
-      icon: Users,;'
-      title: 'Enhanced Team Productivity',;'
+      icon: Users,;
+      title: 'Enhanced Team Productivity',;
       description: 'Automated workflows free up time for strategic work';
     };
   ];
 
   const useCases = [
     {
-'
-      title: 'Software Development','
+
+      title: 'Software Development',
       description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',
       icon: GitBranch
     },
     {
-'
-      title: 'Marketing Campaigns','
+
+      title: 'Marketing Campaigns',
       description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',
       icon: MessageSquare
     },
     {
-'
-      title: 'Construction Projects','
+
+      title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
       icon: Building;
     },;
-    {;'
-      title: 'Event Planning',;'
+    {;
+      title: 'Event Planning',;
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
       icon: Calendar;
     };
@@ -174,7 +174,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Project Management Platform - Zion Tech Group""
+        title="AI Project Management Platform - Zion Tech Group"
         description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
       />
 

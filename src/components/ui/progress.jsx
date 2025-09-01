@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { cn } from '../../lib/utils';
 
 const Progress = React.forwardRef()
@@ -23,7 +23,7 @@ const Progress = React.forwardRef()
     );
   }
 );
-'
+
 Progress.displayName = 'Progress';
 
 export { Progress };

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
 
@@ -21,87 +21,87 @@ import {
   Settings,
   Workflow,
   FileText,
-  Monitor,'
-  Smartphone} from 'lucide-react';'
+  Monitor,
+  Smartphone} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 ;
 export { function };
 export default function DigitalTransformation(...args: unknown[]): unknown {
   const services = [
     {
-'
+
       title: 'Process Automation',
       description:'
         'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
       icon: Workflow,
       features: ['
-        'RPA Implementation','
-        'Workflow Optimization','
-        'Business Process Mapping','
+        'RPA Implementation',
+        'Workflow Optimization',
+        'Business Process Mapping',
         'Performance Monitoring',
       ]},
     {
-'
+
       title: 'Cloud Migration',
       description:'
         'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
       icon: Cloud,
       features: ['
-        'Migration Strategy','
-        'Data Transfer','
-        'Application Modernization','
+        'Migration Strategy',
+        'Data Transfer',
+        'Application Modernization',
         'Performance Optimization',
       ]},
     {
-'
+
       title: 'Data Strategy',
       description:'
         'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
       icon: Database,
       features: ['
-        'Data Architecture','
-        'Analytics Implementation','
-        'Data Governance','
+        'Data Architecture',
+        'Analytics Implementation',
+        'Data Governance',
         'Business Intelligence',
       ]},
     {
 
-      icon: Users,'
-      title: 'Change Management','
+      icon: Users,
+      title: 'Change Management',
       description: 'Guide organizations through digital transformation journey'},
     {
 
-      icon: Clock,'
-      title: 'Agile Implementation','
+      icon: Clock,
+      title: 'Agile Implementation',
       description: 'Rapid deployment with iterative improvement cycles'},
     {
 
-      icon: Search,'
-      title: 'Performance Monitoring','
+      icon: Search,
+      title: 'Performance Monitoring',
       description: 'Track transformation progress and measure ROI'},
   ];
 
   const benefits = [
     {
-'
+
       title: 'Increased Efficiency',
       description:'
         'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
       icon: TrendingUp},
     {
-'
+
       title: 'Cost Reduction',
       description:'
         'Reduce operational costs through automation and cloud optimization.',
       icon: BarChart3},
     {
-'
+
       title: 'Better Customer Experience',
       description:'
         'Deliver faster, more personalized services through digital channels.',
       icon: Star},
     {
-'
+
       title: 'Competitive Advantage',
       description:'
         'Stay ahead of the competition with cutting-edge digital capabilities.',
@@ -109,28 +109,28 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
   ];
 
   const industries = ['
-    'Healthcare','
-    'Finance','
-    'Manufacturing','
-    'Retail','
-    'Education','
-    'Government','
-    'Technology','
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Technology',
     'Energy',
   ];
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'};
   const industries = ['
-    'Healthcare','
-    'Finance','
-    'Manufacturing','
-    'Retail','
-    'Education','
-    'Government','
-    'Technology','
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Technology',
     'Transportation',
   ];
   return()
@@ -151,7 +151,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Digital"
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 {' '}
                 Transformation
               </span>

@@ -97,9 +97,7 @@ export function AISolutions(...args: unknown[]): unknown {
       title: 'Machine Learning',
       description: 'Advanced algorithms that learn and improve from data',
       benefits: [
-        'Predictive modeling',
-        'Pattern recognition',
-        'Automated decision making',
+        'Predictive modeling',Pattern recognition',Automated decision making',
       ],
     },
     {
@@ -107,37 +105,33 @@ export function AISolutions(...args: unknown[]): unknown {
       title: 'Data Analytics',
       description: 'Transform raw data into actionable insights',
       benefits: [
-        'Real-time processing',
-        'Visual analytics',
-        'Performance metrics',
+        'Real-time processing',Visual analytics',Performance metrics',
       ],
     },
     {
       icon: Users,
       title: 'Natural Language Processing',
       description: 'Understand and generate human language',
-      benefits: ['Chatbots', 'Text analysis', 'Language translation'],
+      benefits: ['Chatbots',Text analysis',Language translation'],
     },
     {
       icon: Eye,
       title: 'Computer Vision',
       description: 'Analyze and interpret visual information',
-      benefits: ['Image recognition', 'Object detection', 'Video analysis'],
+      benefits: ['Image recognition',Object detection',Video analysis'],
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and behaviors',
-      benefits: ['Risk assessment', 'Demand forecasting', 'Customer behavior'],
+      benefits: ['Risk assessment',Demand forecasting',Customer behavior'],
     },
     {
       icon: Zap,
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation',
       benefits: [
-        'Workflow optimization',
-        'Error reduction',
-        'Efficiency gains',
+        'Workflow optimization',Error reduction',Efficiency gains',
       ],
     },
   ];
@@ -147,9 +141,7 @@ export function AISolutions(...args: unknown[]): unknown {
       industry: 'Healthcare',
       icon: Heart,
       applications: [
-        'Diagnostic assistance',
-        'Patient monitoring',
-        'Drug discovery',
+        'Diagnostic assistance',Patient monitoring',Drug discovery',
       ],
       color: 'from-red-500 to-pink-600',
     },
@@ -157,9 +149,7 @@ export function AISolutions(...args: unknown[]): unknown {
       industry: 'Finance',
       icon: DollarSign,
       applications: [
-        'Fraud detection',
-        'Risk assessment',
-        'Trading algorithms',
+        'Fraud detection',Risk assessment',Trading algorithms',
       ],
       color: 'from-green-500 to-emerald-600',
     },
@@ -167,9 +157,7 @@ export function AISolutions(...args: unknown[]): unknown {
       industry: 'Manufacturing',
       icon: Building,
       applications: [
-        'Predictive maintenance',
-        'Quality control',
-        'Supply chain optimization',
+        'Predictive maintenance',Quality control',Supply chain optimization',
       ],
       color: 'from-blue-500 to-cyan-600',
     },
@@ -177,9 +165,7 @@ export function AISolutions(...args: unknown[]): unknown {
       industry: 'Retail',
       icon: ShoppingCart,
       applications: [
-        'Customer segmentation',
-        'Inventory management',
-        'Personalized recommendations',
+        'Customer segmentation',Inventory management',Personalized recommendations',
       ],
       color: 'from-purple-500 to-indigo-600',
     },

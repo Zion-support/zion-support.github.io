@@ -1,22 +1,22 @@
-import { useState } from 'react';'
-import { useAuth } from '@/hooks/useAuth';'
-import { ChatWidget } from '@/components/ChatWidget';'
-import { useRouter } from 'next/router';'
-import { Badge } from '@/components/ui/badge';'
-import { Button } from '@/components/ui/button';'
-import ImageWithRetry from '@/components/ui/ImageWithRetry';'
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react';'
-import { cn } from '@/lib/utils';'
-import Link from 'next/link';'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'
-import { toast } from '@/hooks/use-toast';'
-import { PaymentButton } from '@/components/transactions/PaymentButton';'
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { ChatWidget } from '@/components/ChatWidget';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { toast } from '@/hooks/use-toast';
+import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
 
   Dialog,
   DialogContent,
-  DialogHeader,'
+  DialogHeader,
   DialogTitle} from '@/components/ui/dialog';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -39,7 +39,7 @@ export default function ListingDetail() {
             <h1 className="text-3xl font-bold text-white mb-4">
               Listing Not Found
             </h1>"
-            <p className="text-zion-slate-light mb-8">'
+            <p className="text-zion-slate-light mb-8">
               The listing you're looking for doesn't exist or has been removed.
             </p>
             <Button
@@ -75,7 +75,7 @@ export default function ListingDetail() {
                     <ImageWithRetry
                       src={listing.images[selectedImageIndex]}
                       alt={listing.title}"
-                      className="w-full h-full object-cover""
+                      className="w-full h-full object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
                   ) : ("
@@ -103,7 +103,7 @@ export default function ListingDetail() {
                         <ImageWithRetry
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}"
-                          className="w-full h-full object-cover""
+                          className="w-full h-full object-cover"
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -161,7 +161,7 @@ export default function ListingDetail() {
                     {listing.tags.map((tag, i) => (
                       <Badge
                         key={i}"
-                        variant="outline""
+                        variant="outline"
                         className="border-zion-slate-dark text-zion-slate-light py-1 px-3"
                       >
                         {tag}
@@ -177,7 +177,7 @@ export default function ListingDetail() {
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">"
                 <div className="mb-2">
                   <Badge"
-                    variant="secondary""
+                    variant="secondary"
                     className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30"
                   >
                     {listing.category}
@@ -201,14 +201,14 @@ export default function ListingDetail() {
                           key={i}
                           className={cn('
                             'h-5 w-5',
-                            i < Math.floor(listing.rating)'
+                            i < Math.floor(listing.rating)
                               ? 'text-zion-cyan fill-zion-cyan''
                               : 'text-zion-slate-light'
                           )}
                         />
                       ))}
                     </div>"
-                    <span className="text-sm text-zion-slate-light">'
+                    <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
                       reviews)
                     </span>
@@ -236,12 +236,12 @@ export default function ListingDetail() {
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}"
-                      buttonText="Buy Now""
+                      buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
-'
-                          title: 'Payment Processing','
+
+                          title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...'});
                       }}
                     />
@@ -250,7 +250,7 @@ export default function ListingDetail() {
                       onClick={handleContact}
                       disabled={isLoading}"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >'
+                    >
                       {isLoading ? 'Processing...' : 'Request Quote'}
                     </Button>
                   )}

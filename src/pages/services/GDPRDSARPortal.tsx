@@ -5,8 +5,8 @@ import {
   FileText,
   ExternalLink,
   CheckCircle,
-  Mail,'
-  Phone} from 'lucide-react.ts';'
+  Mail,
+  Phone} from 'lucide-react.ts';
 import { Link } from 'react-router-dom.ts';
 
 export default function GDPRDSARPortal(...args: any[]): any {
@@ -28,20 +28,20 @@ export default function GDPRDSARPortal(...args: any[]): any {
             <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
               {[
                 {
-'
-                  title: 'Identity verification & consent','
+
+                  title: 'Identity verification & consent',
                   desc: 'Email/SMS OTP, ID document support.'},
                 {
-'
-                  title: 'Workflow automation','
+
+                  title: 'Workflow automation',
                   desc: 'Intake, triage, routing, collaboration.'},
                 {
-'
-                  title: 'Data source connectors','
+
+                  title: 'Data source connectors',
                   desc: 'CRM, CDP, Data Warehouse lookups.'},
                 {
-'
-                  title: 'Exports & redaction','
+
+                  title: 'Exports & redaction',
                   desc: 'PDF/CSV exports with auto‑redaction.'},
               ].map(f => (
                 <div
@@ -56,7 +56,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
               ))}
             </div>
 "
-            <div className="mt-8 text-sm text-slate-300">'
+            <div className="mt-8 text-sm text-slate-300">
               Typical pricing:{' '}'"
               <span className="font-semibold text-cyan-300">$99–$399/mo</span>{' '}
               plus usage. Market comps: OneTrust/Transcend tiers.
@@ -64,17 +64,17 @@ export default function GDPRDSARPortal(...args: any[]): any {
 "
             <div className="mt-4 flex gap-4 text-sm">
               <a"
-                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-                href="https://www.onetrust.com/pricing/""
-                target="_blank""
+                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
+                href="https://www.onetrust.com/pricing/"
+                target="_blank"
                 rel="noreferrer"
               >"
                 OneTrust pricing <ExternalLink className="w-3 h-3" />
               </a>
               <a"
-                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-2  00""
-                href="https://transcend.io/pricing/""
-                target="_blank""
+                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-2  00"
+                href="https://transcend.io/pricing/"
+                target="_blank"
                 rel="noreferrer"
               >"
                 Transcend pricing <ExternalLink className="w-3 h-3" />
@@ -83,19 +83,19 @@ export default function GDPRDSARPortal(...args: any[]): any {
 "
             <div className="mt-10 flex flex-wrap gap-3">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
               >
                 Request a demo
               </Link>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2"
               >"
                 <Mail className="w-4 h-4" /> kleber@ziontechgroup.com
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2"
               >"
                 <Phone className="w-4 h-4" /> +1 302 464 0950
@@ -108,7 +108,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
               Looking for our existing DSAR implementation page?
             </div>
             <Link"
-              to="/services/dsr-portal""
+              to="/services/dsr-portal"
               className="mt-3 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
             >"
               Go to DSAR Portal <ExternalLink className="w-3 h-3" />

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -6,7 +6,7 @@ import {
   CpuChipIcon,
   BoltIcon,
   GlobeAltIcon,
-  RocketLaunchIcon,'
+  RocketLaunchIcon,
   ShieldCheckIcon} from '@heroicons/react/24/outline';
 const QuantumTechnology = () => {
   return()
@@ -30,13 +30,13 @@ const QuantumTechnology = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"
               >
                 Get Started
               </Link>
               <Link"
-                to="/quantum-services""
+                to="/quantum-services"
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
               >
                 Explore Services
@@ -277,13 +277,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -303,13 +303,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -328,13 +328,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -355,13 +355,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -380,13 +380,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -405,13 +405,13 @@ const QuantumTechnology = () => {
               <div className="flex items-start space-x-4">"
                 <div className="bg-purple-600/20 p-2 rounded-lg">
                   <svg"
-                    className="h-6 w-6 text-purple-400""
-                    fill="none""
-                    viewBox="0 0 24 24""
+                    className="h-6 w-6 text-purple-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M5 13l4 4L19 7"
@@ -445,13 +445,13 @@ const QuantumTechnology = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"
             >
               Schedule a Consultation
             </Link>
             <Link"
-              to="/quantum-services""
+              to="/quantum-services"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
             >
               View All Services

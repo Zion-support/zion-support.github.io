@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
 import { emergingTechServices2030 } from "../data / emergingTechServices2030";
@@ -65,17 +65,17 @@ export default function EmergingTech2030(...args[]):  {
   };
 
   const serviceIcons = {
-'
-  'Quantum Computing': Brain,'
-    'Artificial Intelligence': Cpu,'
-    'Neuromorphic Computing': Brain,'
-    'Synthetic Biology': Heart,'
-    'Space Technology': Rocket,'
+
+  'Quantum Computing': Brain,
+    'Artificial Intelligence': Cpu,
+    'Neuromorphic Computing': Brain,
+    'Synthetic Biology': Heart,
+    'Space Technology': Rocket,
     'Brain-Computer Interface': Brain,;
   ;
   ;
   ;
-  ;'
+  ;
   'Fusion Energy': Zap;
   ;
 
@@ -84,9 +84,9 @@ export default function EmergingTech2030(...args[]):  {
   return()
     <>
       <SEO "
-        title = "Emerging Technology Services 2030 - Zion Tech Group""
-        description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses.""
-        canonical="/emerging-tech-2030""
+        title = "Emerging Technology Services 2030 - Zion Tech Group"
+        description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
+        canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
       />
 "
@@ -98,14 +98,14 @@ export default function EmergingTech2030(...args[]):  {
           <motion.div"
             className="relative z-10 container mx-auto text-center max-w-6xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
 
             <motion.div variants={itemVariants}>"
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Emerging Tech 2030
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Pioneering the future with revolutionary technologies that will transform industries and redefine what's possible
               </p>"
               <div className="flex flex-wrap justify-center gap-4 mb-12">"
@@ -130,19 +130,19 @@ export default function EmergingTech2030(...args[]):  {
 "
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Started
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Request Quote
               </Link>
               <Link"
-                to="/services-catalog""
+                to="/services-catalog"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 View All Services
@@ -156,7 +156,7 @@ export default function EmergingTech2030(...args[]):  {
           <motion.div"
             className="container mx-auto max-w-7xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
 "
             <motion.div variants={itemVariants} className="text-center mb-16">"
@@ -220,7 +220,7 @@ export default function EmergingTech2030(...args[]):  {
                     <Link
                       to = {
 `
-  `/services/${service.id.replace(/-/g,'
+  `/services/${service.id.replace(/-/g,
   '-')
 
 
@@ -245,7 +245,7 @@ export default function EmergingTech2030(...args[]):  {
           <motion.div "
             className="container mx-auto max-w-6xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 "
@@ -262,44 +262,44 @@ export default function EmergingTech2030(...args[]):  {
               {[
                 {
 
-                  icon: Award,'
-                  title: 'Industry Expertise','
-                  description: 'Deep knowledge across multiple industries with proven track records of successful implementations.','
+                  icon: Award,
+                  title: 'Industry Expertise',
+                  description: 'Deep knowledge across multiple industries with proven track records of successful implementations.',
                   color: 'from-yellow-500 to-orange-600'
                 },
                 {
 
-                  icon: Users,'
-                  title: 'Expert Team','
-                  description: 'World-class engineers, scientists, and consultants with advanced degrees and industry experience.','
+                  icon: Users,
+                  title: 'Expert Team',
+                  description: 'World-class engineers, scientists, and consultants with advanced degrees and industry experience.',
                   color: 'from-blue-500 to-cyan-600'
                 },
                 {
 
-                  icon: Target,'
-                  title: 'Custom Solutions','
-                  description: 'Tailored solutions designed specifically for your business needs and industry requirements.','
+                  icon: Target,
+                  title: 'Custom Solutions',
+                  description: 'Tailored solutions designed specifically for your business needs and industry requirements.',
                   color: 'from-green-500 to-emerald-600'
                 },
                 {
 
-                  icon: BarChart3,'
-                  title: 'Proven Results','
-                  description: 'Track record of delivering measurable business outcomes and ROI for our clients.','
+                  icon: BarChart3,
+                  title: 'Proven Results',
+                  description: 'Track record of delivering measurable business outcomes and ROI for our clients.',
                   color: 'from-purple-500 to-pink-600'
                 },
                 {
 
-                  icon: Lightbulb,'
-                  title: 'Innovation First','
-                  description: 'Always at the forefront of technology, exploring emerging trends and cutting-edge solutions.','
+                  icon: Lightbulb,
+                  title: 'Innovation First',
+                  description: 'Always at the forefront of technology, exploring emerging trends and cutting-edge solutions.',
                   color: 'from-indigo-500 to-purple-600'
                 },
                 {
 
-                  icon: Shield,'
-                  title: 'Enterprise Security','
-                  description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.','
+                  icon: Shield,
+                  title: 'Enterprise Security',
+                  description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
                 }
               ].map ( (feature, index) => (<motion.div
@@ -323,7 +323,7 @@ export default function EmergingTech2030(...args[]):  {
           <motion.div"
             className="container mx-auto max-w-4xl text-center"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -331,7 +331,7 @@ export default function EmergingTech2030(...args[]):  {
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>"
-              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our emerging technology services can help you stay ahead of the competition and prepare for the future
               </p>
             </motion.div>
@@ -353,13 +353,13 @@ export default function EmergingTech2030(...args[]):  {
 "
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 Schedule a Consultation
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Custom Quote

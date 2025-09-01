@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react.ts';'
+import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Search, 
 import { zion2026AIMarketplaceServices  } from '../../data / zion - 2026 - ai - marketplace - services';
@@ -19,43 +19,43 @@ import { zion2026AIMarketplaceServices  } from '../../data / zion - 2026 - ai - 
   Mail,
   MapPin,
   ExternalLink'
- } from 'lucide-react.ts';'
+ } from 'lucide-react.ts';
 import { zion2026AIMarketplaceServices  } from '../../data/zion-2026-ai-marketplace-services';
 
-const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [viewMode, setViewMode] = useState<any>('grid');
-'
-  const categories = ['all', 'AI Marketplace', 'AI Integration', 'AI Automation', 'AI Analytics', 'AI Development'];
+
+  const categories = ['all',AI Marketplace',AI Integration',AI Automation',AI Analytics',AI Development'];
 
   const filteredServices = useMemo(() => {;
     return zion2026AIMarketplaceServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase());'
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     }) ;
   }, [searchTerm, selectedCategory]) ;
 
   const getCategoryIcon = (category: anystring)  => {;
-    switch (category) {;'
-      case 'AI Marketplace': return Globe;'
-      case 'AI Integration': return Zap;'
-      case 'AI Automation': return Shield;'
-      case 'AI Analytics': return BarChart3;'
+    switch (category) {;
+      case 'AI Marketplace': return Globe;
+      case 'AI Integration': return Zap;
+      case 'AI Automation': return Shield;
+      case 'AI Analytics': return BarChart3;
       case 'AI Development': return Code;
       default: return Globe;
     }
   };
 
   const getCategoryColor = (category: anystring)  => {;
-    switch (category) {;'
-      case 'AI Marketplace': return 'from-blue-500 to-cyan-500';'
-      case 'AI Integration': return 'from-purple-500 to-pink-500';'
-      case 'AI Automation': return 'from-green-500 to-emerald-500';'
-      case 'AI Analytics': return 'from-orange-500 to-red-500';'
-      case 'AI Development': return 'from-indigo-500 to-blue-500';'
+    switch (category) {;
+      case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
+      case 'AI Integration': return 'from-purple-500 to-pink-500';
+      case 'AI Automation': return 'from-green-500 to-emerald-500';
+      case 'AI Analytics': return 'from-orange-500 to-red-500';
+      case 'AI Development': return 'from-indigo-500 to-blue-500';
       default: return 'from-gray-500 to-slate-500';
     }
   };
@@ -140,7 +140,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search AI marketplace services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -157,7 +157,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                   className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   {categories.map(category  => (
-                    <option key={category} value={category}>'
+                    <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -169,7 +169,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                   <button'
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-md transition-colors ${
-'
+
                       viewMode === 'grid' '
                         ? 'bg-blue-500 text-white' '
                         : 'text-gray-400 hover:text-white'`
@@ -180,7 +180,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                   <button'
                     onClick={() => setViewMode('list')}`
                     className={`p-2 rounded-md transition-colors ${
-'
+
                       viewMode === 'list' '
                         ? 'bg-blue-500 text-white' '
                         : 'text-gray-400 hover:text-white'`
@@ -235,7 +235,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
 
 }}`
                   className={`bg-slate-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 ${
-'
+
                     viewMode === 'list' ? 'flex' : ''`
                   }`}
                 >
@@ -244,7 +244,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                     <div className="flex items-center justify-between mb-4">`
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                         {React.createElement(getCategoryIcon(service.category), {
-'
+
                           className: 'w-6 h-6 text-white' 
                         })}
                       </div>"
@@ -353,9 +353,9 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
             </div>"
             <div className="mt-8 text-center">
               <a "
-                href="https://ziontechgroup.com" "
-                target="_blank" "
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 <span>Visit our website</span>"

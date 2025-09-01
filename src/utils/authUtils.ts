@@ -4,12 +4,12 @@ export const cleanupAuthState = () => {
     if (typeof window !== 'undefined') {
 
       // Clear any stored tokens or user data
-'
-      localStorage.removeItem('auth');'
+
+      localStorage.removeItem('auth');
       sessionStorage.removeItem('auth');
     }
   } catch (error) {
-'
+
     // console.error('Error cleaning up auth state:', error);
   }
 };
@@ -17,7 +17,7 @@ export const cleanupAuthState = () => {
 export const isAuthenticated = (): boolean => {
 
   try {
-'
+
     if (typeof window !== 'undefined') {
 
       const auth ='
@@ -26,7 +26,7 @@ export const isAuthenticated = (): boolean => {
     }
     return false;
   } catch (error) {
-'
+
     // console.error('Error checking authentication status:', error);
 
     return false;
@@ -36,7 +36,7 @@ export const isAuthenticated = (): boolean => {
 export const getAuthToken = (): string | null => {
 
   try {
-'
+
     if (typeof window !== 'undefined') {
 
       const auth ='
@@ -49,7 +49,7 @@ export const getAuthToken = (): string | null => {
     }
     return null;
   } catch (error) {
-'
+
     // console.error('Error getting auth token:', error);
 
       return null;
@@ -59,7 +59,7 @@ export const getAuthToken = (): string | null => {
 export const getUserData = (): any => {
 
   try {
-'
+
     if (typeof window !== 'undefined') {
 
       const auth ='
@@ -72,10 +72,9 @@ export const getUserData = (): any => {
     }
     return null;
   } catch (error) {
-'
+
     // console.error('Error getting user data:', error);
 
     return null;
   }
 };
-'

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -122,117 +122,117 @@ export function EnhancedFuturisticFooter() {
   
   const footerSections = [
     {
-'
+
       title: 'Services',
-      icon: Rocket,'
+      icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
       links: ['
-        { name: 'Services Overview', href: '/services-overview' },'
-        { name: 'AI Services', href: '/ai-services' },'
-        { name: 'IT Services', href: '/it-services' },'
-        { name: 'Micro SaaS', href: '/micro-saas' },'
-        { name: 'Services Catalog', href: '/services-catalog' },'
+        { name: 'Services Overview', href: '/services-overview' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Services Catalog', href: '/services-catalog' },
         { name: 'Services Comparison', href: '/services-comparison' }
       ]
     },
     {
-'
-      title: 'Core Technologies','
+
+      title: 'Core Technologies',
       title: 'AI & Machine Learning Services',
       featured: true,
-      icon: Brain,'
+      icon: Brain,
       color: 'from-indigo-600 to-purple-600',
       links: ['
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },'
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },'
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', featured: true },'
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },'
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },'
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },'
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },'
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },'
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },'
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },'
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },'
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },'
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },'
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', featured: true },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
       ]
     },
     {
-'
+
       title: 'Innovation Hub',
-      icon: Star,'
+      icon: Star,
       color: 'from-purple-600 to-pink-600',
       links: ['
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },'
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },'
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },'
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },'
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },'
+        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
       ]
     },
     {
-'
-        { name: 'Investor Relations', href: '/investors', featured: false },;'
-        { name: 'Press & Media', href: '/press', featured: false },;'
+
+        { name: 'Investor Relations', href: '/investors', featured: false },;
+        { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ];
     };
   ];
 
   const quickLinks = ['
-    { name: 'Services', href: '/services' },'
-    { name: 'Pricing', href: '/pricing' },'
-    { name: 'About Us', href: '/about' },'
-    { name: 'Our Team', href: '/team' },'
-    { name: 'Careers', href: '/careers' },'
-    { name: 'Partners', href: '/partners' },'
-    { name: 'News & Events', href: '/news' },'
-    { name: 'Case Studies', href: '/case-studies' },'
-    { name: 'Blog', href: '/blog' },'
-    { name: 'Careers', href: '/careers' },'
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'News & Events', href: '/news' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Marketplace', href: '/marketplace' }
   ];
 
   const socialLinks = ['
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },'
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-300' },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },'
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },'
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },'
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-300' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
     }
   ];
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
   const socialLinks = ['
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },'
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },'
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },'
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },'
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
   ];
 
   const quickActions = ['
-    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },'
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },'
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },'
+    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
     { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
   ];
 
   const stats = ['
-    { value: '500+', label: 'Projects Delivered', icon: CheckCircle },'
-    { value: '50+', label: 'AI Solutions', icon: Brain },'
-    { value: '24/7', label: 'Support Available', icon: Clock },'
+    { value: '500+', label: 'Projects Delivered', icon: CheckCircle },
+    { value: '50+', label: 'AI Solutions', icon: Brain },
+    { value: '24/7', label: 'Support Available', icon: Clock },
     { value: '99.9%', label: 'Uptime Guarantee', icon: Award }
   ];
 
@@ -253,17 +253,17 @@ export function EnhancedFuturisticFooter() {
       </div>
 
   const legalLinks = ['
-    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;'
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;'
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;'
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;'
-    { name: 'Security', href: '/security', description: 'Security practices' },;'
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
+    { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
   ];
 
   // Create missing pages for broken links
   const createMissingPage = (name: anystring, href: string)  => {
-'
+
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return()
@@ -365,7 +365,7 @@ export function EnhancedFuturisticFooter() {
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={`w-10 h-10 bg-slate-800/50 border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-400/10 ${social.color}`}
                     aria-label={social.name}
@@ -462,7 +462,7 @@ export function EnhancedFuturisticFooter() {
                   <a
                     key={social.name}
                     href={social.href}"
-                    target="_blank""
+                    target="_blank"
                     rel="noopener noreferrer"`
                     className={`w-10 h-10 bg-slate-800/50 border border-slate-600/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} hover:border-cyan-400/50 transition-all duration-200`}
                   >"
@@ -474,8 +474,8 @@ export function EnhancedFuturisticFooter() {
                 <p className="text-sm text-slate-400">Subscribe to our newsletter</p>"
                 <div className="flex">
                   <input"
-                    type="email""
-                    placeholder="Enter your email""
+                    type="email"
+                    placeholder="Enter your email"
                     className="flex-1 px-3 py-2 bg-slate-800/50 border border-slate-600/50 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                   />"
                   <button className="px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">"
@@ -504,103 +504,103 @@ export function EnhancedFuturisticFooter() {
                 <span className="flex items-center">"
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />
                   AWS Partner
-                </span>'
+                </span>
       title: 'Pricing & Plans',
-      icon: DollarSign,'
+      icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
       links: ['
-        { name: 'Pricing Overview', href: '/pricing' },;'
-        { name: 'Pricing Guide', href: '/pricing-guide' },;'
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;'
-        { name: 'Request Quote', href: '/request-quote' },;'
-        { name: 'Schedule Demo', href: '/schedule-demo' },;'
+        { name: 'Pricing Overview', href: '/pricing' },;
+        { name: 'Pricing Guide', href: '/pricing-guide' },;
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;
+        { name: 'Request Quote', href: '/request-quote' },;
+        { name: 'Schedule Demo', href: '/schedule-demo' },;
         { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
-'
+
       title: 'Company',;
-      icon: Building,'
+      icon: Building,
       color: 'from-green-600 to-emerald-600',
       links: ['
-        { name: 'About Us', href: '/about' },;'
-        { name: 'Our Team', href: '/team' },;'
-        { name: 'Careers', href: '/careers' },;'
-        { name: 'Partners', href: '/partners' },;'
-        { name: 'News & Press', href: '/news' },;'
-        { name: 'Events', href: '/events' },;'
-        { name: 'Case Studies', href: '/case-studies' },;'
+        { name: 'About Us', href: '/about' },;
+        { name: 'Our Team', href: '/team' },;
+        { name: 'Careers', href: '/careers' },;
+        { name: 'Partners', href: '/partners' },;
+        { name: 'News & Press', href: '/news' },;
+        { name: 'Events', href: '/events' },;
+        { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {
-'
+
       title: 'Resources & Learning',;
-      icon: BookOpen,'
+      icon: BookOpen,
       color: 'from-orange-600 to-red-600',
       links: ['
-        { name: 'Help Center', href: '/help' },;'
-        { name: 'Documentation', href: '/documentation' },;'
-        { name: 'Training', href: '/training' },;'
-        { name: 'Blog', href: '/blog' },;'
-        { name: 'Webinars', href: '/webinars' },;'
-        { name: 'White Papers', href: '/white-papers' },;'
-        { name: 'FAQ', href: '/faq' },;'
-        { name: 'Support Center', href: '/support' },;'
+        { name: 'Help Center', href: '/help' },;
+        { name: 'Documentation', href: '/documentation' },;
+        { name: 'Training', href: '/training' },;
+        { name: 'Blog', href: '/blog' },;
+        { name: 'Webinars', href: '/webinars' },;
+        { name: 'White Papers', href: '/white-papers' },;
+        { name: 'FAQ', href: '/faq' },;
+        { name: 'Support Center', href: '/support' },;
         { name: 'Community', href: '/community' }
       ]
     },
     {
-'
+
       title: 'Platform & Tools',;
-      icon: Settings,'
+      icon: Settings,
       color: 'from-slate-600 to-gray-600',
       links: ['
-        { name: 'Dashboard', href: '/dashboard' },;'
-        { name: 'Login', href: '/login' },;'
-        { name: 'Sign Up', href: '/signup' },;'
-        { name: 'System Status', href: '/status' },;'
-        { name: 'API Documentation', href: '/documentation' },;'
+        { name: 'Dashboard', href: '/dashboard' },;
+        { name: 'Login', href: '/login' },;
+        { name: 'Sign Up', href: '/signup' },;
+        { name: 'System Status', href: '/status' },;
+        { name: 'API Documentation', href: '/documentation' },;
         { name: 'Developer Tools', href: '/documentation' }
       ]
     },
     {
-'
+
       title: 'Legal & Compliance',;
-      icon: Shield,'
+      icon: Shield,
       color: 'from-gray-600 to-slate-600',
       links: ['
-        { name: 'Privacy Policy', href: '/privacy' },;'
-        { name: 'Terms of Service', href: '/terms' },;'
-        { name: 'Cookie Policy', href: '/cookies' },;'
-        { name: 'Security', href: '/security' },;'
-        { name: 'Compliance', href: '/compliance' },;'
-        { name: 'Accessibility', href: '/accessibility' },;'
+        { name: 'Privacy Policy', href: '/privacy' },;
+        { name: 'Terms of Service', href: '/terms' },;
+        { name: 'Cookie Policy', href: '/cookies' },;
+        { name: 'Security', href: '/security' },;
+        { name: 'Compliance', href: '/compliance' },;
+        { name: 'Accessibility', href: '/accessibility' },;
         { name: 'Sitemap', href: '/sitemap' }
       ]
     }
   ];
 
   const quickLinks = ['
-    { name: 'Get Quote', href: '/request-quote', icon: DollarSign },;'
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;'
-    { name: 'Contact Support', href: '/support', icon: MessageCircle },;'
+    { name: 'Get Quote', href: '/request-quote', icon: DollarSign },;
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
+    { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
 
   const socialLinks = ['
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },;'
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;'
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;'
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;'
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;'
+    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },;
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
   const contactInfo = {
-'
-    phone: '+1 (555) 123-4567',;'
-    email: 'info@ziontechgroup.com','
+
+    phone: '+1 (555) 123-4567',;
+    email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
   };
 
@@ -658,12 +658,12 @@ export function EnhancedFuturisticFooter() {
               </p>"
               <form className="space-y-3">
                 <input"
-                  type="email""
-                  placeholder="Enter your email""
+                  type="email"
+                  placeholder="Enter your email"
                   className="w-full px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
                 />
                 <button"
-                  type="submit""
+                  type="submit"
                   className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                 >
                   <social.icon className="w-5 h-5" />
@@ -739,7 +739,7 @@ export function EnhancedFuturisticFooter() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={scrollToTop}"
-                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110""
+                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >"
                 <ArrowUpRight className="w-5 h-5 rotate-45" />;

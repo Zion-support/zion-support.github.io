@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -139,168 +139,168 @@ export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
 
-      icon: Brain,'
-      title: 'AI-Powered Patient Analytics','
+      icon: Brain,
+      title: 'AI-Powered Patient Analytics',
       description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
     },
     {
 
-      icon: Heart,'
-      title: 'Clinical Decision Support','
+      icon: Heart,
+      title: 'Clinical Decision Support',
       description: 'AI-driven recommendations for treatment plans and medication management'
     },
     {
 
-      icon: Activity,'
-      title: 'Real-time Health Monitoring','
+      icon: Activity,
+      title: 'Real-time Health Monitoring',
       description: 'Continuous monitoring of patient vitals and health indicators'
     },
     {
 
-      icon: TrendingUp,'
-      title: 'Predictive Health Analytics','
+      icon: TrendingUp,
+      title: 'Predictive Health Analytics',
       description: 'Forecast patient outcomes and identify at-risk populations'
     },
     {
 
-      icon: Shield,'
-      title: 'HIPAA-Compliant Security','
+      icon: Shield,
+      title: 'HIPAA-Compliant Security',
       description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
     },
     {
 
-      icon: BarChart4,'
-      title: 'Population Health Insights','
+      icon: BarChart4,
+      title: 'Population Health Insights',
       description: 'Comprehensive analytics for population health management and public health'
     }
   ];
 
   const benefits = ['
-    'Improve patient outcomes by 35%','
-    'Reduce readmission rates by 40%','
-    'Lower healthcare costs by 25-30%','
-    'Enhance clinical decision-making by 50%','
-    'Streamline administrative processes by 60%','
+    'Improve patient outcomes by 35%',
+    'Reduce readmission rates by 40%',
+    'Lower healthcare costs by 25-30%',
+    'Enhance clinical decision-making by 50%',
+    'Streamline administrative processes by 60%',
     'Ensure 99.9% HIPAA compliance'
   ];
 
   const useCases = [
     {
-'
-      industry: 'Hospitals & Health Systems','
+
+      industry: 'Hospitals & Health Systems',
       description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
     },
     {
-'
-      industry: 'Primary Care Practices','
+
+      industry: 'Primary Care Practices',
       description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
     },
     {
-'
-      industry: 'Specialty Clinics','
+
+      industry: 'Specialty Clinics',
       description: 'Streamline specialty care workflows and improve treatment outcomes'
     },
     {
-'
-      industry: 'Health Insurance','
+
+      industry: 'Health Insurance',
       description: 'Risk assessment, fraud detection, and population health management'
     }
   ];
 
   const pricingPlans = [
     {
-'
-      plan: 'Starter','
+
+      plan: 'Starter',
       price: '$2,800/month',
       features: ['
-        'Up to 50 providers','
-        'Basic AI analytics','
-        'Patient monitoring','
-        'Clinical decision support','
-        'Basic reporting','
+        'Up to 50 providers',
+        'Basic AI analytics',
+        'Patient monitoring',
+        'Clinical decision support',
+        'Basic reporting',
         'Email support'
       ]
     },
     {
-'
-      plan: 'Professional','
+
+      plan: 'Professional',
       price: '$5,500/month',
       features: ['
-        'Up to 200 providers','
-        'Advanced AI analytics','
-        'Population health insights','
-        'Custom workflows','
-        'Advanced reporting','
-        'Priority support','
+        'Up to 200 providers',
+        'Advanced AI analytics',
+        'Population health insights',
+        'Custom workflows',
+        'Advanced reporting',
+        'Priority support',
         'API access'
       ]
     },
     {
-'
-      plan: 'Enterprise','
+
+      plan: 'Enterprise',
       price: '$12,000/month',
       features: ['
-        'Unlimited providers','
-        'Full AI capabilities','
-        'Custom integrations','
-        'White-label options','
-        'Dedicated health manager','
-        '24/7 phone support','
+        'Unlimited providers',
+        'Full AI capabilities',
+        'Custom integrations',
+        'White-label options',
+        'Dedicated health manager',
+        '24/7 phone support',
         'Custom training'
       ]
     }
   ];
 
   const integrations = ['
-    'Epic EHR','
-    'Cerner','
-    'Allscripts','
-    'Meditech','
-    'Athenahealth','
-    'Practice Fusion','
-    'eClinicalWorks','
-    'NextGen','
-    'Greenway Health','
-    'DrChrono','
-    'Kareo','
+    'Epic EHR',
+    'Cerner',
+    'Allscripts',
+    'Meditech',
+    'Athenahealth',
+    'Practice Fusion',
+    'eClinicalWorks',
+    'NextGen',
+    'Greenway Health',
+    'DrChrono',
+    'Kareo',
     'Webhook APIs'
   ];
 
   const keyMetrics = [
     {
-'
-      metric: '35%','
+
+      metric: '35%',
       label: 'Patient Outcome Improvement'
     },
     {
-'
-      metric: '40%','
+
+      metric: '40%',
       label: 'Readmission Rate Reduction'
     },
     {
-'
-      metric: '30%','
+
+      metric: '30%',
       label: 'Cost Reduction'
     },
     {
-'
-      metric: '50%','
+
+      metric: '50%',
       label: 'Decision Enhancement'
     }
   ];
 
   const complianceStandards = ['
-    'HIPAA','
-    'HITECH','
-    'SOC 2 Type II','
-    'ISO 27001','
-    'HITRUST','
-    'GDPR','
-    'CCPA','
-    'FDA 21 CFR Part 11','
-    'ONC Health IT','
-    'Meaningful Use','
-    'MIPS','
+    'HIPAA',
+    'HITECH',
+    'SOC 2 Type II',
+    'ISO 27001',
+    'HITRUST',
+    'GDPR',
+    'CCPA',
+    'FDA 21 CFR Part 11',
+    'ONC Health IT',
+    'Meaningful Use',
+    'MIPS',
     'APMs'
   ];
 
@@ -321,7 +321,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Healthcare with"
-              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
                 {' '}AI Intelligence
               </span>
             </h1>"
@@ -658,14 +658,14 @@ export default function AIHealthcareAnalyticsPlatform() {
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Contact Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
                 <Globe className="w-5 h-5 mr-2" />

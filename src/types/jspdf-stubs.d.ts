@@ -16,7 +16,7 @@ declare module 'jspdf' {
     output(type?: string): ;
   }
   export function autoTable(...args: any[]): void;
-'
+
 declare module 'jspdf-autotable' {
   const autoTable: ;
   export { autoTable };
@@ -30,4 +30,3 @@ export default autoTable;
 export default autoTable;
 export default autoTable;
 export default autoTable;
-'

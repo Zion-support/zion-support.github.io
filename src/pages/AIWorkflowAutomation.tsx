@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -264,7 +264,7 @@ import {
   BTree,
   RedBlackTree,
   AVLTree,
-  SplayTree,'
+  SplayTree,
   Treap} from 'lucide-react';
 
 const workflowSolutions = [
@@ -509,12 +509,12 @@ const workflowBenefits = [
 ];
 
 export default function AIWorkflowAutomation(...args[]):  {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-'
-  const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
-'
+
+  const categories = ['All',Process Automation',Document Processing',Workflow Orchestration',Decision Automation',Analytics',Task Management'];
+
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions
     : workflowSolutions.filter (solution => solution.category === selectedCategory) ;
@@ -741,7 +741,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
 
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-'
+
                   technology.reliability === 'Critical''
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                     : technology.reliability === 'High''
@@ -1055,20 +1055,20 @@ export default function AIWorkflowAutomation(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>"
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how AI workflow automation can revolutionize your operations,
               improve efficiency, and create competitive advantages.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                 Start Workflow Project
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                 Workflow Consultation

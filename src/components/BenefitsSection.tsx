@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
 import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
@@ -117,7 +117,7 @@ const benefits: Benefit[] = [;
       <div className="absolute inset-0 opacity-5">;"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,'
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
           backgroundSize: '40px 40px'
         }} />
       </div>;
@@ -161,7 +161,7 @@ const benefits: Benefit[] = [;
         <motion.div"
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
 
@@ -183,7 +183,7 @@ const benefits: Benefit[] = [;
         <motion.div"
           className="relative"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
 

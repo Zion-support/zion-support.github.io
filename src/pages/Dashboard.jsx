@@ -1,13 +1,13 @@
-import React from 'react';'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 export default function Dashboard() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Dashboard - Zion Tech Group""
-        description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account.""
-        keywords="dashboard, account management, services, analytics""
+        title="Dashboard - Zion Tech Group"
+        description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account."
+        keywords="dashboard, account management, services, analytics"
         canonical="https://ziontechgroup.com/dashboard"
       />
 
@@ -62,19 +62,19 @@ export default function Dashboard() {
                 </h3>"
                 <div className="space-y-3">
                   <a"
-                    href="/contact""
+                    href="/contact"
                     className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg text-center transition-colors"
                   >
                     Contact Support
                   </a>
                   <a"
-                    href="/services""
+                    href="/services"
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors"
                   >
                     View Services
                   </a>
                   <a"
-                    href="/request-quote""
+                    href="/request-quote"
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors"
                   >
                     Request Quote
@@ -136,13 +136,13 @@ export default function Dashboard() {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               📞 Call + 1 (302) 464 - 0950
             </a>
             <a"
-              href="/contact""
+              href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
             >
               Contact Support

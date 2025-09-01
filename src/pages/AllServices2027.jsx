@@ -1,14 +1,14 @@
-import React, { useState } from 'react';'
-import { Button } from '@/components/ui/button';'
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import {
 
@@ -36,14 +36,14 @@ import {
   Award,
   Clock,
   Target,
-  Rocket,'
-  Lightbulb} from 'lucide-react';'
+  Rocket,
+  Lightbulb} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import all service data'
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';'
-import { CUTTING_EDGE_2025_SERVICES } from '@/data/2025-cutting-edge-innovations.jsx';'
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '@/data/2025-specialized-industry-solutions.jsx';'
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import { CUTTING_EDGE_2025_SERVICES } from '@/data/2025-cutting-edge-innovations.jsx';
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '@/data/2025-specialized-industry-solutions.jsx';
 import { INNOVATIVE_MICRO_SAAS_2025 } from '@/data/2025-innovative-micro-saas-expansion.jsx';
 
 // Combine all services;
@@ -58,67 +58,67 @@ const ALL_SERVICES = [
 const SERVICE_CATEGORIES = ['
   { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length },
   {
-'
-    id: 'ai-services','
+
+    id: 'ai-services',
     name: 'AI Services',
     icon: Brain,
     count: ALL_SERVICES.filter('
       s => s.category.includes('AI') || s.tags.includes('AI')
     ).length},
   {
-'
-    id: 'quantum-computing','
+
+    id: 'quantum-computing',
     name: 'Quantum Computing',
     icon: Rocket,
     count: ALL_SERVICES.filter('
       s => s.category.includes('Quantum') || s.tags.includes('Quantum')
     ).length},
   {
-'
-    id: 'cybersecurity','
+
+    id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
     count: ALL_SERVICES.filter('
       s => s.category.includes('Security') || s.tags.includes('Security')
     ).length},
   {
-'
-    id: 'business-intelligence','
+
+    id: 'business-intelligence',
     name: 'Business Intelligence',
     icon: BarChart3,
     count: ALL_SERVICES.filter('
       s => s.category.includes('Business') || s.tags.includes('Business')
     ).length},
   {
-'
-    id: 'industry-solutions','
+
+    id: 'industry-solutions',
     name: 'Industry Solutions',
     icon: Target,
     count: ALL_SERVICES.filter(s =>
       ['
-        'Healthcare','
-        'Financial Services','
-        'Manufacturing','
-        'Energy','
-        'Transportation','
-        'Education','
-        'Real Estate','
-        'Agriculture','
-        'Legal Services','
+        'Healthcare',
+        'Financial Services',
+        'Manufacturing',
+        'Energy',
+        'Transportation',
+        'Education',
+        'Real Estate',
+        'Agriculture',
+        'Legal Services',
         'Media & Entertainment',
       ].includes(s.category)
     ).length},
   {
-'
-    id: 'emerging-tech','
+
+    id: 'emerging-tech',
     name: 'Emerging Tech',
     icon: Lightbulb,
     count: ALL_SERVICES.filter(s =>
       ['
-        'Edge Computing','
-        'Digital Twin','
-        'Autonomous Systems','
-        'Neuromorphic Computing','
+        'Edge Computing',
+        'Digital Twin',
+        'Autonomous Systems',
+        'Neuromorphic Computing',
         'Federated Learning',
       ].includes(s.category)
     ).length},
@@ -126,44 +126,44 @@ const SERVICE_CATEGORIES = ['
 
 // Contact information;
 const CONTACT_INFO = {
-'
-  phone: '+1 302 464 0950','
-  email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008, Middletown DE 19709','
-  website: 'https://ziontechgroup.com','
-  supportHours: '24/7','
+
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+  supportHours: '24/7',
   responseTime: '< 2 hours'};
 
 // Benefits section;
 const BENEFITS = [
   {
 
-    icon: <Zap className="h-6 w-6" />,'
+    icon: <Zap className="h-6 w-6" />,
     title: 'Immediate Deployment',
     description:'
       'All services are ready for immediate deployment with no setup delays'},
   {
 "
-    icon: <Shield className="h-6 w-6" />,'
+    icon: <Shield className="h-6 w-6" />,
     title: 'Enterprise Security',
     description:'
       'Bank-level security with SOC 2 compliance and 24/7 monitoring'},
   {
 "
-    icon: <Users className="h-6 w-6" />,'
-    title: 'Dedicated Support','
+    icon: <Users className="h-6 w-6" />,
+    title: 'Dedicated Support',
     description: '24/7 technical support with dedicated account managers'},
   {
 "
-    icon: <TrendingUp className="h-6 w-6" />,'
-    title: 'Proven ROI','
+    icon: <TrendingUp className="h-6 w-6" />,
+    title: 'Proven ROI',
     description: 'Average 300% ROI within 6 months of implementation'},
 ];
 
 export default function AllServices2027() {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('featured');
 
   // Filter services based on category and search
@@ -184,15 +184,15 @@ export default function AllServices2027() {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'featured':
-        return b.featured - a.featured;'
+        return b.featured - a.featured;
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'price-low':
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price;'
+        return b.price - a.price;
       case 'ai-score':
         return b.aiScore - a.aiScore;
       default:
@@ -215,15 +215,15 @@ export default function AllServices2027() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-blue hover:bg-gray-100"
             >"
               <Globe className="h-5 w-5 mr-2" />
               Explore All Services
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-blue"
             >"
               <Phone className="h-5 w-5 mr-2" />
@@ -429,7 +429,7 @@ export default function AllServices2027() {
                       <Button className="flex-1" size="sm">
                         <Link
                           to={service.website}"
-                          target="_blank""
+                          target="_blank"
                           className="flex items-center"
                         >
                           Learn More"
@@ -548,7 +548,7 @@ export default function AllServices2027() {
                   <option>Emerging Tech</option>
                 </select>
                 <textarea"
-                  placeholder="Tell us about your project or requirements...""
+                  placeholder="Tell us about your project or requirements..."
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue"
                   rows={4}
                 />"
@@ -575,15 +575,15 @@ export default function AllServices2027() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-blue hover:bg-gray-100"
             >"
               <Rocket className="h-5 w-5 mr-2" />
               Explore Services
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-blue"
             >"
               <Phone className="h-5 w-5 mr-2" />

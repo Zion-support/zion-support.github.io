@@ -32,7 +32,7 @@ const initialState: AuthState = {
   error: null};
 
 const authSlice = createSlice({
-'
+
   name: 'auth',
   initialState,
   reducers: {
@@ -82,4 +82,3 @@ export const {
   clearError} = authSlice.actions;
 
 export default authSlice.reducer;
-'

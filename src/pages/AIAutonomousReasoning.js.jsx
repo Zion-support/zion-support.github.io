@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousReasoning = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousReasoning = () => {
       <Helmet>
         <title>AI Autonomous Reasoning Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous reasoning platform that continuously analyzes logic, solves problems, and makes decisions with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI reasoning, autonomous reasoning, logical analysis, problem solving, autonomous operations, AI reasoning platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-reasoning"
         />
       </Helmet>
@@ -179,13 +179,13 @@ const AIAutonomousReasoning = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Logical Reasoning','
-                'Deductive Reasoning','
-                'Inductive Reasoning','
-                'Abductive Reasoning','
-                'Analytical Reasoning','
-                'Critical Thinking','
-                'Problem Solving','
+                'Logical Reasoning',
+                'Deductive Reasoning',
+                'Inductive Reasoning',
+                'Abductive Reasoning',
+                'Analytical Reasoning',
+                'Critical Thinking',
+                'Problem Solving',
                 'Decision Making',
               ].map(type => (
                 <div

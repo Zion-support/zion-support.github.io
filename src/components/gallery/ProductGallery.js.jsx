@@ -1,7 +1,7 @@
-import React, { useState, Suspense } from 'react';'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';'
-import { AspectRatio } from '@/components/ui/aspect-ratio';'
-const ReactPlayer = React.lazy(() => import('react-player'));'
+import React, { useState, Suspense } from 'react';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+const ReactPlayer = React.lazy(() => import('react-player'));
 const ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
 export function ProductGallery({ images, videoUrl, modelUrl }) {
 
@@ -53,7 +53,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                 <img"
                   loading="lazy"
                   src={poster}"
-                  alt="Video preview""
+                  alt="Video preview"
                   className="w-full h-full object-cover"
                 />
               }
@@ -73,7 +73,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                 <img"
                   loading="lazy"
                   src={poster}"
-                  alt="3D model preview""
+                  alt="3D model preview"
                   className="w-full h-full object-cover"
                 />
               }

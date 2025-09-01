@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // Read the file;
 const filePath = 'data/2027-cutting-edge-comprehensive-services.ts';
-let content = fs.readFileSync(filePath, 'utf8');
+let content = fs.readFileSync(filePath,utf8');
 
 // Add tags to all services that don't have them
 // This regex finds services that don't have tags and adds appropriate tags
@@ -16,26 +16,26 @@ content = content.replace(serviceRegex, (match, p1, p2) => {
   // Create tags based on category
   let tags = [];
   if (category.includes('AI') || category.includes('Autonomous')) {
-    tags = ['AI', 'Automation', 'Machine Learning', 'Innovation'];
+    tags = ['AI',Automation',Machine Learning',Innovation'];
   } else if (category.includes('Quantum')) {
-    tags = ['Quantum Computing', 'AI', 'Research', 'Innovation'];
+    tags = ['Quantum Computing',AI',Research',Innovation'];
   } else if (category.includes('Blockchain')) {
-    tags = ['Blockchain', 'Web3', 'Decentralized', 'Innovation'];
+    tags = ['Blockchain',Web3',Decentralized',Innovation'];
   } else if (category.includes('Cybersecurity')) {
-    tags = ['Cybersecurity', 'Privacy', 'Compliance', 'Security'];
+    tags = ['Cybersecurity',Privacy',Compliance',Security'];
   } else if (category.includes('Healthcare') || category.includes('Biotech')) {
-    tags = ['Healthcare', 'Biotech', 'AI', 'Research'];
+    tags = ['Healthcare',Biotech',AI',Research'];
   } else if (category.includes('Education') || category.includes('Learning')) {
-    tags = ['Education', 'Learning', 'AI', 'Personalization'];
+    tags = ['Education',Learning',AI',Personalization'];
   } else {
-    tags = ['Technology', 'Innovation', 'Digital', 'Solutions'];
+    tags = ['Technology',Innovation',Digital',Solutions'];
   }
 
-  return `${p1}\n    tags: [${tags.map(tag => `'${tag}'`).join(', ')}],${p2}`;
+  return `${p1}\n    tags: [${tags.map(tag => `'${tag}'`).join(',)}],${p2}`;
 });
 
 // Write the file back
-fs.writeFileSync(filePath, content, 'utf8');
+fs.writeFileSync(filePath, content,utf8');
 console.log(
   'Tags added to all services in 2027-cutting-edge-comprehensive-services.ts'
 );

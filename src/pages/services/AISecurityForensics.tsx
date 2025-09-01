@@ -1,60 +1,60 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
   const features = [
-    'AI-powered security forensics optimization','
-    'Intelligent digital evidence analysis and processing',;'
-    'Automated incident investigation and reconstruction',;'
-    'Predictive analytics for forensic needs',;'
-    'Smart forensics framework management',;'
-    'AI-driven forensics automation and orchestration',;'
-    'Real-time forensics performance tracking',;'
+    'AI-powered security forensics optimization',
+    'Intelligent digital evidence analysis and processing',;
+    'Automated incident investigation and reconstruction',;
+    'Predictive analytics for forensic needs',;
+    'Smart forensics framework management',;
+    'AI-driven forensics automation and orchestration',;
+    'Real-time forensics performance tracking',;
     'Custom AI models for forensics applications';
   ];
 
   const tiers = [
     {
-'
-      name: 'Developer','
-      price: '$799/mo','
-      details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support']
+
+      name: 'Developer',
+      price: '$799/mo',
+      details: ['Up to 10 investigations/month',Basic AI features',Standard forensics',Email support']
     },
     {
-'
-      name: 'Business', '
-      price: '$1,999/mo', '
-      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] ;
+
+      name: 'Business',
+      price: '$1,999/mo',
+      details: ['Up to 50 investigations/month',Advanced AI features',Enhanced forensics',Priority support'] ;
     },;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
-      details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support'] ;
+    { ;
+      name: 'Enterprise', ;
+      price: '$4,999/mo', ;
+      details: ['Unlimited investigations',Custom AI models',Full forensics suite',24/7 dedicated support'] ;
     },;
   ];
 
-  const useCases = [;'
-    'Security forensics optimization',;'
-    'Digital evidence analysis and processing',;'
-    'Incident investigation and reconstruction',;'
-    'Forensics framework management and automation',;'
-    'Forensics automation and orchestration',;'
+  const useCases = [;
+    'Security forensics optimization',;
+    'Digital evidence analysis and processing',;
+    'Incident investigation and reconstruction',;
+    'Forensics framework management and automation',;
+    'Forensics automation and orchestration',;
     'Forensics scaling and management';
   ];
 
-  const benefits = [;'
-    'Improve security forensics performance by 50-80%',;'
-    'Reduce investigation time by 40-70%',;'
-    'Cut security forensics costs by 35-65%',;'
-    'Enhance security forensics reliability and scalability',;'
-    'Optimize resource utilization',;'
+  const benefits = [;
+    'Improve security forensics performance by 50-80%',;
+    'Reduce investigation time by 40-70%',;
+    'Cut security forensics costs by 35-65%',;
+    'Enhance security forensics reliability and scalability',;
+    'Optimize resource utilization',;
     'Scale security forensics operations efficiently';
   ];
 
-  const industries = [;'
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
+  const industries = [;
+    'Software Development',;
+    'E-commerce & Retail',;
+    'Financial Services',;
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
     'Technology & SaaS';
   ];
 
@@ -110,8 +110,8 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['50-80% performance improvement', '40-70% investigation time reduction', '35-65% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['50-80% performance improvement',40-70% investigation time reduction',35-65% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
               <Brain className="w-6 h-6 text-slate-600 mb-3" />"
               <div className="text-gray-900 font-semibold">{t}</div>

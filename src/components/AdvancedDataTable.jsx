@@ -1,8 +1,8 @@
-import { useState, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useMemo, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll";"
-import { useAnalytics } from "../hooks/useAnalytics";'
+import { useAnalytics } from "../hooks/useAnalytics";
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
 
     const { trackEvent } = useAnalytics({
@@ -35,19 +35,19 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 const value = String(item[filter.key]).toLowerCase();
                 const filterValue = filter.value.toLowerCase();
                 switch (filter.operator) {
-'
+
                     case 'contains':
-                        return value.includes(filterValue);'
+                        return value.includes(filterValue);
                     case 'equals':
-                        return value === filterValue;'
+                        return value === filterValue;
                     case 'starts_with':
-                        return value.startsWith(filterValue);'
+                        return value.startsWith(filterValue);
                     case 'ends_with':
-                        return value.endsWith(filterValue);'
+                        return value.endsWith(filterValue);
                     case 'regex':
                         try {
-'
-                            return new RegExp(filterValue, 'i').test(value)}
+
+                            return new RegExp(filterValue,i').test(value)}
                         catch {
 
                             return false}
@@ -61,9 +61,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
                 const aVal = a[sortConfig.key];
                 const bVal = b[sortConfig.key];
-                if (aVal < bVal)'
+                if (aVal < bVal)
                     return sortConfig.direction === 'asc' ? -1 : 1;
-                if (aVal > bVal)'
+                if (aVal > bVal)
                     return sortConfig.direction === 'asc' ? 1 : -1;
                 return 0})}
         return result}, [data, searchQuery, filters, sortConfig, columns]);
@@ -87,12 +87,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         setSortConfig(prev => {
 
             if (prev?.key === key) {
-'
+
                 return prev.direction === 'asc''
                     ? { key, direction: 'desc' }
-                    : null}'
-            return { key, direction: 'asc' }});'
-        trackEvent('table', 'column_sorted', String(key))}, [enableSorting, trackEvent]);
+                    : null}
+            return { key, direction: 'asc' }});
+        trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent]);
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {
 
@@ -104,8 +104,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 newFilters.push({ key, value, operator });
 
             return newFilters;
-        });'
-        trackEvent('table', 'filter_applied', String(key), null, { operator, value });
+        });
+        trackEvent('table',filter_applied', String(key), null, { operator, value });
     }, [trackEvent]);
     // Handle selection
     const handleSelectionChange = useCallback((item, checked) => {
@@ -141,23 +141,23 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         else {
 
             // Default CSV export
-            const csvContent = generateCSV(processedData, columns);'
-            downloadCSV(csvContent, 'table-export.csv')}'
-        trackEvent('table', 'data_exported', 'export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
+            const csvContent = generateCSV(processedData, columns);
+            downloadCSV(csvContent,table-export.csv')}
+        trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content
     const generateCSV = (data, columns) => {
-'
-        const headers = columns.map(col => col.header).join(',');
+
+        const headers = columns.map(col => col.header).join(',);
         const rows = data.map(item => columns.map(col => {
 
             const value = item[col.key];'"
-            return typeof value === 'string' && value.includes(',') ? `"${value}"` : value}).join(','));'
+            return typeof value === 'string' && value.includes(',) ? `"${value}"` : value}).join(',));
         return [headers, ...rows].join('\n')};
     // Download CSV
     const downloadCSV = (content, filename) => {
-'
+
         const blob = new Blob([content], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);'
+        const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = filename;
@@ -168,7 +168,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
         if (!enableSorting || sortConfig?.key !== key) {
 "
-            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}'
+            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
         return sortConfig.direction === 'asc'"
             ? <ChevronUp className="w-4 h-4 text-blue-500"/>"
             : <ChevronDown className="w-4 h-4 text-blue-500"/>};
@@ -220,7 +220,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 }} animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }} exit = {
@@ -242,7 +242,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </label>
                     <select onChange = {
 
-  (e) => handleFilterChange(column.key, e.target.value,'
+  (e) => handleFilterChange(column.key, e.target.value,
   'contains')
 
 

@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import SEO from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Button } from '@/components/ui/button';'
-import { Link } from 'react-router-dom';'
+import React, { useEffect } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import SEO from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
 export default function IntegrationsFeature() {
   const schema = {
-'
-    '@context': 'https://schema.org','
-    '@type': 'WebPage','
+
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
     name: 'API & Integrations',
     description:'
-      'Connect Zion with Slack, your website and other tools via our API and widgets.','
+      'Connect Zion with Slack, your website and other tools via our API and widgets.',
     url: 'https://app.ziontechgroup.com/features/integrations'};
   const { markSlackConnected } = useAdvancedOnboardingStatus();
   useEffect(() => {
@@ -22,9 +22,9 @@ export default function IntegrationsFeature() {
   return()
     <>
       <SEO
-        title="API & Integrations""
-        description="Extend Zion by embedding widgets or using our REST API for custom workflows.""
-        keywords="Zion API, Slack integration, embed widget""
+        title="API & Integrations"
+        description="Extend Zion by embedding widgets or using our REST API for custom workflows."
+        keywords="Zion API, Slack integration, embed widget"
         canonical="https://app.ziontechgroup.com/features/integrations"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -43,9 +43,9 @@ export default function IntegrationsFeature() {
             already use.
           </p>
           <img"
-            loading="lazy""
-            src="https://placehold.co/800x400""
-            alt="Screenshot showing integrations""
+            loading="lazy"
+            src="https://placehold.co/800x400"
+            alt="Screenshot showing integrations"
             className="rounded-lg shadow-xl mx-auto mb-12"
           />"
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"

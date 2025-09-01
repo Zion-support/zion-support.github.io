@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
 
@@ -9,7 +9,7 @@ import {
   Zap,
   Shield,
   ArrowRight,
-  CheckCircle,'
+  CheckCircle,
   Brain} from 'lucide-react';
 const AIBusinessIntelligence = () => {
   return()
@@ -17,11 +17,11 @@ const AIBusinessIntelligence = () => {
       <Helmet>
         <title>AI Business Intelligence | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Transform your business with AI-powered business intelligence. Get real-time insights, predictive analytics, and intelligent decision-making capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI business intelligence, business analytics, predictive analytics, data insights, Zion Tech Group"
         />
       </Helmet>
@@ -165,13 +165,13 @@ const AIBusinessIntelligence = () => {
                 </h3>"
                 <div className="space-y-4">
                   {['
-                    'Advanced Statistical Analysis','
-                    'Machine Learning Models','
-                    'Natural Language Processing','
-                    'Pattern Recognition','
-                    'Anomaly Detection','
-                    'Trend Forecasting','
-                    'Correlation Analysis','
+                    'Advanced Statistical Analysis',
+                    'Machine Learning Models',
+                    'Natural Language Processing',
+                    'Pattern Recognition',
+                    'Anomaly Detection',
+                    'Trend Forecasting',
+                    'Correlation Analysis',
                     'Predictive Modeling',
                   ].map((capability, index) => ("
                     <div key={index} className="flex items-center space-x-3">"
@@ -188,13 +188,13 @@ const AIBusinessIntelligence = () => {
                 </h3>"
                 <div className="space-y-4">
                   {['
-                    'Interactive Dashboards','
-                    'Custom Report Builder','
-                    'Real-time Data Streaming','
-                    'Multi-source Data Integration','
-                    'Automated Insights Generation','
-                    'Collaborative Analytics','
-                    'Mobile BI Access','
+                    'Interactive Dashboards',
+                    'Custom Report Builder',
+                    'Real-time Data Streaming',
+                    'Multi-source Data Integration',
+                    'Automated Insights Generation',
+                    'Collaborative Analytics',
+                    'Mobile BI Access',
                     'Advanced Visualization',
                   ].map((capability, index) => ("
                     <div key={index} className="flex items-center space-x-3">"

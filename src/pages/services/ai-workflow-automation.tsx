@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
+import React from 'react.ts';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion.ts';
 import {
 
@@ -11,7 +11,7 @@ import {
   Shield,
   Users,
   Clock,
-  BarChart3,'
+  BarChart3,
   CheckCircle} from 'lucide-react.ts';
 
 export default function AIWorkflowAutomation(...args: any[]): any {
@@ -19,55 +19,55 @@ export default function AIWorkflowAutomation(...args: any[]): any {
   const features = [
     {
 
-      icon: Workflow,'
+      icon: Workflow,
       title: 'Intelligent Process Automation',
       description:'
         'AI-powered workflow automation that learns and optimizes your business processes automatically.'},
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Machine Learning Integration',
       description:'
         'Seamless integration with ML models for predictive workflow optimization and decision-making.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Goal-Oriented Automation',
       description:'
         'Workflows that adapt and optimize based on your business objectives and KPIs.'},
     {
 
-      icon: TrendingUp,'
+      icon: TrendingUp,
       title: 'Performance Analytics',
       description:'
         'Real-time insights into workflow efficiency and optimization opportunities.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Secure & Compliant',
       description:'
         'Enterprise-grade security with built-in compliance monitoring and audit trails.'},
     {
 
-      icon: Users,'
+      icon: Users,
       title: 'Team Collaboration',
       description:'
         'Enhanced team productivity with intelligent task routing and workload balancing.'},
   ];
 
   const benefits = ['
-    'Reduce manual tasks by up to 80%','
-    'Improve process efficiency by 60%','
-    'Cut operational costs by 40%','
-    'Enhance customer satisfaction','
-    'Ensure regulatory compliance','
+    'Reduce manual tasks by up to 80%',
+    'Improve process efficiency by 60%',
+    'Cut operational costs by 40%',
+    'Enhance customer satisfaction',
+    'Ensure regulatory compliance',
     'Scale operations seamlessly',
   ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Workflow Automation - Zion Tech Group""
+        title="AI Workflow Automation - Zion Tech Group"
         description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
       />
 

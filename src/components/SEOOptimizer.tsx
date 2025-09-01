@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -30,19 +30,19 @@ interface SEOAnalysis {
 }
 
 interface SEOIssue {
-  id: string;'
+  id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
-  description: string;'
+  description: string;
   impact: 'high' | 'medium' | 'low';
-  fixable: boolean;'
+  fixable: boolean;
   category: 'content' | 'technical' | 'performance' | 'accessibility'}
 
 interface SEOSuggestion {
   id: string;
   title: string;
-  description: string;'
-  priority: 'high' | 'medium' | 'low';'
+  description: string;
+  priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
   estimatedImpact: number
 }
@@ -77,7 +77,7 @@ autoAnalyze:  true,;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);'
+  const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
@@ -86,61 +86,61 @@ autoAnalyze:  true,;
     score: 87,
     issues[;
       {
-'
-        id: '1','
-        type: 'warning','
-        title: 'Missing Meta Description','
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.','
+
+        id: '1',
+        type: 'warning',
+        title: 'Missing Meta Description',
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
         impact: 'medium',
-        fixable: true,'
+        fixable: true,
         category: 'content'
       },
       {
-'
-        id: '2','
-        type: 'error','
-        title: 'Slow Page Load Time','
-        description: 'Page load time is above the recommended 3-second threshold.','
+
+        id: '2',
+        type: 'error',
+        title: 'Slow Page Load Time',
+        description: 'Page load time is above the recommended 3-second threshold.',
         impact: 'high',
-        fixable: true,'
+        fixable: true,
         category: 'performance'
       },
       {
-'
-        id: '3','
-        type: 'info','
-        title: 'Missing Alt Text','
-        description: 'Some images are missing alt text, which affects accessibility.','
+
+        id: '3',
+        type: 'info',
+        title: 'Missing Alt Text',
+        description: 'Some images are missing alt text, which affects accessibility.',
         impact: 'low',
-        fixable: true,'
+        fixable: true,
         category: 'accessibility'
 
     ],;
     suggestions[;
       {
-'
-        id: '1','
-        title: 'Optimize Images','
-        description: 'Compress and optimize images to improve page load speed.','
-        priority: 'high','
+
+        id: '1',
+        title: 'Optimize Images',
+        description: 'Compress and optimize images to improve page load speed.',
+        priority: 'high',
         effort: 'medium',
         estimatedImpact: 15
       },
       {
-'
-        id: '2','
-        title: 'Add Schema Markup','
-        description: 'Implement structured data to improve search engine understanding.','
-        priority: 'medium','
+
+        id: '2',
+        title: 'Add Schema Markup',
+        description: 'Implement structured data to improve search engine understanding.',
+        priority: 'medium',
         effort: 'low',
         estimatedImpact: 8
       },
       {
-'
-        id: '3','
-        title: 'Improve Internal Linking','
-        description: 'Add more internal links to improve page authority distribution.','
-        priority: 'low','
+
+        id: '3',
+        title: 'Improve Internal Linking',
+        description: 'Add more internal links to improve page authority distribution.',
+        priority: 'low',
         effort: 'low',
         estimatedImpact: 5
 
@@ -188,7 +188,7 @@ autoAnalyze:  true,;
   };
 
   // Filter issues by category
-  const filteredIssues = useMemo(() => {;'
+  const filteredIssues = useMemo(() => {;
     if (selectedCategory === 'all') return analysis?.issues || [];
     return analysis?.issues.filter (issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
@@ -243,7 +243,7 @@ autoAnalyze:  true,;
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}"
-            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors""
+            className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 "
             <Settings className="w-5 h-5 text-zion-slate" />
@@ -313,7 +313,7 @@ autoAnalyze:  true,;
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"
             <div className="grid grid-cols-3 gap-4">`
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -321,14 +321,14 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.lcp}s
                   </div>"
                   <div className="text-sm text-zion-slate/60">LCP</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
               </div>
 `
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -336,14 +336,14 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.fid}ms
                   </div>"
                   <div className="text-sm text-zion-slate/60">FID</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
               </div>
 `
               <div className={`p-4 rounded-lg border ${
-'
+
                 analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
               }`}>"
                 <div className="text-center">"
@@ -351,7 +351,7 @@ autoAnalyze:  true,;
                     {analysis.metrics.coreWebVitals.cls}
                   </div>"
                   <div className="text-sm text-zion-slate/60">CLS</div>"
-                  <div className="text-xs text-zion-slate/40">'
+                  <div className="text-xs text-zion-slate/40">
                     {analysis.metrics.coreWebVitals.cls <= 0.1 ? 'Good' : 'Needs improvement'}
                   </div>
                 </div>
@@ -364,8 +364,8 @@ autoAnalyze:  true,;
             <div className="flex items-center justify-between mb-4">"
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
 "
-              <div className="flex space-x-1">'
-                {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
+              <div className="flex space-x-1">
+                {['all',content',technical',performance',accessibility'].map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}`
@@ -409,15 +409,15 @@ autoAnalyze:  true,;
 
 }}`
                     className={`p-4 rounded-lg border-l-4 ${
-'
+
                       issue.type === 'error' ? 'border-red-500 bg-red-50' :'
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
                       'border-blue-500 bg-blue-50'`
                     }`}
 "
-                    <div className="flex items-start space-x-3">'
+                    <div className="flex items-start space-x-3">
                       {issue.type === 'error' ? ("
-                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />'
+                        <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
                       ) : issue.type === 'warning' ? ("
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
                       ) : ("
@@ -499,7 +499,7 @@ autoAnalyze:  true,;
 }}
                 animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}

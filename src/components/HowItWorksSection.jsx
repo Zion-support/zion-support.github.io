@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -11,112 +11,112 @@ import {
   Target,
   TrendingUp,
   Award,
-  Zap,'
+  Zap,
   Shield} from 'lucide-react';
 
 const steps = [
   {
 
-    icon: <Search className="w-8 h-8" />,'
+    icon: <Search className="w-8 h-8" />,
     title: 'Discover',
     description:'
-      'Browse our comprehensive catalog of 100+ micro SAAS services and solutions','
-    color: 'from-zion-cyan to-zion-cyan-dark','
+      'Browse our comprehensive catalog of 100+ micro SAAS services and solutions',
+    color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'from-zion-cyan/20 to-zion-cyan-dark/20',
     details: ['
-      'AI-powered search and filtering','
-      'Curated service categories','
-      'Industry-specific solutions','
+      'AI-powered search and filtering',
+      'Curated service categories',
+      'Industry-specific solutions',
       'Real-time availability',
-    ],'
-    duration: 'Immediate','
+    ],
+    duration: 'Immediate',
     success: '95% match rate'},
   {
 "
-    icon: <Users className="w-8 h-8" />,'
+    icon: <Users className="w-8 h-8" />,
     title: 'Connect',
     description:'
-      'Get matched with the perfect service or solution for your business needs','
-    color: 'from-zion-purple to-zion-purple-dark','
+      'Get matched with the perfect service or solution for your business needs',
+    color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
     details: ['
-      'Smart matching algorithm','
-      'Service verification','
-      'Portfolio review','
+      'Smart matching algorithm',
+      'Service verification',
+      'Portfolio review',
       'Direct communication',
-    ],'
-    duration: '2-4 hours','
+    ],
+    duration: '2-4 hours',
     success: '98% satisfaction'},
   {
 "
-    icon: <FileText className="w-8 h-8" />,'
+    icon: <FileText className="w-8 h-8" />,
     title: 'Plan',
     description:'
-      'Collaborate on requirements, timeline, and implementation strategy','
-    color: 'from-zion-blue to-zion-blue-dark','
+      'Collaborate on requirements, timeline, and implementation strategy',
+    color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'from-zion-blue/20 to-zion-blue-dark/20',
     details: ['
-      'Interactive planning','
-      'Timeline optimization','
-      'Resource allocation','
+      'Interactive planning',
+      'Timeline optimization',
+      'Resource allocation',
       'Risk assessment',
-    ],'
-    duration: '4-8 hours','
+    ],
+    duration: '4-8 hours',
     success: '90% on-time delivery'},
   {
 "
-    icon: <Rocket className="w-8 h-8" />,'
+    icon: <Rocket className="w-8 h-8" />,
     title: 'Execute',
     description:'
-      'Watch your vision come to life with our expert implementation','
-    color: 'from-zion-cyan-light to-zion-cyan','
+      'Watch your vision come to life with our expert implementation',
+    color: 'from-zion-cyan-light to-zion-cyan',
     bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
     details: ['
-      'Agile implementation','
-      'Regular progress updates','
-      'Quality assurance','
+      'Agile implementation',
+      'Regular progress updates',
+      'Quality assurance',
       'Performance monitoring',
-    ],'
-    duration: '1-4 weeks','
+    ],
+    duration: '1-4 weeks',
     success: '99% quality score'},
   {
 "
-    icon: <CheckCircle className="w-8 h-8" />,'
+    icon: <CheckCircle className="w-8 h-8" />,
     title: 'Deliver',
     description:'
-      'Receive your completed solution with ongoing support and maintenance','
-    color: 'from-zion-purple-light to-zion-purple','
+      'Receive your completed solution with ongoing support and maintenance',
+    color: 'from-zion-purple-light to-zion-purple',
     bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
     details: ['
-      'Comprehensive testing','
-      'Documentation delivery','
-      'Training and handover','
+      'Comprehensive testing',
+      'Documentation delivery',
+      'Training and handover',
       'Post-launch support',
-    ],'
-    duration: 'Ongoing','
+    ],
+    duration: 'Ongoing',
     success: '100% client retention'},
 ];
 ;
 const stats = [
   {
 "
-    icon: <Clock className="w-6 h-6" />,'
-    value: '3x Faster','
+    icon: <Clock className="w-6 h-6" />,
+    value: '3x Faster',
     label: 'Implementation'},
   {
 "
-    icon: <Target className="w-6 h-6" />,'
-    value: '99.9%','
+    icon: <Target className="w-6 h-6" />,
+    value: '99.9%',
     label: 'Success Rate'},
   {
 "
-    icon: <TrendingUp className="w-6 h-6" />,'
-    value: '50%','
+    icon: <TrendingUp className="w-6 h-6" />,
+    value: '50%',
     label: 'Cost Reduction'},
   {
 "
-    icon: <Award className="w-6 h-6" />,'
-    value: '1000+','
+    icon: <Award className="w-6 h-6" />,
+    value: '1000+',
     label: 'Services Delivered'},
 ];
 
@@ -144,7 +144,7 @@ export function HowItWorksSection() {
       y: 0,
       transition: {
 
-        duration: 0.8,'
+        duration: 0.8,
         ease: 'easeOut'}}};
 
   const statsVariants = {
@@ -156,7 +156,7 @@ export function HowItWorksSection() {
       scale: 1,
       transition: {
 
-        duration: 0.6,'
+        duration: 0.6,
         ease: 'easeOut'}}};
 
   return ("
@@ -216,7 +216,7 @@ export function HowItWorksSection() {
         <motion.div"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
@@ -259,7 +259,7 @@ export function HowItWorksSection() {
                 <AnimatePresence>
                   {hoveredStep === index && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}'
+                      initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}"
@@ -323,7 +323,7 @@ export function HowItWorksSection() {
           <motion.div"
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
@@ -332,7 +332,7 @@ export function HowItWorksSection() {
                 key={index}
                 variants={statsVariants}"
                 className="text-center group"
-                whileHover={{ scale: 1.05 }}'
+                whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 400 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">

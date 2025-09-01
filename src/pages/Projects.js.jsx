@@ -1,5 +1,5 @@
-import React from 'react';'
-import { useProjects } from '@/hooks/useProjects';'
+import React from 'react';
+import { useProjects } from '@/hooks/useProjects';
 import { SEO } from '@/components/SEO';
 import {
 
@@ -7,18 +7,18 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';'
-import { Link } from 'react-router-dom';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 import { Clock, Briefcase } from 'lucide-react';
 function ProjectsContent() {
   const { projects, isLoading } = useProjects();
   return()
     <>
       <SEO
-        title="My Projects | Zion AI Marketplace""
+        title="My Projects | Zion AI Marketplace"
         description="View and manage your projects."
       />
 "
@@ -39,20 +39,20 @@ function ProjectsContent() {
               <Card key={project.id}>
                 <CardHeader>"
                   <CardTitle className="flex items-center gap-2">"
-                    <Briefcase className="h-5 w-5 text-primary" />'
+                    <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || 'Project'}</span>
                   </CardTitle>"
                   <CardDescription className="flex items-center gap-2 mt-1">"
                     <Badge variant="outline">{project.status}</Badge>"
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">"
-                      <Clock className="h-3 w-3" />'
+                      <Clock className="h-3 w-3" />
                       Started{' '}
                       {new Date(project.start_date).toLocaleDateString()}
                     </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>"
-                  <p className="text-sm text-muted-foreground line-clamp-2">'
+                  <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description || 'Project details'}
                   </p>
                 </CardContent>

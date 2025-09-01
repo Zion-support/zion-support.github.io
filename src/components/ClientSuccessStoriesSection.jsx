@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building const successStories = [
 
@@ -27,7 +27,7 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         technologies["AWS", "Kubernetes", "React", "Node.js", "PostgreSQL", "Redis"],"
         team: "12 developers","
         duration: "8 months","
-        budget: "$2.5M",'"
+        budget: "$2.5M","
         testimonial: "Zion Tech Group transformed our entire technology stack. The results exceeded our expectations - we're now processing 10x more transactions with better reliability than ever before.","
         author: "Sarah Chen","
         role: "CTO",
@@ -58,7 +58,7 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         technologies["React Native", "Python", "TensorFlow", "AWS", "HIPAA Compliance", "WebRTC"],"
         team: "15 developers","
         duration: "12 months","
-        budget: "$3.2M",'"
+        budget: "$3.2M","
         testimonial: "Zion's expertise in healthcare technology and security is unmatched. They delivered a platform that our doctors and patients love, while maintaining the highest security standards.","
         author: "Dr. Michael Rodriguez","
         role: "Chief Medical Officer",
@@ -120,7 +120,7 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         technologies["IoT Sensors", "Python", "Machine Learning", "Azure", "React", "Real-time Analytics"],"
         team: "20 developers","
         duration: "14 months","
-        budget: "$4.1M",'"
+        budget: "$4.1M","
         testimonial: "Zion's IoT and automation solutions have transformed our manufacturing process. We've seen dramatic improvements in efficiency, quality, and cost savings that exceeded our projections.","
         author: "David Kim","
         role: "Operations Director",
@@ -151,7 +151,7 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         technologies["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],"
         team: "16 developers","
         duration: "11 months","
-        budget: "$2.9M",'"
+        budget: "$2.9M","
         testimonial: "Zion created an incredible learning platform that adapts to each student's needs. Our student engagement and learning outcomes have improved dramatically since the launch.","
         author: "Lisa Patel","
         role: "Chief Learning Officer",
@@ -182,7 +182,7 @@ import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Buildin
         technologies["Python", "Machine Learning", "IoT", "React", "AWS", "Real-time Analytics"],"
         team: "22 developers","
         duration: "16 months","
-        budget: "$5.5M",'"
+        budget: "$5.5M","
         testimonial: "Zion's smart grid solution has revolutionized our energy management. We've significantly increased our renewable energy integration while improving grid reliability and reducing costs.","
         author: "Alex Johnson","
         role: "Chief Technology Officer",

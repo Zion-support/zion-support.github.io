@@ -1,5 +1,5 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import { SEO  } from '../../components/SEO';
 import { Users, 
   TrendingUp, 
@@ -299,7 +299,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Employee Performance Analytics - Zion Tech Group""
+        title="AI Employee Performance Analytics - Zion Tech Group"
         description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
       />
       
@@ -339,7 +339,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Employee Performance"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {' '}Analytics
               </span>
             </h1>"
@@ -753,7 +753,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your organization's needs. All plans include a 14-day free trial.
             </p>
           </motion.div>

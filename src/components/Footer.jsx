@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
 
@@ -9,11 +9,11 @@ import {
   ArrowUp,
   Heart,
   CheckCircle,
-  Send,'
+  Send,
   Globe} from 'lucide-react';
 
 export function FooterNewsletter() {
-'
+
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +26,7 @@ export function FooterNewsletter() {
     // Simulate API call
     setTimeout(() => {
       setIsSubscribed(true);
-      setIsLoading(false);'
+      setIsLoading(false);
       setEmail('');
       // Reset after 5 seconds
       setTimeout(() => setIsSubscribed(false), 5000);
@@ -58,7 +58,7 @@ export function FooterNewsletter() {
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}"
-            placeholder="Enter your email""
+            placeholder="Enter your email"
             className="flex-1 px-3 py-2 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-sm"
             required
           />
@@ -85,92 +85,92 @@ export function FooterNewsletter() {
 
   const socialLinks = [
     {
-'
-      name: 'LinkedIn','
-      url: 'https://www.linkedin.com/company/ziontechgroup','
-      icon: '💼','
+
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/ziontechgroup',
+      icon: '💼',
       color: 'hover:bg-blue-600/20'},
     {
-'
-      name: 'Twitter','
-      url: 'https://twitter.com/ziontechgroup','
-      icon: '🐦','
+
+      name: 'Twitter',
+      url: 'https://twitter.com/ziontechgroup',
+      icon: '🐦',
       color: 'hover:bg-sky-500/20'},
     {
-'
-      name: 'GitHub','
-      url: 'https://github.com/Zion-Holdings','
-      icon: '💻','
+
+      name: 'GitHub',
+      url: 'https://github.com/Zion-Holdings',
+      icon: '💻',
       color: 'hover:bg-gray-600/20'},
     {
-'
-      name: 'YouTube','
-      url: 'https://www.youtube.com/@ziontechgroup','
-      icon: '📺','
+
+      name: 'YouTube',
+      url: 'https://www.youtube.com/@ziontechgroup',
+      icon: '📺',
       color: 'hover:bg-red-600/20'},
     {
-'
-      name: 'Discord','
-      url: 'https://discord.gg/ziontechgroup','
-      icon: '🎮','
+
+      name: 'Discord',
+      url: 'https://discord.gg/ziontechgroup',
+      icon: '🎮',
       color: 'hover:bg-indigo-600/20'},
   ];
 
   const footerSections = [
     {
-'
+
       title: 'Services',
       links: ['
-        { label: 'AI Solutions', path: '/services/ai' },'
-        { label: 'Cloud & DevOps', path: '/services/cloud' },'
-        { label: 'Cybersecurity', path: '/services/cybersecurity' },'
-        { label: 'IT Infrastructure', path: '/services/infrastructure' },'
+        { label: 'AI Solutions', path: '/services/ai' },
+        { label: 'Cloud & DevOps', path: '/services/cloud' },
+        { label: 'Cybersecurity', path: '/services/cybersecurity' },
+        { label: 'IT Infrastructure', path: '/services/infrastructure' },
         { label: 'Digital Transformation', path: '/services/transformation' },
         {
-'
-          label: 'Quantum Neural Network','
+
+          label: 'Quantum Neural Network',
           path: '/quantum-neural-network-platform'},
         {
-'
-          label: 'Autonomous Operations','
+
+          label: 'Autonomous Operations',
           path: '/autonomous-business-operations-platform'},
         {
-'
-          label: 'IT Asset Management','
+
+          label: 'IT Asset Management',
           path: '/ai-powered-it-asset-management'},
       ]},
     {
-'
+
       title: 'Company',
       links: ['
-        { label: 'About Us', path: '/about' },'
-        { label: 'Our Team', path: '/about' },'
-        { label: 'Careers', path: '/careers' },'
-        { label: 'News & Updates', path: '/news' },'
-        { label: 'Case Studies', path: '/case-studies' },'
+        { label: 'About Us', path: '/about' },
+        { label: 'Our Team', path: '/about' },
+        { label: 'Careers', path: '/careers' },
+        { label: 'News & Updates', path: '/news' },
+        { label: 'Case Studies', path: '/case-studies' },
         { label: 'Partners', path: '/partners' },
       ]},
     {
-'
+
       title: 'Resources',
       links: ['
-        { label: 'Blog', path: '/blog' },'
-        { label: 'Documentation', path: '/docs' },'
-        { label: 'White Papers', path: '/white-papers' },'
-        { label: 'Webinars', path: '/webinars' },'
-        { label: 'Research', path: '/research-development' },'
-        { label: 'Events', path: '/events' },'
+        { label: 'Blog', path: '/blog' },
+        { label: 'Documentation', path: '/docs' },
+        { label: 'White Papers', path: '/white-papers' },
+        { label: 'Webinars', path: '/webinars' },
+        { label: 'Research', path: '/research-development' },
+        { label: 'Events', path: '/events' },
         { label: 'Training', path: '/training' },
       ]},
     {
-'
+
       title: 'Support',
       links: ['
-        { label: 'Contact Us', path: '/contact' },'
-        { label: 'Help Center', path: '/help' },'
-        { label: 'Support Portal', path: '/support' },'
-        { label: 'FAQ', path: '/faq' },'
-        { label: 'Consulting', path: '/services/consulting' },'
+        { label: 'Contact Us', path: '/contact' },
+        { label: 'Help Center', path: '/help' },
+        { label: 'Support Portal', path: '/support' },
+        { label: 'FAQ', path: '/faq' },
+        { label: 'Consulting', path: '/services/consulting' },
         { label: 'Request Quote', path: '/contact' },
       ]},
   ];
@@ -178,32 +178,32 @@ export function FooterNewsletter() {
   const contactInfo = [
     {
 
-      icon: Mail,'
-      label: 'Email','
-      value: 'kleber@ziontechgroup.com','
+      icon: Mail,
+      label: 'Email',
+      value: 'kleber@ziontechgroup.com',
       href: 'mailto:kleber@ziontechgroup.com'},
     {
 
-      icon: Phone,'
-      label: 'Phone','
-      value: '+1 302 464 0950','
+      icon: Phone,
+      label: 'Phone',
+      value: '+1 302 464 0950',
       href: 'tel:+13024640950'},
     {
 
-      icon: MapPin,'
-      label: 'Address','
-      value: '364 E Main St STE 1008, Middletown DE 19709','
+      icon: MapPin,
+      label: 'Address',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'},
     {
 
-      icon: Globe,'
-      label: 'Website','
-      value: 'ziontechgroup.com','
+      icon: Globe,
+      label: 'Website',
+      value: 'ziontechgroup.com',
       href: 'https://ziontechgroup.com'},
   ];
 
   const scrollToTop = () => {
-'
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -248,7 +248,7 @@ export function FooterNewsletter() {
                 <motion.a
                   key={social.name}
                   href={social.url}"
-                  target="_blank""
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`w - 10 h - 10 bg - zinc - 800 / 50 border border - zinc - 700 / 50 rounded - lg flex items - center justify - center text - lg transition - all duration - 300 ${social.color} hover:scale - 110`}
                   whileHover={{ scale: 1.1 }}
@@ -314,14 +314,14 @@ export function FooterNewsletter() {
               </span>
               <span>•</span>
               <Link"
-                to="/privacy""
+                to="/privacy"
                 className="hover:text-zion-cyan transition-colors"
               >
                 Privacy Policy
               </Link>
               <span>•</span>
               <Link"
-                to="/terms""
+                to="/terms"
                 className="hover:text-zion-cyan transition-colors"
               >
                 Terms of Service

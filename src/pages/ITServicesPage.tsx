@@ -1,12 +1,12 @@
-import React from 'react';'
+import React from 'react';
 import SEO from '@/components/SEO';
 
 const ITServicesPage = () => {
   return()
     <>
       <SEO
-        title="IT Services - Zion Tech Group""
-        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions.""
+        title="IT Services - Zion Tech Group"
+        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."
         keywords="IT services, infrastructure, support, technology consulting, IT solutions"
       />
 "

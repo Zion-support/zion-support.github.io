@@ -1,44 +1,44 @@
-import { useState, useEffect } from 'react';'
-import { useParams, useNavigate } from 'react-router-dom';'
-import { Input } from '@/components/ui/input';'
-import { Button } from '@/components/ui/button';'
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists'
 import { toast } from '@/hooks/use-toast'; // Assuming this hook exists
 // Placeholder for the actual API call, to be implemented in a later step'
 import { resetPassword } from '@/services/auth';
 export default function ResetPasswordPage() {
   const { token } = useParams();
-  const navigate = useNavigate();'
-  const [password, setPassword] = useState('');'
+  const navigate = useNavigate();
+  const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);'
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   useEffect(() => {
     if (!token) {
-'
+
       setError('Invalid or missing reset token.');
       // Consider redirecting to an error page or login page
     }
   }, [token]);
   const handleSubmit = async e => {
 
-    e.preventDefault();'
+    e.preventDefault();
     setError('');
     if (password !== confirmPassword) {
-'
+
       setError('Passwords do not match.');
       return;
     }
     // Basic password strength check (can be enhanced)
     if (password.length < 8) {
-'
+
       setError('Password must be at least 8 characters long.');
       return;
     }
     setIsLoading(true);
     try {
-      await resetPassword(token, password);'
-      toast.success('Password has been reset successfully!');'
+      await resetPassword(token, password);
+      toast.success('Password has been reset successfully!');
       router('/login'); // Redirect to login page on success
     } catch (err) {
       // Ensure err.message is a string.
@@ -69,8 +69,8 @@ export default function ResetPasswordPage() {
         {error && <p className="text-red-500 text-sm text-center">{error}</p>}
         <div>
           <Input"
-            type="password""
-            name="password""
+            type="password"
+            name="password"
             placeholder="Enter new password"
             value={password}
             onChange={handlePasswordChange}
@@ -80,14 +80,14 @@ export default function ResetPasswordPage() {
           {/* <PasswordStrengthMeter password={password} /> */}
         </div>
         <Input"
-          type="password""
-          name="confirmPassword""
+          type="password"
+          name="confirmPassword"
           placeholder="Confirm new password"
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
           disabled={isLoading}
         />"
-        <Button type="submit" className="w-full" disabled={isLoading}>'
+        <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>

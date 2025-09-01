@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';'
+import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
 
@@ -40,18 +40,18 @@ import {
   Clock,
   ArrowRight,
   ChevronDown,
-  CheckCircle,'
-  ExternalLink} from 'lucide-react.ts';'
-import { SEO } from '@/components/SEO';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';'
-import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';'
+  CheckCircle,
+  ExternalLink} from 'lucide-react.ts';
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
+import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';
 import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';
 
 export default function Services2028(...args: any[]): any {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
 
   // Combine all services
@@ -94,13 +94,13 @@ export default function Services2028(...args: any[]): any {
   const sortedServices = [...filteredServices].sort((a, b) => {
 
     switch (sortBy) {
-'
+
       case 'price-low':
-        return a.price - b.price;'
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price;'
+        return b.price - a.price;
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'name':
         return a.title.localeCompare (b.title) ;
       default:
@@ -109,10 +109,10 @@ export default function Services2028(...args: any[]): any {
   }) ;
 
   const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    website: 'https://ziontechgroup.com','
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'};
 
   return()
@@ -146,8 +146,8 @@ export default function Services2028(...args: any[]): any {
       </div>
 
       <SEO"
-        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions""
-        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology.""
+        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
+        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
         keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
       />
 
@@ -184,13 +184,13 @@ export default function Services2028(...args: any[]): any {
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#services""
+                href="#services"
                 className="btn-futuristic btn-primary text-lg px-8 py-4"
               >
                 Explore Services
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="btn-futuristic btn-secondary text-lg px-8 py-4"
               >
                 Get Free Quote
@@ -210,7 +210,7 @@ export default function Services2028(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
@@ -227,7 +227,7 @@ export default function Services2028(...args: any[]): any {
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: anyborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"
                 >
                   {categories.map(category => (
-                    <option key={category} value={category}>'
+                    <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -375,7 +375,7 @@ export default function Services2028(...args: any[]): any {
                     Learn More
                   </a>
                   <a"
-                    href="/contact""
+                    href="/contact"
                     className="btn-futuristic btn-secondary w-full text-center"
                   >
                     Get Quote
@@ -463,12 +463,12 @@ export default function Services2028(...args: any[]): any {
 "
             <div className="text-neon-cyan/70">"
               <p className="mb-2">{contactInfo.address}</p>
-              <p>'
+              <p>
                 Visit us at{' '}
                 <a
                   href={contactInfo.website}"
-                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300""
-                  target="_blank""
+                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   {contactInfo.website}
