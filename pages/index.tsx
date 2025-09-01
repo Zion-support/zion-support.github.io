@@ -1145,65 +1145,50 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
 
-          {/* Automation Scripts & Capabilities */}
+          {/* Advanced Automation Features */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Automation Scripts & Capabilities</h2>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚡ Advanced Automation Features & Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Redundancy Orchestration</h3>
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy V2</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Ultimate Redundancy V2 System</li>
-                  <li>• Comprehensive Redundancy</li>
-                  <li>• PM2 Auto-Sync & Management</li>
-                  <li>• GitHub Actions Redundancy</li>
-                  <li>• Netlify Functions Redundancy</li>
+                  <li>• Multi-layer failover systems</li>
+                  <li>• Automatic process recovery</li>
+                  <li>• Health monitoring & alerts</li>
+                  <li>• Geographic distribution</li>
+                  <li>• Self-healing infrastructure</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold block">
-                    Explore Systems →
-                  </Link>
-                  <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400/70 hover:text-cyan-300 text-xs font-semibold block">
-                    Documentation →
-                  </Link>
-                </div>
+                <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI & Content Automation</h3>
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Content Factory</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Content Generation Systems</li>
-                  <li>• AI Trends Research</li>
-                  <li>• Marketing Sync Automation</li>
-                  <li>• SEO Optimization</li>
-                  <li>• Performance Monitoring</li>
+                  <li>• Autonomous content generation</li>
+                  <li>• AI-powered research & trends</li>
+                  <li>• Intelligent content optimization</li>
+                  <li>• Automated quality assurance</li>
+                  <li>• Dynamic content updates</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold block">
-                    Explore AI Systems →
-                  </Link>
-                  <Link href="/AUTOMATION_COMPLETION_REPORT.md" className="text-fuchsia-400/70 hover:text-fuchsia-300 text-xs font-semibold block">
-                    Completion Report →
-                  </Link>
-                </div>
+                <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore AI Factory →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Health Systems</h3>
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚙️ Build Orchestration</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Build Failure Recovery</li>
-                  <li>• Pre-Build Health Checks</li>
-                  <li>• Continuous Build Monitoring</li>
-                  <li>• Performance Optimization</li>
-                  <li>• Quality Assurance</li>
+                  <li>• Smart build monitoring</li>
+                  <li>• Automatic failure recovery</li>
+                  <li>• Performance optimization</li>
+                  <li>• Dependency management</li>
+                  <li>• Quality gate enforcement</li>
                 </ul>
-                <div className="space-y-2">
-                  <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold block">
-                    Explore Build Systems →
-                  </Link>
-                  <Link href="/README_BUILD_AUTOMATION.md" className="text-green-400/70 hover:text-green-300 text-xs font-semibold block">
-                    Build Docs →
-                  </Link>
-                </div>
+                <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Build Systems →
+                </Link>
               </div>
             </div>
           </section>
