@@ -172,124 +172,16 @@ npm run build
 
 ## 🔧 Configuration
 
-### Environment Variables
+For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
 
-Create a `.env.local` file with the following variables:
+## Running Tests
 
-```env
-# API Configuration
-VITE_API_URL=your_api_url
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_key
+This project uses [Vitest](https://vitest.dev/) for unit tests. After installing
+dependencies via `./setup.sh npm`, run:
 
-# Payment Processing
-VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
-
-# Analytics
-VITE_GA_TRACKING_ID=your_ga_id
-
-# Feature Flags
-VITE_ENABLE_ANALYTICS=true
-VITE_ENABLE_PWA=true
+```sh
+npm run test
 ```
 
-### Tailwind Configuration
-
-The project uses Tailwind CSS with custom configuration. Edit `tailwind.config.js` to customize:
-
-- Colors and theme
-- Content paths
-- Plugins and extensions
-
-## 📊 Performance Monitoring
-
-The application includes built-in performance monitoring:
-
-- **Core Web Vitals** tracking
-- **Real-time metrics** collection
-- **Performance scoring** and alerts
-- **User experience** analytics
-
-## ♿ Accessibility Features
-
-### Built-in Accessibility
-
-- **WCAG 2.1 AA** compliance
-- **Screen reader** support
-- **Keyboard navigation** optimization
-- **High contrast** mode
-- **Reduced motion** support
-
-### User Controls
-
-- **Font size** adjustment
-- **Color scheme** preferences
-- **Focus indicators** customization
-- **Zoom level** controls
-
-## 🔒 Security
-
-### Security Features
-
-- **HTTPS** enforcement
-- **Content Security Policy** (CSP)
-- **XSS protection**
-- **CSRF protection**
-- **Input validation** and sanitization
-
-### Best Practices
-
-- Regular security audits
-- Dependency vulnerability scanning
-- Secure coding guidelines
-- Privacy compliance (GDPR, CCPA)
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow the existing code style
-- Write tests for new features
-- Update documentation as needed
-- Ensure accessibility compliance
-- Test across different browsers
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-### Getting Help
-
-- **Documentation**: Check the `/docs` folder
-- **Issues**: Create an issue on GitHub
-- **Discussions**: Use GitHub Discussions
-- **Email**: support@ziontechgroup.com
-
-### Community
-
-- **Discord**: Join our community server
-- **Twitter**: Follow us for updates
-- **LinkedIn**: Connect with our team
-
-## 🏆 Acknowledgments
-
-- **React Team** for the amazing framework
-- **Vite Team** for the fast build tool
-- **Tailwind CSS** for the utility-first CSS framework
-- **All contributors** who have helped improve this project
-
----
-
-**Built with ❤️ by the Zion Tech Group Team**
-
-_Empowering businesses with cutting-edge technology solutions_
+The tests are located in the `tests/` directory and use JSDOM to simulate the
+browser environment.
