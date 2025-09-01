@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🖼️ broken-image-scanner function triggered');
+    console.log('broken-image-scanner function triggered');
     
-    // Basic broken image scanning logic
-    const timestamp = new Date().toISOString();
+    // Broken image scanning simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Broken image scanner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'broken-image-scanner',
-        status: 'success',
+        source: event.source || 'unknown',
         scanning: {
-          images: 'scanned',
-          broken: 'identified',
-          fixes: 'suggested'
+          status: 'active',
+          imagesScanned: 0,
+          brokenFound: 0,
+          lastScan: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ broken-image-scanner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ broken-image-scanner failed:', error);
+    console.error('Error in broken-image-scanner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Broken image scanner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'broken-image-scanner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'broken-image-scanner'
       })
     };
   }

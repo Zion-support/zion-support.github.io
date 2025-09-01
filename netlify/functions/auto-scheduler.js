@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('⏰ auto-scheduler function triggered');
+    console.log('auto-scheduler function triggered');
     
-    // Basic auto scheduling logic
-    const timestamp = new Date().toISOString();
+    // Auto-scheduling simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Auto scheduler executed successfully',
-        timestamp: timestamp,
+        message: 'Auto-scheduler executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'auto-scheduler',
-        status: 'success',
+        source: event.source || 'unknown',
         scheduling: {
-          tasks: 'scheduled',
-          optimization: 'applied',
-          efficiency: 'improved'
+          status: 'active',
+          tasksScheduled: 0,
+          lastSchedule: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ auto-scheduler completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ auto-scheduler failed:', error);
+    console.error('Error in auto-scheduler:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Auto scheduler failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'auto-scheduler',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'auto-scheduler'
       })
     };
   }

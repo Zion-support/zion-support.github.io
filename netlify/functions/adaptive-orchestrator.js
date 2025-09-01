@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔄 adaptive-orchestrator function triggered');
+    console.log('adaptive-orchestrator function triggered');
     
-    // Basic adaptive orchestration logic
-    const timestamp = new Date().toISOString();
+    // Adaptive orchestration logic simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Adaptive orchestrator executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'adaptive-orchestrator',
-        status: 'success',
+        source: event.source || 'unknown',
         orchestration: {
-          adaptation: 'enabled',
-          learning: 'active',
-          optimization: 'continuous'
+          status: 'active',
+          mode: 'adaptive',
+          lastUpdate: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ adaptive-orchestrator completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ adaptive-orchestrator failed:', error);
+    console.error('Error in adaptive-orchestrator:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Adaptive orchestrator failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'adaptive-orchestrator',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'adaptive-orchestrator'
       })
     };
   }

@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('👃 code-smell-audit-runner function triggered');
+    console.log('code-smell-audit-runner function triggered');
     
-    // Basic code smell audit running logic
-    const timestamp = new Date().toISOString();
+    // Code smell audit simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Code smell audit runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'code-smell-audit-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         audit: {
-          smells: 'detected',
-          quality: 'assessed',
-          improvements: 'suggested'
+          status: 'active',
+          filesScanned: 0,
+          smellsFound: 0,
+          lastAudit: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ code-smell-audit-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ code-smell-audit-runner failed:', error);
+    console.error('Error in code-smell-audit-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Code smell audit runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'code-smell-audit-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'code-smell-audit-runner'
       })
     };
   }

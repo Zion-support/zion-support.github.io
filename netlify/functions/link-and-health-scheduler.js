@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔗 link-and-health-scheduler function triggered');
+    console.log('link-and-health-scheduler function triggered');
     
-    // Basic link and health scheduling logic
-    const timestamp = new Date().toISOString();
+    // Link and health scheduling simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Link and health scheduler executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'link-and-health-scheduler',
-        status: 'success',
+        source: event.source || 'unknown',
         scheduling: {
-          links: 'monitored',
-          health: 'checked',
-          maintenance: 'scheduled'
+          status: 'active',
+          linksScheduled: 0,
+          healthChecks: 0,
+          lastSchedule: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ link-and-health-scheduler completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ link-and-health-scheduler failed:', error);
+    console.error('Error in link-and-health-scheduler:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Link and health scheduler failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'link-and-health-scheduler',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'link-and-health-scheduler'
       })
     };
   }

@@ -1,36 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('☁️ cloud_orchestrator function triggered');
+    console.log('cloud_orchestrator function triggered');
     
-    // Basic cloud orchestration logic
-    const timestamp = new Date().toISOString();
+    // Cloud orchestration simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Cloud orchestrator executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'cloud_orchestrator',
-        status: 'success',
+        source: event.source || 'unknown',
         orchestration: {
-          services: ['compute', 'storage', 'networking'],
-          status: 'healthy'
+          status: 'active',
+          cloudServices: 0,
+          lastOrchestration: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ cloud_orchestrator completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ cloud_orchestrator failed:', error);
+    console.error('Error in cloud_orchestrator:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Cloud orchestrator failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'cloud_orchestrator'
       })
     };
   }

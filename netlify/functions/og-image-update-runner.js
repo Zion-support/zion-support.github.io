@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🖼️ og-image-update-runner function triggered');
+    console.log('og-image-update-runner function triggered');
     
-    // Basic OG image update running logic
-    const timestamp = new Date().toISOString();
+    // OG image update simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'OG image update runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'og-image-update-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         update: {
-          ogImages: 'updated',
-          social: 'enhanced',
-          sharing: 'optimized'
+          status: 'active',
+          imagesUpdated: 0,
+          lastUpdate: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ og-image-update-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ og-image-update-runner failed:', error);
+    console.error('Error in og-image-update-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'OG image update runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'og-image-update-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'og-image-update-runner'
       })
     };
   }

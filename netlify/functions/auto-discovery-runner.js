@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔍 auto-discovery-runner function triggered');
+    console.log('auto-discovery-runner function triggered');
     
-    // Basic auto discovery running logic
-    const timestamp = new Date().toISOString();
+    // Auto-discovery simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Auto discovery runner executed successfully',
-        timestamp: timestamp,
+        message: 'Auto-discovery runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'auto-discovery-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         discovery: {
-          patterns: 'discovered',
-          insights: 'generated',
-          automation: 'enhanced'
+          status: 'scanning',
+          itemsFound: 0,
+          lastScan: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ auto-discovery-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ auto-discovery-runner failed:', error);
+    console.error('Error in auto-discovery-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Auto discovery runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'auto-discovery-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'auto-discovery-runner'
       })
     };
   }

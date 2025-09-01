@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📦 knowledge-pack-runner function triggered');
+    console.log('knowledge-pack-runner function triggered');
     
-    // Basic knowledge pack running logic
-    const timestamp = new Date().toISOString();
+    // Knowledge pack simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Knowledge pack runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'knowledge-pack-runner',
-        status: 'success',
-        knowledgePack: {
-          content: 'packaged',
-          organization: 'improved',
-          accessibility: 'enhanced'
+        source: event.source || 'unknown',
+        knowledge: {
+          status: 'active',
+          packs: 0,
+          lastPack: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ knowledge-pack-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ knowledge-pack-runner failed:', error);
+    console.error('Error in knowledge-pack-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Knowledge pack runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'knowledge-pack-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'knowledge-pack-runner'
       })
     };
   }

@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📋 todo-summary-runner function triggered');
+    console.log('todo-summary-runner function triggered');
     
-    // Basic TODO summary running logic
-    const timestamp = new Date().toISOString();
+    // Todo summary simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'TODO summary runner executed successfully',
-        timestamp: timestamp,
+        message: 'Todo summary runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'todo-summary-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         summary: {
-          todos: 'summarized',
-          progress: 'tracked',
-          insights: 'generated'
+          status: 'active',
+          summaries: 0,
+          lastSummary: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ todo-summary-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ todo-summary-runner failed:', error);
+    console.error('Error in todo-summary-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'TODO summary runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'todo-summary-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'todo-summary-runner'
       })
     };
   }

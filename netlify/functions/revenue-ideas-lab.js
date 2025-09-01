@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('💰 revenue-ideas-lab function triggered');
+    console.log('revenue-ideas-lab function triggered');
     
-    // Basic revenue ideas lab logic
-    const timestamp = new Date().toISOString();
+    // Revenue ideas lab simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Revenue ideas lab executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'revenue-ideas-lab',
-        status: 'success',
+        source: event.source || 'unknown',
         lab: {
-          ideas: 'generated',
-          analysis: 'conducted',
-          opportunities: 'identified'
+          status: 'active',
+          ideas: 0,
+          lastIdea: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ revenue-ideas-lab completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ revenue-ideas-lab failed:', error);
+    console.error('Error in revenue-ideas-lab:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Revenue ideas lab failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'revenue-ideas-lab',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'revenue-ideas-lab'
       })
     };
   }

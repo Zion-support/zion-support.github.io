@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔗 internal-link-graph-runner function triggered');
+    console.log('internal-link-graph-runner function triggered');
     
-    // Basic internal link graph running logic
-    const timestamp = new Date().toISOString();
+    // Internal link graph simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Internal link graph runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'internal-link-graph-runner',
-        status: 'success',
-        linkGraph: {
-          internalLinks: 'mapped',
-          relationships: 'analyzed',
-          navigation: 'optimized'
+        source: event.source || 'unknown',
+        graph: {
+          status: 'generating',
+          links: 0,
+          nodes: 0,
+          lastGenerated: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ internal-link-graph-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ internal-link-graph-runner failed:', error);
+    console.error('Error in internal-link-graph-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Internal link graph runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'internal-link-graph-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'internal-link-graph-runner'
       })
     };
   }

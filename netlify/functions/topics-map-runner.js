@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🗺️ topics-map-runner function triggered');
+    console.log('topics-map-runner function triggered');
     
-    // Basic topics mapping logic
-    const timestamp = new Date().toISOString();
+    // Topics mapping simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Topics map runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'topics-map-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         mapping: {
-          topics: 'mapped',
-          relationships: 'identified',
-          insights: 'generated'
+          status: 'active',
+          topics: 0,
+          lastMap: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ topics-map-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ topics-map-runner failed:', error);
+    console.error('Error in topics-map-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Topics map runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'topics-map-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'topics-map-runner'
       })
     };
   }

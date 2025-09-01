@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📢 front-ads-promoter function triggered');
+    console.log('front-ads-promoter function triggered');
     
-    // Basic front ads promotion logic
-    const timestamp = new Date().toISOString();
+    // Front ads promotion simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Front ads promoter executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'front-ads-promoter',
-        status: 'success',
+        source: event.source || 'unknown',
         promotion: {
-          ads: 'promoted',
-          visibility: 'increased',
-          engagement: 'enhanced'
+          status: 'active',
+          adsPromoted: 0,
+          lastPromotion: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ front-ads-promoter completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ front-ads-promoter failed:', error);
+    console.error('Error in front-ads-promoter:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Front ads promoter failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'front-ads-promoter',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'front-ads-promoter'
       })
     };
   }

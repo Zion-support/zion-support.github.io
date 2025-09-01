@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🗺️ sitemap_runner function triggered');
+    console.log('sitemap_runner function triggered');
     
-    // Basic sitemap running logic
-    const timestamp = new Date().toISOString();
+    // Sitemap running simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Sitemap runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'sitemap_runner',
-        status: 'success',
+        source: event.source || 'unknown',
         sitemap: {
-          generation: 'completed',
-          pages: 'indexed',
-          searchEngines: 'notified'
+          status: 'active',
+          pages: 0,
+          lastGenerated: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ sitemap_runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error);
+    console.error('Error in sitemap_runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Sitemap runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'sitemap_runner'
       })
     };
   }

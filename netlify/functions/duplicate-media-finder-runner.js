@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔄 duplicate-media-finder-runner function triggered');
+    console.log('duplicate-media-finder-runner function triggered');
     
-    // Basic duplicate media finding logic
-    const timestamp = new Date().toISOString();
+    // Duplicate media finding simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Duplicate media finder runner executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'duplicate-media-finder-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         finding: {
-          duplicates: 'identified',
-          cleanup: 'recommended',
-          optimization: 'suggested'
+          status: 'active',
+          mediaScanned: 0,
+          duplicatesFound: 0,
+          lastScan: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ duplicate-media-finder-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ duplicate-media-finder-runner failed:', error);
+    console.error('Error in duplicate-media-finder-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Duplicate media finder runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'duplicate-media-finder-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'duplicate-media-finder-runner'
       })
     };
   }

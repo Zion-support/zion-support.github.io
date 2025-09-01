@@ -1,32 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🏠 homepage_advertiser function triggered');
+    console.log('homepage_advertiser function triggered');
     
-    // Basic homepage advertising logic
-    const timestamp = new Date().toISOString();
+    // Homepage advertising simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Homepage advertiser executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'homepage_advertiser',
-        status: 'success'
+        source: event.source || 'unknown',
+        advertising: {
+          status: 'active',
+          ads: 0,
+          lastAd: new Date().toISOString()
+        }
       })
     };
     
-    console.log('✅ homepage_advertiser completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ homepage_advertiser failed:', error);
+    console.error('Error in homepage_advertiser:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Homepage advertiser failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'homepage_advertiser'
       })
     };
   }

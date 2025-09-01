@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📝 todo-scanner-runner function triggered');
+    console.log('todo-scanner-runner function triggered');
     
-    // Basic TODO scanning logic
-    const timestamp = new Date().toISOString();
+    // Todo scanning simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'TODO scanner runner executed successfully',
-        timestamp: timestamp,
+        message: 'Todo scanner runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'todo-scanner-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         scanning: {
-          todos: 'scanned',
-          priorities: 'identified',
-          actions: 'suggested'
+          status: 'active',
+          todosFound: 0,
+          lastScan: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ todo-scanner-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ todo-scanner-runner failed:', error);
+    console.error('Error in todo-scanner-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'TODO scanner runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'todo-scanner-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'todo-scanner-runner'
       })
     };
   }

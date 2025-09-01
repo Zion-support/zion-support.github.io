@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📡 repo-radar-runner function triggered');
+    console.log('repo-radar-runner function triggered');
     
-    // Basic repository radar running logic
-    const timestamp = new Date().toISOString();
+    // Repository radar simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Repo radar runner executed successfully',
-        timestamp: timestamp,
+        message: 'Repository radar runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'repo-radar-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         radar: {
-          repository: 'scanned',
-          insights: 'generated',
-          monitoring: 'active'
+          status: 'scanning',
+          repositories: 0,
+          signals: 0,
+          lastScan: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ repo-radar-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ repo-radar-runner failed:', error);
+    console.error('Error in repo-radar-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Repo radar runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'repo-radar-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'repo-radar-runner'
       })
     };
   }

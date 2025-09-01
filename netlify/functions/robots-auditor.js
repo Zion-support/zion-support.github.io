@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🤖 robots-auditor function triggered');
+    console.log('robots-auditor function triggered');
     
-    // Basic robots.txt auditing logic
-    const timestamp = new Date().toISOString();
+    // Robots auditing simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Robots auditor executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'robots-auditor',
-        status: 'success',
+        source: event.source || 'unknown',
         audit: {
-          robots: 'audited',
-          compliance: 'verified',
-          recommendations: 'generated'
+          status: 'active',
+          robotsFiles: 0,
+          issuesFound: 0,
+          lastAudit: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ robots-auditor completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ robots-auditor failed:', error);
+    console.error('Error in robots-auditor:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Robots auditor failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'robots-auditor',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'robots-auditor'
       })
     };
   }

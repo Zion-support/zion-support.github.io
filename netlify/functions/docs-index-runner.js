@@ -1,37 +1,40 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📚 docs-index-runner function triggered');
+    console.log('docs-index-runner function triggered');
     
-    // Basic documentation indexing logic
-    const timestamp = new Date().toISOString();
+    // Documentation index simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Docs index runner executed successfully',
-        timestamp: timestamp,
+        message: 'Documentation index runner executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'docs-index-runner',
-        status: 'success',
+        source: event.source || 'unknown',
         indexing: {
-          documentation: 'indexed',
-          search: 'enabled',
-          navigation: 'improved'
+          status: 'active',
+          documents: 0,
+          lastIndex: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ docs-index-runner completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ docs-index-runner failed:', error);
+    console.error('Error in docs-index-runner:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Docs index runner failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'docs-index-runner',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'docs-index-runner'
       })
     };
   }

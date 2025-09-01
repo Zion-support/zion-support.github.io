@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('🔗 canonical-auditor function triggered');
+    console.log('canonical-auditor function triggered');
     
-    // Basic canonical URL auditing logic
-    const timestamp = new Date().toISOString();
+    // Canonical auditing simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Canonical auditor executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'canonical-auditor',
-        status: 'success',
-        audit: {
-          canonical: 'audited',
-          duplicates: 'identified',
-          recommendations: 'generated'
+        source: event.source || 'unknown',
+        auditing: {
+          status: 'active',
+          pagesAudited: 0,
+          issuesFound: 0,
+          lastAudit: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ canonical-auditor completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ canonical-auditor failed:', error);
+    console.error('Error in canonical-auditor:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Canonical auditor failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'canonical-auditor',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'canonical-auditor'
       })
     };
   }

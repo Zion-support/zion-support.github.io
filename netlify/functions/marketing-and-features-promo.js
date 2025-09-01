@@ -1,37 +1,41 @@
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
-    console.log('📢 marketing-and-features-promo function triggered');
+    console.log('marketing-and-features-promo function triggered');
     
-    // Basic marketing and features promotion logic
-    const timestamp = new Date().toISOString();
+    // Marketing and features promotion simulation
     const result = {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         message: 'Marketing and features promo executed successfully',
-        timestamp: timestamp,
+        timestamp: new Date().toISOString(),
         function: 'marketing-and-features-promo',
-        status: 'success',
-        promotions: {
-          features: 'highlighted',
-          marketing: 'active',
-          engagement: 'increased'
+        source: event.source || 'unknown',
+        promotion: {
+          status: 'active',
+          marketing: 0,
+          features: 0,
+          lastPromo: new Date().toISOString()
         }
       })
     };
     
-    console.log('✅ marketing-and-features-promo completed successfully');
     return result;
-    
   } catch (error) {
-    console.error('❌ marketing-and-features-promo failed:', error);
+    console.error('Error in marketing-and-features-promo:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
-        message: 'Marketing and features promo failed',
-        error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'marketing-and-features-promo',
-        status: 'error'
+        error: 'Internal server error',
+        message: error.message,
+        function: 'marketing-and-features-promo'
       })
     };
   }
