@@ -11,7 +11,8 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-reac
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 interface EquipmentSpecification {
   name: string;
