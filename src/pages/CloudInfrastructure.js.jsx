@@ -9,37 +9,37 @@ export default function CloudInfrastructure() {
             title: 'Infrastructure as Code',
             description: 'Automate cloud infrastructure deployment and management',
             icon: Code,
-            features['Terraform', 'CloudFormation', 'ARM Templates', 'Deployment Automation']
-        },
+            features['Terraform', 'CloudFormation', 'ARM Templates', 'Deployment Automation'];
+        },;
         {
             title: 'Container Orchestration',
             description: 'Manage and scale containerized applications',
             icon: Cpu,
-            features['Kubernetes', 'Docker', 'ECS/EKS', 'Azure AKS', 'GKE']
-        },
+            features['Kubernetes', 'Docker', 'ECS/EKS', 'Azure AKS', 'GKE'];
+        },;
         {
             title: 'Serverless Computing',
             description: 'Build and run applications without managing servers',
             icon: Zap,
-            features['AWS Lambda', 'Azure Functions', 'Cloud Functions', 'Event-driven Architecture']
-        },
+            features['AWS Lambda', 'Azure Functions', 'Cloud Functions', 'Event-driven Architecture'];
+        },;
         {
             title: 'Database Solutions',
             description: 'Managed database services for optimal performance',
             icon: Database,
-            features['RDS, Aurora', 'Azure SQL', 'Cloud SQL', 'NoSQL Options']
-        },
+            features['RDS, Aurora', 'Azure SQL', 'Cloud SQL', 'NoSQL Options'];
+        },;
         {
             title: 'Security & Compliance',
             description: 'Enterprise-grade security and compliance features',
             icon: Shield,
-            features['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring']
-        },
+            features['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring'];
+        },;
         {
             title: 'Monitoring & Analytics',
             description: 'Comprehensive monitoring and observability',
             icon: BarChart3,
-            features['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
+            features['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management'];
         }
     ];
     const benefits = [

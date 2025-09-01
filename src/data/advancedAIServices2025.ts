@@ -300,7 +300,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-    competitors["SAP", "Oracle", "Manhattan Associates", "Blue Yonder"],
+    competitors["SAP", "Oracle", "Manhattan Associates", "Blue Yonder"],;
     marketSize: "$31.2 billion by 2025"
   },
 
@@ -314,7 +314,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     price: 1899,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Contract analysis and review",
       "Legal document classification",
       "Risk identification",
@@ -325,29 +325,29 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "Regulatory updates",
       "Client communication tools",
       "Billing integration"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce document review time by 80%",
       "Improve accuracy by 60%",
       "Lower legal costs",
       "Faster contract processing",
       "Better risk management"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Law firms",
       "Corporate legal departments",
       "Compliance teams",
       "Contract managers",
       "Legal consultants"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Attorneys",
       "Legal professionals",
       "Compliance officers",
       "Contract managers",
       "Legal departments"
-    ],
-    tags["AI Legal", "Document Analysis", "Contract Review", "Compliance", "Legal Tech"],
+    ],;
+    tags["AI Legal", "Document Analysis", "Contract Review", "Compliance", "Legal Tech"],;
     estimatedDelivery: "6-8 weeks",
     supportLevel: "professional",
     marketPrice: "$1,899 - $4,899/month",
@@ -358,25 +358,25 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       uptime: "99.99%",
       security: ["HIPAA", "SOC 2", "Data encryption", "Access controls"]
     },
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],
-    marketSize: "$45.2 billion by 2025",
-    growthRate: "250% annual growth",
-    rating: 4.8,
-    reviews: 234,
-    customers: 456
-  },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],;
+    marketSize: "$45.2 billion by 2025",;
+    growthRate: "250% annual growth",;
+    rating: 4.8,;
+    reviews: 234,;
+    customers: 456;
+  },;
 
   // AI-Powered Creative Content Generation
   {
     id: "ai-creative-content-generation",
-    title: "AI-Powered Creative Content Generation",
-    description: "Advanced AI platform that generates creative content including art, music, literature, and multimedia content with human-like creativity.",
-    category: "AI & Creativity",
-    subcategory: "Content Generation",
-    price: 5499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
+    title: "AI-Powered Creative Content Generation",;
+    description: "Advanced AI platform that generates creative content including art, music, literature, and multimedia content with human-like creativity.",;
+    category: "AI & Creativity",;
+    subcategory: "Content Generation",;
+    price: 5499,;
+    currency: "$",;
+    pricingModel: "monthly",;
+    features: [;
       "Art generation",
       "Music composition",
       "Creative writing",
@@ -388,65 +388,65 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "API access",
       "24/7 support"
     ],
-    benefits: [
+    benefits: [;
       "Generate content 100x faster",
       "Unlimited creative possibilities",
       "Reduce production costs by 70%",
       "Consistent quality",
       "Scalable creativity"
     ],
-    useCases: [
+    useCases: [;
       "Marketing content",
       "Entertainment",
       "Education",
       "Design",
       "Advertising"
     ],
-    targetAudience: [
+    targetAudience: [;
       "Creative agencies",
       "Marketing teams",
       "Entertainment companies",
       "Educational institutions",
       "Design firms"
     ],
-    tags: ["AI", "Creativity", "Content Generation", "Art", "Music"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$5,499 - $15,000/month",
-    roi: "250-500%",
-    innovationLevel: "Advanced",
+    tags: ["AI", "Creativity", "Content Generation", "Art", "Music"],;
+    estimatedDelivery: "6-10 weeks",;
+    supportLevel: "premium",;
+    marketPrice: "$5,499 - $15,000/month",;
+    roi: "250-500%",;
+    innovationLevel: "Advanced",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["GANs", "Transformers", "Computer Vision", "React", "Python"],
-      integrations: ["Design tools", "Music software", "Video editors", "Social media"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["Content protection", "Copyright management", "Access controls"]
+      integrations: ["Design tools", "Music software", "Video editors", "Social media"],;
+      apiEndpoints: 300,;
+      uptime: "99.9%",;
+      security: ["Content protection", "Copyright management", "Access controls"];
     },
     competitors: ["OpenAI DALL-E", "Midjourney", "Stable Diffusion", "Jasper"],
-    marketSize: "$18.7 billion by 2025",
-    growthRate: "220% annual growth",
-    rating: 4.6,
-    reviews: 189,
-    customers: 345
+    marketSize: "$18.7 billion by 2025",;
+    growthRate: "220% annual growth",;
+    rating: 4.6,;
+    reviews: 189,;
+    customers: 345;
   },
 
   // AI-Powered Financial Trading
   {
     id: "ai-financial-trading",
-    title: "AI-Powered Financial Trading",
-    description: "Intelligent trading platform that uses AI to analyze markets, predict trends, and execute trades with optimal timing and risk management.",
-    category: "AI & Finance",
-    subcategory: "Algorithmic Trading",
-    price: 18999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
+    title: "AI-Powered Financial Trading",;
+    description: "Intelligent trading platform that uses AI to analyze markets, predict trends, and execute trades with optimal timing and risk management.",;
+    category: "AI & Finance",;
+    subcategory: "Algorithmic Trading",;
+    price: 18999,;
+    currency: "$",;
+    pricingModel: "monthly",;
+    features: [;
       "Market analysis",
       "Trend prediction",
       "Risk management",
@@ -458,65 +458,65 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "API access",
       "24/7 trading"
     ],
-    benefits: [
+    benefits: [;
       "Improve returns by 35%",
       "Reduce risk by 50%",
       "24/7 trading",
       "Emotion-free decisions",
       "Optimal execution"
     ],
-    useCases: [
+    useCases: [;
       "Stock trading",
       "Forex trading",
       "Cryptocurrency trading",
       "Portfolio management",
       "Risk assessment"
     ],
-    targetAudience: [
+    targetAudience: [;
       "Hedge funds",
       "Investment firms",
       "Trading companies",
       "Financial institutions",
       "Individual traders"
     ],
-    tags: ["AI", "Finance", "Trading", "Algorithmic", "Risk Management"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$18,999 - $50,000/month",
-    roi: "600-1200%",
-    innovationLevel: "Advanced",
+    tags: ["AI", "Finance", "Trading", "Algorithmic", "Risk Management"],;
+    estimatedDelivery: "12-16 weeks",;
+    supportLevel: "enterprise",;
+    marketPrice: "$18,999 - $50,000/month",;
+    roi: "600-1200%",;
+    innovationLevel: "Advanced",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["Deep Learning", "Reinforcement Learning", "React", "Python", "PostgreSQL"],
-      integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"],
-      apiEndpoints: 800,
-      uptime: "99.99%",
-      security: ["SOC 2", "PCI DSS", "Encryption", "Access controls"]
+      integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"],;
+      apiEndpoints: 800,;
+      uptime: "99.99%",;
+      security: ["SOC 2", "PCI DSS", "Encryption", "Access controls"];
     },
     competitors: ["Quantopian", "Alpaca", "Interactive Brokers", "TD Ameritrade"],
-    marketSize: "$67.8 billion by 2025",
-    growthRate: "280% annual growth",
-    rating: 4.8,
-    reviews: 267,
-    customers: 489
+    marketSize: "$67.8 billion by 2025",;
+    growthRate: "280% annual growth",;
+    rating: 4.8,;
+    reviews: 267,;
+    customers: 489;
   },
 
   // AI-Powered Autonomous Vehicles
   {
     id: "ai-autonomous-vehicles",
-    title: "AI-Powered Autonomous Vehicles",
-    description: "Advanced AI platform for autonomous vehicle navigation, safety, and fleet management with real-time decision making and predictive maintenance.",
-    category: "AI & Transportation",
-    subcategory: "Autonomous Vehicles",
-    price: 29999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
+    title: "AI-Powered Autonomous Vehicles",;
+    description: "Advanced AI platform for autonomous vehicle navigation, safety, and fleet management with real-time decision making and predictive maintenance.",;
+    category: "AI & Transportation",;
+    subcategory: "Autonomous Vehicles",;
+    price: 29999,;
+    currency: "$",;
+    pricingModel: "monthly",;
+    features: [;
       "Autonomous navigation",
       "Object detection",
       "Path planning",
@@ -528,52 +528,52 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
       "API integration",
       "24/7 support"
     ],
-    benefits: [
+    benefits: [;
       "100% autonomous operation",
       "Reduce accidents by 90%",
       "Optimize fleet efficiency",
       "24/7 operation",
       "Reduce operational costs"
     ],
-    useCases: [
+    useCases: [;
       "Autonomous cars",
       "Trucking",
       "Delivery vehicles",
       "Public transportation",
       "Mining vehicles"
     ],
-    targetAudience: [
+    targetAudience: [;
       "Automotive companies",
       "Transportation companies",
       "Logistics firms",
       "Government agencies",
       "Mining companies"
     ],
-    tags: ["AI", "Autonomous Vehicles", "Transportation", "Safety", "Fleet Management"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$29,999 - $85,000/month",
-    roi: "800-1500%",
-    innovationLevel: "Revolutionary",
+    tags: ["AI", "Autonomous Vehicles", "Transportation", "Safety", "Fleet Management"],;
+    estimatedDelivery: "20-24 weeks",;
+    supportLevel: "enterprise",;
+    marketPrice: "$29,999 - $85,000/month",;
+    roi: "800-1500%",;
+    innovationLevel: "Revolutionary",;
     contactInfo: {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",;
+      website: "https://ziontechgroup.com",;
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     },
     technicalSpecs: {
       technology: ["Computer Vision", "LIDAR", "Machine Learning", "React", "Python"],
-      integrations: ["Vehicle systems", "GPS", "Traffic systems", "Fleet management", "Safety systems"],
-      apiEndpoints: 1200,
-      uptime: "99.99%",
-      security: ["Vehicle security", "Data protection", "Safety protocols", "Encryption"]
+      integrations: ["Vehicle systems", "GPS", "Traffic systems", "Fleet management", "Safety systems"],;
+      apiEndpoints: 1200,;
+      uptime: "99.99%",;
+      security: ["Vehicle security", "Data protection", "Safety protocols", "Encryption"];
     },
     competitors: ["Tesla", "Waymo", "Cruise", "Aurora"],
-    marketSize: "$556.7 billion by 2025",
-    growthRate: "350% annual growth",
-    rating: 4.9,
-    reviews: 345,
-    customers: 567
+    marketSize: "$556.7 billion by 2025",;
+    growthRate: "350% annual growth",;
+    rating: 4.9,;
+    reviews: 345,;
+    customers: 567;
   }
 ];
 

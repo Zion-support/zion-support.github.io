@@ -68,16 +68,16 @@ export default function Cybersecurity(...args: any[]): any {
               </button>
             </div>
           </div>
-        </div>
+        </div>;
         {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10">;
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -121,14 +121,14 @@ export default function Cybersecurity(...args: any[]): any {
 
                     Get Quote
                   </Link>
-                </div>
+                </div>;
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Security Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -149,13 +149,13 @@ export default function Cybersecurity(...args: any[]): any {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm">{tech.description}</p>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
       {/* Compliance Frameworks Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -176,13 +176,13 @@ export default function Cybersecurity(...args: any[]): any {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
                 <p className="text-slate-300 text-sm">{framework.description}</p>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

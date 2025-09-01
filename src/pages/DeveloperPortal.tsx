@@ -39,19 +39,19 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
 
   const apiFeatures = [
     {
-      icon: Code,
+      icon: Code,;
       title: 'Code Examples',
       description: 'Ready-to-use code snippets in multiple languages',
       category: 'Development'
     },
     {
-      icon: Terminal,
+      icon: Terminal,;
       title: 'API Playground',
       description: 'Test APIs directly in your browser',
       category: 'Testing'
     },
     {
-      icon: BookOpen,
+      icon: BookOpen,;
       title: 'Documentation',
       description: 'Comprehensive guides and tutorials',
       category: 'Learning'
@@ -66,19 +66,19 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
 
   const resources = [
     {
-      title: 'Getting Started Guide',
+      title: 'Getting Started Guide',;
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
     },
     {
-      title: 'API Reference',
+      title: 'API Reference',;
       description: 'Complete endpoint documentation',
       icon: '📚',
       difficulty: 'All Levels'
     },
     {
-      title: 'Best Practices',
+      title: 'Best Practices',;
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
@@ -93,10 +93,10 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
 
   const community = [
     {
-      language: 'JavaScript',
+      language: 'JavaScript',;
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY',;
     'Content-Type': 'application/json';
   };
 });
@@ -106,13 +106,13 @@ const data = await response.json();
       icon: Code
     },
     {
-      name: 'GitHub Discussions',
+      name: 'GitHub Discussions',;
       description: 'Open source collaboration',
       members: '1.8K+',
       icon: '🐙'
     },
     {
-      name: 'Discord Server',
+      name: 'Discord Server',;
       description: 'Real-time developer chat',
       members: '3.2K+',
       icon: '🎮'
@@ -338,7 +338,7 @@ const data = await response.json();
       </section>
 
       {/* Code Examples */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -381,7 +381,7 @@ const data = await response.json();
       </section>
 
       {/* Resources */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -464,14 +464,14 @@ const data = await response.json();
                     View Resource
                   </button>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Quick Start Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      <section className="py-16 px-4 bg-slate-800/30">;
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial = {
@@ -572,7 +572,7 @@ const data = await response.json();
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build Something Amazing?

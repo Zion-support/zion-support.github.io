@@ -83,7 +83,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
               <p className="text-sm text-gray-400">
                 We respect your privacy. Unsubscribe at  time.
               </p>
-            </form>
+            </form>;
           )}
 
           {status === 'loading' && (
@@ -102,7 +102,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
 
                 Subscribe Another Email
               </button>
-            </div>
+            </div>;
           )}
 
           {status === 'error' && (
@@ -114,7 +114,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
 
                 Try Again
               </button>
-            </div>
+            </div>;
           )}
         </div>
 

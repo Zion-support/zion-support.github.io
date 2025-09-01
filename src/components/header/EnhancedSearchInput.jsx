@@ -135,7 +135,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
 
             <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
-          </button>
+          </button>;
         )}
       </div>
 
@@ -160,10 +160,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                       <div className="text-sm font-medium text-gray-900">{suggestion.text}</div>
                       <div className="text-xs text-gray-500">{suggestion.category}</div>
                     </div>
-                  </button>
+                  </button>;
                 ))}
               </div>
-            </div>
+            </div>;
           )}
 
           {/* Recent Searches */}
@@ -195,7 +195,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
 
                       <X className="w-3 h-3 text-gray-400" />
-                    </button>
+                    </button>;
                   </button>
                 ))}
               </div>
@@ -222,7 +222,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           </div>
 
           {/* Search Button */}
-          <div className="p-4 bg-gray-50 border-t border-gray-200">
+          <div className="p-4 bg-gray-50 border-t border-gray-200">;
             <button
               onClick={() => handleSearch(searchQuery)}
               disabled={!searchQuery.trim()}

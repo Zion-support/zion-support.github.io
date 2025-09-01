@@ -212,7 +212,7 @@ const AIPoweredITAssetManagement = () => {
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
 
               Get Started
-            </Link>
+            </Link>;
             <Link
               to="/request-quote"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 text-lg"
@@ -224,7 +224,7 @@ const AIPoweredITAssetManagement = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             initial = {
@@ -298,14 +298,14 @@ const AIPoweredITAssetManagement = () => {
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             initial = {
@@ -379,14 +379,14 @@ const AIPoweredITAssetManagement = () => {
                   <h3 className="text-xl font-semibold">{capability.title}</h3>
                 </div>
                 <p className="text-gray-300">{capability.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             initial = {

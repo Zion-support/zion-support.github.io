@@ -48,22 +48,22 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       title: 'Blockchain Strategy',
       description: 'Comprehensive blockchain roadmap and implementation strategy',
       price: 'From $5,000',
-      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']
-    },
+      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan'];
+    },;
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
-    },
+      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance'];
+    },;
     {
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
-    },
+      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring'];
+    },;
     {
-      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
     };
       title: 'DeFi Solutions',;
       description: 'Decentralized finance applications and protocols',;
@@ -147,12 +147,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 Learn More
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -228,14 +228,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -322,7 +322,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
 
                   Get Quote
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -330,7 +330,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -406,14 +406,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.name}</h3>
                 <p className="text-sm text-slate-400">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

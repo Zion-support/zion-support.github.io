@@ -285,12 +285,12 @@ export default function Blockchain(...args[]):  {
                   Request Quote
                 </RouterLink>
               </div>
-            </motion.div>
+            </motion.div>;
           </div>
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
@@ -375,14 +375,14 @@ export default function Blockchain(...args[]):  {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-white/5">
+        <section className="py-20 bg-white/5">;
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
@@ -459,14 +459,14 @@ export default function Blockchain(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-zinc-400">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
@@ -542,7 +542,7 @@ export default function Blockchain(...args[]):  {
 }}
                   viewport={{ once: true }}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
                         Most Popular
@@ -577,7 +577,7 @@ export default function Blockchain(...args[]):  {
                     }`}
 
                     {plan.cta}
-                  </RouterLink>
+                  </RouterLink>;
                 </motion.div>
               ))}
             </div>
@@ -585,7 +585,7 @@ export default function Blockchain(...args[]):  {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white/5">
+        <section className="py-20 bg-white/5">;
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
@@ -664,14 +664,14 @@ export default function Blockchain(...args[]):  {
                     <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                     <p className="text-zinc-400">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
+        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">;
           <div className="container-responsive text-center">
             <motion.div
               initial = {

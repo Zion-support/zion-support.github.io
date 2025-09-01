@@ -9,7 +9,7 @@ const TalentDirectory = () => {
             role: "Senior AI Engineer",
             experience: "8+ years",
             location: "San Francisco, CA",
-            skills["Machine Learning", "Python", "TensorFlow", "Computer Vision"],
+            skills["Machine Learning", "Python", "TensorFlow", "Computer Vision"],;
             rating: 4.9,
             projects: 24,
             avatar: "👩‍💻"
@@ -20,7 +20,7 @@ const TalentDirectory = () => {
             role: "Cloud Architect",
             experience: "10+ years",
             location: "Austin, TX",
-            skills["AWS", "Kubernetes", "Terraform", "DevOps"],
+            skills["AWS", "Kubernetes", "Terraform", "DevOps"],;
             rating: 4.8,
             projects: 31,
             avatar: "👨‍💻"
@@ -31,7 +31,7 @@ const TalentDirectory = () => {
             role: "Cybersecurity Specialist",
             experience: "6+ years",
             location: "New York, NY",
-            skills["Penetration Testing", "SOC", "Compliance", "Incident Response"],
+            skills["Penetration Testing", "SOC", "Compliance", "Incident Response"],;
             rating: 4.9,
             projects: 18,
             avatar: "👩‍💻"
@@ -42,7 +42,7 @@ const TalentDirectory = () => {
             role: "Data Scientist",
             experience: "7+ years",
             location: "Seattle, WA",
-            skills["Data Analytics", "SQL", "R", "Tableau"],
+            skills["Data Analytics", "SQL", "R", "Tableau"],;
             rating: 4.7,
             projects: 22,
             avatar: "👨‍💻"
@@ -53,7 +53,7 @@ const TalentDirectory = () => {
             role: "Full Stack Developer",
             experience: "5+ years",
             location: "Boston, MA",
-            skills["React", "Node.js", "Python", "MongoDB"],
+            skills["React", "Node.js", "Python", "MongoDB"],;
             rating: 4.8,
             projects: 19,
             avatar: "👩‍💻"
@@ -64,7 +64,7 @@ const TalentDirectory = () => {
             role: "DevOps Engineer",
             experience: "9+ years",
             location: "Denver, CO",
-            skills["Docker", "Jenkins", "Ansible", "Linux"],
+            skills["Docker", "Jenkins", "Ansible", "Linux"],;
             rating: 4.9,
             projects: 28,
             avatar: "👨‍💻"

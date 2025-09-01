@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 
 export default function CustomerFeedbackSurveys(...args[]):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="Mobile-First Customer Feedback Surveys | Zion Tech Group"
         description="Create branded, mobile-friendly surveys with AI insights, NPS, CSAT, churn predictors, and real-time dashboards."

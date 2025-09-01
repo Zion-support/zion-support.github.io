@@ -19,7 +19,7 @@ const mockUser = {
     reputation: 325,
     postCount: 14,
     replyCount: 47,
-    badges[
+    badges[;
         {
             id: "badge1",
             name: "Answer Hero",
@@ -43,7 +43,7 @@ const mockUser = {
             icon: "Star",
             color: "#6366F1"
         }
-    ],
+    ],;
     isVerified: true,
     isModerator: false
 };
@@ -58,7 +58,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags["machine-learning", "fine-tuning", "gpt"],
+        tags["machine-learning", "fine-tuning", "gpt"],;
         createdAt: "2025-04-01T12:00:00Z",
         updatedAt: "2025-04-01T12:00:00Z",
         upvotes: 48,
@@ -76,7 +76,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "ai-tools",
-        tags["prompts", "techniques", "optimization"],
+        tags["prompts", "techniques", "optimization"],;
         createdAt: "2025-03-20T14:25:00Z",
         updatedAt: "2025-03-20T14:25:00Z",
         upvotes: 36,
@@ -92,7 +92,7 @@ const userPosts = [
         authorAvatar: "https://i.pravatar.cc/150?img=3",
         authorRole: "Verified Talent",
         categoryId: "project-help",
-        tags["monitoring", "production", "devops"],
+        tags["monitoring", "production", "devops"],;
         createdAt: "2025-03-12T09:30:00Z",
         updatedAt: "2025-03-12T09:30:00Z",
         upvotes: 24,

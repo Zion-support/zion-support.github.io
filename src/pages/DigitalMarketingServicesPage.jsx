@@ -3,12 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart const MarketingServices = [
+import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart const MarketingServices = [;
     {
         title: "Search Engine Optimization (SEO)",
         description: "Improve your website's visibility and rank higher in search results",
         price: "$1,500 - $8,000/month",
-        features["Keyword research", "On-page optimization", "Technical SEO", "Link building"],
+        features["Keyword research", "On-page optimization", "Technical SEO", "Link building"],;
         icon: <Search className="h-8 w-8 text-zion-cyan"/>,
         category: "SEO",
         badge: "Popular",
@@ -18,7 +18,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Pay-Per-Click (PPC) Management",
         description: "Strategic PPC campaigns across Google, Facebook, and other platforms",
         price: "$1,000 - $5,000/month + 10-15% ad spend",
-        features["Campaign strategy", "Ad creation", "Bid management", "Performance tracking"],
+        features["Campaign strategy", "Ad creation", "Bid management", "Performance tracking"],;
         icon: <TrendingUp className="h-8 w-8 text-zion-purple"/>,
         category: "PPC",
         badge: "Premium",
@@ -28,7 +28,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Social Media Marketing",
         description: "Engage your audience across all major social platforms",
         price: "$800 - $4,000/month",
-        features["Content creation", "Community management", "Paid social ads", "Analytics reporting"],
+        features["Content creation", "Community management", "Paid social ads", "Analytics reporting"],;
         icon: <Share2 className="h-8 w-8 text-zion-blue"/>,
         category: "Social Media",
         link: "/request-quote?service=social-media"
@@ -37,7 +37,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Content Marketing Strategy",
         description: "Create valuable content that attracts and converts your audience",
         price: "$2,000 - $10,000/month",
-        features["Content planning", "Blog writing", "Infographics", "Content distribution"],
+        features["Content planning", "Blog writing", "Infographics", "Content distribution"],;
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,
         category: "Content",
         link: "/request-quote?service=content-marketing"
@@ -46,7 +46,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Email Marketing Campaigns",
         description: "Build relationships and drive sales through targeted email campaigns",
         price: "$500 - $3,000/month",
-        features["List building", "Template design", "Automation", "A/B testing"],
+        features["List building", "Template design", "Automation", "A/B testing"],;
         icon: <Mail className="h-8 w-8 text-zion-purple"/>,
         category: "Email",
         link: "/request-quote?service=email-marketing"
@@ -55,7 +55,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Marketing Analytics & Reporting",
         description: "Data-driven insights to optimize your marketing performance",
         price: "$800 - $3,000/month",
-        features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],
+        features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],;
         icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,
         category: "Analytics",
         link: "/request-quote?service=marketing-analytics"
@@ -64,7 +64,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Conversion Rate Optimization",
         description: "Improve your website's ability to convert visitors into customers",
         price: "$1,500 - $6,000/month",
-        features["A/B testing", "User experience", "Landing page optimization", "Funnel analysis"],
+        features["A/B testing", "User experience", "Landing page optimization", "Funnel analysis"],;
         icon: <CheckCircle className="h-8 w-8 text-zion-cyan"/>,
         category: "CRO",
         link: "/request-quote?service=conversion-optimization"
@@ -73,7 +73,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Influencer Marketing",
         description: "Partner with influencers to reach new audiences and build trust",
         price: "$2,000 - $15,000 per campaign",
-        features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],
+        features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],;
         icon: <Users className="h-8 w-8 text-zion-purple"/>,
         category: "Influencer",
         link: "/request-quote?service=influencer-marketing"
@@ -82,7 +82,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Video Marketing & Production",
         description: "Create engaging video content for multiple platforms",
         price: "$1,000 - $8,000 per video",
-        features["Script writing", "Video production", "Editing", "Distribution strategy"],
+        features["Script writing", "Video production", "Editing", "Distribution strategy"],;
         icon: <Video className="h-8 w-8 text-zion-blue"/>,
         category: "Video",
         link: "/request-quote?service=video-marketing"
@@ -91,7 +91,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Graphic Design Services",
         description: "Professional design for marketing materials and branding",
         price: "$50 - $300 per design",
-        features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],
+        features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],;
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,
         category: "Design",
         link: "/request-quote?service=graphic-design"
@@ -100,7 +100,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Marketing Automation",
         description: "Streamline your marketing processes with automation tools",
         price: "$1,000 - $5,000/month",
-        features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],
+        features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],;
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,
         category: "Automation",
         link: "/request-quote?service=marketing-automation"
@@ -109,7 +109,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Local SEO & Google My Business",
         description: "Optimize your business for local search results",
         price: "$500 - $2,500/month",
-        features["Local keyword optimization", "Review management", "Citation building", "Local content"],
+        features["Local keyword optimization", "Review management", "Citation building", "Local content"],;
         icon: <Globe className="h-8 w-8 text-zion-blue"/>,
         category: "Local SEO",
         link: "/request-quote?service=local-seo"
@@ -118,7 +118,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "E-commerce Marketing",
         description: "Specialized marketing strategies for online stores",
         price: "$1,500 - $8,000/month",
-        features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],
+        features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],;
         icon: <ShoppingCart className="h-8 w-8 text-zion-cyan"/>,
         category: "E-commerce",
         link: "/request-quote?service=ecommerce-marketing"
@@ -127,7 +127,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Marketing Strategy Consulting",
         description: "Strategic guidance for your overall marketing approach",
         price: "$150 - $300/hour",
-        features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],
+        features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],;
         icon: <CheckCircle className="h-8 w-8 text-zion-purple"/>,
         category: "Consulting",
         link: "/request-quote?service=marketing-consulting"
@@ -136,7 +136,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Brand Development & Positioning",
         description: "Develop a strong brand identity and market position",
         price: "$5,000 - $25,000",
-        features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],
+        features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],;
         icon: <Eye className="h-8 w-8 text-zion-blue"/>,
         category: "Branding",
         link: "/request-quote?service=brand-development"
@@ -145,7 +145,7 @@ import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Use
         title: "Marketing Technology Stack",
         description: "Audit and optimize your marketing technology infrastructure",
         price: "$2,000 - $10,000",
-        features["Tool assessment", "Integration planning", "Implementation", "Training"],
+        features["Tool assessment", "Integration planning", "Implementation", "Training"],;
         icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,
         category: "MarTech",
         link: "/request-quote?service=marketing-technology"

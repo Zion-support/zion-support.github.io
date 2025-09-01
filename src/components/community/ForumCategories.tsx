@@ -14,7 +14,7 @@ lastPost?: {
     date: string}}
 
 export default function ForumCategories(...args[]):  {
-  const categories: ForumCategoryInfo[] = [
+  const categories: ForumCategoryInfo[] = [;
     {
       id: '1',
       name: 'General Discussion',
@@ -96,12 +96,12 @@ export default function ForumCategories(...args[]):  {
   ];
 
   return (
-    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
+    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10">;
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
-      </div>
+      </div>;
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -147,7 +147,7 @@ export default function ForumCategories(...args[]):  {
                 </span>
               </div>
 
-              {category.lastPost && (
+              {category.lastPost && (;
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>
                   <p className="text-sm text-white font-medium truncate">
@@ -158,7 +158,7 @@ export default function ForumCategories(...args[]):  {
                   </p>
                 </div>
               )}
-            </div>
+            </div>;
           ))}
         </div>
 

@@ -35,7 +35,7 @@ interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
   maxFeedback?: number}
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-  showStats = true,;
+showStats:  true,;
   showFilters = true,;
   maxFeedback = 10;
 }) => {;
@@ -46,7 +46,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     averageRating: 0,
     positivePercentage: 0,
     responseRate: 0,
-    topCategories[]
+    topCategories[];
   });
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);
@@ -71,7 +71,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-15',
         helpful: 24,
         unhelpful: 1,
-        tags['AI', 'Consulting', 'Machine Learning'],
+        tags['AI', 'Consulting', 'Machine Learning'],;
         verified: true
       },
       {
@@ -84,7 +84,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-12',
         helpful: 18,
         unhelpful: 2,
-        tags['Cloud', 'Migration', 'Support'],
+        tags['Cloud', 'Migration', 'Support'],;
         verified: true
       },
       {
@@ -97,7 +97,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-10',
         helpful: 31,
         unhelpful: 0,
-        tags['Digital Transformation', 'Infrastructure', 'ROI'],
+        tags['Digital Transformation', 'Infrastructure', 'ROI'],;
         verified: true
       },
       {
@@ -110,7 +110,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-08',
         helpful: 12,
         unhelpful: 5,
-        tags['Security', 'Communication', 'Project Management'],
+        tags['Security', 'Communication', 'Project Management'],;
         verified: true
       },
       {
@@ -123,7 +123,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         date: '2024-01-05',
         helpful: 28,
         unhelpful: 1,
-        tags['AI', 'Efficiency', 'Implementation'],
+        tags['AI', 'Efficiency', 'Implementation'],;
         verified: true
 
     ];
@@ -331,7 +331,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
               </div>
             </div>
             <div className="text-zinc-400">Average Rating</div>
-          </motion.div>
+          </motion.div>;
 
           <motion.div
             initial = {
@@ -359,7 +359,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>
             <div className="text-zinc-400">Positive Feedback</div>
-          </motion.div>
+          </motion.div>;
 
           <motion.div
             initial = {
@@ -425,10 +425,10 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>
                 <div className="text-zinc-400 text-sm">{category.category}</div>
                 <div className="text-zion-cyan text-xs">{category.percentage.toFixed(1)}%</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
-        </div>
+        </div>;
       )}
 
       {/* Filters and Search */}
@@ -462,7 +462,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           </select>
 
           {/* Search */}
-          <div className="relative flex-1 max-w-md">
+          <div className="relative flex-1 max-w-md">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
             <input
               type="text"
@@ -478,8 +478,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
             onClick={() => setShowFeedbackForm(!showFeedbackForm)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
 
-            <MessageCircle className="w-4 h-4" />
-            Add Feedback
+            <MessageCircle className="w-4 h-4" />;
+            Add Feedback;
           </button>
         </div>
       )}
@@ -549,7 +549,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                             star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'
                           }`}
                         />
-                      </button>
+                      </button>;
                     ))}
                   </div>
                 </div>
@@ -623,8 +623,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       </AnimatePresence>
 
       {/* Feedback List */}
-      <div className="space-y-4">
-        {filteredFeedback.map((item, index) => (
+      <div className="space-y-4">;
+        {filteredFeedback.map((item, index) => (;
           <motion.div
             key={item.id}
             initial = {
@@ -681,8 +681,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
             </div>
 
             {/* Rating */}
-            <div className="flex items-center gap-2 mb-3">
-              {[1, 2, 3, 4, 5].map((star) => (
+            <div className="flex items-center gap-2 mb-3">;
+              {[1, 2, 3, 4, 5].map((star) => (;
                 <Star
                   key={star}
                   className={`w-5 h-5 ${
@@ -690,14 +690,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   }`}
                 />
               ))}
-              <span className="text-sm text-zinc-400 ml-2">{item.rating}/5</span>
+              <span className="text-sm text-zinc-400 ml-2">{item.rating}/5</span>;
             </div>
 
             {/* Comment */}
-            <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>
+            <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>;
 
             {/* Tags */}
-            {item.tags.length > 0 && (
+            {item.tags.length > 0 && (;
               <div className="flex flex-wrap gap-2 mb-4">
                 {item.tags.map((tag) => (
                   <span

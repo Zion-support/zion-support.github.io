@@ -12,28 +12,28 @@ export default function HelpCenterPage() {
             icon: <User className="w-8 h-8 text-zion-cyan"/>,
             title: "Getting Started",
             description: "Learn the basics of using Zion's marketplace platform",
-            articles["Creating an account", "Setting up your profile", "First steps guide"],
+            articles["Creating an account", "Setting up your profile", "First steps guide"],;
             color: "text-zion-cyan"
         },
         {
             icon: <ShoppingCart className="w-8 h-8 text-zion-purple"/>,
             title: "Marketplace",
             description: "Buying and selling on our platform",
-            articles["How to buy services", "Selling your services", "Payment methods"],
+            articles["How to buy services", "Selling your services", "Payment methods"],;
             color: "text-zion-purple"
         },
         {
             icon: <Users className="w-8 h-8 text-zion-cyan"/>,
             title: "Talent & Hiring",
             description: "Finding talent and getting hired",
-            articles["Hiring process", "Creating job posts", "Talent profiles"],
+            articles["Hiring process", "Creating job posts", "Talent profiles"],;
             color: "text-zion-cyan"
         },
         {
             icon: <Settings className="w-8 h-8 text-zion-purple"/>,
             title: "Account & Settings",
             description: "Managing your account and preferences",
-            articles["Account settings", "Privacy controls", "Security features"],
+            articles["Account settings", "Privacy controls", "Security features"],;
             color: "text-zion-purple"
         }
     ];

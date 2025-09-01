@@ -250,7 +250,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
 
-                {isSubmitting ? (
+                {isSubmitting ? (;
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                     <span>Submitting...</span>
@@ -269,7 +269,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               </p>
             </form>
           </div>
-        </div>
+        </div>;
       </div>
     </section>
   )};

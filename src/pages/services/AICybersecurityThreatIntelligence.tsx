@@ -60,7 +60,7 @@ import {
   MapPin,
   Calendar,
   Calculator
-  DollarSign,
+  DollarSign,;
   Clock,
   Award,
   Target,
@@ -91,7 +91,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Network,
       title: 'Network Security Monitoring',
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
-      icon: Brain,
+      icon: Brain,;
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
     },
@@ -300,12 +300,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Eye
     },
     {
-      title: "Incident Response Automation",
+      title: "Incident Response Automation",;
       description: "Automated response workflows that minimize threat impact and recovery time",
       icon: Zap
     },
     {
-      title: "Compliance Reporting",
+      title: "Compliance Reporting",;
       description: "Automated compliance reports for SOC 2, ISO 27001, GDPR, and other standards",
       icon: FileText
     }
@@ -313,32 +313,32 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
   const threatTypes = [
     {
-      title: "Ransomware Attacks",
+      title: "Ransomware Attacks",;
       description: "AI detection and prevention of ransomware before encryption occurs",
       icon: Lock
     },
     {
-      title: "Phishing Campaigns",
+      title: "Phishing Campaigns",;
       description: "Advanced detection of sophisticated phishing attempts and social engineering",
       icon: Mail
     },
     {
-      title: "DDoS Attacks",
+      title: "DDoS Attacks",;
       description: "Real-time detection and mitigation of distributed denial of service attacks",
       icon: Network
     },
     {
-      title: "Insider Threats",
+      title: "Insider Threats",;
       description: "Behavioral analysis to identify malicious insider activities",
       icon: Users
     },
     {
-      title: "Zero-Day Exploits",
+      title: "Zero-Day Exploits",;
       description: "AI-powered detection of previously unknown vulnerabilities and exploits",
       icon: AlertTriangle
     },
     {
-      title: "Advanced Persistent Threats",
+      title: "Advanced Persistent Threats",;
       description: "Long-term threat detection and response for sophisticated attackers",
       icon: Target
     }
@@ -587,7 +587,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div>;
       </section>
 
       {/* Threat Types Section */}
@@ -696,7 +696,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               Choose the perfect plan for your security needs with our transparent, 
               enterprise-grade pricing structure.
             </p>
-          </motion.div>
+          </motion.div>;
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
@@ -711,7 +711,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                     : 'border-slate-700/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -781,7 +781,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 >
                   Get Started
                 </a>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>

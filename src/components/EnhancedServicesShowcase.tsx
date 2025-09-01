@@ -245,14 +245,14 @@ export default function EnhancedServicesShowcase() {
                 </Link>
 
                 {/* Hover Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
               </div>
-            </motion.div>
+            </motion.div>;
           ))}
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -365,7 +365,7 @@ export default function EnhancedServicesShowcase() {
           className="text-center mt-16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -375,7 +375,7 @@ export default function EnhancedServicesShowcase() {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -386,7 +386,7 @@ export default function EnhancedServicesShowcase() {
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3 ;
 
 
 
@@ -395,7 +395,7 @@ export default function EnhancedServicesShowcase() {
 
 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category, index) => (;
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -430,10 +430,10 @@ export default function EnhancedServicesShowcase() {
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
-              Call +1 302 464 0950
-            </a>
+              Call +1 302 464 0950;
+            </a>;
           </div>;
-          <div className="mt-6 text-zion-slate-light">;
+<div className: "mt-6 text-zion-slate-light">;
             Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
           </div>;
         </motion.div>;
@@ -442,8 +442,8 @@ export default function EnhancedServicesShowcase() {
   );
 };
             >
-              View All Services
-              <ArrowRight className="ml-2 w-5 h-5" />
+              View All Services;
+              <ArrowRight className="ml-2 w-5 h-5" />;
             </Link>
             <a 
               href="tel:+13024640950"

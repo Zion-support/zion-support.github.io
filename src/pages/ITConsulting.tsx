@@ -211,10 +211,10 @@ export default function ITConsulting() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Consulting Services Grid */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -255,7 +255,7 @@ export default function ITConsulting() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -280,7 +280,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {consultingServices.map((service, index) => (
+            {consultingServices.map((service, index) => (;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -314,7 +314,7 @@ export default function ITConsulting() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -357,7 +357,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -368,14 +368,14 @@ export default function ITConsulting() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -401,7 +401,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {industries.map((industry, index) => (
+            {industries.map((industry, index) => (;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -418,7 +418,7 @@ export default function ITConsulting() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {

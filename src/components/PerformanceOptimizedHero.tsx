@@ -189,7 +189,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
               <p className="text-gray-300 text-sm">
                 Cutting-edge solutions for modern businesses
               </p>
-            </motion.div>
+            </motion.div>;
           ))}
         </motion.div>
 
@@ -198,7 +198,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"
           variants={itemVariants}
 
-          <div className="text-center">
+          <div className="text-center">;
             <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-gray-400">Happy Clients</div>
           </div>

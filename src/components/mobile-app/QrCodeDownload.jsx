@@ -119,7 +119,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
                     <span className="text-xl">{downloadLinks[platform].icon}</span>
                     <span className="capitalize">{platform}</span>
-                  </button>
+                  </button>;
                 ))}
               </div>
             </div>
@@ -162,7 +162,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                     onClick={() => handleCopyLink(currentPlatform.url)}
                     className="flex items-center justify-center space-x-2 px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
 
-                    {copied ? (
+                    {copied ? (;
                       <>
                         <Check className="w-4 h-4 text-green-400" />
                         <span>Copied!</span>
@@ -221,7 +221,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
         </div>
 
         {/* Bottom Info */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16">;
           <div className="bg-white/5 rounded-2xl p-6 border border-white/10 max-w-3xl mx-auto">
             <h3 className="text-xl font-semibold text-white mb-3">
               Having Trouble?

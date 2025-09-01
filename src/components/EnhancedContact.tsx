@@ -29,11 +29,11 @@ interface ContactFormErrors {
 
 export function EnhancedContact(...args[]):  {
   const [formData, setFormData] = useState<any>({
-    name: '',
-    email: '',
-    phone: '',
-    comp: '',
-    service: 'general',
+    name: '',;
+    email: '',;
+    phone: '',;
+    comp: '',;
+    service: 'general',;
     message: ''
   });
 

@@ -157,12 +157,12 @@ interface Testimonial {
             aria-label="Next testimonial"
 
             <ChevronRight className="w-6 h-6" />
-          </button>
+          </button>;
         </div>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {testimonials.map((_, index) => (
+        <div className="flex justify-center mt-8 space-x-2">;
+          {testimonials.map((_, index) => (;
             <button
               key={index}
               onClick={() => goToTestimonial(index)}
@@ -181,7 +181,7 @@ interface Testimonial {
           className="mt-16 text-center"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -191,7 +191,7 @@ interface Testimonial {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -201,7 +201,7 @@ interface Testimonial {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 

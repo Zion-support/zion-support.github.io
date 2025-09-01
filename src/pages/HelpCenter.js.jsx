@@ -13,7 +13,7 @@ export default function HelpCenter() {
   'getting-started': {
             title: 'Getting Started',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'How to create your first account',
   href: '/help/create-account' 
 
@@ -22,51 +22,51 @@ export default function HelpCenter() {
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
                 { title: 'First steps for new users', href: '/help/first-steps' }
             ]
-        },
+        },;
         'marketplace': {
             title: 'Marketplace',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'How to list products and services', href: '/help/list-products' },
                 { title: 'Managing your listings', href: '/help/manage-listings' },
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
                 { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
             ]
-        },
+        },;
         'talent': {
             title: 'Talent & Hiring',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'Creating a talent profile', href: '/help/talent-profile' },
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },
                 { title: 'Payment and escrow system', href: '/help/payment-system' }
             ]
-        },
+        },;
         'technical': {
             title: 'Technical Support',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'Common technical issues', href: '/help/technical-issues' },
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },
                 { title: 'API and integration support', href: '/help/api-support' }
             ]
-        },
+        },;
         'billing': {
             title: 'Billing & Payments',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'Understanding your invoice', href: '/help/invoice-guide' },
                 { title: 'Payment methods and security', href: '/help/payment-methods' },
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },
                 { title: 'Tax information and reporting', href: '/help/tax-information' }
             ]
-        },
+        },;
         'account': {
             title: 'Account & Security',
             icon: BookOpen,
-            articles[
+            articles[;
                 { title: 'Account security best practices', href: '/help/account-security' },
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },

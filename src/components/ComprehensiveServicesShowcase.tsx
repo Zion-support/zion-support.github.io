@@ -157,10 +157,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </Link>
             </div>
           </div>
-        </div>
+        </div>;
       </section>
       {/* Contact Information Banner */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-white border-b border-gray-200">;
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-gray-700">
             <div className="flex items-center gap-2">
@@ -190,7 +190,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Filters Section */}
-      <section className="bg-white py-8 border-b border-gray-200">
+      <section className="bg-white py-8 border-b border-gray-200">;
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             {/* Search */}
@@ -240,7 +240,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
@@ -312,9 +312,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   </div>
                 </div>
                 {/* Service Details */}
-                <div className="p-6">
+                <div className="p-6">;
                   {/* Market Price & ROI */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-6">;
                     <div className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-sm text-gray-500">Market Price</div>
                       <div className="font-semibold text-gray-900">{service.marketPrice}</div>
@@ -323,7 +323,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       <div className="text-sm text-gray-500">ROI</div>
                       <div className="font-semibold text-green-700">{service.roi}</div>
                     </div>
-                  </div>
+                  </div>;
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
@@ -408,7 +408,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">
+      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?

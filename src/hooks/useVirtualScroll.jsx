@@ -8,7 +8,7 @@ export const useVirtualScroll = (items, options) => {
     const [state, setState] = useState({
         startIndex: 0,
         endIndex: 0,
-        visibleItems[],
+        visibleItems[],;
         scrollTop: 0,
         containerHeight,
         totalHeight: items.length * itemHeight,
@@ -240,7 +240,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const [state, setState] = useState({
         startIndex: 0,
         endIndex: 0,
-        visibleItems[],
+        visibleItems[],;
         scrollTop: 0,
         containerHeight: options.containerHeight || 400,
         totalHeight: 0,

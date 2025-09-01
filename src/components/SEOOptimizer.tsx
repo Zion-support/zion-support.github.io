@@ -68,7 +68,7 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
-  autoAnalyze = true,;
+autoAnalyze:  true,;
   showDetails = false,;
   onAnalysisComplete;
 }) => {;
@@ -81,7 +81,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Mock SEO analysis data (in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
     score: 87,
-    issues[
+    issues[;
       {
         id: '1',
         type: 'warning',
@@ -109,8 +109,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         fixable: true,
         category: 'accessibility'
 
-    ],
-    suggestions[
+    ],;
+    suggestions[;
       {
         id: '1',
         title: 'Optimize Images',
@@ -135,7 +135,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         effort: 'low',
         estimatedImpact: 5
 
-    ],
+    ],;
     metrics: {
       pageSpeed: 78,
       mobileFriendliness: 92,
@@ -246,7 +246,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             disabled={isAnalyzing}
             className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
 
-            {isAnalyzing ? (
+            {isAnalyzing ? (;
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 <span>Analyzing...</span>
@@ -259,13 +259,13 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             )}
           </button>
         </div>
-      </div>
+      </div>;
 
       {isAnalyzing ? (
-        <div className="text-center py-12">
+        <div className="text-center py-12">;
           <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />
           <p className="text-zion-slate/60">Analyzing your page...</p>
-        </div>
+        </div>;
       ) : analysis ? (
         <>
           {/* Overall Score */}
@@ -435,14 +435,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                         )}
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div>;
                 ))}
               </AnimatePresence>
             </div>
           </div>
 
           {/* Suggestions */}
-          <div className="mb-6">
+          <div className="mb-6">;
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>
             <div className="space-y-3">
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
@@ -485,7 +485,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
                     </button>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
@@ -546,7 +546,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                     </select>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             )};
           </AnimatePresence>;
         </>;

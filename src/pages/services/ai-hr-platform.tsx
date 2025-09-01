@@ -118,10 +118,10 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -196,14 +196,14 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Modules Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      <section className="py-16 px-4 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -280,14 +280,14 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                     <p className="text-gray-300">{module.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -395,7 +395,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Globe, TrendingUp, Award const stats = [
+import { Users, Globe, TrendingUp, Award const stats = [;
     {
         icon: <Users className="w-8 h-8"/>,
         value: "10K+",

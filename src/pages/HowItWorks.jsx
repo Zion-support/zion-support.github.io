@@ -87,18 +87,18 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
         {
             title: "For Clients",
             icon: Users,
-            benefits[
+            benefits[;
                 "Access to verified, skilled professionals",
                 "AI-powered matching for better results",
                 "Secure payment protection",
                 "Transparent pricing and reviews",
                 "24/7 platform support"
             ]
-        },
+        },;
         {
             title: "For Talent",
             icon: Briefcase,
-            benefits[
+            benefits[;
                 "Global client opportunities",
                 "Flexible work arrangements",
                 "Secure payment processing",

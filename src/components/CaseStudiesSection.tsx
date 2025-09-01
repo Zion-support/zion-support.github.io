@@ -240,7 +240,7 @@ export function CaseStudiesSection() {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </motion.div>;
       </div>;
     </section>;
   )};

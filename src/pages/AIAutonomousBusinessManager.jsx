@@ -679,25 +679,25 @@ const businessBenefits = [
     title: "Intelligent Decision Making",
     description: "AI-powered insights enable better, data-driven business decisions",
     icon: Brain,
-    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
-  },
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
+  },;
   {
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]
-  },
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];
+  },;
   {
     title: "Cost Optimization",
     description: "AI identifies cost-saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]
-  },
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];
+  },;
   {
     title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];
   }
 ];
 
@@ -808,10 +808,10 @@ export default function AIAutonomousBusinessManager() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Business Manager Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -895,14 +895,14 @@ export default function AIAutonomousBusinessManager() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Business Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -987,14 +987,14 @@ export default function AIAutonomousBusinessManager() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1076,14 +1076,14 @@ export default function AIAutonomousBusinessManager() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1217,7 +1217,7 @@ export default function AIAutonomousBusinessManager() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1316,14 +1316,14 @@ export default function AIAutonomousBusinessManager() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

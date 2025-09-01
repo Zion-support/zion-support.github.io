@@ -18,14 +18,14 @@ const categoryIcons = {
 
 };
 const pricingFeatures = {
-  basic[
+  basic[;
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
         "Community documentation",
         "Email support"
-    ],
-    professional[
+    ],;
+    professional[;
         "All Basic features",
         "Advanced analytics",
         "Priority support (12/7)",
@@ -33,8 +33,8 @@ const pricingFeatures = {
         "Phone & email support",
         "Dedicated account manager",
         "Training sessions"
-    ],
-    enterprise[
+    ],;
+    enterprise[;
         "All Professional features",
         "Custom development",
         "24/7 dedicated support",
@@ -289,7 +289,7 @@ export default function PricingPage() {
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
 
-        ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+        ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
                     {benefit.icon}

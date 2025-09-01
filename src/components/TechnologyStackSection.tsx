@@ -220,7 +220,7 @@ export function TechnologyStackSection() {
                 </div>
               )})}
           </div>
-        </motion.div>
+        </motion.div>;
 
         {/* Technology Philosophy */}
         <motion.div 

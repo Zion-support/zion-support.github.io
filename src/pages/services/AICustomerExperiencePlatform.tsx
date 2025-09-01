@@ -45,14 +45,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       title: 'Customer Experience Assessment',
       description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
       price: 'From $4,500',
-      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
-    },
+      features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis'];
+    },;
     {
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered customer experience platform',
       price: 'From $12,000',
-      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
-    },
+      features['Platform setup', 'AI model training', 'Integration configuration', 'Team training'];
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
@@ -156,7 +156,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
               </div>
-            </div>
+            </div>;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Experience Platform
             </h1>
@@ -181,10 +181,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {

@@ -59,7 +59,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     {
       name: "AI Trading Platform",
       price: "From $4,999/month",
-      features[
+      features[;
         "Advanced trading algorithms",
         "Real-time market data",
         "Portfolio optimization",
@@ -67,11 +67,11 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Multi-asset support",
         "24/7 monitoring"
       ]
-    },
+    },;
     {
       name: "Risk Management Suite",
       price: "From $2,999/month",
-      features[
+      features[;
         "Portfolio risk analysis",
         "VaR calculations",
         "Stress testing",
@@ -79,11 +79,11 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Compliance reporting",
         "Custom risk models"
       ]
-    },
+    },;
     {
       name: "Market Analysis Engine",
       price: "From $3,999/month",
-      features[
+      features[;
         "AI market predictions",
         "Sentiment analysis",
         "Technical indicators",
@@ -91,11 +91,11 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Custom research tools",
         "Real-time insights"
       ]
-    },
+    },;
     {
       name: "Quantitative Research",
       price: "From $5,999/month",
-      features[
+      features[;
         "Custom strategy development",
         "Advanced modeling",;
         "Performance analytics",;
@@ -200,7 +200,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -276,14 +276,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Service Packages */}
-        <section className="py-20 px-6 bg-black/30">
+        <section className="py-20 px-6 bg-black/30">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -370,7 +370,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
 
                     Get Started
-                  </motion.button>
+                  </motion.button>;
                 </motion.div>
               ))}
             </div>
@@ -378,7 +378,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Supported Assets */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -451,14 +451,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
                   <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium">{asset}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-6 bg-black/30">
+        <section className="py-20 px-6 bg-black/30">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -533,14 +533,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white text-lg font-medium">{benefit}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Technologies Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -613,14 +613,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
                   <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />
                   <p className="text-white font-medium">{tech}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial = {
@@ -736,7 +736,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {

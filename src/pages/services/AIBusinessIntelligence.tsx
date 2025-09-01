@@ -61,10 +61,10 @@ const AIBusinessIntelligence: React.FC = () => {
       title: "Intelligent Forecasting",
       description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
     },
-      icon: Target,
-      title: 'Performance Optimization',
-      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',
-      benefits: ['Process optimization', 'Pricing strategies', 'Resource allocation', 'Efficiency improvements']
+      icon: Target,;
+      title: 'Performance Optimization',;
+      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;
+      benefits: ['Process optimization', 'Pricing strategies', 'Resource allocation', 'Efficiency improvements'];
     }
   ];
 
@@ -124,7 +124,7 @@ const AIBusinessIntelligence: React.FC = () => {
       popular: false
 
 export default function AIBusinessIntelligence() {
-  const features = [
+  const features = [;
     {
       icon: Brain,
       title: "AI-Powered Analytics",
@@ -155,7 +155,7 @@ export default function AIBusinessIntelligence() {
       title: "Automated Insights",
       description: "AI-generated recommendations and actionable insights delivered in real-time."
     }
-      title: "Automated Insights",
+      title: "Automated Insights",;
       description: "Automatically discover patterns, anomalies, and actionable insights from your data.";
     };
   ];
@@ -224,19 +224,19 @@ export default function AIBusinessIntelligence() {
       description: "Customer behavior analysis, inventory optimization, and demand forecasting"
     },
     {
-      industry: "Finance",
+      industry: "Finance",;
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
-      industry: "Finance",
+      industry: "Finance",;
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
-      industry: "Manufacturing",
+      industry: "Manufacturing",;
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
     {
-      industry: "Marketing",
+      industry: "Marketing",;
       description: "Campaign performance analysis, audience targeting, and ROI optimization"
     }
   ];
@@ -388,7 +388,7 @@ export default function AIBusinessIntelligence() {
               Our AI Business Intelligence platform provides comprehensive capabilities for
               data analysis, visualization, and decision-making support.
             </p>
-          </motion.div>
+          </motion.div>;
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
@@ -629,7 +629,7 @@ export default function AIBusinessIntelligence() {
       </div>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -678,7 +678,7 @@ export default function AIBusinessIntelligence() {
               AI Business Intelligence is transforming industries across the globe,
               enabling data-driven decision making and operational excellence.
             </p>
-          </motion.div>
+          </motion.div>;
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)  => (
@@ -768,7 +768,7 @@ export default function AIBusinessIntelligence() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -837,7 +837,7 @@ export default function AIBusinessIntelligence() {
             </a>
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20">

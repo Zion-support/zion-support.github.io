@@ -10,7 +10,7 @@ const AIMatcher = () => {
         {
             id: 'industry',
             question: 'What industry are you in?',
-            options[
+            options[;
                 'Technology & Software',
                 'Healthcare & Life Sciences',
                 'Financial Services',
@@ -20,21 +20,21 @@ const AIMatcher = () => {
                 'Government & Public Sector',
                 'Other'
             ]
-        },
+        },;
         {
             id: 'comp_size',
             question: 'What is your comp size?',
-            options[
+            options[;
                 'Startup (1-50 employees)',
                 'Small Business (51-200 employees)',
                 'Medium Business (201-1000 employees)',
                 'Enterprise (1000+ employees)'
             ]
-        },
+        },;
         {
             id: 'ai_goals',
             question: 'What are your primary AI goals?',
-            options[
+            options[;
                 'Automate repetitive tasks',
                 'Improve customer experience',
                 'Enhance decision making',
@@ -43,22 +43,22 @@ const AIMatcher = () => {
                 'Reduce costs',
                 'Innovate products/services'
             ]
-        },
+        },;
         {
             id: 'budget',
             question: 'What is your budget range for AI implementation?',
-            options[
+            options[;
                 'Under $10,000',
                 '$10,000 - $50,000',
                 '$50,000 - $200,000',
                 '$200,000 - $1,000,000',
                 'Over $1,000,000'
             ]
-        },
+        },;
         {
             id: 'timeline',
             question: 'What is your implementation timeline?',
-            options[
+            options[;
                 'Immediate (0-3 months)',
                 'Short-term (3-6 months)',
                 'Medium-term (6-12 months)',
@@ -71,8 +71,8 @@ const AIMatcher = () => {
             name: 'AI Business Intelligence',
             description: 'Advanced analytics and business intelligence powered by artificial intelligence',
             category: 'Analytics & Insights',
-            bestFor['Data-driven decision making', 'Performance tracking', 'Market analysis'],
-            features['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],
+            bestFor['Data-driven decision making', 'Performance tracking', 'Market analysis'],;
+            features['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],;
             href: '/services/ai-business-intelligence',
             icon: TrendingUp
         },
@@ -80,8 +80,8 @@ const AIMatcher = () => {
             name: 'AI Marketing Automation',
             description: 'Intelligent marketing automation with AI-driven optimization',
             category: 'Marketing & Sales',
-            bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'],
-            features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'],
+            bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'],;
+            features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'],;
             href: '/services/ai-marketing-automation',
             icon: Target
         },
@@ -89,8 +89,8 @@ const AIMatcher = () => {
             name: 'AI Workflow Automation',
             description: 'Streamline business processes with intelligent automation',
             category: 'Process Automation',
-            bestFor['Operational efficiency', 'Error reduction', 'Cost savings'],
-            features['Process Optimization', 'Workflow Design', 'Integration'],
+            bestFor['Operational efficiency', 'Error reduction', 'Cost savings'],;
+            features['Process Optimization', 'Workflow Design', 'Integration'],;
             href: '/services/ai-workflow-automation',
             icon: Zap
         },
@@ -98,8 +98,8 @@ const AIMatcher = () => {
             name: 'AI-Powered IT Asset Management',
             description: 'Intelligent IT asset lifecycle management',
             category: 'IT Management',
-            bestFor['Asset optimization', 'Cost management', 'Compliance'],
-            features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'],
+            bestFor['Asset optimization', 'Cost management', 'Compliance'],;
+            features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'],;
             href: '/ai-powered-it-asset-management',
             icon: Cloud
         },
@@ -107,8 +107,8 @@ const AIMatcher = () => {
             name: 'Autonomous Business Operations',
             description: 'AI-driven business process automation platform',
             category: 'Business Operations',
-            bestFor['End-to-end automation', 'Scalability', 'Innovation'],
-            features['Process Automation', 'Decision Support', 'Performance Analytics'],
+            bestFor['End-to-end automation', 'Scalability', 'Innovation'],;
+            features['Process Automation', 'Decision Support', 'Performance Analytics'],;
             href: '/autonomous-business-operations-platform',
             icon: Brain
         },
@@ -116,8 +116,8 @@ const AIMatcher = () => {
             name: 'AI Customer Service Automation',
             description: 'Intelligent customer service and support automation',
             category: 'Customer Experience',
-            bestFor['24/7 support', 'Response time improvement', 'Customer satisfaction'],
-            features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],
+            bestFor['24/7 support', 'Response time improvement', 'Customer satisfaction'],;
+            features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],;
             href: '/services/ai-customer-service-automation',
             icon: Users
         }

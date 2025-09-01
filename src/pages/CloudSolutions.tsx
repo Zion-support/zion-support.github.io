@@ -23,22 +23,22 @@ export default function CloudSolutions(...args[]):  {
       icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
-      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
-    },
+      features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"];
+    },;
     {
       icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
-      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
-    },
+      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"];
+    },;
     {
       icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
-      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
-    },
+      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"];
+    },;
     {
-      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"];
     };
       icon: Zap,;
       title: "DevOps Automation",;
@@ -201,11 +201,11 @@ export default function CloudSolutions(...args[]):  {
               </motion.button>
             </motion.div>
           </motion.div>
-        </div>
+        </div>;
       </section>
 
       {/* Cloud Services Grid */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -248,7 +248,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((service, index) => (;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -286,7 +286,7 @@ export default function CloudSolutions(...args[]):  {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -329,7 +329,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -340,14 +340,14 @@ export default function CloudSolutions(...args[]):  {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -390,7 +390,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {technologies.map((tech, index) => (
+            {technologies.map((tech, index) => (;
               <motion.div
                 key={index}
                 className="text-center group"
@@ -402,14 +402,14 @@ export default function CloudSolutions(...args[]):  {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-zion-slate-light text-sm">{tech.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

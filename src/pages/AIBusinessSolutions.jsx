@@ -30,27 +30,27 @@ export default function AIBusinessSolutions() {
     const industries = [
         {
             name: 'Healthcare',
-            applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare']
-        },
+            applications['Patient diagnosis', 'Drug discovery', 'Medical imaging', 'Predictive healthcare'];
+        },;
         {
             name: 'Manufacturing',
-            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning']
-        },
+            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'];
+        },;
         {
             name: 'Retail',
-            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting']
-        },
+            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting'];
+        },;
         {
             name: 'Financial Services',
-            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service']
-        },
+            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service'];
+        },;
         {
             name: 'Transportation',
-            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting']
-        },
+            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting'];
+        },;
         {
             name: 'Energy',
-            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis']
+            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis'];
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

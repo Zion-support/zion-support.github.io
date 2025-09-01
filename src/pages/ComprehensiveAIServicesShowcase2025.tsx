@@ -29,7 +29,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       title: "AI Legal Document Automation",
       description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research",
       price: "From $199/month",
-      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],
+      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],;
       link: "/services/ai-legal-document-automation",
       category: "Legal Tech"
     },
@@ -38,7 +38,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       title: "AI Healthcare Predictive Analytics",
       description: "Revolutionize healthcare delivery with AI-powered predictive analytics and early disease detection",
       price: "From $1,999/month",
-      features["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],
+      features["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],;
       link: "/services/ai-healthcare-predictive-analytics",
       category: "Healthcare"
     },
@@ -47,7 +47,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       title: "AI Financial Trading & Risk Management",
       description: "Transform trading operations with AI-powered algorithms and comprehensive risk management",
       price: "From $2,999/month",
-      features["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],
+      features["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],;
       link: "/services/ai-financial-trading-risk-management",
       category: "FinTech"
     },
@@ -56,7 +56,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       title: "AI Supply Chain Optimization",
       description: "Optimize supply chains with AI-powered demand forecasting and logistics optimization",
       price: "From $2,499/month",
-      features["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],
+      features["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],;
       link: "/services/ai-supply-chain-optimization",
       category: "Logistics"
     },
@@ -65,7 +65,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       title: "AI Cybersecurity Suite",
       description: "Advanced cybersecurity with AI-powered threat detection and automated response",
       price: "From $1,999/month",
-      features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],
+      features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],;
       link: "/services/ai-cybersecurity-suite",
       category: "Security"
     },
@@ -190,7 +190,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         </section>
 
         {/* AI Services Grid */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -294,7 +294,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"
 
                     Learn More
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -302,7 +302,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         </section>
 
         {/* Industry Solutions */}
-        <section className="py-20 px-6 bg-black/30">
+        <section className="py-20 px-6 bg-black/30">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -378,14 +378,14 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{solution.title}</h3>
                   <p className="text-gray-300">{solution.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Advanced Technologies */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -458,14 +458,14 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
                   <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium text-sm">{tech}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial = {
@@ -581,7 +581,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {

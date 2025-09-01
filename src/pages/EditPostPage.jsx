@@ -15,7 +15,7 @@ const mockPost = {
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags["machine-learning", "fine-tuning", "gpt"],
+    tags["machine-learning", "fine-tuning", "gpt"],;
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
@@ -70,7 +70,7 @@ export default function EditPostPage() {
         content: post.content,
         categoryId: post.categoryId,
         tags: post.tags.join(",
-  ")
+  ");
     
 
 

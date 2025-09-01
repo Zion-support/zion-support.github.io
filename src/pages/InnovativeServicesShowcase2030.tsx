@@ -95,10 +95,10 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Contact Banner */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">;
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
@@ -118,7 +118,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             <div className="flex-1">
@@ -149,7 +149,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>
+                </button>;
               ))}
             </div>
           </div>
@@ -157,7 +157,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
@@ -212,7 +212,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 </div>
 
                 {/* Pricing */}
-                <div className="mb-4 p-4 bg-purple-600/20 rounded-lg border border-purple-500/30">
+                <div className="mb-4 p-4 bg-purple-600/20 rounded-lg border border-purple-500/30">;
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-purple-200 text-sm">Starting at</span>
                     <span className="text-white font-bold">${service.pricing.monthly}/month</span>
@@ -220,7 +220,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   <div className="text-purple-200 text-xs">
                     Market price: {service.pricing.marketPrice}
                   </div>
-                </div>
+                </div>;
 
                 {/* Features */}
                 <div className="mb-4">
@@ -331,7 +331,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       </section>
 
       {/* Why Choose Zion Tech Group */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -429,14 +429,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -489,7 +489,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
       </section>
 
       {/* Footer Contact */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 to-blue-900">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 to-blue-900">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>

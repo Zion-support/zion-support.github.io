@@ -153,7 +153,7 @@ export default function EmergingTech2030(...args[]):  {
         </section>
 
         {/* Services Overview */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4">;
           <motion.div
             className="container mx-auto max-w-7xl"
             variants={containerVariants}
@@ -243,7 +243,7 @@ export default function EmergingTech2030(...args[]):  {
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className = "py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
+        <section className = "py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">;
           <motion.div 
             className="container mx-auto max-w-6xl"
             variants={containerVariants}
@@ -309,14 +309,14 @@ export default function EmergingTech2030(...args[]):  {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </motion.div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4">;
           <motion.div
             className="container mx-auto max-w-4xl text-center"
             variants={containerVariants}

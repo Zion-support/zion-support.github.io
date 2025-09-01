@@ -55,7 +55,7 @@ interface NotificationSettings {
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
-  enableSound = true,;
+enableSound:  true,;
   enableVibration = true,;
   autoDismiss = true,;
   defaultDuration = 5000;
@@ -214,7 +214,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return (
     <>
       {/* Notification Bell */}
-      <div className = {`fixed ${getPositionClasses()} z-50`}>
+      <div className = {`fixed ${getPositionClasses()} z-50`}>;
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
@@ -437,7 +437,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 }}
                       layout
                       className = {
-  `p-4 rounded-xl ${getNotificationStyles(notification.type,
+  `p-4 rounded-xl ${getNotificationStyles(notification.type,;
   notification.priority)
 
 

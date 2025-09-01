@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [
+import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
     {
         id: '1',
         title: 'AI-Powered E-commerce Platform',
         description: 'A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.',
         category: 'AI & ML',
-        technologies['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],
+        technologies['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],;
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -13,14 +13,14 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2500,
         completionDate: '2024-01',
         featured: true,
-        tags['Machine Learning', 'E-commerce', 'Real-time', 'Scalable']
-    },
+        tags['Machine Learning', 'E-commerce', 'Real-time', 'Scalable'];
+    },;
     {
         id: '2',
         title: 'Blockchain Supply Chain Tracker',
         description: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.',
         category: 'Web3',
-        technologies['Solidity', 'React', 'Web3.js', 'IPFS', 'Ethereum'],
+        technologies['Solidity', 'React', 'Web3.js', 'IPFS', 'Ethereum'],;
         image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -28,14 +28,14 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 1800,
         completionDate: '2024-02',
         featured: true,
-        tags['Blockchain', 'Supply Chain', 'Decentralized', 'Security']
-    },
+        tags['Blockchain', 'Supply Chain', 'Decentralized', 'Security'];
+    },;
     {
         id: '3',
         title: 'Real-time Data Analytics Dashboard',
         description: 'Comprehensive analytics platform providing real-time insights with interactive charts, predictive analytics, and automated reporting.',
         category: 'Data Science',
-        technologies['Python', 'Django', 'D3.js', 'PostgreSQL', 'Redis'],
+        technologies['Python', 'Django', 'D3.js', 'PostgreSQL', 'Redis'],;
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -43,14 +43,14 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 3200,
         completionDate: '2024-03',
         featured: false,
-        tags['Analytics', 'Real-time', 'Predictive', 'Dashboard']
-    },
+        tags['Analytics', 'Real-time', 'Predictive', 'Dashboard'];
+    },;
     {
         id: '4',
         title: 'Mobile-First Banking App',
         description: 'Secure and intuitive mobile banking application with biometric authentication, real-time notifications, and advanced security features.',
         category: 'Mobile',
-        technologies['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+        technologies['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],;
         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -58,14 +58,14 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 4500,
         completionDate: '2024-04',
         featured: true,
-        tags['Mobile', 'Banking', 'Security', 'Biometric']
-    },
+        tags['Mobile', 'Banking', 'Security', 'Biometric'];
+    },;
     {
         id: '5',
         title: 'IoT Smart Home Controller',
         description: 'Centralized smart home management system with AI-powered automation, energy optimization, and seamless device integration.',
         category: 'IoT',
-        technologies['Python', 'React', 'MQTT', 'TensorFlow', 'Docker'],
+        technologies['Python', 'React', 'MQTT', 'TensorFlow', 'Docker'],;
         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -73,14 +73,14 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 1200,
         completionDate: '2024-05',
         featured: false,
-        tags['IoT', 'Smart Home', 'Automation', 'Energy']
-    },
+        tags['IoT', 'Smart Home', 'Automation', 'Energy'];
+    },;
     {
         id: '6',
         title: 'Cybersecurity Threat Detection',
         description: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.',
         category: 'Security',
-        technologies['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker'],
+        technologies['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker'],;
         image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com',
@@ -88,7 +88,7 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2800,
         completionDate: '2024-06',
         featured: true,
-        tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
+        tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time'];
     }
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];

@@ -39,14 +39,14 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$199",
             period: "/month",
             description: "Perfect for small businesses and startups",
-            features[
+            features[;
                 "Up to 1,000 conversations/month",
                 "Basic AI chatbot",
                 "Email and chat support",
                 "Email support",
                 "Basic analytics",
                 "Mobile app access"
-            ],
+            ],;
             cta: "Start Free Trial",
             popular: false
         },
@@ -55,7 +55,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$599",
             period: "/month",
             description: "Ideal for growing businesses and mid-size companies",
-            features[
+            features[;
                 "Up to 10,000 conversations/month",
                 "Advanced AI chatbot",
                 "Multi-channel support",
@@ -64,7 +64,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
                 "API integration",
                 "Custom workflows",
                 "Sentiment analysis"
-            ],
+            ],;
             cta: "Start Free Trial",
             popular: true
         },
@@ -73,7 +73,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
             price: "$1,999",
             period: "/month",
             description: "For large corporations and global customer service teams",
-            features[
+            features[;
                 "Unlimited conversations",
                 "Custom AI models",
                 "Omnichannel support",
@@ -82,7 +82,7 @@ import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smar
                 "Custom integrations",
                 "On-premise deployment",
                 "Advanced compliance"
-            ],
+            ],;
             cta: "Contact Sales",
             popular: false
 

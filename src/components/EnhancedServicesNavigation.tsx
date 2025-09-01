@@ -12,7 +12,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
       description: "Cutting-edge AI solutions",
       icon: "🤖",
       color: "from-blue-600 to-purple-600",
-      services[
+      services[;
         {
           title: "Code Review & Security",
           url: "/services/ai-code-review-security",
@@ -38,13 +38,13 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
           pricing: "From $299/month"
         }
       ]
-    },
+    },;
     {
       name: "Cloud & Infrastructure",
       description: "Enterprise solutions",
       icon: "☁️",
       color: "from-green-600 to-blue-600",
-      services[
+      services[;
         {
           title: "Cloud DevOps",
           url: "/services/cloud-devops",
@@ -64,13 +64,13 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
           pricing: "Custom pricing"
         }
       ]
-    },
+    },;
     {
       name: "Data & Analytics",
       description: "Business intelligence",
       icon: "📊",
       color: "from-purple-600 to-pink-600",
-      services[
+      services[;
         {
           title: "Data Analytics",
           url: "/services/data-analytics",
@@ -90,13 +90,13 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
           pricing: "Custom pricing"
         }
       ]
-    },
+    },;
     {
       name: "Security & Compliance",
       description: "Enterprise security",
       icon: "🔒",
       color: "from-red-600 to-orange-600",
-      services[
+      services[;
         {
           title: "Zero Trust Architecture",
           url: "/services/zero-trust-network-architecture",

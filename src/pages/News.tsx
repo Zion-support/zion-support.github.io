@@ -276,7 +276,7 @@ const News: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </div>;
   );
 };
 

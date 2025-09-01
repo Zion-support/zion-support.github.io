@@ -5,22 +5,22 @@ const SpaceTech = () => {
         {
             title: "Satellite Technology",
             description: "Advanced satellite systems for communication, navigation, and Earth observation.",
-            applications["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
-        },
+            applications["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"];
+        },;
         {
             title: "Space Robotics",
             description: "Autonomous robotic systems for space exploration and satellite maintenance.",
-            applications["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
-        },
+            applications["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"];
+        },;
         {
             title: "Space Communications",
             description: "High-speed, secure communication networks for space missions and satellite operations.",
-            applications["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
-        },
+            applications["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"];
+        },;
         {
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
-            applications["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
+            applications["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"];
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

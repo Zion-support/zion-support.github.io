@@ -56,7 +56,7 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => 
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;
     service.category === 'Emerging Technology'
   ).length
   ).length,;

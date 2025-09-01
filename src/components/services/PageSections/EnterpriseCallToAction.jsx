@@ -98,7 +98,7 @@ export const EnterpriseCallToAction = () => {
                 <span>{method.action}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </div>
+            </div>;
           ))}
         </div>
 
@@ -141,10 +141,10 @@ export const EnterpriseCallToAction = () => {
               <div className="text-blue-100">Enterprise Support</div>
             </div>
           </div>
-        </div>
+        </div>;
 
         {/* Enterprise Process */}
-        <div className="mt-20">
+        <div className="mt-20">;
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our Enterprise Engagement Process
           </h3>
@@ -189,7 +189,7 @@ export const EnterpriseCallToAction = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-20">;
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-3xl mx-auto border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Start Your Enterprise Journey

@@ -34,20 +34,20 @@ export default function OnsiteSupport(...args[]):  {
       icon: Server,
       title: 'Server Maintenance',
       description: 'Proactive server monitoring, updates, and optimization',
-      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
-    },
+      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification'];
+    },;
     {
       icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
-      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
-    },
+      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security'];
+    },;
     {
       icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
-      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
-    },
+      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening'];
+    },;
     {
       title: 'Training & Consultation',
       description: 'Staff training and strategic consultation',
@@ -494,13 +494,13 @@ export default function OnsiteSupport(...args[]):  {
                   <div className="text-slate-300 font-medium">{area.responseTime}</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
       </div>
 
       {/* Support Tiers */}
-      <div className="bg-slate-800/20 py-16">
+      <div className="bg-slate-800/20 py-16">;
         <div className="container mx-auto px-4">
           <motion.h2
             initial = {
@@ -592,7 +592,7 @@ export default function OnsiteSupport(...args[]):  {
       </section>
 
       {/* Response Process */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">;
         <motion.h2
           initial = {
   { opacity: 0,
@@ -670,13 +670,13 @@ export default function OnsiteSupport(...args[]):  {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
               <p className="text-slate-400 text-sm">{step.description}</p>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
       </div>
 
       {/* Benefits */}
-      <div className="bg-slate-800/20 py-16">
+      <div className="bg-slate-800/20 py-16">;
         <div className="container mx-auto px-4">
           <motion.h2
             initial = {
@@ -758,7 +758,7 @@ export default function OnsiteSupport(...args[]):  {
       </section>
 
       {/* Contact Information */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">;
         <motion.h2
           initial = {
   { opacity: 0,
@@ -862,13 +862,13 @@ export default function OnsiteSupport(...args[]):  {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
       </div>
 
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">;
         <motion.div
           initial = {
   { opacity: 0,

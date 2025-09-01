@@ -14,7 +14,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                     name: 'Performance',
                     icon: Zap,
                     overallScore: 88,
-                    metrics[
+                    metrics[;
                         {
                             name: 'Page Load Time',
                             value: 2.1,
@@ -41,12 +41,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             description: 'Overall Google Core Web Vitals performance',
 
                     ]
-                },
+                },;
                 {
                     name: 'SEO Health',
                     icon: Search,
                     overallScore: 82,
-                    metrics[
+                    metrics[;
                         {
                             name: 'Meta Descriptions',
                             value: 78,
@@ -80,12 +80,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             description: 'Structured data implementation',
 
                     ]
-                },
+                },;
                 {
                     name: 'Accessibility',
                     icon: Eye,
                     overallScore: 91,
-                    metrics[
+                    metrics[;
                         {
                             name: 'ARIA Implementation',
                             value: 88,
@@ -112,12 +112,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             description: 'Screen reader compatibility',
 
                     ]
-                },
+                },;
                 {
                     name: 'Security',
                     icon: Shield,
                     overallScore: 94,
-                    metrics[
+                    metrics[;
                         {
                             name: 'HTTPS Implementation',
                             value: 100,
@@ -144,12 +144,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             description: 'CSP header implementation',
 
                     ]
-                },
+                },;
                 {
                     name: 'Content Quality',
                     icon: Globe,
                     overallScore: 76,
-                    metrics[
+                    metrics[;
                         {
                             name: 'Content Completeness',
                             value: 68,
@@ -177,12 +177,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             description: 'Recently updated content percentage',
 
                     ]
-                },
+                },;
                 {
                     name: 'User Experience',
                     icon: Users,
                     overallScore: 85,
-                    metrics[
+                    metrics[;
                         {
                             name: 'Mobile Responsiveness',
                             value: 96,

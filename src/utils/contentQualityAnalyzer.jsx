@@ -1,4 +1,4 @@
-        }
+        
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
         // Collect all issues and count frequency
@@ -178,4 +178,4 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 };
 
 export default ContentQualityAnalyzer;
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+}}}}}}}}}}}}}}}}

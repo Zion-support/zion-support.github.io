@@ -403,7 +403,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
               </h2>
@@ -429,7 +429,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
               </h2>
@@ -470,7 +470,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
               </h2>
@@ -514,7 +514,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
               </h2>
@@ -552,7 +552,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
               </h2>
@@ -578,7 +578,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
               </h2>
@@ -604,7 +604,7 @@ const TermsOfService = () => {;
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
               </h2>
@@ -673,7 +673,7 @@ const TermsOfService = () => {;
         </section>
 
         {/* Table of Contents */}
-        <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -761,7 +761,7 @@ const TermsOfService = () => {;
         </section>
 
         {/* Key Provisions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -848,7 +848,7 @@ const TermsOfService = () => {;
         </section>
 
         {/* Terms Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">;
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial = {
@@ -901,7 +901,7 @@ const TermsOfService = () => {;
         </section>
 
         {/* Dispute Resolution */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -988,7 +988,7 @@ const TermsOfService = () => {;
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial = {

@@ -102,7 +102,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
-          </motion.div>
+          </motion.div>;
         )}
         
         <motion.div 
@@ -178,6 +178,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </Link>
         </motion.div>
       </div>
-    </section>
+    </section>;
   );
 }}}}}}}}}}

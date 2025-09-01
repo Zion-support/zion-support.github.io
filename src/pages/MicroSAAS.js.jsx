@@ -5,22 +5,22 @@ const MicroSAAS = () => {
         {
             title: "AI Content Generator",
             description: "Automated content creation platform for marketing, social media, and business communications.",
-            features["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
-        },
+            features["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"];
+        },;
         {
             title: "Accessibility Auditor",
             description: "Comprehensive accessibility testing and compliance tools for web applications.",
-            features["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
-        },
+            features["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"];
+        },;
         {
             title: "Affiliate Attribution Hub",
             description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
-            features["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
-        },
+            features["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"];
+        },;
         {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
-            features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
+            features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"];
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

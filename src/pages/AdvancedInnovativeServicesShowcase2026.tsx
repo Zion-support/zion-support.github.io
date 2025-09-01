@@ -414,11 +414,11 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
                   Learn More <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
 
-        {filteredServices.length === 0 && (
+        {filteredServices.length === 0 && (;
           <motion.div
             className="text-center py-20"
             initial={{ opacity: 0 }}
@@ -427,7 +427,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-slate-400">Try adjusting your search criteria or category filter.</p>
-          </motion.div>
+          </motion.div>;
         )}
       </motion.div>
 
@@ -436,7 +436,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         className="bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-indigo-900/20 border-t border-slate-700/50"
         initial = {
   { opacity: 0,
-  y: 50 
+  y: 50 ;
 
 
 
@@ -446,7 +446,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -456,7 +456,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 }}
         transition = {
   { duration: 0.8,
-  delay: 1 
+  delay: 1 ;
 
 
 

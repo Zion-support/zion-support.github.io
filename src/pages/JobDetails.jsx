@@ -155,18 +155,3 @@ export default function JobDetails() {
                 description: job.description,
                 comp_name: job.comp_name || "Comp",
                 budget: job.budget,
-  <<<<<<< HEAD
-                client_id: job.client_id
-            
-
-}} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>)}
-  client_id: job.client_id
-            
-
-
-
-
-}} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
-    </>);
-}

@@ -64,7 +64,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
             },
-            "sameAs"[
+            "sameAs"[;
                 "https://linkedin.com/company/ziontechgroup",
                 "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"

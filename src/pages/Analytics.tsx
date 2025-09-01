@@ -187,12 +187,12 @@ const Analytics: React.FC = () => {
                 Explore Services
               </Link>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Metrics Section */}
-      <section className="py-16 bg-slate-800/50">
+      <section className="py-16 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
@@ -236,14 +236,14 @@ const Analytics: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                 <div className="text-cyan-400 font-semibold mb-1">{metric.label}</div>
                 <div className="text-sm text-slate-400">{metric.description}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -320,14 +320,14 @@ const Analytics: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Analytics Types Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -420,7 +420,7 @@ const Analytics: React.FC = () => {
 
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -428,7 +428,7 @@ const Analytics: React.FC = () => {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -502,14 +502,14 @@ const Analytics: React.FC = () => {
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-white font-medium mb-2">{integration.name}</h3>
                 <p className="text-sm text-slate-400">{integration.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

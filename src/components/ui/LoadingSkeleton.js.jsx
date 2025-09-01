@@ -8,11 +8,11 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 
 } animate = {
   {
-                background[
+                background[;
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 100%, hsl(var(--zion-slate-dark)) 0%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%,
-  hsl(var(--zion-slate-dark)) 100%)"
+  hsl(var(--zion-slate-dark)) 100%)";
                 ]
             
 

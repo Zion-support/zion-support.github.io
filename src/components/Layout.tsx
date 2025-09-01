@@ -3,12 +3,12 @@ import { ReactNode } from 'react';
 interface LayoutProps {
   children: ReactNode;
 
-const navigation: NavItem[] = [
+const navigation: NavItem[] = [;
   { label: 'Home', href: '/' },
   {
     label: 'Services',
     href: '/services',
-    children[
+    children[;
       { label: 'AI & Machine Learning', href: '/services#ai' },
       { label: 'Quantum Technology', href: '/services#quantum' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
@@ -22,7 +22,7 @@ const navigation: NavItem[] = [
       { label: 'Consulting & Strategy', href: '/services#consulting' },
       { label: 'All Services', href: '/services' }
     ]
-  },
+  },;
   { label: 'Contact', href: '/contact' }
 ];
 export default function Layout(...args[]):  {
@@ -72,11 +72,11 @@ export default function Layout(...args[]):  {
             </div>
           </div>
         </div>
-      </header>
+      </header>;
       {/* Main Content */}
-      <div className="flex">
+      <div className="flex">;
         {/* Sidebar */}
-        <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
+<aside className: {`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}>
           <div className="p-4">
@@ -97,7 +97,7 @@ export default function Layout(...args[]):  {
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''
                         }`} />
                       </button>
-                      {sidebarDropdownOpen === item.label && (
+                      {sidebarDropdownOpen === item.label && (;
                         <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (
                             <a
@@ -118,7 +118,7 @@ export default function Layout(...args[]):  {
 
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
-                    </a>
+                    </a>;
                   )}
                 </div>
               ))}

@@ -219,12 +219,12 @@ import {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             )}
           </AnimatePresence>
 
           {/* Benefits */}
-          <div className="mb-4">
+          <div className="mb-4">;
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Benefits</h4>
             <div className="grid grid-cols-2 gap-2">
               {service.benefits.slice(0, 4).map((benefit, index) => (
@@ -239,7 +239,7 @@ import {
           </div>
 
           {/* Technical Specs */}
-          <div className="mb-4">
+          <div className="mb-4">;
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical Specs</h4>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
@@ -254,7 +254,7 @@ import {
           </div>
 
           {/* ROI and Setup */}
-          <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+          <div className="grid grid-cols-2 gap-4 mb-4 text-sm">;
             <div>
               <p className="text-gray-500 dark:text-gray-400">ROI</p>
               <p className="font-semibold text-green-600">{service.roi}</p>
@@ -266,7 +266,7 @@ import {
           </div>
 
           {/* Contact and Actions */}
-          <div className="border-t border-gray-200 dark:border-slate-700 pt-4">
+          <div className="border-t border-gray-200 dark:border-slate-700 pt-4">;
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
                 <Phone className="w-4 h-4" />
@@ -549,12 +549,12 @@ import {
             </motion.div>
           </div>
         </div>
-      </div>
+      </div>;
 
       {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         {/* Filters and Search */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">;
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {/* Search */}
             <div className="flex-1 max-w-md">
@@ -612,7 +612,7 @@ import {
         </div>
 
         {/* Services Count */}
-        <div className="mb-8">
+        <div className="mb-8">;
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services
           </p>
@@ -639,7 +639,7 @@ import {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?

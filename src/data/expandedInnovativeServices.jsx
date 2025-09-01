@@ -15,4 +15,3 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = [
     "Risk Assessment",
     "Entertainment"
 ];
-}

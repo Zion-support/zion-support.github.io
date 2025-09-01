@@ -101,7 +101,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       price: '$499',
       period: '/month',
       description: 'Perfect for small financial institutions',
-      features[
+      features[;
         'Up to 1,000 transactions/month',
         'Basic compliance monitoring',
         'Standard regulatory updates',
@@ -109,7 +109,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
         'Basic reporting',
         'Up to 5 user licenses',
         'Core compliance frameworks'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: false
     },
@@ -118,7 +118,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       price: '$999',
       period: '/month',
       description: 'Ideal for growing financial organizations',
-      features[
+      features[;
         'Up to 10,000 transactions/month',
         'Advanced AI compliance monitoring',
         'Real-time regulatory updates',
@@ -129,7 +129,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
         'API integrations',
         'Custom workflows',
         'Advanced analytics'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
@@ -138,7 +138,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       price: '$2,499',
       period: '/month',
       description: 'For large financial institutions with complex needs',
-      features[
+      features[;
         'Unlimited transactions',
         'Premium AI compliance monitoring',
         '24/7 dedicated support',
@@ -274,10 +274,10 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -354,14 +354,14 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Compliance Frameworks Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -438,14 +438,14 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{framework.title}</h3>
                 <p className="text-slate-300">{framework.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -519,14 +519,14 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -603,14 +603,14 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-slate-300">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -686,7 +686,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                     : 'border-slate-700/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -719,14 +719,14 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
                 }`}>
                   {plan.cta}
                 </button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -776,7 +776,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

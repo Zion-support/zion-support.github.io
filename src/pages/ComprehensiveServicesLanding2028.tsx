@@ -227,11 +227,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               Get Started
             </Button>
           </motion.div>
-        </div>
+        </div>;
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white/5 backdrop-blur-sm">
+      <section className="py-16 bg-white/5 backdrop-blur-sm">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index)  => (
@@ -274,14 +274,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 </div>
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light">{stat.label}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Services Overview */}
-      <section id="services-section" className="py-20">
+      <section id="services-section" className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {
@@ -405,7 +405,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   onClick={() => setSelectedService(service)}
 
                   View Details
-                </Button>
+                </Button>;
               </motion.div>
             ))}
           </div>
@@ -456,7 +456,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
+      <section className="py-20 bg-white/5 backdrop-blur-sm">;
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {
@@ -574,7 +574,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {
@@ -1017,7 +1017,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       )}
 

@@ -25,7 +25,7 @@ const initialState: WishlistState = {
 
 };
 
-const wishlistSlice = createSlice({;
+const wishlistSlice:  createSlice({;
   name: any'wishlist',;
   initialState,;
   reducers: {;

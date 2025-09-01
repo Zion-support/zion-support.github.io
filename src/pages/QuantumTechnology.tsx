@@ -35,35 +35,35 @@ export default function QuantumTechnology(...args[]):  {
       icon: Atom,
       title: "Quantum Computing",
       description: "Leverage quantum algorithms for complex computational problems",
-      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
+      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],;
       color: "from-zion-cyan to-zion-blue"
     },
     {
       icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution",
-      features["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
+      features["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],;
       color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Network,
       title: "Quantum Networks",
       description: "Quantum internet infrastructure for secure data transmission",
-      features["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
+      features["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],;
       color: "from-zion-green to-zion-emerald"
     },
     {
       icon: Brain,
       title: "Quantum Machine Learning",
       description: "AI algorithms enhanced with quantum computing capabilities",
-      features["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
+      features["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],;
       color: "from-zion-yellow to-zion-orange"
     },
     {
       icon: Database,
       title: "Quantum Databases",
       description: "Quantum-enhanced data storage and retrieval systems",
-      features["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
+      features["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],;
       color: "from-zion-red to-zion-pink"
     },
     {
@@ -90,35 +90,35 @@ export default function QuantumTechnology(...args[]):  {
       title: "Portfolio Optimization",
       description: "Quantum algorithms for optimal investment portfolio management",
       category: "finance",
-      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
+      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],;
       icon: BarChart3
     },
     {
       title: "Drug Discovery",
       description: "Quantum simulation for molecular modeling and drug development",
       category: "healthcare",
-      benefits["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
+      benefits["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],;
       icon: Monitor
     },
     {
       title: "Supply Chain Optimization",
       description: "Quantum optimization for logistics and supply chain management",
       category: "logistics",
-      benefits["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
+      benefits["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],;
       icon: Network
     },
     {
       title: "Cryptographic Security",
       description: "Quantum-resistant encryption and secure communication",
       category: "cybersecurity",
-      benefits["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
+      benefits["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],;
       icon: Shield
     },
     {
       title: "Climate Modeling",
       description: "Quantum computing for complex climate simulations",
       category: "research",
-      benefits["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
+      benefits["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],;
       icon: Lightbulb
     },
     {
@@ -135,31 +135,31 @@ export default function QuantumTechnology(...args[]):  {
     {
       name: "Superconducting Qubits",
       description: "Quantum bits using superconducting circuits for computation",
-      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
+      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],;
       icon: Cpu
     },
     {
       name: "Trapped Ions",
       description: "Quantum bits using individual ions for precise control",
-      advantages["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
+      advantages["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],;
       icon: Atom
     },
     {
       name: "Topological Qubits",
       description: "Quantum bits with inherent error protection",
-      advantages["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
+      advantages["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],;
       icon: Shield
     },
     {
       name: "Photonic Qubits",
       description: "Quantum bits using light particles for communication",
-      advantages["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
+      advantages["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],;
       icon: Network
     },
     {
       name: "Silicon Qubits",
       description: "Quantum bits using semiconductor technology",
-      advantages["Manufacturing", "Scalability", "Integration", "Cost Effective"],
+      advantages["Manufacturing", "Scalability", "Integration", "Cost Effective"],;
       icon: Server
     },
     {
@@ -273,10 +273,10 @@ export default function QuantumTechnology(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Quantum Services Overview */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -319,7 +319,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumServices.map((service, index) => (
+            {quantumServices.map((service, index) => (;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -357,7 +357,7 @@ export default function QuantumTechnology(...args[]):  {
       </section>
 
       {/* Quantum Applications */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -400,7 +400,7 @@ export default function QuantumTechnology(...args[]):  {
             {applications.map((app)  => {
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -491,7 +491,7 @@ export default function QuantumTechnology(...args[]):  {
       </section>
 
       {/* Quantum Technologies */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -534,7 +534,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumTechnologies.map((tech, index) => (
+            {quantumTechnologies.map((tech, index) => (;
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -575,7 +575,7 @@ export default function QuantumTechnology(...args[]):  {
       </section>
 
       {/* Quantum Advantages */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-pink">
+      <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-pink">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -618,7 +618,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map((advantage, index) => (;
               <motion.div
                 key={index}
                 className="text-center"
@@ -629,14 +629,14 @@ export default function QuantumTechnology(...args[]):  {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{advantage.label}</h3>
                 <p className="text-zion-slate-light">{advantage.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Implementation Process */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -679,7 +679,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {[
+            {[;
               {
                 step: "01",
                 title: "Quantum Assessment",
@@ -704,7 +704,7 @@ export default function QuantumTechnology(...args[]):  {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
 
-            ].map((phase, index) => (
+            ].map((phase, index) => (;
               <motion.div
                 key={index}
                 className="relative"
@@ -719,19 +719,19 @@ export default function QuantumTechnology(...args[]):  {
                   <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
                 </div>
 
-                {index < 3 && (
+                {index < 3 && (;
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-zion-purple" />
                   </div>
                 )}
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

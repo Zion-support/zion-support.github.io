@@ -43,15 +43,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-ai-solutions.jpg",
       cta: "Explore AI Solutions",
       path: "/services/ai-business-intelligence",
-      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],;
       gradient: "from-zion-cyan via-zion-purple to-zion-blue",
       icon: Brain,
-      stats[
+      stats[;
         { label: "Accuracy Rate", value: "95%+", icon: Target },
         { label: "ROI Increase", value: "450%", icon: TrendingUp },
         { label: "Market Growth", value: "280%", icon: Rocket }
       ]
-    },
+    },;
     {
       title: "Comprehensive IT Services",
       subtitle: "End-to-end technology solutions for modern businesses",
@@ -59,15 +59,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-it-services.jpg",
       cta: "View Our Services",
       path: "/services",
-      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],;
       gradient: "from-zion-blue via-zion-cyan to-zion-purple",
       icon: Shield,
-      stats[
+      stats[;
         { label: "Uptime", value: "99.99%", icon: Target },
         { label: "Cost Savings", value: "700%", icon: TrendingUp },
         { label: "Response Time", value: "<5min", icon: Rocket }
       ]
-    },
+    },;
     {
       title: "Green IT Solutions",
       subtitle: "Sustainable technology for a better future",
@@ -75,10 +75,10 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-green-it.jpg",
       cta: "Learn More",
       path: "/green-it",
-      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],;
       gradient: "from-zion-cyan via-zion-blue to-zion-purple",
       icon: Globe,
-      stats[
+      stats[;
         { label: "Energy Savings", value: "60%", icon: Target },
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
         { label: "Cost Reduction", value: "40%", icon: Rocket }
@@ -137,7 +137,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       </div>
 
       {/* Hero content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
@@ -255,7 +255,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
-                    </motion.div>
+                    </motion.div>;
                   ))}
                 </div>
 
@@ -285,7 +285,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           <motion.div
             initial = {
   { opacity: 0,
-  x: 50 
+  x: 50 ;
 
 
 
@@ -295,7 +295,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
             animate = {
   { opacity: 1,
-  x: 0 
+  x: 0 ;
 
 
 
@@ -305,7 +305,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 
+  delay: 0.2 ;
 
 
 
@@ -357,8 +357,8 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             </div>
 
             {/* Enhanced floating stats cards */}
-            <div className="absolute -bottom-6 -left-6 space-y-4">
-              {currentSlideData.stats.map((stat, index) => (
+            <div className="absolute -bottom-6 -left-6 space-y-4">;
+              {currentSlideData.stats.map((stat, index) => (;
                 <motion.div
                   key={stat.label}
                   initial = {
@@ -393,7 +393,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       <p className="text-xs text-gray-300">{stat.label}</p>
                     </div>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
 
@@ -401,7 +401,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -411,7 +411,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -422,7 +422,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
               transition={{ delay: 0.8 }}
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
 
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">;
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">
                   <Star className="w-6 h-6 text-zion-cyan" />
                 </div>
@@ -436,7 +436,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         </div>
 
         {/* Enhanced slide navigation */}
-        <div className="flex items-center justify-center mt-16 space-x-4">
+        <div className="flex items-center justify-center mt-16 space-x-4">;
           <motion.button
             onClick={prevSlide}
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
@@ -492,7 +492,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
           transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity ;
 
 
 

@@ -272,11 +272,11 @@ export function EnhancedSearch({
             prev < results.length - 1 ? prev + 1 : prev;
           );
           break;
-        case 'ArrowUp':
+        case 'ArrowUp':;
           event.preventDefault();
           setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
           break;
-        case 'Enter':
+        case 'Enter':;
           event.preventDefault();
           if (selectedIndex >= 0 && results[selectedIndex]) {
             handleResultClick(results[selectedIndex]);
@@ -284,7 +284,7 @@ export function EnhancedSearch({
             handleSearch();
           }
           break;
-        case 'Escape':
+        case 'Escape':;
           setIsOpen(false);
           setSelectedIndex(-1);
           break;
@@ -330,7 +330,7 @@ export function EnhancedSearch({
     setFilters({ type[], category[], tags[] })};
 
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
-    setFilters(prev => ({;
+setFilters(prev: > ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
         ? prev[filterType].filter(v => v !== value);
@@ -612,7 +612,7 @@ export function EnhancedSearch({
                           </button>
                         ))}
                       </div>
-                    </div>
+                    </div>;
                   )}
 
                   {/* Popular Searches */}
@@ -637,7 +637,7 @@ export function EnhancedSearch({
                     </div>
                   </div>
                 </div>
-              ) : isLoading ? (
+              ) : isLoading ? (;
                 <div className="p-8 text-center">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
                   <p className="text-gray-600 mt-2">Searching...</p>

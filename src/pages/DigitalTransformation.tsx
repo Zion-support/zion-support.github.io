@@ -41,46 +41,46 @@ import {
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",
-      activities[
+      activities[;
         "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
         "Technology audit",
         "Gap analysis"
       ]
-    },
+    },;
     {
       phase: "02",
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4-6 weeks",
-      activities[
+      activities[;
         "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
         "ROI analysis and business case",
         "Risk assessment"
       ]
-    },
+    },;
     {
       phase: "03",
       title: "Pilot & Validation",
       description: "Implement proof-of-concept and validate approach with stakeholders",
       duration: "6-8 weeks",
-      activities[
+      activities[;
         "Proof-of-concept development",
         "Pilot implementation",
         "Stakeholder validation",
         "Performance measurement",
         "Feedback collection"
       ]
-    },
+    },;
     {
       phase: "04",
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
-      activities[
+      activities[;
         "Phased rollout execution",;
         "Change management implementation",;
         "Performance monitoring",;
@@ -198,14 +198,14 @@ import {
 
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* Services Section */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -268,14 +268,14 @@ import {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Transformation Process */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -379,7 +379,7 @@ import {
                       </motion.div>
                     )}
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
@@ -387,7 +387,7 @@ import {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -446,14 +446,14 @@ import {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?

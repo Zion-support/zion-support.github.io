@@ -124,7 +124,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-                    scale[0, 1,
+                    scale[0, 1,;
   0]
                 
 

@@ -134,7 +134,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script = > {;
+existingScripts.forEach(script:  > {;
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove();
       }

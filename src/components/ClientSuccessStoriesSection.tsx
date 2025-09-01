@@ -255,7 +255,7 @@ export function ClientSuccessStoriesSection() {
 
         {/* Success Metrics */}
         <motion.div 
-          className="mb-16"
+          className="mb-16";
           initial = {
   { opacity: 0,
   y: 30 

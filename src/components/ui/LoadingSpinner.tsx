@@ -251,8 +251,8 @@ export function ContentPlaceholder({
             <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
-          </motion.div>
-        ))
+          </motion.div>;
+        ));
       ) : variant === 'list' ? (
         // List placeholders
         Array.from({ length: 5 }).map((_, index) => (
@@ -265,9 +265,9 @@ export function ContentPlaceholder({
 
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
-          </motion.div>
+          </motion.div>;
         ))
-      ) : variant === 'grid' ? (
+      ) : variant === 'grid' ? (;
         // Grid placeholders
         Array.from({ length: 8 }).map((_, index) => (
           <motion.div
@@ -279,9 +279,9 @@ export function ContentPlaceholder({
 
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
-          </motion.div>
+          </motion.div>;
         ))
-      ) : (
+      ) : (;
         // Default placeholders
         Array.from({ length: 4 }).map((_, index) => (
           <motion.div
@@ -339,7 +339,7 @@ export function AppLoadingSpinner() {
               }}
 
               {icon}
-            </span>
+            </span>;
           </motion.div>
         ))}
       </div>
@@ -356,8 +356,8 @@ export function AppLoadingSpinner() {
       </motion.div>
 
       {/* Progress dots */}
-      <div className="flex gap-2 mt-6">
-        {[0, 1, 2].map((i) => (
+      <div className="flex gap-2 mt-6">;
+        {[0, 1, 2].map((i) => (;
           <motion.div
             key={i}
             className="w-2 h-2 bg-cyan-400 rounded-full"

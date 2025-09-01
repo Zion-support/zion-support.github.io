@@ -576,102 +576,102 @@ import {
   Shield,
   Zap,
   Brain
-const autonomousVehicleSolutions = [
+const autonomousVehicleSolutions = [;
   {
     id: 1,
     title: "AI Vehicle Perception System",
     description: "Advanced computer vision and sensor fusion for autonomous vehicle perception.",
     icon: Eye,
-    features[
+    features[;
       "Computer vision",
       "Sensor fusion",
       "Object detection",
       "Environment mapping"
-    ],
+    ],;
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Perception",
-    technologies["Computer Vision", "AI", "Sensor Fusion", "Machine Learning"]
-  },
+    technologies["Computer Vision", "AI", "Sensor Fusion", "Machine Learning"];
+  },;
   {
     id: 2,
     title: "Autonomous Navigation System",
     description: "AI-powered navigation and path planning for autonomous vehicles.",
     icon: Navigation,
-    features[
+    features[;
       "Path planning",
       "Route optimization",
       "Traffic analysis",
       "Real-time navigation"
-    ],
+    ],;
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Navigation",
-    technologies["AI Navigation", "Path Planning", "Traffic Analysis", "Machine Learning"]
-  },
+    technologies["AI Navigation", "Path Planning", "Traffic Analysis", "Machine Learning"];
+  },;
   {
     id: 3,
     title: "Vehicle Control System",
     description: "Intelligent control systems for autonomous vehicle operation.",
     icon: Cog,
-    features[
+    features[;
       "Vehicle control",
       "Safety systems",
       "Performance optimization",
       "Real-time control"
-    ],
+    ],;
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Control",
-    technologies["AI Control", "Vehicle Systems", "Safety", "Real-time Processing"]
-  },
+    technologies["AI Control", "Vehicle Systems", "Safety", "Real-time Processing"];
+  },;
   {
     id: 4,
     title: "Predictive Maintenance System",
     description: "AI-driven predictive maintenance for autonomous vehicle fleets.",
     icon: Wrench,
-    features[
+    features[;
       "Predictive maintenance",
       "Health monitoring",
       "Performance tracking",
       "Fleet management"
-    ],
+    ],;
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Maintenance",
-    technologies["Predictive Analytics", "IoT", "Machine Learning", "Fleet Management"]
-  },
+    technologies["Predictive Analytics", "IoT", "Machine Learning", "Fleet Management"];
+  },;
   {
     id: 5,
     title: "Safety & Security System",
     description: "Comprehensive safety and security systems for autonomous vehicles.",
     icon: Shield,
-    features[
+    features[;
       "Safety monitoring",
       "Security protocols",
       "Emergency systems",
       "Compliance management"
-    ],
+    ],;
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Safety",
-    technologies["AI Safety", "Security", "Compliance", "Emergency Systems"]
-  },
+    technologies["AI Safety", "Security", "Compliance", "Emergency Systems"];
+  },;
   {
     id: 6,
     title: "Fleet Management Platform",
     description: "AI-powered platform for managing autonomous vehicle fleets.",
     icon: Users,
-    features[
+    features[;
       "Fleet optimization",
       "Route planning",
       "Performance analytics",
       "Operational efficiency"
-    ],
+    ],;
     price: "From $220,000",
     timeline: "26-38 weeks",
     category: "Fleet Management",
-    technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"]
+    technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"];
   }
 ];
 
@@ -772,25 +772,25 @@ const vehicleBenefits = [
     title: "Enhanced Safety",
     description: "AI-powered systems provide superior safety and accident prevention",
     icon: Shield,
-    examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"]
-  },
+    examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"];
+  },;
   {
     title: "Improved Efficiency",
     description: "Autonomous systems optimize vehicle performance and operations",
     icon: Zap,
-    examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"]
-  },
+    examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"];
+  },;
   {
     title: "Cost Reduction",
     description: "AI systems reduce operational costs and improve resource utilization",
     icon: TrendingUp,
-    examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"]
-  },
+    examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"];
+  },;
   {
     title: "24/7 Operation",
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
-    examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
+    examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"];
   }
 ];
 
@@ -901,10 +901,10 @@ export default function AIAutonomousVehicle() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Vehicle Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -988,14 +988,14 @@ export default function AIAutonomousVehicle() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Vehicle Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1080,14 +1080,14 @@ export default function AIAutonomousVehicle() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1169,14 +1169,14 @@ export default function AIAutonomousVehicle() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1310,7 +1310,7 @@ export default function AIAutonomousVehicle() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1409,14 +1409,14 @@ export default function AIAutonomousVehicle() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

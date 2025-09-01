@@ -202,7 +202,7 @@ export function ComprehensiveServicesShowcase() {
   { 
                   y: -8,
                   boxShadow: "0 20px 40px rgba(0, 0, 0,
-  0.3)"
+  0.3)";
                 
 
 }}
@@ -284,7 +284,7 @@ export function ComprehensiveServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
+            </motion.div>;
           ))}
         </motion.div>
 

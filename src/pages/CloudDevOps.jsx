@@ -26,79 +26,79 @@ import {
 } from 'lucide-react';
 
     icon: GitFork,
-    features: [
+    features: [;
       "Automated testing",
       "Build automation",
       "Deployment automation",
       "Rollback capabilities"
     ],
-    price: "From $12,000",
-    timeline: "6-12 weeks",
-    category: "DevOps",
+    price: "From $12,000",;
+    timeline: "6-12 weeks",;
+    category: "DevOps",;
     platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
   },
   {
     id: 3,
-    title: "Container Orchestration",
-    description: "Kubernetes and Docker implementation for scalable containerized applications.",
-    icon: Server,
+    title: "Container Orchestration",;
+    description: "Kubernetes and Docker implementation for scalable containerized applications.",;
+    icon: Server,;
     features[
       "Container orchestration",
       "Service mesh setup",
       "Auto-scaling",
       "Monitoring & logging"
     ],
-    price: "From $20,000",
-    timeline: "10-18 weeks",
-    category: "Containerization",
+    price: "From $20,000",;
+    timeline: "10-18 weeks",;
+    category: "Containerization",;
     platforms["Kubernetes", "Docker", "Helm", "Istio"]
   },
   {
     id: 4,
-    title: "Infrastructure as Code",
-    description: "Automated infrastructure provisioning and management using code.",
-    icon: Code,
+    title: "Infrastructure as Code",;
+    description: "Automated infrastructure provisioning and management using code.",;
+    icon: Code,;
     features[
       "Terraform implementation",
       "Ansible automation",
       "Version control",
       "Environment management"
     ],
-    price: "From $18,000",
-    timeline: "8-14 weeks",
-    category: "IaC",
+    price: "From $18,000",;
+    timeline: "8-14 weeks",;
+    category: "IaC",;
     platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]
   },
   {
     id: 5,
-    title: "Monitoring & Observability",
-    description: "Comprehensive monitoring and logging solutions for cloud applications.",
-    icon: Activity,
+    title: "Monitoring & Observability",;
+    description: "Comprehensive monitoring and logging solutions for cloud applications.",;
+    icon: Activity,;
     features[
       "Real-time monitoring",
       "Alert systems",
       "Log aggregation",
       "Performance metrics"
     ],
-    price: "From $10,000",
-    timeline: "6-10 weeks",
-    category: "Monitoring",
+    price: "From $10,000",;
+    timeline: "6-10 weeks",;
+    category: "Monitoring",;
     platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]
   },
   {
     id: 6,
-    title: "Security & Compliance",
-    description: "Cloud security implementation and compliance management for enterprise applications.",
-    icon: Shield,
+    title: "Security & Compliance",;
+    description: "Cloud security implementation and compliance management for enterprise applications.",;
+    icon: Shield,;
     features[
       "Identity management",
       "Access controls",
       "Security scanning",
       "Compliance reporting"
     ],
-    price: "From $25,000",
-    timeline: "12-20 weeks",
-    category: "Security",
+    price: "From $25,000",;
+    timeline: "12-20 weeks",;
+    category: "Security",;
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
@@ -108,27 +108,27 @@ const cloudPlatforms = [
     name: "Amazon Web Services",
     description: "Leading cloud platform with comprehensive services",
     icon: Cloud,
-    features["EC2", "S3", "Lambda", "RDS", "ECS"]
-  },
+    features["EC2", "S3", "Lambda", "RDS", "ECS"];
+  },;
   {
     name: "Microsoft Azure",
     description: "Enterprise cloud platform with strong integration",
     icon: Server,
-    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]
-  },
+    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];
+  },;
   {
     name: "Google Cloud Platform",
     description: "Innovative cloud platform with AI/ML focus",
     icon: Globe,
-    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]
-  },
+    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];
+  },;
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
           icon: GitFork,
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
 
-    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
+    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
   }
 ];
 
@@ -300,10 +300,10 @@ export default function CloudDevOps() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Cloud Platforms */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -386,14 +386,14 @@ export default function CloudDevOps() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -475,14 +475,14 @@ export default function CloudDevOps() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -616,7 +616,7 @@ export default function CloudDevOps() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -715,14 +715,14 @@ export default function CloudDevOps() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

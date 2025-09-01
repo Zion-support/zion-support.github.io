@@ -205,7 +205,7 @@ const QuantumAIPlatform = () => {
       </section>
 
       {/* Quantum Advantages Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -283,14 +283,14 @@ const QuantumAIPlatform = () => {
                 <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
                 <p className="text-gray-300 text-sm">{advantage.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -377,14 +377,14 @@ const QuantumAIPlatform = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -459,7 +459,7 @@ const QuantumAIPlatform = () => {
                     : 'border-slate-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -492,14 +492,14 @@ const QuantumAIPlatform = () => {
                 >
                   Get Started
                 </a>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -584,14 +584,14 @@ const QuantumAIPlatform = () => {
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
                 </div>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {

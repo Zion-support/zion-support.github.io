@@ -128,7 +128,7 @@ export const calculateServiceStats = () => {
 
 
 }).length
-    })),
+    })),;
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
       ...level,
       count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>

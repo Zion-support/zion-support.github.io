@@ -220,7 +220,7 @@ export function InteractiveTestimonials() {
         </div>
 
         {/* Testimonial Indicators */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8">;
           <div className="flex space-x-2">
             {testimonials.map((_, index) => (
               <button
@@ -235,7 +235,7 @@ export function InteractiveTestimonials() {
         </div>
 
         {/* Play/Pause Controls */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8">;
           <button
             onClick={togglePlayPause}
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -258,12 +258,12 @@ export function InteractiveTestimonials() {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
         {/* Category Filter */}

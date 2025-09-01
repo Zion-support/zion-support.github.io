@@ -155,7 +155,7 @@ export function FeatureHighlights() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
 

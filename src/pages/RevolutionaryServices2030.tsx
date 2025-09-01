@@ -472,11 +472,11 @@ export default function RevolutionaryServices2030() {
                     <option value="reviews">Sort by Reviews</option>
                     <option value="aiScore">Sort by AI Score</option>
                   </select>
-                </div>
+                </div>;
               </div>
 
               {/* Category Filters */}
-              <div className="mt-8">
+              <div className="mt-8">;
                 <div className="flex flex-wrap gap-3">
                   <button
                     onClick={() => setActiveCategory('all')}
@@ -502,7 +502,7 @@ export default function RevolutionaryServices2030() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </div>;
             </div>
 
             {/* Services Grid */}
@@ -619,7 +619,7 @@ export default function RevolutionaryServices2030() {
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </div>;
                         Learn More
                       </Link>
 
@@ -645,7 +645,7 @@ export default function RevolutionaryServices2030() {
               })}
             </AnimatePresence>
           </div>
-                Clear all filters
+                Clear all filters;
               </button>
             </div>
           )}
@@ -653,7 +653,7 @@ export default function RevolutionaryServices2030() {
       </div>
 
       {/* Footer CTA */}
-      <div className="relative z-10 pb-20">
+      <div className="relative z-10 pb-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -672,7 +672,7 @@ export default function RevolutionaryServices2030() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

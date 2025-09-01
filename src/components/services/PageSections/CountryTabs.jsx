@@ -32,7 +32,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
 
               <span className="text-2xl">{country.flag}</span>
               <span>{country.name}</span>
-            </button>
+            </button>;
           ))}
         </div>
 
@@ -85,7 +85,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
                     </div>
 
                     {/* Contact Information */}
-                    <div className="space-y-3">
+                    <div className="space-y-3">;
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                           <Phone className="w-4 h-4 text-blue-600" />
@@ -115,7 +115,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
                           <p className="font-semibold text-gray-900">{region.contact.hours}</p>
                         </div>
                       </div>
-                    </div>
+                    </div>;
 
                     {/* CTA Button */}
                     <div className="mt-6">
@@ -126,7 +126,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div>;
 
             {/* Global Benefits */}
             <div className="bg-gray-50 border-t border-gray-200 p-8">

@@ -56,7 +56,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Security', 'Expert', 'Certified', 'Compliance'],
+    tags['Security', 'Expert', 'Certified', 'Compliance'],;
     featured: true,
     seller: {
       name: 'SecureNet Professionals',
@@ -79,7 +79,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Quantum', 'Research', 'Advanced', 'Experimental'],
+    tags['Quantum', 'Research', 'Advanced', 'Experimental'],;
     featured: false,
     seller: {
       name: 'QuantumTech Labs',
@@ -102,7 +102,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 4567,
     likes: 278,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Cloud', 'Migration', 'Enterprise', 'AWS'],
+    tags['Cloud', 'Migration', 'Enterprise', 'AWS'],;
     featured: true,
     seller: {
       name: 'CloudMasters Inc',
@@ -125,7 +125,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 1890,
     likes: 112,
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
+    tags['IoT', 'Edge Computing', 'Real-time', 'Analytics'],;
     featured: false,
     seller: {
       name: 'IoT Solutions Pro',
@@ -148,7 +148,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 3120,
     likes: 167,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Data Science', 'Machine Learning', 'Python', 'Statistics'],
+    tags['Data Science', 'Machine Learning', 'Python', 'Statistics'],;
     featured: false,
     seller: {
       name: 'DataGenius Consulting',
@@ -206,23 +206,23 @@ export const marketplaceFilters = [
     title: 'Price Range',
     key: 'priceRange',
     type: 'radio' as const,
-    options[
+    options[;
       { value: '0-1000', label: 'Under $1,000' },
       { value: '1000-5000', label: '$1,000 - $5,000' },
       { value: '5000-10000', label: '$5,000 - $10,000' },
       { value: '10000+', label: 'Over $10,000' }
     ]
-  },
+  },;
   {
     title: 'Rating',
     key: 'rating',
     type: 'checkbox' as const,
-    options[
+    options[;
       { value: '4.5+', label: '4.5+ Stars' },
       { value: '4.0+', label: '4.0+ Stars' },
       { value: '3.5+', label: '3.5+ Stars' }
     ]
-  },
+  },;
   {
     title: 'Availability',
     key: 'availability',

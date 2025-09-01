@@ -203,17 +203,17 @@ export default function Leadership() {
                         <Phone className="w-5 h-5" />
                         <span>Call</span>
                       </a>
-                    </div>
+                    </div>;
                   </div>
                 </div>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Comp Values */}
-      <section className="py-16 bg-slate-800/30">
+      <section className="py-16 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -239,7 +239,7 @@ export default function Leadership() {
       </section>
 
       {/* Achievements */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -263,7 +263,7 @@ export default function Leadership() {
       </section>
 
       {/* Comp Culture */}
-      <section className="py-16 bg-slate-800/30">
+      <section className="py-16 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -293,7 +293,7 @@ export default function Leadership() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border border-cyan-400/20">
             <div className="text-center mb-8">

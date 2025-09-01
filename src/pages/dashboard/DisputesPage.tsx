@@ -5,7 +5,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 
 function DisputesPage(...args[]):  {
   return (
-    <ProtectedRoute>
+    <ProtectedRoute>;
       <>
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace"

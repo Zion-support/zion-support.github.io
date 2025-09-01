@@ -246,10 +246,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
   ];
@@ -507,92 +507,92 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
       links: [
-        { name: 'Pricing Overview', href: '/pricing' },
-        { name: 'Pricing Guide', href: '/pricing-guide' },
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },
-        { name: 'Request Quote', href: '/request-quote' },
-        { name: 'Schedule Demo', href: '/schedule-demo' },
+        { name: 'Pricing Overview', href: '/pricing' },;
+        { name: 'Pricing Guide', href: '/pricing-guide' },;
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;
+        { name: 'Request Quote', href: '/request-quote' },;
+        { name: 'Schedule Demo', href: '/schedule-demo' },;
         { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
-      title: 'Company',
+      title: 'Company',;
       icon: Building,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'News & Press', href: '/news' },
-        { name: 'Events', href: '/events' },
-        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'About Us', href: '/about' },;
+        { name: 'Our Team', href: '/team' },;
+        { name: 'Careers', href: '/careers' },;
+        { name: 'Partners', href: '/partners' },;
+        { name: 'News & Press', href: '/news' },;
+        { name: 'Events', href: '/events' },;
+        { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {
-      title: 'Resources & Learning',
+      title: 'Resources & Learning',;
       icon: BookOpen,
       color: 'from-orange-600 to-red-600',
       links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/documentation' },
-        { name: 'Training', href: '/training' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Support Center', href: '/support' },
+        { name: 'Help Center', href: '/help' },;
+        { name: 'Documentation', href: '/documentation' },;
+        { name: 'Training', href: '/training' },;
+        { name: 'Blog', href: '/blog' },;
+        { name: 'Webinars', href: '/webinars' },;
+        { name: 'White Papers', href: '/white-papers' },;
+        { name: 'FAQ', href: '/faq' },;
+        { name: 'Support Center', href: '/support' },;
         { name: 'Community', href: '/community' }
       ]
     },
     {
-      title: 'Platform & Tools',
+      title: 'Platform & Tools',;
       icon: Settings,
       color: 'from-slate-600 to-gray-600',
       links: [
-        { name: 'Dashboard', href: '/dashboard' },
-        { name: 'Login', href: '/login' },
-        { name: 'Sign Up', href: '/signup' },
-        { name: 'System Status', href: '/status' },
-        { name: 'API Documentation', href: '/documentation' },
+        { name: 'Dashboard', href: '/dashboard' },;
+        { name: 'Login', href: '/login' },;
+        { name: 'Sign Up', href: '/signup' },;
+        { name: 'System Status', href: '/status' },;
+        { name: 'API Documentation', href: '/documentation' },;
         { name: 'Developer Tools', href: '/documentation' }
       ]
     },
     {
-      title: 'Legal & Compliance',
+      title: 'Legal & Compliance',;
       icon: Shield,
       color: 'from-gray-600 to-slate-600',
       links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' },
-        { name: 'Accessibility', href: '/accessibility' },
+        { name: 'Privacy Policy', href: '/privacy' },;
+        { name: 'Terms of Service', href: '/terms' },;
+        { name: 'Cookie Policy', href: '/cookies' },;
+        { name: 'Security', href: '/security' },;
+        { name: 'Compliance', href: '/compliance' },;
+        { name: 'Accessibility', href: '/accessibility' },;
         { name: 'Sitemap', href: '/sitemap' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Get Quote', href: '/request-quote', icon: DollarSign },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
-    { name: 'Contact Support', href: '/support', icon: MessageCircle },
+    { name: 'Get Quote', href: '/request-quote', icon: DollarSign },;
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
+    { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },;
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
   const contactInfo = {
-    phone: '+1 (555) 123-4567',
+    phone: '+1 (555) 123-4567',;
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
   };

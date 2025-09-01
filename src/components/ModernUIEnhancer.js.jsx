@@ -406,8 +406,8 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 }} animate = {
   {
-                    y[0, -100, 0],
-                    opacity[0.2, 0.5, 0.2],
+                    y[0, -100, 0],;
+                    opacity[0.2, 0.5, 0.2],;
   
 
 }} transition = {

@@ -14,15 +14,15 @@ const researchAreas = [
         patents: 8,
         funding: "$2.5M",
         status: "Active",
-        highlights[
+        highlights[;
             "Computer Vision Breakthroughs",
             "NLP Model Optimization",
             "Autonomous Systems Research",
             "AI Ethics & Governance"
-        ],
-        technologies["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],
-        partners["MIT", "Stanford", "Google Research", "Microsoft Research"]
-    },
+        ],;
+        technologies["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],;
+        partners["MIT", "Stanford", "Google Research", "Microsoft Research"];
+    },;
     {
         id: 2,
         title: "Quantum Computing & Cryptography",
@@ -35,15 +35,15 @@ const researchAreas = [
         patents: 5,
         funding: "$1.8M",
         status: "Active",
-        highlights[
+        highlights[;
             "Quantum Algorithm Development",
             "Post-Quantum Cryptography",
             "Quantum Machine Learning",
             "Quantum Error Correction"
-        ],
-        technologies["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],
-        partners["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"]
-    },
+        ],;
+        technologies["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],;
+        partners["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"];
+    },;
     {
         id: 3,
         title: "Blockchain & Distributed Systems",
@@ -56,15 +56,15 @@ const researchAreas = [
         patents: 6,
         funding: "$2.1M",
         status: "Active",
-        highlights[
+        highlights[;
             "Scalability Solutions",
             "Consensus Mechanisms",
             "DeFi Protocols",
             "Cross-Chain Interoperability"
-        ],
-        technologies["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],
-        partners["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"]
-    },
+        ],;
+        technologies["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],;
+        partners["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"];
+    },;
     {
         id: 4,
         title: "Cybersecurity & Privacy",
@@ -77,15 +77,15 @@ const researchAreas = [
         patents: 7,
         funding: "$1.9M",
         status: "Active",
-        highlights[
+        highlights[;
             "Threat Intelligence",
             "Zero-Knowledge Proofs",
             "Secure Multi-Party Computation",
             "Privacy-Preserving ML"
-        ],
-        technologies["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],
-        partners["DARPA", "NSA", "CISA", "Academic Institutions"]
-    },
+        ],;
+        technologies["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],;
+        partners["DARPA", "NSA", "CISA", "Academic Institutions"];
+    },;
     {
         id: 5,
         title: "Edge Computing & IoT",
@@ -98,15 +98,15 @@ const researchAreas = [
         patents: 4,
         funding: "$1.5M",
         status: "Active",
-        highlights[
+        highlights[;
             "Edge AI Deployment",
             "IoT Security Protocols",
             "Distributed Computing",
             "Real-time Processing"
-        ],
-        technologies["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],
-        partners["Intel", "ARM", "Qualcomm", "Industrial Partners"]
-    },
+        ],;
+        technologies["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],;
+        partners["Intel", "ARM", "Qualcomm", "Industrial Partners"];
+    },;
     {
         id: 6,
         title: "Sustainable Technology",
@@ -119,14 +119,14 @@ const researchAreas = [
         patents: 3,
         funding: "$1.2M",
         status: "Active",
-        highlights[
+        highlights[;
             "Green AI Algorithms",
             "Energy-Efficient Computing",
             "Renewable Energy Integration",
             "Carbon Footprint Reduction"
-        ],
-        technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
-        partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
+        ],;
+        technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],;
+        partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"];
     }
 ];
 const innovationStats = [

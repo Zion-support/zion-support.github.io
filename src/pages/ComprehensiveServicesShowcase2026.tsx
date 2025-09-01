@@ -124,7 +124,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           </div>
         </section>
         {/* Search and Filter Section */}
-        <section className="py-8">
+        <section className="py-8">;
           <div className="container mx-auto px-4">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -145,7 +145,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
-                  {categories.map(category => (
+                  {categories.map(category => (;
                     <option key={category} value={category} className="bg-zinc-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -157,7 +157,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
-                  {innovationLevels.map(level => (
+                  {innovationLevels.map(level => (;
                     <option key={level} value={level} className="bg-zinc-800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
                     </option>
@@ -168,7 +168,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-12">
+        <section className="py-12">;
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredServices.map((service, index) => (
@@ -232,7 +232,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           </div>
         </section>
         {/* Contact CTA Section */}
-        <section className="py-16">
+        <section className="py-16">;
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

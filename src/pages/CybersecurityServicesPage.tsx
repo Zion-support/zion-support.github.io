@@ -35,7 +35,7 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Cybersecurity') ||
   service.category.includes('Security') ||
   service.category.includes('Zero Trust')
-  AlertTriangle,
+  AlertTriangle,;
   CheckCircle,
   Star,
   Clock,
@@ -63,14 +63,14 @@ const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: any'threat-detection',
+    id: any'threat-detection',;
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-    id: any'zero-trust',
+    id: any'zero-trust',;
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,

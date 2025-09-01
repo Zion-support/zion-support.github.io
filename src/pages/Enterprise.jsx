@@ -41,32 +41,32 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
             price: "$999",
             period: "/month",
             description: "Perfect for growing teams",
-            features[
+            features[;
                 "Up to 25 team members",
                 "Basic analytics",
                 "Email support",
                 "Standard integrations"
             ]
-        },
+        },;
         {
             name: "Professional",
             price: "$2,499",
             period: "/month",
             description: "Ideal for established companies",
-            features[
+            features[;
                 "Up to 100 team members",
                 "Advanced analytics",
                 "Priority support",
                 "Custom integrations",
                 "SSO authentication"
             ]
-        },
+        },;
         {
             name: "Enterprise",
             price: "Custom",
             period: "",
             description: "For large organizations",
-            features[
+            features[;
                 "Unlimited team members",
                 "Custom analytics",
                 "Dedicated support",

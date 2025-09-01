@@ -16,7 +16,7 @@ export class SEOOptimizer {
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
-  and innovative IT services for the healthcare industry.'
+  and innovative IT services for the healthcare industry.';
     
 
 };

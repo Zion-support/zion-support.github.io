@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [;
     {
         id: 1,
         name: 'Sarah Johnson',

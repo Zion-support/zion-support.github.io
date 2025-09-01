@@ -3,7 +3,7 @@ import { SEO   } from '@/components/SEO';
 
 export default function IncidentResponsePlatform(...args: []):  {
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">;
       <SEO title="Incident Response Platform" description="Automate detection, triage, and remediation with our AI-driven IR platform." />
       <div className="container mx-auto px-4 max-w-5xl">
         <h1 className="text-4xl font-bold mb-4">Incident Response Platform</h1>

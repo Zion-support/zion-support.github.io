@@ -68,13 +68,13 @@ export default function AIContentMarketingAutomation(...args[]):  {
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
-      features[
+      features[;
         "AI content generation (50 pieces/month)",
         "Basic social media automation",
         "Email campaign templates",
         "Basic analytics dashboard",
         "Email support"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: false
     },
@@ -83,14 +83,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
-      features[
+      features[;
         "AI content generation (200 pieces/month)",
         "Advanced social media automation",
         "Multi-channel distribution",
         "Advanced analytics and reporting",
         "SEO optimization tools",
         "Priority support"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: true
     },
@@ -99,7 +99,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
       price: "$1,999",
       period: "/month",
       description: "For large organizations with complex needs",
-      features[
+      features[;
         "Unlimited AI content generation",
         "Custom AI model training",
         "Advanced audience targeting",
@@ -176,12 +176,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 Watch Demo
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -255,14 +255,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -336,14 +336,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -417,7 +417,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     : 'border-gray-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -453,7 +453,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
                   }`}
 
                   {plan.cta}
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -461,7 +461,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -535,14 +535,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -597,7 +597,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team

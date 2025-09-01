@@ -273,93 +273,93 @@ const workflowSolutions = [
     title: "AI Process Automation",
     description: "Intelligent automation of business processes using AI and machine learning.",
     icon: Cog,
-    features[
+    features[;
       "Process automation",
       "AI decision making",
       "Workflow optimization",
       "Performance monitoring"
-    ],
+    ],;
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Process Automation",
-    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"]
-  },
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"];
+  },;
   {
     id: 2,
     title: "Intelligent Document Processing",
     description: "AI-powered document processing and workflow automation.",
     icon: FileText,
-    features[
+    features[;
       "Document processing",
       "Data extraction",
       "Workflow automation",
       "Compliance management"
-    ],
+    ],;
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Document Processing",
-    technologies["AI", "OCR", "Document Processing", "Workflow"]
-  },
+    technologies["AI", "OCR", "Document Processing", "Workflow"];
+  },;
   {
     id: 3,
     title: "Smart Workflow Orchestration",
     description: "Intelligent orchestration and management of complex workflows.",
     icon: Network,
-    features[
+    features[;
       "Workflow orchestration",
       "Process management",
       "Resource optimization",
       "Performance analytics"
-    ],
+    ],;
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Workflow Orchestration",
-    technologies["AI", "Workflow Management", "Orchestration", "Analytics"]
-  },
+    technologies["AI", "Workflow Management", "Orchestration", "Analytics"];
+  },;
   {
     id: 4,
     title: "AI Decision Automation",
     description: "Automated decision making using AI algorithms and business rules.",
     icon: Brain,
-    features[
+    features[;
       "Decision automation",
       "Business rules",
       "AI algorithms",
       "Risk assessment"
-    ],
+    ],;
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Decision Automation",
-    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"]
-  },
+    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"];
+  },;
   {
     id: 5,
     title: "Predictive Workflow Analytics",
     description: "AI-powered analytics for workflow optimization and prediction.",
     icon: BarChart3,
-    features[
+    features[;
       "Predictive analytics",
       "Workflow optimization",
       "Performance insights",
       "Trend analysis"
-    ],
+    ],;
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Analytics",
-    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
-  },
+    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"];
+  },;
   {
     id: 6,
     title: "Intelligent Task Management",
     description: "AI-powered task management and workflow optimization.",
     icon: Target,
-    features[
+    features[;
       "Task management",
       "Priority optimization",
       "Resource allocation",
       "Performance tracking"
-    ],
-    technologies["AI", "Task Management", "Optimization", "Analytics"]
+    ],;
+    technologies["AI", "Task Management", "Optimization", "Analytics"];
   };
     price: "From $100,000",;
     timeline: "16-28 weeks",;
@@ -465,22 +465,22 @@ const workflowBenefits = [
     title: "Increased Efficiency",
     description: "AI automation significantly improves workflow efficiency and productivity",
     icon: Zap,
-    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
-  },
+    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"];
+  },;
   {
     title: "Cost Reduction",
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,
-    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
-  },
+    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"];
+  },;
   {
     title: "Better Decision Making",
     description: "AI-powered insights enable better, data-driven decisions",
     icon: Brain,
-    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
-  },
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
+  },;
   {
-    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
+    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
     title: "Scalability",;
     description: "AI workflows scale efficiently with business growth",;
@@ -596,10 +596,10 @@ export default function AIWorkflowAutomation(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Workflow Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -683,14 +683,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Workflow Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -775,14 +775,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -864,14 +864,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1005,7 +1005,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1104,14 +1104,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

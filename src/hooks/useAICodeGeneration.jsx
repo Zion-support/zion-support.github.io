@@ -48,7 +48,7 @@ export const useAICodeGeneration = () => {
                 quality: options.quality
             // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
-                error: error instanceof Error ? error.message : 'Unknown error'
+                error: error instanceof Error ? error.message : 'Unknown error';
             });
 
         finally {
@@ -96,7 +96,7 @@ export const useAICodeGeneration = () => {
                 performance: analysis.performance
             // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
-                error: error instanceof Error ? error.message : 'Unknown error'
+                error: error instanceof Error ? error.message : 'Unknown error';
             });
 
         finally {
@@ -381,7 +381,7 @@ console.log("Language:", "${options.language}");`};
         // Performance suggestions
         if (code.includes('setInterval') || code.includes('setTimeout')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_1`,
+                id: `suggestion_${Date.now()}_1`,;
                 type: 'performance',
                 title: 'Optimize Timer Usage',
                 description: 'Consider using requestAnimationFrame for visual updates and cleanup timers properly',
@@ -462,15 +462,15 @@ describe('GeneratedComponent', () => {
 });`;
     };
     const generatePytestTests = (_code) => {
-        return `import pytest
-from generated_module import GeneratedClass
+        return `import pytest;
+from generated_module import GeneratedClass;
 
-class TestGeneratedClass:
-    def test_initialization(self):
+class TestGeneratedClass:;
+    def test_initialization(self):;
         instance = GeneratedClass()
         assert instance is not None
 
-    def test_process_data(self):
+    def test_process_data(self):;
         instance = GeneratedClass()
         result = instance.process_data("test")
         assert result == "test"
@@ -501,19 +501,19 @@ export const GeneratedComponent = () => {
 };`;
     };
     const generatePythonDoc = (_code) => {
-        return `"""
+        return `""";
 Generated Module
 
-This module was generated based on user requirements.
-"""
+This module was generated based on user requirements.;
+""";
 
-def generated_function():
-    """
-    Generated function with docstring.
+def generated_function():;
+    """;
+    Generated function with docstring.;
 
-    Returns:
+    Returns:;
         str: Description of return value
-    """
+    """;
     pass`;
     };
     const generateGenericDocs = (_code, language) => {

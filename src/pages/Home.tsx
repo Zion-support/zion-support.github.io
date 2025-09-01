@@ -93,10 +93,6 @@ const FuturisticBackground = React.memo(() => {
 });
 
 
-<<<<<<< HEAD
-// Hero Section Component
-const HeroSection = () => {
-=======
 // Floating Action Button Component
 const FloatingActionButton = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
@@ -197,7 +193,6 @@ FloatingActionButton.displayName = 'FloatingActionButton';
 
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
->>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   
@@ -221,13 +216,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-blue-500 to-cyan-500"
     },
     {
-<<<<<<< HEAD
-      title: "Cybersecurity Fortress",
-      subtitle: "Protect your digital assets with military-grade security",
-      description: "Advanced threat detection, zero-trust architecture, and compliance solutions for the modern enterprise.",
-      cta: "Secure Your Business",
-      link: "/services/cybersecurity",
-=======
       name: 'AI Healthcare Analytics',
       description: 'Predictive diagnostics and care optimization powered by AI',
       icon: Heart,
@@ -264,7 +252,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     },
     {
       name: 'Cybersecurity',
->>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
       icon: Shield,
       color: "from-red-500 to-orange-500"
     }
@@ -344,22 +331,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Navigation Arrows */}
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors"
-        >
-          <ChevronLeft className="w-8 h-8" />
-        </button>
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors"
-        >
-          <ChevronRight className="w-8 h-8" />
-        </button>
-
-=======
         {/* Enhanced Stats with animations */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -405,7 +376,6 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
           </button>
         </div>
->>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
       </div>
     </section>
   );
@@ -614,24 +584,10 @@ const CTASection = () => {
 
 };
 
-<<<<<<< HEAD
-
-// Main Home Component
-const Home = () => {
-=======
 // Main Home component
 export default function Home() {
->>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   return (
 
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      <HeroSection />
-      <FeaturesSection />
-      <StatsSection />
-      <CTASection />
-    </div>
-=======
         {/* Services Showcase */}
         <ServicesShowcase />
 
@@ -648,7 +604,6 @@ export default function Home() {
         <FloatingActionButton />
       </div>
     </>
->>>>>>> efd85e279c374efd3f42a37bc6b3e93d7053e172
   );
 };
 

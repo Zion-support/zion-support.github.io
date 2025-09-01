@@ -237,7 +237,7 @@ export function HowItWorksSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => (;
             <motion.div 
               key={index} 
               variants={statsVariants}
@@ -432,7 +432,7 @@ export function HowItWorksSection() {
           className="text-center mt-16"
           initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -442,7 +442,7 @@ export function HowItWorksSection() {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -453,7 +453,7 @@ export function HowItWorksSection() {
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5 ;
 
 
 

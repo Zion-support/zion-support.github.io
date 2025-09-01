@@ -65,7 +65,7 @@ const frequencies = [;
         setFormData({
           email: '',
           firstName: '',
-          interests[],
+          interests[],;
           frequency: 'monthly'
         });
       // // // // // // // console.error('Newsletter subscription error:', error);
@@ -381,7 +381,7 @@ const frequencies = [;
                 }`}>
                   {freq.description}
                 </span>
-              </label>
+              </label>;
             ))}
           </div>
         </div>
@@ -390,7 +390,7 @@ const frequencies = [;
         <motion.button
           type="submit"
           disabled={status === 'loading'}
-          className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
+className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
             status === 'loading'
               ? 'bg-slate-400 cursor-not-allowed'
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
@@ -440,7 +440,7 @@ const frequencies = [;
               <AlertCircle className="h-4 w-4" />
               Something went wrong. Please try again later.
             </p>
-          </motion.div>
+          </motion.div>;
         )}
 
         {/* Privacy Notice */}

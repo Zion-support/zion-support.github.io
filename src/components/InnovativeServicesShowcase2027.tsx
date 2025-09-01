@@ -209,7 +209,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -218,8 +218,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
           animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
+  isVisible ? { opacity: 1,;
+  y: 0 ;
 
 
 
@@ -229,7 +229,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 
@@ -239,7 +239,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index)  => (
+          {filteredServices.map((service, index)  => (;
             <motion.div
               key={service.id}
               initial = {
@@ -305,7 +305,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 </div>
 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="grid grid-cols-2 gap-4 mb-4">;
                   <div className="text-center">
                     <div className="text-zion-cyan font-bold text-lg">{service.marketSize}</div>
                     <div className="text-gray-400 text-xs">Market Size</div>
@@ -314,10 +314,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                     <div className="text-zion-purple font-bold text-lg">{service.roi}</div>
                     <div className="text-gray-400 text-xs">ROI</div>
                   </div>
-                </div>
+                </div>;
 
                 {/* Price & CTA */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-4">;
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}
@@ -330,7 +330,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>
-                  {expandedService === service.id && (
+                  {expandedService === service.id && (;
                     <motion.div
                       initial = {
   { opacity: 0,
@@ -415,7 +415,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                           {service.external && <ExternalLink className="w-4 h-4" />}
                         </a>
-                      </div>
+                      </div>;
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -428,7 +428,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -437,8 +437,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 }}
           animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
+  isVisible ? { opacity: 1,;
+  y: 0 ;
 
 
 
@@ -448,7 +448,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6 ;
 
 
 
@@ -458,7 +458,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 }}
           className="text-center"
 
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;
             <h3 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>

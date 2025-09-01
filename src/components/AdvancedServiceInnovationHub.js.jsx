@@ -22,8 +22,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2025-2030',
             adoption: 85,
             investment: '$50B+',
-            keyPlayers['IBM', 'Google', 'Microsoft', 'Startups'],
-            technologies['Quantum Computing', 'Quantum Algorithms', 'Quantum Software'],
+            keyPlayers['IBM', 'Google', 'Microsoft', 'Startups'],;
+            technologies['Quantum Computing', 'Quantum Algorithms', 'Quantum Software'],;
             status: 'Emerging'
         },
         {
@@ -35,8 +35,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 45,
             investment: '$100B+',
-            keyPlayers['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],
-            technologies['AI Consciousness', 'General AI', 'Neural Networks'],
+            keyPlayers['OpenAI', 'Anthropic', 'Research Labs', 'Universities'],;
+            technologies['AI Consciousness', 'General AI', 'Neural Networks'],;
             status: 'Emerging'
         },
         {
@@ -48,8 +48,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 30,
             investment: '$200B+',
-            keyPlayers['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],
-            technologies['Space Robotics', 'Resource Processing', 'Space Logistics'],
+            keyPlayers['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'],;
+            technologies['Space Robotics', 'Resource Processing', 'Space Logistics'],;
             status: 'Emerging'
         },
         {
@@ -61,8 +61,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 60,
             investment: '$500B+',
-            keyPlayers['ITER', 'Private Fusion Companies', 'Government Labs'],
-            technologies['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],
+            keyPlayers['ITER', 'Private Fusion Companies', 'Government Labs'],;
+            technologies['Fusion Physics', 'Plasma Confinement', 'Energy Conversion'],;
             status: 'Growing'
         },
         {
@@ -74,8 +74,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2025-2035',
             adoption: 70,
             investment: '$150B+',
-            keyPlayers['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],
-            technologies['DNA Programming', 'Genetic Engineering', 'Bio-Manufacturing'],
+            keyPlayers['Ginkgo Bioworks', 'Twist Bioscience', 'Research Institutions'],;
+            technologies['DNA Programming', 'Genetic Engineering', 'Bio-Manufacturing'],;
             status: 'Growing'
         },
         {
@@ -87,8 +87,8 @@ const AdvancedServiceInnovationHub = () => {
             timeline: '2030-2040',
             adoption: 40,
             investment: '$80B+',
-            keyPlayers['Neuralink', 'Kernel', 'Medical Device Companies'],
-            technologies['Neural Interfaces', 'Signal Processing', 'AI/ML'],
+            keyPlayers['Neuralink', 'Kernel', 'Medical Device Companies'],;
+            technologies['Neural Interfaces', 'Signal Processing', 'AI/ML'],;
             status: 'Emerging'
         }
     ];

@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 
 export default function LLMContentStudio(...args: []):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="LLM Content Studio | Zion Tech Group"
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."

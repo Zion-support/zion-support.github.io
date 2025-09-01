@@ -28,9 +28,9 @@ const ServiceCard = ({ service, index, isVisible }) => {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
   {
-                x[0, Math.random() * 100 - 50],
-                y[0, Math.random() * 100 - 50],
-                opacity[0.6, 0.2, 0.6],
+                x[0, Math.random() * 100 - 50],;
+                y[0, Math.random() * 100 - 50],;
+                opacity[0.6, 0.2, 0.6],;
   
 
 }} transition = {

@@ -141,13 +141,13 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$299',
       period: '/month',
       description: 'Perfect for growing SaaS companies',
-      features[
+      features[;
         'Up to 1,000 customers',
         'Basic prediction models',
         'Email alerts',
         'Standard integrations',
         'Email support'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: false
     },
@@ -156,14 +156,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$799',
       period: '/month',
       description: 'Ideal for established businesses',
-      features[
+      features[;
         'Up to 10,000 customers',
         'Advanced AI models',
         'Real-time dashboards',
         'Custom integrations',
         'Priority support',
         'Advanced analytics'
-      ],
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
@@ -172,7 +172,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       price: '$1,999',
       period: '/month',
       description: 'For large-scale operations',
-      features[
+      features[;
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
@@ -189,13 +189,13 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       title: 'SaaS Companies',
       description: 'Predict churn, identify expansion opportunities, and optimize customer success operations',
-      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores']
-    },
+      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores'];
+    },;
     {
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
-      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases']
-    },
+      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases'];
+    },;
     {
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
@@ -259,10 +259,10 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -350,14 +350,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Capabilities */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -443,14 +443,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -536,14 +536,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -619,14 +619,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -701,7 +701,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                     : 'border-slate-700/50 hover:border-purple-400/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -734,14 +734,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 }`}>
                   {plan.cta}
                 </button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Implementation Process */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
@@ -798,7 +798,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
 
-            ].map((phase, index) => (
+            ].map((phase, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -838,14 +838,14 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">;
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial = {
@@ -910,7 +910,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>

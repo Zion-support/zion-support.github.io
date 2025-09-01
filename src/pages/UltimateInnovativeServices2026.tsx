@@ -174,12 +174,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 <span>Proven ROI</span>
               </motion.div>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Search and Filters */}
-      <section className="py-12 bg-white/5 backdrop-blur-sm">
+      <section className="py-12 bg-white/5 backdrop-blur-sm">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* Search */}
@@ -248,7 +248,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -495,13 +495,13 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               >
                 Clear Filters
               </button>
-            </div>
+            </div>;
           )}
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {

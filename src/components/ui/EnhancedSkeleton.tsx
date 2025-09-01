@@ -13,7 +13,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
-  variant = 'default',;
+variant:  'default',;
   width,;
   height,;
   lines = 1,;

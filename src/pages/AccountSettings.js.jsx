@@ -54,7 +54,7 @@ export default function AccountSettings() {
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({
                 method: 'personal_sign',
-                params[address, message]
+                params[address, message];
             });
             // Auto-set DID handle if ENS is available
             try {

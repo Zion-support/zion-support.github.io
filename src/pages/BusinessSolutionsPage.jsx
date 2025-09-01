@@ -3,12 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [
+import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [;
     {
         title: "Business Strategy Consulting",
         description: "Strategic planning and business model optimization for growth",
         price: "$200 - $500/hour",
-        features["Market analysis", "Competitive research", "Growth strategy", "Implementation roadmap"],
+        features["Market analysis", "Competitive research", "Growth strategy", "Implementation roadmap"],;
         icon: <CheckCircle className="h-8 w-8 text-zion-cyan"/>,
         category: "Strategy",
         badge: "Popular",
@@ -18,7 +18,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Process Automation & Optimization",
         description: "Streamline operations and eliminate inefficiencies",
         price: "$5,000 - $50,000",
-        features["Process mapping", "Automation design", "Implementation", "Training & support"],
+        features["Process mapping", "Automation design", "Implementation", "Training & support"],;
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,
         category: "Automation",
         badge: "Premium",
@@ -28,7 +28,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Digital Transformation",
         description: "Modernize your business with cutting-edge technology",
         price: "$25,000 - $200,000",
-        features["Technology assessment", "Migration planning", "Implementation", "Change management"],
+        features["Technology assessment", "Migration planning", "Implementation", "Change management"],;
         icon: <Zap className="h-8 w-8 text-zion-blue"/>,
         category: "Transformation",
         link: "/request-quote?service=digital-transformation"
@@ -37,7 +37,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Business Intelligence & Analytics",
         description: "Data-driven insights for better decision making",
         price: "$2,000 - $15,000/month",
-        features["Dashboard creation", "KPI tracking", "Predictive analytics", "Custom reporting"],
+        features["Dashboard creation", "KPI tracking", "Predictive analytics", "Custom reporting"],;
         icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,
         category: "Analytics",
         link: "/request-quote?service=business-intelligence"
@@ -46,7 +46,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Change Management",
         description: "Navigate organizational changes successfully",
         price: "$150 - $300/hour",
-        features["Change strategy", "Communication planning", "Training programs", "Success measurement"],
+        features["Change strategy", "Communication planning", "Training programs", "Success measurement"],;
         icon: <Users className="h-8 w-8 text-zion-purple"/>,
         category: "Change Management",
         link: "/request-quote?service=change-management"
@@ -55,7 +55,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Financial Planning & Analysis",
         description: "Strategic financial guidance and forecasting",
         price: "$1,500 - $8,000/month",
-        features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],
+        features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],;
         icon: <DollarSign className="h-8 w-8 text-zion-blue"/>,
         category: "Finance",
         link: "/request-quote?service=financial-planning"
@@ -64,7 +64,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Market Research & Analysis",
         description: "Deep insights into your market and customers",
         price: "$3,000 - $25,000",
-        features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],
+        features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],;
         icon: <Search className="h-8 w-8 text-zion-cyan"/>,
         category: "Research",
         link: "/request-quote?service=market-research"
@@ -73,7 +73,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Operational Excellence",
         description: "Optimize your operations for maximum efficiency",
         price: "$5,000 - $40,000",
-        features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],
+        features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],;
         icon: <CheckCircle className="h-8 w-8 text-zion-purple"/>,
         category: "Operations",
         link: "/request-quote?service=operational-excellence"
@@ -82,7 +82,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Customer Experience Design",
         description: "Create exceptional customer journeys",
         price: "$8,000 - $60,000",
-        features["Journey mapping", "UX research", "Service design", "Implementation"],
+        features["Journey mapping", "UX research", "Service design", "Implementation"],;
         icon: <Eye className="h-8 w-8 text-zion-blue"/>,
         category: "Customer Experience",
         link: "/request-quote?service=customer-experience"
@@ -91,7 +91,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Supply Chain Optimization",
         description: "Streamline your supply chain for cost and efficiency",
         price: "$10,000 - $75,000",
-        features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],
+        features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],;
         icon: <Globe className="h-8 w-8 text-zion-cyan"/>,
         category: "Supply Chain",
         link: "/request-quote?service=supply-chain"
@@ -100,7 +100,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Risk Management & Compliance",
         description: "Identify and mitigate business risks",
         price: "$2,000 - $20,000",
-        features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],
+        features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],;
         icon: <Shield className="h-8 w-8 text-zion-purple"/>,
         category: "Risk Management",
         link: "/request-quote?service=risk-management"
@@ -109,7 +109,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Performance Management Systems",
         description: "Implement effective performance tracking and improvement",
         price: "$3,000 - $25,000",
-        features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],
+        features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],;
         icon: <Star className="h-8 w-8 text-zion-blue"/>,
         category: "Performance",
         link: "/request-quote?service=performance-management"
@@ -118,7 +118,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Innovation & R&D Strategy",
         description: "Drive innovation and research initiatives",
         price: "$5,000 - $50,000",
-        features["Innovation strategy", "R&D planning", "Partnership development", "IP protection"],
+        features["Innovation strategy", "R&D planning", "Partnership development", "IP protection"],;
         icon: <Lightbulb className="h-8 w-8 text-zion-cyan"/>,
         category: "Innovation",
         link: "/request-quote?service=innovation-strategy"
@@ -127,7 +127,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Mergers & Acquisitions Support",
         description: "Navigate complex M&A transactions successfully",
         price: "$25,000 - $200,000",
-        features["Due diligence", "Valuation analysis", "Integration planning", "Post-merger support"],
+        features["Due diligence", "Valuation analysis", "Integration planning", "Post-merger support"],;
         icon: <Building className="h-8 w-8 text-zion-purple"/>,
         category: "M&A",
         link: "/request-quote?service=mergers-acquisitions"
@@ -136,7 +136,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "International Expansion",
         description: "Expand your business globally with confidence",
         price: "$15,000 - $100,000",
-        features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],
+        features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],;
         icon: <Globe className="h-8 w-8 text-zion-blue"/>,
         category: "Expansion",
         link: "/request-quote?service=international-expansion"
@@ -145,7 +145,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         title: "Sustainability & ESG Consulting",
         description: "Build sustainable business practices and ESG compliance",
         price: "$3,000 - $30,000",
-        features["Sustainability audit", "ESG strategy", "Implementation planning", "Reporting"],
+        features["Sustainability audit", "ESG strategy", "Implementation planning", "Reporting"],;
         icon: <Leaf className="h-8 w-8 text-zion-cyan"/>,
         category: "Sustainability",
         badge: "New",

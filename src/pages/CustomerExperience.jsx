@@ -173,25 +173,25 @@ const customerExperienceBenefits = [
     title: "Improved Customer Satisfaction",
     description: "Better experiences lead to higher customer satisfaction and loyalty",
     icon: Heart,
-    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]
-  },
+    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"];
+  },;
   {
     title: "Increased Conversion Rates",
     description: "Optimized experiences drive better business outcomes",
     icon: TrendingUp,
-    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]
-  },
+    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"];
+  },;
   {
     title: "Reduced Support Costs",
     description: "Better experiences reduce the need for customer support",
     icon: Headphones,
-    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]
-  },
+    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"];
+  },;
   {
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
-    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
+    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"];
   }
 ];
 
@@ -302,10 +302,10 @@ export default function CustomerExperience() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Customer Experience Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -389,14 +389,14 @@ export default function CustomerExperience() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Customer Experience Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -481,14 +481,14 @@ export default function CustomerExperience() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -570,14 +570,14 @@ export default function CustomerExperience() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -711,7 +711,7 @@ export default function CustomerExperience() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -810,14 +810,14 @@ export default function CustomerExperience() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

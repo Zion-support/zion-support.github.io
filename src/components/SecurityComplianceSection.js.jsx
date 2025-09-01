@@ -10,9 +10,9 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2026-12-31",
         scope: "Global Operations",
-        features["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
-        benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
-    },
+        features["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],;
+        benefits["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"];
+    },;
     {
         name: "SOC 2 Type II",
         category: "Service Organization Control",
@@ -21,9 +21,9 @@ const securityStandards = [
         status: "Certified",
         validUntil: "2025-06-30",
         scope: "Cloud Services & Data Processing",
-        features["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
-        benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
-    },
+        features["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],;
+        benefits["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"];
+    },;
     {
         name: "GDPR Compliance",
         category: "Data Protection Regulation",
@@ -32,9 +32,9 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "EU Data Processing",
-        features["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],
-        benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"]
-    },
+        features["Data Minimization", "Consent Management", "Right to Erasure", "Data Portability"],;
+        benefits["Legal Compliance", "Customer Rights Protection", "Data Transparency", "Global Operations"];
+    },;
     {
         name: "HIPAA",
         category: "Healthcare Data Protection",
@@ -43,8 +43,8 @@ const securityStandards = [
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "Healthcare Solutions",
-        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
-        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
+        features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],;
+        benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"];
     }
 ];
 const complianceFrameworks = [
@@ -54,35 +54,35 @@ const complianceFrameworks = [
         description: "Voluntary framework for managing and reducing cybersecurity risk",
         implementation: "Fully Implemented",
         maturity: "Tier 4 - Adaptive",
-        controls["Identify", "Protect", "Detect", "Respond", "Recover"],
-        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"]
-    },
+        controls["Identify", "Protect", "Detect", "Respond", "Recover"],;
+        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"];
+    },;
     {
         name: "OWASP Top 10",
         category: "Web Application Security",
         description: "Standard awareness document for developers and web application security",
         implementation: "Fully Implemented",
         maturity: "Advanced",
-        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],
-        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"]
-    },
+        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],;
+        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"];
+    },;
     {
         name: "PCI DSS",
         category: "Payment Card Security",
         description: "Payment Card Industry Data Security Standard compliance",
         implementation: "Compliant",
         maturity: "Level 1",
-        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],
-        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"]
-    },
+        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],;
+        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"];
+    },;
     {
         name: "FedRAMP",
         category: "Federal Cloud Security",
         description: "Federal Risk and Authorization Management Program compliance",
         implementation: "In Progress",
         maturity: "Authorization Phase",
-        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
-        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
+        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],;
+        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"];
     }
 ];
 const securityStats = [

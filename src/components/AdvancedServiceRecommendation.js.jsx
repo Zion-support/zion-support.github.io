@@ -11,8 +11,8 @@ const AdvancedServiceRecommendation = () => {
         budget: '',
         timeline: '',
         technologyMaturity: '',
-        primaryGoals[],
-        challenges[]
+        primaryGoals[],;
+        challenges[];
     });
     const [recommendations, setRecommendations] = useState([]);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -49,11 +49,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'ai',
             price: '$25,000/month',
             duration: '6-12 months',
-            tags['AI', 'CRM', 'Automation', 'Analytics'],
-            features['AI-powered insights', 'Automated workflows', 'Predictive analytics'],
-            benefits['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],
-            technology['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],
-            targetAudience['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],
+            tags['AI', 'CRM', 'Automation', 'Analytics'],;
+            features['AI-powered insights', 'Automated workflows', 'Predictive analytics'],;
+            benefits['Improved customer retention', 'Increased sales efficiency', 'Better decision making'],;
+            technology['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'],;
+            targetAudience['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],;
             image: '/images/services/ai-crm.jpg',
             link: 'https://ziontechgroup.com/services/ai-crm-platform',
             contactInfo: '+1 302 464 0950',
@@ -66,11 +66,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'quantum',
             price: '$150,000/month',
             duration: '12-18 months',
-            tags['Quantum Computing', 'Research', 'Optimization'],
-            features['Quantum processors access', 'Algorithm development', 'Research support'],
-            benefits['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],
-            technology['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],
-            targetAudience['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],
+            tags['Quantum Computing', 'Research', 'Optimization'],;
+            features['Quantum processors access', 'Algorithm development', 'Research support'],;
+            benefits['Solve intractable problems', 'Research acceleration', 'Competitive advantage'],;
+            technology['Quantum Computing', 'Quantum Algorithms', 'Research Tools'],;
+            targetAudience['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],;
             image: '/images/services/quantum-computing.jpg',
             link: 'https://ziontechgroup.com/services/quantum-computing-service',
             contactInfo: '+1 302 464 0950',
@@ -83,11 +83,11 @@ const AdvancedServiceRecommendation = () => {
             category: 'blockchain',
             price: '$75,000/month',
             duration: '8-14 months',
-            tags['Blockchain', 'Supply Chain', 'Transparency'],
-            features['End-to-end tracking', 'Smart contracts', 'Transparency'],
-            benefits['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],
-            technology['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],
-            targetAudience['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
+            tags['Blockchain', 'Supply Chain', 'Transparency'],;
+            features['End-to-end tracking', 'Smart contracts', 'Transparency'],;
+            benefits['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'],;
+            technology['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'],;
+            targetAudience['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],;
             image: '/images/services/blockchain-supply-chain.jpg',
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
             contactInfo: '+1 302 464 0950',
@@ -300,8 +300,8 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
   (e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal] 
+                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
+  goal] ;
 
 }))}
                 else {
@@ -319,8 +319,8 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
   (e) => {
                 if (e.target.checked) {
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge] 
+                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
+  challenge] ;
 
 }))}
                 else {

@@ -19,11 +19,11 @@ const EnhancedZionTechServices2025: React.FC = () => {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
-      case 'rating':
+      case 'rating':;
         return b.rating - a.rating;
-      case 'aiScore':
+      case 'aiScore':;
         return b.aiScore - a.aiScore;
-      default:
+      default:;
         return a.title.localeCompare(b.title);
 
   });
@@ -112,7 +112,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
-              {categories.map(category => (
+              {categories.map(category => (;
                 <option key={category} value={category}>{category}</option>
               ))}
             </select>
@@ -230,13 +230,13 @@ const EnhancedZionTechServices2025: React.FC = () => {;
                     Contact Sales
                   </a>
                 </div>
-              </div>
+              </div>;
             </div>
           ))}
         </div>
 
         {/* Contact Section */}
-        <div className="mt-24 text-center">
+        <div className="mt-24 text-center">;
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Transform Your Business?
           </h2>
@@ -260,7 +260,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;
         </div>
 
         {/* Why Choose Zion Tech Group */}
-        <div className="mt-24">
+        <div className="mt-24">;
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
           </h2>

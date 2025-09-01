@@ -104,7 +104,7 @@ export default function EnhancedStatsSection(...args[]):  {
         current = numericValue;
         clearInterval(timer);
       }
-      setCountedValues(prev = > ({;
+setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor(current);
       }));
@@ -232,7 +232,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
                 {/* Icon */}
                 <motion.div
-                  className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
+className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
                   whileHover={{
                     rotate: 360,
   scale: 1.1
@@ -288,7 +288,7 @@ export default function EnhancedStatsSection(...args[]):  {
                   initial={false}
                 />
               </motion.div>
-            </motion.div>
+            </motion.div>;
           ))}
         </div>
 
@@ -296,7 +296,7 @@ export default function EnhancedStatsSection(...args[]):  {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -309,10 +309,10 @@ export default function EnhancedStatsSection(...args[]):  {
   {
             visible: {
               opacity: 1,
-              y: 0,
+              y: 0,;
               transition: {
                 duration: 0.6,
-  delay: 0.6
+  delay: 0.6;
               
 
 
@@ -325,7 +325,7 @@ export default function EnhancedStatsSection(...args[]):  {
           }}
           className="mt-16"
 
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
             <motion.div
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
