@@ -1,4 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { apiClient } from '@/utils/apiClient';
+import { Loader2 } from 'lucide-react';
+
 export function FooterNewsletter() {
 
   const [email, setEmail] = useState('');
@@ -6,9 +12,27 @@ export function FooterNewsletter() {
   const handleSubmit = e => {
 
     e.preventDefault();
-    // Here you would typically send the email to your newsletter service
-    setIsSubscribed(true);
-    setEmail('');
+    if (honeypot) return; // ignore bots
+    setIsSubmitting(true);
+    try {
+      const res = await apiClient('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      if (res.ok) {
+        toast.success('Subscribed!');
+        setEmail('');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        toast.error(data.error || 'Subscription failed');
+      }
+    } catch (err) {
+      toast.error(err.message || 'Subscription failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   if(isSubscribed) {
 

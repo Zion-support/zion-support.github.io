@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { apiClient } from './apiClient';
 
 /**
  * Formats a date for display in the referral system
@@ -49,11 +50,17 @@ export async function trackReferral(userId: string, email: string) {
     if (!refCode) return;
     
     // Call API to record the referral
-    const response = await api.post('/api/track-referral', {
-      refCode,
-      userId,
-      email,
-      ipAddress: '', // This will be captured by the server
+    const response = await apiClient('/api/track-referral', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        refCode,
+        userId,
+        email,
+        ipAddress: '', // This will be captured by the server
+      }),
     });
 
     if (response.status >= 200 && response.status < 300) {
