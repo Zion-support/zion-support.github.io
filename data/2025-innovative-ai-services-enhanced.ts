@@ -73,14 +73,13 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     setupTime: '2-4 weeks',
     category: 'AI Consciousness & Research',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis'],
-    integrations: ['OpenAI API, Anthropic Claude, Research databases, Academic platforms, Cloud computing'],
-    useCases: ['AI research and development, Consciousness studies, Emotional AI development, Human-AI collaboration, Ethical AI training'],
-    roi: 'Research institutions report 500% ROI through breakthrough discoveries and accelerated AI development.',
-    competitors: ['OpenAI, Anthropic, DeepMind, Google AI'],
-    marketSize: '$2.5B AI research market',
-    growthRate: '400% annual growth',
-    variant: 'ai-consciousness-advanced',
+    technology: ['Python, TensorFlow, PyTorch, Neuroscience algorithms, Emotional AI, Consciousness frameworks'],
+    integrations: ['OpenAI, Anthropic, Google AI, Microsoft Azure, AWS AI services'],
+    useCases: ['Healthcare AI development, Educational AI systems, Customer service AI, Therapeutic AI applications, Research and development'],
+    roi: 'Organizations report 500% improvement in AI emotional intelligence and 300% increase in user satisfaction.',
+    competitors: ['No direct competitors - first mover advantage'],
+    marketSize: '$15.5B emotional AI market',
+    growthRate: '45% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -104,16 +103,278 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     period: '/month',
     description: 'Advanced platform for building autonomous AI ecosystems that can self-manage, evolve, and adapt without human intervention. Perfect for creating intelligent systems that grow and improve over time.',
     features: [
-      'Autonomous system architecture',
-      'Self-evolution algorithms',
-      'Adaptive learning systems',
-      'Resource optimization',
-      'Self-healing capabilities',
-      'Performance monitoring',
-      'Scalability management',
-      'Integration frameworks',
-      'Security protocols',
-      'Analytics dashboard'
+      'Hybrid AI-Quantum algorithms',
+      'Quantum-enhanced machine learning',
+      'Real-time quantum processing',
+      'Classical AI integration',
+      'Quantum error correction',
+      'Multi-qubit optimization',
+      'Quantum machine learning models',
+      'Performance benchmarking tools',
+      'API for quantum applications',
+      '24/7 quantum computing access'
+    ],
+    popular: true,
+    icon: '⚛️',
+    color: 'from-blue-600 to-cyan-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-quantum-neural-network',
+    marketPosition: 'Leading hybrid AI-Quantum platform. Our advantage: First to market with practical AI-Quantum hybrid solutions for enterprise use.',
+    targetAudience: 'Quantum computing companies, AI research labs, Pharmaceutical companies, Financial institutions, Government agencies',
+    trialDays: 60,
+    setupTime: '4-6 weeks',
+    category: 'AI-Quantum Computing',
+    realService: true,
+    technology: ['Python, Qiskit, TensorFlow, Quantum algorithms, Hybrid computing frameworks'],
+    integrations: ['IBM Quantum, Google Quantum, Microsoft Quantum, AWS Braket, Azure Quantum'],
+    useCases: ['Drug discovery, Financial modeling, Cryptography, Optimization problems, Scientific research'],
+    roi: 'Organizations report 1000x performance improvement for specific quantum-advantage problems.',
+    competitors: ['IBM Quantum, Google Quantum, Microsoft Quantum - but we offer hybrid AI-Quantum solutions'],
+    marketSize: '$8.5B quantum computing market',
+    growthRate: '55% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Hybrid AI-Quantum computing platform with advanced algorithms and real-time quantum processing capabilities.',
+    launchDate: '2024-11-15',
+    customers: 8,
+    rating: 4.9,
+    reviews: 5
+  },
+
+  // AI Autonomous Research Assistant
+  {
+    id: 'ai-autonomous-research-assistant',
+    name: 'AI Autonomous Research Assistant',
+    tagline: 'Self-directed AI research that discovers new insights autonomously',
+    price: '$899',
+    period: '/month',
+    description: 'Intelligent AI research platform that autonomously conducts research, analyzes data, and discovers new insights without human intervention.',
+    features: [
+      'Autonomous research planning',
+      'Self-directed data collection',
+      'Independent hypothesis generation',
+      'Automated experiment design',
+      'Real-time research monitoring',
+      'Insight discovery algorithms',
+      'Research report generation',
+      'Integration with research databases',
+      'Multi-domain research capabilities',
+      '24/7 autonomous operation'
+    ],
+    popular: true,
+    icon: '🔬',
+    color: 'from-green-600 to-emerald-600',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-research-assistant',
+    marketPosition: 'First autonomous AI research platform. Our advantage: AI that conducts research independently, reducing human research time by 90%.',
+    targetAudience: 'Research institutions, Universities, Pharmaceutical companies, Technology companies, Government research labs',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'AI Research & Discovery',
+    realService: true,
+    technology: ['Python, TensorFlow, PyTorch, Research algorithms, Autonomous systems, NLP'],
+    integrations: ['PubMed, arXiv, ResearchGate, Google Scholar, Academic databases, Lab equipment APIs'],
+    useCases: ['Scientific research, Drug discovery, Technology development, Academic research, Market research'],
+    roi: 'Research teams report 90% reduction in research time and 300% increase in discovery rate.',
+    competitors: ['No direct competitors - revolutionary autonomous research capability'],
+    marketSize: '$25.5B research and development market',
+    growthRate: '18% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Autonomous AI research platform with self-directed research capabilities and independent insight discovery.',
+    launchDate: '2024-10-20',
+    customers: 18,
+    rating: 4.8,
+    reviews: 12
+  },
+
+  // AI Emotional Intelligence Training
+  {
+    id: 'ai-emotional-intelligence-training',
+    name: 'AI Emotional Intelligence Training',
+    tagline: 'Train AI systems to understand and respond to human emotions',
+    price: '$699',
+    period: '/month',
+    description: 'Comprehensive AI emotional intelligence training platform that teaches AI systems to recognize, understand, and appropriately respond to human emotions.',
+    features: [
+      'Emotion recognition training',
+      'Empathy development modules',
+      'Emotional response generation',
+      'Multi-cultural emotional understanding',
+      'Real-time emotional analysis',
+      'Emotional intelligence assessment',
+      'Custom emotional training programs',
+      'Integration with AI systems',
+      'Performance analytics and reporting',
+      '24/7 emotional training support'
+    ],
+    popular: true,
+    icon: '❤️',
+    color: 'from-red-600 to-pink-600',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/ai-emotional-intelligence-training',
+    marketPosition: 'Leading AI emotional intelligence training platform. Our advantage: Comprehensive emotional training that increases AI empathy by 400%.',
+    targetAudience: 'AI developers, Healthcare AI companies, Customer service AI, Educational AI, Therapeutic AI applications',
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'AI Emotional Intelligence',
+    realService: true,
+    technology: ['Python, TensorFlow, PyTorch, Emotional AI, Computer vision, NLP'],
+    integrations: ['OpenAI, Anthropic, Google AI, Microsoft Azure, AWS AI services, Healthcare systems'],
+    useCases: ['Healthcare AI training, Customer service AI, Educational AI, Therapeutic AI, Social AI development'],
+    roi: 'AI systems trained with our platform show 400% improvement in emotional understanding and user satisfaction.',
+    competitors: ['Limited competition - specialized emotional AI training'],
+    marketSize: '$12.5B emotional AI market',
+    growthRate: '35% annual growth',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI emotional intelligence training platform with comprehensive emotional understanding and empathy development capabilities.',
+    launchDate: '2024-09-15',
+    customers: 25,
+    rating: 4.7,
+    reviews: 16
+  },
+
+  // AI Predictive Maintenance Platform
+  {
+    id: 'ai-predictive-maintenance-platform',
+    name: 'AI Predictive Maintenance Platform',
+    tagline: 'Predict equipment failures before they happen with AI',
+    price: '$599',
+    period: '/month',
+    description: 'Advanced AI-powered predictive maintenance platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime.',
+    features: [
+      'AI-powered failure prediction',
+      'Real-time equipment monitoring',
+      'Predictive maintenance scheduling',
+      'Performance optimization',
+      'Cost reduction analytics',
+      'Integration with IoT devices',
+      'Mobile maintenance app',
+      'Custom alert systems',
+      'Maintenance history tracking',
+      '24/7 monitoring and alerts'
+    ],
+    popular: true,
+    icon: '🔧',
+    color: 'from-orange-600 to-red-600',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance-platform',
+    marketPosition: 'Competes with PTC ThingWorx ($50/month), Siemens Mindsphere ($100/month). Our advantage: AI algorithms reduce maintenance costs by 40% and increase equipment uptime by 30%.',
+    targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Facility managers',
+    trialDays: 14,
+    setupTime: '2-3 weeks',
+    category: 'AI Industrial IoT',
+    realService: true,
+    technology: ['Python, TensorFlow, IoT platforms, Time series analysis, Predictive algorithms'],
+    integrations: ['Siemens, PTC, GE Predix, AWS IoT, Azure IoT, Industrial equipment APIs'],
+    useCases: ['Equipment monitoring, Predictive maintenance, Performance optimization, Cost reduction, Downtime prevention'],
+    roi: 'Manufacturing companies report 40% reduction in maintenance costs and 30% increase in equipment uptime.',
+    competitors: ['PTC ThingWorx, Siemens Mindsphere, GE Predix, IBM Watson IoT'],
+    marketSize: '$35.5B predictive maintenance market',
+    growthRate: '25% annual growth',
+
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI-powered predictive maintenance platform with machine learning algorithms for equipment failure prediction and maintenance optimization.',
+    launchDate: '2024-08-20',
+    customers: 42,
+    rating: 4.8,
+    reviews: 28
+  },
+
+  // AI Content Personalization Engine
+  {
+    id: 'ai-content-personalization-engine',
+    name: 'AI Content Personalization Engine',
+    tagline: 'Deliver personalized content experiences with AI intelligence',
+    price: '$449',
+    period: '/month',
+    description: 'Intelligent AI-powered content personalization platform that automatically adapts content, recommendations, and user experiences based on individual preferences and behavior.',
+    features: [
+      'AI-powered content adaptation',
+      'Real-time personalization',
+      'Behavioral analysis',
+      'Dynamic content generation',
+      'A/B testing automation',
+      'Performance optimization',
+      'Multi-channel personalization',
+      'User preference learning',
+      'Integration with CMS systems',
+      '24/7 personalization engine'
+    ],
+    popular: true,
+    icon: '🎯',
+    color: 'from-indigo-600 to-purple-600',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/ai-content-personalization-engine',
+    marketPosition: 'Competes with Dynamic Yield ($1,000/month), Optimizely ($1,000/month). Our advantage: AI personalization increases engagement by 250% and conversion rates by 180%.',
+    targetAudience: 'E-commerce companies, Media companies, Marketing agencies, SaaS companies, Content platforms',
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'AI Content Personalization',
+    realService: true,
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+    integrations: ['Shopify, WordPress, HubSpot, Salesforce, Google Analytics, Facebook Pixel'],
+    useCases: ['E-commerce personalization, Content recommendations, Marketing automation, User experience optimization, Conversion rate optimization'],
+    roi: 'Companies report 250% increase in user engagement and 180% improvement in conversion rates.',
+    competitors: ['Dynamic Yield, Optimizely, Adobe Target, Google Optimize'],
+    marketSize: '$18.5B personalization market',
+    growthRate: '22% annual growth',
+
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI-powered content personalization platform with machine learning algorithms for dynamic content adaptation and user experience optimization.',
+    launchDate: '2024-07-25',
+    customers: 67,
+    rating: 4.7,
+    reviews: 41
+  },
+
+  // AI Autonomous Ecosystem Manager
+  {
+    id: 'ai-autonomous-ecosystem-manager',
+    name: 'AI Autonomous Ecosystem Manager',
+    tagline: 'Self-managing AI systems that optimize entire business ecosystems',
+    price: '$1,599',
+    period: '/month',
+    description: 'Revolutionary AI platform that autonomously manages and optimizes entire business ecosystems, coordinating multiple AI systems for maximum efficiency.',
+    features: [
+      'Autonomous ecosystem coordination',
+      'Multi-AI system management',
+      'Self-optimizing workflows',
+      'Intelligent resource allocation',
+      'Real-time ecosystem monitoring',
+      'Predictive ecosystem optimization',
+      'Integration with existing AI systems',
+      'Custom ecosystem rules',
+      'Performance analytics and reporting',
+      '24/7 autonomous operation'
     ],
     popular: true,
     icon: '🌐',
@@ -126,14 +387,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     setupTime: '1-2 weeks',
     category: 'AI Autonomy & Evolution',
     realService: true,
-    technology: ['Python, TensorFlow, Kubernetes, Docker, React, Node.js, PostgreSQL'],
-    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, CI/CD platforms, Monitoring tools'],
-    useCases: ['Autonomous AI development, Self-evolving systems, Automated machine learning, Intelligent automation, Research platforms'],
-    roi: 'Development teams report 300% productivity increase and 80% reduction in maintenance overhead.',
-    competitors: ['Google AutoML, Azure AutoML, DataRobot, H2O.ai'],
-    marketSize: '$8.5B AutoML market',
-    growthRate: '250% annual growth',
-    variant: 'ai-autonomy-enterprise',
+    technology: ['Python, TensorFlow, Kubernetes, Microservices, AI orchestration, Distributed systems'],
+    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Existing AI platforms'],
+    useCases: ['Enterprise AI coordination, Multi-system optimization, Business process automation, Resource optimization, Digital transformation'],
+    roi: 'Enterprises report 300% improvement in overall AI efficiency and 200% reduction in operational complexity.',
+    competitors: ['No direct competitors - revolutionary autonomous ecosystem management'],
+    marketSize: '$45.5B AI management market',
+    growthRate: '40% annual growth',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -179,14 +440,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     setupTime: '1 week',
     category: 'AI Ethics & Compliance',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Machine Learning'],
-    integrations: ['AI development platforms, Compliance systems, Governance tools, Reporting platforms'],
-    useCases: ['AI ethics implementation, Bias detection, Compliance monitoring, Stakeholder engagement, Policy management'],
-    roi: 'Organizations report 200% improvement in AI trustworthiness and 90% reduction in ethical risks.',
-    competitors: ['Ethics consulting firms, Governance platforms, Compliance tools'],
-    marketSize: '$3.5B AI ethics market',
-    growthRate: '180% annual growth',
-    variant: 'ai-ethics-enterprise',
+    technology: ['Python, Ethical AI frameworks, Bias detection algorithms, Explainable AI, Compliance tools'],
+    integrations: ['AI development platforms, Compliance systems, Government databases, Industry standards'],
+    useCases: ['AI development oversight, Compliance management, Risk assessment, Ethical training, Governance implementation'],
+    roi: 'Organizations report 80% reduction in AI risks and 100% compliance with ethical standards.',
+    competitors: ['Limited competition - specialized AI ethics and governance'],
+    marketSize: '$8.5B AI governance market',
+    growthRate: '30% annual growth',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -232,14 +493,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     setupTime: '1 hour',
     category: 'AI Creativity & Arts',
     realService: true,
-    technology: ['React, Python, TensorFlow, PyTorch, Stable Diffusion, Music generation models'],
-    integrations: ['Adobe Creative Suite, Figma, Canva, Social media platforms, Content management systems'],
-    useCases: ['Art creation, Music composition, Design automation, Content generation, Creative collaboration'],
-    roi: 'Creative professionals report 400% increase in productivity and 300% expansion of creative possibilities.',
-    competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'],
-    marketSize: '$15.5B creative AI market',
-    growthRate: '320% annual growth',
-    variant: 'ai-creativity-pro',
+    technology: ['Python, TensorFlow, Computer vision, NLP, Creative AI, Design algorithms'],
+    integrations: ['Canva, Adobe Creative Suite, Figma, Sketch, Social media platforms'],
+    useCases: ['Content creation, Graphic design, Marketing materials, Social media content, Brand assets'],
+    roi: 'Creative teams report 500% increase in content output and 70% reduction in design time.',
+    competitors: ['Canva, Adobe Creative Cloud, Figma, Midjourney, DALL-E'],
+    marketSize: '$22.5B creative software market',
+    growthRate: '20% annual growth',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -287,12 +548,12 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     realService: true,
     technology: ['React, Python, TensorFlow, Natural Language Processing, Machine Learning'],
     integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams, Zoom'],
-    useCases: ['K-12 education, Higher education, Corporate training, Skill development, Language learning'],
-    roi: 'Educational institutions report 40% improvement in learning outcomes and 50% reduction in training costs.',
-    competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Pluralsight'],
-    marketSize: '$250B global education market',
-    growthRate: '95% annual growth',
-    variant: 'ai-education-enterprise',
+    useCases: ['K-12 education, Higher education, Corporate training, Skill development, Test preparation'],
+    roi: 'Educational institutions report 300% improvement in learning effectiveness and 40% reduction in learning time.',
+    competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Skillshare'],
+    marketSize: '$28.5B online education market',
+    growthRate: '25% annual growth',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -345,7 +606,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Aidoc, Zebra Medical'],
     marketSize: '$45B AI healthcare market',
     growthRate: '140% annual growth',
-    variant: 'ai-healthcare-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +659,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Bloomberg Terminal, Thomson Reuters, RiskMetrics, MSCI, FactSet'],
     marketSize: '$35.5B financial intelligence market',
     growthRate: '24% annual growth',
-    variant: 'ai-finance-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -451,7 +712,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Sustainability consulting firms, ESG platforms, Environmental management tools'],
     marketSize: '$18.5B sustainability market',
     growthRate: '160% annual growth',
-    variant: 'ai-sustainability-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -504,7 +765,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Sentiment analysis tools, Emotion AI platforms, Customer service AI'],
     marketSize: '$12.5B emotional AI market',
     growthRate: '280% annual growth',
-    variant: 'ai-emotional-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -557,7 +818,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['DataRobot, H2O.ai, RapidMiner, KNIME'],
     marketSize: '$21.5B predictive analytics market',
     growthRate: '32% annual growth',
-    variant: 'ai-predictive-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -610,7 +871,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Google Vision AI, AWS Rekognition, Azure Computer Vision, Clarifai'],
     marketSize: '$18.7B computer vision market',
     growthRate: '28% annual growth',
-    variant: 'ai-vision-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -663,7 +924,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['OpenAI API, Google Cloud NLP, Azure Language, spaCy'],
     marketSize: '$16.3B NLP market',
     growthRate: '25% annual growth',
-    variant: 'ai-nlp-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -716,7 +977,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Amazon Personalize, Google Recommendations AI, Recombee, Algolia'],
     marketSize: '$12.8B recommendation engine market',
     growthRate: '30% annual growth',
-    variant: 'ai-recommendation-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -769,7 +1030,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Sift, Signifyd, Kount, Forter'],
     marketSize: '$22.5B fraud detection market',
     growthRate: '35% annual growth',
-    variant: 'ai-fraud-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -822,7 +1083,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['SAP SCM, Oracle SCM, JDA Software, Manhattan Associates'],
     marketSize: '$18.9B supply chain management market',
     growthRate: '22% annual growth',
-    variant: 'ai-supply-chain-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -875,7 +1136,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls'],
     marketSize: '$15.7B energy management market',
     growthRate: '28% annual growth',
-    variant: 'ai-energy-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -928,7 +1189,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Cognex, Keyence, Omron, SICK'],
     marketSize: '$12.3B quality control market',
     growthRate: '25% annual growth',
-    variant: 'ai-quality-control-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -981,7 +1242,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Segment, Mixpanel, Amplitude, Google Analytics'],
     marketSize: '$14.2B customer analytics market',
     growthRate: '26% annual growth',
-    variant: 'ai-segmentation-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1034,7 +1295,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D-Wave'],
     marketSize: '$8.5B quantum computing market',
     growthRate: '25% annual growth',
-    variant: 'quantum-ai-enterprise',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1087,7 +1348,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['None - First to market'],
     marketSize: '$12B+ potential market',
     growthRate: '400%+ annual growth',
-    variant: 'ai-research',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1140,7 +1401,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Mood Meter', 'Emotion AI', 'Empath', 'Affectiva'],
     marketSize: '$3.2B emotional intelligence market',
     growthRate: '22% annual growth',
-    variant: 'ai-training',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1193,7 +1454,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Uptake', 'C3.ai', 'Predix', 'Mindsphere'],
     marketSize: '$7.8B predictive maintenance market',
     growthRate: '30% annual growth',
-    variant: 'ai-industrial',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1246,7 +1507,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Dynamic Yield', 'Optimizely', 'Adobe Target', 'Google Optimize'],
     marketSize: '$4.2B content personalization market',
     growthRate: '25% annual growth',
-    variant: 'ai-content',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1299,7 +1560,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['None - First to market'],
     marketSize: '$15B+ potential market',
     growthRate: '500%+ annual growth',
-    variant: 'ai-autonomous',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1352,7 +1613,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['AI Fairness 360', 'What-If Tool', 'LIME', 'SHAP'],
     marketSize: '$2.8B AI ethics market',
     growthRate: '35% annual growth',
-    variant: 'ai-governance',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1405,7 +1666,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     competitors: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'Jukebox'],
     marketSize: '$3.5B AI creative tools market',
     growthRate: '40% annual growth',
-    variant: 'ai-creative',
+
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

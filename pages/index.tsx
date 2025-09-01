@@ -1,11 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import Hero from '../components/sections/Hero';
-import Features from '../components/sections/Features';
-import MicroSaasServices from '../components/sections/MicroSaasServices';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Brain, Monitor, Search } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedContactForm from '../components/EnhancedContactForm';
+import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
 export default function HomePage() {
   const heroStats = [
@@ -304,13 +309,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Platform Capabilities */}
-      <Features
-        title="Why Choose Our Micro SaaS Services"
-        subtitle="Real solutions with competitive pricing, market analysis, and enterprise-grade features designed for modern businesses."
-        features={platformFeatures}
-        columns={2}
-      />
+      {/* Enhanced Services Showcase */}
+      <div id="services">
+        <ComprehensiveServicesShowcase />
+      </div>
 
       {/* Micro SaaS Services Preview */}
       <section className="py-24 bg-gradient-to-r from-purple-900 to-pink-900 relative overflow-hidden">
