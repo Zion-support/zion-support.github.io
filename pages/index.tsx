@@ -110,55 +110,39 @@ const Index: NextPage = () => {
             </div>
             
             {/* Navigation Links */}
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <div className="flex flex-wrap justify-center gap-4">
               <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
                 About Us
               </a>
               <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
                 Our Services
               </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                Case Studies
-              </a>
-              <a href="/resources" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
-                Resources
-              </a>
               <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
                 Contact
               </a>
-              <a href="/automation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                Automation
+              <a href="/api-documentation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                API Docs
               </a>
-              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
-                Blog
-              </a>
-              <a href="/technology-insights" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50">
-                Insights
-              </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-emerald-400/50">
-                Case Studies
+              <a href="/component-library" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
+                Components
               </a>
             </div>
           </section>
 
-          {/* Success Stories Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14 mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold tracking-wide text-white/90 mb-4">Success Stories</h2>
-              <p className="text-white/70 max-w-2xl mx-auto mb-6">
-                Discover how our autonomous AI solutions have transformed businesses across industries
-              </p>
-              <a href="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                View All Case Studies →
-              </a>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-6 rounded-2xl border border-blue-500/30">
-                <div className="text-3xl mb-3">🏥</div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">Healthcare</h3>
-                <p className="text-white/70 text-sm mb-3">40% reduction in patient wait times</p>
-                <div className="text-2xl font-bold text-white">$2.3M</div>
-                <div className="text-xs text-white/60">Annual savings</div>
+          {/* Features Section */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Core Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-300">Autonomous Systems</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Self-running automation workflows that maintain, optimize, and improve systems without human intervention.
+                </p>
               </div>
               
               <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 p-6 rounded-2xl border border-green-500/30">
