@@ -25,6 +25,7 @@ const nextConfig = {
         /pages\/research-development\.tsx$/,
         /pages\/services\/\[id\]\.tsx$/,
         /src\/components\/EnhancedNavigation\.tsx$/,
+        /src\/data\/innovativeServices2031\.ts$/,
         /pages\/advanced-cybersecurity\.tsx$/,
         /pages\/careers\.tsx$/,
         /pages\/case-studies\.page\.tsx$/,
