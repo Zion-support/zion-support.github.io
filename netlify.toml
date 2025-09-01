@@ -333,42 +333,15 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
+# Newly added autonomous functions
 [[scheduled.functions]]
-  name = "semantic-code-map-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
+  name = "repo-insights-digest"
+  schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
-  name = "perf-budget-guardian"
-  schedule = "*/15 * * * *" # every 15 minutes
+  name = "architecture-graph"
+  schedule = "*/3 * * * *" # every 3 minutes
 
 [[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-[[scheduled.functions]]
-  name = "terminology-consistency-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "stale-content-auditor-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "7 */12 * * *"
-
-[[scheduled.functions]]
-  name = "structured-data-auditor"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "content-freshness-runner"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "i18n-seed-runner"
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "performance-hints-runner"
-  schedule = "*/15 * * * *"
+  name = "ux-issues-scanner"
+  schedule = "*/5 * * * *" # every 5 minutes
