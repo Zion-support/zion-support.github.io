@@ -18,22 +18,21 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-
-const lazy = React.lazy;
-const Suspense = React.Suspense;
-const Home = lazy(() => import('./pages/Home'));
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
-const Analytics = lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = lazy(() => import('./pages/CommunityPage'));
-const Categories = lazy(() => import('./pages/Categories'));
-const Login = lazy(() => import('./pages/Login'));
-const Signup = lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -49,6 +48,7 @@ const baseRoutes = [
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
 ];
 
 const App = () => {
