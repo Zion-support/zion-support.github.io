@@ -78,7 +78,17 @@ export default function BlogPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <nav className="mb-8">
+              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </a>
+              <span className="mx-3 text-white/40">|</span>
+              <a href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                Resources
+              </a>
+            </nav>
+            
             <header className="text-center mb-16">
               <nav className="mb-6 text-left">
                 <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
