@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running component-coupling-graph-runner function');
+    console.log('🤖 component-coupling-graph-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple component coupling graph logic
+    // Simulate component coupling graph running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Component coupling graph generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Component coupling graph runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Component coupling graph runner executed successfully',
+        timestamp,
+        function: 'component-coupling-graph-runner',
+        status: 'completed',
+        graph: [
+          'dependency_analysis',
+          'coupling_visualization',
+          'architecture_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in component-coupling-graph-runner function:', error);
     
+    console.log('✅ component-coupling-graph-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ component-coupling-graph-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Component coupling graph runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

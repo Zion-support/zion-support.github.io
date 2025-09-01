@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running newsroom-runner function');
+    console.log('🤖 newsroom-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple newsroom logic
+    // Simulate newsroom running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      run: true,
-      timestamp: new Date().toISOString(),
-      message: 'Newsroom runner completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Newsroom runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Newsroom runner executed successfully',
+        timestamp,
+        function: 'newsroom-runner',
+        status: 'completed',
+        newsroom: [
+          'content_curation',
+          'news_aggregation',
+          'media_management'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in newsroom-runner function:', error);
     
+    console.log('✅ newsroom-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ newsroom-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Newsroom runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

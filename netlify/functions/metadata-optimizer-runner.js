@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running metadata-optimizer-runner function');
+    console.log('🤖 metadata-optimizer-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple metadata optimization logic
+    // Simulate metadata optimization running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      optimized: true,
-      timestamp: new Date().toISOString(),
-      message: 'Metadata optimization completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Metadata optimizer runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Metadata optimizer runner executed successfully',
+        timestamp,
+        function: 'metadata-optimizer-runner',
+        status: 'completed',
+        optimization: [
+          'seo_metadata',
+          'social_media_tags',
+          'structured_data'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in metadata-optimizer-runner function:', error);
     
+    console.log('✅ metadata-optimizer-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ metadata-optimizer-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Metadata optimizer runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

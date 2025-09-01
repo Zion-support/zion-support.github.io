@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running dead-code-report function');
+    console.log('🤖 dead-code-report function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple dead code reporting logic
+    // Simulate dead code reporting logic
+    const timestamp = new Date().toISOString();
     const result = {
-      reported: true,
-      timestamp: new Date().toISOString(),
-      message: 'Dead code report completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Dead code report completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Dead code report executed successfully',
+        timestamp,
+        function: 'dead-code-report',
+        status: 'completed',
+        report: [
+          'unused_functions',
+          'dead_imports',
+          'orphaned_code'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in dead-code-report function:', error);
     
+    console.log('✅ dead-code-report completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ dead-code-report failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Dead code report failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

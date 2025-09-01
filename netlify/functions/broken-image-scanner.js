@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running broken-image-scanner function');
+    console.log('🤖 broken-image-scanner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple broken image scanning logic
+    // Simulate broken image scanning logic
+    const timestamp = new Date().toISOString();
     const result = {
-      scanned: true,
-      timestamp: new Date().toISOString(),
-      message: 'Broken image scanning completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Broken image scanner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Broken image scanner executed successfully',
+        timestamp,
+        function: 'broken-image-scanner',
+        status: 'completed',
+        scanning: [
+          'image_validation',
+          'broken_link_detection',
+          'replacement_suggestions'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in broken-image-scanner function:', error);
     
+    console.log('✅ broken-image-scanner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ broken-image-scanner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Broken image scanner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

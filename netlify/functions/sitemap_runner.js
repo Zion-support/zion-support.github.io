@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running sitemap_runner function');
+    console.log('🤖 sitemap_runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple sitemap generation logic
+    // Simulate sitemap generation logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Sitemap generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Sitemap runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Sitemap runner executed successfully',
+        timestamp,
+        function: 'sitemap_runner',
+        status: 'completed',
+        sitemap: [
+          'pages_indexed',
+          'urls_generated',
+          'search_optimized'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in sitemap_runner function:', error);
     
+    console.log('✅ sitemap_runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ sitemap_runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Sitemap runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

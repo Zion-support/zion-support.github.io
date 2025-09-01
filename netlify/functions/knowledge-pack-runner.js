@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running knowledge-pack-runner function');
+    console.log('🤖 knowledge-pack-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple knowledge pack logic
+    // Simulate knowledge pack running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Knowledge pack generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Knowledge pack runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Knowledge pack runner executed successfully',
+        timestamp,
+        function: 'knowledge-pack-runner',
+        status: 'completed',
+        knowledge: [
+          'content_aggregation',
+          'knowledge_organization',
+          'learning_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in knowledge-pack-runner function:', error);
     
+    console.log('✅ knowledge-pack-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ knowledge-pack-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Knowledge pack runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

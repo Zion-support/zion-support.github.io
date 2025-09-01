@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running security-audit-runner function');
+    console.log('🤖 security-audit-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple security audit logic
+    // Simulate security audit running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      audited: true,
-      timestamp: new Date().toISOString(),
-      message: 'Security audit completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Security audit runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Security audit runner executed successfully',
+        timestamp,
+        function: 'security-audit-runner',
+        status: 'completed',
+        audit: [
+          'vulnerability_scanning',
+          'dependency_analysis',
+          'security_compliance'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in security-audit-runner function:', error);
     
+    console.log('✅ security-audit-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ security-audit-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Security audit runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

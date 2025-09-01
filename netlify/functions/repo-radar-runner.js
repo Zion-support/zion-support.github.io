@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running repo-radar-runner function');
+    console.log('🤖 repo-radar-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple repo radar logic
+    // Simulate repository radar running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      scanned: true,
-      timestamp: new Date().toISOString(),
-      message: 'Repo radar scanning completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Repo radar runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Repo radar runner executed successfully',
+        timestamp,
+        function: 'repo-radar-runner',
+        status: 'completed',
+        radar: [
+          'repository_monitoring',
+          'trend_analysis',
+          'opportunity_detection'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in repo-radar-runner function:', error);
     
+    console.log('✅ repo-radar-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ repo-radar-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Repo radar runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

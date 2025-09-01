@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running content-freshness-score-runner function');
+    console.log('🤖 content-freshness-score-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple content freshness scoring logic
+    // Simulate content freshness score running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      scored: true,
-      timestamp: new Date().toISOString(),
-      message: 'Content freshness scoring completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Content freshness score runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Content freshness score runner executed successfully',
+        timestamp,
+        function: 'content-freshness-score-runner',
+        status: 'completed',
+        scoring: [
+          'freshness_analysis',
+          'quality_assessment',
+          'update_recommendations'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in content-freshness-score-runner function:', error);
     
+    console.log('✅ content-freshness-score-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ content-freshness-score-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Content freshness score runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

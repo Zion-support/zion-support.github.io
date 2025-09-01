@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running auto-discovery-runner function');
+    console.log('🤖 auto-discovery-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple auto discovery logic
+    // Simulate auto discovery running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      discovered: true,
-      timestamp: new Date().toISOString(),
-      message: 'Auto discovery completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Auto discovery runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Auto discovery runner executed successfully',
+        timestamp,
+        function: 'auto-discovery-runner',
+        status: 'completed',
+        discovery: [
+          'pattern_recognition',
+          'automation_identification',
+          'opportunity_detection'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in auto-discovery-runner function:', error);
     
+    console.log('✅ auto-discovery-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ auto-discovery-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Auto discovery runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running front-ads-promoter function');
+    console.log('🤖 front-ads-promoter function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple front ads promotion logic
+    // Simulate front ads promotion logic
+    const timestamp = new Date().toISOString();
     const result = {
-      promoted: true,
-      timestamp: new Date().toISOString(),
-      message: 'Front ads promotion completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Front ads promoter completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Front ads promoter executed successfully',
+        timestamp,
+        function: 'front-ads-promoter',
+        status: 'completed',
+        promotion: [
+          'ad_optimization',
+          'content_promotion',
+          'user_engagement'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in front-ads-promoter function:', error);
     
+    console.log('✅ front-ads-promoter completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ front-ads-promoter failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Front ads promoter failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

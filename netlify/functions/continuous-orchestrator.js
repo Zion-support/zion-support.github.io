@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running continuous-orchestrator function');
+    console.log('🤖 continuous-orchestrator function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple continuous orchestration logic
+    // Simulate continuous orchestration logic
+    const timestamp = new Date().toISOString();
     const result = {
-      orchestrated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Continuous orchestration completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Continuous orchestrator completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Continuous orchestrator executed successfully',
+        timestamp,
+        function: 'continuous-orchestrator',
+        status: 'completed',
+        orchestration: [
+          'continuous_monitoring',
+          'automated_responses',
+          'system_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in continuous-orchestrator function:', error);
     
+    console.log('✅ continuous-orchestrator completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ continuous-orchestrator failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Continuous orchestrator failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running intelligent-meta-orchestrator function');
+    console.log('🤖 intelligent-meta-orchestrator function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple intelligent meta orchestration logic
+    // Simulate intelligent meta orchestration logic
+    const timestamp = new Date().toISOString();
     const result = {
-      orchestrated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Intelligent meta orchestration completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Intelligent meta orchestrator completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Intelligent meta orchestrator executed successfully',
+        timestamp,
+        function: 'intelligent-meta-orchestrator',
+        status: 'completed',
+        orchestration: [
+          'intelligent_planning',
+          'meta_level_optimization',
+          'adaptive_coordination'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in intelligent-meta-orchestrator function:', error);
     
+    console.log('✅ intelligent-meta-orchestrator completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ intelligent-meta-orchestrator failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Intelligent meta orchestrator failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

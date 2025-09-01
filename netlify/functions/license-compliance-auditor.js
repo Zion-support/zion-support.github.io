@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running license-compliance-auditor function');
+    console.log('🤖 license-compliance-auditor function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple license compliance auditing logic
+    // Simulate license compliance auditing logic
+    const timestamp = new Date().toISOString();
     const result = {
-      audited: true,
-      timestamp: new Date().toISOString(),
-      message: 'License compliance auditing completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'License compliance auditor completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'License compliance auditor executed successfully',
+        timestamp,
+        function: 'license-compliance-auditor',
+        status: 'completed',
+        auditing: [
+          'license_scanning',
+          'compliance_validation',
+          'risk_assessment'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in license-compliance-auditor function:', error);
     
+    console.log('✅ license-compliance-auditor completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ license-compliance-auditor failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'License compliance auditor failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

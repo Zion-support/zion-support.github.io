@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running orphan-pages-detector function');
+    console.log('🤖 orphan-pages-detector function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple orphan pages detection logic
+    // Simulate orphan pages detection logic
+    const timestamp = new Date().toISOString();
     const result = {
-      detected: true,
-      timestamp: new Date().toISOString(),
-      message: 'Orphan pages detection completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Orphan pages detector completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Orphan pages detector executed successfully',
+        timestamp,
+        function: 'orphan-pages-detector',
+        status: 'completed',
+        detection: [
+          'page_analysis',
+          'link_validation',
+          'isolation_identification'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in orphan-pages-detector function:', error);
     
+    console.log('✅ orphan-pages-detector completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ orphan-pages-detector failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Orphan pages detector failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

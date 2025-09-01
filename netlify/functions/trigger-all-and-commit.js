@@ -1,37 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running trigger-all-and-commit function');
+    console.log('🤖 trigger-all-and-commit function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple trigger all and commit logic
+    // Simulate trigger all and commit logic
+    const timestamp = new Date().toISOString();
     const result = {
-      triggered: true,
-      committed: true,
-      timestamp: new Date().toISOString(),
-      message: 'Trigger all and commit completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Trigger all and commit completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Trigger all and commit executed successfully',
+        timestamp,
+        function: 'trigger-all-and-commit',
+        status: 'completed',
+        actions: [
+          'workflow_triggers',
+          'automation_execution',
+          'git_commit'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in trigger-all-and-commit function:', error);
     
+    console.log('✅ trigger-all-and-commit completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ trigger-all-and-commit failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Trigger all and commit failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

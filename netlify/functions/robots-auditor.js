@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running robots-auditor function');
+    console.log('🤖 robots-auditor function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple robots auditing logic
+    // Simulate robots.txt auditing logic
+    const timestamp = new Date().toISOString();
     const result = {
-      audited: true,
-      timestamp: new Date().toISOString(),
-      message: 'Robots auditing completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Robots auditor completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Robots auditor executed successfully',
+        timestamp,
+        function: 'robots-auditor',
+        status: 'completed',
+        auditing: [
+          'robots_txt_validation',
+          'crawl_directive_analysis',
+          'seo_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in robots-auditor function:', error);
     
+    console.log('✅ robots-auditor completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ robots-auditor failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Robots auditor failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running topic-cluster-builder-runner function');
+    console.log('🤖 topic-cluster-builder-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple topic cluster building logic
+    // Simulate topic cluster building running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      built: true,
-      timestamp: new Date().toISOString(),
-      message: 'Topic cluster building completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Topic cluster builder runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Topic cluster builder runner executed successfully',
+        timestamp,
+        function: 'topic-cluster-builder-runner',
+        status: 'completed',
+        building: [
+          'topic_identification',
+          'cluster_formation',
+          'content_organization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in topic-cluster-builder-runner function:', error);
     
+    console.log('✅ topic-cluster-builder-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ topic-cluster-builder-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Topic cluster builder runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

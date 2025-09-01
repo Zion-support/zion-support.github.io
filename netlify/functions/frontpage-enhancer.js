@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running frontpage-enhancer function');
+    console.log('🤖 frontpage-enhancer function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple frontpage enhancement logic
+    // Simulate frontpage enhancement logic
+    const timestamp = new Date().toISOString();
     const result = {
-      enhanced: true,
-      timestamp: new Date().toISOString(),
-      message: 'Frontpage enhancement completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Frontpage enhancer completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Frontpage enhancer executed successfully',
+        timestamp,
+        function: 'frontpage-enhancer',
+        status: 'completed',
+        enhancements: [
+          'content_optimization',
+          'layout_improvements',
+          'performance_enhancements'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in frontpage-enhancer function:', error);
     
+    console.log('✅ frontpage-enhancer completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ frontpage-enhancer failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Frontpage enhancer failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

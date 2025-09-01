@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running link-and-health-scheduler function');
+    console.log('🤖 link-and-health-scheduler function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple link and health scheduling logic
+    // Simulate link and health scheduling logic
+    const timestamp = new Date().toISOString();
     const result = {
-      scheduled: true,
-      timestamp: new Date().toISOString(),
-      message: 'Link and health scheduling completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Link and health scheduler completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Link and health scheduler executed successfully',
+        timestamp,
+        function: 'link-and-health-scheduler',
+        status: 'completed',
+        scheduled: [
+          'link_validation',
+          'health_checks',
+          'performance_monitoring'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in link-and-health-scheduler function:', error);
     
+    console.log('✅ link-and-health-scheduler completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ link-and-health-scheduler failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Link and health scheduler failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

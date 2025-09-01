@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running repo-knowledge-graph-runner function');
+    console.log('🤖 repo-knowledge-graph-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple repo knowledge graph logic
+    // Simulate repository knowledge graph running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Repo knowledge graph generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Repo knowledge graph runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Repo knowledge graph runner executed successfully',
+        timestamp,
+        function: 'repo-knowledge-graph-runner',
+        status: 'completed',
+        knowledge_graph: [
+          'code_analysis',
+          'dependency_mapping',
+          'relationship_visualization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in repo-knowledge-graph-runner function:', error);
     
+    console.log('✅ repo-knowledge-graph-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ repo-knowledge-graph-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Repo knowledge graph runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

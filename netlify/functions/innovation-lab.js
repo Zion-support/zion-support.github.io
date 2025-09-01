@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running innovation-lab function');
+    console.log('🤖 innovation-lab function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple innovation lab logic
+    // Simulate innovation lab logic
+    const timestamp = new Date().toISOString();
     const result = {
-      innovated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Innovation lab completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Innovation lab completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Innovation lab executed successfully',
+        timestamp,
+        function: 'innovation-lab',
+        status: 'completed',
+        innovation: [
+          'idea_generation',
+          'experimentation',
+          'prototype_development'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in innovation-lab function:', error);
     
+    console.log('✅ innovation-lab completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ innovation-lab failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Innovation lab failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

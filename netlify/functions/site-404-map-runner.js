@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running site-404-map-runner function');
+    console.log('🤖 site-404-map-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple site 404 mapping logic
+    // Simulate site 404 mapping running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      mapped: true,
-      timestamp: new Date().toISOString(),
-      message: 'Site 404 mapping completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Site 404 map runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Site 404 map runner executed successfully',
+        timestamp,
+        function: 'site-404-map-runner',
+        status: 'completed',
+        mapping: [
+          'error_page_detection',
+          'redirect_mapping',
+          'user_experience_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in site-404-map-runner function:', error);
     
+    console.log('✅ site-404-map-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ site-404-map-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Site 404 map runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

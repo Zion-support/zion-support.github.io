@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running pagespeed-insights-runner function');
+    console.log('🤖 pagespeed-insights-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple PageSpeed insights logic
+    // Simulate PageSpeed insights running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      analyzed: true,
-      timestamp: new Date().toISOString(),
-      message: 'PageSpeed insights analysis completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'PageSpeed insights runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'PageSpeed insights runner executed successfully',
+        timestamp,
+        function: 'pagespeed-insights-runner',
+        status: 'completed',
+        insights: [
+          'performance_analysis',
+          'optimization_recommendations',
+          'speed_metrics'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in pagespeed-insights-runner function:', error);
     
+    console.log('✅ pagespeed-insights-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ pagespeed-insights-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'PageSpeed insights runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

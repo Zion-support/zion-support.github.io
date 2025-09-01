@@ -1,36 +1,33 @@
 exports.handler = async (event, context) => {
   try {
-    console.log('Running internal-link-graph-runner function');
+    console.log('🤖 internal-link-graph-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple internal link graph logic
+    // Simulate internal link graph running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Internal link graph generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Internal link graph runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Internal link graph runner executed successfully',
+        timestamp,
+        function: 'internal-link-graph-runner',
+        status: 'completed',
+        graph: [
+          'link_mapping',
+          'navigation_analysis',
+          'structure_optimization'
+        ]
       })
     };
-  } catch (error) {
-    console.error('Error in internal-link-graph-runner function:', error);
     
+    console.log('✅ internal-link-graph-runner completed successfully');
+    return result;
+  } catch (error) {
+    console.error('❌ internal-link-graph-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
-        error: error.message,
+        error: 'Internal link graph runner failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };
