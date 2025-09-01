@@ -1,1 +1,1 @@
-export default function Page() { return <div>ai-powered-business-solutions-discussion</div>; }
+export default function PlaceholderPage() { return null; }

@@ -1,1 +1,1 @@
-export default function Page() { return <div>digital-transformation-insights</div>; }
+export default function PlaceholderPage() { return null; }

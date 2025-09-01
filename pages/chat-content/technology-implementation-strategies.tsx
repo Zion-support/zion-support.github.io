@@ -1,1 +1,1 @@
-export default function Page() { return <div>technology-implementation-strategies</div>; }
+export default function PlaceholderPage() { return null; }

@@ -1,1 +1,1 @@
-export default function Page() { return <div>cloud-computing-strategies</div>; }
+export default function PlaceholderPage() { return null; }

@@ -1,1 +1,1 @@
-export default function Page() { return <div>future-of-work-and-automation</div>; }
+export default function PlaceholderPage() { return null; }

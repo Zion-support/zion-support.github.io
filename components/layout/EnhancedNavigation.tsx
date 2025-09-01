@@ -19,8 +19,11 @@ export default function EnhancedNavigation() {
         <Link href="/">
           <a className="font-semibold">Zion</a>
         </Link>
-        <div className="flex-1 hidden sm:block">
-          <GlobalSearchBar />
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/about"><a>About</a></Link>
+          <Link href="/blog"><a>Blog</a></Link>
+          <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/services/description-generator"><a>Service Generator</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
