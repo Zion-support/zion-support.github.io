@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6">
-      <h1 className="text-2xl font-semibold">Zion</h1>
-      <p className="text-gray-600">Welcome.</p>
-      <div className="mt-4">
-        <Link href="/admin/jobs/syndication"><a className="text-indigo-600 underline">Go to Admin • Job Syndication</a></Link>
+    <div className="space-y-4">
+      <h1 className="text-2xl font-semibold">Welcome to Zion</h1>
+      <p className="opacity-80">Explore our AI marketplace and tools.</p>
+      <div>
+        <Link href="/tokenomics"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Open Whitepaper Generator</a></Link>
       </div>
     </div>
   );

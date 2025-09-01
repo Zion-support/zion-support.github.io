@@ -1,3 +1,1 @@
-export default function AuthIndex() {
-  return <div className="p-6">Auth</div>;
-}
+export default function AuthIndexPage() { return <div className="p-6">Auth</div>; }

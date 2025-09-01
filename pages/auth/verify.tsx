@@ -1,3 +1,1 @@
-export default function Verify() {
-  return <div className="p-6">Verify</div>;
-}
+export default function VerifyPage() { return <div className="p-6">Verify</div>; }
