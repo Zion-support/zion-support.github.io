@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { servicesCatalog } from '../../../src/data/servicesCatalog';
+import { servicesList } from './_servicesData.route';
 
 export default function ServicesIndex() {
-  const items = servicesCatalog.flatMap((c) => c.items.map((i) => ({ ...i, categoryName: c.name })));
+  const items = servicesList;
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>

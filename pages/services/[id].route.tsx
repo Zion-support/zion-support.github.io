@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { servicesCatalog } from '../../../src/data/servicesCatalog';
+import { servicesList } from './_servicesData.route';
 
 function getAllItems() {
-  return servicesCatalog.flatMap((c) => c.items.map((i) => ({ ...i, categoryName: c.name })));
+  return servicesList;
 }
 
 export default function ServiceDetail() {

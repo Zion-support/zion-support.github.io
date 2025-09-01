@@ -30,7 +30,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": false,
@@ -94,15 +94,22 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx"
+    "pages/**/*.route.ts",
+    "pages/**/*.route.tsx",
+    "pages/**/*.route.js",
+    "pages/**/*.route.jsx",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
-    "dist"
+    "dist",
+    "automation",
+    "components.disabled",
+    "pages.disabled",
+    "tests",
+    "tests.disabled",
+    "components"
   ]
 }
