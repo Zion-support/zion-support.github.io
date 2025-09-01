@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function StatusIncidentHub(...args: any[]): any {
+export default function StatusIncidentHub(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -10,7 +10,7 @@ export default function StatusIncidentHub(...args: any[]): any {
           <Server className="w-8 h-8 text-cyan-400"/> Status & Incident Hub
         </h1>
         <p className="mt-4 text-slate-300">Public status pages, incident timelines, SLA tracking, and subscriber notifications. Integrates with PagerDuty, Opsgenie, and Slack.</p>
-        <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+        <div className="mt-8 grid gap-4 sm: unknowngrid-cols-2">
           {[
             { title: 'Multi‑service monitoring', desc: 'Track APIs, regions and dependencies.' },
             { title: 'Incident comms', desc: 'Templates, timelines, and subscriber updates.' },

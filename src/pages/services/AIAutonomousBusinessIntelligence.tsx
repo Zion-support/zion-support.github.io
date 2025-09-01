@@ -37,7 +37,7 @@ import { Brain,
   Home
  } from 'lucide-react.ts';
 
-export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
+export default function AIAutonomousBusinessIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -266,7 +266,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -350,7 +350,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -434,7 +434,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {intelligenceTypes.map((type, index)  => (
               <motion.div
                 key={index}
@@ -518,7 +518,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}

@@ -47,7 +47,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 
-export default function InnovativeServicesShowcase2029(...args: any[]): any {
+export default function InnovativeServicesShowcase2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -236,7 +236,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >

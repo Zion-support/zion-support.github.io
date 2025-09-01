@@ -265,7 +265,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Powerful Features for Legal Professionals
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index)  => (
                   <motion.div
                     key={index}
@@ -329,7 +329,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Transparent Pricing Plans
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
                 {pricingPlans.map((plan, index)  => (
                   <motion.div
                     key={index}
@@ -395,7 +395,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Competitive Analysis
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8 mb-12">
                 {competitors.map((competitor, index)  => (
                   <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">
                     <div className="flex items-center justify-between mb-4">

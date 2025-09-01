@@ -13,7 +13,7 @@ import { Shield,
   Eye
  } from 'lucide-react.ts';
 
-export default function Cybersecurity(...args: any[]): any {
+export default function Cybersecurity(...args: unknown[]): unknown {
 
   return (
     <div className = "min-h-screen bg-futuristic">

@@ -14,7 +14,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
           crawls, Core Web Vitals checks, structured data validation, and content suggestions.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: unknowngrid-cols-2 lg:grid-cols-3">
           {[
             'Automated site crawl and issues triage',
             'Core Web Vitals & Lighthouse monitoring',

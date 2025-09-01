@@ -71,7 +71,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
     };
   ];
 
-  const getServicesByCategory = (categoryId: anystring)  => {;
+  const getServicesByCategory = (categoryId: unknownstring)  => {;
     if (categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId);
   };
@@ -300,7 +300,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
 
 
 }} 
-            transition={{ duration: any0.6 }}
+            transition={{ duration: unknown0.6 }}
           >
             {categories.map((category)  => (
               <button 
@@ -423,7 +423,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             }} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: anytrue }}
+            viewport={{ once: unknowntrue }}
           >
             {selectedServices.map((service, index)  => (
               <motion.div 

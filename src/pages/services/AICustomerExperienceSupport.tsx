@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp  } from 'lucide-react.ts';
 
-export default function AICustomerExperienceSupport(...args: any[]): any {
+export default function AICustomerExperienceSupport(...args: unknown[]): unknown {
   const features = [
     'AI-powered chatbot with 95% accuracy and natural language processing',
     'Intelligent ticket routing and priority classification',;

@@ -235,7 +235,7 @@ const AIWorkflowOrchestrator = () => {
                 Powerful Features for Modern Workflows
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index)  => (
                   <motion.div
                     key={feature.title}
@@ -322,7 +322,7 @@ const AIWorkflowOrchestrator = () => {
                 Why Choose AI Workflow Orchestrator?
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-6">
                 {benefits.map((benefit, index)  => (
                   <motion.div
                     key={benefit}
@@ -406,7 +406,7 @@ const AIWorkflowOrchestrator = () => {
                 Industry Applications
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
                 {useCases.map((useCase, index)  => (
                   <motion.div
                     key={useCase.title}
@@ -493,7 +493,7 @@ const AIWorkflowOrchestrator = () => {
                 Simple, Transparent Pricing
               </h2>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
                 {pricing.map((plan, index)  => (
                   <motion.div
                     key={plan.name}

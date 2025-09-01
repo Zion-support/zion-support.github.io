@@ -20,7 +20,7 @@ import { Sparkles,
 import { SEO  } from '@/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025  } from '../data/newInnovativeServices2025';
 
-export default function NewInnovativeServicesShowcase(...args: any[]): any {
+export default function NewInnovativeServicesShowcase(...args: unknown[]): unknown {
   const serviceCategories = [
     {
       title: "AI & Legal Tech",
@@ -127,7 +127,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anygrid-cols-3">
+          <div className="grid gap-8 md: unknowngrid-cols-3">
             {serviceCategories.map((category, index)  => (
               <motion.div
                 key={index}
@@ -174,7 +174,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anygrid-cols-2">
+          <div className="grid gap-8 md: unknowngrid-cols-2">
             {keyBenefits.map((benefit, index)  => (
               <motion.div
                 key={index}

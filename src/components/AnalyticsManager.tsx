@@ -37,12 +37,12 @@ interface UserSession {
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: Array<{ name: string; timestamp: number; data?: unknown }>;
   userAgent: string;
   referrer: string;
 }
 
-export function AnalyticsManager() {
+export function AnalyticsManager(): void {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
   const [currentSession, setCurrentSession] = useState<UserSession | null>(null);
   const [isTracking, setIsTracking] = useState(false);
@@ -245,7 +245,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const trackEvent = useCallback((name: string, data?: any) => {
+  const trackEvent = useCallback((name: string, data?: unknown) => {
     if (currentSession) {
       const event = { name, timestamp: Date.now(), data };
       
@@ -272,7 +272,7 @@ export function AnalyticsManager() {
     trackEvent('performance_metric', { metric, value });
   }, []);
 
-  const sendAnalyticsData = useCallback(async (type: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (type: string, data: unknown) => {
     try {
       // In production, send to your analytics endpoint
       // await fetch('/api/analytics', {

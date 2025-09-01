@@ -29,7 +29,7 @@ import { Search,
   Cpu
  } from 'lucide-react.ts';
 
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
+export function ComprehensiveNewServicesShowcase2025(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -62,12 +62,12 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
       return 0;
     });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: unknownstring)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: unknownstring)  => {
     const colors: { [key: string]: string } = {
       'ai-services': 'from-purple-500 to-pink-600',
       'quantum-computing': 'from-indigo-500 to-purple-600',
@@ -149,7 +149,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}

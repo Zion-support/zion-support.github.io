@@ -2,7 +2,7 @@
 import React from 'react'
 import { SEO } from '@/components/SEO'
 
-export default function BlogPost() {
+export default function BlogPost(): void {
   const { slug } = useParams();
 
   // Mock blog post data - in a real app, this would come from an API
@@ -167,7 +167,7 @@ export default function BlogPost() {
   };
 
   const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
+    const categoryIcons: { [key: string]: unknown } = {
       ai: Brain,
       quantum: Cpu,
       security: Shield,

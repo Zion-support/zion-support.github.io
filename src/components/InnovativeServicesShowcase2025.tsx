@@ -48,7 +48,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data/innovativeServices2025';
 
-export default function InnovativeServicesShowcase2025(...args: any[]): any {
+export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -99,19 +99,19 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: unknownstring)  => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
       <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: unknownstring)  => {
     if (category === 'all') return 'from-cyan-500 to-blue-500';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500';
   };
 
-  const openServiceModal = (service: any)  => {
+  const openServiceModal = (service: unknown)  => {
     setSelectedService(service);
     setShowModal(true);
   };
@@ -493,7 +493,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                       <div className="flex flex-wrap gap-2">
-                        {selectedService.tags.map((tag: anystring)  => (
+                        {selectedService.tags.map((tag: unknownstring)  => (
                           <span
                             key={tag}
                             className="px-3 py-1 bg-gray-800/50 border border-gray-600 rounded-full text-sm text-gray-300"
@@ -536,7 +536,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>
                       <div className="space-y-2">
-                        {selectedService.integrations.map((integration: anystring)  => (
+                        {selectedService.integrations.map((integration: unknownstring)  => (
                           <div key={integration} className="flex items-center gap-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400" />
                             <span className="text-sm">{integration}</span>
@@ -548,7 +548,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Competitors</h4>
                       <div className="space-y-2">
-                        {selectedService.competitors.map((competitor: anystring)  => (
+                        {selectedService.competitors.map((competitor: unknownstring)  => (
                           <div key={competitor} className="flex items-center gap-2 text-gray-300">
                             <Target className="w-4 h-4 text-red-400" />
                             <span className="text-sm">{competitor}</span>
@@ -571,7 +571,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           <p className="futuristic-subheading text-xl">We stand behind every service with comprehensive guarantees</p>
         </div>
         
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map(([key, value])  => (
             <motion.div
               key={key}

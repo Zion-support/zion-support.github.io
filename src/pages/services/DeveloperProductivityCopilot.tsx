@@ -12,7 +12,7 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
           Speed up code reviews, raise test quality, and reduce cycle time with AI assistance across your toolchain.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: unknowngrid-cols-2 lg:grid-cols-3">
           {[
             'Static diffs + architectural risk scoring',
             'PR review suggestions and security hints',

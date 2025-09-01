@@ -523,7 +523,7 @@ const AIFinancialCompliancePlatform = () => {
       {/* Key Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-8">
             {keyMetrics.map((item, index)  => (
               <motion.div
                 key={index}
@@ -557,7 +557,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -594,7 +594,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -628,7 +628,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -662,7 +662,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 lg:grid-cols-6 gap-4">
             {regulations.map((regulation, index)  => (
               <motion.div
                 key={index}
@@ -695,7 +695,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -751,7 +751,7 @@ const AIFinancialCompliancePlatform = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)  => (
               <motion.div
                 key={index}

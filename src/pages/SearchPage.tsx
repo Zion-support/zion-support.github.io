@@ -48,11 +48,11 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
 }
 
-export default function SearchPage() {
+export default function SearchPage(): void {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);

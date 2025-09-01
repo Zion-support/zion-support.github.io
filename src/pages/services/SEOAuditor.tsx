@@ -2,7 +2,7 @@ import React from 'react.ts'
 import { SEO  } from '../../components/SEO'
 import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon  } from 'lucide-react.ts'
 
-export default function SEOAuditor(...args: any[]): any {
+export default function SEOAuditor(...args: unknown[]): unknown {
   const features = [
     { icon: Search, title: 'AI Crawl & Indexing', desc: 'Automated site crawl, index status checks, and AI summaries of issues.' },
     { icon: BarChart3, title: 'Page-level Scores', desc: 'On-page SEO, Core Web Vitals, schema markup and accessibility scoring.' },
@@ -53,7 +53,7 @@ export default function SEOAuditor(...args: any[]): any {
       </section>
 
       <section className="py-10">
-        <div className="container-responsive grid grid-cols-1 md: anygrid-cols-3 gap-6">
+        <div className="container-responsive grid grid-cols-1 md: unknowngrid-cols-3 gap-6">
           {pricing.map((p)  => (
             <div key={p.tier} className="card-futuristic">
               <div className="text-sm text-zion-blue-light/70">{p.tier}</div>

@@ -178,7 +178,7 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api: unknown) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -416,7 +416,7 @@ const ApiPlayground: React.FC = () => {
                               <div className="bg-slate-700/50 rounded-lg p-4 mb-4">
                                 <h4 className="text-white font-medium mb-2">Parameters</h4>
                                 <div className="space-y-2">
-                                  {selectedApi.parameters.map((param: any, idx: number) => (
+                                  {selectedApi.parameters.map((param: unknown, idx: number) => (
                                     <div key={idx} className="flex items-center justify-between text-sm">
                                       <div>
                                         <span className="text-white font-medium">{param.name}</span>

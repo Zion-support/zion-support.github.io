@@ -184,7 +184,7 @@ class MimeTypeFallback {
     }
   }
 
-  injectResource(url: anystring, type: 'script' | 'stylesheet'): Promise<any> {
+  injectResource(url: unknownstring, type: 'script' | 'stylesheet'): Promise<any> {
     return new Promise((resolve, reject)  => {
       const element = this.createResourceElement(url, type);
       

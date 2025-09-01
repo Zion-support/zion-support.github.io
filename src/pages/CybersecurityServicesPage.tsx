@@ -63,14 +63,14 @@ const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
 );
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: any'threat-detection',;
+    id: unknown'threat-detection',;
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
   },
   {
-    id: any'zero-trust',;
+    id: unknown'zero-trust',;
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,
@@ -78,13 +78,13 @@ const SECURITY_SERVICE_CATEGORIES = [
   }
 ];
 
-export default function CybersecurityServicesPage(...args: any[]): any {
+export default function CybersecurityServicesPage(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: unknownstring)  => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelLabel = (model: unknownstring)  => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -160,7 +160,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid gap-6 md: anygrid-cols-2">
+            <div className="grid gap-6 md: unknowngrid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category)  => {
 
                 const IconComponent = category.icon;
@@ -204,7 +204,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               </TabsList>
               <TabsContent value="all" className="space-y-6">
 
-                <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md: unknowngrid-cols-2 lg:grid-cols-3">
                   {CYBERSECURITY_SERVICES.map((service)  => (
 
                     <SecurityServiceCard key={service.id} service={service} />
@@ -214,7 +214,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               {SECURITY_SERVICE_CATEGORIES.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="space-y-6">
 
-                  <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
+                  <div className="grid gap-6 md: unknowngrid-cols-2 lg:grid-cols-3">
                     {category.services.map((service)  => (
 
                       <SecurityServiceCard key={service.id} service={service} />
@@ -333,7 +333,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid gap-6 md: anygrid-cols-3 lg:grid-cols-6">
+            <div className="grid gap-6 md: unknowngrid-cols-3 lg:grid-cols-6">
 
               {[
                 { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
@@ -412,7 +412,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 }
 // Security Service Card Component
 
-function SecurityServiceCard(...args: any[]): any {
+function SecurityServiceCard(...args: unknown[]): unknown {
 import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Search,
@@ -462,7 +462,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
 
-  const getPricingModelIcon = (model: anystring)  => {
+  const getPricingModelIcon = (model: unknownstring)  => {
 
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />;
@@ -472,8 +472,8 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     }
   };
 
-  const getPricingModelText = (model: anystring)  => {
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelText = (model: unknownstring)  => {
+  const getPricingModelLabel = (model: unknownstring)  => {
 
     switch (model) {
       case 'one-time': return 'One-time';
@@ -545,7 +545,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
           <h4 className="font-medium text-sm">Key Features:</h4>
           <ul className="space-y-1">
 
-            {service.features.slice(0, 3).map((feature: anystring, index: number)  => (
+            {service.features.slice(0, 3).map((feature: unknownstring, index: number)  => (
 
               <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-3 w-3 text-green-600" />
@@ -720,7 +720,7 @@ const CybersecurityServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {CYBERSECURITY_SERVICES.map((service)  => (
 
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
@@ -841,7 +841,7 @@ const CybersecurityServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service)  => (
 
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
@@ -903,7 +903,7 @@ const CybersecurityServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-6">
             {securityTechnologies.map((tech, index)  => (
 
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -929,7 +929,7 @@ const CybersecurityServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-6">
             {complianceStandards.map((standard, index)  => (
 
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -955,7 +955,7 @@ const CybersecurityServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-6">
             {threatIntelligence.map((intel, index)  => (
 
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">

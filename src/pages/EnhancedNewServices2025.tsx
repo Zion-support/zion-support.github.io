@@ -167,7 +167,7 @@ import { Brain,
   Package
  } from 'lucide-react.ts';
 
-export function EnhancedNewServices2025(...args: any[]): any {
+export function EnhancedNewServices2025(...args: unknown[]): unknown {
   const newServices = [
     {
       id: 'agent-ops-monitor',
@@ -751,7 +751,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"></div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {newServices
                 .filter(service  => service.category === category)
                 .map((service, index) => (

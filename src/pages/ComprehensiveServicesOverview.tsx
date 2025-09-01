@@ -31,7 +31,7 @@ import { Brain,
   Sparkles
  } from 'lucide-react.ts';
   };
-  const getServicePrice = (service: any)  => {
+  const getServicePrice = (service: unknown)  => {
     if (typeof service.price === 'number') {
       return service.price;
     }

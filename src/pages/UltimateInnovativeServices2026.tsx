@@ -229,7 +229,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="text-zion-slate-300">Sort by: any</span>
+            <span className="text-zion-slate-300">Sort by: unknown</span>
             {sortOptions.map(option  => (
               <button
                 key={option.id}

@@ -151,7 +151,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     URL.revokeObjectURL(url);
   };
 
-  const getStatusIcon = (status: anystring)  => {
+  const getStatusIcon = (status: unknownstring)  => {
     switch (status) {
       case 'working':
         return <CheckCircle className="w-4 h-4 text-green-500" />;
@@ -166,7 +166,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: unknownstring)  => {
     switch (status) {
       case 'working':
         return 'text-green-600 bg-green-100';
@@ -343,7 +343,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                     </div>
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>
                     {page.links.length > 0 && (
-                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-2">
                         {page.links.slice(0, 6).map((link, linkIndex)  => (
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}

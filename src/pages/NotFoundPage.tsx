@@ -10,7 +10,7 @@ import { Home,
   Cpu
  } from 'lucide-react.ts';
 
-export function NotFoundPage(...args: any[]): any {
+export function NotFoundPage(...args: unknown[]): unknown {
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },
@@ -57,7 +57,7 @@ export function NotFoundPage(...args: any[]): any {
           {/* Popular Pages */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Popular Pages</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-5 gap-4">
               {popularPages.map((page, index)  => (
                 <motion.div
                   key={page.name}

@@ -182,7 +182,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -222,7 +222,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -293,7 +293,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}

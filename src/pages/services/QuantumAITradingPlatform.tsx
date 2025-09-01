@@ -39,7 +39,7 @@ import { Atom,
   PieChart
  } from 'lucide-react.ts';
 
-export default function QuantumAITradingPlatform(...args: any[]): any {
+export default function QuantumAITradingPlatform(...args: unknown[]): unknown {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -334,7 +334,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">
                   {features.map((feature, index)  => (
                     <motion.div
                       key={index}

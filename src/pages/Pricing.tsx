@@ -100,7 +100,7 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: unknown;
   cta: string;
   ctaLink: string;
 }

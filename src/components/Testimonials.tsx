@@ -19,7 +19,7 @@ interface TestimonialsProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Testimonials(...args: any[]): any {
+export function Testimonials(...args: unknown[]): unknown {
   return (
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +42,7 @@ export function Testimonials(...args: any[]): any {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
           {testimonials.map((testimonial, index)  => (
             <motion.div
               key={testimonial.author}

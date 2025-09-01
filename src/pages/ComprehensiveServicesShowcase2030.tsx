@@ -10,7 +10,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {;
-    let services: any[] = [];
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -37,7 +37,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     return services};
 
   const getCategories = () => {;
-    let services: any[] = [];
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
