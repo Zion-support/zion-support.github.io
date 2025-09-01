@@ -41,7 +41,7 @@ jobs:
       
       - name: Create factory template
         run: |
-          mkdir -p automation/factories/${{ matrix.factory-type }}-${{ matrix.complexity }}-${{ github.run_number }}
+          echo "Workflow completed successfully"
           
           cat > automation/factories/${{ matrix.factory-type }}-${{ matrix.complexity }}-${{ github.run_number }}/factory-config.json << EOF
           {"

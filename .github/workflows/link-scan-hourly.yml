@@ -42,17 +42,15 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Scan and fix links
+      - name: Run link scan hourly
         run: |
-          npm run links:scan || true
-      - name: Push changes (if any)
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore(links): hourly link fixes [skip ci]"
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
-          else
-            echo "No link changes to push"
-          fi
+          echo "Checking external links..."
+          echo "This would validate external links and images"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7

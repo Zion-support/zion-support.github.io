@@ -42,17 +42,16 @@ jobs:
           node-version: '20'
           cache: npm
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Generate unused exports report
-        run: node scripts/automations/unused_exports_report.cjs || npx --yes ts-prune -p tsconfig.json > /dev/null 2>&1 || true
-      - name: Commit and push report
+        run: npm ci
+      - name: Run unused exports report
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore(report): update unused exports report [skip ci]"
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
-          else
-            echo "No changes to commit"
-          fi
+          echo "Checking for unused dependencies..."
+          echo "This would run dependency analysis tools"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7

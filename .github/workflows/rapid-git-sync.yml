@@ -41,11 +41,17 @@ jobs:
         with:
           node-version: 20
           cache: npm
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+      - name: Install dependencies
+        run: npm ci
+      - name: Run rapid git sync
+        run: |
+          echo "Syncing git..."
+          echo "This would handle rapid git synchronization tasks"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7

@@ -1,36 +1,37 @@
-name: WORKFLOW_NAME_PLACEHOLDER
-'on':
-  workflow_dispatch: {}
+---
+name: homepage-auto-advertiser
+
+on:
   schedule:
-  - cron: '*/30 * * * *'
-concurrency:
-  group: workflow-workflow_name_placeholder-${{ github.ref }}
-  cancel-in-progress: true
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   actions: read
+
+concurrency:
+  group: "homepage-auto-advertiser-${{ github.ref }}"
+  cancel-in-progress: true
+
 jobs:
   main:
-    name: Main Job
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run lighthouse live
+      - name: Run homepage auto advertiser
         run: |
-          echo "Running Lighthouse audit..."
-          echo "This would run Lighthouse performance audits"
+          echo "Updating homepage..."
+          echo "This would handle homepage automation and updates"
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

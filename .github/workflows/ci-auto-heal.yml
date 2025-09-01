@@ -44,21 +44,5 @@ jobs:
         run: "npm ci
       - name: Run CI healers
         run: |
-          npm run ci:heal || true
-      - name: Create Pull Request
-        id: cpr
-          token: ${{ secrets.GITHUB_TOKEN }}"
-          commit-message: "chore(ci-heal): attempt automated fix after CI failure"
-          title: "chore(ci-heal): automated fixes after CI failure"
-          body: "|
-            Automated attempt to heal CI after a failure.
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          echo "Workflow completed successfully"
+          

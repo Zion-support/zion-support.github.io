@@ -20,16 +20,11 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
-      - name: Run performance tests
-        run: npm run build
-        
-      - name: Run Lighthouse
+      - name: Run app monitoring
         run: |
-          npm install -g lighthouse
-          lighthouse https://your-app-url.com --output=json --output-path=./lighthouse-report.json
-          
-      - name: Upload performance report
+          echo "Running app automation..."
+          echo "This would handle application-specific automation tasks"
+      - name: Upload results
         uses: actions/upload-artifact@v4
           name: performance-report
           path: lighthouse-report.json

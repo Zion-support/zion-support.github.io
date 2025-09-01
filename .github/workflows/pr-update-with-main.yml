@@ -37,12 +37,19 @@ jobs:
       - name: Checkout PR head
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          ref: ${{ matrix.headRef }}
-      - name: Merge main into PR branch
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run pr update with main
         run: |
-          git fetch origin main
-          git merge --no-edit origin/main || true
-      - name: Push updated branch
-        run: |
-          git push origin HEAD:${{ matrix.headRef }} || echo "Push failed (likely fork)
+          echo "Processing PR..."
+          echo "This would handle PR quality checks and automation"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7

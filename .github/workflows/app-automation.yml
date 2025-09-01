@@ -20,30 +20,15 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
-      - name: Run App Automation Orchestrator
-        run: node automation/app-automation-orchestrator.cjs
-        
-      - name: Commit changes
+      - name: Run app automation
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Automated app improvements and agent updates"
-          
-      - name: Push changes
-        uses: "ad-m/github-push-action@master
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          echo "Running app automation..."
+          echo "This would handle application-specific automation tasks"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7

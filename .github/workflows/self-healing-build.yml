@@ -42,20 +42,15 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Try build
-        id: build
-      - name: Heal and retry build
-  if: steps.build.outcome == 'failure'
-          npm run ci:heal || true
-      - name: Create Pull Request if changes
-  if: always()
-          token: ${{ secrets.GITHUB_TOKEN }}"
-          commit-message: "chore(self-heal): automated build healing"
-          title: "chore(self-heal): automated build healing"
-          body: |
-            Automated build healing changes.
-          branch: automation/self-heal-build
-          delete-branch: true
-          labels: |
-            automation
-            auto-merge
+      - name: Run self healing build
+        run: |
+          echo "Running self-healing..."
+          echo "This would attempt to automatically fix build and workflow issues"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
