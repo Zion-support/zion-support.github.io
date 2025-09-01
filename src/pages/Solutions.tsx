@@ -27,30 +27,11 @@ import { Link } from 'react-router-dom';
 import {
 
   Brain,
-  Shield,
   Cloud,
-  TrendingUp,
-  Zap,
-  Globe,
   Cpu,
   Database,
-  Network,
   Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Star,
+  Zap,
   Target,
   Award,
   Clock,
@@ -323,7 +304,21 @@ const featuredSolutions = [
   };
 ];
 
-  const industrySolutions = [
+  const solutions = [
+    // Enterprise Solutions
+    {
+      id: 'enterprise-digital-transformation',
+      title: 'Enterprise Digital Transformation',
+      description: 'Comprehensive digital transformation strategy and implementation for large organizations.',
+      industry: 'enterprise',
+      challenges: ['Legacy system modernization', 'Process automation', 'Data silo integration', 'Change management'],
+      solutions: ['AI-powered workflow automation', 'Cloud migration strategy', 'Data governance framework', 'Employee training programs'],
+      benefits: ['30% operational efficiency improvement', 'Reduced IT costs by 25%', 'Improved customer experience', 'Faster time to market'],
+      technologies: ['AI/ML', 'Cloud Computing', 'Data Analytics', 'IoT', 'Blockchain'],
+      icon: Building2,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/solutions/enterprise-digital-transformation'
+    },
     {
 '
       title: 'Enterprise Solutions',
@@ -346,6 +341,8 @@ const featuredSolutions = [
       ],'
       href: '/solutions/enterprise'
     },
+
+    // Healthcare Solutions
     {
 '
       title: 'Healthcare Solutions',
@@ -390,6 +387,8 @@ const featuredSolutions = [
       ],'
       href: '/solutions/financial'
     },
+
+    // Financial Services Solutions
     {
 '
       title: 'Manufacturing Solutions',
@@ -434,6 +433,8 @@ const featuredSolutions = [
       ],'
       href: '/solutions/government'
     },
+
+    // Manufacturing Solutions
     {
 '
       title: 'Education Solutions',
@@ -458,7 +459,7 @@ const featuredSolutions = [
     }
   ];
 
-  const technologySolutions = [
+    // Retail & E-commerce Solutions
     {
 '
       title: 'AI & Machine Learning',
@@ -489,6 +490,8 @@ const featuredSolutions = [
         'Edge Computing'
       ]
     },
+
+    // Education Solutions
     {
 '
       title: 'Cybersecurity',
@@ -504,6 +507,8 @@ const featuredSolutions = [
         'Incident Response'
       ]
     },
+
+    // Government Solutions
     {
 '
       title: 'Quantum Computing',
@@ -521,12 +526,9 @@ const featuredSolutions = [
     }
   ];
 
-  const filteredSolutions = featuredSolutions.filter (solution => {;
-    const matchesSearch = solution.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         solution.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
-    
-    return matchesCategory && matchesSearch;
-  }) ;
+  const filteredSolutions = activeIndustry === 'all' 
+    ? solutions 
+    : solutions.filter(solution => solution.industry === activeIndustry);
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -828,7 +830,7 @@ const featuredSolutions = [
                 to="/case-studies""
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
               >
-                View Case Studies
+                Get Custom Quote
               </Link>
             </div>
           </div>
@@ -1151,6 +1153,7 @@ const featuredSolutions = [
     </div>;) ;
 }
       </div>
-    </>) ;
+    </div>
+  );
 }
 '"`

@@ -12,8 +12,19 @@ import {
   Mail,
   MapPin,
   ExternalLink,
-  Zap,
-  Shield,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  DollarSign,
+  Clock,
+  Award,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
   Cpu,
   Brain'
 } from 'lucide-react';'
@@ -41,6 +52,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
 
       filtered = filtered.filter(service => service.serviceName === selectedService);
     }
+  };
 
     return filtered;
   }, [selectedService]);
@@ -104,9 +116,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                 <div className="text-3xl font-bold text-purple-400 mb-2">{ALL_PRICING_GUIDES_2026.length}</div>"
                 <div className="text-zinc-400">Services Available</div>
               </div>
-            </motion.div>
-          </div>
-        </section>
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">8-12</div>
+                <div className="text-gray-300">Weeks Delivery</div>
+              </div>
+            </div>
 
         {/* Filters Section */}"
         <section className="py-8">;"
@@ -127,6 +141,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                       </option>) ) }
                   </select>
                 </div>
+              </div>
 
                 {/* Tier Filter */}
                 <div>"
@@ -219,8 +234,19 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                         </div>
                       ))}
                     </div>
-                  </div>;
-                </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-300">ROI:</span>
+                      <span className="text-green-400 font-semibold">{service.roi}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-300">Delivery:</span>
+                      <span className="text-white font-semibold">{service.estimatedDelivery}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-300">Support:</span>
+                      <span className="text-white font-semibold capitalize">{service.supportLevel}</span>
+                    </div>
+                  </div>
 
                 {/* Pricing Tiers */}"
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
@@ -298,7 +324,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                               {audience}
                             </span>) ) }
                         </div>
-                      </div>;
 
                       {/* Key Metrics */}"
                       <div className="space-y-3 mb-6">;"
@@ -363,6 +388,42 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                       <div className="text-zinc-400">Referral Program</div>
                     </div>
                   </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Pricing Comparison Section */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Pricing Tiers Comparison
+            </h2>
+            <p className="text-xl text-gray-300">
+              Choose the right pricing tier for your business needs and budget
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {priceRanges.slice(1).map((range, index) => (
+              <motion.div
+                key={range.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">{range.label.split(' ')[0]}</h3>
+                <div className="text-3xl font-bold text-purple-400 mb-2">
+                  {range.min === 1000 ? '$1K' : range.min === 3000 ? '$3K' : range.min === 6000 ? '$6K' : '$10K+'}
                 </div>
               </motion.div>) ) }
           </div>
@@ -404,11 +465,32 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
-            </motion.div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span>Custom Integration</span>
+                  </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span>Training & Onboarding</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Pricing Comparison Section */}
+      <section className="px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Pricing Comparison
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Compare our services across different categories and find the perfect solution for your business needs
+            </p>
           </div>
-        </section>
 
         {/* Contact CTA Section */}"
         <section className="py-16">;"

@@ -519,6 +519,9 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                     Zion Tech Group
                   </h1>
                 </div>
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
               </Link>
             </div>
             
@@ -722,10 +725,16 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   )}
                 </button>
               </form>
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
-
+              {/* Notifications */}
+              <button className="relative p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                <Bell className="w-5 h-5" />
+                <span className="absolute top-1 right-1 w-2 h-2 bg-zion-cyan rounded-full"></span>
+              </button>
+              {/* User Menu */}
+              <button className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                <User className="w-5 h-5" />
+                <span className="text-sm font-medium">Account</span>
+              </button>
               {/* CTA Button */}
               <Link"
                 to="/contact""
@@ -736,7 +745,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
             </div>
           </div>
         </div>
-
         {/* Mobile menu */}
         {mobileMenuOpen && ("
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-700">"
@@ -821,11 +829,142 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   Get Started
                 </Link>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>;
-    </>
+            )}
+
+            {activeDropdown === 'Resources' && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {resources.map((resource) => (
+                  <Link
+                    key={resource.name}
+                    to={resource.href}
+                    className="group p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
+                    onClick={closeAllDropdowns}
+                  >
+                    <div className="flex items-center space-x-3 mb-3">
+                      <resource.icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300" />
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">
+                        {resource.name}
+                      </h3>
+                    </div>
+                    <p className="text-slate-300 text-sm">{resource.description}</p>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {/* Mobile Search */}
+            <div className="px-3 py-2">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services, solutions..."
+                  className="w-full bg-slate-800/50 border border-slate-600 rounded-lg pl-10 pr-4 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <Search className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-2 top-2.5 bg-cyan-500 hover:bg-cyan-600 text-white p-1 rounded-md transition-colors duration-200 disabled:opacity-50"
+                >
+                  {isSearching ? (
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <ArrowRight className="w-4 h-4" />
+                  )}
+                </button>
+              </form>
+            </div>
+
+            {/* Mobile Navigation */}
+            {navigation.map((item) => (
+              <div key={item.name}>
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      onClick={() => {
+                        if (activeDropdown === item.name) {
+                          setActiveDropdown(null);
+                        } else {
+                          setActiveDropdown(item.name);
+                        }
+                      }}
+                      className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md"
+                    >
+                      {item.name}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className="pl-4 space-y-1">
+                        {item.name === 'Services' && services.slice(0, 6).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-md"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                        {item.name === 'Solutions' && solutions.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            to={solution.href}
+                            className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-md"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {solution.name}
+                          </Link>
+                        ))}
+                        {item.name === 'Resources' && resources.map((resource) => (
+                          <Link
+                            key={resource.name}
+                            to={resource.href}
+                            className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800 rounded-md"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {resource.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+
+            {/* Mobile CTA */}
+            <div className="px-3 py-2">
+              <Link
+                to="/contact"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
 '"`

@@ -10,12 +10,16 @@ import {
   CheckCircle} from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  fcpScore: 'good' | 'needs-improvement' | 'poor';
+  lcpScore: 'good' | 'needs-improvement' | 'poor';
+  fidScore: 'good' | 'needs-improvement' | 'poor';
+  clsScore: 'good' | 'needs-improvement' | 'poor';
+  ttfbScore: 'good' | 'needs-improvement' | 'poor';
 }
 
 interface PerformanceMonitorProps {
@@ -150,7 +154,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });'
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Observe LCP
+  const generatePerformanceTips = (currentMetrics: PerformanceMetrics) => {
+    const tips: string[] = [];
 
       const lcpObserver = new PerformanceObserver(list => {
 
@@ -182,7 +187,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });'
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Observe CLS
+    if (tips.length === 0) {
+      tips.push('Great performance! Keep monitoring for any regressions');
+    }
 
       const clsObserver = new PerformanceObserver(list => {
 
@@ -194,6 +201,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             clsValue += (entry as any).value;
           }
         }
+      });
 
         setMetrics(prev => (prev ? { ...prev, cls: clsValue } : null));
       });'

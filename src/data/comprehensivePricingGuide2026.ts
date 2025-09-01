@@ -7,18 +7,20 @@ export interface PricingTier {
   currency: string;
   billing: string;
   features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  roi: string;
-  setupTime: string;
-  supportLevel: string;
-  innovationLevel: string;
+  bestFor: string;
+  popular?: boolean;
+};
 
-}
-;
-export interface ServicePricing {
+export type PricingCategory = {
+  name: string;
+  description: string;
+  tiers: PricingTier[];
+  marketSize: string;
+  averageROI: string;
+  implementationTime: string;
+};
 
-  id: string;
+export type PricingBenefit = {
   title: string;
   description: string;
   category: string;
@@ -190,7 +192,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],"
     scalabilityFeatures: ["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"]
   },
-
   {
 "
     id: "quantum-cybersecurity-suite-2026","
@@ -464,7 +465,6 @@ export const PRICING_SUMMARY_2026 = {
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;"
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"];
   },
-
   {
 "
     id: "autonomous-supply-chain-platform-2026","
@@ -605,7 +605,6 @@ export const PRICING_SUMMARY_2026 = {
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],;"
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"];
   },
-
   {
 "
     id: "quantum-financial-trading-platform-2026","
@@ -746,7 +745,6 @@ export const PRICING_SUMMARY_2026 = {
     complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],;"
     scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"];
   },
-
   {
 "
     id: "autonomous-healthcare-diagnostics-2026","

@@ -18,38 +18,24 @@ pricing: {
 };
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
+  tags: string[];
+  contactInfo: AIServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  implementationTime: string;
   technologies: string[];
-  integrations: string[];
-  support: string[];
-  website: string;
-  contactEmail: string;
-  phone: string;
-  address: string;
-  rating: number;
-  reviewCount: number;
+  freeConsultation: boolean;
+  trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-  competitors: string[];
-  aiCapabilities: string[];
-  sustainabilityScore: number;
-  complianceStandards: string[];
-  deploymentOptions: string[];
-  apiAccess: boolean;
-  customDevelopment: boolean;
-  trainingIncluded: boolean;
-  freeTrial: boolean;
-  moneyBackGuarantee: boolean;
-  sla: string;
-  responseTime: string;
-  availability: string;
-  location: string;
-  tags: string[];
-  image: string;
-  createdAt: string;
-  featured: boolean;
-  trending: boolean}
+  growthRate: string;
+  useCases: string[];
+  compliance: string[];
+  supportLevel: string;
+  accuracy: string;
+}
 
 // Zion Tech Group Contact Information;
 const zionContact = {
@@ -70,8 +56,9 @@ const zionContact = {
 
 
 };
-;
-export const innovativeAIServices2030: AIService[] = [
+
+// Innovative AI Services 2030
+export const innovativeAIServices2030: InnovativeAIService[] = [
   {
 "
     id: "ai-voice-cloning-platform","
@@ -167,7 +154,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-code-review-assistant","
@@ -263,7 +249,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-customer-sentiment-analyzer","
@@ -359,7 +344,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-predictive-inventory-management","
@@ -455,7 +439,6 @@ export const innovativeAIServices2030: AIService[] = [
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-personalized-learning-platform","

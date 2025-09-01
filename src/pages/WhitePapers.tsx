@@ -5,17 +5,20 @@ import {
   Download,
   Search,
   Filter,
-  Calendar,
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Target,
+  TrendingUp as TrendingUpIcon,
+  ArrowRight,
   Clock,
   Users,
-  Star,
-  Eye,
-  ArrowRight,
-  BookOpen,
+  Award,
+  CheckCircle,
   Brain,
-  Cloud,
   Shield,
-  Database,
+  Cloud,
+  Rocket,
   Zap,
   Globe,
   Target,
@@ -195,7 +198,16 @@ export default function WhitePapers() {
       language: 'English'},
   ];
 
-  const featuredInsights = [
+  const filteredWhitePapers = whitePapers.filter(paper => {
+    const matchesCategory = selectedCategory === 'All' || paper.category === selectedCategory;
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.author.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesIndustry && matchesSearch;
+  });
+
+  const stats = [
     {
 '
       title: 'AI Adoption Trends 2025',
@@ -539,8 +551,9 @@ export default function WhitePapers() {
               Subscribe
             </button>
           </div>
-        </div>
+        </section>
       </div>
-    </div>) ;
+    </>
+  );
 }
 '"`

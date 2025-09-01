@@ -23,6 +23,8 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+  showDetails: boolean;
+}
 
   errorId: string;
   showDetails: boolean;
@@ -64,8 +66,30 @@ class ErrorBoundary extends Component<Props, State> {
       // console.error('Error caught by boundary:', error, errorInfo);
     }
 
-    // In production, you would send this to your error reporting service
-    // Example: Sentry.captureException (error, { extra: errorInfo }) ;
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log to external error reporting service (e.g., Sentry)
+    this.logErrorToService(error, errorInfo);
+  }
+
+  private logErrorToService(error: Error, errorInfo: ErrorInfo) {
+    try {
+      // Example: Log to Sentry or other error reporting service
+      if (typeof window !== 'undefined' && (window as any).Sentry) {
+        (window as any).Sentry.captureException(error, {
+          contexts: {
+            react: {
+              componentStack: errorInfo.componentStack
+            }
+          }
+        });
+      }
+    } catch (logError) {
+      console.error('Failed to log error to service:', logError);
+    }
   }
 
   handleRetry = () => {
@@ -104,8 +128,28 @@ class ErrorBoundary extends Component<Props, State> {
     alert('Error report copied to clipboard. Please send this to support.');
   };
 
-  toggleDetails = () => {
-    this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
+  private copyErrorToClipboard = () => {
+    if (this.state.error && this.state.errorInfo) {
+      const errorText = `
+Error: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo.componentStack}
+      `.trim();
+
+      navigator.clipboard.writeText(errorText).then(() => {
+        // Show success message
+        alert('Error details copied to clipboard');
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = errorText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('Error details copied to clipboard');
+      });
+    }
   };
 
   render () {

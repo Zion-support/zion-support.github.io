@@ -324,6 +324,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       />
                     </div>
                   </div>
+                </div>
 
                   <div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -426,6 +427,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <option value="20+">20+ people</option>
                     </select>
                   </div>
+                </div>
 
                   {/* Services of Interest */}
                   <div>"
@@ -471,6 +473,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       placeholder="Tell us about your specific needs, challenges, or questions..."
                     />
                   </div>
+                </div>
 
                   <button"
                     type="submit"
@@ -575,6 +578,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </div>
+              </div>
 
                 {/* Demo Benefits */}"
                 <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 p-6">;"
@@ -590,12 +594,80 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <li>• ROI projections</li>
                   </ul>
                 </div>
-              </motion.div>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Zion Tech Group</h4>
+              <p className="text-gray-400 mb-4">
+                Leading provider of AI, infrastructure, and emerging technology solutions.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Facebook className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/ai-services" className="hover:text-white transition-colors">AI Services</Link></li>
+                <li><Link to="/it-services" className="hover:text-white transition-colors">IT Services</Link></li>
+                <li><Link to="/micro-saas" className="hover:text-white transition-colors">Micro SaaS</Link></li>
+                <li><Link to="/services" className="hover:text-white transition-colors">All Services</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to="/team" className="hover:text-white transition-colors">Our Team</Link></li>
+                <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+              <div className="space-y-2 text-gray-400">
+                <div className="flex items-center gap-2">
+                  <PhoneIcon className="w-4 h-4" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MailIcon className="w-4 h-4" />
+                  <span>info@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPinIcon className="w-4 h-4" />
+                  <span>123 Tech Street, Innovation City</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default ScheduleDemo;}}}}'"

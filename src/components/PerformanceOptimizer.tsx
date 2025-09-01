@@ -11,18 +11,26 @@ import {
   Settings} from 'lucide-react';
 
 interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  speedIndex: number;
+}
 
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-  score: number; // Overall performance score
-
+interface ResourceMetrics {
+  totalResources: number;
+  totalSize: number;
+  images: number;
+  scripts: number;
+  stylesheets: number;
+  fonts: number;
 }
 
 interface OptimizationSuggestion {
-
   id: string;
   title: string;
   description: string;'
@@ -106,6 +114,32 @@ const PerformanceOptimizer: React.FC = () => {
       score: 0};
 
     // Calculate performance score
+    calculatePerformanceScore(initialMetrics, resourceMetrics);
+
+    // Continuous monitoring
+    intervalRef.current = setInterval(() => {
+      updateResourceMetrics();
+    }, 5000);
+  }, []);
+
+  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
+    setMetrics(prev => prev ? { ...prev, ...newMetrics } : null);
+  }, []);
+
+  const updateResourceMetrics = useCallback(() => {
+    const resources = performance.getEntriesByType('resource');
+    const newResourceMetrics: ResourceMetrics = {
+      totalResources: resources.length,
+      totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
+      images: resources.filter(r => r.initiatorType === 'img').length,
+      scripts: resources.filter(r => r.initiatorType === 'script').length,
+      stylesheets: resources.filter(r => r.initiatorType === 'link').length,
+      fonts: resources.filter(r => r.initiatorType === 'font').length
+    };
+    setResourceMetrics(newResourceMetrics);
+  }, []);
+
+  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics, resources: ResourceMetrics) => {
     let score = 100;
     if (newMetrics.fcp > 1800) score -= 20;
     if (newMetrics.lcp > 2500) score -= 25;
@@ -124,7 +158,6 @@ const PerformanceOptimizer: React.FC = () => {
       const interval = setInterval(measurePerformance, 5000);
       return () => clearInterval(interval);
     }
-  }, [isMonitoring, measurePerformance]) ;
 
   const getScoreColor = (score: number) => {
 '

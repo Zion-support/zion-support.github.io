@@ -21,9 +21,8 @@ interface AccessibilitySettings {
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
+  focusIndicators: boolean;
   zoomLevel: number;
 
   const [isVisible, setIsVisible] = useState (false) ;
@@ -34,7 +33,6 @@ interface AccessibilitySettings {
     largeText: false,
     reducedMotion: false,
     screenReader: false,
-
     keyboardNavigation: false,
     focusIndicator: true,
     zoomLevel: 100});
@@ -75,8 +73,12 @@ interface AccessibilitySettings {
         document.documentElement.classList.remove('reduced-motion');
       }
 
-      // Apply zoom level
-      document.documentElement.style.fontSize = `${updatedSettings.zoomLevel}%`;
+    // Color blindness simulation
+    if (newSettings.colorBlindness !== 'none') {
+      root.classList.add(`color-blind-${newSettings.colorBlindness}`);
+    } else {
+      root.classList.remove('color-blind-protanopia', 'color-blind-deuteranopia', 'color-blind-tritanopia');
+    }
 
       // Store settings in localStorage
       localStorage.setItem('
@@ -97,11 +99,28 @@ interface AccessibilitySettings {
       setSettings(parsedSettings);
       applySettings(parsedSettings);
     }
-  }, [applySettings]) ;
+  }, [enabled, applySettings]);
 
-  // Enhanced keyboard navigation
-  useEffect ( () => {
-    if (!settings.keyboardNavigation) return;
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    if (!settings.screenReader) return;
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }, [settings.screenReader]);
+
+  // Keyboard navigation enhancement
+  useEffect(() => {
+    if (!enabled || !settings.keyboardNavigation) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
 
@@ -242,8 +261,8 @@ interface AccessibilitySettings {
     <>
       {/* Accessibility Toggle Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        onClick={() => setIsVisible(!isVisible)}
+        className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsVisible(!isVisible)}"
@@ -421,6 +440,13 @@ interface AccessibilitySettings {
                     />
                   </button>
                 </div>
+                <button
+                  onClick={() => applySettings({ ...settings, zoomLevel: 100 })}
+                  className="flex items-center space-x-2 text-zion-purple/60 hover:text-zion-purple text-xs transition-colors"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  <span>Reset to 100%</span>
+                </button>
               </div>
 
               {/* Zoom Controls */}"
@@ -450,6 +476,32 @@ interface AccessibilitySettings {
                     </button>
                   </div>
                 </div>
+                
+                {accessibilityIssues.length > 0 && (
+                  <div className="space-y-2">
+                    <h5 className="text-zion-purple/80 text-xs font-medium">Issues Found:</h5>
+                    <div className="space-y-1">
+                      {accessibilityIssues.slice(0, 3).map((issue, index) => (
+                        <div key={index} className="text-white/80 text-xs bg-zion-slate/30 p-2 rounded-lg flex items-start space-x-2">
+                          <AlertTriangle className="w-3 h-3 text-yellow-500 mt-0.5 flex-shrink-0" />
+                          <span>{issue}</span>
+                        </div>
+                      ))}
+                      {accessibilityIssues.length > 3 && (
+                        <div className="text-white/60 text-xs text-center">
+                          +{accessibilityIssues.length - 3} more issues
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                <button
+                  onClick={runAccessibilityAudit}
+                  className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
+                >
+                  Run Accessibility Audit
+                </button>
               </div>
 
               {/* Screen Reader Support */}"
@@ -484,6 +536,7 @@ interface AccessibilitySettings {
                   </button>
                 </div>
               </div>
+            </div>
 
               {/* Current Focus Indicator */}
               {currentFocus && settings.focusIndicator && ("
@@ -498,7 +551,8 @@ interface AccessibilitySettings {
                   </p>
                 </div>) }
             </div>
-          </motion.div>) }
+          </motion.div>
+        )}
       </AnimatePresence>
 
       {/* Screen Reader Only Styles */}`
@@ -511,8 +565,8 @@ interface AccessibilitySettings {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect (0, 0, 0, 0) ;
-          white - space: nowrap;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
           border: 0;
         }
 
@@ -533,7 +587,8 @@ interface AccessibilitySettings {
           transition-duration: 0.01ms !important;
         }`
       `}</style>
-    </>) ;
+    </>
+  );
 };
 
 export default EnhancedAccessibilityEnhancer;

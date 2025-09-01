@@ -8,29 +8,21 @@ import {
   Shield,
   Cloud,
   Rocket,
-  Heart,
   Zap,
-  Globe,
+  ArrowRight,
+  CheckCircle,
   Star,
   TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Award,
-  Clock,
+  Users,
   Target,
-  BarChart3,
-  Cpu,
+  Globe,
   Lock,
-  ShoppingCart,
+  Cpu,
+  Heart,
+  Atom,
   MessageCircle,
   BookOpen,
-  Settings,
-  Palette,
-  Database,
+  Workflow,
   Network,
   Smartphone,
   Monitor,
@@ -275,6 +267,7 @@ export default function ServicesOverview() {
         service => service.category === selectedCategory
       );
     }
+  };
 
     // Filter by price range'
     if (priceRange !== 'all') {
@@ -458,8 +451,17 @@ export default function ServicesOverview() {
                     </div>
                   </div>
                 </div>
-              </motion.div>) ) }
-          </div>
+                <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-400 mb-3 line-clamp-2">{category.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-cyan-400 font-medium">{category.count} Services</span>
+                  {selectedCategory === category.id && (
+                    <CheckCircle className="w-5 h-5 text-cyan-400" />
+                  )}
+                </div>
+              </motion.button>
+            );
+          })}
         </div>
       </section>
 
@@ -655,6 +657,7 @@ export default function ServicesOverview() {
                         </div>
                       </div>
                     </div>
+                  </div>
 
                     {/* CTA Button */}"
                     <div className="flex space-x-3">
@@ -672,6 +675,7 @@ export default function ServicesOverview() {
                         <Phone className="w-4 h-4" />
                       </a>
                     </div>
+                  </div>
 
                     {/* Additional Info */}"
                     <div className="mt-4 pt-4 border-t border-white/20">"
@@ -888,8 +892,24 @@ export default function ServicesOverview() {
                   Call Now
                 </a>
               </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Emerging Tech</h3>
+                <p className="text-gray-400">Next-generation technologies for the future</p>
+              </div>
             </div>
-          </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Emerging Tech').map(service => (
+                <div key={service.id} className="bg-slate-700/50 rounded-lg p-4">
+                  <h4 className="font-semibold text-white mb-2">{service.title}</h4>
+                  <p className="text-sm text-gray-400 mb-3 line-clamp-2">{service.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-400 font-medium">${service.price.toLocaleString()}</span>
+                    <span className="text-xs text-gray-500">{service.innovationLevel}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>

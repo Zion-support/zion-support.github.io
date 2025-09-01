@@ -89,10 +89,55 @@
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "sales",
-          "email": "info@ziontechgroup.com"
+          "email": "info@ziontechgroup.com",
+          "availableLanguage": "English"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.7128",
+            "longitude": "-74.0060"
+          },
+          "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Technology Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Solutions",
+                "description": "Machine learning, natural language processing, computer vision"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Quantum Computing",
+                "description": "Quantum algorithms, optimization, cryptography"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cybersecurity",
+                "description": "Advanced security solutions and compliance"
+              }
+            }
+          ]
         }
       }
     </script>
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -103,12 +148,21 @@
           "@type": "SearchAction",
           "target": "https://ziontechgroup.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
         }
       }
     </script>
   </head>
   <body class="antialiased">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; background: #f0f0f0; color: #333;">
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this application. Zion Tech Group requires JavaScript for the best user experience.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 

@@ -16,10 +16,9 @@ import {
   Pinch,
   Rotate,
   X,
-  Menu,
-  Home,
-  Search,
-  User,
+  CheckCircle,
+  AlertTriangle,
+  Info,
   Settings,
   ArrowUp,
   ArrowDown,
@@ -37,12 +36,9 @@ interface TouchGesture {
 }
 
 interface MobileExperienceEnhancerProps {
-  // Add your props here
-
-
   enabled?: boolean;
-  showGestures?: boolean;
-  enableSwipeNavigation?: boolean;
+  showControls?: boolean;
+}
 
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
 
@@ -82,8 +78,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
 
-    const handleResize = () => {
-      checkDevice () ;
+    const detectOrientation = () => {
+      if (window.innerHeight > window.innerWidth) {
+        setOrientation('portrait');
+      } else {
+        setOrientation('landscape');
+      }
     };
 
     const handleOrientationChange = () => {
@@ -203,9 +203,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         // Log gesture for debugging'
         // console.log('Touch Gesture:', gesture);
       }
-
-      setTouchStart (null) ;
-      setTouchEnd (null) ;
     };
 '
     document.addEventListener('touchstart', handleTouchStart, { passive: false });'
@@ -400,8 +397,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 </div>
               </a>
             </div>
-          </motion.div>) }
-      </AnimatePresence>
 
       {/* Floating Action Button for Mobile */}
       {isMobile && (<motion.button

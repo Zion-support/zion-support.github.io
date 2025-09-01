@@ -47,7 +47,40 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     };
   ];
 
-  const pricingTiers = [
+  const optimizationModules = [
+    {
+      icon: Activity,
+      title: "Demand Forecasting",
+      description: "AI-powered demand prediction using historical data, market trends, and external factors"
+    },
+    {
+      icon: LineChart,
+      title: "Inventory Optimization",
+      description: "Smart inventory management that balances stock levels with demand and reduces carrying costs"
+    },
+    {
+      icon: PieChart,
+      title: "Supplier Performance Analytics",
+      description: "Comprehensive evaluation of supplier performance with predictive scoring and recommendations"
+    },
+    {
+      icon: MapPin,
+      title: "Network Optimization",
+      description: "Optimize warehouse locations, distribution centers, and transportation routes for maximum efficiency"
+    },
+    {
+      icon: BarChart3,
+      title: "Cost Optimization",
+      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement operations"
+    },
+    {
+      icon: Target,
+      title: "Sustainability Optimization",
+      description: "Optimize supply chain operations for environmental impact and sustainability goals"
+    }
+  ];
+
+  const pricingPlans = [
     {
 "
       name: "Starter","
@@ -176,8 +209,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
               </Button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
       {/* Key Benefits */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
@@ -192,9 +224,8 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">{benefit.metric}</div>"
               <p className="text-gray-300">{benefit.description}</p>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        </section>
 
       {/* Features */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"

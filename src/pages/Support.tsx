@@ -156,9 +156,23 @@ const Support = () => {
               Get the help you need with our comprehensive support resources,
               documentation, and expert assistance
             </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for help articles, guides, and solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Search Bar */}"
       <div className="container-responsive py-8">
@@ -216,7 +230,7 @@ const Support = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Tab Content */}"
       <div className="container-responsive pb-16">
@@ -392,10 +406,9 @@ const Support = () => {
                       <span>Access Resource</span>"
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
-                  </Link>
-                </motion.div>) ) }
-            </div>
-          </motion.div>) }
+                  </div>
+                </div>
+              </motion.div>
 
         {/* System Status Tab */}'
         {activeTab === 'status' && (

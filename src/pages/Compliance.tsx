@@ -8,16 +8,6 @@ import {
   FileText,
   Users,
   Globe,
-  Lock,
-  Eye,
-  Database,
-  Clock,
-  AlertTriangle,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
   Zap,
   Brain,
   Cloud,
@@ -140,7 +130,7 @@ import {
       trend: 'stable'},
   ];
 
-  const securityMeasures = [
+  const securityFeatures = [
     {
 '
       category: 'Access Control',
@@ -187,7 +177,7 @@ import {
       icon: Shield},
   ];
 
-  const contactInfo = [
+  const complianceTools = [
     {
 '
       title: 'Compliance Team','
@@ -229,7 +219,21 @@ import {
               across all our services, ensuring your data and operations are
               protected by industry-leading frameworks and best practices.
             </p>
-          </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
+              >
+                Get Compliance Report
+              </Link>
+              <Link
+                to="/services/ai-compliance-copilot"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transition-colors"
+              >
+                Learn About AI Compliance
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -459,7 +463,7 @@ import {
                   </div>
                 </motion.div>) ) }
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>) ;

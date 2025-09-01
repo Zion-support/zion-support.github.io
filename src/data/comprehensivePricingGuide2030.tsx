@@ -1,35 +1,42 @@
-import { ProductListing  } from '@/types/listings';
-import { COMPREHENSIVE_SERVICES_INDEX_2030  } from "./comprehensiveServicesIndex2030";
-
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
-// Complete pricing information for all services with market analysis and ROI projections
-;
+// Complete pricing information for all innovative services
+
 export interface PricingTier {
   name: string;
   price: number;
+  billing: string;
   features: string[];
-  bestFor: string;
-  setupTime: string;
-  support: string
+  recommended: boolean;
+  popular?: boolean;
 }
 ;
 export interface ServicePricing {
   serviceId: string;
   serviceName: string;
   category: string;
-  basePrice: number;
-  pricingTiers: PricingTier[];
-  marketPrice: string;
-  competitors: string[];
+  description: string;
+  pricing: PricingTier[];
+  marketComparison: string;
   roi: string;
   setupTime: string;
-  paymentOptions: string[];
-  volumeDiscounts: string[];
-  enterpriseFeatures: string[]
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
 }
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
-  // AI-Powered Autonomous Research Assistant
+
+// Zion Tech Group Contact Information
+const zionContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
+
+export const comprehensivePricingGuide2030: ServicePricing[] = [
+  // Micro SaaS Services
   {
 "
     serviceId: "ai-autonomous-research-assistant","

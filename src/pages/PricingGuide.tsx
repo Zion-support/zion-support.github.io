@@ -11,21 +11,11 @@ import { SEO } from "../components / SEO";
   Brain, 
   Cloud, 
   Shield, 
+  Rocket, 
   Cpu, 
-  ShoppingCart,
-  MessageCircle,
-  Users,
-  TrendingUp,
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3,
-  Rocket,
-  Leaf,
-  Lock,
-  Heart,
-  Globe,
+  Lock, 
+  Heart, 
+  Globe, 
   Atom,
   Satellite'
 } from 'lucide-react';
@@ -51,7 +41,8 @@ export default function PricingGuide(...args[]):  {
     GBP: { symbol: '£', rate: 0.73 };
   };
 
-  const pricingPlans = [
+export const PricingGuide: React.FC = () => {
+  const pricingTiers = [
     {
 "
       name: "Starter",
@@ -154,7 +145,10 @@ export default function PricingGuide(...args[]):  {
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },"
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
       ]
-    },;
+    }
+  ];
+
+  const addOnServices = [
     {
 "
       category: "IT Infrastructure",
@@ -284,6 +278,7 @@ export default function PricingGuide(...args[]):  {
                       <span className="text-lg text-slate-400 font-normal">'
                         /{selectedPeriod === 'monthly' ? 'month' : 'year'}
                       </span>
+                      <span className="text-slate-400">{tier.period}</span>
                     </div>
                   </div>
 
@@ -295,8 +290,9 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700''
                         : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'`
                     }`}
-
-                    {plan.cta}
+                  >
+                    {tier.cta}
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
 "
@@ -355,7 +351,64 @@ export default function PricingGuide(...args[]):  {
                     </div>
                   ))}
                 </div>
-              </div>) ) }
+                <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
+                <div className="text-cyan-400 font-semibold mb-3">{service.price}</div>
+                <p className="text-sm text-slate-400">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing FAQ */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Get answers to common questions about our pricing and services.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">Do you offer custom pricing?</h3>
+                <p className="text-slate-300">Yes, we provide custom pricing for enterprise clients and specialized requirements. Contact our sales team for a personalized quote.</p>
+              </div>
+              
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">Can I change my plan later?</h3>
+                <p className="text-slate-300">Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.</p>
+              </div>
+              
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">What's included in support?</h3>
+                <p className="text-slate-300">All plans include 24/7 technical support, regular updates, and maintenance. Enterprise plans include dedicated support teams.</p>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">Are there setup fees?</h3>
+                <p className="text-slate-300">Setup fees vary by service complexity. Simple implementations may have no setup fee, while complex solutions may include one-time setup costs.</p>
+              </div>
+              
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">Do you offer discounts?</h3>
+                <p className="text-slate-300">We offer volume discounts for enterprise clients and annual payment discounts. Contact us to learn about available discounts.</p>
+              </div>
+              
+              <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">What payment methods do you accept?</h3>
+                <p className="text-slate-300">We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

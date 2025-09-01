@@ -1,8 +1,10 @@
-module.exports = {
+export default {
   apps: [
     {
-      name: 'lint-fixer',
-      script: 'scripts/pm2/lint-fixer.js',
+      name: 'bolt-zion-app',
+      script: 'npm',
+      args: 'run preview',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,

@@ -4,13 +4,16 @@ import {
 
   Search, 
   BookOpen, 
-  Video, 
-  FileText, 
-  HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 
   Clock, 
+  Users, 
+  Star, 
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  HelpCircle,
   FileText,
   Video,
   Download,
@@ -100,7 +103,27 @@ export default function Help() {
     }
   ];
 
-  const quickLinks = [
+  const faqs = [
+    {
+      question: 'How quickly can I get started with your AI services?',
+      answer: 'Most AI services can be implemented within 2-4 weeks, depending on complexity. We offer rapid deployment options for standard solutions.'
+    },
+    {
+      question: 'What kind of support do you provide?',
+      answer: 'We offer 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.'
+    },
+    {
+      question: 'Can I customize the AI solutions for my specific needs?',
+      answer: 'Absolutely! We specialize in custom AI development and can tailor solutions to your exact business requirements and industry specifications.'
+    },
+    {
+      question: 'What security measures do you have in place?',
+      answer: 'We implement enterprise-grade security including SOC 2 Type II compliance, ISO 27001 certification, and end-to-end encryption for all data.'
+    },
+    {
+      question: 'Do you offer training for my team?',
+      answer: 'Yes, we provide comprehensive training programs, workshops, and ongoing support to ensure your team can effectively use our solutions.'
+    },
     {
 '
       name: 'Live Chat',
@@ -124,12 +147,15 @@ export default function Help() {
     { day: 'Sunday', hours: 'Emergency Support Only', available: false }
   ];
 
-  const filteredCategories = helpCategories.filter (category =>
-    category.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-    category.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-    category.articles.some (article =>
-      article.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-      article.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ;
+  const filteredArticles = helpArticles.filter(article => 
+    selectedCategory === 'all' || article.category === selectedCategory
+  );
+
+  const searchResults = filteredArticles.filter(article =>
+    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
 
   return()
     <div className="min-h-screen bg-slate-900 text-white">
@@ -192,6 +218,25 @@ export default function Help() {
               </motion.a>
             ))}
           </div>
+          
+          {searchResults.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center py-12"
+            >
+              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
+              <p className="text-slate-300 mb-4">Try adjusting your search terms or browse our categories.</p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="px-6 py-2 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-colors"
+              >
+                Clear Search
+              </button>
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -283,7 +328,7 @@ export default function Help() {
             </form>;
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Additional Resources */}"
       <section className="py-16 bg-slate-800/30">;"
@@ -368,7 +413,8 @@ export default function Help() {
                 href="mailto:support@ziontechgroup.com""
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Send Email
+                <Phone className="w-4 h-4" />
+                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>

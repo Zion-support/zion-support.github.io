@@ -114,9 +114,10 @@ export const innovativeServices2026: InnovativeService[] = [
     api: true,
     mobile: true,
     enterprise: true,
-    startup: false,
+    startup: true,
     smb: true
   },
+  // NEW INNOVATIVE MICRO SAAS SERVICES
   {
 '
     id: 'smart-energy-consumption-monitor','
@@ -207,8 +208,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-
-  // AI SOLUTIONS
   {
 '
     id: 'autonomous-customer-service-agent','
@@ -296,7 +295,7 @@ export const innovativeServices2026: InnovativeService[] = [
     api: true,
     mobile: true,
     enterprise: true,
-    startup: false,
+    startup: true,
     smb: true
   },
   {
@@ -345,7 +344,7 @@ export const innovativeServices2026: InnovativeService[] = [
     smb: true
   },
 
-  // IT SERVICES
+  // ADVANCED IT SERVICES
   {
 '
     id: 'cloud-migration-accelerator','
@@ -389,7 +388,7 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: true
+    smb: false
   },
   {
 '
@@ -478,11 +477,11 @@ export const innovativeServices2026: InnovativeService[] = [
     api: false,
     mobile: false,
     enterprise: true,
-    startup: false,
+    startup: true,
     smb: true
   },
 
-  // EMERGING TECHNOLOGIES
+  // EMERGING TECHNOLOGY SOLUTIONS
   {
 '
     id: 'quantum-computing-as-a-service','
@@ -617,9 +616,14 @@ export const innovativeServices2026: InnovativeService[] = [
     enterprise: true,
     startup: true,
     smb: true
-
+  }
 ];
-;
+
+// Combine original services with new services
+const allServices = [...innovativeServices2026, ...newServices];
+
+export default allServices;
+
 export const serviceCategories = [
   {
 '

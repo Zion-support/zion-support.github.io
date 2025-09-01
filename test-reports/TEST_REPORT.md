@@ -3,8 +3,8 @@
 ## Summary
 
 - **Total Test Suites**: 6
-- **Passed**: 4 ✅
-- **Failed**: 2 ❌
+- **Passed**: 5 ✅
+- **Failed**: 1 ❌
 - **Quality Gates**: FAILED ❌
 
 ## Test Results
@@ -20,8 +20,8 @@
 sh: 1: next: not found
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-sh: 1: next: not found
-... |
+Invalid option '--ext' - perhaps you meant '-c'?
+You... |
 | Coverage | ✅ PASS | Coverage generation failed
 ... |
 

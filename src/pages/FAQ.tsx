@@ -203,7 +203,8 @@ export default function FAQ() {
                 {category}
               </button>) ) }
           </div>
-        </motion.div>
+        </div>
+      </section>
 
         {/* FAQ Items */}
         <motion.div
@@ -313,8 +314,9 @@ export default function FAQ() {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>) ;
+        </div>
+      </section>
+    </div>
+  );
 }
 '"`

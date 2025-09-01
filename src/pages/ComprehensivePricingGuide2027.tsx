@@ -3,101 +3,44 @@ import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
 import {
 
-  Brain, 
-  GitFork, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-9e26
+import { Link } from 'react-router-dom';
+import { servicesCatalog } from '@/data/servicesCatalog';
+import { 
+  Check, 
+  Star, 
+  Zap, 
   Shield, 
   Users, 
-  BarChart3, 
-  Eye, 
-  CheckCircle, 
+  Globe, 
   ArrowRight,
-  Play,
-  Clock,
-  TrendingUp,
-  Cpu,
-  Network,
-  Bot,
-  Sparkles,
-  Globe,
-  Activity,
-  Code,
-  Server,
-  Cpu,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  MessageCircle,
-  Search,
-  FileText,
-  Settings,
-  Palette,
-  Zap as ZapIcon2,
   Phone,
   Mail,
   MapPin,
-  DollarSign,
-  Star,
+  ExternalLink,
+  TrendingUp,
   Award,
-  Rocket,
-  Lightbulb,
-  Users,
-  Target as TargetIcon,
-  Users2,
-  Briefcase,
-  Building,
-  Truck,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Atom,
-  Leaf as LeafIcon,
-  Gamepad2 as Gamepad2Icon,
-  Coins as CoinsIcon,
-  Satellite as SatelliteIcon,
-  Key,
-  Fingerprint,
-  AlertTriangle,
-  Zap,
+  Clock,
+  DollarSign,
   Target,
-      GitFork as WorkflowIcon,
-  BookOpen,
-  FileCheck,
-  UserCheck,
-  Globe as GlobeIcon,
+  Rocket,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Network,
+  Monitor,
+  Smartphone,
+  Code,
+  BarChart3,
+  Server,
   Shield as ShieldIcon,
-  Lock as LockIcon,
-  Eye as EyeIcon,
-  BarChart3 as BarChart3Icon,
+  Globe as GlobeIcon,
+  Zap as ZapIcon,
   Users as UsersIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowRight as ArrowRightIcon,
-  Play as PlayIcon,
-  Clock as ClockIcon,
   TrendingUp as TrendingUpIcon,
-  Cpu as CpuIcon,
-  Network as NetworkIcon,
-  Bot as BotIcon,
-  Sparkles as SparklesIcon,
-  Globe as GlobeIcon2,
-  Activity as ActivityIcon,
-  Code as CodeIcon,
-  Server as ServerIcon,
-  Chip as ChipIcon,
-  Wifi as WifiIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Globe2 as Globe2Icon,
-  MessageCircle as MessageCircleIcon,
-  Search as SearchIcon,
-  FileText as FileTextIcon,
-  Settings as SettingsIcon,
-  Palette as PaletteIcon,
-  Zap as ZapIcon3,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  DollarSign as DollarSignIcon,
-  Star as StarIcon,
   Award as AwardIcon,
   Rocket as RocketIcon,
   Lightbulb as LightbulbIcon,
@@ -251,7 +194,7 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
     }
   };
 
-  const enterprisePackages = [
+  const pricingTiers = [
     {
 "
       name: "Starter Enterprise","
@@ -266,6 +209,7 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
         "Compliance reporting","
         "Training & onboarding"
       ],
+      cta: "Start Free Trial",
       popular: false
     },
     {
@@ -283,6 +227,7 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
         "SLA guarantees","
         "Custom development"
       ],
+      cta: "Get Started",
       popular: true
     },
     {
@@ -301,11 +246,12 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
         "Compliance automation","
         "Strategic consulting"
       ],
+      cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const marketComparison = [
+  const enterpriseFeatures = [
     {
 "
       feature: "AI Workflow Automation","
@@ -552,9 +498,10 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
                         : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'`
                     }`}
                   >
-                    Get Started
-                  </motion.button>
-                </motion.div>) ) }
+                    {tier.cta}
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -640,10 +587,28 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </motion.button>
-              </div>
-            </motion.div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* No Results */}
+        {filteredServices.length === 0 && (
+          <div className="text-center py-16">
+            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedPriceRange('all');
+              }}
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              Clear all filters
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Contact Information */}"
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/50">"
@@ -665,9 +630,10 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
             </div>
           </div>
         </section>
-      </div>
-    </div>) ;
-};
+      </main>
+    </>
+  );
+}
 
 export default ComprehensivePricingGuide2027;
 '"`

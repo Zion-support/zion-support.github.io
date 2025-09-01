@@ -9,18 +9,17 @@ import { motion  } from 'framer - motion.ts';
 
   Shield, 
   Cloud, 
+  Database, 
+  Globe, 
   Zap, 
-  Star, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  TrendingUp,
-  Users,
-  Target,
-  Award,
-  Clock,
+  TrendingUp, 
+  Users, 
+  Lock, 
+  Cpu,
+  Smartphone,
+  Building2,
+  Car,
+  Heart,
   DollarSign,
   Search'
 } from 'lucide-react';
@@ -152,7 +151,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Services Grid */}"
       <section className="py-12 px-4 sm:px-6 lg:px-8">;"
@@ -314,7 +313,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
               </button>
             </div>) }
         </div>
-      </section>
+      </div>
 
       {/* Why Choose Zion Tech Group */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;"

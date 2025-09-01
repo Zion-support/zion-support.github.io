@@ -14,25 +14,25 @@
 ### 📦 Dependencies
 
 - **Status**: ✅ Success
-- **Duration**: 2475ms
+- **Duration**: 5563ms
 
 ### 🔍 Linting
 
 - **Status**: ❌ Failed
 - **Duration**: N/A
-- **Issues**: 0 (0 errors, 0 warnings)
+- **Issues**: 1 (0 errors, 1 warnings)
 
 ### 🔍 Type Checking
 
 - **Status**: ❌ Failed
 - **Duration**: N/A
-- **Issues**: 98 (98 errors, 0 warnings)
+- **Issues**: 182 (182 errors, 0 warnings)
 
 ### 🏗️ Build
 
 - **Status**: ✅ Success
-- **Duration**: 28073ms
-- **Build Size**: 2.39 MB
+- **Duration**: 7740ms
+- **Build Size**: 4.40 MB
 
 ### 🧪 Testing
 

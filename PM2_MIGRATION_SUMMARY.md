@@ -79,9 +79,13 @@ The following workflows are still active for specialized tasks:
 - `link-checker.yml` - Link validation
 - `npm-publish.yml` - NPM package publishing
 - `security.yml` - Security scanning
+- `codeql.yml` - Code quality analysis
 - `release.yml` - Release management
+- `npm-publish.yml` - Package publishing
+- `status-badge.yml` - Status badges
+- `agent-factory.yml` - Agent automation
 
-## Usage
+## How to Use PM2 CI/CD
 
 ### Starting PM2
 
@@ -92,45 +96,52 @@ pm2 start ecosystem.config.cjs
 ### Using PM2 Automation
 
 ```bash
-# Development
-npm run pm2:start
-npm run pm2:stop
-npm run pm2:restart
-
-# CI Tasks
-npm run pm2:lint
-npm run pm2:test
-npm run pm2:build
-
-# Full Pipeline
-npm run pm2:ci      # CI pipeline
-npm run pm2:cd      # CD pipeline
+npm run ci:full
 ```
 
 ### Direct Script Usage
 
 ```bash
-./scripts/pm2-automation.sh start
-./scripts/pm2-automation.sh ci
-./scripts/pm2-automation.sh deploy
+npm run quality:full
 ```
 
-## Benefits of Migration
+### Run Tests
+```bash
+npm run test:verify
+```
 
-1. **Local Execution**: All CI/CD tasks run locally instead of on GitHub servers
-2. **Faster Feedback**: No waiting for GitHub Actions to queue and execute
-3. **Cost Savings**: Reduced GitHub Actions minutes usage
-4. **Offline Capability**: Can run automation without internet connection
-5. **Real-time Monitoring**: PM2 provides live status and log monitoring
-6. **Process Management**: Automatic restart on crashes, load balancing capabilities
+### Monitor PM2
+```bash
+pm2 monit          # Monitor processes
+pm2 logs           # View logs
+pm2 status         # Check status
+pm2 restart bolt-app # Restart application
+```
+
+### PM2 Management
+```bash
+pm2 save           # Save current configuration
+pm2 startup        # Configure startup
+pm2 reload         # Reload configuration
+```
+
+## Benefits of PM2 Migration
+
+1. **Local Control**: CI/CD runs locally instead of on GitHub servers
+2. **Faster Execution**: No network latency or queue waiting
+3. **Cost Effective**: No GitHub Actions minutes consumption
+4. **Real-time Monitoring**: Live process monitoring and logging
+5. **Flexible Scheduling**: Can run tasks on custom schedules
+6. **Resource Optimization**: Better resource utilization
+7. **Offline Capability**: Works without internet connection
 
 ## Next Steps
 
-1. **Test All Automation**: Verify all PM2 automation commands work correctly
-2. **Documentation**: Update team documentation with new PM2 workflows
-3. **Training**: Train team members on using PM2 automation
-4. **Monitoring**: Set up PM2 monitoring and alerting if needed
-5. **Optimization**: Fine-tune PM2 configuration based on usage patterns
+1. **Monitor PM2 Performance**: Ensure stable operation
+2. **Customize Schedules**: Set up automated task scheduling
+3. **Add Monitoring**: Implement PM2 monitoring and alerting
+4. **Documentation**: Update team documentation
+5. **Training**: Train team on PM2 usage
 
 ## Files Created/Modified
 

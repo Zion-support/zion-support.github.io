@@ -604,14 +604,93 @@ export default function Home() {
         {/* Micro SaaS Products */}
         <MicroSaaSProducts />
 
-        {/* Testimonials */}
-        <TestimonialsSection />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                    <feature.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <CTASection />
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold text-white mb-6"
+            >
+              Ready to Transform Your Business?
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-gray-300 mb-8"
+            >
+              Get started with our comprehensive AI solutions and take your business to the next level
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link
+                to="/comprehensive-services-showcase-2026"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Explore 2026 Services</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Contact Us</span>
+                <MessageCircle className="w-5 h-5 ml-2" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
 
-        {/* Floating Action Button */}
-        <FloatingActionButton />
+        {/* Additional Sections */}
+        <Suspense fallback={<LoadingFallback message="Loading additional sections..." />}>
+          <TechSolutionsSection />
+          <CaseStudiesSection />
+          <TeamExpertiseSection />
+          <GlobalPresenceSection />
+          <InnovationResearchSection />
+          <ClientSuccessStoriesSection />
+          <TechnologyStackSection />
+          <SecurityComplianceSection />
+          <AIServicesShowcase />
+          <InteractiveTestimonials />
+          <ServicesShowcase />
+          <BenefitsSection />
+          <HowItWorksSection />
+          <NewsletterSection />
+          <FeaturedListingsSection />
+          <FeatureHighlights />
+          <FeatureCTAs />
+          <ITServiceRequestHero />
+          <FloatingCTA />
+          <PricingSection />
+        </Suspense>
       </div>
     </>) ;
 };

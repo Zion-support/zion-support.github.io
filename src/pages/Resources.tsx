@@ -243,7 +243,7 @@ const Resources: React.FC = (): JSX.Element => {;'
     };
   ];
 
-  const additionalResources = [
+  const featuredResources = [
     {
 '
       id: 'api-docs','
@@ -328,13 +328,15 @@ const Resources: React.FC = (): JSX.Element => {;'
                 to="/blog""
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Explore Resources
+                <HelpCircle size={20} />
+                Get Help
               </Link>
               <Link"
                 to="/contact""
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
               >
-                Get Support
+                <FileText size={20} />
+                View Docs
               </Link>
             </div>
           </motion.div>
@@ -608,6 +610,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                 </motion.article>;) }) }
           </div>
         </div>
+      </section>
 
       {/* All Resources Grid */}"
       <section className="py-20">"
@@ -768,7 +771,8 @@ const Resources: React.FC = (): JSX.Element => {;'
                   Access Resource"
                   <ExternalLink className="w-4 h-4" />
                 </Link>
-              </motion.div>) ) }
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

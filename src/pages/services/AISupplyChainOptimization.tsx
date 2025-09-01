@@ -22,20 +22,15 @@ import {
   Play,
   ArrowRight,
   CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  MapPin,
-  Shield,
-  Settings,
+  Play,
+  Star,
   DollarSign,
-  AlertCircle,
-  Calendar,
+  Settings,
+  BarChart3,
+  Target,
+  Clock,
+  Shield,
+  Rocket,
   Package,
   Route,
   Warehouse,
@@ -255,7 +250,7 @@ export default function AISupplyChainOptimization() {
       ]},
   ];
 
-  const keyMetrics = [
+  const useCases = [
     {
 '
       metric: '30%','
@@ -371,7 +366,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {keyMetrics.map((metric, index (
               <motion.div
-                key={metric.metric}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -387,6 +382,8 @@ export default function AISupplyChainOptimization() {
                 <div className="text-sm text-gray-400">
                   {metric.description}
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -406,15 +403,14 @@ export default function AISupplyChainOptimization() {
               Powerful Features
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI capabilities designed to revolutionize your supply
-              chain operations and logistics management.
+              Join industry leaders who have revolutionized their supply chain operations with AI-powered optimization.
             </p>
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature: unknown, index: unknown (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -459,15 +455,14 @@ export default function AISupplyChainOptimization() {
               Optimization Areas
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive optimization across all aspects of your supply chain
-              for maximum efficiency and cost savings.
+              Tailored optimization strategies for different industries with unique supply chain challenges and requirements.
             </p>
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {optimizationAreas.map(category: unknown, index: unknown 
               <motion.div
-                key={category.category}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -508,15 +503,14 @@ export default function AISupplyChainOptimization() {
               Business Benefits
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI-powered supply chain optimization can transform
-              your operations and drive business growth.
+              See how AI Supply Chain Optimization transforms different industries and business operations.
             </p>
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
-                key={benefit.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -562,18 +556,17 @@ export default function AISupplyChainOptimization() {
               Transparent Pricing
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain needs. All plans
-              include a 14-day free trial.
+              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
-                key={plan.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 
@@ -601,6 +594,7 @@ export default function AISupplyChainOptimization() {
                     {plan.price}"
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 "
                 <ul className="space-y-4 mb-8">
@@ -757,7 +751,7 @@ export default function AISupplyChainOptimization() {
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

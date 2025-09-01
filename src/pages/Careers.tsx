@@ -14,10 +14,18 @@ import {
   Rocket,
   ArrowRight,
   CheckCircle,
-  Star,
   Globe,
-  Award,
+  Building,
+  GraduationCap,
+  TrendingUp,
   Lightbulb,
+  Target,
+  Users2,
+  Coffee,
+  Gamepad2,
+  BookOpen,
+  Calendar,
+  MessageCircle,
   Mail,
   Phone,'
   Search} from 'lucide-react';
@@ -59,7 +67,7 @@ export default function Careers() {
     { id: 'san-francisco', name: 'San Francisco, CA', count: 1 },
   ];
 
-  const jobListings = [
+  const openPositions = [
     {
 '
       id: 'senior-ai-engineer','
@@ -111,6 +119,7 @@ export default function Careers() {
         'Conference attendance funding','
         'Collaboration with leading quantum research institutions','
         'Comprehensive benefits package',
+        'Team events and activities'
       ],
       icon: Zap,'
       color: 'from-blue-500 to-cyan-500'},
@@ -239,8 +248,32 @@ export default function Careers() {
       (selectedLocation === 'san-francisco' &&'
         job.location.includes('San Francisco'));
 
-    return matchesSearch && matchesDepartment && matchesLocation;
-  }) ;
+  const lifeAtZion = [
+    {
+      title: 'Modern Office Spaces',
+      description: 'Collaborative workspaces designed for innovation',
+      image: '🏢',
+      category: 'Work Environment'
+    },
+    {
+      title: 'Team Events',
+      description: 'Regular team building and social activities',
+      image: '🎉',
+      category: 'Culture'
+    },
+    {
+      title: 'Learning Sessions',
+      description: 'Knowledge sharing and skill development workshops',
+      image: '📚',
+      category: 'Development'
+    },
+    {
+      title: 'Innovation Labs',
+      description: 'Dedicated spaces for experimentation and prototyping',
+      image: '🔬',
+      category: 'Innovation'
+    }
+  ];
 
   const toggleJob = (jobId: string) => {
 
@@ -309,6 +342,9 @@ export default function Careers() {
                 ))}
               </select>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
             {/* Location Filter */}
             <div>"
@@ -332,7 +368,8 @@ export default function Careers() {
               </select>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
         {/* Job Listings */}
         <motion.div
@@ -461,8 +498,13 @@ export default function Careers() {
                       </div>
                     </motion.div>) }
                 </div>
-              </motion.div>) ) ) }
-        </motion.div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-slate-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
         {/* Why Work With Us */}
         <motion.div
@@ -479,6 +521,25 @@ export default function Careers() {
               Join a team that's passionate about innovation and making a real
               impact in the world of technology.
             </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {lifeAtZion.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center"
+              >
+                <div className="text-4xl mb-4">{item.image}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-slate-300 text-sm mb-3">{item.description}</p>
+                <span className="inline-block px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">
+                  {item.category}
+                </span>
+              </motion.div>
+            ))}
           </div>
 "
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
@@ -553,10 +614,81 @@ export default function Careers() {
               Send Your Resume
             </button>
           </div>
-        </motion.div>
-      </div>
-    </div>) ;
-}
+          
+          {/* Job Listings */}
+          <div className={`grid gap-6 ${
+            viewMode === 'grid' 
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+              : 'grid-cols-1'
+          }`}>
+            {filteredJobs().map((job, index) => (
+              <motion.div
+                key={job.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link to={job.link}>
+                  <div className={`bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full ${
+                    viewMode === 'list' ? 'flex items-start space-x-4' : ''
+                  }`}>
+                    {job.urgent && (
+                      <div className="flex items-center space-x-2 mb-3">
+                        <Zap className="w-4 h-4 text-yellow-400" />
+                        <span className="text-xs text-yellow-400 font-medium">Urgent Hiring</span>
+                      </div>
+                    )}
+                    
+                    <div className={`w-12 h-12 bg-gradient-to-br ${job.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${
+                      viewMode === 'list' ? 'mb-0 flex-shrink-0' : ''
+                    }`}>
+                      <job.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <div className={viewMode === 'list' ? 'flex-1' : ''}>
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {job.title}
+                      </h3>
+                      
+                      <div className="space-y-2 mb-4">
+                        <div className="flex items-center space-x-2 text-sm text-slate-400">
+                          <Building className="w-4 h-4" />
+                          <span>{job.department}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm text-slate-400">
+                          <MapPin className="w-4 h-4" />
+                          <span>{job.location}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm text-slate-400">
+                          <Briefcase className="w-4 h-4" />
+                          <span>{job.type}</span>
+                        </div>
+                        <div className="flex items-center space-x-2 text-sm text-slate-400">
+                          <Clock className="w-4 h-4" />
+                          <span>{job.experience}</span>
+                        </div>
+                      </div>
+                      
+                      <p className="text-slate-300 text-sm mb-4">{job.description}</p>
+                      
+                      <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
+                        <span>Posted {job.posted}</span>
+                        <span>{job.applications} applications</span>
+                      </div>
+                      
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        <span className="text-sm font-medium">View Details</span>
+                        <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
 // Missing Search component
 const Search = ({ className }: { className?: string }) => (

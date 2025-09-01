@@ -3,33 +3,27 @@ import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   TrendingUp, 
-  Target, 
-  Users, 
+  DollarSign, 
   BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
+  Shield, 
+  Zap, 
+  Brain, 
+  Target, 
+  Clock, 
+  CheckCircle, 
+  AlertTriangle,
+  Activity,
+  PieChart,
+  LineChart,
+  UserCheck,
+  Heart,
   Star,
-  ArrowRight,
+  Award,
   Globe,
   Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  LineChart,
-  PieChart,
-  Activity,
-  Cpu,
   Database,
-  Network,
+  Cloud,
+  Server,
   Lock,
   Eye,
   AlertTriangle'
@@ -72,7 +66,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
     "Quantitative trading firms";
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
 "
       name: "Starter","

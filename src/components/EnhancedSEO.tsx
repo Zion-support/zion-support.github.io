@@ -2,12 +2,18 @@ import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  // Add your props here
-
-
-  title?: string;
-  description?: string;
-  keywords?: string;
+  title: string;
+  description: string;
+  canonical?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+  tags?: string[];
+  services?: Array<{
+    name: string;
+    description: string;
+    url: string;
+    category: string;
+  }>;
   image?: string;
   url?: string;'
   type?: 'website' | 'article' | 'product' | 'service';
@@ -16,8 +22,11 @@ interface SEOProps {
   author?: string;
   section?: string;
   tags?: string[];
-  noindex?: boolean;
   canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  structuredData?: any;
+}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
 '
@@ -71,7 +80,51 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         areaServed: 'US','
         availableLanguage: 'English'
       }
-    };
+    } : undefined,
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ziontechgroup.com"
+        },
+        ...(section ? [{
+          "@type": "ListItem",
+          "position": 2,
+          "name": section,
+          "item": `https://ziontechgroup.com/${section.toLowerCase()}`
+        }] : []),
+        {
+          "@type": "ListItem",
+          "position": section ? 3 : 2,
+          "name": title,
+          "item": url || `https://ziontechgroup.com${canonical || ''}`
+        }
+      ]
+    }
+  };
+
+  // Combine all structured data
+  const allStructuredData = [
+    organizationStructuredData,
+    pageStructuredData,
+    structuredData
+  ].filter(Boolean);
+
+  // Generate meta keywords
+  const metaKeywords = [
+    'Zion Tech Group',
+    'AI Solutions',
+    'Technology Services',
+    'Digital Transformation',
+    'IT Consulting',
+    'Cloud Services',
+    'Cybersecurity',
+    ...tags,
+    ...keywords
+  ].join(', ');
 
   const defaultStructuredData = {
 

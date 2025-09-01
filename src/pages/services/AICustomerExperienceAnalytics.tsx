@@ -11,17 +11,14 @@ import {
   Shield,
   Cloud,
   CheckCircle,
-  ArrowRight,
   Play,
-  Globe,
-  Lock,
-  Rocket,
   Star,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  Eye,
+  DollarSign,
+  Settings,
+  Analytics,
+  Chart,
+  Target,
+  Zap,
   Heart,
   MessageCircle,
   PieChart,
@@ -69,7 +66,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
         'AI-generated insights and specific recommendations to improve customer satisfaction and retention.'},
   ];
 
-  const pricingTiers = [
+  const pricingPlans = [
     {
 '
       name: 'Starter','
@@ -223,13 +220,13 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Advanced CX Analytics Features
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive insights into every
-              aspect of your customer experience.
+              Our AI-powered platform provides deep insights into customer behavior, sentiment, and journey optimization 
+              to help you deliver exceptional experiences that drive loyalty and growth.
             </p>
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -263,8 +260,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Comprehensive Analytics Capabilities
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Measure and analyze every aspect of your customer experience with
-              industry-leading metrics and insights.
+              Join industry leaders who have revolutionized their customer experience with AI-powered analytics.
             </p>
           </motion.div>
 "
@@ -300,8 +296,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Transparent Pricing
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your customer experience analytics
-              needs. All plans include our core AI insights features.
+              See how AI Customer Experience Analytics transforms different industries and business functions.
             </p>
           </motion.div>
 "
@@ -382,8 +377,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Why Choose AI Customer Experience Analytics?
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your customer experience with data-driven insights that
-              drive real business results.
+              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 "

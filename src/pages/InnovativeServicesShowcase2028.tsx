@@ -16,39 +16,25 @@ import {
   Users,
   BarChart3,
   MessageCircle,
-  Zap,
+  DollarSign,
+  Settings,
+  Globe,
+  Rocket,
+  Star,
   CheckCircle,
   ArrowRight,
-  Atom,
-  Satellite,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Truck,
-  Building,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
+  Play,
   Award,
-  Lightbulb,
-  Workflow,
-  Bot,
-  Sparkles,
-  Palette,
+  Cpu,
+  Lock,
+  Eye,
+  Activity,
+  Clock,
+  Database,
+  Cloud,
+  Smartphone,
   FileText,
-  Video,
-  TestTube,
-  GraduationCap,
+  PenTool,
   ShoppingCart,
   HelpCircle,
   Activity,
@@ -68,7 +54,6 @@ export default function InnovativeServicesShowcase2028() {
   const [activeCategory, setActiveCategory] = useState('all');'
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Enhanced service categories with real market prices and features
   const serviceCategories = [
     {
 '
@@ -526,7 +511,7 @@ export default function InnovativeServicesShowcase2028() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
@@ -548,13 +533,14 @@ export default function InnovativeServicesShowcase2028() {
                 to="/contact""
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
-                Get Free Consultation
+                Get Started Today
               </Link>
               <Link"
                 to="/case-studies""
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                View Case Studies
+                <Play className="w-5 h-5 inline mr-2" />
+                Schedule Demo
               </Link>
             </div>
           </motion.div>
@@ -617,6 +603,7 @@ export default function InnovativeServicesShowcase2028() {
             initial="hidden""
             whileInView="visible"
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
             {filteredServices.map((service, index) => ("
               <motion.div key={index} variants={itemVariants} className="group">"
@@ -713,8 +700,22 @@ export default function InnovativeServicesShowcase2028() {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-              </motion.div>) ) }
-          </motion.div>
+                
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-purple-400 mb-2">{service.pricing}</div>
+                  <p className="text-gray-400 text-sm">14-day free trial included</p>
+                </div>
+                
+                <Link
+                  to={service.href}
+                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold text-center hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -722,7 +723,7 @@ export default function InnovativeServicesShowcase2028() {
       <section className="py-20 bg-gradient-to-r from-slate-800 to-blue-900">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -809,10 +810,14 @@ export default function InnovativeServicesShowcase2028() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA Buttons */}
+      {/* Micro SaaS Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -833,6 +838,36 @@ export default function InnovativeServicesShowcase2028() {
               </Link>
             </div>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {microSaaSServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+              >
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-5 h-5 text-white" />
+                </div>
+                
+                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                
+                <div className="text-purple-400 font-semibold mb-4">{service.pricing}</div>
+                
+                <Link
+                  to={service.href}
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-3 h-3 ml-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -840,7 +875,7 @@ export default function InnovativeServicesShowcase2028() {
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"

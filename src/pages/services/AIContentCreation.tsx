@@ -12,9 +12,10 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Users,
   Globe,
-  Target,
+  Lock,
+  Eye,
+  Activity,
   TrendingUp,
   Palette,
   Camera,
@@ -119,7 +120,7 @@ export default function AIContentCreation(...args: any[]): any {
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">"
               <PenTool className="w-4 h-4 mr-2" />
-              AI-Powered Creation
+              AI Content Creation
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -147,7 +148,7 @@ export default function AIContentCreation(...args: any[]): any {
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
               >
-                View All Services
+                Schedule Demo
               </Link>
             </div>
           </motion.div>
@@ -311,7 +312,7 @@ export default function AIContentCreation(...args: any[]): any {
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
               >
-                Explore All Services
+                Contact Our Team
               </Link>
             </div>
           </motion.div>

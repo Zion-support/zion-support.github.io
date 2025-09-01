@@ -149,7 +149,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     };
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
 '
       name: 'Starter','
@@ -319,7 +319,50 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               Our platform combines cutting-edge AI with deep customer insights to deliver
               unprecedented accuracy in customer success prediction and optimization.
             </p>
-          </motion.div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center p-6"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">25% Churn Reduction</h3>
+              <p className="text-slate-300">Identify at-risk customers before they leave and take proactive action</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center p-6"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">40% Revenue Growth</h3>
+              <p className="text-slate-300">Uncover expansion opportunities and increase customer lifetime value</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center p-6"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">95% Prediction Accuracy</h3>
+              <p className="text-slate-300">Advanced AI algorithms provide reliable insights for better decision-making</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Grid */}"
       <section className="py-16">"
@@ -474,8 +517,19 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                       {benefit}
                     </div>
                   ))}
-                </div>
-              </motion.div>;
+                </ul>
+                
+                <a 
+                  href="/contact" 
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -962,7 +1016,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               </div>"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>Cancel time</span>
+                <span>Cancel anytime</span>
               </div>
             </div>
           </motion.div>

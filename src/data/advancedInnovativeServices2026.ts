@@ -21,8 +21,9 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string
-};
+    website: string;
+    address: string;
+  };
   technicalSpecs?: {
 
     technology: string[];
@@ -31,9 +32,12 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-  caseStudies?: string[]}
-;
+  marketSize?: string;
+  industryTrends?: string[];
+}
+
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
+  // AI-Powered Cybersecurity & Threat Intelligence
   {
 
     id: 'quantum-ai-neural-networks-2026','

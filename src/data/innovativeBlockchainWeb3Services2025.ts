@@ -34,7 +34,7 @@ contactInfo: {
   marketSize?: string}
 ;
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
-  // DeFi Platform & Yield Farming
+  // DeFi Lending Platform
   {
 
     id: "defi-platform-yield-farming","
@@ -102,7 +102,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketSize: "$67.8 billion by 2025"
   },
 
-  // NFT Marketplace & Creation Platform
+  // NFT Marketplace Platform
   {
 "
     id: "nft-marketplace-creation-platform","
@@ -170,7 +170,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketSize: "$23.4 billion by 2025"
   },
 
-  // DAO Governance & Management Platform
+  // DAO Governance Platform
   {
 "
     id: "dao-governance-management-platform","
@@ -238,7 +238,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketSize: "$12.8 billion by 2025"
   },
 
-  // Web3 Identity & Authentication Platform
+  // Web3 Identity Platform
   {
 "
     id: "web3-identity-authentication-platform","
@@ -306,7 +306,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketSize: "$18.9 billion by 2025"
   },
 
-  // Cross-Chain Bridge & Interoperability Platform
+  // DeFi Yield Aggregator
   {
 "
     id: "cross-chain-bridge-interoperability","

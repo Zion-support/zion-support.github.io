@@ -178,7 +178,7 @@ const News: React.FC = () => {
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> News</span>
               </h1>
             </div>
-          </motion.div>
+          ))}
         </div>
       </section>
       {/* News Grid */}"
@@ -277,6 +277,9 @@ const News: React.FC = () => {
                 Subscribe
               </button>
             </div>
+            <p className="text-sm text-white/70 mt-3">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </div>
         </motion.div>
       </div>

@@ -4,222 +4,33 @@ import {
 
   Heart, 
   Activity, 
+  Users, 
   TrendingUp, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Target, 
+  Clock, 
   CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
+  AlertTriangle,
+  BarChart3,
   PieChart,
   LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare,
-  UserPlus,
   UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  Star2,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  PhoneCall,
-  Video,
-  MailOpen,
-  Send,
-  Archive,
-  Trash2,
-  Edit3,
-  Copy,
-  Share2,
-  Download,
-  Upload,
-  ExternalLink,
-  Link,
-  Unlink,
-  Lock3,
-  Unlock,
-  Eye2,
-  EyeOff,
+  Heart,
+  Star,
+  Award,
+  Globe,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,
+  Lock,
+  Eye,
+  Settings,
   Bell,
-  BellOff,
-  Volume2,
-  VolumeX,
-  Wifi2,
-  WifiOff,
-  Bluetooth2,
-  BluetoothOff,
-  Radio2,
-  RadioOff,
-  Sensor2,
-  SensorOff,
-  Chip2,
-  ChipOff,
-  Circuit2,
-  CircuitOff,
-  Orbit2,
-  OrbitOff,
-  Planet2,
-  PlanetOff,
-  Star2 as StarIcon,
-  StarOff,
-  Telescope2,
-  TelescopeOff,
-  Antenna2,
-  AntennaOff,
-  Signal2,
-  SignalOff,
-  Navigation2,
-  NavigationOff,
-  Earth2,
-  EarthOff,
-  Moon2,
-  MoonOff,
-  Sun2,
-  SunOff,
-  Binary2,
-  BinaryOff,
-  Network2,
-  NetworkOff,
-  Database3,
-  DatabaseOff,
-  Lock3 as LockIcon,
-  LockOff,
-  Key3,
-  KeyOff,
-  Fingerprint3,
-  FingerprintOff,
-  Eye3,
-  EyeOff2,
-  Brain3,
-  BrainOff,
-  Cpu3,
-  CpuOff,
-  Memory2,
-  MemoryOff,
-  HardDrive2,
-  HardDriveOff,
-  Server3,
-  ServerOff,
-  Phone2,
-  PhoneOff,
-  Mail2,
-  MailOff,
-  Calendar2,
-  CalendarOff,
-  MessageSquare3,
-  MessageSquareOff,
-  UserPlus2 as UserPlusIcon,
-  UserCheck2 as UserCheckIcon,
-  UserX2 as UserXIcon,
-  UserMinus2 as UserMinusIcon,
-  UserEdit2 as UserEditIcon,
-  UserSearch2 as UserSearchIcon,
-  UserList2,
-  UserListOff,
-  UserSettings2,
-  UserSettingsOff,
-  UserCog2,
-  UserCogOff,
-  UserShield2,
-  UserShieldOff,
-  UserStar2,
-  UserStarOff,
-  UserHeart2,
-  UserHeartOff,
-  UserCheck3,
-  UserCheckOff,
-  UserX3,
-  UserXOff,
-  UserMinus3,
-  UserMinusOff,
-  UserPlus3,
-  UserPlusOff,
-  UserEdit3,
-  UserEditOff,
-  UserSearch3,
-  UserSearchOff,
+  Mail,
+  Phone,
   MapPin,
   Clock,
   AlertTriangle,
@@ -322,8 +133,9 @@ import {
   CloudSnow10,
   CloudSleet10'
 } from 'lucide-react';
-;
-const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
+import { SEO } from '@/components/SEO';
+
+export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
 
@@ -395,7 +207,7 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
 '
       plan: 'Starter','
@@ -579,7 +391,6 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature: unknown, index: unknown (
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
@@ -591,10 +402,9 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">"
@@ -661,8 +471,7 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Compliance Standards Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">"
@@ -694,8 +503,7 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -751,8 +559,7 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Integrations Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">"
@@ -784,8 +591,7 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -819,9 +625,8 @@ const AIHealthcareAnalyticsPlatform = (...args: unknown[]): unknown => {
                 Schedule Demo
               </motion.button>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       {/* Contact Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">"

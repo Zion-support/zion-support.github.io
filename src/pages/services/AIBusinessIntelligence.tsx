@@ -313,8 +313,8 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
             </h1>
             "
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the full potential of your data with advanced AI analytics, real-time insights, 
-              and predictive intelligence that drives strategic decision-making and business growth.
+              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform. 
+              Get real-time insights, predictive analytics, and automated decision-making capabilities.
             </p>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -490,7 +490,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -629,7 +629,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                   >"
                     <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"
                     <span className="text-gray-300">{benefit}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -954,8 +954,8 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               href="/contact""
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
-              Schedule Demo
-            </a>
+              Contact Our Team
+            </Link>
           </div>
 "
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">"

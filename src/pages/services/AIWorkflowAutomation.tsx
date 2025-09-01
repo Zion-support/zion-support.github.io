@@ -5,29 +5,18 @@ import {
   Workflow, 
   Zap, 
   Brain, 
+  Zap, 
   Clock, 
   TrendingUp, 
   Shield, 
-  Globe, 
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
+  Clock, 
+  Users, 
+  BarChart3, 
   CheckCircle,
   ArrowRight,
-  BarChart3,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
   Play,
-  Pause,
+  Star,
+  DollarSign,
   Settings,
   Monitor,
   AlertCircle,
@@ -133,7 +122,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
 '
       name: 'Starter','
@@ -257,8 +246,9 @@ export default function AIWorkflowAutomation(...args[]):  {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
+                <Play className="w-5 h-5 inline mr-2" />
                 Watch Demo
-              </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -387,6 +377,8 @@ export default function AIWorkflowAutomation(...args[]):  {
                     </div>
                   ))}
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -533,7 +525,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
                 Schedule Demo
-              </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>

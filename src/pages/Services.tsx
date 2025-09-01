@@ -1,6 +1,53 @@
-import React from 'react';
-export default Services;
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Zap, 
+  Rocket, 
+  Zap, 
+  Search, 
+  Star, 
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  PenTool,
+  Eye,
+  Server,
+  Truck,
+  Building,
+  Scale,
+  Leaf,
+  Factory,
+  Car,
+  Home,
+  City,
+  CheckCircle2,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import EnhancedSEO from '@/components/EnhancedSEO';
 
+export default function Services() {
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
   const categories = ['
     { id: 'all', name: 'All Services', icon: Settings, count: allServices.length },'
@@ -21,7 +68,13 @@ export default Services;
     return matchesSearch && matchesCategory;
   }) ;
 
-  const featuredServices = allServices.filter (service => service.featured) ;
+  const filteredCategories = serviceCategories.filter(category =>
+    category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    category.services.some(service =>
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"
@@ -124,7 +177,7 @@ export default Services;
               <a href="/services" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* New: AI Services & Solutions */}"
         <div className="mt-24 text-left">"
@@ -156,7 +209,7 @@ export default Services;
               <a href="https://ziontechgroup.com/partners" className="text-cyan-300 hover:text-cyan-200 font-semibold">Our partners →</a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* New: IT Services & Modernization */}"
         <div className="mt-24 text-left">"
@@ -188,7 +241,7 @@ export default Services;
               <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Contact us →</a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* CTA and Contact */}"
         <div className="mt-24 text-left">"
@@ -211,7 +264,8 @@ export default Services;
           </a>
         </div>
       </div>
-    </div>) ;
+    </>
+  );
 };
 
 export default Services;

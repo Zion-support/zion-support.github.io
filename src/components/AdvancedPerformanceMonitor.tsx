@@ -8,20 +8,21 @@ import {
   AlertTriangle} from 'lucide-react.ts';
 
 interface PerformanceMetrics {
-
-  fcp: number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
-  fid: number | null; // First Input Delay
-  cls: number | null; // Cumulative Layout Shift
-  ttfb: number | null; // Time to First Byte
-  fmp: number | null; // First Meaningful Paint
-
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  fcp: number | null;
+  fmp: number | null;
+  si: number | null;
+  tti: number | null;
 }
 
 interface PerformanceScore {
   score: number;'
   rating: 'good' | 'needs-improvement' | 'poor';
   color: string;
+}
 
 const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -102,6 +103,30 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         rating = 'poor';'
         color = 'text-red-500';
       }
+    });
+
+    const averageScore = metricCount > 0 ? totalScore / metricCount : 0;
+    
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+    let color: string;
+
+    if (averageScore >= 90) {
+      grade = 'A';
+      color = 'text-green-500';
+    } else if (averageScore >= 80) {
+      grade = 'B';
+      color = 'text-blue-500';
+    } else if (averageScore >= 70) {
+      grade = 'C';
+      color = 'text-yellow-500';
+    } else if (averageScore >= 60) {
+      grade = 'D';
+      color = 'text-orange-500';
+    } else {
+      grade = 'F';
+      color = 'text-red-500';
+    }
+  }, []) ;
 
       return { score: averageScore, rating, color };
     },
@@ -170,16 +195,15 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       return () => {
-        fcpObserver.disconnect () ;
-        lcpObserver.disconnect () ;
-        fidObserver.disconnect () ;
-        clsObserver.disconnect () ;
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
       };
     }
-  }, []) ;
+  }, []);
 
-  // Measure Time to First Byte
-  useEffect ( () => {
+  // Measure other performance metrics
+  const measureOtherMetrics = useCallback(() => {
     if (performance.timing) {
 
       const ttfb =
@@ -188,11 +212,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     }
   }, []) ;
 
-  // Update overall score when metrics change
-  useEffect ( () => {
-    const score = calculateScore (metrics) ;
-    setOverallScore (score) ;
-  }, [metrics, calculateScore]) ;
+      // First Meaningful Paint (FMP) - approximated
+      const fmp = timing.domContentLoadedEventEnd - timing.navigationStart;
+      setMetrics(prev => ({ ...prev, fmp }));
 
   // Format time values
   const formatTime = (time: number | null): string => {
@@ -295,6 +317,12 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             <div className="text-xs text-zion-slate-light">'
               {getMetricRating('fcp', metrics.fcp)}
             </div>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="p-1 hover:bg-slate-700/50 rounded-lg transition-colors duration-200"
+            >
+              <X className="w-4 h-4 text-gray-400" />
+            </button>
           </div>
         </div>
 "

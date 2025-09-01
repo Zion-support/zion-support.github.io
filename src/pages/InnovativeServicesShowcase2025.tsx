@@ -220,9 +220,34 @@ import { SEO } from '@/components/SEO';
       path: '/services/ai-quantum-machine-learning','
       category: 'AI & Quantum Computing'
     }
-  ];
+    setExpandedServices(newExpanded);
+  };
 
-  const categories = [...new Set (services.map (service => service.category) ) ];
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Solutions': return Brain;
+      case 'IT Services': return Server;
+      case 'Micro SaaS': return ShoppingCart;
+      case 'Cybersecurity': return ShieldIcon;
+      case 'Data Analytics': return BarChart3;
+      case 'Cloud Services': return Cloud;
+      case 'Emerging Tech': return Rocket;
+      default: return Zap;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Solutions': return 'from-purple-600 to-pink-600';
+      case 'IT Services': return 'from-blue-600 to-cyan-600';
+      case 'Micro SaaS': return 'from-green-600 to-emerald-600';
+      case 'Cybersecurity': return 'from-red-600 to-orange-600';
+      case 'Data Analytics': return 'from-indigo-600 to-purple-600';
+      case 'Cloud Services': return 'from-cyan-600 to-blue-600';
+      case 'Emerging Tech': return 'from-yellow-600 to-orange-600';
+      default: return 'from-gray-600 to-slate-600';
+    }
+  };
 
   return()
     <div className="min-h-screen bg-white">
@@ -329,7 +354,8 @@ import { SEO } from '@/components/SEO';
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            </motion.div>) ) }
+            </motion.div>
+          </div>
         </div>
       </section>
       {/* Contact Information Banner */}"
@@ -563,8 +589,9 @@ import { SEO } from '@/components/SEO';
                     </div>
                   </div>
                 </div>
-              </motion.div>) ) }
-          </div>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
       {/* Featured Services */}"

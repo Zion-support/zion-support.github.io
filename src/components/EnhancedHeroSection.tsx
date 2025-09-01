@@ -29,9 +29,10 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-  icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any> 
-}[]}
+  icon: React.ComponentType<any>;
+  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  badge?: string;
+}
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
@@ -256,7 +257,9 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             </AnimatePresence>
           </motion.div>
 
-          {/* Right content - Image and stats */}
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <AnimatePresence mode="wait">
           <motion.div
             initial = {
 
@@ -345,10 +348,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       <p className="text-xs text-gray-300">{stat.label}</p>
                     </div>
                   </div>
-                </motion.div>;) ) }
-            </div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-            {/* Rating card */}
+            {/* CTA Button */}
             <motion.div
               initial = {
 
@@ -415,7 +421,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         </div>
       </div>
 
-      {/* Enhanced scroll indicator */}
+      {/* Floating Elements */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

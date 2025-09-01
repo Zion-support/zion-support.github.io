@@ -126,6 +126,68 @@ export default function MicroSAASSolutions() {
                     {solution.category}
                   </span>
                 </div>
+
+                {/* Features */}
+                <div className="space-y-3 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="space-y-3">
+                  <Link
+                    to={service.link}
+                    className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    to="/request-quote"
+                    className="block w-full text-center border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
+                  >
+                    Get Quote
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Built for rapid deployment and immediate impact on your business operations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Rapid Deployment</h3>
+              <p className="text-gray-600">Get up and running in hours, not months. Our solutions are designed for immediate implementation.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Transparent Pricing</h3>
+              <p className="text-gray-600">No hidden fees or surprise costs. Clear, predictable pricing that scales with your business.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                <Target className="w-8 h-8 text-white" />
               </div>
 "
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
@@ -180,7 +242,7 @@ export default function MicroSAASSolutions() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

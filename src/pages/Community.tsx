@@ -10,6 +10,10 @@ import {
   Calendar,
   MapPin,
   Globe,
+  ArrowRight,
+  CheckCircle,
+  Heart,
+  Share2,
   BookOpen,
   Video,
   Download,
@@ -34,7 +38,7 @@ export default function Community() {
     { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
   ];
 
-  const communityForums = [
+  const communityCategories = [
     {
 '
       title: 'AI & Machine Learning','
@@ -81,7 +85,7 @@ export default function Community() {
     };
   ];
 
-  const upcomingEvents = [
+  const communityStats = [
     {
 '
       title: 'AI Innovation Summit 2025','
@@ -339,7 +343,7 @@ const Community: React.FC = () => {
     }
   ];
 
-  const communityPosts: CommunityPost[] = [
+  const topContributors = [
     {
 '
       id: '1',;'
@@ -507,6 +511,21 @@ const Community: React.FC = () => {
               Connect with fellow developers, share knowledge, and get support from the 
               Zion Tech Group community of technology professionals.
             </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/community/join"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Join Community
+              </Link>
+              <Link
+                to="/community/forums"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Browse Forums
+              </Link>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -614,8 +633,13 @@ const Community: React.FC = () => {
                     Learn More
                   </div>
                 </div>
-              </Link>;
-            </motion.div>) ) }
+                
+                <button className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300">
+                  Register Now
+                </button>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -967,18 +991,10 @@ const Community: React.FC = () => {
             <p className="text-gray-300">Featured Posts</p>
           </div>
         </div>
-      </div>;
-    </div>) };
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
-}
-
-
-
-}
+      </section>
+    </div>
+  );
+};
 
 }
 '"`

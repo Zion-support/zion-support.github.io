@@ -203,7 +203,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Quantum Computing as a Service
             </h1>"
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Access the power of quantum computing without the complexity. Solve complex optimization,
+              Access the power of quantum computing without the complexity. Solve complex optimization, 
               simulation, and machine learning problems with our enterprise-grade quantum platform.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -217,11 +217,11 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <a"
                 href="#demo""
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
-
+              >
                 Watch Demo
               </a>
             </div>
-          </motion.div>;
+          </motion.div>
         </div>
       </section>
 
@@ -281,7 +281,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>"
                 <p className="text-slate-300">{benefit.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
@@ -343,7 +343,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
@@ -439,9 +439,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
                       : 'bg-slate-700 text-white hover:bg-slate-600'`
                   }`}
-
+                >
                   {plan.cta}
-                </a>;
+                </a>
               </motion.div>
             ))}
           </div>
@@ -509,7 +509,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
@@ -567,7 +567,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200"
 "
                 <span className="text-slate-300 font-medium">{integration}</span>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
@@ -618,7 +618,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-2">Quantum-Safe Security</h3>"
               <p className="text-slate-300">Post-quantum cryptography and quantum-resistant encryption protocols</p>
             </motion.div>
-
+            
             <motion.div
               initial = {
 
@@ -661,7 +661,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>"
               <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
             </motion.div>
-
+            
             <motion.div
               initial = {
 
@@ -772,7 +772,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               </div>"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
-                <span>Cancel time</span>
+                <span>Cancel anytime</span>
               </div>
             </div>
           </motion.div>
@@ -804,13 +804,13 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>"
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
                   ziontechgroup.com
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

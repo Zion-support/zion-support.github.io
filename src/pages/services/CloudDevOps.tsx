@@ -19,17 +19,18 @@ import {
   Globe,
   Building,
   DollarSign,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
   Database,
+  BarChart3,
+  Zap,
+  Globe,
+  Lock,
+  Eye,
+  Activity,
+  TrendingUp,
+  AlertTriangle,
+  FileText,
+  Network,
+  Server,
   Smartphone,
   GitBranch,
   Docker,
@@ -114,7 +115,7 @@ const CloudDevOps = () => {
       description: 'Automated database provisioning, backups, and scaling'},
   ];
 
-  const useCases = [
+  const pricing = [
     {
 '
       industry: 'E-commerce','
@@ -148,7 +149,7 @@ const CloudDevOps = () => {
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">"
               <Cloud className="w-4 h-4 mr-2" />
-              Cloud & DevOps Solutions
+              Cloud DevOps
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -173,9 +174,9 @@ const CloudDevOps = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">"
                 <Settings className="w-5 h-5 mr-2" />
                 Schedule Demo
-              </button>
+              </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -200,7 +201,7 @@ const CloudDevOps = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
@@ -257,6 +258,8 @@ const CloudDevOps = () => {
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -335,7 +338,7 @@ const CloudDevOps = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
-                key={index}
+                key={plan.plan}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"

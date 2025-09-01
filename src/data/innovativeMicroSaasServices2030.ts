@@ -14,27 +14,35 @@ export interface MicroSaasService {
   category: string;
   pricing: string;
   description: string;
+  category: string;
+  subcategory: string;
   price: number;
+  currency: string;
   pricingModel: string;
-  userLimit: string;
   features: string[];
   benefits: string[];
+  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  contactInfo: ServiceContact;
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  competitors: string[];
   roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
   innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  useCases: string[];
-  technologies: string[];
-  compliance: string[]
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
 }
 
 // Zion Tech Group Contact Information;

@@ -6,40 +6,12 @@ import {
   MessageSquare,
   TrendingUp,
   CheckCircle,
-  ArrowRight,
   Play,
-  Settings,
+  Star,
+  Award,
+  MessageCircle,
   Target,
-  Activity,
-  Sparkles,
-  Search,
   Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
   Brain,
   Compass,
   RefreshCw,
@@ -272,7 +244,7 @@ const AICustomerSuccessPlatform = () => {
     'Scale customer success operations efficiently',
   ];
 
-  const useCases = [
+  const benefits = [
     {
 '
       industry: 'SaaS Companies',
@@ -295,7 +267,7 @@ const AICustomerSuccessPlatform = () => {
         'Monitor account health and provide proactive financial advisory'},
   ];
 
-  const pricing = [
+  const useCases = [
     {
 '
       plan: 'Starter','
@@ -392,7 +364,14 @@ const AICustomerSuccessPlatform = () => {
               >"
                 <Settings className="w-5 h-5 mr-2" />
                 Start Free Trial
-              </motion.button>
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                <Play className="w-5 h-5 inline mr-2" />
+                Watch Demo
+              </Link>
             </div>
           </motion.div>
         </div>

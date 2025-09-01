@@ -117,6 +117,9 @@ import {
 
   const currentYear = new Date () .getFullYear () ;
 
+export function EnhancedFuturisticFooter() {
+  const currentYear = new Date().getFullYear();
+  
   const footerSections = [
     {
 '
@@ -642,6 +645,7 @@ import {
                 ))}
               </div>
             </div>
+          </div>
 
             {/* Newsletter Signup */}"
             <div className="space-y-4">"
@@ -662,11 +666,11 @@ import {
                   type="submit""
                   className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
                 >
-                  Subscribe
-                </button>
-              </form>
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Bottom Section */}
           <motion.div
@@ -715,7 +719,7 @@ import {
                   <h4 className="text-sm font-semibold text-slate-400 mb-2">Global Support</h4>"
                   <p className="text-sm text-slate-500">24/7 availability worldwide</p>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

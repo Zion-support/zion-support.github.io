@@ -163,10 +163,41 @@ code {
   background: var(--zion-cyan-500);
 }
 
-/* Loading spinner */
-.loading-spinner {
-  border: 3px solid var(--zion-slate-700);
-  border-top: 3px solid var(--zion-cyan-500);
+/* Selection styles */
+::selection {
+  background-color: var(--zion-cyan);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--zion-cyan);
+  color: white;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgb(var(--zion-cyan));
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   width: 40px;
   height: 40px;

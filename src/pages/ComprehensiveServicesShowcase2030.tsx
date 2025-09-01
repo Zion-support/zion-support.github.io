@@ -54,8 +54,22 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         services = comprehensiveAIServices2030;
         break}
 
-    const categories = [...new Set (services.map (service => service.category) ) ];
-    return categories};
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Quantum Computing & AI': return Atom;
+      case 'Space Technology': return Rocket;
+      case 'Sustainability & Climate Tech': return Leaf;
+      case 'Healthcare AI': return Heart;
+      case 'Financial AI': return DollarSign;
+      case 'Legal Tech': return Scale;
+      case 'Supply Chain AI': return Truck;
+      case 'HR Tech': return Users;
+      case 'EdTech': return BookOpen;
+      case 'Marketing AI': return TrendingUp;
+      case 'Project Management': return Building2;
+      default: return Lightbulb;
+    }
+  };
 
   const renderServiceCard = (service)  => {
 '
@@ -274,6 +288,15 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 <div className="text-sm text-gray-600">"
                   AI Score: <span className="font-bold text-purple-600">{service.aiScore}/100</span>
                 </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
+                <Search className="w-12 h-12 text-gray-400" />
               </div>
             </div>
 "
@@ -410,6 +433,35 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 </div>
               </div>
             </div>
+          )}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join the future of technology with our revolutionary AI-powered services. 
+            Get started today and experience the power of innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
+            >
+              <MessageCircle className="mr-2" />
+              Start Your Journey
+            </Link>
+            <Link
+              to="/schedule-demo"
+              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
+            >
+              <Play className="mr-2" />
+              Schedule Demo
+            </Link>
           </div>
         </div>
 
@@ -436,6 +488,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 </svg>
                 <span > 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+              <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-700 font-medium">
+                {contactInfo.phone}
+              </a>
             </div>
           </div>
         </div>

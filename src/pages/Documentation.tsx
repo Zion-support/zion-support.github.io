@@ -36,7 +36,7 @@ const Documentation: React.FC = () => {
     { id: 'guides', name: 'Guides', count: 0 },
   ];
 
-  const documentationItems = [
+  const docCategories = [
     {
 
       id: 1,'
@@ -124,7 +124,7 @@ const Documentation: React.FC = () => {
       tags: ['python', 'sdk', 'examples']},
   ];
 
-  const featuredResources = [
+  const documentationResources = [
     {
 '
       title: 'Zion Tech Group Developer Portal','
@@ -205,7 +205,7 @@ const Documentation: React.FC = () => {
         item => item.category === cat.id
       ).length;
     }
-  }) ;
+  ];
 
   return()
     <>
@@ -280,8 +280,27 @@ const Documentation: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Documentation Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Documentation Categories
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Find comprehensive guides, tutorials, and references organized by category. 
+              Everything you need to build with our AI platform.
+            </p>
+          </motion.div>
 
         {/* Documentation Grid */}"
         <section className="py-16 px-4">"
@@ -313,6 +332,7 @@ const Documentation: React.FC = () => {
                       <Eye className="w-4 h-4" />
                       {item.views.toLocaleString()}
                     </div>
+                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
                   </div>
 "
                   <h3 className="text-white font-semibold text-lg mb-2">
@@ -362,7 +382,8 @@ const Documentation: React.FC = () => {
               </div>
             )}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Featured Resources */}"
         <section className="py-16 px-4">"
@@ -407,10 +428,8 @@ const Documentation: React.FC = () => {
                 </motion.div>) ) }
             </div>
           </div>
-        </section>
-      </div>
-    </>) ;
-};
+        </div>
+      </section>
 
 export default Documentation;
 '"`

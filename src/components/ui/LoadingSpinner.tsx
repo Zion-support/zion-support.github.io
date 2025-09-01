@@ -5,7 +5,7 @@ import { cn } from '../../utils/cn';
 interface LoadingSpinnerProps {
 '
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: string;
+  color?: 'primary' | 'secondary' | 'white';
   text?: string;
 
 export default function LoadingSpinner({
@@ -32,6 +32,12 @@ export function LoadingSpinner({
     md: 'w-12 h-12','
     lg: 'w-16 h-16','
     xl: 'w-20 h-20'
+  };
+
+  const colorClasses = {
+    primary: 'border-cyan-500 border-t-transparent',
+    secondary: 'border-purple-500 border-t-transparent',
+    white: 'border-white border-t-transparent'
   };
 
   const textSizes = {
@@ -246,6 +252,7 @@ export function FullPageLoader({
       </div>
     </div>
   );
+}
 
 // Content loading placeholder
 export function ContentPlaceholder({

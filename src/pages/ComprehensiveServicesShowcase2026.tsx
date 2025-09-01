@@ -6,17 +6,11 @@ import {
   Filter,
   Star,
   Zap,
-  Brain,
-  Shield,
-  Cpu,
-  Network,
+  Star,
   Phone,
   Mail,
   MapPin,
   ExternalLink,
-  TrendingUp,
-  Users,
-  Clock,
   CheckCircle,
   ArrowRight'
 import { SEO } from '../components/SEO';
@@ -64,6 +58,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
       case 'Quantum AI': return <Zap className="w-5 h-5" />;"
       default: return <Zap className="w-5 h-5" />;
 
+    return services;
   };
   const getInnovationLevelColor = (level: string) => {;
     switch (level) {;'
@@ -72,7 +67,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';'
       default: return 'bg-gray-600';
     }
-    return `$${price.toLocaleString () }`;
+
+    const categories = [...new Set(services.map(service => service.category))];
+    return categories;
   };
 
   return()

@@ -5,22 +5,18 @@ import {
 
   Brain,
   Shield,
-  Cloud,
-  Database,
   Globe,
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
+  Brain,
+  Rocket,
   Target,
-  DollarSign,
+  Award,
+  Sparkles,
   Clock,
   CheckCircle,
   Search'
  } from 'lucide-react';
 
-  const services = [
+  const services: Service[] = [
     {
 '
       title: 'AI Workflow Automation','
@@ -259,8 +255,8 @@ export default function EnhancedServicesShowcase() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 className="group relative"
-                onHoverStart={ () => setHoveredService (service.id) }
-                onHoverEnd={ () => setHoveredService (null) }
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <motion.div"
                   className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
@@ -328,7 +324,6 @@ export default function EnhancedServicesShowcase() {
                       <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>"
                       <p className="text-xs text-gray-400">Market</p>
                     </div>
-                  </div>
 
                   {/* CTA Button */}
                   <motion.div"
@@ -343,15 +338,17 @@ export default function EnhancedServicesShowcase() {
                       Learn More"
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>
-                  </motion.div>
+                  </div>
 
                   {/* Hover effect overlay */}
                   <motion.div"
                     className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={false}
+                    animate={{ opacity: hoveredService === service.id ? 1 : 0 }}
                   />
-                </motion.div>
-              </motion.div>) ) }
+                </div>
+              </motion.div>
+            ))}
           </AnimatePresence>
         </div>
 
@@ -369,7 +366,11 @@ export default function EnhancedServicesShowcase() {
   { opacity: 1,
   y: 0 ;
 
-}}
+        {/* CTA Section */}
+        <motion.div 
+          className="text-center mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
 

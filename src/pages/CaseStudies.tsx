@@ -7,23 +7,36 @@ import {
   Users,
   TrendingUp,
   ArrowRight,
-  Search,
+  ChevronRight,
+  ChevronDown,
+  ChevronUp,
   Filter,
-  Calendar,
+  Search,
   Star,
-  Eye,
-  Share2,
-  Bookmark,
-  Target,
   Award,
+  CheckCircle,
   Zap,
   Brain,
-  Cloud,
+  Rocket,
   Shield,
-  Atom,
-  Network,
   Heart,
+  Crown,
+  Sparkles,
+  Flame,
+  Globe,
+  BarChart3,
+  PieChart,
+  Activity,
+  ArrowUpRight,
+  ArrowDownRight,
+  Eye,
+  Sparkles,
+  TrendingUp,
+  Settings,
+  Cpu,
+  Brain,
   DollarSign,
+  ChartBar,
   Clock,
   MapPin,'
   Factory} from 'lucide-react';
@@ -208,7 +221,7 @@ export default function CaseStudies() {
         cs => cs.service === service.id
       ).length;
     }
-  }) ;
+  ];
 
   const filteredCaseStudies = caseStudies.filter(cs => {
 
@@ -221,7 +234,7 @@ export default function CaseStudies() {
       cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
       cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesIndustry && matchesService && matchesSearch;
-  }) ;
+  });
 
   const stats = ['
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },'
@@ -291,7 +304,7 @@ export default function CaseStudies() {
               </select>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Featured Case Studies */}
         {filteredCaseStudies.filter(cs => cs.featured).length > 0 && ("
@@ -347,7 +360,6 @@ export default function CaseStudies() {
                   </motion.article>
                 ))}
             </div>
-          </div>) }
 
         {/* All Case Studies */}
         <div>"
@@ -424,10 +436,37 @@ export default function CaseStudies() {
                         ))}
                       </ul>
                     </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Technologies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {study.technologies.map((tech, idx) => (
+                          <span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-lg">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        <span className="mr-2">View Details</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <button className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 text-gray-400 hover:text-white transition-all duration-300">
+                          <Share2 className="w-4 h-4" />
+                        </button>
+                        <button className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 text-gray-400 hover:text-white transition-all duration-300">
+                          <Download className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </motion.article>
               ))}
           </div>
+        </section>
 
           {filteredCaseStudies.length === 0 && ("
             <div className="text-center py-12">"
@@ -469,12 +508,14 @@ export default function CaseStudies() {
                 href="/services""
                 className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
-                Request a Quote
-              </a>
+                <span>Explore Our Services</span>
+                <Rocket className="w-5 h-5 ml-2" />
+              </Link>
             </div>
           </div>
-        </motion.div>
+        </section>
       </div>
-    </div>) ;
+    </>
+  );
 }
 '"`

@@ -6,27 +6,20 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Info,
-  Settings,
-  HelpCircle,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
   FileText,
+  Phone,
+  Settings,
+  LogIn,
+  User,
+  Search,
   Globe,
   Zap,
   Shield,
-  Cloud,
   Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
-  Rocket,
-  Star,
   TrendingUp,
   Award,
   BookOpen,
@@ -175,6 +168,56 @@ export const EnhancedMobileNavigation: React.FC = () => {
       }
     };
 
+export default function EnhancedMobileNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
+
+  const navigationItems: NavigationItem[] = [
+    {
+      label: 'Home',
+      path: '/',
+      icon: Home
+    },
+    {
+      label: 'Services',
+      path: '/services',
+      icon: Briefcase,
+      children: [
+        { label: 'AI Solutions', path: '/ai-services', icon: Brain },
+        { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shield },
+        { label: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { label: 'IoT & Edge', path: '/services/edge-computing-platform', icon: Zap },
+        { label: 'Blockchain', path: '/services/blockchain-enterprise-solutions', icon: Database }
+      ]
+    },
+    {
+      label: 'About',
+      path: '/about',
+      icon: Users
+    },
+    {
+      label: 'Blog',
+      path: '/blog',
+      icon: FileText
+    },
+    {
+      label: 'Contact',
+      path: '/contact',
+      icon: Phone
+    }
+  ];
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  }, [location.pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
     if (isOpen) {
 '
       document.addEventListener('mousedown', handleClickOutside);'
@@ -209,7 +252,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
 '
       return activePath === '/';
 
-    return activePath.startsWith (path) ;
+  const toggleSubmenu = (label: string) => {
+    setActiveSubmenu(activeSubmenu === label ? null : label);
   };
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
@@ -335,7 +379,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
         <Menu size={24} />
       </button>
 
-      {/* Mobile Navigation Overlay */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (<motion.div
             initial={{ opacity: 0 }}
@@ -372,6 +416,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>"
                     <p className="text-sm text-zion-slate-light">Technology Solutions</p>
                   </div>
+                  <span className="text-white font-semibold">Zion Tech</span>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}"
@@ -413,6 +458,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     {navigationItems.map(item => renderNavigationItem(item))}
                   </div>
                 </nav>
+              </div>
 
                 {/* Contact Information */}"
                 <div className="p-6 border-t border-zion-slate-light/20">;"

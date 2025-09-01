@@ -28,7 +28,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     };
   ];
 
-  const services = [
+  const useCases = [
     {
 '
       title: 'Threat Intelligence','
@@ -126,7 +126,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>
 
       {/* Features Section */}"
       <section className="py-16 px-4">;"
@@ -298,7 +298,16 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
-              </motion.div>;
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <ul className="space-y-2">
+                  {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
           </div>
         </div>

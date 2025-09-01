@@ -5,7 +5,8 @@ import {
   Shield, 
   Eye, 
   AlertTriangle, 
-  TrendingUp, 
+  Brain, 
+  Zap, 
   Users, 
   Globe, 
   Cpu,
@@ -20,41 +21,42 @@ import {
 
   Shield, 
   CheckCircle, 
-  BarChart3, 
-  Zap, 
+  Star, 
+  DollarSign, 
+  Clock, 
+  Database, 
+  Target,
   ArrowRight,
-  Activity,
-  Sparkles,
-  Search,
-  Globe,
   Building,
-  DollarSign,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  Clock,
-  Users,
+  Calculator,
+  ChartBar,
+  Search,
+  Filter,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  BarChart3,
   TrendingUp,
-  Lock,
-  Eye,
-  Database,
+  Cpu,
+  Network,
   Server,
-  Smartphone,
-  Workflow,
-  Rocket,
-  RefreshCw,
+  Cloud,
+  Lock,
+  Key,
+  Settings,
+  Monitor,
+  Activity,
+  Gauge,
   Bug,
   Virus,
+  LockKeyhole,
+  Fingerprint,
+  Scan,
   AlertCircle,
   ShieldCheck,
-  Fire,
-  Radar,
-  Satellite,
+  Globe,
   Wifi,
-  Cloud,
-  HardDrive,
   Smartphone,
   Laptop,
   Tablet,
@@ -317,7 +319,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       ],'
       cta: 'Contact Sales',
       popular: false
-
+    }
   ];
 
   return ("
@@ -608,7 +610,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityCapabilities.map((capability, index (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -625,7 +627,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               </motion.div>
             ))}
           </div>
-        </div>;
+        </div>
       </section>
 
       {/* Threat Types Section */}"
@@ -765,6 +767,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
                     <span className="text-gray-400">{plan.period}</span>
                   </div>
+                  <p className="text-gray-600">{plan.description}</p>
                 </div>
 "
                 <ul className="space-y-3 mb-8">
@@ -1097,7 +1100,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -140,7 +140,27 @@ import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-rea
               </button>
             </div>
           </div>
-        </motion.div>
+
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Do you offer custom pricing for enterprise clients?
+            </h3>
+            <p className="text-gray-600">
+              Absolutely! Enterprise clients often have unique requirements, and we provide custom pricing 
+              based on your specific needs, scale, and project scope.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              What kind of support is included?
+            </h3>
+            <p className="text-gray-600">
+              Support varies by tier: Starter includes email support, Professional adds priority email support, 
+              and Enterprise provides 24/7 priority support with dedicated account management.
+            </p>
+          </div>
+        </div>
       </div>
     </div>) ;
 }

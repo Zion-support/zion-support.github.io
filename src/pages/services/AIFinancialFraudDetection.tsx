@@ -5,15 +5,18 @@ import { Shield,
   Brain, 
   BarChart3, 
   AlertTriangle, 
-  Zap, 
-  Lock, 
-  Target, 
+  Clock, 
+  BarChart3, 
   CheckCircle,
-  ArrowRight,
+  Play,
   Star,
-  Clock,
+  Award,
   DollarSign,
-  TrendingUp,
+  Target,
+  Zap,
+  Brain,
+  Globe,
+  Rocket,
   Eye,
   Cpu'
  } from 'lucide-react';
@@ -71,7 +74,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     "Salesforce, HubSpot, Pipedrive";
   ];
 
-  const pricing = [
+  const industries = [
     {
 "
       plan: "Starter","
@@ -224,11 +227,13 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   x: 0 
 
 
-
-
-
-
-}}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
 
@@ -493,7 +498,13 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
-}}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
 
@@ -574,11 +585,13 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   y: 0 
 
 
-
-
-
-
-}}
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
 
@@ -612,6 +625,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
                     <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
 "
                 <ul className="space-y-4 mb-8">
@@ -685,7 +699,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
 
                 Schedule Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -87,14 +87,97 @@ export default function Contact() {
     }
   };
 
-  const isFormValid = formData.name && formData.email && formData.message;
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 302 464 0950',
+      description: 'Call us directly for immediate assistance',
+      action: 'tel:+13024640950',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      description: 'Send us a detailed message',
+      action: 'mailto:kleber@ziontechgroup.com',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      value: '364 E Main St STE 1008\nMiddletown DE 19709',
+      description: 'Visit our office for in-person meetings',
+      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Monday - Friday\n9:00 AM - 6:00 PM EST',
+      description: 'We\'re available during business hours',
+      action: null,
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  const services = [
+    'AI Business Intelligence',
+    'Micro SaaS Solutions',
+    'Cloud & DevOps',
+    'Cybersecurity',
+    'Digital Transformation',
+    'Data Analytics',
+    'IoT Solutions',
+    'Custom Development',
+    'Consulting Services',
+    'Other'
+  ];
+
+  const industries = [
+    'Healthcare',
+    'Financial Services',
+    'Manufacturing',
+    'Retail & E-commerce',
+    'Technology',
+    'Education',
+    'Legal Services',
+    'Government',
+    'Startup',
+    'Enterprise',
+    'Other'
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: Brain,
+      title: 'AI-First Approach',
+      description: 'Cutting-edge artificial intelligence integrated into every solution'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance for all solutions'
+    },
+    {
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Certified professionals with decades of combined experience'
+    },
+    {
+      icon: Zap,
+      title: 'Fast Implementation',
+      description: 'Rapid deployment and time-to-value for your business'
+    }
+  ];
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}"
           className="text-center text-white mb-16"
@@ -111,7 +194,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}"
             className="space-y-8"
@@ -392,9 +475,9 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        {/* Additional Contact Information */}
+        {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}"
           className="mt-24 text-center"
@@ -441,6 +524,7 @@ export default function Contact() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>
+  );
 }
 '"`
