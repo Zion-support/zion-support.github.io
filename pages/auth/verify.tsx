@@ -1,2 +1,8 @@
-import React from 'react';
-export default function Verify(){return <div className="p-6 text-high-contrast">Verify</div>;}
+export default function Verify() {
+  return (
+    <div className="space-y-2">
+      <h1 className="text-xl font-semibold">Verify</h1>
+      <p className="text-gray-600 dark:text-gray-400">Check your email for a verification link.</p>
+    </div>
+  );
+}

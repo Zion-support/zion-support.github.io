@@ -45,14 +45,7 @@ export default function EnhancedNavigation() {
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/book-builder"><a>Book Builder</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/summit"><a className="font-medium">Summit</a></Link>
-          <button
-            aria-label="Toggle theme"
-            onClick={toggleTheme}
-            className="px-2 py-1 rounded border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            {isDark ? 'Light' : 'Dark'}
-          </button>
+          <Link href="/zion/init"><a className="font-medium text-indigo-600 dark:text-indigo-400">Deploy</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
