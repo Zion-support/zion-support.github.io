@@ -2,12 +2,19 @@
 
 /**
  * Intelligent Repository Manager
- * Advanced automation for repository management, PR analysis, and intelligent merging
+ * 
+ * This script provides intelligent automation for:
+ * - Git repository management
+ * - Branch health monitoring
+ * - Automated merging and conflict resolution
+ * - Repository optimization
+ * - Development workflow automation
  */
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 class IntelligentRepositoryManager {
   constructor() {
@@ -205,199 +212,168 @@ class IntelligentRepositoryManager {
     score += Math.min(commitCount * 0.5, 5);
     
     return {
-      score: Math.min(score, 10),
+      score: Math.round(score * 10) / 10,
       criticalFiles,
-      riskLevel: score <= 3 ? 'low' : score <= 6 ? 'medium' : 'high'
+      riskLevel: score > 5 ? 'HIGH' : score > 3 ? 'MEDIUM' : 'LOW'
     };
   }
 
   calculatePriority(complexity, commitCount) {
-    let priority = 1;
+    let priority = 0;
     
-    if (complexity.riskLevel === 'high') priority += 3;
-    else if (complexity.riskLevel === 'medium') priority += 2;
+    // Higher complexity = higher priority
+    priority += complexity.score * 2;
     
-    if (complexity.criticalFiles > 0) priority += 2;
-    if (commitCount > 10) priority += 1;
+    // More commits = higher priority
+    priority += Math.min(commitCount * 0.3, 3);
     
-    return Math.min(priority, 5);
+    // Critical files increase priority
+    if (complexity.criticalFiles > 0) {
+      priority += complexity.criticalFiles * 1.5;
+    }
+    
+    return Math.round(priority * 10) / 10;
   }
 
   async intelligentMerge() {
     try {
       this.log('Starting intelligent merge process...');
       
-      const analysis = await this.analyzePullRequests();
-      const mergeableBranches = analysis
-        .filter(branch => branch.mergeable)
-        .sort((a, b) => b.priority - a.priority);
-
-      this.log(`Found ${mergeableBranches.length} mergeable branches`);
-
-      if (mergeableBranches.length === 0) {
-        this.log('No mergeable branches found');
+      const analysisResults = await this.analyzePullRequests();
+      
+      if (analysisResults.length === 0) {
+        this.log('No branches to analyze');
         return;
       }
-
-      // Process branches in batches
-      const batchSize = this.config.mergeBatchSize;
-      for (let i = 0; i < mergeableBranches.length; i += batchSize) {
-        const batch = mergeableBranches.slice(i, i + batchSize);
-        await this.processMergeBatch(batch);
-        
-        // Wait between batches to avoid overwhelming the system
-        if (i + batchSize < mergeableBranches.length) {
-          await this.sleep(5000);
-        }
+      
+      // Sort by priority (highest first)
+      analysisResults.sort((a, b) => (b.priority || 0) - (a.priority || 0));
+      
+      // Process in batches
+      const batchSize = this.config.mergeBatchSize || 5;
+      const batches = [];
+      
+      for (let i = 0; i < analysisResults.length; i += batchSize) {
+        batches.push(analysisResults.slice(i, i + batchSize));
       }
-
+      
+      for (const batch of batches) {
+        await this.processMergeBatch(batch);
+        // Wait between batches to avoid overwhelming the system
+        await this.sleep(2000);
+      }
+      
       this.log('Intelligent merge process completed');
+      
     } catch (error) {
-      this.log(`Error during intelligent merge: ${error.message}`, 'error');
+      this.log(`Error in intelligent merge: ${error.message}`, 'error');
     }
   }
 
   async processMergeBatch(branches) {
-    this.log(`Processing merge batch of ${branches.length} branches`);
-    
     for (const branch of branches) {
-      try {
-        await this.mergeBranch(branch);
-        this.mergeHistory.push({
-          branch: branch.branchName,
-          timestamp: new Date().toISOString(),
-          success: true
-        });
-      } catch (error) {
-        this.log(`Failed to merge branch ${branch.branchName}: ${error.message}`, 'error');
-        this.mergeHistory.push({
-          branch: branch.branchName,
-          timestamp: new Date().toISOString(),
-          success: false,
-          error: error.message
-        });
+      if (branch.mergeable) {
+        try {
+          await this.mergeBranch(branch.branchName);
+          this.log(`Successfully merged branch: ${branch.branchName}`);
+        } catch (error) {
+          this.log(`Failed to merge branch ${branch.branchName}: ${error.message}`, 'error');
+        }
+      } else {
+        this.log(`Branch ${branch.branchName} is not mergeable (complexity: ${branch.complexity.score}, conflicts: ${branch.hasConflicts})`);
       }
     }
   }
 
   async mergeBranch(branch) {
     try {
-      this.log(`Merging branch: ${branch.branchName}`);
+      this.log(`Attempting to merge branch: ${branch}`);
       
-      // Ensure we're on main branch
+      // Switch to main branch
       await this.executeCommand('git checkout main');
+      
+      // Pull latest changes
       await this.executeCommand('git pull origin main');
       
-      // Merge the branch
-      if (this.config.mergeStrategy === 'squash') {
-        await this.executeCommand(`git merge --squash origin/${branch.branchName}`);
-        await this.executeCommand('git commit -m "Merge branch \'' + branch.branchName + '\' with squash"');
-      } else {
-        await this.executeCommand(`git merge origin/${branch.branchName} --no-ff`);
-      }
+      // Merge the feature branch
+      await this.executeCommand(`git merge origin/${branch} --no-ff --strategy=recursive -X theirs`);
       
-      // Push to main
+      // Push changes
       await this.executeCommand('git push origin main');
       
-      // Clean up remote branch
+      // Clean up the feature branch
       if (this.config.branchCleanupEnabled) {
-        try {
-          await this.executeCommand(`git push origin --delete ${branch.branchName}`);
-          this.log(`Deleted remote branch: ${branch.branchName}`);
-        } catch (error) {
-          this.log(`Could not delete remote branch ${branch.branchName}: ${error.message}`, 'warning');
-        }
+        await this.executeCommand(`git push origin --delete ${branch}`);
+        this.log(`Deleted feature branch: ${branch}`);
       }
       
-      this.log(`Successfully merged branch: ${branch.branchName}`);
+      this.log(`Successfully merged and cleaned up branch: ${branch}`);
+      
     } catch (error) {
-      throw new Error(`Merge failed for ${branch.branchName}: ${error.message}`);
+      this.log(`Error merging branch ${branch}: ${error.message}`, 'error');
+      
+      // Try to resolve conflicts
+      if (error.message.includes('conflict')) {
+        await this.resolveConflicts();
+      }
+      
+      throw error;
     }
   }
 
   async resolveConflicts() {
     try {
-      this.log('Starting conflict resolution process...');
+      this.log('Attempting to resolve merge conflicts...');
       
-      const analysis = await this.analyzePullRequests();
-      const conflictedBranches = analysis.filter(branch => branch.hasConflicts);
+      // Get list of conflicted files
+      const conflictedFiles = await this.executeCommand('git diff --name-only --diff-filter=U');
       
-      this.log(`Found ${conflictedBranches.length} branches with conflicts`);
-      
-      for (const branch of conflictedBranches) {
-        try {
-          await this.resolveBranchConflicts(branch);
-        } catch (error) {
-          this.log(`Failed to resolve conflicts for ${branch.branchName}: ${error.message}`, 'error');
-          this.conflictHistory.push({
-            branch: branch.branchName,
-            timestamp: new Date().toISOString(),
-            resolved: false,
-            error: error.message
-          });
-        }
+      if (conflictedFiles.length === 0) {
+        this.log('No conflicts to resolve');
+        return;
       }
+      
+      this.log(`Found ${conflictedFiles.length} conflicted files`);
+      
+      for (const file of conflictedFiles.split('\n').filter(f => f.trim())) {
+        await this.resolveFileConflict(file);
+      }
+      
+      // Add resolved files
+      await this.executeCommand('git add .');
+      
+      // Complete the merge
+      await this.executeCommand('git commit -m "Resolve merge conflicts automatically"');
+      
+      this.log('Successfully resolved all conflicts');
+      
     } catch (error) {
-      this.log(`Error during conflict resolution: ${error.message}`, 'error');
+      this.log(`Error resolving conflicts: ${error.message}`, 'error');
+      throw error;
     }
   }
 
-  async resolveBranchConflicts(branch) {
+  async resolveFileConflict(file) {
     try {
-      this.log(`Resolving conflicts for branch: ${branch.branchName}`);
+      this.log(`Resolving conflict in file: ${file}`);
       
-      // Checkout the branch
-      await this.executeCommand(`git checkout -b conflict-resolution-${Date.now()}`);
-      await this.executeCommand(`git pull origin ${branch.branchName}`);
+      // Read the conflicted file
+      const content = fs.readFileSync(file, 'utf8');
       
-      // Try to rebase on main
-      try {
-        await this.executeCommand('git rebase origin/main');
-        this.log(`Successfully rebased ${branch.branchName}`);
-        
-        // Force push the resolved branch
-        await this.executeCommand(`git push origin HEAD:${branch.branchName} --force`);
-        
-        this.conflictHistory.push({
-          branch: branch.branchName,
-          timestamp: new Date().toISOString(),
-          resolved: true
-        });
-      } catch (rebaseError) {
-        // If rebase fails, abort and try merge
-        await this.executeCommand('git rebase --abort');
-        throw new Error(`Rebase failed: ${rebaseError.message}`);
-      }
+      // Simple conflict resolution strategy: keep both versions
+      const resolvedContent = content
+        .replace(/<<<<<<< HEAD\n/g, '')
+        .replace(/=======\n/g, '')
+        .replace(/>>>>>>> [^\n]*\n/g, '');
       
-      // Clean up temporary branch
-      await this.executeCommand('git checkout main');
-      await this.executeCommand(`git branch -D conflict-resolution-${Date.now()}`);
+      // Write resolved content
+      fs.writeFileSync(file, resolvedContent);
+      
+      this.log(`Resolved conflict in file: ${file}`);
       
     } catch (error) {
-      throw new Error(`Conflict resolution failed: ${error.message}`);
+      this.log(`Error resolving conflict in file ${file}: ${error.message}`, 'error');
     }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      repositoryStatus: await this.getRepositoryStatus(),
-      mergeHistory: this.mergeHistory.slice(-20), // Last 20 merges
-      conflictHistory: this.conflictHistory.slice(-20), // Last 20 conflicts
-      config: this.config,
-      statistics: {
-        totalMerges: this.mergeHistory.length,
-        successfulMerges: this.mergeHistory.filter(m => m.success).length,
-        totalConflicts: this.conflictHistory.length,
-        resolvedConflicts: this.conflictHistory.filter(c => c.resolved).length
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'logs', 'repository-manager-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`Report generated: ${reportPath}`);
-    return report;
   }
 
   async sleep(ms) {
@@ -405,33 +381,27 @@ class IntelligentRepositoryManager {
   }
 
   async start() {
-    this.log('Intelligent Repository Manager started');
+    this.log('Starting Intelligent Repository Manager...');
     
-    // Initial analysis
-    await this.analyzePullRequests();
-    
-    // Start continuous monitoring
-    setInterval(async () => {
-      try {
-        await this.analyzePullRequests();
-        
-        if (this.config.autoMergeEnabled) {
+    try {
+      // Initialize
+      await this.getRepositoryStatus();
+      
+      // Start monitoring loop
+      setInterval(async () => {
+        try {
           await this.intelligentMerge();
+        } catch (error) {
+          this.log(`Error in monitoring loop: ${error.message}`, 'error');
         }
-        
-        if (this.config.conflictResolutionEnabled) {
-          await this.resolveConflicts();
-        }
-        
-        // Generate report every hour
-        if (new Date().getMinutes() === 0) {
-          await this.generateReport();
-        }
-        
-      } catch (error) {
-        this.log(`Error in monitoring cycle: ${error.message}`, 'error');
-      }
-    }, this.config.healthCheckInterval);
+      }, this.config.healthCheckInterval);
+      
+      this.log('Intelligent Repository Manager started successfully');
+      
+    } catch (error) {
+      this.log(`Error starting Intelligent Repository Manager: ${error.message}`, 'error');
+      throw error;
+    }
   }
 }
 
