@@ -12,8 +12,8 @@ function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = 2000
 
 async function isServerRunning(url: string): Promise<boolean> {
   try {
-    const res = await fetchWithTimeout(url, { method: 'HEAD' });
-    return res.ok;
+    const res = await fetchFn(`${url}/api/health`, { method: 'HEAD' });
+    return res.status < 500;
   } catch {
     return false;
   }
