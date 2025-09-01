@@ -1,51 +1,81 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-import LoadingSpinner from './components/ui/loading-spinner';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+
+const { lazy } = React;
+const Home = lazy(() => import('./pages/Home'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
+const Analytics = lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Categories = lazy(() => import('./pages/Categories'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/community', element: <CommunityPage /> },
+];
 
 const App = () => {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <div className="min-h-screen">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/*" element={<ServicesPage />} />
-              <Route path="/comprehensive-services" element={<SimplePage />} />
-              <Route path="/pricing" element={<SimplePage />} />
-              <Route path="/solutions" element={<SimplePage />} />
-              <Route path="/solutions/*" element={<SimplePage />} />
-              <Route path="/about" element={<SimplePage />} />
-              <Route path="/about/*" element={<SimplePage />} />
-              <Route path="/contact" element={<SimplePage />} />
-              <Route path="/blog" element={<SimplePage />} />
-              <Route path="/blog/*" element={<SimplePage />} />
-              <Route path="/careers" element={<SimplePage />} />
-              <Route path="/partners" element={<SimplePage />} />
-              <Route path="/press" element={<SimplePage />} />
-              <Route path="/case-studies" element={<SimplePage />} />
-              <Route path="/research-development" element={<SimplePage />} />
-              <Route path="/docs" element={<SimplePage />} />
-              <Route path="/api" element={<SimplePage />} />
-              <Route path="/developer" element={<SimplePage />} />
-              <Route path="/help" element={<SimplePage />} />
-              <Route path="/training" element={<SimplePage />} />
-              <Route path="/community" element={<SimplePage />} />
-              <Route path="/support" element={<SimplePage />} />
-              <Route path="/sitemap" element={<SimplePage />} />
-              <Route path="/comprehensive-sitemap" element={<SimplePage />} />
-              <Route path="/privacy-policy" element={<SimplePage />} />
-              <Route path="/terms-of-service" element={<SimplePage />} />
-              <Route path="/cookie-policy" element={<SimplePage />} />
-              <Route path="/request-quote" element={<SimplePage />} />
-              <Route path="*" element={<SimplePage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </div>
-    </ErrorBoundary>
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <React.Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+        </React.Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
 }
 
